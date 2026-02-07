@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-warm-bg: #faf6f1;
+  --color-warm-card: #f5ede4;
+  --color-warm-accent: #8b6f47;
+  --color-warm-accent-light: #c2a173;
+  --color-warm-text: #392b21;
+  --color-warm-text-muted: #6b5744;
+  --color-warm-border: #d4c4b0;
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background-color: var(--color-warm-bg);
+  color: var(--color-warm-text);
+}
