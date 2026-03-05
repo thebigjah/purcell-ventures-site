@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Cinzel } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,10 +7,19 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "900"],
+});
+
 export const metadata: Metadata = {
-  title: "Purcell Ventures LLC — Web Development & Digital Solutions",
+  title: "Purcell Ventures — AI-Powered Digital Tools for Local Businesses",
   description:
-    "Professional web development, automation, and digital solutions for businesses. Founded by Elijah Purcell.",
+    "Websites, booking systems, CRM, social media, and AI chatbots — custom-built and fully managed for your business. One monthly subscription. Cancel anytime.",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -20,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${cinzel.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
