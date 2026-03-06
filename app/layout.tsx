@@ -17,9 +17,6 @@ export const metadata: Metadata = {
   title: "Purcell Ventures — AI-Powered Digital Tools for Local Businesses",
   description:
     "Websites, booking systems, CRM, social media, and AI chatbots — custom-built and fully managed for your business. One monthly subscription. Cancel anytime.",
-  icons: {
-    icon: [{ url: "/favicon.png", type: "image/png" }],
-  },
 };
 
 export default function RootLayout({
