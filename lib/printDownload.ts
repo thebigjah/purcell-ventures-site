@@ -1,3 +1,5 @@
+import type { RefObject } from "react";
+
 // lib/printDownload.ts — shared print-quality download utility
 // scale: 4 → 720 DPI at 3.5"×2" (2520×1440px), well above 300 DPI print minimum
 // Injects PNG pHYs chunk so printers read the correct DPI instead of 72 DPI screen default
@@ -42,7 +44,7 @@ function injectPngDpi(bytes: Uint8Array, dpi: number): Uint8Array {
 }
 
 export async function downloadPrintAsset(
-  ref: React.RefObject<HTMLDivElement | null>,
+  ref: RefObject<HTMLDivElement | null>,
   filename: string,
   dpi = 720,
 ) {
