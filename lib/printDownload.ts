@@ -58,12 +58,12 @@ export async function downloadPrintAsset(
   if (cardEl) { cardEl.style.boxShadow = ""; cardEl.style.borderRadius = ""; }
 
   const blob = await new Promise<Blob>(resolve => canvas.toBlob(b => resolve(b!), "image/png"));
-  const buf = await blob.arrayBuffer();
+  const buf = (await blob.arrayBuffer()) as ArrayBuffer;
   const withDpi = injectPngDpi(new Uint8Array(buf), dpi);
 
   const a = document.createElement("a");
   a.download = `${filename}.png`;
-  a.href = URL.createObjectURL(new Blob([withDpi], { type: "image/png" }));
+  a.href = URL.createObjectURL(new Blob([withDpi.buffer as ArrayBuffer], { type: "image/png" }));
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 60000);
 }
