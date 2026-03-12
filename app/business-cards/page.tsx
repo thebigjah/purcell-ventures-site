@@ -1,8 +1,9 @@
+"use client";
 // Business card slash variations — purcellventures.co/business-cards
 // 6 designs built around the diagonal gold slash + PV luxury logo mark
 // Print: 3.5" × 2" at 300 DPI · Preview: 630×360px (1.8× scale)
 
-import React from "react";
+import React, { useRef } from "react";
 
 const W = 630;
 const H = 360;
@@ -12,7 +13,7 @@ const INFO = {
   name: "Elijah Purcell",
   title: "Founder",
   phone: "(770) 280-5319",
-  email: "elijah@purcellventures.co",
+  email: "elijah@purcell-ventures.com",
   web: "purcellventures.co",
 };
 
@@ -114,21 +115,18 @@ function V1Back() {
 // ─── V2: The Slash / Ghost PV ─────────────────────────────────────────────────
 // Massive faded PV watermark fills the card — the slash cuts over it
 
-function GhostPV({ size = 252, opacity = 0.08 }: { size?: number; opacity?: number }) {
+function GhostPV({ opacity = 0.08 }: { opacity?: number }) {
   return (
-    <div style={{
-      position: "absolute", inset: 0,
-      display: "flex", alignItems: "center", justifyContent: "center",
-      overflow: "hidden", pointerEvents: "none",
-    }}>
-      <div style={{
-        fontFamily: "'Cinzel', Georgia, serif",
-        fontSize: `${size}px`, fontWeight: 700,
-        color: "#d4af37", opacity,
-        lineHeight: 1, letterSpacing: "0.04em",
-        userSelect: "none", whiteSpace: "nowrap",
-      }}>PV</div>
-    </div>
+    <svg style={{ position: "absolute", inset: 0, pointerEvents: "none", overflow: "hidden" }} width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
+      <text
+        x={W / 2} y={H / 2}
+        textAnchor="middle" dominantBaseline="central"
+        fontFamily="'Cinzel', Georgia, serif"
+        fontSize="252" fontWeight="700"
+        fill="#d4af37" opacity={opacity}
+        letterSpacing="10"
+      >PV</text>
+    </svg>
   );
 }
 
@@ -377,6 +375,182 @@ function V6Back() {
   );
 }
 
+// ─── Purcell Works Card ───────────────────────────────────────────────────────
+
+const INFO_WORKS = {
+  name: "Elijah Purcell",
+  title: "Owner",
+  phone: "(770) 280-5319",
+  email: "elijah@purcell-ventures.com",
+  web: "works.purcellventures.co",
+};
+
+const QR_WORKS = `https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://works.purcellventures.co&bgcolor=0c0a08&color=d4af37`;
+
+function GhostPW({ opacity = 0.08 }: { opacity?: number }) {
+  return (
+    <svg style={{ position: "absolute", inset: 0, pointerEvents: "none", overflow: "hidden" }} width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
+      <text
+        x={W / 2} y={H / 2}
+        textAnchor="middle" dominantBaseline="central"
+        fontFamily="'Cinzel', Georgia, serif"
+        fontSize="252" fontWeight="700"
+        fill="#d4af37" opacity={opacity}
+        letterSpacing="10"
+      >PW</text>
+    </svg>
+  );
+}
+
+function WorksContactLines({ color = "#8a8070", size = 11 }: { color?: string; size?: number }) {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "3px" }}>
+      {[INFO_WORKS.phone, INFO_WORKS.email, INFO_WORKS.web].map(line => (
+        <div key={line} style={{ fontSize: `${size}px`, color, letterSpacing: "0.02em", fontFamily: "Inter, sans-serif" }}>{line}</div>
+      ))}
+    </div>
+  );
+}
+
+function WorksNameBlock({ nameColor = "#f5f0e0", titleColor = "#8a8070", size = 13 }: { nameColor?: string; titleColor?: string; size?: number }) {
+  return (
+    <div>
+      <div style={{ fontSize: `${size}px`, fontWeight: 700, color: nameColor, letterSpacing: "0.06em", textTransform: "uppercase", fontFamily: "Inter, sans-serif" }}>{INFO_WORKS.name}</div>
+      <div style={{ fontSize: `${Math.round(size * 0.8)}px`, color: titleColor, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "Inter, sans-serif", marginTop: "3px" }}>{INFO_WORKS.title}</div>
+    </div>
+  );
+}
+
+function WorksV2Front() {
+  return (
+    <CardShell style={{ background: "#0c0a08" }}>
+      <GhostPV />
+      <Slashes />
+      <div style={{ position: "absolute", inset: PAD, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+        <div>
+          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "40px", fontWeight: 700, color: "#d4af37", lineHeight: 1 }}>Purcell</div>
+          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", fontWeight: 400, color: "#d4af37", letterSpacing: "0.26em", marginTop: "2px", opacity: 0.8 }}>WORKS</div>
+          <div style={{ height: "1px", background: "#d4af3730", margin: "14px 0" }} />
+          <WorksNameBlock />
+        </div>
+        <WorksContactLines />
+      </div>
+    </CardShell>
+  );
+}
+
+function WorksV2Back() {
+  return (
+    <CardShell style={{ background: "#0c0a08" }}>
+      <GhostPV />
+      <Slashes o1={0.2} o2={0.12} />
+      <QRCenter src={QR_WORKS} />
+    </CardShell>
+  );
+}
+
+// ─── PNG DPI injection ────────────────────────────────────────────────────────
+// Embeds a pHYs chunk into a PNG so printers read the correct DPI (not 72 DPI screen default)
+
+function injectPngDpi(bytes: Uint8Array, dpi: number): Uint8Array {
+  const table = new Uint32Array(256);
+  for (let i = 0; i < 256; i++) {
+    let c = i;
+    for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1;
+    table[i] = c;
+  }
+  const crc32 = (buf: Uint8Array) => {
+    let c = 0xffffffff;
+    for (const b of buf) c = table[(c ^ b) & 0xff] ^ (c >>> 8);
+    return (c ^ 0xffffffff) >>> 0;
+  };
+
+  const ppm = Math.round(dpi / 0.0254);
+  const typeBytes = new Uint8Array([112, 72, 89, 115]); // "pHYs"
+  const data = new Uint8Array([
+    (ppm >> 24) & 0xff, (ppm >> 16) & 0xff, (ppm >> 8) & 0xff, ppm & 0xff,
+    (ppm >> 24) & 0xff, (ppm >> 16) & 0xff, (ppm >> 8) & 0xff, ppm & 0xff,
+    1, // unit = meter
+  ]);
+  const crcBuf = new Uint8Array(13);
+  crcBuf.set(typeBytes); crcBuf.set(data, 4);
+  const crc = crc32(crcBuf);
+
+  const chunk = new Uint8Array(4 + 4 + 9 + 4);
+  chunk[3] = 9; // length (big-endian, value = 9)
+  chunk.set(typeBytes, 4);
+  chunk.set(data, 8);
+  chunk[17] = (crc >> 24) & 0xff; chunk[18] = (crc >> 16) & 0xff;
+  chunk[19] = (crc >> 8) & 0xff;  chunk[20] = crc & 0xff;
+
+  const pos = 33; // PNG sig (8) + IHDR chunk (25) = 33
+  const out = new Uint8Array(bytes.length + chunk.length);
+  out.set(bytes.slice(0, pos));
+  out.set(chunk, pos);
+  out.set(bytes.slice(pos), pos + chunk.length);
+  return out;
+}
+
+// ─── Download wrapper ─────────────────────────────────────────────────────────
+
+function CardSection({ title, subtitle, Front, Back, filenamePrefix }: {
+  title: string;
+  subtitle: string;
+  Front: React.ComponentType;
+  Back: React.ComponentType;
+  filenamePrefix: string;
+}) {
+  const frontRef = useRef<HTMLDivElement>(null);
+  const backRef = useRef<HTMLDivElement>(null);
+
+  const download = async (ref: React.RefObject<HTMLDivElement | null>, filename: string) => {
+    if (!ref.current) return;
+    const cardEl = ref.current.firstElementChild as HTMLElement | null;
+    if (cardEl) { cardEl.style.boxShadow = "none"; cardEl.style.borderRadius = "0"; }
+    const html2canvas = (await import("html2canvas")).default;
+    // scale: 4 → 2520×1440px → 720 DPI at 3.5"×2"
+    const canvas = await html2canvas(ref.current, { scale: 4, useCORS: true, backgroundColor: null });
+    if (cardEl) { cardEl.style.boxShadow = ""; cardEl.style.borderRadius = ""; }
+
+    const blob = await new Promise<Blob>(resolve => canvas.toBlob(b => resolve(b!), "image/png"));
+    const buf = await blob.arrayBuffer();
+    const withDpi = injectPngDpi(new Uint8Array(buf), 720); // embed 720 DPI metadata
+
+    const a = document.createElement("a");
+    a.download = `${filename}.png`;
+    a.href = URL.createObjectURL(new Blob([withDpi], { type: "image/png" }));
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 60000);
+  };
+
+  const btnStyle: React.CSSProperties = {
+    marginTop: "10px", padding: "8px 18px", background: "none",
+    border: "1px solid #2e2820", color: "#8a8070", fontSize: "11px",
+    fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase",
+    cursor: "pointer", borderRadius: "4px", display: "block", width: "100%",
+    fontFamily: "Inter, sans-serif",
+  };
+
+  return (
+    <div>
+      <div style={{ fontSize: "20px", fontWeight: 700, color: "#f5f0e0", marginBottom: "4px" }}>{title}</div>
+      <div style={{ fontSize: "13px", color: "#524d45", marginBottom: "20px" }}>{subtitle}</div>
+      <div style={{ display: "flex", gap: "24px", flexWrap: "wrap", alignItems: "flex-start" }}>
+        <div>
+          <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "8px" }}>Front</div>
+          <div ref={frontRef} style={{ display: "inline-block" }}><Front /></div>
+          <button style={btnStyle} onClick={() => download(frontRef, `${filenamePrefix}-Front`)}>↓ Download Front</button>
+        </div>
+        <div>
+          <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "8px" }}>Back</div>
+          <div ref={backRef} style={{ display: "inline-block" }}><Back /></div>
+          <button style={btnStyle} onClick={() => download(backRef, `${filenamePrefix}-Back`)}>↓ Download Back</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ─── Registry ─────────────────────────────────────────────────────────────────
 
 const DESIGNS = [
@@ -428,7 +602,7 @@ export default function BusinessCardsPage() {
   return (
     <div style={{ minHeight: "100vh", background: "#080706", color: "#f5f0e0", fontFamily: "Inter, sans-serif", padding: "48px 32px" }}>
 
-      <div style={{ maxWidth: "1400px", margin: "0 auto 52px" }}>
+      <div style={{ maxWidth: "1400px", margin: "0 auto 64px" }}>
         <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d4af37", marginBottom: "10px" }}>
           Purcell Ventures — Private
         </div>
@@ -440,7 +614,34 @@ export default function BusinessCardsPage() {
         </p>
       </div>
 
+      {/* Your Cards — downloadable */}
+      <div style={{ maxWidth: "1400px", margin: "0 auto 80px" }}>
+        <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#d4af37", marginBottom: "32px", paddingBottom: "16px", borderBottom: "1px solid #2e2820" }}>
+          Your Cards
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: "64px" }}>
+          <CardSection
+            title="Purcell Ventures"
+            subtitle="The Slash / Ghost PV — your committed PV card"
+            Front={V2Front}
+            Back={V2Back}
+            filenamePrefix="PV-Ghost-PV"
+          />
+          <CardSection
+            title="Purcell Works"
+            subtitle="The Slash / Ghost PW — field services card"
+            Front={WorksV2Front}
+            Back={WorksV2Back}
+            filenamePrefix="PW-Ghost-PW"
+          />
+        </div>
+      </div>
+
+      {/* All variations */}
       <div style={{ maxWidth: "1400px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "64px" }}>
+        <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#524d45", paddingBottom: "16px", borderBottom: "1px solid #1e1c1a" }}>
+          All Variations
+        </div>
         {DESIGNS.map((d, i) => (
           <div key={d.name}>
             <div style={{ display: "flex", alignItems: "baseline", gap: "14px", marginBottom: "20px" }}>
