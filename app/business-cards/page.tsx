@@ -4,7 +4,7 @@
 // Print: 3.5" × 2" at 300 DPI · Preview: 630×360px (1.8× scale)
 
 import React, { useRef } from "react";
-import { downloadPrintAsset } from "@/lib/printDownload";
+import { downloadPrintAsset, downloadPrintAssetPDF } from "@/lib/printDownload";
 
 const W = 630;
 const H = 360;
@@ -462,15 +462,16 @@ function CardSection({ title, subtitle, Front, Back, filenamePrefix }: {
   const frontRef = useRef<HTMLDivElement>(null);
   const backRef = useRef<HTMLDivElement>(null);
 
-  const download = (ref: React.RefObject<HTMLDivElement | null>, filename: string) =>
-    downloadPrintAsset(ref, filename);
-
   const btnStyle: React.CSSProperties = {
-    marginTop: "10px", padding: "8px 18px", background: "none",
+    marginTop: "8px", padding: "7px 14px", background: "none",
     border: "1px solid #2e2820", color: "#8a8070", fontSize: "11px",
     fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase",
     cursor: "pointer", borderRadius: "4px", display: "block", width: "100%",
     fontFamily: "Inter, sans-serif",
+  };
+  const btnPdfStyle: React.CSSProperties = {
+    ...btnStyle,
+    border: "1px solid #4a3a1a", color: "#d4af37",
   };
 
   return (
@@ -481,12 +482,14 @@ function CardSection({ title, subtitle, Front, Back, filenamePrefix }: {
         <div>
           <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "8px" }}>Front</div>
           <div ref={frontRef} style={{ display: "inline-block" }}><Front /></div>
-          <button style={btnStyle} onClick={() => download(frontRef, `${filenamePrefix}-Front`)}>↓ Download Front</button>
+          <button style={btnPdfStyle} onClick={() => downloadPrintAssetPDF(frontRef, `${filenamePrefix}-Front`)}>↓ Download Front PDF</button>
+          <button style={btnStyle} onClick={() => downloadPrintAsset(frontRef, `${filenamePrefix}-Front`)}>↓ Download Front PNG</button>
         </div>
         <div>
           <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "8px" }}>Back</div>
           <div ref={backRef} style={{ display: "inline-block" }}><Back /></div>
-          <button style={btnStyle} onClick={() => download(backRef, `${filenamePrefix}-Back`)}>↓ Download Back</button>
+          <button style={btnPdfStyle} onClick={() => downloadPrintAssetPDF(backRef, `${filenamePrefix}-Back`)}>↓ Download Back PDF</button>
+          <button style={btnStyle} onClick={() => downloadPrintAsset(backRef, `${filenamePrefix}-Back`)}>↓ Download Back PNG</button>
         </div>
       </div>
     </div>

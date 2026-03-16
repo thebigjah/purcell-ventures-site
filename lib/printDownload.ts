@@ -43,19 +43,22 @@ function injectPngDpi(bytes: Uint8Array, dpi: number): Uint8Array {
   return out;
 }
 
+async function captureCanvas(ref: RefObject<HTMLDivElement | null>): Promise<{ canvas: HTMLCanvasElement; cardEl: HTMLElement | null }> {
+  const cardEl = ref.current!.firstElementChild as HTMLElement | null;
+  if (cardEl) { cardEl.style.boxShadow = "none"; cardEl.style.borderRadius = "0"; }
+  const html2canvas = (await import("html2canvas")).default;
+  const canvas = await html2canvas(ref.current!, { scale: 4, useCORS: true, backgroundColor: null });
+  if (cardEl) { cardEl.style.boxShadow = ""; cardEl.style.borderRadius = ""; }
+  return { canvas, cardEl };
+}
+
 export async function downloadPrintAsset(
   ref: RefObject<HTMLDivElement | null>,
   filename: string,
   dpi = 720,
 ) {
   if (!ref.current) return;
-  const cardEl = ref.current.firstElementChild as HTMLElement | null;
-  if (cardEl) { cardEl.style.boxShadow = "none"; cardEl.style.borderRadius = "0"; }
-
-  const html2canvas = (await import("html2canvas")).default;
-  const canvas = await html2canvas(ref.current, { scale: 4, useCORS: true, backgroundColor: null });
-
-  if (cardEl) { cardEl.style.boxShadow = ""; cardEl.style.borderRadius = ""; }
+  const { canvas } = await captureCanvas(ref);
 
   const blob = await new Promise<Blob>(resolve => canvas.toBlob(b => resolve(b!), "image/png"));
   const buf = (await blob.arrayBuffer()) as ArrayBuffer;
@@ -66,4 +69,20 @@ export async function downloadPrintAsset(
   a.href = URL.createObjectURL(new Blob([withDpi.buffer as ArrayBuffer], { type: "image/png" }));
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 60000);
+}
+
+// Business card = 3.5" × 2" at 300 DPI → embed rasterized image in a properly-sized PDF
+export async function downloadPrintAssetPDF(
+  ref: RefObject<HTMLDivElement | null>,
+  filename: string,
+) {
+  if (!ref.current) return;
+  const { canvas } = await captureCanvas(ref);
+  const imgData = canvas.toDataURL("image/png");
+
+  const { jsPDF } = await import("jspdf");
+  // Landscape PDF exactly 3.5" × 2"
+  const pdf = new jsPDF({ orientation: "landscape", unit: "in", format: [3.5, 2] });
+  pdf.addImage(imgData, "PNG", 0, 0, 3.5, 2);
+  pdf.save(`${filename}.pdf`);
 }
