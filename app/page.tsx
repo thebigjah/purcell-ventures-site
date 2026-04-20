@@ -4,30 +4,23 @@ const DIVISIONS = [
   {
     slug: "digital",
     label: "Digital Services",
-    tagline: "Websites, AI, booking, CRM — fully managed for local businesses.",
+    tagline: "Your full digital operation: website, AI tools, booking, and marketing. Built and managed for you. Starting at $75/mo.",
     status: "live" as const,
     href: "/digital",
   },
   {
     slug: "consulting",
     label: "AI Consulting",
-    tagline: "Workshops and 1-on-1 sessions teaching businesses to work smarter with AI.",
+    tagline: "I come to your business and walk your team through the AI tools that will actually change how they work. Hands-on. Same-day results.",
     status: "live" as const,
     href: "/consulting",
   },
   {
     slug: "software",
     label: "Custom Software",
-    tagline: "Mobile apps, web platforms, and AI tools built for your actual problem.",
+    tagline: "Apps, platforms, and automation tools scoped and built around your exact problem — from idea to launch.",
     status: "live" as const,
     href: "/software",
-  },
-  {
-    slug: "services",
-    label: "Field Services",
-    tagline: "Gutters, pressure washing, lawn care. Professional, reliable, local.",
-    status: "live" as const,
-    href: "/services",
   },
   {
     slug: "realestate",
@@ -44,29 +37,56 @@ export default function Home() {
 
       {/* Nav */}
       <nav style={{
-        padding: "0 32px", height: "60px", display: "flex", alignItems: "center",
+        padding: "0 24px", height: "60px", display: "flex", alignItems: "center",
         justifyContent: "space-between", borderBottom: "1px solid var(--color-warm-border)",
       }}>
         <span style={{ fontSize: "17px", fontWeight: 700, color: "var(--color-warm-text)", letterSpacing: "-0.01em" }}>
           Purcell <span style={{ color: "var(--color-warm-accent)" }}>Ventures</span>
         </span>
-        <a href="mailto:elijah@purcellventures.co" style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", textDecoration: "none" }}>
+        <a href="mailto:elijah@purcellventures.co" style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", textDecoration: "none" }}
+          className="hidden sm:block">
           elijah@purcellventures.co
         </a>
       </nav>
 
       {/* Main */}
-      <main style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", padding: "80px 32px", maxWidth: "960px", margin: "0 auto", width: "100%" }}>
+      <main className="flex-1 flex flex-col justify-center w-full mx-auto px-6 py-12 sm:px-8 sm:py-20"
+        style={{ maxWidth: "960px" }}>
+
+        {/* Logo Mark */}
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: "48px" }}>
+          <div style={{
+            width: "120px", height: "120px", borderRadius: "50%",
+            border: "1.5px solid var(--color-warm-accent)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            position: "relative",
+          }}>
+            {/* Outer ring decoration */}
+            <div style={{
+              position: "absolute", inset: "8px", borderRadius: "50%",
+              border: "1px solid var(--color-warm-border)",
+            }} />
+            <span style={{
+              fontFamily: "'Cinzel', Georgia, serif",
+              fontSize: "32px", fontWeight: 700,
+              color: "var(--color-warm-accent)",
+              letterSpacing: "0.06em",
+              position: "relative",
+            }}>
+              PV
+            </span>
+          </div>
+        </div>
 
         {/* Eyebrow */}
         <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "24px" }}>
-          Purcell Ventures LLC — Georgia
+          Purcell Ventures LLC
         </p>
 
         {/* Headline */}
         <h1 style={{
           fontFamily: "'Cinzel', Georgia, serif",
-          fontSize: "clamp(48px, 8vw, 96px)", fontWeight: 700,
+          fontSize: "clamp(40px, 8vw, 96px)", fontWeight: 700,
           lineHeight: 1.02, letterSpacing: "-0.02em",
           color: "var(--color-warm-text)", marginBottom: "24px",
         }}>
@@ -74,20 +94,22 @@ export default function Home() {
           <span style={{ color: "var(--color-warm-accent)" }}>Built to grow.</span>
         </h1>
 
-        <p style={{ fontSize: "17px", color: "var(--color-warm-text-muted)", maxWidth: "480px", lineHeight: 1.75, marginBottom: "72px" }}>
+        <p className="text-base sm:text-lg" style={{ color: "var(--color-warm-text-muted)", maxWidth: "480px", lineHeight: 1.75, marginBottom: "48px" }}>
           Purcell Ventures is a multi-division company founded by Elijah Purcell.
           We build software, serve local communities, and invest in real estate.
         </p>
 
         {/* Divisions */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1px", background: "var(--color-warm-border)" }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2"
+          style={{ gap: "1px", background: "var(--color-warm-border)" }}>
           {DIVISIONS.map((div) => (
-            <div key={div.slug} style={{
-              background: "var(--color-warm-bg)",
-              padding: "32px 28px",
-              position: "relative",
-              transition: "background 0.15s",
-            }}
+            <div key={div.slug}
+              style={{
+                background: "var(--color-warm-bg)",
+                padding: "28px 24px",
+                position: "relative",
+                transition: "background 0.15s",
+              }}
               onMouseEnter={(e) => {
                 if (div.status === "live") e.currentTarget.style.background = "var(--color-warm-card)";
               }}
@@ -109,7 +131,7 @@ export default function Home() {
 
               <h2 style={{
                 fontFamily: "'Cinzel', Georgia, serif",
-                fontSize: "26px", fontWeight: 600, marginBottom: "10px",
+                fontSize: "22px", fontWeight: 600, marginBottom: "10px",
                 color: div.status === "live" ? "var(--color-warm-text)" : "var(--color-warm-text-muted)",
               }}>
                 {div.label}
@@ -135,7 +157,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer style={{ padding: "24px 32px", borderTop: "1px solid var(--color-warm-border)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
+      <footer style={{ padding: "24px", borderTop: "1px solid var(--color-warm-border)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
         <span style={{ fontSize: "13px", color: "var(--color-warm-text-light)" }}>
           © {new Date().getFullYear()} Purcell Ventures LLC
         </span>

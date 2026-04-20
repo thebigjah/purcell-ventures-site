@@ -213,8 +213,8 @@ export default function ResumePrint() {
             {[
               { val: "3.92", label: "GPA (Weighted)" },
               { val: "1440", label: "SAT" },
-              { val: "29", label: "Acceptances" },
-              { val: "$441k+/yr", label: "Scholarships" },
+              { val: "34", label: "Acceptances" },
+              { val: "$505k+/yr", label: "Scholarships" },
             ].map(s => (
               <div className="stat-block" key={s.label}>
                 <div className="stat-val">{s.val}</div>
@@ -359,25 +359,28 @@ export default function ResumePrint() {
               <div className="section-title">Scholarship Record</div>
               <div className="scholar-grid">
                 {[
-                  ["Kalamazoo College", "$48,000/yr", "Lux Esto"],
-                  ["Susquehanna University", "$48,000/yr", "Merit"],
-                  ["Drake University", "$31,000/yr", "Merit"],
+                  ["Kalamazoo College", "$48,000/yr", "Confirmed"],
+                  ["Susquehanna University", "$48,000/yr", "Confirmed"],
+                  ["Drake University", "$31,000/yr", "Confirmed"],
                   ["Hood College", "$31,000/yr", "Presidential"],
-                  ["Transylvania University", "$30,000/yr", "Merit"],
-                  ["University of Alabama", "$28,000/yr", "Presidential Merit ✓"],
-                  ["Bradley University", "$28,000/yr", "Presidential ✓"],
-                  ["Presbyterian College", "$28,000/yr", "Highlander ✓"],
-                  ["Cedarville University", "$22,000/yr", "Merit"],
-                  ["Berry College", "$20,000/yr", "Merit, renewable"],
-                  ["Oral Roberts University", "$24,000/yr", "Merit"],
-                  ["Lenoir-Rhyne University", "$26,000/yr", "Niche Direct"],
-                  ["Palm Beach Atlantic", "$21,000/yr", "Merit"],
-                  ["Charleston Southern", "$17,000/yr", "Merit"],
-                  ["Mississippi College", "$14,500/yr", "Academic Merit"],
+                  ["Transylvania University", "$30,000/yr", "Confirmed"],
+                  ["University of Alabama", "$28,000/yr", "Presidential Merit — Enrolled"],
+                  ["Bradley University", "$28,000/yr", "Presidential"],
+                  ["Presbyterian College", "$28,000/yr", "Highlander"],
+                  ["Valparaiso University", "$28,000/yr", "Confirmed"],
+                  ["Lenoir-Rhyne University", "$26,000/yr", "Confirmed"],
+                  ["Oral Roberts University", "$24,000/yr", "Confirmed"],
+                  ["Cedarville University", "$22,000/yr", "Confirmed"],
+                  ["George Fox University", "$22,000/yr", "Confirmed"],
+                  ["Berry College", "$20,000/yr", "Confirmed, renewable"],
+                  ["Palm Beach Atlantic University", "$18,000/yr", "Confirmed"],
+                  ["Union University", "$17,000/yr", "Confirmed"],
+                  ["Charleston Southern University", "$17,000/yr", "Confirmed"],
+                  ["Mississippi College", "$14,500/yr", "Confirmed"],
                   ["Hartwick College", "$10,000/yr", "Flight Path"],
-                  ["Francis Marion University", "$10,884/yr", "Niche Direct"],
-                  ["Rider University", "$3,000/yr", "Merit"],
-                  ["Georgia State University", "$1,060/yr", "Merit + Honors"],
+                  ["Francis Marion University", "$10,884/yr", "Confirmed"],
+                  ["Rider University", "$3,000/yr", "Confirmed"],
+                  ["Georgia State University", "$1,000/yr", "Merit + Honors"],
                 ].map(([school, amt, note]) => (
                   <div className="scholar-row" key={school}>
                     <div className="scholar-name">{school} <span>{note}</span></div>
@@ -387,10 +390,10 @@ export default function ResumePrint() {
               </div>
               <div className="scholar-total">
                 <span className="scholar-total-label">Total (confirmed offers)</span>
-                <span className="scholar-total-val">$441,444 / year</span>
+                <span className="scholar-total-val">$505,384 / year</span>
               </div>
               <div style={{ fontSize: "8px", color: "#9a8270", marginTop: "3px", fontStyle: "italic" }}>
-                29 acceptances as of March 2026. Additional decisions pending.
+                34 acceptances as of April 2026. Enrolled: University of Alabama.
               </div>
             </div>
 
