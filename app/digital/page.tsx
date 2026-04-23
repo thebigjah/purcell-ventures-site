@@ -1773,9 +1773,9 @@ export default function DigitalPage() {
             <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.8, marginBottom: "40px" }}>
               Tell me about your business. I'll get back to you within 24 hours with a recommendation and a quote. No pressure, no pitch deck.
             </p>
-            <a href="mailto:elijah@purcellventures.co" style={{ display: "flex", alignItems: "center", gap: "10px", color: "var(--color-warm-text-muted)", textDecoration: "none", fontSize: "14px", marginBottom: "12px" }}>
+            <a href="mailto:elijah@purcell-ventures.com" style={{ display: "flex", alignItems: "center", gap: "10px", color: "var(--color-warm-text-muted)", textDecoration: "none", fontSize: "14px", marginBottom: "12px" }}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-warm-accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              elijah@purcellventures.co
+              elijah@purcell-ventures.com
             </a>
             <span style={{ fontSize: "13px", color: "var(--color-warm-text-muted)" }}>Based in Georgia · responds within 24 hours</span>
           </div>

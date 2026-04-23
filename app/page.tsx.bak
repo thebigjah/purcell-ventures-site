@@ -1,0 +1,533 @@
+"use client";
+
+import { useState } from "react";
+import ROICalculator from "./components/ROICalculator";
+
+const MODULES = [
+  {
+    category: "Website & Presence",
+    items: [
+      { name: "Business Website", desc: "Multi-page site — Home, About, Services, Contact. Mobile-friendly and SEO-ready." },
+      { name: "Landing Page", desc: "Single-page, conversion-focused with a lead capture form and strong call-to-action." },
+      { name: "Portfolio / Gallery", desc: "Image grid showcase for photographers, artists, and food businesses." },
+    ],
+  },
+  {
+    category: "Booking & Scheduling",
+    items: [
+      { name: "Appointment Booking", desc: "Calendar with time slots, service selection, and automatic email confirmations." },
+      { name: "Event Registration", desc: "RSVP system with attendee management and automated reminder emails." },
+    ],
+  },
+  {
+    category: "Communication & Marketing",
+    items: [
+      { name: "Email Newsletter", desc: "Subscriber list, AI-written campaigns, and scheduled sends." },
+      { name: "SMS Campaigns", desc: "Broadcast texts to your customer list for promotions and updates." },
+      { name: "Social Media Scheduler", desc: "Write and schedule posts for Facebook and Instagram. AI generates the captions." },
+      { name: "Review Manager", desc: "Google and Yelp reviews in one dashboard. AI drafts your responses." },
+    ],
+  },
+  {
+    category: "Customer Management",
+    items: [
+      { name: "Simple CRM", desc: "Contact list, notes, follow-up reminders, and a visual pipeline." },
+      { name: "Lead Capture Pipeline", desc: "Embeddable lead form connected to a kanban board — from inquiry to closed deal." },
+      { name: "Loyalty Program", desc: "Digital punch card with QR code check-ins. Reward your repeat customers." },
+    ],
+  },
+  {
+    category: "AI-Powered Tools",
+    items: [
+      { name: "AI Chatbot Widget", desc: "A chatbot on your website, trained on your business — answers questions 24/7." },
+      { name: "AI Content Generator", desc: "Blog posts, product descriptions, and bios written on demand." },
+      { name: "AI Caption Generator", desc: "Upload a photo, get five ready-to-post social media captions." },
+      { name: "AI FAQ Builder", desc: "Answer a few questions — get a complete FAQ page built automatically." },
+    ],
+  },
+  {
+    category: "Operations & Finance",
+    items: [
+      { name: "Online Estimating", desc: "Build job quotes with line items, labor, materials, and send them as shareable links." },
+      { name: "Online Invoicing", desc: "Create invoices and send payment links. Get paid faster via Stripe." },
+      { name: "Expense Tracker", desc: "Log expenses by category with monthly summaries and tax-ready reports." },
+      { name: "Inventory Tracker", desc: "Product list, stock levels, and low-stock alerts." },
+      { name: "Staff Scheduler", desc: "Shift management, availability tracking, and a simple rota view." },
+    ],
+  },
+];
+
+const PRICING = [
+  {
+    name: "Starter",
+    price: 75,
+    setup: 300,
+    tagline: "Get online and start getting found.",
+    features: [
+      "Business Website",
+      "AI Chatbot Widget",
+      "Contact / Lead Form",
+      "Google Analytics setup",
+      "Monthly content update",
+    ],
+    cta: "Start with Starter",
+    highlight: false,
+  },
+  {
+    name: "Growth",
+    price: 125,
+    setup: 400,
+    tagline: "Everything in Starter, plus bookings and marketing.",
+    features: [
+      "Everything in Starter",
+      "Appointment Booking",
+      "Email Newsletter",
+      "Social Media Scheduler",
+      "Review Manager",
+      "Lead Capture Pipeline",
+    ],
+    cta: "Get Growth",
+    highlight: true,
+  },
+  {
+    name: "Full Service",
+    price: 175,
+    setup: 500,
+    tagline: "Your complete digital operation — fully managed.",
+    features: [
+      "Everything in Growth",
+      "CRM & Estimating",
+      "Online Invoicing",
+      "AI Content Generator",
+      "SMS Campaigns",
+      "Loyalty Program",
+      "Priority support",
+    ],
+    cta: "Go Full Service",
+    highlight: false,
+  },
+];
+
+const FAQ = [
+  {
+    q: "How is this different from Wix or Squarespace?",
+    a: "Those are tools you manage yourself. I build it, maintain it, update it, and add AI capabilities those platforms don't offer — like a chatbot trained on your business, AI-generated social posts, and automated review responses. You focus on your business, I handle the tech.",
+  },
+  {
+    q: "Why is it cheaper than a typical agency?",
+    a: "Because I build modular, reusable systems — not one-off custom builds from scratch. I use AI tools throughout my workflow, which cuts hours without cutting quality. You get professional-grade work at a fraction of typical agency rates.",
+  },
+  {
+    q: "Do I own the website?",
+    a: "Yes. The site, content, and domain are yours. If you ever want to leave, I hand over everything — full source code, all assets. No hostage-taking.",
+  },
+  {
+    q: "What if I need something that's not on the list?",
+    a: "Ask. If it's in scope, I'll add it. If it's a bigger custom build, I'll quote it separately. Either way, you'll have a clear answer before any work starts.",
+  },
+  {
+    q: "What does the setup fee cover?",
+    a: "The initial build — getting your branding, colors, content, and settings configured. After that, the monthly retainer covers maintenance, updates, and support.",
+  },
+  {
+    q: "Can I start small and add more later?",
+    a: "Absolutely. Start with a website and chatbot. Add booking when you're ready. Scale at your own pace.",
+  },
+];
+
+export default function Home() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  return (
+    <div className="min-h-screen" style={{ background: "var(--color-warm-bg)" }}>
+
+      {/* Navigation */}
+      <nav style={{
+        position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
+        background: "rgba(15,13,11,0.92)", backdropFilter: "blur(12px)",
+        borderBottom: "1px solid var(--color-warm-border)",
+      }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px", height: "60px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <a href="#" style={{ fontSize: "17px", fontWeight: 700, color: "var(--color-warm-text)", textDecoration: "none", letterSpacing: "-0.01em" }}>
+            Purcell <span style={{ color: "var(--color-warm-accent)" }}>Ventures</span>
+          </a>
+          <div style={{ display: "flex", gap: "32px", alignItems: "center" }}>
+            <div style={{ display: "flex", gap: "28px" }} className="hidden-mobile">
+              {["Services", "Pricing", "How It Works", "Contact"].map((link) => (
+                <a key={link} href={`#${link.toLowerCase().replace(/ /g, "-")}`} style={{
+                  fontSize: "14px", color: "var(--color-warm-text-muted)",
+                  textDecoration: "none", transition: "color 0.2s",
+                }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-warm-text)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "var(--color-warm-text-muted)")}
+                >
+                  {link}
+                </a>
+              ))}
+            </div>
+            <a href="#contact" style={{
+              padding: "8px 18px", background: "var(--color-warm-accent)",
+              color: "var(--color-warm-bg)", fontSize: "13px", fontWeight: 600,
+              borderRadius: "6px", textDecoration: "none",
+            }}>
+              Get Started
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section style={{ padding: "140px 24px 100px", maxWidth: "1100px", margin: "0 auto" }}>
+        <p style={{ fontSize: "13px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "28px" }}>
+          Purcell Ventures — Digital Services
+        </p>
+        <h1 style={{
+          fontFamily: "'Cormorant Garamond', Georgia, serif",
+          fontSize: "clamp(48px, 7vw, 84px)", fontWeight: 700,
+          lineHeight: 1.05, letterSpacing: "-0.01em",
+          color: "var(--color-warm-text)", marginBottom: "28px", maxWidth: "820px",
+        }}>
+          Your entire online<br />
+          presence.{" "}
+          <span style={{ color: "var(--color-warm-accent)" }}>Handled.</span>
+        </h1>
+        <p style={{ fontSize: "18px", color: "var(--color-warm-text-muted)", maxWidth: "540px", lineHeight: 1.7, marginBottom: "44px" }}>
+          Websites, booking, CRM, chatbots, and more — custom-built
+          for your business and fully managed. Starting at $75/month.
+        </p>
+        <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
+          <a href="#contact" style={{
+            padding: "14px 32px", background: "var(--color-warm-accent)",
+            color: "var(--color-warm-bg)", fontSize: "15px", fontWeight: 700,
+            borderRadius: "8px", textDecoration: "none",
+          }}>
+            Book a Free Demo
+          </a>
+          <a href="#pricing" style={{
+            padding: "14px 28px", border: "1px solid var(--color-warm-border)",
+            color: "var(--color-warm-text-muted)", fontSize: "15px", fontWeight: 500,
+            borderRadius: "8px", textDecoration: "none",
+          }}>
+            See Pricing
+          </a>
+        </div>
+
+        {/* Stats */}
+        <div style={{ display: "flex", gap: "48px", marginTop: "72px", flexWrap: "wrap" }}>
+          {[
+            { n: "$75", label: "starting per month" },
+            { n: "20+", label: "tools available" },
+            { n: "AI", label: "built into every tool" },
+            { n: "24hr", label: "support response" },
+          ].map(({ n, label }) => (
+            <div key={label}>
+              <div style={{ fontSize: "28px", fontWeight: 800, color: "var(--color-warm-text)", letterSpacing: "-0.02em" }}>{n}</div>
+              <div style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", marginTop: "2px" }}>{label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section id="how-it-works" style={{ padding: "100px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+          <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px" }}>Process</p>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 700, letterSpacing: "-0.01em", marginBottom: "64px", maxWidth: "480px", lineHeight: 1.1 }}>
+            You run your business.<br />I handle the rest.
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "48px" }}>
+            {[
+              { n: "01", title: "Pick Your Tools", desc: "Choose which modules your business needs, or let me recommend a bundle based on what you're trying to accomplish." },
+              { n: "02", title: "I Build & Customize", desc: "I set everything up with your branding, content, and business info. You review and approve. Most builds are live within a week." },
+              { n: "03", title: "Subscribe & Grow", desc: "One monthly fee. I handle updates, maintenance, and support — permanently. Your digital presence stays current without you lifting a finger." },
+            ].map((step) => (
+              <div key={step.n}>
+                <div style={{ fontSize: "56px", fontWeight: 900, color: "var(--color-warm-border-light)", lineHeight: 1, marginBottom: "20px", letterSpacing: "-0.04em" }}>
+                  {step.n}
+                </div>
+                <h3 style={{ fontSize: "18px", fontWeight: 700, marginBottom: "10px" }}>{step.title}</h3>
+                <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.7 }}>{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section id="services" style={{ padding: "100px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+          <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px" }}>Tools</p>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 700, letterSpacing: "-0.01em", marginBottom: "64px", lineHeight: 1.1 }}>
+            20 tools. One partner.<br />Mix and match what you need.
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: "56px" }}>
+            {MODULES.map((group) => (
+              <div key={group.category}>
+                <p style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "20px", opacity: 0.8 }}>
+                  {group.category}
+                </p>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "1px", background: "var(--color-warm-border)" }}>
+                  {group.items.map((item) => (
+                    <div key={item.name} style={{
+                      background: "var(--color-warm-bg)", padding: "24px 28px",
+                      transition: "background 0.15s",
+                    }}
+                      onMouseEnter={(e) => (e.currentTarget.style.background = "var(--color-warm-card)")}
+                      onMouseLeave={(e) => (e.currentTarget.style.background = "var(--color-warm-bg)")}
+                    >
+                      <h4 style={{ fontSize: "15px", fontWeight: 600, marginBottom: "8px", color: "var(--color-warm-text)" }}>{item.name}</h4>
+                      <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section id="pricing" style={{ padding: "100px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+          <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px" }}>Pricing</p>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 700, letterSpacing: "-0.01em", marginBottom: "12px", lineHeight: 1.1 }}>
+            Flat monthly rate.<br />No surprises.
+          </h2>
+          <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", marginBottom: "56px" }}>
+            One-time setup fee, then a flat monthly rate. No contracts. Cancel anytime.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1px", background: "var(--color-warm-border)" }}>
+            {PRICING.map((plan) => (
+              <div key={plan.name} style={{
+                background: plan.highlight ? "var(--color-warm-accent)" : "var(--color-warm-card)",
+                padding: "40px 36px",
+                position: "relative",
+              }}>
+                {plan.highlight && (
+                  <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-bg)", background: "rgba(0,0,0,0.15)", display: "inline-block", padding: "3px 10px", borderRadius: "4px", marginBottom: "20px" }}>
+                    Most Popular
+                  </div>
+                )}
+                <p style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: plan.highlight ? "rgba(15,13,11,0.6)" : "var(--color-warm-accent)", marginBottom: "12px" }}>
+                  {plan.name}
+                </p>
+                <div style={{ display: "flex", alignItems: "flex-end", gap: "4px", marginBottom: "4px" }}>
+                  <span style={{ fontSize: "48px", fontWeight: 900, letterSpacing: "-0.04em", color: plan.highlight ? "#0f0d0b" : "var(--color-warm-text)", lineHeight: 1 }}>${plan.price}</span>
+                  <span style={{ fontSize: "14px", color: plan.highlight ? "rgba(15,13,11,0.6)" : "var(--color-warm-text-muted)", paddingBottom: "8px" }}>/mo</span>
+                </div>
+                <p style={{ fontSize: "13px", color: plan.highlight ? "rgba(15,13,11,0.55)" : "var(--color-warm-text-muted)", marginBottom: "24px" }}>
+                  + ${plan.setup} one-time setup
+                </p>
+                <p style={{ fontSize: "14px", color: plan.highlight ? "rgba(15,13,11,0.7)" : "var(--color-warm-text-muted)", marginBottom: "28px", lineHeight: 1.6 }}>
+                  {plan.tagline}
+                </p>
+                <ul style={{ listStyle: "none", padding: 0, marginBottom: "32px", display: "flex", flexDirection: "column", gap: "10px" }}>
+                  {plan.features.map((f) => (
+                    <li key={f} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "14px", color: plan.highlight ? "rgba(15,13,11,0.85)" : "var(--color-warm-text-muted)" }}>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ marginTop: "2px", flexShrink: 0 }}>
+                        <path d="M3 8l3.5 3.5L13 5" stroke={plan.highlight ? "#0f0d0b" : "var(--color-warm-accent)"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <a href="#contact" style={{
+                  display: "block", textAlign: "center",
+                  padding: "13px 24px",
+                  background: plan.highlight ? "#0f0d0b" : "var(--color-warm-accent)",
+                  color: plan.highlight ? "var(--color-warm-accent)" : "#0f0d0b",
+                  fontSize: "14px", fontWeight: 700, borderRadius: "6px",
+                  textDecoration: "none",
+                }}>
+                  {plan.cta}
+                </a>
+              </div>
+            ))}
+          </div>
+          <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", marginTop: "24px", textAlign: "center" }}>
+            Need a custom bundle? Just ask — I'll put together exactly what you need.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Purcell Ventures */}
+      <section style={{ padding: "100px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "start" }} className="grid-responsive">
+          <div>
+            <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px" }}>Why Me</p>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(30px, 3.5vw, 44px)", fontWeight: 700, letterSpacing: "-0.01em", marginBottom: "44px", lineHeight: 1.1 }}>
+              A local partner beats a national agency every time.
+            </h2>
+            <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
+              {[
+                { title: "You talk to the person who built it", desc: "No support tickets, no account managers, no runaround. You text or call me directly." },
+                { title: "AI built in from day one", desc: "A chatbot that knows your business, captions that sound like you, content that doesn't take hours to write." },
+                { title: "Cheaper than any agency. Better than DIY.", desc: "Agencies charge $2,000+/month. Wix can't do half of what I offer. You get professional tools at a price that makes sense." },
+                { title: "Everything is yours", desc: "The code, the domain, the content — all of it. You're not locked in. I hand it over the moment you ask." },
+              ].map((point) => (
+                <div key={point.title} style={{ paddingLeft: "20px", borderLeft: "2px solid var(--color-warm-border-light)" }}>
+                  <h4 style={{ fontSize: "15px", fontWeight: 600, marginBottom: "6px" }}>{point.title}</h4>
+                  <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.7 }}>{point.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div style={{ background: "var(--color-warm-card)", border: "1px solid var(--color-warm-border)", borderRadius: "12px", padding: "40px" }}>
+            <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "24px" }}>About Me</p>
+            <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.8, marginBottom: "20px" }}>
+              I'm Elijah Purcell — 18 years old, founded Purcell Ventures LLC, and heading to
+              the University of Alabama in fall 2026.
+            </p>
+            <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.8, marginBottom: "20px" }}>
+              I started this business running gutters, pressure washing, and lawn care —
+              so I understand what small businesses actually need. Not buzzwords. Real tools
+              that save time, bring in customers, and make the operation run smoother.
+            </p>
+            <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.8 }}>
+              I use the same AI development tools that engineers at top tech companies use —
+              which means you get professional-grade work, fast, at a price that makes sense
+              for a small business.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ROI Calculator */}
+      <ROICalculator />
+
+      {/* FAQ */}
+      <section style={{ padding: "100px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+          <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px" }}>FAQ</p>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 700, letterSpacing: "-0.01em", marginBottom: "56px", lineHeight: 1.1 }}>
+            Common questions.
+          </h2>
+          <div style={{ maxWidth: "720px", display: "flex", flexDirection: "column" }}>
+            {FAQ.map((item, i) => (
+              <div key={item.q} style={{ borderTop: "1px solid var(--color-warm-border)", padding: "20px 0" }}>
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  style={{
+                    display: "flex", justifyContent: "space-between", alignItems: "flex-start",
+                    width: "100%", background: "none", border: "none", cursor: "pointer",
+                    textAlign: "left", gap: "16px",
+                  }}
+                >
+                  <span style={{ fontSize: "15px", fontWeight: 600, color: "var(--color-warm-text)", lineHeight: 1.5 }}>{item.q}</span>
+                  <span style={{ fontSize: "20px", color: "var(--color-warm-accent)", flexShrink: 0, marginTop: "1px", transition: "transform 0.2s", display: "block", transform: openFaq === i ? "rotate(45deg)" : "rotate(0deg)" }}>+</span>
+                </button>
+                {openFaq === i && (
+                  <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.8, marginTop: "12px", paddingRight: "32px" }}>
+                    {item.a}
+                  </p>
+                )}
+              </div>
+            ))}
+            <div style={{ borderTop: "1px solid var(--color-warm-border)" }} />
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" style={{ padding: "100px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: "80px", alignItems: "start" }} className="grid-responsive">
+          <div>
+            <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px" }}>Contact</p>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(32px, 4vw, 52px)", fontWeight: 700, letterSpacing: "-0.01em", marginBottom: "20px", lineHeight: 1.05 }}>
+              Ready to talk?
+            </h2>
+            <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.8, marginBottom: "40px" }}>
+              Tell me about your business. I'll get back to you within 24 hours
+              with a recommendation and a quote. No pressure, no pitch deck.
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+              <a href="mailto:elijah@purcell-ventures.com" style={{ display: "flex", alignItems: "center", gap: "10px", color: "var(--color-warm-text-muted)", textDecoration: "none", fontSize: "14px" }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-warm-accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" />
+                </svg>
+                elijah@purcell-ventures.com
+              </a>
+              <span style={{ fontSize: "14px", color: "var(--color-warm-text-muted)" }}>
+                Based in Georgia — responds within 24 hours
+              </span>
+            </div>
+          </div>
+          <div style={{ background: "var(--color-warm-card)", border: "1px solid var(--color-warm-border)", borderRadius: "12px", padding: "40px" }}>
+            <form style={{ display: "flex", flexDirection: "column", gap: "20px" }} onSubmit={(e) => e.preventDefault()}>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+                {[
+                  { label: "Your name", placeholder: "Jane Smith" },
+                  { label: "Business name", placeholder: "Smith Salon" },
+                ].map(({ label, placeholder }) => (
+                  <div key={label}>
+                    <label style={{ display: "block", fontSize: "12px", fontWeight: 600, color: "var(--color-warm-text-muted)", marginBottom: "7px", letterSpacing: "0.04em" }}>{label}</label>
+                    <input type="text" placeholder={placeholder} style={{
+                      width: "100%", padding: "10px 14px",
+                      background: "var(--color-warm-bg)", border: "1px solid var(--color-warm-border)",
+                      borderRadius: "6px", color: "var(--color-warm-text)", fontSize: "14px", outline: "none",
+                    }} />
+                  </div>
+                ))}
+              </div>
+              <div>
+                <label style={{ display: "block", fontSize: "12px", fontWeight: 600, color: "var(--color-warm-text-muted)", marginBottom: "7px", letterSpacing: "0.04em" }}>Email or phone</label>
+                <input type="text" placeholder="jane@smithsalon.com or (770) 555-0100" style={{
+                  width: "100%", padding: "10px 14px",
+                  background: "var(--color-warm-bg)", border: "1px solid var(--color-warm-border)",
+                  borderRadius: "6px", color: "var(--color-warm-text)", fontSize: "14px", outline: "none",
+                }} />
+              </div>
+              <div>
+                <label style={{ display: "block", fontSize: "12px", fontWeight: 600, color: "var(--color-warm-text-muted)", marginBottom: "7px", letterSpacing: "0.04em" }}>What do you need?</label>
+                <textarea rows={4} placeholder="Tell me about your business and what you're trying to solve..." style={{
+                  width: "100%", padding: "10px 14px", resize: "none",
+                  background: "var(--color-warm-bg)", border: "1px solid var(--color-warm-border)",
+                  borderRadius: "6px", color: "var(--color-warm-text)", fontSize: "14px", outline: "none",
+                  fontFamily: "inherit",
+                }} />
+              </div>
+              <div>
+                <label style={{ display: "block", fontSize: "12px", fontWeight: 600, color: "var(--color-warm-text-muted)", marginBottom: "7px", letterSpacing: "0.04em" }}>Best fit?</label>
+                <select style={{
+                  width: "100%", padding: "10px 14px",
+                  background: "var(--color-warm-bg)", border: "1px solid var(--color-warm-border)",
+                  borderRadius: "6px", color: "var(--color-warm-text-muted)", fontSize: "14px", outline: "none",
+                }}>
+                  <option value="">Not sure — help me pick</option>
+                  <option value="starter">Starter ($75/mo) — Website + Chatbot</option>
+                  <option value="growth">Growth ($125/mo) — + Booking + Marketing</option>
+                  <option value="full">Full Service ($175/mo) — Everything</option>
+                  <option value="custom">Custom — I'll tell you what I need</option>
+                </select>
+              </div>
+              <button type="submit" style={{
+                padding: "13px 32px", background: "var(--color-warm-accent)",
+                color: "var(--color-warm-bg)", fontSize: "15px", fontWeight: 700,
+                border: "none", borderRadius: "6px", cursor: "pointer", alignSelf: "flex-start",
+              }}>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer style={{ padding: "28px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "16px", flexWrap: "wrap" }}>
+          <span style={{ fontSize: "14px", color: "var(--color-warm-text-muted)" }}>
+            <strong style={{ color: "var(--color-warm-text)" }}>Purcell Ventures LLC</strong> · Georgia · {new Date().getFullYear()}
+          </span>
+          <span style={{ fontSize: "13px", color: "var(--color-warm-text-light)" }}>purcellventures.co</span>
+        </div>
+      </footer>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .hidden-mobile { display: none !important; }
+          .grid-responsive { grid-template-columns: 1fr !important; gap: 40px !important; }
+        }
+      `}</style>
+    </div>
+  );
+}

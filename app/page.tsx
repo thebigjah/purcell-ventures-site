@@ -1,4 +1,44 @@
 "use client";
+import { PanopticonMark } from "@/app/components/PanopticonMark";
+
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does Purcell Ventures do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Purcell Ventures LLC is a Georgia-based multi-division company. We offer digital services for small businesses (websites, AI tools, CRM, booking from $75/mo), hands-on AI consulting and team training, custom software development (apps, platforms, AI integrations), and owner-operated field services (gutter cleaning, pressure washing, lawn care) in Metro Atlanta under the Purcell Works brand.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Who founded Purcell Ventures?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Purcell Ventures LLC was founded by Elijah Purcell, an entrepreneur and AI consultant based in Acworth, Georgia.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Where is Purcell Ventures based?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Purcell Ventures LLC is based in Acworth, Georgia. Digital services and AI consulting are available nationwide. Field services (Purcell Works) serve Metro Atlanta: Kennesaw, Marietta, Acworth, Canton, and Woodstock.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "How do I contact Purcell Ventures?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Contact Elijah Purcell directly at elijah@purcell-ventures.com or by phone at (770) 280-5319.",
+      },
+    },
+  ],
+};
 
 const DIVISIONS = [
   {
@@ -34,6 +74,7 @@ const DIVISIONS = [
 export default function Home() {
   return (
     <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", display: "flex", flexDirection: "column" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
 
       {/* Nav */}
       <nav style={{
@@ -43,9 +84,9 @@ export default function Home() {
         <span style={{ fontSize: "17px", fontWeight: 700, color: "var(--color-warm-text)", letterSpacing: "-0.01em" }}>
           Purcell <span style={{ color: "var(--color-warm-accent)" }}>Ventures</span>
         </span>
-        <a href="mailto:elijah@purcellventures.co" style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", textDecoration: "none" }}
+        <a href="mailto:elijah@purcell-ventures.com" style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", textDecoration: "none" }}
           className="hidden sm:block">
-          elijah@purcellventures.co
+          elijah@purcell-ventures.com
         </a>
       </nav>
 
@@ -55,27 +96,7 @@ export default function Home() {
 
         {/* Logo Mark */}
         <div style={{ display: "flex", justifyContent: "center", marginBottom: "48px" }}>
-          <div style={{
-            width: "120px", height: "120px", borderRadius: "50%",
-            border: "1.5px solid var(--color-warm-accent)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            position: "relative",
-          }}>
-            {/* Outer ring decoration */}
-            <div style={{
-              position: "absolute", inset: "8px", borderRadius: "50%",
-              border: "1px solid var(--color-warm-border)",
-            }} />
-            <span style={{
-              fontFamily: "'Cinzel', Georgia, serif",
-              fontSize: "32px", fontWeight: 700,
-              color: "var(--color-warm-accent)",
-              letterSpacing: "0.06em",
-              position: "relative",
-            }}>
-              PV
-            </span>
-          </div>
+          <PanopticonMark size={140} color="var(--color-warm-accent)" bg="#0c0a08" cfg={{ cellStyle: "outlined" }} />
         </div>
 
         {/* Eyebrow */}
@@ -159,9 +180,13 @@ export default function Home() {
       {/* Footer */}
       <footer style={{ padding: "24px", borderTop: "1px solid var(--color-warm-border)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
         <span style={{ fontSize: "13px", color: "var(--color-warm-text-light)" }}>
-          © {new Date().getFullYear()} Purcell Ventures LLC
+          © {new Date().getFullYear()} Purcell Ventures LLC · Acworth, Georgia
         </span>
-        <span style={{ fontSize: "13px", color: "var(--color-warm-text-light)" }}>Georgia</span>
+        <div style={{ display: "flex", gap: "20px" }}>
+          <a href="/about" style={{ fontSize: "13px", color: "var(--color-warm-text-light)", textDecoration: "none" }}>About</a>
+          <a href="/resume" style={{ fontSize: "13px", color: "var(--color-warm-text-light)", textDecoration: "none" }}>Resume</a>
+          <a href="mailto:elijah@purcell-ventures.com" style={{ fontSize: "13px", color: "var(--color-warm-text-light)", textDecoration: "none" }}>Contact</a>
+        </div>
       </footer>
     </div>
   );

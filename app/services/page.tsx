@@ -68,7 +68,7 @@ export default function ServicesPage() {
           Gutters, pressure washing, and lawn care — owner-operated. You deal directly with Elijah, not a dispatcher or a crew you've never met.
         </p>
         <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-          <a href="mailto:elijah@purcellventures.co?subject=Field Services Quote" style={{ padding: "14px 28px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "14px", fontWeight: 700, borderRadius: "6px", textDecoration: "none" }}>
+          <a href="mailto:elijah@purcell-ventures.com?subject=Field Services Quote" style={{ padding: "14px 28px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "14px", fontWeight: 700, borderRadius: "6px", textDecoration: "none" }}>
             Get a Free Quote
           </a>
           <a href="#services" style={{ padding: "14px 28px", background: "none", border: "1px solid var(--color-warm-border)", color: "var(--color-warm-text-muted)", fontSize: "14px", fontWeight: 600, borderRadius: "6px", textDecoration: "none" }}>
@@ -157,7 +157,7 @@ export default function ServicesPage() {
           </div>
           <div style={{ textAlign: "right" }}>
             <div style={{ fontSize: "12px", color: "var(--color-warm-text-light)", marginBottom: "4px" }}>Not sure if we cover your area?</div>
-            <a href="mailto:elijah@purcellventures.co" style={{ fontSize: "14px", fontWeight: 600, color: "var(--color-warm-accent)", textDecoration: "none" }}>Just ask →</a>
+            <a href="mailto:elijah@purcell-ventures.com" style={{ fontSize: "14px", fontWeight: 600, color: "var(--color-warm-accent)", textDecoration: "none" }}>Just ask →</a>
           </div>
         </div>
       </section>

@@ -118,11 +118,11 @@ const PRICING = [
 
 const FAQ = [
   { q: "Do I need any tech experience to benefit from this?", a: "No. Most sessions are designed for people who've never used AI tools before. I meet you where you are and build from there." },
-  { q: "What do participants need to bring?", a: "A laptop or tablet and a willingness to try things. I'll handle everything else — setup, demos, exercises, and a takeaway guide." },
-  { q: "Can you come to our location?", a: "Yes. I come to you — your office, your team, your environment. That context makes the session more relevant and the examples more useful." },
-  { q: "What's the difference between this and just using ChatGPT on my own?", a: "Most people use about 10% of what AI tools can do. I show you the other 90% — the prompting techniques, the integrations, the specific workflows that actually save time in your type of business." },
-  { q: "Will this lead to a sales pitch for your other services?", a: "Only if it makes sense. Consulting is its own thing. If I see something in your business that I could build for you, I'll mention it — but there's no pressure and no upsell baked into the session." },
-  { q: "How far in advance do I need to book?", a: "Typically 1–2 weeks for standard sessions. Custom trainings need more prep time — reach out as early as you can." },
+  { q: "What do participants need to bring?", a: "A laptop or tablet and a willingness to try things. I'll handle everything else: setup, demos, exercises, and a takeaway guide." },
+  { q: "Can you come to our location?", a: "Yes. I come to you. Your office, your team, your environment. That context makes the session more relevant and the examples more useful." },
+  { q: "What's the difference between this and just using ChatGPT on my own?", a: "Most people use about 10% of what AI tools can do. I show you the other 90%: the prompting techniques, the integrations, the specific workflows that actually save time in your type of business." },
+  { q: "Will this lead to a sales pitch for your other services?", a: "Only if it makes sense. Consulting is its own thing. If I see something in your business that I could build for you, I'll mention it. No pressure, no upsell baked into the session." },
+  { q: "How far in advance do I need to book?", a: "Typically 1–2 weeks for standard sessions. Custom trainings need more prep time. Reach out as early as you can." },
 ];
 
 export default function ConsultingPage() {
@@ -149,7 +149,7 @@ export default function ConsultingPage() {
           <div style={{ display: "flex", gap: "24px", alignItems: "center" }}>
             <a href="#sessions" style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", textDecoration: "none" }}>Sessions</a>
             <a href="#pricing" style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", textDecoration: "none" }}>Pricing</a>
-            <a href="#contact" style={{ padding: "8px 18px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "13px", fontWeight: 600, borderRadius: "6px", textDecoration: "none" }}>
+            <a href="/consulting/book" style={{ padding: "8px 18px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "13px", fontWeight: 600, borderRadius: "6px", textDecoration: "none" }}>
               Book a Session
             </a>
           </div>
@@ -172,10 +172,10 @@ export default function ConsultingPage() {
           <span style={{ color: "var(--color-warm-accent)" }}>twice the work in half the time.</span>
         </h1>
         <p style={{ fontSize: "17px", color: "var(--color-warm-text-muted)", maxWidth: "580px", lineHeight: 1.8, marginBottom: "40px" }}>
-          I come to your business and teach your team how to actually use AI — hands-on, practical, and tailored to what you do. Not theory. Real tools, real results, same day.
+          I come to your business and teach your team how to actually use AI. Hands-on, practical, and tailored to what you do. Not theory. Real tools, real results, same day.
         </p>
         <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginBottom: "72px" }}>
-          <a href="#contact" style={{ padding: "14px 32px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "14px", fontWeight: 700, borderRadius: "7px", textDecoration: "none" }}>
+          <a href="/consulting/book" style={{ padding: "14px 32px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "14px", fontWeight: 700, borderRadius: "7px", textDecoration: "none" }}>
             Book a Session
           </a>
           <a href="#sessions" style={{ padding: "14px 24px", border: "1px solid var(--color-warm-border)", color: "var(--color-warm-text-muted)", fontSize: "14px", fontWeight: 500, borderRadius: "7px", textDecoration: "none" }}>
@@ -204,12 +204,12 @@ export default function ConsultingPage() {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px" }}>Who Books This</p>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(24px, 3.5vw, 40px)", fontWeight: 700, marginBottom: "48px", lineHeight: 1.1 }}>
-            If AI feels like something you're<br />supposed to understand but don't — this is for you.
+            If AI feels like something you're<br />supposed to understand but don't. This is for you.
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1px", background: "var(--color-warm-border)" }}>
             {[
               { who: "Small Business Owners", desc: "You run a tight operation. An hour a day saved on admin, emails, and content is worth thousands of dollars a year." },
-              { who: "Office & Operations Teams", desc: "Your team does repetitive digital work. There are tools that do most of it automatically — you just haven't learned them yet." },
+              { who: "Office & Operations Teams", desc: "Your team does repetitive digital work. There are tools that do most of it automatically. You just haven't learned them yet." },
               { who: "Marketing Departments", desc: "Content takes forever. AI cuts production time by 60–80% without cutting quality. Let me show you how." },
               { who: "Any Team Feeling Behind", desc: "The businesses that figure out AI now will be ahead for years. The ones that wait will spend years catching up." },
             ].map((item) => (
@@ -275,7 +275,7 @@ export default function ConsultingPage() {
                           <div style={{ fontSize: "11px", color: "var(--color-warm-text-muted)", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "6px" }}>Group size</div>
                           <div style={{ fontSize: "14px", color: "var(--color-warm-text)" }}>{s.groupSize}</div>
                         </div>
-                        <a href="#contact" style={{ padding: "12px 20px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "14px", fontWeight: 700, borderRadius: "7px", textDecoration: "none", textAlign: "center" }}>
+                        <a href="/consulting/book" style={{ padding: "12px 20px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "14px", fontWeight: 700, borderRadius: "7px", textDecoration: "none", textAlign: "center" }}>
                           Book This Session →
                         </a>
                       </div>
@@ -321,7 +321,7 @@ export default function ConsultingPage() {
           <div style={{ marginTop: "24px", padding: "20px 24px", background: "var(--color-warm-card)", border: "1px solid var(--color-warm-border)", borderRadius: "8px", display: "flex", gap: "16px", alignItems: "center" }}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-warm-accent)" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
             <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>
-              Not sure what you need? <a href="#contact" style={{ color: "var(--color-warm-accent)", textDecoration: "none", fontWeight: 600 }}>Send me a message</a> — I'll ask a few questions and tell you exactly which session makes sense.
+              Not sure what you need? <a href="#contact" style={{ color: "var(--color-warm-accent)", textDecoration: "none", fontWeight: 600 }}>Send me a message.</a> I'll ask a few questions and tell you exactly which session makes sense.
             </p>
           </div>
         </div>
@@ -339,7 +339,7 @@ export default function ConsultingPage() {
               { step: "01", title: "Quick Call", desc: "We talk for 15 minutes. You tell me about your business, your team, and your biggest time-wasters. I tell you which session fits and what I'll customize." },
               { step: "02", title: "I Build Your Session", desc: "I take what I learned and build the presentation around your tools, your workflows, and your industry. You get a tailored session, not a template." },
               { step: "03", title: "We Run It", desc: "I come to you. Live demos, hands-on exercises, real questions. Every participant gets a takeaway guide they can use immediately after." },
-              { step: "04", title: "Follow-Up", desc: "After the session I send a resource package — key tools, prompts, and next steps specific to what we covered. Plus I'm reachable if questions come up." },
+              { step: "04", title: "Follow-Up", desc: "After the session I send a resource package: key tools, prompts, and next steps specific to what we covered. Plus I'm reachable if questions come up." },
             ].map((item) => (
               <div key={item.step} style={{ paddingLeft: "20px", borderLeft: "2px solid var(--color-warm-border-light)" }}>
                 <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", color: "var(--color-warm-accent)", marginBottom: "10px" }}>{item.step}</div>
@@ -380,10 +380,10 @@ export default function ConsultingPage() {
           <p style={{ fontSize: "16px", color: "var(--color-warm-text-muted)", lineHeight: 1.8, marginBottom: "40px" }}>
             Tell me about your team and I'll come back with a specific session recommendation and a quote within 24 hours.
           </p>
-          <a href="mailto:elijah@purcellventures.co?subject=Consulting Session Inquiry" style={{ display: "inline-block", padding: "16px 40px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "16px", fontWeight: 700, borderRadius: "8px", textDecoration: "none", marginBottom: "16px" }}>
+          <a href="mailto:elijah@purcell-ventures.com?subject=Consulting Session Inquiry" style={{ display: "inline-block", padding: "16px 40px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "16px", fontWeight: 700, borderRadius: "8px", textDecoration: "none", marginBottom: "16px" }}>
             Email Elijah Directly →
           </a>
-          <div style={{ fontSize: "13px", color: "var(--color-warm-text-light)" }}>elijah@purcellventures.co · (770) 280-5319 · Response within 24 hours</div>
+          <div style={{ fontSize: "13px", color: "var(--color-warm-text-light)" }}>elijah@purcell-ventures.com · (770) 280-5319 · Response within 24 hours</div>
         </div>
       </section>
 

@@ -102,7 +102,7 @@ export default function SoftwarePage() {
           I build mobile apps, web platforms, and AI-powered tools. Fast turnaround, transparent pricing, and I stay involved after launch.
         </p>
         <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-          <a href="mailto:elijah@purcellventures.co?subject=Software Project Inquiry" style={{ padding: "14px 28px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "14px", fontWeight: 700, borderRadius: "6px", textDecoration: "none" }}>
+          <a href="mailto:elijah@purcell-ventures.com?subject=Software Project Inquiry" style={{ padding: "14px 28px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "14px", fontWeight: 700, borderRadius: "6px", textDecoration: "none" }}>
             Start a Project
           </a>
           <a href="#work" style={{ padding: "14px 28px", background: "none", border: "1px solid var(--color-warm-border)", color: "var(--color-warm-text-muted)", fontSize: "14px", fontWeight: 600, borderRadius: "6px", textDecoration: "none" }}>
@@ -211,7 +211,7 @@ export default function SoftwarePage() {
         <p style={{ fontSize: "16px", color: "var(--color-warm-text-muted)", marginBottom: "32px" }}>
           Tell me what you're trying to build. I'll tell you if I can help and what it takes.
         </p>
-        <a href="mailto:elijah@purcellventures.co?subject=Software Project Inquiry" style={{ padding: "16px 36px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "15px", fontWeight: 700, borderRadius: "6px", textDecoration: "none" }}>
+        <a href="mailto:elijah@purcell-ventures.com?subject=Software Project Inquiry" style={{ padding: "16px 36px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "15px", fontWeight: 700, borderRadius: "6px", textDecoration: "none" }}>
           Email Elijah →
         </a>
       </section>

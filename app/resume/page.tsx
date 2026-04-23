@@ -43,6 +43,26 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   );
 }
 
+function SubSection({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div style={{ marginBottom: "1.25rem" }}>
+      <div style={{
+        fontSize: "11px",
+        fontWeight: 700,
+        letterSpacing: "0.1em",
+        textTransform: "uppercase",
+        color: SA.textMuted,
+        marginBottom: "0.6rem",
+        paddingBottom: "3px",
+        borderBottom: `1px solid ${SA.border}`,
+      }}>
+        {title}
+      </div>
+      {children}
+    </div>
+  );
+}
+
 function Row({ left, right, sub, note }: { left: string; right?: string; sub?: string; note?: string }) {
   return (
     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "0.85rem", gap: "12px" }}>
@@ -98,6 +118,31 @@ function ScholarCard({ school, amount, note }: { school: string; amount: string;
   );
 }
 
+function ImpactCard({ year, location, org, bullets }: { year: string; location: string; org: string; bullets: string[] }) {
+  return (
+    <div style={{
+      padding: "12px 14px",
+      background: SA.card,
+      border: `1px solid ${SA.border}`,
+      borderRadius: "6px",
+      marginBottom: "10px",
+    }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "6px" }}>
+        <div>
+          <span style={{ fontWeight: 700, fontSize: "13px", color: SA.text }}>{location}</span>
+          <span style={{ fontSize: "12px", color: SA.textMuted, marginLeft: "8px" }}>{org}</span>
+        </div>
+        <span style={{ fontSize: "12px", color: SA.textMuted, whiteSpace: "nowrap" }}>{year}</span>
+      </div>
+      <ul style={{ margin: 0, paddingLeft: "16px" }}>
+        {bullets.map((b, i) => (
+          <li key={i} style={{ fontSize: "12px", color: SA.textMuted, lineHeight: 1.5, marginBottom: "2px" }}>{b}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 export default function ResumePage() {
   return (
     <div style={{ background: SA.bg, minHeight: "100vh", fontFamily: "'Inter', sans-serif" }}>
@@ -126,6 +171,7 @@ export default function ResumePage() {
             {[
               { label: "Email", val: "elijahpurcell@gmail.com", href: "mailto:elijahpurcell@gmail.com" },
               { label: "Business", val: "purcellventures.co", href: "https://purcellventures.co" },
+              { label: "Full Resume (PDF)", val: "purcellventures.co/resume/print", href: "/resume/print" },
             ].map(({ label, val, href }) => (
               <span key={label} style={{ color: "#c4a890" }}>
                 <span style={{ opacity: 0.6, marginRight: "4px" }}>{label}:</span>
@@ -138,8 +184,8 @@ export default function ResumePage() {
             {[
               { val: "3.92", label: "GPA (weighted)" },
               { val: "1440", label: "SAT Score" },
-              { val: "19+", label: "College Acceptances" },
-              { val: "$280k+/yr", label: "Merit Scholarships" },
+              { val: "34", label: "College Acceptances" },
+              { val: "$520k+/yr", label: "Merit Scholarships" },
             ].map(({ val, label }) => (
               <div key={label} style={{ textAlign: "center" }}>
                 <div style={{ fontFamily: "'Cinzel', serif", fontSize: "22px", fontWeight: 700, color: "#e8c96a" }}>{val}</div>
@@ -156,10 +202,21 @@ export default function ResumePage() {
         {/* Education */}
         <Section title="Education">
           <Row
-            left="Cornerstone Preparatory Academy"
-            right="2022 – 2026"
-            sub="High School Diploma · GPA: 3.92 (weighted) · SAT: 1440"
-            note="Course highlights: AP-level coursework, College-Level Worldview Seminar (invited, Summer 2023), 3 years Spanish"
+            left="Grove Christian School — Midlothian, VA"
+            right="2022 – 2024"
+            sub="9th Grade – Mid 10th Grade · Beta Club · Honors courses"
+            note="Awards: Behold (9th) · Steadfast (10th) · Christ-like Leadership Award (Sports Banquet) · Lead in Christmas Musical"
+          />
+          <Row
+            left="Cornerstone Preparatory Academy — Acworth, GA"
+            right="2024 – 2026"
+            sub="Mid 10th Grade – 12th Grade · GPA: 3.92 (weighted) · SAT: 1440 · Beta Club"
+            note="Course highlights: 3 years Spanish · AP-level coursework · College-Level Worldview & Apologetics"
+          />
+          <Row
+            left="Lee University — Summer Honors Program"
+            right="Summer 2025"
+            sub="Cryptography & Social Media · 6 College Credit Hours earned"
           />
           <Row
             left="The University of Alabama — Honors College"
@@ -172,9 +229,29 @@ export default function ResumePage() {
         {/* Awards & Honors */}
         <Section title="Awards & Honors">
           <Row
+            left="Behold Award"
+            right="9th Grade · Grove Christian School"
+            sub="Character and excellence recognition awarded to select students for demonstrated moral integrity and spiritual maturity."
+          />
+          <Row
+            left="Steadfast Award"
+            right="10th Grade · Grove Christian School"
+            sub="Recognition for consistent perseverance, faithfulness, and character under pressure."
+          />
+          <Row
             left="Christian Character Award"
-            right="9th Grade"
+            right="Cornerstone Prep"
             sub="Selected as one of two students school-wide (one male, one female) for moral excellence, integrity, and leadership."
+          />
+          <Row
+            left="Christ-like Leadership Award"
+            right="Grove Christian School · Sports Banquet"
+            sub="Awarded at the annual athletics banquet for embodying servant leadership and Christian character in competitive sport."
+          />
+          <Row
+            left="Lead Role — Christmas Musical"
+            right="Grove Christian School"
+            sub="Selected for the lead acting and vocal role in the school's annual Christmas production."
           />
           <Row
             left="Highest Math Grade in Class"
@@ -182,9 +259,9 @@ export default function ResumePage() {
             sub="Earned 100% both semesters — top math average in the class."
           />
           <Row
-            left="College-Level Worldview Seminar — Invited Participant"
-            right="Summer 2023"
-            sub="Accelerated seminar led by school principal on cultural and worldview analysis; college-level critical reading and analytical writing."
+            left="Family Foundation & Colson Center — Youth Leadership Summit"
+            right="Summer 2023 · Richmond, VA"
+            sub="Competitive invitation-only summit. Advanced seminar on worldview, cultural analysis, and Christian civic leadership. College-level critical reading and analytical writing."
           />
           <Row
             left="University of Alabama — Honors College Admission"
@@ -206,31 +283,41 @@ export default function ResumePage() {
           <ScholarCard school="Susquehanna University" amount="$48,000/yr" note="Merit Scholarship" />
           <ScholarCard school="Drake University" amount="$31,000/yr" note="Merit Scholarship" />
           <ScholarCard school="Hood College" amount="$31,000/yr" note="Presidential Scholarship" />
-          <ScholarCard school="Francis Marion University" amount="$28,000/yr" note="Niche Direct Merit" />
+          <ScholarCard school="Transylvania University" amount="$30,000/yr" note="Merit Scholarship" />
           <ScholarCard school="The University of Alabama" amount="$28,000/yr" note="Presidential Merit (enrolled)" />
+          <ScholarCard school="Bradley University" amount="$28,000/yr" note="Presidential Scholarship (confirmed)" />
+          <ScholarCard school="Presbyterian College" amount="$28,000/yr" note="Highlander Scholarship (confirmed)" />
+          <ScholarCard school="Cedarville University" amount="$22,000/yr" note="Merit Scholarship" />
+          <ScholarCard school="Berry College" amount="$20,000/yr" note="Merit Scholarship, renewable" />
           <ScholarCard school="Oral Roberts University" amount="$24,000/yr" note="Merit Scholarship" />
+          <ScholarCard school="Lenoir-Rhyne University" amount="$26,000/yr" note="Niche Direct Merit" />
+          <ScholarCard school="Nazareth University" amount="$25,000/yr" note="Presidential Scholarship" />
           <ScholarCard school="Palm Beach Atlantic University" amount="$21,000/yr" note="Merit Scholarship" />
           <ScholarCard school="Charleston Southern University" amount="$17,000/yr" note="Merit Scholarship" />
+          <ScholarCard school="Mississippi College" amount="$14,500/yr" note="Academic Merit Scholarship" />
+          <ScholarCard school="Hartwick College" amount="$10,000/yr" note="Flight Path Scholarship" />
+          <ScholarCard school="Francis Marion University" amount="$10,884/yr" note="Niche Direct Merit" />
           <ScholarCard school="Rider University" amount="$3,000/yr" note="Merit Scholarship" />
+          <ScholarCard school="Valparaiso University" amount="$28,000/yr" note="Merit Scholarship" />
           <ScholarCard school="Georgia State University" amount="$1,060/yr" note="Merit + Honors College" />
           <div style={{
             display: "flex", justifyContent: "space-between", padding: "10px 12px",
             background: SA.text, borderRadius: "6px", marginTop: "10px",
           }}>
             <span style={{ fontWeight: 700, fontSize: "13px", color: "#f5ede0" }}>Total (confirmed offers)</span>
-            <span style={{ fontWeight: 700, fontSize: "14px", color: "#e8c96a" }}>$280,060 / year</span>
+            <span style={{ fontWeight: 700, fontSize: "14px", color: "#e8c96a" }}>$520,444 / year</span>
           </div>
           <p style={{ fontSize: "11px", color: SA.textLight, marginTop: "8px" }}>
-            19+ acceptances as of March 2026. Additional decisions still pending.
+            34 acceptances. Enrolled at University of Alabama.
           </p>
         </Section>
 
         {/* Work & Entrepreneurship */}
         <Section title="Work Experience & Entrepreneurship">
           <Row
-            left="Founder & CEO — Purcell Ventures LLC (formerly Zultar LLC)"
+            left="Founder & CEO — Purcell Ventures LLC"
             right="2023 – Present"
-            sub="Software development, AI integration, and digital marketing. Built React Native apps, web platforms, Chrome extensions, and AI pipelines. Lead service business and wholesale real estate divisions."
+            sub="Software development, AI integration, and digital marketing. Built React Native apps, web platforms, Chrome extensions, and AI pipelines. Leads service business and wholesale real estate divisions."
             note="Client work deployed to production. Generates active revenue."
           />
           <Row
@@ -246,37 +333,90 @@ export default function ResumePage() {
           <Row
             left="Team Member — Chick-fil-A"
             right="10th Grade (6 months)"
-            sub="Front-line customer service in a high-volume fast food environment. Built discipline, teamwork, and customer communication skills."
+            sub="Front-line customer service in a high-volume environment. Built discipline, teamwork, and communication skills."
           />
         </Section>
 
         {/* Leadership */}
         <Section title="Leadership & Ministry">
+          <SubSection title="School & Organizational Leadership">
+            <Row
+              left="Founder & Leader — Mighty Men (Men's Bible Study)"
+              right="9th – 12th Grade"
+              sub="Founded and leads the school's men's discipleship group. Plans and facilitates weekly 2-hour discussions, mentors peers, creates lesson materials, and supports spiritual formation."
+            />
+            <Row
+              left="Head Chaplain"
+              right="9th Spring – 10th Fall"
+              sub="Organized school chapel services, coordinated worship teams, and led school-wide spiritual programming. Weekly rehearsals and Friday performances."
+            />
+            <Row
+              left="Worship Team — Lead Vocalist"
+              right="9th – 12th Grade"
+              sub="Lead vocalist at school chapel and church services. Bass-baritone, range C1–F5. Rehearsals 2–3×/week."
+            />
+            <Row
+              left="Youth Group Leader & Summer Camp Counselor"
+              right="Ongoing"
+              sub="Mentors younger students at church, leads group discussions, and staffs week-long summer camp annually."
+            />
+            <Row
+              left="Peer Tutor (Math & English)"
+              right="10th – 12th Grade"
+              sub="One-on-one academic support for classmates. Improved peers' grades through structured review sessions."
+            />
+          </SubSection>
+
+          <SubSection title="IMPACT Mission Trips">
+            <ImpactCard
+              year="Sophomore Year"
+              location="North Carolina"
+              org="Praying Pelican Missions"
+              bullets={[
+                "Organized and participated in a regional food drive serving underserved communities.",
+                "Constructed a full floor and ADA-compliant accessibility ramp for an elderly couple's home after the husband became disabled.",
+                "Led prayer and worship sessions throughout the week-long trip.",
+              ]}
+            />
+            <ImpactCard
+              year="Junior Year"
+              location="Bahamas"
+              org="Christian Education Relief"
+              bullets={[
+                "Helped rebuild a Christian education camp looted and destroyed during the COVID-19 pandemic.",
+                "Coordinated the movement and organization of heavy materials and equipment across the campus.",
+                "Co-led the renovation of a decommissioned bus into a mobile walking classroom for the camp.",
+              ]}
+            />
+            <ImpactCard
+              year="Senior Year"
+              location="Hawaii"
+              org="Disaster Relief · March 2026"
+              bullets={[
+                "Deploying to provide disaster relief following the severe flooding that impacted Hawaii in early 2026.",
+                "Serving in construction support, community aid, and worship/prayer leadership.",
+              ]}
+            />
+          </SubSection>
+        </Section>
+
+        {/* Community Service */}
+        <Section title="Community Service & Volunteer Work">
           <Row
-            left="Men's Bible Study Leader"
-            right="9th – 12th Grade"
-            sub="Plans and facilitates weekly 2-hour discussions. Mentors peers, creates lesson materials, and supports spiritual development."
+            left="MUST Ministries — Food Collection"
+            sub="Organized and participated in food drives benefiting MUST Ministries, a nonprofit providing hunger relief, shelter, and support services to families in need across greater Atlanta."
           />
           <Row
-            left="Head Chaplain"
-            right="9th Spring – 10th Fall"
-            sub="Organized school chapel services, coordinated worship teams, and led school-wide spiritual programming. Weekly rehearsals and Friday performances."
+            left="Children's Ministry — Church Volunteer"
+            sub="Serves regularly in the kids ministry program at Riverstone Church — teaching, mentoring, and leading activities for elementary-age children."
           />
           <Row
-            left="Worship Team — Vocalist"
-            right="9th – 12th Grade"
-            sub="Lead vocalist at school chapel and church services. Bass-baritone, range C1–F5. Rehearsals 2–3×/week."
+            left="Community Cleanup — Environmental Service"
+            sub="Volunteer park and neighborhood cleanup efforts. Ongoing participation in local environmental stewardship."
           />
-          <Row
-            left="Youth Group Leader & Summer Camp Counselor"
-            right="Ongoing"
-            sub="Mentors younger students at church, helps lead group discussions, and staffs week-long summer camp annually. 200+ volunteer hours."
-          />
-          <Row
-            left="Peer Tutor (Math & English)"
-            right="10th – 12th Grade"
-            sub="One-on-one academic support for classmates. Improved peers' grades through structured review sessions."
-          />
+          <p style={{ fontSize: "12px", color: SA.textLight, marginTop: "4px", fontStyle: "italic" }}>
+            200+ cumulative volunteer hours across ministry, mission, and community service.
+          </p>
         </Section>
 
         {/* Athletics */}
@@ -294,27 +434,39 @@ export default function ResumePage() {
           <Row
             left="Weightlifting"
             right="Ongoing"
-            sub="Scientific hypertrophy-focused training program."
+            sub="Scientific hypertrophy-focused training program. Consistent multi-year commitment."
           />
         </Section>
 
         {/* Clubs */}
         <Section title="Clubs & Organizations">
-          <div style={{ display: "flex", flexWrap: "wrap", marginBottom: "8px" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", marginBottom: "12px" }}>
             {[
-              "Med Club",
-              "Spanish Club (3 yrs)",
+              "Beta Club (Grove & CPA)",
               "Apologetics & Debate Team",
+              "Spanish Club (3 yrs)",
+              "Club Med",
+              "Creative Writing / Writer's Guild",
               "Curious Conversations",
               "Animal Ambassadors",
-              "Mighty Men (Men's Bible)",
-              "NFL Fantasy League",
+              "Senior Devotional",
+              "Mighty Men (Founder & Leader)",
             ].map(c => <AwardBadge key={c} text={c} />)}
           </div>
           <Row
-            left="Apologetics & Debate"
+            left="Apologetics & Debate Team"
             right="9th – 12th Grade"
             sub="Engaged in formal and informal theological debate with teachers and peers. Contributed to school-wide theological discussion. 5–10 hrs/week."
+          />
+          <Row
+            left="Creative Writing / Writer's Guild"
+            right="11th Grade"
+            sub="Workshop-style group focused on original fiction, poetry, and narrative craft. Produced original poetry, fiction drafts, and personal essays."
+          />
+          <Row
+            left="Beta Club"
+            right="Grove & Cornerstone"
+            sub="National honor society recognizing academic achievement, character, leadership, and service."
           />
         </Section>
 
@@ -326,6 +478,11 @@ export default function ResumePage() {
             sub="Range C1–F5. Lead worship vocalist at school and church. Active in performance and rehearsal consistently since 9th grade."
           />
           <Row
+            left="Lead Actor — Christmas Musical"
+            right="Grove Christian School"
+            sub="Selected for the lead role in the school's annual Christmas production. Combined vocal performance with acting and stage presence."
+          />
+          <Row
             left="Poetry & Creative Writing"
             right="Ongoing"
             sub='Original works include "The Husks the Swine Did Eat," "Injustice Scorned," "The Rebuking of Loki," fiction novel drafts, and personal essays. Writes across 8 distinct styles.'
@@ -333,7 +490,7 @@ export default function ResumePage() {
           <Row
             left="Content Creation — YouTube & Social Media"
             right="2023 – Present"
-            sub="Scripts, films, and edits commentary content on psychology, faith, and culture. YouTube channel with 2,800+ subscribers (gaming-origin, transitioning to intellectual commentary)."
+            sub="Scripts, films, and edits commentary content on psychology, faith, and culture. YouTube channel with 2,800+ subscribers transitioning to intellectual commentary."
           />
           <Row
             left="Photography, Videography & Graphic Design"
@@ -366,17 +523,12 @@ export default function ResumePage() {
         {/* Faith & Service */}
         <Section title="Faith & Community Service">
           <Row
-            left="Church Involvement — Riverstone / Local Church"
+            left="Church Involvement — Riverstone Church"
             right="Ongoing"
             sub="Sunday service (11am), youth group (5–7pm), and Wednesday Bible study (7–9pm) every week. Active participant since childhood; baptized at 15."
           />
           <Row
-            left="Summer Mission Trip"
-            right="Annual"
-            sub="Week-long mission camp each summer. 200+ total volunteer hours across youth ministry, outreach, and service events."
-          />
-          <Row
-            left="Apologetics Study"
+            left="Apologetics & Theology Study"
             right="Ongoing"
             sub="Independently studying William Lane Craig, Sean McDowell, C.S. Lewis, A.W. Tozer, hermeneutics, and philosophy of religion."
           />
@@ -404,7 +556,7 @@ export default function ResumePage() {
           </div>
           <div style={{ fontSize: "12px", color: SA.textLight }}>
             <a href="https://purcellventures.co" style={{ color: SA.accentLight, textDecoration: "none" }}>purcellventures.co</a>
-            {" "}&nbsp;·&nbsp; Updated March 2026
+            {" "}&nbsp;·&nbsp; Updated April 2026
           </div>
         </div>
 

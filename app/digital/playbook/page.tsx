@@ -166,7 +166,7 @@ See the full breakdown at purcellventures.co/digital
 Want to hop on a 15-minute call to go over it?
 
 — Elijah Purcell | Purcell Ventures LLC
-elijah@purcellventures.co`;
+elijah@purcell-ventures.com`;
 }
 
 function generateSummary(v: Visit): string {
@@ -458,8 +458,8 @@ export default function PlaybookPage() {
             {[
               { label: "Day 1 — Text/Email after a walk-in", color: "#7aaa6a", script: `Hey [Name], it's Elijah — I stopped by [Business] earlier today. Wanted to send over what I mentioned: purcellventures.co/digital\n\nBased on what you told me, I think [specific tool] would make the biggest difference for you. Happy to put together a quick overview with pricing if you want to take a look. No pressure either way.\n\n— Elijah Purcell | Purcell Ventures`, note: "Keep it short. Reference something specific from the conversation. Link directly to the digital page." },
               { label: "Day 3 — If no response", color: "#d4af37", script: `Hey [Name], just circling back. I know you're busy — wanted to leave the door open if you had any questions about what I mentioned.\n\nIf the timing's not right, totally understand. But if you want me to put together a custom quote for [Business], I'm happy to do that. Takes me about 10 minutes.\n\n— Elijah`, note: "One more touch. If they don't reply after this, let them go. Don't spam." },
-              { label: "Day 7 — Final follow-up", color: "#e8a030", script: `Hey [Name] — last message, I promise. If you ever want to revisit the online presence stuff for [Business], I'm at elijah@purcellventures.co.\n\nI do good work and I'm local. Whenever the time is right.\n\n— Elijah`, note: "Leave it warm. Say 'last message' — it's honest and it actually gets replies." },
-              { label: "Warm Lead — Custom Proposal Email", color: "#9b7fd4", script: `Hey [Name],\n\nGood talking to you. Based on what you shared, here's what I'd recommend for [Business]:\n\n• [Tool 1] — [one line on why it fits them]\n• [Tool 2] — [one line on why it fits them]\n• [Tool 3] — [one line on why it fits them]\n\nTotal: $[X] setup + $[Y]/month after that.\n\nThat includes me building it, maintaining it, and being reachable when you need something. Full pricing at purcellventures.co/digital.\n\nWant to hop on a 15-minute call to go over it?\n\n— Elijah Purcell | Purcell Ventures LLC\nelijah@purcellventures.co`, note: "Always send a written proposal to warm leads. It makes you look professional and gives them something to share with a spouse/partner." },
+              { label: "Day 7 — Final follow-up", color: "#e8a030", script: `Hey [Name] — last message, I promise. If you ever want to revisit the online presence stuff for [Business], I'm at elijah@purcell-ventures.com.\n\nI do good work and I'm local. Whenever the time is right.\n\n— Elijah`, note: "Leave it warm. Say 'last message' — it's honest and it actually gets replies." },
+              { label: "Warm Lead — Custom Proposal Email", color: "#9b7fd4", script: `Hey [Name],\n\nGood talking to you. Based on what you shared, here's what I'd recommend for [Business]:\n\n• [Tool 1] — [one line on why it fits them]\n• [Tool 2] — [one line on why it fits them]\n• [Tool 3] — [one line on why it fits them]\n\nTotal: $[X] setup + $[Y]/month after that.\n\nThat includes me building it, maintaining it, and being reachable when you need something. Full pricing at purcellventures.co/digital.\n\nWant to hop on a 15-minute call to go over it?\n\n— Elijah Purcell | Purcell Ventures LLC\nelijah@purcell-ventures.com`, note: "Always send a written proposal to warm leads. It makes you look professional and gives them something to share with a spouse/partner." },
             ].map((item, i) => (
               <div key={i} style={{ ...s, borderColor: item.color + "40", marginBottom: "16px" }}>
                 <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: item.color, marginBottom: "12px" }}>{item.label}</div>
@@ -675,7 +675,7 @@ export default function PlaybookPage() {
                               style={{ padding: "8px 14px", background: "#d4af3712", border: "1px solid #d4af3740", borderRadius: "6px", color: copiedId === `proposal-${v.id}` ? "#7aaa6a" : "#d4af37", fontSize: "12px", cursor: "pointer", fontWeight: 600 }}>
                               {copiedId === `proposal-${v.id}` ? "✓ Copied" : "Generate Proposal"}
                             </button>
-                            <a href={`mailto:elijah@purcellventures.co?subject=Visit Log — ${v.businessName}&body=${encodeURIComponent(generateSummary(v))}`}
+                            <a href={`mailto:elijah@purcell-ventures.com?subject=Visit Log — ${v.businessName}&body=${encodeURIComponent(generateSummary(v))}`}
                               style={{ padding: "8px 14px", background: "#1a1714", border: "1px solid #2e2820", borderRadius: "6px", color: "#8a8070", fontSize: "12px", textDecoration: "none", fontWeight: 600 }}>
                               Email to Self
                             </a>

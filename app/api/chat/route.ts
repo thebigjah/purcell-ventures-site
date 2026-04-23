@@ -15,7 +15,7 @@ Purcell Ventures is a Georgia-based company run by Elijah Purcell. Four division
 
 4. FIELD SERVICES (Purcell Works) — gutter cleaning ($100+), pressure washing ($75+), lawn care ($50+). Owner-operated.
 
-Contact: elijah@purcellventures.co | (770) 280-5319
+Contact: elijah@purcell-ventures.com | (770) 280-5319
 Book consulting: purcellventures.co/consulting/book
 Field services quote: purcellventures.co/services
 Digital services: purcellventures.co/digital

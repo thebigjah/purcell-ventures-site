@@ -214,7 +214,7 @@ export default function ResumePrint() {
               { val: "3.92", label: "GPA (Weighted)" },
               { val: "1440", label: "SAT" },
               { val: "34", label: "Acceptances" },
-              { val: "$505k+/yr", label: "Scholarships" },
+              { val: "$520k+/yr", label: "Scholarships" },
             ].map(s => (
               <div className="stat-block" key={s.label}>
                 <div className="stat-val">{s.val}</div>
@@ -280,7 +280,7 @@ export default function ResumePrint() {
                 ["Christ-like Leadership Award", "Sports Banquet · Grove", "Awarded for servant leadership and Christian character in competitive sport."],
                 ["Lead Role — Christmas Musical", "Grove Christian School", "Lead acting and vocal role in the annual Christmas production."],
                 ["Highest Math Grade in Class", "9th Grade", "100% both semesters — top math average in the class."],
-                ["Youth Leadership Summit", "Family Foundation & Colson Center · Richmond, VA · Summer 2023", "Invitation-only. Advanced worldview, cultural analysis, and Christian civic leadership seminar."],
+                ["Youth Leadership Summit", "Summer 2023", "Family Foundation & Colson Center · Richmond, VA. Invitation-only advanced worldview, cultural analysis, and Christian civic leadership seminar."],
                 ["UA Honors College Admission", "2026", "Selective admission based on academic achievement and leadership."],
                 ["GSU Honors College Admission", "2026", ""],
               ].map(([title, right, sub]) => (
@@ -369,6 +369,7 @@ export default function ResumePrint() {
                   ["Presbyterian College", "$28,000/yr", "Highlander"],
                   ["Valparaiso University", "$28,000/yr", "Confirmed"],
                   ["Lenoir-Rhyne University", "$26,000/yr", "Confirmed"],
+                  ["Nazareth University", "$25,000/yr", "Presidential"],
                   ["Oral Roberts University", "$24,000/yr", "Confirmed"],
                   ["Cedarville University", "$22,000/yr", "Confirmed"],
                   ["George Fox University", "$22,000/yr", "Confirmed"],
@@ -390,7 +391,7 @@ export default function ResumePrint() {
               </div>
               <div className="scholar-total">
                 <span className="scholar-total-label">Total (confirmed offers)</span>
-                <span className="scholar-total-val">$505,384 / year</span>
+                <span className="scholar-total-val">$530,384 / year</span>
               </div>
               <div style={{ fontSize: "8px", color: "#9a8270", marginTop: "3px", fontStyle: "italic" }}>
                 34 acceptances as of April 2026. Enrolled: University of Alabama.

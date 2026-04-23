@@ -71,6 +71,42 @@ export async function downloadPrintAsset(
   setTimeout(() => URL.revokeObjectURL(a.href), 60000);
 }
 
+export function downloadSvgElement(svgEl: SVGSVGElement, filename: string): void {
+  const svgString = new XMLSerializer().serializeToString(svgEl);
+  const blob = new Blob([svgString], { type: "image/svg+xml;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.download = `${filename}.svg`;
+  a.href = url;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+}
+
+export async function downloadSvgAsPng(svgEl: SVGSVGElement, filename: string, size = 1200): Promise<void> {
+  const svgString = new XMLSerializer().serializeToString(svgEl);
+  const blob = new Blob([svgString], { type: "image/svg+xml;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const img = new Image();
+  await new Promise<void>((resolve, reject) => {
+    img.onload = () => resolve();
+    img.onerror = reject;
+    img.src = url;
+  });
+  URL.revokeObjectURL(url);
+  const canvas = document.createElement("canvas");
+  canvas.width = size; canvas.height = size;
+  const ctx = canvas.getContext("2d")!;
+  ctx.drawImage(img, 0, 0, size, size);
+  const pngBlob = await new Promise<Blob>(resolve => canvas.toBlob(b => resolve(b!), "image/png"));
+  const buf = await pngBlob.arrayBuffer();
+  const withDpi = injectPngDpi(new Uint8Array(buf), 300);
+  const a = document.createElement("a");
+  a.download = `${filename}.png`;
+  a.href = URL.createObjectURL(new Blob([withDpi.buffer as ArrayBuffer], { type: "image/png" }));
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 60000);
+}
+
 // Business card = 3.5" × 2" at 300 DPI → embed rasterized image in a properly-sized PDF
 export async function downloadPrintAssetPDF(
   ref: RefObject<HTMLDivElement | null>,

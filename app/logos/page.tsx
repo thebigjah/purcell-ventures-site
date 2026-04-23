@@ -1,8 +1,10 @@
+"use client";
 // Brand identity options — purcellventures.co/logos
-// 5 logo treatments × 3 color variants each
 // SVG-backed, resolution-independent previews
 
-import React from "react";
+import React, { useRef } from "react";
+import { PanopConfig, PanopticonMark, PanopticonSplit } from "@/app/components/PanopticonMark";
+import { downloadPrintAsset, downloadSvgElement, downloadSvgAsPng } from "@/lib/printDownload";
 
 const GOLD  = "#d4af37";
 const DARK  = "#0c0a08";
@@ -32,8 +34,7 @@ function Center({ children }: { children: React.ReactNode }) {
   );
 }
 
-// ─── 1. The Wordmark — single horizontal line ──────────────────────────────────
-// PURCELL  ·  VENTURES with generous tracking
+// ─── 1. The Wordmark ──────────────────────────────────────────────────────────
 
 function Wordmark({ color = GOLD, size = 30 }: { color?: string; size?: number }) {
   return (
@@ -53,7 +54,7 @@ function Wordmark({ color = GOLD, size = 30 }: { color?: string; size?: number }
   );
 }
 
-// ─── 2. The Stacked — PURCELL / rule / VENTURES ───────────────────────────────
+// ─── 2. The Stacked ───────────────────────────────────────────────────────────
 
 function Stacked({
   top = GOLD, btm = GOLD, rule = GOLD, fs1 = 44, fs2 = 13,
@@ -75,7 +76,7 @@ function Stacked({
   );
 }
 
-// ─── 3. The Monogram — clean PV ───────────────────────────────────────────────
+// ─── 3. The Monogram ──────────────────────────────────────────────────────────
 
 function Mono({ color = GOLD, size = 100 }: { color?: string; size?: number }) {
   return (
@@ -88,11 +89,7 @@ function Mono({ color = GOLD, size = 100 }: { color?: string; size?: number }) {
   );
 }
 
-// ─── 4. The Slash Mark — PV + V-stroke extended ───────────────────────────────
-// 220×220 canvas. PV at 88px centered at (110, 100).
-// V top-right ≈ (174, 56), top-left ≈ (110, 56), apex ≈ (142, 118).
-// Right leg (\): (203, 0) → (89, 220)
-// Left  leg (/): (81,  0) → (195, 220)
+// ─── 4. The Slash Mark ────────────────────────────────────────────────────────
 
 function SlashMark({
   color = GOLD, bg = DARK, size = 220,
@@ -102,12 +99,8 @@ function SlashMark({
   const pv    = Math.round(88 * scale);
   const sw    = Math.max(1, 1.5 * scale);
   const mt    = Math.round(-8 * scale);
-
-  // Right leg \ : bisects V's right stroke — (192,0)→(96,220) at scale=1
   const [rx1, rx2] = [Math.round(192 * scale), Math.round(96  * scale)];
-  // Left  leg / : bisects V's left stroke — (28,0)→(124,220) at scale=1
   const [lx1, lx2] = [Math.round(28  * scale), Math.round(124 * scale)];
-
   return (
     <Box w={size} h={size} bg={bg}>
       <Center>
@@ -130,33 +123,26 @@ function SlashMark({
   );
 }
 
-// ─── 5. The Full Lockup — Slash Mark left + stacked wordmark right ─────────────
-// 500×140 canvas. PV zone: left 130px. Divider at x=148. Text from x=166.
-// PV at 58px centered at (65, 70). V-aligned slash: (127, 0) → (56, 140).
+// ─── 5. The Full Lockup ───────────────────────────────────────────────────────
 
 function Lockup({ color = GOLD, bg = DARK }: { color?: string; bg?: string }) {
   return (
     <Box w={500} h={140} bg={bg}>
-      {/* PV mark */}
       <div style={{
         position: "absolute", top: "50%", left: 65,
         transform: "translate(-50%, -50%)",
         fontFamily: "'Cinzel', Georgia, serif",
         fontSize: "58px", fontWeight: 700,
         color, lineHeight: 1, letterSpacing: "0.06em",
-        whiteSpace: "nowrap",
-        marginTop: "-4px",
+        whiteSpace: "nowrap", marginTop: "-4px",
       }}>PV</div>
-      {/* V-aligned slash — corrected to match V's actual right leg position */}
       <svg style={{ position: "absolute", inset: 0, pointerEvents: "none" }} width={500} height={140} viewBox="0 0 500 140">
         <line x1={118} y1={0} x2={57} y2={140} stroke={color} strokeWidth="1.5" opacity="0.6" />
       </svg>
-      {/* Vertical rule */}
       <div style={{
         position: "absolute", left: 148, top: 24, bottom: 24,
         width: "1px", background: color, opacity: 0.22,
       }} />
-      {/* Wordmark — style 1: size contrast only, no rule */}
       <div style={{ position: "absolute", left: 168, top: "50%", transform: "translateY(-50%)" }}>
         <div style={{
           fontFamily: "'Cinzel', Georgia, serif",
@@ -181,9 +167,130 @@ type LogoEntry = {
   subtitle: string;
   main: React.ReactNode;
   variants: { label: string; node: React.ReactNode }[];
+  isSvg?: boolean;
 };
 
+function PanopticonVariant({ size, color = GOLD, bg = DARK, cfg }: {
+  size: number; color?: string; bg?: string; cfg?: PanopConfig;
+}) {
+  return (
+    <div style={{ borderRadius: 8, overflow: "hidden", boxShadow: "0 4px 16px rgba(0,0,0,0.45)", display: "inline-block" }}>
+      <PanopticonMark size={size} color={color} bg={bg} cfg={cfg} />
+    </div>
+  );
+}
+
+const btnBase: React.CSSProperties = {
+  display: "inline-block", padding: "8px 16px", background: "none",
+  border: "1px solid #2e2820", color: "#6a6458", fontSize: "11px",
+  fontWeight: 600, letterSpacing: "0.08em", cursor: "pointer",
+  borderRadius: "4px", fontFamily: "Inter, sans-serif",
+};
+const btnGoldStyle: React.CSSProperties = { ...btnBase, borderColor: GOLD, color: GOLD };
+const btnSmallStyle: React.CSSProperties = {
+  ...btnBase, display: "block", width: "100%", marginTop: "6px",
+  padding: "5px 0", fontSize: "10px", letterSpacing: "0.06em", textAlign: "center",
+};
+
+function LogoSection({ logo, idx }: { logo: LogoEntry; idx: number }) {
+  const mainRef = useRef<HTMLDivElement>(null);
+  const varRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  async function dlMain() {
+    if (logo.isSvg) {
+      const svg = mainRef.current?.querySelector("svg");
+      if (svg) { await downloadSvgAsPng(svg as SVGSVGElement, logo.name, 1200); return; }
+    }
+    await downloadPrintAsset(mainRef, logo.name);
+  }
+
+  function dlMainSvg() {
+    const svg = mainRef.current?.querySelector("svg");
+    if (svg) downloadSvgElement(svg as SVGSVGElement, logo.name);
+  }
+
+  async function dlVariant(vi: number, label: string) {
+    const el = varRefs.current[vi];
+    if (!el) return;
+    if (logo.isSvg) {
+      const svg = el.querySelector("svg");
+      if (svg) { await downloadSvgAsPng(svg as SVGSVGElement, label, 600); return; }
+    }
+    await downloadPrintAsset({ current: el }, label);
+  }
+
+  const num = String(idx + 1).padStart(2, "0");
+
+  return (
+    <div>
+      <div style={{ display: "flex", alignItems: "baseline", gap: "14px", marginBottom: "24px" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, color: GOLD, letterSpacing: "0.1em" }}>{num}</span>
+        <span style={{ fontSize: "20px", fontWeight: 700, color: CREAM }}>{logo.name}</span>
+        <span style={{ fontSize: "13px", color: "#524d45" }}>{logo.subtitle}</span>
+      </div>
+
+      <div style={{ marginBottom: "16px" }}>
+        <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "10px" }}>Primary</div>
+        <div ref={mainRef} style={{ display: "inline-block" }}>{logo.main}</div>
+        <div style={{ display: "flex", gap: "8px", marginTop: "10px" }}>
+          <button style={btnBase} onClick={dlMain}>↓ Download PNG</button>
+          {logo.isSvg && <button style={btnGoldStyle} onClick={dlMainSvg}>↓ Download SVG</button>}
+        </div>
+      </div>
+
+      <div>
+        <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "10px" }}>Variants</div>
+        <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "flex-start" }}>
+          {logo.variants.map((v, vi) => (
+            <div key={v.label}>
+              <div ref={el => { varRefs.current[vi] = el; }}>{v.node}</div>
+              <button style={btnSmallStyle} onClick={() => dlVariant(vi, `${logo.name} ${v.label}`)}>↓ PNG</button>
+              <div style={{ fontSize: "10px", color: "#3a3530", marginTop: "4px", letterSpacing: "0.04em", maxWidth: "140px" }}>{v.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const LOGOS: LogoEntry[] = [
+  {
+    name: "The Panopticon Mark",
+    subtitle: "Reverse panopticon ring · inward cell groups · concentric field · PV center",
+    isSvg: true,
+    main: (
+      <div style={{ borderRadius: 8, overflow: "hidden", boxShadow: "0 6px 32px rgba(0,0,0,0.55)", display: "inline-block" }}>
+        <PanopticonMark size={280} />
+      </div>
+    ),
+    variants: [
+      {
+        label: "Standard — gold on dark",
+        node: <PanopticonVariant size={140} />,
+      },
+      {
+        label: "Minimal — 4 groups, no rings",
+        node: <PanopticonVariant size={140} cfg={{ numGroups: 4, includeFlankers: false, numRings: 0, tallH: 44 }} />,
+      },
+      {
+        label: "Dense — 12 groups, 14 rings",
+        node: <PanopticonVariant size={140} cfg={{ numGroups: 12, numRings: 14, tallH: 26, shortH: 12 }} />,
+      },
+      {
+        label: "Outlined / Wireframe",
+        node: <PanopticonVariant size={140} cfg={{ cellStyle: "outlined" }} />,
+      },
+      {
+        label: "Light — dark on cream",
+        node: <PanopticonVariant size={140} color={DARK} bg={CREAM} />,
+      },
+      {
+        label: "Split — half gold / half inverted",
+        node: <div style={{ borderRadius: 8, overflow: "hidden", boxShadow: "0 4px 16px rgba(0,0,0,0.45)", display: "inline-block" }}><PanopticonSplit size={140} /></div>,
+      },
+    ],
+  },
   {
     name: "The Wordmark",
     subtitle: "Single stacked horizontal — headers, footers, signage, email signatures",
@@ -261,42 +368,14 @@ export default function LogosPage() {
           Logo Options
         </h1>
         <p style={{ fontSize: "14px", color: "#524d45", maxWidth: "480px", lineHeight: 1.7 }}>
-          5 treatments × 3 color variants. Right-click any logo to save as image. For vector files, recreate in Canva or Figma using Cinzel font.
+          6 treatments. Download PNG or SVG directly from each logo. Panopticon Mark is fully vector — SVG download scales to any size.
         </p>
       </div>
 
       {/* Logos */}
       <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "72px" }}>
         {LOGOS.map((logo, i) => (
-          <div key={logo.name}>
-
-            {/* Label */}
-            <div style={{ display: "flex", alignItems: "baseline", gap: "14px", marginBottom: "24px" }}>
-              <span style={{ fontSize: "11px", fontWeight: 700, color: GOLD, letterSpacing: "0.1em" }}>0{i + 1}</span>
-              <span style={{ fontSize: "20px", fontWeight: 700, color: CREAM }}>{logo.name}</span>
-              <span style={{ fontSize: "13px", color: "#524d45" }}>{logo.subtitle}</span>
-            </div>
-
-            {/* Main */}
-            <div style={{ marginBottom: "16px" }}>
-              <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "10px" }}>Primary</div>
-              {logo.main}
-            </div>
-
-            {/* Variants */}
-            <div>
-              <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "10px" }}>Color Variants</div>
-              <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "flex-start" }}>
-                {logo.variants.map((v) => (
-                  <div key={v.label}>
-                    {v.node}
-                    <div style={{ fontSize: "10px", color: "#3a3530", marginTop: "6px", letterSpacing: "0.04em" }}>{v.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-          </div>
+          <LogoSection key={logo.name} logo={logo} idx={i} />
         ))}
       </div>
 
@@ -304,9 +383,9 @@ export default function LogosPage() {
       <div style={{ maxWidth: "1200px", margin: "72px auto 0", padding: "28px 32px", background: MID, border: "1px solid #2e2820", borderRadius: "10px" }}>
         <div style={{ fontSize: "13px", fontWeight: 700, color: GOLD, marginBottom: "14px" }}>Usage Notes</div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "20px", fontSize: "12px", color: "#6a6458", lineHeight: 1.7 }}>
-          <div><strong style={{ color: "#8a8070" }}>Font:</strong> Cinzel (Google Fonts, free). Use Bold 700 for PV and PURCELL. Regular 400 for VENTURES.</div>
+          <div><strong style={{ color: "#8a8070" }}>Font:</strong> Cinzel (Google Fonts, free). Bold 700 for PV and PURCELL. Regular 400 for VENTURES.</div>
           <div><strong style={{ color: "#8a8070" }}>Colors:</strong> Gold: #d4af37 · Near-black: #0c0a08 · Cream: #f5f0e0</div>
-          <div><strong style={{ color: "#8a8070" }}>Vector:</strong> Recreate in Canva or Figma for scalable SVG/PDF files. Use for print, large format, or embroidery.</div>
+          <div><strong style={{ color: "#8a8070" }}>Panopticon SVG:</strong> Download SVG for fully scalable vector — use for print, embroidery, large format, and app icons.</div>
           <div><strong style={{ color: "#8a8070" }}>The Slash:</strong> The slash in the mark follows the exact angle of the V's right stroke — they are one element extended.</div>
         </div>
       </div>
