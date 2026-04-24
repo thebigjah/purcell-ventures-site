@@ -168,6 +168,28 @@ export default function AboutPage() {
 
         <Divider />
 
+        {/* The Mark */}
+        <h2 style={{
+          fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600,
+          color: "var(--color-warm-text)", marginBottom: "32px",
+        }}>
+          The Mark
+        </h2>
+
+        <p style={{ fontSize: "16px", color: "var(--color-warm-text-muted)", lineHeight: 1.85, marginBottom: "20px", maxWidth: "640px" }}>
+          The Purcell Ventures mark is built on a deliberate inversion of Jeremy Bentham&apos;s panopticon — a prison design from 1791 where a single guard in a central tower could surveil every prisoner without them knowing when they were being watched. The uncertainty alone produced compliance. Michel Foucault later argued it wasn&apos;t just a prison design. It was the operating model of modern power: institutions exert control through the possibility of observation. You regulate yourself because you might be watched. The watcher stays hidden. The watched stays exposed.
+        </p>
+
+        <p style={{ fontSize: "16px", color: "var(--color-warm-text-muted)", lineHeight: 1.85, marginBottom: "20px", maxWidth: "640px" }}>
+          The inverse of that isn&apos;t chaos. It&apos;s the principle most free societies claim to believe in and rarely practice: the powerful should be transparent and accountable, and ordinary people should have their privacy and freedom. The asymmetry should run upward, not downward. That&apos;s what the mark means. PV sits at the center — visible, declared, not hidden in a tower. The structure radiates outward as accountability arms, not inward as surveillance. The space beyond the rings belongs to the people we work with. We&apos;re the ones who are observable.
+        </p>
+
+        <p style={{ fontSize: "16px", color: "var(--color-warm-text-muted)", lineHeight: 1.85, marginBottom: "64px", maxWidth: "640px" }}>
+          In 2026, that position is rarer than it should be. The systems most people depend on — the platforms, the algorithms, the AI models making decisions about their credit and their feed and their hiring — are deliberately opaque. The asymmetry Bentham designed for prisoners is now the default assumption of the economy. The mark is a refusal of that. My name is on the business. You deal with me directly. That&apos;s not a branding choice. It&apos;s a position.
+        </p>
+
+        <Divider />
+
         {/* The person */}
         <h2 style={{
           fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600,

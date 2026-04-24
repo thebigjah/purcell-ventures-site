@@ -359,6 +359,50 @@ const LOGOS: LogoEntry[] = [
           ringFadeToCenter: true,
         }} />,
       },
+      {
+        label: "Declaration — accountability at the perimeter, free field within",
+        node: <PanopticonVariant size={140} cfg={{
+          cellStyle: "outlined",
+          pvSize: 56, pvClearR: 62,
+          ringStart: 96, ringEnd: 114,
+          numRings: 3,
+          ringFadeToCenter: false,
+        }} />,
+      },
+      {
+        label: "Free Field — maximum open space, 6 spokes, 2 outer rings",
+        node: <PanopticonVariant size={140} cfg={{
+          cellStyle: "outlined",
+          numGroups: 6, includeFlankers: false,
+          tallH: 42,
+          pvSize: 58, pvClearR: 64,
+          ringStart: 106, ringEnd: 118,
+          numRings: 2,
+          ringFadeToCenter: false,
+        }} />,
+      },
+      {
+        label: "Sousveillance — bold boundary, declared center, open interior",
+        node: <PanopticonVariant size={140} cfg={{
+          numGroups: 8, includeFlankers: true,
+          pvSize: 52, pvClearR: 58,
+          ringStart: 94, ringEnd: 114,
+          numRings: 4,
+          ringFadeToCenter: false,
+        }} />,
+      },
+      {
+        label: "Perimeter — 4 cardinal spokes, rings at boundary only",
+        node: <PanopticonVariant size={140} cfg={{
+          cellStyle: "outlined",
+          numGroups: 4, includeFlankers: true, flankerDeg: 9,
+          tallH: 42, shortH: 22,
+          pvSize: 56, pvClearR: 62,
+          ringStart: 92, ringEnd: 114,
+          numRings: 4,
+          ringFadeToCenter: false,
+        }} />,
+      },
     ],
   },
   {
