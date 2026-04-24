@@ -661,13 +661,280 @@ function IconsSection() {
   );
 }
 
+// ─── Photo Style ──────────────────────────────────────────────────────────────
+
+const GRADING = [
+  { param: "Temperature",  value: "+15",  note: "Push toward amber. Never neutral or cool." },
+  { param: "Tint",         value: "+5",   note: "Slight magenta warmth. Avoid green cast." },
+  { param: "Exposure",     value: "−0.3", note: "Slightly underexposed for richness. Don't clip highlights." },
+  { param: "Highlights",   value: "−30",  note: "Protect against blow-out. Preserve sky and skin detail." },
+  { param: "Shadows",      value: "+10",  note: "Lift slightly. Shadows should be warm brown, not black." },
+  { param: "Whites",       value: "−20",  note: "Pull back. Prevents clinical white from entering the frame." },
+  { param: "Blacks",       value: "+5",   note: "Never crush to pure black. Match Purcell Dark (#0c0a08)." },
+  { param: "Clarity",      value: "+10",  note: "Subtle micro-contrast. More on tools/texture. Less on faces." },
+  { param: "Vibrance",     value: "−15",  note: "Muted, not desaturated. Earthy tones should stay present." },
+  { param: "Saturation",   value: "−10",  note: "Second pass muting. Prevents any color from dominating." },
+];
+
+const SUBJECTS = [
+  {
+    category: "People / Portraits",
+    icon: "eye",
+    do: [
+      "Direct eye contact or purposeful gaze — confidence, not performance",
+      "Natural or soft window light. Hard shadows are fine on one side.",
+      "Candid over posed — mid-movement, mid-conversation, working",
+      "Real environments: a desk, a truck cab, a job site",
+    ],
+    avoid: [
+      "Stock-photo smiles — teeth, staged handshakes, \"team building\" body language",
+      "Pure white or seamless studio backgrounds",
+      "Over-retouched skin — should look like a real person",
+      "Overly formal attire unless the context demands it",
+    ],
+  },
+  {
+    category: "Field Work",
+    icon: "droplet",
+    do: [
+      "The work itself: spray hitting a surface, gutters mid-clean, equipment in motion",
+      "Before/after juxtaposition — the transformation is the story",
+      "Close-up texture: grime, water beads, clean concrete",
+      "Golden hour light where possible — flatters everything outdoors",
+    ],
+    avoid: [
+      "Cluttered staging — safety gear everywhere for the photo, not the job",
+      "Flat overcast light with no direction",
+      "Posed \"look at the camera\" shots mid-job",
+      "Editing that makes the job site look glamorous — authenticity matters more",
+    ],
+  },
+  {
+    category: "Technology / Workspace",
+    icon: "terminal",
+    do: [
+      "Screens with actual content — interfaces, data, real work",
+      "Intentional shallow depth of field. Bokeh is fine when purposeful.",
+      "Warm ambient light: desk lamp, window light at dusk",
+      "Context over equipment — what's being built matters more than the gear",
+    ],
+    avoid: [
+      "Generic \"laptop on table\" stock photos",
+      "Glowing blue screens in dark rooms (reads as stock, reads as cold)",
+      "Cables everywhere for aesthetics — clutter without purpose",
+      "Staged \"thinking\" poses (hand on chin, looking at ceiling)",
+    ],
+  },
+  {
+    category: "Environment / Context",
+    icon: "pin",
+    do: [
+      "Georgia landscape: red clay, green hills, suburban neighborhoods",
+      "Architecture with warm light — brick, wood, weathered surfaces",
+      "Empty spaces that feel inhabited — a workshop, a driveway, a kitchen",
+      "Wide establishing shots for location-specific work",
+    ],
+    avoid: [
+      "Skylines that read as generic metropolitan",
+      "Nature photography with no human element (this isn't a travel brand)",
+      "Cold industrial spaces with no warmth",
+      "Anything that reads as aspirational for its own sake",
+    ],
+  },
+];
+
+const OVERLAYS = [
+  {
+    label: "Standard dark overlay",
+    rule: "Default for hero and card images with text. DARK at 72% opacity.",
+    bg: "linear-gradient(135deg, #3a2a18 0%, #1a1208 100%)",
+    overlay: "rgba(12,10,8,0.72)",
+    heading: "Gutters Cleaned Right",
+    sub: "Metro Atlanta service area",
+  },
+  {
+    label: "Heavy overlay — light body copy",
+    rule: "When body copy appears over an image. Needs more coverage to stay readable.",
+    bg: "linear-gradient(135deg, #4a3520 0%, #0c0a08 100%)",
+    overlay: "rgba(12,10,8,0.85)",
+    heading: "Custom Software",
+    sub: "Built for your workflow, not the other way around.",
+  },
+  {
+    label: "Gradient fade — bottom-anchored text",
+    rule: "When text needs to appear at the bottom of an image. Gradient from transparent to DARK.",
+    bg: "linear-gradient(160deg, #5a3a1a 0%, #2e1c0a 100%)",
+    overlay: "linear-gradient(to top, rgba(12,10,8,0.95) 0%, rgba(12,10,8,0.4) 50%, transparent 100%)",
+    heading: "Acworth, Georgia",
+    sub: "Owner-operated. No middlemen.",
+  },
+];
+
+const RATIOS = [
+  { name: "Hero",      ratio: "16:9",  w: 320, h: 180, use: "Page banners, section headers with full-bleed images" },
+  { name: "Wide Hero", ratio: "21:9",  w: 320, h: 137, use: "Landing page hero, cinematic moments. Crop tightly." },
+  { name: "Card",      ratio: "4:3",   w: 240, h: 180, use: "Service cards, blog thumbnails, case study covers" },
+  { name: "Portrait",  ratio: "4:5",   w: 192, h: 240, use: "Team photos, person-centered social content" },
+  { name: "Square",    ratio: "1:1",   w: 200, h: 200, use: "Profile photos, social avatars, icon-scale thumbnails" },
+];
+
+function PhotoSection() {
+  return (
+    <div>
+      {/* Tone reference */}
+      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Tone Reference</h2>
+      <p style={{ fontSize: "13px", color: ASH, marginBottom: "24px", maxWidth: "600px", lineHeight: 1.65 }}>
+        All brand photography lives in the warm-dark range. These gradients show the acceptable tonal spectrum — from rich shadow to warm highlight. Nothing cooler than the middle column. Nothing brighter than the right column.
+      </p>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "8px", marginBottom: "48px" }}>
+        {[
+          { label: "Shadow floor",  grad: "linear-gradient(160deg, #1a140c 0%, #0c0a08 100%)", note: "Darkest allowed" },
+          { label: "Deep warm",     grad: "linear-gradient(160deg, #2e2014 0%, #1a130a 100%)", note: "Card backgrounds" },
+          { label: "Midtone amber", grad: "linear-gradient(160deg, #5a3a1a 0%, #2e200e 100%)", note: "Ideal shadow range" },
+          { label: "Warm highlight", grad: "linear-gradient(160deg, #a07040 0%, #5a3a18 100%)", note: "Highlight ceiling" },
+          { label: "Hot limit",     grad: "linear-gradient(160deg, #c49040 0%, #8a5a28 100%)", note: "Never exceed this" },
+        ].map(s => (
+          <div key={s.label} style={{ borderRadius: 6, overflow: "hidden", border: `1px solid ${EMBER}` }}>
+            <div style={{ background: s.grad, height: 80 }} />
+            <div style={{ padding: "8px 10px", background: MID }}>
+              <div style={{ fontSize: "10px", fontWeight: 700, color: CREAM, marginBottom: "2px" }}>{s.label}</div>
+              <div style={{ fontSize: "10px", color: CHAR }}>{s.note}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Grading parameters */}
+      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Color Grading</h2>
+      <p style={{ fontSize: "13px", color: ASH, marginBottom: "24px", maxWidth: "600px", lineHeight: 1.65 }}>
+        Starting point for any photo entering brand materials. Use Lightroom, Capture One, or equivalent. These are relative adjustments from the photo's neutral edit — not absolute values.
+      </p>
+      <div style={{ border: `1px solid ${EMBER}`, borderRadius: 8, overflow: "hidden", marginBottom: "56px" }}>
+        {GRADING.map((g, i) => (
+          <div key={g.param} style={{
+            display: "grid", gridTemplateColumns: "160px 80px 1fr",
+            gap: "16px", alignItems: "center",
+            padding: "13px 24px",
+            borderBottom: i < GRADING.length - 1 ? `1px solid ${EMBER}` : "none",
+            background: i % 2 === 0 ? DARK : MID,
+          }}>
+            <div style={{ fontSize: "13px", fontWeight: 600, color: CREAM, fontFamily: "var(--font-inter), sans-serif" }}>{g.param}</div>
+            <div style={{ fontSize: "14px", fontWeight: 700, color: GOLD, fontFamily: "var(--font-inter), sans-serif" }}>{g.value}</div>
+            <div style={{ fontSize: "12px", color: ASH, lineHeight: 1.55 }}>{g.note}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Subject categories */}
+      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Subject Guidelines</h2>
+      <p style={{ fontSize: "13px", color: ASH, marginBottom: "28px", maxWidth: "600px", lineHeight: 1.65 }}>
+        Four categories covering every context the brand will use photography. Each has a do list and an avoid list — the avoid list is more important.
+      </p>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "16px", marginBottom: "56px" }}>
+        {SUBJECTS.map(s => (
+          <div key={s.category} style={{ border: `1px solid ${EMBER}`, borderRadius: 8, overflow: "hidden" }}>
+            <div style={{ padding: "16px 20px", background: MID, borderBottom: `1px solid ${EMBER}` }}>
+              <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "14px", fontWeight: 700, color: CREAM }}>{s.category}</div>
+            </div>
+            <div style={{ padding: "16px 20px", background: DARK }}>
+              <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", color: GOLD, marginBottom: "10px", fontFamily: "Inter, sans-serif" }}>DO</div>
+              <ul style={{ margin: "0 0 18px", paddingLeft: "16px" }}>
+                {s.do.map(d => (
+                  <li key={d} style={{ fontSize: "12px", color: CREAM, lineHeight: 1.65, marginBottom: "4px" }}>{d}</li>
+                ))}
+              </ul>
+              <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", color: "#a06060", marginBottom: "10px", fontFamily: "Inter, sans-serif" }}>AVOID</div>
+              <ul style={{ margin: 0, paddingLeft: "16px" }}>
+                {s.avoid.map(a => (
+                  <li key={a} style={{ fontSize: "12px", color: ASH, lineHeight: 1.65, marginBottom: "4px" }}>{a}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Overlay system */}
+      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Overlay System</h2>
+      <p style={{ fontSize: "13px", color: ASH, marginBottom: "28px", maxWidth: "600px", lineHeight: 1.65 }}>
+        Three approved overlays for text-over-image situations. Gradients below simulate the photo tone — the overlay treatment is what matters. Never put text directly on an unprocessed photo without one of these.
+      </p>
+      <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "56px" }}>
+        {OVERLAYS.map(ov => (
+          <div key={ov.label} style={{ border: `1px solid ${EMBER}`, borderRadius: 8, overflow: "hidden" }}>
+            <div style={{ position: "relative", background: ov.bg, height: 140 }}>
+              <div style={{ position: "absolute", inset: 0, background: ov.overlay }} />
+              <div style={{ position: "relative", padding: "24px 32px", zIndex: 1 }}>
+                <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 700, color: CREAM, marginBottom: "6px" }}>
+                  {ov.heading}
+                </div>
+                <div style={{ fontSize: "14px", color: ASH }}>{ov.sub}</div>
+              </div>
+            </div>
+            <div style={{ padding: "12px 20px", background: MID, borderTop: `1px solid ${EMBER}` }}>
+              <div style={{ fontSize: "11px", fontWeight: 600, color: GOLD, marginBottom: "3px", letterSpacing: "0.06em" }}>{ov.label}</div>
+              <div style={{ fontSize: "12px", color: ASH }}>{ov.rule}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Aspect ratios */}
+      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Aspect Ratios</h2>
+      <p style={{ fontSize: "13px", color: ASH, marginBottom: "28px", maxWidth: "600px", lineHeight: 1.65 }}>
+        Five ratios covering every use case. When cropping, prioritize the subject over including more context — a tight crop reads more confidently than a loose one.
+      </p>
+      <div style={{ display: "flex", gap: "24px", flexWrap: "wrap", alignItems: "flex-end", marginBottom: "56px" }}>
+        {RATIOS.map(r => (
+          <div key={r.name}>
+            <div style={{
+              width: r.w / 2,
+              height: r.h / 2,
+              background: `linear-gradient(135deg, ${EMBER} 0%, ${MID} 100%)`,
+              border: `1px solid ${ASH}`,
+              borderRadius: 4,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginBottom: "10px",
+            }}>
+              <span style={{ fontSize: "12px", fontWeight: 700, color: GOLD, fontFamily: "Inter, sans-serif" }}>{r.ratio}</span>
+            </div>
+            <div style={{ fontSize: "12px", fontWeight: 600, color: CREAM, marginBottom: "3px", fontFamily: "'Cinzel', Georgia, serif" }}>{r.name}</div>
+            <div style={{ fontSize: "11px", color: CHAR, maxWidth: r.w / 2, lineHeight: 1.5 }}>{r.use}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Hard rules */}
+      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Hard Rules</h2>
+      <p style={{ fontSize: "13px", color: ASH, marginBottom: "20px" }}>These kill the brand on contact.</p>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "10px" }}>
+        {[
+          "No pure white or cool-gray backgrounds anywhere in brand photography.",
+          "No photos with blue-tinted shadows. Shadows must read warm.",
+          "No stock photo people. Every face in brand materials must be real and known.",
+          "No filters with names — Instagram presets, VSCO packs, Lightroom influencer presets. Derive from the grading table.",
+          "No photography that would look at home on a Fortune 500 corporate site.",
+          "No mixing photo styles in the same layout — match grading before publishing.",
+        ].map(rule => (
+          <div key={rule} style={{ padding: "14px 16px", border: `1px solid #4a1a1a`, borderRadius: 6, background: "#0e0808" }}>
+            <p style={{ fontSize: "12px", color: "#c07070", lineHeight: 1.6, margin: 0 }}>{rule}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
-type Tab = "colors" | "type" | "icons";
+type Tab = "colors" | "type" | "icons" | "photo";
 const TABS: { id: Tab; label: string }[] = [
   { id: "colors", label: "Color Rules" },
   { id: "type",   label: "Typography" },
   { id: "icons",  label: "Icons" },
+  { id: "photo",  label: "Photo Style" },
 ];
 
 export default function BrandPage() {
@@ -706,6 +973,7 @@ export default function BrandPage() {
         {tab === "colors" && <ColorSection />}
         {tab === "type"   && <TypographySection />}
         {tab === "icons"  && <IconsSection />}
+        {tab === "photo"  && <PhotoSection />}
       </div>
 
       <div style={{ maxWidth: "1100px", margin: "64px auto 0", display: "flex", gap: "24px" }}>
