@@ -11,6 +11,11 @@ export type PanopConfig = {
   cellStyle?: "filled" | "outlined";
   tallH?: number;
   shortH?: number;
+  pvSize?: number;          // PV text font size (default 30)
+  pvClearR?: number;        // clearing circle radius behind PV text (default 34)
+  ringStart?: number;       // inner radius of ring band (default 42)
+  ringEnd?: number;         // outer radius of ring band (default 85)
+  ringFadeToCenter?: boolean; // fade rings toward center — outer rings stronger (broadcast feel)
 };
 
 export function PanopticonElements({ cx, cy, color, cfg }: {
@@ -19,6 +24,7 @@ export function PanopticonElements({ cx, cy, color, cfg }: {
   const {
     numGroups = 8, includeFlankers = true, flankerDeg = 10,
     numRings = 10, cellStyle = "filled", tallH = 32, shortH = 16,
+    ringStart = 42, ringEnd = 85, ringFadeToCenter = false,
   } = cfg;
   const ringR = 135;
   const ringSW = cellStyle === "outlined" ? 3 : 20;
@@ -35,7 +41,7 @@ export function PanopticonElements({ cx, cy, color, cfg }: {
     }
   }
   const rings = numRings > 0
-    ? Array.from({ length: numRings }, (_, i) => 42 + (85 - 42) * i / Math.max(numRings - 1, 1))
+    ? Array.from({ length: numRings }, (_, i) => ringStart + (ringEnd - ringStart) * i / Math.max(numRings - 1, 1))
     : [];
   return (
     <>
@@ -51,11 +57,15 @@ export function PanopticonElements({ cx, cy, color, cfg }: {
           strokeWidth={cellStyle === "outlined" ? 0.8 : 0}
           transform={`rotate(${angle} ${cx} ${cy})`} />
       ))}
-      {rings.map((r, i) => (
-        <circle key={i} cx={cx} cy={cy} r={r} stroke={color}
-          strokeWidth={cellStyle === "outlined" ? "0.8" : "1.1"}
-          fill="none" opacity={0.38 + 0.06 * i} />
-      ))}
+      {rings.map((r, i) => {
+        const t = numRings > 1 ? i / (numRings - 1) : 1;
+        const opacity = ringFadeToCenter ? 0.10 + 0.68 * t : 0.38 + 0.06 * i;
+        return (
+          <circle key={i} cx={cx} cy={cy} r={r} stroke={color}
+            strokeWidth={cellStyle === "outlined" ? "0.8" : "1.1"}
+            fill="none" opacity={opacity} />
+        );
+      })}
     </>
   );
 }
@@ -65,14 +75,14 @@ export function PanopticonMark({ size = 280, color = GOLD, bg = DARK, cfg }: {
 }) {
   const resolved = cfg ?? {};
   const cx = 150, cy = 150;
-  const { numRings = 10 } = resolved;
+  const { pvSize = 30, pvClearR = 34 } = resolved;
   return (
     <svg width={size} height={size} viewBox="0 0 300 300" style={{ display: "block" }}>
       <rect width="300" height="300" fill={bg} rx="8" />
       <PanopticonElements cx={cx} cy={cy} color={color} cfg={resolved} />
-      {numRings > 0 && <circle cx={cx} cy={cy} r="34" fill={bg} />}
+      <circle cx={cx} cy={cy} r={pvClearR} fill={bg} />
       <text x={cx} y={cy} textAnchor="middle" dominantBaseline="central"
-        fontFamily="'Cinzel', Georgia, serif" fontSize="30" fontWeight="700"
+        fontFamily="'Cinzel', Georgia, serif" fontSize={pvSize} fontWeight="700"
         fill={color} style={{ letterSpacing: "1.8px" }}>PV</text>
     </svg>
   );

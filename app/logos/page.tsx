@@ -289,6 +289,48 @@ const LOGOS: LogoEntry[] = [
         label: "Split — half gold / half inverted",
         node: <div style={{ borderRadius: 8, overflow: "hidden", boxShadow: "0 4px 16px rgba(0,0,0,0.45)", display: "inline-block" }}><PanopticonSplit size={140} /></div>,
       },
+      {
+        label: "Open Center — wireframe, large PV",
+        node: <PanopticonVariant size={140} cfg={{
+          cellStyle: "outlined",
+          pvSize: 44, pvClearR: 50,
+          ringStart: 58, ringEnd: 112,
+          numRings: 6,
+          ringFadeToCenter: true,
+        }} />,
+      },
+      {
+        label: "Broadcast — outer ring band, fading inward",
+        node: <PanopticonVariant size={140} cfg={{
+          cellStyle: "outlined",
+          numGroups: 8, includeFlankers: true,
+          pvSize: 40, pvClearR: 46,
+          ringStart: 62, ringEnd: 115,
+          numRings: 8,
+          ringFadeToCenter: true,
+        }} />,
+      },
+      {
+        label: "Sparse — 4 groups, open field",
+        node: <PanopticonVariant size={140} cfg={{
+          cellStyle: "outlined",
+          numGroups: 4, includeFlankers: true, flankerDeg: 8,
+          tallH: 38, shortH: 20,
+          pvSize: 48, pvClearR: 54,
+          ringStart: 65, ringEnd: 112,
+          numRings: 5,
+          ringFadeToCenter: true,
+        }} />,
+      },
+      {
+        label: "Filled Broadcast — large PV, rings pushed out",
+        node: <PanopticonVariant size={140} cfg={{
+          pvSize: 42, pvClearR: 48,
+          ringStart: 58, ringEnd: 85,
+          numRings: 6,
+          ringFadeToCenter: true,
+        }} />,
+      },
     ],
   },
   {
