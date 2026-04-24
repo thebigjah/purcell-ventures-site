@@ -96,7 +96,13 @@ export default function Home() {
 
         {/* Logo Mark */}
         <div style={{ display: "flex", justifyContent: "center", marginBottom: "48px" }}>
-          <PanopticonMark size={140} color="var(--color-warm-accent)" bg="#0c0a08" cfg={{ cellStyle: "outlined" }} />
+          <PanopticonMark size={140} color="var(--color-warm-accent)" bg="#0c0a08" cfg={{
+            cellStyle: "outlined",
+            pvSize: 70, pvClearR: 58,
+            ringStart: 70, ringEnd: 116,
+            numRings: 7,
+            ringFadeToCenter: true,
+          }} />
         </div>
 
         {/* Eyebrow */}
