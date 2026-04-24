@@ -261,7 +261,13 @@ const LOGOS: LogoEntry[] = [
     isSvg: true,
     main: (
       <div style={{ borderRadius: 8, overflow: "hidden", boxShadow: "0 6px 32px rgba(0,0,0,0.55)", display: "inline-block" }}>
-        <PanopticonMark size={280} />
+        <PanopticonMark size={280} cfg={{
+          cellStyle: "outlined",
+          pvSize: 50, pvClearR: 56,
+          ringStart: 68, ringEnd: 116,
+          numRings: 7,
+          ringFadeToCenter: true,
+        }} />
       </div>
     ),
     variants: [
@@ -290,34 +296,45 @@ const LOGOS: LogoEntry[] = [
         node: <div style={{ borderRadius: 8, overflow: "hidden", boxShadow: "0 4px 16px rgba(0,0,0,0.45)", display: "inline-block" }}><PanopticonSplit size={140} /></div>,
       },
       {
-        label: "Open Center — wireframe, large PV",
+        label: "Lampstand — wireframe + fading rings, sovereign center",
         node: <PanopticonVariant size={140} cfg={{
           cellStyle: "outlined",
-          pvSize: 44, pvClearR: 50,
-          ringStart: 58, ringEnd: 112,
-          numRings: 6,
+          pvSize: 50, pvClearR: 56,
+          ringStart: 68, ringEnd: 116,
+          numRings: 7,
           ringFadeToCenter: true,
         }} />,
       },
       {
-        label: "Broadcast — outer ring band, fading inward",
+        label: "Ripple — wide band, heavy fade, PV dominant",
         node: <PanopticonVariant size={140} cfg={{
           cellStyle: "outlined",
-          numGroups: 8, includeFlankers: true,
-          pvSize: 40, pvClearR: 46,
-          ringStart: 62, ringEnd: 115,
-          numRings: 8,
+          pvSize: 50, pvClearR: 56,
+          ringStart: 60, ringEnd: 118,
+          numRings: 10,
           ringFadeToCenter: true,
         }} />,
       },
       {
-        label: "Sparse — 4 groups, open field",
+        label: "Signal — 6 spokes, sparse outer field",
+        node: <PanopticonVariant size={140} cfg={{
+          cellStyle: "outlined",
+          numGroups: 6, includeFlankers: false,
+          tallH: 40,
+          pvSize: 52, pvClearR: 58,
+          ringStart: 72, ringEnd: 114,
+          numRings: 4,
+          ringFadeToCenter: true,
+        }} />,
+      },
+      {
+        label: "Cardinal — 4 directions, open and bold",
         node: <PanopticonVariant size={140} cfg={{
           cellStyle: "outlined",
           numGroups: 4, includeFlankers: true, flankerDeg: 8,
-          tallH: 38, shortH: 20,
-          pvSize: 48, pvClearR: 54,
-          ringStart: 65, ringEnd: 112,
+          tallH: 40, shortH: 20,
+          pvSize: 54, pvClearR: 60,
+          ringStart: 74, ringEnd: 114,
           numRings: 5,
           ringFadeToCenter: true,
         }} />,
@@ -325,9 +342,20 @@ const LOGOS: LogoEntry[] = [
       {
         label: "Filled Broadcast — large PV, rings pushed out",
         node: <PanopticonVariant size={140} cfg={{
-          pvSize: 42, pvClearR: 48,
-          ringStart: 58, ringEnd: 85,
+          pvSize: 48, pvClearR: 54,
+          ringStart: 62, ringEnd: 88,
           numRings: 6,
+          ringFadeToCenter: true,
+        }} />,
+      },
+      {
+        label: "Filled Cardinal — 4 groups, bold center",
+        node: <PanopticonVariant size={140} cfg={{
+          numGroups: 4, includeFlankers: true, flankerDeg: 8,
+          tallH: 40, shortH: 20,
+          pvSize: 50, pvClearR: 56,
+          ringStart: 64, ringEnd: 88,
+          numRings: 5,
           ringFadeToCenter: true,
         }} />,
       },
