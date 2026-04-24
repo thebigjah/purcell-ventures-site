@@ -263,8 +263,8 @@ const LOGOS: LogoEntry[] = [
       <div style={{ borderRadius: 8, overflow: "hidden", boxShadow: "0 6px 32px rgba(0,0,0,0.55)", display: "inline-block" }}>
         <PanopticonMark size={280} cfg={{
           cellStyle: "outlined",
-          pvSize: 92, pvClearR: 72,
-          ringStart: 76, ringEnd: 116,
+          pvSize: 70, pvClearR: 58,
+          ringStart: 70, ringEnd: 116,
           numRings: 7,
           ringFadeToCenter: true,
         }} />
@@ -299,8 +299,8 @@ const LOGOS: LogoEntry[] = [
         label: "Lampstand — wireframe + fading rings, sovereign center",
         node: <PanopticonVariant size={140} cfg={{
           cellStyle: "outlined",
-          pvSize: 92, pvClearR: 72,
-          ringStart: 76, ringEnd: 116,
+          pvSize: 70, pvClearR: 58,
+          ringStart: 70, ringEnd: 116,
           numRings: 7,
           ringFadeToCenter: true,
         }} />,
@@ -320,8 +320,8 @@ const LOGOS: LogoEntry[] = [
         node: <PanopticonVariant size={140} cfg={{
           cellStyle: "outlined",
           numGroups: 12, tallH: 26, shortH: 12,
-          pvSize: 92, pvClearR: 72,
-          ringStart: 76, ringEnd: 116,
+          pvSize: 70, pvClearR: 58,
+          ringStart: 70, ringEnd: 116,
           numRings: 7,
           ringFadeToCenter: true,
         }} />,
@@ -331,8 +331,8 @@ const LOGOS: LogoEntry[] = [
         node: <PanopticonVariant size={140} cfg={{
           cellStyle: "outlined",
           numGroups: 6, includeFlankers: false, tallH: 38,
-          pvSize: 92, pvClearR: 72,
-          ringStart: 76, ringEnd: 116,
+          pvSize: 70, pvClearR: 58,
+          ringStart: 70, ringEnd: 116,
           numRings: 7,
           ringFadeToCenter: true,
         }} />,
@@ -341,8 +341,8 @@ const LOGOS: LogoEntry[] = [
         label: "Lampstand — light, dark on cream",
         node: <PanopticonVariant size={140} color={DARK} bg={CREAM} cfg={{
           cellStyle: "outlined",
-          pvSize: 92, pvClearR: 72,
-          ringStart: 76, ringEnd: 116,
+          pvSize: 70, pvClearR: 58,
+          ringStart: 70, ringEnd: 116,
           numRings: 7,
           ringFadeToCenter: true,
         }} />,
