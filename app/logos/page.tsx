@@ -263,8 +263,8 @@ const LOGOS: LogoEntry[] = [
       <div style={{ borderRadius: 8, overflow: "hidden", boxShadow: "0 6px 32px rgba(0,0,0,0.55)", display: "inline-block" }}>
         <PanopticonMark size={280} cfg={{
           cellStyle: "outlined",
-          pvSize: 50, pvClearR: 56,
-          ringStart: 68, ringEnd: 116,
+          pvSize: 70, pvClearR: 58,
+          ringStart: 70, ringEnd: 116,
           numRings: 7,
           ringFadeToCenter: true,
         }} />
@@ -299,8 +299,50 @@ const LOGOS: LogoEntry[] = [
         label: "Lampstand — wireframe + fading rings, sovereign center",
         node: <PanopticonVariant size={140} cfg={{
           cellStyle: "outlined",
-          pvSize: 50, pvClearR: 56,
-          ringStart: 68, ringEnd: 116,
+          pvSize: 70, pvClearR: 58,
+          ringStart: 70, ringEnd: 116,
+          numRings: 7,
+          ringFadeToCenter: true,
+        }} />,
+      },
+      {
+        label: "Lampstand — 5 rings, more open field",
+        node: <PanopticonVariant size={140} cfg={{
+          cellStyle: "outlined",
+          pvSize: 70, pvClearR: 58,
+          ringStart: 72, ringEnd: 116,
+          numRings: 5,
+          ringFadeToCenter: true,
+        }} />,
+      },
+      {
+        label: "Lampstand — 12 groups, dense arms",
+        node: <PanopticonVariant size={140} cfg={{
+          cellStyle: "outlined",
+          numGroups: 12, tallH: 26, shortH: 12,
+          pvSize: 70, pvClearR: 58,
+          ringStart: 70, ringEnd: 116,
+          numRings: 7,
+          ringFadeToCenter: true,
+        }} />,
+      },
+      {
+        label: "Lampstand — 6 spokes, no flankers",
+        node: <PanopticonVariant size={140} cfg={{
+          cellStyle: "outlined",
+          numGroups: 6, includeFlankers: false, tallH: 38,
+          pvSize: 70, pvClearR: 58,
+          ringStart: 70, ringEnd: 116,
+          numRings: 7,
+          ringFadeToCenter: true,
+        }} />,
+      },
+      {
+        label: "Lampstand — light, dark on cream",
+        node: <PanopticonVariant size={140} color={DARK} bg={CREAM} cfg={{
+          cellStyle: "outlined",
+          pvSize: 70, pvClearR: 58,
+          ringStart: 70, ringEnd: 116,
           numRings: 7,
           ringFadeToCenter: true,
         }} />,
