@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Cinzel, DM_Sans } from "next/font/google";
 import "./globals.css";
 import ChatWidget from "./components/ChatWidget";
+import SiteNav from "./components/SiteNav";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -160,6 +161,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
+        <SiteNav />
         {children}
         <ChatWidget />
       </body>
