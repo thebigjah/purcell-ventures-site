@@ -84,7 +84,7 @@ const SESSIONS = [
 const PRICING = [
   {
     label: "1-on-1",
-    rate: "$100",
+    rate: "$175",
     unit: "/ hour",
     desc: "You and me. We go deep on your specific situation, tools, and problems. Most flexible — agenda is entirely yours.",
     note: "2-hr minimum recommended",
@@ -92,7 +92,7 @@ const PRICING = [
   },
   {
     label: "Small Group",
-    rate: "$55",
+    rate: "$125",
     unit: "/ person",
     desc: "2–8 people. Collaborative, interactive, and tailored to the group. Better for teams that work closely together.",
     note: "Per session · 2-hr minimum",
@@ -100,10 +100,10 @@ const PRICING = [
   },
   {
     label: "Workshop",
-    rate: "$40",
-    unit: "/ person",
-    desc: "9–30 people. Structured presentation with Q&A and hands-on exercises. Great for all-hands training or community events.",
-    note: "Per session · 3-hr minimum",
+    rate: "$2,500",
+    unit: "flat rate",
+    desc: "Up to 20 people. Structured session with Q&A and hands-on exercises. Great for all-hands training or company events.",
+    note: "Half-day · up to 20 people",
     highlight: false,
   },
   {
