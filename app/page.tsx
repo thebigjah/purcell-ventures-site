@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { PanopticonMark } from "@/app/components/PanopticonMark";
 
 const FAQ_SCHEMA = {
@@ -182,6 +183,56 @@ export default function Home() {
           ))}
         </div>
       </main>
+
+      {/* Courses */}
+      <section style={{ maxWidth: "960px", margin: "0 auto", padding: "0 24px 64px" }}>
+        <div style={{ borderTop: "1px solid var(--color-warm-border)", paddingTop: "48px", marginBottom: "32px" }}>
+          <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: "8px" }}>
+            <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)" }}>
+              Courses
+            </p>
+            <Link href="/courses" style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", textDecoration: "none" }}>
+              View all →
+            </Link>
+          </div>
+          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(22px, 3.5vw, 32px)", fontWeight: 700, color: "var(--color-warm-text)", lineHeight: 1.1 }}>
+            Learn from someone who just did it.
+          </h2>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1px", background: "var(--color-warm-border)", borderRadius: 8, overflow: "hidden" }}>
+          {[
+            {
+              href: "/courses/college-apps",
+              title: "The College Application Playbook",
+              desc: "34 acceptances. $505,000+ in scholarships. The exact process — school list, essays, financial aid, and negotiation.",
+              price: "$297",
+            },
+            {
+              href: "/courses/business-launch",
+              title: "The Business Launch Playbook",
+              desc: "From idea to LLC to first dollar. 7 modules, 26 lessons, and a full resource pack of templates and tools.",
+              price: "$397",
+            },
+          ].map(c => (
+            <Link key={c.href} href={c.href} style={{ textDecoration: "none", display: "block", background: "var(--color-warm-bg)", padding: "28px 24px", transition: "background 0.15s" }}
+              onMouseEnter={e => (e.currentTarget.style.background = "var(--color-warm-card)")}
+              onMouseLeave={e => (e.currentTarget.style.background = "var(--color-warm-bg)")}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "16px" }}>
+                <div style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--color-warm-accent)", flexShrink: 0 }} />
+                <span style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-accent)" }}>Available Now</span>
+              </div>
+              <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "17px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "10px", lineHeight: 1.2 }}>{c.title}</h3>
+              <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.65, marginBottom: "20px" }}>{c.desc}</p>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 800, color: "var(--color-warm-text)", letterSpacing: "-0.02em" }}>{c.price}</span>
+                <span style={{ fontSize: "12px", fontWeight: 600, color: "var(--color-warm-accent)", letterSpacing: "0.06em" }}>View Course →</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       {/* Footer */}
       <footer style={{ padding: "24px", borderTop: "1px solid var(--color-warm-border)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
