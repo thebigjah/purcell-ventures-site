@@ -155,15 +155,15 @@ export default function CollegeAppsPage() {
   const [email,      setEmail]      = useState("");
   const [waitlisted, setWaitlisted] = useState(false);
 
-  function handleWaitlist(e: React.FormEvent) {
+  async function handleWaitlist(e: React.FormEvent) {
     e.preventDefault();
     if (!email.trim()) return;
     try {
-      const existing = JSON.parse(localStorage.getItem("pv_course_waitlist") || "[]");
-      localStorage.setItem("pv_course_waitlist", JSON.stringify([
-        ...existing,
-        { email: email.trim(), ts: new Date().toISOString(), course: "college-apps" },
-      ]));
+      await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email.trim(), course: "college-apps" }),
+      });
     } catch {}
     setWaitlisted(true);
   }

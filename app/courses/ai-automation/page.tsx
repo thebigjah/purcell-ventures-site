@@ -513,13 +513,15 @@ function WaitlistBlock() {
   const [email, setEmail] = useState("");
   const [done, setDone] = useState(false);
 
-  function submit(e: React.FormEvent) {
+  async function submit(e: React.FormEvent) {
     e.preventDefault();
     if (!email) return;
     try {
-      const existing = JSON.parse(localStorage.getItem("pv_course_waitlist") || "[]");
-      existing.push({ email, course: "ai-automation", ts: Date.now() });
-      localStorage.setItem("pv_course_waitlist", JSON.stringify(existing));
+      await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, course: "ai-automation" }),
+      });
     } catch {}
     setDone(true);
   }
