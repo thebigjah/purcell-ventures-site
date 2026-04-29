@@ -55,7 +55,7 @@ const MODULES = [
   {
     num: "06", title: "Personal AI Assistants", lessonCount: 3, totalMin: 38,
     lessons: [
-      { id: "6-1", title: "How I built ElijahBot — a personal AI with memory, voice, and screen vision", duration: "14 min", format: "Camera + Screen" },
+      { id: "6-1", title: "Building a personal AI assistant — memory, voice, and screen vision", duration: "14 min", format: "Camera + Screen" },
       { id: "6-2", title: "Persistent memory and context — making your AI remember you", duration: "13 min", format: "Screen share" },
       { id: "6-3", title: "Voice input and output — ElevenLabs, Web Speech, and hands-free AI", duration: "11 min", format: "Screen share" },
     ],
@@ -150,7 +150,7 @@ const FAQS = [
   },
   {
     q: "Are these tools you actually run?",
-    a: "Yes. The email bot processes my inbox every day. The YouTube pipeline runs 3x daily and generates real AdSense revenue. AutoBlade finds service jobs for Purcell Works. ElijahBot sits on my desktop right now. None of this was built for the course — the course was built around tools that already existed and already worked.",
+    a: "Yes. The email bot processes my inbox every day. The content pipeline runs on a schedule and generates real AdSense revenue. I built a listing monitor to surface job leads automatically, an inbox harvester to process bulk email in minutes instead of days, and a personal AI that sits on my desktop right now. None of this was built for the course — the course was built around tools that already existed and already worked.",
   },
   {
     q: "What do I get in the resource pack?",
@@ -223,32 +223,32 @@ export default function ZeroToAutomatedPage() {
             {[
               {
                 name: "Email Bot",
-                desc: "Reads my inbox, categorizes every message by urgency, and drafts replies for me — using Claude. I open my email once a day instead of twelve times.",
+                desc: "Reads your inbox, categorizes every message by urgency, and drafts replies using Claude. Process 40+ emails in under 2 minutes instead of spending an hour on manual triage.",
                 stats: "Runs daily · Gmail IMAP + Claude API · SQLite",
               },
               {
-                name: "YouTube Pipeline",
-                desc: "Downloads source footage, generates AI commentary, assembles the video with captions and a thumbnail, and uploads to YouTube. Runs 3x per day.",
-                stats: "3x daily · yt-dlp + MoviePy + YouTube API",
+                name: "Content Pipeline",
+                desc: "Downloads source footage, generates AI commentary, assembles with captions and a thumbnail, and uploads automatically. A fully hands-off production workflow that runs on a schedule.",
+                stats: "Runs on schedule · yt-dlp + MoviePy + YouTube API",
               },
               {
-                name: "AutoBlade Scraper",
-                desc: "Monitors Craigslist and Nextdoor for service job postings that match what Purcell Works does. Filters spam, deduplicates, and exports to Google Sheets.",
-                stats: "Atlanta-wide · Selenium + gspread",
+                name: "Listing Monitor",
+                desc: "Watches Craigslist, Facebook Marketplace, or any job board for postings that match your criteria. Filters noise, deduplicates against what it's already seen, and exports clean leads to a spreadsheet.",
+                stats: "Runs on schedule · Selenium + gspread",
               },
               {
-                name: "Places Lead Gen",
-                desc: "Queries Google Places API for local businesses, scores them by how incomplete their online presence is, and outputs a ranked list of people I should call.",
+                name: "Opportunity Scorer",
+                desc: "Queries any data source for prospects or leads, scores each result against your custom criteria, and outputs a ranked list of who to contact first.",
                 stats: "Runs on demand · Places API + scoring algo",
               },
               {
-                name: "Scholarship Sniper",
-                desc: "Scanned 2,200+ emails from colleges and scholarship orgs, extracted deadlines and award amounts, and built a prioritized list — in one afternoon.",
-                stats: "2,200+ emails processed · Gmail OAuth + Claude",
+                name: "Inbox Harvester",
+                desc: "Processes hundreds of emails or documents at once — extracting deadlines, prices, contacts, or any structured data — and builds a prioritized list in minutes instead of days.",
+                stats: "Batch processing · Gmail OAuth + Claude",
               },
               {
-                name: "ElijahBot",
-                desc: "A personal AI overlay that sits on my desktop — voice input, voice output, screen vision, persistent memory, and slash commands. It's always open.",
+                name: "Personal AI Assistant",
+                desc: "A desktop overlay built around how you work — voice input, voice output, screen vision, persistent memory, and custom slash commands for your most common tasks.",
                 stats: "Always on · Electron + Claude API + ElevenLabs",
               },
             ].map(t => (
