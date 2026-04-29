@@ -4,7 +4,7 @@ import Link from "next/link";
 import VideoEmbed from "@/app/components/VideoEmbed";
 import { PanopticonMark } from "@/app/components/PanopticonMark";
 
-const VALID_CODE = process.env.NEXT_PUBLIC_COURSE_ACCESS_CODE ?? "COLLEGE2025";
+const VALID_CODE = process.env.NEXT_PUBLIC_COURSE_ACCESS_CODE ?? "COLLEGE2026";
 type GateState = "loading" | "locked" | "unlocked";
 
 // ── localStorage helpers ──────────────────────────────────────────────────────

@@ -77,6 +77,34 @@ export default function CoursesPage() {
               </div>
             </div>
           </Link>
+          {/* AI Automation — live */}
+          <Link href="/courses/ai-automation" style={{ textDecoration: "none", display: "block", background: "var(--color-warm-bg)", padding: "40px", transition: "background 0.15s" }}
+            onMouseEnter={e => (e.currentTarget.style.background = "var(--color-warm-card)")}
+            onMouseLeave={e => (e.currentTarget.style.background = "var(--color-warm-bg)")}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "24px" }}>
+              <div style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--color-warm-accent)", flexShrink: 0 }} />
+              <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontFamily: "var(--font-inter), sans-serif" }}>
+                Available Now
+              </span>
+            </div>
+            <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "12px", lineHeight: 1.15 }}>
+              Zero to Automated
+            </h2>
+            <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.7, marginBottom: "32px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+              8 modules. 25 lessons. Build the AI tools you actually need — email bots, content pipelines, lead scrapers, and personal AI assistants. Every tool taught is a tool I run.
+            </p>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+              <div>
+                <div style={{ fontSize: "11px", color: "var(--color-warm-text-muted)", marginBottom: "2px", fontFamily: "var(--font-inter), sans-serif" }}>from</div>
+                <div style={{ fontSize: "28px", fontWeight: 900, color: "var(--color-warm-text)", fontFamily: "'Cinzel', Georgia, serif", letterSpacing: "-0.02em" }}>$397</div>
+              </div>
+              <div style={{ fontSize: "13px", fontWeight: 600, color: "var(--color-warm-accent)", letterSpacing: "0.06em", fontFamily: "var(--font-inter), sans-serif" }}>
+                View Course →
+              </div>
+            </div>
+          </Link>
+
         </div>
       </div>
     </div>

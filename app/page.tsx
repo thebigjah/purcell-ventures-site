@@ -214,6 +214,12 @@ export default function Home() {
               desc: "From idea to LLC to first dollar. 7 modules, 26 lessons, and a full resource pack of templates and tools.",
               price: "$397",
             },
+            {
+              href: "/courses/ai-automation",
+              title: "Zero to Automated",
+              desc: "Email bots, YouTube pipelines, lead scrapers, personal AI assistants. 8 modules, 25 lessons, 7 real code templates.",
+              price: "$397",
+            },
           ].map(c => (
             <Link key={c.href} href={c.href} style={{ textDecoration: "none", display: "block", background: "var(--color-warm-bg)", padding: "28px 24px", transition: "background 0.15s" }}
               onMouseEnter={e => (e.currentTarget.style.background = "var(--color-warm-card)")}
