@@ -95,37 +95,43 @@ export default function Home() {
       <main className="flex-1 flex flex-col justify-center w-full mx-auto px-6 py-12 sm:px-8 sm:py-20"
         style={{ maxWidth: "960px" }}>
 
-        {/* Logo Mark */}
-        <div style={{ display: "flex", justifyContent: "center", marginBottom: "48px" }}>
-          <PanopticonMark size={140} color="var(--color-warm-accent)" bg="#0c0a08" cfg={{
-            cellStyle: "outlined",
-            pvSize: 70, pvClearR: 58,
-            ringStart: 70, ringEnd: 116,
-            numRings: 7,
-            ringFadeToCenter: true,
-          }} />
+        {/* Hero: logo + headline (stacked on mobile, side-by-side on desktop) */}
+        <div className="flex flex-col md:flex-row md:items-center md:gap-16" style={{ marginBottom: "48px" }}>
+          {/* Logo Mark */}
+          <div className="flex justify-center mb-12 md:mb-0 md:flex-shrink-0">
+            <PanopticonMark size={140} color="var(--color-warm-accent)" bg="#0c0a08" cfg={{
+              cellStyle: "outlined",
+              pvSize: 70, pvClearR: 58,
+              ringStart: 70, ringEnd: 116,
+              numRings: 7,
+              ringFadeToCenter: true,
+            }} />
+          </div>
+
+          {/* Text content */}
+          <div className="md:flex-1 md:min-w-0">
+            {/* Eyebrow */}
+            <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "24px" }}>
+              Purcell Ventures LLC
+            </p>
+
+            {/* Headline */}
+            <h1 style={{
+              fontFamily: "'Cinzel', Georgia, serif",
+              fontSize: "clamp(40px, 8vw, 96px)", fontWeight: 700,
+              lineHeight: 1.02, letterSpacing: "-0.02em",
+              color: "var(--color-warm-text)", marginBottom: "24px",
+            }}>
+              Built to last.<br />
+              <span style={{ color: "var(--color-warm-accent)" }}>Built to grow.</span>
+            </h1>
+
+            <p className="text-base sm:text-lg" style={{ color: "var(--color-warm-text-muted)", maxWidth: "480px", lineHeight: 1.75 }}>
+              Purcell Ventures is a multi-division company founded by Elijah Purcell.
+              We build software, serve local communities, and invest in real estate.
+            </p>
+          </div>
         </div>
-
-        {/* Eyebrow */}
-        <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "24px" }}>
-          Purcell Ventures LLC
-        </p>
-
-        {/* Headline */}
-        <h1 style={{
-          fontFamily: "'Cinzel', Georgia, serif",
-          fontSize: "clamp(40px, 8vw, 96px)", fontWeight: 700,
-          lineHeight: 1.02, letterSpacing: "-0.02em",
-          color: "var(--color-warm-text)", marginBottom: "24px",
-        }}>
-          Built to last.<br />
-          <span style={{ color: "var(--color-warm-accent)" }}>Built to grow.</span>
-        </h1>
-
-        <p className="text-base sm:text-lg" style={{ color: "var(--color-warm-text-muted)", maxWidth: "480px", lineHeight: 1.75, marginBottom: "48px" }}>
-          Purcell Ventures is a multi-division company founded by Elijah Purcell.
-          We build software, serve local communities, and invest in real estate.
-        </p>
 
         {/* Divisions */}
         <div className="grid grid-cols-1 sm:grid-cols-2"
