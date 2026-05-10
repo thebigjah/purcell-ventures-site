@@ -45,7 +45,7 @@ const schema = {
       "givenName": "Elijah",
       "familyName": "Purcell",
       "jobTitle": "Founder & CEO",
-      "description": "Entrepreneur, AI consultant, and software developer based in Acworth, Georgia. Founder of Purcell Ventures LLC — a multi-division company offering digital services, AI consulting, custom software, and owner-operated field services. Received 34 college acceptances totaling over $505,000 per year in scholarships. Enrolling at the University of Alabama Honors College in Fall 2026.",
+      "description": "Entrepreneur, AI consultant, and software developer based in Acworth, Georgia. Founder of Purcell Ventures LLC — a multi-division company offering digital services, AI consulting, and custom software development. Also founder of Mantle Field Services, a sister brand handling owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta. Received 34 college acceptances totaling over $505,000 per year in scholarships. Enrolling at the University of Alabama Honors College in Fall 2026.",
       "worksFor": { "@id": "https://purcellventures.co/#organization" },
       "url": "https://purcellventures.co",
       "email": "elijah@purcell-ventures.com",
@@ -89,7 +89,7 @@ const schema = {
           "name": "Who is Elijah Purcell?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Elijah Purcell is an entrepreneur, AI consultant, and software developer based in Acworth, Georgia. He is the founder and CEO of Purcell Ventures LLC, a multi-division company offering digital services, AI consulting, custom software development, and owner-operated field services. He received 34 college acceptances with over $505,000 per year in scholarships and is enrolling at the University of Alabama Honors College in Fall 2026.",
+            "text": "Elijah Purcell is an entrepreneur, AI consultant, and software developer based in Acworth, Georgia. He is the founder and CEO of Purcell Ventures LLC, a multi-division company offering digital services, AI consulting, and custom software development. He also founded Mantle Field Services, a sister brand handling owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta. He received 34 college acceptances with over $505,000 per year in scholarships and is enrolling at the University of Alabama Honors College in Fall 2026.",
           },
         },
         {
@@ -97,7 +97,7 @@ const schema = {
           "name": "What is Purcell Ventures LLC?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Purcell Ventures LLC is a Georgia-based multi-division company founded by Elijah Purcell. Its divisions include: Digital Services (websites, AI tools, CRM, booking systems for small businesses), AI Consulting (hands-on team training and workshops), Custom Software Development (mobile apps, web apps, AI integrations), and Purcell Works (owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta).",
+            "text": "Purcell Ventures LLC is a Georgia-based multi-division company founded by Elijah Purcell. Its divisions include: Digital Services (websites, AI tools, CRM, booking systems for small businesses), AI Consulting (hands-on team training and workshops), and Custom Software Development (mobile apps, web apps, AI integrations). A sister brand, Mantle Field Services, handles owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta.",
           },
         },
         {
@@ -105,7 +105,7 @@ const schema = {
           "name": "Where is Purcell Ventures located?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Purcell Ventures LLC is based in Acworth, Georgia. Field services (Purcell Works) serve the Metro Atlanta area including Kennesaw, Marietta, Acworth, Canton, and Woodstock. Digital services and AI consulting are available nationwide.",
+            "text": "Purcell Ventures LLC is based in Acworth, Georgia. Digital services and AI consulting are available nationwide. Sister brand Mantle Field Services serves the Metro Atlanta area (Kennesaw, Marietta, Acworth, Canton, Woodstock) with gutter cleaning, pressure washing, and lawn care.",
           },
         },
         {

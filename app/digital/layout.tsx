@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Digital Services for Small Businesses | Websites, AI Tools, CRM & Booking",
   description:
-    "Complete digital toolkit: website, AI chatbot, booking system, CRM, email marketing, social scheduling, and 20+ tools. One monthly subscription — Starter $75/mo, Growth $125/mo, Full $175/mo. Setup $300–500.",
+    "Complete digital toolkit: website, AI chatbot, booking system, CRM, email marketing, social scheduling, and 20+ tools. One monthly subscription — Starter $99/mo, Growth $179/mo, Full $279/mo. Setup $400–1,000.",
   keywords: [
     "digital services small business", "AI chatbot for website", "business website management",
     "CRM for small business", "email marketing automation", "booking system",
@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Digital Services for Small Businesses — Purcell Ventures",
     description:
-      "Website, AI chatbot, booking system, CRM, and 20+ tools. One subscription. Starting at $75/mo.",
+      "Website, AI chatbot, booking system, CRM, and 20+ tools. One subscription. Starting at $99/mo.",
     url: "https://purcellventures.co/digital",
     type: "website",
   },
   twitter: {
     title: "Digital Services — Purcell Ventures",
-    description: "Website, AI chatbot, booking, CRM, and 20+ tools for small businesses. From $75/mo.",
+    description: "Website, AI chatbot, booking, CRM, and 20+ tools for small businesses. From $99/mo.",
   },
   alternates: { canonical: "https://purcellventures.co/digital" },
 };
@@ -40,13 +40,13 @@ const schema = {
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "USD",
-        "lowPrice": "75",
-        "highPrice": "175",
+        "lowPrice": "99",
+        "highPrice": "279",
         "offerCount": 3,
         "offers": [
-          { "@type": "Offer", "name": "Starter Plan", "price": "75", "priceCurrency": "USD" },
-          { "@type": "Offer", "name": "Growth Plan", "price": "125", "priceCurrency": "USD" },
-          { "@type": "Offer", "name": "Full Suite Plan", "price": "175", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Starter Plan", "price": "99", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Growth Plan", "price": "179", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Full Suite Plan", "price": "279", "priceCurrency": "USD" },
         ],
       },
     },
@@ -66,7 +66,7 @@ const schema = {
           "name": "How much does a digital services subscription cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Plans start at $75/mo (Starter), $125/mo (Growth), or $175/mo (Full Suite). There is a one-time setup fee of $300–500.",
+            "text": "Plans start at $99/mo (Starter), $179/mo (Growth), or $279/mo (Full Suite). There is a one-time setup fee of $400–1,000.",
           },
         },
         {

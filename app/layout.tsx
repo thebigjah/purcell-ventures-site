@@ -28,11 +28,10 @@ export const metadata: Metadata = {
     template: "%s | Purcell Ventures",
   },
   description:
-    "Georgia-based company offering complete digital services, hands-on AI consulting, custom software development, and owner-operated field services. Founded by Elijah Purcell.",
+    "Georgia-based company offering complete digital services, hands-on AI consulting, and custom software development. Founded by Elijah Purcell.",
   keywords: [
     "AI consulting", "digital services for small business", "custom software development",
     "business AI training", "website management", "Purcell Ventures", "Elijah Purcell",
-    "gutter cleaning Kennesaw", "pressure washing Metro Atlanta",
   ],
   authors: [{ name: "Elijah Purcell", url: "https://purcellventures.co" }],
   creator: "Elijah Purcell",
@@ -44,13 +43,13 @@ export const metadata: Metadata = {
     siteName: "Purcell Ventures",
     title: "Purcell Ventures | Digital Services, AI Consulting & Custom Software",
     description:
-      "Georgia-based company offering complete digital services, AI consulting, custom software, and owner-operated field services.",
+      "Georgia-based company offering complete digital services, AI consulting, and custom software.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Purcell Ventures | Digital Services, AI Consulting & Custom Software",
     description:
-      "Georgia-based company offering complete digital services, AI consulting, custom software, and field services.",
+      "Georgia-based company offering complete digital services, AI consulting, and custom software.",
   },
   robots: {
     index: true,
@@ -67,7 +66,7 @@ const orgSchema = {
       "@id": "https://purcellventures.co/#website",
       "url": "https://purcellventures.co",
       "name": "Purcell Ventures",
-      "description": "Digital services, AI consulting, custom software, and field services. Founded by Elijah Purcell.",
+      "description": "Digital services, AI consulting, and custom software. Founded by Elijah Purcell.",
       "publisher": { "@id": "https://purcellventures.co/#organization" },
       "potentialAction": {
         "@type": "SearchAction",
@@ -90,7 +89,7 @@ const orgSchema = {
         "width": 1200,
         "height": 630,
       },
-      "description": "Multi-division company offering digital services, AI consulting, custom software development, and owner-operated field services. Founded by Elijah Purcell in Georgia.",
+      "description": "Multi-division company offering digital services, AI consulting, and custom software development. Founded by Elijah Purcell in Georgia.",
       "foundingDate": "2023",
       "foundingLocation": {
         "@type": "Place",

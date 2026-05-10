@@ -26,7 +26,6 @@ const LINKS = [
   { href: "/consulting", label: "Consulting" },
   { href: "/software",   label: "Software" },
   { href: "/courses",    label: "Courses" },
-  { href: "/services",   label: "Services" },
   { href: "/about",      label: "About" },
 ];
 

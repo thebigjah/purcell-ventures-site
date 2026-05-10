@@ -13,7 +13,7 @@ interface Invoice {
   createdAt: string;
 }
 
-const DIVISIONS = ["Purcell Ventures — Digital Services", "Purcell Ventures — Consulting", "Purcell Ventures — Custom Software", "Purcell Works — Field Services"];
+const DIVISIONS = ["Purcell Ventures — Digital Services", "Purcell Ventures — Consulting", "Purcell Ventures — Custom Software", "Mantle Field Services"];
 const STATUS_COLORS: Record<string, string> = { Draft: "#524d45", Sent: "#d4af37", Paid: "#4a9a6a", Overdue: "#9a4a4a" };
 
 function total(items: LineItem[]) { return items.reduce((s, i) => s + i.qty * i.rate, 0); }

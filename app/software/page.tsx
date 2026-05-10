@@ -184,12 +184,12 @@ export default function SoftwarePage() {
         <div style={{ background: "var(--color-warm-card)", border: "1px solid var(--color-warm-border)", borderRadius: "12px", padding: "40px 40px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "32px" }}>
           <div>
             <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px" }}>Small Projects</div>
-            <div style={{ fontSize: "28px", fontWeight: 800, color: "var(--color-warm-text)", marginBottom: "8px" }}>$500–1,500</div>
+            <div style={{ fontSize: "28px", fontWeight: 800, color: "var(--color-warm-text)", marginBottom: "8px" }}>$1,500–3,500</div>
             <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>Landing pages, Chrome extensions, small tools, automation scripts.</p>
           </div>
           <div>
             <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px" }}>Full Apps</div>
-            <div style={{ fontSize: "28px", fontWeight: 800, color: "var(--color-warm-text)", marginBottom: "8px" }}>$1,500–5,000</div>
+            <div style={{ fontSize: "28px", fontWeight: 800, color: "var(--color-warm-text)", marginBottom: "8px" }}>$5,000–15,000</div>
             <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>Mobile apps, web platforms, AI-powered tools, full-stack applications.</p>
           </div>
           <div>

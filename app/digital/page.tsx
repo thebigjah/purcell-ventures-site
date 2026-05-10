@@ -70,8 +70,8 @@ const MODULES = [
 const PRICING = [
   {
     name: "Starter",
-    price: 75,
-    setup: 300,
+    price: 99,
+    setup: 400,
     tagline: "Get online and start getting found.",
     features: ["Business Website", "AI Chatbot Widget", "Contact / Lead Form", "Google Analytics setup", "Monthly content update"],
     cta: "Start with Starter",
@@ -79,8 +79,8 @@ const PRICING = [
   },
   {
     name: "Growth",
-    price: 125,
-    setup: 400,
+    price: 179,
+    setup: 700,
     tagline: "Everything in Starter, plus bookings and marketing.",
     features: ["Everything in Starter", "Appointment Booking", "Email Newsletter", "Social Media Scheduler", "Review Manager", "Lead Capture Pipeline"],
     cta: "Get Growth",
@@ -88,8 +88,8 @@ const PRICING = [
   },
   {
     name: "Full Service",
-    price: 175,
-    setup: 500,
+    price: 279,
+    setup: 1000,
     tagline: "Your complete digital operation — fully managed.",
     features: ["Everything in Growth", "CRM & Estimating", "Online Invoicing", "AI Content Generator", "SMS Campaigns", "Loyalty Program", "Priority support"],
     cta: "Go Full Service",
@@ -324,7 +324,7 @@ function TeamBuilder() {
             </div>
             <div style={{ textAlign: "center" }}>
               <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-text-muted)", marginBottom: "4px" }}>My subscription instead</div>
-              <div style={{ fontSize: "15px", fontWeight: 600, color: "var(--color-warm-text-muted)", marginBottom: "4px" }}>from $75/mo</div>
+              <div style={{ fontSize: "15px", fontWeight: 600, color: "var(--color-warm-text-muted)", marginBottom: "4px" }}>from $99/mo</div>
               <div style={{ fontSize: "26px", fontWeight: 800, color: "var(--color-warm-accent)", letterSpacing: "-0.02em" }}>Save ${(totalSalary - 75).toLocaleString()}+</div>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "8px", alignItems: "flex-start" }}>
@@ -1539,7 +1539,7 @@ export default function DigitalPage() {
               <span style={{ color: "var(--color-warm-accent)" }}>Built with you.</span>
             </h1>
             <p style={{ fontSize: "17px", color: "var(--color-warm-text-muted)", maxWidth: "460px", lineHeight: 1.75, marginBottom: "36px" }}>
-              Websites, booking, CRM, chatbots, and more — built around your business, your input, your approval. Starting at $75/month.
+              Websites, booking, CRM, chatbots, and more — built around your business, your input, your approval. Starting at $99/month.
             </p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               <a href="#contact" style={{ padding: "13px 28px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "14px", fontWeight: 700, borderRadius: "7px", textDecoration: "none" }}>
@@ -1801,9 +1801,9 @@ export default function DigitalPage() {
                 <label style={{ display: "block", fontSize: "11px", fontWeight: 600, color: "var(--color-warm-text-muted)", marginBottom: "6px", letterSpacing: "0.06em", textTransform: "uppercase" }}>Best fit?</label>
                 <select style={{ width: "100%", padding: "10px 13px", background: "var(--color-warm-bg)", border: "1px solid var(--color-warm-border)", borderRadius: "6px", color: "var(--color-warm-text-muted)", fontSize: "14px", outline: "none" }}>
                   <option value="">Not sure — help me pick</option>
-                  <option value="starter">Starter ($75/mo) — Website + Chatbot</option>
-                  <option value="growth">Growth ($125/mo) — + Booking + Marketing</option>
-                  <option value="full">Full Service ($175/mo) — Everything</option>
+                  <option value="starter">Starter ($99/mo) — Website + Chatbot</option>
+                  <option value="growth">Growth ($179/mo) — + Booking + Marketing</option>
+                  <option value="full">Full Service ($279/mo) — Everything</option>
                   <option value="custom">Custom — I'll tell you what I need</option>
                 </select>
               </div>

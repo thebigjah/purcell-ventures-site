@@ -11,7 +11,7 @@ const FAQ_SCHEMA = {
       "name": "What does Purcell Ventures do?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Purcell Ventures LLC is a Georgia-based multi-division company. We offer digital services for small businesses (websites, AI tools, CRM, booking from $75/mo), hands-on AI consulting and team training, custom software development (apps, platforms, AI integrations), and owner-operated field services (gutter cleaning, pressure washing, lawn care) in Metro Atlanta under the Purcell Works brand.",
+        "text": "Purcell Ventures LLC is a Georgia-based multi-division company. We offer digital services for small businesses (websites, AI tools, CRM, booking from $99/mo), hands-on AI consulting and team training, and custom software development (apps, platforms, AI integrations). Field services (gutter cleaning, pressure washing, lawn care) are run separately under our Mantle Field Services brand.",
       },
     },
     {
@@ -27,7 +27,7 @@ const FAQ_SCHEMA = {
       "name": "Where is Purcell Ventures based?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Purcell Ventures LLC is based in Acworth, Georgia. Digital services and AI consulting are available nationwide. Field services (Purcell Works) serve Metro Atlanta: Kennesaw, Marietta, Acworth, Canton, and Woodstock.",
+        "text": "Purcell Ventures LLC is based in Acworth, Georgia. Digital services and AI consulting are available nationwide. Field services run under our separate Mantle Field Services brand, serving Metro Atlanta: Kennesaw, Marietta, Acworth, Canton, and Woodstock.",
       },
     },
     {
@@ -45,7 +45,7 @@ const DIVISIONS = [
   {
     slug: "digital",
     label: "Digital Services",
-    tagline: "Your full digital operation: website, AI tools, booking, and marketing. Built and managed for you. Starting at $75/mo.",
+    tagline: "Your full digital operation: website, AI tools, booking, and marketing. Built and managed for you. Starting at $99/mo.",
     status: "live" as const,
     href: "/digital",
   },

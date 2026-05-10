@@ -7,7 +7,7 @@ const DIVISIONS = [
     label: "Digital Services",
     desc: "Complete digital toolkit for small businesses — website, AI chatbot, booking system, CRM, email marketing, and 20+ tools. Fully managed. One subscription.",
     href: "/digital",
-    price: "From $75/mo",
+    price: "From $99/mo",
   },
   {
     label: "AI Consulting",
@@ -19,12 +19,12 @@ const DIVISIONS = [
     label: "Custom Software",
     desc: "Mobile apps, web apps, and AI integrations scoped and built around your exact problem. From idea to launch.",
     href: "/software",
-    price: "From $500",
+    price: "From $1,500",
   },
   {
-    label: "Purcell Works — Field Services",
-    desc: "Owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta. You deal directly with the owner.",
-    href: "/services",
+    label: "Mantle Field Services (sister brand)",
+    desc: "Owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta — run under its own brand. Same owner, same standards.",
+    href: "https://mantle-field-site.vercel.app",
     price: "From $50",
   },
 ];
@@ -226,7 +226,7 @@ function ContactTab() {
         {[
           { q: "Who do I actually talk to?", a: "Me. Elijah Purcell. There's no team, no account manager, no handoff. You deal with the owner from first message to final delivery." },
           { q: "How fast do you respond?", a: "Same day on email, usually within a few hours. If you need an answer urgently, call or text." },
-          { q: "Do you take on clients outside Atlanta?", a: "For digital services, consulting, and software — yes, anywhere. For field services (gutter cleaning, pressure washing, lawn care), Metro Atlanta only." },
+          { q: "Do you take on clients outside Atlanta?", a: "For digital services, consulting, and software — yes, anywhere. For field work (gutter cleaning, pressure washing, lawn care), see our sister brand Mantle Field Services — Metro Atlanta only." },
           { q: "What's the best way to start?", a: "Email with a one-sentence description of what you need. I'll tell you honestly if I can help and what it would look like." },
         ].map(({ q, a }) => (
           <div key={q} style={{

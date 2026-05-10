@@ -48,7 +48,7 @@ export default function OgImage() {
           fontSize: "22px", color: "#8a7a6a", maxWidth: "680px",
           lineHeight: 1.55, display: "flex",
         }}>
-          Digital services · AI consulting · Custom software · Field services
+          Digital services · AI consulting · Custom software · Real estate
         </div>
 
         {/* Domain bottom right */}

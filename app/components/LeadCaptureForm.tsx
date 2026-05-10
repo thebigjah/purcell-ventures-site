@@ -6,7 +6,6 @@ const SERVICES = [
   "Digital Services (website, chatbot, booking, etc.)",
   "AI Consulting / Team Training",
   "Custom Software / App Development",
-  "Field Services (gutters, pressure washing, lawn care)",
   "Not sure — just exploring",
 ];
 

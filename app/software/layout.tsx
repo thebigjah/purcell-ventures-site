@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Custom Software Development | Mobile Apps, Web Apps & AI Integration",
   description:
-    "Custom-built mobile apps, web platforms, automation tools, and AI integrations scoped around your exact problem — from idea to launch. Small projects $500–1,500, full apps $1,500–5,000+.",
+    "Custom-built mobile apps, web platforms, automation tools, and AI integrations scoped around your exact problem — from idea to launch. Small projects $1,500–3,500, full apps $5,000–15,000+.",
   keywords: [
     "custom software development", "mobile app development", "web app development",
     "AI integration for business", "custom business software", "app development Georgia",
@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Custom Software Development — Purcell Ventures",
     description:
-      "Mobile apps, web platforms, and AI tools built around your exact problem. Small projects $500–1,500, full apps $1,500–5,000+.",
+      "Mobile apps, web platforms, and AI tools built around your exact problem. Small projects $1,500–3,500, full apps $5,000–15,000+.",
     url: "https://purcellventures.co/software",
     type: "website",
   },
   twitter: {
     title: "Custom Software Development — Purcell Ventures",
-    description: "Mobile apps, web apps, and AI tools built for your business. From $500.",
+    description: "Mobile apps, web apps, and AI tools built for your business. From $1,500.",
   },
   alternates: { canonical: "https://purcellventures.co/software" },
 };
@@ -38,11 +38,11 @@ const schema = {
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "USD",
-    "lowPrice": "500",
-    "highPrice": "5000",
+    "lowPrice": "1500",
+    "highPrice": "15000",
     "offers": [
-      { "@type": "Offer", "name": "Small Project", "price": "500", "priceCurrency": "USD", "description": "Scripts, tools, automations, simple web apps" },
-      { "@type": "Offer", "name": "Full Application", "price": "1500", "priceCurrency": "USD", "description": "Mobile apps, web platforms, full AI integrations" },
+      { "@type": "Offer", "name": "Small Project", "price": "1500", "priceCurrency": "USD", "description": "Scripts, tools, automations, simple web apps" },
+      { "@type": "Offer", "name": "Full Application", "price": "5000", "priceCurrency": "USD", "description": "Mobile apps, web platforms, full AI integrations" },
     ],
   },
 };

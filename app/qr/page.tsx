@@ -11,7 +11,7 @@ const CATEGORIES = [
     label: "Brand",
     items: [
       { name: "Homepage",        data: "https://purcellventures.co",             desc: "purcellventures.co" },
-      { name: "Purcell Works",   data: "https://works.purcellventures.co",        desc: "works.purcellventures.co" },
+      { name: "Mantle Field Services", data: "https://mantle-field-site.vercel.app", desc: "mantle-field-site.vercel.app" },
     ],
   },
   {
@@ -20,7 +20,7 @@ const CATEGORIES = [
       { name: "Digital Services", data: "https://purcellventures.co/digital",     desc: "purcellventures.co/digital" },
       { name: "Consulting",       data: "https://purcellventures.co/consulting",  desc: "purcellventures.co/consulting" },
       { name: "Custom Software",  data: "https://purcellventures.co/software",    desc: "purcellventures.co/software" },
-      { name: "Field Services",   data: "https://purcellventures.co/services",    desc: "purcellventures.co/services" },
+      { name: "Mantle Field Services", data: "https://mantle-field-site.vercel.app", desc: "mantle-field-site.vercel.app" },
     ],
   },
   {
