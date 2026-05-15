@@ -202,10 +202,15 @@ export default function ResumePage() {
         {/* Education */}
         <Section title="Education">
           <Row
+            left="Cornerstone Preparatory Academy — Acworth, GA"
+            right="K – 8th Grade"
+            sub="Elementary and middle school (4th – 8th in person; K–3rd homeschooled). The same school he returned to for high school."
+          />
+          <Row
             left="Grove Christian School — Midlothian, VA"
-            right="2022 – 2024"
+            right="2022 – 2023"
             sub="9th Grade – Mid 10th Grade · Beta Club · Honors courses"
-            note="Awards: Behold (9th) · Steadfast (10th) · Christ-like Leadership Award (Sports Banquet) · Lead in Christmas Musical"
+            note="Awards: Behold (9th) · Steadfast (10th) · Christian Character Award · Christ-like Leadership Award · Highest Math Grade in Class (9th) · Lead in Christmas Musical"
           />
           <Row
             left="Cornerstone Preparatory Academy — Acworth, GA"
@@ -240,13 +245,13 @@ export default function ResumePage() {
           />
           <Row
             left="Christian Character Award"
-            right="Cornerstone Prep"
+            right="Grove Christian School"
             sub="Selected as one of two students school-wide (one male, one female) for moral excellence, integrity, and leadership."
           />
           <Row
             left="Christ-like Leadership Award"
-            right="Grove Christian School · Sports Banquet"
-            sub="Awarded at the annual athletics banquet for embodying servant leadership and Christian character in competitive sport."
+            right="Grove Christian School · End-of-Year Awards"
+            sub="Awarded at the end-of-year awards ceremony for embodying servant leadership and Christian character throughout the school year."
           />
           <Row
             left="Lead Role — Christmas Musical"
@@ -316,13 +321,13 @@ export default function ResumePage() {
         <Section title="Work Experience & Entrepreneurship">
           <Row
             left="Founder & CEO — Purcell Ventures LLC"
-            right="2023 – Present"
+            right="April 2025 – Present"
             sub="Software development, AI integration, and digital marketing. Built React Native apps, web platforms, Chrome extensions, and AI pipelines. Leads service business and wholesale real estate divisions."
-            note="Client work deployed to production. Generates active revenue."
+            note="Filed as Zultar LLC 4/8/2025, rebranded Purcell Ventures LLC 1/27/2026. Client work deployed to production. Generates active revenue."
           />
           <Row
             left="Founder — Autoblade Services"
-            right="2023 – Present"
+            right="2024 – Present"
             sub="Launched and operate a lawn care and property services business. Handle client acquisition, scheduling, equipment maintenance, and service delivery."
           />
           <Row
@@ -341,9 +346,9 @@ export default function ResumePage() {
         <Section title="Leadership & Ministry">
           <SubSection title="School & Organizational Leadership">
             <Row
-              left="Founder & Leader — Mighty Men (Men's Bible Study)"
-              right="9th – 12th Grade"
-              sub="Founded and leads the school's men's discipleship group. Plans and facilitates weekly 2-hour discussions, mentors peers, creates lesson materials, and supports spiritual formation."
+              left="Member — Mighty Men (Men's Bible Study, Cornerstone Prep)"
+              right="11th – 12th Grade"
+              sub="Active member of the school's men's discipleship group. Weekly 2-hour discussions on faith, character, and spiritual formation."
             />
             <Row
               left="Head Chaplain"
@@ -408,7 +413,7 @@ export default function ResumePage() {
           />
           <Row
             left="Children's Ministry — Church Volunteer"
-            sub="Serves regularly in the kids ministry program at Riverstone Church — teaching, mentoring, and leading activities for elementary-age children."
+            sub="Serves regularly in the kids ministry program at Stonebridge Church (Marietta) — teaching, mentoring, and leading activities for elementary-age children."
           />
           <Row
             left="Community Cleanup — Environmental Service"
@@ -450,7 +455,7 @@ export default function ResumePage() {
               "Curious Conversations",
               "Animal Ambassadors",
               "Senior Devotional",
-              "Mighty Men (Founder & Leader)",
+              "Mighty Men (Member · CPA)",
             ].map(c => <AwardBadge key={c} text={c} />)}
           </div>
           <Row
@@ -523,9 +528,9 @@ export default function ResumePage() {
         {/* Faith & Service */}
         <Section title="Faith & Community Service">
           <Row
-            left="Church Involvement — Riverstone Church"
+            left="Church Involvement — Stonebridge (Marietta) + Kennesaw First Baptist"
             right="Ongoing"
-            sub="Sunday service (11am), youth group (5–7pm), and Wednesday Bible study (7–9pm) every week. Active participant since childhood; baptized at 15."
+            sub="Stonebridge Church (Marietta) — Sunday service, longstanding home church, baptized here at 15. Kennesaw First Baptist — Wednesday youth and retreats (~1.5 years)."
           />
           <Row
             left="Apologetics & Theology Study"

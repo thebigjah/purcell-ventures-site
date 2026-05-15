@@ -71,7 +71,7 @@ function StoryTab() {
           { label: "Enrolling",          value: "University of Alabama, Fall 2026" },
           { label: "Program",            value: "Honors College — Psychology / Data Science" },
           { label: "Scholarship Record", value: "34 acceptances · $520k+/yr awarded" },
-          { label: "Company",            value: "Purcell Ventures LLC (founded 2023)" },
+          { label: "Company",            value: "Purcell Ventures LLC (founded April 2025)" },
           { label: "Contact",            value: "elijah@purcell-ventures.com" },
         ].map(({ label, value }) => (
           <div key={label} style={{
@@ -94,7 +94,7 @@ function StoryTab() {
 
       <h2 style={h2Style}>Outside the Work</h2>
       <p style={prose}>
-        I&apos;m a bass-baritone vocalist — range C1 to F5 — and I lead worship at church most Sundays. I write poetry nobody asked for. I&apos;m 6&apos;3&quot; and from Georgia, which means I&apos;ve never met a stranger in my life. I&apos;ve done mission trips to North Carolina, the Bahamas, and Hawaii. I founded a men&apos;s Bible study at my school, competed in apologetics and debate for four years, and earned a 3.92 GPA without once finding it particularly interesting to coast.
+        I&apos;m a bass-baritone vocalist — range C1 to F5 — and I lead worship at church most Sundays. I write poetry nobody asked for. I&apos;m 6&apos;3&quot; and from Georgia, which means I&apos;ve never met a stranger in my life. I&apos;ve done mission trips to North Carolina, the Bahamas, and Hawaii, with Alaska coming this July. I&apos;m a member of my school&apos;s men&apos;s Bible study, competed in apologetics and debate for four years, and earned a 3.92 GPA without once finding it particularly interesting to coast.
       </p>
       <p style={{ ...prose, marginBottom: 0 }}>
         I care about doing things that last. That&apos;s true of the software, the businesses, the relationships, and the faith. I don&apos;t think those are separate categories.

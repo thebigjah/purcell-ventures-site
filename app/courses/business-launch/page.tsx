@@ -135,7 +135,7 @@ const FAQS = [
   },
   {
     q: "You're 18. Why should I take business advice from you?",
-    a: "Because I actually did it. I founded Purcell Ventures at 18, built multiple revenue streams, and documented every tool, decision, and mistake along the way. I'm not teaching theory — I'm teaching the exact process I used, while it's still fresh. The tools I recommend are the ones I actively use. The mistakes I warn about are ones I made.",
+    a: "Because I actually did it. I founded Purcell Ventures at 17, built multiple revenue streams, and documented every tool, decision, and mistake along the way. I'm not teaching theory — I'm teaching the exact process I used, while it's still fresh. The tools I recommend are the ones I actively use. The mistakes I warn about are ones I made.",
   },
   {
     q: "What's the resource pack?",
@@ -227,12 +227,12 @@ export default function BusinessLaunchPage() {
             Business Launch Course
           </div>
           <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(36px, 5.5vw, 68px)", fontWeight: 700, lineHeight: 1.0, marginBottom: "28px", maxWidth: "820px" }}>
-            <span style={{ color: "var(--color-warm-accent)" }}>I started a company at 18.</span>
+            <span style={{ color: "var(--color-warm-accent)" }}>I started a company at 17.</span>
             <br />
             <span style={{ color: "var(--color-warm-text)" }}>Here's everything I wish I knew first.</span>
           </h1>
           <p style={{ fontSize: "18px", color: "var(--color-warm-text-muted)", lineHeight: 1.75, maxWidth: "560px", marginBottom: "40px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            I'm Elijah Purcell. I founded Purcell Ventures at 18 — consulting, software, digital products, courses. This course is the complete playbook: idea to legal entity to first dollar to operating business, with every tool, decision, and shortcut I actually used.
+            I'm Elijah Purcell. I founded Purcell Ventures at 17 — consulting, software, digital products, courses. This course is the complete playbook: idea to legal entity to first dollar to operating business, with every tool, decision, and shortcut I actually used.
           </p>
           <div className="bl-hero-btns" style={{ display: "flex", gap: "12px", marginBottom: "56px" }}>
             <a href="#curriculum" style={{
@@ -256,7 +256,7 @@ export default function BusinessLaunchPage() {
           {/* Stats bar */}
           <div className="bl-stat-bar" style={{ borderTop: "1px solid var(--color-warm-border)", paddingTop: "40px" }}>
             {[
-              { num: "18",   label: "age when I founded it" },
+              { num: "17",   label: "age when I founded it" },
               { num: "5+",   label: "active revenue streams" },
               { num: "50+",  label: "tools tested & documented" },
               { num: "26",   label: "lessons in this course" },

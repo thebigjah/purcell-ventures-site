@@ -236,11 +236,19 @@ export default function ResumePrint() {
 
               <div className="row">
                 <div className="row-left">
+                  <div className="row-title">Cornerstone Preparatory Academy — Acworth, GA</div>
+                  <div className="row-sub">Elementary & Middle School (4th–8th in person; K–3rd homeschooled).</div>
+                </div>
+                <div className="row-right">K–8th</div>
+              </div>
+
+              <div className="row">
+                <div className="row-left">
                   <div className="row-title">Grove Christian School — Midlothian, VA</div>
                   <div className="row-sub">9th–Mid 10th Grade · Beta Club · Honors coursework</div>
-                  <div className="row-note">Awards: Behold (9th) · Steadfast (10th) · Christ-like Leadership Award · Lead in Christmas Musical</div>
+                  <div className="row-note">Awards: Behold (9th) · Steadfast (10th) · Christian Character · Christ-like Leadership · Lead in Christmas Musical</div>
                 </div>
-                <div className="row-right">2022–2024</div>
+                <div className="row-right">2022–2023</div>
               </div>
 
               <div className="row">
@@ -276,8 +284,8 @@ export default function ResumePrint() {
               {[
                 ["Behold Award", "9th Grade · Grove Christian School", "Character and excellence recognition for moral integrity and spiritual maturity."],
                 ["Steadfast Award", "10th Grade · Grove Christian School", "Recognition for perseverance, faithfulness, and character under pressure."],
-                ["Christian Character Award", "Cornerstone Prep", "One of two students school-wide selected for moral excellence and leadership."],
-                ["Christ-like Leadership Award", "Sports Banquet · Grove", "Awarded for servant leadership and Christian character in competitive sport."],
+                ["Christian Character Award", "Grove Christian School", "One of two students school-wide selected for moral excellence and leadership."],
+                ["Christ-like Leadership Award", "End-of-Year Awards · Grove", "Awarded for servant leadership and Christian character throughout the school year."],
                 ["Lead Role — Christmas Musical", "Grove Christian School", "Lead acting and vocal role in the annual Christmas production."],
                 ["Highest Math Grade in Class", "9th Grade", "100% both semesters — top math average in the class."],
                 ["Youth Leadership Summit", "Summer 2023", "Family Foundation & Colson Center · Richmond, VA. Invitation-only advanced worldview, cultural analysis, and Christian civic leadership seminar."],
@@ -300,16 +308,16 @@ export default function ResumePrint() {
               <div className="row">
                 <div className="row-left">
                   <div className="row-title">Founder & CEO — Purcell Ventures LLC</div>
-                  <div className="row-sub">Software development, AI integration, digital marketing. Built React Native apps, web platforms, and AI pipelines. Active revenue.</div>
+                  <div className="row-sub">Software development, AI integration, digital marketing. Built React Native apps, web platforms, and AI pipelines. Active revenue. Filed as Zultar LLC April 2025; rebranded Purcell Ventures January 2026.</div>
                 </div>
-                <div className="row-right">2023–Present</div>
+                <div className="row-right">Apr 2025–Present</div>
               </div>
               <div className="row">
                 <div className="row-left">
                   <div className="row-title">Founder — Autoblade Services</div>
                   <div className="row-sub">Lawn care and property services. Client acquisition, scheduling, and service delivery.</div>
                 </div>
-                <div className="row-right">2023–Present</div>
+                <div className="row-right">2024–Present</div>
               </div>
               <div className="row">
                 <div className="row-left">
@@ -404,7 +412,7 @@ export default function ResumePrint() {
 
               <div className="subsection-title">School & Church</div>
               {[
-                ["Founder & Leader — Mighty Men (Men's Bible Study)", "9th–12th", "Plans and leads weekly 2-hr discipleship group. Mentors peers, creates curriculum."],
+                ["Member — Mighty Men (Men's Bible Study, CPA)", "11th–12th", "Active member of the school's men's discipleship group. Weekly 2-hr discussions on faith and spiritual formation."],
                 ["Head Chaplain", "9th–10th", "Organized chapel services, coordinated worship teams, led school-wide programming."],
                 ["Worship Team — Lead Vocalist", "9th–12th", "Lead bass-baritone vocalist at school and church. Range C1–F5. 2–3 rehearsals/week."],
                 ["Youth Group Leader & Camp Counselor", "Ongoing", "Mentors younger students at church, leads group discussions, staffs summer camp."],
@@ -455,7 +463,7 @@ export default function ResumePrint() {
             <div className="section">
               <div className="section-title">Clubs & Organizations</div>
               <div className="badge-wrap">
-                {["Beta Club (Grove & CPA)", "Apologetics & Debate", "Spanish Club (3 yrs)", "Club Med", "Creative Writing / Writer's Guild", "Curious Conversations", "Animal Ambassadors", "Senior Devotional", "Mighty Men (Founder)"].map(b => (
+                {["Beta Club (Grove & CPA)", "Apologetics & Debate", "Spanish Club (3 yrs)", "Club Med", "Creative Writing / Writer's Guild", "Curious Conversations", "Animal Ambassadors", "Senior Devotional", "Mighty Men (Member · CPA)"].map(b => (
                   <span className="badge" key={b}>{b}</span>
                 ))}
               </div>
@@ -483,7 +491,7 @@ export default function ResumePrint() {
               <div className="section-title">Community Service</div>
               {[
                 ["MUST Ministries — Food Collection", "", "Organized and participated in food drives serving families in need across greater Atlanta."],
-                ["Children's Ministry — Riverstone Church", "Ongoing", "Teaching, mentoring, and leading activities for elementary-age children."],
+                ["Children's Ministry — Stonebridge Church (Marietta)", "Ongoing", "Teaching, mentoring, and leading activities for elementary-age children."],
                 ["Community Cleanup — Environmental Service", "Ongoing", "Park and neighborhood cleanup. Environmental stewardship."],
               ].map(([title, right, sub]) => (
                 <div className="row" key={title}>
