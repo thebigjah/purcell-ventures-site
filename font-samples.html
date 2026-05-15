@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Font Samples — Purcell Ventures</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Playfair+Display:wght@400;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Serif+Display:ital@0;1&family=Libre+Baskerville:wght@400;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Raleway:wght@300;400;600;700;800&family=Josefin+Sans:wght@300;400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0c0a08; color: #f5f0e0; font-family: 'Inter', sans-serif; }
+
+  .page-header {
+    padding: 40px 48px 32px;
+    border-bottom: 1px solid #2e2820;
+  }
+  .page-header p { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #d4af37; margin-bottom: 10px; }
+  .page-header h1 { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700; color: #f5f0e0; }
+  .page-header small { font-size: 13px; color: #8a8070; margin-top: 6px; display: block; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    gap: 1px;
+    background: #2e2820;
+  }
+
+  .sample {
+    background: #0c0a08;
+    padding: 40px 44px 36px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .sample:hover { background: #1a1714; }
+
+  .sample-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+  }
+  .font-name {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #d4af37;
+  }
+  .font-tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 3px;
+    background: #1a1714;
+    border: 1px solid #2e2820;
+    color: #8a8070;
+    letter-spacing: 0.05em;
+  }
+  .font-tag.serif { color: #c9b08a; border-color: #3d3628; }
+  .font-tag.sans { color: #8ab0c9; border-color: #28363d; }
+  .font-tag.display { color: #c9a8c0; border-color: #3d2836; }
+
+  .headline {
+    color: #f5f0e0;
+    margin-bottom: 10px;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+  .headline .gold { color: #d4af37; }
+
+  .subtext {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #8a8070;
+    line-height: 1.7;
+    margin-bottom: 22px;
+    max-width: 380px;
+  }
+
+  .sample-ui {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 18px;
+    background: #d4af37;
+    color: #0c0a08;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+  }
+  .btn-ghost {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    padding: 8px 16px;
+    background: transparent;
+    color: #8a8070;
+    border: 1px solid #2e2820;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .divider {
+    height: 1px;
+    background: #2e2820;
+    margin: 32px 0 28px;
+  }
+
+  .nav-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #2e2820;
+    margin-bottom: 28px;
+  }
+  .nav-logo { font-size: 15px; font-weight: 700; }
+  .nav-links { display: flex; gap: 20px; font-size: 12px; font-family: 'Inter', sans-serif; color: #8a8070; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <p>Purcell Ventures — Brand</p>
+  <h1>Font Samples</h1>
+  <small>All shown on dark background with gold accent — your actual brand colors. Body text is always Inter.</small>
+</div>
+
+<div class="grid">
+
+  <!-- 1. Cinzel -->
+  <div class="sample">
+    <div class="sample-meta">
+      <span class="font-name">Cinzel</span>
+      <span class="font-tag display">Roman · Display</span>
+    </div>
+    <div class="nav-preview">
+      <span class="nav-logo" style="font-family:'Cinzel',serif; letter-spacing:0.06em;">PURCELL <span class="gold">VENTURES</span></span>
+      <div class="nav-links"><span>Digital</span><span>Services</span><span>Contact</span></div>
+    </div>
+    <h2 class="headline" style="font-family:'Cinzel',serif; font-size:42px; font-weight:700; letter-spacing:0.02em;">
+      Built to Last.<br/><span class="gold">Built to Grow.</span>
+    </h2>
+    <p class="subtext">Custom-built digital tools for local businesses. One flat monthly price.</p>
+    <div class="sample-ui">
+      <button class="btn">Book a Demo</button>
+      <button class="btn-ghost">See Pricing</button>
+    </div>
+    <div class="divider"></div>
+    <small style="font-size:12px; color:#524d45; font-family:'Inter',sans-serif;">Inspired by Roman inscriptions. Commanding, authoritative. Looks exceptional in gold on black. Very distinctive — nobody else uses this.</small>
+  </div>
+
+  <!-- 2. Playfair Display -->
+  <div class="sample">
+    <div class="sample-meta">
+      <span class="font-name">Playfair Display</span>
+      <span class="font-tag serif">Serif · Editorial</span>
+    </div>
+    <div class="nav-preview">
+      <span class="nav-logo" style="font-family:'Playfair Display',serif;">Purcell <span class="gold">Ventures</span></span>
+      <div class="nav-links"><span>Digital</span><span>Services</span><span>Contact</span></div>
+    </div>
+    <h2 class="headline" style="font-family:'Playfair Display',serif; font-size:44px; font-weight:700;">
+      Built to last.<br/><span class="gold">Built to grow.</span>
+    </h2>
+    <p class="subtext">Custom-built digital tools for local businesses. One flat monthly price.</p>
+    <div class="sample-ui">
+      <button class="btn">Book a Demo</button>
+      <button class="btn-ghost">See Pricing</button>
+    </div>
+    <div class="divider"></div>
+    <small style="font-size:12px; color:#524d45; font-family:'Inter',sans-serif;">Classic, refined, established. Strong contrast between thin and thick strokes. Old-money feel. The "safe premium" choice.</small>
+  </div>
+
+  <!-- 3. Fraunces -->
+  <div class="sample">
+    <div class="sample-meta">
+      <span class="font-name">Fraunces</span>
+      <span class="font-tag serif">Serif · Optical</span>
+    </div>
+    <div class="nav-preview">
+      <span class="nav-logo" style="font-family:'Fraunces',serif; font-weight:600;">Purcell <span class="gold">Ventures</span></span>
+      <div class="nav-links"><span>Digital</span><span>Services</span><span>Contact</span></div>
+    </div>
+    <h2 class="headline" style="font-family:'Fraunces',serif; font-size:44px; font-weight:700;">
+      Built to last.<br/><span class="gold">Built to grow.</span>
+    </h2>
+    <p class="subtext">Custom-built digital tools for local businesses. One flat monthly price.</p>
+    <div class="sample-ui">
+      <button class="btn">Book a Demo</button>
+      <button class="btn-ghost">See Pricing</button>
+    </div>
+    <div class="divider"></div>
+    <small style="font-size:12px; color:#524d45; font-family:'Inter',sans-serif;">Warm, slightly quirky serif. Has a softness that Playfair doesn't — less stiff, more personality. Unexpected and memorable.</small>
+  </div>
+
+  <!-- 4. Cormorant Garamond (current) -->
+  <div class="sample" style="border: 1px solid #d4af3740;">
+    <div class="sample-meta">
+      <span class="font-name">Cormorant Garamond <span style="color:#8a8070; font-weight:400;">(current)</span></span>
+      <span class="font-tag serif">Serif · Luxury</span>
+    </div>
+    <div class="nav-preview">
+      <span class="nav-logo" style="font-family:'Cormorant Garamond',serif; font-weight:700; font-size:17px;">Purcell <span class="gold">Ventures</span></span>
+      <div class="nav-links"><span>Digital</span><span>Services</span><span>Contact</span></div>
+    </div>
+    <h2 class="headline" style="font-family:'Cormorant Garamond',serif; font-size:48px; font-weight:700;">
+      Built to last.<br/><span class="gold">Built to grow.</span>
+    </h2>
+    <p class="subtext">Custom-built digital tools for local businesses. One flat monthly price.</p>
+    <div class="sample-ui">
+      <button class="btn">Book a Demo</button>
+      <button class="btn-ghost">See Pricing</button>
+    </div>
+    <div class="divider"></div>
+    <small style="font-size:12px; color:#524d45; font-family:'Inter',sans-serif;">Ultra-refined, very thin strokes. Almost fashion-magazine level elegance. Can feel delicate on body text at small sizes.</small>
+  </div>
+
+  <!-- 5. Cinzel Bold (heavier weight) -->
+  <div class="sample">
+    <div class="sample-meta">
+      <span class="font-name">Raleway</span>
+      <span class="font-tag sans">Sans · Geometric</span>
+    </div>
+    <div class="nav-preview">
+      <span class="nav-logo" style="font-family:'Raleway',sans-serif; font-weight:700; letter-spacing:0.04em;">PURCELL <span class="gold">VENTURES</span></span>
+      <div class="nav-links"><span>Digital</span><span>Services</span><span>Contact</span></div>
+    </div>
+    <h2 class="headline" style="font-family:'Raleway',sans-serif; font-size:44px; font-weight:800; letter-spacing:-0.02em;">
+      Built to last.<br/><span class="gold">Built to grow.</span>
+    </h2>
+    <p class="subtext">Custom-built digital tools for local businesses. One flat monthly price.</p>
+    <div class="sample-ui">
+      <button class="btn">Book a Demo</button>
+      <button class="btn-ghost">See Pricing</button>
+    </div>
+    <div class="divider"></div>
+    <small style="font-size:12px; color:#524d45; font-family:'Inter',sans-serif;">Clean geometric sans with real character. Not as corporate as Inter. Uppercase nav looks sharp. Reads as confident and modern.</small>
+  </div>
+
+  <!-- 6. DM Serif Display -->
+  <div class="sample">
+    <div class="sample-meta">
+      <span class="font-name">DM Serif Display</span>
+      <span class="font-tag serif">Serif · Modern</span>
+    </div>
+    <div class="nav-preview">
+      <span class="nav-logo" style="font-family:'DM Serif Display',serif;">Purcell <span class="gold">Ventures</span></span>
+      <div class="nav-links"><span>Digital</span><span>Services</span><span>Contact</span></div>
+    </div>
+    <h2 class="headline" style="font-family:'DM Serif Display',serif; font-size:44px;">
+      Built to last.<br/><span class="gold">Built to grow.</span>
+    </h2>
+    <p class="subtext">Custom-built digital tools for local businesses. One flat monthly price.</p>
+    <div class="sample-ui">
+      <button class="btn">Book a Demo</button>
+      <button class="btn-ghost">See Pricing</button>
+    </div>
+    <div class="divider"></div>
+    <small style="font-size:12px; color:#524d45; font-family:'Inter',sans-serif;">A modern editorial serif. Slightly condensed feel, very clean. Less flourish than Cormorant or Playfair — grounded and serious.</small>
+  </div>
+
+</div>
+
+<div style="padding:32px 48px; border-top:1px solid #2e2820; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+  <span style="font-size:13px; color:#524d45;">Purcell Ventures — Font Reference · Body text is always Inter</span>
+  <button onclick="window.print()" style="font-family:'Inter',sans-serif; font-size:12px; padding:8px 16px; background:transparent; color:#8a8070; border:1px solid #2e2820; border-radius:5px; cursor:pointer;">Print / Save PDF</button>
+</div>
+
+</body>
+</html>
