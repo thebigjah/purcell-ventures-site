@@ -188,7 +188,7 @@ export default function ConsultingPage() {
           {[
             { n: "5", label: "core sessions" },
             { n: "1-on-1", label: "or up to 30+" },
-            { n: "$40", label: "per person/session" },
+            { n: "From $125", label: "per person" },
             { n: "Same day", label: "takeaways" },
           ].map(({ n, label }) => (
             <div key={label}>

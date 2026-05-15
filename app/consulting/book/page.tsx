@@ -11,9 +11,9 @@ const SESSION_TYPES = [
 ];
 
 const FORMAT = [
-  { id: "1on1",     label: "1-on-1",         rate: "$100/hr" },
-  { id: "group",    label: "Small Group",    rate: "$55/person" },
-  { id: "workshop", label: "Workshop",       rate: "$40/person" },
+  { id: "1on1",     label: "1-on-1",         rate: "$175/hr" },
+  { id: "group",    label: "Small Group",    rate: "$125/person" },
+  { id: "workshop", label: "Workshop",       rate: "$2,500 flat" },
   { id: "corporate",label: "Corporate",      rate: "Custom quote" },
 ];
 
@@ -33,10 +33,25 @@ interface Booking {
   createdAt: string;
 }
 
-function saveBooking(booking: Omit<Booking, "id" | "status" | "createdAt">) {
-  const existing: Booking[] = JSON.parse(localStorage.getItem("pv_bookings") || "[]");
-  existing.unshift({ ...booking, id: Date.now().toString(), status: "New", createdAt: new Date().toISOString() });
-  localStorage.setItem("pv_bookings", JSON.stringify(existing));
+async function saveBooking(booking: Omit<Booking, "id" | "status" | "createdAt">) {
+  // Keep a localStorage copy as a fallback / personal log
+  try {
+    const existing: Booking[] = JSON.parse(localStorage.getItem("pv_bookings") || "[]");
+    existing.unshift({ ...booking, id: Date.now().toString(), status: "New", createdAt: new Date().toISOString() });
+    localStorage.setItem("pv_bookings", JSON.stringify(existing));
+  } catch {
+    // localStorage might be full or disabled — that's fine, the email is the real channel
+  }
+  // Real delivery: POST to the booking API which emails via Resend
+  try {
+    await fetch("/api/booking", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(booking),
+    });
+  } catch (err) {
+    console.error("Booking submit failed:", err);
+  }
 }
 
 export default function BookPage() {
@@ -53,8 +68,8 @@ export default function BookPage() {
   const [notes, setNotes] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = () => {
-    saveBooking({ sessionType, format, datePreference, timePreference, name, business, email, phone, groupSize, notes });
+  const handleSubmit = async () => {
+    await saveBooking({ sessionType, format, datePreference, timePreference, name, business, email, phone, groupSize, notes });
     setSubmitted(true);
   };
 

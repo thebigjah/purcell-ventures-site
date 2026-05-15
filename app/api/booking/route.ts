@@ -1,0 +1,105 @@
+import { NextRequest, NextResponse } from "next/server";
+
+const SESSION_LABELS: Record<string, string> = {
+  "ai-basics":        "AI Basics for Business (2 hrs)",
+  "chatgpt-workflow": "ChatGPT in Your Workflow (3 hrs)",
+  "ai-marketing":     "AI for Marketing & Social Media (2.5 hrs)",
+  "automation":       "Automating Your Business (4 hrs)",
+  "custom":           "Custom Team Training",
+};
+
+const FORMAT_LABELS: Record<string, string> = {
+  "1on1":      "1-on-1 ($175/hr)",
+  "group":     "Small Group ($125/person)",
+  "workshop":  "Workshop ($2,500 flat, up to 20)",
+  "corporate": "Corporate / Custom (quote)",
+};
+
+export async function POST(req: NextRequest) {
+  let body: Record<string, string>;
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: "Invalid body" }, { status: 400 });
+  }
+
+  const {
+    sessionType = "",
+    format = "",
+    datePreference = "",
+    timePreference = "",
+    name = "",
+    business = "",
+    email = "",
+    phone = "",
+    groupSize = "",
+    notes = "",
+  } = body;
+
+  if (!name || !phone) {
+    return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+  }
+
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.warn("RESEND_API_KEY not set — booking not delivered:", { name, email, phone, sessionType, format });
+    return NextResponse.json({ ok: true });
+  }
+
+  const sessionLabel = SESSION_LABELS[sessionType] ?? sessionType ?? "(not specified)";
+  const formatLabel  = FORMAT_LABELS[format] ?? format ?? "(not specified)";
+  const timestamp    = new Date().toLocaleString("en-US", { timeZone: "America/New_York" });
+
+  const html = `
+    <div style="font-family:Inter,system-ui,sans-serif;max-width:600px">
+      <h2 style="color:#c2a173;margin:0 0 16px 0;font-family:Cinzel,Georgia,serif">New consulting booking</h2>
+      <table style="width:100%;border-collapse:collapse;font-size:14px;color:#222">
+        <tr><td style="padding:8px 0;color:#666;width:140px">Name</td><td style="padding:8px 0;font-weight:600">${escape(name)}</td></tr>
+        <tr><td style="padding:8px 0;color:#666">Business</td><td style="padding:8px 0">${escape(business) || "(not given)"}</td></tr>
+        <tr><td style="padding:8px 0;color:#666">Phone</td><td style="padding:8px 0;font-weight:600"><a href="tel:${escape(phone)}">${escape(phone)}</a></td></tr>
+        <tr><td style="padding:8px 0;color:#666">Email</td><td style="padding:8px 0"><a href="mailto:${escape(email)}">${escape(email) || "(not given)"}</a></td></tr>
+        <tr><td colspan="2" style="padding:16px 0 4px 0;border-top:1px solid #ddd"></td></tr>
+        <tr><td style="padding:8px 0;color:#666">Session</td><td style="padding:8px 0;font-weight:600">${escape(sessionLabel)}</td></tr>
+        <tr><td style="padding:8px 0;color:#666">Format</td><td style="padding:8px 0">${escape(formatLabel)}</td></tr>
+        <tr><td style="padding:8px 0;color:#666">Group size</td><td style="padding:8px 0">${escape(groupSize) || "(not given)"}</td></tr>
+        <tr><td style="padding:8px 0;color:#666">Date pref</td><td style="padding:8px 0">${escape(datePreference) || "(not given)"}</td></tr>
+        <tr><td style="padding:8px 0;color:#666">Time pref</td><td style="padding:8px 0">${escape(timePreference) || "(not given)"}</td></tr>
+        ${notes ? `<tr><td style="padding:8px 0;color:#666;vertical-align:top">Notes</td><td style="padding:8px 0;white-space:pre-wrap">${escape(notes)}</td></tr>` : ""}
+        <tr><td colspan="2" style="padding:16px 0 4px 0;border-top:1px solid #ddd"></td></tr>
+        <tr><td style="padding:8px 0;color:#999;font-size:12px" colspan="2">Submitted ${escape(timestamp)} ET</td></tr>
+      </table>
+      <p style="margin-top:24px;font-size:13px;color:#666">Reply within 4 hours to maximize close rate.</p>
+    </div>
+  `;
+
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from: "Purcell Ventures Bookings <onboarding@resend.dev>",
+      to:   ["elijah@purcell-ventures.com"],
+      reply_to: email || undefined,
+      subject: `Booking: ${name}${business ? ` (${business})` : ""} - ${sessionLabel}`,
+      html,
+    }),
+  });
+
+  if (!res.ok) {
+    console.error("Resend error:", await res.text());
+    return NextResponse.json({ ok: true });
+  }
+
+  return NextResponse.json({ ok: true });
+}
+
+function escape(s: string): string {
+  return String(s ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
