@@ -351,6 +351,58 @@ export default function ConsultingPage() {
         </div>
       </section>
 
+      {/* Why work with me — credibility, not testimonials yet */}
+      <section style={{ borderTop: "1px solid var(--color-warm-border)", padding: "100px 24px" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+          <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px" }}>Why Work With Me</p>
+          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(26px, 4vw, 44px)", fontWeight: 700, marginBottom: "20px", lineHeight: 1.1 }}>
+            I&apos;m eighteen. That&apos;s a feature, not a bug.
+          </h2>
+          <p style={{ fontSize: "16px", color: "var(--color-warm-text-muted)", lineHeight: 1.85, marginBottom: "48px", maxWidth: "720px" }}>
+            Most AI consultants are mid-career adults who came to this stack late. I came up inside it. I&apos;ve been building autonomous systems and shipping production tools for a year — full time, while still in high school. The work I&apos;m offering you is the same work I do in my own infrastructure every day.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "32px", marginBottom: "48px" }}>
+            {[
+              {
+                num: "34",
+                label: "College acceptances",
+                desc: "Honors programs across the country evaluated my work. They didn&apos;t accept the bio — they accepted the portfolio.",
+              },
+              {
+                num: "$520k+",
+                label: "In scholarship offers",
+                desc: "Per academic year, across those acceptances. Market validation that the work translates.",
+              },
+              {
+                num: "Honors College",
+                label: "UA New College, Fall 2026",
+                desc: "Self-designed Psychology + Data Science hybrid on a pre-med path. The track is the work.",
+              },
+              {
+                num: "Live infrastructure",
+                label: "purcellventures.co + side ships",
+                desc: "Every tool I teach, I&apos;ve already built into my own stack. I&apos;m not demo-ing — I&apos;m showing you what already works.",
+              },
+            ].map((item) => (
+              <div key={item.label} style={{ paddingLeft: "20px", borderLeft: "2px solid var(--color-warm-accent)" }}>
+                <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 700, color: "var(--color-warm-accent)", marginBottom: "6px" }}>{item.num}</div>
+                <h4 style={{ fontSize: "13px", fontWeight: 700, marginBottom: "10px", color: "var(--color-warm-text)" }}>{item.label}</h4>
+                <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.7 }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div style={{ background: "var(--color-warm-card)", border: "1px solid var(--color-warm-border)", borderRadius: "8px", padding: "28px 32px", maxWidth: "780px" }}>
+            <p style={{ fontSize: "13px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px" }}>The Honest Trade-Off</p>
+            <p style={{ fontSize: "15px", color: "var(--color-warm-text)", lineHeight: 1.75, marginBottom: "14px" }}>
+              I don&apos;t have a wall of corporate testimonials yet. I&apos;m at the start of my consulting business.
+            </p>
+            <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.75 }}>
+              That means: you get my undivided attention, my hunger to deliver work I can use as my own first proof, and my lower rates than I&apos;ll charge in a year. If you&apos;re willing to be an early client, you get more of me than my later clients will.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section style={{ borderTop: "1px solid var(--color-warm-border)", padding: "100px 24px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
