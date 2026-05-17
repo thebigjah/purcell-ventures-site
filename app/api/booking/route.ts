@@ -87,12 +87,33 @@ export async function POST(req: NextRequest) {
     }),
   });
 
-  if (!res.ok) {
+  const resendOk = res.ok;
+  if (!resendOk) {
     console.error("Resend error:", await res.text());
-    return NextResponse.json({ ok: true });
   }
 
-  return NextResponse.json({ ok: true });
+  // ntfy fallback — never lose a booking even if Resend is missing/down
+  const ntfyTopic = process.env.NTFY_TOPIC;
+  if (ntfyTopic) {
+    try {
+      const ntfyBody = `${name} · ${phone}${email ? " · " + email : ""}\n${sessionLabel} (${formatLabel})${business ? "\nBusiness: " + business : ""}${groupSize ? "\nGroup: " + groupSize : ""}${datePreference ? "\nDate pref: " + datePreference : ""}${notes ? "\nNotes: " + notes : ""}`;
+      const safeTitle = `PV booking: ${name}`.replace(/[^\x20-\x7E]/g, " ").slice(0, 80);
+      await fetch(`https://ntfy.sh/${ntfyTopic}`, {
+        method: "POST",
+        headers: {
+          Title: safeTitle,
+          Priority: "high",
+          Tags: "moneybag,bell",
+          "Content-Type": "text/plain; charset=utf-8",
+        },
+        body: ntfyBody,
+      });
+    } catch (e) {
+      console.warn("ntfy fallback failed", e);
+    }
+  }
+
+  return NextResponse.json({ ok: true, delivered: resendOk });
 }
 
 function escape(s: string): string {
