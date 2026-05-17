@@ -9,7 +9,7 @@ Purcell Ventures is a Georgia-based company run by Elijah Purcell. Three core di
 
 1. DIGITAL SERVICES — websites, AI chatbots, booking systems, email marketing, CRM, invoicing, social scheduling, and 20+ more tools. One monthly subscription: Starter $99/mo, Growth $179/mo, Full $279/mo. Setup fee $400–1,000 one time.
 
-2. AI CONSULTING — hands-on training sessions for business teams. 1-on-1 ($100/hr), Small Group ($55/person), Workshop ($40/person). 5 session types: AI Basics, ChatGPT Workflow, AI for Marketing, Automation, Custom.
+2. AI CONSULTING — hands-on training sessions for business teams. 1-on-1 ($175/hr), Small Group ($125/person), Workshop ($2,500 flat up to 20 people), Corporate (custom quote). 5 session types: AI Basics for Business (2 hrs), ChatGPT in Your Workflow (3 hrs), AI for Marketing & Social Media (2.5 hrs), Automating Your Business (4 hrs), Custom Team Training.
 
 3. CUSTOM SOFTWARE — mobile apps, web apps, AI integrations, automation. Small projects $1,500–3,500, full apps $5,000–15,000+.
 
