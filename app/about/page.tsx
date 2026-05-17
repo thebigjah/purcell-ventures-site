@@ -13,7 +13,7 @@ const DIVISIONS = [
     label: "AI Consulting",
     desc: "Hands-on AI training for business teams. ChatGPT workflows, marketing automation, and custom sessions. I come to your office. Same-day results.",
     href: "/consulting",
-    price: "From $40/person",
+    price: "From $125/person",
   },
   {
     label: "Custom Software",
