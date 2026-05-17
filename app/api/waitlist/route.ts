@@ -50,11 +50,27 @@ export async function POST(req: NextRequest) {
     }),
   });
 
-  if (!res.ok) {
-    console.error("Resend error:", await res.text());
-    // Still return ok to the user — don't show an error for a waitlist signup
-    return NextResponse.json({ ok: true });
+  const resendOk = res.ok;
+  if (!resendOk) console.error("Resend error:", await res.text());
+
+  // ntfy fallback so course-waitlist signups never get lost
+  const ntfyTopic = process.env.NTFY_TOPIC;
+  if (ntfyTopic) {
+    try {
+      await fetch(`https://ntfy.sh/${ntfyTopic}`, {
+        method: "POST",
+        headers: {
+          Title: `Waitlist: ${courseName}`.replace(/[^\x20-\x7E]/g, " ").slice(0, 80),
+          Priority: "default",
+          Tags: "books,bell",
+          "Content-Type": "text/plain; charset=utf-8",
+        },
+        body: `${email}\nCourse: ${courseName}\n${timestamp} ET`,
+      });
+    } catch (e) {
+      console.warn("ntfy fallback failed", e);
+    }
   }
 
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({ ok: true, delivered: resendOk });
 }
