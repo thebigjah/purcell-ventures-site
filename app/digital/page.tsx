@@ -1665,32 +1665,39 @@ export default function DigitalPage() {
       <ROICalculator />
 
       {/* ── CUSTOM BUNDLE ─────────────────────────────────────────── */}
-      <section style={{ padding: "0 24px", borderTop: "1px solid var(--color-warm-border)" }}>
+      <section style={{ position: "relative", zIndex: 5, padding: "0 24px", borderTop: "1px solid var(--color-warm-border)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <div style={{
+          <div className="pv-card" style={{
             display: "grid", gridTemplateColumns: "1fr auto",
             gap: "48px", alignItems: "center",
             padding: "64px 56px",
-            background: "var(--color-warm-card)",
-            border: "1px solid var(--color-warm-border)",
             borderTop: "none",
-          }} className="grid-responsive">
+          }}>
+            <span className="b3"></span><span className="b4"></span>
             <div>
-              <p style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px" }}>
-                Custom Bundle
-              </p>
-              <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", letterSpacing: "0.03em", fontSize: "clamp(24px, 3vw, 38px)", fontWeight: 700, lineHeight: 1.15, marginBottom: "16px" }}>
-                Don't fit in a box?<br />Good. Neither do most businesses.
-              </h2>
-              <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.75, maxWidth: "520px" }}>
-                Pick exactly what you need — two tools or twelve. I'll build the bundle, quote you a flat monthly price, and we'll get started. No upsells, no surprises.
+              <div className="pv-mono-label" style={{ marginBottom: "14px" }}>Custom bundle</div>
+              <h3 style={{
+                fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
+                fontSize: "clamp(22px, 3vw, 34px)", letterSpacing: "0.02em",
+                color: "var(--color-warm-text)", textTransform: "uppercase",
+                lineHeight: 1.15, marginBottom: "16px",
+              }}>
+                Don&apos;t fit in a box?{" "}
+                <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>
+                  Good. Neither do most.
+                </em>
+              </h3>
+              <p className="pv-italic" style={{ fontSize: "16.5px", color: "var(--color-warm-text)", opacity: 0.88, lineHeight: 1.55, maxWidth: "520px" }}>
+                Pick exactly what you need — two tools or twelve. I&apos;ll build the bundle, quote you a flat monthly price, and we&apos;ll get started. No upsells, no surprises.
               </p>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "12px", alignItems: "flex-start" }}>
-              <a href="#contact" style={{ padding: "14px 32px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "14px", fontWeight: 700, borderRadius: "7px", textDecoration: "none", whiteSpace: "nowrap" }}>
-                Build My Bundle →
+              <a href="#contact" className="pv-btn-primary" style={{ whiteSpace: "nowrap" }}>
+                Build my bundle →
               </a>
-              <span style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", textAlign: "center", width: "100%" }}>You guide it · You approve it · You own it</span>
+              <span className="pv-mono-label" style={{ width: "100%", textAlign: "center", color: "var(--color-warm-text-light)" }}>
+                You guide · You approve · You own
+              </span>
             </div>
           </div>
         </div>
