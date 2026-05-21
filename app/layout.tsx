@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Cinzel, DM_Sans } from "next/font/google";
 import "./globals.css";
 import ChatWidget from "./components/ChatWidget";
@@ -20,6 +20,12 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0c0a08",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://purcellventures.co"),

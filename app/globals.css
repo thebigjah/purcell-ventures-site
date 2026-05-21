@@ -18,9 +18,10 @@
   --color-royal-purple-dark: #2c1654;
 }
 
-body {
+html, body {
   background-color: var(--color-warm-bg);
   color: var(--color-warm-text);
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {
