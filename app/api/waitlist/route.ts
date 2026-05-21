@@ -37,15 +37,23 @@ export async function POST(req: NextRequest) {
     body: JSON.stringify({
       from: "Purcell Ventures <onboarding@resend.dev>",
       to:   ["elijah@purcell-ventures.com"],
-      subject: `New waitlist signup — ${courseName}`,
+      subject: `Waitlist: ${courseName}`,
       html: `
-        <p style="font-family:sans-serif;font-size:15px;">
-          <strong>${email}</strong> joined the waitlist for <strong>${courseName}</strong>.
-        </p>
-        <p style="font-family:sans-serif;font-size:13px;color:#666;">
-          Time: ${timestamp} ET<br>
-          Course: ${course}
-        </p>
+        <div style="font-family:Inter,system-ui,sans-serif;max-width:560px;background:#faf8f4;padding:32px;border:1px solid #e0d8c4">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:#b8941e;margin-bottom:12px">
+            Purcell Ventures · Course Waitlist
+          </div>
+          <h2 style="color:#0c0a08;margin:0 0 18px 0;font-family:Cinzel,Georgia,serif;font-size:22px;font-weight:600;letter-spacing:0.02em;text-transform:uppercase;border-bottom:1px solid #d4af37;padding-bottom:14px">
+            New signup <em style="color:#d4af37;font-weight:400">received.</em>
+          </h2>
+          <p style="font-size:16px;color:#0c0a08;margin:0 0 8px 0;font-family:Georgia,serif;font-style:italic">
+            <strong style="font-family:Cinzel,Georgia,serif;font-style:normal">${email}</strong> joined the waitlist for
+            <strong style="font-family:Cinzel,Georgia,serif;font-style:normal;color:#b8941e">${courseName}</strong>.
+          </p>
+          <p style="font-size:11px;color:#7a6a52;margin:20px 0 0 0;letter-spacing:0.18em;text-transform:uppercase">
+            ${timestamp} ET · ${course}
+          </p>
+        </div>
       `,
     }),
   });
