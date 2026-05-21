@@ -81,6 +81,11 @@ const PROCESS = [
 export default function SoftwarePage() {
   return (
     <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden" }}>
+      <style dangerouslySetInnerHTML={{ __html: `
+        @media (max-width: 900px) {
+          .pv-sw-services, .pv-sw-process, .pv-sw-pricing { grid-template-columns: 1fr !important; gap: 14px !important; }
+        }
+      ` }} />
       <VignetteBackground />
 
       <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
@@ -107,7 +112,7 @@ export default function SoftwarePage() {
           <span className="roman">I.</span>
           <h2>What I build</h2>
         </header>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px", marginBottom: "64px" }}>
+        <div className="pv-sw-services" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px", marginBottom: "64px" }}>
           {SERVICES.map((s) => (
             <div key={s.title} className="pv-card" style={{ padding: "28px 28px 24px" }}>
               <span className="b3"></span><span className="b4"></span>
@@ -203,7 +208,7 @@ export default function SoftwarePage() {
           <span className="roman">III.</span>
           <h2>How it <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>works</em></h2>
         </header>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "12px", marginBottom: "64px" }}>
+        <div className="pv-sw-process" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "12px", marginBottom: "64px" }}>
           {PROCESS.map((p) => (
             <div key={p.step} className="pv-card" style={{ padding: "28px 24px 24px" }}>
               <span className="b3"></span><span className="b4"></span>
@@ -235,7 +240,7 @@ export default function SoftwarePage() {
           <span className="roman">IV.</span>
           <h2>Pricing <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>tiers</em></h2>
         </header>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }}>
+        <div className="pv-sw-pricing" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }}>
           {[
             { tier: "Small projects", price: "$1,500 – 3,500", desc: "Landing pages, Chrome extensions, small tools, automation scripts." },
             { tier: "Full apps",      price: "$5,000 – 15,000", desc: "Mobile apps, web platforms, AI-powered tools, full-stack applications." },
