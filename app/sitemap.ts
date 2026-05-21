@@ -15,7 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Booking + case studies — conversion paths
     { url: `${BASE}/consulting/book`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
-    { url: `${BASE}/ai-readiness`,    lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/ai-readiness`,        lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/ai-cost-calculator`,  lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/case-studies`,    lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // About + personal depth

@@ -411,15 +411,20 @@ export default function AIReadinessPage() {
               }}>
                 Based on your tier, this session is the right fit. No upsell — if I think you don&apos;t need it, I&apos;ll tell you straight up.
               </p>
-              {tier.sessionCta.href.startsWith("mailto:") ? (
-                <a href={tier.sessionCta.href} className="pv-btn-primary">
-                  {tier.sessionCta.label}
-                </a>
-              ) : (
-                <Link href={tier.sessionCta.href} className="pv-btn-primary">
-                  {tier.sessionCta.label}
+              <div style={{ display: "flex", flexDirection: "column", gap: "10px", alignItems: "center" }}>
+                {tier.sessionCta.href.startsWith("mailto:") ? (
+                  <a href={tier.sessionCta.href} className="pv-btn-primary">
+                    {tier.sessionCta.label}
+                  </a>
+                ) : (
+                  <Link href={tier.sessionCta.href} className="pv-btn-primary">
+                    {tier.sessionCta.label}
+                  </Link>
+                )}
+                <Link href="/ai-cost-calculator" className="pv-btn-ghost">
+                  Quantify it: AI Cost Calculator →
                 </Link>
-              )}
+              </div>
             </section>
 
             {/* Restart */}
