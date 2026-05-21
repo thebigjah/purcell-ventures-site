@@ -1552,12 +1552,17 @@ export default function DigitalPage() {
       </section>
 
       {/* ── SERVICES ──────────────────────────────────────────────── */}
-      <section id="services" style={{ padding: "100px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
+      <section id="services" style={{ position: "relative", zIndex: 5, padding: "100px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px" }}>Tools</p>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", letterSpacing: "0.03em", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, marginBottom: "64px", lineHeight: 1.1 }}>
-            25 tools. One partner.<br />Mix and match what you need.
-          </h2>
+          <header className="pv-section-head" style={{ marginBottom: "48px" }}>
+            <span className="roman">I.</span>
+            <h2>
+              25 tools, one partner.{" "}
+              <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>
+                Mix and match.
+              </em>
+            </h2>
+          </header>
           <div style={{ display: "flex", flexDirection: "column", gap: "52px" }}>
             {MODULES.map((group) => (
               <div key={group.category}>
@@ -1601,12 +1606,17 @@ export default function DigitalPage() {
       <TeamBuilder />
 
       {/* ── PRICING ───────────────────────────────────────────────── */}
-      <section id="pricing" style={{ padding: "100px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
+      <section id="pricing" style={{ position: "relative", zIndex: 5, padding: "100px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px" }}>Pricing</p>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", letterSpacing: "0.03em", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, marginBottom: "12px", lineHeight: 1.1 }}>
-            Flat monthly rate.<br />No surprises.
-          </h2>
+          <header className="pv-section-head" style={{ marginBottom: "12px" }}>
+            <span className="roman">II.</span>
+            <h2>
+              Flat monthly rate.{" "}
+              <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>
+                No surprises.
+              </em>
+            </h2>
+          </header>
           <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", marginBottom: "52px" }}>
             One-time setup fee, then a flat monthly rate. No contracts. Cancel anytime.
           </p>
@@ -1687,13 +1697,16 @@ export default function DigitalPage() {
       </section>
 
       {/* ── WHY ME / ABOUT ────────────────────────────────────────── */}
-      <section style={{ padding: "100px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
+      <section style={{ position: "relative", zIndex: 5, padding: "100px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "start" }} className="grid-responsive">
           <div>
-            <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px" }}>Why Me</p>
-            <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", letterSpacing: "0.03em", fontSize: "clamp(26px, 3.5vw, 40px)", fontWeight: 700, marginBottom: "44px", lineHeight: 1.15 }}>
+            <header className="pv-section-head" style={{ marginBottom: "32px" }}>
+              <span className="roman">III.</span>
+              <h2>Why <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>me</em></h2>
+            </header>
+            <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", letterSpacing: "0.03em", fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 600, marginBottom: "32px", lineHeight: 1.2, color: "var(--color-warm-text)" }}>
               A local partner beats a national agency every time.
-            </h2>
+            </h3>
             <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
               {[
                 { title: "You talk to the person who built it", desc: "No support tickets, no account managers, no runaround. You text or call me directly." },
@@ -1724,12 +1737,12 @@ export default function DigitalPage() {
       </section>
 
       {/* ── FAQ ───────────────────────────────────────────────────── */}
-      <section style={{ padding: "100px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
+      <section style={{ position: "relative", zIndex: 5, padding: "100px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px" }}>FAQ</p>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", letterSpacing: "0.03em", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, marginBottom: "52px", lineHeight: 1.1 }}>
-            Common questions.
-          </h2>
+          <header className="pv-section-head" style={{ marginBottom: "32px" }}>
+            <span className="roman">IV.</span>
+            <h2>Common <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>questions</em></h2>
+          </header>
           <div style={{ maxWidth: "720px", display: "flex", flexDirection: "column" }}>
             {FAQ.map((item, i) => (
               <div key={item.q} style={{ borderTop: "1px solid var(--color-warm-border)", padding: "20px 0" }}>
@@ -1748,13 +1761,13 @@ export default function DigitalPage() {
       </section>
 
       {/* ── CONTACT ───────────────────────────────────────────────── */}
-      <section id="contact" style={{ padding: "100px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
+      <section id="contact" style={{ position: "relative", zIndex: 5, padding: "100px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: "80px", alignItems: "start" }} className="grid-responsive">
           <div>
-            <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px" }}>Contact</p>
-            <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", letterSpacing: "0.03em", fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 700, marginBottom: "20px", lineHeight: 1.08 }}>
-              Ready to talk?
-            </h2>
+            <header className="pv-section-head" style={{ marginBottom: "20px" }}>
+              <span className="roman">V.</span>
+              <h2>Ready to <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>talk?</em></h2>
+            </header>
             <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.8, marginBottom: "40px" }}>
               Tell me about your business. I'll get back to you within 24 hours with a recommendation and a quote. No pressure, no pitch deck.
             </p>
