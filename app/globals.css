@@ -150,6 +150,20 @@ h1, h2, h3 {
   color: var(--color-warm-accent);
 }
 
+/* Stats band — common pattern: brass-bordered grid of stat cells.
+   Auto-collapse on mobile. */
+.pv-stats-band {
+  display: grid;
+  border: 1px solid var(--color-warm-border);
+  background: var(--color-warm-bg-alt);
+}
+.pv-stats-band > .stat {
+  padding: 20px 12px;
+  text-align: center;
+  border-right: 1px solid var(--color-warm-border);
+}
+.pv-stats-band > .stat:last-child { border-right: none; }
+
 /* Hard-edge primary button */
 .pv-btn-primary {
   display: inline-block;
@@ -194,6 +208,11 @@ h1, h2, h3 {
 
   .pv-page-head h1 { font-size: clamp(34px, 9vw, 60px) !important; letter-spacing: 0.005em !important; }
   .pv-page-head .deck { font-size: 16px !important; }
+
+  .pv-stats-band { grid-template-columns: repeat(2, 1fr) !important; }
+  .pv-stats-band > .stat:nth-child(odd)  { border-right: 1px solid var(--color-warm-border) !important; }
+  .pv-stats-band > .stat:nth-child(even) { border-right: none !important; }
+  .pv-stats-band > .stat:nth-child(-n+2) { border-bottom: 1px solid var(--color-warm-border) !important; }
 }
 
 @keyframes pv-phi-fade-mobile {
