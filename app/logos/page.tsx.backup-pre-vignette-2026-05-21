@@ -5,7 +5,6 @@
 import React, { useRef } from "react";
 import { PanopConfig, PanopticonMark, PanopticonSplit } from "@/app/components/PanopticonMark";
 import { downloadPrintAsset, downloadSvgElement, downloadSvgAsPng } from "@/lib/printDownload";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 const GOLD  = "#d4af37";
 const DARK  = "#0c0a08";
@@ -514,9 +513,7 @@ const LOGOS: LogoEntry[] = [
 
 export default function LogosPage() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: CREAM, fontFamily: "Inter, sans-serif", padding: "48px 32px", position: "relative", overflowX: "hidden" }}>
-      <VignetteBackground />
-      <div style={{ position: "relative", zIndex: 5 }}>
+    <div style={{ minHeight: "100vh", background: "#080706", color: CREAM, fontFamily: "Inter, sans-serif", padding: "48px 32px" }}>
 
       {/* Header */}
       <div style={{ maxWidth: "1200px", margin: "0 auto 56px" }}>
@@ -550,7 +547,6 @@ export default function LogosPage() {
       </div>
 
       <div style={{ height: "64px" }} />
-      </div>
     </div>
   );
 }

@@ -3,7 +3,6 @@
 // All brand URLs as downloadable high-res QR codes (1000×1000px)
 
 import React from "react";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 // ─── QR items ────────────────────────────────────────────────────────────────
 
@@ -143,27 +142,29 @@ function QrCard({ name, data, desc }: { name: string; data: string; desc: string
 
 export default function QrPage() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden", fontFamily: "Inter, sans-serif", padding: "48px 32px" }}>
-      <VignetteBackground />
-      <div style={{ position: "relative", zIndex: 5, maxWidth: "1100px", margin: "0 auto" }}>
+    <div style={{ minHeight: "100vh", background: "#080706", color: "#f5f0e0", fontFamily: "Inter, sans-serif", padding: "48px 32px" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
 
-        <header className="pv-page-head" style={{ marginBottom: "48px" }}>
-          <div className="pv-mono-label">Internal · QR Code Hub</div>
-          <h1 style={{ margin: 0 }}>
-            QR <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Hub.</em>
-          </h1>
-          <p className="deck">
-            1000×1000 px downloads · Dark or light · Ready for stickers, cards, and print.
-          </p>
-        </header>
+        <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d4af37", marginBottom: "10px" }}>
+          Purcell Ventures — Private
+        </div>
+        <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "36px", fontWeight: 700, color: "#f5f0e0", marginBottom: "8px" }}>
+          QR Code Hub
+        </h1>
+        <p style={{ fontSize: "14px", color: "#524d45", marginBottom: "56px" }}>
+          1000×1000px downloads · Dark or light · Ready for stickers, cards, and print
+        </p>
 
         {CATEGORIES.map(cat => (
           <div key={cat.label} style={{ marginBottom: "56px" }}>
-            <header className="pv-section-head" style={{ marginBottom: "24px", padding: "20px 0 14px" }}>
-              <span className="roman">§</span>
-              <h2>{cat.label}</h2>
-            </header>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))", gap: "16px" }}>
+            <div style={{
+              fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em",
+              textTransform: "uppercase", color: "#524d45",
+              paddingBottom: "16px", borderBottom: "1px solid #1e1c1a", marginBottom: "28px",
+            }}>
+              {cat.label}
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))", gap: "20px" }}>
               {cat.items.map(item => (
                 <QrCard key={item.name} {...item} />
               ))}

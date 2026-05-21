@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 const GOLD       = "#d4af37";
 const DARK       = "#0c0a08";
@@ -941,9 +940,7 @@ const TABS: { id: Tab; label: string }[] = [
 export default function BrandPage() {
   const [tab, setTab] = useState<Tab>("colors");
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: CREAM, fontFamily: "Inter, sans-serif", padding: "48px 32px", position: "relative", overflowX: "hidden" }}>
-      <VignetteBackground />
-      <div style={{ position: "relative", zIndex: 5 }}>
+    <div style={{ minHeight: "100vh", background: "#080706", color: CREAM, fontFamily: "Inter, sans-serif", padding: "48px 32px" }}>
 
       <div style={{ maxWidth: "1100px", margin: "0 auto 48px" }}>
         <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: GOLD, marginBottom: "10px" }}>
@@ -982,7 +979,6 @@ export default function BrandPage() {
       <div style={{ maxWidth: "1100px", margin: "64px auto 0", display: "flex", gap: "24px" }}>
         <a href="/logos"    style={{ fontSize: "13px", color: CHAR, textDecoration: "none" }}>← Logos</a>
         <a href="/patterns" style={{ fontSize: "13px", color: CHAR, textDecoration: "none" }}>← Patterns</a>
-      </div>
       </div>
     </div>
   );
