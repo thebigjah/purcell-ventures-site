@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 const SESSION_TYPES = [
   { id: "ai-basics",        label: "AI Basics for Business",    duration: "2 hrs",     tag: "Intro" },
@@ -86,21 +85,15 @@ export default function BookPage() {
   const step3Done = !!name && !!phone;
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden", fontFamily: "Inter, sans-serif" }}>
-      <VignetteBackground />
+    <div style={{ minHeight: "100vh", background: "#080706", color: "#f5f0e0", fontFamily: "Inter, sans-serif" }}>
+      {/* Nav */}
+      <nav style={{ padding: "0 32px", height: "60px", display: "flex", alignItems: "center", gap: "16px", borderBottom: "1px solid #2e2820" }}>
+        <a href="/consulting" style={{ fontSize: "12px", color: "#524d45", textDecoration: "none" }}>← Consulting</a>
+        <span style={{ color: "#2e2820" }}>|</span>
+        <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "15px", fontWeight: 700, color: "#f5f0e0" }}>Book a Session</span>
+      </nav>
 
-      <div style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "56px 36px 96px" }}>
-
-        {/* Editorial page-head */}
-        <header className="pv-page-head" style={{ marginBottom: "40px" }}>
-          <div className="pv-mono-label">Consulting · Booking</div>
-          <h1 style={{ margin: 0 }}>
-            Book a <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>session.</em>
-          </h1>
-          <p className="deck">
-            Three short steps. I&apos;ll reach out within 24 hours to confirm.
-          </p>
-        </header>
+      <div style={{ maxWidth: "680px", margin: "0 auto", padding: "56px 24px 80px" }}>
 
         {/* Progress */}
         <div style={{ display: "flex", gap: "8px", marginBottom: "48px" }}>
