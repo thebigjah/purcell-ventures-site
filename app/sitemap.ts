@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/verses`,  lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/writing`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
     { url: `${BASE}/links`,   lastModified: now, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${BASE}/faq`,     lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/resume`,  lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // Courses — discoverable
