@@ -161,8 +161,22 @@ export default function FAQPage() {
   const [open, setOpen] = useState<string | null>(null);
   const toggle = (id: string) => setOpen(prev => prev === id ? null : id);
 
+  // Structured data for Google's FAQ rich snippets
+  const FAQ_JSON_LD = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQS.flatMap(section =>
+      section.qas.map(qa => ({
+        "@type": "Question",
+        "name": qa.q,
+        "acceptedAnswer": { "@type": "Answer", "text": qa.a },
+      }))
+    ),
+  };
+
   return (
     <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }} />
       <VignetteBackground />
 
       <main style={{ position: "relative", zIndex: 5, maxWidth: "820px", margin: "0 auto", padding: "72px 36px 96px" }}>
