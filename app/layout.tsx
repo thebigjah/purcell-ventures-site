@@ -96,7 +96,7 @@ const orgSchema = {
         "height": 630,
       },
       "description": "Multi-division company offering digital services, AI consulting, and custom software development. Founded by Elijah Purcell in Georgia.",
-      "foundingDate": "2023",
+      "foundingDate": "2025-04-08",
       "foundingLocation": {
         "@type": "Place",
         "name": "Acworth, Georgia, USA",
