@@ -73,7 +73,7 @@ const FAQS: QSection[] = [
     qas: [
       {
         q: "How does the subscription work?",
-        a: "Pick a tier (Starter / Growth / Full Service). Pay a one-time setup fee + a flat monthly rate. No contracts. Cancel anytime. All 25+ tools accessible from one dashboard.",
+        a: "Pick a tier — Starter ($99/mo + $400 setup), Growth ($179/mo + $700 setup), or Full Service ($279/mo + $1,000 setup). Flat monthly rate after setup. No contracts. Cancel anytime. All 25+ tools accessible from one dashboard.",
       },
       {
         q: "Can I mix and match tools from different tiers?",

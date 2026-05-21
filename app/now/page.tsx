@@ -26,10 +26,10 @@ const FOCUS = [
     roman: "III.",
     label: "Going",
     items: [
-      "Alaska mission trip — disaster relief, July 17–23, 2026.",
       "Lee University Summer Honors — June 14–20, cryptography + social media + 6 college credits.",
       "Bama Bound — July 9–11, Tuscaloosa, orientation + first advisor meeting.",
-      "Hawaii mission trip — March 2026, flood recovery (completed).",
+      "Alaska mission trip — disaster relief, July 17–23, 2026.",
+      "Addie's wedding — July 25.",
     ],
   },
   {
