@@ -66,10 +66,10 @@ const STACK = [
     roman: "VII.",
     category: "Hardware",
     items: [
-      { name: "Windows desktop", desc: "Daily driver. Where the long-running automations live." },
-      { name: "MacBook (handoff)", desc: "Travel + on-the-go. Same memory directory, synced via iCloud." },
-      { name: "Galaxy A14",   desc: "Phone. ntfy on the home screen for one-tap approvals from anywhere." },
-      { name: "Shure mic",    desc: "Worship, course recording, anything voiced. Already paid for." },
+      { name: "Windows desktop", desc: "Where the long-running automations live. The workshop." },
+      { name: "MacBook",         desc: "Travel + on-the-go. Same memory directory, synced via iCloud." },
+      { name: "Android phone",   desc: "ntfy on the home screen for one-tap approvals from anywhere." },
+      { name: "Shure mic",       desc: "Worship, course recording, anything voiced. Already paid for." },
     ],
   },
   {
