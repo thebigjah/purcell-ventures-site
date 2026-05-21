@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 export const metadata: Metadata = {
   title: "Elijah Purcell — Resume & Achievements",
@@ -6,38 +7,47 @@ export const metadata: Metadata = {
     "Elijah Purcell | Cornerstone Prep Academy '26 | University of Alabama Honors College | Entrepreneur, Vocalist, Writer. Full activities, awards, and scholarship record.",
 };
 
-const SA = {
-  bg: "#f5ede0",
-  bgAlt: "#ede3d4",
-  card: "#fff8f0",
-  border: "#d6c4a8",
-  accent: "#8b5e3c",
-  accentLight: "#b87d52",
-  gold: "#9a7a2e",
-  goldLight: "#c4a24a",
-  text: "#2d1f0e",
-  textMuted: "#6b5444",
-  textLight: "#9a8270",
-  green: "#4a7a4a",
-  blue: "#3a5a7a",
+// Dark Vignette palette — same as the rest of the site
+const C = {
+  bg: "#0c0a08",
+  bgAlt: "#141210",
+  card: "#1a1714",
+  border: "#2e2820",
+  accent: "#d4af37",
+  accentLight: "#e8c96a",
+  text: "#f5f0e0",
+  textMuted: "#a89c87",
+  textLight: "#7a6a52",
+  green: "#7aaa6a",
 };
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({ roman, title, em, children }: { roman: string; title: string; em?: string; children: React.ReactNode }) {
   return (
-    <section style={{ marginBottom: "2.5rem" }}>
-      <h2 style={{
-        fontFamily: "'Cinzel', Georgia, serif",
-        fontSize: "13px",
-        fontWeight: 700,
-        letterSpacing: "0.12em",
-        textTransform: "uppercase",
-        color: SA.accent,
-        borderBottom: `2px solid ${SA.accent}`,
-        paddingBottom: "6px",
-        marginBottom: "1.25rem",
+    <section style={{ marginBottom: "56px" }}>
+      <header style={{
+        padding: "32px 0 18px",
+        display: "grid", gridTemplateColumns: "auto 1fr",
+        gap: "20px", alignItems: "baseline",
+        borderBottom: `1px solid ${C.border}`,
+        marginBottom: "28px",
       }}>
-        {title}
-      </h2>
+        <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontWeight: 400, fontSize: "36px", lineHeight: 1, color: C.accent }}>
+          {roman}
+        </span>
+        <h2 style={{
+          fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
+          fontSize: "22px", letterSpacing: "0.04em",
+          color: C.text, textTransform: "uppercase",
+          margin: 0,
+        }}>
+          {title}
+          {em && (
+            <em className="pv-italic" style={{ fontWeight: 400, textTransform: "none", letterSpacing: 0, color: C.accent, marginLeft: "10px" }}>
+              {em}
+            </em>
+          )}
+        </h2>
+      </header>
       {children}
     </section>
   );
@@ -45,16 +55,14 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 function SubSection({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div style={{ marginBottom: "1.25rem" }}>
+    <div style={{ marginBottom: "24px" }}>
       <div style={{
-        fontSize: "11px",
-        fontWeight: 700,
-        letterSpacing: "0.1em",
-        textTransform: "uppercase",
-        color: SA.textMuted,
-        marginBottom: "0.6rem",
-        paddingBottom: "3px",
-        borderBottom: `1px solid ${SA.border}`,
+        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+        fontSize: "10px", fontWeight: 700,
+        letterSpacing: "0.28em", textTransform: "uppercase",
+        color: C.accent,
+        marginBottom: "16px", paddingBottom: "6px",
+        borderBottom: `1px solid ${C.border}`,
       }}>
         {title}
       </div>
@@ -65,14 +73,32 @@ function SubSection({ title, children }: { title: string; children: React.ReactN
 
 function Row({ left, right, sub, note }: { left: string; right?: string; sub?: string; note?: string }) {
   return (
-    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "0.85rem", gap: "12px" }}>
+    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "18px", gap: "16px" }}>
       <div style={{ flex: 1 }}>
-        <div style={{ fontWeight: 600, color: SA.text, fontSize: "14px", lineHeight: 1.4 }}>{left}</div>
-        {sub && <div style={{ color: SA.textMuted, fontSize: "13px", marginTop: "2px", lineHeight: 1.4 }}>{sub}</div>}
-        {note && <div style={{ color: SA.textLight, fontSize: "12px", marginTop: "3px", fontStyle: "italic" }}>{note}</div>}
+        <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600, color: C.text, fontSize: "15px", lineHeight: 1.3, letterSpacing: "0.01em" }}>
+          {left}
+        </div>
+        {sub && (
+          <div className="pv-italic" style={{ color: C.text, opacity: 0.85, fontSize: "15px", marginTop: "6px", lineHeight: 1.5 }}>
+            {sub}
+          </div>
+        )}
+        {note && (
+          <div style={{ color: C.textLight, fontSize: "12.5px", marginTop: "6px", fontStyle: "italic", lineHeight: 1.5 }}>
+            {note}
+          </div>
+        )}
       </div>
       {right && (
-        <div style={{ fontSize: "12px", color: SA.textMuted, whiteSpace: "nowrap", paddingTop: "2px" }}>{right}</div>
+        <div style={{
+          fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+          fontSize: "10px", fontWeight: 700,
+          letterSpacing: "0.22em", textTransform: "uppercase",
+          color: C.accent, whiteSpace: "nowrap", paddingTop: "4px",
+          textAlign: "right", maxWidth: "180px",
+        }}>
+          {right}
+        </div>
       )}
     </div>
   );
@@ -82,14 +108,14 @@ function AwardBadge({ text }: { text: string }) {
   return (
     <span style={{
       display: "inline-block",
-      background: SA.bgAlt,
-      border: `1px solid ${SA.border}`,
-      borderRadius: "4px",
-      padding: "3px 8px",
-      fontSize: "12px",
-      color: SA.text,
-      marginRight: "6px",
-      marginBottom: "6px",
+      border: `1.5px solid ${C.border}`,
+      padding: "5px 12px",
+      fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+      fontSize: "10px", fontWeight: 600,
+      letterSpacing: "0.18em", textTransform: "uppercase",
+      color: C.textMuted,
+      marginRight: "8px",
+      marginBottom: "8px",
     }}>
       {text}
     </span>
@@ -102,41 +128,60 @@ function ScholarCard({ school, amount, note }: { school: string; amount: string;
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
-      padding: "8px 12px",
-      background: SA.card,
-      border: `1px solid ${SA.border}`,
-      borderRadius: "6px",
-      marginBottom: "6px",
-      gap: "8px",
+      padding: "12px 18px",
+      background: C.bgAlt,
+      border: `1px solid ${C.border}`,
+      marginBottom: "8px",
+      gap: "12px",
     }}>
       <div>
-        <span style={{ fontWeight: 600, fontSize: "13px", color: SA.text }}>{school}</span>
-        {note && <span style={{ fontSize: "12px", color: SA.textMuted, marginLeft: "8px" }}>{note}</span>}
+        <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600, fontSize: "14px", color: C.text }}>
+          {school}
+        </span>
+        {note && (
+          <span className="pv-italic" style={{ fontSize: "13px", color: C.textMuted, marginLeft: "12px" }}>
+            {note}
+          </span>
+        )}
       </div>
-      <span style={{ fontWeight: 700, fontSize: "13px", color: SA.green, whiteSpace: "nowrap" }}>{amount}</span>
+      <span style={{
+        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+        fontWeight: 700, fontSize: "13px", letterSpacing: "0.06em",
+        color: C.accent, whiteSpace: "nowrap",
+      }}>
+        {amount}
+      </span>
     </div>
   );
 }
 
 function ImpactCard({ year, location, org, bullets }: { year: string; location: string; org: string; bullets: string[] }) {
   return (
-    <div style={{
-      padding: "12px 14px",
-      background: SA.card,
-      border: `1px solid ${SA.border}`,
-      borderRadius: "6px",
-      marginBottom: "10px",
-    }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "6px" }}>
+    <div className="pv-card" style={{ padding: "24px 28px 20px", marginBottom: "12px" }}>
+      <span className="b3"></span><span className="b4"></span>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px", gap: "12px" }}>
         <div>
-          <span style={{ fontWeight: 700, fontSize: "13px", color: SA.text }}>{location}</span>
-          <span style={{ fontSize: "12px", color: SA.textMuted, marginLeft: "8px" }}>{org}</span>
+          <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600, fontSize: "15px", color: C.text, letterSpacing: "0.02em" }}>
+            {location}
+          </span>
+          <span className="pv-italic" style={{ fontSize: "13px", color: C.textMuted, marginLeft: "10px" }}>
+            {org}
+          </span>
         </div>
-        <span style={{ fontSize: "12px", color: SA.textMuted, whiteSpace: "nowrap" }}>{year}</span>
+        <span style={{
+          fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+          fontSize: "10px", fontWeight: 700,
+          letterSpacing: "0.24em", textTransform: "uppercase",
+          color: C.accent, whiteSpace: "nowrap",
+        }}>
+          {year}
+        </span>
       </div>
-      <ul style={{ margin: 0, paddingLeft: "16px" }}>
+      <ul style={{ margin: 0, paddingLeft: "18px" }}>
         {bullets.map((b, i) => (
-          <li key={i} style={{ fontSize: "12px", color: SA.textMuted, lineHeight: 1.5, marginBottom: "2px" }}>{b}</li>
+          <li key={i} className="pv-italic" style={{ fontSize: "14px", color: C.text, opacity: 0.85, lineHeight: 1.55, marginBottom: "4px" }}>
+            {b}
+          </li>
         ))}
       </ul>
     </div>
@@ -145,62 +190,114 @@ function ImpactCard({ year, location, org, bullets }: { year: string; location: 
 
 export default function ResumePage() {
   return (
-    <div style={{ background: SA.bg, minHeight: "100vh", fontFamily: "'Inter', sans-serif" }}>
+    <div style={{ background: C.bg, color: C.text, minHeight: "100vh", position: "relative", overflowX: "hidden" }}>
+      <VignetteBackground />
 
-      {/* Header */}
-      <div style={{
-        background: SA.text,
-        color: SA.bg,
-        padding: "48px 40px 36px",
+      {/* Mini nav — SiteNav is hidden on /resume per HIDE_ON list */}
+      <nav style={{
+        position: "relative", zIndex: 5,
+        padding: "16px 36px",
+        borderBottom: `1px solid ${C.border}`,
+        display: "flex", justifyContent: "space-between", alignItems: "center",
+        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+        fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase",
       }}>
-        <div style={{ maxWidth: "760px", margin: "0 auto" }}>
-          <h1 style={{
-            fontFamily: "'Cinzel', Georgia, serif",
-            fontSize: "32px",
-            fontWeight: 700,
-            letterSpacing: "0.04em",
-            margin: 0,
-            color: "#f5ede0",
+        <a href="/" style={{ color: C.textMuted, textDecoration: "none" }}>← Purcell · Ventures</a>
+        <a href="/resume/print" style={{ color: C.accent, textDecoration: "none" }}>Print version →</a>
+      </nav>
+
+      <main style={{ position: "relative", zIndex: 5, maxWidth: "880px", margin: "0 auto", padding: "56px 36px 80px" }}>
+
+        {/* Editorial page header with stats band */}
+        <header style={{
+          borderTop: `3px solid ${C.text}`,
+          borderBottom: `1px solid ${C.text}`,
+          padding: "18px 0 32px",
+          position: "relative",
+          marginBottom: "40px",
+        }}>
+          <div style={{
+            fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+            fontSize: "10px", fontWeight: 700,
+            letterSpacing: "0.32em", textTransform: "uppercase",
+            color: C.accent, marginBottom: "12px",
           }}>
-            Elijah Purcell
+            Résumé · Field Record · Class of 2026
+          </div>
+          <h1 style={{
+            fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700,
+            fontSize: "clamp(40px, 7vw, 84px)",
+            lineHeight: 0.98, letterSpacing: "0.005em",
+            color: C.text, margin: 0,
+          }}>
+            Elijah Brent <em className="pv-italic" style={{ fontWeight: 400, color: C.accent }}>Purcell</em>
           </h1>
-          <p style={{ fontSize: "14px", color: "#c4a890", margin: "8px 0 0", letterSpacing: "0.03em" }}>
-            Cornerstone Preparatory Academy, Class of 2026 &nbsp;·&nbsp; Acworth, GA
+          <p className="pv-italic" style={{ marginTop: "16px", fontSize: "18px", color: C.text, opacity: 0.78, maxWidth: "640px", lineHeight: 1.5 }}>
+            Cornerstone Preparatory Academy, Class of 2026 · Acworth, Georgia
           </p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", marginTop: "20px", fontSize: "13px" }}>
+
+          {/* Contact line */}
+          <div style={{
+            marginTop: "24px",
+            display: "flex", flexWrap: "wrap", gap: "24px",
+            fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+            fontSize: "12px", letterSpacing: "0.04em",
+            color: C.textMuted,
+          }}>
             {[
-              { label: "Email", val: "elijahpurcell@gmail.com", href: "mailto:elijahpurcell@gmail.com" },
-              { label: "Business", val: "purcellventures.co", href: "https://purcellventures.co" },
-              { label: "Full Resume (PDF)", val: "purcellventures.co/resume/print", href: "/resume/print" },
+              { label: "Email",       val: "elijahpurcell@gmail.com",        href: "mailto:elijahpurcell@gmail.com" },
+              { label: "Business",    val: "purcellventures.co",             href: "https://purcellventures.co" },
+              { label: "Print PDF",   val: "purcellventures.co/resume/print", href: "/resume/print" },
             ].map(({ label, val, href }) => (
-              <span key={label} style={{ color: "#c4a890" }}>
-                <span style={{ opacity: 0.6, marginRight: "4px" }}>{label}:</span>
-                <a href={href} style={{ color: "#e8c96a", textDecoration: "none" }}>{val}</a>
+              <span key={label}>
+                <span style={{ color: C.textLight, marginRight: "6px", letterSpacing: "0.22em", textTransform: "uppercase", fontSize: "10px" }}>
+                  {label}
+                </span>
+                <a href={href} style={{ color: C.accent, textDecoration: "none" }}>{val}</a>
               </span>
             ))}
           </div>
-          {/* Stats row */}
-          <div style={{ display: "flex", gap: "32px", marginTop: "24px", flexWrap: "wrap" }}>
+
+          {/* Stats band */}
+          <div style={{
+            marginTop: "32px",
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: "0",
+            border: `1px solid ${C.border}`,
+            background: C.bgAlt,
+          }}>
             {[
-              { val: "3.92", label: "GPA (weighted)" },
-              { val: "1440", label: "SAT Score" },
-              { val: "34", label: "College Acceptances" },
-              { val: "$520k+/yr", label: "Merit Scholarships" },
-            ].map(({ val, label }) => (
-              <div key={label} style={{ textAlign: "center" }}>
-                <div style={{ fontFamily: "'Cinzel', serif", fontSize: "22px", fontWeight: 700, color: "#e8c96a" }}>{val}</div>
-                <div style={{ fontSize: "11px", color: "#9a8270", marginTop: "2px", letterSpacing: "0.04em" }}>{label}</div>
+              { val: "3.92",       label: "GPA (weighted)" },
+              { val: "1440",       label: "SAT score" },
+              { val: "34",         label: "Acceptances" },
+              { val: "$520k+/yr",  label: "Scholarships" },
+            ].map(({ val, label }, i) => (
+              <div key={label} style={{
+                padding: "20px 16px",
+                textAlign: "center",
+                borderRight: i < 3 ? `1px solid ${C.border}` : "none",
+              }}>
+                <div style={{
+                  fontFamily: "'Cinzel', serif", fontSize: "24px", fontWeight: 700,
+                  color: C.accent, letterSpacing: "-0.01em",
+                }}>
+                  {val}
+                </div>
+                <div style={{
+                  fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                  fontSize: "9px", letterSpacing: "0.28em", textTransform: "uppercase",
+                  color: C.textLight, marginTop: "6px",
+                }}>
+                  {label}
+                </div>
               </div>
             ))}
           </div>
-        </div>
-      </div>
+        </header>
 
-      {/* Body */}
-      <div style={{ maxWidth: "760px", margin: "0 auto", padding: "36px 24px 60px" }}>
-
-        {/* Education */}
-        <Section title="Education">
+        {/* ─── Education ─── */}
+        <Section roman="I." title="Education">
           <Row
             left="Cornerstone Preparatory Academy — Acworth, GA"
             right="K – 8th Grade"
@@ -231,94 +328,78 @@ export default function ResumePage() {
           />
         </Section>
 
-        {/* Awards & Honors */}
-        <Section title="Awards & Honors">
-          <Row
-            left="Behold Award"
-            right="9th Grade · Grove Christian School"
-            sub="Character and excellence recognition awarded to select students for demonstrated moral integrity and spiritual maturity."
-          />
-          <Row
-            left="Steadfast Award"
-            right="10th Grade · Grove Christian School"
-            sub="Recognition for consistent perseverance, faithfulness, and character under pressure."
-          />
-          <Row
-            left="Christian Character Award"
-            right="Grove Christian School"
-            sub="Selected as one of two students school-wide (one male, one female) for moral excellence, integrity, and leadership."
-          />
-          <Row
-            left="Christ-like Leadership Award"
-            right="Grove Christian School · End-of-Year Awards"
-            sub="Awarded at the end-of-year awards ceremony for embodying servant leadership and Christian character throughout the school year."
-          />
-          <Row
-            left="Lead Role — Christmas Musical"
-            right="Grove Christian School"
-            sub="Selected for the lead acting and vocal role in the school's annual Christmas production."
-          />
-          <Row
-            left="Highest Math Grade in Class"
-            right="9th Grade"
-            sub="Earned 100% both semesters — top math average in the class."
-          />
+        {/* ─── Awards & Honors ─── */}
+        <Section roman="II." title="Awards" em="and honors">
+          <Row left="Behold Award" right="9th Grade · Grove" sub="Character and excellence recognition awarded to select students for demonstrated moral integrity and spiritual maturity." />
+          <Row left="Steadfast Award" right="10th Grade · Grove" sub="Recognition for consistent perseverance, faithfulness, and character under pressure." />
+          <Row left="Christian Character Award" right="Grove" sub="Selected as one of two students school-wide (one male, one female) for moral excellence, integrity, and leadership." />
+          <Row left="Christ-like Leadership Award" right="Grove · End-of-Year Awards" sub="Awarded at the end-of-year awards ceremony for embodying servant leadership and Christian character throughout the school year." />
+          <Row left="Lead Role — Christmas Musical" right="Grove" sub="Selected for the lead acting and vocal role in the school&apos;s annual Christmas production." />
+          <Row left="Highest Math Grade in Class" right="9th Grade" sub="Earned 100% both semesters — top math average in the class." />
           <Row
             left="Family Foundation & Colson Center — Youth Leadership Summit"
             right="Summer 2023 · Richmond, VA"
-            sub="Competitive invitation-only summit. Advanced seminar on worldview, cultural analysis, and Christian civic leadership. College-level critical reading and analytical writing."
+            sub="Competitive invitation-only summit. Advanced seminar on worldview, cultural analysis, and Christian civic leadership."
           />
-          <Row
-            left="University of Alabama — Honors College Admission"
-            right="2026"
-            sub="Selective admission based on academic achievement and demonstrated leadership."
-          />
-          <Row
-            left="Georgia State University — Honors College Admission"
-            right="2026"
-          />
+          <Row left="University of Alabama — Honors College Admission" right="2026" sub="Selective admission based on academic achievement and demonstrated leadership." />
+          <Row left="Georgia State University — Honors College Admission" right="2026" />
         </Section>
 
-        {/* Scholarship Record */}
-        <Section title="Scholarship Record (College Offers)">
-          <p style={{ fontSize: "12px", color: SA.textMuted, marginBottom: "12px" }}>
+        {/* ─── Scholarship Record ─── */}
+        <Section roman="III." title="Scholarship record" em="college offers">
+          <p className="pv-italic" style={{ fontSize: "15px", color: C.text, opacity: 0.78, marginBottom: "20px", lineHeight: 1.5 }}>
             Merit scholarship offers from schools that have extended admission — all based on academic achievement.
           </p>
-          <ScholarCard school="Kalamazoo College" amount="$48,000/yr" note="Lux Esto Scholarship" />
-          <ScholarCard school="Susquehanna University" amount="$48,000/yr" note="Merit Scholarship" />
-          <ScholarCard school="Drake University" amount="$31,000/yr" note="Merit Scholarship" />
-          <ScholarCard school="Hood College" amount="$31,000/yr" note="Presidential Scholarship" />
-          <ScholarCard school="Transylvania University" amount="$30,000/yr" note="Merit Scholarship" />
-          <ScholarCard school="The University of Alabama" amount="$28,000/yr" note="Presidential Merit (enrolled)" />
-          <ScholarCard school="Bradley University" amount="$28,000/yr" note="Presidential Scholarship (confirmed)" />
-          <ScholarCard school="Presbyterian College" amount="$28,000/yr" note="Highlander Scholarship (confirmed)" />
-          <ScholarCard school="Cedarville University" amount="$22,000/yr" note="Merit Scholarship" />
-          <ScholarCard school="Berry College" amount="$20,000/yr" note="Merit Scholarship, renewable" />
-          <ScholarCard school="Oral Roberts University" amount="$24,000/yr" note="Merit Scholarship" />
-          <ScholarCard school="Lenoir-Rhyne University" amount="$26,000/yr" note="Niche Direct Merit" />
-          <ScholarCard school="Nazareth University" amount="$25,000/yr" note="Presidential Scholarship" />
-          <ScholarCard school="Palm Beach Atlantic University" amount="$21,000/yr" note="Merit Scholarship" />
-          <ScholarCard school="Charleston Southern University" amount="$17,000/yr" note="Merit Scholarship" />
-          <ScholarCard school="Mississippi College" amount="$14,500/yr" note="Academic Merit Scholarship" />
-          <ScholarCard school="Hartwick College" amount="$10,000/yr" note="Flight Path Scholarship" />
-          <ScholarCard school="Francis Marion University" amount="$10,884/yr" note="Niche Direct Merit" />
-          <ScholarCard school="Rider University" amount="$3,000/yr" note="Merit Scholarship" />
-          <ScholarCard school="Valparaiso University" amount="$28,000/yr" note="Merit Scholarship" />
-          <ScholarCard school="Georgia State University" amount="$1,060/yr" note="Merit + Honors College" />
+          {[
+            { school: "Kalamazoo College",            amount: "$48,000/yr", note: "Lux Esto Scholarship" },
+            { school: "Susquehanna University",       amount: "$48,000/yr", note: "Merit Scholarship" },
+            { school: "Drake University",             amount: "$31,000/yr", note: "Merit Scholarship" },
+            { school: "Hood College",                 amount: "$31,000/yr", note: "Presidential Scholarship" },
+            { school: "Transylvania University",      amount: "$30,000/yr", note: "Merit Scholarship" },
+            { school: "The University of Alabama",    amount: "$28,000/yr", note: "Presidential Merit (enrolled)" },
+            { school: "Bradley University",           amount: "$28,000/yr", note: "Presidential Scholarship (confirmed)" },
+            { school: "Presbyterian College",         amount: "$28,000/yr", note: "Highlander Scholarship (confirmed)" },
+            { school: "Cedarville University",        amount: "$22,000/yr", note: "Merit Scholarship" },
+            { school: "Berry College",                amount: "$20,000/yr", note: "Merit Scholarship, renewable" },
+            { school: "Oral Roberts University",      amount: "$24,000/yr", note: "Merit Scholarship" },
+            { school: "Lenoir-Rhyne University",      amount: "$26,000/yr", note: "Niche Direct Merit" },
+            { school: "Nazareth University",          amount: "$25,000/yr", note: "Presidential Scholarship" },
+            { school: "Palm Beach Atlantic University", amount: "$21,000/yr", note: "Merit Scholarship" },
+            { school: "Charleston Southern University", amount: "$17,000/yr", note: "Merit Scholarship" },
+            { school: "Mississippi College",          amount: "$14,500/yr", note: "Academic Merit Scholarship" },
+            { school: "Hartwick College",             amount: "$10,000/yr", note: "Flight Path Scholarship" },
+            { school: "Francis Marion University",    amount: "$10,884/yr", note: "Niche Direct Merit" },
+            { school: "Rider University",             amount: "$3,000/yr",  note: "Merit Scholarship" },
+            { school: "Valparaiso University",        amount: "$28,000/yr", note: "Merit Scholarship" },
+            { school: "Georgia State University",     amount: "$1,060/yr",  note: "Merit + Honors College" },
+          ].map(s => <ScholarCard key={s.school} {...s} />)}
           <div style={{
-            display: "flex", justifyContent: "space-between", padding: "10px 12px",
-            background: SA.text, borderRadius: "6px", marginTop: "10px",
+            display: "flex", justifyContent: "space-between", alignItems: "center",
+            padding: "16px 22px", marginTop: "12px",
+            background: C.text, color: C.bg,
           }}>
-            <span style={{ fontWeight: 700, fontSize: "13px", color: "#f5ede0" }}>Total (confirmed offers)</span>
-            <span style={{ fontWeight: 700, fontSize: "14px", color: "#e8c96a" }}>$520,444 / year</span>
+            <span style={{
+              fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+              fontWeight: 700, fontSize: "11px",
+              letterSpacing: "0.32em", textTransform: "uppercase",
+            }}>
+              Total · confirmed offers
+            </span>
+            <span style={{
+              fontFamily: "'Cinzel', Georgia, serif",
+              fontWeight: 700, fontSize: "20px",
+              color: C.accent, letterSpacing: "-0.01em",
+            }}>
+              $520,444 / yr
+            </span>
           </div>
-          <p style={{ fontSize: "11px", color: SA.textLight, marginTop: "8px" }}>
+          <p className="pv-italic" style={{ fontSize: "13px", color: C.textLight, marginTop: "10px" }}>
             34 acceptances. Enrolled at University of Alabama.
           </p>
         </Section>
 
-        {/* Work & Entrepreneurship */}
-        <Section title="Work Experience & Entrepreneurship">
+        {/* ─── Work & Entrepreneurship ─── */}
+        <Section roman="IV." title="Work" em="and entrepreneurship">
           <Row
             left="Founder & CEO — Purcell Ventures LLC"
             right="April 2025 – Present"
@@ -342,34 +423,14 @@ export default function ResumePage() {
           />
         </Section>
 
-        {/* Leadership */}
-        <Section title="Leadership & Ministry">
-          <SubSection title="School & Organizational Leadership">
-            <Row
-              left="Member — Mighty Men (Men's Bible Study, Cornerstone Prep)"
-              right="11th – 12th Grade"
-              sub="Active member of the school's men's discipleship group. Weekly 2-hour discussions on faith, character, and spiritual formation."
-            />
-            <Row
-              left="Head Chaplain"
-              right="9th Spring – 10th Fall"
-              sub="Organized school chapel services, coordinated worship teams, and led school-wide spiritual programming. Weekly rehearsals and Friday performances."
-            />
-            <Row
-              left="Worship Team — Lead Vocalist"
-              right="9th – 12th Grade"
-              sub="Lead vocalist at school chapel and church services. Bass-baritone, range C1–F5. Rehearsals 2–3×/week."
-            />
-            <Row
-              left="Youth Group Leader & Summer Camp Counselor"
-              right="Ongoing"
-              sub="Mentors younger students at church, leads group discussions, and staffs week-long summer camp annually."
-            />
-            <Row
-              left="Peer Tutor (Math & English)"
-              right="10th – 12th Grade"
-              sub="One-on-one academic support for classmates. Improved peers' grades through structured review sessions."
-            />
+        {/* ─── Leadership ─── */}
+        <Section roman="V." title="Leadership" em="and ministry">
+          <SubSection title="School + Organizational Leadership">
+            <Row left="Member — Mighty Men (Men's Bible Study, Cornerstone Prep)" right="11th – 12th Grade" sub="Active member of the school&apos;s men&apos;s discipleship group. Weekly 2-hour discussions on faith, character, and spiritual formation." />
+            <Row left="Head Chaplain" right="9th Spring – 10th Fall" sub="Organized school chapel services, coordinated worship teams, and led school-wide spiritual programming. Weekly rehearsals and Friday performances." />
+            <Row left="Worship Team — Lead Vocalist" right="9th – 12th Grade" sub="Lead vocalist at school chapel and church services. Bass-baritone, range C1–F5. Rehearsals 2–3×/week." />
+            <Row left="Youth Group Leader & Summer Camp Counselor" right="Ongoing" sub="Mentors younger students at church, leads group discussions, and staffs week-long summer camp annually." />
+            <Row left="Peer Tutor (Math & English)" right="10th – 12th Grade" sub="One-on-one academic support for classmates. Improved peers&apos; grades through structured review sessions." />
           </SubSection>
 
           <SubSection title="IMPACT Mission Trips">
@@ -379,7 +440,7 @@ export default function ResumePage() {
               org="Praying Pelican Missions"
               bullets={[
                 "Organized and participated in a regional food drive serving underserved communities.",
-                "Constructed a full floor and ADA-compliant accessibility ramp for an elderly couple's home after the husband became disabled.",
+                "Constructed a full floor and ADA-compliant accessibility ramp for an elderly couple&apos;s home after the husband became disabled.",
                 "Led prayer and worship sessions throughout the week-long trip.",
               ]}
             />
@@ -405,167 +466,117 @@ export default function ResumePage() {
           </SubSection>
         </Section>
 
-        {/* Community Service */}
-        <Section title="Community Service & Volunteer Work">
-          <Row
-            left="MUST Ministries — Food Collection"
-            sub="Organized and participated in food drives benefiting MUST Ministries, a nonprofit providing hunger relief, shelter, and support services to families in need across greater Atlanta."
-          />
-          <Row
-            left="Children's Ministry — Church Volunteer"
-            sub="Serves regularly in the kids ministry program at Stonebridge Church (Marietta) — teaching, mentoring, and leading activities for elementary-age children."
-          />
-          <Row
-            left="Community Cleanup — Environmental Service"
-            sub="Volunteer park and neighborhood cleanup efforts. Ongoing participation in local environmental stewardship."
-          />
-          <p style={{ fontSize: "12px", color: SA.textLight, marginTop: "4px", fontStyle: "italic" }}>
+        {/* ─── Community Service ─── */}
+        <Section roman="VI." title="Community service" em="and volunteer work">
+          <Row left="MUST Ministries — Food Collection" sub="Organized and participated in food drives benefiting MUST Ministries, a nonprofit providing hunger relief, shelter, and support services to families in need across greater Atlanta." />
+          <Row left="Children&apos;s Ministry — Church Volunteer" sub="Serves regularly in the kids ministry program at Stonebridge Church (Marietta) — teaching, mentoring, and leading activities for elementary-age children." />
+          <Row left="Community Cleanup — Environmental Service" sub="Volunteer park and neighborhood cleanup efforts. Ongoing participation in local environmental stewardship." />
+          <p className="pv-italic" style={{ fontSize: "13px", color: C.textLight, marginTop: "8px" }}>
             200+ cumulative volunteer hours across ministry, mission, and community service.
           </p>
         </Section>
 
-        {/* Athletics */}
-        <Section title="Athletics">
-          <Row
-            left="Cheerleader — Back / Base"
-            right="9th – 10th Grade"
-            sub="Competitive cheer support and stunt base. 6–7 hrs/week during season."
-          />
-          <Row
-            left="Track & Field — Shot Put, Discus, 100m"
-            right="9th Grade"
-            sub="Competed in field and sprint events during 9th grade spring season."
-          />
-          <Row
-            left="Weightlifting"
-            right="Ongoing"
-            sub="Scientific hypertrophy-focused training program. Consistent multi-year commitment."
-          />
+        {/* ─── Athletics ─── */}
+        <Section roman="VII." title="Athletics">
+          <Row left="Cheerleader — Back / Base" right="9th – 10th Grade" sub="Competitive cheer support and stunt base. 6–7 hrs/week during season." />
+          <Row left="Track & Field — Shot Put, Discus, 100m" right="9th Grade" sub="Competed in field and sprint events during 9th grade spring season." />
+          <Row left="Weightlifting" right="Ongoing" sub="Scientific hypertrophy-focused training program. Consistent multi-year commitment." />
         </Section>
 
-        {/* Clubs */}
-        <Section title="Clubs & Organizations">
-          <div style={{ display: "flex", flexWrap: "wrap", marginBottom: "12px" }}>
+        {/* ─── Clubs ─── */}
+        <Section roman="VIII." title="Clubs" em="and organizations">
+          <div style={{ display: "flex", flexWrap: "wrap", marginBottom: "20px" }}>
             {[
               "Beta Club (Grove & CPA)",
               "Apologetics & Debate Team",
               "Spanish Club (3 yrs)",
               "Club Med",
-              "Creative Writing / Writer's Guild",
+              "Creative Writing / Writer&apos;s Guild",
               "Curious Conversations",
               "Animal Ambassadors",
               "Senior Devotional",
               "Mighty Men (Member · CPA)",
             ].map(c => <AwardBadge key={c} text={c} />)}
           </div>
-          <Row
-            left="Apologetics & Debate Team"
-            right="9th – 12th Grade"
-            sub="Engaged in formal and informal theological debate with teachers and peers. Contributed to school-wide theological discussion. 5–10 hrs/week."
-          />
-          <Row
-            left="Creative Writing / Writer's Guild"
-            right="11th Grade"
-            sub="Workshop-style group focused on original fiction, poetry, and narrative craft. Produced original poetry, fiction drafts, and personal essays."
-          />
-          <Row
-            left="Beta Club"
-            right="Grove & Cornerstone"
-            sub="National honor society recognizing academic achievement, character, leadership, and service."
-          />
+          <Row left="Apologetics & Debate Team" right="9th – 12th Grade" sub="Engaged in formal and informal theological debate with teachers and peers. Contributed to school-wide theological discussion. 5–10 hrs/week." />
+          <Row left="Creative Writing / Writer&apos;s Guild" right="11th Grade" sub="Workshop-style group focused on original fiction, poetry, and narrative craft. Produced original poetry, fiction drafts, and personal essays." />
+          <Row left="Beta Club" right="Grove & Cornerstone" sub="National honor society recognizing academic achievement, character, leadership, and service." />
         </Section>
 
-        {/* Arts & Creative */}
-        <Section title="Arts, Media & Creative Work">
-          <Row
-            left="Vocalist — Bass-Baritone"
-            right="Ongoing"
-            sub="Range C1–F5. Lead worship vocalist at school and church. Active in performance and rehearsal consistently since 9th grade."
-          />
-          <Row
-            left="Lead Actor — Christmas Musical"
-            right="Grove Christian School"
-            sub="Selected for the lead role in the school's annual Christmas production. Combined vocal performance with acting and stage presence."
-          />
-          <Row
-            left="Poetry & Creative Writing"
-            right="Ongoing"
-            sub='Original works include "The Husks the Swine Did Eat," "Injustice Scorned," "The Rebuking of Loki," fiction novel drafts, and personal essays. Writes across 8 distinct styles.'
-          />
-          <Row
-            left="Content Creation — YouTube & Social Media"
-            right="2023 – Present"
-            sub="Scripts, films, and edits commentary content on psychology, faith, and culture. YouTube channel with 2,800+ subscribers transitioning to intellectual commentary."
-          />
-          <Row
-            left="Photography, Videography & Graphic Design"
-            right="Ongoing"
-            sub="Photoshop experience. Handles brand design, product photography, and video production for Purcell Ventures clients and personal projects."
-          />
+        {/* ─── Arts & Creative ─── */}
+        <Section roman="IX." title="Arts" em="media, creative work">
+          <Row left="Vocalist — Bass-Baritone" right="Ongoing" sub="Range C1–F5. Lead worship vocalist at school and church. Active in performance and rehearsal consistently since 9th grade." />
+          <Row left="Lead Actor — Christmas Musical" right="Grove" sub="Selected for the lead role in the school&apos;s annual Christmas production. Combined vocal performance with acting and stage presence." />
+          <Row left="Poetry & Creative Writing" right="Ongoing" sub='Original works include "The Husks the Swine Did Eat," "Injustice Scorned," "The Rebuking of Loki," fiction novel drafts, and personal essays. Writes across 8 distinct styles.' />
+          <Row left="Content Creation — YouTube & Social Media" right="2023 – Present" sub="Scripts, films, and edits commentary content on psychology, faith, and culture. YouTube channel with 2,800+ subscribers transitioning to intellectual commentary." />
+          <Row left="Photography, Videography & Graphic Design" right="Ongoing" sub="Photoshop experience. Handles brand design, product photography, and video production for Purcell Ventures clients and personal projects." />
         </Section>
 
-        {/* Skills */}
-        <Section title="Skills & Technical Abilities">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px" }}>
+        {/* ─── Skills ─── */}
+        <Section roman="X." title="Skills" em="and technical abilities">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
             {[
-              ["Programming", "Python (CS50P), JavaScript/TypeScript, React Native, Node.js"],
+              ["Programming",   "Python (CS50P), JavaScript/TypeScript, React Native, Node.js"],
               ["AI & Automation", "OpenAI API, AI pipeline design, data training & evaluation"],
-              ["Software", "Expo, Next.js, Express, Git, Photoshop"],
+              ["Software",      "Expo, Next.js, Express, Git, Photoshop"],
               ["Communication", "Public speaking, theological debate, persuasive writing"],
-              ["Business", "Client management, invoicing, scheduling, marketing"],
-              ["Music", "Vocal performance (bass-baritone), worship leading, stage presence"],
-              ["Languages", "English (native), Spanish (3 yrs)"],
-              ["Fitness", "Strength & conditioning, scientific training methodology"],
+              ["Business",      "Client management, invoicing, scheduling, marketing"],
+              ["Music",         "Vocal performance (bass-baritone), worship leading, stage presence"],
+              ["Languages",     "English (native), Spanish (3 yrs)"],
+              ["Fitness",       "Strength & conditioning, scientific training methodology"],
             ].map(([skill, desc]) => (
-              <div key={skill} style={{ padding: "8px 12px", background: SA.card, border: `1px solid ${SA.border}`, borderRadius: "6px" }}>
-                <div style={{ fontWeight: 600, fontSize: "12px", color: SA.accent, marginBottom: "2px" }}>{skill}</div>
-                <div style={{ fontSize: "12px", color: SA.textMuted, lineHeight: 1.4 }}>{desc}</div>
+              <div key={skill} style={{
+                padding: "14px 18px",
+                background: C.bgAlt,
+                border: `1px solid ${C.border}`,
+              }}>
+                <div style={{
+                  fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                  fontSize: "10px", fontWeight: 700,
+                  letterSpacing: "0.28em", textTransform: "uppercase",
+                  color: C.accent, marginBottom: "6px",
+                }}>
+                  {skill}
+                </div>
+                <div className="pv-italic" style={{ fontSize: "14px", color: C.text, opacity: 0.85, lineHeight: 1.5 }}>
+                  {desc}
+                </div>
               </div>
             ))}
           </div>
         </Section>
 
-        {/* Faith & Service */}
-        <Section title="Faith & Community Service">
-          <Row
-            left="Church Involvement — Stonebridge (Marietta) + Kennesaw First Baptist"
-            right="Ongoing"
-            sub="Stonebridge Church (Marietta) — Sunday service, longstanding home church, baptized here at 15. Kennesaw First Baptist — Wednesday youth and retreats (~1.5 years)."
-          />
-          <Row
-            left="Apologetics & Theology Study"
-            right="Ongoing"
-            sub="Independently studying William Lane Craig, Sean McDowell, C.S. Lewis, A.W. Tozer, hermeneutics, and philosophy of religion."
-          />
+        {/* ─── Faith & Service ─── */}
+        <Section roman="XI." title="Faith" em="and community life">
+          <Row left="Church Involvement — Stonebridge (Marietta) + Kennesaw First Baptist" right="Ongoing" sub="Stonebridge Church (Marietta) — Sunday service, longstanding home church, baptized here at 15. Kennesaw First Baptist — Wednesday youth and retreats (~1.5 years)." />
+          <Row left="Apologetics & Theology Study" right="Ongoing" sub="Independently studying William Lane Craig, Sean McDowell, C.S. Lewis, A.W. Tozer, hermeneutics, and philosophy of religion." />
         </Section>
 
-        {/* Goals */}
-        <Section title="Career Goals & Vision">
-          <p style={{ fontSize: "14px", color: SA.text, lineHeight: 1.7, maxWidth: "600px" }}>
+        {/* ─── Goals ─── */}
+        <Section roman="XII." title="Career goals" em="and vision">
+          <p className="pv-italic" style={{ fontSize: "18px", color: C.text, opacity: 0.92, lineHeight: 1.55, maxWidth: "640px" }}>
             I plan to pursue an MD in Psychiatry, integrating clinical mental health care with AI-driven research and faith-based counseling. My goal is to develop accessible, data-informed interventions for mental health — bridging neuroscience, technology, and human dignity. Alongside medicine, I&apos;m building a multi-stream entrepreneurial portfolio through Purcell Ventures and developing a personal content brand centered on the intersection of psychology, faith, and intellectual discourse.
           </p>
         </Section>
 
-        {/* Footer */}
+        {/* Bottom strip */}
         <div style={{
-          borderTop: `1px solid ${SA.border}`,
-          paddingTop: "20px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          flexWrap: "wrap",
-          gap: "8px",
+          borderTop: `1px solid ${C.border}`, paddingTop: "24px",
+          display: "flex", justifyContent: "space-between", alignItems: "center",
+          flexWrap: "wrap", gap: "12px",
+          fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+          fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase",
+          color: C.textLight,
         }}>
-          <div style={{ fontSize: "12px", color: SA.textLight }}>
-            Elijah Purcell · elijahpurcell@gmail.com · Acworth, GA
-          </div>
-          <div style={{ fontSize: "12px", color: SA.textLight }}>
-            <a href="https://purcellventures.co" style={{ color: SA.accentLight, textDecoration: "none" }}>purcellventures.co</a>
-            {" "}&nbsp;·&nbsp; Updated April 2026
+          <div>Elijah Purcell · elijahpurcell@gmail.com · Acworth, GA</div>
+          <div>
+            <a href="https://purcellventures.co" style={{ color: C.accent, textDecoration: "none", letterSpacing: "0.32em" }}>purcellventures.co</a>
+            <span style={{ margin: "0 8px" }}>·</span>
+            <span style={{ color: C.textLight }}>Updated May 2026</span>
           </div>
         </div>
 
-      </div>
+      </main>
     </div>
   );
 }
