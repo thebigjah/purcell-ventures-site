@@ -103,6 +103,14 @@ export default function ConsultingPage() {
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden" }}>
+      <style dangerouslySetInnerHTML={{ __html: `
+        @media (max-width: 900px) {
+          .pv-cs-stats { grid-template-columns: repeat(2, 1fr) !important; }
+          .pv-cs-stats > div:nth-child(1), .pv-cs-stats > div:nth-child(2) { border-bottom: 1px solid var(--color-warm-border); }
+          .pv-cs-stats > div:nth-child(2) { border-right: none !important; }
+          .pv-cs-who, .pv-cs-pricing, .pv-cs-process, .pv-cs-stats-band { grid-template-columns: 1fr !important; gap: 14px !important; }
+        }
+      ` }} />
       <VignetteBackground />
 
       <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
@@ -123,7 +131,7 @@ export default function ConsultingPage() {
           </div>
 
           {/* Stats band */}
-          <div style={{
+          <div className="pv-cs-stats" style={{
             marginTop: "40px",
             display: "grid",
             gridTemplateColumns: "repeat(4, 1fr)",
@@ -168,7 +176,7 @@ export default function ConsultingPage() {
         <p className="pv-italic" style={{ fontSize: "20px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.5, maxWidth: "640px", marginBottom: "32px" }}>
           If AI feels like something you&apos;re supposed to understand but don&apos;t — this is for you.
         </p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px", marginBottom: "64px" }}>
+        <div className="pv-cs-who" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px", marginBottom: "64px" }}>
           {[
             { who: "Small Business Owners",      desc: "You run a tight operation. An hour a day saved on admin, emails, and content is worth thousands of dollars a year." },
             { who: "Office & Operations Teams",  desc: "Your team does repetitive digital work. There are tools that do most of it automatically. You just haven't learned them yet." },
@@ -291,7 +299,7 @@ export default function ConsultingPage() {
         <p className="pv-italic" style={{ fontSize: "17px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.55, maxWidth: "560px", marginBottom: "28px" }}>
           Rate is based on group size and session length. The more people, the lower the per-person cost. All sessions include a takeaway guide.
         </p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "12px", marginBottom: "20px" }}>
+        <div className="pv-cs-pricing" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "12px", marginBottom: "20px" }}>
           {PRICING.map((p) => (
             <div key={p.label} className="pv-card" style={{
               padding: "30px 24px 24px",
@@ -342,7 +350,7 @@ export default function ConsultingPage() {
           <span className="roman">IV.</span>
           <h2>How it works <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>simple, no friction</em></h2>
         </header>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px", marginBottom: "64px" }}>
+        <div className="pv-cs-process" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px", marginBottom: "64px" }}>
           {[
             { step: "01", title: "Quick Call",         desc: "We talk for 15 minutes. You tell me about your business, your team, and your biggest time-wasters. I tell you which session fits and what I'll customize." },
             { step: "02", title: "I Build Your Session", desc: "I take what I learned and build the presentation around your tools, your workflows, and your industry. You get a tailored session, not a template." },
@@ -384,7 +392,7 @@ export default function ConsultingPage() {
         <p className="pv-italic" style={{ fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.65, marginBottom: "32px", maxWidth: "720px" }}>
           Most AI consultants are mid-career adults who came to this stack late. I came up inside it. I&apos;ve been building autonomous systems and shipping production tools for a year — full-time, while still in high school. The work I&apos;m offering is the same work I do in my own infrastructure every day.
         </p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px", marginBottom: "32px" }}>
+        <div className="pv-cs-stats-band" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px", marginBottom: "32px" }}>
           {[
             { num: "34",          label: "College acceptances",        desc: "Honors programs across the country evaluated my work. They didn't accept the bio — they accepted the portfolio." },
             { num: "$520k+",      label: "In scholarship offers",      desc: "Per academic year, across those acceptances. Market validation that the work translates." },
