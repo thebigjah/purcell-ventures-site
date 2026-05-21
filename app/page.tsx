@@ -245,25 +245,83 @@ export default function Home() {
 
         @media (max-width: 900px) {
           .pv-phi-field {
-            mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, transparent 0%, transparent 50%, black 100%);
-            -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, transparent 0%, transparent 50%, black 100%);
+            mask-image: radial-gradient(ellipse 90% 60% at 50% 50%, transparent 0%, transparent 35%, black 100%);
+            -webkit-mask-image: radial-gradient(ellipse 90% 60% at 50% 50%, transparent 0%, transparent 35%, black 100%);
           }
-          .pv-phi-field svg { opacity: 0.22; }
-          .pv-reports { grid-template-columns: 1fr !important; }
-          .pv-report-span-7, .pv-report-span-5, .pv-report-span-6 { grid-column: span 1 !important; }
-          .pv-meta-strip { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+          .pv-phi-field svg { opacity: 0.30; }
+
+          /* Wordmark scales up on mobile, doesn't collapse */
+          .pv-wordmark .purcell { font-size: 48px !important; letter-spacing: 0.32em !important; padding-left: 0.32em !important; }
+          .pv-wordmark .ventures { font-size: 20px !important; letter-spacing: 0.42em !important; padding-left: 0.42em !important; }
+
+          /* Meta strip: 2x2 with internal rules preserved */
+          .pv-meta-strip { grid-template-columns: 1fr 1fr !important; gap: 0 !important; }
+          .pv-meta-strip > div { padding: 12px 16px !important; border-right: 1px solid var(--color-warm-border) !important; }
           .pv-meta-strip > div:nth-child(2n) { border-right: none !important; }
           .pv-meta-strip > div:nth-child(1), .pv-meta-strip > div:nth-child(2) {
-            border-bottom: 1px solid var(--color-warm-border); padding-bottom: 12px;
+            border-bottom: 1px solid var(--color-warm-border) !important;
           }
-          .pv-meta-strip > div:nth-child(3), .pv-meta-strip > div:nth-child(4) { padding-top: 12px; }
-          .pv-hero { grid-template-columns: 1fr !important; gap: 24px !important; }
-          .pv-hero-statement { max-width: none !important; font-size: 36px !important; }
-          .pv-section-head { grid-template-columns: 1fr !important; gap: 12px !important; }
-          .pv-founder { grid-template-columns: 1fr !important; gap: 32px !important; }
-          .pv-founder-verse { text-align: left !important; }
-          .pv-contact { grid-template-columns: 1fr 1fr !important; gap: 24px !important; }
+
+          /* Hero: stack vertically but italic stays oversized */
+          .pv-hero { grid-template-columns: 1fr !important; gap: 24px !important; padding: 56px 24px 48px !important; }
+          .pv-hero-statement { max-width: none !important; font-size: 44px !important; line-height: 1.08 !important; }
+
+          /* Section head: bigger Roman + ornamental divider above */
+          .pv-section-head { grid-template-columns: auto 1fr !important; gap: 16px !important; padding: 56px 24px 20px !important; align-items: center !important; }
+          .pv-section-head .roman-mobile-big { font-size: 64px !important; }
+          .pv-section-head > span:last-child { display: none !important; }
+
+          .pv-section-divider {
+            display: block !important;
+            text-align: center;
+            padding: 28px 24px 0;
+            font-family: 'Cinzel', Georgia, serif;
+            color: var(--color-warm-accent);
+            font-size: 16px;
+            letter-spacing: 0.6em;
+            opacity: 0.7;
+          }
+
+          /* Reports stack with stronger card identity */
+          .pv-reports { grid-template-columns: 1fr !important; padding: 20px 24px 64px !important; gap: 20px !important; }
+          .pv-report-span-7, .pv-report-span-5, .pv-report-span-6 { grid-column: span 1 !important; }
+          .pv-report {
+            padding: 44px 28px 28px !important;
+            border-top: 3px solid var(--color-warm-accent) !important;
+          }
+          .pv-report-roman {
+            font-size: 36px !important;
+            margin: 0 0 12px !important;
+          }
+
+          /* Founder: vertical stack but verse gets a pulled-out band */
+          .pv-founder { grid-template-columns: 1fr !important; gap: 28px !important; padding: 64px 24px !important; }
+          .pv-founder-verse {
+            text-align: center !important;
+            padding: 24px 20px !important;
+            border-top: 1px solid var(--color-warm-border) !important;
+            border-bottom: 1px solid var(--color-warm-border) !important;
+            margin: 0 -4px !important;
+          }
+
+          /* Contact: 2 columns, cleaner */
+          .pv-contact { grid-template-columns: 1fr 1fr !important; gap: 28px !important; padding: 48px 24px 24px !important; }
         }
+
+        @media (max-width: 480px) {
+          .pv-meta-strip { grid-template-columns: 1fr !important; }
+          .pv-meta-strip > div {
+            border-right: none !important;
+            border-bottom: 1px solid var(--color-warm-border) !important;
+            padding: 10px 16px !important;
+          }
+          .pv-meta-strip > div:last-child { border-bottom: none !important; }
+          .pv-hero-statement { font-size: 36px !important; }
+          .pv-contact { grid-template-columns: 1fr !important; }
+        }
+
+        /* Hide the desktop ornamental divider, show on mobile */
+        .pv-section-divider { display: none; }
         .pv-mono-link, .pv-mono-link-text {
           font-family: var(--font-dm-sans), system-ui, sans-serif;
           font-size: 12px; letter-spacing: 0.04em;
@@ -360,6 +418,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Mobile-only ornamental divider above the Divisions section */}
+      <div className="pv-section-divider" aria-hidden="true">✦ &nbsp; I &nbsp; ✦</div>
+
       {/* Divisions section head */}
       <header
         className="pv-section-head"
@@ -371,7 +432,7 @@ export default function Home() {
           borderBottom: "1px solid var(--color-warm-border)",
         }}
       >
-        <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontWeight: 400, fontSize: "48px", lineHeight: 1, color: "var(--color-warm-accent)" }}>
+        <span className="roman-mobile-big" style={{ fontFamily: "'Cinzel', Georgia, serif", fontWeight: 400, fontSize: "48px", lineHeight: 1, color: "var(--color-warm-accent)" }}>
           I.
         </span>
         <h2 style={{
@@ -493,8 +554,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Mobile-only ornamental divider above the Courses section */}
+      <div className="pv-section-divider" aria-hidden="true">✦ &nbsp; II &nbsp; ✦</div>
+
       {/* Courses — kept from prior homepage, styling consistent */}
-      <section style={{
+      <section className="pv-section-head" style={{
         position: "relative", zIndex: 5,
         maxWidth: "1080px", margin: "0 auto", padding: "80px 36px 48px",
       }}>
@@ -503,7 +567,7 @@ export default function Home() {
           paddingBottom: "20px", borderBottom: "1px solid var(--color-warm-border)",
           marginBottom: "32px",
         }}>
-          <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontWeight: 400, fontSize: "48px", lineHeight: 1, color: "var(--color-warm-accent)" }}>
+          <span className="roman-mobile-big" style={{ fontFamily: "'Cinzel', Georgia, serif", fontWeight: 400, fontSize: "48px", lineHeight: 1, color: "var(--color-warm-accent)" }}>
             II.
           </span>
           <h2 style={{
@@ -657,7 +721,7 @@ function ReportCard({ division }: { division: Division }) {
   const Inner = (
     <>
       <span className="b3"></span><span className="b4"></span>
-      <span style={{
+      <span className="pv-report-roman" style={{
         fontFamily: "Georgia, serif", fontStyle: "italic", fontWeight: 400,
         fontSize: "22px", color: "var(--color-warm-accent)",
         margin: "16px 0 6px", display: "block", lineHeight: 1,
