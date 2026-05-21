@@ -51,8 +51,11 @@ export async function POST(req: NextRequest) {
   const timestamp    = new Date().toLocaleString("en-US", { timeZone: "America/New_York" });
 
   const html = `
-    <div style="font-family:Inter,system-ui,sans-serif;max-width:600px">
-      <h2 style="color:#c2a173;margin:0 0 16px 0;font-family:Cinzel,Georgia,serif">New consulting booking</h2>
+    <div style="font-family:Inter,system-ui,sans-serif;max-width:600px;background:#faf8f4;padding:32px;border:1px solid #e0d8c4">
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:#b8941e;margin-bottom:12px;font-family:Inter,system-ui,sans-serif">
+        Purcell Ventures · Consulting Booking
+      </div>
+      <h2 style="color:#0c0a08;margin:0 0 18px 0;font-family:Cinzel,Georgia,serif;font-size:24px;font-weight:600;letter-spacing:0.02em;text-transform:uppercase;border-bottom:1px solid #d4af37;padding-bottom:14px">New booking <em style="color:#d4af37;font-weight:400">submitted.</em></h2>
       <table style="width:100%;border-collapse:collapse;font-size:14px;color:#222">
         <tr><td style="padding:8px 0;color:#666;width:140px">Name</td><td style="padding:8px 0;font-weight:600">${escape(name)}</td></tr>
         <tr><td style="padding:8px 0;color:#666">Business</td><td style="padding:8px 0">${escape(business) || "(not given)"}</td></tr>
