@@ -1,7 +1,10 @@
 "use client";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { PanopticonMark } from "@/app/components/PanopticonMark";
 
+// ──────────────────────────────────────────────────────────────
+// FAQ schema (unchanged — important for SEO)
+// ──────────────────────────────────────────────────────────────
 const FAQ_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -41,222 +44,692 @@ const FAQ_SCHEMA = {
   ],
 };
 
-const DIVISIONS = [
+// ──────────────────────────────────────────────────────────────
+// Divisions (preserved from prior homepage + specs added)
+// ──────────────────────────────────────────────────────────────
+type Division = {
+  slug: string;
+  roman: string;
+  label: string;
+  tagline: string;
+  status: "live" | "coming";
+  href: string | null;
+  span: "span-7" | "span-5" | "span-6";
+  specs: { label: string; value: string; muted?: boolean }[];
+};
+
+const DIVISIONS: Division[] = [
   {
     slug: "digital",
+    roman: "I.",
     label: "Digital Services",
-    tagline: "Your full digital operation: website, AI tools, booking, and marketing. Built and managed for you. Starting at $99/mo.",
-    status: "live" as const,
+    tagline:
+      "Your full digital operation: website, AI tools, booking, and marketing. Built and managed for you. Starting at $99/mo.",
+    status: "live",
     href: "/digital",
+    span: "span-7",
+    specs: [
+      { label: "Status",   value: "Accepting" },
+      { label: "From",     value: "$99 / mo" },
+      { label: "Setup",    value: "$300 – $500", muted: true },
+      { label: "Reach",    value: "Nationwide",  muted: true },
+    ],
   },
   {
     slug: "consulting",
+    roman: "II.",
     label: "AI Consulting",
-    tagline: "I come to your business and walk your team through the AI tools that will actually change how they work. Hands-on. Same-day results.",
-    status: "live" as const,
+    tagline:
+      "I come to your business and walk your team through the AI tools that will actually change how they work. Hands-on. Same-day results.",
+    status: "live",
     href: "/consulting",
+    span: "span-5",
+    specs: [
+      { label: "Status",   value: "Accepting" },
+      { label: "From",     value: "$100 / hr" },
+      { label: "Format",   value: "On-site / Virtual", muted: true },
+      { label: "Minimum",  value: "2 hr",              muted: true },
+    ],
   },
   {
     slug: "software",
+    roman: "III.",
     label: "Custom Software",
-    tagline: "Apps, platforms, and automation tools scoped and built around your exact problem — from idea to launch.",
-    status: "live" as const,
+    tagline:
+      "Apps, platforms, and automation tools scoped and built around your exact problem — from idea to launch.",
+    status: "live",
     href: "/software",
+    span: "span-6",
+    specs: [
+      { label: "Status",    value: "Accepting" },
+      { label: "From",      value: "$500 build" },
+      { label: "Portfolio", value: "7 shipped",        muted: true },
+      { label: "Scope",     value: "Web / Mobile / AI", muted: true },
+    ],
   },
   {
     slug: "realestate",
+    roman: "IV.",
     label: "Real Estate",
-    tagline: "Wholesale real estate — finding off-market deals for investors.",
-    status: "coming" as const,
+    tagline:
+      "Wholesale real estate — finding off-market deals for investors. Sister channel, opens 2026.",
+    status: "coming",
     href: null,
+    span: "span-6",
+    specs: [
+      { label: "Status",   value: "Pending",     muted: true },
+      { label: "Opens",    value: "2026" },
+      { label: "Model",    value: "Wholesale",   muted: true },
+      { label: "Focus",    value: "Off-market",  muted: true },
+    ],
   },
 ];
 
+// ──────────────────────────────────────────────────────────────
+// Courses (kept from prior homepage)
+// ──────────────────────────────────────────────────────────────
+const COURSES = [
+  {
+    href: "/courses/college-apps",
+    title: "The College Application Playbook",
+    desc: "34 acceptances. $505,000+ in scholarships. The exact process — school list, essays, financial aid, and negotiation.",
+    price: "$297",
+  },
+  {
+    href: "/courses/business-launch",
+    title: "The Business Launch Playbook",
+    desc: "From idea to LLC to first dollar. 7 modules, 26 lessons, and a full resource pack of templates and tools.",
+    price: "$397",
+  },
+  {
+    href: "/courses/ai-automation",
+    title: "Zero to Automated",
+    desc: "Email bots, YouTube pipelines, lead scrapers, personal AI assistants. 8 modules, 25 lessons, 7 real code templates.",
+    price: "$397",
+  },
+];
+
+// ──────────────────────────────────────────────────────────────
+// Phi Array generator — phyllotaxis (golden angle 137.508°)
+// ──────────────────────────────────────────────────────────────
+function generatePhiDots(cx = 600, cy = 800, n = 380, spread = 26): string {
+  const golden = Math.PI * (3 - Math.sqrt(5));
+  let s = "";
+  for (let i = 0; i < n; i++) {
+    const r = spread * Math.sqrt(i);
+    const t = i * golden;
+    const x = cx + r * Math.cos(t);
+    const y = cy + r * Math.sin(t);
+    const dot = 1.4 + (i / n) * 0.6;
+    const op = 0.12 + 0.7 * (1 - i / n);
+    s += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${dot.toFixed(2)}" opacity="${op.toFixed(2)}"/>`;
+  }
+  return s;
+}
+
 export default function Home() {
+  const phiRef = useRef<SVGGElement>(null);
+
+  useEffect(() => {
+    if (phiRef.current) {
+      phiRef.current.innerHTML = generatePhiDots();
+    }
+  }, []);
+
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", display: "flex", flexDirection: "column" }}>
+    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", position: "relative", overflowX: "hidden" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
 
-      {/* Nav */}
-      <nav style={{
-        padding: "0 24px", height: "60px", display: "flex", alignItems: "center",
-        justifyContent: "space-between", borderBottom: "1px solid var(--color-warm-border)",
+      {/* Page-local styles for the things that need media queries / mask-image / hover */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        .pv-phi-field {
+          position: fixed; inset: 0; pointer-events: none; z-index: 0;
+          mask-image: radial-gradient(ellipse 50% 60% at 50% 50%, transparent 0%, transparent 35%, black 90%);
+          -webkit-mask-image: radial-gradient(ellipse 50% 60% at 50% 50%, transparent 0%, transparent 35%, black 90%);
+        }
+        .pv-phi-field svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.35; }
+
+        .pv-wordmark .purcell {
+          font-family: 'Cinzel', Georgia, serif;
+          font-weight: 700;
+          font-size: clamp(40px, 7vw, 88px);
+          color: var(--color-warm-text);
+          letter-spacing: 0.42em;
+          line-height: 1;
+          padding-left: 0.42em;
+        }
+        .pv-wordmark .rule {
+          height: 1px; background: var(--color-warm-accent);
+          margin: 18px auto; max-width: 60%;
+          position: relative;
+        }
+        .pv-wordmark .rule::before, .pv-wordmark .rule::after {
+          content: ""; position: absolute; top: -3px;
+          width: 7px; height: 7px;
+          border: 1px solid var(--color-warm-accent);
+          transform: rotate(45deg);
+        }
+        .pv-wordmark .rule::before { left: -4px; }
+        .pv-wordmark .rule::after { right: -4px; }
+        .pv-wordmark .ventures {
+          font-family: 'Cinzel', Georgia, serif;
+          font-weight: 400;
+          font-size: clamp(18px, 3vw, 38px);
+          color: var(--color-warm-accent);
+          letter-spacing: 0.58em;
+          line-height: 1;
+          padding-left: 0.58em;
+        }
+
+        .pv-report {
+          background: var(--color-warm-bg-alt);
+          border: 1px solid var(--color-warm-border);
+          padding: 36px 32px 28px;
+          position: relative;
+          display: flex; flex-direction: column;
+          text-decoration: none; color: inherit;
+          transition: border-color 0.2s, transform 0.2s;
+        }
+        .pv-report:hover { border-color: var(--color-warm-accent); transform: translateY(-2px); }
+        .pv-report::before, .pv-report::after,
+        .pv-report .b3, .pv-report .b4 {
+          content: ""; position: absolute; width: 14px; height: 14px;
+          border: 1.5px solid var(--color-warm-accent);
+        }
+        .pv-report::before { top: 6px; left: 6px; border-right: none; border-bottom: none; }
+        .pv-report::after  { top: 6px; right: 6px; border-left: none; border-bottom: none; }
+        .pv-report .b3 { bottom: 6px; left: 6px; border-right: none; border-top: none; display: block; }
+        .pv-report .b4 { bottom: 6px; right: 6px; border-left: none; border-top: none; display: block; }
+
+        .pv-italic { font-family: Georgia, 'Times New Roman', serif; font-style: italic; }
+
+        @media (max-width: 900px) {
+          .pv-phi-field {
+            mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, transparent 0%, transparent 50%, black 100%);
+            -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, transparent 0%, transparent 50%, black 100%);
+          }
+          .pv-phi-field svg { opacity: 0.22; }
+          .pv-reports { grid-template-columns: 1fr !important; }
+          .pv-report-span-7, .pv-report-span-5, .pv-report-span-6 { grid-column: span 1 !important; }
+          .pv-meta-strip { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+          .pv-meta-strip > div:nth-child(2n) { border-right: none !important; }
+          .pv-meta-strip > div:nth-child(1), .pv-meta-strip > div:nth-child(2) {
+            border-bottom: 1px solid var(--color-warm-border); padding-bottom: 12px;
+          }
+          .pv-meta-strip > div:nth-child(3), .pv-meta-strip > div:nth-child(4) { padding-top: 12px; }
+          .pv-hero { grid-template-columns: 1fr !important; gap: 24px !important; }
+          .pv-hero-statement { max-width: none !important; font-size: 36px !important; }
+          .pv-section-head { grid-template-columns: 1fr !important; gap: 12px !important; }
+          .pv-founder { grid-template-columns: 1fr !important; gap: 32px !important; }
+          .pv-founder-verse { text-align: left !important; }
+          .pv-contact { grid-template-columns: 1fr 1fr !important; gap: 24px !important; }
+        }
+        .pv-mono-link, .pv-mono-link-text {
+          font-family: var(--font-dm-sans), system-ui, sans-serif;
+          font-size: 12px; letter-spacing: 0.04em;
+          color: var(--color-warm-text); text-decoration: none; display: block;
+          margin-bottom: 4px;
+        }
+        .pv-mono-link:hover { color: var(--color-warm-accent); }
+      ` }} />
+
+      {/* Phi vignette background — fixed, masked, parallax-style */}
+      <div className="pv-phi-field" aria-hidden="true">
+        <svg viewBox="0 0 1200 1600" preserveAspectRatio="xMidYMid slice">
+          <g ref={phiRef} fill="#d4af37"></g>
+        </svg>
+      </div>
+
+      {/* Wordmark masthead */}
+      <section style={{
+        position: "relative", zIndex: 5,
+        padding: "80px 36px 56px", textAlign: "center",
+        borderBottom: "1px solid var(--color-warm-border)",
       }}>
-        <span style={{ fontSize: "17px", fontWeight: 700, color: "var(--color-warm-text)", letterSpacing: "-0.01em" }}>
-          Purcell <span style={{ color: "var(--color-warm-accent)" }}>Ventures</span>
+        <div className="pv-wordmark" style={{ display: "inline-block" }}>
+          <div className="purcell">PURCELL</div>
+          <div className="rule"></div>
+          <div className="ventures">VENTURES</div>
+        </div>
+      </section>
+
+      {/* Meta strip */}
+      <div
+        className="pv-meta-strip"
+        style={{
+          position: "relative", zIndex: 5,
+          display: "grid", gridTemplateColumns: "repeat(4, 1fr)",
+          padding: "18px 36px",
+          borderBottom: "1px solid var(--color-warm-border)",
+          fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+          fontSize: "10px",
+          letterSpacing: "0.18em", textTransform: "uppercase",
+        }}
+      >
+        <MetaCell label="Founded" value="April · MMXXV" />
+        <MetaCell label="Divisions" value="04 active · 01 pending" gold />
+        <MetaCell label="Charter" value="Domestic LLC · Georgia" />
+        <MetaCell label="Principal" value="Elijah Brent Purcell" last />
+      </div>
+
+      {/* Hero italic statement */}
+      <section
+        className="pv-hero"
+        style={{
+          position: "relative", zIndex: 5,
+          padding: "96px 36px 64px",
+          display: "grid", gridTemplateColumns: "1fr 9fr 2fr",
+          alignItems: "start", gap: "36px",
+        }}
+      >
+        <div /> {/* spacer */}
+        <p
+          className="pv-italic pv-hero-statement"
+          style={{
+            fontSize: "clamp(36px, 6vw, 84px)",
+            lineHeight: 1.05, letterSpacing: "-0.005em",
+            color: "var(--color-warm-text)",
+            maxWidth: "22ch",
+            margin: 0,
+          }}
+        >
+          Built by{" "}
+          <span style={{ fontStyle: "normal", fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700, letterSpacing: 0 }}>
+            one
+          </span>{" "}
+          operator for the{" "}
+          <em style={{ color: "var(--color-warm-accent)" }}>small businesses</em>{" "}
+          who move first.
+        </p>
+        <div
+          style={{
+            fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+            fontSize: "10px",
+            letterSpacing: "0.18em", textTransform: "uppercase",
+            color: "var(--color-warm-text-light)",
+            textAlign: "right",
+            borderTop: "1px solid var(--color-warm-border)",
+            paddingTop: "12px",
+            lineHeight: 1.8,
+          }}
+        >
+          <strong style={{ color: "var(--color-warm-text)", display: "block", fontWeight: 500 }}>04.08.2025</strong>
+          Filed Georgia SOS
+          <strong style={{ color: "var(--color-warm-text)", display: "block", fontWeight: 500, marginTop: "6px" }}>Est. 2025</strong>
+          Acworth · Cobb Co.
+        </div>
+      </section>
+
+      {/* Divisions section head */}
+      <header
+        className="pv-section-head"
+        style={{
+          position: "relative", zIndex: 5,
+          padding: "64px 36px 28px",
+          display: "grid", gridTemplateColumns: "1fr 8fr 3fr",
+          gap: "36px", alignItems: "baseline",
+          borderBottom: "1px solid var(--color-warm-border)",
+        }}
+      >
+        <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontWeight: 400, fontSize: "48px", lineHeight: 1, color: "var(--color-warm-accent)" }}>
+          I.
         </span>
-        <a href="mailto:elijah@purcell-ventures.com" style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", textDecoration: "none" }}
-          className="hidden sm:block">
-          elijah@purcell-ventures.com
-        </a>
-      </nav>
+        <h2 style={{
+          fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
+          fontSize: "28px", letterSpacing: "0.04em",
+          color: "var(--color-warm-text)", textTransform: "uppercase",
+          margin: 0,
+        }}>
+          The Divisions{" "}
+          <em className="pv-italic" style={{ fontWeight: 400, textTransform: "none", letterSpacing: 0, color: "var(--color-warm-accent)", marginLeft: "10px" }}>
+            at present
+          </em>
+        </h2>
+        <span style={{
+          fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+          fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase",
+          color: "var(--color-warm-text-light)",
+          textAlign: "right",
+        }}>
+          04 active · 01 pending
+        </span>
+      </header>
 
-      {/* Main */}
-      <main className="flex-1 flex flex-col justify-center w-full mx-auto px-6 py-12 sm:px-8 sm:py-20"
-        style={{ maxWidth: "960px" }}>
+      {/* Report cards — asymmetric 12-col */}
+      <section
+        className="pv-reports"
+        style={{
+          position: "relative", zIndex: 5,
+          padding: "32px 36px 80px",
+          display: "grid", gridTemplateColumns: "repeat(12, 1fr)",
+          gap: "24px",
+        }}
+      >
+        {DIVISIONS.map((d) => (
+          <ReportCard key={d.slug} division={d} />
+        ))}
+      </section>
 
-        {/* Hero: logo + headline (stacked on mobile, side-by-side on desktop) */}
-        <div className="flex flex-col md:flex-row md:items-center md:gap-16" style={{ marginBottom: "48px" }}>
-          {/* Logo Mark */}
-          <div className="flex justify-center mb-12 md:mb-0 md:flex-shrink-0">
-            <PanopticonMark size={140} color="var(--color-warm-accent)" bg="#0c0a08" cfg={{
-              cellStyle: "outlined",
-              pvSize: 70, pvClearR: 58,
-              ringStart: 70, ringEnd: 116,
-              numRings: 7,
-              ringFadeToCenter: true,
-            }} />
+      {/* Founder block — softened from preview, no "FILED BY" framing */}
+      <section
+        className="pv-founder"
+        style={{
+          position: "relative", zIndex: 5,
+          padding: "80px 36px",
+          borderTop: "1px solid var(--color-warm-border)",
+          borderBottom: "1px solid var(--color-warm-border)",
+          display: "grid", gridTemplateColumns: "2fr 4fr 2fr",
+          gap: "56px", alignItems: "start",
+        }}
+      >
+        <div>
+          <div style={{
+            fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+            fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase",
+            color: "var(--color-warm-accent)",
+            borderTop: "2px solid var(--color-warm-accent)",
+            paddingTop: "12px", marginBottom: "24px",
+          }}>
+            About
           </div>
-
-          {/* Text content */}
-          <div className="md:flex-1 md:min-w-0">
-            {/* Eyebrow */}
-            <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "24px" }}>
-              Purcell Ventures LLC
-            </p>
-
-            {/* Headline */}
-            <h1 style={{
-              fontFamily: "'Cinzel', Georgia, serif",
-              fontSize: "clamp(40px, 8vw, 96px)", fontWeight: 700,
-              lineHeight: 1.02, letterSpacing: "-0.02em",
-              color: "var(--color-warm-text)", marginBottom: "24px",
-            }}>
-              Built to last.<br />
-              <span style={{ color: "var(--color-warm-accent)" }}>Built to grow.</span>
-            </h1>
-
-            <p className="text-base sm:text-lg" style={{ color: "var(--color-warm-text-muted)", maxWidth: "480px", lineHeight: 1.75 }}>
-              Purcell Ventures is a multi-division company founded by Elijah Purcell.
-              We build software, serve local communities, and invest in real estate.
-            </p>
-          </div>
+          <h4 style={{
+            fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
+            fontSize: "32px", letterSpacing: "0.02em",
+            color: "var(--color-warm-text)", textTransform: "uppercase",
+            lineHeight: 1.05, margin: 0,
+          }}>
+            Elijah Brent{" "}
+            <em className="pv-italic" style={{ fontWeight: 400, textTransform: "none", letterSpacing: 0, color: "var(--color-warm-accent)" }}>
+              Purcell
+            </em>
+          </h4>
         </div>
-
-        {/* Divisions */}
-        <div className="grid grid-cols-1 sm:grid-cols-2"
-          style={{ gap: "1px", background: "var(--color-warm-border)" }}>
-          {DIVISIONS.map((div) => (
-            <div key={div.slug}
-              style={{
-                background: "var(--color-warm-bg)",
-                padding: "28px 24px",
-                position: "relative",
-                transition: "background 0.15s",
-              }}
-              onMouseEnter={(e) => {
-                if (div.status === "live") e.currentTarget.style.background = "var(--color-warm-card)";
-              }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "var(--color-warm-bg)"; }}
-            >
-              {/* Status badge */}
-              <div style={{ marginBottom: "16px" }}>
-                {div.status === "live" ? (
-                  <span style={{ display: "inline-flex", alignItems: "center", gap: "6px", fontSize: "11px", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-warm-accent)" }}>
-                    <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--color-warm-accent)", display: "inline-block" }} />
-                    Live
-                  </span>
-                ) : (
-                  <span style={{ fontSize: "11px", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-warm-text-light)" }}>
-                    Coming Soon
-                  </span>
-                )}
-              </div>
-
-              <h2 style={{
-                fontFamily: "'Cinzel', Georgia, serif",
-                fontSize: "22px", fontWeight: 600, marginBottom: "10px",
-                color: div.status === "live" ? "var(--color-warm-text)" : "var(--color-warm-text-muted)",
-              }}>
-                {div.label}
-              </h2>
-              <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.65, marginBottom: "24px" }}>
-                {div.tagline}
-              </p>
-
-              {div.status === "live" && div.href ? (
-                <a href={div.href} style={{
-                  display: "inline-flex", alignItems: "center", gap: "6px",
-                  fontSize: "13px", fontWeight: 600, color: "var(--color-warm-accent)",
-                  textDecoration: "none",
-                }}>
-                  View Services <span style={{ fontSize: "16px" }}>→</span>
-                </a>
-              ) : (
-                <span style={{ fontSize: "13px", color: "var(--color-warm-text-light)" }}>In development</span>
-              )}
-            </div>
-          ))}
+        <div>
+          <p className="pv-italic" style={{
+            fontSize: "19px", lineHeight: 1.55,
+            color: "var(--color-warm-text)", opacity: 0.92,
+            marginBottom: "18px", marginTop: 0,
+          }}>
+            Eighteen years old. Founded April 2025 out of a desk in Acworth, Georgia.
+            Heading to the University of Alabama Honors College — pre-med psychiatry with an AI specialty.
+          </p>
+          <p className="pv-italic" style={{
+            fontSize: "19px", lineHeight: 1.55,
+            color: "var(--color-warm-text)", opacity: 0.92,
+            marginBottom: "18px",
+          }}>
+            I built Purcell Ventures because the small businesses I knew were being sold the same{" "}
+            <em style={{ color: "var(--color-warm-accent)" }}>generic AI solutions</em>{" "}
+            by firms that did not understand them.
+          </p>
+          <p className="pv-italic" style={{
+            fontSize: "19px", lineHeight: 1.55,
+            color: "var(--color-warm-text)", opacity: 0.92,
+            margin: 0,
+          }}>
+            One operator. Four divisions. Same person who answers the phone, builds the software, and walks into your storefront.
+          </p>
         </div>
-      </main>
+        <div
+          className="pv-founder-verse"
+          style={{
+            fontFamily: "'Cinzel', Georgia, serif", fontWeight: 400,
+            fontSize: "13px", letterSpacing: "0.32em", textTransform: "uppercase",
+            color: "var(--color-warm-accent)",
+            paddingTop: "24px",
+            borderTop: "1px solid var(--color-warm-border)",
+            textAlign: "right", lineHeight: 1.8,
+          }}
+        >
+          Trust in the Lord with all your heart<br />
+          and lean not on your own understanding.
+          <em className="pv-italic" style={{
+            fontWeight: 400, textTransform: "none", letterSpacing: 0,
+            color: "var(--color-warm-text)", opacity: 0.7,
+            fontSize: "15px", display: "block", marginTop: "6px",
+          }}>
+            — Proverbs 3:5
+          </em>
+        </div>
+      </section>
 
-      {/* Courses */}
-      <section style={{ maxWidth: "960px", margin: "0 auto", padding: "0 24px 64px" }}>
-        <div style={{ borderTop: "1px solid var(--color-warm-border)", paddingTop: "48px", marginBottom: "32px" }}>
-          <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: "8px" }}>
-            <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)" }}>
-              Courses
-            </p>
-            <Link href="/courses" style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", textDecoration: "none" }}>
-              View all →
-            </Link>
-          </div>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(22px, 3.5vw, 32px)", fontWeight: 700, color: "var(--color-warm-text)", lineHeight: 1.1 }}>
-            Learn from someone who just did it.
+      {/* Courses — kept from prior homepage, styling consistent */}
+      <section style={{
+        position: "relative", zIndex: 5,
+        maxWidth: "1080px", margin: "0 auto", padding: "80px 36px 48px",
+      }}>
+        <div style={{
+          display: "grid", gridTemplateColumns: "1fr 8fr 3fr", gap: "36px", alignItems: "baseline",
+          paddingBottom: "20px", borderBottom: "1px solid var(--color-warm-border)",
+          marginBottom: "32px",
+        }}>
+          <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontWeight: 400, fontSize: "48px", lineHeight: 1, color: "var(--color-warm-accent)" }}>
+            II.
+          </span>
+          <h2 style={{
+            fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
+            fontSize: "28px", letterSpacing: "0.04em",
+            color: "var(--color-warm-text)", textTransform: "uppercase",
+            margin: 0,
+          }}>
+            Courses{" "}
+            <em className="pv-italic" style={{ fontWeight: 400, textTransform: "none", letterSpacing: 0, color: "var(--color-warm-accent)", marginLeft: "10px" }}>
+              available now
+            </em>
           </h2>
+          <Link href="/courses" style={{
+            fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+            fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase",
+            color: "var(--color-warm-text-light)", textAlign: "right", textDecoration: "none",
+          }}>
+            View all →
+          </Link>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1px", background: "var(--color-warm-border)", borderRadius: 8, overflow: "hidden" }}>
-          {[
-            {
-              href: "/courses/college-apps",
-              title: "The College Application Playbook",
-              desc: "34 acceptances. $505,000+ in scholarships. The exact process — school list, essays, financial aid, and negotiation.",
-              price: "$297",
-            },
-            {
-              href: "/courses/business-launch",
-              title: "The Business Launch Playbook",
-              desc: "From idea to LLC to first dollar. 7 modules, 26 lessons, and a full resource pack of templates and tools.",
-              price: "$397",
-            },
-            {
-              href: "/courses/ai-automation",
-              title: "Zero to Automated",
-              desc: "Email bots, YouTube pipelines, lead scrapers, personal AI assistants. 8 modules, 25 lessons, 7 real code templates.",
-              price: "$397",
-            },
-          ].map(c => (
-            <Link key={c.href} href={c.href} style={{ textDecoration: "none", display: "block", background: "var(--color-warm-bg)", padding: "28px 24px", transition: "background 0.15s" }}
-              onMouseEnter={e => (e.currentTarget.style.background = "var(--color-warm-card)")}
-              onMouseLeave={e => (e.currentTarget.style.background = "var(--color-warm-bg)")}
-            >
-              <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "16px" }}>
-                <div style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--color-warm-accent)", flexShrink: 0 }} />
-                <span style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-accent)" }}>Available Now</span>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "24px" }}>
+          {COURSES.map((c) => (
+            <Link key={c.href} href={c.href} className="pv-report" style={{ minHeight: "260px" }}>
+              <span className="b3"></span><span className="b4"></span>
+              <div style={{
+                fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
+                color: "var(--color-warm-accent)", marginBottom: "8px",
+              }}>
+                Available now
               </div>
-              <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "17px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "10px", lineHeight: 1.2 }}>{c.title}</h3>
-              <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.65, marginBottom: "20px" }}>{c.desc}</p>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 800, color: "var(--color-warm-text)", letterSpacing: "-0.02em" }}>{c.price}</span>
-                <span style={{ fontSize: "12px", fontWeight: 600, color: "var(--color-warm-accent)", letterSpacing: "0.06em" }}>View Course →</span>
+              <h3 style={{
+                fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
+                fontSize: "22px", letterSpacing: "0.02em",
+                color: "var(--color-warm-text)", textTransform: "uppercase",
+                margin: "0 0 14px", lineHeight: 1.15,
+              }}>
+                {c.title}
+              </h3>
+              <p className="pv-italic" style={{
+                fontSize: "14.5px", lineHeight: 1.55,
+                color: "var(--color-warm-text)", opacity: 0.85,
+                marginBottom: "24px", flex: 1,
+              }}>
+                {c.desc}
+              </p>
+              <div style={{
+                marginTop: "auto", paddingTop: "14px",
+                borderTop: "1px dashed var(--color-warm-border)",
+                display: "flex", alignItems: "baseline", justifyContent: "space-between",
+              }}>
+                <span style={{
+                  fontFamily: "'Cinzel', Georgia, serif", fontWeight: 800,
+                  fontSize: "22px", letterSpacing: "-0.02em",
+                  color: "var(--color-warm-text)",
+                }}>
+                  {c.price}
+                </span>
+                <span style={{
+                  fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                  fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase",
+                  color: "var(--color-warm-accent)",
+                }}>
+                  View course →
+                </span>
               </div>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* Footer */}
-      <footer style={{ padding: "24px", borderTop: "1px solid var(--color-warm-border)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
-        <span style={{ fontSize: "13px", color: "var(--color-warm-text-light)" }}>
-          © {new Date().getFullYear()} Purcell Ventures LLC · Acworth, Georgia
-        </span>
-        <div style={{ display: "flex", gap: "20px" }}>
-          <a href="/about" style={{ fontSize: "13px", color: "var(--color-warm-text-light)", textDecoration: "none" }}>About</a>
-          <a href="/resume" style={{ fontSize: "13px", color: "var(--color-warm-text-light)", textDecoration: "none" }}>Resume</a>
-          <a href="mailto:elijah@purcell-ventures.com" style={{ fontSize: "13px", color: "var(--color-warm-text-light)", textDecoration: "none" }}>Contact</a>
+      {/* Contact strip */}
+      <section
+        className="pv-contact"
+        style={{
+          position: "relative", zIndex: 5,
+          padding: "56px 36px 28px",
+          display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "36px",
+          borderTop: "1px solid var(--color-warm-border)",
+        }}
+      >
+        <ContactBlock title="Reach">
+          <a className="pv-mono-link" href="mailto:elijah@purcell-ventures.com">elijah@purcell-ventures.com</a>
+          <a className="pv-mono-link" href="tel:+17702805319">(770) 280·5319</a>
+        </ContactBlock>
+        <ContactBlock title="Office">
+          <p style={{ margin: 0 }}>4404 Grove Drive NW</p>
+          <p style={{ margin: 0 }}>Acworth, GA 30101</p>
+          <span style={{ color: "var(--color-warm-text-light)", fontSize: "13px" }}>Cobb County</span>
+        </ContactBlock>
+        <ContactBlock title="Sister">
+          <a href="https://mantle-field-site.vercel.app" style={{ color: "var(--color-warm-text)", textDecoration: "none", display: "block", fontFamily: "Georgia, serif", fontStyle: "italic", fontSize: "15.5px" }}>
+            Mantle Field Services
+          </a>
+          <span style={{ color: "var(--color-warm-text-light)", fontSize: "13px" }}>Metro Atlanta only</span>
+        </ContactBlock>
+        <ContactBlock title="Filings">
+          <p className="pv-mono-link-text">Control № 25075361</p>
+          <p className="pv-mono-link-text">Domestic LLC · GA</p>
+          <span style={{ color: "var(--color-warm-text-light)", fontSize: "13px" }}>Established April 8, 2025</span>
+        </ContactBlock>
+      </section>
+
+      {/* Colophon */}
+      <footer
+        style={{
+          position: "relative", zIndex: 5,
+          padding: "24px 36px 36px",
+          borderTop: "1px solid var(--color-warm-border)",
+          display: "flex", justifyContent: "space-between", alignItems: "center",
+          flexWrap: "wrap", gap: "12px",
+          fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+          fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
+          color: "var(--color-warm-text-light)",
+        }}
+      >
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
+        <div style={{ display: "flex", gap: "24px" }}>
+          <a href="/about" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>About</a>
+          <a href="/resume" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>Resume</a>
+          <a href="mailto:elijah@purcell-ventures.com" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>Contact</a>
         </div>
       </footer>
+
+    </div>
+  );
+}
+
+// ──────────────────────────────────────────────────────────────
+// Small reusable cells
+// ──────────────────────────────────────────────────────────────
+function MetaCell({ label, value, gold, last }: { label: string; value: string; gold?: boolean; last?: boolean }) {
+  return (
+    <div style={{
+      padding: "0 18px",
+      borderRight: last ? "none" : "1px solid var(--color-warm-border)",
+    }}>
+      <span style={{ display: "block", color: "var(--color-warm-text-light)", marginBottom: "4px", fontSize: "9px" }}>
+        {label}
+      </span>
+      <span style={{ color: gold ? "var(--color-warm-accent)" : "var(--color-warm-text)" }}>
+        {value}
+      </span>
+    </div>
+  );
+}
+
+function ReportCard({ division }: { division: Division }) {
+  const Inner = (
+    <>
+      <span className="b3"></span><span className="b4"></span>
+      <span style={{
+        fontFamily: "Georgia, serif", fontStyle: "italic", fontWeight: 400,
+        fontSize: "22px", color: "var(--color-warm-accent)",
+        margin: "16px 0 6px", display: "block", lineHeight: 1,
+      }}>
+        {division.roman}
+      </span>
+      <h3 style={{
+        fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
+        fontSize: "26px", letterSpacing: "0.03em",
+        color: "var(--color-warm-text)", textTransform: "uppercase",
+        margin: "0 0 18px", lineHeight: 1.1,
+      }}>
+        {division.label}
+      </h3>
+      <p style={{
+        fontFamily: "Georgia, serif", fontStyle: "italic",
+        fontSize: "15.5px", lineHeight: 1.55,
+        color: "var(--color-warm-text)", opacity: 0.85,
+        marginBottom: "28px", margin: "0 0 28px",
+      }}>
+        {division.tagline}
+      </p>
+      <div style={{
+        marginTop: "auto", paddingTop: "16px",
+        borderTop: "1px dashed var(--color-warm-border)",
+        display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px",
+        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+        fontSize: "9.5px", letterSpacing: "0.18em", textTransform: "uppercase",
+      }}>
+        {division.specs.map((s) => (
+          <div key={s.label} style={{ lineHeight: 1.5 }}>
+            <span style={{ color: "var(--color-warm-text-light)", display: "block", marginBottom: "2px", fontSize: "8.5px" }}>
+              {s.label}
+            </span>
+            <span style={{ color: s.muted ? "var(--color-warm-text-muted)" : "var(--color-warm-accent)" }}>
+              {s.value}
+            </span>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+
+  const className = `pv-report pv-report-${division.span}`;
+  const style = { gridColumn: division.span === "span-7" ? "span 7" : division.span === "span-5" ? "span 5" : "span 6" };
+
+  return division.status === "live" && division.href ? (
+    <a href={division.href} className={className} style={style}>{Inner}</a>
+  ) : (
+    <div className={className} style={style}>{Inner}</div>
+  );
+}
+
+function ContactBlock({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <h5 style={{
+        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+        fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase",
+        color: "var(--color-warm-accent)",
+        borderTop: "1px solid var(--color-warm-accent)",
+        paddingTop: "10px", marginBottom: "14px", margin: "0 0 14px",
+      }}>
+        {title}
+      </h5>
+      <div style={{
+        fontFamily: "Georgia, serif", fontStyle: "italic",
+        fontSize: "15.5px", lineHeight: 1.55,
+        color: "var(--color-warm-text)",
+      }}>
+        {children}
+      </div>
     </div>
   );
 }
