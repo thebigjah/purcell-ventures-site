@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 type Business = {
   name: string;
@@ -119,7 +120,9 @@ export default function FinderPage() {
   }
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0c0a08", color: "#f5f0e0", fontFamily: "Inter, sans-serif" }}>
+    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "#f5f0e0", fontFamily: "Inter, sans-serif", position: "relative", overflowX: "hidden" }}>
+      <VignetteBackground />
+      <div style={{ position: "relative", zIndex: 5 }}>
 
       {/* Header */}
       <div style={{ background: "#141210", borderBottom: "1px solid #2e2820", padding: "14px 24px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0, zIndex: 50 }}>
@@ -300,6 +303,7 @@ export default function FinderPage() {
             </div>
           </div>
         )}
+      </div>
       </div>
     </div>
   );

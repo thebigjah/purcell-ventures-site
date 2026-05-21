@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 // ─── TYPES ────────────────────────────────────────────────────────────────────
 
@@ -278,7 +279,9 @@ export default function PlaybookPage() {
   const hotLeads = visits.filter(v => v.interest === "hot" && !v.followUpDone);
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0c0a08", color: "#f5f0e0", fontFamily: "Inter, sans-serif" }}>
+    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "#f5f0e0", fontFamily: "Inter, sans-serif", position: "relative", overflowX: "hidden" }}>
+      <VignetteBackground />
+      <div style={{ position: "relative", zIndex: 5 }}>
 
       {/* Header */}
       <div style={{ background: "#141210", borderBottom: "1px solid #2e2820", padding: "14px 24px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0, zIndex: 50, gap: "12px", flexWrap: "wrap" }}>
@@ -699,6 +702,7 @@ export default function PlaybookPage() {
             )}
           </div>
         )}
+      </div>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@
 // Private tool — same style as /print
 
 import { useState, useEffect } from "react";
+import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 const LEAD_STATUSES = ["New", "Contacted", "Proposal Sent", "Closed Won", "Closed Lost", "Pass"];
 const STATUS_COLORS: Record<string, string> = {
@@ -91,7 +92,9 @@ export default function CRMPage() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#080706", color: "#f5f0e0", fontFamily: "Inter, sans-serif", padding: "48px 32px" }}>
+    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "#f5f0e0", fontFamily: "Inter, sans-serif", padding: "48px 32px", position: "relative", overflowX: "hidden" }}>
+      <VignetteBackground />
+      <div style={{ position: "relative", zIndex: 5 }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
 
         {/* Header */}
@@ -297,6 +300,7 @@ export default function CRMPage() {
 
       </div>
       <div style={{ height: "64px" }} />
+      </div>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 interface Subscriber {
   id: string;
@@ -47,7 +48,9 @@ export default function NewsletterPage() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#080706", color: "#f5f0e0", fontFamily: "Inter, sans-serif" }}>
+    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "#f5f0e0", fontFamily: "Inter, sans-serif", position: "relative", overflowX: "hidden" }}>
+      <VignetteBackground />
+      <div style={{ position: "relative", zIndex: 5 }}>
       <nav style={{ padding: "0 32px", height: "60px", display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: "1px solid #2e2820" }}>
         <a href="/" style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "16px", fontWeight: 700, color: "#f5f0e0", textDecoration: "none" }}>
           Purcell <span style={{ color: "#d4af37" }}>Ventures</span>
@@ -109,6 +112,7 @@ export default function NewsletterPage() {
         <p style={{ fontSize: "11px", color: "#3a3530", marginTop: "16px", textAlign: "center" }}>
           No spam. One email per week. Unsubscribe anytime.
         </p>
+      </div>
       </div>
     </div>
   );

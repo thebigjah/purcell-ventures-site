@@ -3,6 +3,7 @@
 // Private tool — create, manage, and track invoices. localStorage.
 
 import { useState, useEffect } from "react";
+import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 interface LineItem { description: string; qty: number; rate: number; }
 interface Invoice {
@@ -105,7 +106,9 @@ export default function InvoicingPage() {
   }, { paid: 0, outstanding: 0 });
 
   return (
-    <div style={{ minHeight: "100vh", background: "#080706", color: "#f5f0e0", fontFamily: "Inter, sans-serif", padding: "48px 32px" }}>
+    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "#f5f0e0", fontFamily: "Inter, sans-serif", padding: "48px 32px", position: "relative", overflowX: "hidden" }}>
+      <VignetteBackground />
+      <div style={{ position: "relative", zIndex: 5 }}>
       <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
 
         {/* Header */}
@@ -316,6 +319,7 @@ export default function InvoicingPage() {
 
       </div>
       <div style={{ height: "64px" }} />
+      </div>
     </div>
   );
 }
