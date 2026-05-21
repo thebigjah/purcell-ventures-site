@@ -1,30 +1,7 @@
 "use client";
 
-// Case Studies page — staged 2026-05-17.
-// Three placeholder slots ready for real client stories.
-// When clients say yes to testimonial (per 30-day check-in in the playbook),
-// fill in the data + uncomment the live CTA in metadata + push.
-
 import Link from "next/link";
-
-const CASE_STUDIES: CaseStudy[] = [
-  // SLOT 1 — fill when first client completes
-  // {
-  //   slug: "[client-slug]",
-  //   industry: "[Industry]",
-  //   companyType: "[e.g. Real estate office, 6 agents]",
-  //   sessionType: "[Half-Day Team Training | 90-min ChatGPT in Your Workflow | etc.]",
-  //   problem: "[The specific time-suck or workflow they came with — 1-2 sentences]",
-  //   solution: "[What you delivered — be specific about the tools/workflows you set up]",
-  //   outcome: "[Quantified results — hours saved/month, $ value, qualitative wins]",
-  //   quote: "[Direct quote from client — keep it specific, not generic]",
-  //   quoteAttribution: "[Name], [Role]",
-  //   timeframe: "[Date of session]",
-  //   isPublic: true,
-  // },
-  // SLOT 2 — same template
-  // SLOT 3 — same template
-];
+import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 interface CaseStudy {
   slug: string;
@@ -40,157 +17,237 @@ interface CaseStudy {
   isPublic: boolean;
 }
 
+const CASE_STUDIES: CaseStudy[] = [
+  // When clients say yes to testimonial, fill in the data + push.
+];
+
+// Case-studies-specific mobile rules. Base Vignette styles live in globals.css.
+const CASE_PAGE_CSS = `
+  @media (max-width: 900px) {
+    .pv-cs-grid { grid-template-columns: 1fr !important; }
+  }
+`;
+
 export default function CaseStudiesPage() {
+  const liveStudies = CASE_STUDIES.filter(cs => cs.isPublic);
+
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)" }}>
+    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden" }}>
+      <style dangerouslySetInnerHTML={{ __html: CASE_PAGE_CSS }} />
+      <VignetteBackground />
 
-      {/* Nav */}
-      <nav style={{
-        position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
-        background: "rgba(12,10,8,0.94)", backdropFilter: "blur(12px)",
-        borderBottom: "1px solid var(--color-warm-border)",
-      }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px", height: "60px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <a href="/" style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", textDecoration: "none", letterSpacing: "0.04em" }}>← Home</a>
-            <span style={{ color: "var(--color-warm-border-light)" }}>|</span>
-            <a href="/consulting" style={{ fontSize: "16px", fontWeight: 700, color: "var(--color-warm-text)", textDecoration: "none", letterSpacing: "0.04em", fontFamily: "'Cinzel', Georgia, serif" }}>
-              Purcell <span style={{ color: "var(--color-warm-accent)" }}>Consulting</span>
-            </a>
-          </div>
-          <div style={{ display: "flex", gap: "24px", alignItems: "center" }}>
-            <a href="/consulting#sessions" style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", textDecoration: "none" }}>Sessions</a>
-            <a href="/consulting/book" style={{ padding: "8px 18px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "13px", fontWeight: 600, borderRadius: "6px", textDecoration: "none" }}>
-              Book a Session
-            </a>
-          </div>
-        </div>
-      </nav>
+      <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 100px" }}>
 
-      {/* Hero */}
-      <section style={{ padding: "140px 24px 100px", maxWidth: "1100px", margin: "0 auto" }}>
-        <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "24px" }}>
-          Purcell Ventures — Case Studies
-        </p>
-        <h1 style={{
-          fontFamily: "'Cinzel', Georgia, serif",
-          fontSize: "clamp(36px, 6vw, 64px)",
-          fontWeight: 700, lineHeight: 1.05,
-          marginBottom: "24px",
-          color: "var(--color-warm-text)",
-        }}>
-          Real teams. Real workflows. Real hours saved.
-        </h1>
-        <p style={{
-          fontSize: "18px",
-          color: "var(--color-warm-text-muted)",
-          maxWidth: "640px",
-          lineHeight: 1.75,
-        }}>
-          The work below is from sessions I&apos;ve delivered for small businesses around Metro Atlanta. Each case study is published with the client&apos;s explicit permission.
-        </p>
-      </section>
-
-      {/* Case studies */}
-      <section style={{ padding: "0 24px 100px", maxWidth: "1100px", margin: "0 auto" }}>
-        {CASE_STUDIES.filter(cs => cs.isPublic).length === 0 ? (
+        {/* Editorial page header */}
+        <div style={{ borderTop: "3px solid var(--color-warm-text)", borderBottom: "1px solid var(--color-warm-text)", padding: "16px 0 24px", marginBottom: "48px" }}>
           <div style={{
-            background: "var(--color-warm-card)",
-            border: "1px solid var(--color-warm-border)",
-            borderRadius: "12px",
-            padding: "48px 32px",
-            textAlign: "center",
+            fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+            fontSize: "10px", fontWeight: 700, letterSpacing: "0.32em", textTransform: "uppercase",
+            color: "var(--color-warm-accent)", marginBottom: "12px",
           }}>
-            <p style={{ fontSize: "13px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px" }}>
-              Coming Soon
-            </p>
-            <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", marginBottom: "16px", color: "var(--color-warm-text)" }}>
-              Building the first round.
+            Field Reports · Volume I
+          </div>
+          <h1 style={{
+            fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700,
+            fontSize: "clamp(40px, 7vw, 88px)",
+            lineHeight: 0.98, letterSpacing: "0.005em",
+            color: "var(--color-warm-text)", margin: 0,
+          }}>
+            Case <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Studies</em>
+          </h1>
+          <p className="pv-italic" style={{ marginTop: "18px", fontSize: "20px", color: "var(--color-warm-text)", opacity: 0.85, maxWidth: "640px", lineHeight: 1.5 }}>
+            Real teams, real workflows, real hours saved. Each case study below is published with the client&apos;s explicit permission.
+          </p>
+        </div>
+
+        {/* Body */}
+        {liveStudies.length === 0 ? (
+          <div className="pv-card" style={{ padding: "64px 56px", textAlign: "center" }}>
+            <span className="b3"></span><span className="b4"></span>
+            <div style={{
+              fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+              fontSize: "11px", fontWeight: 700, letterSpacing: "0.32em", textTransform: "uppercase",
+              color: "var(--color-warm-accent)", marginBottom: "16px",
+            }}>
+              ✦ &nbsp; Coming soon &nbsp; ✦
+            </div>
+            <h2 style={{
+              fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
+              fontSize: "clamp(28px, 4vw, 44px)", letterSpacing: "0.02em",
+              color: "var(--color-warm-text)", textTransform: "uppercase",
+              marginBottom: "20px", lineHeight: 1.1,
+            }}>
+              Building the <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>first round.</em>
             </h2>
-            <p style={{ fontSize: "16px", color: "var(--color-warm-text-muted)", maxWidth: "560px", margin: "0 auto 32px", lineHeight: 1.75 }}>
-              I&apos;m starting consulting work intentionally — choosing the first clients carefully, doing each session with full attention, then asking permission to publish the result.
-              First case studies will land here within ~60 days of starting client work.
+            <p className="pv-italic" style={{
+              fontSize: "19px", color: "var(--color-warm-text)", opacity: 0.85,
+              maxWidth: "560px", margin: "0 auto 24px", lineHeight: 1.55,
+            }}>
+              Consulting work is starting intentionally — choosing the first clients carefully, doing each session with full attention, then asking permission to publish the result. First case studies land within ~60 days of starting client work.
             </p>
-            <p style={{ fontSize: "14px", color: "var(--color-warm-text-light)", lineHeight: 1.6, marginBottom: "24px" }}>
-              If you&apos;d like to be the early client whose story anchors this page — there&apos;s a real benefit to going first. Discounted rate, more of my attention, and the case study itself becomes a marketing asset for your business if you want it to.
+            <p style={{
+              fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+              fontSize: "14px", color: "var(--color-warm-text-muted)",
+              maxWidth: "560px", margin: "0 auto 36px", lineHeight: 1.65,
+            }}>
+              If you&apos;d like to be the early client whose story anchors this page — discounted rate, more of my attention, and the case study itself becomes a marketing asset for your business if you want it to.
             </p>
-            <Link href="/consulting/book" style={{ display: "inline-block", padding: "14px 32px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", borderRadius: "8px", textDecoration: "none", fontWeight: 700, fontSize: "14px", letterSpacing: "0.05em" }}>
+            <Link href="/consulting/book" style={{
+              display: "inline-block",
+              padding: "13px 32px",
+              background: "var(--color-warm-text)", color: "var(--color-warm-bg)",
+              fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+              fontSize: "11px", fontWeight: 700, letterSpacing: "0.28em", textTransform: "uppercase",
+              textDecoration: "none",
+            }}>
               Book the conversation
             </Link>
           </div>
         ) : (
-          <div style={{ display: "grid", gap: "32px" }}>
-            {CASE_STUDIES.filter(cs => cs.isPublic).map((cs) => (
-              <article key={cs.slug} style={{
-                background: "var(--color-warm-card)",
-                border: "1px solid var(--color-warm-border)",
-                borderRadius: "12px",
-                padding: "40px 36px",
-              }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "20px", flexWrap: "wrap", gap: "12px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
+            {liveStudies.map((cs, i) => (
+              <article key={cs.slug} className="pv-card" style={{ paddingTop: "44px" }}>
+                <span className="b3"></span><span className="b4"></span>
+
+                {/* Header */}
+                <div style={{
+                  display: "flex", justifyContent: "space-between", alignItems: "flex-start",
+                  marginBottom: "24px", flexWrap: "wrap", gap: "16px",
+                }}>
                   <div>
-                    <p style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "6px" }}>
-                      {cs.industry} · {cs.timeframe}
-                    </p>
-                    <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", color: "var(--color-warm-text)" }}>
+                    <div style={{
+                      fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                      fontSize: "10px", fontWeight: 700, letterSpacing: "0.28em", textTransform: "uppercase",
+                      color: "var(--color-warm-accent)", marginBottom: "10px",
+                    }}>
+                      № {String(i + 1).padStart(2, "0")} · {cs.industry} · {cs.timeframe}
+                    </div>
+                    <h2 style={{
+                      fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
+                      fontSize: "26px", letterSpacing: "0.02em",
+                      color: "var(--color-warm-text)", textTransform: "uppercase",
+                      lineHeight: 1.1, margin: 0,
+                    }}>
                       {cs.companyType}
                     </h2>
                   </div>
-                  <span style={{ padding: "6px 14px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", borderRadius: "999px", fontSize: "12px", fontWeight: 600, color: "var(--color-warm-text-muted)" }}>
+                  <span style={{
+                    padding: "6px 14px",
+                    border: "1.5px solid var(--color-warm-border)",
+                    fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                    fontSize: "10px", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase",
+                    color: "var(--color-warm-text-muted)",
+                  }}>
                     {cs.sessionType}
                   </span>
                 </div>
 
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "24px", marginBottom: "28px" }}>
-                  <div>
-                    <h3 style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-text-light)", marginBottom: "10px" }}>The Problem</h3>
-                    <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.75 }}>{cs.problem}</p>
-                  </div>
-                  <div>
-                    <h3 style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-text-light)", marginBottom: "10px" }}>What We Did</h3>
-                    <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.75 }}>{cs.solution}</p>
-                  </div>
-                  <div>
-                    <h3 style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-text-light)", marginBottom: "10px" }}>The Outcome</h3>
-                    <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.75 }}>{cs.outcome}</p>
-                  </div>
+                {/* Three-column body */}
+                <div className="pv-cs-grid" style={{
+                  display: "grid", gridTemplateColumns: "repeat(3, 1fr)",
+                  gap: "32px", marginBottom: "32px",
+                  paddingTop: "16px", borderTop: "1px dashed var(--color-warm-border)",
+                }}>
+                  {[
+                    { h: "The Problem", body: cs.problem },
+                    { h: "What we did", body: cs.solution },
+                    { h: "The Outcome", body: cs.outcome },
+                  ].map(({ h, body }) => (
+                    <div key={h}>
+                      <h3 style={{
+                        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                        fontSize: "10px", fontWeight: 700, letterSpacing: "0.32em", textTransform: "uppercase",
+                        color: "var(--color-warm-accent)", marginBottom: "12px",
+                        borderTop: "1px solid var(--color-warm-accent)", paddingTop: "10px",
+                      }}>
+                        {h}
+                      </h3>
+                      <p className="pv-italic" style={{ fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.88, lineHeight: 1.55, margin: 0 }}>
+                        {body}
+                      </p>
+                    </div>
+                  ))}
                 </div>
 
+                {/* Pull quote */}
                 <blockquote style={{
                   borderLeft: "3px solid var(--color-warm-accent)",
-                  paddingLeft: "20px",
+                  paddingLeft: "24px",
                   marginTop: "24px",
                 }}>
-                  <p style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", lineHeight: 1.65, color: "var(--color-warm-text)", fontStyle: "italic", marginBottom: "8px" }}>
+                  <p className="pv-italic" style={{
+                    fontSize: "22px", lineHeight: 1.45, color: "var(--color-warm-text)",
+                    marginBottom: "10px",
+                  }}>
                     &ldquo;{cs.quote}&rdquo;
                   </p>
-                  <p style={{ fontSize: "13px", color: "var(--color-warm-text-light)" }}>— {cs.quoteAttribution}</p>
+                  <p style={{
+                    fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                    fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase",
+                    color: "var(--color-warm-text-light)",
+                  }}>
+                    — {cs.quoteAttribution}
+                  </p>
                 </blockquote>
               </article>
             ))}
           </div>
         )}
-      </section>
 
-      {/* CTA */}
-      <section style={{ borderTop: "1px solid var(--color-warm-border)", padding: "80px 24px" }}>
-        <div style={{ maxWidth: "680px", margin: "0 auto", textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(26px, 4vw, 36px)", marginBottom: "16px", color: "var(--color-warm-text)" }}>
-            Could your team be the next case study?
+        {/* CTA strip */}
+        <section style={{
+          marginTop: "80px",
+          padding: "56px 36px",
+          borderTop: "1px solid var(--color-warm-border)",
+          borderBottom: "1px solid var(--color-warm-border)",
+          textAlign: "center",
+        }}>
+          <div style={{
+            fontFamily: "'Cinzel', Georgia, serif", color: "var(--color-warm-accent)",
+            fontSize: "14px", letterSpacing: "0.6em", marginBottom: "20px", opacity: 0.7,
+          }}>
+            ✦
+          </div>
+          <h2 style={{
+            fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
+            fontSize: "clamp(26px, 3.5vw, 36px)", letterSpacing: "0.02em",
+            color: "var(--color-warm-text)", textTransform: "uppercase",
+            marginBottom: "16px", lineHeight: 1.15,
+          }}>
+            Could your team be the <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>next?</em>
           </h2>
-          <p style={{ fontSize: "16px", color: "var(--color-warm-text-muted)", lineHeight: 1.75, marginBottom: "32px" }}>
+          <p className="pv-italic" style={{
+            fontSize: "18px", color: "var(--color-warm-text)", opacity: 0.85,
+            maxWidth: "560px", margin: "0 auto 32px", lineHeight: 1.55,
+          }}>
             Same Elijah, same delivery, your team&apos;s actual workflows. Reach out and we&apos;ll figure out which session fits.
           </p>
-          <Link href="/consulting" style={{ display: "inline-block", padding: "16px 40px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "16px", fontWeight: 700, borderRadius: "8px", textDecoration: "none" }}>
-            See Consulting Sessions →
+          <Link href="/consulting" style={{
+            display: "inline-block",
+            padding: "13px 32px",
+            background: "var(--color-warm-text)", color: "var(--color-warm-bg)",
+            fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+            fontSize: "11px", fontWeight: 700, letterSpacing: "0.28em", textTransform: "uppercase",
+            textDecoration: "none",
+          }}>
+            See consulting sessions →
           </Link>
-        </div>
-      </section>
+        </section>
 
-      {/* Footer */}
-      <footer style={{ padding: "24px 32px", borderTop: "1px solid var(--color-warm-border)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <span style={{ fontSize: "13px", color: "var(--color-warm-text-light)" }}>© {new Date().getFullYear()} Purcell Ventures LLC</span>
-        <span style={{ fontSize: "13px", color: "var(--color-warm-text-light)" }}>Georgia</span>
+      </main>
+
+      <footer style={{
+        position: "relative", zIndex: 5,
+        padding: "24px 36px",
+        borderTop: "1px solid var(--color-warm-border)",
+        display: "flex", justifyContent: "space-between", alignItems: "center",
+        flexWrap: "wrap", gap: "12px",
+        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+        fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
+        color: "var(--color-warm-text-light)",
+      }}>
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
+        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← Home</a>
       </footer>
     </div>
   );

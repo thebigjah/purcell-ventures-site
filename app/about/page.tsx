@@ -1,27 +1,32 @@
 "use client";
 
 import { useState } from "react";
+import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 const DIVISIONS = [
   {
+    roman: "I.",
     label: "Digital Services",
     desc: "Complete digital toolkit for small businesses — website, AI chatbot, booking system, CRM, email marketing, and 20+ tools. Fully managed. One subscription.",
     href: "/digital",
     price: "From $99/mo",
   },
   {
+    roman: "II.",
     label: "AI Consulting",
     desc: "Hands-on AI training for business teams. ChatGPT workflows, marketing automation, and custom sessions. I come to your office. Same-day results.",
     href: "/consulting",
     price: "From $125/person",
   },
   {
+    roman: "III.",
     label: "Custom Software",
     desc: "Mobile apps, web apps, and AI integrations scoped and built around your exact problem. From idea to launch.",
     href: "/software",
     price: "From $1,500",
   },
   {
+    roman: "IV.",
     label: "Mantle Field Services (sister brand)",
     desc: "Owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta — run under its own brand. Same owner, same standards.",
     href: "https://mantle-field-site.vercel.app",
@@ -31,41 +36,76 @@ const DIVISIONS = [
 
 type Tab = "story" | "company" | "mark" | "contact";
 
-const TABS: { id: Tab; label: string }[] = [
-  { id: "story",   label: "Story"    },
-  { id: "company", label: "Company"  },
-  { id: "mark",    label: "The Mark" },
-  { id: "contact", label: "Contact"  },
+const TABS: { id: Tab; label: string; roman: string }[] = [
+  { id: "story",   roman: "I.",   label: "Story"    },
+  { id: "company", roman: "II.",  label: "Company"  },
+  { id: "mark",    roman: "III.", label: "The Mark" },
+  { id: "contact", roman: "IV.",  label: "Contact"  },
 ];
 
+// About-page-specific mobile rules. Vignette base styles live in globals.css.
+const ABOUT_PAGE_CSS = `
+  @media (max-width: 900px) {
+    .pv-stat-grid { grid-template-columns: 1fr !important; }
+    .pv-tabs { flex-wrap: wrap !important; }
+    .pv-tab-roman { display: none !important; }
+  }
+`;
+
 const prose: React.CSSProperties = {
-  fontSize: "16px", color: "var(--color-warm-text-muted)",
-  lineHeight: 1.85, marginBottom: "20px", maxWidth: "640px",
+  fontFamily: "Georgia, serif", fontStyle: "italic",
+  fontSize: "18px", color: "var(--color-warm-text)",
+  opacity: 0.92, lineHeight: 1.55, marginBottom: "20px", maxWidth: "640px",
 };
 
 const h2Style: React.CSSProperties = {
-  fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600,
-  color: "var(--color-warm-text)", marginBottom: "32px",
+  fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
+  fontSize: "28px", letterSpacing: "0.04em",
+  color: "var(--color-warm-text)", textTransform: "uppercase",
+  marginBottom: "24px", lineHeight: 1.1,
 };
 
-const Divider = () => (
-  <div style={{ width: "48px", height: "2px", background: "var(--color-warm-accent)", margin: "0 0 48px" }} />
-);
+function SectionHead({ roman, title, em }: { roman: string; title: string; em?: string }) {
+  return (
+    <header style={{
+      padding: "48px 0 24px",
+      display: "grid", gridTemplateColumns: "auto 1fr",
+      gap: "20px", alignItems: "baseline",
+      borderBottom: "1px solid var(--color-warm-border)",
+      marginBottom: "32px",
+    }}>
+      <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontWeight: 400, fontSize: "40px", lineHeight: 1, color: "var(--color-warm-accent)" }}>
+        {roman}
+      </span>
+      <h2 style={{
+        fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
+        fontSize: "24px", letterSpacing: "0.04em",
+        color: "var(--color-warm-text)", textTransform: "uppercase",
+        margin: 0,
+      }}>
+        {title}{em && (
+          <em className="pv-italic" style={{ fontWeight: 400, textTransform: "none", letterSpacing: 0, color: "var(--color-warm-accent)", marginLeft: "10px" }}>
+            {em}
+          </em>
+        )}
+      </h2>
+    </header>
+  );
+}
 
 function StoryTab() {
   return (
     <div>
-      <p style={{ fontSize: "18px", color: "var(--color-warm-text-muted)", lineHeight: 1.75, marginBottom: "20px", maxWidth: "640px" }}>
+      <p className="pv-italic" style={{ ...prose, fontSize: "22px", maxWidth: "640px" }}>
         I&apos;m 18 years old. I have a company with four active divisions, software in production, and a clear sense of what I&apos;m building toward. I&apos;m not in a hurry to seem older than I am — I&apos;m in a hurry because the work matters.
       </p>
-      <p style={{ ...prose, marginBottom: "48px" }}>
+      <p style={prose}>
         I started Purcell Ventures out of a simple observation: the tools that change how businesses operate — AI automation, custom software, real digital infrastructure — were being engineered for enterprises and trickling down to small businesses as afterthoughts, if at all. The HVAC contractor, the barber, the florist: they work harder than most people I&apos;ve ever met and operate with a fraction of the support. That bothered me enough to do something about it.
       </p>
 
-      <Divider />
+      <SectionHead roman="§" title="Background" em="at a glance" />
 
-      <h2 style={h2Style}>Background</h2>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", marginBottom: "48px" }}>
+      <div className="pv-stat-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "48px" }}>
         {[
           { label: "Location",           value: "Acworth, Georgia" },
           { label: "Enrolling",          value: "University of Alabama, Fall 2026" },
@@ -74,25 +114,19 @@ function StoryTab() {
           { label: "Company",            value: "Purcell Ventures LLC (founded April 2025)" },
           { label: "Contact",            value: "elijah@purcell-ventures.com" },
         ].map(({ label, value }) => (
-          <div key={label} style={{
-            padding: "20px 24px",
-            border: "1px solid var(--color-warm-border)",
-            borderRadius: "6px",
-            background: "var(--color-warm-card)",
-          }}>
-            <div style={{ fontSize: "11px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "8px" }}>
+          <div key={label} className="pv-card" style={{ padding: "28px 28px 22px" }}>
+            <span className="b3"></span><span className="b4"></span>
+            <div style={{ fontFamily: "var(--font-dm-sans), system-ui, sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "10px" }}>
               {label}
             </div>
-            <div style={{ fontSize: "15px", color: "var(--color-warm-text)", lineHeight: 1.5 }}>
+            <div className="pv-italic" style={{ fontSize: "17px", color: "var(--color-warm-text)", lineHeight: 1.4 }}>
               {value}
             </div>
           </div>
         ))}
       </div>
 
-      <Divider />
-
-      <h2 style={h2Style}>Outside the Work</h2>
+      <SectionHead roman="§" title="Outside the work" />
       <p style={prose}>
         I&apos;m a bass-baritone vocalist — range C1 to F5 — and I lead worship at church most Sundays. I write poetry nobody asked for. I&apos;m 6&apos;3&quot; and from Georgia, which means I&apos;ve never met a stranger in my life. I&apos;ve done mission trips to North Carolina, the Bahamas, and Hawaii, with Alaska coming this July. I&apos;m a member of my school&apos;s men&apos;s Bible study, competed in apologetics and debate for four years, and earned a 3.92 GPA without once finding it particularly interesting to coast.
       </p>
@@ -106,7 +140,7 @@ function StoryTab() {
 function CompanyTab() {
   return (
     <div>
-      <h2 style={h2Style}>Where This Is Going</h2>
+      <SectionHead roman="§" title="Where this is going" />
       <p style={prose}>
         This fall I&apos;m going to the University of Alabama&apos;s Honors College to study psychology and data science. The endgame is psychiatry — specifically the intersection of AI-driven research and clinical mental health care. I believe the next generation of mental health treatment will be built on behavioral data, and I believe it needs to be built by people who understand both the science and the human being underneath it.
       </p>
@@ -117,30 +151,31 @@ function CompanyTab() {
         My faith is the thread through all of it. I&apos;m a Christian, and I believe people are made in the image of God — which means every business I advise, every tool I build, and every patient I eventually treat deserves infrastructure and care that reflects that. That&apos;s not a tagline. It&apos;s the reason I do this at all.
       </p>
 
-      <Divider />
-
-      <h2 style={h2Style}>What We Build</h2>
-      <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.75, marginBottom: "32px", maxWidth: "580px" }}>
-        Four divisions, one company. All of it owner-operated — when you work with Purcell Ventures, you work with me.
-      </p>
+      <SectionHead roman="§" title="What we build" em="four divisions, one operator" />
       <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
         {DIVISIONS.map((d) => (
-          <a key={d.label} href={d.href} style={{
-            display: "block", padding: "24px",
-            border: "1px solid var(--color-warm-border)",
-            borderRadius: "6px", background: "var(--color-warm-card)",
-            textDecoration: "none",
-            transition: "border-color 0.15s",
-          }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "10px" }}>
-              <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "16px", fontWeight: 600, color: "var(--color-warm-text)" }}>
-                {d.label}
-              </span>
-              <span style={{ fontSize: "13px", color: "var(--color-warm-accent)", fontWeight: 600, marginLeft: "16px", flexShrink: 0 }}>
+          <a key={d.label} href={d.href} className="pv-card" style={{ display: "block", paddingTop: "32px" }}>
+            <span className="b3"></span><span className="b4"></span>
+            <div style={{
+              display: "flex", justifyContent: "space-between", alignItems: "flex-start",
+              gap: "16px", marginBottom: "12px",
+            }}>
+              <div style={{ display: "flex", alignItems: "baseline", gap: "14px" }}>
+                <span className="pv-italic" style={{ fontSize: "24px", color: "var(--color-warm-accent)", lineHeight: 1 }}>{d.roman}</span>
+                <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, letterSpacing: "0.02em", color: "var(--color-warm-text)", textTransform: "uppercase", lineHeight: 1.1 }}>
+                  {d.label}
+                </span>
+              </div>
+              <span style={{
+                fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                fontSize: "11px", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase",
+                color: "var(--color-warm-accent)", marginLeft: "16px", flexShrink: 0,
+                whiteSpace: "nowrap",
+              }}>
                 {d.price}
               </span>
             </div>
-            <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.65, margin: 0 }}>
+            <p className="pv-italic" style={{ fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.55, margin: 0 }}>
               {d.desc}
             </p>
           </a>
@@ -153,20 +188,18 @@ function CompanyTab() {
 function MarkTab() {
   return (
     <div>
-      <h2 style={h2Style}>The Mark</h2>
+      <SectionHead roman="§" title="The Mark" em="an inverse panopticon" />
       <p style={prose}>
         The Purcell Ventures mark is built on a deliberate inversion of Jeremy Bentham&apos;s panopticon — a prison design from 1791 where a single guard in a central tower could surveil every prisoner without them knowing when they were being watched. The uncertainty alone produced compliance. Michel Foucault later argued it wasn&apos;t just a prison design. It was the operating model of modern power: institutions exert control through the possibility of observation. You regulate yourself because you might be watched. The watcher stays hidden. The watched stays exposed.
       </p>
       <p style={prose}>
         The inverse of that isn&apos;t chaos. It&apos;s the principle most free societies claim to believe in and rarely practice: the powerful should be transparent and accountable, and ordinary people should have their privacy and freedom. The asymmetry should run upward, not downward. That&apos;s what the mark means. PV sits at the center — visible, declared, not hidden in a tower. The structure radiates outward as accountability arms, not inward as surveillance. The space beyond the rings belongs to the people we work with. We&apos;re the ones who are observable.
       </p>
-      <p style={{ ...prose, marginBottom: "48px" }}>
+      <p style={{ ...prose, marginBottom: "32px" }}>
         In 2026, that position is rarer than it should be. The systems most people depend on — the platforms, the algorithms, the AI models making decisions about their credit and their feed and their hiring — are deliberately opaque. The asymmetry Bentham designed for prisoners is now the default assumption of the economy. The mark is a refusal of that. My name is on the business. You deal with me directly. That&apos;s not a branding choice. It&apos;s a position.
       </p>
 
-      <Divider />
-
-      <h2 style={h2Style}>The Name</h2>
+      <SectionHead roman="§" title="The Name" />
       <p style={prose}>
         Purcell Ventures is named after my family. Not a founder persona, not a brand construct — my actual last name. That&apos;s a choice that comes with accountability baked in. When something ships under this name, I shipped it. When a client has a problem, I answer for it. There&apos;s no layer of corporate abstraction between my reputation and the work.
       </p>
@@ -180,65 +213,48 @@ function MarkTab() {
 function ContactTab() {
   return (
     <div>
-      <h2 style={h2Style}>Get in Touch</h2>
-      <p style={{ fontSize: "16px", color: "var(--color-warm-text-muted)", lineHeight: 1.75, marginBottom: "32px", maxWidth: "520px" }}>
-        Email is best. I respond the same day.
+      <SectionHead roman="§" title="Get in touch" em="email is best" />
+      <p style={prose}>
+        Same-day response. If you need an answer urgently, call or text.
       </p>
-      <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", marginBottom: "56px" }}>
-        <a href="mailto:elijah@purcell-ventures.com" style={{
-          display: "inline-flex", alignItems: "center",
-          padding: "12px 24px", border: "1px solid var(--color-warm-accent)",
-          borderRadius: "4px", color: "var(--color-warm-accent)",
-          fontSize: "14px", fontWeight: 600, textDecoration: "none",
-        }}>
-          elijah@purcell-ventures.com
-        </a>
-        <a href="tel:+17702805319" style={{
-          display: "inline-flex", alignItems: "center",
-          padding: "12px 24px", border: "1px solid var(--color-warm-border)",
-          borderRadius: "4px", color: "var(--color-warm-text-muted)",
-          fontSize: "14px", fontWeight: 600, textDecoration: "none",
-        }}>
-          (770) 280-5319
-        </a>
-        <a href="https://www.linkedin.com/in/elijah-purcell-5128a9256" target="_blank" rel="noopener noreferrer" style={{
-          display: "inline-flex", alignItems: "center",
-          padding: "12px 24px", border: "1px solid var(--color-warm-border)",
-          borderRadius: "4px", color: "var(--color-warm-text-muted)",
-          fontSize: "14px", fontWeight: 600, textDecoration: "none",
-        }}>
-          LinkedIn
-        </a>
-        <a href="/resume" style={{
-          display: "inline-flex", alignItems: "center",
-          padding: "12px 24px", border: "1px solid var(--color-warm-border)",
-          borderRadius: "4px", color: "var(--color-warm-text-muted)",
-          fontSize: "14px", fontWeight: 600, textDecoration: "none",
-        }}>
-          Resume →
-        </a>
+      <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginBottom: "56px", marginTop: "28px" }}>
+        {[
+          { href: "mailto:elijah@purcell-ventures.com", label: "elijah@purcell-ventures.com", primary: true },
+          { href: "tel:+17702805319",                   label: "(770) 280·5319" },
+          { href: "https://www.linkedin.com/in/elijah-purcell-5128a9256", label: "LinkedIn",  ext: true },
+          { href: "/resume",                            label: "Resume →" },
+        ].map(({ href, label, primary, ext }) => (
+          <a key={href} href={href} target={ext ? "_blank" : undefined} rel={ext ? "noopener noreferrer" : undefined}
+            style={{
+              display: "inline-flex", alignItems: "center",
+              padding: "11px 22px",
+              border: `1.5px solid ${primary ? "var(--color-warm-accent)" : "var(--color-warm-border)"}`,
+              borderRadius: 0,
+              color: primary ? "var(--color-warm-accent)" : "var(--color-warm-text-muted)",
+              fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+              fontSize: "11px", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase",
+              textDecoration: "none",
+              transition: "background 0.12s, color 0.12s",
+            }}>
+            {label}
+          </a>
+        ))}
       </div>
 
-      <Divider />
-
-      <h2 style={h2Style}>What to Expect</h2>
-      <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+      <SectionHead roman="§" title="What to expect" />
+      <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
         {[
           { q: "Who do I actually talk to?", a: "Me. Elijah Purcell. There's no team, no account manager, no handoff. You deal with the owner from first message to final delivery." },
           { q: "How fast do you respond?", a: "Same day on email, usually within a few hours. If you need an answer urgently, call or text." },
           { q: "Do you take on clients outside Atlanta?", a: "For digital services, consulting, and software — yes, anywhere. For field work (gutter cleaning, pressure washing, lawn care), see our sister brand Mantle Field Services — Metro Atlanta only." },
           { q: "What's the best way to start?", a: "Email with a one-sentence description of what you need. I'll tell you honestly if I can help and what it would look like." },
         ].map(({ q, a }) => (
-          <div key={q} style={{
-            padding: "24px",
-            border: "1px solid var(--color-warm-border)",
-            borderRadius: "6px",
-            background: "var(--color-warm-card)",
-          }}>
-            <div style={{ fontSize: "15px", fontWeight: 600, color: "var(--color-warm-text)", marginBottom: "10px" }}>
+          <div key={q} className="pv-card">
+            <span className="b3"></span><span className="b4"></span>
+            <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "16px", fontWeight: 600, letterSpacing: "0.02em", textTransform: "uppercase", color: "var(--color-warm-text)", marginBottom: "10px" }}>
               {q}
             </div>
-            <div style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.7 }}>
+            <div className="pv-italic" style={{ fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.6 }}>
               {a}
             </div>
           </div>
@@ -252,43 +268,41 @@ export default function AboutPage() {
   const [activeTab, setActiveTab] = useState<Tab>("story");
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)" }}>
+    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden" }}>
+      <style dangerouslySetInnerHTML={{ __html: ABOUT_PAGE_CSS }} />
+      <VignetteBackground />
 
-      {/* Nav */}
-      <nav style={{
-        padding: "0 24px", height: "60px", display: "flex", alignItems: "center",
-        justifyContent: "space-between", borderBottom: "1px solid var(--color-warm-border)",
-      }}>
-        <a href="/" style={{ fontSize: "17px", fontWeight: 700, color: "var(--color-warm-text)", letterSpacing: "-0.01em", textDecoration: "none" }}>
-          Purcell <span style={{ color: "var(--color-warm-accent)" }}>Ventures</span>
-        </a>
-        <a href="mailto:elijah@purcell-ventures.com" style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", textDecoration: "none" }}>
-          elijah@purcell-ventures.com
-        </a>
-      </nav>
+      <main style={{ position: "relative", zIndex: 5, maxWidth: "820px", margin: "0 auto", padding: "72px 24px 120px" }}>
 
-      <main style={{ maxWidth: "800px", margin: "0 auto", padding: "80px 24px 120px" }}>
+        {/* Page eyebrow + title */}
+        <div style={{ borderTop: "3px solid var(--color-warm-text)", borderBottom: "1px solid var(--color-warm-text)", padding: "16px 0 18px", position: "relative", marginBottom: "32px" }}>
+          <div style={{
+            fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+            fontSize: "10px", fontWeight: 700, letterSpacing: "0.32em", textTransform: "uppercase",
+            color: "var(--color-warm-accent)", marginBottom: "10px",
+          }}>
+            About · Purcell Ventures
+          </div>
+          <h1 style={{
+            fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700,
+            fontSize: "clamp(40px, 7vw, 72px)",
+            lineHeight: 1.02, letterSpacing: "0.005em",
+            color: "var(--color-warm-text)", margin: 0,
+          }}>
+            Elijah Brent <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Purcell</em>
+          </h1>
+          <p className="pv-italic" style={{ marginTop: "14px", fontSize: "18px", color: "var(--color-warm-text)", opacity: 0.78, maxWidth: "560px" }}>
+            Founder · operator · undergraduate-bound out of Acworth, Georgia.
+          </p>
+        </div>
 
-        {/* Page header — always visible */}
-        <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "20px" }}>
-          About
-        </p>
-        <h1 style={{
-          fontFamily: "'Cinzel', Georgia, serif",
-          fontSize: "clamp(36px, 6vw, 64px)", fontWeight: 700,
-          lineHeight: 1.05, letterSpacing: "-0.02em",
-          color: "var(--color-warm-text)", marginBottom: "48px",
-        }}>
-          Elijah Purcell
-        </h1>
-
-        {/* Tab bar */}
-        <div style={{
+        {/* Tabs as a numbered editorial nav */}
+        <div className="pv-tabs" style={{
           display: "flex", gap: "0",
           borderBottom: "1px solid var(--color-warm-border)",
-          marginBottom: "56px",
+          marginBottom: "8px",
         }}>
-          {TABS.map(({ id, label }) => {
+          {TABS.map(({ id, label, roman }) => {
             const isActive = activeTab === id;
             return (
               <button
@@ -296,16 +310,19 @@ export default function AboutPage() {
                 onClick={() => setActiveTab(id)}
                 style={{
                   background: "none", border: "none", cursor: "pointer",
-                  padding: "12px 24px",
-                  fontSize: "13px", fontWeight: isActive ? 700 : 500,
-                  letterSpacing: "0.04em",
+                  padding: "16px 22px 14px",
+                  fontFamily: "'Cinzel', Georgia, serif",
+                  fontSize: "13px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase",
                   color: isActive ? "var(--color-warm-accent)" : "var(--color-warm-text-muted)",
                   borderBottom: isActive ? "2px solid var(--color-warm-accent)" : "2px solid transparent",
                   marginBottom: "-1px",
                   transition: "color 0.15s, border-color 0.15s",
-                  fontFamily: "Inter, sans-serif",
+                  display: "inline-flex", alignItems: "baseline", gap: "10px",
                 }}
               >
+                <span className="pv-tab-roman pv-italic" style={{ color: isActive ? "var(--color-warm-accent)" : "var(--color-warm-text-light)", fontSize: "14px" }}>
+                  {roman}
+                </span>
                 {label}
               </button>
             );
@@ -313,18 +330,27 @@ export default function AboutPage() {
         </div>
 
         {/* Tab content */}
-        {activeTab === "story"   && <StoryTab />}
-        {activeTab === "company" && <CompanyTab />}
-        {activeTab === "mark"    && <MarkTab />}
-        {activeTab === "contact" && <ContactTab />}
+        <div style={{ paddingTop: "32px" }}>
+          {activeTab === "story"   && <StoryTab />}
+          {activeTab === "company" && <CompanyTab />}
+          {activeTab === "mark"    && <MarkTab />}
+          {activeTab === "contact" && <ContactTab />}
+        </div>
 
       </main>
 
-      <footer style={{ padding: "24px", borderTop: "1px solid var(--color-warm-border)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
-        <span style={{ fontSize: "13px", color: "var(--color-warm-text-light)" }}>
-          © {new Date().getFullYear()} Purcell Ventures LLC
-        </span>
-        <a href="/" style={{ fontSize: "13px", color: "var(--color-warm-text-light)", textDecoration: "none" }}>← Back to home</a>
+      <footer style={{
+        position: "relative", zIndex: 5,
+        padding: "24px 36px",
+        borderTop: "1px solid var(--color-warm-border)",
+        display: "flex", justifyContent: "space-between", alignItems: "center",
+        flexWrap: "wrap", gap: "12px",
+        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+        fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
+        color: "var(--color-warm-text-light)",
+      }}>
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
+        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← Home</a>
       </footer>
     </div>
   );
