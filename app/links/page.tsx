@@ -22,6 +22,14 @@ const SECTIONS: { roman: string; label: string; items: LinkItem[] }[] = [
     ],
   },
   {
+    roman: "I.5",
+    label: "Free Tools",
+    items: [
+      { href: "/ai-readiness",       label: "AI Readiness Test",  desc: "10 questions, 3 minutes. Score your team's AI maturity, get calibrated next steps. No email capture." },
+      { href: "/ai-cost-calculator", label: "AI Cost Calculator", desc: "Enter your team size and workload. See how fast an AI session pays back in dollars. Conservative math." },
+    ],
+  },
+  {
     roman: "II.",
     label: "Learn From Me",
     items: [
