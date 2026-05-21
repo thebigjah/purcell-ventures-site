@@ -118,6 +118,7 @@ export default function ConsultingPage() {
           </p>
           <div style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
             <a className="pv-btn-primary" href="/consulting/book">Book a session</a>
+            <a className="pv-btn-ghost" href="/ai-readiness">Take the 3-min readiness test</a>
             <a className="pv-btn-ghost" href="#sessions">See what I teach</a>
           </div>
 
