@@ -641,6 +641,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Personal-depth strip: links to /now /uses /verses /writing /faq */}
+      <section style={{
+        position: "relative", zIndex: 5,
+        padding: "56px 36px 40px",
+        borderTop: "1px solid var(--color-warm-border)",
+      }}>
+        <header className="pv-section-head" style={{ marginBottom: "20px", padding: "0 0 14px" }}>
+          <span className="roman">III.</span>
+          <h2>Going <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>deeper</em></h2>
+        </header>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "12px" }}>
+          {[
+            { href: "/now",     label: "/now",     desc: "What I'm focused on right now." },
+            { href: "/uses",    label: "/uses",    desc: "My working stack — every tool in production." },
+            { href: "/verses",  label: "Verses",   desc: "Five scriptures I come back to." },
+            { href: "/writing", label: "Writing",  desc: "Selected original prose." },
+            { href: "/faq",     label: "FAQ",      desc: "Common questions, answered." },
+          ].map(item => (
+            <Link key={item.href} href={item.href} className="pv-card" style={{
+              padding: "20px 22px 18px", display: "block",
+            }}>
+              <span className="b3"></span><span className="b4"></span>
+              <div style={{
+                fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
+                fontSize: "16px", letterSpacing: "0.04em",
+                color: "var(--color-warm-text)", marginBottom: "6px",
+              }}>
+                {item.label}
+              </div>
+              <p className="pv-italic" style={{
+                fontSize: "13.5px", color: "var(--color-warm-text)", opacity: 0.82,
+                lineHeight: 1.5, margin: 0,
+              }}>
+                {item.desc}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Contact strip */}
       <section
         className="pv-contact"
