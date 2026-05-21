@@ -9,7 +9,7 @@ const STACK = [
     items: [
       { name: "Claude Code",  desc: "The terminal-resident AI partner that wrote 80% of the code on this site. Subscription, daily driver." },
       { name: "VS Code",      desc: "When the AI hands off — type-checking, debugging, design previews." },
-      { name: "iTerm2 / WT",  desc: "Terminal of choice depending on whether I'm on the Mac or the Windows desktop." },
+      { name: "Terminal",     desc: "PowerShell on Windows, iTerm2/zsh on Mac. Every workflow ends up scripted." },
     ],
   },
   {
@@ -69,7 +69,7 @@ const STACK = [
       { name: "Windows desktop", desc: "Where the long-running automations live. The workshop." },
       { name: "MacBook",         desc: "Travel + on-the-go. Same memory directory, synced via iCloud." },
       { name: "Android phone",   desc: "ntfy on the home screen for one-tap approvals from anywhere." },
-      { name: "Shure mic",       desc: "Worship, course recording, anything voiced. Already paid for." },
+      { name: "Condenser mic",   desc: "Worship, course recording, anything voiced. Already paid for." },
     ],
   },
   {
