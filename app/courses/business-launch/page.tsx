@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 // ── Lemon Squeezy URLs — swap when account is live ────────────────────────────
 const LS_FULL  = "#waitlist";
@@ -182,7 +183,8 @@ export default function BusinessLaunchPage() {
   }
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)" }}>
+    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden" }}>
+      <VignetteBackground />
       <style>{`
         .bl-stat-bar { display: flex; gap: 48px; flex-wrap: wrap; }
         .bl-diff-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
@@ -194,80 +196,50 @@ export default function BusinessLaunchPage() {
         }
       `}</style>
 
-      {/* ── In-page nav ──────────────────────────────────────────────────────── */}
-      <nav style={{
-        position: "sticky", top: 58, zIndex: 50,
-        background: "rgba(12,10,8,0.94)", backdropFilter: "blur(12px)",
-        borderBottom: "1px solid var(--color-warm-border)",
-        padding: "0 24px",
-      }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", height: "50px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <Link href="/courses" style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", textDecoration: "none", fontFamily: "var(--font-inter), sans-serif" }}>
-            ← Courses
-          </Link>
-          <div style={{ display: "flex", gap: "24px", alignItems: "center" }}>
-            <a href="#curriculum" style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", textDecoration: "none", fontFamily: "var(--font-inter), sans-serif" }}>Curriculum</a>
-            <a href="#pricing"    style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", textDecoration: "none", fontFamily: "var(--font-inter), sans-serif" }}>Pricing</a>
-            <a href="#waitlist" style={{
-              padding: "6px 16px", fontSize: "12px", fontWeight: 700,
-              color: "var(--color-warm-bg)", background: "var(--color-warm-accent)",
-              borderRadius: 4, textDecoration: "none", letterSpacing: "0.06em",
-              fontFamily: "var(--font-inter), sans-serif",
-            }}>
-              Join Waitlist
-            </a>
-          </div>
-        </div>
-      </nav>
-
-      {/* ── Hero ─────────────────────────────────────────────────────────────── */}
-      <section style={{ padding: "100px 24px 80px", borderBottom: "1px solid var(--color-warm-border)" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "20px", fontFamily: "var(--font-inter), sans-serif" }}>
-            Business Launch Course
-          </div>
-          <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(36px, 5.5vw, 68px)", fontWeight: 700, lineHeight: 1.0, marginBottom: "28px", maxWidth: "820px" }}>
-            <span style={{ color: "var(--color-warm-accent)" }}>I started a company at 17.</span>
+      <section style={{ position: "relative", zIndex: 5, padding: "72px 36px 60px", maxWidth: "1080px", margin: "0 auto" }}>
+        <header className="pv-page-head" style={{ marginBottom: 0 }}>
+          <div className="pv-mono-label">Course · Business Launch Playbook</div>
+          <h1 style={{ margin: 0 }}>
+            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>I started a company at 17.</em>
             <br />
-            <span style={{ color: "var(--color-warm-text)" }}>Here's everything I wish I knew first.</span>
+            Here&apos;s everything I wish I knew first.
           </h1>
-          <p style={{ fontSize: "18px", color: "var(--color-warm-text-muted)", lineHeight: 1.75, maxWidth: "560px", marginBottom: "40px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            I'm Elijah Purcell. I founded Purcell Ventures at 17 — consulting, software, digital products, courses. This course is the complete playbook: idea to legal entity to first dollar to operating business, with every tool, decision, and shortcut I actually used.
+          <p className="deck">
+            I&apos;m Elijah Purcell. I founded Purcell Ventures at 17 — consulting, software, digital products, courses. This course is the complete playbook: idea to legal entity to first dollar to operating business, with every tool, decision, and shortcut I actually used.
           </p>
-          <div className="bl-hero-btns" style={{ display: "flex", gap: "12px", marginBottom: "56px" }}>
-            <a href="#curriculum" style={{
-              padding: "14px 28px", fontSize: "14px", fontWeight: 600,
-              color: "var(--color-warm-text)", border: "1px solid var(--color-warm-border)",
-              borderRadius: 7, textDecoration: "none", letterSpacing: "0.04em",
-              fontFamily: "var(--font-inter), sans-serif",
-            }}>
-              See What's Inside ↓
-            </a>
-            <a href="#waitlist" style={{
-              padding: "14px 28px", fontSize: "14px", fontWeight: 700,
-              color: "var(--color-warm-bg)", background: "var(--color-warm-accent)",
-              borderRadius: 7, textDecoration: "none", letterSpacing: "0.04em",
-              fontFamily: "var(--font-inter), sans-serif",
-            }}>
-              Join the Waitlist →
-            </a>
+          <div className="bl-hero-btns" style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
+            <a href="#curriculum" className="pv-btn-ghost">See what&apos;s inside ↓</a>
+            <a href="#waitlist" className="pv-btn-primary">Join the waitlist →</a>
           </div>
-
-          {/* Stats bar */}
-          <div className="bl-stat-bar" style={{ borderTop: "1px solid var(--color-warm-border)", paddingTop: "40px" }}>
+          <div style={{
+            marginTop: "32px",
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: 0,
+            border: "1px solid var(--color-warm-border)",
+            background: "var(--color-warm-bg-alt)",
+          }}>
             {[
-              { num: "17",   label: "age when I founded it" },
-              { num: "5+",   label: "active revenue streams" },
-              { num: "50+",  label: "tools tested & documented" },
-              { num: "26",   label: "lessons in this course" },
-            ].map(s => (
-              <div key={s.label}>
-                <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", fontWeight: 800, color: "var(--color-warm-text)", letterSpacing: "-0.02em" }}>{s.num}</div>
-                <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", marginTop: "3px", fontFamily: "var(--font-inter), sans-serif" }}>{s.label}</div>
+              { num: "17",  label: "Age when I founded" },
+              { num: "5+",  label: "Revenue streams" },
+              { num: "50+", label: "Tools tested" },
+              { num: "26",  label: "Lessons" },
+            ].map((s, i) => (
+              <div key={s.label} style={{
+                padding: "20px 12px",
+                textAlign: "center",
+                borderRight: i < 3 ? "1px solid var(--color-warm-border)" : "none",
+              }}>
+                <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 700, color: "var(--color-warm-accent)", letterSpacing: "-0.01em" }}>
+                  {s.num}
+                </div>
+                <div className="pv-mono-label" style={{ marginTop: "6px", color: "var(--color-warm-text-light)" }}>
+                  {s.label}
+                </div>
               </div>
             ))}
           </div>
-        </div>
+        </header>
       </section>
 
       {/* ── Who this is for ───────────────────────────────────────────────────── */}

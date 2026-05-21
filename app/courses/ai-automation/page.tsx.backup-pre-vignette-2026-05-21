@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 // ── Lemon Squeezy URLs — swap when account is live ────────────────────────────
 const LS_FULL  = "#waitlist";
@@ -179,50 +178,41 @@ export default function ZeroToAutomatedPage() {
   const totalMin = MODULES.reduce((s, m) => s + m.totalMin, 0);
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden" }}>
-      <VignetteBackground />
-      <div style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
+    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "80px 24px 120px" }}>
 
         {/* ── Hero ── */}
-        <header className="pv-page-head">
-          <div className="pv-mono-label">Course · AI Automation</div>
-          <h1 style={{ margin: 0 }}>
-            Zero to <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Automated.</em>
+        <div style={{ marginBottom: "72px" }}>
+          <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontFamily: "var(--font-inter), sans-serif" }}>
+            Purcell Ventures — Course
+          </div>
+          <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(32px, 5vw, 64px)", fontWeight: 700, color: "var(--color-warm-text)", lineHeight: 1.0, marginBottom: "20px" }}>
+            Zero to Automated
           </h1>
-          <p className="deck">
-            Build the AI tools you actually need — taught by someone who uses them every day. I automated my email inbox, my YouTube channel, my lead generation, and my scholarship search. Here is exactly how I built every one of them — and how you can build yours.
+          <p style={{ fontSize: "19px", fontWeight: 500, color: "var(--color-warm-accent)", marginBottom: "20px", fontFamily: "var(--font-dm-sans), sans-serif", letterSpacing: "-0.01em" }}>
+            Build the AI tools you actually need — taught by someone who uses them every day.
           </p>
-          {/* Stats band */}
-          <div style={{
-            marginTop: "32px",
-            display: "grid",
-            gridTemplateColumns: "repeat(5, 1fr)",
-            gap: 0,
-            border: "1px solid var(--color-warm-border)",
-            background: "var(--color-warm-bg-alt)",
-          }}>
+          <p style={{ fontSize: "16px", color: "var(--color-warm-text-muted)", lineHeight: 1.8, maxWidth: "600px", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: "32px" }}>
+            I automated my email inbox, my YouTube channel, my lead generation, and my scholarship search.
+            Here is exactly how I built every one of them — and how you can build yours.
+          </p>
+
+          {/* Stats bar */}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "32px", paddingTop: "28px", borderTop: "1px solid var(--color-warm-border)" }}>
             {[
-              { v: "8",                                                label: "Modules" },
-              { v: `${totalLessons}`,                                  label: "Lessons" },
-              { v: `${Math.round(totalMin / 60 * 10) / 10} hrs`,       label: "Video" },
-              { v: "7",                                                label: "Code templates" },
-              { v: "5+",                                               label: "In production" },
-            ].map((s, i) => (
-              <div key={s.label} style={{
-                padding: "18px 10px",
-                textAlign: "center",
-                borderRight: i < 4 ? "1px solid var(--color-warm-border)" : "none",
-              }}>
-                <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 700, color: "var(--color-warm-accent)", letterSpacing: "-0.01em" }}>
-                  {s.v}
-                </div>
-                <div className="pv-mono-label" style={{ marginTop: "6px", color: "var(--color-warm-text-light)", fontSize: "9px" }}>
-                  {s.label}
-                </div>
+              { label: "Modules", value: "8" },
+              { label: "Lessons", value: `${totalLessons}` },
+              { label: "Video", value: `${Math.round(totalMin / 60 * 10) / 10} hrs` },
+              { label: "Code Templates", value: "7" },
+              { label: "Real tools running in production", value: "5+" },
+            ].map(s => (
+              <div key={s.label}>
+                <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 700, color: "var(--color-warm-text)", letterSpacing: "-0.02em" }}>{s.value}</div>
+                <div style={{ fontSize: "11px", color: "var(--color-warm-text-muted)", marginTop: "2px", fontFamily: "var(--font-inter), sans-serif", letterSpacing: "0.04em" }}>{s.label}</div>
               </div>
             ))}
           </div>
-        </header>
+        </div>
 
         {/* ── "Real tools" proof section ── */}
         <div style={{ marginBottom: "80px" }}>

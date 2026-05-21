@@ -1,112 +1,151 @@
 "use client";
 import Link from "next/link";
+import { VignetteBackground } from "@/app/components/VignetteBackground";
+
+const COURSES = [
+  {
+    roman: "I.",
+    href: "/courses/college-apps",
+    title: "The College Application Playbook",
+    desc: "34 acceptances. $505,000+ in scholarships. 98 schools researched. The exact process — building your list, writing essays, chasing scholarships, and maximizing your offer.",
+    price: "$297",
+    stats: [
+      { v: "34",    l: "Acceptances" },
+      { v: "$505k+", l: "Scholarships" },
+      { v: "17",    l: "Lessons" },
+    ],
+  },
+  {
+    roman: "II.",
+    href: "/courses/business-launch",
+    title: "The Business Launch Playbook",
+    desc: "From idea to LLC to first dollar. 7 modules, 26 lessons, and a full resource pack — every tool, decision, and shortcut from building Purcell Ventures at 18.",
+    price: "$397",
+    stats: [
+      { v: "7",   l: "Modules" },
+      { v: "26",  l: "Lessons" },
+      { v: "LLC", l: "→ Revenue" },
+    ],
+  },
+  {
+    roman: "III.",
+    href: "/courses/ai-automation",
+    title: "Zero to Automated",
+    desc: "8 modules. 25 lessons. Build the AI tools you actually need — email bots, content pipelines, lead scrapers, and personal AI assistants. Every tool taught is a tool I run.",
+    price: "$397",
+    stats: [
+      { v: "8",   l: "Modules" },
+      { v: "25",  l: "Lessons" },
+      { v: "7",   l: "Code templates" },
+    ],
+  },
+];
 
 export default function CoursesPage() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)" }}>
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "80px 24px 120px" }}>
+    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden" }}>
+      <VignetteBackground />
 
-        {/* Header */}
-        <div style={{ marginBottom: "64px" }}>
-          <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontFamily: "var(--font-inter), sans-serif" }}>
-            Purcell Ventures — Courses
-          </div>
-          <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(32px, 5vw, 56px)", fontWeight: 700, color: "var(--color-warm-text)", lineHeight: 1.05, marginBottom: "16px" }}>
-            Learn from someone<br />who just did it.
+      <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
+
+        {/* Page head */}
+        <header className="pv-page-head">
+          <div className="pv-mono-label">Purcell Ventures · Courses</div>
+          <h1>
+            Learn from someone <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>who just did it.</em>
           </h1>
-          <p style={{ fontSize: "17px", color: "var(--color-warm-text-muted)", lineHeight: 1.75, maxWidth: "520px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            No theory. No credentials theater. Just the actual process — documented, structured, and taught by someone who's been through it recently enough to remember every step.
+          <p className="deck">
+            No theory. No credentials theater. Just the actual process — documented, structured, and taught by someone who&apos;s been through it recently enough to remember every step.
           </p>
+        </header>
+
+        {/* Courses grid */}
+        <header className="pv-section-head">
+          <span className="roman">I.</span>
+          <h2>Available <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>now</em></h2>
+        </header>
+        <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+          {COURSES.map((c) => (
+            <Link key={c.href} href={c.href} className="pv-card" style={{
+              display: "grid",
+              gridTemplateColumns: "auto 1fr auto",
+              gap: "32px",
+              alignItems: "center",
+              padding: "36px 36px 32px",
+              minHeight: "200px",
+            }}>
+              <span className="b3"></span><span className="b4"></span>
+              <span className="pv-italic" style={{ fontSize: "56px", color: "var(--color-warm-accent)", lineHeight: 1, fontWeight: 400 }}>
+                {c.roman}
+              </span>
+              <div>
+                <div className="pv-mono-label" style={{ marginBottom: "10px", color: "var(--color-warm-accent)" }}>
+                  Available now · Self-paced
+                </div>
+                <h2 style={{
+                  fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
+                  fontSize: "26px", letterSpacing: "0.02em",
+                  color: "var(--color-warm-text)", textTransform: "uppercase",
+                  marginBottom: "12px", lineHeight: 1.15, margin: "0 0 12px",
+                }}>
+                  {c.title}
+                </h2>
+                <p className="pv-italic" style={{
+                  fontSize: "15.5px", color: "var(--color-warm-text)", opacity: 0.85,
+                  lineHeight: 1.55, marginBottom: "16px", maxWidth: "640px",
+                }}>
+                  {c.desc}
+                </p>
+                <div style={{ display: "flex", gap: "28px", flexWrap: "wrap" }}>
+                  {c.stats.map(s => (
+                    <div key={s.l}>
+                      <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700, fontSize: "18px", color: "var(--color-warm-accent)", letterSpacing: "-0.01em" }}>
+                        {s.v}
+                      </div>
+                      <div className="pv-mono-label" style={{ marginTop: "2px", color: "var(--color-warm-text-light)" }}>
+                        {s.l}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "10px", minWidth: "140px" }}>
+                <div className="pv-mono-label" style={{ color: "var(--color-warm-text-light)" }}>From</div>
+                <div style={{
+                  fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700,
+                  fontSize: "44px", letterSpacing: "-0.02em",
+                  color: "var(--color-warm-text)", lineHeight: 1,
+                }}>
+                  {c.price}
+                </div>
+                <span style={{
+                  fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                  fontSize: "10px", fontWeight: 700, letterSpacing: "0.28em", textTransform: "uppercase",
+                  color: "var(--color-warm-accent)",
+                  marginTop: "12px",
+                }}>
+                  View course →
+                </span>
+              </div>
+            </Link>
+          ))}
         </div>
 
-        {/* Course grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "1px", background: "var(--color-warm-border)", borderRadius: 10, overflow: "hidden" }}>
+      </main>
 
-          {/* College Apps — live */}
-          <Link href="/courses/college-apps" style={{ textDecoration: "none", display: "block", background: "var(--color-warm-bg)", padding: "40px", transition: "background 0.15s" }}
-            onMouseEnter={e => (e.currentTarget.style.background = "var(--color-warm-card)")}
-            onMouseLeave={e => (e.currentTarget.style.background = "var(--color-warm-bg)")}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "24px" }}>
-              <div style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--color-warm-accent)", flexShrink: 0 }} />
-              <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontFamily: "var(--font-inter), sans-serif" }}>
-                Available Now
-              </span>
-            </div>
-            <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "12px", lineHeight: 1.15 }}>
-              The College Application Playbook
-            </h2>
-            <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.7, marginBottom: "32px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-              34 acceptances. $505,000+ in scholarships. 98 schools researched. This is the exact process — building your list, writing essays, chasing scholarships, and maximizing your offer.
-            </p>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-              <div>
-                <div style={{ fontSize: "11px", color: "var(--color-warm-text-muted)", marginBottom: "2px", fontFamily: "var(--font-inter), sans-serif" }}>from</div>
-                <div style={{ fontSize: "28px", fontWeight: 900, color: "var(--color-warm-text)", fontFamily: "'Cinzel', Georgia, serif", letterSpacing: "-0.02em" }}>$297</div>
-              </div>
-              <div style={{ fontSize: "13px", fontWeight: 600, color: "var(--color-warm-accent)", letterSpacing: "0.06em", fontFamily: "var(--font-inter), sans-serif" }}>
-                View Course →
-              </div>
-            </div>
-          </Link>
-
-          {/* Business Launch — live */}
-          <Link href="/courses/business-launch" style={{ textDecoration: "none", display: "block", background: "var(--color-warm-bg)", padding: "40px", transition: "background 0.15s" }}
-            onMouseEnter={e => (e.currentTarget.style.background = "var(--color-warm-card)")}
-            onMouseLeave={e => (e.currentTarget.style.background = "var(--color-warm-bg)")}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "24px" }}>
-              <div style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--color-warm-accent)", flexShrink: 0 }} />
-              <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontFamily: "var(--font-inter), sans-serif" }}>
-                Available Now
-              </span>
-            </div>
-            <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "12px", lineHeight: 1.15 }}>
-              The Business Launch Playbook
-            </h2>
-            <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.7, marginBottom: "32px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-              From idea to LLC to first dollar. 7 modules, 26 lessons, and a full resource pack — every tool, decision, and shortcut from building Purcell Ventures at 18.
-            </p>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-              <div>
-                <div style={{ fontSize: "11px", color: "var(--color-warm-text-muted)", marginBottom: "2px", fontFamily: "var(--font-inter), sans-serif" }}>from</div>
-                <div style={{ fontSize: "28px", fontWeight: 900, color: "var(--color-warm-text)", fontFamily: "'Cinzel', Georgia, serif", letterSpacing: "-0.02em" }}>$397</div>
-              </div>
-              <div style={{ fontSize: "13px", fontWeight: 600, color: "var(--color-warm-accent)", letterSpacing: "0.06em", fontFamily: "var(--font-inter), sans-serif" }}>
-                View Course →
-              </div>
-            </div>
-          </Link>
-          {/* AI Automation — live */}
-          <Link href="/courses/ai-automation" style={{ textDecoration: "none", display: "block", background: "var(--color-warm-bg)", padding: "40px", transition: "background 0.15s" }}
-            onMouseEnter={e => (e.currentTarget.style.background = "var(--color-warm-card)")}
-            onMouseLeave={e => (e.currentTarget.style.background = "var(--color-warm-bg)")}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "24px" }}>
-              <div style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--color-warm-accent)", flexShrink: 0 }} />
-              <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontFamily: "var(--font-inter), sans-serif" }}>
-                Available Now
-              </span>
-            </div>
-            <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "12px", lineHeight: 1.15 }}>
-              Zero to Automated
-            </h2>
-            <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.7, marginBottom: "32px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-              8 modules. 25 lessons. Build the AI tools you actually need — email bots, content pipelines, lead scrapers, and personal AI assistants. Every tool taught is a tool I run.
-            </p>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-              <div>
-                <div style={{ fontSize: "11px", color: "var(--color-warm-text-muted)", marginBottom: "2px", fontFamily: "var(--font-inter), sans-serif" }}>from</div>
-                <div style={{ fontSize: "28px", fontWeight: 900, color: "var(--color-warm-text)", fontFamily: "'Cinzel', Georgia, serif", letterSpacing: "-0.02em" }}>$397</div>
-              </div>
-              <div style={{ fontSize: "13px", fontWeight: 600, color: "var(--color-warm-accent)", letterSpacing: "0.06em", fontFamily: "var(--font-inter), sans-serif" }}>
-                View Course →
-              </div>
-            </div>
-          </Link>
-
-        </div>
-      </div>
+      <footer style={{
+        position: "relative", zIndex: 5,
+        padding: "24px 36px",
+        borderTop: "1px solid var(--color-warm-border)",
+        display: "flex", justifyContent: "space-between", alignItems: "center",
+        flexWrap: "wrap", gap: "12px",
+        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+        fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
+        color: "var(--color-warm-text-light)",
+      }}>
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
+        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← Home</a>
+      </footer>
     </div>
   );
 }
