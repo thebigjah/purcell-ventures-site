@@ -75,10 +75,31 @@ export default function BookPage() {
   };
 
   const inputStyle: React.CSSProperties = {
-    width: "100%", padding: "11px 14px", background: "#161412",
-    border: "1px solid #2e2820", borderRadius: "6px",
-    color: "#f5f0e0", fontSize: "14px", fontFamily: "Inter, sans-serif",
+    width: "100%", padding: "12px 14px", background: "#161412",
+    border: "1px solid #2e2820", borderRadius: 0,
+    color: "#f5f0e0", fontSize: "14px", fontFamily: "Georgia, serif", fontStyle: "italic",
     outline: "none", boxSizing: "border-box",
+  };
+
+  const labelStyle: React.CSSProperties = {
+    fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+    fontSize: "10px", fontWeight: 700,
+    letterSpacing: "0.28em", textTransform: "uppercase",
+    color: "var(--color-warm-accent)",
+    marginBottom: "10px",
+  };
+
+  const stepHeaderStyle: React.CSSProperties = {
+    fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
+    fontSize: "32px", letterSpacing: "0.02em",
+    color: "var(--color-warm-text)", textTransform: "uppercase",
+    marginBottom: "10px", lineHeight: 1.1,
+  };
+
+  const stepDeckStyle: React.CSSProperties = {
+    fontFamily: "Georgia, serif", fontStyle: "italic",
+    fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.85,
+    marginBottom: "28px",
   };
 
   const step1Done = !!sessionType;
@@ -128,118 +149,177 @@ export default function BookPage() {
         </div>
 
         {submitted ? (
-          <div style={{ textAlign: "center", padding: "48px 0" }}>
-            <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "32px", fontWeight: 700, color: "#d4af37", marginBottom: "16px" }}>You're booked.</div>
-            <p style={{ fontSize: "15px", color: "#8a8070", lineHeight: 1.8, maxWidth: "440px", margin: "0 auto 32px" }}>
+          <div style={{ textAlign: "center", padding: "56px 24px" }}>
+            <div style={{ fontFamily: "'Cinzel', Georgia, serif", color: "var(--color-warm-accent)", fontSize: "14px", letterSpacing: "0.6em", marginBottom: "20px", opacity: 0.7 }}>
+              ✦
+            </div>
+            <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "44px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "20px", letterSpacing: "0.02em", textTransform: "uppercase" }}>
+              You&apos;re <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>booked.</em>
+            </div>
+            <p className="pv-italic" style={{ fontSize: "18px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.55, maxWidth: "460px", margin: "0 auto 32px" }}>
               Elijah will reach out within 24 hours to confirm and lock in the details.
             </p>
-            <div style={{ fontSize: "13px", color: "#524d45" }}>elijah@purcell-ventures.com · (770) 280-5319</div>
-            <a href="/consulting" style={{ display: "inline-block", marginTop: "24px", fontSize: "13px", color: "#d4af37", textDecoration: "none" }}>← Back to Consulting</a>
+            <div className="pv-mono-label" style={{ marginBottom: "24px", color: "var(--color-warm-text-light)" }}>
+              elijah@purcell-ventures.com · (770) 280·5319
+            </div>
+            <a href="/consulting" className="pv-btn-ghost">← Back to consulting</a>
           </div>
         ) : step === 1 ? (
           <div>
-            <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", fontWeight: 700, marginBottom: "8px" }}>Pick a session.</h1>
-            <p style={{ fontSize: "14px", color: "#8a8070", marginBottom: "28px" }}>Every session is customized to your business — this just tells me where to start.</p>
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginBottom: "32px" }}>
-              {SESSION_TYPES.map(s => (
-                <button key={s.id} onClick={() => setSessionType(s.id)} style={{
-                  padding: "16px 20px", background: sessionType === s.id ? "#1e1a14" : "#0e0c0a",
-                  border: `1px solid ${sessionType === s.id ? "#d4af37" : "#2e2820"}`,
-                  borderRadius: "8px", cursor: "pointer", textAlign: "left", display: "flex", alignItems: "center", gap: "14px",
-                }}>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ fontSize: "15px", fontWeight: 600, color: "#f5f0e0", fontFamily: "Inter, sans-serif" }}>{s.label}</div>
-                    <div style={{ fontSize: "12px", color: "#6a6458", marginTop: "2px" }}>{s.duration}</div>
-                  </div>
-                  <span style={{ fontSize: "11px", color: "#d4af37", background: "#d4af3715", padding: "3px 9px", borderRadius: "20px" }}>{s.tag}</span>
-                  {sessionType === s.id && <span style={{ color: "#d4af37", fontSize: "16px" }}>✓</span>}
-                </button>
-              ))}
+            <h1 style={stepHeaderStyle}>Pick a <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>session.</em></h1>
+            <p style={stepDeckStyle}>Every session is customized to your business — this just tells me where to start.</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "32px" }}>
+              {SESSION_TYPES.map(s => {
+                const isActive = sessionType === s.id;
+                return (
+                  <button key={s.id} onClick={() => setSessionType(s.id)} style={{
+                    padding: "18px 22px", background: isActive ? "#1e1a14" : "var(--color-warm-bg-alt)",
+                    border: `1.5px solid ${isActive ? "var(--color-warm-accent)" : "var(--color-warm-border)"}`,
+                    borderRadius: 0, cursor: "pointer", textAlign: "left",
+                    display: "flex", alignItems: "center", gap: "16px",
+                    transition: "background 0.12s, border-color 0.12s",
+                  }}>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "16px", fontWeight: 600, color: "var(--color-warm-text)", letterSpacing: "0.02em" }}>
+                        {s.label}
+                      </div>
+                      <div className="pv-mono-label" style={{ marginTop: "6px", color: "var(--color-warm-text-light)", letterSpacing: "0.22em" }}>
+                        {s.duration}
+                      </div>
+                    </div>
+                    <span style={{
+                      fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                      fontSize: "10px", fontWeight: 700,
+                      letterSpacing: "0.22em", textTransform: "uppercase",
+                      padding: "4px 10px",
+                      border: `1.5px solid ${isActive ? "var(--color-warm-accent)" : "var(--color-warm-border)"}`,
+                      color: isActive ? "var(--color-warm-accent)" : "var(--color-warm-text-muted)",
+                    }}>
+                      {s.tag}
+                    </span>
+                    {isActive && <span style={{ color: "var(--color-warm-accent)", fontSize: "18px" }}>✓</span>}
+                  </button>
+                );
+              })}
             </div>
-            <button onClick={() => setStep(2)} disabled={!step1Done} style={{
-              padding: "13px 28px", background: step1Done ? "#d4af37" : "#1a1714",
-              color: step1Done ? "#0c0a08" : "#3a3530", fontWeight: 700, fontSize: "14px",
-              border: "none", borderRadius: "6px", cursor: step1Done ? "pointer" : "not-allowed",
-              fontFamily: "Inter, sans-serif",
-            }}>Next: Logistics →</button>
+            <button onClick={() => setStep(2)} disabled={!step1Done}
+              className={step1Done ? "pv-btn-primary" : ""}
+              style={step1Done ? {} : {
+                padding: "13px 32px", background: "#1a1714",
+                color: "#3a3530", fontWeight: 700, fontSize: "11px",
+                border: "none", borderRadius: 0, cursor: "not-allowed",
+                fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                letterSpacing: "0.28em", textTransform: "uppercase",
+              }}
+            >
+              Next: Logistics →
+            </button>
           </div>
         ) : step === 2 ? (
           <div>
-            <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", fontWeight: 700, marginBottom: "8px" }}>Logistics.</h1>
-            <p style={{ fontSize: "14px", color: "#8a8070", marginBottom: "28px" }}>Format, size, and when works for you.</p>
+            <h1 style={stepHeaderStyle}>Logistics.</h1>
+            <p style={stepDeckStyle}>Format, size, and when works for you.</p>
 
-            <div style={{ marginBottom: "24px" }}>
-              <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#524d45", marginBottom: "10px" }}>Format</div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px" }}>
-                {FORMAT.map(f => (
-                  <button key={f.id} onClick={() => setFormat(f.id)} style={{
-                    padding: "14px 16px", background: format === f.id ? "#1e1a14" : "#0e0c0a",
-                    border: `1px solid ${format === f.id ? "#d4af37" : "#2e2820"}`,
-                    borderRadius: "7px", cursor: "pointer", textAlign: "left",
-                  }}>
-                    <div style={{ fontSize: "14px", fontWeight: 600, color: "#f5f0e0", fontFamily: "Inter, sans-serif" }}>{f.label}</div>
-                    <div style={{ fontSize: "11px", color: "#6a6458", marginTop: "2px" }}>{f.rate}</div>
-                  </button>
-                ))}
+            <div style={{ marginBottom: "28px" }}>
+              <div style={labelStyle}>Format</div>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
+                {FORMAT.map(f => {
+                  const isActive = format === f.id;
+                  return (
+                    <button key={f.id} onClick={() => setFormat(f.id)} style={{
+                      padding: "16px 18px",
+                      background: isActive ? "#1e1a14" : "var(--color-warm-bg-alt)",
+                      border: `1.5px solid ${isActive ? "var(--color-warm-accent)" : "var(--color-warm-border)"}`,
+                      borderRadius: 0, cursor: "pointer", textAlign: "left",
+                    }}>
+                      <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "15px", fontWeight: 600, color: "var(--color-warm-text)", letterSpacing: "0.02em" }}>
+                        {f.label}
+                      </div>
+                      <div className="pv-mono-label" style={{ marginTop: "4px", color: isActive ? "var(--color-warm-accent)" : "var(--color-warm-text-light)" }}>
+                        {f.rate}
+                      </div>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
             {(format === "group" || format === "workshop" || format === "corporate") && (
               <div style={{ marginBottom: "24px" }}>
-                <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#524d45", marginBottom: "10px" }}>Approx. group size</div>
+                <div style={labelStyle}>Approx. group size</div>
                 <input style={inputStyle} placeholder="e.g. 8 people" value={groupSize} onChange={e => setGroupSize(e.target.value)} />
               </div>
             )}
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", marginBottom: "24px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "28px" }}>
               <div>
-                <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#524d45", marginBottom: "10px" }}>Date preference</div>
+                <div style={labelStyle}>Date preference</div>
                 <input style={inputStyle} placeholder="e.g. Any Tuesday in April" value={datePreference} onChange={e => setDatePreference(e.target.value)} />
               </div>
               <div>
-                <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#524d45", marginBottom: "10px" }}>Time of day</div>
+                <div style={labelStyle}>Time of day</div>
                 <input style={inputStyle} placeholder="e.g. Morning, after 2pm" value={timePreference} onChange={e => setTimePreference(e.target.value)} />
               </div>
             </div>
 
             <div style={{ display: "flex", gap: "10px" }}>
-              <button onClick={() => setStep(1)} style={{ padding: "13px 20px", background: "none", border: "1px solid #2e2820", color: "#8a8070", fontWeight: 600, fontSize: "14px", borderRadius: "6px", cursor: "pointer", fontFamily: "Inter, sans-serif" }}>← Back</button>
-              <button onClick={() => setStep(3)} disabled={!step2Done} style={{
-                padding: "13px 28px", background: step2Done ? "#d4af37" : "#1a1714",
-                color: step2Done ? "#0c0a08" : "#3a3530", fontWeight: 700, fontSize: "14px",
-                border: "none", borderRadius: "6px", cursor: step2Done ? "pointer" : "not-allowed", fontFamily: "Inter, sans-serif",
-              }}>Next: Contact Info →</button>
+              <button onClick={() => setStep(1)} className="pv-btn-ghost">← Back</button>
+              <button onClick={() => setStep(3)} disabled={!step2Done}
+                className={step2Done ? "pv-btn-primary" : ""}
+                style={step2Done ? {} : {
+                  padding: "13px 32px", background: "#1a1714",
+                  color: "#3a3530", fontWeight: 700, fontSize: "11px",
+                  border: "none", borderRadius: 0, cursor: "not-allowed",
+                  fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                  letterSpacing: "0.28em", textTransform: "uppercase",
+                }}
+              >
+                Next: Contact →
+              </button>
             </div>
           </div>
         ) : (
           <div>
-            <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", fontWeight: 700, marginBottom: "8px" }}>Last step.</h1>
-            <p style={{ fontSize: "14px", color: "#8a8070", marginBottom: "28px" }}>How to reach you.</p>
-            <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "28px" }}>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
+            <h1 style={stepHeaderStyle}>Last <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>step.</em></h1>
+            <p style={stepDeckStyle}>How to reach you.</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: "14px", marginBottom: "28px" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px" }}>
                 <input required style={inputStyle} placeholder="Your name *" value={name} onChange={e => setName(e.target.value)} />
                 <input style={inputStyle} placeholder="Business name" value={business} onChange={e => setBusiness(e.target.value)} />
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px" }}>
                 <input required style={inputStyle} placeholder="Phone number *" value={phone} onChange={e => setPhone(e.target.value)} />
                 <input style={inputStyle} placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
               </div>
-              <textarea style={{ ...inputStyle, resize: "vertical", minHeight: "80px" }} placeholder="Anything else I should know? (tools you use, specific pain points, etc.)" value={notes} onChange={e => setNotes(e.target.value)} />
+              <textarea style={{ ...inputStyle, resize: "vertical", minHeight: "96px" }} placeholder="Anything else I should know? (tools you use, specific pain points, etc.)" value={notes} onChange={e => setNotes(e.target.value)} />
             </div>
 
-            {/* Summary */}
-            <div style={{ padding: "16px 20px", background: "#0e0c0a", border: "1px solid #2e2820", borderRadius: "8px", marginBottom: "24px", fontSize: "13px", color: "#8a8070", lineHeight: 2 }}>
-              <span style={{ color: "#d4af37", fontWeight: 600 }}>Session:</span> {SESSION_TYPES.find(s => s.id === sessionType)?.label} · {FORMAT.find(f => f.id === format)?.label}
-              {groupSize && <> · {groupSize}</>} · {datePreference}
+            {/* Summary card with brass corners */}
+            <div className="pv-card" style={{ padding: "18px 22px", marginBottom: "24px" }}>
+              <span className="b3"></span><span className="b4"></span>
+              <div className="pv-mono-label" style={{ marginBottom: "8px" }}>Your booking</div>
+              <div className="pv-italic" style={{ fontSize: "15px", color: "var(--color-warm-text)", opacity: 0.92, lineHeight: 1.6 }}>
+                <strong style={{ fontFamily: "'Cinzel', Georgia, serif", fontStyle: "normal", color: "var(--color-warm-accent)" }}>{SESSION_TYPES.find(s => s.id === sessionType)?.label}</strong>
+                {" · "}{FORMAT.find(f => f.id === format)?.label}
+                {groupSize && <> · {groupSize}</>}
+                {" · "}{datePreference}
+              </div>
             </div>
 
             <div style={{ display: "flex", gap: "10px" }}>
-              <button onClick={() => setStep(2)} style={{ padding: "13px 20px", background: "none", border: "1px solid #2e2820", color: "#8a8070", fontWeight: 600, fontSize: "14px", borderRadius: "6px", cursor: "pointer", fontFamily: "Inter, sans-serif" }}>← Back</button>
-              <button onClick={handleSubmit} disabled={!step3Done} style={{
-                padding: "13px 28px", background: step3Done ? "#d4af37" : "#1a1714",
-                color: step3Done ? "#0c0a08" : "#3a3530", fontWeight: 700, fontSize: "14px",
-                border: "none", borderRadius: "6px", cursor: step3Done ? "pointer" : "not-allowed", fontFamily: "Inter, sans-serif", flex: 1,
-              }}>Request Booking →</button>
+              <button onClick={() => setStep(2)} className="pv-btn-ghost">← Back</button>
+              <button onClick={handleSubmit} disabled={!step3Done}
+                className={step3Done ? "pv-btn-primary" : ""}
+                style={step3Done ? { flex: 1 } : {
+                  flex: 1, padding: "13px 32px", background: "#1a1714",
+                  color: "#3a3530", fontWeight: 700, fontSize: "11px",
+                  border: "none", borderRadius: 0, cursor: "not-allowed",
+                  fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                  letterSpacing: "0.28em", textTransform: "uppercase",
+                }}
+              >
+                Request booking →
+              </button>
             </div>
           </div>
         )}
