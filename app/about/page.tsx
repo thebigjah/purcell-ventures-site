@@ -2,6 +2,14 @@
 
 import { useState } from "react";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
+import { PanopticonMark } from "@/app/components/PanopticonMark";
+
+const LAMPSTAND_MARK = {
+  cellStyle: "outlined" as const,
+  pvSize: 70, pvClearR: 58,
+  ringStart: 70, ringEnd: 116,
+  numRings: 7, ringFadeToCenter: true,
+};
 
 const DIVISIONS = [
   {
@@ -189,6 +197,37 @@ function MarkTab() {
   return (
     <div>
       <SectionHead roman="§" title="The Mark" em="an inverse panopticon" />
+
+      {/* The actual mark, rendered large */}
+      <div style={{
+        display: "flex",
+        alignItems: "center", justifyContent: "center",
+        padding: "32px 0 8px",
+        marginBottom: "16px",
+      }}>
+        <div style={{
+          padding: "32px",
+          border: "1px solid var(--color-warm-border)",
+          background: "rgba(20, 18, 16, 0.4)",
+          position: "relative",
+        }}>
+          <span style={{ position: "absolute", top: 8, left: 8, width: 16, height: 16, borderTop: "1.5px solid var(--color-warm-accent)", borderLeft: "1.5px solid var(--color-warm-accent)", display: "block" }} />
+          <span style={{ position: "absolute", top: 8, right: 8, width: 16, height: 16, borderTop: "1.5px solid var(--color-warm-accent)", borderRight: "1.5px solid var(--color-warm-accent)", display: "block" }} />
+          <span style={{ position: "absolute", bottom: 8, left: 8, width: 16, height: 16, borderBottom: "1.5px solid var(--color-warm-accent)", borderLeft: "1.5px solid var(--color-warm-accent)", display: "block" }} />
+          <span style={{ position: "absolute", bottom: 8, right: 8, width: 16, height: 16, borderBottom: "1.5px solid var(--color-warm-accent)", borderRight: "1.5px solid var(--color-warm-accent)", display: "block" }} />
+          <PanopticonMark size={240} color="var(--color-warm-accent)" bg="transparent" cfg={LAMPSTAND_MARK} />
+        </div>
+      </div>
+      <div style={{
+        textAlign: "center",
+        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+        fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
+        color: "var(--color-warm-text-light)",
+        marginBottom: "40px",
+      }}>
+        Fig. I · The Purcell mark · Lampstand cfg
+      </div>
+
       <p style={prose}>
         The Purcell Ventures mark is built on a deliberate inversion of Jeremy Bentham&apos;s panopticon — a prison design from 1791 where a single guard in a central tower could surveil every prisoner without them knowing when they were being watched. The uncertainty alone produced compliance. Michel Foucault later argued it wasn&apos;t just a prison design. It was the operating model of modern power: institutions exert control through the possibility of observation. You regulate yourself because you might be watched. The watcher stays hidden. The watched stays exposed.
       </p>
