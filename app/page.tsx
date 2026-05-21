@@ -71,7 +71,7 @@ const DIVISIONS: Division[] = [
     specs: [
       { label: "Status",   value: "Accepting" },
       { label: "From",     value: "$99 / mo" },
-      { label: "Setup",    value: "$300 – $500", muted: true },
+      { label: "Setup",    value: "$400 – $1,000", muted: true },
       { label: "Reach",    value: "Nationwide",  muted: true },
     ],
   },
@@ -86,7 +86,7 @@ const DIVISIONS: Division[] = [
     span: "span-5",
     specs: [
       { label: "Status",   value: "Accepting" },
-      { label: "From",     value: "$100 / hr" },
+      { label: "From",     value: "$125 / person" },
       { label: "Format",   value: "On-site / Virtual", muted: true },
       { label: "Minimum",  value: "2 hr",              muted: true },
     ],
@@ -102,7 +102,7 @@ const DIVISIONS: Division[] = [
     span: "span-6",
     specs: [
       { label: "Status",    value: "Accepting" },
-      { label: "From",      value: "$500 build" },
+      { label: "From",      value: "$1,500 build" },
       { label: "Portfolio", value: "7 shipped",        muted: true },
       { label: "Scope",     value: "Web / Mobile / AI", muted: true },
     ],
