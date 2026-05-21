@@ -187,6 +187,13 @@ h1, h2, h3 {
   }
   .pv-phi-field svg { opacity: 0.30; animation: pv-phi-fade-mobile 1.4s ease-out; }
   .pv-section-divider { display: block; }
+
+  .pv-section-head { gap: 14px !important; padding: 32px 0 16px !important; }
+  .pv-section-head .roman { font-size: 32px !important; }
+  .pv-section-head h2 { font-size: 18px !important; letter-spacing: 0.04em !important; }
+
+  .pv-page-head h1 { font-size: clamp(34px, 9vw, 60px) !important; letter-spacing: 0.005em !important; }
+  .pv-page-head .deck { font-size: 16px !important; }
 }
 
 @keyframes pv-phi-fade-mobile {
