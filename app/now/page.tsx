@@ -46,10 +46,9 @@ const FOCUS = [
     roman: "V.",
     label: "Reading",
     items: [
-      "Mere Christianity — C.S. Lewis. Annual re-read.",
-      "Tactics — Greg Koukl. Worldview discussions on campus and at home.",
+      "Lewis, Craig, McDowell, Tozer — slow reads, marked margins.",
       "The Bible — daily, no streak required.",
-      "Anything Annie Duke writes — Thinking in Bets is the operating posture.",
+      "Annie Duke and the decision-making canon — Thinking in Bets shaped how I run a calibration journal.",
     ],
   },
   {
