@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s | Purcell Ventures",
   },
   description:
-    "Georgia-based company offering complete digital services, hands-on AI consulting, and custom software development. Founded by Elijah Purcell.",
+    "Built by one operator for the small businesses who move first. Digital services from $99/mo, hands-on AI consulting, custom software. Founded by Elijah Purcell in Acworth, Georgia.",
   keywords: [
     "AI consulting", "digital services for small business", "custom software development",
     "business AI training", "website management", "Purcell Ventures", "Elijah Purcell",
@@ -49,13 +49,13 @@ export const metadata: Metadata = {
     siteName: "Purcell Ventures",
     title: "Purcell Ventures | Digital Services, AI Consulting & Custom Software",
     description:
-      "Georgia-based company offering complete digital services, AI consulting, and custom software.",
+      "Built by one operator for the small businesses who move first. Digital services, AI consulting, and custom software.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Purcell Ventures | Digital Services, AI Consulting & Custom Software",
     description:
-      "Georgia-based company offering complete digital services, AI consulting, and custom software.",
+      "Built by one operator for the small businesses who move first. Digital services, AI consulting, and custom software.",
   },
   robots: {
     index: true,
