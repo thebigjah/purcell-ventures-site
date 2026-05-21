@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import ROICalculator from "../components/ROICalculator";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 const MODULES = [
   {
@@ -1491,64 +1490,80 @@ export default function DigitalPage() {
   const [hoveredTool, setHoveredTool] = useState<string | null>(null);
 
   return (
-    <div className="min-h-screen" style={{ background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden" }}>
-      <VignetteBackground />
+    <div className="min-h-screen" style={{ background: "var(--color-warm-bg)" }}>
 
-      {/* ── HERO (page-head + dashboard graphic) ───────────────────── */}
-      <section style={{ position: "relative", zIndex: 5, padding: "72px 36px 60px", maxWidth: "1080px", margin: "0 auto" }}>
-        <header className="pv-page-head" style={{ marginBottom: "0" }}>
-          <div className="pv-mono-label">Division I · Digital Services</div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center" }} className="grid-responsive">
-            <div>
-              <h1 style={{ margin: 0 }}>
-                Your entire online presence.<br />
-                <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Built with you.</em>
-              </h1>
-              <p className="deck">
-                Websites, booking, CRM, chatbots, and more — built around your business, your input, your approval. Starting at $99/month.
-              </p>
-              <div style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
-                <a href="#contact" className="pv-btn-primary">Book a free demo</a>
-                <a href="#pricing" className="pv-btn-ghost">See pricing</a>
-              </div>
-              {/* Stats band */}
-              <div style={{
-                marginTop: "32px",
-                display: "grid",
-                gridTemplateColumns: "repeat(4, 1fr)",
-                gap: 0,
-                border: "1px solid var(--color-warm-border)",
-                background: "var(--color-warm-bg-alt)",
-              }}>
-                {[{ n: "$99", label: "starting/mo" }, { n: "25+", label: "tools" }, { n: "AI", label: "in every tool" }, { n: "24-hr", label: "response" }].map(({ n, label }, i) => (
-                  <div key={label} style={{
-                    padding: "16px 12px",
-                    textAlign: "center",
-                    borderRight: i < 3 ? "1px solid var(--color-warm-border)" : "none",
-                  }}>
-                    <div style={{
-                      fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 700,
-                      color: "var(--color-warm-accent)", letterSpacing: "-0.01em",
-                    }}>
-                      {n}
-                    </div>
-                    <div style={{
-                      fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-                      fontSize: "9px", letterSpacing: "0.28em", textTransform: "uppercase",
-                      color: "var(--color-warm-text-light)", marginTop: "4px",
-                    }}>
-                      {label}
-                    </div>
-                  </div>
-                ))}
-              </div>
+      {/* Navigation */}
+      <nav style={{
+        position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
+        background: "rgba(12,10,8,0.94)", backdropFilter: "blur(12px)",
+        borderBottom: "1px solid var(--color-warm-border)",
+      }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px", height: "60px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+            <a href="/" style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", textDecoration: "none", letterSpacing: "0.04em" }}>← Home</a>
+            <span style={{ color: "var(--color-warm-border-light)" }}>|</span>
+            <a href="/digital" style={{ fontSize: "16px", fontWeight: 700, color: "var(--color-warm-text)", textDecoration: "none", letterSpacing: "0.04em", fontFamily: "'Cinzel', Georgia, serif" }}>
+              Purcell <span style={{ color: "var(--color-warm-accent)" }}>Digital</span>
+            </a>
+          </div>
+          <div style={{ display: "flex", gap: "32px", alignItems: "center" }}>
+            <div style={{ display: "flex", gap: "24px" }} className="hidden-mobile">
+              {[["Services", "services"], ["Pricing", "pricing"], ["Contact", "contact"]].map(([label, id]) => (
+                <a key={id} href={`#${id}`} style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", textDecoration: "none" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-warm-text)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "var(--color-warm-text-muted)")}
+                >{label}</a>
+              ))}
             </div>
-            {/* Graphic */}
-            <div className="hidden-mobile" style={{ position: "relative" }}>
-              <DashboardGraphic />
+            <a href="#contact" style={{ padding: "8px 18px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "13px", fontWeight: 600, borderRadius: "6px", textDecoration: "none" }}>
+              Get Started
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* ── HERO ──────────────────────────────────────────────────── */}
+      <section style={{ padding: "120px 24px 80px", maxWidth: "1100px", margin: "0 auto" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center" }} className="grid-responsive">
+          <div>
+            <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "24px" }}>
+              Purcell Ventures — Digital Services
+            </p>
+            <h1 style={{
+              fontFamily: "'Cinzel', Georgia, serif",
+              fontSize: "clamp(36px, 5.5vw, 72px)", fontWeight: 700,
+              lineHeight: 1.08, letterSpacing: "0.03em",
+              color: "var(--color-warm-text)", marginBottom: "24px",
+            }}>
+              Your entire<br />online presence.<br />
+              <span style={{ color: "var(--color-warm-accent)" }}>Built with you.</span>
+            </h1>
+            <p style={{ fontSize: "17px", color: "var(--color-warm-text-muted)", maxWidth: "460px", lineHeight: 1.75, marginBottom: "36px" }}>
+              Websites, booking, CRM, chatbots, and more — built around your business, your input, your approval. Starting at $99/month.
+            </p>
+            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+              <a href="#contact" style={{ padding: "13px 28px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "14px", fontWeight: 700, borderRadius: "7px", textDecoration: "none" }}>
+                Book a Free Demo
+              </a>
+              <a href="#pricing" style={{ padding: "13px 24px", border: "1px solid var(--color-warm-border)", color: "var(--color-warm-text-muted)", fontSize: "14px", fontWeight: 500, borderRadius: "7px", textDecoration: "none" }}>
+                See Pricing
+              </a>
+            </div>
+            {/* Stats */}
+            <div style={{ display: "flex", gap: "36px", marginTop: "52px", flexWrap: "wrap", borderTop: "1px solid var(--color-warm-border)", paddingTop: "32px" }}>
+              {[{ n: "$75", label: "starting/mo" }, { n: "25+", label: "tools" }, { n: "AI", label: "in every tool" }, { n: "24hr", label: "response" }].map(({ n, label }) => (
+                <div key={label}>
+                  <div style={{ fontSize: "24px", fontWeight: 800, color: "var(--color-warm-text)", letterSpacing: "-0.02em", fontFamily: "'Cinzel', Georgia, serif" }}>{n}</div>
+                  <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", marginTop: "2px" }}>{label}</div>
+                </div>
+              ))}
             </div>
           </div>
-        </header>
+          {/* Graphic */}
+          <div className="hidden-mobile" style={{ position: "relative" }}>
+            <DashboardGraphic />
+          </div>
+        </div>
       </section>
 
       {/* ── SERVICES ──────────────────────────────────────────────── */}

@@ -1,3 +1,6 @@
+"use client";
+import { VignetteBackground } from "@/app/components/VignetteBackground";
+
 const PROJECTS = [
   {
     name: "Pulse",
@@ -43,25 +46,25 @@ const PROJECTS = [
 
 const SERVICES = [
   {
-    icon: "📱",
+    roman: "i.",
     title: "Mobile Apps",
     desc: "iOS and Android apps built with React Native or Expo. From idea to app store — design, development, and deployment.",
     examples: ["Social apps", "Business tools", "Games", "AI-powered apps"],
   },
   {
-    icon: "🌐",
+    roman: "ii.",
     title: "Web Applications",
     desc: "Full-stack web apps built with Next.js. Fast, modern, and ready to scale. Landing pages to full SaaS platforms.",
     examples: ["Business platforms", "Dashboards", "E-commerce", "APIs"],
   },
   {
-    icon: "🤖",
+    roman: "iii.",
     title: "AI Integration",
     desc: "Bring AI into your product — chatbots, content generation, voice interfaces, recommendation engines, and automation.",
     examples: ["AI chatbots", "Content pipelines", "Voice tools", "Smart automation"],
   },
   {
-    icon: "⚙️",
+    roman: "iv.",
     title: "Automation & Tools",
     desc: "Custom tools, scripts, and pipelines that save time and cut manual work. Chrome extensions, schedulers, data processors.",
     examples: ["Chrome extensions", "Batch processors", "Scrapers", "Schedulers"],
@@ -69,157 +72,242 @@ const SERVICES = [
 ];
 
 const PROCESS = [
-  { step: "01", title: "Discovery Call", desc: "30 minutes. You explain the problem. I ask questions and tell you honestly what it takes to build." },
-  { step: "02", title: "Scoped Proposal", desc: "I send a written breakdown — what gets built, what it costs, what the timeline looks like. No surprises." },
-  { step: "03", title: "Build", desc: "You get updates throughout. I use Claude to move fast without cutting corners on quality." },
+  { step: "01", title: "Discovery Call",   desc: "30 minutes. You explain the problem. I ask questions and tell you honestly what it takes to build." },
+  { step: "02", title: "Scoped Proposal",  desc: "I send a written breakdown — what gets built, what it costs, what the timeline looks like. No surprises." },
+  { step: "03", title: "Build",            desc: "You get updates throughout. I use Claude to move fast without cutting corners on quality." },
   { step: "04", title: "Launch + Support", desc: "Deploy, test, ship. I stay available for fixes and follow-on work after launch." },
 ];
 
 export default function SoftwarePage() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", fontFamily: "Inter, sans-serif" }}>
+    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden" }}>
+      <VignetteBackground />
 
-      {/* Nav */}
-      <nav style={{ padding: "0 32px", height: "60px", display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: "1px solid var(--color-warm-border)" }}>
-        <a href="/" style={{ fontSize: "17px", fontWeight: 700, color: "var(--color-warm-text)", letterSpacing: "-0.01em", textDecoration: "none" }}>
-          Purcell <span style={{ color: "var(--color-warm-accent)" }}>Ventures</span>
-        </a>
-        <a href="tel:+17702805319" style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", textDecoration: "none" }}>
-          (770) 280-5319
-        </a>
-      </nav>
+      <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-      {/* Hero */}
-      <section style={{ padding: "96px 32px 80px", maxWidth: "960px", margin: "0 auto" }}>
-        <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "24px" }}>
-          Custom Software Development
-        </p>
-        <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(40px, 7vw, 80px)", fontWeight: 700, lineHeight: 1.05, letterSpacing: "-0.02em", color: "var(--color-warm-text)", marginBottom: "28px" }}>
-          Software built for<br />
-          <span style={{ color: "var(--color-warm-accent)" }}>your actual problem.</span>
-        </h1>
-        <p style={{ fontSize: "18px", color: "var(--color-warm-text-muted)", maxWidth: "520px", lineHeight: 1.75, marginBottom: "40px" }}>
-          I build mobile apps, web platforms, and AI-powered tools. Fast turnaround, transparent pricing, and I stay involved after launch.
-        </p>
-        <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-          <a href="mailto:elijah@purcell-ventures.com?subject=Software Project Inquiry" style={{ padding: "14px 28px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "14px", fontWeight: 700, borderRadius: "6px", textDecoration: "none" }}>
-            Start a Project
-          </a>
-          <a href="#work" style={{ padding: "14px 28px", background: "none", border: "1px solid var(--color-warm-border)", color: "var(--color-warm-text-muted)", fontSize: "14px", fontWeight: 600, borderRadius: "6px", textDecoration: "none" }}>
-            See My Work
-          </a>
-        </div>
-      </section>
+        {/* Editorial page head */}
+        <header className="pv-page-head">
+          <div className="pv-mono-label">Division III · Custom Software</div>
+          <h1>
+            Software built for <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>your actual problem.</em>
+          </h1>
+          <p className="deck">
+            Mobile apps, web platforms, and AI-powered tools. Fast turnaround, transparent pricing, and I stay involved after launch.
+          </p>
+          <div style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
+            <a className="pv-btn-primary" href="mailto:elijah@purcell-ventures.com?subject=Software Project Inquiry">
+              Start a project
+            </a>
+            <a className="pv-btn-ghost" href="#work">See my work</a>
+          </div>
+        </header>
 
-      {/* Services */}
-      <section style={{ padding: "0 32px 80px", maxWidth: "960px", margin: "0 auto" }}>
-        <h2 style={{ fontSize: "13px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-text-muted)", marginBottom: "32px" }}>
-          What I Build
-        </h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1px", background: "var(--color-warm-border)" }}>
+        {/* Services */}
+        <header className="pv-section-head">
+          <span className="roman">I.</span>
+          <h2>What I build</h2>
+        </header>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px", marginBottom: "64px" }}>
           {SERVICES.map((s) => (
-            <div key={s.title} style={{ background: "var(--color-warm-bg)", padding: "28px 24px" }}>
-              <div style={{ fontSize: "28px", marginBottom: "14px" }}>{s.icon}</div>
-              <div style={{ fontSize: "16px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "10px" }}>{s.title}</div>
-              <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.65, marginBottom: "16px" }}>{s.desc}</p>
+            <div key={s.title} className="pv-card" style={{ padding: "28px 28px 24px" }}>
+              <span className="b3"></span><span className="b4"></span>
+              <div style={{ display: "flex", alignItems: "baseline", gap: "14px", marginBottom: "10px" }}>
+                <span className="pv-italic" style={{ fontSize: "22px", color: "var(--color-warm-accent)", lineHeight: 1 }}>{s.roman}</span>
+                <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, letterSpacing: "0.02em", color: "var(--color-warm-text)", textTransform: "uppercase", lineHeight: 1.1, margin: 0 }}>
+                  {s.title}
+                </h3>
+              </div>
+              <p className="pv-italic" style={{ fontSize: "15.5px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.55, marginBottom: "16px" }}>
+                {s.desc}
+              </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
-                {s.examples.map(e => (
-                  <span key={e} style={{ fontSize: "11px", padding: "3px 8px", background: "var(--color-warm-card)", border: "1px solid var(--color-warm-border)", borderRadius: "3px", color: "var(--color-warm-text-muted)" }}>{e}</span>
+                {s.examples.map((e) => (
+                  <span key={e} style={{
+                    fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                    fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase",
+                    padding: "4px 10px",
+                    border: "1px solid var(--color-warm-border)",
+                    color: "var(--color-warm-text-muted)",
+                  }}>
+                    {e}
+                  </span>
                 ))}
               </div>
             </div>
           ))}
         </div>
-      </section>
 
-      {/* Portfolio */}
-      <section id="work" style={{ padding: "0 32px 80px", maxWidth: "960px", margin: "0 auto" }}>
-        <h2 style={{ fontSize: "13px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-text-muted)", marginBottom: "32px" }}>
-          Recent Work
-        </h2>
-        <div style={{ display: "flex", flexDirection: "column", gap: "1px", background: "var(--color-warm-border)" }}>
+        {/* Portfolio */}
+        <header className="pv-section-head" id="work">
+          <span className="roman">II.</span>
+          <h2>Recent <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>work</em></h2>
+        </header>
+        <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "64px" }}>
           {PROJECTS.map((p) => (
-            <div key={p.name} style={{ background: "var(--color-warm-bg)", padding: "28px 32px", display: "grid", gridTemplateColumns: "1fr auto", gap: "24px", alignItems: "start" }}>
+            <div key={p.name} className="pv-card" style={{
+              display: "grid", gridTemplateColumns: "1fr auto",
+              gap: "24px", alignItems: "start",
+              padding: "32px 32px 26px",
+            }}>
+              <span className="b3"></span><span className="b4"></span>
               <div>
-                <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "8px" }}>
-                  <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: "var(--color-warm-text)" }}>{p.name}</span>
-                  <span style={{ fontSize: "11px", color: "var(--color-warm-text-muted)", background: "var(--color-warm-card)", padding: "2px 8px", borderRadius: "3px", border: "1px solid var(--color-warm-border)" }}>{p.type}</span>
+                <div style={{ display: "flex", alignItems: "baseline", gap: "14px", marginBottom: "10px", flexWrap: "wrap" }}>
+                  <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, letterSpacing: "0.02em", color: "var(--color-warm-text)" }}>
+                    {p.name}
+                  </span>
+                  <span style={{
+                    fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                    fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase",
+                    padding: "3px 10px", border: "1.5px solid var(--color-warm-border)",
+                    color: "var(--color-warm-text-muted)",
+                  }}>
+                    {p.type}
+                  </span>
                 </div>
-                <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.65, marginBottom: "14px", maxWidth: "560px" }}>{p.desc}</p>
+                <p className="pv-italic" style={{ fontSize: "15.5px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.55, marginBottom: "14px", maxWidth: "640px" }}>
+                  {p.desc}
+                </p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
                   {p.tags.map(t => (
-                    <span key={t} style={{ fontSize: "11px", padding: "3px 8px", background: `var(--color-warm-accent)12`, border: "1px solid var(--color-warm-accent)30", borderRadius: "3px", color: "var(--color-warm-accent)" }}>{t}</span>
+                    <span key={t} style={{
+                      fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                      fontSize: "9.5px", letterSpacing: "0.18em", textTransform: "uppercase",
+                      padding: "3px 8px",
+                      border: "1px solid var(--color-warm-accent)",
+                      color: "var(--color-warm-accent)",
+                      opacity: 0.85,
+                    }}>
+                      {t}
+                    </span>
                   ))}
                 </div>
               </div>
               <div style={{ textAlign: "right" }}>
-                <span style={{ fontSize: "11px", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: p.status === "live" ? "var(--color-warm-accent)" : "var(--color-warm-text-light)", display: "flex", alignItems: "center", gap: "5px", justifyContent: "flex-end" }}>
-                  {p.status === "live" && <span style={{ width: "5px", height: "5px", borderRadius: "50%", background: "var(--color-warm-accent)", display: "inline-block" }} />}
+                <span style={{
+                  fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                  fontSize: "10px", fontWeight: 700,
+                  letterSpacing: "0.24em", textTransform: "uppercase",
+                  color: p.status === "live" ? "var(--color-warm-accent)" : "var(--color-warm-text-light)",
+                  display: "inline-flex", alignItems: "center", gap: "8px",
+                }}>
+                  {p.status === "live" && <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--color-warm-accent)", display: "inline-block" }} />}
                   {p.label}
                 </span>
               </div>
             </div>
           ))}
         </div>
-      </section>
 
-      {/* Process */}
-      <section style={{ padding: "0 32px 80px", maxWidth: "960px", margin: "0 auto" }}>
-        <h2 style={{ fontSize: "13px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-text-muted)", marginBottom: "32px" }}>
-          How It Works
-        </h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1px", background: "var(--color-warm-border)" }}>
+        {/* Process */}
+        <header className="pv-section-head">
+          <span className="roman">III.</span>
+          <h2>How it <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>works</em></h2>
+        </header>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "12px", marginBottom: "64px" }}>
           {PROCESS.map((p) => (
-            <div key={p.step} style={{ background: "var(--color-warm-bg)", padding: "28px 24px" }}>
-              <div style={{ fontSize: "32px", fontWeight: 800, color: "var(--color-warm-border)", fontFamily: "'Cinzel', Georgia, serif", marginBottom: "14px", lineHeight: 1 }}>{p.step}</div>
-              <div style={{ fontSize: "15px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "10px" }}>{p.title}</div>
-              <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.65 }}>{p.desc}</p>
+            <div key={p.step} className="pv-card" style={{ padding: "28px 24px 24px" }}>
+              <span className="b3"></span><span className="b4"></span>
+              <div style={{
+                fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700,
+                fontSize: "44px", color: "var(--color-warm-accent)",
+                lineHeight: 1, marginBottom: "16px",
+                letterSpacing: "-0.02em",
+              }}>
+                {p.step}
+              </div>
+              <h4 style={{
+                fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
+                fontSize: "16px", letterSpacing: "0.02em",
+                color: "var(--color-warm-text)", textTransform: "uppercase",
+                marginBottom: "10px", lineHeight: 1.15, margin: "0 0 10px",
+              }}>
+                {p.title}
+              </h4>
+              <p className="pv-italic" style={{ fontSize: "14.5px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.55, margin: 0 }}>
+                {p.desc}
+              </p>
             </div>
           ))}
         </div>
-      </section>
 
-      {/* Pricing */}
-      <section style={{ padding: "0 32px 80px", maxWidth: "960px", margin: "0 auto" }}>
-        <div style={{ background: "var(--color-warm-card)", border: "1px solid var(--color-warm-border)", borderRadius: "12px", padding: "40px 40px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "32px" }}>
-          <div>
-            <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px" }}>Small Projects</div>
-            <div style={{ fontSize: "28px", fontWeight: 800, color: "var(--color-warm-text)", marginBottom: "8px" }}>$1,500–3,500</div>
-            <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>Landing pages, Chrome extensions, small tools, automation scripts.</p>
-          </div>
-          <div>
-            <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px" }}>Full Apps</div>
-            <div style={{ fontSize: "28px", fontWeight: 800, color: "var(--color-warm-text)", marginBottom: "8px" }}>$5,000–15,000</div>
-            <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>Mobile apps, web platforms, AI-powered tools, full-stack applications.</p>
-          </div>
-          <div>
-            <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px" }}>Ongoing</div>
-            <div style={{ fontSize: "28px", fontWeight: 800, color: "var(--color-warm-text)", marginBottom: "8px" }}>Custom</div>
-            <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>Retainer-based work, long-term projects, feature development over time.</p>
-          </div>
+        {/* Pricing */}
+        <header className="pv-section-head">
+          <span className="roman">IV.</span>
+          <h2>Pricing <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>tiers</em></h2>
+        </header>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }}>
+          {[
+            { tier: "Small projects", price: "$1,500 – 3,500", desc: "Landing pages, Chrome extensions, small tools, automation scripts." },
+            { tier: "Full apps",      price: "$5,000 – 15,000", desc: "Mobile apps, web platforms, AI-powered tools, full-stack applications." },
+            { tier: "Ongoing",        price: "Custom",          desc: "Retainer-based work, long-term projects, feature development over time." },
+          ].map(t => (
+            <div key={t.tier} className="pv-card" style={{ padding: "32px 28px" }}>
+              <span className="b3"></span><span className="b4"></span>
+              <div className="pv-mono-label" style={{ marginBottom: "12px" }}>{t.tier}</div>
+              <div style={{
+                fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700,
+                fontSize: "28px", color: "var(--color-warm-text)",
+                letterSpacing: "-0.01em", marginBottom: "12px",
+              }}>
+                {t.price}
+              </div>
+              <p className="pv-italic" style={{ fontSize: "14.5px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.55, margin: 0 }}>
+                {t.desc}
+              </p>
+            </div>
+          ))}
         </div>
-        <p style={{ fontSize: "13px", color: "var(--color-warm-text-light)", marginTop: "16px", textAlign: "center" }}>
+        <p className="pv-italic" style={{ fontSize: "14px", color: "var(--color-warm-text-light)", marginTop: "20px", textAlign: "center" }}>
           All projects start with a free 30-minute discovery call. No obligation.
         </p>
-      </section>
 
-      {/* CTA */}
-      <section style={{ padding: "0 32px 96px", maxWidth: "960px", margin: "0 auto", textAlign: "center" }}>
-        <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(28px, 5vw, 52px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "20px" }}>
-          Have a project in mind?
-        </h2>
-        <p style={{ fontSize: "16px", color: "var(--color-warm-text-muted)", marginBottom: "32px" }}>
-          Tell me what you're trying to build. I'll tell you if I can help and what it takes.
-        </p>
-        <a href="mailto:elijah@purcell-ventures.com?subject=Software Project Inquiry" style={{ padding: "16px 36px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "15px", fontWeight: 700, borderRadius: "6px", textDecoration: "none" }}>
-          Email Elijah →
-        </a>
-      </section>
+        {/* CTA */}
+        <section style={{
+          marginTop: "80px",
+          padding: "56px 36px",
+          borderTop: "1px solid var(--color-warm-border)",
+          borderBottom: "1px solid var(--color-warm-border)",
+          textAlign: "center",
+        }}>
+          <div style={{
+            fontFamily: "'Cinzel', Georgia, serif", color: "var(--color-warm-accent)",
+            fontSize: "14px", letterSpacing: "0.6em", marginBottom: "20px", opacity: 0.7,
+          }}>
+            ✦
+          </div>
+          <h2 style={{
+            fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
+            fontSize: "clamp(26px, 4vw, 44px)", letterSpacing: "0.02em",
+            color: "var(--color-warm-text)", textTransform: "uppercase",
+            marginBottom: "16px", lineHeight: 1.15,
+          }}>
+            Have a project <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>in mind?</em>
+          </h2>
+          <p className="pv-italic" style={{
+            fontSize: "18px", color: "var(--color-warm-text)", opacity: 0.85,
+            maxWidth: "560px", margin: "0 auto 32px", lineHeight: 1.55,
+          }}>
+            Tell me what you&apos;re trying to build. I&apos;ll tell you if I can help and what it takes.
+          </p>
+          <a className="pv-btn-primary" href="mailto:elijah@purcell-ventures.com?subject=Software Project Inquiry">
+            Email Elijah →
+          </a>
+        </section>
 
-      {/* Footer */}
-      <footer style={{ padding: "24px 32px", borderTop: "1px solid var(--color-warm-border)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
-        <span style={{ fontSize: "13px", color: "var(--color-warm-text-light)" }}>© {new Date().getFullYear()} Purcell Ventures LLC</span>
-        <a href="/" style={{ fontSize: "13px", color: "var(--color-warm-text-light)", textDecoration: "none" }}>← All Divisions</a>
+      </main>
+
+      <footer style={{
+        position: "relative", zIndex: 5,
+        padding: "24px 36px",
+        borderTop: "1px solid var(--color-warm-border)",
+        display: "flex", justifyContent: "space-between", alignItems: "center",
+        flexWrap: "wrap", gap: "12px",
+        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+        fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
+        color: "var(--color-warm-text-light)",
+      }}>
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
+        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← All divisions</a>
       </footer>
     </div>
   );
