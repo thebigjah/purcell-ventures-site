@@ -39,60 +39,90 @@ export default function SiteNav() {
 
   return (
     <>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .pv-nav-links { display: flex; }
         .pv-nav-contact { display: flex; }
         .pv-nav-hamburger { display: none; }
+        .pv-nav-link { transition: color 0.15s; }
+        .pv-nav-link:hover { color: ${CREAM} !important; }
         @media (max-width: 767px) {
           .pv-nav-links { display: none; }
           .pv-nav-contact { display: none; }
           .pv-nav-hamburger { display: flex; }
         }
-      `}</style>
+      ` }} />
 
-      <header style={{ position: "sticky", top: 0, zIndex: 100, background: DARK, borderBottom: `1px solid ${EMBER}` }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", height: "58px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+      <header style={{
+        position: "sticky", top: 0, zIndex: 100,
+        background: "rgba(12, 10, 8, 0.92)",
+        backdropFilter: "blur(12px)",
+        WebkitBackdropFilter: "blur(12px)",
+        borderBottom: `1px solid ${EMBER}`,
+      }}>
+        {/* Brass hairline rule */}
+        <div style={{ height: "1px", background: GOLD, opacity: 0.35 }} />
 
-          {/* Wordmark */}
-          <Link href="/" onClick={() => setOpen(false)} style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none", flexShrink: 0 }}>
-            <PanopticonMark size={34} color={GOLD} bg={DARK} cfg={LAMPSTAND} />
-            <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "13px", fontWeight: 700, color: CREAM, letterSpacing: "0.12em" }}>
-              PURCELL VENTURES
+        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", height: "62px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+
+          {/* Wordmark — Cinzel with proper letter-spacing */}
+          <Link href="/" onClick={() => setOpen(false)} style={{
+            display: "flex", alignItems: "center", gap: "12px",
+            textDecoration: "none", flexShrink: 0,
+          }}>
+            <PanopticonMark size={32} color={GOLD} bg="transparent" cfg={LAMPSTAND} />
+            <span style={{
+              fontFamily: "'Cinzel', Georgia, serif",
+              fontSize: "13px", fontWeight: 700,
+              color: CREAM, letterSpacing: "0.32em",
+              paddingLeft: "0.32em",
+            }}>
+              PURCELL · VENTURES
             </span>
           </Link>
 
-          {/* Desktop links */}
-          <nav className="pv-nav-links" style={{ alignItems: "center", gap: "2px" }}>
+          {/* Desktop links — mono small-caps */}
+          <nav className="pv-nav-links" style={{ alignItems: "center", gap: "4px" }}>
             {LINKS.map(link => (
-              <Link key={link.href} href={link.href} style={{
+              <Link key={link.href} href={link.href} className="pv-nav-link" style={{
                 padding: "7px 14px",
-                fontSize: "13px",
-                fontWeight: isActive(link.href) ? 600 : 400,
+                fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                fontSize: "10.5px",
+                fontWeight: isActive(link.href) ? 700 : 500,
                 color: isActive(link.href) ? GOLD : ASH,
                 textDecoration: "none",
-                letterSpacing: "0.04em",
-                fontFamily: "var(--font-inter), sans-serif",
-                borderRadius: 4,
-                transition: "color 0.15s",
+                letterSpacing: "0.24em",
+                textTransform: "uppercase",
+                borderRadius: 0,
+                position: "relative",
               }}>
                 {link.label}
+                {isActive(link.href) && (
+                  <span style={{
+                    position: "absolute", left: "14px", right: "14px", bottom: "-2px",
+                    height: "1px", background: GOLD,
+                  }} />
+                )}
               </Link>
             ))}
           </nav>
 
-          {/* Desktop CTA */}
+          {/* Desktop CTA — pv-btn-ghost style */}
           <div className="pv-nav-contact" style={{ alignItems: "center" }}>
             <Link href="/about#contact" style={{
-              padding: "7px 18px",
-              fontSize: "12px",
-              fontWeight: 700,
+              padding: "8px 16px",
+              fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+              fontSize: "10.5px", fontWeight: 700,
               color: GOLD,
-              border: `1px solid ${GOLD}`,
-              borderRadius: 4,
+              border: `1.5px solid ${GOLD}`,
+              borderRadius: 0,
               textDecoration: "none",
-              letterSpacing: "0.07em",
-              fontFamily: "var(--font-inter), sans-serif",
-            }}>
+              letterSpacing: "0.24em",
+              textTransform: "uppercase",
+              transition: "background 0.12s, color 0.12s",
+            }}
+              onMouseEnter={e => { e.currentTarget.style.background = GOLD; e.currentTarget.style.color = DARK; }}
+              onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = GOLD; }}
+            >
               Contact
             </Link>
           </div>
@@ -118,34 +148,35 @@ export default function SiteNav() {
 
         {/* Mobile menu */}
         {open && (
-          <div style={{ borderTop: `1px solid ${EMBER}`, background: DARK, padding: "12px 0 20px" }}>
+          <div style={{ borderTop: `1px solid ${EMBER}`, background: DARK, padding: "16px 0 24px" }}>
             {LINKS.map(link => (
               <Link key={link.href} href={link.href} onClick={() => setOpen(false)} style={{
                 display: "block",
-                padding: "12px 28px",
-                fontSize: "15px",
-                fontWeight: isActive(link.href) ? 600 : 400,
+                padding: "14px 28px",
+                fontFamily: "'Cinzel', Georgia, serif",
+                fontSize: "14px",
+                fontWeight: isActive(link.href) ? 700 : 500,
                 color: isActive(link.href) ? GOLD : CREAM,
                 textDecoration: "none",
-                letterSpacing: "0.04em",
-                fontFamily: "var(--font-inter), sans-serif",
-                borderLeft: isActive(link.href) ? `2px solid ${GOLD}` : "2px solid transparent",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                borderLeft: isActive(link.href) ? `3px solid ${GOLD}` : "3px solid transparent",
               }}>
                 {link.label}
               </Link>
             ))}
-            <div style={{ padding: "16px 28px 0" }}>
+            <div style={{ padding: "20px 28px 0" }}>
               <Link href="/about#contact" onClick={() => setOpen(false)} style={{
                 display: "inline-block",
-                padding: "9px 22px",
-                fontSize: "13px",
-                fontWeight: 700,
+                padding: "10px 22px",
+                fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                fontSize: "10.5px", fontWeight: 700,
                 color: GOLD,
-                border: `1px solid ${GOLD}`,
-                borderRadius: 4,
+                border: `1.5px solid ${GOLD}`,
+                borderRadius: 0,
                 textDecoration: "none",
-                letterSpacing: "0.07em",
-                fontFamily: "var(--font-inter), sans-serif",
+                letterSpacing: "0.24em",
+                textTransform: "uppercase",
               }}>
                 Contact
               </Link>
