@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "AI Consulting & Team Training | Hands-On Workshops for Business Teams",
   description:
-    "Hands-on AI training for business teams in Metro Atlanta and beyond. 1-on-1 ($100/hr), small group ($55/person), or workshop ($40/person). I come to you. Real tools, same-day results.",
+    "Hands-on AI training for business teams in Metro Atlanta and beyond. 1-on-1 ($175/hr), small group ($125/person), or half-day workshop ($2,500 flat up to 20 people). I come to you. Real tools, same-day results.",
   keywords: [
     "AI consulting for business", "AI training workshop", "ChatGPT for business training",
     "AI consulting Atlanta Georgia", "hands-on AI training", "business AI workshop",
@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI Consulting & Team Training — Purcell Ventures",
     description:
-      "Hands-on AI training for business teams. 1-on-1, small group, or workshop. I come to you. Starting at $40/person.",
+      "Hands-on AI training for business teams. 1-on-1, small group, or half-day workshop. I come to you. Starting at $125/person.",
     url: "https://purcellventures.co/consulting",
     type: "website",
   },
   twitter: {
     title: "AI Consulting — Purcell Ventures",
-    description: "Hands-on AI training for business teams. Starting at $40/person. I come to you.",
+    description: "Hands-on AI training for business teams. Starting at $125/person. I come to you.",
   },
   alternates: { canonical: "https://purcellventures.co/consulting" },
 };
@@ -43,12 +43,12 @@ const schema = {
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "USD",
-        "lowPrice": "40",
-        "highPrice": "100",
+        "lowPrice": "125",
+        "highPrice": "2500",
         "offers": [
-          { "@type": "Offer", "name": "1-on-1 Session", "price": "100", "priceCurrency": "USD", "unitText": "per hour" },
-          { "@type": "Offer", "name": "Small Group Session", "price": "55", "priceCurrency": "USD", "unitText": "per person" },
-          { "@type": "Offer", "name": "Workshop", "price": "40", "priceCurrency": "USD", "unitText": "per person" },
+          { "@type": "Offer", "name": "1-on-1 Session", "price": "175", "priceCurrency": "USD", "unitText": "per hour" },
+          { "@type": "Offer", "name": "Small Group Session", "price": "125", "priceCurrency": "USD", "unitText": "per person" },
+          { "@type": "Offer", "name": "Workshop", "price": "2500", "priceCurrency": "USD", "unitText": "half-day flat (up to 20 people)" },
         ],
       },
     },
@@ -84,7 +84,7 @@ const schema = {
           "name": "How much does AI consulting cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "1-on-1 sessions are $100/hr. Small group sessions are $55/person. Workshops are $40/person. Five session types available: AI Basics, ChatGPT Workflow, AI for Marketing, Automation, and Custom.",
+            "text": "1-on-1 sessions are $175/hr (2-hr minimum recommended). Small group sessions are $125/person (2-8 people, 2-hr minimum). Workshops are $2,500 flat for up to 20 people, half-day. Corporate / multi-session engagements are quoted custom. Five session types available: AI Basics, ChatGPT Workflow, AI for Marketing, Automation, and Custom.",
           },
         },
         {

@@ -397,7 +397,7 @@ function RackCardFront() {
         {/* Price */}
         <div style={{ marginBottom: "14px" }}>
           <div style={{ fontSize: "8.5px", color: "#524d45", letterSpacing: "0.12em", textTransform: "uppercase", fontFamily: "Inter, sans-serif" }}>Starting at</div>
-          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 700, color: "#d4af37", marginTop: "2px" }}>$75 / mo</div>
+          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 700, color: "#d4af37", marginTop: "2px" }}>$99 / mo</div>
         </div>
 
         {/* QR */}

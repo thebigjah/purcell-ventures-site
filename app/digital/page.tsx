@@ -1509,6 +1509,7 @@ export default function DigitalPage() {
               </p>
               <div style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
                 <a href="#contact" className="pv-btn-primary">Book a free demo</a>
+                <a href="/digital/tools" className="pv-btn-ghost">Try the tools free</a>
                 <a href="#pricing" className="pv-btn-ghost">See pricing</a>
               </div>
               {/* Stats band */}

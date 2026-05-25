@@ -40,6 +40,13 @@ const DIVISIONS = [
     href: "https://mantle-field-site.vercel.app",
     price: "From $50",
   },
+  {
+    roman: "V.",
+    label: "Steady — Personal IT",
+    desc: "Personal tech help for individuals and households. AI coaching, phone setup, password managers, medication reminders, smart home, family care plans. For when you're the family tech person and need to hand the job off.",
+    href: "/steady",
+    price: "From $79/mo",
+  },
 ];
 
 type Tab = "story" | "company" | "mark" | "contact";

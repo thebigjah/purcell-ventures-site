@@ -250,9 +250,34 @@ export default function FAQPage() {
           ))}
         </div>
 
-        {/* Closing band */}
+        {/* Want this for your business — eat-own-dog-food CTA */}
         <section style={{
           marginTop: "64px",
+          padding: "32px 36px",
+          background: "var(--color-warm-bg-alt)",
+          border: "2px solid var(--color-warm-accent)",
+          display: "grid",
+          gridTemplateColumns: "1fr auto",
+          gap: "20px",
+          alignItems: "center",
+        }}>
+          <div>
+            <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "8px" }}>
+              Want this for your business?
+            </div>
+            <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, color: "var(--color-warm-text)", margin: "0 0 8px" }}>
+              Build your own FAQ in 30 seconds.
+            </h3>
+            <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: 0, lineHeight: 1.5, maxWidth: "560px" }}>
+              Tell us about your business. Our AI FAQ Builder generates 6-10 customer-quality questions and answers, ready to drop on your site. Free to use.
+            </p>
+          </div>
+          <a className="pv-btn-primary" href="/digital/tools/faq-builder">Try the tool</a>
+        </section>
+
+        {/* Closing band */}
+        <section style={{
+          marginTop: "32px",
           padding: "48px 36px",
           borderTop: "1px solid var(--color-warm-border)",
           borderBottom: "1px solid var(--color-warm-border)",

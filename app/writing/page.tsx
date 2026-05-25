@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
+
+// noindex — keep personal writing out of search engines
 
 interface Piece {
   roman: string;
@@ -47,6 +49,15 @@ const PIECES: Piece[] = [
 
 export default function WritingPage() {
   const [openSlug, setOpenSlug] = useState<string | null>(null);
+
+  // noindex meta tag — block search engines from indexing this personal writing
+  useEffect(() => {
+    const meta = document.createElement("meta");
+    meta.name = "robots";
+    meta.content = "noindex, nofollow, noarchive";
+    document.head.appendChild(meta);
+    return () => { document.head.removeChild(meta); };
+  }, []);
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden" }}>

@@ -12,7 +12,7 @@ const ASH   = "#524d45";
 const CHAR  = "#3a3530";
 
 // Pages that are internal tools — no public nav needed
-const HIDE_ON = ["/logos", "/patterns", "/brand", "/resume", "/print", "/qr", "/business-cards", "/crm", "/invoicing", "/newsletter", "/links", "/digital/playbook", "/digital/finder", "/courses/college-apps/lessons", "/courses/business-launch/lessons", "/courses/ai-automation/lessons"];
+const HIDE_ON = ["/logos", "/patterns", "/brand", "/resume", "/print", "/qr", "/business-cards", "/crm", "/invoicing", "/newsletter", "/links", "/digital/playbook", "/digital/finder", "/sales-rep", "/rep-portal", "/courses/college-apps/lessons", "/courses/business-launch/lessons", "/courses/ai-automation/lessons"];
 
 const LAMPSTAND = {
   cellStyle: "outlined" as const,
@@ -25,7 +25,11 @@ const LINKS = [
   { href: "/digital",    label: "Digital" },
   { href: "/consulting", label: "Consulting" },
   { href: "/software",   label: "Software" },
+  { href: "/steady",     label: "Steady" },
   { href: "/courses",    label: "Courses" },
+  { href: "/shop/starter-kit", label: "Shop" },
+  { href: "/portfolio",  label: "Portfolio" },
+  { href: "/blog",       label: "Blog" },
   { href: "/about",      label: "About" },
 ];
 

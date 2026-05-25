@@ -113,7 +113,7 @@ const DISCOVERY = [
 
 const CLOSES = [
   { type: "Soft Close (preferred first)", script: "Here's what I'd suggest — let me put together a quick overview of exactly what I'd build for you, with pricing, and we can look at it together. No commitment. Would that be useful?", note: "This gives them an easy 'yes' and you a reason to follow up." },
-  { type: "Demo Close", script: "Can I show you something real quick? [Pull up purcellventures.co/digital on your phone] This is what a full setup looks like for a business like yours. Starting at $75 a month.", note: "Always have the site up and ready on your phone." },
+  { type: "Demo Close", script: "Can I show you something real quick? [Pull up purcellventures.co/digital on your phone] This is what a full setup looks like for a business like yours. Starting at $99 a month.", note: "Always have the site up and ready on your phone." },
   { type: "Urgency Close (only when they're warm)", script: "I only take on a few new clients at a time so I can actually give each one attention. I've got a slot opening up this month — want to get on a call this week?", note: "Only use this if they're genuinely interested." },
   { type: "Leave-Behind", script: "Here's my card. My site is purcellventures.co — you can see pricing, tools, the whole thing. I'll follow up in a day or two if that's okay.", note: "Always get permission to follow up. Always follow up." },
 ];

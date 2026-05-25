@@ -108,8 +108,24 @@ const DIVISIONS: Division[] = [
     ],
   },
   {
-    slug: "realestate",
+    slug: "steady",
     roman: "IV.",
+    label: "Steady — Personal IT",
+    tagline:
+      "Personal tech help for individuals + households. For when you're the family tech person and need to hand the job off. AI coaching, phone setup, smart home, medication reminders.",
+    status: "live",
+    href: "/steady",
+    span: "span-6",
+    specs: [
+      { label: "Status",    value: "Accepting" },
+      { label: "From",      value: "$79 / mo" },
+      { label: "One-off",   value: "$99 / session", muted: true },
+      { label: "Reach",     value: "Atlanta + remote", muted: true },
+    ],
+  },
+  {
+    slug: "realestate",
+    roman: "V.",
     label: "Real Estate",
     tagline:
       "Wholesale real estate — finding off-market deals for investors. Sister channel, opens 2026.",
@@ -466,7 +482,7 @@ export default function Home() {
         className="pv-reports"
         style={{
           position: "relative", zIndex: 5,
-          padding: "32px 36px 80px",
+          padding: "32px 36px 32px",
           display: "grid", gridTemplateColumns: "repeat(12, 1fr)",
           gap: "24px",
         }}
@@ -474,6 +490,44 @@ export default function Home() {
         {DIVISIONS.map((d) => (
           <ReportCard key={d.slug} division={d} />
         ))}
+      </section>
+
+      {/* Starter Kit revenue CTA — prominent for self-serve revenue */}
+      <section style={{ position: "relative", zIndex: 5, padding: "8px 36px 64px" }}>
+        <Link href="/shop/starter-kit" style={{
+          display: "block",
+          padding: "32px 36px",
+          background: "linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.04))",
+          border: "2px solid var(--color-warm-accent)",
+          textDecoration: "none",
+          transition: "transform 0.15s",
+        }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "32px", alignItems: "center", flexWrap: "wrap" }}>
+            <div>
+              <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "10px" }}>
+                Just-Released · One-Time $19
+              </div>
+              <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", color: "var(--color-warm-text)", fontWeight: 700, margin: "0 0 8px", lineHeight: 1.2 }}>
+                Steal our entire sales + AI infrastructure — <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>$19.</em>
+              </h2>
+              <p style={{ margin: 0, fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>
+                The PV AI Starter Kit. 24 production AI prompts, 5 sales scripts, full rep handbook, 50+ cold-outreach templates, contractor agreement, CRM CSV. Editable. Yours forever.
+              </p>
+            </div>
+            <div style={{
+              padding: "14px 32px",
+              background: "var(--color-warm-accent)",
+              color: "var(--color-warm-bg)",
+              fontFamily: "'Cinzel', Georgia, serif",
+              fontSize: "16px",
+              fontWeight: 700,
+              letterSpacing: "0.04em",
+              whiteSpace: "nowrap",
+            }}>
+              See what&apos;s in it →
+            </div>
+          </div>
+        </Link>
       </section>
 
       {/* Founder block — softened from preview, no "FILED BY" framing */}
@@ -686,6 +740,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Open Resources — surfacing free + transparent content */}
+      <section
+        style={{
+          position: "relative", zIndex: 5,
+          padding: "72px 36px 32px",
+          borderTop: "1px solid var(--color-warm-border)",
+        }}
+      >
+        <div style={{ maxWidth: "1080px", margin: "0 auto" }}>
+          <div style={{ display: "flex", alignItems: "baseline", gap: "16px", marginBottom: "8px", flexWrap: "wrap" }}>
+            <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700 }}>Open Resources</span>
+            <span style={{ fontFamily: "Georgia, serif", fontSize: "11px", color: "var(--color-warm-text-light)", fontStyle: "italic" }}>Free. No email required.</span>
+          </div>
+          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "32px", fontWeight: 700, color: "var(--color-warm-text)", margin: "0 0 12px" }}>
+            Use anything <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>now.</em>
+          </h2>
+          <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, margin: "0 0 32px", maxWidth: "640px" }}>
+            We publish the tools, the math, the process, and the writing. No gated downloads. If we&apos;re right for your business, you&apos;ll know before any conversation.
+          </p>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "12px" }}>
+            <ResourceCard href="/digital/tools" label="17 free tools" body="AI FAQ Builder, content generator, palette tool, brand kit, logo concepts, review responder, estimate generator, and more — running with our Anthropic key." />
+            <ResourceCard href="/ai-readiness" label="AI Readiness Test" body="10 questions. Tier-scored. Concrete next steps for where your business actually is." />
+            <ResourceCard href="/ai-cost-calculator" label="Cost Calculator" body="Plug in team size + hourly rate + manual hours. Get a payback projection in 30 seconds." />
+            <ResourceCard href="/pricing-comparison" label="Pricing, compared" body="Our prices next to typical agency, freelancer, and DIY tools. No spin." />
+            <ResourceCard href="/how-we-work" label="How we work" body="5-stage process. 6 commitments. When we say no. Read this before signing anything." />
+            <ResourceCard href="/portfolio" label="Portfolio" body="10 shipped projects. Web apps, mobile apps, AI tools, internal systems." />
+            <ResourceCard href="/blog" label="Blog" body="Five workflows you can automate without code. Why most AI tools waste money." />
+            <ResourceCard href="/steady" label="Steady — Personal IT" body="Tech support for non-tech-savvy family. Comparison vs alternatives + what a Monthly Care month actually looks like." />
+          </div>
+        </div>
+      </section>
+
       {/* Contact strip */}
       <section
         className="pv-contact"
@@ -700,10 +787,10 @@ export default function Home() {
           <a className="pv-mono-link" href="mailto:elijah@purcell-ventures.com">elijah@purcell-ventures.com</a>
           <a className="pv-mono-link" href="tel:+17702805319">(770) 280·5319</a>
         </ContactBlock>
-        <ContactBlock title="Office">
-          <p style={{ margin: 0 }}>4404 Grove Drive NW</p>
-          <p style={{ margin: 0 }}>Acworth, GA 30101</p>
-          <span style={{ color: "var(--color-warm-text-light)", fontSize: "13px" }}>Cobb County</span>
+        <ContactBlock title="Service Area">
+          <p style={{ margin: 0 }}>Metro Atlanta · Cobb County</p>
+          <p style={{ margin: 0 }}>Kennesaw · Marietta · Acworth · Canton · Woodstock</p>
+          <span style={{ color: "var(--color-warm-text-light)", fontSize: "13px" }}>Remote nationwide</span>
         </ContactBlock>
         <ContactBlock title="Sister">
           <a href="https://mantle-field-site.vercel.app" style={{ color: "var(--color-warm-text)", textDecoration: "none", display: "block", fontFamily: "Georgia, serif", fontStyle: "italic", fontSize: "15.5px" }}>
@@ -718,7 +805,7 @@ export default function Home() {
         </ContactBlock>
       </section>
 
-      {/* Colophon */}
+      {/* Colophon footer */}
       <footer
         style={{
           position: "relative", zIndex: 5,
@@ -732,16 +819,43 @@ export default function Home() {
         }}
       >
         <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
-        <div style={{ display: "flex", gap: "24px" }}>
-          <a href="/about" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>About</a>
-          <a href="/resume" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>Resume</a>
-          <a href="mailto:elijah@purcell-ventures.com" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>Contact</a>
+        <div style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
+          <a href="/about" style={footerLink}>About</a>
+          <a href="/how-we-work" style={footerLink}>How we work</a>
+          <a href="/portfolio" style={footerLink}>Portfolio</a>
+          <a href="/blog" style={footerLink}>Blog</a>
+          <a href="/digital/tools" style={footerLink}>Tools</a>
+          <a href="/pricing-comparison" style={footerLink}>Pricing</a>
+          <a href="/resume" style={footerLink}>Resume</a>
+          <a href="mailto:elijah@purcell-ventures.com" style={footerLink}>Contact</a>
         </div>
       </footer>
 
     </div>
   );
 }
+
+// ──────────────────────────────────────────────────────────────
+// Helpers added in the 2026-05-24 workshop expansion
+// ──────────────────────────────────────────────────────────────
+function ResourceCard({ href, label, body }: { href: string; label: string; body: string }) {
+  return (
+    <Link href={href} style={{
+      display: "block",
+      padding: "18px 20px",
+      background: "var(--color-warm-bg-alt)",
+      border: "1px solid var(--color-warm-border)",
+      textDecoration: "none",
+      transition: "border-color 0.15s",
+      borderRadius: 0,
+    }}>
+      <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "15px", color: "var(--color-warm-accent)", marginBottom: "6px", fontWeight: 600 }}>{label} →</div>
+      <p style={{ margin: 0, fontSize: "12px", color: "var(--color-warm-text-muted)", lineHeight: 1.55 }}>{body}</p>
+    </Link>
+  );
+}
+
+const footerLink: React.CSSProperties = { color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" };
 
 // ──────────────────────────────────────────────────────────────
 // Small reusable cells
