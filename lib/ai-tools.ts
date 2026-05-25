@@ -1109,6 +1109,175 @@ Quality bar:
     maxTokens: 2200,
     outputFormat: "markdown",
   },
+
+  // ===== Tools added 2026-05-25 overnight =====
+
+  {
+    slug: "bio-writer",
+    name: "AI Bio Writer",
+    tagline: "Generate professional bios in your voice. Multiple lengths + multiple platforms.",
+    description: "Paste a few facts about yourself or your business. AI returns three bios: short (140 chars for X/Twitter), medium (LinkedIn / About page, ~80 words), long (full About page, ~250 words). Same person, three voices.",
+    category: "Communication & Marketing",
+    fields: [
+      { name: "name", label: "Name (person or business)", type: "text", required: true, placeholder: "e.g., Elijah Purcell" },
+      { name: "role", label: "Role / title", type: "text", required: true, placeholder: "e.g., Founder of Purcell Ventures LLC" },
+      { name: "facts", label: "Key facts (one per line)", type: "textarea", required: true, placeholder: "3-5 lines: what you do, what you've built, what matters to you. Specifics beat generics." },
+      { name: "tone", label: "Voice / tone", type: "select", required: true, options: ["Confident", "Conversational", "Formal", "Witty"] },
+      { name: "audience", label: "Who reads it (optional)", type: "text", placeholder: "e.g., Small business owners considering AI consulting" },
+    ],
+    systemPrompt: `You write professional bios. The user provides facts about themselves or their business + tone preference. You return three bios of different lengths.
+
+Output in markdown:
+
+## Short (X/Twitter — 140 chars max)
+[Single sentence. Most important fact + voice signature. Counts include spaces.]
+
+## Medium (LinkedIn / About — 60-90 words)
+[2-3 sentence paragraph. Same person as Short but with more texture. Specific accomplishments, not generic phrases.]
+
+## Long (Full About page — 200-280 words)
+[3-4 paragraph version. Story arc: who they are → what they've done → what they're working on now → how to reach them. Keeps the voice from Short and Medium but expands authentically.]
+
+Quality bar:
+- Specific over generic. "Built 30+ products" beats "passionate about technology."
+- Active voice. "Built X" not "X was built by me."
+- No filler ("I'm a multi-passionate entrepreneur..." dies on first read).
+- The voice should match the requested tone — Confident is direct, Conversational is warm, Formal is precise, Witty has personality.
+- Don't repeat the same achievement across all three lengths. Lead with different facts in each.
+- End the Long bio with one line on how to reach them or what they're doing next.`,
+    buildUserMessage: (i) => [
+      `Name: ${i.name}`,
+      `Role: ${i.role}`,
+      `Tone: ${i.tone}`,
+      i.audience ? `Audience: ${i.audience}` : null,
+      ``,
+      `Facts:`,
+      i.facts,
+    ].filter(Boolean).join("\n"),
+    maxTokens: 1800,
+    outputFormat: "markdown",
+  },
+
+  {
+    slug: "press-release",
+    name: "AI Press Release Writer",
+    tagline: "Generate a press release in 60 seconds for a launch, hire, or milestone.",
+    description: "For when you need to announce something publicly and don't want to write a press release from scratch. AI generates a complete press release with headline, dateline, lead, body, boilerplate, and contact info.",
+    category: "Communication & Marketing",
+    fields: [
+      { name: "announcement", label: "What are you announcing", type: "textarea", required: true, placeholder: "e.g., Launch of new AI consulting service / hiring of a new VP / $50k seed funding / new partnership with Local Bank" },
+      { name: "businessName", label: "Business name", type: "text", required: true, placeholder: "e.g., Purcell Ventures LLC" },
+      { name: "city", label: "City + state (for dateline)", type: "text", required: true, placeholder: "e.g., Acworth, GA" },
+      { name: "founderName", label: "Quotable spokesperson", type: "text", required: true, placeholder: "e.g., Elijah Purcell, Founder" },
+      { name: "businessOneLiner", label: "Business one-liner (for boilerplate)", type: "text", required: true, placeholder: "e.g., AI consulting + custom software for small businesses" },
+      { name: "contactEmail", label: "Contact email", type: "text", required: true, placeholder: "e.g., elijah@purcell-ventures.com" },
+    ],
+    systemPrompt: `You write press releases. The user provides facts about an announcement. You return a complete, AP-style press release.
+
+Output in markdown:
+
+# FOR IMMEDIATE RELEASE
+
+## [Compelling headline — single line, under 12 words, no clickbait]
+
+### [Optional subhead — single line, can be longer, adds context]
+
+**[CITY], [State] — [Today's date]** — [Opening paragraph: the 5 W's compressed into 2-3 sentences. The reader should know WHO, WHAT, WHERE, WHEN, WHY from this paragraph alone.]
+
+[Body paragraph 1: Expansion on the most important aspect. Specific details.]
+
+[Body paragraph 2: Quote from the spokesperson — make it sound like something a real human would say, not a marketing template. Attribute as "[Name], [Title], said:" before the quote.]
+
+[Body paragraph 3 (optional): Context, supporting information, what comes next.]
+
+[Body paragraph 4 (optional): Second quote from spokesperson OR data point that strengthens the story.]
+
+### About [Business name]
+[2-3 sentence boilerplate about the business — keep this short, factual, evergreen so it can be reused in future releases.]
+
+### Media Contact
+[Spokesperson name]
+[Email]
+[Phone, if available]
+
+###
+
+Quality bar:
+- Headlines: specific, factual, no superlatives ("first," "best," "revolutionary")
+- Quotes: sound like a human said them, not a press kit. Include specifics.
+- Body: factual. Save the editorializing for blog posts.
+- Length: 350-500 words total. Press releases are not essays.`,
+    buildUserMessage: (i) => [
+      `Announcement: ${i.announcement}`,
+      `Business: ${i.businessName}`,
+      `City: ${i.city}`,
+      `Spokesperson: ${i.founderName}`,
+      `Business description: ${i.businessOneLiner}`,
+      `Contact: ${i.contactEmail}`,
+    ].join("\n"),
+    maxTokens: 2000,
+    outputFormat: "markdown",
+  },
+
+  {
+    slug: "review-request",
+    name: "AI Customer Review Request",
+    tagline: "Generate a personalized review-request email or text. Polite, specific, hard to ignore.",
+    description: "After a positive customer interaction, send a request for a Google/Yelp/Facebook review. AI personalizes based on what they actually bought + a specific moment from the experience. Reads as written, not templated.",
+    category: "Communication & Marketing",
+    fields: [
+      { name: "customerName", label: "Customer's first name", type: "text", required: true, placeholder: "e.g., Sarah" },
+      { name: "service", label: "What they bought", type: "text", required: true, placeholder: "e.g., AI Booking Setup for Cherry Blossom Salon" },
+      { name: "specificMoment", label: "A specific moment you remember", type: "textarea", required: true, placeholder: "e.g., When she said the AI texts cut Saturday phone calls by half / when she came in early to learn the system / her referring two stylists to her network" },
+      { name: "businessName", label: "Your business name", type: "text", required: true, placeholder: "e.g., Purcell Ventures" },
+      { name: "platform", label: "Review platform", type: "select", required: true, options: ["Google", "Yelp", "Facebook", "Trustpilot", "Other"] },
+      { name: "channel", label: "Sending via", type: "select", required: true, options: ["Email", "Text message", "Both"] },
+    ],
+    systemPrompt: `You write personalized review-request messages. The user supplies a customer name, what they bought, a specific moment from the experience, and the review platform.
+
+CRITICAL: review-request messages are dying because they all sound the same. Your job is to write one that sounds like a real human wrote it specifically for THIS customer.
+
+Output format depends on channel:
+
+If Email:
+\`\`\`
+Subject: [specific, personal, under 50 chars]
+
+Hi [name],
+
+[Open with a callback to the specific moment — proves you remember them as a person, not a transaction. 2-3 sentences.]
+
+[The ask — direct. One sentence. Include the specific platform link.]
+
+[Closing — short. Mention you read every review personally. Sign with first name.]
+\`\`\`
+
+If Text message:
+\`\`\`
+Hi [name] — quick one. [Callback to the specific moment in 1 sentence.] If you'd be willing to leave a quick review on [platform] at [link], it'd mean a lot. No worries if not. — [first name]
+\`\`\`
+
+If Both: include both formats with clear "EMAIL VERSION:" and "TEXT VERSION:" headers.
+
+Quality bar:
+- The callback to the specific moment should sound like a human remembering, not a database entry.
+- Don't oversell the ask. "If you'd be willing" beats "would love it."
+- The text version must be under 320 characters (one SMS).
+- Never include "Five stars would help us a lot!" or any other pressure phrase. That's manipulation.
+- Always include the actual [link] placeholder for the user to fill in.
+- For text: avoid emojis (most people hate them in marketing texts).
+- Sign with first name only, not full signature.`,
+    buildUserMessage: (i) => [
+      `Customer: ${i.customerName}`,
+      `What they bought: ${i.service}`,
+      `Specific moment to reference: ${i.specificMoment}`,
+      `Business: ${i.businessName}`,
+      `Platform: ${i.platform}`,
+      `Channel: ${i.channel}`,
+    ].join("\n"),
+    maxTokens: 1500,
+    outputFormat: "markdown",
+  },
 ];
 
 export function getTool(slug: string): AIToolConfig | undefined {
