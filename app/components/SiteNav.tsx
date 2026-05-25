@@ -11,8 +11,8 @@ const EMBER = "#2e2820";
 const ASH   = "#524d45";
 const CHAR  = "#3a3530";
 
-// Pages that are internal tools — no public nav needed
-const HIDE_ON = ["/logos", "/patterns", "/brand", "/resume", "/print", "/qr", "/business-cards", "/crm", "/invoicing", "/newsletter", "/links", "/digital/playbook", "/digital/finder", "/sales-rep", "/rep-portal", "/courses/college-apps/lessons", "/courses/business-launch/lessons", "/courses/ai-automation/lessons"];
+// Pages that are internal tools or off-brand storefront — no public nav needed
+const HIDE_ON = ["/logos", "/patterns", "/brand", "/resume", "/print", "/qr", "/business-cards", "/crm", "/invoicing", "/newsletter", "/links", "/digital/playbook", "/digital/finder", "/sales-rep", "/rep-portal", "/courses/college-apps/lessons", "/courses/business-launch/lessons", "/courses/ai-automation/lessons", "/shop", "/free"];
 
 const LAMPSTAND = {
   cellStyle: "outlined" as const,
@@ -27,7 +27,6 @@ const LINKS = [
   { href: "/software",   label: "Software" },
   { href: "/steady",     label: "Steady" },
   { href: "/courses",    label: "Courses" },
-  { href: "/shop/starter-kit", label: "Shop" },
   { href: "/portfolio",  label: "Portfolio" },
   { href: "/blog",       label: "Blog" },
   { href: "/about",      label: "About" },

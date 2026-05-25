@@ -492,44 +492,6 @@ export default function Home() {
         ))}
       </section>
 
-      {/* Starter Kit revenue CTA — prominent for self-serve revenue */}
-      <section style={{ position: "relative", zIndex: 5, padding: "8px 36px 64px" }}>
-        <Link href="/shop/starter-kit" style={{
-          display: "block",
-          padding: "32px 36px",
-          background: "linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.04))",
-          border: "2px solid var(--color-warm-accent)",
-          textDecoration: "none",
-          transition: "transform 0.15s",
-        }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "32px", alignItems: "center", flexWrap: "wrap" }}>
-            <div>
-              <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "10px" }}>
-                Just-Released · One-Time $19
-              </div>
-              <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", color: "var(--color-warm-text)", fontWeight: 700, margin: "0 0 8px", lineHeight: 1.2 }}>
-                Steal our entire sales + AI infrastructure — <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>$19.</em>
-              </h2>
-              <p style={{ margin: 0, fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>
-                The PV AI Starter Kit. 24 production AI prompts, 5 sales scripts, full rep handbook, 50+ cold-outreach templates, contractor agreement, CRM CSV. Editable. Yours forever.
-              </p>
-            </div>
-            <div style={{
-              padding: "14px 32px",
-              background: "var(--color-warm-accent)",
-              color: "var(--color-warm-bg)",
-              fontFamily: "'Cinzel', Georgia, serif",
-              fontSize: "16px",
-              fontWeight: 700,
-              letterSpacing: "0.04em",
-              whiteSpace: "nowrap",
-            }}>
-              See what&apos;s in it →
-            </div>
-          </div>
-        </Link>
-      </section>
-
       {/* Founder block — softened from preview, no "FILED BY" framing */}
       <section
         className="pv-founder"

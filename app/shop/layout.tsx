@@ -1,51 +1,25 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
+// /shop and its children are intentionally hidden from PV's public brand:
+// - Not linked from main nav, homepage, or footer
+// - noindex/nofollow/noarchive so Google + AI crawlers skip them
+// - Pages remain live + functional for direct URL traffic (e.g., social posts,
+//   KDP book back-matter, email signature links pointing at /shop/<slug>)
+// - All Stripe Payment Links still work — they're independent of /shop pages
+// Treatment: PV-owned legally, brand-invisible publicly.
 export const metadata: Metadata = {
-  title: "Shop — Self-serve digital products | Purcell Ventures",
-  description:
-    "Self-serve digital products from Purcell Ventures. The PV AI Starter Kit ($19) and Cold Email Mastery Pack ($29). Instant download via Stripe. 30-day refund guarantee.",
-  keywords: [
-    "AI prompts pack", "sales scripts download", "cold email templates",
-    "small business AI kit", "marketing template download",
-  ],
-  openGraph: {
-    title: "Shop — Purcell Ventures self-serve digital products",
-    description: "$19 PV AI Starter Kit + $29 Cold Email Pack. Instant download. 30-day refund.",
-    url: "https://purcellventures.co/shop",
-    type: "website",
+  title: "Shop — Purcell Ventures",
+  description: "Self-serve digital products. Instant download via Stripe. 30-day refund.",
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: { index: false, follow: false, noimageindex: true, "max-image-preview": "none" },
   },
-  alternates: { canonical: "/shop" },
-};
-
-const productSchema = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "itemListElement": [
-    {
-      "@type": "Product",
-      "position": 1,
-      "name": "PV AI Starter Kit",
-      "description": "24 production AI prompts + 5 sales scripts + full rep handbook + 50+ cold-outreach templates + contractor agreement + CRM CSV.",
-      "offers": { "@type": "Offer", "price": "19", "priceCurrency": "USD" },
-      "url": "https://purcellventures.co/shop/starter-kit",
-    },
-    {
-      "@type": "Product",
-      "position": 2,
-      "name": "Cold Email Mastery Pack",
-      "description": "100+ cold email templates across 10 industries + 80 subject lines + 30 reply-handling scripts + AI scoring rubric + sequencing cadences.",
-      "offers": { "@type": "Offer", "price": "29", "priceCurrency": "USD" },
-      "url": "https://purcellventures.co/shop/cold-email-pack",
-    },
-  ],
+  alternates: { canonical: undefined },
 };
 
 export default function ShopLayout({ children }: { children: ReactNode }) {
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }
