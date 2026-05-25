@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
+import { RefTracker } from "./RefTracker";
+import { BuyButton } from "./BuyButton";
 
 /**
  * /shop/starter-kit — the money-maker.
@@ -9,6 +11,8 @@ import { VignetteBackground } from "@/app/components/VignetteBackground";
  * Elijah does the one-time Stripe setup, this page sells autonomously.
  *
  * Env var: STARTER_KIT_PAYMENT_LINK = full Stripe Checkout URL
+ *
+ * Affiliate tracking: ?ref=name in URL captures referrer + appends to Stripe URL.
  */
 
 export const metadata = {
@@ -57,6 +61,7 @@ export default function StarterKitPage() {
   return (
     <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
       <VignetteBackground />
+      <RefTracker product="starter-kit" />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
         {/* Configuration warning — only shows if STARTER_KIT_PAYMENT_LINK env var is missing */}
@@ -78,24 +83,7 @@ export default function StarterKitPage() {
           <p style={{ fontSize: "17px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, maxWidth: "640px", margin: "0 auto 32px" }}>
             The Purcell Ventures AI Starter Kit. 24 production AI tool prompts, 5 sales scripts, full rep handbook, 50+ cold-outreach templates, 1099 contractor template, CRM CSV. Everything we use internally. Editable. Yours forever.
           </p>
-          <a
-            href={PAYMENT_LINK}
-            style={{
-              display: "inline-block",
-              padding: "16px 40px",
-              background: "var(--color-warm-accent)",
-              color: "var(--color-warm-bg)",
-              fontFamily: "'Cinzel', Georgia, serif",
-              fontSize: "18px",
-              fontWeight: 700,
-              textDecoration: "none",
-              border: "none",
-              letterSpacing: "0.04em",
-              cursor: "pointer",
-            }}
-          >
-            Buy now — $19 →
-          </a>
+          <BuyButton paymentLink={PAYMENT_LINK} product="starter-kit" size="large" />
           <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "10px", fontStyle: "italic" }}>
             Secure checkout via Stripe · Instant email delivery · 30-day refund guarantee
           </p>
