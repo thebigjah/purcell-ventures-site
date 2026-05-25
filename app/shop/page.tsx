@@ -8,6 +8,15 @@ export const metadata = {
 
 const PRODUCTS = [
   {
+    href: "/shop/bundle",
+    title: "★ The Complete Pack (all 3, bundled)",
+    price: "$39",
+    tagline: "All three products + save $18 vs separate",
+    blurb: "Starter Kit + Cold Email Mastery Pack + Subject Line Library. 61 files. Single ZIP. The recommended way to buy if you want everything.",
+    bestFor: "Anyone serious about putting all of this to work — most people who buy one end up wanting the others within a week. Bundle solves that.",
+    sizing: "61 files · 3 folders · one Stripe Checkout",
+  },
+  {
     href: "/shop/subject-lines",
     title: "Cold Email Subject Line Library",
     price: "$9",
