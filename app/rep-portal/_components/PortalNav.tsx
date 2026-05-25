@@ -26,6 +26,7 @@ const LINKS = [
   { href: "/rep-portal/help", label: "Help", adminOnly: false },
   { href: "/rep-portal/settings", label: "Settings", adminOnly: false },
   { href: "/rep-portal/onboard", label: "Onboard", adminOnly: true },
+  { href: "/rep-portal/status", label: "Status", adminOnly: true },
 ];
 
 export function PortalNav() {
