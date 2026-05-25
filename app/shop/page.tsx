@@ -8,6 +8,15 @@ export const metadata = {
 
 const PRODUCTS = [
   {
+    href: "/shop/subject-lines",
+    title: "Cold Email Subject Line Library",
+    price: "$9",
+    tagline: "80 tested subject lines across 8 categories",
+    blurb: "10 per category — Direct, Question, Referral, Observation, Local, Value-First, Curiosity, Time-Bound. Plus 20 you should NEVER use.",
+    bestFor: "Quick-win pricing. Anyone who needs better email hooks today.",
+    sizing: "80 lines · 8 categories · PDF + markdown",
+  },
+  {
     href: "/shop/starter-kit",
     title: "PV AI Starter Kit",
     price: "$19",
