@@ -10,6 +10,7 @@ const LINKS = [
   { href: "/rep-portal", label: "Dashboard", adminOnly: false },
   { href: "/rep-portal/crm", label: "CRM", adminOnly: false },
   { href: "/rep-portal/calendar", label: "Calendar", adminOnly: false },
+  { href: "/rep-portal/operations", label: "Operations", adminOnly: false },
   { href: "/rep-portal/pricing", label: "Pricing", adminOnly: false },
   { href: "/rep-portal/products", label: "Products", adminOnly: false },
   { href: "/rep-portal/playbook", label: "Playbook", adminOnly: false },
