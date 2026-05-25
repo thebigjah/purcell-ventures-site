@@ -14,6 +14,30 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "ai-augmented-sales-rep-day",
+    title: "What a day looks like for an AI-augmented sales rep",
+    excerpt: "A full Tuesday in the life of a rep using AI prospect research, AI next-step coaching, and conversation summary tools alongside a real CRM. Specific times, specific tasks, specific tools.",
+    date: "May 25, 2026",
+    readingTime: "6 min read",
+    category: "Process",
+  },
+  {
+    slug: "why-i-built-crm-from-scratch",
+    title: "Why I built a CRM from scratch instead of paying $1,200/yr for HubSpot",
+    excerpt: "HubSpot starts at $50/mo and rapidly hits $200+/mo with features I actually need. So I built ours in a week. Here's the math, the tradeoffs, and when you should NOT do this.",
+    date: "May 25, 2026",
+    readingTime: "5 min read",
+    category: "Opinion",
+  },
+  {
+    slug: "case-for-charging-19",
+    title: "The case for charging $19 for what others sell at $497",
+    excerpt: "Most agencies bundle a starter playbook into a $497 course. We unbundle it. Here's the strategic argument for selling cheap entry products + how it changes the customer relationship.",
+    date: "May 25, 2026",
+    readingTime: "4 min read",
+    category: "Strategy",
+  },
+  {
     slug: "five-workflows-no-code",
     title: "Five workflows you can automate this week without writing code",
     excerpt: "The five workflows I see small business owners burn the most time on. Each is automatable with off-the-shelf tools in under two hours. No code required.",
