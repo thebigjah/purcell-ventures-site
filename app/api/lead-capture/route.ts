@@ -1,14 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
+import { sendEmail, isResendConfigured } from "@/lib/resend-client";
+import { leadMagnetWelcome } from "@/lib/email-templates";
 
 /**
  * Lead capture endpoint.
  *
- * For now: logs to console and stores nothing server-side. When Resend
- * is wired (next session), this will save to a Resend audience + send
- * the auto-responder email.
- *
- * Client-side, the page that calls this also stores the lead locally
- * as a fallback so nothing is truly lost.
+ * When RESEND_API_KEY env var is set, sends an auto-responder welcome email
+ * via Resend. Otherwise logs to console and the page-side localStorage backs
+ * up the lead.
  */
 
 export async function POST(req: NextRequest) {
@@ -19,18 +18,35 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Valid email required" }, { status: 400 });
     }
 
-    // Log to console for now (will go to Vercel logs)
+    // Log to console (Vercel function logs)
     console.log("[LEAD CAPTURE]", { email, firstName, source, intent, timestamp: new Date().toISOString() });
 
-    // TODO when Resend is wired:
-    // 1. Save to Resend audience
-    // 2. Send auto-responder with the free templates
-    // 3. Optionally tag with source (free-cold-email-pack, etc.)
-    // 4. Add to Elijah's drip sequence
+    // Send auto-responder email if Resend is configured
+    let emailResult: { ok: boolean; id?: string; error?: string } = { ok: false };
+    if (isResendConfigured()) {
+      const tmpl = leadMagnetWelcome(firstName);
+      emailResult = await sendEmail({
+        to: email,
+        subject: tmpl.subject,
+        html: tmpl.html,
+        text: tmpl.text,
+        replyTo: "elijah@purcell-ventures.com",
+        tags: [
+          { name: "source", value: source || "unknown" },
+          { name: "intent", value: intent || "unknown" },
+        ],
+      });
+    }
 
     return NextResponse.json({
       ok: true,
-      message: "Lead captured. (Auto-email pending Resend integration — Elijah will follow up manually.)",
+      emailSent: emailResult.ok,
+      resendConfigured: isResendConfigured(),
+      message: emailResult.ok
+        ? "Captured + welcome email sent."
+        : isResendConfigured()
+          ? `Captured (email send failed: ${emailResult.error || "unknown"})`
+          : "Captured. Set RESEND_API_KEY on Vercel to auto-send welcome emails.",
     });
   } catch {
     return NextResponse.json({ error: "Server error" }, { status: 500 });
