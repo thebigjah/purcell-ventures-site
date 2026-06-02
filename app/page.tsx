@@ -103,7 +103,7 @@ const DIVISIONS: Division[] = [
     specs: [
       { label: "Status",    value: "Accepting" },
       { label: "From",      value: "$1,500 build" },
-      { label: "Portfolio", value: "7 shipped",        muted: true },
+      { label: "Portfolio", value: "12 shipped",       muted: true },
       { label: "Scope",     value: "Web / Mobile / AI", muted: true },
     ],
   },
@@ -728,7 +728,7 @@ export default function Home() {
             <ResourceCard href="/ai-cost-calculator" label="Cost Calculator" body="Plug in team size + hourly rate + manual hours. Get a payback projection in 30 seconds." />
             <ResourceCard href="/pricing-comparison" label="Pricing, compared" body="Our prices next to typical agency, freelancer, and DIY tools. No spin." />
             <ResourceCard href="/how-we-work" label="How we work" body="5-stage process. 6 commitments. When we say no. Read this before signing anything." />
-            <ResourceCard href="/portfolio" label="Portfolio" body="10 shipped projects. Web apps, mobile apps, AI tools, internal systems." />
+            <ResourceCard href="/portfolio" label="Portfolio" body="12 shipped projects. Web apps, mobile apps, AI tools, internal systems." />
             <ResourceCard href="/blog" label="Blog" body="Five workflows you can automate without code. Why most AI tools waste money." />
             <ResourceCard href="/steady" label="Steady — Personal IT" body="Tech support for non-tech-savvy family. Comparison vs alternatives + what a Monthly Care month actually looks like." />
           </div>
