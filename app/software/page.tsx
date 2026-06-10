@@ -97,7 +97,7 @@ export default function SoftwarePage() {
             Software built for <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>your actual problem.</em>
           </h1>
           <p className="deck">
-            Mobile apps, web platforms, and AI-powered tools. Fast turnaround, transparent pricing, and I stay involved after launch.
+            Mobile apps, web platforms, and AI-powered tools. Fast turnaround, scoped on a discovery call, and I stay involved after launch.
           </p>
           <div style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
             <a className="pv-btn-primary" href="mailto:elijah@purcell-ventures.com?subject=Software Project Inquiry">
@@ -235,16 +235,16 @@ export default function SoftwarePage() {
           ))}
         </div>
 
-        {/* Pricing */}
+        {/* Engagement */}
         <header className="pv-section-head">
           <span className="roman">IV.</span>
-          <h2>Pricing <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>tiers</em></h2>
+          <h2>How to <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>engage</em></h2>
         </header>
         <div className="pv-sw-pricing" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }}>
           {[
-            { tier: "Small projects", price: "$1,500 – 3,500", desc: "Landing pages, Chrome extensions, small tools, automation scripts." },
-            { tier: "Full apps",      price: "$5,000 – 15,000", desc: "Mobile apps, web platforms, AI-powered tools, full-stack applications." },
-            { tier: "Ongoing",        price: "Custom",          desc: "Retainer-based work, long-term projects, feature development over time." },
+            { tier: "Small projects", price: "Discovery call", desc: "Landing pages, Chrome extensions, small tools, automation scripts." },
+            { tier: "Full apps",      price: "Discovery call", desc: "Mobile apps, web platforms, AI-powered tools, full-stack applications." },
+            { tier: "Ongoing",        price: "Discovery call", desc: "Retainer-based work, long-term projects, feature development over time." },
           ].map(t => (
             <div key={t.tier} className="pv-card" style={{ padding: "32px 28px" }}>
               <span className="b3"></span><span className="b4"></span>
@@ -263,7 +263,7 @@ export default function SoftwarePage() {
           ))}
         </div>
         <p className="pv-italic" style={{ fontSize: "14px", color: "var(--color-warm-text-light)", marginTop: "20px", textAlign: "center" }}>
-          All projects start with a free 30-minute discovery call. No obligation.
+          All projects start with a free 30-minute discovery call. Scope and pricing on the call, never before.
         </p>
 
         {/* CTA */}
