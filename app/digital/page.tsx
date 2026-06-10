@@ -70,30 +70,56 @@ const MODULES = [
 
 const PRICING = [
   {
-    name: "Starter",
-    price: 99,
-    setup: 400,
-    tagline: "Get online and start getting found.",
-    features: ["Business Website", "AI Chatbot Widget", "Contact / Lead Form", "Google Analytics setup", "Monthly content update"],
-    cta: "Start with Starter",
+    name: "Site Care",
+    price: "Tier I",
+    setup: "",
+    tagline: "Lightweight set-and-forget tools available to every client. Quick wins, configured in a day or two.",
+    features: [
+      "Color Palette Tool",
+      "Brand Kit Builder",
+      "Logo Concept Generator",
+      "Business Card Copy",
+      "Social Media Templates",
+      "Caption Generator",
+      "Review Response Generator",
+      "Email & SMS Composers (templates)",
+    ],
+    cta: "Start the conversation",
     highlight: false,
   },
   {
-    name: "Growth",
-    price: 179,
-    setup: 700,
-    tagline: "Everything in Starter, plus bookings and marketing.",
-    features: ["Everything in Starter", "Appointment Booking", "Email Newsletter", "Social Media Scheduler", "Review Manager", "Lead Capture Pipeline"],
-    cta: "Get Growth",
+    name: "Site Care + Lead Ops",
+    price: "Tier II",
+    setup: "",
+    tagline: "Utilities that integrate with your site or send messages on your behalf. Everything in Site Care, plus active utilities.",
+    features: [
+      "Everything in Site Care",
+      "Review Request Automation",
+      "AI FAQ Builder (deployed on site)",
+      "AI Content Generator (trained on brand)",
+      "Event Registration system",
+      "Inventory Tracker",
+      "Online Estimating Form",
+      "Staff Scheduler",
+      "Loyalty Punch Card (QR-driven)",
+    ],
+    cta: "Start the conversation",
     highlight: true,
   },
   {
-    name: "Full Service",
-    price: 279,
-    setup: 1000,
-    tagline: "Your complete digital operation — fully managed.",
-    features: ["Everything in Growth", "CRM & Estimating", "Online Invoicing", "AI Content Generator", "SMS Campaigns", "Loyalty Program", "Priority support"],
-    cta: "Go Full Service",
+    name: "Marketing Partner",
+    price: "Tier III",
+    setup: "",
+    tagline: "Marketing-team-grade add-ons that need ongoing tuning. Everything in Site Care + Lead Ops, plus the heavy lifts.",
+    features: [
+      "Everything in Site Care + Lead Ops",
+      "AI Chatbot trained on your business",
+      "Online Booking (branded, integrated)",
+      "AI Estimate Generator (photo to quote)",
+      "Email + SMS Campaign system",
+      "Custom integrations (priced per scope)",
+    ],
+    cta: "Start the conversation",
     highlight: false,
   },
 ];
@@ -1612,14 +1638,14 @@ export default function DigitalPage() {
           <header className="pv-section-head" style={{ marginBottom: "12px" }}>
             <span className="roman">II.</span>
             <h2>
-              Flat monthly rate.{" "}
+              Three tiers,{" "}
               <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>
-                No surprises.
+                tied to your maintenance level.
               </em>
             </h2>
           </header>
           <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", marginBottom: "52px" }}>
-            One-time setup fee, then a flat monthly rate. No contracts. Cancel anytime.
+            Every add-on has a setup fee. Tier III gives you access to all of it. Tier II adds the active utilities. Tier I keeps things light. No contracts. Cancel anytime.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", border: "1px solid var(--color-warm-border)" }}>
             {PRICING.map((plan) => (
@@ -1638,10 +1664,10 @@ export default function DigitalPage() {
                   {plan.name}
                 </p>
                 <div style={{ display: "flex", alignItems: "flex-end", gap: "4px", marginBottom: "4px" }}>
-                  <span style={{ fontSize: "52px", fontWeight: 900, letterSpacing: "-0.03em", color: plan.highlight ? "#0c0a08" : "var(--color-warm-text)", lineHeight: 1 }}>${plan.price}</span>
-                  <span style={{ fontSize: "14px", color: plan.highlight ? "rgba(12,10,8,0.6)" : "var(--color-warm-text-muted)", paddingBottom: "10px" }}>/mo</span>
+                  <span style={{ fontSize: "52px", fontWeight: 900, letterSpacing: "-0.03em", color: plan.highlight ? "#0c0a08" : "var(--color-warm-text)", lineHeight: 1 }}>{plan.price}</span>
+                  <span style={{ fontSize: "14px", color: plan.highlight ? "rgba(12,10,8,0.6)" : "var(--color-warm-text-muted)", paddingBottom: "10px" }}>{plan.setup}</span>
                 </div>
-                <p style={{ fontSize: "12px", color: plan.highlight ? "rgba(12,10,8,0.55)" : "var(--color-warm-text-muted)", marginBottom: "20px" }}>+ ${plan.setup} one-time setup</p>
+                <p style={{ fontSize: "12px", color: plan.highlight ? "rgba(12,10,8,0.55)" : "var(--color-warm-text-muted)", marginBottom: "20px" }}>Pricing on the discovery call</p>
                 <p style={{ fontSize: "14px", color: plan.highlight ? "rgba(12,10,8,0.7)" : "var(--color-warm-text-muted)", marginBottom: "24px", lineHeight: 1.6 }}>{plan.tagline}</p>
                 <ul style={{ listStyle: "none", padding: 0, marginBottom: "32px", display: "flex", flexDirection: "column", gap: "10px", flex: 1 }}>
                   {plan.features.map((f) => (

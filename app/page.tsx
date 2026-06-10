@@ -14,7 +14,7 @@ const FAQ_SCHEMA = {
       "name": "What does Purcell Ventures do?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Purcell Ventures LLC is a Georgia-based multi-division company. We offer digital services for small businesses (websites, AI tools, CRM, booking from $99/mo), hands-on AI consulting and team training, and custom software development (apps, platforms, AI integrations). Field services (gutter cleaning, pressure washing, lawn care) are run separately under our Mantle Field Services brand.",
+        "text": "Purcell Ventures LLC is a Georgia-based multi-division company. We build custom websites and provide ongoing maintenance partnership (Sites division), offer tier-gated digital add-ons like AI chatbots and booking systems (Digital Add-Ons division), do hands-on AI consulting and team training, and build custom software (apps, platforms, AI integrations). Field services (gutter cleaning, pressure washing, lawn care) are run separately under our Mantle Field Services brand.",
       },
     },
     {
@@ -60,30 +60,46 @@ type Division = {
 
 const DIVISIONS: Division[] = [
   {
-    slug: "digital",
+    slug: "sites",
     roman: "I.",
-    label: "Digital Services",
+    label: "Sites",
     tagline:
-      "Your full digital operation: website, AI tools, booking, and marketing. Built and managed for you. Starting at $99/mo.",
+      "Custom websites and ongoing partnership for local businesses. Three build tiers, three maintenance tiers, scoped on a discovery call.",
     status: "live",
-    href: "/digital",
+    href: "/sites",
     span: "span-7",
     specs: [
+      { label: "Status",      value: "Accepting" },
+      { label: "Tiers",       value: "Starter · Pro · Custom" },
+      { label: "Maintenance", value: "Three levels",   muted: true },
+      { label: "Pricing",     value: "Discovery call", muted: true },
+    ],
+  },
+  {
+    slug: "digital",
+    roman: "II.",
+    label: "Digital Add-Ons",
+    tagline:
+      "A catalog of add-ons that layer onto your site. AI chatbots, booking, review automation, content generation, and more. Tier-gated by your maintenance level.",
+    status: "live",
+    href: "/digital",
+    span: "span-5",
+    specs: [
       { label: "Status",   value: "Accepting" },
-      { label: "From",     value: "$99 / mo" },
-      { label: "Setup",    value: "$400 – $1,000", muted: true },
-      { label: "Reach",    value: "Nationwide",  muted: true },
+      { label: "Catalog",  value: "22 add-ons" },
+      { label: "Pricing",  value: "Discovery call", muted: true },
+      { label: "Reach",    value: "Nationwide",     muted: true },
     ],
   },
   {
     slug: "consulting",
-    roman: "II.",
+    roman: "III.",
     label: "AI Consulting",
     tagline:
       "I come to your business and walk your team through the AI tools that will actually change how they work. Hands-on. Same-day results.",
     status: "live",
     href: "/consulting",
-    span: "span-5",
+    span: "span-6",
     specs: [
       { label: "Status",   value: "Accepting" },
       { label: "From",     value: "$125 / person" },
@@ -93,7 +109,7 @@ const DIVISIONS: Division[] = [
   },
   {
     slug: "software",
-    roman: "III.",
+    roman: "IV.",
     label: "Custom Software",
     tagline:
       "Apps, platforms, and automation tools scoped and built around your exact problem — from idea to launch.",
@@ -102,14 +118,14 @@ const DIVISIONS: Division[] = [
     span: "span-6",
     specs: [
       { label: "Status",    value: "Accepting" },
-      { label: "From",      value: "$1,500 build" },
-      { label: "Portfolio", value: "12 shipped",       muted: true },
+      { label: "Pricing",   value: "Discovery call" },
+      { label: "Portfolio", value: "12 shipped",        muted: true },
       { label: "Scope",     value: "Web / Mobile / AI", muted: true },
     ],
   },
   {
     slug: "steady",
-    roman: "IV.",
+    roman: "V.",
     label: "Steady — Personal IT",
     tagline:
       "Personal tech help for individuals + households. For when you're the family tech person and need to hand the job off. AI coaching, phone setup, smart home, medication reminders.",
@@ -125,7 +141,7 @@ const DIVISIONS: Division[] = [
   },
   {
     slug: "realestate",
-    roman: "V.",
+    roman: "VI.",
     label: "Real Estate",
     tagline:
       "Wholesale real estate — finding off-market deals for investors. Sister channel, opens 2026.",
@@ -356,7 +372,7 @@ export default function Home() {
 
       {/* Visually-hidden H1 for SEO + accessibility */}
       <h1 style={{ position: "absolute", width: "1px", height: "1px", padding: 0, margin: "-1px", overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>
-        Purcell Ventures — Digital Services, AI Consulting, and Custom Software
+        Purcell Ventures — Sites, Digital Add-Ons, AI Consulting, and Custom Software
       </h1>
 
       {/* Wordmark masthead */}
@@ -386,7 +402,7 @@ export default function Home() {
         }}
       >
         <MetaCell label="Founded" value="April · MMXXV" />
-        <MetaCell label="Divisions" value="04 active · 01 pending" gold />
+        <MetaCell label="Divisions" value="05 active · 01 pending" gold />
         <MetaCell label="Charter" value="Domestic LLC · Georgia" />
         <MetaCell label="Principal" value="Elijah Brent Purcell" last />
       </div>
@@ -473,7 +489,7 @@ export default function Home() {
           color: "var(--color-warm-text-light)",
           textAlign: "right",
         }}>
-          04 active · 01 pending
+          05 active · 01 pending
         </span>
       </header>
 
