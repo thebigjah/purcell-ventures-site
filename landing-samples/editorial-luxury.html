@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Purcell Ventures — A Studio for Software, Web, and AI</title>
+<meta name="description" content="Purcell Ventures is an AI-forward studio building software, websites, and intelligent tools. Founded by Elijah Purcell." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0c0a08;
+    --card: #1a1714;
+    --gold: #d4af37;
+    --gold-light: #e8c96a;
+    --cream: #f5f0e0;
+    --muted: #8a8070;
+    --border: #2e2820;
+    --purple: #3d1f6e;
+    --green: #7aaa6a;
+    --display: 'Cinzel', serif;
+    --serif: 'Cormorant', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --gutter: clamp(1.5rem, 6vw, 7rem);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection { background: var(--gold); color: var(--bg); }
+
+  /* ---------- grain + vignette ---------- */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background:
+      radial-gradient(ellipse 120% 80% at 50% -10%, rgba(212,175,55,0.06), transparent 60%),
+      radial-gradient(ellipse 100% 100% at 50% 120%, rgba(61,31,110,0.08), transparent 55%);
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    inset: -200%;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------- shared label ---------- */
+  .label {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 0.68rem;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .label-muted { color: var(--muted); }
+
+  .folio {
+    font-family: var(--display);
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--muted);
+  }
+
+  /* ---------- hairline ---------- */
+  .hairline {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold) 12%, var(--gold) 88%, transparent);
+    opacity: 0.55;
+    transform-origin: left center;
+  }
+
+  /* ---------- nav ---------- */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.6rem var(--gutter);
+    mix-blend-mode: difference;
+  }
+  nav .mark {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.32em;
+    color: var(--cream);
+  }
+  nav .nav-links {
+    display: flex;
+    gap: 2.4rem;
+  }
+  nav .nav-links a {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 400;
+    opacity: 0.8;
+    transition: opacity 0.4s;
+  }
+  nav .nav-links a:hover { opacity: 1; }
+  @media (max-width: 720px) { nav .nav-links { display: none; } }
+
+  /* ---------- reveal primitives ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 1.1s cubic-bezier(.16,.84,.34,1), transform 1.1s cubic-bezier(.16,.84,.34,1);
+  }
+  .reveal.in { opacity: 1; transform: none; }
+
+  .mask-line { display: block; overflow: hidden; }
+  .mask-line > span {
+    display: block;
+    transform: translateY(110%);
+    transition: transform 1.05s cubic-bezier(.16,.84,.34,1);
+  }
+  .mask-line.in > span { transform: none; }
+
+  .draw {
+    transform: scaleX(0);
+    transition: transform 1.3s cubic-bezier(.7,0,.2,1);
+  }
+  .draw.in { transform: scaleX(1); }
+
+  /* =========================================================
+     HERO
+  ========================================================== */
+  header.hero {
+    position: relative;
+    min-height: 100vh;
+    padding: 0 var(--gutter);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-content: center;
+    gap: 0.5rem 1rem;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-kicker {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    margin-bottom: clamp(1.5rem, 4vw, 3rem);
+  }
+  .hero-kicker .hairline { flex: 1; }
+
+  .hero-title {
+    grid-column: 1 / -1;
+    font-family: var(--display);
+    font-weight: 600;
+    line-height: 0.96;
+    letter-spacing: 0.01em;
+    font-size: clamp(2.9rem, 11vw, 9.5rem);
+    color: var(--cream);
+  }
+  .hero-title em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  .hero-title .indent { padding-left: clamp(2rem, 14vw, 14rem); }
+
+  .hero-meta {
+    grid-column: 1 / 6;
+    margin-top: clamp(2rem, 5vw, 3.5rem);
+    align-self: start;
+  }
+  @media (max-width: 860px) { .hero-meta { grid-column: 1 / -1; } }
+  .hero-meta p {
+    font-family: var(--serif);
+    font-size: clamp(1.15rem, 2.1vw, 1.55rem);
+    line-height: 1.45;
+    color: var(--cream);
+    font-weight: 400;
+  }
+  .hero-meta .sig {
+    margin-top: 1.6rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-family: var(--sans);
+  }
+  .hero-meta .sig b { color: var(--gold); font-weight: 500; }
+
+  .hero-aside {
+    grid-column: 9 / -1;
+    margin-top: clamp(2rem, 5vw, 3.5rem);
+    align-self: end;
+    text-align: right;
+  }
+  @media (max-width: 860px) { .hero-aside { grid-column: 1 / -1; text-align: left; margin-top: 1.5rem; } }
+  .hero-aside .num {
+    font-family: var(--display);
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    color: var(--gold);
+    line-height: 1;
+  }
+  .hero-aside .num-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.5rem;
+  }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 2rem;
+    left: var(--gutter);
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .scroll-cue .line {
+    width: 48px; height: 1px; background: var(--gold);
+    transform-origin: left;
+    animation: cue 2.6s ease-in-out infinite;
+  }
+  @keyframes cue { 0%,100% { transform: scaleX(0.3); opacity:.4 } 50% { transform: scaleX(1); opacity:1 } }
+
+  /* =========================================================
+     SECTION SHELL
+  ========================================================== */
+  section { position: relative; z-index: 3; padding: clamp(5rem, 12vw, 11rem) var(--gutter); }
+
+  .sec-head {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: clamp(3rem, 7vw, 6rem);
+  }
+  .sec-head .folio-no { grid-column: 1 / 3; }
+  .sec-head .sec-label { grid-column: 3 / 9; }
+  .sec-head .sec-title {
+    grid-column: 1 / -1;
+    margin-top: 1.4rem;
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(2rem, 6vw, 4.6rem);
+    line-height: 1.02;
+    color: var(--cream);
+  }
+  .sec-head .sec-title em {
+    font-family: var(--serif); font-style: italic; color: var(--gold);
+    font-weight: 500; text-transform: none; letter-spacing: 0;
+  }
+
+  /* =========================================================
+     DIVISIONS — editorial entries
+  ========================================================== */
+  .divisions { display: flex; flex-direction: column; }
+
+  .division {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    padding: clamp(2.2rem, 4vw, 3.4rem) 0;
+    border-top: 1px solid var(--border);
+    align-items: start;
+    position: relative;
+  }
+  .division:last-child { border-bottom: 1px solid var(--border); }
+
+  .division .d-no {
+    grid-column: 1 / 2;
+    font-family: var(--display);
+    font-size: 0.85rem;
+    color: var(--gold);
+    padding-top: 0.5rem;
+  }
+  .division .d-name {
+    grid-column: 2 / 7;
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(1.45rem, 3.4vw, 2.7rem);
+    line-height: 1.05;
+    color: var(--cream);
+    transition: color 0.5s, transform 0.6s cubic-bezier(.16,.84,.34,1);
+  }
+  .division .d-tag {
+    grid-column: 2 / 7;
+    margin-top: 0.7rem;
+    font-size: 0.66rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .division .d-body {
+    grid-column: 8 / 12;
+    font-family: var(--serif);
+    font-size: clamp(1.05rem, 1.7vw, 1.32rem);
+    line-height: 1.55;
+    color: var(--cream);
+    font-weight: 400;
+  }
+  .division .d-mark {
+    grid-column: 12 / -1;
+    justify-self: end;
+    font-family: var(--display);
+    font-size: 1.4rem;
+    color: var(--border);
+    transition: color 0.5s, transform 0.6s;
+    padding-top: 0.3rem;
+  }
+  .division:hover .d-name { color: var(--gold); transform: translateX(10px); }
+  .division:hover .d-mark { color: var(--gold); transform: rotate(45deg); }
+
+  @media (max-width: 860px) {
+    .division { gap: 0.4rem; }
+    .division .d-no { grid-column: 1 / -1; padding-top: 0; }
+    .division .d-name { grid-column: 1 / -1; }
+    .division .d-tag { grid-column: 1 / -1; }
+    .division .d-body { grid-column: 1 / -1; margin-top: 1.1rem; }
+    .division .d-mark { display: none; }
+    .division:hover .d-name { transform: none; }
+  }
+
+  /* =========================================================
+     MANIFESTO
+  ========================================================== */
+  .manifesto {
+    background:
+      radial-gradient(ellipse 90% 120% at 80% 0%, rgba(61,31,110,0.16), transparent 55%),
+      var(--bg);
+  }
+  .manifesto-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+  }
+  .manifesto .m-side { grid-column: 1 / 4; align-self: start; }
+  @media (max-width: 860px) { .manifesto .m-side { grid-column: 1 / -1; margin-bottom: 2.5rem; } }
+  .manifesto .m-side .lamp {
+    font-family: var(--display);
+    color: var(--gold);
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+  .manifesto .m-side p {
+    font-size: 0.72rem; letter-spacing: 0.06em; line-height: 1.7;
+    color: var(--muted);
+  }
+
+  .manifesto .m-body { grid-column: 5 / -1; }
+  @media (max-width: 860px) { .manifesto .m-body { grid-column: 1 / -1; } }
+  .manifesto .m-body p {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    line-height: 1.4;
+    color: var(--cream);
+  }
+  .manifesto .m-body p .drop {
+    float: left;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(4.5rem, 10vw, 8rem);
+    line-height: 0.74;
+    color: var(--gold);
+    margin: 0.18em 0.18em 0 0;
+  }
+  .manifesto .m-body p em { color: var(--gold); font-style: italic; }
+  .manifesto .m-body .verse {
+    margin-top: 2.6rem;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* =========================================================
+     APPROACH / NUMBERS
+  ========================================================== */
+  .approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  @media (max-width: 760px) { .approach-grid { grid-template-columns: 1fr; } }
+  .approach-cell {
+    background: var(--bg);
+    padding: clamp(2rem, 4vw, 3.2rem);
+  }
+  .approach-cell .a-no {
+    font-family: var(--display); color: var(--gold);
+    font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 1.4rem;
+  }
+  .approach-cell h3 {
+    font-family: var(--display); font-weight: 500;
+    font-size: clamp(1.3rem, 2.4vw, 1.8rem); color: var(--cream);
+    margin-bottom: 0.9rem; line-height: 1.1;
+  }
+  .approach-cell p {
+    font-family: var(--serif); font-size: 1.12rem; line-height: 1.55;
+    color: var(--muted); font-weight: 400;
+  }
+
+  /* =========================================================
+     CTA
+  ========================================================== */
+  .cta {
+    text-align: center;
+    padding-top: clamp(6rem, 14vw, 13rem);
+    padding-bottom: clamp(6rem, 14vw, 13rem);
+    position: relative;
+  }
+  .cta .label { display: block; margin-bottom: 2rem; }
+  .cta h2 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(2.6rem, 9vw, 7.5rem);
+    line-height: 0.98;
+    color: var(--cream);
+    letter-spacing: 0.01em;
+  }
+  .cta h2 em {
+    font-family: var(--serif); font-style: italic; color: var(--gold);
+    font-weight: 500; letter-spacing: 0; text-transform: none;
+  }
+  .cta .cta-sub {
+    max-width: 34rem; margin: 2.2rem auto 0;
+    font-family: var(--serif); font-size: 1.25rem; line-height: 1.5;
+    color: var(--muted);
+  }
+  .cta-btn {
+    display: inline-flex; align-items: center; gap: 1rem;
+    margin-top: 3.4rem;
+    padding: 1.1rem 2.6rem;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.5s;
+  }
+  .cta-btn span { position: relative; z-index: 2; }
+  .cta-btn::before {
+    content: ""; position: absolute; inset: 0;
+    background: var(--gold);
+    transform: translateY(101%);
+    transition: transform 0.55s cubic-bezier(.7,0,.2,1);
+    z-index: 1;
+  }
+  .cta-btn:hover { color: var(--bg); }
+  .cta-btn:hover::before { transform: translateY(0); }
+  .cta-btn .arrow { transition: transform 0.5s; }
+  .cta-btn:hover .arrow { transform: translateX(6px); }
+
+  /* =========================================================
+     FOOTER
+  ========================================================== */
+  footer {
+    position: relative; z-index: 3;
+    padding: clamp(3rem, 6vw, 5rem) var(--gutter) 2.5rem;
+    border-top: 1px solid var(--border);
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem; align-items: baseline;
+  }
+  .footer-grid .f-mark {
+    grid-column: 1 / 6;
+    font-family: var(--display); font-weight: 600;
+    font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+    letter-spacing: 0.3em; color: var(--cream);
+  }
+  @media (max-width: 760px) { .footer-grid .f-mark { grid-column: 1 / -1; } }
+  .footer-grid .f-col { grid-column: span 3; }
+  @media (max-width: 760px) { .footer-grid .f-col { grid-column: 1 / -1; } }
+  .footer-grid .f-col .label { display: block; margin-bottom: 0.9rem; }
+  .footer-grid .f-col a, .footer-grid .f-col span {
+    display: block; color: var(--muted); text-decoration: none;
+    font-size: 0.82rem; line-height: 2; transition: color 0.4s;
+  }
+  .footer-grid .f-col a:hover { color: var(--gold); }
+  .footer-base {
+    margin-top: 3rem; display: flex; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+    font-size: 0.66rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .mask-line > span, .draw { transition: none !important; opacity: 1 !important; transform: none !important; }
+    .scroll-cue .line { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="mark" href="#top">PURCELL VENTURES</a>
+  <div class="nav-links">
+    <a href="#divisions">Divisions</a>
+    <a href="#manifesto">Manifesto</a>
+    <a href="#approach">Approach</a>
+    <a href="#start">Start a Project</a>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="top">
+  <div class="hero-kicker reveal">
+    <span class="label">The Studio</span>
+    <span class="hairline draw"></span>
+    <span class="folio">Est. MMXXIV — Acworth, GA</span>
+  </div>
+
+  <h1 class="hero-title">
+    <span class="mask-line"><span>We build the</span></span>
+    <span class="mask-line"><span><em>software,</em> sites,</span></span>
+    <span class="mask-line indent"><span>and AI tools</span></span>
+    <span class="mask-line indent"><span>worth keeping.</span></span>
+  </h1>
+
+  <div class="hero-meta reveal">
+    <p>An AI-forward studio designing and shipping considered digital work for founders who refuse the generic.</p>
+    <div class="sig">Founded by <b>Elijah Purcell</b></div>
+  </div>
+
+  <div class="hero-aside reveal">
+    <div class="num">04</div>
+    <div class="num-label">Divisions, one standard</div>
+  </div>
+
+  <div class="scroll-cue reveal">
+    <span class="line"></span> Scroll
+  </div>
+</header>
+
+<!-- ===================== DIVISIONS ===================== -->
+<section class="divisions-section" id="divisions">
+  <div class="sec-head">
+    <span class="folio-no folio reveal">No. 01</span>
+    <span class="sec-label label reveal">The Divisions</span>
+    <h2 class="sec-title reveal">Four disciplines, held to a <em>single</em> standard of craft.</h2>
+  </div>
+
+  <div class="divisions">
+    <article class="division reveal">
+      <span class="d-no">i.</span>
+      <h3 class="d-name">Web Studio</h3>
+      <div class="d-tag">Sites &amp; brand systems</div>
+      <p class="d-body">Editorial websites and digital identities engineered to move. Every line, type choice, and transition is intentional. We design the impression and the infrastructure behind it.</p>
+      <span class="d-mark">+</span>
+    </article>
+
+    <article class="division reveal">
+      <span class="d-no">ii.</span>
+      <h3 class="d-name">Software</h3>
+      <div class="d-tag">Web &amp; native applications</div>
+      <p class="d-body">Production applications, dashboards, and platforms built to last past the demo. Clean architecture, real users, and shipping pace measured in days, not quarters.</p>
+      <span class="d-mark">+</span>
+    </article>
+
+    <article class="division reveal">
+      <span class="d-no">iii.</span>
+      <h3 class="d-name">Digital Products</h3>
+      <div class="d-tag">Tools, agents &amp; automations</div>
+      <p class="d-body">Intelligent tools that do work, not demos. AI agents, internal systems, and automations that compress hours into seconds and run quietly while you sleep.</p>
+      <span class="d-mark">+</span>
+    </article>
+
+    <article class="division reveal">
+      <span class="d-no">iv.</span>
+      <h3 class="d-name">Consulting</h3>
+      <div class="d-tag">Strategy &amp; AI integration</div>
+      <p class="d-body">Direction for teams deciding where AI belongs in their business. We map the leverage, build the first version, and hand back something you can actually run.</p>
+      <span class="d-mark">+</span>
+    </article>
+  </div>
+</section>
+
+<!-- ===================== MANIFESTO ===================== -->
+<section class="manifesto" id="manifesto">
+  <div class="sec-head">
+    <span class="folio-no folio reveal">No. 02</span>
+    <span class="sec-label label reveal">The Manifesto</span>
+  </div>
+  <div class="manifesto-grid">
+    <aside class="m-side reveal">
+      <div class="lamp">&#10022;</div>
+      <p>A lampstand is not hidden. The work we make is meant to be seen, used, and trusted. We treat that as a charge, not a slogan.</p>
+    </aside>
+    <div class="m-body">
+      <p class="reveal">
+        <span class="drop">M</span>ost software is built to impress for a week and quietly disappoint forever. We build the opposite. Tools that earn their place by working, sites that read like they were made by hand, and AI that serves the person using it rather than the trend that named it. <em>Excellence is the testimony.</em>
+      </p>
+      <div class="verse reveal">Let your light so shine. &mdash; Matthew 5:16</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== APPROACH ===================== -->
+<section class="approach" id="approach">
+  <div class="sec-head">
+    <span class="folio-no folio reveal">No. 03</span>
+    <span class="sec-label label reveal">The Approach</span>
+    <h2 class="sec-title reveal">How the work actually <em>gets</em> made.</h2>
+  </div>
+  <div class="approach-grid">
+    <div class="approach-cell reveal">
+      <div class="a-no">01</div>
+      <h3>Taste, then tech</h3>
+      <p>We decide what good looks like before we decide how to build it. Direction precedes code, always.</p>
+    </div>
+    <div class="approach-cell reveal">
+      <div class="a-no">02</div>
+      <h3>Ship in days</h3>
+      <p>AI compresses the distance between idea and live. We move at that speed without surrendering the polish.</p>
+    </div>
+    <div class="approach-cell reveal">
+      <div class="a-no">03</div>
+      <h3>Built to be kept</h3>
+      <p>Nothing disposable. Every project is something you would be proud to put your name beside.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="cta" id="start">
+  <span class="label reveal">No. 04 &mdash; The Invitation</span>
+  <h2 class="reveal">Start a <em>project</em><br/>worth building.</h2>
+  <p class="cta-sub reveal">Tell us what you are trying to make. If it is ambitious and you want it made well, this is the right room.</p>
+  <a class="cta-btn reveal" href="mailto:elijahpurcell@gmail.com?subject=New%20Project%20Inquiry">
+    <span>Start a Project</span>
+    <span class="arrow" aria-hidden="true">&#8594;</span>
+  </a>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="footer-grid">
+    <div class="f-mark">PURCELL VENTURES</div>
+    <div class="f-col">
+      <span class="label">Studio</span>
+      <a href="#divisions">Web Studio</a>
+      <a href="#divisions">Software</a>
+      <a href="#divisions">Digital Products</a>
+      <a href="#divisions">Consulting</a>
+    </div>
+    <div class="f-col">
+      <span class="label">Connect</span>
+      <a href="mailto:elijahpurcell@gmail.com">Email</a>
+      <a href="#start">Start a project</a>
+      <span>Acworth, Georgia</span>
+    </div>
+  </div>
+  <div class="footer-base">
+    <span>&copy; MMXXVI Purcell Ventures LLC</span>
+    <span>Software &middot; Web &middot; Artificial Intelligence</span>
+  </div>
+</footer>
+
+<script>
+  // Orchestrated page-load + scroll reveals via IntersectionObserver.
+  (function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Staggered hero entrance on load.
+    window.addEventListener('load', function () {
+      if (reduce) {
+        document.querySelectorAll('.reveal, .mask-line, .draw').forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      var heroSeq = document.querySelectorAll('header.hero .mask-line, header.hero .reveal, header.hero .draw');
+      heroSeq.forEach(function (el, i) {
+        setTimeout(function () { el.classList.add('in'); }, 180 + i * 130);
+      });
+    });
+
+    // Scroll-triggered reveals for everything below the fold.
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        // Stagger grouped children within a section.
+        var group = el.closest('section');
+        el.classList.add('in');
+        io.unobserve(el);
+      });
+    }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+
+    document.querySelectorAll('section .reveal, section .mask-line, section .draw').forEach(function (el, i) {
+      // light per-element delay so siblings cascade
+      el.style.transitionDelay = (Math.min(i % 6, 5) * 0.07) + 's';
+      io.observe(el);
+    });
+
+    // Subtle parallax drift on hero numeral for life without distraction.
+    if (!reduce) {
+      var aside = document.querySelector('.hero-aside .num');
+      window.addEventListener('scroll', function () {
+        var y = window.scrollY;
+        if (aside && y < window.innerHeight) {
+          aside.style.transform = 'translateY(' + (y * 0.08) + 'px)';
+        }
+      }, { passive: true });
+    }
+  })();
+</script>
+</body>
+</html>
