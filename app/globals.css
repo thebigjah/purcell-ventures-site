@@ -246,6 +246,10 @@ h1, h2, h3 {
 /* ── SiteFX: site-wide wow layer (cursor, preloader, reveals) ── */
 @keyframes pvFxUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
 @keyframes pvFxSweep { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+@keyframes pvFxPulse { 0%, 100% { opacity: 0.45; } 50% { opacity: 1; } }
+@keyframes pvScan { from { transform: translateY(0); } to { transform: translateY(100vh); } }
+@keyframes pvReticleSpin { to { transform: rotate(360deg); } }
+@keyframes pvSpyHit { 0% { opacity: 0; letter-spacing: 0.6em; filter: blur(6px); } 60% { opacity: 1; filter: blur(0); } 100% { opacity: 1; letter-spacing: 0.18em; } }
 
 .pv-reveal { opacity: 0; transform: translateY(30px); will-change: opacity, transform; }
 .pv-reveal.pv-in {

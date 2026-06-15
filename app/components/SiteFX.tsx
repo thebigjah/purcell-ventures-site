@@ -8,37 +8,140 @@
  *   4. Reveal     — cinematic scroll reveals auto-applied to sections + cards
  * All progressive-enhanced (no JS / reduced-motion / touch → graceful), brand gold #d4af37.
  */
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { PanopticonMark } from "./PanopticonMark";
 
 const GOLD = "#d4af37";
 
-/* ── 1. Preloader ─────────────────────────────────────────────── */
-function Preloader() {
-  const [show, setShow] = useState(true);
-  const [leaving, setLeaving] = useState(false);
+/* ── 1. Intro sequence — load → pixel-stretch gold wave → logo → scroll-in ── */
+function IntroSequence() {
+  // phase: 0 loading · 1 wave · 2 brand · 3 leaving
+  const [active, setActive] = useState(true);
+  const [phase, setPhase] = useState(0);
+  const cv = useRef<HTMLCanvasElement>(null);
+
+  const dismiss = useCallback(() => {
+    if (typeof window !== "undefined") sessionStorage.setItem("pv_entered", "1");
+    setPhase(3);
+    setTimeout(() => setActive(false), 850);
+  }, []);
+
+  // timeline
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (sessionStorage.getItem("pv_entered")) { setShow(false); return; }
-    const t1 = setTimeout(() => setLeaving(true), 1500);
-    const t2 = setTimeout(() => { setShow(false); sessionStorage.setItem("pv_entered", "1"); }, 2200);
-    return () => { clearTimeout(t1); clearTimeout(t2); };
-  }, []);
-  if (!show) return null;
+    if (sessionStorage.getItem("pv_entered")) { setActive(false); return; }
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setPhase(2);
+      const t = setTimeout(dismiss, 1500);
+      return () => clearTimeout(t);
+    }
+    const t1 = setTimeout(() => setPhase(1), 750);
+    const t2 = setTimeout(() => setPhase(2), 2150);
+    const t3 = setTimeout(dismiss, 7000); // safety auto-dismiss
+    return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
+  }, [dismiss]);
+
+  // dismiss on first scroll/click once we're on the brand screen
+  useEffect(() => {
+    if (phase !== 2) return;
+    const go = () => dismiss();
+    const opt = { once: true, passive: true } as AddEventListenerOptions;
+    window.addEventListener("wheel", go, opt);
+    window.addEventListener("touchmove", go, opt);
+    window.addEventListener("click", go, { once: true });
+    window.addEventListener("keydown", go, { once: true });
+    return () => {
+      window.removeEventListener("wheel", go); window.removeEventListener("touchmove", go);
+      window.removeEventListener("click", go); window.removeEventListener("keydown", go);
+    };
+  }, [phase, dismiss]);
+
+  // the pixel-stretch wave: slit-scan a gold panopticon-motif field with a travelling stretch
+  useEffect(() => {
+    if (phase < 1) return;
+    const c = cv.current; if (!c) return;
+    const ctx = c.getContext("2d"); if (!ctx) return;
+    const W = (c.width = window.innerWidth), H = (c.height = window.innerHeight);
+    const coarse = window.matchMedia("(pointer: coarse)").matches;
+    // offscreen brand-pattern source: gold radial glow + concentric rings + radial cells
+    const off = document.createElement("canvas"); off.width = W; off.height = H;
+    const o = off.getContext("2d")!;
+    o.fillStyle = "#0c0a08"; o.fillRect(0, 0, W, H);
+    const cx = W / 2, cy = H / 2, R = Math.min(W, H) * 0.42;
+    const grad = o.createRadialGradient(cx, cy, 0, cx, cy, R * 1.4);
+    grad.addColorStop(0, "rgba(232,201,106,0.55)"); grad.addColorStop(0.45, "rgba(212,175,55,0.22)"); grad.addColorStop(1, "rgba(12,10,8,0)");
+    o.fillStyle = grad; o.fillRect(0, 0, W, H);
+    o.strokeStyle = "rgba(212,175,55,0.5)"; o.lineWidth = 1;
+    for (let i = 1; i <= 10; i++) { o.globalAlpha = 0.12 + i * 0.045; o.beginPath(); o.arc(cx, cy, (R / 10) * i, 0, 7); o.stroke(); }
+    o.globalAlpha = 1; o.fillStyle = "rgba(212,175,55,0.8)";
+    for (let g = 0; g < 36; g++) { const a = (g / 36) * Math.PI * 2; const x = cx + Math.cos(a) * R, y = cy + Math.sin(a) * R; o.save(); o.translate(x, y); o.rotate(a); o.fillRect(-2, -14, 4, 28); o.restore(); }
+
+    const slice = coarse ? 5 : 3, sigma = W * 0.06, amp = 1.9, DUR = 1350;
+    let raf = 0, start = 0;
+    const step = (t: number) => {
+      if (!start) start = t;
+      const p = Math.min(1, (t - start) / DUR);
+      const wp = (p * 1.4 - 0.2) * W; // wave x position sweeping L→R
+      ctx.clearRect(0, 0, W, H);
+      for (let x = 0; x < W; x += slice) {
+        const d = x - wp; const gss = Math.exp(-(d * d) / (2 * sigma * sigma));
+        const sc = 1 + amp * gss; const sh = H * sc;
+        ctx.drawImage(off, x, 0, slice, H, x, (H - sh) / 2, slice, sh);
+      }
+      if (p < 1) raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [phase]);
+
+  if (!active) return null;
+  const lock = phase >= 2;
   return (
     <div aria-hidden style={{
-      position: "fixed", inset: 0, zIndex: 9999, background: "#0c0a08",
-      display: "grid", placeItems: "center", transition: "opacity 0.7s ease",
-      opacity: leaving ? 0 : 1, pointerEvents: leaving ? "none" : "auto",
+      position: "fixed", inset: 0, zIndex: 9999, background: "#0c0a08", overflow: "hidden",
+      clipPath: phase === 3 ? "circle(0% at 50% 50%)" : "circle(150% at 50% 50%)",
+      transition: "clip-path 0.85s cubic-bezier(0.76,0,0.24,1)",
     }}>
-      <div style={{ textAlign: "center", animation: "pvFxUp 0.9s cubic-bezier(0.16,1,0.3,1) both" }}>
-        <div style={{
-          fontFamily: "var(--font-cinzel), serif", color: "#f5f0e0", fontWeight: 700,
-          fontSize: "clamp(22px, 5vw, 38px)", letterSpacing: "0.34em", paddingLeft: "0.34em",
-        }}>PURCELL VENTURES</div>
-        <div style={{ position: "relative", height: 1, width: 220, maxWidth: "60vw", margin: "20px auto 14px", background: "rgba(212,175,55,0.18)", overflow: "hidden" }}>
-          <div style={{ position: "absolute", inset: 0, background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)`, animation: "pvFxSweep 1.5s ease-in-out forwards" }} />
+      {/* the signal — slit-scan gold wave */}
+      <canvas ref={cv} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", opacity: lock ? 0 : phase === 1 ? 1 : 0, transition: "opacity 0.6s ease" }} />
+      {/* surveillance vignette + scanline */}
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "radial-gradient(circle at 50% 48%, transparent 48%, rgba(0,0,0,0.74) 100%)" }} />
+      <div style={{ position: "absolute", left: 0, right: 0, top: 0, height: 2, background: "linear-gradient(90deg, transparent, rgba(212,175,55,0.55), transparent)", opacity: phase < 2 ? 1 : 0, animation: "pvScan 2.6s linear infinite" }} />
+
+      {/* reticle — sweeps, then locks to center */}
+      <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", pointerEvents: "none", opacity: phase === 3 ? 0 : 0.85, transition: "opacity 0.5s" }}>
+        <g style={{ transformOrigin: "50px 50px", transition: "transform 0.85s cubic-bezier(0.76,0,0.24,1)", transform: lock ? "scale(0.4)" : "scale(1)" }}>
+          <g style={{ transformOrigin: "50px 50px", animation: lock ? "none" : "pvReticleSpin 8s linear infinite" }}>
+            <circle cx="50" cy="50" r="22" fill="none" stroke={GOLD} strokeOpacity="0.5" strokeWidth="0.25" strokeDasharray="2 3" />
+            <circle cx="50" cy="50" r="31" fill="none" stroke={GOLD} strokeOpacity="0.22" strokeWidth="0.2" />
+          </g>
+          <line x1="50" y1="34" x2="50" y2="43" stroke={GOLD} strokeWidth="0.3" />
+          <line x1="50" y1="57" x2="50" y2="66" stroke={GOLD} strokeWidth="0.3" />
+          <line x1="34" y1="50" x2="43" y2="50" stroke={GOLD} strokeWidth="0.3" />
+          <line x1="57" y1="50" x2="66" y2="50" stroke={GOLD} strokeWidth="0.3" />
+        </g>
+      </svg>
+
+      {/* phase 0/1: dossier telemetry */}
+      <div style={{ position: "absolute", top: "12%", left: "8%", fontFamily: "var(--font-dm-sans), monospace", color: "rgba(212,175,55,0.82)", fontSize: 10, letterSpacing: "0.16em", lineHeight: 2.1, opacity: lock ? 0 : 1, transition: "opacity 0.4s" }}>
+        {["> SECURE CHANNEL ESTABLISHED", "> NODE · ACWORTH GA 30101", "> DECRYPTING STUDIO ASSETS", "> CLEARANCE VERIFIED"].map((l, i) => (
+          <div key={i} style={{ animation: `pvFxUp 0.4s ${0.15 + i * 0.24}s both` }}>{l}</div>
+        ))}
+      </div>
+
+      {/* phase 2: brand lock */}
+      <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", opacity: lock && phase < 3 ? 1 : 0, transition: "opacity 0.6s ease", pointerEvents: phase === 2 ? "auto" : "none" }}>
+        <div style={{ textAlign: "center" }}>
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: 22, animation: lock ? "pvFxUp 0.8s cubic-bezier(0.16,1,0.3,1) both" : undefined }}>
+            <PanopticonMark size={130} cfg={{ numGroups: 8, includeFlankers: true, numRings: 10, ringFadeToCenter: true }} />
+          </div>
+          <div style={{ display: "flex", justifyContent: "center", gap: "0.3em", fontFamily: "var(--font-cinzel), serif", color: "#f5f0e0", fontWeight: 700, fontSize: "clamp(22px, 5vw, 40px)", letterSpacing: "0.18em" }}>
+            <span style={{ animation: lock ? "pvSpyHit 0.55s 0.15s both" : undefined }}>PURCELL</span>
+            <span style={{ animation: lock ? "pvSpyHit 0.55s 0.34s both" : undefined }}>VENTURES</span>
+          </div>
+          <div style={{ marginTop: 18, fontFamily: "var(--font-dm-sans), monospace", color: GOLD, fontSize: 10, letterSpacing: "0.42em", textTransform: "uppercase", animation: lock ? "pvFxUp 0.5s 0.62s both" : undefined }}>Clearance Granted</div>
+          <div style={{ marginTop: 26, fontFamily: "var(--font-dm-sans), sans-serif", color: "#8a8070", fontSize: 10, letterSpacing: "0.34em", textTransform: "uppercase", animation: "pvFxPulse 2s 0.9s ease-in-out infinite" }}>Scroll to begin ↓</div>
         </div>
-        <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", color: "#8a8070", fontSize: 10, letterSpacing: "0.34em", textTransform: "uppercase" }}>Entering the Studio</div>
       </div>
     </div>
   );
@@ -141,5 +244,5 @@ function Reveal() {
 }
 
 export default function SiteFX() {
-  return (<><Preloader /><Cursor /><Ambient /><Reveal /></>);
+  return (<><IntroSequence /><Cursor /><Ambient /><Reveal /></>);
 }
