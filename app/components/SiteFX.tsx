@@ -1,51 +1,81 @@
 "use client";
 /**
- * SiteFX — site-wide "wow" layer (visual only, no page content touched):
- *   1. IntroSequence — a 3D spy opening-credits journey (ThreeScene) that flies
- *      through a rifled gold tunnel, orbits a bullet-time burst, the gold fluid
- *      washes past the lens, then arrives clean on the panopticon mark + wordmark
- *      + founder credit + scroll-to-enter, opening into the site via a gun-barrel iris.
- *   2. Cursor  — custom gold ring cursor (desktop)
- *   3. Ambient — subtle gold particle field (screen blend)
- *   4. Reveal  — cinematic scroll reveals auto-applied to sections + cards
- * Progressive-enhanced: no-JS / reduced-motion / no-WebGL / touch all degrade gracefully.
+ * SiteFX — a site-wide "wow" motion/effects layer. Pure visual enhancement,
+ * added once in layout.tsx; it touches NO page content. Four parts:
+ *   1. Preloader  — a branded Cinzel intro gate (once per session)
+ *   2. Cursor     — a custom gold ring cursor that reacts to interactive els (desktop only)
+ *   3. Ambient    — a subtle gold particle/filament field over warm-black (screen blend)
+ *   4. Reveal     — cinematic scroll reveals auto-applied to sections + cards
+ * All progressive-enhanced (no JS / reduced-motion / touch → graceful), brand gold #d4af37.
  */
 import { useCallback, useEffect, useRef, useState } from "react";
 import { PanopticonMark } from "./PanopticonMark";
-import { ThreeScene } from "./ThreeScene";
 
 const GOLD = "#d4af37";
-const GRAIN = "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")";
 
-/* ── 1. Intro — 3D spy opening-credits journey ─────────────────── */
+/* ── 1. Intro — spy opening-credits sequence: shader bg + 7 timed scenes + gun-barrel iris ── */
+const PV_VERT = "attribute vec2 p; void main(){ gl_Position = vec4(p, 0.0, 1.0); }";
+const PV_FRAG = `precision highp float;
+uniform vec2 u_res; uniform float u_time; uniform float u_intensity;
+float hash(vec2 p){ p=fract(p*vec2(123.34,345.45)); p+=dot(p,p+34.345); return fract(p.x*p.y); }
+float noise(vec2 p){ vec2 i=floor(p),f=fract(p); vec2 u=f*f*(3.0-2.0*f);
+  float a=hash(i),b=hash(i+vec2(1.0,0.0)),c=hash(i+vec2(0.0,1.0)),d=hash(i+vec2(1.0,1.0));
+  return mix(mix(a,b,u.x),mix(c,d,u.x),u.y); }
+float fbm(vec2 p){ float v=0.0,a=0.5; for(int i=0;i<6;i++){ v+=a*noise(p); p=p*2.02+vec2(11.3,7.7); a*=0.5; } return v; }
+void main(){
+  vec2 uv=gl_FragCoord.xy/u_res.xy; vec2 p=uv; p.x*=u_res.x/u_res.y;
+  float t=u_time*0.045;
+  vec2 q=vec2(fbm(p*1.6+vec2(0.0,t)),fbm(p*1.6+vec2(5.2,-t)));
+  vec2 r=vec2(fbm(p*1.6+3.0*q+vec2(1.7,9.2)+t*0.5),fbm(p*1.6+3.0*q+vec2(8.3,2.8)-t*0.4));
+  float f=fbm(p*1.7+3.2*r);
+  vec2 lp=vec2(0.5*(u_res.x/u_res.y)+sin(u_time*0.45)*0.18,0.34);
+  float d=distance(p,lp); float glow=smoothstep(0.95,0.0,d);
+  vec3 nearBlack=vec3(0.047,0.039,0.031),amber=vec3(0.35,0.22,0.06),gold=vec3(0.831,0.686,0.216),goldLight=vec3(0.91,0.79,0.42);
+  float field=f+0.18*r.x+0.12*q.y;
+  vec3 col=nearBlack;
+  col=mix(col,amber,smoothstep(0.35,0.85,field)*0.85);
+  col=mix(col,gold,smoothstep(0.62,1.05,field)*0.65*(0.4+glow));
+  col+=goldLight*pow(glow,2.2)*0.55;
+  float fil=smoothstep(0.78,0.82,fbm(p*3.0+r*2.0+t*1.2));
+  col+=gold*fil*0.12*glow;
+  float vig=smoothstep(1.25,0.25,distance(uv,vec2(0.5)));
+  col*=0.55+0.45*vig;
+  col+=(hash(gl_FragCoord.xy+u_time)-0.5)*0.015;
+  col*=u_intensity;
+  gl_FragColor=vec4(col,1.0);
+}`;
+
 function IntroSequence() {
   const [active, setActive] = useState(true);
-  const [arrived, setArrived] = useState(false);
+  const [scene, setScene] = useState(1);   // 1..7 storyboard scenes
   const [leaving, setLeaving] = useState(false);
-  const [run3d, setRun3d] = useState(false);
+  const sh = useRef<HTMLCanvasElement>(null);
+  const sceneRef = useRef(1);
+  const intensity = useRef(0.25);
 
   const dismiss = useCallback(() => {
     if (typeof window !== "undefined") sessionStorage.setItem("pv_entered", "1");
     setLeaving(true);
-    setTimeout(() => setActive(false), 1000);
+    setTimeout(() => setActive(false), 950);
   }, []);
-  const onArrive = useCallback(() => setArrived(true), []);
 
+  // scene timeline (slowed, opening-credits pacing)
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (sessionStorage.getItem("pv_entered")) { setActive(false); return; }
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setArrived(true);
-      const t = setTimeout(dismiss, 2400); return () => clearTimeout(t);
+      setScene(7); sceneRef.current = 7; intensity.current = 0.85;
+      const t = setTimeout(dismiss, 2000); return () => clearTimeout(t);
     }
-    setRun3d(true);
-    const safety = setTimeout(() => setArrived(true), 11000); // if onArrive never fires (no webgl)
-    return () => clearTimeout(safety);
+    const marks: [number, number][] = [[2, 950], [3, 1950], [4, 2900], [5, 4000], [6, 4950], [7, 6200]];
+    const timers = marks.map(([s, at]) => setTimeout(() => { setScene(s); sceneRef.current = s; }, at));
+    const safety = setTimeout(dismiss, 13000);
+    return () => { timers.forEach(clearTimeout); clearTimeout(safety); };
   }, [dismiss]);
 
-  // dismiss on first scroll/click once arrived
+  // dismiss on first scroll/click once we reach the lock
   useEffect(() => {
-    if (!arrived) return;
+    if (scene < 6) return;
     const go = () => dismiss();
     const opt = { once: true, passive: true } as AddEventListenerOptions;
     window.addEventListener("wheel", go, opt); window.addEventListener("touchmove", go, opt);
@@ -54,35 +84,99 @@ function IntroSequence() {
       window.removeEventListener("wheel", go); window.removeEventListener("touchmove", go);
       window.removeEventListener("click", go); window.removeEventListener("keydown", go);
     };
-  }, [arrived, dismiss]);
+  }, [scene, dismiss]);
+
+  // WebGL fluid-gold shader background — swells into the climax via u_intensity
+  useEffect(() => {
+    const c = sh.current; if (!c) return;
+    let gl: WebGLRenderingContext | null = null;
+    try { gl = (c.getContext("webgl") || c.getContext("experimental-webgl")) as WebGLRenderingContext | null; } catch { /* no webgl */ }
+    if (!gl) return;
+    const g = gl;
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.6);
+    const resize = () => { c.width = Math.floor(innerWidth * dpr); c.height = Math.floor(innerHeight * dpr); g.viewport(0, 0, c.width, c.height); };
+    const mk = (type: number, src: string) => { const s = g.createShader(type)!; g.shaderSource(s, src); g.compileShader(s); return s; };
+    const prog = g.createProgram()!;
+    g.attachShader(prog, mk(g.VERTEX_SHADER, PV_VERT));
+    g.attachShader(prog, mk(g.FRAGMENT_SHADER, PV_FRAG));
+    g.linkProgram(prog); g.useProgram(prog);
+    const buf = g.createBuffer(); g.bindBuffer(g.ARRAY_BUFFER, buf);
+    g.bufferData(g.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), g.STATIC_DRAW);
+    const loc = g.getAttribLocation(prog, "p"); g.enableVertexAttribArray(loc); g.vertexAttribPointer(loc, 2, g.FLOAT, false, 0, 0);
+    const uRes = g.getUniformLocation(prog, "u_res"), uTime = g.getUniformLocation(prog, "u_time"), uInt = g.getUniformLocation(prog, "u_intensity");
+    resize(); window.addEventListener("resize", resize);
+    const start = performance.now(); let raf = 0;
+    const targetFor = (s: number) => (s <= 2 ? 0.42 : s <= 4 ? 0.58 : s === 5 ? 0.82 : s === 6 ? 1.05 : 0.85);
+    const frame = (now: number) => {
+      intensity.current += (targetFor(sceneRef.current) - intensity.current) * 0.04;
+      g.uniform2f(uRes, c.width, c.height); g.uniform1f(uTime, (now - start) / 1000); g.uniform1f(uInt, intensity.current);
+      g.drawArrays(g.TRIANGLES, 0, 3);
+      raf = requestAnimationFrame(frame);
+    };
+    raf = requestAnimationFrame(frame);
+    return () => { cancelAnimationFrame(raf); window.removeEventListener("resize", resize); };
+  }, []);
 
   if (!active) return null;
   return (
     <div aria-hidden style={{
       position: "fixed", inset: 0, zIndex: 9999, background: "#0c0a08", overflow: "hidden",
       clipPath: leaving ? "circle(0% at 50% 50%)" : "circle(150% at 50% 50%)",
-      transition: "clip-path 1s cubic-bezier(0.76,0,0.24,1)",
+      transition: "clip-path 0.95s cubic-bezier(0.76,0,0.24,1)",
     }}>
-      {run3d && <ThreeScene onArrive={onArrive} dim={arrived} />}
+      <canvas ref={sh} style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} />
+      {/* film grain + vignette texture */}
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", opacity: 0.06, mixBlendMode: "overlay", backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")", animation: "pvGrain 0.5s steps(4) infinite" }} />
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "radial-gradient(circle at 50% 46%, transparent 40%, rgba(0,0,0,0.72) 100%)" }} />
 
-      {/* film grain texture */}
-      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", opacity: 0.05, mixBlendMode: "overlay", backgroundImage: GRAIN, animation: "pvGrain 0.5s steps(4) infinite" }} />
+      {/* SCENE 1 — ignition dot */}
+      {scene <= 2 && <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center" }}>
+        <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#f5f0e0", boxShadow: `0 0 16px 4px ${GOLD}`, animation: "pvDrift 1.2s ease-in-out both", opacity: scene === 1 ? 1 : 0, transition: "opacity 0.5s" }} />
+      </div>}
 
-      {/* lock overlay — fades in clean after the camera arrives */}
-      <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", pointerEvents: arrived ? "auto" : "none", opacity: arrived ? 1 : 0, transition: "opacity 1s ease 0.25s" }}>
-        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at 50% 50%, rgba(12,10,8,0.55) 28%, rgba(12,10,8,0.93) 76%)" }} />
-        <div style={{ position: "relative", textAlign: "center" }}>
-          <div style={{ display: "flex", justifyContent: "center", marginBottom: 26, animation: arrived ? "pvMarkIn 1.1s cubic-bezier(0.16,1,0.3,1) both" : undefined }}>
-            <PanopticonMark size={148} cfg={{ numGroups: 8, includeFlankers: true, numRings: 10, ringFadeToCenter: true }} />
+      {/* SCENE 2 — barrel iris (rifled ring opening) */}
+      {scene >= 2 && scene <= 3 && <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", opacity: scene === 3 ? 0.4 : 1, transition: "opacity 0.6s" }}>
+        <div style={{ width: "44vmin", height: "44vmin", borderRadius: "50%", border: `1px solid ${GOLD}`, boxShadow: `0 0 50px ${GOLD}55, inset 0 0 50px ${GOLD}33`, background: "conic-gradient(from 0deg, transparent, rgba(212,175,55,0.16), transparent, rgba(212,175,55,0.16), transparent)", animation: "pvIris 1.1s cubic-bezier(0.16,1,0.3,1) both, pvReticleSpin 7s linear infinite" }} />
+      </div>}
+
+      {/* SCENE 3 — bullet-time tracer */}
+      {scene === 3 && <>
+        <div style={{ position: "absolute", top: "50%", left: 0, width: "32vw", height: 2, background: `linear-gradient(90deg, transparent, ${GOLD}, #fff)`, filter: `blur(0.6px) drop-shadow(0 0 7px ${GOLD})`, mixBlendMode: "screen", animation: "pvTracer 1s cubic-bezier(0.2,0.7,0.3,1) both" }} />
+        <div style={{ position: "absolute", inset: 0, background: "#fff", mixBlendMode: "screen", opacity: 0, animation: "pvFlash 1s ease-out both" }} />
+      </>}
+
+      {/* SCENE 4 — dossier stamp */}
+      {scene >= 3 && scene <= 5 && <div style={{ position: "absolute", left: "8%", bottom: "15%", fontFamily: "var(--font-dm-sans), monospace", color: "rgba(245,240,224,0.92)", fontSize: 11, letterSpacing: "0.16em", lineHeight: 2.3, opacity: scene === 4 || scene === 5 ? 1 : 0, transition: "opacity 0.5s" }}>
+        {["PURCELL VENTURES", "34.0658° N · 84.6769° W", "EST. 2026 — ACWORTH GA", "AN AI-FORWARD STUDIO"].map((l, i) => (
+          <div key={i} style={{ animation: `pvType 0.55s ${i * 0.18}s both`, color: i === 3 ? GOLD : undefined }}>{l}</div>
+        ))}
+      </div>}
+
+      {/* SCENE 5 — crosshair lock */}
+      {scene === 5 && <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", pointerEvents: "none" }}>
+        <g style={{ transformOrigin: "50px 50px", animation: "pvConverge 0.75s cubic-bezier(0.76,0,0.24,1) both" }}>
+          {[[50, 30, 50, 41], [50, 59, 50, 70], [30, 50, 41, 50], [59, 50, 70, 50]].map((c, i) => (
+            <line key={i} x1={c[0]} y1={c[1]} x2={c[2]} y2={c[3]} stroke={GOLD} strokeWidth="0.4" />
+          ))}
+          <circle cx="50" cy="50" r="13" fill="none" stroke={GOLD} strokeOpacity="0.6" strokeWidth="0.3" strokeDasharray="1.5 2.5" />
+        </g>
+      </svg>}
+
+      {/* SCENE 6/7 — the lock: panopticon mark + wordmark */}
+      {scene >= 6 && <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", pointerEvents: "auto" }}>
+        <div style={{ textAlign: "center" }}>
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: 26, animation: "pvMarkIn 1.1s cubic-bezier(0.16,1,0.3,1) both" }}>
+            <PanopticonMark size={146} cfg={{ numGroups: 8, includeFlankers: true, numRings: 10, ringFadeToCenter: true }} />
           </div>
-          <div style={{ display: "flex", justifyContent: "center", gap: "0.3em", fontFamily: "var(--font-cinzel), serif", color: "#f5f0e0", fontWeight: 700, fontSize: "clamp(22px, 5vw, 42px)", letterSpacing: "0.18em", textShadow: "0 2px 34px rgba(0,0,0,0.9)" }}>
-            <span style={{ animation: arrived ? "pvSpyHit 0.6s 0.2s both" : undefined }}>PURCELL</span>
-            <span style={{ animation: arrived ? "pvSpyHit 0.6s 0.4s both" : undefined }}>VENTURES</span>
-          </div>
-          <div style={{ marginTop: 16, fontFamily: "var(--font-dm-sans), monospace", color: GOLD, fontSize: 11, letterSpacing: "0.42em", textTransform: "uppercase", animation: arrived ? "pvFxUp 0.6s 0.7s both" : undefined }}>Elijah Purcell · Founder</div>
-          <div style={{ marginTop: 26, fontFamily: "var(--font-dm-sans), sans-serif", color: "#c4b89e", fontSize: 10, letterSpacing: "0.34em", textTransform: "uppercase", textShadow: "0 1px 18px rgba(0,0,0,0.9)", animation: "pvFxPulse 2s 1s ease-in-out infinite" }}>Scroll to enter ↓</div>
+          {scene >= 7 && <>
+            <div style={{ display: "flex", justifyContent: "center", gap: "0.3em", fontFamily: "var(--font-cinzel), serif", color: "#f5f0e0", fontWeight: 700, fontSize: "clamp(22px, 5vw, 42px)", letterSpacing: "0.18em" }}>
+              <span style={{ animation: "pvSpyHit 0.6s 0.05s both" }}>PURCELL</span>
+              <span style={{ animation: "pvSpyHit 0.6s 0.24s both" }}>VENTURES</span>
+            </div>
+            <div style={{ marginTop: 24, fontFamily: "var(--font-dm-sans), sans-serif", color: "#8a8070", fontSize: 10, letterSpacing: "0.34em", textTransform: "uppercase", animation: "pvFxPulse 2s 0.9s ease-in-out infinite" }}>Scroll to enter ↓</div>
+          </>}
         </div>
-      </div>
+      </div>}
     </div>
   );
 }
@@ -174,7 +268,7 @@ function Reveal() {
     for (const el of els) {
       el.dataset.pvSeen = "1";
       const r = el.getBoundingClientRect();
-      if (r.top < innerHeight * 0.92) { el.classList.add("pv-in"); continue; }
+      if (r.top < innerHeight * 0.92) { el.classList.add("pv-in"); continue; } // already visible: no hide
       el.classList.add("pv-reveal");
       io.observe(el);
     }
