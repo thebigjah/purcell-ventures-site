@@ -7,7 +7,7 @@
  *
  * To grow the library: drop a component in ./arts, then add an ARTS entry.
  */
-import { useEffect, useRef, useState, type ComponentType } from "react";
+import { useEffect, useState, type ComponentType } from "react";
 
 import GunBarrelWalk from "./arts/GunBarrelWalk";
 import RiflingSpiral from "./arts/RiflingSpiral";
@@ -97,25 +97,24 @@ const ARTS: Art[] = [
 
 const GOLD = "#d4af37";
 
-function LazyArt({ comp: Comp }: { comp: ComponentType }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [on, setOn] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const io = new IntersectionObserver(([e]) => setOn(e.isIntersecting), { rootMargin: "150px" });
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
+/* Mounts the art ONLY when `play` — so at most one or two animate at a time
+ * (the hovered tile, or the fullscreen one). Everything else is a static poster,
+ * which is what keeps the gallery smooth with 40 heavy canvas loops. */
+function Frame({ comp: Comp, play }: { comp: ComponentType; play: boolean }) {
   return (
-    <div ref={ref} style={{ position: "absolute", inset: 0 }}>
-      {on ? <Comp /> : <div style={{ position: "absolute", inset: 0, background: "#0c0a08" }} />}
+    <div style={{ position: "absolute", inset: 0 }}>
+      {play ? <Comp /> : (
+        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at 50% 42%, #16120c, #0c0a08 72%)", display: "grid", placeItems: "center" }}>
+          <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", color: "#5a5346", fontSize: 9, letterSpacing: "0.24em", textTransform: "uppercase" }}>▶ hover to play</span>
+        </div>
+      )}
     </div>
   );
 }
 
 export default function IntroLab() {
   const [open, setOpen] = useState<number | null>(null);
+  const [hover, setHover] = useState<number | null>(null);
   const cur = open !== null ? ARTS.find((a) => a.n === open) ?? null : null;
   useEffect(() => {
     const k = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(null); };
@@ -137,11 +136,9 @@ export default function IntroLab() {
       </header>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: 18 }}>
         {ARTS.map((a) => (
-          <button key={a.n} onClick={() => setOpen(a.n)} style={{ all: "unset", cursor: "pointer", display: "block" }}>
-            <div style={{ position: "relative", aspectRatio: "16 / 9", overflow: "hidden", border: `1px solid ${GOLD}26`, background: "#0c0a08", boxShadow: "0 10px 40px rgba(0,0,0,0.5)", transition: "border-color 0.2s, transform 0.2s" }}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = `${GOLD}99`; e.currentTarget.style.transform = "translateY(-2px)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = `${GOLD}26`; e.currentTarget.style.transform = "none"; }}>
-              <LazyArt comp={a.comp} />
+          <button key={a.n} onClick={() => setOpen(a.n)} onMouseEnter={() => setHover(a.n)} onMouseLeave={() => setHover((h) => (h === a.n ? null : h))} style={{ all: "unset", cursor: "pointer", display: "block" }}>
+            <div style={{ position: "relative", aspectRatio: "16 / 9", overflow: "hidden", border: `1px solid ${hover === a.n ? GOLD + "99" : GOLD + "26"}`, background: "#0c0a08", boxShadow: "0 10px 40px rgba(0,0,0,0.5)", transform: hover === a.n ? "translateY(-2px)" : "none", transition: "border-color 0.2s, transform 0.2s" }}>
+              <Frame comp={a.comp} play={hover === a.n && open === null} />
               <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, padding: "26px 14px 11px", background: "linear-gradient(0deg, rgba(8,6,5,0.92), transparent)", pointerEvents: "none" }}>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
                   <span style={{ fontFamily: "var(--font-dm-sans), monospace", color: GOLD, fontSize: 12, fontWeight: 700 }}>{String(a.n).padStart(2, "0")}</span>
