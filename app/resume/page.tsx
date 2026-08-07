@@ -507,7 +507,7 @@ export default function ResumePage() {
           />
           <Row
             left="AI Data Trainer — Outlier AI"
-            right="Feb – May 2026"
+            right="Oct 2025 – May 2026"
             sub="Two projects. Aether: evaluated large language model outputs and authored written rationales assessing accuracy, reasoning quality, and instruction adherence. Straw Tablecloth: wrote realistic spoken-style human-assistant conversations against a fixed tool-call budget, authoring the user turns and editing model responses, iterating prompts until the model stopped over-calling its tools."
           />
           <Row

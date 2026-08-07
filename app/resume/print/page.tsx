@@ -391,7 +391,7 @@ export default function ResumePrint() {
                   "Filed as Zultar LLC 4/8/2025, renamed 1/27/2026. Control #25075361. EIN and business banking. Registered agent of record."],
                 ["Founder & Operator — Mantle Field Services", "2024–Present",
                   "Gutter cleaning, pressure washing, and lawn care across metro Atlanta. Client acquisition, quoting, scheduling, equipment maintenance, on-site delivery. Grew out of Autoblade Services.", ""],
-                ["AI Data Trainer — Outlier AI", "Feb–May 2026",
+                ["AI Data Trainer — Outlier AI", "Oct 2025–May 2026",
                   "Two projects. Aether: evaluated LLM outputs and authored written rationales on accuracy, reasoning quality, and instruction adherence. Straw Tablecloth: wrote spoken-style human-assistant conversations against a fixed tool-call budget, authoring user turns and editing model responses.", ""],
                 ["AI Response Evaluator — DataAnnotation", "Spring 2026",
                   "Rated AI responses against a Helpful, Honest, Harmless rubric ranking honesty and harmlessness above helpfulness. Flagged hallucinated facts, fabricated links, false premises accepted without correction, and incorrect reasoning.", ""],
