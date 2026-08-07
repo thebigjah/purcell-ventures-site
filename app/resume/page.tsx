@@ -507,12 +507,12 @@ export default function ResumePage() {
           />
           <Row
             left="AI Data Trainer — Outlier AI"
-            right="2026"
+            right="Feb – May 2026"
             sub="Two projects. Aether: evaluated large language model outputs and authored written rationales assessing accuracy, reasoning quality, and instruction adherence. Straw Tablecloth: wrote realistic spoken-style human-assistant conversations against a fixed tool-call budget, authoring the user turns and editing model responses, iterating prompts until the model stopped over-calling its tools."
           />
           <Row
             left="AI Response Evaluator — DataAnnotation"
-            right="2025"
+            right="Spring 2026"
             sub="Rated AI responses against a Helpful, Honest, Harmless rubric that ranks honesty and harmlessness above helpfulness. Flagged hallucinated facts, fabricated links, false premises accepted without correction, and incorrect reasoning, alongside assessment of length, repetition, and whether the model answered the question the user actually meant."
           />
           <Row
