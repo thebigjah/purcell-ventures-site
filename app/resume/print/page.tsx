@@ -9,6 +9,100 @@ const RECIPIENT = {
 };
 // ────────────────────────────────────────────────────────────────────────────
 
+const PROJECTS = [
+  {
+    name: "Middleman",
+    kind: "Two-sided sales marketplace",
+    year: "2026",
+    live: "middleman-lime.vercel.app",
+    stack: "Next.js 16 · TypeScript · Supabase/PostgreSQL · Stripe",
+    bullets: [
+      "Shipped a marketplace connecting companies with independent sales reps, where the platform acts as paying agent and escrows commissions through Stripe.",
+      "Built the compliance spine: contractor-classification safeguards, per-state geo-gating, e-signed agreements, and commission terms frozen at signature so later edits cannot change what a rep is owed.",
+      "14 migrations with row-level security; 92 automated tests including 20 adversarial cases from an independent reviewer.",
+    ],
+  },
+  {
+    name: "The Loom",
+    kind: "Autonomous lead-generation engine",
+    year: "2026",
+    live: "the-loom-gold.vercel.app",
+    stack: "Python · Google Places API · Supabase · GitHub Actions · Next.js",
+    bullets: [
+      "Daily crawler that finds local businesses with no real web presence, researches and scores each, and emails a ranked packet at 7:15 AM.",
+      "Tracking 97 actionable leads against a $529,675 pipeline, with automatic takedown of expired previews.",
+      "Five production website templates, each with its own typographic and color system.",
+    ],
+  },
+  {
+    name: "Blast Studio",
+    kind: "Game platform and creator tools",
+    year: "2026",
+    live: "",
+    stack: "JavaScript · MediaPipe · Vercel Blob · Capacitor (iOS + Android)",
+    bullets: [
+      "Turned a single browser game into a platform: self-hosted subject cutout, brush mask editor, content editor, per-version leaderboards, marketplace, and admin review queue.",
+      "Delivered the iOS build to App Store Connect with no physical test device, archiving unsigned and signing at export with an Admin-scoped API key.",
+    ],
+  },
+  {
+    name: "ElijahBot OS",
+    kind: "Personal knowledge and operations command center",
+    year: "2026",
+    live: "elijahbot-os.vercel.app",
+    stack: "Next.js · TypeScript · Node ingest pipeline · Vercel Cron · Claude API",
+    bullets: [
+      "Command center over a 441-node knowledge graph: eight stations, command palette with voice, PWA install, and a 7:30 AM briefing email.",
+      "Nightly job re-ingests the graph, scores its health, and writes a gaps file identifying what the knowledge base is missing.",
+      "Paired with a semantic recall layer serving ~200-token chunks so retrieval stays cheap at scale.",
+    ],
+  },
+  {
+    name: "Boyfriend Camera",
+    kind: "Computer-vision photography application",
+    year: "2026",
+    live: "boyfriend-camera.vercel.app",
+    stack: "WebGL/GLSL · three.js · MediaPipe · IndexedDB · PWA",
+    bullets: [
+      "Camera app whose live viewfinder runs through a WebGL color-grading shader, so photos are composed with the final look already applied.",
+      "On-device scene analysis reads luminance, color cast, and edge orientation to suggest and place a pose; three.js renders lit 3D mannequin guides in-frame.",
+      "Non-destructive editor: curves, 8-channel HSL, three-way wheels, radial and linear masks, and video grading.",
+    ],
+  },
+  {
+    name: "Wholesale Engine",
+    kind: "Real-estate acquisition pipeline",
+    year: "2026",
+    live: "",
+    stack: "Python · SQLite/Supabase · ArcGIS · pytest",
+    bullets: [
+      "Parses county tax-delinquent PDFs by word coordinates, enriches against a 279,000-record assessor GIS layer, prices by maximum allowable offer, matches a buyer CRM, and emails a daily packet.",
+      "Ethical exclusions encoded in the pipeline: sources prohibiting scraping are refused, and estate-owned parcels are held for human review.",
+    ],
+  },
+  {
+    name: "Outreach Engine",
+    kind: "Compliance-gated outreach automation",
+    year: "2026",
+    live: "",
+    stack: "Python · Gmail API · JSON policy layer · pytest",
+    bullets: [
+      "Four-tier risk classifier: lowest tiers send automatically, sensitive tiers draft for human review, highest tier is never drafted.",
+      "Hard CAN-SPAM gates, append-only suppression list, fail-closed blocklist, and a sticky hard-stop on bounce spikes. 22-check safety suite.",
+    ],
+  },
+  {
+    name: "Fellowship of the Round",
+    kind: "3D multiplayer arena game",
+    year: "2026",
+    live: "",
+    stack: "Godot 4.7 · GDScript · Steam networking",
+    bullets: [
+      "Seven playable species with distinct ability kits, a 131-card stacking upgrade pool, PvE encounters, and 12-player online multiplayer across three maps.",
+    ],
+  },
+];
+
 export default function ResumePrint() {
   const handlePrint = () => window.print();
 
@@ -44,7 +138,7 @@ export default function ResumePrint() {
           min-height: 11in;
           background: #ffffff;
           margin: 32px auto;
-          padding: 0.65in 0.7in 0.65in;
+          padding: 0.55in 0.6in 0.55in;
           font-family: 'Inter', sans-serif;
           font-size: 10px;
           color: #1a1208;
@@ -52,7 +146,7 @@ export default function ResumePrint() {
         }
 
         /* HEADER */
-        .header { border-bottom: 2.5px solid #2d1f0e; padding-bottom: 10px; margin-bottom: 14px; }
+        .header { border-bottom: 2.5px solid #2d1f0e; padding-bottom: 9px; margin-bottom: 12px; }
         .header h1 {
           font-family: 'Crimson Pro', Georgia, serif;
           font-size: 26px;
@@ -67,17 +161,24 @@ export default function ResumePrint() {
           margin-top: 4px;
           letter-spacing: 0.02em;
         }
+        .header-summary {
+          font-size: 9.5px;
+          color: #4a3020;
+          margin-top: 5px;
+          line-height: 1.5;
+          max-width: 6.6in;
+        }
         .header-contact {
           display: flex;
           flex-wrap: wrap;
-          gap: 0 20px;
+          gap: 0 18px;
           margin-top: 6px;
           font-size: 10px;
           color: #4a3020;
         }
         .header-stats {
           display: flex;
-          gap: 24px;
+          gap: 22px;
           margin-top: 8px;
           flex-wrap: wrap;
         }
@@ -98,7 +199,7 @@ export default function ResumePrint() {
         }
 
         /* SECTIONS */
-        .section { margin-bottom: 13px; }
+        .section { margin-bottom: 12px; }
         .section-title {
           font-size: 8.5px;
           font-weight: 700;
@@ -128,6 +229,23 @@ export default function ResumePrint() {
         .row-sub { font-size: 9px; color: #5a4030; margin-top: 1px; line-height: 1.4; }
         .row-note { font-size: 8.5px; color: #9a8270; margin-top: 1px; font-style: italic; line-height: 1.3; }
         .row-right { font-size: 9px; color: #9a8270; white-space: nowrap; padding-top: 1px; }
+
+        /* PROJECTS */
+        .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; }
+        .proj {
+          border-left: 2px solid #d6c4a8;
+          padding: 0 0 0 8px;
+          margin-bottom: 8px;
+          break-inside: avoid;
+        }
+        .proj-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+        .proj-name { font-weight: 600; font-size: 10.5px; color: #1a1208; }
+        .proj-kind { font-size: 8.5px; color: #6b5444; font-style: italic; }
+        .proj-year { font-size: 8.5px; color: #9a8270; white-space: nowrap; }
+        .proj-live { font-size: 8.5px; color: #8b5e3c; margin-top: 1px; }
+        .proj-bullets { padding-left: 11px; margin-top: 2px; }
+        .proj-bullets li { font-size: 8.8px; color: #5a4030; line-height: 1.4; margin-bottom: 1.5px; }
+        .proj-stack { font-size: 8px; color: #9a8270; margin-top: 3px; letter-spacing: 0.01em; }
 
         /* IMPACT TRIPS */
         .impact-card {
@@ -170,8 +288,14 @@ export default function ResumePrint() {
           color: #2d1f0e;
         }
 
-        /* TWO COLUMN LAYOUT */
-        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+        /* TWO COLUMN LAYOUT — single flow across two balanced columns so pages fill evenly */
+        .two-col { column-count: 2; column-gap: 24px; }
+        .two-col .section-title { break-after: avoid; break-inside: avoid; }
+        .two-col .subsection-title { break-after: avoid; break-inside: avoid; }
+        .two-col .row { break-inside: avoid; }
+        .two-col .skill-card { break-inside: avoid; }
+        .two-col .impact-card { break-inside: avoid; }
+        .two-col > .section:first-child { margin-top: 0; }
 
         /* FOOTER */
         .footer {
@@ -202,19 +326,27 @@ export default function ResumePrint() {
         <div className="header">
           <h1>Elijah Purcell</h1>
           <div className="header-sub">
-            Cornerstone Preparatory Academy, Class of 2026 · Acworth, GA
+            Founder, Purcell Ventures LLC · University of Alabama Honors College &apos;30 · Acworth, GA
+          </div>
+          <div className="header-summary">
+            I build and ship software end to end: marketplaces, autonomous data pipelines, AI-integrated
+            applications, and the compliance and review systems that keep them honest. Fifteen production
+            deployments to date. Studying psychology and data science on a pre-med track toward psychiatry.
           </div>
           <div className="header-contact">
             <span>elijahpurcell@gmail.com</span>
+            <span>(770) 280-5319</span>
             <span>purcellventures.co</span>
+            <span>github.com/thebigjah</span>
             <span>Acworth, GA 30101</span>
           </div>
           <div className="header-stats">
             {[
+              { val: "15+", label: "Products Shipped" },
               { val: "3.92", label: "GPA (Weighted)" },
               { val: "1440", label: "SAT" },
               { val: "34", label: "Acceptances" },
-              { val: "$520k+/yr", label: "Scholarships" },
+              { val: "$530k/yr", label: "Scholarships" },
             ].map(s => (
               <div className="stat-block" key={s.label}>
                 <div className="stat-val">{s.val}</div>
@@ -224,11 +356,58 @@ export default function ResumePrint() {
           </div>
         </div>
 
-        {/* Two-column body */}
+        {/* Selected Work — full width, leads the page */}
+        <div className="section">
+          <div className="section-title">Selected Work — Shipped Products</div>
+          <div className="proj-grid">
+            {PROJECTS.map(p => (
+              <div className="proj" key={p.name}>
+                <div className="proj-head">
+                  <div>
+                    <span className="proj-name">{p.name}</span>{" "}
+                    <span className="proj-kind">{p.kind}</span>
+                  </div>
+                  <span className="proj-year">{p.year}</span>
+                </div>
+                {p.live && <div className="proj-live">{p.live}</div>}
+                <ul className="proj-bullets">
+                  {p.bullets.map((b, i) => <li key={i}>{b}</li>)}
+                </ul>
+                <div className="proj-stack">{p.stack}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Two-column body — one flow, balanced across columns */}
         <div className="two-col">
 
-          {/* LEFT COLUMN */}
-          <div>
+            {/* Experience */}
+            <div className="section">
+              <div className="section-title">Experience</div>
+              {[
+                ["Founder & CEO — Purcell Ventures LLC", "Apr 2025–Present",
+                  "Georgia LLC across software, AI integration, digital marketing, field services, and wholesale real estate. Owns the full cycle: acquisition, scoping, pricing, build, deployment, support. Active revenue.",
+                  "Filed as Zultar LLC 4/8/2025, renamed 1/27/2026. Control #25075361. EIN and business banking. Registered agent of record."],
+                ["Founder & Operator — Mantle Field Services", "2024–Present",
+                  "Gutter cleaning, pressure washing, and lawn care across metro Atlanta. Client acquisition, quoting, scheduling, equipment maintenance, on-site delivery. Grew out of Autoblade Services.", ""],
+                ["AI Data Trainer — Outlier AI (Aether Project)", "2026",
+                  "Evaluated large language model outputs and authored written rationales on accuracy, reasoning quality, and instruction adherence. Contributed to model quality and alignment work.", ""],
+                ["Team Member — Chick-fil-A", "2023",
+                  "Front-line customer service in a high-volume operation.", ""],
+                ["Peer Tutor — Mathematics & English", "2022–2026",
+                  "One-on-one academic support through structured review sessions, with measurable improvement in peers' grades.", ""],
+              ].map(([title, right, sub, note]) => (
+                <div className="row" key={title}>
+                  <div className="row-left">
+                    <div className="row-title">{title}</div>
+                    <div className="row-sub">{sub}</div>
+                    {note && <div className="row-note">{note}</div>}
+                  </div>
+                  <div className="row-right">{right}</div>
+                </div>
+              ))}
+            </div>
 
             {/* Education */}
             <div className="section">
@@ -236,10 +415,28 @@ export default function ResumePrint() {
 
               <div className="row">
                 <div className="row-left">
-                  <div className="row-title">Cornerstone Preparatory Academy — Acworth, GA</div>
-                  <div className="row-sub">Elementary & Middle School (4th–8th in person; K–3rd homeschooled).</div>
+                  <div className="row-title">The University of Alabama — Honors College</div>
+                  <div className="row-sub">B.S. Psychology / Data Science · New College · Presidential Merit ($28,000/yr)</div>
+                  <div className="row-note">Pre-med track toward psychiatry. Entering Fall 2026.</div>
                 </div>
-                <div className="row-right">K–8th</div>
+                <div className="row-right">2026–2030</div>
+              </div>
+
+              <div className="row">
+                <div className="row-left">
+                  <div className="row-title">Cornerstone Preparatory Academy — Acworth, GA</div>
+                  <div className="row-sub">GPA 3.92 (wtd) · SAT 1440 · Beta Club</div>
+                  <div className="row-note">3 yrs Spanish · AP-level coursework · Worldview &amp; Apologetics seminar</div>
+                </div>
+                <div className="row-right">Grad. May 2026</div>
+              </div>
+
+              <div className="row">
+                <div className="row-left">
+                  <div className="row-title">Lee University — Summer Honors Program</div>
+                  <div className="row-sub">Cryptography &amp; Social Media · 6 college credit hours</div>
+                </div>
+                <div className="row-right">Summer 2025</div>
               </div>
 
               <div className="row">
@@ -250,47 +447,62 @@ export default function ResumePrint() {
                 </div>
                 <div className="row-right">2022–2023</div>
               </div>
+            </div>
 
-              <div className="row">
-                <div className="row-left">
-                  <div className="row-title">Cornerstone Preparatory Academy — Acworth, GA</div>
-                  <div className="row-sub">Mid 10th–12th · GPA 3.92 (wtd) · SAT 1440 · Beta Club</div>
-                  <div className="row-note">3 yrs Spanish · AP-level coursework · Worldview & Apologetics seminar</div>
+            {/* Engineering practice */}
+            <div className="section">
+              <div className="section-title">Engineering Practice</div>
+              {[
+                ["Adversarial review gates", "",
+                  "Every significant build passes an independent reviewer whose job is to break it before release. The gate has caught disqualifying defects the builder's own verification missed, including unsaved user data lost to an OS tab kill and tests claimed but never written."],
+                ["Security auditing", "",
+                  "Read-only audits across seven live applications documenting row-level-security gaps, unauthenticated paid-API routes, stored XSS, vote forgery through exposed identifiers, and SSRF, each with a severity-ranked remediation list."],
+              ].map(([title, right, sub]) => (
+                <div className="row" key={title}>
+                  <div className="row-left">
+                    <div className="row-title">{title}</div>
+                    <div className="row-sub">{sub}</div>
+                  </div>
+                  {right && <div className="row-right">{right}</div>}
                 </div>
-                <div className="row-right">2024–2026</div>
-              </div>
+              ))}
+            </div>
 
-              <div className="row">
-                <div className="row-left">
-                  <div className="row-title">Lee University — Summer Honors Program</div>
-                  <div className="row-sub">Cryptography & Social Media · 6 College Credit Hours</div>
-                </div>
-                <div className="row-right">Summer 2025</div>
-              </div>
-
-              <div className="row">
-                <div className="row-left">
-                  <div className="row-title">University of Alabama — Honors College</div>
-                  <div className="row-sub">B.S. Psychology / Data Science · Presidential Merit ($28,000/yr)</div>
-                  <div className="row-note">Pre-med track; Honors College admission</div>
-                </div>
-                <div className="row-right">Fall 2026</div>
+            {/* Skills */}
+            <div className="section">
+              <div className="section-title">Technical Skills</div>
+              <div className="skills-grid">
+                {[
+                  ["Languages", "TypeScript, JavaScript, Python, SQL, GDScript, GLSL, HTML/CSS"],
+                  ["Frameworks", "Next.js, React, React Native/Expo, Node, Express, Capacitor, Godot"],
+                  ["Data & Infra", "Supabase/PostgreSQL (RLS, migrations), SQLite, Vercel, GitHub Actions, cron"],
+                  ["AI & ML", "Claude and OpenAI APIs, tool-use agent loops, semantic retrieval, MediaPipe, output evaluation"],
+                  ["Graphics", "WebGL and GLSL shaders, three.js, Canvas, real-time image processing"],
+                  ["Engineering", "Automated testing, adversarial code review, security auditing, technical writing"],
+                  ["Business", "Client acquisition, pricing, contracts, invoicing, compliance"],
+                  ["Communication", "Public speaking, formal debate, persuasive and analytical writing"],
+                ].map(([label, val]) => (
+                  <div className="skill-card" key={label}>
+                    <div className="skill-label">{label}</div>
+                    <div className="skill-val">{val}</div>
+                  </div>
+                ))}
               </div>
             </div>
 
             {/* Awards */}
             <div className="section">
-              <div className="section-title">Awards & Honors</div>
+              <div className="section-title">Awards &amp; Honors</div>
               {[
-                ["Behold Award", "9th Grade · Grove Christian School", "Character and excellence recognition for moral integrity and spiritual maturity."],
-                ["Steadfast Award", "10th Grade · Grove Christian School", "Recognition for perseverance, faithfulness, and character under pressure."],
-                ["Christian Character Award", "Grove Christian School", "One of two students school-wide selected for moral excellence and leadership."],
-                ["Christ-like Leadership Award", "End-of-Year Awards · Grove", "Awarded for servant leadership and Christian character throughout the school year."],
-                ["Lead Role — Christmas Musical", "Grove Christian School", "Lead acting and vocal role in the annual Christmas production."],
-                ["Highest Math Grade in Class", "9th Grade", "100% both semesters — top math average in the class."],
-                ["Youth Leadership Summit", "Summer 2023", "Family Foundation & Colson Center · Richmond, VA. Invitation-only advanced worldview, cultural analysis, and Christian civic leadership seminar."],
                 ["UA Honors College Admission", "2026", "Selective admission based on academic achievement and leadership."],
                 ["GSU Honors College Admission", "2026", ""],
+                ["Behold Award", "9th Grade · Grove", "Character and excellence recognition for moral integrity and spiritual maturity."],
+                ["Steadfast Award", "10th Grade · Grove", "Recognition for perseverance, faithfulness, and character under pressure."],
+                ["Christian Character Award", "Grove", "One of two students school-wide selected for moral excellence and leadership."],
+                ["Christ-like Leadership Award", "End-of-Year Awards · Grove", "Awarded for servant leadership and Christian character throughout the school year."],
+                ["Lead Role — Christmas Musical", "Grove", "Lead acting and vocal role in the annual Christmas production."],
+                ["Highest Math Grade in Class", "9th Grade", "100% both semesters — top math average in the class."],
+                ["Youth Leadership Summit", "Summer 2023", "Family Foundation & Colson Center · Richmond, VA. Invitation-only seminar on worldview, cultural analysis, and Christian civic leadership."],
               ].map(([title, right, sub]) => (
                 <div className="row" key={title}>
                   <div className="row-left">
@@ -302,72 +514,12 @@ export default function ResumePrint() {
               ))}
             </div>
 
-            {/* Work */}
-            <div className="section">
-              <div className="section-title">Work Experience & Entrepreneurship</div>
-              <div className="row">
-                <div className="row-left">
-                  <div className="row-title">Founder & CEO — Purcell Ventures LLC</div>
-                  <div className="row-sub">Software development, AI integration, digital marketing. Built React Native apps, web platforms, and AI pipelines. Active revenue. Filed as Zultar LLC April 2025; rebranded Purcell Ventures January 2026.</div>
-                </div>
-                <div className="row-right">Apr 2025–Present</div>
-              </div>
-              <div className="row">
-                <div className="row-left">
-                  <div className="row-title">Founder — Autoblade Services</div>
-                  <div className="row-sub">Lawn care and property services. Client acquisition, scheduling, and service delivery.</div>
-                </div>
-                <div className="row-right">2024–Present</div>
-              </div>
-              <div className="row">
-                <div className="row-left">
-                  <div className="row-title">AI Data Trainer — Outlier AI (Aether Project)</div>
-                  <div className="row-sub">Training and evaluating AI models at $15/hr. LLM quality and alignment work.</div>
-                </div>
-                <div className="row-right">Feb 2026–Present</div>
-              </div>
-              <div className="row">
-                <div className="row-left">
-                  <div className="row-title">Team Member — Chick-fil-A</div>
-                  <div className="row-sub">High-volume customer service. Built discipline, teamwork, communication skills.</div>
-                </div>
-                <div className="row-right">10th Grade</div>
-              </div>
-            </div>
-
-            {/* Skills */}
-            <div className="section">
-              <div className="section-title">Skills</div>
-              <div className="skills-grid">
-                {[
-                  ["Programming", "Python, JavaScript/TypeScript, React Native, Node.js"],
-                  ["AI & Automation", "OpenAI API, AI pipeline design, data training & eval"],
-                  ["Software", "Expo, Next.js, Express, Git, Photoshop"],
-                  ["Communication", "Public speaking, theological debate, persuasive writing"],
-                  ["Business", "Client management, invoicing, scheduling, marketing"],
-                  ["Music", "Vocal performance (bass-baritone), worship leading"],
-                  ["Languages", "English (native), Spanish (3 yrs)"],
-                  ["Fitness", "Strength & conditioning, hypertrophy methodology"],
-                ].map(([label, val]) => (
-                  <div className="skill-card" key={label}>
-                    <div className="skill-label">{label}</div>
-                    <div className="skill-val">{val}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-          </div>
-
-          {/* RIGHT COLUMN */}
-          <div>
-
             {/* Scholarship Record */}
             <div className="section">
               <div className="section-title">Scholarship Record</div>
               <div className="scholar-grid">
                 {[
-                  ["Kalamazoo College", "$48,000/yr", "Confirmed"],
+                  ["Kalamazoo College", "$48,000/yr", "Lux Esto"],
                   ["Susquehanna University", "$48,000/yr", "Confirmed"],
                   ["Drake University", "$31,000/yr", "Confirmed"],
                   ["Hood College", "$31,000/yr", "Presidential"],
@@ -386,8 +538,8 @@ export default function ResumePrint() {
                   ["Union University", "$17,000/yr", "Confirmed"],
                   ["Charleston Southern University", "$17,000/yr", "Confirmed"],
                   ["Mississippi College", "$14,500/yr", "Confirmed"],
-                  ["Hartwick College", "$10,000/yr", "Flight Path"],
                   ["Francis Marion University", "$10,884/yr", "Confirmed"],
+                  ["Hartwick College", "$10,000/yr", "Flight Path"],
                   ["Rider University", "$3,000/yr", "Confirmed"],
                   ["Georgia State University", "$1,000/yr", "Merit + Honors"],
                 ].map(([school, amt, note]) => (
@@ -402,21 +554,20 @@ export default function ResumePrint() {
                 <span className="scholar-total-val">$530,384 / year</span>
               </div>
               <div style={{ fontSize: "8px", color: "#9a8270", marginTop: "3px", fontStyle: "italic" }}>
-                34 acceptances as of April 2026. Enrolled: University of Alabama.
+                34 acceptances. Enrolled: University of Alabama.
               </div>
             </div>
 
             {/* Leadership */}
             <div className="section">
-              <div className="section-title">Leadership & Ministry</div>
+              <div className="section-title">Leadership &amp; Ministry</div>
 
-              <div className="subsection-title">School & Church</div>
+              <div className="subsection-title">School &amp; Church</div>
               {[
                 ["Member — Mighty Men (Men's Bible Study, CPA)", "11th–12th", "Active member of the school's men's discipleship group. Weekly 2-hr discussions on faith and spiritual formation."],
                 ["Head Chaplain", "9th–10th", "Organized chapel services, coordinated worship teams, led school-wide programming."],
                 ["Worship Team — Lead Vocalist", "9th–12th", "Lead bass-baritone vocalist at school and church. Range C1–F5. 2–3 rehearsals/week."],
                 ["Youth Group Leader & Camp Counselor", "Ongoing", "Mentors younger students at church, leads group discussions, staffs summer camp."],
-                ["Peer Tutor (Math & English)", "10th–12th", "One-on-one academic support. Improved peers' grades through structured review."],
               ].map(([title, right, sub]) => (
                 <div className="row" key={title}>
                   <div className="row-left">
@@ -435,7 +586,7 @@ export default function ResumePrint() {
                 </div>
                 <ul className="impact-bullets">
                   <li>Organized and led a regional food drive serving underserved communities.</li>
-                  <li>Built a full floor and ADA accessibility ramp for an elderly couple's home after the husband became disabled.</li>
+                  <li>Built a full floor and ADA accessibility ramp for an elderly couple&apos;s home after the husband became disabled.</li>
                 </ul>
               </div>
               <div className="impact-card">
@@ -451,17 +602,36 @@ export default function ResumePrint() {
               <div className="impact-card">
                 <div className="impact-header">
                   <div><span className="impact-loc">Hawaii</span><span className="impact-org">Disaster Relief</span></div>
-                  <span className="impact-year">Senior Year · March 2026</span>
+                  <span className="impact-year">March 2026</span>
                 </div>
                 <ul className="impact-bullets">
-                  <li>Serving in disaster relief following severe flooding. Construction support, community aid, worship and prayer leadership.</li>
+                  <li>Deployed for disaster relief after severe flooding. Construction support, community aid, worship and prayer leadership.</li>
                 </ul>
               </div>
             </div>
 
-            {/* Clubs & Athletics side by side */}
+            {/* Arts */}
             <div className="section">
-              <div className="section-title">Clubs & Organizations</div>
+              <div className="section-title">Arts &amp; Creative</div>
+              {[
+                ["Vocalist — Bass-Baritone", "Ongoing", "Range C1–F5. Lead worship vocalist at school and church since 9th grade."],
+                ["Poetry & Creative Writing", "Ongoing", "Original poetry, fiction drafts, and personal essays across 8 distinct styles."],
+                ["Content Creation — YouTube", "2023–Present", "Scripts, films, and edits commentary on psychology, faith, and culture. 2,800+ subscribers."],
+                ["Design, Photography & Video", "Ongoing", "Brand identity, product photography, and video production for clients. Built a full color-grading toolchain from scratch."],
+              ].map(([title, right, sub]) => (
+                <div className="row" key={title}>
+                  <div className="row-left">
+                    <div className="row-title">{title}</div>
+                    <div className="row-sub">{sub}</div>
+                  </div>
+                  <div className="row-right">{right}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Clubs */}
+            <div className="section">
+              <div className="section-title">Clubs &amp; Organizations</div>
               <div className="badge-wrap">
                 {["Beta Club (Grove & CPA)", "Apologetics & Debate", "Spanish Club (3 yrs)", "Club Med", "Creative Writing / Writer's Guild", "Curious Conversations", "Animal Ambassadors", "Senior Devotional", "Mighty Men (Member · CPA)"].map(b => (
                   <span className="badge" key={b}>{b}</span>
@@ -469,6 +639,7 @@ export default function ResumePrint() {
               </div>
             </div>
 
+            {/* Athletics */}
             <div className="section">
               <div className="section-title">Athletics</div>
               {[
@@ -511,17 +682,20 @@ export default function ResumePrint() {
             <div className="section">
               <div className="section-title">Career Goals</div>
               <p style={{ fontSize: "9.5px", color: "#2d1f0e", lineHeight: 1.6 }}>
-                Pursuing an MD in Psychiatry, integrating clinical care with AI-driven research and faith-based counseling. Goal: develop accessible, data-informed interventions for mental health — bridging neuroscience, technology, and human dignity. Simultaneously building Purcell Ventures and a personal content brand at the intersection of psychology, faith, and intellectual discourse.
+                Pursuing an MD in Psychiatry, integrating clinical care with AI-driven research and
+                faith-based counseling. Goal: develop accessible, data-informed interventions for mental
+                health, bridging neuroscience, technology, and human dignity. Simultaneously building
+                Purcell Ventures and a personal content brand at the intersection of psychology, faith,
+                and intellectual discourse.
               </p>
             </div>
 
-          </div>
         </div>
 
         {/* Footer */}
         <div className="footer">
-          <span>Elijah Purcell · elijahpurcell@gmail.com · Acworth, GA</span>
-          <span>purcellventures.co · Updated March 2026</span>
+          <span>Elijah Purcell · elijahpurcell@gmail.com · (770) 280-5319 · Acworth, GA</span>
+          <span>purcellventures.co · Updated August 2026</span>
         </div>
 
       </div>
