@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "shipped-is-not-activated",
+    title: "Shipping is not the same as being able to take a payment",
+    excerpt: "A site can be live, green in the deploy log, and still unable to accept a dollar. The gap between a finished site and a working business is usually one broken path, and it is invisible from the inside.",
+    date: "August 17, 2026",
+    readingTime: "3 min read",
+    category: "Opinion",
+  },
+  {
     slug: "ai-augmented-sales-rep-day",
     title: "What a day looks like for an AI-augmented sales rep",
     excerpt: "A full Tuesday in the life of a rep using AI prospect research, AI next-step coaching, and conversation summary tools alongside a real CRM. Specific times, specific tasks, specific tools.",
