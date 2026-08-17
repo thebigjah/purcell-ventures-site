@@ -242,3 +242,29 @@ h1, h2, h3 {
   .pv-phi-field svg { animation: none !important; }
   .pv-hero-statement, .pv-page-head, .pv-section-head { animation: none !important; }
 }
+
+/* BLOG BODY SPACING.
+   Every post on this site has had run-together paragraphs since the blog launched in
+   May: a global reset zeroes margins and nothing ever restored them inside a post, so
+   `getComputedStyle` on any `article p` returned margin 0 top and bottom. It reads as
+   one long block on a phone, which is where most of this gets read.
+
+   Scoped to `article`, which 19 pages use: the blog, the shop pages and a few others.
+   That is a wider blast radius than "just the blog", so it is stated rather than
+   assumed. It is the right scope anyway, because those pages have exactly the same
+   collapsed-paragraph bug from exactly the same reset. Nothing outside an `article` is
+   touched, so no landing page or nav can shift. */
+article p {
+  margin: 0 0 1.15em;
+}
+article p:last-child {
+  margin-bottom: 0;
+}
+article ul,
+article ol {
+  margin: 0 0 1.15em;
+  padding-left: 1.35em;
+}
+article li {
+  margin-bottom: 0.4em;
+}
