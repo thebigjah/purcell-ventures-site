@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "agents-that-cannot-fix-what-they-find",
+    title: "We built agents that cannot fix what they find",
+    excerpt: "Separating the finder from the fixer is the cheapest safety property you can buy in an agent system. It also creates a failure mode nobody warns you about, and we shipped it.",
+    date: "August 17, 2026",
+    readingTime: "4 min read",
+    category: "Engineering",
+  },
+  {
     slug: "shipped-is-not-activated",
     title: "Shipping is not the same as being able to take a payment",
     excerpt: "A site can be live, green in the deploy log, and still unable to accept a dollar. The gap between a finished site and a working business is usually one broken path, and it is invisible from the inside.",
