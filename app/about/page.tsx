@@ -131,7 +131,7 @@ function StoryTab() {
         }}
       />
       <p className="pv-italic" style={{ ...prose, fontSize: "22px", maxWidth: "640px" }}>
-        I&apos;m 19 years old. I have a company with four active divisions, software in production, and a clear sense of what I&apos;m building toward. I&apos;m not in a hurry to seem older than I am — I&apos;m in a hurry because the work matters.
+        I&apos;m 19 years old. I have a company with four active divisions, software in production, and a clear sense of what I&apos;m building toward. I&apos;m not in a hurry to seem older than I am. I&apos;m in a hurry because the work matters.
       </p>
       <p style={prose}>
         I started Purcell Ventures out of a simple observation: the tools that change how businesses operate — AI automation, custom software, real digital infrastructure — were being engineered for enterprises and trickling down to small businesses as afterthoughts, if at all. The HVAC contractor, the barber, the florist: they work harder than most people I&apos;ve ever met and operate with a fraction of the support. That bothered me enough to do something about it.
@@ -141,10 +141,10 @@ function StoryTab() {
 
       <div className="pv-stat-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "48px" }}>
         {[
-          { label: "Location",           value: "Acworth, Georgia" },
+          { label: "Location",           value: "Tuscaloosa, Alabama" },
           { label: "University",         value: "University of Alabama, Class of 2030" },
-          { label: "Program",            value: "Honors College — Psychology / Data Science" },
-          { label: "Scholarship Record", value: "34 acceptances · $520k+/yr awarded" },
+          { label: "Program",            value: "Honors College, psychology and data science" },
+          { label: "Scholarship Record", value: "34 acceptances · $505k+/yr offered (2026)" },
           { label: "Company",            value: "Purcell Ventures LLC (founded April 2025)" },
           { label: "Contact",            value: "elijah@purcell-ventures.com" },
         ].map(({ label, value }) => (
@@ -162,7 +162,7 @@ function StoryTab() {
 
       <SectionHead roman="§" title="Outside the work" />
       <p style={prose}>
-        I&apos;m a bass-baritone vocalist — range C1 to F5 — and I lead worship at church most Sundays. I write poetry nobody asked for. I&apos;m 6&apos;3&quot; and from Georgia, which means I&apos;ve never met a stranger in my life. I&apos;ve done mission trips to North Carolina, the Bahamas, and Hawaii, with Alaska coming this July. I&apos;m a member of my school&apos;s men&apos;s Bible study, competed in apologetics and debate for four years, and earned a 3.92 GPA without once finding it particularly interesting to coast.
+        I&apos;m a bass-baritone vocalist, range C1 to F5, and I lead worship at church most Sundays. I write poetry nobody asked for. I&apos;m 6&apos;3&quot; and from Georgia, which means I&apos;ve never met a stranger in my life. I&apos;ve done mission trips to North Carolina, the Bahamas, Hawaii, and Alaska. I was a member of my school&apos;s men&apos;s Bible study, competed in apologetics and debate for four years, and earned a 3.92 GPA without once finding it particularly interesting to coast.
       </p>
       <p style={{ ...prose, marginBottom: 0 }}>
         I care about doing things that last. That&apos;s true of the software, the businesses, the relationships, and the faith. I don&apos;t think those are separate categories.
@@ -357,7 +357,7 @@ export default function AboutPage() {
             Elijah Brent <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Purcell</em>
           </h1>
           <p className="pv-italic" style={{ marginTop: "14px", fontSize: "18px", color: "var(--color-warm-text)", opacity: 0.78, maxWidth: "560px" }}>
-            Founder · operator · undergraduate-bound out of Acworth, Georgia.
+            Founder · operator · University of Alabama undergraduate in Tuscaloosa.
           </p>
         </div>
 
