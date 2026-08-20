@@ -31,6 +31,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     { url: `${BASE}/blog/121-businesses-near-campus`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
 
+    // The tap card. It carries his name, his photo and his contact details on a page
+    // that people reach by tapping a physical object, which is exactly the kind of
+    // corroborating page a name query wants.
+    { url: `${BASE}/card`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+
     // The reporting series. An author byline on a piece ABOUT other people, in a named
     // place, is an entity signal no amount of self-description produces, and it is the
     // only page here that also generates conversations with prospects.
