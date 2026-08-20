@@ -27,7 +27,7 @@ export const metadata = {
 const link = { color: "var(--color-warm-accent)", textDecoration: "underline" };
 
 const ROWS: [string, number, number][] = [
-  ["Restaurants", 64, 14],
+  ["Restaurants", 64, 15],
   ["Clothing", 12, 1],
   ["Barbers and salons", 11, 3],
   ["Cafes", 8, 2],
@@ -65,7 +65,7 @@ export default function Post() {
           <p style={{ fontSize: "18px" }}>
             I pulled every independent business inside a 2500 metre circle around the Quad,
             dropped anything carrying a chain brand, and then tried to open each one&apos;s
-            website. There were 121 of them. Twenty-six had a site that answered.
+            website. There were 121 of them. Twenty-seven had a site that answered.
           </p>
 
           <h2>What was actually measured</h2>
@@ -74,13 +74,13 @@ export default function Post() {
             This matters more than the number, so it goes first. The source is
             OpenStreetMap, which is maintained by volunteers, and a business with no
             website recorded there might still have one. So the honest claim is not that
-            ninety-five businesses near campus have no website.
+            ninety-four businesses near campus have no website.
           </p>
 
           <p>
-            The honest claim is that for ninety-five of them, <em>a machine looking for a
+            The honest claim is that for ninety-four of them, <em>a machine looking for a
             website does not find one</em>. Ninety list none at all. Three list one that no
-            longer answers. Two return an error page.
+            longer answers. One points at a page that has been deleted.
           </p>
 
           <p>
@@ -179,6 +179,15 @@ export default function Post() {
             was dropped. Every listed website got a real HTTP request, and a 403 or a 405
             was counted as working, because plenty of live sites refuse a bare HEAD. The
             script is <code>scout.py</code> and re-running it reproduces every figure above.
+          </p>
+
+          <p>
+            <strong>Correction, same day.</strong> The first version of this piece said
+            twenty-six working sites and ninety-five without. The script was sending only a
+            HEAD request, and two restaurants whose sites are perfectly alive answer GET but
+            refuse HEAD, so they were counted as broken. Corrected above to twenty-seven and
+            ninety-four. The correction stays visible rather than being edited in quietly,
+            because the piece is about checking things.
           </p>
 
           <PostByline post={{

@@ -16,7 +16,7 @@ const POSTS: Post[] = [
   {
     slug: "121-businesses-near-campus",
     title: "121 businesses near campus, and what a phone can find",
-    excerpt: "Every independent business within 2500 metres of the Quad, and how many list a website a machine can actually reach. Twenty-six of 121. The number that surprised me was the opening hours.",
+    excerpt: "Every independent business within 2500 metres of the Quad, and how many list a website a machine can actually reach. Twenty-seven of 121. The number that surprised me was the opening hours.",
     date: "August 20, 2026",
     readingTime: "4 min read",
     category: "Reporting",
