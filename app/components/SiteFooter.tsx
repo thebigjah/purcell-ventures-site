@@ -56,10 +56,12 @@ export default function SiteFooter() {
           </div>
           <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
             <li><Link href="/who" style={{ color: "#c9c3b4", textDecoration: "none" }}>Who is Elijah Purcell</Link></li>
+            <li><Link href="/what-is-purcell-ventures" style={{ color: "#8b8578", textDecoration: "none" }}>What is Purcell Ventures</Link></li>
             <li><Link href="/team" style={{ color: "#8b8578", textDecoration: "none" }}>The team</Link></li>
             <li><Link href="/resume" style={{ color: "#8b8578", textDecoration: "none" }}>Founder resume</Link></li>
             <li><Link href="/portfolio" style={{ color: "#8b8578", textDecoration: "none" }}>Portfolio</Link></li>
             <li><Link href="/blog" style={{ color: "#8b8578", textDecoration: "none" }}>Writing</Link></li>
+            <li><Link href="/ai-at-alabama" style={{ color: "#8b8578", textDecoration: "none" }}>AI at Alabama</Link></li>
           </ul>
         </div>
 

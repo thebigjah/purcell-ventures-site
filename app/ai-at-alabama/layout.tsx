@@ -18,7 +18,7 @@ import type { Metadata } from "next";
 // specific, and being specific is the only reason it is worth reading.
 
 export const metadata: Metadata = {
-  title: "Studying AI at the University of Alabama: the degree, the alternatives, and what actually matters",
+  title: "Studying AI at the University of Alabama: the degree and the alternatives | Elijah Purcell",
   description:
     "A plain guide to artificial intelligence at the University of Alabama: the new AI BS and its exact course requirements, why the CS double major is blocked, and the routes for students who are not in engineering. Written by Elijah Purcell, a UA student building AI agent systems in production.",
   alternates: { canonical: "/ai-at-alabama" },
