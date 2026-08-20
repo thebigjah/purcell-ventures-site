@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
+import PostByline from "@/app/components/PostByline";
 
 export default function Post() {
   return (
@@ -72,6 +73,15 @@ export default function Post() {
           <p>
             If any of these feel impossible at your current setup, that&apos;s usually the symptom of a deeper problem — your tools don&apos;t talk to each other. That&apos;s a different conversation. <Link href="/consulting" style={{ color: "var(--color-warm-accent)" }}>Book a consulting session</Link> if you want to walk through what your stack should look like.
           </p>
+        
+
+          <PostByline post={{
+            slug: "five-workflows-no-code",
+            title: "Five workflows you can automate this week without writing code",
+            description: "The five workflows I see small business owners burn the most time on. Each is automatable with off-the-shelf tools in under two hours. No code required.",
+            published: "2026-05-24",
+          }} />
+
         </article>
 
         <footer style={{ marginTop: "48px", paddingTop: "24px", borderTop: "1px solid var(--color-warm-border)", fontSize: "12px", color: "var(--color-warm-text-light)", fontStyle: "italic" }}>

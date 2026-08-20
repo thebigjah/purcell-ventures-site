@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
+import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
   title: "Why I built a CRM from scratch instead of paying HubSpot | Purcell Ventures Blog",
@@ -101,6 +102,15 @@ export default function Post() {
           <p style={{ marginTop: "32px", padding: "16px 20px", background: "var(--color-warm-bg-alt)", borderLeft: "3px solid var(--color-warm-accent)", fontSize: "13px", color: "var(--color-warm-text-muted)", fontStyle: "italic" }}>
             First draft written by our AI Content Generator. Edited and signed off by Elijah Purcell.
           </p>
+
+        
+
+          <PostByline post={{
+            slug: "why-i-built-crm-from-scratch",
+            title: "Why I built a CRM from scratch instead of paying $1,200/yr for HubSpot",
+            description: "HubSpot starts at $50/mo and rapidly hits $200+/mo with features I actually need. So I built ours in a week. Here's the math, the tradeoffs, and when you should NOT do this.",
+            published: "2026-05-25",
+          }} />
 
         </article>
 

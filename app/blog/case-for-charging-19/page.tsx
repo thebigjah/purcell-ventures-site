@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
+import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
   title: "The case for charging $19 for what others sell at $497 | Purcell Ventures Blog",
@@ -91,6 +92,15 @@ export default function Post() {
           <p style={{ marginTop: "32px", padding: "16px 20px", background: "var(--color-warm-bg-alt)", borderLeft: "3px solid var(--color-warm-accent)", fontSize: "13px", color: "var(--color-warm-text-muted)", fontStyle: "italic" }}>
             First draft written by our AI Content Generator. Edited and signed off by Elijah Purcell.
           </p>
+
+        
+
+          <PostByline post={{
+            slug: "case-for-charging-19",
+            title: "The case for charging $19 for what others sell at $497",
+            description: "Most agencies bundle a starter playbook into a $497 course. We unbundle it. Here's the strategic argument for selling cheap entry products + how it changes the customer relationship.",
+            published: "2026-05-25",
+          }} />
 
         </article>
 

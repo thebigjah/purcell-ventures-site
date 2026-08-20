@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
+import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
   title: "What a day looks like for an AI-augmented sales rep | Purcell Ventures Blog",
@@ -155,6 +156,15 @@ export default function Post() {
           <p style={{ marginTop: "32px", padding: "16px 20px", background: "var(--color-warm-bg-alt)", borderLeft: "3px solid var(--color-warm-accent)", fontSize: "13px", color: "var(--color-warm-text-muted)", fontStyle: "italic" }}>
             First draft written by our AI Content Generator. Edited and signed off by Elijah Purcell.
           </p>
+
+        
+
+          <PostByline post={{
+            slug: "ai-augmented-sales-rep-day",
+            title: "What a day looks like for an AI-augmented sales rep",
+            description: "A full Tuesday in the life of a rep using AI prospect research, AI next-step coaching, and conversation summary tools alongside a real CRM. Specific times, specific tasks, specific tools.",
+            published: "2026-05-25",
+          }} />
 
         </article>
 

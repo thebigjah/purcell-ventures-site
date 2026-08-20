@@ -19,6 +19,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ai-cost-calculator`,  lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/case-studies`,    lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
+    // Every post, not the two that happened to be listed. A post absent from the
+    // sitemap is a post an engine finds only by walking the index page, if it does.
+    { url: `${BASE}/blog/agents-that-cannot-fix-what-they-find`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/blog/shipped-is-not-activated`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/blog/ai-augmented-sales-rep-day`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/blog/why-i-built-crm-from-scratch`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/blog/case-for-charging-19`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/blog/five-workflows-no-code`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/blog/why-most-ai-tools-waste-money`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+
     // The reporting series. An author byline on a piece ABOUT other people, in a named
     // place, is an entity signal no amount of self-description produces, and it is the
     // only page here that also generates conversations with prospects.

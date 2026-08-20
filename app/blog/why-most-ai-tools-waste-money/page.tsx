@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
+import PostByline from "@/app/components/PostByline";
 
 export default function Post() {
   return (
@@ -63,6 +64,15 @@ export default function Post() {
           <p>
             That&apos;s the whole pitch. Don&apos;t buy AI until your workflow is ready for it. When it is — call us.
           </p>
+        
+
+          <PostByline post={{
+            slug: "why-most-ai-tools-waste-money",
+            title: "Why most small business AI tools waste your money",
+            description: "Most of the AI tools sold to small businesses fail not because the AI is bad — but because the workflow they're attached to was already broken. Here's how to tell the difference.",
+            published: "2026-05-24",
+          }} />
+
         </article>
 
         <footer style={{ marginTop: "48px", paddingTop: "24px", borderTop: "1px solid var(--color-warm-border)", fontSize: "12px", color: "var(--color-warm-text-light)", fontStyle: "italic" }}>

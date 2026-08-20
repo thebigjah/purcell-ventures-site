@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
+import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
   title: "We built agents that cannot fix what they find | Purcell Ventures Blog",
@@ -62,6 +63,15 @@ export default function Post() {
           <p>Every one of these failures had the same shape: an empty result that reads as good news. No exception, no error, no red anywhere. An auditor that finds nothing, a ledger with nothing resolved, a scan that returns zero rows.</p>
 
           <p>Which gives the rule we now build to: <strong>assert on counts and on values, never on the absence of an exception.</strong> A test that only proves the code did not crash would have passed on every single one of these.</p>
+
+        
+
+          <PostByline post={{
+            slug: "agents-that-cannot-fix-what-they-find",
+            title: "We built agents that cannot fix what they find",
+            description: "Separating the finder from the fixer is the cheapest safety property you can buy in an agent system. It also creates a failure mode nobody warns you about, and we shipped it.",
+            published: "2026-08-17",
+          }} />
 
         </article>
       </main>

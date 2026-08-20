@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
+import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
   title: "Shipping is not the same as being able to take a payment | Purcell Ventures Blog",
@@ -55,6 +56,15 @@ export default function Post() {
           <p>&quot;It&apos;s live&quot; is a statement about hosting. &quot;It can take money&quot; is a statement about the business. They get confused constantly, and only one of them pays for anything.</p>
 
           <p>If you&apos;re sitting on something you shipped and never activated, the fix usually isn&apos;t a redesign. It&apos;s one path, made obvious.</p>
+
+        
+
+          <PostByline post={{
+            slug: "shipped-is-not-activated",
+            title: "Shipping is not the same as being able to take a payment",
+            description: "A site can be live, green in the deploy log, and still unable to accept a dollar. The gap between a finished site and a working business is usually one broken path, and it is invisible from the inside.",
+            published: "2026-08-17",
+          }} />
 
         </article>
       </main>

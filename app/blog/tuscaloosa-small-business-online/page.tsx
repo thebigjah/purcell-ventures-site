@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
+import PostByline from "@/app/components/PostByline";
 
 // THE JOURNALISM PLAY, and the reason it is worth more than another opinion post.
 //
@@ -123,12 +124,14 @@ export default function Post() {
             also built.
           </p>
 
-          <p style={{ marginTop: "40px", fontSize: "14px", color: "var(--color-warm-text-muted)" }}>
-            Elijah Purcell is the founder of{" "}
-            <Link href="/who" style={linkStyle}>Purcell Ventures LLC</Link> and a psychology
-            and data science student at the University of Alabama Honors College. He writes
-            the Tuscaloosa Storefront Project.
-          </p>
+        
+
+          <PostByline post={{
+            slug: "tuscaloosa-small-business-online",
+            title: "The Tuscaloosa Storefront Project",
+            description: "A reporting series on independent businesses around the University of Alabama: who runs them, how students actually find them, and what happens to a fifteen-year-old shop that has no website.",
+            published: "2026-08-20",
+          }} />
 
         </article>
       </main>

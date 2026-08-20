@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "tuscaloosa-small-business-online",
+    title: "The Tuscaloosa Storefront Project",
+    excerpt: "A reporting series on independent businesses around the University of Alabama: who runs them, how students actually find them, and what happens to a fifteen-year-old shop that has no website.",
+    date: "August 20, 2026",
+    readingTime: "3 min read",
+    category: "Reporting",
+  },
+  {
     slug: "agents-that-cannot-fix-what-they-find",
     title: "We built agents that cannot fix what they find",
     excerpt: "Separating the finder from the fixer is the cheapest safety property you can buy in an agent system. It also creates a failure mode nobody warns you about, and we shipped it.",
