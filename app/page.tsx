@@ -548,8 +548,11 @@ export default function Home() {
             color: "var(--color-warm-text)", opacity: 0.92,
             marginBottom: "18px", marginTop: 0,
           }}>
-            Eighteen years old. Founded April 2025 out of a desk at the University of Alabama.
-            Student at the University of Alabama Honors College — pre-med psychiatry with an AI specialty.
+            Nineteen years old. Founded Purcell Ventures LLC in April 2025, in Acworth,
+            Georgia, at seventeen. Now a psychology and data science student at the
+            University of Alabama Honors College in Tuscaloosa, on a pre-med track toward
+            psychiatry. <a href="/who" style={{ color: "var(--color-warm-accent)" }}>More
+            about Elijah Purcell</a>.
           </p>
           <p className="pv-italic" style={{
             fontSize: "19px", lineHeight: 1.55,
