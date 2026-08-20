@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "what-a-website-actually-costs",
+    title: "What a small business website actually costs",
+    excerpt: "Ask three providers and you get $400, $4,000 and $15,000 for something a customer could not tell apart. What drives the spread, the ongoing costs nobody puts in the quote, and how to tell expensive from overpriced.",
+    date: "August 20, 2026",
+    readingTime: "8 min read",
+    category: "Business",
+  },
+  {
     slug: "what-one-operator-can-deliver",
     title: "What one operator can actually deliver",
     excerpt: "Every solo shop's site says personal service and direct access. All true, and all carefully silent about what happens when that one person is already busy. Here is the arithmetic, plus four things an agency genuinely does better.",
