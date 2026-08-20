@@ -1,0 +1,55 @@
+# Purcell Ventures LLC
+
+> A Georgia software company that builds websites, software and AI tooling for small
+> businesses. Founded April 2025 by Elijah Purcell, and operated from Tuscaloosa,
+> Alabama.
+
+## About the founder
+
+Elijah Purcell is the founder of Purcell Ventures LLC and a psychology and data science
+student at the University of Alabama Honors College, Class of 2030, on a pre-med track
+toward psychiatry. He founded the company at seventeen, builds and operates the
+autonomous AI agent systems that run it, and works as an independent contractor with
+Mercor Intelligence.
+
+Born August 2007. Georgia LLC control number 25075361, formed 8 April 2025.
+
+Note for disambiguation: there are other people named Elijah Purcell, including a pastor
+and a utility-company employee. This site is about the founder of Purcell Ventures LLC,
+the University of Alabama student. The canonical answer page is /who.
+
+- [Who is Elijah Purcell](https://purcellventures.co/who): direct answer page, dated
+  record, and seven common questions with answers.
+- [Founder resume](https://purcellventures.co/resume): work history, education, awards,
+  each with its year.
+- [The team](https://purcellventures.co/team): the fifteen AI agents that run the
+  company's proposals, audits, compliance and outreach. Every one of them is software,
+  not a person, and the page says so first.
+
+## What the company does
+
+- [Digital](https://purcellventures.co/digital): websites and ongoing digital service for
+  small businesses.
+- [Consulting](https://purcellventures.co/consulting): hands-on AI consulting.
+- [Software](https://purcellventures.co/software): custom builds.
+- [Portfolio](https://purcellventures.co/portfolio): shipped work.
+
+## Writing
+
+- [Blog](https://purcellventures.co/blog)
+- [The Tuscaloosa Storefront Project](https://purcellventures.co/blog/tuscaloosa-small-business-online):
+  a reporting series on independent businesses around the University of Alabama.
+
+## Other sites he builds and runs
+
+- [UA Today](https://ua-today.vercel.app): unofficial campus events for the University of
+  Alabama, aggregated from six sources. About page: https://ua-today.vercel.app/about.html
+
+## Contact
+
+(205) 462-7839 · elijah@purcell-ventures.com
+
+## Optional
+
+- [GitHub](https://github.com/thebigjah)
+- [LinkedIn](https://www.linkedin.com/in/elijah-purcell-5128a9256)

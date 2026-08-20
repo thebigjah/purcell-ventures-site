@@ -22,7 +22,7 @@ const FAQ_SCHEMA = {
       "name": "Who founded Purcell Ventures?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Purcell Ventures LLC was founded by Elijah Purcell, an entrepreneur and AI consultant based in Acworth, Georgia.",
+        "text": "Purcell Ventures LLC was founded by Elijah Purcell in April 2025. He is a psychology and data science student at the University of Alabama Honors College and lives in Tuscaloosa, Alabama. The company is registered in Georgia.",
       },
     },
     {

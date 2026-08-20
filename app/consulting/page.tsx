@@ -387,7 +387,7 @@ export default function ConsultingPage() {
           <h2>Why work <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>with me</em></h2>
         </header>
         <p className="pv-italic" style={{ fontSize: "20px", color: "var(--color-warm-text)", opacity: 0.92, lineHeight: 1.45, maxWidth: "640px", marginBottom: "20px" }}>
-          I&apos;m eighteen. That&apos;s a feature, not a bug.
+          I&apos;m nineteen. That&apos;s a feature, not a bug.
         </p>
         <p className="pv-italic" style={{ fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.65, marginBottom: "32px", maxWidth: "720px" }}>
           Most AI consultants are mid-career adults who came to this stack late. I came up inside it. I&apos;ve been building autonomous systems and shipping production tools for a year — full-time, while still in high school. The work I&apos;m offering is the same work I do in my own infrastructure every day.

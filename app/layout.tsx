@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     template: "%s | Purcell Ventures",
   },
   description:
-    "Built by one operator for the small businesses who move first. Digital services from $99/mo, hands-on AI consulting, custom software. Founded by Elijah Purcell in Acworth, Georgia.",
+    "Built by one operator for the small businesses who move first. Digital services from $99/mo, hands-on AI consulting, custom software. Founded by Elijah Purcell, a University of Alabama student, and operated from Tuscaloosa.",
   keywords: [
     "AI consulting", "digital services for small business", "custom software development",
     "business AI training", "website management", "Purcell Ventures", "Elijah Purcell",
@@ -125,7 +125,7 @@ const orgSchema = {
       "givenName": "Elijah",
       "familyName": "Purcell",
       "jobTitle": "Founder & CEO",
-      "description": "Entrepreneur, AI consultant, and software developer. Founder of Purcell Ventures LLC, Acworth, Georgia. Student at the University of Alabama Honors College, Class of 2030, studying psychology and data science.",
+      "description": "Founder of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama Honors College, Class of 2030, on a pre-med track toward psychiatry. Based in Tuscaloosa, Alabama. Builds and operates autonomous AI agent systems.",
       "worksFor": { "@id": "https://purcellventures.co/#organization" },
       "url": "https://purcellventures.co",
       "email": "elijah@purcell-ventures.com",
