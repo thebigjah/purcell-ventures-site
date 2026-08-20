@@ -21,7 +21,9 @@ export const metadata: Metadata = {
     title: "Digital Services: Purcell Ventures",
     description: "Website, AI chatbot, booking, CRM, and 20+ tools for small businesses. From $99/mo.",
   },
-  alternates: { canonical: "https://purcellventures.co/digital" },
+  // NO canonical here. This layout wraps every /digital child route and Next
+  // inherits it, so each child was declaring itself a duplicate of /digital.
+  // A page with no canonical self-canonicalises, which is what these want.
 };
 
 const schema = {
