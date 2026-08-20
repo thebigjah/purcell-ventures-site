@@ -133,7 +133,7 @@ const PROJECTS: Project[] = [
     techStack: ["Next.js 16", "Auth.js v5", "Firestore", "Claude Haiku", "Vercel"],
     liveUrl: "https://elijahbot-refresh.vercel.app",
     status: "Live",
-    visualSymbol: "↻",
+    visualSymbol: "RF",
     visualColor: "#7aaa6a",
     detailLines: [
       "13-habit default template",
@@ -151,7 +151,7 @@ const PROJECTS: Project[] = [
     techStack: ["Vanilla JS", "Fraunces + JetBrains Mono", "Vercel", "PWA"],
     liveUrl: "https://elijahbot-tools-hub.vercel.app",
     status: "Live",
-    visualSymbol: "⚙",
+    visualSymbol: "TH",
     visualColor: "#e8b968",
     detailLines: [
       "Stage Fright voice analyzer",
@@ -170,7 +170,7 @@ const PROJECTS: Project[] = [
     techStack: ["Expo", "React Native", "Supabase", "MapLibre"],
     liveUrl: "https://coverage-bice.vercel.app",
     status: "Live",
-    visualSymbol: "🚶",
+    visualSymbol: "PW",
     visualColor: "#7aaa6a",
     detailLines: [
       "GPS-tracked walking routes",
@@ -187,7 +187,7 @@ const PROJECTS: Project[] = [
     category: ["AI Tools", "Internal"],
     techStack: ["Python", "Etherscan API", "Helius API", "ntfy"],
     status: "Internal",
-    visualSymbol: "📈",
+    visualSymbol: "WT",
     visualColor: "#4a9a6a",
     detailLines: [
       "Backtest framework (90d replay)",
@@ -204,7 +204,7 @@ const PROJECTS: Project[] = [
     category: ["AI Tools", "Internal"],
     techStack: ["Python", "OpenAI", "FFmpeg", "YouTube API"],
     status: "Internal",
-    visualSymbol: "▶",
+    visualSymbol: "YT",
     visualColor: "#e54a28",
     detailLines: [
       "Hook grader (auto-regen if score < threshold)",
@@ -221,7 +221,7 @@ const PROJECTS: Project[] = [
     category: ["AI Tools", "Internal"],
     techStack: ["Python", "Gmail API", "Anthropic Claude"],
     status: "Internal",
-    visualSymbol: "🎓",
+    visualSymbol: "SS",
     visualColor: "#9b7fd4",
     detailLines: [
       "34 college acceptances tracked",
@@ -276,7 +276,7 @@ const PROJECTS: Project[] = [
     techStack: ["Next.js 16", "Supabase", "Tailwind 4", "Open Library API"],
     liveUrl: "https://folio-now.vercel.app",
     status: "Live",
-    visualSymbol: "📚",
+    visualSymbol: "FO",
     visualColor: "#7B2D26",
     detailLines: [
       "Bookshop.org affiliate (supports indie bookstores, not Amazon)",
@@ -294,7 +294,7 @@ const PROJECTS: Project[] = [
     techStack: ["Next.js", "Supabase"],
     liveUrl: "https://grans-supplements.vercel.app",
     status: "Live",
-    visualSymbol: "💊",
+    visualSymbol: "GS",
     visualColor: "#56627A",
     detailLines: [
       "25 numbered bottles with dose schedules",
@@ -312,7 +312,7 @@ const PROJECTS: Project[] = [
     techStack: ["Next.js 16", "Supabase", "Anthropic Claude", "Meta Graph API"],
     liveUrl: "https://pv-social.vercel.app",
     status: "Internal",
-    visualSymbol: "📱",
+    visualSymbol: "PS",
     visualColor: "#9b7fd4",
     detailLines: [
       "AI composer with brand-voice grounding",
@@ -353,7 +353,7 @@ export default function PortfolioPage() {
             What we&apos;ve <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>built.</em>
           </h1>
           <p className="deck">
-            Live products, internal systems, and tools-as-art. Each one shipped, used, maintained — not slide-deck portfolio fluff. Click any tile to see the build details.
+            Live products, internal systems, and tools-as-art. Each one shipped, used and maintained, rather than slide-deck portfolio fluff. Click any tile to see the build details.
           </p>
         </header>
 
@@ -486,7 +486,7 @@ export default function PortfolioPage() {
         <div style={{ marginTop: "64px", padding: "40px 32px", textAlign: "center", background: "var(--color-warm-bg-alt)", border: "2px solid var(--color-warm-accent)" }}>
           <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", color: "var(--color-warm-text)", margin: "0 0 12px", fontWeight: 700 }}>Want something like this?</h3>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: "0 0 24px", maxWidth: "560px", marginLeft: "auto", marginRight: "auto", lineHeight: 1.6 }}>
-            Custom software from $1,500 — apps, web platforms, internal tools, AI integrations. Owner-built, owner-maintained.
+            Custom software from $1,500: apps, web platforms, internal tools, AI integrations. Owner-built, owner-maintained.
           </p>
           <Link href="/software" className="pv-btn-primary">See custom software pricing</Link>
         </div>
