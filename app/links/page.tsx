@@ -33,7 +33,7 @@ const SECTIONS: { roman: string; label: string; items: LinkItem[] }[] = [
     roman: "II.",
     label: "Learn From Me",
     items: [
-      { href: "/courses/college-apps",    label: "College Application Playbook",  desc: "34 acceptances. $505k scholarships. $297." },
+      { href: "/courses/college-apps",    label: "College Application Playbook",  desc: "34 acceptances. $530k scholarships. $297." },
       { href: "/courses/business-launch", label: "Business Launch Playbook",      desc: "From idea to LLC to first dollar. $397." },
       { href: "/courses/ai-automation",   label: "Zero to Automated",             desc: "Build the AI tools you actually need. $397." },
     ],

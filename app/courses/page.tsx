@@ -7,11 +7,11 @@ const COURSES = [
     roman: "I.",
     href: "/courses/college-apps",
     title: "The College Application Playbook",
-    desc: "34 acceptances. $505,000+ in scholarships. 98 schools researched. The exact process — building your list, writing essays, chasing scholarships, and maximizing your offer.",
+    desc: "34 acceptances. $530,384 in scholarships. 98 schools researched. The exact process — building your list, writing essays, chasing scholarships, and maximizing your offer.",
     price: "$297",
     stats: [
       { v: "34",    l: "Acceptances" },
-      { v: "$505k+", l: "Scholarships" },
+      { v: "$530k", l: "Scholarships" },
       { v: "17",    l: "Lessons" },
     ],
   },

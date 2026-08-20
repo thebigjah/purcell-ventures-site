@@ -167,7 +167,7 @@ const PROJECTS: Project[] = [
     slug: "scholarship-sniper",
     title: "Scholarship Sniper",
     subtitle: "Automated college acceptance + scholarship intelligence.",
-    description: "Tracked 98 schools through college application cycle, automated decline emails + appeal letters, surfaced $505k+/yr in scholarships across 34 acceptances.",
+    description: "Tracked 98 schools through college application cycle, automated decline emails + appeal letters, surfaced $530k/yr in scholarships across 34 acceptances.",
     category: ["AI Tools", "Internal"],
     techStack: ["Python", "Gmail API", "Anthropic Claude"],
     status: "Internal",
@@ -175,7 +175,7 @@ const PROJECTS: Project[] = [
     visualColor: "#9b7fd4",
     detailLines: [
       "34 college acceptances tracked",
-      "$505,000+/yr in scholarships surfaced",
+      "$530,384/yr in scholarships surfaced",
       "31 decline emails drafted automatically",
       "Alabama appeal letter framework",
     ],

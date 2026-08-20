@@ -164,7 +164,7 @@ const COURSES = [
   {
     href: "/courses/college-apps",
     title: "The College Application Playbook",
-    desc: "34 acceptances. $505,000+ in scholarships. The exact process — school list, essays, financial aid, and negotiation.",
+    desc: "34 acceptances. $530,384 in scholarships. The exact process — school list, essays, financial aid, and negotiation.",
     price: "$297",
   },
   {

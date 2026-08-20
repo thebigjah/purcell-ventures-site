@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "The College Application Playbook | Elijah Purcell",
   description:
-    "How he got 34 acceptances and $505,000 a year in scholarship offers: building the list, writing the essays, and negotiating the award.",
+    "How he got 34 acceptances and $530,384 a year in scholarship offers: building the list, writing the essays, and negotiating the award.",
   alternates: { canonical: "/courses/college-apps" },
 };
 

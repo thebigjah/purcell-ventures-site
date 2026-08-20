@@ -144,7 +144,7 @@ function StoryTab() {
           { label: "Location",           value: "Tuscaloosa, Alabama" },
           { label: "University",         value: "University of Alabama, Class of 2030" },
           { label: "Program",            value: "Honors College, psychology and data science" },
-          { label: "Scholarship Record", value: "34 acceptances · $505k+/yr offered (2026)" },
+          { label: "Shipped",            value: "15+ production applications, designed and coded solo" },
           { label: "Company",            value: "Purcell Ventures LLC (founded April 2025)" },
           { label: "Contact",            value: "elijah@purcell-ventures.com" },
         ].map(({ label, value }) => (

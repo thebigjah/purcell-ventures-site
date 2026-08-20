@@ -115,7 +115,7 @@ const TIERS = [
 const FAQS = [
   {
     q: "Is this for high schoolers or parents?",
-    a: "Both. The content is written so the student can follow it alone, but parents often go through it too and find the financial aid and scholarship modules especially useful. The $505k stat in the headline is for parents — they know what that means.",
+    a: "Both. The content is written so the student can follow it alone, but parents often go through it too and find the financial aid and scholarship modules especially useful. The $530k stat in the headline is for parents — they know what that means.",
   },
   {
     q: "I'm already a junior or senior. Is it too late?",
@@ -123,11 +123,11 @@ const FAQS = [
   },
   {
     q: "You're 18. Why should I take college advice from you?",
-    a: "Because I just did it. 34 acceptances. $505,000+ in scholarships per year. I researched 98 schools and applied to dozens. I made real mistakes and real wins and I documented everything. A 50-year-old counselor has experience — I have current, specific, documented results.",
+    a: "Because I just did it. 34 acceptances. $530,384 in scholarships per year. I researched 98 schools and applied to dozens. I made real mistakes and real wins and I documented everything. A 50-year-old counselor has experience — I have current, specific, documented results.",
   },
   {
     q: "Does this work for scholarships specifically, or just admissions?",
-    a: "Both, but scholarships is where this course is uniquely strong. Module 5 is entirely dedicated to FAFSA, CSS Profile, and the scholarship hunting process I used to identify and apply for the opportunities that added up to $505k+/year.",
+    a: "Both, but scholarships is where this course is uniquely strong. Module 5 is entirely dedicated to FAFSA, CSS Profile, and the scholarship hunting process I used to identify and apply for the opportunities that added up to $530k/year.",
   },
   {
     q: "What's an access code and how does it work?",
@@ -190,7 +190,7 @@ export default function CollegeAppsPage() {
           <h1 style={{ margin: 0 }}>
             <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>34 acceptances.</em>
             <br />
-            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>$505,000+.</em>
+            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>$530,384.</em>
             <br />
             I&apos;ll show you how.
           </h1>
@@ -212,7 +212,7 @@ export default function CollegeAppsPage() {
           }}>
             {[
               { num: "34",     label: "Acceptances" },
-              { num: "$505k+", label: "Scholarships/yr" },
+              { num: "$530k", label: "Scholarships/yr" },
               { num: "98",     label: "Schools researched" },
               { num: "17",     label: "Lessons" },
             ].map((s, i) => (
@@ -337,7 +337,7 @@ export default function CollegeAppsPage() {
               },
               {
                 title: "Real Numbers",
-                body: "34 acceptances and $505k+/year in scholarships aren't vague credentials. I'll show you the spreadsheet, the emails, the timelines. The data is the course.",
+                body: "34 acceptances and $530k/year in scholarships aren't vague credentials. I'll show you the spreadsheet, the emails, the timelines. The data is the course.",
               },
               {
                 title: "Process, Not Theory",

@@ -395,7 +395,7 @@ export default function ConsultingPage() {
         <div className="pv-cs-stats-band" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px", marginBottom: "32px" }}>
           {[
             { num: "34",          label: "College acceptances",        desc: "Honors programs across the country evaluated my work. They didn't accept the bio — they accepted the portfolio." },
-            { num: "$520k+",      label: "In scholarship offers",      desc: "Per academic year, across those acceptances. Market validation that the work translates." },
+            { num: "7",           label: "Security audits run",         desc: "Read-only audits of live production applications, each finding delivered with severity, a reproduction path, and a fix." },
             { num: "Honors Coll.", label: "UA New College, Fall 2026", desc: "Self-designed Psychology + Data Science hybrid on a pre-med path. The track is the work." },
             { num: "Live infra",  label: "purcellventures.co +",       desc: "Every tool I teach, I've already built into my own stack. I'm not demo-ing — I'm showing you what already works." },
           ].map((item) => (
