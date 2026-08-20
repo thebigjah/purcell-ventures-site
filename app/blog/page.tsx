@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "can-ai-find-your-business",
+    title: "Can an AI find your business? A test you can run in five minutes",
+    excerpt: "People are starting to ask an assistant instead of searching, which means there is a version of your business that exists only inside an answer and most owners have never seen it. Here is how to look, and the four fixes that change it.",
+    date: "August 20, 2026",
+    readingTime: "7 min read",
+    category: "Guide",
+  },
+  {
     slug: "ai-team-page-honesty",
     title: "My team page lists fifteen people who do not exist",
     excerpt: "Fifteen names, none of them a person, and the first sentence of the page says so. Why naming them is more useful than describing a system, and why the disclosure lives in the send function rather than in a policy.",
