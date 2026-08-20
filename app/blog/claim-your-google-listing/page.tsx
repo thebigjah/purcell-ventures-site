@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
+import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/claim-your-google-listing" },
@@ -187,6 +188,19 @@ export default function Post() {
             The rest of the self-check is{" "}
             <Link href="/blog/is-your-business-invisible" style={link}>here</Link>.
           </p>
+
+          <PostFaq qa={[
+            ["How do I claim my Google Business Profile?",
+             "Search your business name first. If a panel appears, look for the option to claim or own the business and start there. Otherwise go to business.google.com. Use an email address you will still control in five years, because that login is the key to the listing and recovering it later is genuinely painful."],
+            ["How long does Google Business Profile verification take?",
+             "It depends on the method. Postcard verification takes roughly two weeks. Phone, email and video verification are faster. Video means recording a short walkthrough showing your signage, your equipment and your address, so have those visible before you start. Do not create a second listing while you are waiting for a postcard."],
+            ["Can I hide my home address on a Google Business Profile?",
+             "Yes, and you should if you work from home. Choose the option saying you deliver goods and services to your customers, set a service area, and hide the address. Google supports this explicitly. Otherwise your home address appears on a public map attached to your business name."],
+            ["What gets a Google Business Profile suspended?",
+             "Three things account for most suspensions: paying for reviews or offering a discount in exchange for one, writing reviews yourself or having staff and family write them, and keyword stuffing the business name field with extra search terms. All three are detectable and the penalty is losing the listing."],
+            ["Which Google Business Profile category should I choose?",
+             "The primary category does more to determine which searches you appear in than any other field on the form, so be specific. Barber shop beats hair salon if you are a barber. Add secondary categories afterwards, but treat the primary one as the load-bearing choice."],
+          ]} />
 
           <PostByline post={{
             slug: "claim-your-google-listing",

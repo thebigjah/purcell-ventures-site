@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
+import PostFaq from "@/app/components/PostFaq";
 
 // SOURCED, NOT REMEMBERED.
 //
@@ -141,6 +142,17 @@ export default function Post() {
             to study AI here, that is{" "}
             <Link href="/ai-at-alabama" style={link}>a separate guide</Link>.
           </p>
+
+          <PostFaq qa={[
+            ["Is the gym free for University of Alabama students?",
+             "University Recreation membership is covered for every enrolled student registered for at least one credit hour, with no additional fee. That covers the Student Recreation Center, the Robert E. Witt Activity Center, the Aquatic Center, the Outdoor Pool Complex and the Tennis Court Complex."],
+            ["Does the University of Alabama have free tutoring?",
+             "Yes, through several offices. The Capstone Center for Student Success in Russell Hall is the umbrella, reachable at (205) 348-7011. The Mathematics Technology and Learning Center covers introductory maths courses, the Writing Center is described by the university as a free service open to all students, and the Speaking Studio covers presentations and oral communication."],
+            ["Is the Writing Center at Alabama free?",
+             "Yes. The University of Alabama Writing Center is described on ua.edu as a free service open to all students. Consultations run about fifty minutes and are available by appointment or drop-in, with online appointments and workshops as well. It is for any writing, not only English coursework."],
+            ["What counseling is available to University of Alabama students?",
+             "The Camellia Center provides free, confidential and voluntary counseling and advocacy services to members of the University of Alabama community."],
+          ]} />
 
           <PostByline post={{
             slug: "free-at-alabama",

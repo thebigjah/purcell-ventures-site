@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
+import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/llc-at-seventeen" },
@@ -176,6 +177,17 @@ export default function Post() {
             More about what the company actually does is on{" "}
             <Link href="/what-is-purcell-ventures" style={link}>this page</Link>.
           </p>
+
+          <PostFaq qa={[
+            ["Can a seventeen-year-old start an LLC?",
+             "State rules differ and this is a description rather than legal advice, but it is possible: Purcell Ventures LLC was filed with the Georgia Secretary of State on 8 April 2025 by a seventeen-year-old, control number 25075361, and the filing is public. The obstacle is usually not the filing, it is the bank."],
+            ["What is the hardest part of starting an LLC?",
+             "The business bank account. Banks have their own policies about account holders under eighteen, and those policies are not the same as state law about whether a minor can form an LLC, so the answer can differ between the phone and the desk. Call ahead, ask specifically, and expect to try more than one institution."],
+            ["Do you have to pay for an EIN?",
+             "No. An EIN comes directly from the IRS, takes about ten minutes, and is free. There is an entire industry charging for it. If a page wants money for an EIN, close the page."],
+            ["Can you change an LLC name after registering it?",
+             "Yes, by filing an amendment. Purcell Ventures LLC was originally filed as Zultar LLC on 8 April 2025 and amended to its current name on 27 January 2026, keeping the same entity, control number and EIN. The cost of a wrong name is an amendment fee; the cost of not filing is every month without a company."],
+          ]} />
 
           <PostByline post={{
             slug: "llc-at-seventeen",

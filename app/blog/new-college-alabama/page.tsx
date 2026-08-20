@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
+import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/new-college-alabama" },
@@ -165,6 +166,17 @@ export default function Post() {
             and <Link href="/blog/free-at-alabama" style={link}>what you have already paid
             for</Link>.
           </p>
+
+          <PostFaq qa={[
+            ["What is New College at the University of Alabama?",
+             "New College is an interdisciplinary program inside the Barefield College of Arts and Sciences at the University of Alabama, operating since 1971. Instead of choosing a major from a list, a student designs one with an advisor, drawing courses from across the university around a question rather than a department."],
+            ["What is a depth study at New College?",
+             "A depth study is the self-designed concentration at the centre of a New College degree. Existing examples include Socio-Legal Studies, Psycho-Social Sciences and Neuroscience, which gives a sense of the range."],
+            ["Should I choose New College at Alabama?",
+             "Choose it if you can already say in one sentence the question your degree is for. Do not choose it because you cannot decide: it removes the guardrails at exactly the moment an undecided student needs them most, and a traditional major with a minor is a better tool for finding out what you like. Also check any licensure or accreditation requirements in your field before committing."],
+            ["What is the Levitetz Leadership Program?",
+             "A New College program offering workshops, seed grants, internship opportunities and the Levitetz Light Bulb Award for student research addressing real-world problems."],
+          ]} />
 
           <PostByline post={{
             slug: "new-college-alabama",

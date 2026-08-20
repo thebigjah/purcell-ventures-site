@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
+import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/is-your-business-invisible" },
@@ -199,6 +200,19 @@ export default function Post() {
             <a href="tel:+12054627839" style={link}>(205) 462-7839</a> or{" "}
             <a href="mailto:elijah@purcell-ventures.com" style={link}>elijah@purcell-ventures.com</a>.
           </p>
+
+          <PostFaq qa={[
+            ["How do I check if my business shows up on Google?",
+             "Borrow a phone that is not yours, or open a private window signed out of everything, and search your business name plus your town. Your own phone has visited your website and will show you results no new customer sees. Then search what you sell plus your town, because that is the search somebody who does not know your name actually runs."],
+            ["Why is my business not showing up on Google Maps?",
+             "The most common reason is that the Google Business Profile has never been claimed. Google may have generated a listing without you, in which case you claim it rather than create a new one. Creating a second listing for a business that already has one produces a duplicate, and duplicates get suppressed."],
+            ["Does my small business actually need a website?",
+             "Not always. If you have a queue out the door, are booked weeks ahead, and your customers are the same people they have been for years, a website will not change your business. A site earns its keep when people need to see the work before calling, when you want bookings without a phone call, when a chain outranks you, or when you need somewhere you control. Fix the Google listing and the hours first either way."],
+            ["What should a small business fix first online?",
+             "In order: claim the Google Business Profile and put accurate hours in it, fix the phone number and add one way to reach you that is not a phone call, ask five recent happy customers for a review, and only then think about the website. The listing is free and takes about twenty minutes and for most local businesses it outperforms a new site."],
+            ["Are wrong opening hours online really a problem?",
+             "Wrong hours are worse than no hours. Somebody drives over, finds a locked door, and does not try again. Holiday hours and early closures count. In an audit of 121 independent businesses near the University of Alabama, only 23 had opening hours recorded anywhere a machine could read them."],
+          ]} />
 
           <PostByline post={{
             slug: "is-your-business-invisible",

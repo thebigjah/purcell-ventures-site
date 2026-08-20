@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
+import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/audit-every-business-in-your-town" },
@@ -196,6 +197,15 @@ return last`}</div>
             <a href="mailto:elijah@purcell-ventures.com" style={link}>I would like to hear
             it</a>.
           </p>
+
+          <PostFaq qa={[
+            ["How can I find businesses without a website?",
+             "Query OpenStreetMap through the Overpass API for shops and food businesses within a radius of a point, drop anything carrying a brand or brand:wikidata tag to remove chains, then make a real HTTP request to every website tag that exists. It is free, needs no API key, and takes an afternoon."],
+            ["Is it accurate to say a business has no website if OpenStreetMap has no website tag?",
+             "No, and claiming it is the main way this kind of audit goes wrong. OpenStreetMap is volunteer-maintained, so a missing tag proves that a machine looking for a website does not find one, not that none exists. The honest claim is the more useful one anyway, because it is the same question a customer with a phone is asking."],
+            ["Why do HEAD requests give the wrong answer when checking if a site is live?",
+             "Plenty of live servers do not answer HEAD requests. Checking with HEAD alone marks working sites as broken. Fall back to GET whenever HEAD fails, and treat a 403 or 405 as working rather than down, because a server refusing to be probed is not a server that is offline."],
+          ]} />
 
           <PostByline post={{
             slug: "audit-every-business-in-your-town",
