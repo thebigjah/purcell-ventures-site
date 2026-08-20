@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "claim-your-google-listing",
+    title: "Claim your Google listing yourself, in about twenty minutes",
+    excerpt: "Written so you do not need to hire anybody, including me. What to put in every field, how to hide a home address, the three things that get a listing suspended, and the five-minute monthly check almost nobody does.",
+    date: "August 20, 2026",
+    readingTime: "8 min read",
+    category: "Guide",
+  },
+  {
     slug: "cold-outreach-that-worked",
     title: "The cold email that got me a client, and the ones that did not",
     excerpt: "The difference was not writing quality. It was leading with something specific and checkable about their business instead of a sentence that would be true of every business on earth.",
