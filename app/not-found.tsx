@@ -31,7 +31,7 @@ export default function NotFound() {
           letterSpacing: "0.32em", textTransform: "uppercase",
           color: "var(--color-warm-text-light)", marginBottom: "20px",
         }}>
-          ✦ &nbsp; 404 — Not Found &nbsp; ✦
+          404, not found
         </div>
 
         <h1 style={{
@@ -50,7 +50,7 @@ export default function NotFound() {
           color: "var(--color-warm-text)", opacity: 0.85,
           marginBottom: "40px",
         }}>
-          Either it never was, or it moved. Either way — let&apos;s get you back to something useful.
+          Either it never was, or it moved. Either way, let&apos;s get you back to something useful.
         </p>
 
         <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", justifyContent: "center" }}>
