@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "canonical-tag-noindex",
+    title: "Every post on my blog was telling Google not to index it",
+    excerpt: "One line in a Next.js layout gave nine posts a canonical tag pointing at the index page, which is the standard way of saying 'I am a duplicate, skip me.' Nothing failed, nothing errored, and the only symptom was absence.",
+    date: "August 20, 2026",
+    readingTime: "6 min read",
+    category: "Engineering",
+  },
+  {
     slug: "/ai-at-alabama",
     title: "Studying AI at the University of Alabama",
     excerpt: "The new AI BS and its exact course requirements, why an AI major cannot also major in Computer Science, and the routes for students who are not in the College of Engineering.",
