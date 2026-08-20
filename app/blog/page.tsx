@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "starting-a-business-at-alabama",
+    title: "Starting a business as a student at Alabama",
+    excerpt: "Almost every student business aims at students. Very few aim at the several hundred local businesses serving them, who have money and decide quickly. Plus the three mistakes that cost the most time.",
+    date: "August 20, 2026",
+    readingTime: "7 min read",
+    category: "Business",
+  },
+  {
     slug: "what-you-should-own",
     title: "What you should own at the end of a website project",
     excerpt: "The question that decides whether a project was a purchase or a lease is not in the proposal. Seven assets that should be in your name, why the domain is the one that matters, and what is genuinely reasonable for a provider to keep.",
