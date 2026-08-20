@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "121-businesses-near-campus",
+    title: "121 businesses near campus, and what a phone can find",
+    excerpt: "Every independent business within 2500 metres of the Quad, and how many list a website a machine can actually reach. Twenty-six of 121. The number that surprised me was the opening hours.",
+    date: "August 20, 2026",
+    readingTime: "4 min read",
+    category: "Reporting",
+  },
+  {
     slug: "tuscaloosa-small-business-online",
     title: "The Tuscaloosa Storefront Project",
     excerpt: "A reporting series on independent businesses around the University of Alabama: who runs them, how students actually find them, and what happens to a fifteen-year-old shop that has no website.",

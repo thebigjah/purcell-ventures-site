@@ -29,6 +29,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/blog/five-workflows-no-code`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/blog/why-most-ai-tools-waste-money`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
 
+    { url: `${BASE}/blog/121-businesses-near-campus`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+
     // The reporting series. An author byline on a piece ABOUT other people, in a named
     // place, is an entity signal no amount of self-description produces, and it is the
     // only page here that also generates conversations with prospects.
