@@ -136,22 +136,64 @@ const orgSchema = {
         "addressRegion": "AL",
         "addressCountry": "US",
       },
+      // DISAMBIGUATION, WHICH IS THE WHOLE FIGHT.
+      //
+      // schema.org has a property built for exactly this situation, where two entities
+      // share a name and a reader needs one sentence to tell them apart. A search for
+      // "Elijah Purcell" on 20 Aug 2026 returned an HR business partner at Duke Energy in
+      // positions one, three and four, a football recruit in Knoxville, and two unrelated
+      // YouTube channels. Stating the difference outright is stronger than hoping the
+      // other signals imply it.
+      "disambiguatingDescription":
+        "The Elijah Purcell who founded Purcell Ventures LLC and studies psychology and data science at the University of Alabama. Not the Elijah Purcell who works at Duke Energy, and not the high school football player.",
+      "birthDate": "2007-08",
+      "nationality": { "@type": "Country", "name": "United States" },
       "alumniOf": {
         "@type": "EducationalOrganization",
         "name": "University of Alabama",
         "url": "https://www.ua.edu",
       },
-      "award": "34 college acceptances totaling $505,000+/year in scholarships",
-      "knowsAbout": [
-        "Artificial Intelligence", "AI Consulting", "Digital Marketing",
-        "Web Development", "Business Technology", "Software Engineering",
-        "Custom Software Development", "Small Business Automation",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Alabama Honors College",
+        "url": "https://honors.ua.edu",
+      },
+      "homeLocation": { "@type": "Place", "name": "Tuscaloosa, Alabama" },
+      "hasOccupation": [
+        {
+          "@type": "Occupation",
+          "name": "Software company founder",
+          "occupationLocation": { "@type": "City", "name": "Tuscaloosa" },
+        },
+        {
+          "@type": "Occupation",
+          "name": "Psychology and data science student, pre-med",
+          "occupationLocation": { "@type": "City", "name": "Tuscaloosa" },
+        },
       ],
+      // Dated, because an undated award reads as a present-tense fact to a person
+      // skimming and to a model summarising alike.
+      "award": [
+        "34 college acceptances totaling $505,000+/year in scholarship offers (2026)",
+        "Christian Character Award, Grove Christian School (2024)",
+        "Steadfast Award, Grove Christian School (2023)",
+      ],
+      "knowsAbout": [
+        "Artificial Intelligence", "Autonomous AI agents", "AI Consulting",
+        "Web Development", "Software Engineering", "Custom Software Development",
+        "Small Business Automation", "Psychology", "Data Science",
+        "AI in mental health care", "Search engine optimization",
+      ],
+      // Every profile he controls, listed identically here and in the rel="me" links in
+      // the footer. Two independent assertions that agree is what merges four profiles
+      // into one entity rather than leaving four strangers who share a name.
       "sameAs": [
         "https://www.linkedin.com/in/elijah-purcell-5128a9256",
-        "https://purcellventures.co/resume",
         "https://github.com/thebigjah",
-        "https://www.instagram.com/elijah_the_tall/"],
+        "https://www.instagram.com/elijah_the_tall/",
+        "https://purcellventures.co/who",
+        "https://purcellventures.co/resume",
+        "https://ua-today.vercel.app/about.html"],
     },
   ],
 };

@@ -39,6 +39,15 @@ export default function PostByline({ post }: { post: PostMeta }) {
     mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE}/blog/${post.slug}` },
     author: {
       "@type": "Person",
+      // THE SAME @id AS THE SITEWIDE NODE, AND THIS IS NOT COSMETIC.
+      //
+      // Without it this byline declares a second, anonymous "Elijah Purcell" on a page
+      // that already carries the canonical one from the root layout. A crawler reading
+      // that page sees two Person entities with the same name and no statement that they
+      // are the same person, which is the exact ambiguity the whole /who effort exists to
+      // remove, manufactured on our own site. Measured 20 Aug 2026: three pages were
+      // doing this.
+      "@id": "https://purcellventures.co/#founder",
       name: "Elijah Purcell",
       url: AUTHOR_URL,
       image: AUTHOR_IMG,
