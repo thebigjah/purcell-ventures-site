@@ -1,5 +1,6 @@
 import { QA } from "./layout";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import Link from "next/link";
 
 // Written in the THIRD PERSON on purpose. A search engine can lift "Elijah Purcell is the
 // founder of Purcell Ventures LLC" out of a page and present it as a fact about a named
@@ -28,6 +29,33 @@ const DATED = [
   ["2025", "Founded Purcell Ventures LLC in Georgia at seventeen."],
   ["2024", "Christian Character Award, Grove Christian School."],
   ["2023", "Steadfast Award, Grove Christian School."],
+];
+
+
+// Everything he has written, listed on the page that answers for him. An author page with
+// no bibliography is a claim without evidence, and these links also push the strongest
+// name page's authority out across every post rather than letting it sit here.
+const WRITING: [string, string, string][] = [
+  ["claim-your-google-listing", "Claim your Google listing yourself, in about twenty minutes", "August 20, 2026"],
+  ["cold-outreach-that-worked", "The cold email that got me a client, and the ones that did not", "August 20, 2026"],
+  ["llc-at-seventeen", "What registering an LLC at seventeen actually involved", "August 20, 2026"],
+  ["audit-every-business-in-your-town", "How to audit every business in your town in an afternoon", "August 20, 2026"],
+  ["new-college-alabama", "New College at Alabama, explained by someone in it", "August 20, 2026"],
+  ["what-the-agents-get-wrong", "Fifteen AI agents run my company. Here is what they get wrong", "August 20, 2026"],
+  ["free-at-alabama", "What you have already paid for at Alabama", "August 20, 2026"],
+  ["is-your-business-invisible", "Is your business invisible online? A ten-minute self-check", "August 20, 2026"],
+  ["small-app-security-checklist", "Five holes in almost every small production app", "August 20, 2026"],
+  ["canonical-tag-noindex", "Every post on my blog was telling Google not to index it", "August 20, 2026"],
+  ["/ai-at-alabama", "Studying AI at the University of Alabama", "August 20, 2026"],
+  ["121-businesses-near-campus", "121 businesses near campus, and what a phone can find", "August 20, 2026"],
+  ["tuscaloosa-small-business-online", "The Tuscaloosa Storefront Project", "August 20, 2026"],
+  ["agents-that-cannot-fix-what-they-find", "We built agents that cannot fix what they find", "August 17, 2026"],
+  ["shipped-is-not-activated", "Shipping is not the same as being able to take a payment", "August 17, 2026"],
+  ["ai-augmented-sales-rep-day", "What a day looks like for an AI-augmented sales rep", "May 25, 2026"],
+  ["why-i-built-crm-from-scratch", "Why I built a CRM from scratch instead of paying $1,200/yr for HubSpot", "May 25, 2026"],
+  ["case-for-charging-19", "The case for charging $19 for what others sell at $497", "May 25, 2026"],
+  ["five-workflows-no-code", "Five workflows you can automate this week without writing code", "May 24, 2026"],
+  ["why-most-ai-tools-waste-money", "Why most small business AI tools waste your money", "May 24, 2026"],
 ];
 
 export default function WhoPage() {
@@ -101,6 +129,23 @@ export default function WhoPage() {
           </div>
         ))}
       </div>
+
+      <h2 className="mt-14 border-b border-neutral-300 pb-2 text-xs font-bold uppercase tracking-[0.16em] text-neutral-500 dark:border-neutral-700">
+        Everything he has written
+      </h2>
+      <ul className="mt-5 space-y-3">
+        {WRITING.map(([slug, title, date]) => (
+          <li key={slug} className="flex gap-5 text-sm">
+            <span className="w-24 shrink-0 font-mono text-xs text-neutral-500">{date}</span>
+            <Link
+              href={slug.startsWith("/") ? slug : `/blog/${slug}`}
+              className="underline decoration-neutral-400 underline-offset-2"
+            >
+              {title}
+            </Link>
+          </li>
+        ))}
+      </ul>
 
       <div className="mt-14 border-t border-neutral-200 pt-6 text-sm text-neutral-500 dark:border-neutral-800">
         <p>
