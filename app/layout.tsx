@@ -121,7 +121,7 @@ const orgSchema = {
         "addressCountry": "US",
       },
       "sameAs": [
-        "https://www.linkedin.com/in/elijah-purcell-5128a9256",
+        "https://www.linkedin.com/in/theelijahpurcell",
         "https://github.com/thebigjah",
         "https://www.instagram.com/elijah_the_tall/"],
       "founder": { "@id": "https://purcellventures.co/#founder" },
@@ -201,7 +201,7 @@ const orgSchema = {
       // the footer. Two independent assertions that agree is what merges four profiles
       // into one entity rather than leaving four strangers who share a name.
       "sameAs": [
-        "https://www.linkedin.com/in/elijah-purcell-5128a9256",
+        "https://www.linkedin.com/in/theelijahpurcell",
         "https://github.com/thebigjah",
         "https://www.instagram.com/elijah_the_tall/",
         "https://purcellventures.co/who",

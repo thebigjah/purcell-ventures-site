@@ -286,7 +286,7 @@ function ContactTab() {
         {[
           { href: "mailto:elijah@purcell-ventures.com", label: "elijah@purcell-ventures.com", primary: true },
           { href: "tel:+12054627839",                   label: "(770) 280·5319" },
-          { href: "https://www.linkedin.com/in/elijah-purcell-5128a9256", label: "LinkedIn",  ext: true },
+          { href: "https://www.linkedin.com/in/theelijahpurcell", label: "LinkedIn",  ext: true },
           { href: "/resume",                            label: "Resume →" },
         ].map(({ href, label, primary, ext }) => (
           <a key={href} href={href} target={ext ? "_blank" : undefined} rel={ext ? "noopener noreferrer" : undefined}

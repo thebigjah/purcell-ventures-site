@@ -60,7 +60,7 @@ export default function PostByline({ post }: { post: PostMeta }) {
       affiliation: { "@type": "CollegeOrUniversity", name: "University of Alabama" },
       sameAs: [
         "https://github.com/thebigjah",
-        "https://www.linkedin.com/in/elijah-purcell-5128a9256",
+        "https://www.linkedin.com/in/theelijahpurcell",
         "https://www.instagram.com/elijah_the_tall/",
       ],
     },

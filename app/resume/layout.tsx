@@ -52,7 +52,7 @@ const schema = {
     "Artificial Intelligence", "Software Engineering", "Digital Marketing",
     "Business Management", "Web Development", "AI Consulting",
   ],
-  "sameAs": ["https://www.linkedin.com/in/elijah-purcell-5128a9256",
+  "sameAs": ["https://www.linkedin.com/in/theelijahpurcell",
         "https://github.com/thebigjah",
         "https://www.instagram.com/elijah_the_tall/"],
 };

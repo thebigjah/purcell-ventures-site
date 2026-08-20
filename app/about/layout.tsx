@@ -77,7 +77,7 @@ const schema = {
         "Lawn Care",
       ],
       "sameAs": [
-        "https://www.linkedin.com/in/elijah-purcell-5128a9256",
+        "https://www.linkedin.com/in/theelijahpurcell",
         "https://purcellventures.co/resume",
         "https://github.com/thebigjah",
         "https://www.instagram.com/elijah_the_tall/"],

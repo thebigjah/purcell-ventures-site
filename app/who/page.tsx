@@ -102,7 +102,7 @@ export default function WhoPage() {
           Contact: <a href="tel:+12054627839" className="underline">(205) 462-7839</a>{" "}
           or <a href="mailto:elijah@purcell-ventures.com" className="underline">elijah@purcell-ventures.com</a>.
           Elsewhere:{" "}
-          <a href="https://www.linkedin.com/in/elijah-purcell-5128a9256" className="underline">LinkedIn</a>,{" "}
+          <a href="https://www.linkedin.com/in/theelijahpurcell" className="underline">LinkedIn</a>,{" "}
           <a href="https://github.com/thebigjah" className="underline">GitHub</a>,{" "}
           <a href="https://www.instagram.com/elijah_the_tall/" className="underline">Instagram</a>.
         </p>
