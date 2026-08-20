@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "llc-at-seventeen",
+    title: "What registering an LLC at seventeen actually involved",
+    excerpt: "The filing is the easy part. The bank account is the step that stops people, the registered agent has an address consequence nobody mentions, and yes, you can rename the company later, because I did.",
+    date: "August 20, 2026",
+    readingTime: "6 min read",
+    category: "Business",
+  },
+  {
     slug: "audit-every-business-in-your-town",
     title: "How to audit every business in your town in an afternoon",
     excerpt: "One free Overpass query against OpenStreetMap, a real HTTP request per site, and the two mistakes that will make your numbers wrong. Including the one that reached a published page before I caught it.",
