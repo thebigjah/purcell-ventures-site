@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "new-college-alabama",
+    title: "New College at Alabama, explained by someone in it",
+    excerpt: "How the self-designed degree actually works, what a depth study is, the Levitetz seed grants, and the honest case against it: nobody knows what it is, and the structure is yours to supply.",
+    date: "August 20, 2026",
+    readingTime: "6 min read",
+    category: "Guide",
+  },
+  {
     slug: "what-the-agents-get-wrong",
     title: "Fifteen AI agents run my company. Here is what they get wrong",
     excerpt: "A stage that could not fail, twenty proposals with the internal notes still in them, ten agents that were never being called, findings that closed themselves, and an agent that quietly acquired capabilities nobody granted it.",
