@@ -98,6 +98,16 @@ const orgSchema = {
       },
       "description": "Multi-division company offering digital services, AI consulting, and custom software development. Founded by Elijah Purcell in Georgia.",
       "foundingDate": "2025-04-08",
+      // A logged-out ChatGPT answer on 20 Aug 2026 volunteered that an older New York
+      // LLC shares this company name. Stating the distinguishing fact here means an
+      // assistant does not have to hedge about which company it found.
+      "disambiguatingDescription":
+        "The Purcell Ventures LLC registered in Georgia, control number 25075361, formed 8 April 2025 by Elijah Purcell. Not the older, unrelated Purcell Ventures LLC registered in New York.",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Georgia Secretary of State control number",
+        "value": "25075361",
+      },
       "foundingLocation": {
         "@type": "Place",
         "name": "Acworth, Georgia, USA",
