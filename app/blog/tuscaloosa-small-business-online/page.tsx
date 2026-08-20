@@ -20,6 +20,7 @@ import PostByline from "@/app/components/PostByline";
 // has already spent twenty minutes talking to him about their business.
 
 export const metadata = {
+  alternates: { canonical: "/blog/tuscaloosa-small-business-online" },
   title: "The Tuscaloosa Storefront Project: small businesses near campus, and what they are up against online | Elijah Purcell",
   description:
     "A reporting series by Elijah Purcell on independent businesses around the University of Alabama: who they are, how students find them, and what happens when a business has no website.",

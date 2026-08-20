@@ -19,6 +19,7 @@ import PostByline from "@/app/components/PostByline";
 // reproducible with `python3 scout.py`.
 
 export const metadata = {
+  alternates: { canonical: "/blog/121-businesses-near-campus" },
   title: "121 businesses near the University of Alabama, and what a phone can find | Elijah Purcell",
   description:
     "An audit of every independent business within 2500 metres of the Quad: how many list a website a machine can actually reach, and what that means for a shop competing with a chain three miles away.",

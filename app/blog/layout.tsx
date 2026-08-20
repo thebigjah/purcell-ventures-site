@@ -15,7 +15,9 @@ export const metadata: Metadata = {
     url: "https://purcellventures.co/blog",
     type: "website",
   },
-  alternates: { canonical: "/blog" },
+  // NO canonical here. This layout wraps every post as well as the index, and Next
+  // inherits it, so a canonical pointing at "/blog" told Google that all nine posts
+  // were duplicates of the index page. Each post declares its own below.
 };
 
 export default function BlogLayout({ children }: { children: ReactNode }) {
