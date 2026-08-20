@@ -51,6 +51,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // only page here that also generates conversations with prospects.
     { url: `${BASE}/blog/tuscaloosa-small-business-online`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
 
+    { url: `${BASE}/what-is-purcell-ventures`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+
     // The name-query pages. /who exists specifically to be the answer to
     // "who is Elijah Purcell", and it is the highest-priority page on the site for
     // that query, so it outranks the division pages here on purpose.

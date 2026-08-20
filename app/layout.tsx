@@ -120,11 +120,32 @@ const orgSchema = {
         "addressRegion": "GA",
         "addressCountry": "US",
       },
+      // THE COMPANY'S OWN PROFILES, NOT HIS. This array previously listed his personal
+      // LinkedIn, GitHub and Instagram, which asserts that the company is those accounts.
+      // It is not. The LinkedIn company page is verified live (200) before being listed;
+      // the Yelp listing exists but returns 403 to a non-browser request, so it stays out
+      // until it can be checked properly rather than being asserted on faith.
       "sameAs": [
-        "https://www.linkedin.com/in/theelijahpurcell",
+        "https://www.linkedin.com/company/138853899/",
         "https://github.com/thebigjah",
-        "https://www.instagram.com/elijah_the_tall/"],
+        "https://ua-today.vercel.app",
+        "https://purcellventures.co/who"],
       "founder": { "@id": "https://purcellventures.co/#founder" },
+      "employee": { "@id": "https://purcellventures.co/#founder" },
+      "knowsAbout": [
+        "Web development for small business", "Custom software development",
+        "AI consulting", "Autonomous AI agent systems", "Business process automation",
+        "Search engine optimization",
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Tuscaloosa" },
+        { "@type": "City", "name": "Acworth" },
+        { "@type": "AdministrativeArea", "name": "Metro Atlanta" },
+        { "@type": "Country", "name": "United States" },
+      ],
+      "slogan": "Built by one operator for the small businesses who move first.",
+      // One human. The fifteen agents are software and the team page says so in its first
+      // sentence, so the count here stays honest rather than flattering.
       "numberOfEmployees": { "@type": "QuantitativeValue", "value": 1 },
     },
     {
