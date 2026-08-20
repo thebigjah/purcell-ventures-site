@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "what-you-should-own",
+    title: "What you should own at the end of a website project",
+    excerpt: "The question that decides whether a project was a purchase or a lease is not in the proposal. Seven assets that should be in your name, why the domain is the one that matters, and what is genuinely reasonable for a provider to keep.",
+    date: "August 20, 2026",
+    readingTime: "6 min read",
+    category: "Business",
+  },
+  {
     slug: "six-sources-one-page",
     title: "Six sources, one page: building a campus events site",
     excerpt: "Parsing six feeds is a day of work. The interesting problem is day ninety, when a source starts returning a well-formed empty list with a 200 status and your site quietly shows fewer events.",
