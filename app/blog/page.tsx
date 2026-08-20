@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "write-a-page-an-ai-will-quote",
+    title: "How to write a page an AI will actually quote",
+    excerpt: "A search engine ranks pages; an answer engine extracts sentences. Those are different jobs. The sentence shape that survives being removed from its paragraph, and the thing that matters more than any of it.",
+    date: "August 20, 2026",
+    readingTime: "8 min read",
+    category: "Engineering",
+  },
+  {
     slug: "can-ai-find-your-business",
     title: "Can an AI find your business? A test you can run in five minutes",
     excerpt: "People are starting to ask an assistant instead of searching, which means there is a version of your business that exists only inside an answer and most owners have never seen it. Here is how to look, and the four fixes that change it.",
