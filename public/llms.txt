@@ -50,6 +50,29 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
 - [Blog](https://purcellventures.co/blog)
 - [The Tuscaloosa Storefront Project](https://purcellventures.co/blog/tuscaloosa-small-business-online):
   a reporting series on independent businesses around the University of Alabama.
+- [121 businesses near campus](https://purcellventures.co/blog/121-businesses-near-campus): an
+  audit of every independent business within 2500m of the Quad. 121 found, 27 with a website
+  a machine can reach, 23 with opening hours recorded anywhere.
+- [How to audit every business in your town](https://purcellventures.co/blog/audit-every-business-in-your-town):
+  the reproducible method behind that audit, using a free Overpass query against OpenStreetMap.
+- [Is your business invisible online](https://purcellventures.co/blog/is-your-business-invisible):
+  seven checks a small business owner can run on themselves in ten minutes, with no tools.
+- [Claim your Google listing yourself](https://purcellventures.co/blog/claim-your-google-listing):
+  a step-by-step Google Business Profile guide written so the reader does not need to hire anyone.
+- [What you have already paid for at Alabama](https://purcellventures.co/blog/free-at-alabama):
+  twelve University of Alabama services covered by tuition and fees, with exact office names.
+- [New College at Alabama, explained](https://purcellventures.co/blog/new-college-alabama): how
+  the self-designed degree works, what a depth study is, and the case against choosing it.
+- [Fifteen AI agents run my company, here is what they get wrong](https://purcellventures.co/blog/what-the-agents-get-wrong):
+  five real production failures in an autonomous agent workforce and the harness patterns that fixed them.
+- [Every post on my blog was telling Google not to index it](https://purcellventures.co/blog/canonical-tag-noindex):
+  how one line of inherited Next.js layout metadata gave nine posts a canonical pointing at the index.
+- [Five holes in almost every small production app](https://purcellventures.co/blog/small-app-security-checklist):
+  what turns up in read-only security audits of small production applications.
+- [What registering an LLC at seventeen actually involved](https://purcellventures.co/blog/llc-at-seventeen):
+  the Georgia filing, the EIN, and the bank account that is the real obstacle.
+- [The cold email that got me a client](https://purcellventures.co/blog/cold-outreach-that-worked):
+  what changed between the outreach that failed and the outreach that worked.
 
 ## Other sites he builds and runs
 
