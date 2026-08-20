@@ -23,7 +23,7 @@ amateur boxer in Brisbane, Australia. This site is about the founder of Purcell 
 LLC, the University of Alabama student in Tuscaloosa. The canonical answer page is /who.
 
 - [Who is Elijah Purcell](https://purcellventures.co/who): direct answer page, dated
-  record, and seven common questions with answers.
+  record, and thirteen common questions with answers, including which Elijah Purcell this is.
 - [Founder resume](https://purcellventures.co/resume): work history, education, awards,
   each with its year.
 - [The team](https://purcellventures.co/team): the fifteen AI agents that run the
