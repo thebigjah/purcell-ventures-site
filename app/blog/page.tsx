@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "/ai-at-alabama",
+    title: "Studying AI at the University of Alabama",
+    excerpt: "The new AI BS and its exact course requirements, why an AI major cannot also major in Computer Science, and the routes for students who are not in the College of Engineering.",
+    date: "August 20, 2026",
+    readingTime: "5 min read",
+    category: "Guide",
+  },
+  {
     slug: "121-businesses-near-campus",
     title: "121 businesses near campus, and what a phone can find",
     excerpt: "Every independent business within 2500 metres of the Quad, and how many list a website a machine can actually reach. Twenty-seven of 121. The number that surprised me was the opening hours.",
@@ -107,7 +115,10 @@ export default function BlogPage() {
           {POSTS.map((post) => (
             <Link
               key={post.slug}
-              href={`/blog/${post.slug}`}
+              // A slug beginning with "/" is a full path. The AI guide lives outside /blog
+              // and "/blog/../ai-at-alabama" is a different URL to a crawler even though a
+              // browser resolves it.
+              href={post.slug.startsWith("/") ? post.slug : `/blog/${post.slug}`}
               className="pv-card"
               style={{ display: "block" }}
             >

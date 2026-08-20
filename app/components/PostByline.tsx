@@ -17,6 +17,7 @@ import Link from "next/link";
 // as one person.
 
 export interface PostMeta {
+  /** Slug, or a full path beginning with "/" for pages that do not live under /blog. */
   slug: string;
   title: string;
   description: string;
@@ -29,14 +30,18 @@ const AUTHOR_IMG = "https://purcellventures.co/brand/elijah.jpg";
 const SITE = "https://purcellventures.co";
 
 export default function PostByline({ post }: { post: PostMeta }) {
+  // A slug starting with "/" is a full path. Everything else is a blog post, which is
+  // what every caller was until the AI guide, and a node whose url points at a page that
+  // does not exist is worse than no node at all.
+  const href = post.slug.startsWith("/") ? `${SITE}${post.slug}` : `${SITE}/blog/${post.slug}`;
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
     datePublished: post.published,
-    url: `${SITE}/blog/${post.slug}`,
-    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE}/blog/${post.slug}` },
+    url: href,
+    mainEntityOfPage: { "@type": "WebPage", "@id": href },
     author: {
       "@type": "Person",
       // THE SAME @id AS THE SITEWIDE NODE, AND THIS IS NOT COSMETIC.

@@ -41,6 +41,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // corroborating page a name query wants.
     { url: `${BASE}/card`, lastModified: now, changeFrequency: "monthly", priority: 0.6, images: [`${BASE}/brand/elijah.jpg`] },
 
+    // The AI guide. It targets the questions he wants to own at Alabama by answering
+    // them properly rather than by claiming a title, which is the only version of
+    // that strategy that survives a reader checking it.
+    { url: `${BASE}/ai-at-alabama`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+
     // The reporting series. An author byline on a piece ABOUT other people, in a named
     // place, is an entity signal no amount of self-description produces, and it is the
     // only page here that also generates conversations with prospects.
