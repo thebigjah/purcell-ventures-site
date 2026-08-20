@@ -39,7 +39,7 @@ export default function WhoPage() {
       <div className="mt-8 flex gap-6">
         <img
           src="/brand/elijah.jpg"
-          alt="Elijah Purcell, founder of Purcell Ventures LLC"
+          alt="Elijah Purcell, founder of Purcell Ventures LLC and University of Alabama student"
           width={128}
           height={128}
           className="h-32 w-32 shrink-0 object-cover"

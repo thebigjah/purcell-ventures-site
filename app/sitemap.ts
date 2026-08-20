@@ -34,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // The tap card. It carries his name, his photo and his contact details on a page
     // that people reach by tapping a physical object, which is exactly the kind of
     // corroborating page a name query wants.
-    { url: `${BASE}/card`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/card`, lastModified: now, changeFrequency: "monthly", priority: 0.6, images: [`${BASE}/brand/elijah.jpg`] },
 
     // The reporting series. An author byline on a piece ABOUT other people, in a named
     // place, is an entity signal no amount of self-description produces, and it is the
@@ -44,18 +44,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // The name-query pages. /who exists specifically to be the answer to
     // "who is Elijah Purcell", and it is the highest-priority page on the site for
     // that query, so it outranks the division pages here on purpose.
-    { url: `${BASE}/who`,  lastModified: now, changeFrequency: "monthly", priority: 0.95 },
+    { url: `${BASE}/who`,  lastModified: now, changeFrequency: "monthly", priority: 0.95, images: [`${BASE}/brand/elijah.jpg`] },
     { url: `${BASE}/team`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
 
     // About + personal depth
-    { url: `${BASE}/about`,   lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/about`,   lastModified: now, changeFrequency: "monthly", priority: 0.9, images: [`${BASE}/brand/elijah.jpg`] },
     { url: `${BASE}/now`,     lastModified: now, changeFrequency: "weekly",  priority: 0.6 },
     { url: `${BASE}/uses`,    lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/verses`,  lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/writing`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
     { url: `${BASE}/links`,   lastModified: now, changeFrequency: "monthly", priority: 0.4 },
     { url: `${BASE}/faq`,     lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE}/resume`,  lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/resume`,  lastModified: now, changeFrequency: "monthly", priority: 0.7, images: [`${BASE}/brand/elijah.jpg`] },
 
     // Courses, discoverable
     { url: `${BASE}/courses`,                  lastModified: now, changeFrequency: "weekly",  priority: 0.8 },

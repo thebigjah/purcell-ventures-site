@@ -296,7 +296,7 @@ export default function ResumePage() {
               pushed down, and squared off to match the editorial rules above and below. */}
           <img
             src="/brand/elijah.jpg"
-            alt="Elijah Purcell"
+            alt="Elijah Purcell, founder of Purcell Ventures LLC and University of Alabama student"
             width={132}
             height={132}
             style={{

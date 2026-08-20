@@ -117,7 +117,7 @@ function StoryTab() {
           frame and a centre crop takes the top of it off. */}
       <img
         src="/brand/elijah.jpg"
-        alt="Elijah Purcell"
+        alt="Elijah Purcell, founder of Purcell Ventures LLC and University of Alabama student"
         width={148}
         height={148}
         style={{

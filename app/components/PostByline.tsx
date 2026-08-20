@@ -84,7 +84,7 @@ export default function PostByline({ post }: { post: PostMeta }) {
       >
         <img
           src="/brand/elijah.jpg"
-          alt="Elijah Purcell"
+          alt="Elijah Purcell, founder of Purcell Ventures LLC and University of Alabama student"
           width={72}
           height={72}
           style={{ width: "72px", height: "72px", flex: "0 0 72px", objectFit: "cover", objectPosition: "50% 20%", display: "block" }}
@@ -101,7 +101,9 @@ export default function PostByline({ post }: { post: PostMeta }) {
             builds and operates the autonomous AI agent systems that run the company.
           </p>
           <p style={{ margin: "8px 0 0" }}>
-            <Link href="/who" style={{ color: "var(--color-warm-accent)" }}>More about him</Link>
+            {/* The anchor text is the point. "More about him" tells a crawler nothing about
+                who "him" is, on nine pages that all carry his byline. */}
+            <Link href="/who" style={{ color: "var(--color-warm-accent)" }}>More about Elijah Purcell</Link>
             {" · "}
             <Link href="/blog" style={{ color: "var(--color-warm-accent)" }}>All posts</Link>
           </p>
