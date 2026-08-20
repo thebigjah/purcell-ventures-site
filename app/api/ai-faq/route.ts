@@ -1,5 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { NextRequest, NextResponse } from "next/server";
+import { guard } from "@/lib/api-guard";
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
@@ -20,6 +21,9 @@ Return ONLY valid JSON in this exact shape, no markdown fences:
 }`;
 
 export async function POST(req: NextRequest) {
+  const blocked = guard(req);
+  if (blocked) return blocked;
+
   try {
     const { businessName, businessDescription, topics } = await req.json();
 

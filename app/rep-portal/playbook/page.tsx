@@ -171,7 +171,7 @@ export default function PlaybookPage() {
               <li><strong>Prospect claiming past PV history</strong> — verify before committing.</li>
               <li><strong>Anything you&apos;re unsure about</strong> — trust the instinct.</li>
             </ul>
-            <p style={tipNote}><strong style={{ color: "var(--color-warm-accent)" }}>How:</strong> Text <strong>(770) 280-5319</strong>. Format: &ldquo;Got a [SERVICE] prospect, [BUDGET], decision [TIMELINE]. Need 5 min before I quote.&rdquo; Don&apos;t escalate in front of the prospect.</p>
+            <p style={tipNote}><strong style={{ color: "var(--color-warm-accent)" }}>How:</strong> Text <strong>(205) 462-7839</strong>. Format: &ldquo;Got a [SERVICE] prospect, [BUDGET], decision [TIMELINE]. Need 5 min before I quote.&rdquo; Don&apos;t escalate in front of the prospect.</p>
           </section>
 
           {/* AFTER */}

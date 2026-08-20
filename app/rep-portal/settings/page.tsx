@@ -147,7 +147,7 @@ export default function SettingsPage() {
               <textarea
                 value={settings.defaultEmailSig}
                 onChange={(e) => update("defaultEmailSig", e.target.value)}
-                placeholder={`e.g.,\n— {{repName}}\nPurcell Ventures Sales Rep\n(770) 280-5319`}
+                placeholder={`e.g.,\n— {{repName}}\nPurcell Ventures Sales Rep\n(205) 462-7839`}
                 style={{ ...fieldStyle, minHeight: "100px", resize: "vertical", fontFamily: "var(--font-inter), sans-serif" }}
               />
             </Field>

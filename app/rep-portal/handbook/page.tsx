@@ -112,7 +112,7 @@ const SECTIONS = [
           <li>Any prospect from a competitor&apos;s customer base — judgment call, ask first</li>
         </ul>
         <p><strong>How to escalate:</strong></p>
-        <p>Text Elijah at <strong>(770) 280-5319</strong>: &ldquo;Got a [SERVICE] prospect, [BUDGET], decision timeline [X]. Need 5 min before I quote.&rdquo;</p>
+        <p>Text Elijah at <strong>(205) 462-7839</strong>: &ldquo;Got a [SERVICE] prospect, [BUDGET], decision timeline [X]. Need 5 min before I quote.&rdquo;</p>
         <p>Don&apos;t escalate via email — too slow. Don&apos;t escalate in front of the prospect. Don&apos;t use the chatbot (<Link href="/rep-portal/ask" style={{ color: "var(--color-warm-accent)" }}>Ask</Link>) as a substitute for escalation on high-value deals.</p>
       </>
     ),

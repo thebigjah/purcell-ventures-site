@@ -4,23 +4,23 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "About Elijah Purcell | Founder of Purcell Ventures LLC",
   description:
-    "Elijah Purcell is an entrepreneur, AI consultant, and software developer based in Acworth, Georgia. Founder of Purcell Ventures LLC. 34 college acceptances, $505k+/yr in scholarships. Enrolling University of Alabama Honors College, Fall 2026.",
+    "Elijah Purcell is an entrepreneur, AI consultant, and software developer based in Tuscaloosa, Alabama. Founder of Purcell Ventures LLC. 34 college acceptances, $505k+/yr in scholarships. University of Alabama Honors College, Class of 2030.",
   keywords: [
     "Elijah Purcell", "Elijah Purcell founder", "Purcell Ventures founder",
-    "AI consultant Georgia", "entrepreneur Acworth Georgia", "Elijah Purcell entrepreneur",
+    "AI consultant Georgia", "entrepreneur Tuscaloosa Alabama", "Elijah Purcell entrepreneur",
     "Purcell Ventures LLC founder", "University of Alabama 2026", "Elijah Purcell bio",
   ],
   openGraph: {
     title: "About Elijah Purcell — Founder of Purcell Ventures LLC",
     description:
-      "Entrepreneur, AI consultant, and software developer from Acworth, GA. 34 college acceptances, $505k+/yr in scholarships. Founder of Purcell Ventures LLC.",
+      "Entrepreneur, AI consultant, and software developer. University of Alabama, Tuscaloosa. 34 college acceptances, $505k+/yr in scholarships. Founder of Purcell Ventures LLC.",
     url: "https://purcellventures.co/about",
     type: "profile",
   },
   twitter: {
     card: "summary_large_image",
     title: "About Elijah Purcell — Founder, Purcell Ventures LLC",
-    description: "Entrepreneur, AI consultant, software developer. Acworth, GA. Enrolling University of Alabama Fall 2026.",
+    description: "Entrepreneur, AI consultant, software developer. Tuscaloosa, Alabama. University of Alabama Honors College, Class of 2030.",
   },
   alternates: { canonical: "https://purcellventures.co/about" },
 };
@@ -42,14 +42,15 @@ const schema = {
       "@type": "Person",
       "@id": "https://purcellventures.co/#founder",
       "name": "Elijah Purcell",
+      "image": "https://purcellventures.co/brand/elijah.jpg",
       "givenName": "Elijah",
       "familyName": "Purcell",
       "jobTitle": "Founder & CEO",
-      "description": "Entrepreneur, AI consultant, and software developer based in Acworth, Georgia. Founder of Purcell Ventures LLC — a multi-division company offering digital services, AI consulting, and custom software development. Also founder of Mantle Field Services, a sister brand handling owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta. Received 34 college acceptances totaling over $505,000 per year in scholarships. Enrolling at the University of Alabama Honors College in Fall 2026.",
+      "description": "Entrepreneur, AI consultant, and software developer based in Tuscaloosa, Alabama. Founder of Purcell Ventures LLC — a multi-division company offering digital services, AI consulting, and custom software development. Also founder of Mantle Field Services, a sister brand handling owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta. Received 34 college acceptances totaling over $505,000 per year in scholarships. Student at the University of Alabama Honors College, Class of 2030, studying psychology and data science.",
       "worksFor": { "@id": "https://purcellventures.co/#organization" },
       "url": "https://purcellventures.co",
       "email": "elijah@purcell-ventures.com",
-      "telephone": "+17702805319",
+      "telephone": "+12054627839",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Acworth",
@@ -77,9 +78,9 @@ const schema = {
       ],
       "sameAs": [
         "https://www.linkedin.com/in/elijah-purcell-5128a9256",
-        "https://twitter.com/elijahpurcell",
         "https://purcellventures.co/resume",
-      ],
+        "https://github.com/thebigjah",
+        "https://www.instagram.com/elijah_the_tall/"],
     },
     {
       "@type": "FAQPage",
@@ -89,7 +90,7 @@ const schema = {
           "name": "Who is Elijah Purcell?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Elijah Purcell is an entrepreneur, AI consultant, and software developer based in Acworth, Georgia. He is the founder and CEO of Purcell Ventures LLC, a multi-division company offering digital services, AI consulting, and custom software development. He also founded Mantle Field Services, a sister brand handling owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta. He received 34 college acceptances with over $505,000 per year in scholarships and is enrolling at the University of Alabama Honors College in Fall 2026.",
+            "text": "Elijah Purcell is an entrepreneur, AI consultant, and software developer based in Tuscaloosa, Alabama. He is the founder and CEO of Purcell Ventures LLC, a multi-division company offering digital services, AI consulting, and custom software development. He also founded Mantle Field Services, a sister brand handling owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta. He received 34 college acceptances with over $505,000 per year in scholarships and is a student at the University of Alabama Honors College, having enrolled in Fall 2026.",
           },
         },
         {
@@ -113,7 +114,7 @@ const schema = {
           "name": "How can I contact Elijah Purcell?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can reach Elijah Purcell by email at elijah@purcell-ventures.com or by phone at (770) 280-5319.",
+            "text": "You can reach Elijah Purcell by email at elijah@purcell-ventures.com or by phone at (205) 462-7839.",
           },
         },
       ],

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "Elijah Purcell — Resume & Scholarship Record",
     description:
-      "34 acceptances, $505k+/yr scholarships. Founder of Purcell Ventures LLC. Enrolling University of Alabama Fall 2026.",
+      "34 acceptances, $505k+/yr scholarships. Founder of Purcell Ventures LLC. University of Alabama Honors College, Class of 2030.",
   },
   alternates: { canonical: "https://purcellventures.co/resume" },
 };
@@ -27,15 +27,16 @@ const schema = {
   "@type": "Person",
   "@id": "https://purcellventures.co/#founder",
   "name": "Elijah Purcell",
+  "image": "https://purcellventures.co/brand/elijah.jpg",
   "jobTitle": "Founder & CEO",
   "worksFor": { "@id": "https://purcellventures.co/#organization" },
   "url": "https://purcellventures.co",
   "email": "elijah@purcell-ventures.com",
-  "telephone": "+17702805319",
+  "telephone": "+12054627839",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Acworth",
-    "addressRegion": "GA",
+    "addressLocality": "Tuscaloosa",
+    "addressRegion": "AL",
     "addressCountry": "US",
   },
   "alumniOf": {
@@ -48,7 +49,9 @@ const schema = {
     "Artificial Intelligence", "Software Engineering", "Digital Marketing",
     "Business Management", "Web Development", "AI Consulting",
   ],
-  "sameAs": ["https://www.linkedin.com/in/elijah-purcell-5128a9256"],
+  "sameAs": ["https://www.linkedin.com/in/elijah-purcell-5128a9256",
+        "https://github.com/thebigjah",
+        "https://www.instagram.com/elijah_the_tall/"],
 };
 
 export default function ResumeLayout({ children }: { children: ReactNode }) {

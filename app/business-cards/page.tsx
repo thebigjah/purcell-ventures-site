@@ -14,7 +14,7 @@ const PAD = 40;
 const INFO = {
   name: "Elijah Purcell",
   title: "Founder",
-  phone: "(770) 280-5319",
+  phone: "(205) 462-7839",
   email: "elijah@purcell-ventures.com",
   web: "purcellventures.co",
 };
@@ -382,7 +382,7 @@ function V6Back() {
 const INFO_WORKS = {
   name: "Elijah Purcell",
   title: "Owner",
-  phone: "(770) 280-5319",
+  phone: "(205) 462-7839",
   email: "elijah@purcell-ventures.com",
   web: "works.purcellventures.co",
 };

@@ -33,7 +33,7 @@ export default function ServicesMovedPage() {
           <a href={MANTLE_URL} className="pv-btn-primary">
             Visit Mantle Field →
           </a>
-          <a href="tel:+17702805319" className="pv-btn-ghost">(770) 280·5319</a>
+          <a href="tel:+12054627839" className="pv-btn-ghost">(770) 280·5319</a>
         </div>
         <p style={{
           fontFamily: "var(--font-dm-sans), system-ui, sans-serif",

@@ -19,6 +19,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ai-cost-calculator`,  lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/case-studies`,    lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
+    // The reporting series. An author byline on a piece ABOUT other people, in a named
+    // place, is an entity signal no amount of self-description produces, and it is the
+    // only page here that also generates conversations with prospects.
+    { url: `${BASE}/blog/tuscaloosa-small-business-online`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+
+    // The name-query pages. /who exists specifically to be the answer to
+    // "who is Elijah Purcell", and it is the highest-priority page on the site for
+    // that query, so it outranks the division pages here on purpose.
+    { url: `${BASE}/who`,  lastModified: now, changeFrequency: "monthly", priority: 0.95 },
+    { url: `${BASE}/team`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+
     // About + personal depth
     { url: `${BASE}/about`,   lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/now`,     lastModified: now, changeFrequency: "weekly",  priority: 0.6 },

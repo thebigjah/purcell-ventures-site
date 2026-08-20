@@ -94,7 +94,7 @@ function LoginForm() {
       </button>
       {authMode === "per-rep" && (
         <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", marginTop: "16px", lineHeight: 1.6, fontStyle: "italic" }}>
-          Your password identifies you — every action you take in the portal is attributed to your account. Don&apos;t share your password. If you forgot it or need it rotated, text Elijah at (770) 280-5319.
+          Your password identifies you — every action you take in the portal is attributed to your account. Don&apos;t share your password. If you forgot it or need it rotated, text Elijah at (205) 462-7839.
         </p>
       )}
       {authMode === "shared" && (

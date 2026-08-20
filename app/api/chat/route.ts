@@ -1,5 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { NextRequest, NextResponse } from "next/server";
+import { guard, capMessages } from "@/lib/api-guard";
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
@@ -23,13 +24,26 @@ Digital services: purcellventures.co/digital
 If someone wants to book, get a quote, or learn more, point them to the right page or contact. Never make up pricing or services not listed above.`;
 
 export async function POST(req: NextRequest) {
+  // This route had no authentication and no rate limiting, and it passed the caller's
+  // `messages` array straight through to Anthropic. That is a free Claude proxy billed
+  // to Elijah's key: any prompt, any volume, from anyone who found the URL.
+  const blocked = guard(req);
+  if (blocked) return blocked;
+
   try {
-    const { messages } = await req.json();
+    const body = await req.json();
+    const capped = capMessages(body?.messages);
+    if (!capped.ok) {
+      return NextResponse.json(
+        { text: "I could not read that. Try a shorter question." },
+        { status: 400 }
+      );
+    }
     const response = await client.messages.create({
       model: "claude-haiku-4-5-20251001",
       max_tokens: 300,
       system: SYSTEM,
-      messages,
+      messages: capped.messages as Anthropic.MessageParam[],
     });
     const text = response.content[0].type === "text" ? response.content[0].text : "";
     return NextResponse.json({ text });

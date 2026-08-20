@@ -111,8 +111,27 @@ function SectionHead({ roman, title, em }: { roman: string; title: string; em?: 
 function StoryTab() {
   return (
     <div>
+      {/* Floated so the opening paragraph wraps around it rather than being shoved down
+          the page. Square, hairline border, same editorial language as the rules and
+          section heads. Cropped from 20 percent down because his head sits high in the
+          frame and a centre crop takes the top of it off. */}
+      <img
+        src="/brand/elijah.jpg"
+        alt="Elijah Purcell"
+        width={148}
+        height={148}
+        style={{
+          float: "right",
+          width: "148px",
+          height: "148px",
+          objectFit: "cover",
+          objectPosition: "50% 20%",
+          margin: "4px 0 16px 28px",
+          border: "1px solid currentColor",
+        }}
+      />
       <p className="pv-italic" style={{ ...prose, fontSize: "22px", maxWidth: "640px" }}>
-        I&apos;m 18 years old. I have a company with four active divisions, software in production, and a clear sense of what I&apos;m building toward. I&apos;m not in a hurry to seem older than I am — I&apos;m in a hurry because the work matters.
+        I&apos;m 19 years old. I have a company with four active divisions, software in production, and a clear sense of what I&apos;m building toward. I&apos;m not in a hurry to seem older than I am — I&apos;m in a hurry because the work matters.
       </p>
       <p style={prose}>
         I started Purcell Ventures out of a simple observation: the tools that change how businesses operate — AI automation, custom software, real digital infrastructure — were being engineered for enterprises and trickling down to small businesses as afterthoughts, if at all. The HVAC contractor, the barber, the florist: they work harder than most people I&apos;ve ever met and operate with a fraction of the support. That bothered me enough to do something about it.
@@ -123,7 +142,7 @@ function StoryTab() {
       <div className="pv-stat-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "48px" }}>
         {[
           { label: "Location",           value: "Acworth, Georgia" },
-          { label: "Enrolling",          value: "University of Alabama, Fall 2026" },
+          { label: "University",         value: "University of Alabama, Class of 2030" },
           { label: "Program",            value: "Honors College — Psychology / Data Science" },
           { label: "Scholarship Record", value: "34 acceptances · $520k+/yr awarded" },
           { label: "Company",            value: "Purcell Ventures LLC (founded April 2025)" },
@@ -157,7 +176,7 @@ function CompanyTab() {
     <div>
       <SectionHead roman="§" title="Where this is going" />
       <p style={prose}>
-        This fall I&apos;m going to the University of Alabama&apos;s Honors College to study psychology and data science. The endgame is psychiatry — specifically the intersection of AI-driven research and clinical mental health care. I believe the next generation of mental health treatment will be built on behavioral data, and I believe it needs to be built by people who understand both the science and the human being underneath it.
+        I&apos;m at the University of Alabama&apos;s Honors College to study psychology and data science. The endgame is psychiatry — specifically the intersection of AI-driven research and clinical mental health care. I believe the next generation of mental health treatment will be built on behavioral data, and I believe it needs to be built by people who understand both the science and the human being underneath it.
       </p>
       <p style={prose}>
         Purcell Ventures isn&apos;t separate from that goal — it&apos;s the foundation. Every system I build for a local business, every AI workflow I teach a team, every line of code I ship is practice in the same discipline: making technology work for people rather than against them.
@@ -266,7 +285,7 @@ function ContactTab() {
       <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginBottom: "56px", marginTop: "28px" }}>
         {[
           { href: "mailto:elijah@purcell-ventures.com", label: "elijah@purcell-ventures.com", primary: true },
-          { href: "tel:+17702805319",                   label: "(770) 280·5319" },
+          { href: "tel:+12054627839",                   label: "(770) 280·5319" },
           { href: "https://www.linkedin.com/in/elijah-purcell-5128a9256", label: "LinkedIn",  ext: true },
           { href: "/resume",                            label: "Resume →" },
         ].map(({ href, label, primary, ext }) => (

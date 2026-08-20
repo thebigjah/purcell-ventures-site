@@ -66,7 +66,7 @@ export default function LeadCaptureForm({ title = "Get a Free Quote", subtitle =
     <div style={{ padding: "40px 28px", background: "var(--color-warm-card)", border: "1px solid var(--color-warm-border-light)", borderRadius: "10px", textAlign: "center" }}>
       <div style={{ fontSize: "28px", marginBottom: "12px" }}>✓</div>
       <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "8px" }}>Got it.</div>
-      <div style={{ fontSize: "14px", color: "var(--color-warm-text-muted)" }}>We'll be in touch within 24 hours. In the meantime: (770) 280-5319.</div>
+      <div style={{ fontSize: "14px", color: "var(--color-warm-text-muted)" }}>We'll be in touch within 24 hours. In the meantime: (205) 462-7839.</div>
     </div>
   );
 

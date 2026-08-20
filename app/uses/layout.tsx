@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Uses — What I Actually Use",
+  title: "What Elijah Purcell Uses: Tools, Stack and Setup",
   description:
     "Elijah Purcell's working tech stack: editor, languages, frameworks, AI, infrastructure, automation, hardware. Every tool in active production use.",
   alternates: { canonical: "/uses" },

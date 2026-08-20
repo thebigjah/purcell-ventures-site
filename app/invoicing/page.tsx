@@ -270,7 +270,7 @@ export default function InvoicingPage() {
                 <div>
                   <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 700, color: "#d4af37", marginBottom: "4px" }}>Purcell Ventures</div>
                   <div style={{ fontSize: "12px", color: "#6a6458" }}>{selected.division}</div>
-                  <div style={{ fontSize: "12px", color: "#6a6458" }}>elijah@purcell-ventures.com · (770) 280-5319</div>
+                  <div style={{ fontSize: "12px", color: "#6a6458" }}>elijah@purcell-ventures.com · (205) 462-7839</div>
                 </div>
                 <div style={{ textAlign: "right" }}>
                   <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 700, color: "#f5f0e0" }}>{selected.number}</div>

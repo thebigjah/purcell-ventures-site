@@ -198,7 +198,7 @@ export default function EstimatingPage() {
                 <div style={{ textAlign: "right" }}>
                   <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "16px", color: "var(--color-warm-text)" }}>Purcell Ventures LLC</div>
                   <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", marginTop: "4px" }}>Acworth, GA · Cobb County</div>
-                  <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)" }}>(770) 280-5319 · elijah@purcell-ventures.com</div>
+                  <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)" }}>(205) 462-7839 · elijah@purcell-ventures.com</div>
                 </div>
               </div>
             </header>

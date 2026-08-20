@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Portfolio — Shipped work | Purcell Ventures",
+  title: "Elijah Purcell's Portfolio: Shipped Software and AI Projects",
   description:
     "10 live products, mobile apps, AI tools, and internal systems we've built. Web apps in Next.js + React, native mobile in Expo, automation pipelines in Python. Everything ships, everything's used.",
   keywords: [

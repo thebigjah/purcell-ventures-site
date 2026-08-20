@@ -38,7 +38,7 @@ const FAQ_SCHEMA = {
       "name": "How do I contact Purcell Ventures?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Contact Elijah Purcell directly at elijah@purcell-ventures.com or by phone at (770) 280-5319.",
+        "text": "Contact Elijah Purcell directly at elijah@purcell-ventures.com or by phone at (205) 462-7839.",
       },
     },
   ],
@@ -548,8 +548,8 @@ export default function Home() {
             color: "var(--color-warm-text)", opacity: 0.92,
             marginBottom: "18px", marginTop: 0,
           }}>
-            Eighteen years old. Founded April 2025 out of a desk in Acworth, Georgia.
-            Heading to the University of Alabama Honors College — pre-med psychiatry with an AI specialty.
+            Eighteen years old. Founded April 2025 out of a desk at the University of Alabama.
+            Student at the University of Alabama Honors College — pre-med psychiatry with an AI specialty.
           </p>
           <p className="pv-italic" style={{
             fontSize: "19px", lineHeight: 1.55,
@@ -763,7 +763,7 @@ export default function Home() {
       >
         <ContactBlock title="Reach">
           <a className="pv-mono-link" href="mailto:elijah@purcell-ventures.com">elijah@purcell-ventures.com</a>
-          <a className="pv-mono-link" href="tel:+17702805319">(770) 280·5319</a>
+          <a className="pv-mono-link" href="tel:+12054627839">(770) 280·5319</a>
         </ContactBlock>
         <ContactBlock title="Service Area">
           <p style={{ margin: 0 }}>Metro Atlanta · Cobb County</p>

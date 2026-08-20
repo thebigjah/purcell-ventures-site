@@ -284,6 +284,26 @@ export default function ResumePage() {
           }}>
             Résumé · Field Record · August 2026
           </div>
+          {/* A page about a person with no picture of the person. Fifty-odd pages on this
+              site name him and not one showed his face, which is a gap for a founder whose
+              own name is what people search. Floated so the text wraps rather than being
+              pushed down, and squared off to match the editorial rules above and below. */}
+          <img
+            src="/brand/elijah.jpg"
+            alt="Elijah Purcell"
+            width={132}
+            height={132}
+            style={{
+              float: "right",
+              width: "132px",
+              height: "132px",
+              objectFit: "cover",
+              objectPosition: "50% 20%",
+              marginLeft: "28px",
+              marginBottom: "12px",
+              border: `1px solid ${C.text}`,
+            }}
+          />
           <h1 style={{
             fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700,
             fontSize: "clamp(40px, 7vw, 84px)",

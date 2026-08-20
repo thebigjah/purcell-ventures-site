@@ -407,7 +407,7 @@ export default function ProductDetailPage() {
                 Entry not built yet
               </h1>
               <p style={{ color: "var(--color-warm-text-muted)", margin: "16px auto", maxWidth: "560px", lineHeight: 1.6 }}>
-                Encyclopedia content for <code style={{ background: "var(--color-warm-bg-alt)", padding: "2px 6px", color: "var(--color-warm-accent)" }}>{slug}</code> is being written. For now check the <Link href="/rep-portal/pricing" style={{ color: "var(--color-warm-accent)" }}>pricing reference</Link> or text Elijah at (770) 280-5319.
+                Encyclopedia content for <code style={{ background: "var(--color-warm-bg-alt)", padding: "2px 6px", color: "var(--color-warm-accent)" }}>{slug}</code> is being written. For now check the <Link href="/rep-portal/pricing" style={{ color: "var(--color-warm-accent)" }}>pricing reference</Link> or text Elijah at (205) 462-7839.
               </p>
             </div>
           )}

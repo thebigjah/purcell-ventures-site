@@ -37,7 +37,7 @@ export default function ChatWidget() {
       const data = await res.json();
       setMessages(m => [...m, { role: "assistant", content: data.text }]);
     } catch {
-      setMessages(m => [...m, { role: "assistant", content: "Something went wrong. Try calling (770) 280-5319." }]);
+      setMessages(m => [...m, { role: "assistant", content: "Something went wrong. Try calling (205) 462-7839." }]);
     }
     setLoading(false);
   };

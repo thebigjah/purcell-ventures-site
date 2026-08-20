@@ -1,10 +1,14 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { NextRequest, NextResponse } from "next/server";
+import { guard } from "@/lib/api-guard";
 import { getTool } from "@/lib/ai-tools";
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 export async function POST(req: NextRequest, { params }: { params: Promise<{ slug: string }> }) {
+  const blocked = guard(req);
+  if (blocked) return blocked;
+
   try {
     const { slug } = await params;
     const tool = getTool(slug);

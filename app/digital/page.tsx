@@ -1758,7 +1758,7 @@ export default function DigitalPage() {
           <div style={{ background: "var(--color-warm-card)", border: "1px solid var(--color-warm-border)", borderRadius: "10px", padding: "40px" }}>
             <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "24px" }}>About Me</p>
             <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.85, marginBottom: "20px" }}>
-              I'm Elijah Purcell — 18 years old, founded Purcell Ventures LLC, and heading to the University of Alabama in fall 2026.
+              I'm Elijah Purcell — 19 years old, founded Purcell Ventures LLC, and studying at the University of Alabama in fall 2026.
             </p>
             <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.85, marginBottom: "20px" }}>
               I started this business running gutters, pressure washing, and lawn care — so I understand what small businesses actually need. Not buzzwords. Real tools that save time, bring in customers, and make the operation run smoother.

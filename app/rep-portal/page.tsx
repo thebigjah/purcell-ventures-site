@@ -286,7 +286,7 @@ export default function RepPortalDashboard() {
               Need backup mid-pitch?
             </h4>
             <p style={{ margin: 0, fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.6 }}>
-              Text Elijah at <strong>(770) 280-5319</strong> or email <a href="mailto:elijah@purcell-ventures.com" style={{ color: "var(--color-warm-accent)" }}>elijah@purcell-ventures.com</a>. Format: <em>&quot;Got a [SERVICE] prospect, [BUDGET], decision timeline [X]. Need 5 min before I quote.&quot;</em>
+              Text Elijah at <strong>(205) 462-7839</strong> or email <a href="mailto:elijah@purcell-ventures.com" style={{ color: "var(--color-warm-accent)" }}>elijah@purcell-ventures.com</a>. Format: <em>&quot;Got a [SERVICE] prospect, [BUDGET], decision timeline [X]. Need 5 min before I quote.&quot;</em>
             </p>
           </div>
 

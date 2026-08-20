@@ -27,9 +27,9 @@ const CATEGORIES = [
   {
     label: "Contact",
     items: [
-      { name: "Call / Text",  data: "tel:+17702805319",                         desc: "(770) 280-5319" },
+      { name: "Call / Text",  data: "tel:+12054627839",                         desc: "(205) 462-7839" },
       { name: "Email",        data: "mailto:elijah@purcell-ventures.com",        desc: "elijah@purcell-ventures.com" },
-      { name: "vCard",        data: "BEGIN:VCARD\nVERSION:3.0\nFN:Elijah Purcell\nORG:Purcell Ventures\nTEL:+17702805319\nEMAIL:elijah@purcell-ventures.com\nURL:https://purcellventures.co\nEND:VCARD", desc: "Save contact" },
+      { name: "vCard",        data: "BEGIN:VCARD\nVERSION:3.0\nFN:Elijah Purcell\nORG:Purcell Ventures\nTEL:+12054627839\nEMAIL:elijah@purcell-ventures.com\nURL:https://purcellventures.co\nEND:VCARD", desc: "Save contact" },
     ],
   },
   {

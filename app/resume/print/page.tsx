@@ -335,7 +335,7 @@ export default function ResumePrint() {
           </div>
           <div className="header-contact">
             <span>elijahpurcell@gmail.com</span>
-            <span>(770) 280-5319</span>
+            <span>(205) 462-7839</span>
             <span>purcellventures.co</span>
             <span>github.com/thebigjah</span>
             <span>Acworth, GA 30101</span>
@@ -696,7 +696,7 @@ export default function ResumePrint() {
 
         {/* Footer */}
         <div className="footer">
-          <span>Elijah Purcell · elijahpurcell@gmail.com · (770) 280-5319 · Acworth, GA</span>
+          <span>Elijah Purcell · elijahpurcell@gmail.com · (205) 462-7839 · Acworth, GA</span>
           <span>purcellventures.co · Updated August 2026</span>
         </div>
 

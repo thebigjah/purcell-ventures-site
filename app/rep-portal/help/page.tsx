@@ -132,7 +132,7 @@ const SECTIONS: HelpSection[] = [
         </ul>
         <p><strong>How:</strong></p>
         <ol>
-          <li>Text Elijah at <strong>(770) 280-5319</strong></li>
+          <li>Text Elijah at <strong>(205) 462-7839</strong></li>
           <li>Format: <em>&quot;Got a [SERVICE] prospect, [BUDGET], decision timeline [X]. Need 5 min before I quote.&quot;</em></li>
           <li>Don&apos;t escalate in front of the prospect.</li>
           <li>Don&apos;t use the AI Ask bot as a substitute for escalation on high-value deals.</li>
@@ -256,7 +256,7 @@ export default function HelpPage() {
           </div>
 
           <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", textAlign: "center", fontStyle: "italic" }}>
-            Question not covered here? Text Elijah at (770) 280-5319 — and we&apos;ll add the answer to this page so the next person doesn&apos;t have to ask.
+            Question not covered here? Text Elijah at (205) 462-7839 — and we&apos;ll add the answer to this page so the next person doesn&apos;t have to ask.
           </p>
 
         </main>
