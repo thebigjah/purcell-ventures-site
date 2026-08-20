@@ -8,55 +8,55 @@ const FOCUS = [
     roman: "I.",
     label: "Building",
     items: [
-      "Purcell Ventures — four divisions live, two sales partners coming on, three courses recorded next.",
-      "Mantle Field Services — sister brand, Metro Atlanta only, gutters / pressure washing / lawn through summer.",
-      "Personal AI infrastructure — desktop overlay, automation pipelines, the kind of stack I'm betting on for the next decade.",
+      "Purcell Ventures. Four divisions live, and the current problem is not building things, it is that several of them still cannot take a payment.",
+      "A fifteen-agent AI workforce that runs proposals, audits, compliance and outreach on a schedule. The roster is public on the team page.",
+      "UA Today. Campus events for the University of Alabama, pulled from six sources into one place, and used by students who are not me.",
+      "The Tuscaloosa Storefront Project. Reporting on independent businesses near campus, one at a time.",
     ],
   },
   {
     roman: "II.",
     label: "Studying",
     items: [
-      "Psychology + Data Science prereqs — first year at the University of Alabama starts August 2026.",
-      "Apologetics + worldview — Lewis, Craig, McDowell, Tozer. Slow reads, marked margins.",
-      "How AI changes mental health care — psychiatry is the long arc.",
+      "First semester at the University of Alabama Honors College. Moved in 14 August 2026, first class on the 19th, which was also my birthday.",
+      "Psychology and data science, on a pre-med track toward psychiatry.",
+      "How AI can take administrative load off mental health clinicians. That is the long arc and the reason for the degree combination.",
+      "Apologetics and worldview. Lewis, Craig, McDowell, Tozer. Slow reads, marked margins.",
     ],
   },
   {
     roman: "III.",
-    label: "Going",
+    label: "Figuring out",
     items: [
-      "Lee University Summer Honors — June 14–20, cryptography + social media + 6 college credits.",
-      "Bama Bound — July 9–11, Tuscaloosa, orientation + first advisor meeting.",
-      "Alaska mission trip — disaster relief, July 17–23, 2026.",
-      "Addie's wedding — July 25.",
+      "Which three clubs to join. One for the major, one for fun, one that makes me uncomfortable.",
+      "Whether the businesses I write about actually want a website, or whether the honest answer for most of them is to claim their Google listing and go back to work.",
+      "How to pay for spring semester without a loan. That is a decision already made, not one still open.",
     ],
   },
   {
     roman: "IV.",
     label: "Practicing",
     items: [
-      "Bass-baritone vocals — range C1 to F5, worship-leading at Stonebridge most Sundays.",
-      "Bible study with Mighty Men — Cornerstone Prep weekly, last semester before graduation.",
-      "Strength + conditioning — scientific hypertrophy programming, multi-year commitment.",
-      "Writing — original poetry, fiction drafts, this site, my own infrastructure.",
+      "Bass-baritone vocals, range C1 to F5. Worship-leading whenever there is a room that needs it.",
+      "Strength and conditioning, scientific hypertrophy programming, a multi-year commitment rather than a season.",
+      "Writing. Poetry nobody asked for, fiction drafts, this site, and my own infrastructure.",
     ],
   },
   {
     roman: "V.",
     label: "Reading",
     items: [
-      "Lewis, Craig, McDowell, Tozer — slow reads, marked margins.",
-      "The Bible — daily, no streak required.",
-      "Annie Duke and the decision-making canon — Thinking in Bets shaped how I run a calibration journal.",
+      "Lewis, Craig, McDowell, Tozer. Slow reads, marked margins.",
+      "The Bible, daily, no streak required.",
+      "Annie Duke and the decision-making canon. Thinking in Bets is why I keep a calibration journal.",
     ],
   },
   {
     roman: "VI.",
     label: "Wrestling with",
     items: [
-      "Free will vs. determinism (firmly non-Calvinist, still exploring).",
-      "The right cadence for school + business + faith + family without dropping a ball.",
+      "Free will and determinism. Firmly non-Calvinist, still exploring.",
+      "The right cadence for school, business, faith and family without dropping one of them.",
       "How honest to be on the public internet about the hard parts.",
     ],
   },
@@ -71,7 +71,7 @@ export default function NowPage() {
 
         {/* Page head */}
         <header className="pv-page-head">
-          <div className="pv-mono-label">A /now Page · Updated May 2026</div>
+          <div className="pv-mono-label">A /now Page · Updated 20 August 2026</div>
           <h1>
             What I&apos;m <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>focused on</em> right now.
           </h1>

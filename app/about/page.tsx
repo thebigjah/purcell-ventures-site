@@ -131,7 +131,7 @@ function StoryTab() {
         }}
       />
       <p className="pv-italic" style={{ ...prose, fontSize: "22px", maxWidth: "640px" }}>
-        I&apos;m 19 years old. I have a company with four active divisions, software in production, and a clear sense of what I&apos;m building toward. I&apos;m not in a hurry to seem older than I am. I&apos;m in a hurry because the work matters.
+        I&apos;m 19 years old. I have a company with four active divisions, software in production, and a clear sense of what I&apos;m building toward. I&apos;m not in a hurry to seem older than I am. I&apos;m in a hurry because the work matters. <a href="/who" style={{ color: "var(--color-warm-accent)" }}>The short factual version of who Elijah Purcell is</a> lives on its own page.
       </p>
       <p style={prose}>
         I started Purcell Ventures out of a simple observation: the tools that change how businesses operate — AI automation, custom software, real digital infrastructure — were being engineered for enterprises and trickling down to small businesses as afterthoughts, if at all. The HVAC contractor, the barber, the florist: they work harder than most people I&apos;ve ever met and operate with a fraction of the support. That bothered me enough to do something about it.
