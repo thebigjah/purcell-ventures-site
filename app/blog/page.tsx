@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "free-at-alabama",
+    title: "What you have already paid for at Alabama",
+    excerpt: "Twelve services a University of Alabama student has already bought through tuition and fees, with the exact office names, and an honest list of the things I could not confirm and am therefore not claiming.",
+    date: "August 20, 2026",
+    readingTime: "5 min read",
+    category: "Guide",
+  },
+  {
     slug: "is-your-business-invisible",
     title: "Is your business invisible online? A ten-minute self-check",
     excerpt: "Seven checks you can run on your own business in ten minutes with no tools and no account, to find out what a customer with a phone actually sees. Including the two cases where you do not need a website at all.",
