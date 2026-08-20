@@ -30,7 +30,7 @@ const FOCUS = [
     items: [
       "Which three clubs to join. One for the major, one for fun, one that makes me uncomfortable.",
       "Whether the businesses I write about actually want a website, or whether the honest answer for most of them is to claim their Google listing and go back to work.",
-      "How to pay for spring semester without a loan. That is a decision already made, not one still open.",
+      "Whether to keep the Storefront series weekly or let it run at the pace the interviews actually take.",
     ],
   },
   {
@@ -56,7 +56,7 @@ const FOCUS = [
     label: "Wrestling with",
     items: [
       "Free will and determinism. Firmly non-Calvinist, still exploring.",
-      "The right cadence for school, business, faith and family without dropping one of them.",
+      "The right cadence for school and business without either one taking the other's hours.",
       "How honest to be on the public internet about the hard parts.",
     ],
   },
