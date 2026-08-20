@@ -76,7 +76,7 @@ export default function NowPage() {
             What I&apos;m <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>focused on</em> right now.
           </h1>
           <p className="deck">
-            An old-internet tradition (<a href="https://nownownow.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--color-warm-accent)", textDecoration: "underline", textDecorationStyle: "dotted" }}>nownownow.com</a>) — a single page that tells you what someone is actually doing right now. No marketing, no positioning, just the actual answer to &ldquo;what are you up to lately?&rdquo;
+            An old-internet tradition (<a href="https://nownownow.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--color-warm-accent)", textDecoration: "underline", textDecorationStyle: "dotted" }}>nownownow.com</a>). A single page that tells you what someone is actually doing right now. No marketing, no positioning, just the actual answer to &ldquo;what are you up to lately?&rdquo;
           </p>
         </header>
 
@@ -153,7 +153,7 @@ export default function NowPage() {
           fontSize: "14px", color: "var(--color-warm-text-light)",
           textAlign: "center", lineHeight: 1.7,
         }}>
-          This page updates roughly monthly. If we&apos;re going to meet — this is the truest snapshot I can give you of where my head is right now.
+          This page updates roughly monthly. If we&apos;re going to meet, this is the truest snapshot I can give you of where my head is right now.
         </p>
 
       </main>

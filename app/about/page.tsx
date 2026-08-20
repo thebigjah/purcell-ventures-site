@@ -15,7 +15,7 @@ const DIVISIONS = [
   {
     roman: "I.",
     label: "Digital Services",
-    desc: "Complete digital toolkit for small businesses — website, AI chatbot, booking system, CRM, email marketing, and 20+ tools. Fully managed. One subscription.",
+    desc: "Complete digital toolkit for small businesses: website, AI chatbot, booking system, CRM, email marketing, and 20+ tools. Fully managed. One subscription.",
     href: "/digital",
     price: "From $99/mo",
   },
@@ -36,13 +36,13 @@ const DIVISIONS = [
   {
     roman: "IV.",
     label: "Mantle Field Services (sister brand)",
-    desc: "Owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta — run under its own brand. Same owner, same standards.",
+    desc: "Owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta, run under its own brand. Same owner, same standards.",
     href: "https://mantle-field-site.vercel.app",
     price: "From $50",
   },
   {
     roman: "V.",
-    label: "Steady — Personal IT",
+    label: "Steady: Personal IT",
     desc: "Personal tech help for individuals and households. AI coaching, phone setup, password managers, medication reminders, smart home, family care plans. For when you're the family tech person and need to hand the job off.",
     href: "/steady",
     price: "From $79/mo",
@@ -134,7 +134,7 @@ function StoryTab() {
         I&apos;m 19 years old. I have a company with four active divisions, software in production, and a clear sense of what I&apos;m building toward. I&apos;m not in a hurry to seem older than I am. I&apos;m in a hurry because the work matters. <a href="/who" style={{ color: "var(--color-warm-accent)" }}>The short factual version of who Elijah Purcell is</a> lives on its own page.
       </p>
       <p style={prose}>
-        I started Purcell Ventures out of a simple observation: the tools that change how businesses operate — AI automation, custom software, real digital infrastructure — were being engineered for enterprises and trickling down to small businesses as afterthoughts, if at all. The HVAC contractor, the barber, the florist: they work harder than most people I&apos;ve ever met and operate with a fraction of the support. That bothered me enough to do something about it.
+        I started Purcell Ventures out of a simple observation: the tools that change how businesses operate, meaning AI automation, custom software and real digital infrastructure, were being engineered for enterprises and trickling down to small businesses as afterthoughts, if at all. The HVAC contractor, the barber, the florist: they work harder than most people I&apos;ve ever met and operate with a fraction of the support. That bothered me enough to do something about it.
       </p>
 
       <SectionHead roman="§" title="Background" em="at a glance" />
@@ -176,13 +176,13 @@ function CompanyTab() {
     <div>
       <SectionHead roman="§" title="Where this is going" />
       <p style={prose}>
-        I&apos;m at the University of Alabama&apos;s Honors College to study psychology and data science. The endgame is psychiatry — specifically the intersection of AI-driven research and clinical mental health care. I believe the next generation of mental health treatment will be built on behavioral data, and I believe it needs to be built by people who understand both the science and the human being underneath it.
+        I&apos;m at the University of Alabama&apos;s Honors College to study psychology and data science. The endgame is psychiatry, specifically the intersection of AI-driven research and clinical mental health care. I believe the next generation of mental health treatment will be built on behavioral data, and I believe it needs to be built by people who understand both the science and the human being underneath it.
       </p>
       <p style={prose}>
-        Purcell Ventures isn&apos;t separate from that goal — it&apos;s the foundation. Every system I build for a local business, every AI workflow I teach a team, every line of code I ship is practice in the same discipline: making technology work for people rather than against them.
+        Purcell Ventures isn&apos;t separate from that goal. It&apos;s the foundation. Every system I build for a local business, every AI workflow I teach a team, every line of code I ship is practice in the same discipline: making technology work for people rather than against them.
       </p>
       <p style={{ ...prose, marginBottom: "48px" }}>
-        My faith is the thread through all of it. I&apos;m a Christian, and I believe people are made in the image of God — which means every business I advise, every tool I build, and every patient I eventually treat deserves infrastructure and care that reflects that. That&apos;s not a tagline. It&apos;s the reason I do this at all.
+        My faith is the thread through all of it. I&apos;m a Christian, and I believe people are made in the image of God, which means every business I advise, every tool I build, and every patient I eventually treat deserves infrastructure and care that reflects that. That&apos;s not a tagline. It&apos;s the reason I do this at all.
       </p>
 
       <SectionHead roman="§" title="What we build" em="four divisions, one operator" />
@@ -255,21 +255,21 @@ function MarkTab() {
       </div>
 
       <p style={prose}>
-        The Purcell Ventures mark is built on a deliberate inversion of Jeremy Bentham&apos;s panopticon — a prison design from 1791 where a single guard in a central tower could surveil every prisoner without them knowing when they were being watched. The uncertainty alone produced compliance. Michel Foucault later argued it wasn&apos;t just a prison design. It was the operating model of modern power: institutions exert control through the possibility of observation. You regulate yourself because you might be watched. The watcher stays hidden. The watched stays exposed.
+        The Purcell Ventures mark is built on a deliberate inversion of Jeremy Bentham&apos;s panopticon, a prison design from 1791 where a single guard in a central tower could surveil every prisoner without them knowing when they were being watched. The uncertainty alone produced compliance. Michel Foucault later argued it wasn&apos;t just a prison design. It was the operating model of modern power: institutions exert control through the possibility of observation. You regulate yourself because you might be watched. The watcher stays hidden. The watched stays exposed.
       </p>
       <p style={prose}>
-        The inverse of that isn&apos;t chaos. It&apos;s the principle most free societies claim to believe in and rarely practice: the powerful should be transparent and accountable, and ordinary people should have their privacy and freedom. The asymmetry should run upward, not downward. That&apos;s what the mark means. PV sits at the center — visible, declared, not hidden in a tower. The structure radiates outward as accountability arms, not inward as surveillance. The space beyond the rings belongs to the people we work with. We&apos;re the ones who are observable.
+        The inverse of that isn&apos;t chaos. It&apos;s the principle most free societies claim to believe in and rarely practice: the powerful should be transparent and accountable, and ordinary people should have their privacy and freedom. The asymmetry should run upward, not downward. That&apos;s what the mark means. PV sits at the center: visible, declared, not hidden in a tower. The structure radiates outward as accountability arms, not inward as surveillance. The space beyond the rings belongs to the people we work with. We&apos;re the ones who are observable.
       </p>
       <p style={{ ...prose, marginBottom: "32px" }}>
-        In 2026, that position is rarer than it should be. The systems most people depend on — the platforms, the algorithms, the AI models making decisions about their credit and their feed and their hiring — are deliberately opaque. The asymmetry Bentham designed for prisoners is now the default assumption of the economy. The mark is a refusal of that. My name is on the business. You deal with me directly. That&apos;s not a branding choice. It&apos;s a position.
+        In 2026, that position is rarer than it should be. The systems most people depend on, the platforms and the algorithms and the AI models making decisions about their credit and their feed and their hiring, are deliberately opaque. The asymmetry Bentham designed for prisoners is now the default assumption of the economy. The mark is a refusal of that. My name is on the business. You deal with me directly. That&apos;s not a branding choice. It&apos;s a position.
       </p>
 
       <SectionHead roman="§" title="The Name" />
       <p style={prose}>
-        Purcell Ventures is named after my family. Not a founder persona, not a brand construct — my actual last name. That&apos;s a choice that comes with accountability baked in. When something ships under this name, I shipped it. When a client has a problem, I answer for it. There&apos;s no layer of corporate abstraction between my reputation and the work.
+        Purcell Ventures is named after my family. Not a founder persona, not a brand construct. My actual last name. That&apos;s a choice that comes with accountability baked in. When something ships under this name, I shipped it. When a client has a problem, I answer for it. There&apos;s no layer of corporate abstraction between my reputation and the work.
       </p>
       <p style={{ ...prose, marginBottom: 0 }}>
-        Ventures because that&apos;s what this is. Not a consultancy, not an agency, not a firm. A set of ventures — things being built, tested, and grown. The word carries risk and intention both. That&apos;s accurate.
+        Ventures because that&apos;s what this is. Not a consultancy, not an agency, not a firm. A set of ventures: things being built, tested, and grown. The word carries risk and intention both. That&apos;s accurate.
       </p>
     </div>
   );
@@ -311,7 +311,7 @@ function ContactTab() {
         {[
           { q: "Who do I actually talk to?", a: "Me. Elijah Purcell. There's no team, no account manager, no handoff. You deal with the owner from first message to final delivery." },
           { q: "How fast do you respond?", a: "Same day on email, usually within a few hours. If you need an answer urgently, call or text." },
-          { q: "Do you take on clients outside Atlanta?", a: "For digital services, consulting, and software — yes, anywhere. For field work (gutter cleaning, pressure washing, lawn care), see our sister brand Mantle Field Services — Metro Atlanta only." },
+          { q: "Do you take on clients outside Atlanta?", a: "For digital services, consulting, and software, yes, anywhere. For field work (gutter cleaning, pressure washing, lawn care), see our sister brand Mantle Field Services, Metro Atlanta only." },
           { q: "What's the best way to start?", a: "Email with a one-sentence description of what you need. I'll tell you honestly if I can help and what it would look like." },
         ].map(({ q, a }) => (
           <div key={q} className="pv-card">
