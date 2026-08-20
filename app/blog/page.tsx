@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "ai-team-page-honesty",
+    title: "My team page lists fifteen people who do not exist",
+    excerpt: "Fifteen names, none of them a person, and the first sentence of the page says so. Why naming them is more useful than describing a system, and why the disclosure lives in the send function rather than in a policy.",
+    date: "August 20, 2026",
+    readingTime: "5 min read",
+    category: "Opinion",
+  },
+  {
     slug: "psychology-and-software",
     title: "What psychology has to do with the software I build",
     excerpt: "One week of a methods course found a real defect in a product I had already shipped. Within-subject design, base rates, and the metric question worth asking before you choose the metric.",
