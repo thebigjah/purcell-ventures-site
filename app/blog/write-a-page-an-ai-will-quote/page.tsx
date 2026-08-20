@@ -107,7 +107,19 @@ export default function Post() {
 
           <p>
             FAQPage is the format that hands a machine a question and a self-contained answer
-            as structured data. It is the single highest-leverage thing on this list.
+            as structured data.
+          </p>
+
+          <p>
+            <strong>Correction, added the same day this was published.</strong> An earlier
+            version of this paragraph called FAQPage the single highest-leverage item here.
+            That was true when it produced a rich result in Google, and it is not true now:
+            Google stopped showing FAQ rich results on 7 May 2026 and is removing the
+            reporting and testing support this summer. The schema type is still valid, and it
+            is still read by Bing and by the retrieval crawlers behind the assistants, which
+            is what this article is about. So it keeps its value for answer engines and has
+            none left for Google results, and saying otherwise would be selling you something
+            that stopped existing three months ago.
           </p>
 
           <p>
@@ -169,6 +181,32 @@ export default function Post() {
             It costs twenty minutes and it forces a genuinely useful exercise: writing down
             what each of your pages is actually for, in a sentence, without marketing. Half
             the value is that most sites cannot do it.
+          </p>
+
+          <h2 style={H2}>The one with the largest measured effect</h2>
+
+          <p>
+            Cite external sources inline, and link them.
+          </p>
+
+          <p>
+            This is the technique with the strongest reported result in the generative
+            engine optimisation literature, and the effect is largest for sites that are not
+            already ranking well: a{" "}
+            <a href="https://arxiv.org/html/2607.14035v1" style={link} rel="noopener">
+              2026 survey of the field
+            </a>{" "}
+            reports substantial citation gains for pages that cite authoritative sources
+            inline, with the biggest lifts going to lower-ranked sites. The same body of work
+            finds statistics, definitions, prices, dates and quotations improve citation by
+            roughly a quarter, and that keyword stuffing measurably reduces it.
+          </p>
+
+          <p>
+            The uncomfortable corollary, and the reason I am putting it here rather than
+            burying it: that survey found <em>no established evidence</em> that content
+            volume, publishing velocity or structured data are primary optimisation vectors.
+            Most of what is sold as answer engine optimisation is those three things.
           </p>
 
           <h2 style={H2}>What matters more than all of it</h2>
