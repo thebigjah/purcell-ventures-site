@@ -5,6 +5,12 @@ const BASE = "https://purcellventures.co";
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   return [
+    // Deliberately absent: /consulting/book, /uses, /verses, /writing and /links.
+    // All five are Disallowed in robots.txt, and listing a page in the sitemap while
+    // forbidding the crawler to read it is a contradiction Google resolves badly: the
+    // URL can surface as a bare link with no description at all. Removed here rather
+    // than unblocked there, because unblocking would publish pages he chose to hide.
+
     // Home, top priority
     { url: BASE, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
 
@@ -14,7 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/software`,    lastModified: now, changeFrequency: "monthly", priority: 0.9 },
 
     // Booking and case studies, conversion paths
-    { url: `${BASE}/consulting/book`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/ai-readiness`,        lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/ai-cost-calculator`,  lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/case-studies`,    lastModified: now, changeFrequency: "monthly", priority: 0.7 },
@@ -50,10 +55,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // About + personal depth
     { url: `${BASE}/about`,   lastModified: now, changeFrequency: "monthly", priority: 0.9, images: [`${BASE}/brand/elijah.jpg`] },
     { url: `${BASE}/now`,     lastModified: now, changeFrequency: "weekly",  priority: 0.6 },
-    { url: `${BASE}/uses`,    lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${BASE}/verses`,  lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${BASE}/writing`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
-    { url: `${BASE}/links`,   lastModified: now, changeFrequency: "monthly", priority: 0.4 },
     { url: `${BASE}/faq`,     lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/resume`,  lastModified: now, changeFrequency: "monthly", priority: 0.7, images: [`${BASE}/brand/elijah.jpg`] },
 
