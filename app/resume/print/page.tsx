@@ -392,7 +392,7 @@ export default function ResumePrint() {
                 ["Founder & Operator — Mantle Field Services", "2024–Present",
                   "Gutter cleaning, pressure washing, and lawn care across metro Atlanta. Client acquisition, quoting, scheduling, equipment maintenance, on-site delivery. Grew out of Autoblade Services.", ""],
                 ["AI Data Trainer — Outlier AI", "Oct 2025–May 2026",
-                  "Two projects. Aether: evaluated LLM outputs and authored written rationales on accuracy, reasoning quality, and instruction adherence. Straw Tablecloth: wrote spoken-style human-assistant conversations against a fixed tool-call budget, authoring user turns and editing model responses.", ""],
+                  "Two projects. Evaluated LLM outputs and authored a written rationale for every rating, on accuracy, reasoning quality, and instruction adherence. Wrote spoken-style human-assistant conversations against a fixed per-task tool-call budget, authoring the user turns and editing the model responses.", ""],
                 ["AI Response Evaluator — DataAnnotation", "Spring 2026",
                   "Rated AI responses against a Helpful, Honest, Harmless rubric ranking honesty and harmlessness above helpfulness. Flagged hallucinated facts, fabricated links, false premises accepted without correction, and incorrect reasoning.", ""],
                 ["Team Member — Chick-fil-A", "2023",
