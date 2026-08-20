@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "what-one-operator-can-deliver",
+    title: "What one operator can actually deliver",
+    excerpt: "Every solo shop's site says personal service and direct access. All true, and all carefully silent about what happens when that one person is already busy. Here is the arithmetic, plus four things an agency genuinely does better.",
+    date: "August 20, 2026",
+    readingTime: "7 min read",
+    category: "Business",
+  },
+  {
     slug: "audit-your-site-like-a-crawler",
     title: "Audit your own site the way a crawler does, with curl",
     excerpt: "Nine checks from a terminal, no tools and no account. I ran every one against my own site today and found six real problems, one of which had been quietly suppressing nine pages.",
