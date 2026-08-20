@@ -253,7 +253,10 @@ export default function ResumePage() {
     <div style={{ background: C.bg, color: C.text, minHeight: "100vh", position: "relative", overflowX: "hidden" }}>
       <VignetteBackground />
 
-      {/* Mini nav — SiteNav is hidden on /resume per HIDE_ON list */}
+      {/* Mini nav. SiteNav and SiteFooter are both hidden on /resume per HIDE_ON, so
+          the link to /who has to be placed by hand here. It matters more on this page
+          than on any other: a name search on 20 Aug 2026 returned exactly one result
+          that was him, and it was this one. */}
       <nav style={{
         position: "relative", zIndex: 5,
         padding: "16px 36px",
@@ -263,7 +266,10 @@ export default function ResumePage() {
         fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase",
       }}>
         <a href="/" style={{ color: C.textMuted, textDecoration: "none" }}>← Purcell · Ventures</a>
-        <a href="/resume/print" style={{ color: C.accent, textDecoration: "none" }}>Print version →</a>
+        <span style={{ display: "flex", gap: "22px" }}>
+          <a href="/who" style={{ color: C.textMuted, textDecoration: "none" }}>Who is Elijah Purcell</a>
+          <a href="/resume/print" style={{ color: C.accent, textDecoration: "none" }}>Print version →</a>
+        </span>
       </nav>
 
       <main style={{ position: "relative", zIndex: 5, maxWidth: "880px", margin: "0 auto", padding: "56px 36px 80px" }}>
