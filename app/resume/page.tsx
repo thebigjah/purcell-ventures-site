@@ -559,7 +559,7 @@ export default function ResumePage() {
             left="The University of Alabama — Honors College"
             right="2026 – 2030"
             sub="B.S. Psychology / Data Science · New College · Presidential Merit Scholarship ($28,000/yr)"
-            note="Pre-med track toward psychiatry. Entering Fall 2026."
+            note="Pre-med track toward psychiatry. Enrolled and attending since August 2026."
           />
           <Row
             left="Cornerstone Preparatory Academy — Acworth, GA"

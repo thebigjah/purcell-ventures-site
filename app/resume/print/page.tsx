@@ -419,7 +419,7 @@ export default function ResumePrint() {
                 <div className="row-left">
                   <div className="row-title">The University of Alabama — Honors College</div>
                   <div className="row-sub">B.S. Psychology / Data Science · New College · Presidential Merit ($28,000/yr)</div>
-                  <div className="row-note">Pre-med track toward psychiatry. Entering Fall 2026.</div>
+                  <div className="row-note">Pre-med track toward psychiatry. Enrolled and attending since August 2026.</div>
                 </div>
                 <div className="row-right">2026–2030</div>
               </div>
