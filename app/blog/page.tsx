@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "audit-every-business-in-your-town",
+    title: "How to audit every business in your town in an afternoon",
+    excerpt: "One free Overpass query against OpenStreetMap, a real HTTP request per site, and the two mistakes that will make your numbers wrong. Including the one that reached a published page before I caught it.",
+    date: "August 20, 2026",
+    readingTime: "7 min read",
+    category: "Process",
+  },
+  {
     slug: "new-college-alabama",
     title: "New College at Alabama, explained by someone in it",
     excerpt: "How the self-designed degree actually works, what a depth study is, the Levitetz seed grants, and the honest case against it: nobody knows what it is, and the structure is yours to supply.",
