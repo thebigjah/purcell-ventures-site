@@ -150,9 +150,7 @@ export default function BookPage() {
 
         {submitted ? (
           <div style={{ textAlign: "center", padding: "56px 24px" }}>
-            <div style={{ fontFamily: "'Cinzel', Georgia, serif", color: "var(--color-warm-accent)", fontSize: "14px", letterSpacing: "0.6em", marginBottom: "20px", opacity: 0.7 }}>
-              ✦
-            </div>
+            <div style={{ fontFamily: "'Cinzel', Georgia, serif", color: "var(--color-warm-accent)", fontSize: "14px", letterSpacing: "0.6em", marginBottom: "20px", opacity: 0.7 }}></div>
             <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "44px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "20px", letterSpacing: "0.02em", textTransform: "uppercase" }}>
               You&apos;re <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>booked.</em>
             </div>

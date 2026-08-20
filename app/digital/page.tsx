@@ -567,7 +567,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
           </div>
         ))}
       </div>
-      {[{name:"Spring Deals ✦",date:"Thu Mar 12 · 9:00 AM",status:"Scheduled",open:"—",badge:"#e8a030"},{name:"February Love Special",date:"Feb 14",status:"Sent",open:"71%",badge:"#7aaa6a"},{name:"New Year Refresh",date:"Jan 2",status:"Sent",open:"64%",badge:"#7aaa6a"}].map((c,i) => (
+      {[{name:"Spring Deals ",date:"Thu Mar 12 · 9:00 AM",status:"Scheduled",open:"—",badge:"#e8a030"},{name:"February Love Special",date:"Feb 14",status:"Sent",open:"71%",badge:"#7aaa6a"},{name:"New Year Refresh",date:"Jan 2",status:"Sent",open:"64%",badge:"#7aaa6a"}].map((c,i) => (
         <div key={i} style={{ display: "flex", alignItems: "center", gap: "12px", padding: "10px 16px", background: "#0c0a08", borderBottom: "1px solid #1a1714" }}>
           <div style={{ flex: 1 }}>
             <div style={{ fontSize: "13px", fontWeight: 600, color: "#f5f0e0" }}>{c.name}</div>
@@ -628,7 +628,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
             <div style={{ ...mockBtn, padding: "7px 12px", fontSize: "11px", cursor: "default", flexShrink: 0 }}>Schedule</div>
           </div>
           <div style={{ marginTop: "6px" }}>
-            <div style={{ fontSize: "10px", color: "#d4af37", fontWeight: 600, cursor: "default" }}>✦ AI Rewrite Suggestion</div>
+            <div style={{ fontSize: "10px", color: "#d4af37", fontWeight: 600, cursor: "default" }}> AI Rewrite Suggestion</div>
           </div>
         </div>
         {/* Preview + queue */}

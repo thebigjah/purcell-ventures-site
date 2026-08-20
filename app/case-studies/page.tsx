@@ -69,7 +69,7 @@ export default function CaseStudiesPage() {
               fontSize: "11px", fontWeight: 700, letterSpacing: "0.32em", textTransform: "uppercase",
               color: "var(--color-warm-accent)", marginBottom: "16px",
             }}>
-              ✦ &nbsp; Coming soon &nbsp; ✦
+              Coming soon
             </div>
             <h2 style={{
               fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
@@ -205,9 +205,7 @@ export default function CaseStudiesPage() {
           <div style={{
             fontFamily: "'Cinzel', Georgia, serif", color: "var(--color-warm-accent)",
             fontSize: "14px", letterSpacing: "0.6em", marginBottom: "20px", opacity: 0.7,
-          }}>
-            ✦
-          </div>
+          }}></div>
           <h2 style={{
             fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
             fontSize: "clamp(26px, 3.5vw, 36px)", letterSpacing: "0.02em",

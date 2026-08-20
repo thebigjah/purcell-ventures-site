@@ -83,7 +83,7 @@ export default function LinksPage() {
             letterSpacing: "0.42em", textTransform: "uppercase",
             color: "var(--color-warm-accent)", marginBottom: "20px",
           }}>
-            ✦ &nbsp; Purcell · Ventures &nbsp; ✦
+            Purcell · Ventures
           </div>
           <h1 style={{
             fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700,
@@ -185,7 +185,7 @@ export default function LinksPage() {
           color: "var(--color-warm-text-light)",
           lineHeight: 1.8,
         }}>
-          <div style={{ marginBottom: "8px", color: "var(--color-warm-accent)", opacity: 0.7 }}>✦</div>
+          <div style={{ marginBottom: "8px", color: "var(--color-warm-accent)", opacity: 0.7 }}></div>
           <div>EST · April · MMXXV · Acworth, GA</div>
           <div style={{ marginTop: "6px" }}>Control № 25075361 · Domestic LLC</div>
         </footer>

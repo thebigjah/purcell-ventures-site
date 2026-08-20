@@ -227,9 +227,7 @@ export default function AICostCalculatorPage() {
           <div style={{
             fontFamily: "'Cinzel', Georgia, serif", color: "var(--color-warm-accent)",
             fontSize: "14px", letterSpacing: "0.6em", marginBottom: "20px", opacity: 0.7,
-          }}>
-            ✦
-          </div>
+          }}></div>
           <h2 style={{
             fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
             fontSize: "clamp(22px, 4vw, 32px)", letterSpacing: "0.02em",

@@ -145,9 +145,7 @@ export default function WritingPage() {
           <div style={{
             fontFamily: "'Cinzel', Georgia, serif", color: "var(--color-warm-accent)",
             fontSize: "14px", letterSpacing: "0.6em", marginBottom: "20px", opacity: 0.7,
-          }}>
-            ✦
-          </div>
+          }}></div>
           <p className="pv-italic" style={{
             fontSize: "18px", color: "var(--color-warm-text)", opacity: 0.85,
             maxWidth: "560px", margin: "0 auto", lineHeight: 1.55,

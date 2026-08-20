@@ -111,7 +111,7 @@ export default function HowWeWorkPage() {
 
         {/* The commitments — what's actually in writing */}
         <header className="pv-section-head">
-          <span className="roman">✦</span>
+          <span className="roman"></span>
           <h2>The <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>commitments.</em></h2>
         </header>
 
@@ -130,7 +130,7 @@ export default function HowWeWorkPage() {
 
         {/* The reverse — when we say no */}
         <header className="pv-section-head">
-          <span className="roman">✦</span>
+          <span className="roman"></span>
           <h2>When we say <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>no.</em></h2>
         </header>
 

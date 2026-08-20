@@ -39,16 +39,16 @@ const PAGES: Item[] = [
   { kind: "page", label: "Help", sub: "How to use everything", href: "/rep-portal/help", emoji: "?" },
   { kind: "page", label: "Settings", sub: "Your preferences", href: "/rep-portal/settings", emoji: "⚙" },
   // AI tools
-  { kind: "tool", label: "AI Ask", sub: "Mid-pitch chatbot", href: "/rep-portal/ask", emoji: "✦" },
-  { kind: "tool", label: "AI Objection Handler", sub: "3 response strategies", href: "/rep-portal/objections", emoji: "✦" },
-  { kind: "tool", label: "AI Pitch Coach", sub: "Critique + rewrite", href: "/rep-portal/pitch-coach", emoji: "✦" },
-  { kind: "tool", label: "AI Call Recap", sub: "Structure messy post-call notes", href: "/rep-portal/call-recap", emoji: "✦" },
-  { kind: "tool", label: "AI Email Polish", sub: "Sharpen rough drafts", href: "/rep-portal/email-polish", emoji: "✦" },
+  { kind: "tool", label: "AI Ask", sub: "Mid-pitch chatbot", href: "/rep-portal/ask", emoji: "" },
+  { kind: "tool", label: "AI Objection Handler", sub: "3 response strategies", href: "/rep-portal/objections", emoji: "" },
+  { kind: "tool", label: "AI Pitch Coach", sub: "Critique + rewrite", href: "/rep-portal/pitch-coach", emoji: "" },
+  { kind: "tool", label: "AI Call Recap", sub: "Structure messy post-call notes", href: "/rep-portal/call-recap", emoji: "" },
+  { kind: "tool", label: "AI Email Polish", sub: "Sharpen rough drafts", href: "/rep-portal/email-polish", emoji: "" },
   // Customer-facing tools (open in new tab)
-  { kind: "tool", label: "Tool: AI FAQ Builder", sub: "Customer-side", href: "/digital/tools/faq-builder", emoji: "✦" },
-  { kind: "tool", label: "Tool: Content Generator", sub: "Customer-side", href: "/digital/tools/content-generator", emoji: "✦" },
-  { kind: "tool", label: "Tool: Brand Kit Builder", sub: "Customer-side", href: "/digital/tools/brand-kit", emoji: "✦" },
-  { kind: "tool", label: "Tool: Email Composer", sub: "Customer-side", href: "/digital/tools/email-composer", emoji: "✦" },
+  { kind: "tool", label: "Tool: AI FAQ Builder", sub: "Customer-side", href: "/digital/tools/faq-builder", emoji: "" },
+  { kind: "tool", label: "Tool: Content Generator", sub: "Customer-side", href: "/digital/tools/content-generator", emoji: "" },
+  { kind: "tool", label: "Tool: Brand Kit Builder", sub: "Customer-side", href: "/digital/tools/brand-kit", emoji: "" },
+  { kind: "tool", label: "Tool: Email Composer", sub: "Customer-side", href: "/digital/tools/email-composer", emoji: "" },
 ];
 
 const COMMANDS: Item[] = [

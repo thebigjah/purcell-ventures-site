@@ -456,7 +456,7 @@ export default function Home() {
       </section>
 
       {/* Mobile-only ornamental divider above the Divisions section */}
-      <div className="pv-section-divider" aria-hidden="true">✦ &nbsp; I &nbsp; ✦</div>
+      <div className="pv-section-divider" aria-hidden="true">I</div>
 
       {/* Divisions section head */}
       <header
@@ -595,7 +595,7 @@ export default function Home() {
       </section>
 
       {/* Mobile-only ornamental divider above the Courses section */}
-      <div className="pv-section-divider" aria-hidden="true">✦ &nbsp; II &nbsp; ✦</div>
+      <div className="pv-section-divider" aria-hidden="true">II</div>
 
       {/* Courses — kept from prior homepage, styling consistent */}
       <section className="pv-section-head" style={{
