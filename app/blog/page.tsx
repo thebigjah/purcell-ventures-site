@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "psychology-and-software",
+    title: "What psychology has to do with the software I build",
+    excerpt: "One week of a methods course found a real defect in a product I had already shipped. Within-subject design, base rates, and the metric question worth asking before you choose the metric.",
+    date: "August 20, 2026",
+    readingTime: "6 min read",
+    category: "Notes",
+  },
+  {
     slug: "what-a-website-actually-costs",
     title: "What a small business website actually costs",
     excerpt: "Ask three providers and you get $400, $4,000 and $15,000 for something a customer could not tell apart. What drives the spread, the ongoing costs nobody puts in the quote, and how to tell expensive from overpriced.",
