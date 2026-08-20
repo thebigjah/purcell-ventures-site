@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
+import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/why-i-built-crm-from-scratch" },
@@ -16,6 +17,11 @@ export default function Post() {
 
         <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
 
+        <Breadcrumbs trail={[
+          { name: "Home", href: "/" },
+          { name: "Writing", href: "/blog" },
+          { name: "Why I built a CRM from scratch instead of paying HubSpot", href: "/blog/why-i-built-crm-from-scratch" },
+        ]} />
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
           <div className="pv-mono-label">Opinion · May 25, 2026 · 5 min read</div>
           <h1>

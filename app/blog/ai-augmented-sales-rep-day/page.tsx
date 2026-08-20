@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
+import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/ai-augmented-sales-rep-day" },
@@ -16,6 +17,11 @@ export default function Post() {
 
         <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
 
+        <Breadcrumbs trail={[
+          { name: "Home", href: "/" },
+          { name: "Writing", href: "/blog" },
+          { name: "What a day looks like for an AI-augmented sales rep", href: "/blog/ai-augmented-sales-rep-day" },
+        ]} />
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
           <div className="pv-mono-label">Process · May 25, 2026 · 6 min read</div>
           <h1>

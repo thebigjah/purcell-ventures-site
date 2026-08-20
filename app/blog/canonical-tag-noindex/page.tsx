@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
+import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/canonical-tag-noindex" },
@@ -25,6 +26,11 @@ export default function Post() {
 
         <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
 
+        <Breadcrumbs trail={[
+          { name: "Home", href: "/" },
+          { name: "Writing", href: "/blog" },
+          { name: "Every post on my blog was telling Google not to index it", href: "/blog/canonical-tag-noindex" },
+        ]} />
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
           <div className="pv-mono-label">Engineering · August 20, 2026 · 6 min read</div>
           <h1>

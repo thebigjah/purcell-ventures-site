@@ -2,6 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import { QA } from "./layout";
+import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 const link = { color: "var(--color-warm-accent)", textDecoration: "underline" };
 const H2 = { fontFamily: "'Cinzel', Georgia, serif", fontSize: "26px", fontWeight: 600, lineHeight: 1.2, margin: "44px 0 14px", color: "var(--color-warm-text)" } as const;
@@ -14,6 +15,11 @@ export default function AiAtAlabama() {
 
         <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
 
+      <Breadcrumbs trail={[
+        { name: "Home", href: "/" },
+        { name: "Writing", href: "/blog" },
+        { name: "Studying AI at Alabama", href: "/ai-at-alabama" },
+      ]} />
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
           <div className="pv-mono-label">Guide · August 20, 2026 · Verified against catalog.ua.edu</div>
           <h1>

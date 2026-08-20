@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
+import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export default function Post() {
   return (
@@ -12,6 +13,11 @@ export default function Post() {
 
         <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
 
+        <Breadcrumbs trail={[
+          { name: "Home", href: "/" },
+          { name: "Writing", href: "/blog" },
+          { name: "Five workflows you can automate this week without writing co", href: "/blog/five-workflows-no-code" },
+        ]} />
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
           <div className="pv-mono-label">Practical · May 24, 2026 · 4 min read</div>
           <h1>Five workflows you can automate this week without writing code</h1>

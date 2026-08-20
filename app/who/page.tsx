@@ -1,4 +1,5 @@
 import { QA } from "./layout";
+import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 // Written in the THIRD PERSON on purpose. A search engine can lift "Elijah Purcell is the
 // founder of Purcell Ventures LLC" out of a page and present it as a fact about a named
@@ -32,6 +33,10 @@ const DATED = [
 export default function WhoPage() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-20">
+      <Breadcrumbs trail={[
+        { name: "Home", href: "/" },
+        { name: "Who is Elijah Purcell", href: "/who" },
+      ]} />
       <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
         Who is Elijah Purcell?
       </h1>

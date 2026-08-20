@@ -2,6 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import { QA } from "./layout";
 import { CONTACT } from "@/lib/contact";
+import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 const link = { color: "var(--color-warm-accent)", textDecoration: "underline" };
 const H2 = { fontFamily: "'Cinzel', Georgia, serif", fontSize: "26px", fontWeight: 600, lineHeight: 1.2, margin: "44px 0 14px" } as const;
@@ -23,6 +24,10 @@ export default function CompanyPage() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
+      <Breadcrumbs trail={[
+        { name: "Home", href: "/" },
+        { name: "What is Purcell Ventures", href: "/what-is-purcell-ventures" },
+      ]} />
         <header className="pv-page-head">
           <div className="pv-mono-label">Company record · Last reviewed 20 August 2026</div>
           <h1>
