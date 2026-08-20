@@ -2,7 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 export const metadata = {
-  title: "Shop — Purcell Ventures",
+  title: "Shop: Purcell Ventures",
   description: "Self-serve digital products from Purcell Ventures: PV AI Starter Kit + Cold Email Mastery Pack. Instant download via Stripe.",
 };
 

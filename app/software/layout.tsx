@@ -4,21 +4,21 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Custom Software Development | Mobile Apps, Web Apps & AI Integration",
   description:
-    "Custom-built mobile apps, web platforms, automation tools, and AI integrations scoped around your exact problem — from idea to launch. Small projects $1,500–3,500, full apps $5,000–15,000+.",
+    "Custom-built mobile apps, web platforms, automation tools, and AI integrations scoped around your exact problem, from idea to launch. Small projects $1,500–3,500, full apps $5,000–15,000+.",
   keywords: [
     "custom software development", "mobile app development", "web app development",
     "AI integration for business", "custom business software", "app development Georgia",
     "automation tools", "software development small business",
   ],
   openGraph: {
-    title: "Custom Software Development — Purcell Ventures",
+    title: "Custom Software Development: Purcell Ventures",
     description:
       "Mobile apps, web platforms, and AI tools built around your exact problem. Small projects $1,500–3,500, full apps $5,000–15,000+.",
     url: "https://purcellventures.co/software",
     type: "website",
   },
   twitter: {
-    title: "Custom Software Development — Purcell Ventures",
+    title: "Custom Software Development: Purcell Ventures",
     description: "Mobile apps, web apps, and AI tools built for your business. From $1,500.",
   },
   alternates: { canonical: "https://purcellventures.co/software" },

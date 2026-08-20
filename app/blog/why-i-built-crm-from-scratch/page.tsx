@@ -3,7 +3,7 @@ import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
-  title: "Why I built a CRM from scratch instead of paying HubSpot | Purcell Ventures Blog",
+  title: "Why I built a CRM from scratch instead of paying HubSpot | Purcell Ventures Blog | Elijah Purcell",
   description: "HubSpot starts at $50/mo and rapidly hits $200+/mo with features I actually need. So I built ours in a week. Here's the math, the tradeoffs, and when you should NOT do this.",
 };
 

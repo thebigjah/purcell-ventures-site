@@ -18,7 +18,7 @@ interface HelpSection {
 const SECTIONS: HelpSection[] = [
   {
     id: "first-day",
-    title: "I. Your first day — what to do",
+    title: "I. Your first day: what to do",
     body: (
       <>
         <p>Welcome to the rep portal. In your first hour:</p>
@@ -35,7 +35,7 @@ const SECTIONS: HelpSection[] = [
   },
   {
     id: "daily-rhythm",
-    title: "II. The daily rhythm — what to do every day",
+    title: "II. The daily rhythm: what to do every day",
     body: (
       <>
         <ol>
@@ -142,7 +142,7 @@ const SECTIONS: HelpSection[] = [
   },
   {
     id: "common-workflows",
-    title: "VIII. Common workflows — step by step",
+    title: "VIII. Common workflows: step by step",
     body: (
       <>
         <h4 style={subhead}>A. Cold outreach to a new prospect</h4>
@@ -189,7 +189,7 @@ const SECTIONS: HelpSection[] = [
   },
   {
     id: "stuck",
-    title: "IX. When you&apos;re stuck — order of operations",
+    title: "IX. When you&apos;re stuck: order of operations",
     body: (
       <>
         <ol>

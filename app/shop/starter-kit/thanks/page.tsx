@@ -2,7 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 export const metadata = {
-  title: "Thanks for your purchase — PV AI Starter Kit",
+  title: "Thanks for your purchase: PV AI Starter Kit",
   description: "Your download link is in your email. Check spam if you don't see it within 2 minutes.",
 };
 

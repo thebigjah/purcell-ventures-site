@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     "AI consulting small business", "AI team training",
   ],
   openGraph: {
-    title: "AI Consulting & Team Training — Purcell Ventures",
+    title: "AI Consulting & Team Training: Purcell Ventures",
     description:
       "Hands-on AI training for business teams. 1-on-1, small group, or half-day workshop. I come to you. Starting at $125/person.",
     url: "https://purcellventures.co/consulting",
     type: "website",
   },
   twitter: {
-    title: "AI Consulting — Purcell Ventures",
+    title: "AI Consulting: Purcell Ventures",
     description: "Hands-on AI training for business teams. Starting at $125/person. I come to you.",
   },
   alternates: { canonical: "https://purcellventures.co/consulting" },

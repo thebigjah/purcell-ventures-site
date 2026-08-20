@@ -4,7 +4,7 @@ import { RefTracker } from "../starter-kit/RefTracker";
 import { BuyButton } from "../starter-kit/BuyButton";
 
 export const metadata = {
-  title: "Whale Alerts Premium — $9/mo — Purcell Ventures",
+  title: "Whale Alerts Premium: $9/mo, Purcell Ventures",
   description: "Real-time multi-chain whale movement alerts via Telegram. Risk-scored tokens. Position sizing. $9/mo. Powered by Purcell Ventures wallet tracker.",
 };
 

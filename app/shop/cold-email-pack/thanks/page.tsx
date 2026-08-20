@@ -2,7 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 export const metadata = {
-  title: "Thanks for your purchase — Cold Email Mastery Pack",
+  title: "Thanks for your purchase: Cold Email Mastery Pack",
 };
 
 export default function ThanksPage() {

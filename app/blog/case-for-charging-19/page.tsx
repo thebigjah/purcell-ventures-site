@@ -3,7 +3,7 @@ import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
-  title: "The case for charging $19 for what others sell at $497 | Purcell Ventures Blog",
+  title: "The case for charging $19 for what others sell at $497 | Purcell Ventures Blog | Elijah Purcell",
   description: "Most agencies bundle a starter playbook into a $497 course. We unbundle it. Here's the strategic argument for selling cheap entry products + how it changes the customer relationship.",
 };
 

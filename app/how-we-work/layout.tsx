@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "How Elijah Purcell Works: Process and Commitments",
   description:
-    "Our 5-stage engagement process from first email through year three. 6 written commitments: no surprise invoices, no vendor lock-in, honesty over closing. Read this before signing with us — or any agency.",
+    "Our 5-stage engagement process from first email through year three. 6 written commitments: no surprise invoices, no vendor lock-in, honesty over closing. Read this before signing with us, or any agency.",
   keywords: [
     "purcell ventures process", "engagement process", "agency commitments",
     "how we work transparency", "small business AI process",

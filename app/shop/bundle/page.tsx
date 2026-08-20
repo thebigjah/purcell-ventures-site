@@ -4,7 +4,7 @@ import { RefTracker } from "../starter-kit/RefTracker";
 import { BuyButton } from "../starter-kit/BuyButton";
 
 export const metadata = {
-  title: "The Complete Pack — All 3 products bundled — $39 — Purcell Ventures",
+  title: "The Complete Pack: All 3 products bundled, $39, Purcell Ventures",
   description: "Get all 3 PV products at once: AI Starter Kit + Cold Email Mastery Pack + Subject Line Library. Save $18 vs buying separately. $39 one-time, instant download.",
 };
 

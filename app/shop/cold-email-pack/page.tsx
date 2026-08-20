@@ -2,7 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 export const metadata = {
-  title: "Cold Email Mastery Pack — $29 — Purcell Ventures",
+  title: "Cold Email Mastery Pack: $29, Purcell Ventures",
   description: "100+ tested cold email templates across 10 industries + reply-handling scripts + AI scoring rubric + subject-line library. $29 one-time.",
 };
 
@@ -17,13 +17,13 @@ const PACK_CONTENTS = [
   },
   {
     folder: "02-subject-lines/",
-    title: "Subject line library — 80 tested options across 8 styles",
+    title: "Subject line library: 80 tested options across 8 styles",
     blurb: "Direct, question, referral, observation, local, value-first, curiosity, time-bound. Each labeled with open-rate context. Includes 20 subject lines you should NEVER use + why.",
     count: "80 subject lines",
   },
   {
     folder: "03-reply-handling/",
-    title: "Reply-handling scripts — 30 scenarios",
+    title: "Reply-handling scripts: 30 scenarios",
     blurb: "What to do when they say 'too expensive', 'I'm interested but', 'send me more info', 'we use a competitor', 'we don't need this'. Each scenario has 2-3 response strategies + when to use which.",
     count: "30 scenarios",
   },
@@ -35,13 +35,13 @@ const PACK_CONTENTS = [
   },
   {
     folder: "05-sequencing-cadences/",
-    title: "Sequencing cadences — when to send what",
+    title: "Sequencing cadences: when to send what",
     blurb: "Cold cadence (5 touches over 21 days). Warm cadence (5 touches over 21 days). Quoted-but-silent cadence. Re-engagement after 90 days. Each cadence has the exact email + timing + 'stop after N if no response' rule.",
     count: "4 cadence playbooks",
   },
   {
     folder: "06-list-building/",
-    title: "List-building playbook — how to find prospects without buying lists",
+    title: "List-building playbook: how to find prospects without buying lists",
     blurb: "10 free + 5 paid sources for finding prospect lists. How to enrich them. How to comply with CAN-SPAM. How to track in a CRM. Bonus: the exact Google query templates we use to find SMB prospects in any city.",
     count: "1 playbook + Google query library",
   },

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Steady — Personal IT for Everyday Life",
+  title: "Steady: Personal IT for Everyday Life",
   description:
     "Personal tech help for people who feel overwhelmed by modern tools. AI coaching, phone setup, password managers, medication reminders, smart home setup. One-off help from $99, monthly care from $79.",
   keywords: [
@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     "Atlanta tech help", "remote tech help",
   ],
   openGraph: {
-    title: "Steady — Personal IT for Everyday Life",
+    title: "Steady: Personal IT for Everyday Life",
     description:
       "Personal tech help. AI coaching, phone setup, smart home, password managers, family tech care plans. From $79/mo.",
     url: "https://purcellventures.co/steady",
     type: "website",
   },
   twitter: {
-    title: "Steady — Personal IT for Everyday Life",
+    title: "Steady: Personal IT for Everyday Life",
     description: "Personal tech help. From $79/mo.",
   },
   alternates: { canonical: "/steady" },

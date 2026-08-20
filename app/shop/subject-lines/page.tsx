@@ -4,7 +4,7 @@ import { RefTracker } from "../starter-kit/RefTracker";
 import { BuyButton } from "../starter-kit/BuyButton";
 
 export const metadata = {
-  title: "The Cold Email Subject Line Library — $9 — Purcell Ventures",
+  title: "The Cold Email Subject Line Library: $9, Purcell Ventures",
   description: "80 tested cold email subject lines across 8 categories. PDF + markdown. Instant download. $9 one-time.",
 };
 

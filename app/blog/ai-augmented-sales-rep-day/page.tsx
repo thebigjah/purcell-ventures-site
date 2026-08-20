@@ -3,7 +3,7 @@ import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
-  title: "What a day looks like for an AI-augmented sales rep | Purcell Ventures Blog",
+  title: "What a day looks like for an AI-augmented sales rep | Purcell Ventures Blog | Elijah Purcell",
   description: "A full Tuesday in the life of a rep using AI prospect research, AI next-step coaching, and conversation summary tools alongside a real CRM. Specific times, specific tasks, specific tools.",
 };
 

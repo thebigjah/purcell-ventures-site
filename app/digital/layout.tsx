@@ -4,21 +4,21 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Digital Services for Small Businesses | Websites, AI Tools, CRM & Booking",
   description:
-    "Complete digital toolkit: website, AI chatbot, booking system, CRM, email marketing, social scheduling, and 20+ tools. One monthly subscription — Starter $99/mo, Growth $179/mo, Full $279/mo. Setup $400–1,000.",
+    "Complete digital toolkit: website, AI chatbot, booking system, CRM, email marketing, social scheduling, and 20+ tools. One monthly subscription, Starter $99/mo, Growth $179/mo, Full $279/mo. Setup $400–1,000.",
   keywords: [
     "digital services small business", "AI chatbot for website", "business website management",
     "CRM for small business", "email marketing automation", "booking system",
     "social media scheduling", "website plus AI tools",
   ],
   openGraph: {
-    title: "Digital Services for Small Businesses — Purcell Ventures",
+    title: "Digital Services for Small Businesses: Purcell Ventures",
     description:
       "Website, AI chatbot, booking system, CRM, and 20+ tools. One subscription. Starting at $99/mo.",
     url: "https://purcellventures.co/digital",
     type: "website",
   },
   twitter: {
-    title: "Digital Services — Purcell Ventures",
+    title: "Digital Services: Purcell Ventures",
     description: "Website, AI chatbot, booking, CRM, and 20+ tools for small businesses. From $99/mo.",
   },
   alternates: { canonical: "https://purcellventures.co/digital" },

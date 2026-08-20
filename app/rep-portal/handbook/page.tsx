@@ -32,7 +32,7 @@ const SECTIONS = [
   {
     id: "tiers",
     roman: "II.",
-    title: "What you can sell — by tier",
+    title: "What you can sell: by tier",
     body: (
       <>
         <table>
@@ -100,7 +100,7 @@ const SECTIONS = [
   {
     id: "escalation",
     roman: "VI.",
-    title: "Escalation — when to loop Elijah in",
+    title: "Escalation: when to loop Elijah in",
     body: (
       <>
         <p><strong>Loop Elijah immediately:</strong></p>

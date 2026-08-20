@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 export const metadata: Metadata = {
-  title: "Elijah Purcell — Resume & Achievements",
+  title: "Elijah Purcell: Resume & Achievements",
   description:
     "Elijah Purcell | Founder, Purcell Ventures LLC | University of Alabama Honors College '30 | Software, AI systems, and shipped products. Full work, activities, awards, and scholarship record.",
 };

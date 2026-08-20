@@ -9,7 +9,7 @@ import type { ReactNode } from "react";
 // - All Stripe Payment Links still work — they're independent of /shop pages
 // Treatment: PV-owned legally, brand-invisible publicly.
 export const metadata: Metadata = {
-  title: "Shop — Purcell Ventures",
+  title: "Shop: Purcell Ventures",
   description: "Self-serve digital products. Instant download via Stripe. 30-day refund.",
   robots: {
     index: false,

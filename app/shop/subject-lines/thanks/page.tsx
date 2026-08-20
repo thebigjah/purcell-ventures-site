@@ -2,7 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 export const metadata = {
-  title: "Thanks — Subject Line Library",
+  title: "Thanks: Subject Line Library",
 };
 
 export default function ThanksPage() {

@@ -31,7 +31,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://purcellventures.co"),
   title: {
-    default: "Purcell Ventures | Digital Services, AI Consulting & Custom Software",
+    default: "Purcell Ventures | Elijah Purcell, Founder | Software and AI for Small Business",
     template: "%s | Purcell Ventures",
   },
   description:
@@ -48,13 +48,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://purcellventures.co",
     siteName: "Purcell Ventures",
-    title: "Purcell Ventures | Digital Services, AI Consulting & Custom Software",
+    title: "Purcell Ventures | Elijah Purcell, Founder | Software and AI for Small Business",
     description:
       "Built by one operator for the small businesses who move first. Digital services, AI consulting, and custom software.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Purcell Ventures | Digital Services, AI Consulting & Custom Software",
+    title: "Purcell Ventures | Elijah Purcell, Founder | Software and AI for Small Business",
     description:
       "Built by one operator for the small businesses who move first. Digital services, AI consulting, and custom software.",
   },

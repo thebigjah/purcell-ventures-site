@@ -3,7 +3,7 @@ import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
-  title: "Shipping is not the same as being able to take a payment | Purcell Ventures Blog",
+  title: "Shipping is not the same as being able to take a payment | Purcell Ventures Blog | Elijah Purcell",
   description:
     "A site can be live, green in the deploy log, and still unable to accept a dollar. The gap between a finished site and a working business is usually one broken path, and it is invisible from the inside.",
 };

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 export const metadata = {
-  title: "Thanks — Whale Alerts Premium",
+  title: "Thanks: Whale Alerts Premium",
 };
 
 export default function ThanksPage() {

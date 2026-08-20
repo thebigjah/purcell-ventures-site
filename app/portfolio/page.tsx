@@ -62,7 +62,7 @@ const PROJECTS: Project[] = [
     slug: "elijahbot-refresh",
     title: "ElijahBot Refresh",
     subtitle: "Habit-tracker + accountability chatbot.",
-    description: "Multi-tenant Next.js app — habit tracking, daily journal, week heatmap, Claude-powered conversation that pushes back when you flake. Friends sign up under their own Google account.",
+    description: "Multi-tenant Next.js app, habit tracking, daily journal, week heatmap, Claude-powered conversation that pushes back when you flake. Friends sign up under their own Google account.",
     category: ["Web", "AI Tools"],
     techStack: ["Next.js 16", "Auth.js v5", "Firestore", "Claude Haiku", "Vercel"],
     liveUrl: "https://elijahbot-refresh.vercel.app",

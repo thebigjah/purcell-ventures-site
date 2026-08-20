@@ -77,7 +77,7 @@ export default function Post() {
 
           <PostByline post={{
             slug: "five-workflows-no-code",
-            title: "Five workflows you can automate this week without writing code",
+            title: "Five workflows you can automate this week without writing code | Elijah Purcell",
             description: "The five workflows I see small business owners burn the most time on. Each is automatable with off-the-shelf tools in under two hours. No code required.",
             published: "2026-05-24",
           }} />

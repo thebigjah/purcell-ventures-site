@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Purcell Ventures LLC founder", "University of Alabama 2026", "Elijah Purcell bio",
   ],
   openGraph: {
-    title: "About Elijah Purcell — Founder of Purcell Ventures LLC",
+    title: "About Elijah Purcell: Founder of Purcell Ventures LLC",
     description:
       "Entrepreneur, AI consultant, and software developer. University of Alabama, Tuscaloosa. 34 college acceptances, $505k+/yr in scholarships. Founder of Purcell Ventures LLC.",
     url: "https://purcellventures.co/about",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Elijah Purcell — Founder, Purcell Ventures LLC",
+    title: "About Elijah Purcell: Founder, Purcell Ventures LLC",
     description: "Entrepreneur, AI consultant, software developer. Tuscaloosa, Alabama. University of Alabama Honors College, Class of 2030.",
   },
   alternates: { canonical: "https://purcellventures.co/about" },

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "expo mobile apps", "ai tools built", "Atlanta software developer",
   ],
   openGraph: {
-    title: "Portfolio — what we've built at Purcell Ventures",
+    title: "Portfolio: what we've built at Purcell Ventures",
     description: "10 live products: web apps, mobile apps, AI tools, internal systems. Real shipped work.",
     url: "https://purcellventures.co/portfolio",
     type: "website",

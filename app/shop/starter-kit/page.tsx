@@ -16,7 +16,7 @@ import { BuyButton } from "./BuyButton";
  */
 
 export const metadata = {
-  title: "The PV AI Starter Kit — $19 — Purcell Ventures",
+  title: "The PV AI Starter Kit: $19, Purcell Ventures",
   description: "Steal the full Purcell Ventures sales + AI infrastructure: 24 AI tool prompts, every sales script, contractor template, CRM CSV, 50+ email templates. $19 one-time.",
 };
 

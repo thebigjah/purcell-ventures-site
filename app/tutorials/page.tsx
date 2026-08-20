@@ -2,7 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 
 export const metadata = {
-  title: "Tutorials — Purcell Ventures",
+  title: "Tutorials: Purcell Ventures",
   description: "Short how-to guides for each AI tool. Step-by-step. Real examples. SEO-friendly. No login required.",
 };
 

@@ -3,7 +3,7 @@ import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
-  title: "We built agents that cannot fix what they find | Purcell Ventures Blog",
+  title: "We built agents that cannot fix what they find | Purcell Ventures Blog | Elijah Purcell",
   description:
     "Separating the finder from the fixer is the cheapest safety property you can buy in an agent system. It also creates a failure mode nobody warns you about, and we shipped it.",
 };
