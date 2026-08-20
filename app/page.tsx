@@ -372,7 +372,7 @@ export default function Home() {
 
       {/* Visually-hidden H1 for SEO + accessibility */}
       <h1 style={{ position: "absolute", width: "1px", height: "1px", padding: 0, margin: "-1px", overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>
-        Purcell Ventures — Sites, Digital Add-Ons, AI Consulting, and Custom Software
+        Purcell Ventures: sites, digital add-ons, AI consulting and custom software, founded by Elijah Purcell
       </h1>
 
       {/* Wordmark masthead */}
