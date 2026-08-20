@@ -2,6 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import PostFaq from "@/app/components/PostFaq";
+import PostHowTo from "@/app/components/PostHowTo";
 
 export const metadata = {
   alternates: { canonical: "/blog/is-your-business-invisible" },
@@ -200,6 +201,23 @@ export default function Post() {
             <a href="tel:+12054627839" style={link}>(205) 462-7839</a> or{" "}
             <a href="mailto:elijah@purcell-ventures.com" style={link}>elijah@purcell-ventures.com</a>.
           </p>
+
+          <PostHowTo
+            name="Check whether your business is findable online"
+            description="Seven checks a small business owner can run on their own business in about ten minutes, with no tools and no account."
+            totalTime="PT10M"
+            supply={["A phone that is not yours, or a private browser window signed out of everything"]}
+            steps={[
+            { name: "Use a phone that is not yours", text: "Your own phone has visited your website and knows your business. It will show you results no new customer will ever see, and every check after this one depends on starting clean." },
+            { name: "Search your business name plus your town", text: "If the first result is a directory you never logged into, an abandoned social page, or a competitor, that is the answer to the whole question." },
+            { name: "Search what you sell plus your town", text: "This is the search a customer who does not know your name actually runs. Most owners check their name and never check this one." },
+            { name: "Check your hours everywhere", text: "Google, social pages, and any directory that appeared in the first check. Include holiday hours and early closures." },
+            { name: "Tap your own phone number", text: "Find your number online and tap it. Does it dial, does it reach you, and is it the number you actually answer? Then check whether anything offers a way to reach you that is not a phone call." },
+            { name: "Open your own website on the phone", text: "Three questions: does it load in about three seconds, can you read it without zooming, and can you find hours, address and phone without scrolling past a photograph." },
+            { name: "Look at your reviews and your replies", text: "Recency matters as much as rating. A complaint with no reply reads as agreement. Never pay for a review and never write one yourself." },
+            { name: "Search your own name in quotes", text: "If you are the business, people search you and not only the shop. See who else shares your name, and if somebody does, make sure everything you publish names your town and your trade." },
+          ]}
+          />
 
           <PostFaq qa={[
             ["How do I check if my business shows up on Google?",

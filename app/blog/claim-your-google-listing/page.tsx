@@ -2,6 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import PostFaq from "@/app/components/PostFaq";
+import PostHowTo from "@/app/components/PostHowTo";
 
 export const metadata = {
   alternates: { canonical: "/blog/claim-your-google-listing" },
@@ -188,6 +189,23 @@ export default function Post() {
             The rest of the self-check is{" "}
             <Link href="/blog/is-your-business-invisible" style={link}>here</Link>.
           </p>
+
+          <PostHowTo
+            name="Claim and set up a Google Business Profile"
+            description="How a small business owner claims a Google Business Profile and fills it out properly, without hiring anybody."
+            totalTime="PT20M"
+            supply={["A business name", "A phone number you answer", "An email address you will still control in five years"]}
+            steps={[
+            { name: "Search your business name first", text: "If a panel already appears beside the search results, look for the option to claim the business and start there. Creating a second profile for a business that already has one produces a duplicate, and duplicates get suppressed." },
+            { name: "Go to business.google.com", text: "Use an email address you will still control in five years. Not an employee's personal account and not an address at a domain you might drop, because that login is the key to the listing." },
+            { name: "Choose the primary category carefully", text: "The primary category does more to determine which searches you appear in than any other field. Be specific, then add secondary categories afterwards." },
+            { name: "Set the address, or hide it", text: "If customers come to you, show the address. If you work from home or travel to customers, choose the service-area option and hide the address so it does not appear on a public map." },
+            { name: "Enter regular and holiday hours", text: "Wrong hours are worse than no hours. Add special hours for holidays and set a calendar reminder for the week before each one." },
+            { name: "Complete verification", text: "Google verifies by postcard, phone, email or video depending on the business. Postcard takes about two weeks. Do not create a second listing while waiting." },
+            { name: "Add ten real photos", text: "Exterior including the sign, interior, and the work itself. Ten phone photos beat two professional ones because the panel rotates them and freshness counts." },
+            { name: "Write a plain description", text: "Say what you do, where, and for whom. No keyword stuffing: it does not affect ranking and it tells a human reader something you do not want them concluding." },
+          ]}
+          />
 
           <PostFaq qa={[
             ["How do I claim my Google Business Profile?",
