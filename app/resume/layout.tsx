@@ -10,14 +10,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Elijah Purcell: Resume & Scholarship Record",
     description:
-      "34 college acceptances, $505k+/yr in scholarships. Founder of Purcell Ventures LLC. Enrolled at University of Alabama Honors College, Fall 2026.",
+      "Elijah Purcell is the founder of Purcell Ventures LLC and a psychology and data science student at the University of Alabama Honors College. Full record of shipped software, AI agent systems, client work, education and awards.",
     url: "https://purcellventures.co/resume",
     type: "profile",
   },
   twitter: {
     title: "Elijah Purcell: Resume & Scholarship Record",
     description:
-      "34 acceptances, $505k+/yr scholarships. Founder of Purcell Ventures LLC. University of Alabama Honors College, Class of 2030.",
+      "Elijah Purcell is the founder of Purcell Ventures LLC and a psychology and data science student at the University of Alabama Honors College. Full record of shipped software, AI agent systems, client work, education and awards.",
   },
   alternates: { canonical: "https://purcellventures.co/resume" },
 };
@@ -44,7 +44,10 @@ const schema = {
     "name": "University of Alabama",
     "url": "https://www.ua.edu",
   },
-  "award": "34 college acceptances totaling $505,000+/year in scholarships",
+  // The award list is not the lead. His rule, 20 Aug 2026: the scholarship total
+  // belongs on the college-application course page and nowhere else, because a number
+  // like that in a snippet says "impressive student" where the work says "ships software".
+  "award": "Christian Character Award, Grove Christian School (2024)",
   "knowsAbout": [
     "Artificial Intelligence", "Software Engineering", "Digital Marketing",
     "Business Management", "Web Development", "AI Consulting",

@@ -188,7 +188,6 @@ const orgSchema = {
       // Dated, because an undated award reads as a present-tense fact to a person
       // skimming and to a model summarising alike.
       "award": [
-        "34 college acceptances totaling $505,000+/year in scholarship offers (2026)",
         "Christian Character Award, Grove Christian School (2024)",
         "Steadfast Award, Grove Christian School (2023)",
       ],

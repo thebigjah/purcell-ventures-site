@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "About Elijah Purcell | Founder of Purcell Ventures LLC",
   description:
-    "Elijah Purcell is an entrepreneur, AI consultant, and software developer based in Tuscaloosa, Alabama. Founder of Purcell Ventures LLC. 34 college acceptances, $505k+/yr in scholarships. University of Alabama Honors College, Class of 2030.",
+    "Elijah Purcell is the founder of Purcell Ventures LLC, a Georgia software company building sites, software and AI tooling for local businesses, and a psychology and data science student at the University of Alabama Honors College in Tuscaloosa.",
   keywords: [
     "Elijah Purcell", "Elijah Purcell founder", "Purcell Ventures founder",
     "AI consultant Georgia", "entrepreneur Tuscaloosa Alabama", "Elijah Purcell entrepreneur",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Elijah Purcell: Founder of Purcell Ventures LLC",
     description:
-      "Entrepreneur, AI consultant, and software developer. University of Alabama, Tuscaloosa. 34 college acceptances, $505k+/yr in scholarships. Founder of Purcell Ventures LLC.",
+      "Elijah Purcell is the founder of Purcell Ventures LLC, a Georgia software company building sites, software and AI tooling for local businesses, and a psychology and data science student at the University of Alabama Honors College in Tuscaloosa.",
     url: "https://purcellventures.co/about",
     type: "profile",
   },
@@ -46,7 +46,7 @@ const schema = {
       "givenName": "Elijah",
       "familyName": "Purcell",
       "jobTitle": "Founder & CEO",
-      "description": "Entrepreneur, AI consultant, and software developer based in Tuscaloosa, Alabama. Founder of Purcell Ventures LLC — a multi-division company offering digital services, AI consulting, and custom software development. Also founder of Mantle Field Services, a sister brand handling owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta. Received 34 college acceptances totaling over $505,000 per year in scholarships. Student at the University of Alabama Honors College, Class of 2030, studying psychology and data science.",
+      "description": "Entrepreneur, AI consultant, and software developer based in Tuscaloosa, Alabama. Founder of Purcell Ventures LLC — a multi-division company offering digital services, AI consulting, and custom software development. Also founder of Mantle Field Services, a sister brand handling owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta. Student at the University of Alabama Honors College, Class of 2030, studying psychology and data science.",
       "worksFor": { "@id": "https://purcellventures.co/#organization" },
       "url": "https://purcellventures.co",
       "email": "elijah@purcell-ventures.com",
@@ -62,7 +62,7 @@ const schema = {
         "name": "University of Alabama",
         "url": "https://www.ua.edu",
       },
-      "award": "34 college acceptances totaling $505,000+/year in scholarships",
+      "award": "Christian Character Award, Grove Christian School (2024)",
       "knowsAbout": [
         "Artificial Intelligence",
         "AI Consulting",
@@ -90,7 +90,7 @@ const schema = {
           "name": "Who is Elijah Purcell?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Elijah Purcell is an entrepreneur, AI consultant, and software developer based in Tuscaloosa, Alabama. He is the founder and CEO of Purcell Ventures LLC, a multi-division company offering digital services, AI consulting, and custom software development. He also founded Mantle Field Services, a sister brand handling owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta. He received 34 college acceptances with over $505,000 per year in scholarships and is a student at the University of Alabama Honors College, having enrolled in Fall 2026.",
+            "text": "Elijah Purcell is an entrepreneur, AI consultant, and software developer based in Tuscaloosa, Alabama. He is the founder and CEO of Purcell Ventures LLC, a multi-division company offering digital services, AI consulting, and custom software development. He also founded Mantle Field Services, a sister brand handling owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta. He is a student at the University of Alabama Honors College, having enrolled in Fall 2026.",
           },
         },
         {
