@@ -5,6 +5,10 @@ const BASE = "https://purcellventures.co";
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   return [
+    // /services is deliberately noindex and canonicalises to the Mantle site, so
+    // listing it here asked Google to index a page that tells Google not to index it.
+    // Caught by running this site's own published checklist against it.
+
     // Deliberately absent: /consulting/book, /uses, /verses, /writing and /links.
     // All five are Disallowed in robots.txt, and listing a page in the sitemap while
     // forbidding the crawler to read it is a contradiction Google resolves badly: the
@@ -96,6 +100,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/courses/ai-automation`,    lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // Field services redirect
-    { url: `${BASE}/services`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
   ];
 }
