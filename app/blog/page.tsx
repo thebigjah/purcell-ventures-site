@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "six-sources-one-page",
+    title: "Six sources, one page: building a campus events site",
+    excerpt: "Parsing six feeds is a day of work. The interesting problem is day ninety, when a source starts returning a well-formed empty list with a 200 status and your site quietly shows fewer events.",
+    date: "August 20, 2026",
+    readingTime: "7 min read",
+    category: "Engineering",
+  },
+  {
     slug: "write-a-page-an-ai-will-quote",
     title: "How to write a page an AI will actually quote",
     excerpt: "A search engine ranks pages; an answer engine extracts sentences. Those are different jobs. The sentence shape that survives being removed from its paragraph, and the thing that matters more than any of it.",

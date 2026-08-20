@@ -84,6 +84,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     { url: `${BASE}/blog/write-a-page-an-ai-will-quote`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
 
+    { url: `${BASE}/blog/six-sources-one-page`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+
     // The reporting series. An author byline on a piece ABOUT other people, in a named
     // place, is an entity signal no amount of self-description produces, and it is the
     // only page here that also generates conversations with prospects.
