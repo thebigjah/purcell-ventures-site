@@ -105,7 +105,7 @@ export default function NowPage() {
                         color: "var(--color-warm-text)", opacity: 0.88,
                         display: "flex", gap: "14px",
                       }}>
-                        <span style={{ color: "var(--color-warm-accent)", flexShrink: 0, opacity: 0.7 }}>—</span>
+                        <span style={{ color: "var(--color-warm-accent)", flexShrink: 0, opacity: 0.7 }}>&middot;</span>
                         <span>{item}</span>
                       </li>
                     ))}
