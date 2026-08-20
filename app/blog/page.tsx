@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "is-your-business-invisible",
+    title: "Is your business invisible online? A ten-minute self-check",
+    excerpt: "Seven checks you can run on your own business in ten minutes with no tools and no account, to find out what a customer with a phone actually sees. Including the two cases where you do not need a website at all.",
+    date: "August 20, 2026",
+    readingTime: "7 min read",
+    category: "Guide",
+  },
+  {
     slug: "small-app-security-checklist",
     title: "Five holes in almost every small production app",
     excerpt: "Row-level security that is enabled but enforcing nothing, paid API routes with no authentication, an auth cookie that is not authentication, and two more. From seven read-only audits of live applications.",
