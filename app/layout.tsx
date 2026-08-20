@@ -139,13 +139,17 @@ const orgSchema = {
       // DISAMBIGUATION, WHICH IS THE WHOLE FIGHT.
       //
       // schema.org has a property built for exactly this situation, where two entities
-      // share a name and a reader needs one sentence to tell them apart. A search for
-      // "Elijah Purcell" on 20 Aug 2026 returned an HR business partner at Duke Energy in
-      // positions one, three and four, a football recruit in Knoxville, and two unrelated
-      // YouTube channels. Stating the difference outright is stronger than hoping the
-      // other signals imply it.
+      // share a name and a reader needs one sentence to tell them apart.
+      //
+      // The names here come from Google in a real browser on 20 Aug 2026, not from a
+      // search API, and the two disagreed. The API returned a Duke Energy HR business
+      // partner in the top three; Google returns him nowhere in the top twenty. Who
+      // actually ranks: a campus pastor at Liberty Church in Pensacola at position two, a
+      // Farragut High linebacker recruit in Knoxville, and an amateur boxer in Brisbane.
+      // Naming a competitor who does not rank is useless, and naming the wrong one makes
+      // the page look like it is guessing.
       "disambiguatingDescription":
-        "The Elijah Purcell who founded Purcell Ventures LLC and studies psychology and data science at the University of Alabama. Not the Elijah Purcell who works at Duke Energy, and not the high school football player.",
+        "The Elijah Purcell who founded Purcell Ventures LLC and studies psychology and data science at the University of Alabama in Tuscaloosa. Not the campus pastor at Liberty Church in Pensacola, Florida, not the Farragut High School football recruit in Knoxville, Tennessee, and not the amateur boxer in Brisbane, Australia.",
       "birthDate": "2007-08",
       "nationality": { "@type": "Country", "name": "United States" },
       "alumniOf": {
