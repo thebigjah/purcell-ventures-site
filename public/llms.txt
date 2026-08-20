@@ -26,6 +26,13 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
   record, and thirteen common questions with answers, including which Elijah Purcell this is.
 - [Founder resume](https://purcellventures.co/resume): work history, education, awards,
   each with its year.
+- [What is Purcell Ventures LLC](https://purcellventures.co/what-is-purcell-ventures): the
+  company answer page. Eight questions, the Georgia control number, the four divisions, and
+  the distinction from the older unrelated Purcell Ventures LLC in New York.
+- [Studying AI at the University of Alabama](https://purcellventures.co/ai-at-alabama): a
+  guide to UA's Artificial Intelligence BS by course code, all 121 credit hours, the rule
+  that an AI major cannot also major in Computer Science, and the routes for students not
+  in the College of Engineering. Verified against catalog.ua.edu, 20 August 2026.
 - [The team](https://purcellventures.co/team): the fifteen AI agents that run the
   company's proposals, audits, compliance and outreach. Every one of them is software,
   not a person, and the page says so first.
