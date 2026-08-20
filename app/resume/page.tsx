@@ -268,6 +268,7 @@ export default function ResumePage() {
         <a href="/" style={{ color: C.textMuted, textDecoration: "none" }}>← Purcell · Ventures</a>
         <span style={{ display: "flex", gap: "22px" }}>
           <a href="/who" style={{ color: C.textMuted, textDecoration: "none" }}>Who is Elijah Purcell</a>
+          <a href="/blog" style={{ color: C.textMuted, textDecoration: "none" }}>Writing</a>
           <a href="/resume/print" style={{ color: C.accent, textDecoration: "none" }}>Print version →</a>
         </span>
       </nav>

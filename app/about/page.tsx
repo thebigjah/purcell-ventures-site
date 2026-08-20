@@ -417,6 +417,23 @@ export default function AboutPage() {
         <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
         <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← Home</a>
       </footer>
+
+      {/* /about is one of only seven pages Google currently has indexed, which makes it one
+          of the few doors a crawler actually walks through. Linking the new writing from
+          here is the fastest route to getting any of it discovered. */}
+      <section style={{ maxWidth: "760px", margin: "56px auto 0", padding: "0 24px" }}>
+        <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, marginBottom: "14px" }}>
+          Recent writing
+        </h2>
+        <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: "15px", lineHeight: 1.9 }}>
+          <li><a href="/blog/can-ai-find-your-business" style={{ color: "var(--color-warm-accent)" }}>Can an AI find your business?</a></li>
+          <li><a href="/blog/what-a-website-actually-costs" style={{ color: "var(--color-warm-accent)" }}>What a small business website actually costs</a></li>
+          <li><a href="/blog/121-businesses-near-campus" style={{ color: "var(--color-warm-accent)" }}>121 businesses near campus, and what a phone can find</a></li>
+          <li><a href="/blog/what-the-agents-get-wrong" style={{ color: "var(--color-warm-accent)" }}>Fifteen AI agents run my company. Here is what they get wrong</a></li>
+          <li><a href="/ai-at-alabama" style={{ color: "var(--color-warm-accent)" }}>Studying AI at the University of Alabama</a></li>
+          <li><a href="/blog" style={{ color: "var(--color-warm-accent)" }}>Everything else</a></li>
+        </ul>
+      </section>
     </div>
   );
 }
