@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "audit-your-site-like-a-crawler",
+    title: "Audit your own site the way a crawler does, with curl",
+    excerpt: "Nine checks from a terminal, no tools and no account. I ran every one against my own site today and found six real problems, one of which had been quietly suppressing nine pages.",
+    date: "August 20, 2026",
+    readingTime: "9 min read",
+    category: "Engineering",
+  },
+  {
     slug: "claim-your-google-listing",
     title: "Claim your Google listing yourself, in about twenty minutes",
     excerpt: "Written so you do not need to hire anybody, including me. What to put in every field, how to hide a home address, the three things that get a listing suspended, and the five-minute monthly check almost nobody does.",
