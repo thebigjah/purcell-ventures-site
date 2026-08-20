@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "cold-outreach-that-worked",
+    title: "The cold email that got me a client, and the ones that did not",
+    excerpt: "The difference was not writing quality. It was leading with something specific and checkable about their business instead of a sentence that would be true of every business on earth.",
+    date: "August 20, 2026",
+    readingTime: "6 min read",
+    category: "Business",
+  },
+  {
     slug: "llc-at-seventeen",
     title: "What registering an LLC at seventeen actually involved",
     excerpt: "The filing is the easy part. The bank account is the step that stops people, the registered agent has an address consequence nobody mentions, and yes, you can rename the company later, because I did.",
