@@ -324,8 +324,10 @@ export default function ResumePage() {
           </p>
           <p className="pv-italic" style={{ marginTop: "10px", fontSize: "15.5px", color: C.text, opacity: 0.62, maxWidth: "660px", lineHeight: 1.55 }}>
             I build and ship software end to end: marketplaces, autonomous data pipelines, AI-integrated
-            applications, and the compliance and review systems that keep them honest. Fifteen production
-            deployments to date. Studying psychology and data science on a pre-med track toward psychiatry.
+            applications, and the compliance and review systems that keep them honest. Twenty-nine free
+            tools are live on the open web, alongside client sites, internal systems, and a fifteen-agent
+            workforce that runs the company&apos;s operations on a schedule. Studying psychology and data
+            science on a pre-med track toward psychiatry.
           </p>
 
           {/* Contact line */}
