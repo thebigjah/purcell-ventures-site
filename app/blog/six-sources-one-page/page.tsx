@@ -52,8 +52,8 @@ export default function Post() {
 
           <p>
             <a href="https://ua-today.vercel.app" style={link}>UA Today</a> checks them
-            instead, on a schedule, and shows the result on one page. Six sources. Here is
-            what turned out to be hard, and it was not the parsing.
+            instead, on a schedule, and shows the result on one page: 6 sources, roughly 700
+            events at a time. Here is what turned out to be hard, and it was not the parsing.
           </p>
 
           <h2 style={H2}>The easy problem</h2>

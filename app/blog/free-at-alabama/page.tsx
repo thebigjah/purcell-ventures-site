@@ -62,9 +62,9 @@ export default function Post() {
         <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
 
           <p style={{ fontSize: "18px" }}>
-            Tuition and fees buy a long list of things nobody hands you a receipt for. Most
-            students use two or three of them and graduate without ever finding out the rest
-            existed.
+            Tuition and fees buy a long list of things nobody hands you a receipt for. 12 of them
+            are below. Most students use two or three and graduate without finding out the
+            rest existed.
           </p>
 
           <p>

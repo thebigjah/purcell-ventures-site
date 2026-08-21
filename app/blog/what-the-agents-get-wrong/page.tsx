@@ -42,7 +42,7 @@ export default function Post() {
         <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
 
           <p style={{ fontSize: "18px" }}>
-            Purcell Ventures has one employee and fifteen agents. They are software, the
+            Purcell Ventures has 1 employee and 15 AI agents. They are software, the
             roster is public, and{" "}
             <Link href="/team" style={link}>the team page</Link> says so in its first
             sentence. They draft proposals, audit the live properties, chase invoices, check
@@ -88,7 +88,7 @@ export default function Post() {
           <h2 style={H2}>2. Twenty proposals with the internal notes still in them</h2>
 
           <p>
-            The proposal agent drafted twenty documents. Every one carried internal markers:
+            The proposal agent drafted 20 documents. Every one carried internal markers:
             reasoning meant for me, confidence hedges, notes about the client that were
             written to be read by the person deciding whether to send, not by the client.
           </p>
@@ -115,7 +115,7 @@ export default function Post() {
 
           <p>
             For weeks the daily run reported success. The agents were fine. The runner script
-            called four of them.
+            called 4 of the 15.
           </p>
 
           <p>

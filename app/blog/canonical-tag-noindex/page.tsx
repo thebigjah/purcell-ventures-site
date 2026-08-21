@@ -42,9 +42,9 @@ export default function Post() {
         <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
 
           <p style={{ fontSize: "18px" }}>
-            I found it this morning by accident, while checking something else. Nine posts,
-            every one of them carrying a tag that says: this page is a duplicate, index the
-            other one instead.
+            I found it this morning by accident, while checking something else. 9 posts, every
+            one carrying a tag that says: this page is a duplicate, index the other one
+            instead. By the end of the afternoon it was 14 pages across three sections.
           </p>
 
           <p>

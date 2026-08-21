@@ -176,8 +176,8 @@ done < urls.txt`}</div>
           </p>
 
           <p>
-            I had seven pages indexed against twenty-eight in the sitemap. That gap is the
-            single most useful number in this entire list, and it is the one people never
+            I had 7 pages indexed against 28 in the sitemap. That gap is the single most useful
+            number in this entire list, and it is the one people never
             look at because it takes ten seconds and tells you something you would rather not
             know.
           </p>

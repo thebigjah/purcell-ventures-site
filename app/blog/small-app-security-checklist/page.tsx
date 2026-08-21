@@ -50,7 +50,7 @@ export default function Post() {
         <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
 
           <p style={{ fontSize: "18px" }}>
-            I have run read-only security audits on seven live applications. Small ones:
+            I have run read-only security audits on 7 live applications. Small ones:
             solo builds and two-person teams, the kind with real users and no security
             budget. The same five things come up almost every time, and none of them are
             exotic.

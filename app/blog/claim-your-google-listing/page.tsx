@@ -51,8 +51,9 @@ export default function Post() {
 
           <p>
             For a lot of small local businesses this single thing is worth more than a
-            website. I audited 121 independent businesses near the University of Alabama and
-            twenty-three had opening hours recorded anywhere a machine could read them.{" "}
+            website. I audited 121 independent businesses near the University of Alabama. 27 had a website
+            that answered and 23 had opening hours recorded anywhere a machine could read
+            them.{" "}
             <Link href="/blog/121-businesses-near-campus" style={link}>The rest are invisible
             to the question "are they open right now"</Link>.
           </p>
