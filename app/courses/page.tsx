@@ -19,7 +19,7 @@ const COURSES = [
     roman: "II.",
     href: "/courses/business-launch",
     title: "The Business Launch Playbook",
-    desc: "From idea to LLC to first dollar. 7 modules, 26 lessons, and a full resource pack — every tool, decision, and shortcut from building Purcell Ventures at 18.",
+    desc: "From idea to LLC to first dollar. 7 modules, 26 lessons, and a full resource pack — every tool, decision, and shortcut from building Purcell Ventures at seventeen.",
     price: "$397",
     stats: [
       { v: "7",   l: "Modules" },

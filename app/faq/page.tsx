@@ -138,7 +138,7 @@ const FAQS: QSection[] = [
     label: "About this company",
     qas: [
       {
-        q: "Wait — you're 18?",
+        q: "Wait, you are nineteen?",
         a: "Yes. I've been building production software for a year. The portfolio is real, the clients are real, and I'd rather earn your trust with the work than the age. The full record lives at /resume.",
       },
       {
@@ -232,16 +232,25 @@ export default function FAQPage() {
                           +
                         </span>
                       </button>
-                      {isOpen && (
-                        <div className="pv-italic" style={{
+                      {/* Always in the DOM, hidden with CSS rather than conditionally
+                          rendered. {isOpen && ...} meant a closed answer did not exist in
+                          the HTML at all, so every crawler saw twenty-four questions and
+                          no answers while the FAQPage schema claimed otherwise. Google
+                          counts content hidden by CSS in an accordion; it cannot count
+                          content that was never sent. */}
+                      <div
+                        id={`${id}-answer`}
+                        hidden={!isOpen}
+                        className="pv-italic"
+                        style={{
                           padding: "0 28px 22px",
                           fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.88,
                           lineHeight: 1.6,
                           borderTop: "1px dashed var(--color-warm-border)", paddingTop: "16px",
-                        }}>
-                          {item.a}
-                        </div>
-                      )}
+                        }}
+                      >
+                        {item.a}
+                      </div>
                     </div>
                   );
                 })}
