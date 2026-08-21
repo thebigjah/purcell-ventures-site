@@ -122,7 +122,7 @@ const FAQS = [
     a: "No. The essay modules, financial aid sections, and scholarship hunting process are immediately applicable regardless of where you are in the timeline. The earlier modules on building your list are still useful if you haven't finalized schools.",
   },
   {
-    q: "You're 18. Why should I take college advice from you?",
+    q: "You are nineteen. Why should I take college advice from you?",
     a: "Because I just did it. 34 acceptances. $530,384 in scholarships per year. I researched 98 schools and applied to dozens. I made real mistakes and real wins and I documented everything. A 50-year-old counselor has experience — I have current, specific, documented results.",
   },
   {

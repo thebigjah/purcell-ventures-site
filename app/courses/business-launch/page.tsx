@@ -135,7 +135,7 @@ const FAQS = [
     a: "No. This course assumes you start with nothing except an idea. The legal setup, banking, pricing, outreach, everything is walked through from scratch. If anything, this course was designed specifically for people who've never done this before and don't have a mentor who has.",
   },
   {
-    q: "You're 18. Why should I take business advice from you?",
+    q: "You are nineteen. Why should I take business advice from you?",
     a: "Because I actually did it. I founded Purcell Ventures at 17, built multiple revenue streams, and documented every tool, decision, and mistake along the way. I'm not teaching theory — I'm teaching the exact process I used, while it's still fresh. The tools I recommend are the ones I actively use. The mistakes I warn about are ones I made.",
   },
   {
