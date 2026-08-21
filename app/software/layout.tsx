@@ -47,9 +47,61 @@ const schema = {
   },
 };
 
+
+const BREADCRUMB_LD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://purcellventures.co"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Software",
+      "item": "https://purcellventures.co/software"
+    }
+  ]
+};
+const FAQ_LD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What kind of custom software does Purcell Ventures build?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mobile applications for iOS and Android built with React Native or Expo, full-stack web applications built with Next.js, and AI-powered tools. Custom software work starts at $1,500 and a substantial build runs to around $5,000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does a custom software project start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With a discovery call, where the work is scoped before anything is quoted. The scope comes out of that conversation rather than out of a package."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens after a software project launches?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The builder stays involved after launch. There is one person on the project, so support is the same person who wrote it rather than a handover to somebody who did not."
+      }
+    }
+  ]
+};
+
 export default function SoftwareLayout({ children }: { children: ReactNode }) {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_LD) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

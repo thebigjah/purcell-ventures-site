@@ -50,9 +50,61 @@ const schema = {
   },
 };
 
+
+const BREADCRUMB_LD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://purcellventures.co"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Steady",
+      "item": "https://purcellventures.co/steady"
+    }
+  ]
+};
+const FAQ_LD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Steady?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Personal IT support for people who never chose to manage their own technology: setup, patient teaching, and somebody to call when something breaks. It is aimed at the family member who has been acting as everyone else's tech support."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is personal IT support for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Parents and grandparents, and the person in the family who has been fielding their questions for years. The service exists so that person is not the only option."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this remote or in person?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both are offered, with plans and one-off packages. The detail is on the Steady page and the fastest route is to email Elijah Purcell directly."
+      }
+    }
+  ]
+};
+
 export default function SteadyLayout({ children }: { children: ReactNode }) {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_LD) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
