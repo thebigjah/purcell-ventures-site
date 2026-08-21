@@ -6,7 +6,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/six-sources-one-page" },
-  title: "Six sources, one page: building a campus events site | Elijah Purcell",
+  title: { absolute: "Six sources, one page: building a campus events site | Elijah Purcell" },
   description:
     "How UA Today reconciles six separate feeds of University of Alabama events into a single page, why the hard part is detecting a source that quietly stopped rather than one that errors, and what a floor check is.",
 };

@@ -12,7 +12,7 @@ import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/cold-outreach-that-worked" },
-  title: "The cold email that got me a client, and the fifty that did not | Elijah Purcell",
+  title: { absolute: "The cold email that got me a client, and the fifty that did not | Elijah Purcell" },
   description:
     "What actually works when a teenager cold-emails small businesses: leading with a specific observation instead of a pitch, why attaching work beats describing it, and the three sentences that get deleted every time.",
 };

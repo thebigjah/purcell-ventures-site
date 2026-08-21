@@ -6,7 +6,7 @@ import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/what-the-agents-get-wrong" },
-  title: "Fifteen AI agents run my company. Here is what they get wrong | Elijah Purcell",
+  title: { absolute: "Fifteen AI agents run my company. Here is what they get wrong | Elijah Purcell" },
   description:
     "Five real failures from running a fifteen-agent AI workforce in production: a stage that could not fail, twenty proposals with internal notes in them, ten agents that were never being called, findings that closed themselves, and an agent that quietly acquired capabilities nobody granted it.",
 };

@@ -23,7 +23,7 @@ import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/tuscaloosa-small-business-online" },
-  title: "The Tuscaloosa Storefront Project: small businesses near campus, and what they are up against online | Elijah Purcell",
+  title: { absolute: "The Tuscaloosa Storefront Project | Elijah Purcell | Elijah Purcell" },
   description:
     "A reporting series by Elijah Purcell on independent businesses around the University of Alabama: who they are, how students find them, and what happens when a business has no website.",
 };

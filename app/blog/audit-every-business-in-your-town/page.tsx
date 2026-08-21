@@ -6,7 +6,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/audit-every-business-in-your-town" },
-  title: "How to audit every business in your town in an afternoon | Elijah Purcell",
+  title: { absolute: "How to audit every business in your town in an afternoon | Elijah Purcell" },
   description:
     "The method behind auditing 121 independent businesses near the University of Alabama: one free Overpass query against OpenStreetMap, a real HTTP request per site, and the two mistakes that will make your numbers wrong.",
 };

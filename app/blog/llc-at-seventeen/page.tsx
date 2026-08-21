@@ -6,7 +6,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/llc-at-seventeen" },
-  title: "What registering an LLC at seventeen actually involved | Elijah Purcell",
+  title: { absolute: "What registering an LLC at seventeen actually involved | Elijah Purcell" },
   description:
     "The real sequence: the Georgia filing, the EIN, the bank account that is the actual hard part, the registered agent question, and renaming the company nine months later. What I did, not legal advice.",
 };

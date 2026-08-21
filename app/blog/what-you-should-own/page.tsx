@@ -6,7 +6,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/what-you-should-own" },
-  title: "What you should own at the end of a website project | Elijah Purcell",
+  title: { absolute: "What you should own at the end of a website project | Elijah Purcell" },
   description:
     "The seven accounts and assets that should be in your name when a web project finishes, why a provider holding your domain is the single worst arrangement, and the two questions to ask before you sign anything.",
 };

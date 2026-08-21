@@ -6,7 +6,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/write-a-page-an-ai-will-quote" },
-  title: "How to write a page an AI will actually quote | Elijah Purcell",
+  title: { absolute: "How to write a page an AI will actually quote | Elijah Purcell" },
   description:
     "Answer engine optimisation without the jargon: the sentence shape a model can lift, why FAQPage schema works, what llms.txt is for, and the one thing that matters more than all of it.",
 };

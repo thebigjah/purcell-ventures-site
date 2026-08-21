@@ -14,7 +14,7 @@ import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/small-app-security-checklist" },
-  title: "Five holes in almost every small production app | Elijah Purcell",
+  title: { absolute: "Five holes in almost every small production app | Elijah Purcell" },
   description:
     "What actually turns up when you audit small production applications: row-level security that is enabled but not enforced, paid API routes with no authentication, auth cookies that are not auth, and two more. Written from seven read-only audits.",
 };

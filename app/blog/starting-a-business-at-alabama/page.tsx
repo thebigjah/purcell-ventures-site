@@ -6,7 +6,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/starting-a-business-at-alabama" },
-  title: "Starting a business as a University of Alabama student | Elijah Purcell",
+  title: { absolute: "Starting a business as a University of Alabama student | Elijah Purcell" },
   description:
     "What actually helps a student running a business at UA: the campus resources that apply, why your first customer should not be a student, and the three mistakes that cost the most time.",
 };

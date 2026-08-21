@@ -12,7 +12,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/what-a-website-actually-costs" },
-  title: "What a small business website actually costs | Elijah Purcell",
+  title: { absolute: "What a small business website actually costs | Elijah Purcell" },
   description:
     "Real numbers and what drives them: why the same site is quoted at $400 and at $15,000, what a monthly subscription does and does not include, the ongoing costs nobody mentions, and how to tell an expensive quote from an overpriced one.",
 };

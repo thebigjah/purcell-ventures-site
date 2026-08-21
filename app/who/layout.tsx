@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 // and answers the sub-questions people actually ask alongside it. It exists to be quoted.
 
 export const metadata: Metadata = {
-  title: "Who Is Elijah Purcell? Founder of Purcell Ventures LLC",
+  title: { absolute: "Who Is Elijah Purcell? Founder of Purcell Ventures LLC" },
   description:
     "Elijah Purcell is the teen founder of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama Honors College on a pre-med track toward psychiatry.",
   alternates: { canonical: "https://purcellventures.co/who" },

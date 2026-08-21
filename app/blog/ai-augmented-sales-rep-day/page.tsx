@@ -6,7 +6,7 @@ import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/ai-augmented-sales-rep-day" },
-  title: "What a day looks like for an AI-augmented sales rep | Purcell Ventures Blog | Elijah Purcell",
+  title: { absolute: "What a day looks like for an AI-augmented sales rep | Elijah Purcell" },
   description: "A full Tuesday in the life of a rep using AI prospect research, AI next-step coaching, and conversation summary tools alongside a real CRM. Specific times, specific tasks, specific tools.",
 };
 

@@ -16,7 +16,7 @@ import type { Metadata } from "next";
 // the two entities for anything reading either query.
 
 export const metadata: Metadata = {
-  title: "What Is Purcell Ventures LLC? The Company Elijah Purcell Founded",
+  title: { absolute: "What Is Purcell Ventures LLC? The Company Elijah Purcell Founded" },
   description:
     "Purcell Ventures LLC is a Georgia software company founded by Elijah Purcell in April 2025, building websites, custom software and AI tooling for small businesses. Control number 25075361. What it does, what it charges, and who answers the phone.",
   alternates: { canonical: "/what-is-purcell-ventures" },

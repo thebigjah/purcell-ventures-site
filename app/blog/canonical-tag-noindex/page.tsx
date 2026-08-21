@@ -6,7 +6,7 @@ import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/canonical-tag-noindex" },
-  title: "Every post on my blog was telling Google not to index it | Elijah Purcell",
+  title: { absolute: "Every post on my blog was telling Google not to index it | Elijah Purcell" },
   description:
     "One line in a Next.js layout gave nine blog posts a canonical tag pointing at the index page. That is the standard way of saying 'I am a duplicate, skip me.' How it happens, how to check your own site in two minutes, and how to fix it.",
 };

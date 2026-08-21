@@ -6,7 +6,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/can-ai-find-your-business" },
-  title: "Can an AI find your business? A test you can run in five minutes | Elijah Purcell",
+  title: { absolute: "Can an AI find your business? A test you can run in five minutes | Elijah Purcell" },
   description:
     "People are starting to ask an assistant instead of searching. Five minutes to find out what ChatGPT and Google's AI answer say about your business, why they get it wrong, and the four fixes that actually change the answer.",
 };

@@ -6,7 +6,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/ai-team-page-honesty" },
-  title: "My team page lists fifteen people who do not exist | Elijah Purcell",
+  title: { absolute: "My team page lists fifteen people who do not exist | Elijah Purcell" },
   description:
     "Why a company running AI agents should name them, say they are software in the first sentence, and never let one sign an email as a human. The disclosure rules I enforce in code rather than in policy.",
 };

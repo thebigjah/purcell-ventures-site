@@ -7,7 +7,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/is-your-business-invisible" },
-  title: "Is your business invisible online? A ten-minute self-check | Elijah Purcell",
+  title: { absolute: "Is your business invisible online? A ten-minute self-check | Elijah Purcell" },
   description:
     "Seven checks a small business owner can run on their own business in ten minutes, with no tools and no account, to find out what a customer with a phone actually sees. Built from an audit of 121 businesses near the University of Alabama.",
 };

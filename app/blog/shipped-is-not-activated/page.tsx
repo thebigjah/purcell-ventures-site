@@ -6,7 +6,7 @@ import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/shipped-is-not-activated" },
-  title: "Shipping is not the same as being able to take a payment | Purcell Ventures Blog | Elijah Purcell",
+  title: { absolute: "Shipping is not the same as being able to take a payment | Elijah Purcell" },
   description:
     "A site can be live, green in the deploy log, and still unable to accept a dollar. The gap between a finished site and a working business is usually one broken path, and it is invisible from the inside.",
 };

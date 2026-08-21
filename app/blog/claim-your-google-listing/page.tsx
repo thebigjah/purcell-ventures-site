@@ -7,7 +7,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/claim-your-google-listing" },
-  title: "Claim your Google listing yourself, in about twenty minutes | Elijah Purcell",
+  title: { absolute: "Claim your Google listing yourself, in about twenty minutes | Elijah Purcell" },
   description:
     "A step-by-step guide to claiming and filling out a Google Business Profile, written so you do not need to hire anybody. Including what to put in every field, how to hide a home address, and the three things that get a listing suspended.",
 };
