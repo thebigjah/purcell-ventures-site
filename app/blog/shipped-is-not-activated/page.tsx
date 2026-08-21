@@ -2,6 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/shipped-is-not-activated" },
@@ -66,6 +67,15 @@ export default function Post() {
 
         
 
+
+          <PostFaq qa={[
+            ["Why can't customers pay on my website?",
+             "The most common causes are boring, which is why they survive: a payment link still carrying a placeholder token from testing, so it renders and loads and looks finished and takes nothing; a pricing page listing tiers with no way to select one; or a form that collects an email and promises a follow-up that was never automated. None of these appear in a deploy log."],
+            ["How do I test whether my website can actually take a payment?",
+             "Ask one question of everything you have shipped: can a stranger pay for this today? Not a warm lead who already emailed you. Someone who found the page, decided in forty seconds, and reached for a card. The person who built the site tests that the page renders; almost nobody tests that a purchase completes, because completing one means spending real money on yourself."],
+            ["Why does nobody catch a broken checkout?",
+             "Because building and buying are different jobs, and the person who built it knows where the checkout is, so they never go looking for it. The gap between a finished site and a working business is usually one broken path, and it stays broken precisely because it is invisible from the inside."],
+          ]} />
 
           <section style={{ marginTop: "44px", paddingTop: "22px", borderTop: "1px solid rgba(212,175,55,0.2)" }}>
             <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, margin: "0 0 12px" }}>

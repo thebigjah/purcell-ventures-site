@@ -4,6 +4,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import PostFaq from "@/app/components/PostFaq";
 
 export default function Post() {
   return (
@@ -72,6 +73,13 @@ export default function Post() {
           </p>
         
 
+
+          <PostFaq qa={[
+            ["Why do AI tools fail for small businesses?",
+             "Usually because the workflow the tool was attached to was already broken. A plumber bought a $400 a month AI receptionist to answer after-hours calls and book appointments. The AI worked exactly as promised. His calendar was not connected to anything, his quote process took twenty minutes per call, and he had no way to follow up on the leads it captured, so he cancelled after six months."],
+            ["What should I ask before buying an AI tool for my business?",
+             "One question, answered honestly: if a human assistant did this exact task for free, would the business actually improve? If the bottleneck is not labour but not knowing what to do with the output, AI will not fix it. Buying AI to solve a workflow problem is like buying a faster car when the steering is broken."],
+          ]} />
 
           <section style={{ marginTop: "44px", paddingTop: "22px", borderTop: "1px solid rgba(212,175,55,0.2)" }}>
             <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, margin: "0 0 12px" }}>
