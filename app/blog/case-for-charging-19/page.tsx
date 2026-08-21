@@ -2,6 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/case-for-charging-19" },
@@ -102,6 +103,15 @@ export default function Post() {
 
         
 
+
+          <PostFaq qa={[
+            ["Why sell a product at $19 when comparable ones sell for $497?",
+             "Because distribution matters more than per-unit profit. At $497 you need a full funnel, webinar, email sequence, urgency tactics and social proof, which takes over a hundred hours to build and converts at 1 to 3 per cent. At $19 there is no funnel: someone tries a tool and buys at the bottom, converting closer to 10 to 20 per cent on warm traffic."],
+            ["Does a cheap entry product actually lead to larger purchases?",
+             "That is the argument. Somebody who pays $19 has something to lose and is no longer a stranger: their identity has shifted from never having bought anything to being a customer. The buyer at $19 is the candidate for the $179 service later."],
+            ["What is the maths on a low-priced entry offer?",
+             "On 100 visits: 2 per cent at $497 is $994, against 15 per cent at $19 which is $285. The lower number looks worse until retention and lifetime value are counted, which is the whole point of the argument."],
+          ]} />
 
           <section style={{ marginTop: "44px", paddingTop: "22px", borderTop: "1px solid rgba(212,175,55,0.2)" }}>
             <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, margin: "0 0 12px" }}>

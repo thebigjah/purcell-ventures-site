@@ -2,6 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/ai-augmented-sales-rep-day" },
@@ -166,6 +167,13 @@ export default function Post() {
 
         
 
+
+          <PostFaq qa={[
+            ["What does AI actually change about a salesperson's day?",
+             "Concretely: a dashboard that opens on two overdue tasks, four due today and $12,400 in open pipeline; an AI deal coach that reads a whole pipeline of twenty-three open contacts and names the three worth working today by combining stage, days since last touch and the rep's own notes; and a conversation summary that reads an eight-entry activity timeline and returns five lines on where the deal stands."],
+            ["How does an AI deal coach decide which deals to prioritise?",
+             "Not by stage alone. It combines stage, days since the last touch, and the rep's notes, then surfaces a specific reason to act now. In the example it flagged a quote sent five days earlier that had gone silent, alongside a public post from the prospect that gave a natural opening."],
+          ]} />
 
           <section style={{ marginTop: "44px", paddingTop: "22px", borderTop: "1px solid rgba(212,175,55,0.2)" }}>
             <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, margin: "0 0 12px" }}>
