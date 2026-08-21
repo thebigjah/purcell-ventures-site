@@ -161,7 +161,8 @@ export default function Post() {
 
           <p>
             If somebody shares your name, do not hope. schema.org has{" "}
-            <code>disambiguatingDescription</code> for exactly this, and the plain-prose
+            <a href="https://schema.org/disambiguatingDescription" style={link} rel="noopener"><code>disambiguatingDescription</code></a>{" "}
+            for exactly this, and the plain-prose
             version belongs on the page too.
           </p>
 
@@ -173,8 +174,10 @@ export default function Post() {
           <h2 style={H2}>llms.txt, briefly and honestly</h2>
 
           <p>
-            A plain-text file at the root of your site describing what is on it and where.
-            Adoption is not universal and nobody should promise you results from it.
+            A{" "}
+            <a href="https://llmstxt.org/" style={link} rel="noopener">plain-text file at the root of your site</a>{" "}
+            describing what is on it and where. Adoption is not universal and nobody should
+            promise you results from it.
           </p>
 
           <p>

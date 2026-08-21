@@ -115,7 +115,10 @@ done < urls.txt | sort -k2 | uniq -f1 -D`}</div>
 
           <p>
             Not "is it present." Does it parse. A JSON-LD block with a trailing comma is
-            skipped in silence, and the page behaves exactly as if you never wrote it.
+            skipped in silence, and the page behaves exactly as if you never wrote it. It is
+            also worth reading{" "}
+            <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" style={link} rel="noopener">what Google says it is actually assessing</a>,
+            because no amount of valid markup substitutes for it.
           </p>
 
           <div style={pre}>{`curl -sL https://example.com/page | python3 -c '
