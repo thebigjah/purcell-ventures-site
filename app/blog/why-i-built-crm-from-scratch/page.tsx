@@ -2,6 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/why-i-built-crm-from-scratch" },
@@ -112,6 +113,13 @@ export default function Post() {
 
         
 
+
+          <PostFaq qa={[
+            ["Should I build my own CRM or pay for HubSpot?",
+             "It depends what the paid tiers actually cost for your requirements. HubSpot's free tier excludes custom properties beyond five, workflow automation, pipeline forecasting, custom reports and meaningful API access. For multi-rep visibility, AI-assisted next steps, custom contact stages, an activity timeline and templated email, the real figure was $200 to $400 a month, which is $2,400 to $4,800 a year."],
+            ["How long does it take to build a custom CRM?",
+             "One week of focused work produced six views, per-rep authentication, AI features specific to the workflow, and an activity log structured for the conversations actually being had. The hard cost was around $15 in API usage."],
+          ]} />
 
           <section style={{ marginTop: "44px", paddingTop: "22px", borderTop: "1px solid rgba(212,175,55,0.2)" }}>
             <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, margin: "0 0 12px" }}>

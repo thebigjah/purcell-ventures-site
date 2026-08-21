@@ -4,6 +4,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import PostFaq from "@/app/components/PostFaq";
 
 export default function Post() {
   return (
@@ -81,6 +82,13 @@ export default function Post() {
           </p>
         
 
+
+          <PostFaq qa={[
+            ["What can a small business automate without writing code?",
+             "Five things, each doable in under two hours with off-the-shelf tools: follow-ups on quotes you sent and forgot, new customer onboarding emails, and three more. Most owners do not need an AI strategy, they need ten hours back in the week."],
+            ["How do I automate quote follow-ups?",
+             "A three-touch sequence built with scheduled send in Gmail or a free Zapier and Sheets combination. Day three, a one-line bump. Day eight, an honest last touch where yes or no is fine. Day thirty, a ninety-day pickup. It takes about forty-five minutes to set up and closes 15 to 25 per cent more of your quoted deals purely by not forgetting."],
+          ]} />
 
           <section style={{ marginTop: "44px", paddingTop: "22px", borderTop: "1px solid rgba(212,175,55,0.2)" }}>
             <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, margin: "0 0 12px" }}>

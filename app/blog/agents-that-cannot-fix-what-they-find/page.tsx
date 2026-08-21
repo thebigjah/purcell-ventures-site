@@ -2,6 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/agents-that-cannot-fix-what-they-find" },
@@ -73,6 +74,15 @@ export default function Post() {
 
         
 
+
+          <PostFaq qa={[
+            ["How do you stop an AI agent from accessing things it should not?",
+             "Remove the capability rather than denying the permission. A prompt describing what an agent may look at is honest, specific and completely unenforced, because the process can still open any file on the machine. We found out when an agent asked to draft a payment-chase email went and read the client file first, found no matching record, and objected. The objection was correct and it was also proof that the scope was a request."],
+            ["Is removing built-in tools enough to constrain an agent?",
+             "No. Asked afterwards what it could still reach, the model listed email, calendar and drive, because removing built-in tools leaves externally configured servers inherited from the user's own configuration. An agent reasoning about a code repository must not be able to read your inbox, and that requires closing the external config too."],
+            ["Why separate the agent that finds problems from the one that fixes them?",
+             "It is the cheapest safety property in the system: an agent that can read every repository and change no line of any of them cannot cause the failure it was inspecting for. It also produces a failure that nobody warns you about, which is what the rest of this post is about."],
+          ]} />
 
           <section style={{ marginTop: "44px", paddingTop: "22px", borderTop: "1px solid rgba(212,175,55,0.2)" }}>
             <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, margin: "0 0 12px" }}>
