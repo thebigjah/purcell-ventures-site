@@ -87,7 +87,7 @@ export default function WalletTrackerPremiumPage() {
             <li><strong>Live backtest framework.</strong> The same engine that ran our 90-day historical backtest is now running live.</li>
             <li><strong>Risk scoring built in.</strong> CoinGecko mcap + liquidity + history. Auto-skips score &lt; 4.</li>
             <li><strong>No upsells inside the channel.</strong> Premium is the only paid tier. No NFT shilling, no &quot;mastermind&quot; pitch.</li>
-            <li><strong>Built by a real person.</strong> Elijah Purcell, 18, Acworth GA. <Link href="/about" style={{ color: "var(--color-warm-accent)" }}>about page →</Link></li>
+            <li><strong>Built by a real person.</strong> Elijah Purcell, 19, Tuscaloosa AL. <Link href="/about" style={{ color: "var(--color-warm-accent)" }}>about page →</Link></li>
           </ul>
         </section>
 
