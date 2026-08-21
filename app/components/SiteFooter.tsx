@@ -84,7 +84,7 @@ export default function SiteFooter() {
           <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
             <li><a href="https://www.linkedin.com/in/theelijahpurcell" rel="me" style={{ color: "#8b8578", textDecoration: "none" }}>LinkedIn</a></li>
             <li><a href="https://github.com/thebigjah" rel="me" style={{ color: "#8b8578", textDecoration: "none" }}>GitHub</a></li>
-            <li><a href="https://www.instagram.com/elijah_the_tall/" rel="me" style={{ color: "#8b8578", textDecoration: "none" }}>Instagram</a></li>
+            <li><a href="https://www.instagram.com/theelijahpurcell/" rel="me" style={{ color: "#8b8578", textDecoration: "none" }}>Instagram</a></li>
             <li><a href="https://ua-today.vercel.app" style={{ color: "#8b8578", textDecoration: "none" }}>UA Today</a></li>
           </ul>
         </div>

@@ -11,114 +11,125 @@
 <meta property="og:type" content="profile">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%2317150e'/><text x='16' y='23' font-size='19' font-family='Georgia,serif' fill='%23f2f1ec' text-anchor='middle'>EP</text></svg>">
 <style>
-  /* A tapped card is read once, on a phone, held at arm's length, often outdoors.
-     So: one column, large targets, real contrast, and nothing that needs a second
-     look. No gradients, no glass, no purple. Paper and ink, same language as the
-     rest of Purcell Ventures. */
+  @font-face{font-family:"Clash Display";src:url("/card/fonts/clash-display-600.woff2") format("woff2");
+    font-weight:600;font-style:normal;font-display:swap}
+  @font-face{font-family:"Satoshi";src:url("/card/fonts/satoshi-500.woff2") format("woff2");
+    font-weight:500;font-style:normal;font-display:swap}
+  @font-face{font-family:"Satoshi";src:url("/card/fonts/satoshi-700.woff2") format("woff2");
+    font-weight:700;font-style:normal;font-display:swap}
+  /* A calling card, not a link-in-bio page. It is read on a phone, at arm's length,
+     in the two seconds after a handshake, so the face is the first thing and the one
+     action is unmissable. Letterpress logic: square corners, hairline rules, one
+     accent, generous margin. Zero corner radii, zero stripes, zero cards in a row.
+     Two type families: an editorial serif for the name, system sans for everything
+     else. Both are macOS-local so nothing waits on a webfont over a hotel wifi. */
   :root{
-    --paper:#f2f1ec; --card:#fdfcf9; --ink:#17150e; --muted:#4b473b;
-    --faint:#7d786a; --rule:#ddd9cd; --green:#1e4d3c; --green-ink:#e4ebe5;
+    --ground:#12100D; --ink:#F2EDE2; --muted:#938C7D; --faint:#655E52;
+    --brass:#C9A227; --rule:#2B2620;
   }
-  @media (prefers-color-scheme: dark){
-    :root{ --paper:#141310; --card:#1c1b17; --ink:#f4f2ec; --muted:#c2bcae;
-           --faint:#8d8778; --rule:#33312a; --green:#7fc4a6; --green-ink:#132b22; }
-  }
-  :root[data-theme="light"]{
-    --paper:#f2f1ec; --card:#fdfcf9; --ink:#17150e; --muted:#4b473b;
-    --faint:#7d786a; --rule:#ddd9cd; --green:#1e4d3c; --green-ink:#e4ebe5;
-  }
-  :root[data-theme="dark"]{
-    --paper:#141310; --card:#1c1b17; --ink:#f4f2ec; --muted:#c2bcae;
-    --faint:#8d8778; --rule:#33312a; --green:#7fc4a6; --green-ink:#132b22;
-  }
-  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
   body{
-    margin:0;background:var(--paper);color:var(--ink);
-    font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    line-height:1.5;
-    padding:max(20px,env(safe-area-inset-top)) 18px max(28px,env(safe-area-inset-bottom));
+    margin:0; background:var(--ground); color:var(--ink);
+    font-family:"Satoshi",ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased;
+    padding:0 22px 56px;
   }
-  .wrap{max-width:440px;margin:0 auto}
-  header{padding:14px 0 20px}
+  .wrap{max-width:430px;margin:0 auto}
+  a{color:inherit;text-decoration:none}
+
+  /* Header. The plate is square and nearly full width: at 390px that is a portrait
+     big enough to recognise, which is the whole job of the photo here. */
+  header{padding:34px 0 0;position:relative}
   .mark{
-    font-family:"Iowan Old Style",Charter,Palatino,Georgia,serif;
-    font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);
+    font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--brass);font-weight:600;margin-bottom:20px;
+  }
+  .plate{
+    position:relative;width:100%;aspect-ratio:1/1;overflow:hidden;
+    border:1px solid var(--rule);background:#0d0b09;
+  }
+  .plate img{width:100%;height:100%;object-fit:cover;object-position:52% 30%;display:block}
+  /* The name sits on the plate, over a gradient that only exists to keep it legible.
+     Not decoration: without it the serif fights the photo. */
+  .plate .band{
+    position:absolute;left:0;right:0;bottom:0;padding:60px 18px 16px;
+    background:linear-gradient(to top,rgba(12,10,8,.94) 32%,rgba(12,10,8,0));
   }
   h1{
-    font-family:"Iowan Old Style",Charter,Palatino,Georgia,serif;
-    font-size:34px;line-height:1.05;margin:0 0 4px;letter-spacing:-.015em;
-    text-wrap:balance;
+    font-family:"Clash Display","Iowan Old Style",Georgia,serif;
+    font-size:38px;line-height:1;margin:0;font-weight:600;letter-spacing:-.02em;
   }
-  /* Face beside the name rather than above it. A tapped card is read at arm's length
-     and the two things a person needs first are who this is and what he does. Square,
-     no radius, same as everything else here. */
-  .who{display:flex;gap:16px;align-items:center;margin-top:12px}
-  .face{
-    width:88px;height:88px;flex:0 0 88px;object-fit:cover;object-position:50% 22%;
-    border:1px solid var(--rule);display:block;
+  .role{
+    margin:16px 0 0;color:var(--muted);font-size:15.5px;line-height:1.5;
   }
-  @media (max-width:360px){
-    .face{width:68px;height:68px;flex-basis:68px}
-    h1{font-size:29px}
-  }
-  .role{color:var(--muted);font-size:16px;margin:0}
-  .rule{height:2px;background:var(--ink);margin:22px 0 0;opacity:.9}
 
+  /* The one action. Square, ink on brass, full width, impossible to miss or mistake
+     for a link. Everything below it is deliberately quieter. */
   .save{
-    display:flex;align-items:center;justify-content:center;gap:10px;
-    width:100%;margin:22px 0 8px;padding:19px 18px;
-    background:var(--green);color:var(--green-ink);
-    font-size:18px;font-weight:700;letter-spacing:.01em;
-    text-decoration:none;border:0;border-radius:0;
+    display:block;margin:26px 0 8px;padding:17px 20px;text-align:center;
+    background:var(--brass);color:#17140C;font-weight:700;font-size:16.5px;
+    letter-spacing:.02em;border:1px solid var(--brass);
   }
-  .save:active{opacity:.86}
-  .save-note{color:var(--faint);font-size:12.5px;text-align:center;margin:0 0 26px}
+  .save:active{background:#b8942180}
+  .save-note{margin:0;text-align:center;font-size:12.5px;color:var(--faint)}
 
+  /* Sections. A rule and a label, then rows separated by hairlines. No boxes. */
   h2{
-    font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);
-    margin:30px 0 0;padding-bottom:7px;border-bottom:1px solid var(--rule);font-weight:700;
+    font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--faint);
+    font-weight:700;margin:36px 0 0;padding-bottom:9px;border-bottom:1px solid var(--ink);
   }
   ul{list-style:none;margin:0;padding:0}
+  li{border-bottom:1px solid var(--rule)}
   li a{
-    display:flex;align-items:baseline;gap:14px;
-    padding:15px 2px;border-bottom:1px solid var(--rule);
-    text-decoration:none;color:var(--ink);
+    display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+    padding:14px 0;
   }
-  li a:active{background:var(--card)}
-  .k{font-size:15px;font-weight:600;flex:1}
-  .v{
-    font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:13px;color:var(--muted);
-    text-align:right;font-variant-numeric:tabular-nums;
+  .k{font-weight:600;font-size:16px}
+  .ic{
+    width:17px;height:17px;color:var(--muted);
+    display:inline-block;vertical-align:-3px;margin-right:10px;
   }
-  .d{display:block;font-size:13px;color:var(--faint);font-weight:400;margin-top:2px}
-  footer{margin-top:34px;color:var(--faint);font-size:12.5px}
-  footer a{color:var(--faint)}
+  .ic svg{width:100%;height:100%;display:block}
+  li a:active .ic{color:var(--brass)}
+  .d{display:block;font-weight:400;font-size:13.5px;color:var(--muted);margin-top:3px;line-height:1.45}
+  .v{color:var(--brass);font-size:14px;white-space:nowrap;flex:none}
+  li a:active .k{color:var(--brass)}
+
+  footer{
+    margin-top:34px;padding-top:16px;border-top:1px solid var(--rule);
+    font-size:12.5px;color:var(--faint);line-height:1.7;
+  }
+
+  @media (max-width:360px){
+    h1{font-size:33px}
+    body{padding:0 18px 48px}
+  }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://purcellventures.co/#founder","name":"Elijah Purcell","url":"https://purcellventures.co/who","image":"https://purcellventures.co/brand/elijah.jpg","jobTitle":"Founder, Purcell Ventures LLC","worksFor":{"@type":"Organization","name":"Purcell Ventures LLC","url":"https://purcellventures.co"},"affiliation":{"@type":"CollegeOrUniversity","name":"University of Alabama"},"address":{"@type":"PostalAddress","addressLocality":"Tuscaloosa","addressRegion":"AL","addressCountry":"US"},"telephone":"+12054627839","email":"elijah@purcell-ventures.com","sameAs":["https://purcellventures.co","https://github.com/thebigjah","https://www.linkedin.com/in/theelijahpurcell","https://www.instagram.com/elijah_the_tall/","https://ua-today.vercel.app"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://purcellventures.co/#founder","name":"Elijah Purcell","url":"https://purcellventures.co/who","image":"https://purcellventures.co/brand/elijah.jpg","jobTitle":"Founder, Purcell Ventures LLC","worksFor":{"@type":"Organization","name":"Purcell Ventures LLC","url":"https://purcellventures.co"},"affiliation":{"@type":"CollegeOrUniversity","name":"University of Alabama"},"address":{"@type":"PostalAddress","addressLocality":"Tuscaloosa","addressRegion":"AL","addressCountry":"US"},"telephone":"+12054627839","email":"elijah@purcell-ventures.com","sameAs":["https://purcellventures.co","https://github.com/thebigjah","https://www.linkedin.com/in/theelijahpurcell","https://www.instagram.com/theelijahpurcell/","https://ua-today.vercel.app"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://purcellventures.co"},{"@type":"ListItem","position":2,"name":"Contact card","item":"https://purcellventures.co/card"}]}</script>
   <meta property="og:image" content="https://purcellventures.co/card/elijah.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://purcellventures.co/card/elijah.jpg">
   <link rel="canonical" href="https://purcellventures.co/card">
   <meta property="og:url" content="https://purcellventures.co/card">
+  <link rel="preload" as="font" type="font/woff2" href="/card/fonts/clash-display-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/card/fonts/satoshi-500.woff2" crossorigin>
 </head>
 <body>
 <div class="wrap">
 
   <header>
     <div class="mark">Purcell Ventures LLC</div>
-    <div class="who">
-      <img class="face" src="elijah.jpg" width="88" height="88"
-           alt="Elijah Purcell, founder of Purcell Ventures LLC and University of Alabama student" fetchpriority="high">
-      <div>
-        <h1>Elijah Purcell</h1>
-        <p class="role">Founder. Web design and software for local business.</p>
-      </div>
+    <div class="plate">
+      <img src="/card/elijah.jpg" width="880" height="880" fetchpriority="high"
+           alt="Elijah Purcell, founder of Purcell Ventures LLC">
+      <div class="band"><h1>Elijah Purcell</h1></div>
     </div>
-    <div class="rule"></div>
+    <p class="role">Founder. I build websites and software for local businesses, one at a time.</p>
   </header>
 
-  <a class="save" id="save" href="elijah.vcf" download="Elijah-Purcell.vcf">Add to contacts</a>
+  <a class="save" id="save" href="/card/elijah.vcf" download="Elijah-Purcell.vcf">Add to contacts</a>
   <p class="save-note" id="note">Downloads a contact card. Works on iPhone and Android.</p>
 
   <script>
@@ -146,7 +157,7 @@
       try { localStorage.setItem(KEY, "1"); } catch (e) {}
       var f = document.createElement("iframe");
       f.style.display = "none";
-      f.src = "elijah.vcf";
+      f.src = "/card/elijah.vcf";
       document.body.appendChild(f);
       var n = document.getElementById("note");
       if (n) n.textContent = "If the contact card did not open, tap the button above.";
@@ -158,6 +169,7 @@
   <ul>
     <li><a href="tel:+12054627839"><span class="k">Call or text</span><span class="v">(205) 462-7839</span></a></li>
     <li><a href="mailto:elijah@purcell-ventures.com"><span class="k">Email</span><span class="v">elijah@purcell&#8209;ventures.com</span></a></li>
+    <li><a href="https://purcellventures.co"><span class="k">See what I build<span class="d">Sites, software and AI tooling for local business</span></span><span class="v">purcellventures.co</span></a></li>
   </ul>
 
   <!-- TWO ROWS ARE MISSING ON PURPOSE.
@@ -166,18 +178,12 @@
        schedule) and paste the row below back into "Reach me".
          <li><a href="REAL_BOOKING_URL"><span class="k">Book time<span class="d">See what I actually have open</span></span><span class="v">calendar</span></a></li>
   -->
-  <h2>Work</h2>
-  <ul>
-    <li><a href="https://purcellventures.co"><span class="k">Purcell Ventures<span class="d">Sites, software, AI consulting</span></span><span class="v">visit</span></a></li>
-    <li><a href="https://ua-today.vercel.app"><span class="k">UA Today<span class="d">Everything happening on campus, in one place</span></span><span class="v">visit</span></a></li>
-    <li><a href="https://english-pruitt.vercel.app"><span class="k">English Pruitt Photography<span class="d">Client work</span></span><span class="v">visit</span></a></li>
-  </ul>
 
   <h2>Elsewhere</h2>
   <ul>
-    <li><a href="https://instagram.com/elijah_the_tall"><span class="k">Instagram</span><span class="v">@elijah_the_tall</span></a></li>
-    <li><a href="https://github.com/thebigjah"><span class="k">GitHub</span><span class="v">thebigjah</span></a></li>
-    <li><a href="https://www.linkedin.com/in/theelijahpurcell"><span class="k">LinkedIn</span><span class="v">Elijah Purcell</span></a></li>
+    <li><a href="https://instagram.com/theelijahpurcell"><span class="k"><i class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg></i>Instagram</span><span class="v">@theelijahpurcell</span></a></li>
+    <li><a href="https://github.com/thebigjah"><span class="k"><i class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.6 5.6.6 11.9c0 5 3.3 9.3 7.8 10.8.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C17 4.4 18 4.7 18 4.7c.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6a11.4 11.4 0 0 0 7.8-10.8C23.4 5.6 18.3.5 12 .5z"/></svg></i>GitHub</span><span class="v">thebigjah</span></a></li>
+    <li><a href="https://www.linkedin.com/in/theelijahpurcell"><span class="k"><i class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.2V9h3.4v1.6h.1a3.8 3.8 0 0 1 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5v6.2zM5.1 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM6.9 20.4H3.3V9h3.6v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 1 .8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7c0-.9-.8-1.7-1.8-1.7z"/></svg></i>LinkedIn</span><span class="v">Elijah Purcell</span></a></li>
   </ul>
 
   <footer>

@@ -231,7 +231,7 @@ const orgSchema = {
       "sameAs": [
         "https://www.linkedin.com/in/theelijahpurcell",
         "https://github.com/thebigjah",
-        "https://www.instagram.com/elijah_the_tall/",
+        "https://www.instagram.com/theelijahpurcell/",
         "https://purcellventures.co/who",
         "https://purcellventures.co/resume",
         "https://ua-today.vercel.app/about.html"],

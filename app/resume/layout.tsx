@@ -56,7 +56,7 @@ const schema = {
   ],
   "sameAs": ["https://www.linkedin.com/in/theelijahpurcell",
         "https://github.com/thebigjah",
-        "https://www.instagram.com/elijah_the_tall/"],
+        "https://www.instagram.com/theelijahpurcell/"],
 };
 
 

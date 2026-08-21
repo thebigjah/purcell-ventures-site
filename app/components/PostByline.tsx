@@ -61,7 +61,7 @@ export default function PostByline({ post }: { post: PostMeta }) {
       sameAs: [
         "https://github.com/thebigjah",
         "https://www.linkedin.com/in/theelijahpurcell",
-        "https://www.instagram.com/elijah_the_tall/",
+        "https://www.instagram.com/theelijahpurcell/",
       ],
     },
     publisher: {

@@ -154,7 +154,7 @@ export default function WhoPage() {
           Elsewhere:{" "}
           <a href="https://www.linkedin.com/in/theelijahpurcell" className="underline">LinkedIn</a>,{" "}
           <a href="https://github.com/thebigjah" className="underline">GitHub</a>,{" "}
-          <a href="https://www.instagram.com/elijah_the_tall/" className="underline">Instagram</a>.
+          <a href="https://www.instagram.com/theelijahpurcell/" className="underline">Instagram</a>.
         </p>
         <p className="mt-3">Last reviewed 20 August 2026.</p>
       </div>

@@ -82,7 +82,7 @@ const schema = {
         "https://www.linkedin.com/in/theelijahpurcell",
         "https://purcellventures.co/resume",
         "https://github.com/thebigjah",
-        "https://www.instagram.com/elijah_the_tall/"],
+        "https://www.instagram.com/theelijahpurcell/"],
     },
     {
       "@type": "FAQPage",
