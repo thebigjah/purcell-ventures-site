@@ -33,24 +33,24 @@ const MODULES = [
     category: "Customer Management",
     items: [
       { name: "Simple CRM", desc: "Contact list, notes, follow-up reminders, and a visual pipeline." },
-      { name: "Lead Capture Pipeline", desc: "Embeddable lead form connected to a kanban board — from inquiry to closed deal." },
+      { name: "Lead Capture Pipeline", desc: "Embeddable lead form connected to a kanban board, from inquiry to closed deal." },
       { name: "Loyalty Program", desc: "Digital punch card with QR code check-ins. Reward your repeat customers." },
     ],
   },
   {
     category: "AI-Powered Tools",
     items: [
-      { name: "AI Chatbot Widget", desc: "A chatbot on your website, trained on your business — answers questions 24/7." },
+      { name: "AI Chatbot Widget", desc: "A chatbot on your website, trained on your business, answers questions 24/7." },
       { name: "AI Content Generator", desc: "Blog posts, product descriptions, and bios written on demand." },
       { name: "AI Caption Generator", desc: "Upload a photo, get five ready-to-post social media captions." },
-      { name: "AI FAQ Builder", desc: "Answer a few questions — get a complete FAQ page built automatically." },
+      { name: "AI FAQ Builder", desc: "Answer a few questions, get a complete FAQ page built automatically." },
     ],
   },
   {
     category: "Branding & Identity",
     items: [
-      { name: "Logo Designer", desc: "AI-assisted logo creation — pick your style, icon, and colors. Get a professional mark in minutes." },
-      { name: "Brand Kit", desc: "Complete brand guide: primary and accent colors, font pairings, logo variations, and usage rules — all in one export." },
+      { name: "Logo Designer", desc: "AI-assisted logo creation, pick your style, icon, and colors. Get a professional mark in minutes." },
+      { name: "Brand Kit", desc: "Complete brand guide: primary and accent colors, font pairings, logo variations, and usage rules, all in one export." },
       { name: "Color Palette Tool", desc: "Describe your business vibe in plain English. Get a curated color palette with hex codes and usage guidance." },
       { name: "Business Card Designer", desc: "Front-and-back business card design with your branding. Print-ready PDF and digital version included." },
       { name: "Social Media Templates", desc: "A set of branded post, story, and cover templates built around your colors and logo. Consistent and professional." },
@@ -125,11 +125,11 @@ const PRICING = [
 ];
 
 const FAQ = [
-  { q: "How is this different from Wix or Squarespace?", a: "Those are tools you manage yourself. I build it, maintain it, update it, and add AI capabilities those platforms don't offer — like a chatbot trained on your business, AI-generated social posts, and automated review responses. You focus on your business, I handle the tech." },
-  { q: "Why is it cheaper than a typical agency?", a: "Because I build modular, reusable systems — not one-off custom builds from scratch. I use AI tools throughout my workflow, which cuts hours without cutting quality. You get professional-grade work at a fraction of typical agency rates." },
-  { q: "Do I own the website?", a: "Yes. The site, content, and domain are yours. If you ever want to leave, I hand over everything — full source code, all assets. No hostage-taking." },
+  { q: "How is this different from Wix or Squarespace?", a: "Those are tools you manage yourself. I build it, maintain it, update it, and add AI capabilities those platforms don't offer, like a chatbot trained on your business, AI-generated social posts, and automated review responses. You focus on your business, I handle the tech." },
+  { q: "Why is it cheaper than a typical agency?", a: "Because I build modular, reusable systems, not one-off custom builds from scratch. I use AI tools throughout my workflow, which cuts hours without cutting quality. You get professional-grade work at a fraction of typical agency rates." },
+  { q: "Do I own the website?", a: "Yes. The site, content, and domain are yours. If you ever want to leave, I hand over everything, full source code, all assets. No hostage-taking." },
   { q: "What if I need something that's not on the list?", a: "Ask. If it's in scope, I'll add it. If it's a bigger custom build, I'll quote it separately. Either way, you'll have a clear answer before any work starts." },
-  { q: "What does the setup fee cover?", a: "The initial build — getting your branding, colors, content, and settings configured. After that, the monthly retainer covers maintenance, updates, and support." },
+  { q: "What does the setup fee cover?", a: "The initial build, getting your branding, colors, content, and settings configured. After that, the monthly retainer covers maintenance, updates, and support." },
   { q: "Can I start small and add more later?", a: "Absolutely. Start with a website and chatbot. Add booking when you're ready. Scale at your own pace." },
 ];
 
@@ -194,7 +194,7 @@ const TEAM_MEMBERS = [
   },
 ];
 
-// V-formation depth config per index (7 members — center is index 3)
+// V-formation depth config per index (7 members, center is index 3)
 const V_OFFSETS  = [-60, -35, -15, 0, -15, -35, -60];
 const V_SCALES   = [0.80, 0.88, 0.95, 1.0, 0.95, 0.88, 0.80];
 const V_OPACITIES= [0.55, 0.70, 0.85, 1.0, 0.85, 0.70, 0.55];
@@ -206,7 +206,7 @@ function FullSilhouette({ fillColor, strokeColor, glowColor }: { fillColor: stri
       style={{ filter: glowColor ? `drop-shadow(0 0 16px ${glowColor}80)` : undefined, transition: "filter 0.3s" }}>
       {/* Head */}
       <circle cx="36" cy="26" r="19" fill={fillColor} stroke={strokeColor} strokeWidth="1.5"/>
-      {/* Body — shoulder-to-hip blob, no visible limbs */}
+      {/* Body, shoulder-to-hip blob, no visible limbs */}
       <path d="M6 72 C6 57 19 50 36 50 C53 50 66 57 66 72 L62 136 Q62 142 36 142 Q10 142 10 136 Z" fill={fillColor} stroke={strokeColor} strokeWidth="1.5"/>
     </svg>
   );
@@ -233,7 +233,7 @@ function TeamBuilder() {
           One subscription.<br />Your whole team.
         </h2>
         <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", marginBottom: "52px", maxWidth: "600px", lineHeight: 1.75 }}>
-          Each role below is a real job you&#39;d have to hire for. Hover to see what they handle — and what that would cost you to hire. Then see what it costs with me instead.
+          Each role below is a real job you&#39;d have to hire for. Hover to see what they handle, and what that would cost you to hire. Then see what it costs with me instead.
         </p>
 
         {/* V-Formation figure row */}
@@ -296,7 +296,7 @@ function TeamBuilder() {
                   <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "40px", fontWeight: 700, color: "var(--color-warm-text)", letterSpacing: "-0.01em", lineHeight: 1 }}>${hovered.salary.toLocaleString()}</span>
                   <span style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", paddingBottom: "6px" }}>/mo</span>
                 </div>
-                <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", marginBottom: "16px" }}>Average salary ÷ 12 — before benefits or taxes</div>
+                <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", marginBottom: "16px" }}>Average salary ÷ 12, before benefits or taxes</div>
                 <div style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.7 }}>{hovered.tagline}</div>
               </div>
               <div>
@@ -440,7 +440,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
       <div style={{ background: "linear-gradient(160deg, #0c0a08 60%, #1e1814 100%)", padding: "32px 28px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "14px" }}>
         <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d4af37" }}>Limited Time Offer</div>
         <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "26px", fontWeight: 700, color: "#f5f0e0", lineHeight: 1.2 }}>Get 20% Off Your<br/>First Appointment</div>
-        <div style={{ fontSize: "13px", color: "#8a8070", maxWidth: "320px", lineHeight: 1.65 }}>Join 214 local clients already booking online. Reserve your spot — takes 30 seconds.</div>
+        <div style={{ fontSize: "13px", color: "#8a8070", maxWidth: "320px", lineHeight: 1.65 }}>Join 214 local clients already booking online. Reserve your spot, takes 30 seconds.</div>
         <div style={{ display: "flex", gap: "8px", width: "100%", maxWidth: "360px" }}>
           <input readOnly placeholder="Your name" style={{ ...mockInput, flex: 1 }} />
           <input readOnly placeholder="Email address" style={{ ...mockInput, flex: 2 }} />
@@ -594,7 +594,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
       </div>
       <div style={{ background: "#0c0a08", padding: "14px 16px", borderBottom: "1px solid #2e2820" }}>
         <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#8a8070", marginBottom: "8px" }}>New Broadcast</div>
-        <textarea readOnly rows={3} defaultValue={"Hey {name}! We have a cancellation open tomorrow at 10:30 AM. Reply YES to grab it — first come first served! 🙌"} style={{ ...mockInput, resize: "none", fontFamily: "inherit", lineHeight: 1.6 }} />
+        <textarea readOnly rows={3} defaultValue={"Hey {name}! We have a cancellation open tomorrow at 10:30 AM. Reply YES to grab it, first come first served! 🙌"} style={{ ...mockInput, resize: "none", fontFamily: "inherit", lineHeight: 1.6 }} />
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "8px" }}>
           <div>
             <span style={{ fontSize: "11px", color: "#524d45" }}>To: </span>
@@ -617,7 +617,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
         {/* Composer */}
         <div style={{ padding: "16px", borderRight: "1px solid #2e2820" }}>
           <div style={{ fontSize: "11px", fontWeight: 700, color: "#8a8070", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "8px" }}>Compose Post</div>
-          <textarea readOnly rows={4} defaultValue={"Walk-ins welcome today! Stop in and treat yourself — link in bio for booking 🌿 #smithsalon #kennesaw"} style={{ ...mockInput, resize: "none", fontFamily: "inherit", lineHeight: 1.65 }} />
+          <textarea readOnly rows={4} defaultValue={"Walk-ins welcome today! Stop in and treat yourself, link in bio for booking 🌿 #smithsalon #kennesaw"} style={{ ...mockInput, resize: "none", fontFamily: "inherit", lineHeight: 1.65 }} />
           <div style={{ marginTop: "8px", display: "flex", gap: "6px" }}>
             {[["IG","#d4af37"],["FB","#3d3530"]].map(([p,c]) => (
               <div key={p} style={{ display: "flex", alignItems: "center", gap: "4px", padding: "4px 10px", background: c + "20", border: `1px solid ${c}50`, borderRadius: "4px", fontSize: "11px", color: c, fontWeight: 700 }}>{p}</div>
@@ -831,10 +831,10 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
       </div>
       <div style={{ background: "#0c0a08", padding: "12px 14px", display: "flex", flexDirection: "column", gap: "8px" }}>
         {([
-          {side:"bot",text:"Hi! I'm here 24/7. Ask me anything about Smith Salon — services, hours, pricing, or booking."},
+          {side:"bot",text:"Hi! I'm here 24/7. Ask me anything about Smith Salon, services, hours, pricing, or booking."},
           {side:"user",text:"Do you have any Saturday openings this week?"},
           {side:"bot",text:"Yes! We have 10:00 AM and 2:30 PM open this Saturday. Both include a free consultation. Which works?"},
-          {side:"user",text:"2:30 — can I book highlights?"},
+          {side:"user",text:"2:30, can I book highlights?"},
           {side:"bot",text:"Done! Booked for Saturday 2:30 PM — Highlights with Sarah · $120. Confirmation sent ✓"},
         ] as {side:string;text:string}[]).map((msg,i) => (
           <div key={i} style={{ display: "flex", justifyContent: msg.side === "user" ? "flex-end" : "flex-start" }}>
@@ -906,7 +906,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
       </div>
       <div style={{ background: "#0c0a08", padding: "8px 16px", display: "flex", flexDirection: "column", gap: "6px" }}>
         {[
-          {text:"Walk-ins welcome today — stop in and treat yourself ✨",sel:true},
+          {text:"Walk-ins welcome today, stop in and treat yourself ✨",sel:true},
           {text:"From dull to radiant in one appointment. Book the link in bio.",sel:false},
           {text:"She said 'surprise me' and we delivered. 🌿 #colortransformation",sel:false},
           {text:"Your hair, your story. Let us help you write the next chapter.",sel:false},
@@ -945,7 +945,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
             <div style={{ fontSize: "11px", fontWeight: 700, color: "#8a8070", letterSpacing: "0.08em", textTransform: "uppercase" }}>Generated FAQs</div>
             {pill("12 questions","#7aaa6a")}
           </div>
-          {[{q:"Do you accept walk-ins?",a:"Yes! Walk-ins are welcome based on stylist availability. Booking ahead is recommended — you can book online 24/7.",open:true},{q:"How long does a color service take?",open:false},{q:"What's your cancellation policy?",open:false},{q:"Do you offer gift cards?",open:false}].map((faq,i) => (
+          {[{q:"Do you accept walk-ins?",a:"Yes! Walk-ins are welcome based on stylist availability. Booking ahead is recommended, you can book online 24/7.",open:true},{q:"How long does a color service take?",open:false},{q:"What's your cancellation policy?",open:false},{q:"Do you offer gift cards?",open:false}].map((faq,i) => (
             <div key={i} style={{ borderTop: i > 0 ? "1px solid #1a1714" : undefined, padding: "7px 0" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <div style={{ fontSize: "12px", fontWeight: 600, color: faq.open ? "#f5f0e0" : "#8a8070" }}>{faq.q}</div>
@@ -1034,7 +1034,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
             </div>
             <div style={{ padding: "8px 10px", background: "#0c0a08", borderRadius: "5px", border: "1px solid #2e2820" }}>
               <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "13px", color: "#f5f0e0", marginBottom: "2px" }}>Smith Salon</div>
-              <div style={{ fontSize: "11px", color: "#8a8070", lineHeight: 1.5 }}>Where style meets you — premium hair care in Kennesaw.</div>
+              <div style={{ fontSize: "11px", color: "#8a8070", lineHeight: 1.5 }}>Where style meets you, premium hair care in Kennesaw.</div>
             </div>
           </div>
         </div>
@@ -1058,7 +1058,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", background: "#0c0a08" }}>
         <div style={{ padding: "14px 16px", borderRight: "1px solid #2e2820" }}>
           <div style={{ fontSize: "11px", fontWeight: 700, color: "#8a8070", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "8px" }}>Describe Your Brand</div>
-          <div style={{ ...mockInput, fontSize: "12px", color: "#c8c0b0", marginBottom: "8px", height: "60px", display: "flex", alignItems: "flex-start", paddingTop: "10px" }}>Luxury salon — warm, welcoming, professional. Upscale but not cold.</div>
+          <div style={{ ...mockInput, fontSize: "12px", color: "#c8c0b0", marginBottom: "8px", height: "60px", display: "flex", alignItems: "flex-start", paddingTop: "10px" }}>Luxury salon, warm, welcoming, professional. Upscale but not cold.</div>
           <div style={{ fontSize: "11px", fontWeight: 700, color: "#8a8070", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "8px", marginTop: "10px" }}>Industry</div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "5px", marginBottom: "12px" }}>
             {["Beauty","Health","Food","Retail","Services","Legal","Tech"].map((ind,i) => (
@@ -1291,7 +1291,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
       <div style={{ background: "#0c0a08" }}>
         <div style={{ margin: "12px 14px", padding: "10px 14px", background: "#e05c5c12", border: "1px solid #e05c5c40", borderRadius: "6px", display: "flex", alignItems: "center", gap: "8px" }}>
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#e05c5c" strokeWidth="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          <span style={{ fontSize: "12px", color: "#e05c5c", fontWeight: 600 }}>2 items below reorder threshold — order soon</span>
+          <span style={{ fontSize: "12px", color: "#e05c5c", fontWeight: 600 }}>2 items below reorder threshold, order soon</span>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr 80px", padding: "7px 14px", background: "#141210", borderBottom: "1px solid #2e2820" }}>
           {["Product","SKU","In Stock","Reorder At","Status"].map(h => <span key={h} style={{ fontSize: "10px", fontWeight: 700, color: "#524d45", letterSpacing: "0.05em", textTransform: "uppercase" }}>{h}</span>)}
@@ -1445,7 +1445,7 @@ const borderCell: React.CSSProperties = {
   position: "relative",
 };
 
-// Floating dashboard cards — inline graphic, no external assets needed
+// Floating dashboard cards, inline graphic, no external assets needed
 function DashboardGraphic() {
   const card: React.CSSProperties = {
     background: "#1a1714",
@@ -1463,7 +1463,7 @@ function DashboardGraphic() {
   return (
     <div style={{ position: "relative", width: "100%", height: "420px", minWidth: "320px" }}>
 
-      {/* Booking card — top left */}
+      {/* Booking card, top left */}
       <div style={{ ...card, top: "30px", left: "0px", transform: "rotate(-2deg)", boxShadow: "0 20px 60px rgba(0,0,0,0.5)" }}>
         <div style={label}>New Booking</div>
         <div style={value}>Sarah M. — Highlights</div>
@@ -1473,7 +1473,7 @@ function DashboardGraphic() {
         </div>
       </div>
 
-      {/* Invoice card — right */}
+      {/* Invoice card, right */}
       <div style={{ ...card, top: "110px", right: "0px", transform: "rotate(1.5deg)", boxShadow: "0 20px 60px rgba(0,0,0,0.5)" }}>
         <div style={label}>Payment Received</div>
         <div style={{ fontSize: "28px", fontWeight: 800, color: "#d4af37", letterSpacing: "-0.02em" }}>$450.00</div>
@@ -1484,7 +1484,7 @@ function DashboardGraphic() {
         </div>
       </div>
 
-      {/* Review card — bottom left */}
+      {/* Review card, bottom left */}
       <div style={{ ...card, bottom: "40px", left: "20px", transform: "rotate(-1.25deg)", boxShadow: "0 20px 60px rgba(0,0,0,0.5)" }}>
         <div style={label}>New Google Review</div>
         <div style={{ display: "flex", gap: "2px", marginBottom: "8px" }}>
@@ -1496,10 +1496,10 @@ function DashboardGraphic() {
         <div style={{ fontSize: "11px", color: "#8a8070", marginTop: "6px" }}>— Ashley T.</div>
       </div>
 
-      {/* AI caption card — floats above container top-right */}
+      {/* AI caption card, floats above container top-right */}
       <div style={{ ...card, top: "-70px", right: "0px", transform: "rotate(2deg)", padding: "12px 16px", minWidth: "180px", boxShadow: "0 16px 48px rgba(0,0,0,0.4)" }}>
         <div style={label}>AI Caption Ready</div>
-        <div style={{ fontSize: "12px", color: "#f5f0e0", lineHeight: 1.5 }}>"Walk-ins welcome today — stop in and treat yourself ✨"</div>
+        <div style={{ fontSize: "12px", color: "#f5f0e0", lineHeight: 1.5 }}>"Walk-ins welcome today, stop in and treat yourself ✨"</div>
         <div style={{ fontSize: "11px", color: "#d4af37", marginTop: "6px", fontWeight: 600 }}>5 options generated</div>
       </div>
 
@@ -1531,7 +1531,7 @@ export default function DigitalPage() {
                 <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Built with you.</em>
               </h1>
               <p className="deck">
-                Websites, booking, CRM, chatbots, and more — built around your business, your input, your approval. Starting at $99/month.
+                Websites, booking, CRM, chatbots, and more, built around your business, your input, your approval. Starting at $99/month.
               </p>
               <div style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
                 <a href="#contact" className="pv-btn-primary">Book a free demo</a>
@@ -1715,7 +1715,7 @@ export default function DigitalPage() {
                 </em>
               </h3>
               <p className="pv-italic" style={{ fontSize: "16.5px", color: "var(--color-warm-text)", opacity: 0.88, lineHeight: 1.55, maxWidth: "520px" }}>
-                Pick exactly what you need — two tools or twelve. I&apos;ll build the bundle, quote you a flat monthly price, and we&apos;ll get started. No upsells, no surprises.
+                Pick exactly what you need, two tools or twelve. I&apos;ll build the bundle, quote you a flat monthly price, and we&apos;ll get started. No upsells, no surprises.
               </p>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "12px", alignItems: "flex-start" }}>
@@ -1746,7 +1746,7 @@ export default function DigitalPage() {
                 { title: "You talk to the person who built it", desc: "No support tickets, no account managers, no runaround. You text or call me directly." },
                 { title: "AI built in from day one", desc: "A chatbot that knows your business, captions that sound like you, content that doesn't take hours to write." },
                 { title: "Cheaper than any agency. Better than DIY.", desc: "Agencies charge $2,000+/month. Wix can't do half of what I offer. You get professional tools at a price that makes sense." },
-                { title: "Everything is yours", desc: "The code, the domain, the content — all of it. You're not locked in. I hand it over the moment you ask." },
+                { title: "Everything is yours", desc: "The code, the domain, the content, all of it. You're not locked in. I hand it over the moment you ask." },
               ].map((point) => (
                 <div key={point.title} style={{ paddingLeft: "20px", borderLeft: "2px solid var(--color-warm-border-light)" }}>
                   <h4 style={{ fontSize: "15px", fontWeight: 600, marginBottom: "5px" }}>{point.title}</h4>
@@ -1761,10 +1761,10 @@ export default function DigitalPage() {
               I'm Elijah Purcell — 19 years old, founded Purcell Ventures LLC, and studying at the University of Alabama in fall 2026.
             </p>
             <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.85, marginBottom: "20px" }}>
-              I started this business running gutters, pressure washing, and lawn care — so I understand what small businesses actually need. Not buzzwords. Real tools that save time, bring in customers, and make the operation run smoother.
+              I started this business running gutters, pressure washing, and lawn care, so I understand what small businesses actually need. Not buzzwords. Real tools that save time, bring in customers, and make the operation run smoother.
             </p>
             <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.85 }}>
-              I use the same AI development tools that engineers at top tech companies use — which means you get professional-grade work, fast, at a price that makes sense for a small business.
+              I use the same AI development tools that engineers at top tech companies use, which means you get professional-grade work, fast, at a price that makes sense for a small business.
             </p>
           </div>
         </div>
@@ -1832,7 +1832,7 @@ export default function DigitalPage() {
               <div>
                 <label style={{ display: "block", fontSize: "11px", fontWeight: 600, color: "var(--color-warm-text-muted)", marginBottom: "6px", letterSpacing: "0.06em", textTransform: "uppercase" }}>Best fit?</label>
                 <select style={{ width: "100%", padding: "10px 13px", background: "var(--color-warm-bg)", border: "1px solid var(--color-warm-border)", borderRadius: "6px", color: "var(--color-warm-text-muted)", fontSize: "14px", outline: "none" }}>
-                  <option value="">Not sure — help me pick</option>
+                  <option value="">Not sure, help me pick</option>
                   <option value="starter">Starter ($99/mo) — Website + Chatbot</option>
                   <option value="growth">Growth ($179/mo) — + Booking + Marketing</option>
                   <option value="full">Full Service ($279/mo) — Everything</option>

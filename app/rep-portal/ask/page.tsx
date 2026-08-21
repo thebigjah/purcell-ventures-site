@@ -11,9 +11,9 @@ interface Message {
 
 const SUGGESTIONS = [
   "How do I handle 'we already have a website'?",
-  "A prospect with 12 employees wants AI training — what do I quote?",
+  "A prospect with 12 employees wants AI training, what do I quote?",
   "Walk me through the Pilot Partner pitch verbatim",
-  "Customer says $179/mo is too much — what do I say?",
+  "Customer says $179/mo is too much, what do I say?",
   "When do I escalate to Elijah vs handle solo?",
   "What's my commission if I close a Growth subscription?",
 ];
@@ -135,7 +135,7 @@ export default function RepAskPage() {
           </form>
 
           <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "16px", textAlign: "center", fontStyle: "italic" }}>
-            Conversations aren&apos;t saved — refresh to clear. If you hit a question the bot can&apos;t answer, text Elijah and we&apos;ll add the answer to its training.
+            Conversations aren&apos;t saved, refresh to clear. If you hit a question the bot can&apos;t answer, text Elijah and we&apos;ll add the answer to its training.
           </p>
         </main>
       </div>

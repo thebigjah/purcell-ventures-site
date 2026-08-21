@@ -7,7 +7,7 @@ import { PortalNav } from "../_components/PortalNav";
 import { STAGES, type Stage } from "@/lib/crm-storage";
 
 /**
- * Rep preferences — stored locally per browser.
+ * Rep preferences, stored locally per browser.
  * When Firestore lands, these can sync per-rep across devices.
  */
 
@@ -123,7 +123,7 @@ export default function SettingsPage() {
             />
             <Toggle
               label="Compact mode"
-              hint="Tighter spacing across CRM views — fit more on screen. (Not yet active — visual preference only for now.)"
+              hint="Tighter spacing across CRM views, fit more on screen. (Not yet active, visual preference only for now.)"
               checked={settings.compactMode}
               onChange={(v) => update("compactMode", v)}
             />
@@ -134,7 +134,7 @@ export default function SettingsPage() {
             <h3 style={sectionHead}>Notifications</h3>
             <Toggle
               label="Notify on overdue tasks"
-              hint="Future: when push notifications + email are wired (Phase 2), get pinged when tasks go overdue. Currently just toggles a preference — no actual notifications yet."
+              hint="Future: when push notifications + email are wired (Phase 2), get pinged when tasks go overdue. Currently just toggles a preference, no actual notifications yet."
               checked={settings.notifyOverdue}
               onChange={(v) => update("notifyOverdue", v)}
             />

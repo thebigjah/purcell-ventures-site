@@ -142,7 +142,7 @@ export default function PVEstimatingPage() {
             </div>
             <div style={{ marginBottom: "16px" }}>
               <label style={inputLabel}>Job description</label>
-              <textarea value={editing.jobDescription} onChange={(e) => setEditing({ ...editing, jobDescription: e.target.value })} style={{ ...fieldStyle, minHeight: "80px", resize: "vertical", fontFamily: "var(--font-inter), sans-serif" }} placeholder="Scope summary — what we're building / delivering" />
+              <textarea value={editing.jobDescription} onChange={(e) => setEditing({ ...editing, jobDescription: e.target.value })} style={{ ...fieldStyle, minHeight: "80px", resize: "vertical", fontFamily: "var(--font-inter), sans-serif" }} placeholder="Scope summary, what we're building / delivering" />
             </div>
 
             <h3 style={sectionHead}>Line items</h3>
@@ -174,7 +174,7 @@ export default function PVEstimatingPage() {
               <textarea value={editing.notes} onChange={(e) => setEditing({ ...editing, notes: e.target.value })} style={{ ...fieldStyle, minHeight: "60px", resize: "vertical", fontFamily: "var(--font-inter), sans-serif" }} placeholder="e.g., 50% deposit due to start; payment terms net 14" />
             </div>
             <div style={{ marginBottom: "16px" }}>
-              <label style={inputLabel}>Exclusions (NOT included — protects against scope creep)</label>
+              <label style={inputLabel}>Exclusions (NOT included, protects against scope creep)</label>
               <textarea value={editing.exclusions} onChange={(e) => setEditing({ ...editing, exclusions: e.target.value })} style={{ ...fieldStyle, minHeight: "60px", resize: "vertical", fontFamily: "var(--font-inter), sans-serif" }} placeholder="e.g., Third-party software costs not included; custom integrations billed separately" />
             </div>
 

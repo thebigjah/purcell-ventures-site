@@ -83,14 +83,14 @@ export default function CaseStudiesPage() {
               fontSize: "19px", color: "var(--color-warm-text)", opacity: 0.85,
               maxWidth: "560px", margin: "0 auto 24px", lineHeight: 1.55,
             }}>
-              Consulting work is starting intentionally — choosing the first clients carefully, doing each session with full attention, then asking permission to publish the result. First case studies land within ~60 days of starting client work.
+              Consulting work is starting intentionally, choosing the first clients carefully, doing each session with full attention, then asking permission to publish the result. First case studies land within ~60 days of starting client work.
             </p>
             <p style={{
               fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
               fontSize: "14px", color: "var(--color-warm-text-muted)",
               maxWidth: "560px", margin: "0 auto 36px", lineHeight: 1.65,
             }}>
-              If you&apos;d like to be the early client whose story anchors this page — discounted rate, more of my attention, and the case study itself becomes a marketing asset for your business if you want it to.
+              If you&apos;d like to be the early client whose story anchors this page, discounted rate, more of my attention, and the case study itself becomes a marketing asset for your business if you want it to.
             </p>
             <Link href="/consulting/book" style={{
               display: "inline-block",

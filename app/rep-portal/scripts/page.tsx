@@ -6,7 +6,7 @@ import { PortalNav } from "../_components/PortalNav";
 const SCRIPTS = [
   {
     name: "Soft Close (preferred first)",
-    script: "Here's what I'd suggest — let me put together a quick overview of exactly what I'd build for you, with pricing, and we can look at it together. No commitment. Would that be useful?",
+    script: "Here's what I'd suggest, let me put together a quick overview of exactly what I'd build for you, with pricing, and we can look at it together. No commitment. Would that be useful?",
     note: "This gives them an easy 'yes' and you a reason to follow up. Default opening close.",
   },
   {
@@ -16,17 +16,17 @@ const SCRIPTS = [
   },
   {
     name: "Pilot Partner Pitch (Digital tiers only)",
-    script: "Here's the deal. We just launched these tiers, and right now I have 3 Pilot Partner spots left across all of them. I want to fill them with the right businesses, not just the first three to say yes. If you're a fit, here's what that means for you: 30% off the setup, 30% off your first 6 months. After that you transition to standard pricing — but you'll be paying what's still well under most agencies. What I need from you: at the 60-day mark, a short testimonial — 2 to 3 sentences. Right to use your business as a case study, anonymous if you prefer. And one introduction within 6 months to another business owner you respect. Doesn't have to result in a sale. Just an intro. That's the trade.",
+    script: "Here's the deal. We just launched these tiers, and right now I have 3 Pilot Partner spots left across all of them. I want to fill them with the right businesses, not just the first three to say yes. If you're a fit, here's what that means for you: 30% off the setup, 30% off your first 6 months. After that you transition to standard pricing, but you'll be paying what's still well under most agencies. What I need from you: at the 60-day mark, a short testimonial — 2 to 3 sentences. Right to use your business as a case study, anonymous if you prefer. And one introduction within 6 months to another business owner you respect. Doesn't have to result in a sale. Just an intro. That's the trade.",
     note: "Memorize the rhythm. Don't manufacture urgency past 'spots are limited' — they actually are.",
   },
   {
     name: "Urgency Close (only when they're warm)",
-    script: "I only take on a few new clients at a time so I can actually give each one attention. I've got a slot opening up this month — want to get on a call this week?",
+    script: "I only take on a few new clients at a time so I can actually give each one attention. I've got a slot opening up this month, want to get on a call this week?",
     note: "Only use this if they're genuinely interested. Never fabricate scarcity.",
   },
   {
     name: "Leave-Behind",
-    script: "Here's my card. My site is purcellventures.co — you can see pricing, tools, the whole thing. I'll follow up in a day or two if that's okay.",
+    script: "Here's my card. My site is purcellventures.co, you can see pricing, tools, the whole thing. I'll follow up in a day or two if that's okay.",
     note: "Always get permission to follow up. Always actually follow up.",
   },
 ];
@@ -51,7 +51,7 @@ export default function ScriptsPage() {
               What to <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>say.</em>
             </h1>
             <p className="deck">
-              Frameworks for opens, closes, and follow-ups. Memorize the rhythm — don&apos;t read them off a card mid-pitch.
+              Frameworks for opens, closes, and follow-ups. Memorize the rhythm, don&apos;t read them off a card mid-pitch.
             </p>
           </header>
 

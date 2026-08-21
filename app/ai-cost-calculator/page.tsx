@@ -15,17 +15,17 @@ interface Preset {
 
 const PRESETS: Record<string, Preset> = {
   realestate: { team: 6, rate: 55, manual: 12, auto: 65, cost: 1500,
-    desc: "Real estate office — agents + admin. Listing descriptions, market reports, follow-ups, contract drafts." },
+    desc: "Real estate office, agents + admin. Listing descriptions, market reports, follow-ups, contract drafts." },
   dental:     { team: 8, rate: 45, manual: 10, auto: 55, cost: 1500,
-    desc: "Dental practice — front desk + clinical admin. Insurance pre-auth, scheduling reminders, treatment-plan summaries, patient comms." },
+    desc: "Dental practice, front desk + clinical admin. Insurance pre-auth, scheduling reminders, treatment-plan summaries, patient comms." },
   law:        { team: 5, rate: 95, manual: 14, auto: 60, cost: 2500,
-    desc: "Law firm — partners + paralegals. Document review, brief drafting, intake forms, case summaries." },
+    desc: "Law firm, partners + paralegals. Document review, brief drafting, intake forms, case summaries." },
   marketing:  { team: 4, rate: 75, manual: 18, auto: 70, cost: 1500,
-    desc: "Marketing agency — content + ops. Caption writing, ad copy, scheduling, reporting, client deliverables." },
+    desc: "Marketing agency, content + ops. Caption writing, ad copy, scheduling, reporting, client deliverables." },
   ecommerce:  { team: 3, rate: 60, manual: 15, auto: 70, cost: 1500,
-    desc: "Ecommerce brand — operator + customer service. Product descriptions, support emails, social posts, returns workflows." },
+    desc: "Ecommerce brand, operator + customer service. Product descriptions, support emails, social posts, returns workflows." },
   solo:       { team: 1, rate: 100, manual: 20, auto: 65, cost: 500,
-    desc: "Solo founder — you wear every hat. Outbound, content, admin, follow-ups. Lower session cost reflects 1-on-1 pricing." },
+    desc: "Solo founder, you wear every hat. Outbound, content, admin, follow-ups. Lower session cost reflects 1-on-1 pricing." },
 };
 
 const PRESET_LABELS: Record<string, string> = {
@@ -66,9 +66,9 @@ export default function AICostCalculatorPage() {
       } else if (months < 6) {
         payback = { text: `At those inputs, the session pays back in ~${months.toFixed(1)} months. After that, the savings compound monthly.`, tier: "fast" };
       } else if (months < 24) {
-        payback = { text: `At those inputs, the session pays back in ~${months.toFixed(1)} months — slower than typical because either the team is small or manual hours are low. Worth doing if the work itself drains morale.`, tier: "slow" };
+        payback = { text: `At those inputs, the session pays back in ~${months.toFixed(1)} months, slower than typical because either the team is small or manual hours are low. Worth doing if the work itself drains morale.`, tier: "slow" };
       } else {
-        payback = { text: `At those inputs, the payback is ~${months.toFixed(1)} months — too slow to justify on time-savings alone. Consider a smaller-scope $175/hr 1-on-1 instead.`, tier: "too-slow" };
+        payback = { text: `At those inputs, the payback is ~${months.toFixed(1)} months, too slow to justify on time-savings alone. Consider a smaller-scope $175/hr 1-on-1 instead.`, tier: "too-slow" };
       }
     }
 
@@ -151,7 +151,7 @@ export default function AICostCalculatorPage() {
 
           <NumberField
             label="Average hourly cost per person"
-            context="Fully-loaded — salary + benefits + overhead. $40–85 for support, $60–110 for ops, $80–150 for managers."
+            context="Fully-loaded, salary + benefits + overhead. $40–85 for support, $60–110 for ops, $80–150 for managers."
             value={rate} onChange={setRate} min={15} max={500} prefix="$" suffix="/ hr"
             inputStyle={inputStyle}
           />
@@ -212,7 +212,7 @@ export default function AICostCalculatorPage() {
             fontSize: "11px", color: "var(--color-warm-text-light)",
             letterSpacing: "0.04em", lineHeight: 1.7, textAlign: "left",
           }}>
-            <strong style={{ color: "var(--color-warm-text)" }}>How this is calculated:</strong> manual hrs/wk × team size × automation % × 4.33 wks/mo = hours saved monthly. Multiply by hourly rate for dollar value. Payback = session cost ÷ monthly $ saved. Conservative — doesn&apos;t count quality improvements, error reduction, retention gains from less tedious work, or compounding from automations that build on each other.
+            <strong style={{ color: "var(--color-warm-text)" }}>How this is calculated:</strong> manual hrs/wk × team size × automation % × 4.33 wks/mo = hours saved monthly. Multiply by hourly rate for dollar value. Payback = session cost ÷ monthly $ saved. Conservative, doesn&apos;t count quality improvements, error reduction, retention gains from less tedious work, or compounding from automations that build on each other.
           </p>
         </div>
 

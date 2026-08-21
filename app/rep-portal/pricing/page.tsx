@@ -5,7 +5,7 @@ import { PortalNav } from "../_components/PortalNav";
 
 /**
  * Source of truth for rep-facing pricing.
- * When site prices change, update here too — this is what reps quote from.
+ * When site prices change, update here too, this is what reps quote from.
  *
  * Pilot Partner is a 30%-off offer Elijah controls. Track remaining spots
  * here so reps know what's still available.
@@ -75,7 +75,7 @@ export default function PricingReferencePage() {
               Pricing <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>reference</em>
             </h1>
             <p className="deck">
-              These prices are what you quote. They match the live site. If a prospect sees a different number anywhere — flag it to Elijah, don&apos;t negotiate to it.
+              These prices are what you quote. They match the live site. If a prospect sees a different number anywhere, flag it to Elijah, don&apos;t negotiate to it.
             </p>
           </header>
 
@@ -92,7 +92,7 @@ export default function PricingReferencePage() {
               </div>
             </div>
             <p style={{ margin: 0, fontSize: "14px", lineHeight: 1.6, color: "var(--color-warm-text)" }}>
-              <strong>30% off setup, 30% off first 6 months.</strong> Lock period: 6 months at Pilot pricing, then standard pricing after. In return, client gives: written testimonial at month 2, case-study rights (anonymous if requested), one referral intro within 6 months. <strong>3 spots left across all tiers.</strong> Don&apos;t mass-advertise — deploy verbally per the handbook&apos;s pitch script.
+              <strong>30% off setup, 30% off first 6 months.</strong> Lock period: 6 months at Pilot pricing, then standard pricing after. In return, client gives: written testimonial at month 2, case-study rights (anonymous if requested), one referral intro within 6 months. <strong>3 spots left across all tiers.</strong> Don&apos;t mass-advertise, deploy verbally per the handbook&apos;s pitch script.
             </p>
           </div>
 

@@ -5,10 +5,10 @@ import { VignetteBackground } from "@/app/components/VignetteBackground";
 import { PortalNav } from "../_components/PortalNav";
 
 /**
- * Rep CRM v0.1 — localStorage-backed (per-browser).
+ * Rep CRM v0.1, localStorage-backed (per-browser).
  *
  * Each rep tracks their own deals locally. Admin (Elijah) does NOT see
- * cross-rep deals here — that requires a shared backend (Firestore) which
+ * cross-rep deals here, that requires a shared backend (Firestore) which
  * lands in the next workshop. For now, reps screenshot or export their
  * deal list to share with Elijah for commission verification.
  */

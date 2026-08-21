@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 // - noindex/nofollow/noarchive so Google + AI crawlers skip them
 // - Pages remain live + functional for direct URL traffic (e.g., social posts,
 //   KDP book back-matter, email signature links pointing at /shop/<slug>)
-// - All Stripe Payment Links still work — they're independent of /shop pages
+// - All Stripe Payment Links still work, they're independent of /shop pages
 // Treatment: PV-owned legally, brand-invisible publicly.
 export const metadata: Metadata = {
   title: "Shop: Purcell Ventures",

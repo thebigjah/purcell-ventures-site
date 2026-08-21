@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 
-// ── Lemon Squeezy URLs — swap these when account is live ──────────────────────
+// ── Lemon Squeezy URLs, swap these when account is live ──────────────────────
 const LS_FULL  = "#waitlist";
 const LS_PLAN  = "#waitlist";
 const LS_COACH = "#waitlist";
@@ -21,15 +21,15 @@ const MODULES = [
   {
     num: "02", title: "Building Your School List", lessonCount: 3, totalMin: 35,
     lessons: [
-      { id: "2-1", title: "How I found 98 schools — live spreadsheet walkthrough", duration: "14 min", format: "Screen share" },
-      { id: "2-2", title: "Reach, match, safety — the real math", duration: "10 min", format: "Camera" },
+      { id: "2-1", title: "How I found 98 schools, live spreadsheet walkthrough", duration: "14 min", format: "Screen share" },
+      { id: "2-2", title: "Reach, match, safety, the real math", duration: "10 min", format: "Camera" },
       { id: "2-3", title: "Scholarship hunting before you apply", duration: "11 min", format: "Camera + Screen" },
     ],
   },
   {
     num: "03", title: "Your Application Foundation", lessonCount: 3, totalMin: 24,
     lessons: [
-      { id: "3-1", title: "The activities list — making anything count", duration: "9 min", format: "Camera" },
+      { id: "3-1", title: "The activities list, making anything count", duration: "9 min", format: "Camera" },
       { id: "3-2", title: "Honors, awards, and where to find more", duration: "8 min", format: "Camera" },
       { id: "3-3", title: "Letters of rec strategy", duration: "7 min", format: "Camera" },
     ],
@@ -39,7 +39,7 @@ const MODULES = [
     lessons: [
       { id: "4-1", title: "What admissions actually wants from your personal statement", duration: "13 min", format: "Camera" },
       { id: "4-2", title: "Writing your essay live", duration: "18 min", format: "Screen share" },
-      { id: "4-3", title: "Supplementals — efficiency at scale", duration: "12 min", format: "Camera + Screen" },
+      { id: "4-3", title: "Supplementals, efficiency at scale", duration: "12 min", format: "Camera + Screen" },
       { id: "4-4", title: "Getting feedback and revising", duration: "8 min", format: "Camera" },
     ],
   },
@@ -54,7 +54,7 @@ const MODULES = [
   {
     num: "06", title: "The Final Stretch", lessonCount: 2, totalMin: 20,
     lessons: [
-      { id: "6-1", title: "EA/ED strategy — when to commit early", duration: "11 min", format: "Camera" },
+      { id: "6-1", title: "EA/ED strategy, when to commit early", duration: "11 min", format: "Camera" },
       { id: "6-2", title: "Comparing offers and making the decision", duration: "9 min", format: "Camera" },
     ],
   },
@@ -115,7 +115,7 @@ const TIERS = [
 const FAQS = [
   {
     q: "Is this for high schoolers or parents?",
-    a: "Both. The content is written so the student can follow it alone, but parents often go through it too and find the financial aid and scholarship modules especially useful. The $530k stat in the headline is for parents — they know what that means.",
+    a: "Both. The content is written so the student can follow it alone, but parents often go through it too and find the financial aid and scholarship modules especially useful. The $530k stat in the headline is for parents, they know what that means.",
   },
   {
     q: "I'm already a junior or senior. Is it too late?",
@@ -131,19 +131,19 @@ const FAQS = [
   },
   {
     q: "What's an access code and how does it work?",
-    a: "After you purchase, Lemon Squeezy sends you a confirmation email with a unique access code. You enter it once on the course page and your browser remembers it — no login or account needed.",
+    a: "After you purchase, Lemon Squeezy sends you a confirmation email with a unique access code. You enter it once on the course page and your browser remembers it, no login or account needed.",
   },
   {
     q: "How long do I have access?",
-    a: "Lifetime. The course content lives on this site as long as Purcell Ventures exists. You'll also get any future updates I add — new lessons, updated templates, anything I add based on student feedback.",
+    a: "Lifetime. The course content lives on this site as long as Purcell Ventures exists. You'll also get any future updates I add, new lessons, updated templates, anything I add based on student feedback.",
   },
   {
     q: "What's the difference between the Coaching Track and 1:1 Intensive?",
-    a: "Coaching Track gets you into monthly group calls where you can ask questions directly. It's me, live, answering your specific situation — not just pre-recorded content. The 1:1 Intensive is private hours with me: we review your personal statement, build your school list strategy together, and prep your financial aid negotiation.",
+    a: "Coaching Track gets you into monthly group calls where you can ask questions directly. It's me, live, answering your specific situation, not just pre-recorded content. The 1:1 Intensive is private hours with me: we review your personal statement, build your school list strategy together, and prep your financial aid negotiation.",
   },
   {
     q: "Can I upgrade later?",
-    a: "Yes. If you start with Self-Paced and want to add coaching, reach out directly — the price difference applies as a credit.",
+    a: "Yes. If you start with Self-Paced and want to add coaching, reach out directly, the price difference applies as a credit.",
   },
 ];
 
@@ -195,7 +195,7 @@ export default function CollegeAppsPage() {
             I&apos;ll show you how.
           </h1>
           <p className="deck">
-            I&apos;m Elijah Purcell. I&apos;m 18. I just went through the college application process and came out with more acceptances and scholarship money than I knew what to do with. This course is everything I learned — documented, structured, and taught the way I wish someone had taught it to me.
+            I&apos;m Elijah Purcell. I&apos;m 18. I just went through the college application process and came out with more acceptances and scholarship money than I knew what to do with. This course is everything I learned, documented, structured, and taught the way I wish someone had taught it to me.
           </p>
           <div className="ca-hero-btns" style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
             <a href="#curriculum" className="pv-btn-ghost">See what&apos;s inside ↓</a>
@@ -244,8 +244,8 @@ export default function CollegeAppsPage() {
             {[
               { title: "High schoolers (9th–12th)", body: "You're in the middle of it. Whether you're just starting to think about college or finalizing your list senior year, this course meets you where you are." },
               { title: "Parents of applicants", body: "Especially if you're trying to maximize scholarship money. The financial aid and scholarship modules alone cover strategies most families never hear about." },
-              { title: "First-generation students", body: "Nobody in your family has done this before. This course doesn't assume you already know how applications, financial aid, or college selection work — it starts from the beginning." },
-              { title: "Students who've been rejected", body: "Waitlisted, deferred, or didn't get into your top choice last cycle. This course covers what actually moves the needle — and it's not what most people focus on." },
+              { title: "First-generation students", body: "Nobody in your family has done this before. This course doesn't assume you already know how applications, financial aid, or college selection work, it starts from the beginning." },
+              { title: "Students who've been rejected", body: "Waitlisted, deferred, or didn't get into your top choice last cycle. This course covers what actually moves the needle, and it's not what most people focus on." },
             ].map(w => (
               <div key={w.title} style={{ background: "var(--color-warm-bg)", padding: "32px 28px" }}>
                 <div style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--color-warm-accent)", marginBottom: "16px" }} />
@@ -333,7 +333,7 @@ export default function CollegeAppsPage() {
             {[
               {
                 title: "Peer Perspective",
-                body: "I didn't study college admissions. I went through it. Every lesson is based on what I actually did — not what a textbook says works. The tactics are current, specific, and tested.",
+                body: "I didn't study college admissions. I went through it. Every lesson is based on what I actually did, not what a textbook says works. The tactics are current, specific, and tested.",
               },
               {
                 title: "Real Numbers",
@@ -341,7 +341,7 @@ export default function CollegeAppsPage() {
               },
               {
                 title: "Process, Not Theory",
-                body: "Other courses tell you what matters. This one shows you exactly how to do it — screen shares of the actual tools, templates I built, and step-by-step walkthroughs of every major task.",
+                body: "Other courses tell you what matters. This one shows you exactly how to do it, screen shares of the actual tools, templates I built, and step-by-step walkthroughs of every major task.",
               },
             ].map(d => (
               <div key={d.title} style={{ padding: "32px", border: "1px solid var(--color-warm-border)", borderRadius: 8 }}>

@@ -1,7 +1,7 @@
 "use client";
 // CRM — purcellventures.co/crm
 // Reads leads, bookings, and newsletter subs from localStorage
-// Private tool — same style as /print
+// Private tool, same style as /print
 
 import { useState, useEffect } from "react";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
@@ -103,7 +103,7 @@ export default function CRMPage() {
             Purcell Ventures — Private
           </div>
           <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "32px", fontWeight: 700, color: "#f5f0e0", marginBottom: "8px" }}>CRM</h1>
-          <p style={{ fontSize: "14px", color: "#524d45" }}>Leads · Bookings · Newsletter — all in one place</p>
+          <p style={{ fontSize: "14px", color: "#524d45" }}>Leads · Bookings · Newsletter, all in one place</p>
         </div>
 
         {/* Stats row */}

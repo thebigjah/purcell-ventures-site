@@ -32,7 +32,7 @@ const schema = {
   "@id": "https://purcellventures.co/software#service",
   "name": "Custom Software Development",
   "description":
-    "Custom-built mobile apps, web platforms, automation tools, and AI integrations. Scoped and built around your exact problem — from idea to launch.",
+    "Custom-built mobile apps, web platforms, automation tools, and AI integrations. Scoped and built around your exact problem, from idea to launch.",
   "provider": { "@id": "https://purcellventures.co/#organization" },
   "url": "https://purcellventures.co/software",
   "serviceType": "Custom Software Development",

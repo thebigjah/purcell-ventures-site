@@ -103,7 +103,7 @@ export default function PitchCoachPage() {
                 <textarea
                   value={pitch}
                   onChange={(e) => setPitch(e.target.value)}
-                  placeholder="Paste exactly what you plan to say. Don't sanitize it — the more authentic the input, the more useful the critique."
+                  placeholder="Paste exactly what you plan to say. Don't sanitize it, the more authentic the input, the more useful the critique."
                   style={{ ...fieldStyle, minHeight: "220px", resize: "vertical", fontFamily: "var(--font-inter), sans-serif" }}
                 />
               </div>
@@ -127,7 +127,7 @@ export default function PitchCoachPage() {
                 </div>
                 <div>
                   <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: 0, lineHeight: 1.6 }}>
-                    Grade reflects: clarity, specificity, ethical posture, ask-and-listen balance, anticipation of objections, fit between your service and the scenario. <strong style={{ color: "var(--color-warm-text)" }}>C is average — most first-draft pitches grade C-D. Iteration is the point.</strong>
+                    Grade reflects: clarity, specificity, ethical posture, ask-and-listen balance, anticipation of objections, fit between your service and the scenario. <strong style={{ color: "var(--color-warm-text)" }}>C is average, most first-draft pitches grade C-D. Iteration is the point.</strong>
                   </p>
                 </div>
               </div>
@@ -151,7 +151,7 @@ export default function PitchCoachPage() {
               {/* Missing elements */}
               {coaching.missing_elements.length > 0 && (
                 <div style={{ padding: "16px 20px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-accent)" }}>
-                  <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "10px", marginTop: 0 }}>Missing — should be in this pitch</h3>
+                  <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "10px", marginTop: 0 }}>Missing, should be in this pitch</h3>
                   <ul style={{ margin: 0, paddingLeft: "20px", fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.7 }}>
                     {coaching.missing_elements.map((m, i) => <li key={i} style={{ marginBottom: "4px" }}>{m}</li>)}
                   </ul>

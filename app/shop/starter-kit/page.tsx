@@ -4,7 +4,7 @@ import { RefTracker } from "./RefTracker";
 import { BuyButton } from "./BuyButton";
 
 /**
- * /shop/starter-kit — the money-maker.
+ * /shop/starter-kit, the money-maker.
  *
  * One-time $19 self-serve digital download. Stripe Checkout handles
  * payment + delivery (built-in digital product fulfillment). After
@@ -51,7 +51,7 @@ const KIT_CONTENTS = [
     folder: "05-cold-outreach/",
     title: "50+ cold outreach email templates",
     items: ["Industry-specific cold opens (salon, plumbing, dental, real estate, law, marketing, e-commerce, wellness, vet, accounting)", "5 referral-based openers", "5 LinkedIn DM scripts", "Subject line library (~40 tested options)", "Token-replacement guide"],
-    blurb: "Honest cold outreach — no spam, no manipulation. The kind your prospects don't hate receiving.",
+    blurb: "Honest cold outreach, no spam, no manipulation. The kind your prospects don't hate receiving.",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function StarterKitPage() {
       <RefTracker product="starter-kit" />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        {/* Configuration warning — only shows if STARTER_KIT_PAYMENT_LINK env var is missing */}
+        {/* Configuration warning, only shows if STARTER_KIT_PAYMENT_LINK env var is missing */}
         {!stripeConfigured && (
           <div style={{ background: "rgba(229, 74, 40, 0.1)", border: "2px solid #e54a28", padding: "16px 20px", marginBottom: "32px", fontSize: "13px", color: "#e54a28" }}>
             <strong>⚠ Admin notice:</strong> Set <code style={{ background: "var(--color-warm-bg-alt)", padding: "2px 6px" }}>STARTER_KIT_PAYMENT_LINK</code> env var on Vercel to enable purchases. See setup doc: <code>~/.claude/elijahbot/drafts/STRIPE-SETUP-STARTER-KIT.md</code>
@@ -78,7 +78,7 @@ export default function StarterKitPage() {
           </div>
           <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "44px", fontWeight: 700, color: "var(--color-warm-text)", margin: "0 0 16px", lineHeight: 1.15 }}>
             Steal the <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>$40,000+</em> of sales infrastructure
-            <br />we built — for <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>nineteen dollars.</em>
+            <br />we built, for <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>nineteen dollars.</em>
           </h1>
           <p style={{ fontSize: "17px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, maxWidth: "640px", margin: "0 auto 32px" }}>
             The Purcell Ventures AI Starter Kit. 24 production AI tool prompts, 5 sales scripts, full rep handbook, 50+ cold-outreach templates, 1099 contractor template, CRM CSV. Everything we use internally. Editable. Yours forever.
@@ -136,10 +136,10 @@ export default function StarterKitPage() {
           <div style={{ padding: "24px 28px", background: "rgba(229, 74, 40, 0.05)", border: "1px solid #e54a28" }}>
             <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", color: "#e54a28", fontWeight: 600, margin: "0 0 12px" }}>Skip this if</h3>
             <ul style={{ paddingLeft: "20px", margin: 0, fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.8 }}>
-              <li>You want managed AI services (we offer those separately — see <Link href="/digital" style={{ color: "var(--color-warm-accent)" }}>Digital</Link>)</li>
+              <li>You want managed AI services (we offer those separately, see <Link href="/digital" style={{ color: "var(--color-warm-accent)" }}>Digital</Link>)</li>
               <li>You want pre-built software that does the work for you</li>
               <li>You don&apos;t want to copy-paste prompts into ChatGPT / Claude</li>
-              <li>You&apos;re looking for a 200-page strategy book — this is operational, not philosophical</li>
+              <li>You&apos;re looking for a 200-page strategy book, this is operational, not philosophical</li>
             </ul>
           </div>
         </section>

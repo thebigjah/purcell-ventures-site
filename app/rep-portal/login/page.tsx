@@ -94,12 +94,12 @@ function LoginForm() {
       </button>
       {authMode === "per-rep" && (
         <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", marginTop: "16px", lineHeight: 1.6, fontStyle: "italic" }}>
-          Your password identifies you — every action you take in the portal is attributed to your account. Don&apos;t share your password. If you forgot it or need it rotated, text Elijah at (205) 462-7839.
+          Your password identifies you, every action you take in the portal is attributed to your account. Don&apos;t share your password. If you forgot it or need it rotated, text Elijah at (205) 462-7839.
         </p>
       )}
       {authMode === "shared" && (
         <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", marginTop: "16px", lineHeight: 1.6, fontStyle: "italic" }}>
-          Your name is logged with every action you take. Don&apos;t share the password — if it leaks, Elijah rotates and everyone re-logs in.
+          Your name is logged with every action you take. Don&apos;t share the password, if it leaks, Elijah rotates and everyone re-logs in.
         </p>
       )}
       {authMode === "unconfigured" && (

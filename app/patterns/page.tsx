@@ -11,7 +11,7 @@ const MID   = "#141210";
 // ─── Pattern Engines ──────────────────────────────────────────────────────────
 
 // 1. BROADCAST FIELD
-// Derived from the panopticon mark — ring clusters repeating across a grid.
+// Derived from the panopticon mark, ring clusters repeating across a grid.
 // Each node is a small accountability center; together they form a distributed field.
 function BroadcastField({
   width = 600, height = 280, color = GOLD, bg = DARK,
@@ -48,7 +48,7 @@ function BroadcastField({
 }
 
 // 2. PHI ARRAY
-// Fibonacci/golden angle phyllotaxis — the arrangement of seeds in a sunflower,
+// Fibonacci/golden angle phyllotaxis, the arrangement of seeds in a sunflower,
 // scales on a pinecone, petals on a flower. Nature's most efficient packing.
 // Golden angle ≈ 137.508° = 2π/φ² — the angle at which successive elements
 // are placed so they never perfectly repeat and never leave gaps.
@@ -84,7 +84,7 @@ function PhiArray({
 }
 
 // 3. BLUEPRINT GRID
-// 45°-rotated square lattice — the foundation grid underneath everything.
+// 45°-rotated square lattice, the foundation grid underneath everything.
 // Used in architecture, engineering, drafting. Suggests structural rigor and
 // that the surface you're seeing is built on something precise beneath it.
 function Blueprint({
@@ -113,7 +113,7 @@ function Blueprint({
 }
 
 // 4. INTERFERENCE
-// Wave interference from two or three point sources — constructive and
+// Wave interference from two or three point sources, constructive and
 // destructive overlap. Each source radiates outward; where waves meet,
 // they either reinforce or cancel. A visual model for how forces interact:
 // technology and humanity, power and accountability, faith and reason.
@@ -147,7 +147,7 @@ function Interference({
 }
 
 // 5. HONEYCOMB
-// Regular hexagonal tessellation — the most efficient partition of the plane
+// Regular hexagonal tessellation, the most efficient partition of the plane
 // (honeycomb conjecture, proved by Thomas Hales 1999). Bees solved this with
 // no math degree. Each cell independent, bounded, sovereign; the whole stronger
 // than the sum of its parts. Connects to the privacy/freedom concept: each
@@ -187,7 +187,7 @@ function Honeycomb({
 }
 
 // 6. POLAR ROSE
-// r = a·cos(k·θ) — the rhodonea curve. Discovered by Luigi Guido Grandi (1728).
+// r = a·cos(k·θ), the rhodonea curve. Discovered by Luigi Guido Grandi (1728).
 // k petals when k is odd, 2k when even. Pure polar geometry: distance from center
 // is a cosine function of angle. Mathematically the simplest non-trivial polar curve.
 // At small scale tiled across a surface they read as a refined floral field.
@@ -266,7 +266,7 @@ function ArchimedeanField({
 }
 
 // 8. DOT FIELD
-// Regular grid of dots — the foundational mark of refined print design.
+// Regular grid of dots, the foundational mark of refined print design.
 // Appears in halftone printing (Ben-Day dots, Lichtenstein), high-end stationery,
 // Braille, punch cards, scientific measurement grids. At small scale it reads
 // as texture; at larger scale it reads as a deliberate grid. Both are useful.
@@ -298,10 +298,10 @@ function DotField({
 }
 
 // 9. CHEVRON FIELD
-// V-shapes tiled in staggered rows — directly derived from the V in PV.
+// V-shapes tiled in staggered rows, directly derived from the V in PV.
 // The letter V is the mark's typographic backbone. Chevrons mean direction,
 // forward motion, rank (military insignia), and achievement. A field of them
-// reads as momentum — everything moving the same direction, at the same pace.
+// reads as momentum, everything moving the same direction, at the same pace.
 function ChevronField({
   width = 600, height = 280, color = GOLD, bg = DARK,
   vW = 40, vH = 18, rowSpacing = 32, opacity = 0.22, sw = 0.55,
@@ -332,12 +332,12 @@ function ChevronField({
 }
 
 // 10. LISSAJOUS
-// x = A·sin(a·t + δ), y = B·sin(b·t) — parametric curves named after Jules
+// x = A·sin(a·t + δ), y = B·sin(b·t), parametric curves named after Jules
 // Antoine Lissajous (1857). Appear on oscilloscopes when two sinusoidal signals
 // interact. The shape depends on the frequency ratio a:b and phase shift δ.
 // Simple ratios produce closed curves; irrational ratios produce dense fills.
 // Used in physics, signal analysis, and as a test pattern for electronics.
-// Connects to the "technology serving people" angle — signal, resonance, precision.
+// Connects to the "technology serving people" angle, signal, resonance, precision.
 function LissajousField({
   width = 600, height = 280, color = GOLD, bg = DARK,
   a = 3, b = 2, delta = Math.PI / 4,
@@ -375,7 +375,7 @@ function LissajousField({
 }
 
 // ─── Card Preview ─────────────────────────────────────────────────────────────
-// Shows the pattern as a business card back — the primary application context.
+// Shows the pattern as a business card back, the primary application context.
 type PatternKey = "broadcast" | "phi" | "blueprint" | "interference" | "honeycomb"
   | "rose" | "archimedean" | "dots" | "chevron" | "lissajous";
 
@@ -504,7 +504,7 @@ const PATTERNS: PatternEntry[] = [
   {
     name: "Broadcast Field",
     subtitle: "Radial ring clusters · derived from the panopticon mark",
-    concept: "The mark tiled across a surface. Each node is a small center of accountability radiating outward. Together they form a distributed field — not a single surveillance point but a network of declared, visible actors.",
+    concept: "The mark tiled across a surface. Each node is a small center of accountability radiating outward. Together they form a distributed field, not a single surveillance point but a network of declared, visible actors.",
     application: "Business card back · website section backgrounds · document headers · envelope interior",
     primary: <BroadcastField />,
     variants: [
@@ -513,43 +513,43 @@ const PATTERNS: PatternEntry[] = [
       { label: "Cream on dark",        node: <BroadcastField width={220} height={140} color={CREAM} /> },
       { label: "Dark on cream",        node: <BroadcastField width={220} height={140} color={DARK} bg={CREAM} /> },
       { label: "Card back preview",    node: <CardBack pattern="broadcast" /> },
-      { label: "Card — cream variant", node: <CardBack pattern="broadcast" color={CREAM} /> },
+      { label: "Card, cream variant", node: <CardBack pattern="broadcast" color={CREAM} /> },
     ],
   },
   {
     name: "Phi Array",
     subtitle: "Golden angle phyllotaxis · 137.508° · Fibonacci sequence",
-    concept: "The arrangement of seeds in a sunflower. Each element placed at 2π/φ² from the last — the golden angle — so nothing ever perfectly repeats and no space is wasted. Nature found this solution without mathematics. It's the geometry of growth, of things built to endure, of divine proportion encoded in biology. Kepler called it one of the two great treasures of geometry.",
+    concept: "The arrangement of seeds in a sunflower. Each element placed at 2π/φ² from the last, the golden angle, so nothing ever perfectly repeats and no space is wasted. Nature found this solution without mathematics. It's the geometry of growth, of things built to endure, of divine proportion encoded in biology. Kepler called it one of the two great treasures of geometry.",
     application: "Featured section backgrounds · large-format print · stationery · brand book cover",
     primary: <PhiArray />,
     variants: [
-      { label: "Tight — high density",  node: <PhiArray width={220} height={140} n={500} dotSize={1.0} spread={0.42} /> },
-      { label: "Open — larger dots",    node: <PhiArray width={220} height={140} n={300} dotSize={2.0} spread={0.44} /> },
+      { label: "Tight, high density",  node: <PhiArray width={220} height={140} n={500} dotSize={1.0} spread={0.42} /> },
+      { label: "Open, larger dots",    node: <PhiArray width={220} height={140} n={300} dotSize={2.0} spread={0.44} /> },
       { label: "Cream on dark",         node: <PhiArray width={220} height={140} color={CREAM} /> },
       { label: "Dark on cream",         node: <PhiArray width={220} height={140} color={DARK} bg={CREAM} /> },
       { label: "Card back preview",     node: <CardBack pattern="phi" /> },
-      { label: "Card — cream variant",  node: <CardBack pattern="phi" color={CREAM} /> },
+      { label: "Card, cream variant",  node: <CardBack pattern="phi" color={CREAM} /> },
     ],
   },
   {
     name: "Blueprint Grid",
     subtitle: "45°-rotated square lattice · engineering drafting grid",
-    concept: "The structural substrate underneath everything. Architects and engineers use this grid before any design decisions are made — it's the foundation, not the surface. At low opacity it communicates precision, intentionality, and the existence of a rigorous system beneath the visible layer.",
+    concept: "The structural substrate underneath everything. Architects and engineers use this grid before any design decisions are made, it's the foundation, not the surface. At low opacity it communicates precision, intentionality, and the existence of a rigorous system beneath the visible layer.",
     application: "Slide deck backgrounds · document templates · envelope interior · dense cover texture",
     primary: <Blueprint />,
     variants: [
-      { label: "Fine — tight grid",    node: <Blueprint width={220} height={140} spacing={18} opacity={0.16} /> },
-      { label: "Coarse — open grid",   node: <Blueprint width={220} height={140} spacing={44} opacity={0.20} /> },
+      { label: "Fine, tight grid",    node: <Blueprint width={220} height={140} spacing={18} opacity={0.16} /> },
+      { label: "Coarse, open grid",   node: <Blueprint width={220} height={140} spacing={44} opacity={0.20} /> },
       { label: "Cream on dark",        node: <Blueprint width={220} height={140} color={CREAM} /> },
       { label: "Dark on cream",        node: <Blueprint width={220} height={140} color={DARK} bg={CREAM} /> },
       { label: "Card back preview",    node: <CardBack pattern="blueprint" /> },
-      { label: "Card — dark on gold",  node: <CardBack pattern="blueprint" color={DARK} bg={GOLD} patternOpacity={0.12} /> },
+      { label: "Card, dark on gold",  node: <CardBack pattern="blueprint" color={DARK} bg={GOLD} patternOpacity={0.12} /> },
     ],
   },
   {
     name: "Interference",
     subtitle: "Wave superposition · constructive and destructive overlap",
-    concept: "Two or more point sources radiating outward. Where their waves meet, they either reinforce (constructive) or cancel (destructive). It's a physical model for how distinct forces interact: technology and humanity, power and accountability, faith and reason. The pattern is most beautiful at the collision points. This one has the most direct connection to the sousveillance concept — multiple independent centers, each visible, each radiating.",
+    concept: "Two or more point sources radiating outward. Where their waves meet, they either reinforce (constructive) or cancel (destructive). It's a physical model for how distinct forces interact: technology and humanity, power and accountability, faith and reason. The pattern is most beautiful at the collision points. This one has the most direct connection to the sousveillance concept, multiple independent centers, each visible, each radiating.",
     application: "Hero section backgrounds · presentation title slides · large-format prints",
     primary: <Interference />,
     variants: [
@@ -558,13 +558,13 @@ const PATTERNS: PatternEntry[] = [
       { label: "Three sources",          node: <Interference width={220} height={140} sources={3} wavelength={38} rings={16} opacity={0.20} /> },
       { label: "Cream on dark",          node: <Interference width={220} height={140} color={CREAM} /> },
       { label: "Card back preview",      node: <CardBack pattern="interference" /> },
-      { label: "Card — three sources",   node: <CardBack pattern="interference" /> },
+      { label: "Card, three sources",   node: <CardBack pattern="interference" /> },
     ],
   },
   {
     name: "Honeycomb",
     subtitle: "Regular hexagonal tessellation · honeycomb conjecture · Hales 1999",
-    concept: "The most efficient partition of the plane — mathematically proved by Thomas Hales in 1999. Bees discovered it without calculus. Each cell is independent, bounded, sovereign; the structure emerges from adjacency alone. This maps directly to the privacy/freedom principle: each person or business in their own domain, the whole held together by shared structure rather than surveillance.",
+    concept: "The most efficient partition of the plane, mathematically proved by Thomas Hales in 1999. Bees discovered it without calculus. Each cell is independent, bounded, sovereign; the structure emerges from adjacency alone. This maps directly to the privacy/freedom principle: each person or business in their own domain, the whole held together by shared structure rather than surveillance.",
     application: "Business card back · dense surface texture · physical materials (embossing, debossing) · merchandise",
     primary: <Honeycomb />,
     variants: [
@@ -573,82 +573,82 @@ const PATTERNS: PatternEntry[] = [
       { label: "Cream on dark",         node: <Honeycomb width={220} height={140} color={CREAM} /> },
       { label: "Dark on cream",         node: <Honeycomb width={220} height={140} color={DARK} bg={CREAM} /> },
       { label: "Card back preview",     node: <CardBack pattern="honeycomb" /> },
-      { label: "Card — dark on gold",   node: <CardBack pattern="honeycomb" color={DARK} bg={GOLD} patternOpacity={0.14} /> },
+      { label: "Card, dark on gold",   node: <CardBack pattern="honeycomb" color={DARK} bg={GOLD} patternOpacity={0.14} /> },
     ],
   },
   {
     name: "Polar Rose",
     subtitle: "r = a·cos(k·θ) · rhodonea curve · Grandi 1728",
-    concept: "The simplest non-trivial polar curve. Distance from center is a cosine function of angle — rotate through the full period and you trace a flower. Three petals when k=3, four when k=4, eight when k=4 (even k doubles). Grandi found it while studying Archimedes. It's pure classical geometry — no approximation, no construction, just the polar equation doing its thing.",
+    concept: "The simplest non-trivial polar curve. Distance from center is a cosine function of angle, rotate through the full period and you trace a flower. Three petals when k=3, four when k=4, eight when k=4 (even k doubles). Grandi found it while studying Archimedes. It's pure classical geometry, no approximation, no construction, just the polar equation doing its thing.",
     application: "Business card back · premium stationery · large-format print · brand book sections",
     primary: <PolarRose />,
     variants: [
-      { label: "3-petal — k=3",          node: <PolarRose width={220} height={140} k={3} a={26} spacing={72} opacity={0.26} /> },
-      { label: "4-petal — k=2",          node: <PolarRose width={220} height={140} k={2} a={26} spacing={72} opacity={0.26} /> },
-      { label: "8-petal — k=4",          node: <PolarRose width={220} height={140} k={4} a={22} spacing={64} opacity={0.24} /> },
+      { label: "3-petal, k=3",          node: <PolarRose width={220} height={140} k={3} a={26} spacing={72} opacity={0.26} /> },
+      { label: "4-petal, k=2",          node: <PolarRose width={220} height={140} k={2} a={26} spacing={72} opacity={0.26} /> },
+      { label: "8-petal, k=4",          node: <PolarRose width={220} height={140} k={4} a={22} spacing={64} opacity={0.24} /> },
       { label: "Cream on dark",          node: <PolarRose width={220} height={140} color={CREAM} /> },
       { label: "Card back preview",      node: <CardBack pattern="rose" /> },
-      { label: "Card — cream",           node: <CardBack pattern="rose" color={CREAM} /> },
+      { label: "Card, cream",           node: <CardBack pattern="rose" color={CREAM} /> },
     ],
   },
   {
     name: "Archimedean Spiral",
     subtitle: "r = b·θ · constant pitch · On Spirals (225 BC)",
-    concept: "Archimedes described this curve in 225 BC — one of the first serious mathematical treatises on curves. Unlike the golden/logarithmic spiral, this one has constant spacing between turns. Each revolution goes exactly b further out. It's the spiral of mechanical things: watch springs, vinyl records, drill bits. Methodical, precise, unrelenting forward motion — every turn the same discipline as the last.",
+    concept: "Archimedes described this curve in 225 BC — one of the first serious mathematical treatises on curves. Unlike the golden/logarithmic spiral, this one has constant spacing between turns. Each revolution goes exactly b further out. It's the spiral of mechanical things: watch springs, vinyl records, drill bits. Methodical, precise, unrelenting forward motion, every turn the same discipline as the last.",
     application: "Section backgrounds · document covers · featured content areas",
     primary: <ArchimedeanField />,
     variants: [
-      { label: "Tight — more turns",     node: <ArchimedeanField width={220} height={140} b={4} turns={3.5} spacing={82} opacity={0.24} /> },
-      { label: "Open — fewer turns",     node: <ArchimedeanField width={220} height={140} b={7} turns={2} spacing={88} opacity={0.26} /> },
+      { label: "Tight, more turns",     node: <ArchimedeanField width={220} height={140} b={4} turns={3.5} spacing={82} opacity={0.24} /> },
+      { label: "Open, fewer turns",     node: <ArchimedeanField width={220} height={140} b={7} turns={2} spacing={88} opacity={0.26} /> },
       { label: "Cream on dark",          node: <ArchimedeanField width={220} height={140} color={CREAM} /> },
       { label: "Dark on cream",          node: <ArchimedeanField width={220} height={140} color={DARK} bg={CREAM} /> },
       { label: "Card back preview",      node: <CardBack pattern="archimedean" /> },
-      { label: "Card — cream",           node: <CardBack pattern="archimedean" color={CREAM} /> },
+      { label: "Card, cream",           node: <CardBack pattern="archimedean" color={CREAM} /> },
     ],
   },
   {
     name: "Dot Field",
     subtitle: "Offset grid of dots · halftone · Ben-Day · precision print",
-    concept: "The most elemental pattern in print design. Ben-Day dots (1879) are what Lichtenstein used in his paintings and what newspapers used to print color before digital. A refined dot grid reads as precision — measurement paper, scientific grids, the substrate underlying exact work. Offset rows create a denser, more organic feel than a strict square grid.",
+    concept: "The most elemental pattern in print design. Ben-Day dots (1879) are what Lichtenstein used in his paintings and what newspapers used to print color before digital. A refined dot grid reads as precision, measurement paper, scientific grids, the substrate underlying exact work. Offset rows create a denser, more organic feel than a strict square grid.",
     application: "Business card back · subtle website texture · document watermark · any surface needing understated depth",
     primary: <DotField />,
     variants: [
-      { label: "Micro — tight grid",     node: <DotField width={220} height={140} spacing={10} dotR={0.8} opacity={0.26} /> },
-      { label: "Coarse — visible dots",  node: <DotField width={220} height={140} spacing={26} dotR={1.8} opacity={0.22} /> },
-      { label: "Square grid — no offset",node: <DotField width={220} height={140} spacing={16} dotR={1.1} offset={false} opacity={0.24} /> },
+      { label: "Micro, tight grid",     node: <DotField width={220} height={140} spacing={10} dotR={0.8} opacity={0.26} /> },
+      { label: "Coarse, visible dots",  node: <DotField width={220} height={140} spacing={26} dotR={1.8} opacity={0.22} /> },
+      { label: "Square grid, no offset",node: <DotField width={220} height={140} spacing={16} dotR={1.1} offset={false} opacity={0.24} /> },
       { label: "Cream on dark",          node: <DotField width={220} height={140} color={CREAM} /> },
       { label: "Card back preview",      node: <CardBack pattern="dots" /> },
-      { label: "Card — dark on gold",    node: <CardBack pattern="dots" color={DARK} bg={GOLD} patternOpacity={0.14} /> },
+      { label: "Card, dark on gold",    node: <CardBack pattern="dots" color={DARK} bg={GOLD} patternOpacity={0.14} /> },
     ],
   },
   {
     name: "Chevron Field",
     subtitle: "V-shapes in staggered rows · PV letterform · forward motion",
-    concept: "The V in PV is the typographic backbone of the mark. A chevron is a V. Stacked in rows they represent rank (military insignia), achievement (athletic patches), and direction — everything moving forward at the same angle. This is the most literal brand-derived pattern: the letter itself tiled as texture. Dense at small scale, bold at large scale.",
+    concept: "The V in PV is the typographic backbone of the mark. A chevron is a V. Stacked in rows they represent rank (military insignia), achievement (athletic patches), and direction, everything moving forward at the same angle. This is the most literal brand-derived pattern: the letter itself tiled as texture. Dense at small scale, bold at large scale.",
     application: "Business card back · garment/merchandise embroidery · athletic/apparel contexts · brand presentations",
     primary: <ChevronField />,
     variants: [
-      { label: "Tight — small V",        node: <ChevronField width={220} height={140} vW={26} vH={12} rowSpacing={22} opacity={0.24} /> },
-      { label: "Bold — large V",         node: <ChevronField width={220} height={140} vW={56} vH={26} rowSpacing={44} opacity={0.20} /> },
+      { label: "Tight, small V",        node: <ChevronField width={220} height={140} vW={26} vH={12} rowSpacing={22} opacity={0.24} /> },
+      { label: "Bold, large V",         node: <ChevronField width={220} height={140} vW={56} vH={26} rowSpacing={44} opacity={0.20} /> },
       { label: "Cream on dark",          node: <ChevronField width={220} height={140} color={CREAM} /> },
       { label: "Dark on cream",          node: <ChevronField width={220} height={140} color={DARK} bg={CREAM} /> },
       { label: "Card back preview",      node: <CardBack pattern="chevron" /> },
-      { label: "Card — dark on gold",    node: <CardBack pattern="chevron" color={DARK} bg={GOLD} patternOpacity={0.14} /> },
+      { label: "Card, dark on gold",    node: <CardBack pattern="chevron" color={DARK} bg={GOLD} patternOpacity={0.14} /> },
     ],
   },
   {
     name: "Lissajous",
     subtitle: "x = A·sin(at + δ), y = B·sin(bt) · Lissajous 1857 · oscilloscope",
-    concept: "When two perpendicular sinusoidal signals interact — as they do in an oscilloscope — the combined trace is a Lissajous curve. The shape depends entirely on the ratio of the frequencies (a:b) and the phase shift (δ). Rational ratios produce closed curves; 3:2 produces a figure with 3 vertical lobes and 2 horizontal. They appear in antenna design, mechanical harmonographs, pendulum physics, and signal analysis. This is technology made visible — the direct output of two forces in precise relationship.",
+    concept: "When two perpendicular sinusoidal signals interact, as they do in an oscilloscope, the combined trace is a Lissajous curve. The shape depends entirely on the ratio of the frequencies (a:b) and the phase shift (δ). Rational ratios produce closed curves; 3:2 produces a figure with 3 vertical lobes and 2 horizontal. They appear in antenna design, mechanical harmonographs, pendulum physics, and signal analysis. This is technology made visible, the direct output of two forces in precise relationship.",
     application: "Technical presentations · digital-first surfaces · hero backgrounds · brand book interior",
     primary: <LissajousField />,
     variants: [
-      { label: "3:2 ratio — standard",   node: <LissajousField width={220} height={140} a={3} b={2} amplitude={26} spacing={76} opacity={0.24} /> },
-      { label: "2:1 — figure eight",     node: <LissajousField width={220} height={140} a={2} b={1} delta={Math.PI/2} amplitude={26} spacing={76} opacity={0.24} /> },
-      { label: "5:4 — dense curve",      node: <LissajousField width={220} height={140} a={5} b={4} amplitude={24} spacing={72} opacity={0.22} /> },
+      { label: "3:2 ratio, standard",   node: <LissajousField width={220} height={140} a={3} b={2} amplitude={26} spacing={76} opacity={0.24} /> },
+      { label: "2:1, figure eight",     node: <LissajousField width={220} height={140} a={2} b={1} delta={Math.PI/2} amplitude={26} spacing={76} opacity={0.24} /> },
+      { label: "5:4, dense curve",      node: <LissajousField width={220} height={140} a={5} b={4} amplitude={24} spacing={72} opacity={0.22} /> },
       { label: "Cream on dark",          node: <LissajousField width={220} height={140} color={CREAM} /> },
       { label: "Card back preview",      node: <CardBack pattern="lissajous" /> },
-      { label: "Card — cream",           node: <CardBack pattern="lissajous" color={CREAM} /> },
+      { label: "Card, cream",           node: <CardBack pattern="lissajous" color={CREAM} /> },
     ],
   },
 ];
@@ -669,7 +669,7 @@ export default function PatternsPage() {
           Pattern Library
         </h1>
         <p style={{ fontSize: "14px", color: "#524d45", maxWidth: "560px", lineHeight: 1.75, marginBottom: "8px" }}>
-          Ten patterns derived from mathematical and philosophical principles aligned with the brand. Each is fully vectorized and downloadable. All are designed to work at low opacity as surface texture — never as primary visual elements.
+          Ten patterns derived from mathematical and philosophical principles aligned with the brand. Each is fully vectorized and downloadable. All are designed to work at low opacity as surface texture, never as primary visual elements.
         </p>
         <p style={{ fontSize: "12px", color: "#3a3530", maxWidth: "560px", lineHeight: 1.7 }}>
           Source mathematics: polar coordinates · Fibonacci sequence · golden ratio · wave superposition · hexagonal close-packing · rhodonea curves · Archimedean spiral · halftone grids · Lissajous figures. Each chosen because it has an intellectual basis that maps to something the brand actually means.

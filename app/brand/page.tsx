@@ -19,7 +19,7 @@ const PALETTE = [
     hex: "#0c0a08",
     rgb: "12, 10, 8",
     role: "Primary background",
-    usage: "Default background for all brand materials. Near-black with a warm brown undertone — not pure black, which reads as cold and digital. Every surface starts here unless a specific rule says otherwise.",
+    usage: "Default background for all brand materials. Near-black with a warm brown undertone, not pure black, which reads as cold and digital. Every surface starts here unless a specific rule says otherwise.",
     swatch: DARK,
     textColor: CREAM,
   },
@@ -28,7 +28,7 @@ const PALETTE = [
     hex: "#d4af37",
     rgb: "212, 175, 55",
     role: "Brand accent",
-    usage: "CTAs, highlights, the mark, active states, eyebrow labels, price tags. Never use as body text on dark — too vibrant for sustained reading. Never use as a background for text-heavy content. This is the accent, not the base.",
+    usage: "CTAs, highlights, the mark, active states, eyebrow labels, price tags. Never use as body text on dark, too vibrant for sustained reading. Never use as a background for text-heavy content. This is the accent, not the base.",
     swatch: GOLD,
     textColor: DARK,
   },
@@ -37,7 +37,7 @@ const PALETTE = [
     hex: "#f5f0e0",
     rgb: "245, 240, 224",
     role: "Primary text on dark",
-    usage: "Headings and body text on dark backgrounds. Light backgrounds on cream-stock print. Never use cream text on white — insufficient contrast. On light backgrounds, switch to Purcell Dark for text.",
+    usage: "Headings and body text on dark backgrounds. Light backgrounds on cream-stock print. Never use cream text on white, insufficient contrast. On light backgrounds, switch to Purcell Dark for text.",
     swatch: CREAM,
     textColor: DARK,
   },
@@ -46,7 +46,7 @@ const PALETTE = [
     hex: "#2e2820",
     rgb: "46, 40, 32",
     role: "Borders · card backgrounds",
-    usage: "All borders, dividers, and card backgrounds. One step lighter than Purcell Dark — creates depth without introducing a new color. Never use as text color.",
+    usage: "All borders, dividers, and card backgrounds. One step lighter than Purcell Dark, creates depth without introducing a new color. Never use as text color.",
     swatch: EMBER,
     textColor: CREAM,
   },
@@ -55,7 +55,7 @@ const PALETTE = [
     hex: "#524d45",
     rgb: "82, 77, 69",
     role: "Secondary text · muted content",
-    usage: "Subheadings, descriptions, secondary body copy — anything that should recede behind primary cream text. The workhorse muted tone for long-form content.",
+    usage: "Subheadings, descriptions, secondary body copy, anything that should recede behind primary cream text. The workhorse muted tone for long-form content.",
     swatch: ASH,
     textColor: CREAM,
   },
@@ -64,7 +64,7 @@ const PALETTE = [
     hex: "#3a3530",
     rgb: "58, 53, 48",
     role: "Tertiary text · labels",
-    usage: "Category labels, fine print, metadata, timestamps — the most muted readable text. Below this level, content is invisible.",
+    usage: "Category labels, fine print, metadata, timestamps, the most muted readable text. Below this level, content is invisible.",
     swatch: CHAR,
     textColor: CREAM,
   },
@@ -73,7 +73,7 @@ const PALETTE = [
     hex: "#faf8f4",
     rgb: "250, 248, 244",
     role: "Forced-light background",
-    usage: "Use when printing on standard white paper or generating a PDF that will be viewed on a white background. Slightly warm tinted — avoids the clinical feel of pure white while staying light enough for print legibility. Text on this surface: Purcell Dark. Accent: Gold.",
+    usage: "Use when printing on standard white paper or generating a PDF that will be viewed on a white background. Slightly warm tinted, avoids the clinical feel of pure white while staying light enough for print legibility. Text on this surface: Purcell Dark. Accent: Gold.",
     swatch: WARM_WHITE,
     textColor: DARK,
   },
@@ -81,25 +81,25 @@ const PALETTE = [
 
 const COMBOS = [
   {
-    label: "Default — digital and dark-stock print",
+    label: "Default, digital and dark-stock print",
     bg: DARK, text: CREAM, accent: GOLD, border: EMBER,
     rule: "This is the baseline. Every surface defaults here. Gold for accents and marks only.",
     context: "Website · dark business cards · dark stationery · brand presentations",
   },
   {
-    label: "Inverted accent — premium moments",
+    label: "Inverted accent, premium moments",
     bg: GOLD, text: DARK, accent: DARK, border: DARK,
-    rule: "Gold as a background works only for short-form content — a card back, a section banner, a pull quote. Never for body text paragraphs.",
+    rule: "Gold as a background works only for short-form content, a card back, a section banner, a pull quote. Never for body text paragraphs.",
     context: "Card accent elements · pull quotes · pricing highlights · CTA banners",
   },
   {
-    label: "Cream surface — light-stock print",
+    label: "Cream surface, light-stock print",
     bg: CREAM, text: DARK, accent: GOLD, border: ASH,
     rule: "Cream stock with dark text and gold accents. Feels premium on physical materials. Not for digital — Warm White is the forced-light digital equivalent.",
     context: "Cream-stock stationery · letterhead · printed proposals · brand book pages",
   },
   {
-    label: "Forced light — white paper and standard PDFs",
+    label: "Forced light, white paper and standard PDFs",
     bg: WARM_WHITE, text: DARK, accent: GOLD, border: CHAR,
     rule: "When you have no choice but a light background. Warm White instead of pure white keeps the brand temperature. Dark text, gold accents, Char for borders.",
     context: "Standard PDFs · Google Docs · printed emails · white-stock invoices",
@@ -107,10 +107,10 @@ const COMBOS = [
 ];
 
 const FORBIDDEN = [
-  { bg: "#ffffff", text: CREAM, label: "Cream on white — insufficient contrast. Text disappears." },
-  { bg: DARK, text: GOLD, label: "Gold as body text on dark — too vibrant. Use Cream for prose." },
-  { bg: GOLD, text: CREAM, label: "Cream on gold — washes out. Only Dark on gold." },
-  { bg: DARK, text: "#000000", label: "Pure black text on dark — invisible and wrong temperature." },
+  { bg: "#ffffff", text: CREAM, label: "Cream on white, insufficient contrast. Text disappears." },
+  { bg: DARK, text: GOLD, label: "Gold as body text on dark, too vibrant. Use Cream for prose." },
+  { bg: GOLD, text: CREAM, label: "Cream on gold, washes out. Only Dark on gold." },
+  { bg: DARK, text: "#000000", label: "Pure black text on dark, invisible and wrong temperature." },
 ];
 
 function ColorSection() {
@@ -118,7 +118,7 @@ function ColorSection() {
     <div>
       <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Named Palette</h2>
       <p style={{ fontSize: "13px", color: ASH, marginBottom: "32px", maxWidth: "560px", lineHeight: 1.65 }}>
-        Seven colors. Three primary, four functional. Every brand decision is made from this set — no ad-hoc additions.
+        Seven colors. Three primary, four functional. Every brand decision is made from this set, no ad-hoc additions.
       </p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "16px", marginBottom: "64px" }}>
         {PALETTE.map(c => (
@@ -155,7 +155,7 @@ function ColorSection() {
                 Sample Heading Text
               </div>
               <p style={{ fontSize: "14px", color: combo.text, opacity: 0.72, lineHeight: 1.7, margin: "0 0 16px", maxWidth: "480px" }}>
-                Body copy demonstrating how text reads against this background. This is what a paragraph looks like in this combination — line length, weight, and color relationship.
+                Body copy demonstrating how text reads against this background. This is what a paragraph looks like in this combination, line length, weight, and color relationship.
               </p>
               <div style={{ display: "inline-block", padding: "8px 18px", border: `1px solid ${combo.accent}`, color: combo.accent, fontSize: "12px", fontWeight: 700, letterSpacing: "0.08em", borderRadius: 4 }}>
                 Action →
@@ -220,7 +220,7 @@ function TypographySection() {
             name: "Cinzel",
             role: "Display · Headings · Brand",
             weights: ["400 Regular", "600 SemiBold", "700 Bold", "900 Black"],
-            note: "Roman letterforms based on classical inscriptions. Use for everything that IS the brand — the mark, headings, section titles, the logo. Never for body copy or UI.",
+            note: "Roman letterforms based on classical inscriptions. Use for everything that IS the brand, the mark, headings, section titles, the logo. Never for body copy or UI.",
             sample: "PURCELL VENTURES",
             sampleFont: "'Cinzel', Georgia, serif",
             sampleSize: "28px",
@@ -312,7 +312,7 @@ function TypographySection() {
 
       <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, margin: "56px 0 8px" }}>In Use</h2>
       <p style={{ fontSize: "13px", color: ASH, marginBottom: "24px", maxWidth: "560px", lineHeight: 1.65 }}>
-        The scale applied to a realistic content block — how the fonts actually work together.
+        The scale applied to a realistic content block, how the fonts actually work together.
       </p>
       <div style={{ border: `1px solid ${EMBER}`, borderRadius: 8, padding: "40px 48px", background: DARK, maxWidth: "680px" }}>
         <p style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: GOLD, marginBottom: "16px", fontFamily: "var(--font-inter), sans-serif" }}>
@@ -322,7 +322,7 @@ function TypographySection() {
           Everything your business needs to operate online.
         </h2>
         <p style={{ fontSize: "18px", fontFamily: "var(--font-dm-sans), sans-serif", color: CREAM, opacity: 0.8, lineHeight: 1.75, marginBottom: "16px" }}>
-          A complete digital toolkit — website, AI chatbot, booking system, CRM, and 20+ tools. Fully managed. One subscription.
+          A complete digital toolkit, website, AI chatbot, booking system, CRM, and 20+ tools. Fully managed. One subscription.
         </p>
         <p style={{ fontSize: "15px", fontFamily: "var(--font-dm-sans), sans-serif", color: ASH, lineHeight: 1.8, marginBottom: "28px" }}>
           Most small businesses are running on tools designed for enterprises and pricing designed for startups that raised money. Neither fits. This does.
@@ -637,7 +637,7 @@ function IconsSection() {
         UI Icons
       </h3>
       <p style={{ fontSize: "12px", color: ASH, marginBottom: "20px", lineHeight: 1.6 }}>
-        Navigation and interface icons. Consistent with brand stroke weight — don't mix with unrelated icon families.
+        Navigation and interface icons. Consistent with brand stroke weight, don't mix with unrelated icon families.
       </p>
       {renderGrid(uiIcons, "repeat(auto-fill, minmax(150px, 1fr))")}
 
@@ -647,7 +647,7 @@ function IconsSection() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "16px" }}>
           {[
             ["Stroke only", "Never fill icons. The 1.5px stroke is the identity. Filled versions look wrong against the mark."],
-            ["Color discipline", "Default is Cream on Dark. Gold stroke only for highlighted/active states — not decoration. Never render icons in Ash or Char."],
+            ["Color discipline", "Default is Cream on Dark. Gold stroke only for highlighted/active states, not decoration. Never render icons in Ash or Char."],
             ["Minimum size", "16px minimum on screen. Below that, simplify the icon or replace it with a label. The neural and eye icons are especially sensitive to size."],
             ["Spacing", "Icons need at least 4px breathing room from adjacent text. At 24px, pair with 14px+ type. Don't crowd them."],
           ].map(([title, body]) => (
@@ -682,15 +682,15 @@ const SUBJECTS = [
     category: "People / Portraits",
     icon: "eye",
     do: [
-      "Direct eye contact or purposeful gaze — confidence, not performance",
+      "Direct eye contact or purposeful gaze, confidence, not performance",
       "Natural or soft window light. Hard shadows are fine on one side.",
-      "Candid over posed — mid-movement, mid-conversation, working",
+      "Candid over posed, mid-movement, mid-conversation, working",
       "Real environments: a desk, a truck cab, a job site",
     ],
     avoid: [
-      "Stock-photo smiles — teeth, staged handshakes, \"team building\" body language",
+      "Stock-photo smiles, teeth, staged handshakes, \"team building\" body language",
       "Pure white or seamless studio backgrounds",
-      "Over-retouched skin — should look like a real person",
+      "Over-retouched skin, should look like a real person",
       "Overly formal attire unless the context demands it",
     ],
   },
@@ -699,30 +699,30 @@ const SUBJECTS = [
     icon: "droplet",
     do: [
       "The work itself: spray hitting a surface, gutters mid-clean, equipment in motion",
-      "Before/after juxtaposition — the transformation is the story",
+      "Before/after juxtaposition, the transformation is the story",
       "Close-up texture: grime, water beads, clean concrete",
-      "Golden hour light where possible — flatters everything outdoors",
+      "Golden hour light where possible, flatters everything outdoors",
     ],
     avoid: [
-      "Cluttered staging — safety gear everywhere for the photo, not the job",
+      "Cluttered staging, safety gear everywhere for the photo, not the job",
       "Flat overcast light with no direction",
       "Posed \"look at the camera\" shots mid-job",
-      "Editing that makes the job site look glamorous — authenticity matters more",
+      "Editing that makes the job site look glamorous, authenticity matters more",
     ],
   },
   {
     category: "Technology / Workspace",
     icon: "terminal",
     do: [
-      "Screens with actual content — interfaces, data, real work",
+      "Screens with actual content, interfaces, data, real work",
       "Intentional shallow depth of field. Bokeh is fine when purposeful.",
       "Warm ambient light: desk lamp, window light at dusk",
-      "Context over equipment — what's being built matters more than the gear",
+      "Context over equipment, what's being built matters more than the gear",
     ],
     avoid: [
       "Generic \"laptop on table\" stock photos",
       "Glowing blue screens in dark rooms (reads as stock, reads as cold)",
-      "Cables everywhere for aesthetics — clutter without purpose",
+      "Cables everywhere for aesthetics, clutter without purpose",
       "Staged \"thinking\" poses (hand on chin, looking at ceiling)",
     ],
   },
@@ -731,8 +731,8 @@ const SUBJECTS = [
     icon: "pin",
     do: [
       "Georgia landscape: red clay, green hills, suburban neighborhoods",
-      "Architecture with warm light — brick, wood, weathered surfaces",
-      "Empty spaces that feel inhabited — a workshop, a driveway, a kitchen",
+      "Architecture with warm light, brick, wood, weathered surfaces",
+      "Empty spaces that feel inhabited, a workshop, a driveway, a kitchen",
       "Wide establishing shots for location-specific work",
     ],
     avoid: [
@@ -754,7 +754,7 @@ const OVERLAYS = [
     sub: "Metro Atlanta service area",
   },
   {
-    label: "Heavy overlay — light body copy",
+    label: "Heavy overlay, light body copy",
     rule: "When body copy appears over an image. Needs more coverage to stay readable.",
     bg: "linear-gradient(135deg, #4a3520 0%, #0c0a08 100%)",
     overlay: "rgba(12,10,8,0.85)",
@@ -762,7 +762,7 @@ const OVERLAYS = [
     sub: "Built for your workflow, not the other way around.",
   },
   {
-    label: "Gradient fade — bottom-anchored text",
+    label: "Gradient fade, bottom-anchored text",
     rule: "When text needs to appear at the bottom of an image. Gradient from transparent to DARK.",
     bg: "linear-gradient(160deg, #5a3a1a 0%, #2e1c0a 100%)",
     overlay: "linear-gradient(to top, rgba(12,10,8,0.95) 0%, rgba(12,10,8,0.4) 50%, transparent 100%)",
@@ -785,7 +785,7 @@ function PhotoSection() {
       {/* Tone reference */}
       <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Tone Reference</h2>
       <p style={{ fontSize: "13px", color: ASH, marginBottom: "24px", maxWidth: "600px", lineHeight: 1.65 }}>
-        All brand photography lives in the warm-dark range. These gradients show the acceptable tonal spectrum — from rich shadow to warm highlight. Nothing cooler than the middle column. Nothing brighter than the right column.
+        All brand photography lives in the warm-dark range. These gradients show the acceptable tonal spectrum, from rich shadow to warm highlight. Nothing cooler than the middle column. Nothing brighter than the right column.
       </p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "8px", marginBottom: "48px" }}>
         {[
@@ -808,7 +808,7 @@ function PhotoSection() {
       {/* Grading parameters */}
       <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Color Grading</h2>
       <p style={{ fontSize: "13px", color: ASH, marginBottom: "24px", maxWidth: "600px", lineHeight: 1.65 }}>
-        Starting point for any photo entering brand materials. Use Lightroom, Capture One, or equivalent. These are relative adjustments from the photo's neutral edit — not absolute values.
+        Starting point for any photo entering brand materials. Use Lightroom, Capture One, or equivalent. These are relative adjustments from the photo's neutral edit, not absolute values.
       </p>
       <div style={{ border: `1px solid ${EMBER}`, borderRadius: 8, overflow: "hidden", marginBottom: "56px" }}>
         {GRADING.map((g, i) => (
@@ -829,7 +829,7 @@ function PhotoSection() {
       {/* Subject categories */}
       <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Subject Guidelines</h2>
       <p style={{ fontSize: "13px", color: ASH, marginBottom: "28px", maxWidth: "600px", lineHeight: 1.65 }}>
-        Four categories covering every context the brand will use photography. Each has a do list and an avoid list — the avoid list is more important.
+        Four categories covering every context the brand will use photography. Each has a do list and an avoid list, the avoid list is more important.
       </p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "16px", marginBottom: "56px" }}>
         {SUBJECTS.map(s => (
@@ -858,7 +858,7 @@ function PhotoSection() {
       {/* Overlay system */}
       <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Overlay System</h2>
       <p style={{ fontSize: "13px", color: ASH, marginBottom: "28px", maxWidth: "600px", lineHeight: 1.65 }}>
-        Three approved overlays for text-over-image situations. Gradients below simulate the photo tone — the overlay treatment is what matters. Never put text directly on an unprocessed photo without one of these.
+        Three approved overlays for text-over-image situations. Gradients below simulate the photo tone, the overlay treatment is what matters. Never put text directly on an unprocessed photo without one of these.
       </p>
       <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "56px" }}>
         {OVERLAYS.map(ov => (
@@ -883,7 +883,7 @@ function PhotoSection() {
       {/* Aspect ratios */}
       <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Aspect Ratios</h2>
       <p style={{ fontSize: "13px", color: ASH, marginBottom: "28px", maxWidth: "600px", lineHeight: 1.65 }}>
-        Five ratios covering every use case. When cropping, prioritize the subject over including more context — a tight crop reads more confidently than a loose one.
+        Five ratios covering every use case. When cropping, prioritize the subject over including more context, a tight crop reads more confidently than a loose one.
       </p>
       <div style={{ display: "flex", gap: "24px", flexWrap: "wrap", alignItems: "flex-end", marginBottom: "56px" }}>
         {RATIOS.map(r => (
@@ -917,7 +917,7 @@ function PhotoSection() {
           "No stock photo people. Every face in brand materials must be real and known.",
           "No filters with names — Instagram presets, VSCO packs, Lightroom influencer presets. Derive from the grading table.",
           "No photography that would look at home on a Fortune 500 corporate site.",
-          "No mixing photo styles in the same layout — match grading before publishing.",
+          "No mixing photo styles in the same layout, match grading before publishing.",
         ].map(rule => (
           <div key={rule} style={{ padding: "14px 16px", border: `1px solid #4a1a1a`, borderRadius: 6, background: "#0e0808" }}>
             <p style={{ fontSize: "12px", color: "#c07070", lineHeight: 1.6, margin: 0 }}>{rule}</p>

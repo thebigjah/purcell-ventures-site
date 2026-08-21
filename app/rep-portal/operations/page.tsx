@@ -65,7 +65,7 @@ export default function OperationsPage() {
               PV&apos;s own <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>tools.</em>
             </h1>
             <p className="deck">
-              Internal versions of our customer-facing tools — same UI, but loaded with PV&apos;s actual data instead of empty demos. Password-gated. Storage isolated from the public demos.
+              Internal versions of our customer-facing tools, same UI, but loaded with PV&apos;s actual data instead of empty demos. Password-gated. Storage isolated from the public demos.
             </p>
           </header>
 

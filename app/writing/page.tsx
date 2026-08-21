@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 
-// noindex — keep personal writing out of search engines
+// noindex, keep personal writing out of search engines
 
 interface Piece {
   roman: string;
@@ -21,9 +21,9 @@ const PIECES: Piece[] = [
     date: "January 2025",
     category: "PROSE",
     excerpt:
-      "I saw myself alone — outcast by my own volition, consigned to the filth the world had left to me. For seven days, I denied my flesh any gratification or nourishment, desperate to overcome my weakness, and in doing so, I uncovered the error of my mind.",
+      "I saw myself alone, outcast by my own volition, consigned to the filth the world had left to me. For seven days, I denied my flesh any gratification or nourishment, desperate to overcome my weakness, and in doing so, I uncovered the error of my mind.",
     full:
-      "I saw myself alone — outcast by my own volition, consigned to the filth the world had left to me. For seven days, I denied my flesh any gratification or nourishment, desperate to overcome my weakness, and in doing so, I uncovered the error of my mind. In the earliest hours, my body ached and thundered with yearning. For sixty hours, I felt an unbearable deficit of my necessities. Then, a great and uncomfortable shift took place — my body ceased to hunger, even recoiling at the thought of food. But my naïve, unprepared mind found no such refuge beyond the third day's dusk. While my flesh was content in its deprivation, my mind saw the indulgences around me and whispered of pleasures I could still grasp. A voice, quiet yet insistent, would murmur: You've done your share — allow yourself just this much. For hours, this thought rang unsettled in my mind.\n\nYet in spite of all temptation, I persisted. One hundred sixty-eight hours proved to myself — and to the host above — that I had mastered my flesh. My victory became a celebration, shared with every soul in reach of my arms, and I found gratification in my newness. Lifting my eyes, I saw my Father's house resting just atop the horizon. I took a step toward it.\n\nI fell.\n\nI fell, and I fell, and I fell again. Only two steps closer to His home, and I was already on my knees. What wisdom had this deprivation given me? Would a wise man fall so many times upon the same path? The journey was simple — a line straight and narrow — but great serpents coiled into my vision, their fangs bared with intent to devour. Beneath me, to either side, lay the beasts of the farm. Were I to fall among them, there would be no distinction between us. I was filthy. And with every step toward my Father's house, I stumbled once more.\n\nWhat in me is so deeply wry that I find comfort in the floor caked with filth? What misshapen mind finds crooked contentment in the husks that the swine did eat? They have never satisfied my desires. Even under great pressure, even under the weight of temptation, the surrender I gave to the serpents only buried their fangs deeper beneath my skin. They promised me relief. They promised me something better. Instead, they left me with a grief far worse than the hunger of the flesh. Were I to starve another hundred days and nights, I would not feel a hunger as deep as the one I now have for the Lord.\n\nIn my immaturity, I assumed the snakes would retreat if ignored, that boredom would drive them away. Instead, they stood resolute and watchful, never ceasing in their hunt, waiting for me to stumble.\n\nI take a step toward His house.",
+      "I saw myself alone, outcast by my own volition, consigned to the filth the world had left to me. For seven days, I denied my flesh any gratification or nourishment, desperate to overcome my weakness, and in doing so, I uncovered the error of my mind. In the earliest hours, my body ached and thundered with yearning. For sixty hours, I felt an unbearable deficit of my necessities. Then, a great and uncomfortable shift took place, my body ceased to hunger, even recoiling at the thought of food. But my naïve, unprepared mind found no such refuge beyond the third day's dusk. While my flesh was content in its deprivation, my mind saw the indulgences around me and whispered of pleasures I could still grasp. A voice, quiet yet insistent, would murmur: You've done your share, allow yourself just this much. For hours, this thought rang unsettled in my mind.\n\nYet in spite of all temptation, I persisted. One hundred sixty-eight hours proved to myself, and to the host above, that I had mastered my flesh. My victory became a celebration, shared with every soul in reach of my arms, and I found gratification in my newness. Lifting my eyes, I saw my Father's house resting just atop the horizon. I took a step toward it.\n\nI fell.\n\nI fell, and I fell, and I fell again. Only two steps closer to His home, and I was already on my knees. What wisdom had this deprivation given me? Would a wise man fall so many times upon the same path? The journey was simple, a line straight and narrow, but great serpents coiled into my vision, their fangs bared with intent to devour. Beneath me, to either side, lay the beasts of the farm. Were I to fall among them, there would be no distinction between us. I was filthy. And with every step toward my Father's house, I stumbled once more.\n\nWhat in me is so deeply wry that I find comfort in the floor caked with filth? What misshapen mind finds crooked contentment in the husks that the swine did eat? They have never satisfied my desires. Even under great pressure, even under the weight of temptation, the surrender I gave to the serpents only buried their fangs deeper beneath my skin. They promised me relief. They promised me something better. Instead, they left me with a grief far worse than the hunger of the flesh. Were I to starve another hundred days and nights, I would not feel a hunger as deep as the one I now have for the Lord.\n\nIn my immaturity, I assumed the snakes would retreat if ignored, that boredom would drive them away. Instead, they stood resolute and watchful, never ceasing in their hunt, waiting for me to stumble.\n\nI take a step toward His house.",
   },
   {
     roman: "II.",
@@ -50,7 +50,7 @@ const PIECES: Piece[] = [
 export default function WritingPage() {
   const [openSlug, setOpenSlug] = useState<string | null>(null);
 
-  // noindex meta tag — block search engines from indexing this personal writing
+  // noindex meta tag, block search engines from indexing this personal writing
   useEffect(() => {
     const meta = document.createElement("meta");
     meta.name = "robots";
@@ -72,7 +72,7 @@ export default function WritingPage() {
             Things I&apos;ve <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>written.</em>
           </h1>
           <p className="deck">
-            Original poetry, prose, and reflections. I write nobody asks for. These pieces stay rough on purpose — the polished writing lives on the courses and the consulting decks; the raw stuff lives here.
+            Original poetry, prose, and reflections. I write nobody asks for. These pieces stay rough on purpose, the polished writing lives on the courses and the consulting decks; the raw stuff lives here.
           </p>
         </header>
 

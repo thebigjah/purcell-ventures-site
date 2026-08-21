@@ -1,5 +1,5 @@
 "use client";
-// QR Code Hub — purcellventures.co/qr
+// QR Code Hub, purcellventures.co/qr
 // All brand URLs as downloadable high-res QR codes (1000×1000px)
 
 import React from "react";

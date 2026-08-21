@@ -44,10 +44,10 @@ const SECTIONS: { roman: string; label: string; items: LinkItem[] }[] = [
     items: [
       { href: "/about",   label: "About",   desc: "Who I am, where I'm going, what the mark means." },
       { href: "/now",     label: "/now",    desc: "What I'm focused on right now." },
-      { href: "/uses",    label: "/uses",   desc: "My working stack — every tool in active production." },
+      { href: "/uses",    label: "/uses",   desc: "My working stack, every tool in active production." },
       { href: "/verses",  label: "Verses",  desc: "Five scriptures I come back to." },
       { href: "/writing", label: "Writing", desc: "Selected original prose." },
-      { href: "/resume",  label: "Résumé",  desc: "Full record — education, work, awards, scholarships." },
+      { href: "/resume",  label: "Résumé",  desc: "Full record, education, work, awards, scholarships." },
     ],
   },
   {

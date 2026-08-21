@@ -248,7 +248,7 @@ const POSTS: Post[] = [
   {
     slug: "why-most-ai-tools-waste-money",
     title: "Why most small business AI tools waste your money",
-    excerpt: "Most of the AI tools sold to small businesses fail not because the AI is bad — but because the workflow they're attached to was already broken. Here's how to tell the difference.",
+    excerpt: "Most of the AI tools sold to small businesses fail not because the AI is bad, but because the workflow they're attached to was already broken. Here's how to tell the difference.",
     date: "May 24, 2026",
     readingTime: "5 min read",
     category: "Opinion",
@@ -298,7 +298,7 @@ export default function BlogPage() {
             Want this for your business?
           </h3>
           <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: "0 0 16px", lineHeight: 1.5 }}>
-            We use our own AI Content Generator to draft these posts. You can too — free to try, no signup.
+            We use our own AI Content Generator to draft these posts. You can too, free to try, no signup.
           </p>
           <Link href="/digital/tools/content-generator" className="pv-btn-primary">Try the Content Generator</Link>
         </div>

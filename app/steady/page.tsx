@@ -12,7 +12,7 @@ const TIERS = [
     price: "$99",
     unit: "flat",
     desc: "One 90-minute session, in-person (Metro Atlanta) or over video. Bring one problem, leave with it solved.",
-    fits: "Best for a specific need — new iPhone, ChatGPT crash course, smart speaker setup, password manager migration.",
+    fits: "Best for a specific need, new iPhone, ChatGPT crash course, smart speaker setup, password manager migration.",
     highlight: false,
   },
   {
@@ -20,7 +20,7 @@ const TIERS = [
     price: "$79",
     unit: "/ month",
     desc: "Unlimited texts during business hours + a 30-min video check-in every month + 1 in-person visit (Metro Atlanta).",
-    fits: "Best for ongoing help — when your tech needs change weekly and you want someone on call.",
+    fits: "Best for ongoing help, when your tech needs change weekly and you want someone on call.",
     highlight: true,
   },
   {
@@ -44,9 +44,9 @@ const PACKAGES = [
 
 const PROBLEMS = [
   { icon: "📱", title: "\"My phone is a mess\"", body: "Apps you don't use, notifications you ignore, photos you can't find. I sort it. Once." },
-  { icon: "🤖", title: "\"Everyone says use AI\"", body: "ChatGPT, Claude, Gemini — same energy. I'll show you what actually saves you time vs. what's hype." },
+  { icon: "🤖", title: "\"Everyone says use AI\"", body: "ChatGPT, Claude, Gemini, same energy. I'll show you what actually saves you time vs. what's hype." },
   { icon: "🔒", title: "\"My passwords are everywhere\"", body: "Sticky notes. Same password on 14 sites. One breach away from a problem. Real password manager, real solution." },
-  { icon: "💊", title: "\"My mom can't track her meds\"", body: "Phone reminders, smart speakers, visual cues. I set it up and teach her — patiently — until it sticks." },
+  { icon: "💊", title: "\"My mom can't track her meds\"", body: "Phone reminders, smart speakers, visual cues. I set it up and teach her, patiently, until it sticks." },
   { icon: "🏠", title: "\"I bought an Echo and it's still in the box\"", body: "Smart home gear is intimidating because nobody walks you through it. I do." },
   { icon: "📂", title: "\"My digital life is chaos\"", body: "iCloud full. Google Drive a junk drawer. Subscriptions you forgot. Cleanup + a system you'll actually maintain." },
 ];
@@ -54,15 +54,15 @@ const PROBLEMS = [
 const FAQ = [
   {
     q: "How is this different from your AI Consulting?",
-    a: "Consulting is for business teams — training your staff to use AI in their workflow. Steady is for you, your household, your parents. Personal stakes, not professional ones.",
+    a: "Consulting is for business teams, training your staff to use AI in their workflow. Steady is for you, your household, your parents. Personal stakes, not professional ones.",
   },
   {
     q: "Are you only available in Atlanta?",
-    a: "In-person visits are Metro Atlanta. Remote help (video + screen share) is anywhere in the US. Most Monthly Care work happens remotely — the in-person visit is for setup or family training.",
+    a: "In-person visits are Metro Atlanta. Remote help (video + screen share) is anywhere in the US. Most Monthly Care work happens remotely, the in-person visit is for setup or family training.",
   },
   {
     q: "Can you help my elderly parent who's not tech-savvy?",
-    a: "Yes — this is exactly who Family Care is designed for. I'm patient, I'll repeat things, I'll write down steps, I'll come back if something breaks. No condescension, no jargon.",
+    a: "Yes, this is exactly who Family Care is designed for. I'm patient, I'll repeat things, I'll write down steps, I'll come back if something breaks. No condescension, no jargon.",
   },
   {
     q: "Do you fix broken devices?",
@@ -70,7 +70,7 @@ const FAQ = [
   },
   {
     q: "What happens after Monthly Care month 1?",
-    a: "It auto-renews monthly. Cancel any time with a text — no contracts. Most clients stay 6+ months because tech keeps changing and a coach on call is cheaper than figuring it out alone.",
+    a: "It auto-renews monthly. Cancel any time with a text, no contracts. Most clients stay 6+ months because tech keeps changing and a coach on call is cheaper than figuring it out alone.",
   },
 ];
 
@@ -313,7 +313,7 @@ export default function SteadyPage() {
             Tell me what&apos;s broken.
           </h3>
           <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", margin: "0 0 24px", lineHeight: 1.6, maxWidth: "560px", marginLeft: "auto", marginRight: "auto" }}>
-            5-minute intake form. I&apos;ll reply within 24 hours with a recommended plan — or an honest &quot;you don&apos;t need me.&quot;
+            5-minute intake form. I&apos;ll reply within 24 hours with a recommended plan, or an honest &quot;you don&apos;t need me.&quot;
           </p>
           <a className="pv-btn-primary" href="/steady/start">Start with an intake →</a>
         </div>

@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 
 // ──────────────────────────────────────────────────────────────
-// FAQ schema (unchanged — important for SEO)
+// FAQ schema (unchanged, important for SEO)
 // ──────────────────────────────────────────────────────────────
 const FAQ_SCHEMA = {
   "@context": "https://schema.org",
@@ -112,7 +112,7 @@ const DIVISIONS: Division[] = [
     roman: "IV.",
     label: "Custom Software",
     tagline:
-      "Apps, platforms, and automation tools scoped and built around your exact problem — from idea to launch.",
+      "Apps, platforms, and automation tools scoped and built around your exact problem, from idea to launch.",
     status: "live",
     href: "/software",
     span: "span-6",
@@ -144,7 +144,7 @@ const DIVISIONS: Division[] = [
     roman: "VI.",
     label: "Real Estate",
     tagline:
-      "Wholesale real estate — finding off-market deals for investors. Sister channel, opens 2026.",
+      "Wholesale real estate, finding off-market deals for investors. Sister channel, opens 2026.",
     status: "coming",
     href: null,
     span: "span-6",
@@ -164,7 +164,7 @@ const COURSES = [
   {
     href: "/courses/college-apps",
     title: "The College Application Playbook",
-    desc: "34 acceptances. $530,384 in scholarships. The exact process — school list, essays, financial aid, and negotiation.",
+    desc: "34 acceptances. $530,384 in scholarships. The exact process, school list, essays, financial aid, and negotiation.",
     price: "$297",
   },
   {
@@ -182,7 +182,7 @@ const COURSES = [
 ];
 
 // ──────────────────────────────────────────────────────────────
-// Phi Array generator — phyllotaxis (golden angle 137.508°)
+// Phi Array generator, phyllotaxis (golden angle 137.508°)
 // ──────────────────────────────────────────────────────────────
 function generatePhiDots(cx = 600, cy = 800, n = 380, spread = 26): string {
   const golden = Math.PI * (3 - Math.sqrt(5));
@@ -367,7 +367,7 @@ export default function Home() {
         .pv-mono-link:hover { color: var(--color-warm-accent); }
       ` }} />
 
-      {/* Phi vignette background — fixed, masked, parallax-style */}
+      {/* Phi vignette background, fixed, masked, parallax-style */}
       <div className="pv-phi-field" aria-hidden="true">
         <svg viewBox="0 0 1200 1600" preserveAspectRatio="xMidYMid slice">
           <g ref={phiRef} fill="#d4af37"></g>
@@ -497,7 +497,7 @@ export default function Home() {
         </span>
       </header>
 
-      {/* Report cards — asymmetric 12-col */}
+      {/* Report cards, asymmetric 12-col */}
       <section
         className="pv-reports"
         style={{
@@ -512,7 +512,7 @@ export default function Home() {
         ))}
       </section>
 
-      {/* Founder block — softened from preview, no "FILED BY" framing */}
+      {/* Founder block, softened from preview, no "FILED BY" framing */}
       <section
         className="pv-founder"
         style={{
@@ -601,7 +601,7 @@ export default function Home() {
       {/* Mobile-only ornamental divider above the Courses section */}
       <div className="pv-section-divider" aria-hidden="true">II</div>
 
-      {/* Courses — kept from prior homepage, styling consistent */}
+      {/* Courses, kept from prior homepage, styling consistent */}
       <section className="pv-section-head" style={{
         position: "relative", zIndex: 5,
         maxWidth: "1080px", margin: "0 auto", padding: "80px 36px 48px",
@@ -698,7 +698,7 @@ export default function Home() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "12px" }}>
           {[
             { href: "/now",     label: "/now",     desc: "What I'm focused on right now." },
-            { href: "/uses",    label: "/uses",    desc: "My working stack — every tool in production." },
+            { href: "/uses",    label: "/uses",    desc: "My working stack, every tool in production." },
             { href: "/verses",  label: "Verses",   desc: "Five scriptures I come back to." },
             { href: "/writing", label: "Writing",  desc: "Selected original prose." },
             { href: "/faq",     label: "FAQ",      desc: "Common questions, answered." },
@@ -725,7 +725,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Open Resources — surfacing free + transparent content */}
+      {/* Open Resources, surfacing free + transparent content */}
       <section
         style={{
           position: "relative", zIndex: 5,
@@ -746,7 +746,7 @@ export default function Home() {
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "12px" }}>
-            <ResourceCard href="/digital/tools" label="17 free tools" body="AI FAQ Builder, content generator, palette tool, brand kit, logo concepts, review responder, estimate generator, and more — running with our Anthropic key." />
+            <ResourceCard href="/digital/tools" label="17 free tools" body="AI FAQ Builder, content generator, palette tool, brand kit, logo concepts, review responder, estimate generator, and more, running with our Anthropic key." />
             <ResourceCard href="/ai-readiness" label="AI Readiness Test" body="10 questions. Tier-scored. Concrete next steps for where your business actually is." />
             <ResourceCard href="/ai-cost-calculator" label="Cost Calculator" body="Plug in team size + hourly rate + manual hours. Get a payback projection in 30 seconds." />
             <ResourceCard href="/pricing-comparison" label="Pricing, compared" body="Our prices next to typical agency, freelancer, and DIY tools. No spin." />

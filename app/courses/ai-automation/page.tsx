@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 
-// ── Lemon Squeezy URLs — swap when account is live ────────────────────────────
+// ── Lemon Squeezy URLs, swap when account is live ────────────────────────────
 const LS_FULL  = "#waitlist";
 const LS_PLAN  = "#waitlist";
 const LS_COACH = "#waitlist";
@@ -14,34 +14,34 @@ const MODULES = [
   {
     num: "01", title: "The Automation Mindset", lessonCount: 3, totalMin: 35,
     lessons: [
-      { id: "1-1", title: "The 'more than once' rule — how I decide what to automate", duration: "12 min", format: "Camera" },
-      { id: "1-2", title: "The stack audit — mapping your daily repetitive tasks", duration: "13 min", format: "Camera + Screen" },
-      { id: "1-3", title: "Picking your first build — scope, effort, and impact", duration: "10 min", format: "Camera" },
+      { id: "1-1", title: "The 'more than once' rule, how I decide what to automate", duration: "12 min", format: "Camera" },
+      { id: "1-2", title: "The stack audit, mapping your daily repetitive tasks", duration: "13 min", format: "Camera + Screen" },
+      { id: "1-3", title: "Picking your first build, scope, effort, and impact", duration: "10 min", format: "Camera" },
     ],
   },
   {
     num: "02", title: "Your AI Foundation", lessonCount: 3, totalMin: 37,
     lessons: [
       { id: "2-1", title: "Setting up your environment — Python, APIs, keys, .env files", duration: "13 min", format: "Screen share" },
-      { id: "2-2", title: "Your first AI call — prompting basics and output handling", duration: "12 min", format: "Screen share" },
-      { id: "2-3", title: "Building reusable AI functions — don't copy-paste, build a module", duration: "12 min", format: "Screen share" },
+      { id: "2-2", title: "Your first AI call, prompting basics and output handling", duration: "12 min", format: "Screen share" },
+      { id: "2-3", title: "Building reusable AI functions, don't copy-paste, build a module", duration: "12 min", format: "Screen share" },
     ],
   },
   {
     num: "03", title: "Email Automation", lessonCount: 4, totalMin: 50,
     lessons: [
-      { id: "3-1", title: "How I built my email bot — architecture walkthrough", duration: "13 min", format: "Camera + Screen" },
+      { id: "3-1", title: "How I built my email bot, architecture walkthrough", duration: "13 min", format: "Camera + Screen" },
       { id: "3-2", title: "Connecting to Gmail — OAuth setup, IMAP, reading emails with Python", duration: "14 min", format: "Screen share" },
-      { id: "3-3", title: "AI-powered triage — categorize and prioritize with Claude", duration: "12 min", format: "Screen share" },
-      { id: "3-4", title: "Auto-drafting responses — generating replies you actually send", duration: "11 min", format: "Camera + Screen" },
+      { id: "3-3", title: "AI-powered triage, categorize and prioritize with Claude", duration: "12 min", format: "Screen share" },
+      { id: "3-4", title: "Auto-drafting responses, generating replies you actually send", duration: "11 min", format: "Camera + Screen" },
     ],
   },
   {
     num: "04", title: "Content Automation Pipelines", lessonCount: 4, totalMin: 53,
     lessons: [
-      { id: "4-1", title: "My YouTube pipeline — how it runs without me", duration: "14 min", format: "Camera + Screen" },
-      { id: "4-2", title: "Downloading, transcribing, and clipping — yt-dlp + Whisper", duration: "13 min", format: "Screen share" },
-      { id: "4-3", title: "AI commentary and titling — adding your voice at scale", duration: "13 min", format: "Screen share" },
+      { id: "4-1", title: "My YouTube pipeline, how it runs without me", duration: "14 min", format: "Camera + Screen" },
+      { id: "4-2", title: "Downloading, transcribing, and clipping, yt-dlp + Whisper", duration: "13 min", format: "Screen share" },
+      { id: "4-3", title: "AI commentary and titling, adding your voice at scale", duration: "13 min", format: "Screen share" },
       { id: "4-4", title: "Video assembly, thumbnails, and uploading — MoviePy + YouTube API", duration: "13 min", format: "Screen share" },
     ],
   },
@@ -49,15 +49,15 @@ const MODULES = [
     num: "05", title: "Scraping & Lead Generation", lessonCount: 3, totalMin: 38,
     lessons: [
       { id: "5-1", title: "Web scraping fundamentals — Craigslist, Nextdoor, and public data", duration: "13 min", format: "Screen share" },
-      { id: "5-2", title: "The Places API approach — finding businesses that need help", duration: "13 min", format: "Screen share" },
+      { id: "5-2", title: "The Places API approach, finding businesses that need help", duration: "13 min", format: "Screen share" },
       { id: "5-3", title: "Making scrapers smart — AI filtering and scoring", duration: "12 min", format: "Camera + Screen" },
     ],
   },
   {
     num: "06", title: "Personal AI Assistants", lessonCount: 3, totalMin: 38,
     lessons: [
-      { id: "6-1", title: "Building a personal AI assistant — memory, voice, and screen vision", duration: "14 min", format: "Camera + Screen" },
-      { id: "6-2", title: "Persistent memory and context — making your AI remember you", duration: "13 min", format: "Screen share" },
+      { id: "6-1", title: "Building a personal AI assistant, memory, voice, and screen vision", duration: "14 min", format: "Camera + Screen" },
+      { id: "6-2", title: "Persistent memory and context, making your AI remember you", duration: "13 min", format: "Screen share" },
       { id: "6-3", title: "Voice input and output — ElevenLabs, Web Speech, and hands-free AI", duration: "11 min", format: "Screen share" },
     ],
   },
@@ -65,15 +65,15 @@ const MODULES = [
     num: "07", title: "Scheduling, Monitoring & Reliability", lessonCount: 3, totalMin: 37,
     lessons: [
       { id: "7-1", title: "Running on schedule — Task Scheduler, cron, and the Python schedule library", duration: "13 min", format: "Screen share" },
-      { id: "7-2", title: "Error handling and monitoring — so things don't silently fail", duration: "12 min", format: "Screen share" },
-      { id: "7-3", title: "Config-driven systems — tools you can reuse and share", duration: "12 min", format: "Screen share" },
+      { id: "7-2", title: "Error handling and monitoring, so things don't silently fail", duration: "12 min", format: "Screen share" },
+      { id: "7-3", title: "Config-driven systems, tools you can reuse and share", duration: "12 min", format: "Screen share" },
     ],
   },
   {
     num: "08", title: "Stack, Scale & What's Next", lessonCount: 2, totalMin: 25,
     lessons: [
-      { id: "8-1", title: "Your complete AI stack — assembling the pieces", duration: "13 min", format: "Camera + Screen" },
-      { id: "8-2", title: "Turning tools into products — from personal use to sellable thing", duration: "12 min", format: "Camera" },
+      { id: "8-1", title: "Your complete AI stack, assembling the pieces", duration: "13 min", format: "Camera + Screen" },
+      { id: "8-2", title: "Turning tools into products, from personal use to sellable thing", duration: "12 min", format: "Camera" },
     ],
   },
 ];
@@ -128,10 +128,10 @@ const TIERS = [
 const RESOURCES = [
   { title: "Automation Audit Worksheet", module: "Module 1", desc: "Scoring framework for ranking tasks by frequency × time cost × annoyance" },
   { title: "Python Environment Setup Guide", module: "Module 2", desc: "Step-by-step for every OS, with every common error and its fix" },
-  { title: "Email Bot Starter Template", module: "Module 3", desc: "Stripped version of the real email-bot — add your keys and go" },
+  { title: "Email Bot Starter Template", module: "Module 3", desc: "Stripped version of the real email-bot, add your keys and go" },
   { title: "YouTube Pipeline Starter Template", module: "Module 4", desc: "Stripped pipeline config + entry script with all five steps scaffolded" },
   { title: "Google Places Lead Gen Script", module: "Module 5", desc: "Scoring + export to Sheets, parameterized by city and business type" },
-  { title: "Reusable AI Wrapper Module", module: "Modules 2–7", desc: "The ai_engine.py pattern — import it into any project you build going forward" },
+  { title: "Reusable AI Wrapper Module", module: "Modules 2–7", desc: "The ai_engine.py pattern, import it into any project you build going forward" },
   { title: "Project Config Template", module: "Module 7", desc: "YAML config + CLI boilerplate you can fork for any new automation project" },
 ];
 
@@ -139,27 +139,27 @@ const RESOURCES = [
 const FAQS = [
   {
     q: "Do I need to know Python already?",
-    a: "No, but you need to be willing to learn. Module 2 walks you through setup from scratch. If you can copy code, read error messages, and search for answers, you can build every tool in this course. I won't hold your hand through basic syntax — there are free resources for that — but I'll teach you the patterns that matter.",
+    a: "No, but you need to be willing to learn. Module 2 walks you through setup from scratch. If you can copy code, read error messages, and search for answers, you can build every tool in this course. I won't hold your hand through basic syntax, there are free resources for that, but I'll teach you the patterns that matter.",
   },
   {
     q: "What if I'm not very technical?",
-    a: "The mindset modules (1 and 8) are accessible to anyone. The build modules require real effort. If you've never written code before, this is not the right starting point — take a free Python basics course first, then come back. If you've written any code at all and just haven't done automation, you're ready.",
+    a: "The mindset modules (1 and 8) are accessible to anyone. The build modules require real effort. If you've never written code before, this is not the right starting point, take a free Python basics course first, then come back. If you've written any code at all and just haven't done automation, you're ready.",
   },
   {
     q: "How is this different from an n8n course or Zapier tutorial?",
-    a: "No-code tool tutorials teach you to click through a platform someone else built. This course teaches you to build your own tools from scratch — which means you can build things no-code platforms can't do, you own the code forever, and you understand what's actually happening. We do use n8n/Zapier as glue when it makes sense, but they're never the main event.",
+    a: "No-code tool tutorials teach you to click through a platform someone else built. This course teaches you to build your own tools from scratch, which means you can build things no-code platforms can't do, you own the code forever, and you understand what's actually happening. We do use n8n/Zapier as glue when it makes sense, but they're never the main event.",
   },
   {
     q: "Are these tools you actually run?",
-    a: "Yes. The email bot processes my inbox every day. The content pipeline runs on a schedule and generates real AdSense revenue. I built a listing monitor to surface job leads automatically, an inbox harvester to process bulk email in minutes instead of days, and a personal AI that sits on my desktop right now. None of this was built for the course — the course was built around tools that already existed and already worked.",
+    a: "Yes. The email bot processes my inbox every day. The content pipeline runs on a schedule and generates real AdSense revenue. I built a listing monitor to surface job leads automatically, an inbox harvester to process bulk email in minutes instead of days, and a personal AI that sits on my desktop right now. None of this was built for the course, the course was built around tools that already existed and already worked.",
   },
   {
     q: "What do I get in the resource pack?",
-    a: "Seven real, stripped versions of the tools I run — not toy demos. API calls removed, config files pre-structured, patterns documented. You plug in your keys and you have a working starting point. The Automation Audit Worksheet, setup guides, and project config template are included too.",
+    a: "Seven real, stripped versions of the tools I run, not toy demos. API calls removed, config files pre-structured, patterns documented. You plug in your keys and you have a working starting point. The Automation Audit Worksheet, setup guides, and project config template are included too.",
   },
   {
     q: "What's the refund policy?",
-    a: "If you go through Module 2 and the technical barrier is genuinely beyond what you can bridge, contact me within 7 days of purchase and I'll refund you. I don't offer refunds after you've accessed the full curriculum — this isn't a library.",
+    a: "If you go through Module 2 and the technical barrier is genuinely beyond what you can bridge, contact me within 7 days of purchase and I'll refund you. I don't offer refunds after you've accessed the full curriculum, this isn't a library.",
   },
   {
     q: "Will this work on Windows?",
@@ -190,7 +190,7 @@ export default function ZeroToAutomatedPage() {
             Zero to <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Automated.</em>
           </h1>
           <p className="deck">
-            Build the AI tools you actually need — taught by someone who uses them every day. I automated my email inbox, my YouTube channel, my lead generation, and my scholarship search. Here is exactly how I built every one of them — and how you can build yours.
+            Build the AI tools you actually need, taught by someone who uses them every day. I automated my email inbox, my YouTube channel, my lead generation, and my scholarship search. Here is exactly how I built every one of them, and how you can build yours.
           </p>
           {/* Stats band */}
           <div style={{
@@ -253,12 +253,12 @@ export default function ZeroToAutomatedPage() {
               },
               {
                 name: "Inbox Harvester",
-                desc: "Processes hundreds of emails or documents at once — extracting deadlines, prices, contacts, or any structured data — and builds a prioritized list in minutes instead of days.",
+                desc: "Processes hundreds of emails or documents at once, extracting deadlines, prices, contacts, or any structured data, and builds a prioritized list in minutes instead of days.",
                 stats: "Batch processing · Gmail OAuth + Claude",
               },
               {
                 name: "Personal AI Assistant",
-                desc: "A desktop overlay built around how you work — voice input, voice output, screen vision, persistent memory, and custom slash commands for your most common tasks.",
+                desc: "A desktop overlay built around how you work, voice input, voice output, screen vision, persistent memory, and custom slash commands for your most common tasks.",
                 stats: "Always on · Electron + Claude API + ElevenLabs",
               },
             ].map(t => (
@@ -271,7 +271,7 @@ export default function ZeroToAutomatedPage() {
           </div>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.7 }}>
             Every other AI course teaches you a platform someone else built. This course teaches you to build tools
-            you will actually run — with code you own, patterns you can extend, and real problems they solve.
+            you will actually run, with code you own, patterns you can extend, and real problems they solve.
           </p>
         </div>
 
@@ -282,7 +282,7 @@ export default function ZeroToAutomatedPage() {
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1px", background: "var(--color-warm-border)", borderRadius: 8, overflow: "hidden" }}>
             {[
-              { who: "Solopreneurs and freelancers", desc: "You're spending 5+ hours a week on tasks that follow the same pattern. You know they could be automated — you just don't know where to start." },
+              { who: "Solopreneurs and freelancers", desc: "You're spending 5+ hours a week on tasks that follow the same pattern. You know they could be automated, you just don't know where to start." },
               { who: "Students who want to build real things", desc: "You're not interested in tutorial hell or classroom exercises. You want to finish a course and have something running on your machine that actually does something." },
               { who: "Business Launch alumni", desc: "You've built the business. Now automate it. Module 7-1 of the Business Launch course was specifically designed to point here." },
               { who: "Consulting clients", desc: "You saw one of my tools running during a session and thought: I need that. This course is where you learn to build it yourself." },
@@ -545,7 +545,7 @@ function WaitlistBlock() {
         <div>
           <p style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "8px" }}>You're on the list.</p>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            I'll email you when the course opens — and early access gets a discount.
+            I'll email you when the course opens, and early access gets a discount.
           </p>
         </div>
       ) : (
@@ -554,7 +554,7 @@ function WaitlistBlock() {
             Get notified when Zero to Automated opens.
           </h2>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "20px", fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.7 }}>
-            Early access list gets a discount. No spam — one email when it's live.
+            Early access list gets a discount. No spam, one email when it's live.
           </p>
           <form onSubmit={submit} style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
             <input

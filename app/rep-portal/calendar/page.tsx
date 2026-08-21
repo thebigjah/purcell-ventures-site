@@ -167,7 +167,7 @@ export default function CalendarPage() {
             </h1>
             <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: "8px 0 0", lineHeight: 1.6 }}>
               {totalItems > 0
-                ? `${totalItems} item${totalItems !== 1 ? "s" : ""} across the next 30 days. ${overdueCount > 0 ? `${overdueCount} overdue — handle those first.` : "Nothing overdue. Keep moving."}`
+                ? `${totalItems} item${totalItems !== 1 ? "s" : ""} across the next 30 days. ${overdueCount > 0 ? `${overdueCount} overdue, handle those first.` : "Nothing overdue. Keep moving."}`
                 : "Calendar's empty. Open a contact in the CRM and set a next follow-up date or add a task to populate this view."}
             </p>
           </header>

@@ -108,7 +108,7 @@ export default function ContactDetailPage({ params }: { params: Promise<{ id: st
       company: contact.company || "",
       service: contact.service || "your project",
       repName: ownerName || "Elijah",
-      // Stub pricing — rep fills in manually
+      // Stub pricing, rep fills in manually
       tier: contact.service?.includes("Starter") ? "Starter" : contact.service?.includes("Growth") ? "Growth" : contact.service?.includes("Full") ? "Full" : "[tier]",
       standardPrice: contact.service?.includes("Starter") ? "$400 setup + $99/mo" : contact.service?.includes("Growth") ? "$700 setup + $179/mo" : contact.service?.includes("Full") ? "$1,000 setup + $279/mo" : "[standard]",
       pilotPrice: contact.service?.includes("Starter") ? "$280 setup + $69/mo locked 6mo" : contact.service?.includes("Growth") ? "$490 setup + $125/mo locked 6mo" : contact.service?.includes("Full") ? "$700 setup + $195/mo locked 6mo" : "[pilot]",
@@ -522,7 +522,7 @@ export default function ContactDetailPage({ params }: { params: Promise<{ id: st
               <div>
                 <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", color: "var(--color-warm-accent)", margin: "0 0 4px", fontWeight: 600 }}>AI Prospect Research</h3>
                 <p style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", margin: 0, lineHeight: 1.5 }}>
-                  Pre-call brief generated from this contact&apos;s data. Does NOT browse the web — reasons from the inputs + industry knowledge + PV&apos;s product catalog.
+                  Pre-call brief generated from this contact&apos;s data. Does NOT browse the web, reasons from the inputs + industry knowledge + PV&apos;s product catalog.
                 </p>
               </div>
               <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
@@ -541,7 +541,7 @@ export default function ContactDetailPage({ params }: { params: Promise<{ id: st
 
             {!research && !researchBusy && (
               <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: 0, fontStyle: "italic", textAlign: "center", padding: "20px" }}>
-                Click &quot;Research with AI&quot; for a structured pre-call brief — likely pain points, service fit, opening line, discovery questions, red flags.
+                Click &quot;Research with AI&quot; for a structured pre-call brief, likely pain points, service fit, opening line, discovery questions, red flags.
               </p>
             )}
 
@@ -580,7 +580,7 @@ export default function ContactDetailPage({ params }: { params: Promise<{ id: st
                   </div>
                 </div>
 
-                {/* Opening line — highlight box */}
+                {/* Opening line, highlight box */}
                 <div style={{ padding: "16px 20px", background: "var(--color-warm-bg)", borderLeft: "3px solid var(--color-warm-accent)" }}>
                   <h4 style={researchHead}>Opening line</h4>
                   <p style={{ ...researchBody, margin: 0, fontStyle: "italic" }}>&ldquo;{research.opening_line}&rdquo;</p>
@@ -630,7 +630,7 @@ export default function ContactDetailPage({ params }: { params: Promise<{ id: st
                   </select>
                   <input type="text" value={activityDesc} onChange={(e) => setActivityDesc(e.target.value)} placeholder="What happened?" style={fieldStyle} />
                 </div>
-                <input type="text" value={activityOutcome} onChange={(e) => setActivityOutcome(e.target.value)} placeholder="Outcome (optional) — e.g., scheduled callback Tuesday" style={{ ...fieldStyle, marginBottom: "10px" }} />
+                <input type="text" value={activityOutcome} onChange={(e) => setActivityOutcome(e.target.value)} placeholder="Outcome (optional), e.g., scheduled callback Tuesday" style={{ ...fieldStyle, marginBottom: "10px" }} />
                 <button onClick={logActivity} className="pv-btn-primary" style={{ border: "none", cursor: "pointer" }}>Log</button>
               </section>
 

@@ -63,7 +63,7 @@ export default function EmailPolishPage() {
               Sharpen <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>a draft.</em>
             </h1>
             <p className="deck">
-              Paste your rough email. AI tightens it, suggests subject lines, tells you what changed — while keeping your voice. Use after you write, before you send.
+              Paste your rough email. AI tightens it, suggests subject lines, tells you what changed, while keeping your voice. Use after you write, before you send.
             </p>
           </header>
 
@@ -79,7 +79,7 @@ export default function EmailPolishPage() {
                 <textarea
                   value={draft}
                   onChange={(e) => setDraft(e.target.value)}
-                  placeholder="Paste your rough draft. Include subject line if you have one. Don't sanitize — write how you'd write."
+                  placeholder="Paste your rough draft. Include subject line if you have one. Don't sanitize, write how you'd write."
                   style={{ ...fieldStyle, minHeight: "240px", resize: "vertical", fontFamily: "var(--font-inter), sans-serif" }}
                 />
               </div>

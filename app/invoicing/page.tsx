@@ -1,6 +1,6 @@
 "use client";
-// Invoicing — purcellventures.co/invoicing
-// Private tool — create, manage, and track invoices. localStorage.
+// Invoicing, purcellventures.co/invoicing
+// Private tool, create, manage, and track invoices. localStorage.
 
 import { useState, useEffect } from "react";
 import { VignetteBackground } from "@/app/components/VignetteBackground";

@@ -8,7 +8,7 @@ const STACK = [
     category: "The Editor",
     items: [
       { name: "Claude Code",  desc: "The terminal-resident AI partner that wrote 80% of the code on this site. Subscription, daily driver." },
-      { name: "VS Code",      desc: "When the AI hands off — type-checking, debugging, design previews." },
+      { name: "VS Code",      desc: "When the AI hands off, type-checking, debugging, design previews." },
       { name: "Terminal",     desc: "PowerShell on Windows, iTerm2/zsh on Mac. Every workflow ends up scripted." },
     ],
   },
@@ -48,7 +48,7 @@ const STACK = [
       { name: "Vercel",       desc: "Hosting for every Next.js site I ship." },
       { name: "Cloudflare Tunnel", desc: "For exposing localhost so the phone can reach the desktop dashboard." },
       { name: "ntfy.sh",      desc: "Push notifications without an app. Powers ElijahBot's phone-tap approvals." },
-      { name: "Resend",       desc: "Transactional email — booking confirmations, lead notifications." },
+      { name: "Resend",       desc: "Transactional email, booking confirmations, lead notifications." },
       { name: "Supabase / Firebase", desc: "Whichever fits the app. Supabase for SQL, Firebase for realtime + auth." },
     ],
   },
@@ -59,7 +59,7 @@ const STACK = [
       { name: "yt-dlp",       desc: "Source footage for the YouTube pipeline." },
       { name: "MoviePy",      desc: "Assembling generated content into final videos." },
       { name: "Selenium",     desc: "Headless scraping when an API doesn't exist." },
-      { name: "Task Scheduler", desc: "Windows-side cron — every ElijahBot job runs on this." },
+      { name: "Task Scheduler", desc: "Windows-side cron, every ElijahBot job runs on this." },
     ],
   },
   {
@@ -97,7 +97,7 @@ export default function UsesPage() {
             What I <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>actually use.</em>
           </h1>
           <p className="deck">
-            The full stack — editor, languages, frameworks, AI, infrastructure, automation, hardware. Every tool here is in active production use, not on a shelf. If I&apos;ve dropped something I once used, it&apos;s because something earned its place better.
+            The full stack, editor, languages, frameworks, AI, infrastructure, automation, hardware. Every tool here is in active production use, not on a shelf. If I&apos;ve dropped something I once used, it&apos;s because something earned its place better.
           </p>
         </header>
 

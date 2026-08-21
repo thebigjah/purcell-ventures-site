@@ -169,7 +169,7 @@ export default function AIFaqBuilderPage() {
             </div>
 
             <div style={{ marginTop: "32px", padding: "16px 20px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>
-              <strong style={{ color: "var(--color-warm-text)" }}>Not quite right?</strong> Edit your description above and regenerate. The model uses your wording — give it more specifics about your customers&apos; common confusions and it sharpens up.
+              <strong style={{ color: "var(--color-warm-text)" }}>Not quite right?</strong> Edit your description above and regenerate. The model uses your wording, give it more specifics about your customers&apos; common confusions and it sharpens up.
             </div>
           </div>
         )}

@@ -60,7 +60,7 @@ export default function Post() {
           <p>The $19 buys their attention forever. The $497 buys it once.</p>
 
           <h2 style={head}>3. Honesty about the unit economics</h2>
-          <p>The content in our $19 kit took ~40 hours of focused work over a workshop session. If we sell 100 copies, we&apos;re at $19/hr of build time recovered. If we sell 1,000 copies, we&apos;re at $190/hr — which is a real consulting rate.</p>
+          <p>The content in our $19 kit took ~40 hours of focused work over a workshop session. If we sell 100 copies, we&apos;re at $19/hr of build time recovered. If we sell 1,000 copies, we&apos;re at $190/hr, which is a real consulting rate.</p>
 
           <p>Time-amortization beats per-unit margin when the marginal cost of additional units is $0 (digital download).</p>
 
@@ -69,17 +69,17 @@ export default function Post() {
 
           <p>That changes the buying experience entirely. At $19, the buyer is in test mode: <em>let&apos;s see if this is any good.</em> At $497, the buyer is in justification mode: <em>I have to prove to myself this was worth it.</em></p>
 
-          <p>Test mode is honest. Justification mode is a trap — for both sides.</p>
+          <p>Test mode is honest. Justification mode is a trap, for both sides.</p>
 
           <h2 style={head}>5. The agency model rewards opaqueness; the kit model rewards transparency</h2>
-          <p>When you sell a $497 course, you have to maintain mystique. The customer can&apos;t SEE the contents until after they pay. So the marketing has to do the work — the headlines, the testimonials, the urgency.</p>
+          <p>When you sell a $497 course, you have to maintain mystique. The customer can&apos;t SEE the contents until after they pay. So the marketing has to do the work, the headlines, the testimonials, the urgency.</p>
 
           <p>When you sell a $19 kit, you can show people exactly what&apos;s inside. The marketing is the content itself. We literally list every file in the kit on our <Link href="/shop/starter-kit" style={linkStyle}>shop page</Link>.</p>
 
           <p>This makes refunds drop, complaints drop, trust grow. The customer knows what they&apos;re getting before they buy.</p>
 
           <h2 style={head}>6. Cheap entry products force operational discipline</h2>
-          <p>If you can&apos;t deliver $19 of value reliably and automatically — every single time, no marginal effort — your operations are not ready for a $497 product either.</p>
+          <p>If you can&apos;t deliver $19 of value reliably and automatically, every single time, no marginal effort, your operations are not ready for a $497 product either.</p>
 
           <p>The kit acts as a forcing function on your delivery pipeline: it has to ship instantly via Stripe, the customer has to be able to use it without onboarding, the support burden has to be near-zero.</p>
 
@@ -88,12 +88,12 @@ export default function Post() {
           <h2 style={head}>The math summary</h2>
           <p>If we sell 200 kits a year at $19, that&apos;s $3,600 in recovered build time + 200 people who now have something to lose if they don&apos;t recommend us.</p>
 
-          <p>If even 10 of them become Digital Services customers at $179/mo for 12 months, that&apos;s an additional $21,480 — driven entirely by the $19 entry product.</p>
+          <p>If even 10 of them become Digital Services customers at $179/mo for 12 months, that&apos;s an additional $21,480, driven entirely by the $19 entry product.</p>
 
           <p>The $19 doesn&apos;t pay our bills. It builds the customer base that does.</p>
 
           <h2 style={head}>What this means if you&apos;re selling something</h2>
-          <p>If you&apos;re currently selling at $97, $297, or $497 — consider what a $19 unbundling would look like. Not as a replacement for your main product; as a top-of-funnel.</p>
+          <p>If you&apos;re currently selling at $97, $297, or $497, consider what a $19 unbundling would look like. Not as a replacement for your main product; as a top-of-funnel.</p>
 
           <p>The hardest part isn&apos;t pricing it lower. It&apos;s being willing to give up the per-unit margin in exchange for distribution + relationship.</p>
 

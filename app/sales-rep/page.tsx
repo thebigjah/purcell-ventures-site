@@ -66,7 +66,7 @@ const AUTO_REJECTS = [
 
 const PROCESS = [
   { step: "1", label: "Take the application + quiz", detail: "20–30 minutes. Honest test of product knowledge + ethics + judgment." },
-  { step: "2", label: "Elijah reviews within 7 days", detail: "You get an email either way — interview invite or polite no." },
+  { step: "2", label: "Elijah reviews within 7 days", detail: "You get an email either way, interview invite or polite no." },
   { step: "3", label: "20-minute phone interview", detail: "Conversation, not interrogation. We figure out if it's a fit." },
   { step: "4", label: "Contractor agreement + handbook", detail: "1099 contractor relationship. Standard terms. Parent co-signs if you're under 18." },
   { step: "5", label: "30-minute onboarding call + materials drop", detail: "You get access to the rep portal: product encyclopedia, pricing, scripts, CRM." },
@@ -183,7 +183,7 @@ export default function SalesRepPage() {
 
         <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", padding: "20px 24px", marginBottom: "48px", fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>
           <strong style={{ color: "var(--color-warm-text)", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", letterSpacing: "0.18em", textTransform: "uppercase" }}>Also (low priority for reps):</strong>{" "}
-          <strong>Mantle Field Services</strong> — gutter cleaning ($100+), pressure washing ($75+), lawn care ($50+). Sister brand. Most of these are run directly by the family — reps occasionally close them but it&apos;s not the focus.
+          <strong>Mantle Field Services</strong> — gutter cleaning ($100+), pressure washing ($75+), lawn care ($50+). Sister brand. Most of these are run directly by the family, reps occasionally close them but it&apos;s not the focus.
         </div>
 
         {/* Ethics */}
@@ -211,7 +211,7 @@ export default function SalesRepPage() {
         </div>
 
         <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", padding: "20px 24px", marginBottom: "48px", fontSize: "14px", lineHeight: 1.7 }}>
-          <strong style={{ color: "var(--color-warm-text)" }}>Concrete: when a prospect offers you cash to drop the price, you refuse, document, and tell Elijah. When a prospect doesn&apos;t need our full product, you redirect them to a smaller fit — even if it costs you the bigger commission. The quiz tests for this and the role doesn&apos;t work without it.</strong>
+          <strong style={{ color: "var(--color-warm-text)" }}>Concrete: when a prospect offers you cash to drop the price, you refuse, document, and tell Elijah. When a prospect doesn&apos;t need our full product, you redirect them to a smaller fit, even if it costs you the bigger commission. The quiz tests for this and the role doesn&apos;t work without it.</strong>
         </div>
 
         {/* Quiz prep */}

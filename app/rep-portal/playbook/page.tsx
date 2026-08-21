@@ -6,7 +6,7 @@ import { VignetteBackground } from "@/app/components/VignetteBackground";
 import { PortalNav } from "../_components/PortalNav";
 
 /**
- * The Playbook — single-page rep quick reference.
+ * The Playbook, single-page rep quick reference.
  *
  * The other rep portal pages (handbook, scripts, pricing, objections)
  * are deeper. This page is what a rep needs IN-CALL — collapsed,
@@ -27,7 +27,7 @@ const SECTIONS: Section[] = [
   { id: "objections", title: "Top 10 objections + responses", emoji: "✗", color: "#e54a28" },
   { id: "closes", title: "Close frameworks (5)", emoji: "✓", color: "#7aaa6a" },
   { id: "escalation", title: "When to escalate to Elijah", emoji: "⚠", color: "#e8b968" },
-  { id: "after", title: "After every call — checklist", emoji: "□", color: "var(--color-warm-text)" },
+  { id: "after", title: "After every call, checklist", emoji: "□", color: "var(--color-warm-text)" },
 ];
 
 export default function PlaybookPage() {
@@ -106,7 +106,7 @@ export default function PlaybookPage() {
             <h2 style={sectionHead}>Opening lines</h2>
             <div style={{ display: "grid", gap: "10px" }}>
               <Item title="Referral opening">&ldquo;Hi {`{firstName}`}, this is {`{repName}`} from Purcell Ventures. {`{Referrer}`} mentioned you might want to talk about [their pain point]. Got 60 seconds?&rdquo;</Item>
-              <Item title="Cold opening — local biz">&ldquo;Hey {`{firstName}`}, I run digital tools for small businesses in {`{city}`} — saw {`{company}`} and had a quick thought. Worth 60 seconds?&rdquo;</Item>
+              <Item title="Cold opening, local biz">&ldquo;Hey {`{firstName}`}, I run digital tools for small businesses in {`{city}`} — saw {`{company}`} and had a quick thought. Worth 60 seconds?&rdquo;</Item>
               <Item title="Form-fill follow-up">&ldquo;Hi {`{firstName}`}, you filled out our form on Purcell Ventures last {`{day}`}. I&apos;m {`{repName}`} — wanted to follow up on what you were looking for. Got a minute?&rdquo;</Item>
               <Item title="In-person walk-in">&ldquo;I&apos;m {`{repName}`} — Purcell Ventures. I help businesses around here add AI tools without making it weird. Could I leave you a card?&rdquo;</Item>
               <Item title="LinkedIn DM">&ldquo;Hi {`{firstName}`} — saw your post about [specific thing]. We do this for businesses like {`{company}`} — happy to share what&apos;s worked. Open to a 15-min call?&rdquo;</Item>
@@ -118,10 +118,10 @@ export default function PlaybookPage() {
             <h2 style={sectionHead}>Discovery questions</h2>
             <p style={tipNote}>Ask 3-4 of these before pitching anything. The pitch lands harder when it&apos;s pointed at THEIR words.</p>
             <ol style={{ paddingLeft: "20px", margin: 0 }}>
-              <li style={li}>&ldquo;What&apos;s the most repetitive thing in your week — the thing you wish someone else did?&rdquo;</li>
+              <li style={li}>&ldquo;What&apos;s the most repetitive thing in your week, the thing you wish someone else did?&rdquo;</li>
               <li style={li}>&ldquo;If your business doubled tomorrow, what would break first?&rdquo;</li>
               <li style={li}>&ldquo;What tool or process have you been meaning to set up for the last year and just haven&apos;t?&rdquo;</li>
-              <li style={li}>&ldquo;Walk me through how a new customer finds you — start to finish.&rdquo;</li>
+              <li style={li}>&ldquo;Walk me through how a new customer finds you, start to finish.&rdquo;</li>
               <li style={li}>&ldquo;What do you spend the most time on each week that doesn&apos;t actually make you money?&rdquo;</li>
               <li style={li}>&ldquo;Who&apos;s currently handling your website / marketing / customer service / [relevant]? How&apos;s that working?&rdquo;</li>
               <li style={li}>&ldquo;If you could wave a wand and have ONE thing fixed in your business by tomorrow, what would it be?&rdquo;</li>
@@ -136,16 +136,16 @@ export default function PlaybookPage() {
             <h2 style={sectionHead}>Top 10 objections + quick responses</h2>
             <p style={tipNote}>For deeper / situational responses, use <Link href="/rep-portal/objections" style={linkStyle}>Objections AI</Link>. Below are baseline responses to memorize.</p>
             <div style={{ display: "grid", gap: "12px" }}>
-              <Obj objection="It's too expensive" response="&ldquo;Compared to what? Let&apos;s look at the math — what are you currently paying or doing instead?&rdquo; (Pivot to value, not discount.)" />
-              <Obj objection="We already have a website" response="&ldquo;Most businesses we work with had one too. The difference isn&apos;t the website — it&apos;s the AI tools running on it. What does yours do besides sit there?&rdquo;" />
+              <Obj objection="It's too expensive" response="&ldquo;Compared to what? Let&apos;s look at the math, what are you currently paying or doing instead?&rdquo; (Pivot to value, not discount.)" />
+              <Obj objection="We already have a website" response="&ldquo;Most businesses we work with had one too. The difference isn&apos;t the website, it&apos;s the AI tools running on it. What does yours do besides sit there?&rdquo;" />
               <Obj objection="We use HubSpot / Salesforce already" response="&ldquo;Those are CRMs. We&apos;re not replacing the CRM — we&apos;re adding AI that runs ON top of it (or beside it for small teams). Want to see?&rdquo;" />
               <Obj objection="I need to think about it" response="&ldquo;What specifically? If it&apos;s about whether this works in your industry, I can show you 3 examples in 5 minutes. If it&apos;s budget, let&apos;s figure that out now.&rdquo;" />
-              <Obj objection="Send me more info" response="&ldquo;I will. But the proposal will be specific to YOUR business — so I need 10 minutes first to know what matters to you. When&apos;s good?&rdquo;" />
+              <Obj objection="Send me more info" response="&ldquo;I will. But the proposal will be specific to YOUR business, so I need 10 minutes first to know what matters to you. When&apos;s good?&rdquo;" />
               <Obj objection="Can you do it cheaper?" response="&ldquo;Not on standard pricing — I&apos;d be undercutting our other clients. But if you can commit + give us a testimonial at month 2, we have a Pilot Partner spot at 30% off setup + 30% off first 6 months.&rdquo;" />
-              <Obj objection="Why not just hire a freelancer for $30/hr?" response="&ldquo;Freelancers are great for one-time builds. We do ongoing — we maintain it, we update it, we ship new features. Math at month 6: us $1,800 (all-in maintained), freelancer $1,500 build + $0 maintenance = stale by month 3.&rdquo;" />
+              <Obj objection="Why not just hire a freelancer for $30/hr?" response="&ldquo;Freelancers are great for one-time builds. We do ongoing, we maintain it, we update it, we ship new features. Math at month 6: us $1,800 (all-in maintained), freelancer $1,500 build + $0 maintenance = stale by month 3.&rdquo;" />
               <Obj objection="I don't have time right now" response="&ldquo;That&apos;s exactly the problem we solve. If you have 15 min later this week, I&apos;ll show you how to get 5 hours of your week back. When works?&rdquo;" />
               <Obj objection="We tried AI tools before and they didn't work" response="&ldquo;Which ones? — most generic tools fail because they&apos;re not fit to your business. We build for YOUR workflow specifically. What didn&apos;t work last time?&rdquo;" />
-              <Obj objection="What if I cancel after a month?" response="&ldquo;You can. There&apos;s no contract — month-to-month. If we&apos;re not delivering value, you bail. We&apos;d rather have a happy client for 3 months than a stuck one for 12.&rdquo;" />
+              <Obj objection="What if I cancel after a month?" response="&ldquo;You can. There&apos;s no contract, month-to-month. If we&apos;re not delivering value, you bail. We&apos;d rather have a happy client for 3 months than a stuck one for 12.&rdquo;" />
             </div>
           </section>
 
@@ -153,10 +153,10 @@ export default function PlaybookPage() {
           <section id="closes" style={section}>
             <h2 style={sectionHead}>Close frameworks</h2>
             <div style={{ display: "grid", gap: "12px" }}>
-              <Item title="The Specific-Date close">&ldquo;Great. We can have you live by [specific Friday]. I&apos;ll send the setup link in 5 minutes — what email do you want it at?&rdquo;</Item>
+              <Item title="The Specific-Date close">&ldquo;Great. We can have you live by [specific Friday]. I&apos;ll send the setup link in 5 minutes, what email do you want it at?&rdquo;</Item>
               <Item title="The Alternative-Choice close">&ldquo;Two ways to start — Growth at $179/mo with the full suite OR Starter at $99/mo to test the waters. Which fits where you are?&rdquo;</Item>
               <Item title="The Quiet close">After they&apos;ve seen value: pause. Let them ask &ldquo;so what do I do next?&rdquo; If they don&apos;t after 5 seconds — &ldquo;Should we get you set up?&rdquo;</Item>
-              <Item title="The Pilot Partner close">&ldquo;We have 3 Pilot Partner spots left. 30% off setup, 30% off first 6 months, lock-in pricing — in exchange for a 2-sentence testimonial at month 2 + one referral within 6 months. Want one?&rdquo;</Item>
+              <Item title="The Pilot Partner close">&ldquo;We have 3 Pilot Partner spots left. 30% off setup, 30% off first 6 months, lock-in pricing, in exchange for a 2-sentence testimonial at month 2 + one referral within 6 months. Want one?&rdquo;</Item>
               <Item title="The Honest-No close">&ldquo;If now isn&apos;t right, text me NO and I&apos;ll stop. If we should keep talking, when&apos;s good?&rdquo; (Use ONLY after 3+ follow-ups.)</Item>
             </div>
           </section>
@@ -176,7 +176,7 @@ export default function PlaybookPage() {
 
           {/* AFTER */}
           <section id="after" style={section}>
-            <h2 style={sectionHead}>After every call — checklist</h2>
+            <h2 style={sectionHead}>After every call, checklist</h2>
             <ol style={{ paddingLeft: "20px", fontSize: "14px", lineHeight: 1.9 }}>
               <li><strong>Log the call within 5 min.</strong> Use <Link href="/rep-portal/call-recap" style={linkStyle}>Call Recap</Link> if your notes are messy — AI structures them.</li>
               <li><strong>Update the stage</strong> on the contact if the deal moved (or didn&apos;t).</li>

@@ -245,10 +245,10 @@ export default function CRMPage() {
       { firstName: "James", lastName: "Walker", company: "Walker Real Estate Group", email: "james@walkergroup.com", phone: "(770) 555-0411", stage: "Quoted", estimatedValue: 279, service: "Digital Full", source: "Cold outreach", tags: ["sample", "real-estate"], notes: "Toured their office Thursday. 8 agents, no consistent CRM, scattered tools. Quoted Full tier $279/mo + $1,000 setup. Asked for 'a couple days to think.'", nextFollowUp: new Date(now + 5 * day).toISOString().slice(0, 10) },
       { firstName: "Aisha", lastName: "Williams", company: "Bright Smile Pediatric Dental", email: "aisha@brightsmilepediatric.com", phone: "(770) 555-0856", stage: "Negotiation", estimatedValue: 179, service: "Digital Growth (Pilot Partner)", source: "Web form", tags: ["sample", "dental", "pilot"], notes: "Wants Pilot Partner pricing. Has 6 staff, current website 'from 2018, never updated.' Offered $490 setup + $125/mo locked 6mo. She asked if I could do $80/mo. Said no — Pilot is firm. Awaiting response.", nextFollowUp: new Date(now + 1 * day).toISOString().slice(0, 10) },
       { firstName: "Tom", lastName: "Brewer", company: "Brewer's Auto Detailing", email: "tom@brewersdetail.com", phone: "(770) 555-0289", stage: "Closed Won", estimatedValue: 99, service: "Digital Starter", source: "Word of mouth", tags: ["sample", "auto"], notes: "First close! Standard Starter. Setup starts this week. Promised website live in 5 business days.", closedAt: new Date(now - 4 * day).toISOString() },
-      { firstName: "Rachel", lastName: "Foster", company: "Foster Family Law", email: "rachel@fosterlaw.com", phone: "(404) 555-0521", stage: "Closed Lost", estimatedValue: 279, service: "Digital Full", source: "Cold outreach", tags: ["sample", "law"], notes: "Pitched Full tier. They went with a competitor agency at $800/mo. Said 'we needed more white-glove handholding than your model provides.' Fair feedback — file for 90-day re-pitch.", closedAt: new Date(now - 12 * day).toISOString() },
-      { firstName: "Marcus", lastName: "Hall", company: "Hall's Custom Carpentry", email: "marcus@hallscustom.com", phone: "(770) 555-0734", stage: "Contacted", estimatedValue: 0, service: "Mantle Field Services", source: "Yard sign", tags: ["sample", "trades", "mantle-only"], notes: "Saw the Mantle yard sign at a neighbor's. Wants gutter cleaning. Mantle-only — defer to David + Dad.", nextFollowUp: new Date(now - 1 * day).toISOString().slice(0, 10) }, // overdue
-      { firstName: "Priya", lastName: "Sharma", company: "Sharma Wellness Studio", email: "priya@sharmawellness.com", phone: "(770) 555-0967", stage: "Lead", estimatedValue: 297, service: "College Apps course", source: "Course inquiry — for daughter", tags: ["sample", "course"], notes: "Inquired about College Apps course for her daughter. Probably easier close than the business products. $297, one-time.", nextFollowUp: new Date(now + 4 * day).toISOString().slice(0, 10) },
-      { firstName: "Greg", lastName: "Olsen", company: "Olsen Construction Co.", email: "greg@olsenconst.com", phone: "(770) 555-0322", stage: "Quoted", estimatedValue: 7500, service: "Custom Software — project mgmt tool", source: "Referral", tags: ["sample", "construction", "custom-software", "escalate-elijah"], notes: "Wants custom project management tool. Discovery call w/ Elijah was Wed. Quoted $7,500. Awaiting decision. SENIOR REP — Elijah needs to close.", nextFollowUp: new Date(now + 6 * day).toISOString().slice(0, 10) },
+      { firstName: "Rachel", lastName: "Foster", company: "Foster Family Law", email: "rachel@fosterlaw.com", phone: "(404) 555-0521", stage: "Closed Lost", estimatedValue: 279, service: "Digital Full", source: "Cold outreach", tags: ["sample", "law"], notes: "Pitched Full tier. They went with a competitor agency at $800/mo. Said 'we needed more white-glove handholding than your model provides.' Fair feedback, file for 90-day re-pitch.", closedAt: new Date(now - 12 * day).toISOString() },
+      { firstName: "Marcus", lastName: "Hall", company: "Hall's Custom Carpentry", email: "marcus@hallscustom.com", phone: "(770) 555-0734", stage: "Contacted", estimatedValue: 0, service: "Mantle Field Services", source: "Yard sign", tags: ["sample", "trades", "mantle-only"], notes: "Saw the Mantle yard sign at a neighbor's. Wants gutter cleaning. Mantle-only, defer to David + Dad.", nextFollowUp: new Date(now - 1 * day).toISOString().slice(0, 10) }, // overdue
+      { firstName: "Priya", lastName: "Sharma", company: "Sharma Wellness Studio", email: "priya@sharmawellness.com", phone: "(770) 555-0967", stage: "Lead", estimatedValue: 297, service: "College Apps course", source: "Course inquiry, for daughter", tags: ["sample", "course"], notes: "Inquired about College Apps course for her daughter. Probably easier close than the business products. $297, one-time.", nextFollowUp: new Date(now + 4 * day).toISOString().slice(0, 10) },
+      { firstName: "Greg", lastName: "Olsen", company: "Olsen Construction Co.", email: "greg@olsenconst.com", phone: "(770) 555-0322", stage: "Quoted", estimatedValue: 7500, service: "Custom Software, project mgmt tool", source: "Referral", tags: ["sample", "construction", "custom-software", "escalate-elijah"], notes: "Wants custom project management tool. Discovery call w/ Elijah was Wed. Quoted $7,500. Awaiting decision. SENIOR REP — Elijah needs to close.", nextFollowUp: new Date(now + 6 * day).toISOString().slice(0, 10) },
     ];
 
     const newContacts: Contact[] = samples.map((s) => {
@@ -427,7 +427,7 @@ export default function CRMPage() {
         email: lead.email,
         phone: lead.phone,
         service: lead.service || "",
-        source: "Legacy /crm — site lead form",
+        source: "Legacy /crm, site lead form",
         notes: [lead.message, lead.notes].filter(Boolean).join("\n\n"),
         tags: ["legacy", "site-lead"],
         createdAt: lead.createdAt,
@@ -443,7 +443,7 @@ export default function CRMPage() {
         email: booking.email,
         phone: booking.phone,
         service: booking.sessionType || "Consulting booking",
-        source: "Legacy /crm — consulting booking",
+        source: "Legacy /crm, consulting booking",
         notes: `Format: ${booking.format || "n/a"}\nPreferred date: ${booking.datePreference || "n/a"} ${booking.timePreference || ""}\nGroup size: ${booking.groupSize || "n/a"}\n\n${booking.notes || ""}`,
         tags: ["legacy", "consulting-booking"],
         createdAt: booking.createdAt,
@@ -456,7 +456,7 @@ export default function CRMPage() {
         firstName: first,
         lastName: rest.join(" "),
         email: sub.email,
-        source: "Legacy /crm — newsletter signup",
+        source: "Legacy /crm, newsletter signup",
         notes: `Business type: ${sub.businessType || "n/a"}`,
         tags: ["legacy", "newsletter"],
         createdAt: sub.createdAt,
@@ -789,7 +789,7 @@ function ListView({ contacts, onEdit, onDelete, onStageChange, refresh }: { cont
 
   return (
     <div>
-      {/* Bulk action bar — only shows when selections exist */}
+      {/* Bulk action bar, only shows when selections exist */}
       {selected.size > 0 && (
         <div style={{ display: "flex", gap: "8px", alignItems: "center", padding: "12px 16px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", marginBottom: "12px", flexWrap: "wrap" }}>
           <strong style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "13px" }}>{selected.size} selected</strong>
@@ -1048,7 +1048,7 @@ function TaskSection({ title, tasks, contacts, refresh, accentColor, muted = fal
 function StatsView({ contacts, tasks }: { contacts: Contact[]; tasks: Task[] }) {
   const stats = useMemo(() => statsForContacts(contacts), [contacts]);
 
-  // Funnel data — sequential stages, drop-off rate at each step
+  // Funnel data, sequential stages, drop-off rate at each step
   const funnelStages: Stage[] = ["Lead", "Contacted", "Qualified", "Quoted", "Negotiation", "Closed Won"];
   const funnelData = useMemo(() => {
     // Cumulative: count of contacts who EVER reached each stage (counts current + later stages)
@@ -1140,7 +1140,7 @@ function StatsView({ contacts, tasks }: { contacts: Contact[]; tasks: Task[] }) 
                 <StatCard label="Open pipeline (raw)" value={`$${fc.openPipelineRaw.toLocaleString()}`} />
               </div>
               <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", padding: "16px 20px" }}>
-                <div style={{ fontSize: "11px", color: "var(--color-warm-accent)", letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: "12px", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 700 }}>Stage breakdown — weighted</div>
+                <div style={{ fontSize: "11px", color: "var(--color-warm-accent)", letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: "12px", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 700 }}>Stage breakdown, weighted</div>
                 {STAGES.filter((s) => s !== "Closed Lost").map((s) => {
                   const data = fc.byStage[s];
                   if (data.count === 0) return null;
@@ -1182,7 +1182,7 @@ function StatsView({ contacts, tasks }: { contacts: Contact[]; tasks: Task[] }) 
       <section style={{ marginBottom: "32px" }}>
         <h3 style={statsHeader}>By source</h3>
         {stats.bySource.length === 0 ? (
-          <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", fontStyle: "italic" }}>No source data yet — fill the &quot;source&quot; field on contacts to populate.</p>
+          <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", fontStyle: "italic" }}>No source data yet, fill the &quot;source&quot; field on contacts to populate.</p>
         ) : (
           <div>
             {stats.bySource.map((s) => {
@@ -1426,7 +1426,7 @@ function CoachView({ contacts }: { contacts: Contact[] }) {
           {coaching.dead_or_stalled.length > 0 && (
             <div>
               <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: "#e54a28", fontWeight: 700, marginBottom: "12px" }}>
-                Dead or stalled — kill or revive? ({coaching.dead_or_stalled.length})
+                Dead or stalled, kill or revive? ({coaching.dead_or_stalled.length})
               </h3>
               <div style={{ display: "grid", gap: "8px" }}>
                 {coaching.dead_or_stalled.map((d) => (

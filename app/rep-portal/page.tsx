@@ -56,7 +56,7 @@ const QUICK_LINKS = [
 
 const RECENT = [
   { date: "2026-05-24", note: "Portal launched. Pricing reflects current site ($99/$179/$279 Digital, $175/hr consulting)." },
-  { date: "2026-05-24", note: "Mantle Field Services is low-priority for reps — most jobs run direct by family. Focus on Digital, Consulting, Custom, Courses." },
+  { date: "2026-05-24", note: "Mantle Field Services is low-priority for reps, most jobs run direct by family. Focus on Digital, Consulting, Custom, Courses." },
 ];
 
 export default function RepPortalDashboard() {
@@ -112,7 +112,7 @@ export default function RepPortalDashboard() {
       bestSource,
     });
 
-    // Admin activity feed — last 15 activities across ALL contacts
+    // Admin activity feed, last 15 activities across ALL contacts
     if (admin) {
       const items: FeedItem[] = [];
       allContacts.forEach((c) => {
@@ -161,7 +161,7 @@ export default function RepPortalDashboard() {
             </p>
           </header>
 
-          {/* Action banner — overdue + today + pipeline */}
+          {/* Action banner, overdue + today + pipeline */}
           {ownerName && (
             <div className="dash-action-banner" style={{ display: "grid", gridTemplateColumns: overdue.length > 0 ? "1fr 1fr 1fr 1fr" : "1fr 1fr 1fr", gap: "10px", marginBottom: "32px" }}>
               {overdue.length > 0 && (
@@ -189,11 +189,11 @@ export default function RepPortalDashboard() {
             </div>
           )}
 
-          {/* Personal performance metrics — for non-admin reps mostly */}
+          {/* Personal performance metrics, for non-admin reps mostly */}
           {ownerName && personalMetrics && (personalMetrics.monthWonCount > 0 || personalMetrics.avgDealSize > 0) && (
             <section style={{ marginBottom: "32px" }}>
               <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontWeight: 700 }}>
-                Your performance {admin && "(just yours — switch to admin view in CRM for all reps)"}
+                Your performance {admin && "(just yours, switch to admin view in CRM for all reps)"}
               </h3>
               <div className="dash-perf-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "10px" }}>
                 <div style={perfBox}>
@@ -220,7 +220,7 @@ export default function RepPortalDashboard() {
             </section>
           )}
 
-          {/* Admin activity feed — only for admins */}
+          {/* Admin activity feed, only for admins */}
           {admin && feed.length > 0 && (
             <section style={{ marginBottom: "40px" }}>
               <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontWeight: 700 }}>

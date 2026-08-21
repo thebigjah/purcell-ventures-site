@@ -44,7 +44,7 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* Bubble button — hard-edge square with brass corner brackets */}
+      {/* Bubble button, hard-edge square with brass corner brackets */}
       <button
         onClick={() => setOpen(o => !o)}
         style={{

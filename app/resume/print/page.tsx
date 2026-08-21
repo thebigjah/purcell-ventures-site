@@ -356,7 +356,7 @@ export default function ResumePrint() {
           </div>
         </div>
 
-        {/* Selected Work — full width, leads the page */}
+        {/* Selected Work, full width, leads the page */}
         <div className="section">
           <div className="section-title">Selected Work — Shipped Products</div>
           <div className="proj-grid">
@@ -379,7 +379,7 @@ export default function ResumePrint() {
           </div>
         </div>
 
-        {/* Two-column body — one flow, balanced across columns */}
+        {/* Two-column body, one flow, balanced across columns */}
         <div className="two-col">
 
             {/* Experience */}
@@ -503,7 +503,7 @@ export default function ResumePrint() {
                 ["Christian Character Award", "Grove", "One of two students school-wide selected for moral excellence and leadership."],
                 ["Christ-like Leadership Award", "End-of-Year Awards · Grove", "Awarded for servant leadership and Christian character throughout the school year."],
                 ["Lead Role — Christmas Musical", "Grove", "Lead acting and vocal role in the annual Christmas production."],
-                ["Highest Math Grade in Class", "9th Grade", "100% both semesters — top math average in the class."],
+                ["Highest Math Grade in Class", "9th Grade", "100% both semesters, top math average in the class."],
                 ["Youth Leadership Summit", "Summer 2023", "Family Foundation & Colson Center · Richmond, VA. Invitation-only seminar on worldview, cultural analysis, and Christian civic leadership."],
               ].map(([title, right, sub]) => (
                 <div className="row" key={title}>

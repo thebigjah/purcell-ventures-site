@@ -23,11 +23,11 @@ const SECTIONS: HelpSection[] = [
       <>
         <p>Welcome to the rep portal. In your first hour:</p>
         <ol>
-          <li><strong>Read the <Link href="/rep-portal/handbook" style={linkStyle}>Handbook</Link>.</strong> 10 minutes. Especially the Hard Rules (§5) and the Pilot Partner pitch (§4). Don&apos;t skim — the handbook is the contract.</li>
+          <li><strong>Read the <Link href="/rep-portal/handbook" style={linkStyle}>Handbook</Link>.</strong> 10 minutes. Especially the Hard Rules (§5) and the Pilot Partner pitch (§4). Don&apos;t skim, the handbook is the contract.</li>
           <li><strong>Bookmark the <Link href="/rep-portal/pricing" style={linkStyle}>Pricing reference</Link>.</strong> This is the source of truth for every number you quote. When prices change here, you change.</li>
           <li><strong>Take the quiz</strong> (Elijah sent you the link separately). 14/18 to pass + 6/10 on ethics.</li>
           <li><strong>Sign the contractor agreement</strong> Elijah will send you after the quiz.</li>
-          <li><strong>30-min onboarding call</strong> with Elijah — bring questions.</li>
+          <li><strong>30-min onboarding call</strong> with Elijah, bring questions.</li>
           <li><strong>Add your first prospect</strong> to the <Link href="/rep-portal/crm" style={linkStyle}>CRM</Link>. Even if they&apos;re cold, log them. Commission gets paid on what&apos;s logged here.</li>
         </ol>
       </>
@@ -42,7 +42,7 @@ const SECTIONS: HelpSection[] = [
           <li><strong>Open the <Link href="/rep-portal" style={linkStyle}>Dashboard</Link>.</strong> Look at overdue tasks + today&apos;s tasks at the top. Handle overdue FIRST.</li>
           <li><strong>Run the <Link href="/rep-portal/crm" style={linkStyle}>AI Deal Coach</Link></strong> (CRM → Coach view). It tells you the 3-5 contacts that need attention TODAY and exactly what to do.</li>
           <li><strong>Work through your <Link href="/rep-portal/calendar" style={linkStyle}>Calendar</Link>.</strong> Overdue → Today → Tomorrow → This week. Check off tasks as you finish them.</li>
-          <li><strong>Log every conversation.</strong> Every call, email, meeting — log it on the contact&apos;s detail page. Activity log = your memory + your commission proof.</li>
+          <li><strong>Log every conversation.</strong> Every call, email, meeting, log it on the contact&apos;s detail page. Activity log = your memory + your commission proof.</li>
           <li><strong>Set the next follow-up date</strong> when you log an activity. If you don&apos;t, the contact rots silently.</li>
         </ol>
       </>
@@ -57,7 +57,7 @@ const SECTIONS: HelpSection[] = [
           <li>Open the contact in the <Link href="/rep-portal/crm" style={linkStyle}>CRM</Link>.</li>
           <li>In the &quot;Log activity&quot; box at the top of the activity timeline, pick the type (call, email, SMS, meeting, note).</li>
           <li>Write what happened in <strong>1-2 sentences</strong>. Be specific: &quot;Called Jane, left voicemail&quot; not &quot;tried Jane.&quot;</li>
-          <li>Add an <strong>outcome</strong> if there&apos;s a specific result: &quot;Scheduled callback Tuesday 2pm&quot; / &quot;Asked me to email proposal&quot; / &quot;Pass — no budget.&quot;</li>
+          <li>Add an <strong>outcome</strong> if there&apos;s a specific result: &quot;Scheduled callback Tuesday 2pm&quot; / &quot;Asked me to email proposal&quot; / &quot;Pass, no budget.&quot;</li>
           <li>Click Log. The activity is timestamped + permanent.</li>
           <li><strong>Update the stage</strong> if the conversation moved the deal. (Dropdown in the contact header.)</li>
           <li><strong>Set or update the next follow-up date</strong> in the contact details.</li>
@@ -93,7 +93,7 @@ const SECTIONS: HelpSection[] = [
           <li>Click &quot;Seed with 4 starter templates&quot; (or build your own with + New template).</li>
           <li>Templates use tokens like <code style={codeStyle}>{`{{firstName}}`}</code>, <code style={codeStyle}>{`{{company}}`}</code>, <code style={codeStyle}>{`{{service}}`}</code> as placeholders.</li>
           <li>On any <Link href="/rep-portal/crm" style={linkStyle}>contact detail page</Link>, use the &quot;📧 Use email template&quot; dropdown. The template opens in your email client with tokens auto-filled.</li>
-          <li>Edit before sending (always — never send a template straight). Activity log captures the template you used.</li>
+          <li>Edit before sending (always, never send a template straight). Activity log captures the template you used.</li>
         </ol>
         <p style={tipStyle}>⭐ <strong>Pairs with:</strong> the <Link href="/digital/tools/email-composer" style={linkStyle}>AI Email Composer</Link> for one-off emails you don&apos;t need to save.</p>
       </>
@@ -126,7 +126,7 @@ const SECTIONS: HelpSection[] = [
           <li><strong>Custom Software inquiry</strong> — ANY size. Elijah scopes, you close. Never quote yourself.</li>
           <li><strong>Negotiation below Pilot Partner rates</strong> — don&apos;t discount on your own authority.</li>
           <li><strong>Consulting deal over $2,000</strong></li>
-          <li><strong>Prospect claiming existing PV history</strong> (past customer, referral) — verify before you commit.</li>
+          <li><strong>Prospect claiming existing PV history</strong> (past customer, referral), verify before you commit.</li>
           <li><strong>Prospect from a competitor&apos;s customer base</strong> — judgment call.</li>
           <li><strong>Anything you&apos;re unsure about</strong> — trust your instinct that something needs a second opinion.</li>
         </ul>
@@ -177,11 +177,11 @@ const SECTIONS: HelpSection[] = [
           <li>All imported contacts are tagged &quot;csv-import&quot; for easy filtering.</li>
         </ol>
 
-        <h4 style={subhead}>E. End of day — closing out</h4>
+        <h4 style={subhead}>E. End of day, closing out</h4>
         <ol>
           <li>Update any contacts where you had activity today (log it).</li>
           <li>Set next follow-up dates on anything you touched.</li>
-          <li>Check tomorrow&apos;s calendar — if there&apos;s prep work, do it now.</li>
+          <li>Check tomorrow&apos;s calendar, if there&apos;s prep work, do it now.</li>
           <li>Close laptop.</li>
         </ol>
       </>
@@ -256,7 +256,7 @@ export default function HelpPage() {
           </div>
 
           <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", textAlign: "center", fontStyle: "italic" }}>
-            Question not covered here? Text Elijah at (205) 462-7839 — and we&apos;ll add the answer to this page so the next person doesn&apos;t have to ask.
+            Question not covered here? Text Elijah at (205) 462-7839, and we&apos;ll add the answer to this page so the next person doesn&apos;t have to ask.
           </p>
 
         </main>

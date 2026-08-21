@@ -15,13 +15,13 @@ const TEMPLATES: Template[] = [
   {
     industry: "Salons & spas",
     subject: "Quick question about {{salonName}}",
-    body: `Hi {{firstName}},\n\nI checked out {{salonName}}'s booking flow online and noticed {{specificObservation}}. Most salons we work with say this was the #1 thing they wanted to fix.\n\nWe help salons fix this for $179/mo. Worth 15 min to see what we'd do for you?\n\nIf not, no worries — just delete this.\n\n— {{yourName}}`,
+    body: `Hi {{firstName}},\n\nI checked out {{salonName}}'s booking flow online and noticed {{specificObservation}}. Most salons we work with say this was the #1 thing they wanted to fix.\n\nWe help salons fix this for $179/mo. Worth 15 min to see what we'd do for you?\n\nIf not, no worries, just delete this.\n\n— {{yourName}}`,
     why: "Specific observation + relatable framing + low-commitment ask + permission to ignore.",
   },
   {
     industry: "Plumbing / HVAC / trades",
     subject: "Saw a pattern in how {{businessType}}s are using AI",
-    body: `Hi {{firstName}},\n\nI help trades businesses with AI tools — particularly plumbers and HVAC. Most owners I work with were skeptical at first.\n\nThree things they had in common before:\n• Phone rang less than it used to\n• Losing leads to bigger shops with better websites\n• No time to figure out tech themselves\n\nSound like {{company}}?\n\n— {{yourName}}`,
+    body: `Hi {{firstName}},\n\nI help trades businesses with AI tools, particularly plumbers and HVAC. Most owners I work with were skeptical at first.\n\nThree things they had in common before:\n• Phone rang less than it used to\n• Losing leads to bigger shops with better websites\n• No time to figure out tech themselves\n\nSound like {{company}}?\n\n— {{yourName}}`,
     why: "Pattern-recognition opener > pitch. Three specific items invite agreement. Question forces a yes/no.",
   },
   {
@@ -39,7 +39,7 @@ const TEMPLATES: Template[] = [
   {
     industry: "Law firm",
     subject: "Intake automation for {{firmName}}",
-    body: `Hi {{firstName}},\n\nMost law firms we work with were spending {{specificHours}} on intake — qualifying leads, scheduling consults, gathering docs. We automated that for under $200/mo.\n\nIf intake is a bottleneck, 15-min walkthrough — not a pitch, just the workflow.\n\n— {{yourName}}`,
+    body: `Hi {{firstName}},\n\nMost law firms we work with were spending {{specificHours}} on intake, qualifying leads, scheduling consults, gathering docs. We automated that for under $200/mo.\n\nIf intake is a bottleneck, 15-min walkthrough, not a pitch, just the workflow.\n\n— {{yourName}}`,
     why: "\"Not a pitch, just the workflow\" lowers the threshold. Pain-point first, price as a fact.",
   },
   {
@@ -206,7 +206,7 @@ export default function FreePage() {
         </form>
 
         <div style={{ marginTop: "40px", padding: "20px 24px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>
-          <strong style={{ color: "var(--color-warm-accent)" }}>Why we give 10 away free:</strong> these templates work. We bundle 90 more + subject library + reply handling + cadences into the <Link href="/shop/cold-email-pack" style={{ color: "var(--color-warm-accent)" }}>full $29 pack</Link>. If the free 10 don&apos;t earn at least one reply, the paid version won&apos;t either — and we&apos;d rather you skip it.
+          <strong style={{ color: "var(--color-warm-accent)" }}>Why we give 10 away free:</strong> these templates work. We bundle 90 more + subject library + reply handling + cadences into the <Link href="/shop/cold-email-pack" style={{ color: "var(--color-warm-accent)" }}>full $29 pack</Link>. If the free 10 don&apos;t earn at least one reply, the paid version won&apos;t either, and we&apos;d rather you skip it.
         </div>
 
       </main>

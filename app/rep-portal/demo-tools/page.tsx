@@ -6,7 +6,7 @@ import { VignetteBackground } from "@/app/components/VignetteBackground";
 import { PortalNav } from "../_components/PortalNav";
 
 /**
- * Rep Demo Tools — in-pitch quick launcher.
+ * Rep Demo Tools, in-pitch quick launcher.
  * Reps open this page during a sales call. Each tool opens in a new tab
  * with the prospect's industry pre-suggested as a quick-start prompt.
  */
@@ -35,7 +35,7 @@ const TOOLS: DemoTool[] = [
     slug: "content-generator",
     href: "/digital/tools/content-generator",
     name: "AI Content Generator",
-    pitch: "Blog posts, descriptions, bios, emails, captions — pick a type, get a draft.",
+    pitch: "Blog posts, descriptions, bios, emails, captions, pick a type, get a draft.",
     bestFor: "Owners who know they should be publishing content but never have time.",
     exampleInput: "Blog post about: Why you should flush your water heater annually",
     category: "AI",
@@ -44,8 +44,8 @@ const TOOLS: DemoTool[] = [
     slug: "caption-generator",
     href: "/digital/tools/caption-generator",
     name: "AI Caption Generator",
-    pitch: "5 social captions in different voices — story / value / question / behind-the-scenes / CTA.",
-    bestFor: "Salons, contractors, restaurants — anyone whose social is sporadic.",
+    pitch: "5 social captions in different voices, story / value / question / behind-the-scenes / CTA.",
+    bestFor: "Salons, contractors, restaurants, anyone whose social is sporadic.",
     exampleInput: "Behind-the-scenes shot of organizing tools in the truck",
     category: "AI",
   },
@@ -62,7 +62,7 @@ const TOOLS: DemoTool[] = [
     slug: "brand-kit",
     href: "/digital/tools/brand-kit",
     name: "Brand Kit Builder",
-    pitch: "Palette + fonts + voice + taglines — complete starter brand guide.",
+    pitch: "Palette + fonts + voice + taglines, complete starter brand guide.",
     bestFor: "New businesses or rebrand prospects. High wow factor in pitches.",
     exampleInput: "Mobile dog grooming, focused on anxious dogs and senior pets",
     category: "Branding",
@@ -71,7 +71,7 @@ const TOOLS: DemoTool[] = [
     slug: "logo-concepts",
     href: "/digital/tools/logo-concepts",
     name: "Logo Concept Generator",
-    pitch: "5 distinct logo directions — icon, type, palette, rationale.",
+    pitch: "5 distinct logo directions, icon, type, palette, rationale.",
     bestFor: "Anyone considering a rebrand. Use to brief a designer or sketch yourself.",
     exampleInput: "Business: Bob's Plumbing · Industry: Residential plumbing · Personality: Reliable, hometown, no-nonsense",
     category: "Branding",
@@ -107,7 +107,7 @@ const TOOLS: DemoTool[] = [
     slug: "email-composer",
     href: "/digital/tools/email-composer",
     name: "Email Composer",
-    pitch: "Cold outreach, follow-up, response — get a draft ready to edit and send.",
+    pitch: "Cold outreach, follow-up, response, get a draft ready to edit and send.",
     bestFor: "Anyone with email outreach in their workflow.",
     exampleInput: "Warm follow-up: toured Jane's salon Tuesday, quoted $179/mo, 5 days no response",
     category: "AI",
@@ -135,8 +135,8 @@ const TOOLS: DemoTool[] = [
     slug: "loyalty",
     href: "/digital/loyalty",
     name: "Loyalty Punch Card",
-    pitch: "Digital punch card for repeat customers — add a punch, redeem when full.",
-    bestFor: "Coffee shops, salons, restaurants — anything with a 'buy 10 get one free' angle.",
+    pitch: "Digital punch card for repeat customers, add a punch, redeem when full.",
+    bestFor: "Coffee shops, salons, restaurants, anything with a 'buy 10 get one free' angle.",
     exampleInput: "Add your first customer, click + Punch on each visit, redeem at cap",
     category: "Customer",
   },
@@ -144,16 +144,16 @@ const TOOLS: DemoTool[] = [
     slug: "expenses",
     href: "/digital/expenses",
     name: "Expense Tracker",
-    pitch: "Log expenses by category — monthly summaries + tax-deductible flagging.",
+    pitch: "Log expenses by category, monthly summaries + tax-deductible flagging.",
     bestFor: "Self-employed, contractors, anyone managing their own books.",
-    exampleInput: "$45 Home Depot — drill bits for Tuesday's job · Materials · Tax-deductible",
+    exampleInput: "$45 Home Depot, drill bits for Tuesday's job · Materials · Tax-deductible",
     category: "Operations",
   },
   {
     slug: "inventory",
     href: "/digital/inventory",
     name: "Inventory Tracker",
-    pitch: "SKU list + stock levels + low-stock alerts — never run out of materials again.",
+    pitch: "SKU list + stock levels + low-stock alerts, never run out of materials again.",
     bestFor: "Contractors, retail, anyone with physical inventory.",
     exampleInput: "Premium drill bits 1/4in · qty 12 · reorder at 5 · $4.50 each",
     category: "Operations",
@@ -199,7 +199,7 @@ export default function DemoToolsPage() {
               In-pitch tool <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>launcher.</em>
             </h1>
             <p className="deck">
-              17 working tools, ranked for in-call demos. Each card shows the pitch, the ideal prospect, and a sample input — open in a new tab, paste the prospect&apos;s industry, demo the magic.
+              17 working tools, ranked for in-call demos. Each card shows the pitch, the ideal prospect, and a sample input, open in a new tab, paste the prospect&apos;s industry, demo the magic.
             </p>
           </header>
 
@@ -260,7 +260,7 @@ export default function DemoToolsPage() {
 
           <div style={{ marginTop: "48px", padding: "20px 24px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", fontSize: "12px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>
             <strong style={{ color: "var(--color-warm-accent)", fontFamily: "var(--font-dm-sans), sans-serif", letterSpacing: "0.18em", textTransform: "uppercase", fontSize: "10px" }}>Pro move · </strong>
-            Don&apos;t pre-demo. Wait for the prospect to describe their pain, THEN pull up the matching tool and demo with their actual context. The magic moment is when they see the tool work on THEIR business — not on a generic example.
+            Don&apos;t pre-demo. Wait for the prospect to describe their pain, THEN pull up the matching tool and demo with their actual context. The magic moment is when they see the tool work on THEIR business, not on a generic example.
           </div>
           <p style={{ marginTop: "20px", fontSize: "12px", color: "var(--color-warm-text-light)", textAlign: "center", fontStyle: "italic" }}>
             All of these are also viewable as your prospects would see them at <Link href="/digital/tools" style={{ color: "var(--color-warm-accent)" }}>/digital/tools</Link>.

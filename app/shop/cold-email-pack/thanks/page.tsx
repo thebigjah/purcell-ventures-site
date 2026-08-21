@@ -15,7 +15,7 @@ export default function ThanksPage() {
           You&apos;re <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>in.</em>
         </h1>
         <p style={{ fontSize: "17px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, margin: "0 0 32px" }}>
-          Your download link is on its way to your email from Stripe — usually arrives within 60 seconds.
+          Your download link is on its way to your email from Stripe, usually arrives within 60 seconds.
         </p>
 
         <div style={{ padding: "24px 28px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", marginBottom: "32px", textAlign: "left" }}>

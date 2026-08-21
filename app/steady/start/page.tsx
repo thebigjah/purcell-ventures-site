@@ -113,7 +113,7 @@ export default function SteadyStartPage() {
     try {
       window.location.href = mailto;
     } catch {
-      // ignore — fallback shown on screen
+      // ignore, fallback shown on screen
     }
   }
 
@@ -132,7 +132,7 @@ export default function SteadyStartPage() {
                 Tell me <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>what&apos;s broken.</em>
               </h1>
               <p className="deck">
-                Five minutes of form-filling. I read every one of these personally and reply within 24 hours with a recommended plan — or an honest &quot;you don&apos;t need me.&quot;
+                Five minutes of form-filling. I read every one of these personally and reply within 24 hours with a recommended plan, or an honest &quot;you don&apos;t need me.&quot;
               </p>
             </header>
 
@@ -243,7 +243,7 @@ export default function SteadyStartPage() {
               </h3>
               <ol style={{ paddingLeft: "20px", margin: 0, lineHeight: 1.8, fontSize: "14px", color: "var(--color-warm-text)" }}>
                 <li>I read your intake (usually within a few hours)</li>
-                <li>I reply within 24 hours with a recommended plan — or an honest &quot;you don&apos;t need me&quot;</li>
+                <li>I reply within 24 hours with a recommended plan, or an honest &quot;you don&apos;t need me&quot;</li>
                 <li>If we&apos;re a fit, we schedule the first session (in-person Atlanta or remote video)</li>
                 <li>If we&apos;re not, I&apos;ll point you to something that is</li>
               </ol>

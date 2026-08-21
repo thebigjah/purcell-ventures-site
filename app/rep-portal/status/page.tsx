@@ -7,7 +7,7 @@ import { PortalNav } from "../_components/PortalNav";
 import { isAdmin } from "@/lib/crm-storage";
 
 /**
- * /rep-portal/status — admin health dashboard.
+ * /rep-portal/status, admin health dashboard.
  *
  * Hits /api/health to surface env var configuration without exposing values.
  * Quick visual: green = good, yellow = needs setup, red = broken.
@@ -46,7 +46,7 @@ export default function StatusPage() {
       .catch(() => setError("Couldn't reach /api/health"));
 
     // Stripe status: check the shop pages by looking at their href values
-    // Indirect check — visit each shop page server-side would be cleaner, but for now
+    // Indirect check, visit each shop page server-side would be cleaner, but for now
     // we just rely on /api/health to tell us
     const sk = localStorage.getItem("pv_stripe_sk_configured") === "true";
     const cep = localStorage.getItem("pv_stripe_cep_configured") === "true";

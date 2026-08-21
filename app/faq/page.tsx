@@ -29,7 +29,7 @@ const FAQS: QSection[] = [
       },
       {
         q: "Do you take clients outside Atlanta?",
-        a: "For digital services, consulting, and software — yes, anywhere. For field work (gutter cleaning, pressure washing, lawn care), see Mantle Field Services — Metro Atlanta only.",
+        a: "For digital services, consulting, and software, yes, anywhere. For field work (gutter cleaning, pressure washing, lawn care), see Mantle Field Services — Metro Atlanta only.",
       },
       {
         q: "What's the best way to start?",
@@ -107,7 +107,7 @@ const FAQS: QSection[] = [
       },
       {
         q: "Can you maintain it after launch?",
-        a: "Yes — either as a fixed-bug-rate retainer or as ongoing feature development. We decide what works for both of us at the end of the build.",
+        a: "Yes, either as a fixed-bug-rate retainer or as ongoing feature development. We decide what works for both of us at the end of the build.",
       },
     ],
   },
@@ -143,7 +143,7 @@ const FAQS: QSection[] = [
       },
       {
         q: "What's the panopticon mark about?",
-        a: "It's an inversion of Bentham's prison design — instead of a hidden watcher surveilling visible prisoners, the mark places PV at the center as the visible accountable party, with the structure radiating outward as accountability arms. The full explanation lives on the /about page under 'The Mark.'",
+        a: "It's an inversion of Bentham's prison design, instead of a hidden watcher surveilling visible prisoners, the mark places PV at the center as the visible accountable party, with the structure radiating outward as accountability arms. The full explanation lives on the /about page under 'The Mark.'",
       },
       {
         q: "Why 'Ventures' and not 'agency' or 'studio'?",
@@ -151,7 +151,7 @@ const FAQS: QSection[] = [
       },
       {
         q: "Who owns Mantle Field Services?",
-        a: "I do — it's a sister brand to Purcell Ventures, run under the same LLC umbrella but operated as its own service brand. Same owner, same standards, separate sales operations.",
+        a: "I do, it's a sister brand to Purcell Ventures, run under the same LLC umbrella but operated as its own service brand. Same owner, same standards, separate sales operations.",
       },
     ],
   },
@@ -188,7 +188,7 @@ export default function FAQPage() {
             Common <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>questions.</em>
           </h1>
           <p className="deck">
-            Everything I get asked enough to put on paper. If your question isn&apos;t here — email me. I&apos;ll answer it, then add it to this page so the next person doesn&apos;t have to ask.
+            Everything I get asked enough to put on paper. If your question isn&apos;t here, email me. I&apos;ll answer it, then add it to this page so the next person doesn&apos;t have to ask.
           </p>
         </header>
 
@@ -259,7 +259,7 @@ export default function FAQPage() {
           ))}
         </div>
 
-        {/* Want this for your business — eat-own-dog-food CTA */}
+        {/* Want this for your business, eat-own-dog-food CTA */}
         <section style={{
           marginTop: "64px",
           padding: "32px 36px",

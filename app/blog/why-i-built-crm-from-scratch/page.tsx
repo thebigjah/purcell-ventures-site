@@ -40,14 +40,14 @@ export default function Post() {
           <p>HubSpot has a free tier. That&apos;s the hook. But the free tie (their current pricing is <a href="https://www.hubspot.com/pricing/sales" style={{ color: "var(--color-warm-accent)", textDecoration: "underline" }} rel="noopener">published here</a>)r excludes:</p>
 
           <ul>
-            <li>Custom properties beyond 5 — at $50/mo (Starter)</li>
-            <li>Workflow automation — at $890/mo (Marketing Hub Pro)</li>
-            <li>Pipeline forecasting — at $720/mo (Sales Hub Pro)</li>
-            <li>Custom reports — at $50/mo+</li>
-            <li>API access beyond rate limits — at $720/mo</li>
+            <li>Custom properties beyond 5, at $50/mo (Starter)</li>
+            <li>Workflow automation, at $890/mo (Marketing Hub Pro)</li>
+            <li>Pipeline forecasting, at $720/mo (Sales Hub Pro)</li>
+            <li>Custom reports, at $50/mo+</li>
+            <li>API access beyond rate limits, at $720/mo</li>
           </ul>
 
-          <p>For our actual needs — multi-rep visibility + AI-assisted next steps + custom contact stages + activity timeline + email templates with tokens — we&apos;d be at $200-$400/mo. That&apos;s $2,400-$4,800/yr.</p>
+          <p>For our actual needs, multi-rep visibility + AI-assisted next steps + custom contact stages + activity timeline + email templates with tokens, we&apos;d be at $200-$400/mo. That&apos;s $2,400-$4,800/yr.</p>
 
           <h2 style={head}>What I built instead</h2>
           <p>One week of focused work on what I needed: a CRM with 6 views (List, Kanban, Tasks, Stats, Coach, Reps), per-rep auth, AI-powered features specific to our workflow, and an activity log structured exactly for the conversations we have.</p>
@@ -93,12 +93,12 @@ export default function Post() {
             <li>You code (or have access to someone who does)</li>
             <li>Your workflow is non-standard and requires custom logic</li>
             <li>You care about owning your data</li>
-            <li>You&apos;re going to spend a year+ on this business — the build cost amortizes</li>
+            <li>You&apos;re going to spend a year+ on this business, the build cost amortizes</li>
             <li>You want to use AI in custom ways the SaaS CRMs don&apos;t support</li>
           </ul>
 
           <h2 style={head}>The hidden benefit nobody mentions</h2>
-          <p>Building our own CRM forced us to know our sales process intimately. Every stage, every field, every report — we had to design it. That clarity is worth as much as the CRM itself.</p>
+          <p>Building our own CRM forced us to know our sales process intimately. Every stage, every field, every report, we had to design it. That clarity is worth as much as the CRM itself.</p>
 
           <p>When you outsource the tool, you outsource the thinking behind it. We&apos;ve eaten our own dog food in the most literal way possible.</p>
 

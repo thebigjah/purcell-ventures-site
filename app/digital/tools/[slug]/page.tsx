@@ -150,7 +150,7 @@ export default function ToolPage({ params }: { params: Promise<{ slug: string }>
           </div>
         )}
 
-        {/* Upsell to Starter Kit — appears on every tool page */}
+        {/* Upsell to Starter Kit, appears on every tool page */}
         <Link href="/shop/starter-kit" style={{
           display: "block",
           marginTop: "48px",

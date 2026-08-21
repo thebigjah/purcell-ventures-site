@@ -1,4 +1,4 @@
-// Shared reverse-panopticon SVG mark — used in landing page and brand identity page.
+// Shared reverse-panopticon SVG mark, used in landing page and brand identity page.
 
 const GOLD = "#d4af37";
 const DARK = "#0c0a08";
@@ -15,7 +15,7 @@ export type PanopConfig = {
   pvClearR?: number;        // clearing circle radius behind PV text (default 34)
   ringStart?: number;       // inner radius of ring band (default 42)
   ringEnd?: number;         // outer radius of ring band (default 85)
-  ringFadeToCenter?: boolean; // fade rings toward center — outer rings stronger (broadcast feel)
+  ringFadeToCenter?: boolean; // fade rings toward center, outer rings stronger (broadcast feel)
 };
 
 export function PanopticonElements({ cx, cy, color, cfg }: {

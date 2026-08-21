@@ -75,7 +75,7 @@ export default function OgImage() {
           Built by one operator for the small businesses who move first.
         </div>
 
-        {/* Meta strip — bottom */}
+        {/* Meta strip, bottom */}
         <div style={{
           position: "absolute", bottom: "50px", left: "80px", right: "80px",
           display: "flex", justifyContent: "space-between",

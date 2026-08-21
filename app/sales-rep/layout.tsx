@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: "/sales-rep" },
   robots: {
-    index: false, // unlisted — only people with the link should find this
+    index: false, // unlisted, only people with the link should find this
     follow: false,
   },
 };

@@ -38,7 +38,7 @@ export default function ThanksPage() {
           Want the white-glove version?
         </h3>
         <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, margin: "0 0 24px" }}>
-          We also build, deploy, and maintain custom AI tools for businesses — starting at $99/mo. Same playbook as the kit, but we do the work.
+          We also build, deploy, and maintain custom AI tools for businesses, starting at $99/mo. Same playbook as the kit, but we do the work.
         </p>
         <Link href="/digital" className="pv-btn-primary" style={{ marginRight: "12px" }}>See Digital Services</Link>
         <Link href="/" style={{ color: "var(--color-warm-text-muted)", textDecoration: "underline", fontSize: "14px" }}>Back to home</Link>

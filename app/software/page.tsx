@@ -13,7 +13,7 @@ const PROJECTS = [
   {
     name: "Purcell Ventures",
     type: "Web Platform",
-    desc: "This site — a full multi-division business platform with AI tools, a business finder powered by the Google Places API, and a private sales system.",
+    desc: "This site, a full multi-division business platform with AI tools, a business finder powered by the Google Places API, and a private sales system.",
     tags: ["Next.js", "TypeScript", "Vercel", "Google Places API"],
     status: "live" as const,
     label: "Live Site",
@@ -37,7 +37,7 @@ const PROJECTS = [
   {
     name: "Persona AI",
     type: "Mobile App",
-    desc: "Hyper-personalized AI companion — an AI that actually knows you. Tracks your goals, habits, fitness, and adapts to how you think.",
+    desc: "Hyper-personalized AI companion, an AI that actually knows you. Tracks your goals, habits, fitness, and adapts to how you think.",
     tags: ["Expo", "React Native", "Claude API", "Express"],
     status: "building" as const,
     label: "In Development",
@@ -48,7 +48,7 @@ const SERVICES = [
   {
     roman: "i.",
     title: "Mobile Apps",
-    desc: "iOS and Android apps built with React Native or Expo. From idea to app store — design, development, and deployment.",
+    desc: "iOS and Android apps built with React Native or Expo. From idea to app store, design, development, and deployment.",
     examples: ["Social apps", "Business tools", "Games", "AI-powered apps"],
   },
   {
@@ -60,7 +60,7 @@ const SERVICES = [
   {
     roman: "iii.",
     title: "AI Integration",
-    desc: "Bring AI into your product — chatbots, content generation, voice interfaces, recommendation engines, and automation.",
+    desc: "Bring AI into your product, chatbots, content generation, voice interfaces, recommendation engines, and automation.",
     examples: ["AI chatbots", "Content pipelines", "Voice tools", "Smart automation"],
   },
   {
@@ -73,7 +73,7 @@ const SERVICES = [
 
 const PROCESS = [
   { step: "01", title: "Discovery Call",   desc: "30 minutes. You explain the problem. I ask questions and tell you honestly what it takes to build." },
-  { step: "02", title: "Scoped Proposal",  desc: "I send a written breakdown — what gets built, what it costs, what the timeline looks like. No surprises." },
+  { step: "02", title: "Scoped Proposal",  desc: "I send a written breakdown, what gets built, what it costs, what the timeline looks like. No surprises." },
   { step: "03", title: "Build",            desc: "You get updates throughout. I use Claude to move fast without cutting corners on quality." },
   { step: "04", title: "Launch + Support", desc: "Deploy, test, ship. I stay available for fixes and follow-on work after launch." },
 ];

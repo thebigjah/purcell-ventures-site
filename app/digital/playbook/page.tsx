@@ -83,8 +83,8 @@ const COLD_WALKIN = {
   },
   transitions: [
     { trigger: "They say 'I'm busy'", response: "Totally, I won't take long — I just have one or two questions. If it doesn't click in 2 minutes, I'll leave you to it." },
-    { trigger: "They say 'we already have a website'", response: "Nice — is it bringing in customers, or is it more like a digital business card? Most websites are the second one." },
-    { trigger: "They say 'we don't need that'", response: "Fair enough. Can I ask — how are most new customers finding you right now?" },
+    { trigger: "They say 'we already have a website'", response: "Nice, is it bringing in customers, or is it more like a digital business card? Most websites are the second one." },
+    { trigger: "They say 'we don't need that'", response: "Fair enough. Can I ask, how are most new customers finding you right now?" },
     { trigger: "They say 'I'm not the right person'", response: "Who would be? I'd love to leave my info with them or come back at a better time." },
     { trigger: "They seem interested immediately", response: "Move straight into discovery questions. Don't over-explain. Listen more than you talk." },
   ],
@@ -95,13 +95,13 @@ const DISCOVERY = [
     { q: "How are new customers finding you right now?", listen: "If they say 'word of mouth only' — they have zero digital. If they say Google, ask how many reviews they have." },
     { q: "Do you have a website? When did you last update it?", listen: "Most small businesses haven't touched their site in years. 'We have one but...' always ends with a problem you can solve." },
     { q: "Are you on social media? Who runs that?", listen: "'I try to post but I don't have time' = social media scheduler + AI captions is your pitch." },
-    { q: "How do customers usually book or contact you — phone, walk-in, online?", listen: "If they say phone only — booking system is the sell." },
+    { q: "How do customers usually book or contact you, phone, walk-in, online?", listen: "If they say phone only, booking system is the sell." },
   ]},
   { section: "Find the Pain", color: "#e8a030", questions: [
-    { q: "What's the most time-consuming thing in your week that isn't actually serving customers?", listen: "This reveals the ops tool they need — invoicing, scheduling, CRM, follow-ups." },
+    { q: "What's the most time-consuming thing in your week that isn't actually serving customers?", listen: "This reveals the ops tool they need, invoicing, scheduling, CRM, follow-ups." },
     { q: "Do you ever lose track of leads or follow-ups?", listen: "'Yes' = CRM and lead capture." },
     { q: "Have you ever gotten a bad review online that you didn't get to respond to?", listen: "Yes = review manager pitch." },
-    { q: "How much time does your team spend answering the same questions — hours, prices, location?", listen: "'A lot' = AI chatbot on website is the exact solution." },
+    { q: "How much time does your team spend answering the same questions, hours, prices, location?", listen: "'A lot' = AI chatbot on website is the exact solution." },
   ]},
   { section: "Qualify the Opportunity", color: "#7aaa6a", questions: [
     { q: "Have you ever looked into getting help with any of this before? What stopped you?", listen: "Price objection = lead with value. Trust objection = emphasize local + personal." },
@@ -112,34 +112,34 @@ const DISCOVERY = [
 ];
 
 const CLOSES = [
-  { type: "Soft Close (preferred first)", script: "Here's what I'd suggest — let me put together a quick overview of exactly what I'd build for you, with pricing, and we can look at it together. No commitment. Would that be useful?", note: "This gives them an easy 'yes' and you a reason to follow up." },
+  { type: "Soft Close (preferred first)", script: "Here's what I'd suggest, let me put together a quick overview of exactly what I'd build for you, with pricing, and we can look at it together. No commitment. Would that be useful?", note: "This gives them an easy 'yes' and you a reason to follow up." },
   { type: "Demo Close", script: "Can I show you something real quick? [Pull up purcellventures.co/digital on your phone] This is what a full setup looks like for a business like yours. Starting at $99 a month.", note: "Always have the site up and ready on your phone." },
-  { type: "Urgency Close (only when they're warm)", script: "I only take on a few new clients at a time so I can actually give each one attention. I've got a slot opening up this month — want to get on a call this week?", note: "Only use this if they're genuinely interested." },
-  { type: "Leave-Behind", script: "Here's my card. My site is purcellventures.co — you can see pricing, tools, the whole thing. I'll follow up in a day or two if that's okay.", note: "Always get permission to follow up. Always follow up." },
+  { type: "Urgency Close (only when they're warm)", script: "I only take on a few new clients at a time so I can actually give each one attention. I've got a slot opening up this month, want to get on a call this week?", note: "Only use this if they're genuinely interested." },
+  { type: "Leave-Behind", script: "Here's my card. My site is purcellventures.co, you can see pricing, tools, the whole thing. I'll follow up in a day or two if that's okay.", note: "Always get permission to follow up. Always follow up." },
 ];
 
 const OBJECTIONS = [
-  { obj: "\"That's too expensive.\"", response: "What are you spending right now to get new customers? If the answer is nothing, you're already paying — in customers you're not getting. Most clients make it back in 1–2 new bookings a month." },
-  { obj: "\"We're doing fine without it.\"", response: "That's fair. Quick question — do you know what your competitors are doing online? I'm not saying you need this, I'm saying your competition might be using it on you already." },
-  { obj: "\"I need to think about it.\"", response: "Of course. What's the biggest thing you'd want to think through? I'd rather you feel good about it — can I put together something specific for your business so you have something concrete to look at?" },
-  { obj: "\"I tried something like this before and it didn't work.\"", response: "What happened? That's really common — a lot of what's out there is either too generic or nobody maintains it. What I do is different because I stay involved. It's not a build-and-disappear thing." },
+  { obj: "\"That's too expensive.\"", response: "What are you spending right now to get new customers? If the answer is nothing, you're already paying, in customers you're not getting. Most clients make it back in 1–2 new bookings a month." },
+  { obj: "\"We're doing fine without it.\"", response: "That's fair. Quick question, do you know what your competitors are doing online? I'm not saying you need this, I'm saying your competition might be using it on you already." },
+  { obj: "\"I need to think about it.\"", response: "Of course. What's the biggest thing you'd want to think through? I'd rather you feel good about it, can I put together something specific for your business so you have something concrete to look at?" },
+  { obj: "\"I tried something like this before and it didn't work.\"", response: "What happened? That's really common, a lot of what's out there is either too generic or nobody maintains it. What I do is different because I stay involved. It's not a build-and-disappear thing." },
   { obj: "\"I don't have time to deal with this.\"", response: "That's exactly why people hire me. You don't have to deal with any of it — I handle the setup, the updates, and the maintenance. You look at it when something needs your approval, and that's it." },
-  { obj: "\"I don't know anything about tech.\"", response: "Good — then you're my favorite kind of client. I explain everything in plain terms, and once it's set up you don't need to know how it works. You just see the results." },
+  { obj: "\"I don't know anything about tech.\"", response: "Good, then you're my favorite kind of client. I explain everything in plain terms, and once it's set up you don't need to know how it works. You just see the results." },
 ];
 
 const WORD_OF_MOUTH = [
   { context: "Casual conversation (friends, church, family)", lines: [
-    "I run a thing called Purcell Ventures — I build websites and AI tools for small businesses. Like, the whole online setup. Booking, chatbots, social media — all managed for them.",
-    "If you know any small business owners — salons, contractors, restaurants — who feel like their online presence is embarrassing or just nonexistent, send them my way. It's $75 a month and it actually runs itself.",
+    "I run a thing called Purcell Ventures — I build websites and AI tools for small businesses. Like, the whole online setup. Booking, chatbots, social media, all managed for them.",
+    "If you know any small business owners, salons, contractors, restaurants, who feel like their online presence is embarrassing or just nonexistent, send them my way. It's $75 a month and it actually runs itself.",
     "I'm basically the young, affordable version of a digital agency. But I actually pick up the phone.",
   ]},
   { context: "Someone asks what you do", lines: [
-    "I build and manage the digital side of small businesses — websites, booking systems, AI chatbots, social media tools. All under one subscription.",
-    "Think of it like hiring a web designer, a marketing person, and an AI specialist — but for $75 a month instead of three salaries.",
+    "I build and manage the digital side of small businesses, websites, booking systems, AI chatbots, social media tools. All under one subscription.",
+    "Think of it like hiring a web designer, a marketing person, and an AI specialist, but for $75 a month instead of three salaries.",
   ]},
   { context: "They mention a business that's struggling with marketing", lines: [
     "What's their online presence like? Because that's usually the first domino.",
-    "That sounds like a website + Google reviews problem. I actually fix that — want me to take a look?",
+    "That sounds like a website + Google reviews problem. I actually fix that, want me to take a look?",
     "Tell them to go to purcellventures.co/digital. Everything's there, prices and all.",
   ]},
 ];
@@ -430,7 +430,7 @@ export default function PlaybookPage() {
           <div>
             <div style={{ marginBottom: "24px" }}>
               <div style={{ fontSize: "22px", fontWeight: 700, color: "#f5f0e0", marginBottom: "8px" }}>Word of Mouth Lines</div>
-              <div style={{ fontSize: "14px", color: "#8a8070" }}>Ready-to-use language for any casual conversation. Don't memorize — internalize.</div>
+              <div style={{ fontSize: "14px", color: "#8a8070" }}>Ready-to-use language for any casual conversation. Don't memorize, internalize.</div>
             </div>
             {WORD_OF_MOUTH.map((section, i) => (
               <div key={i} style={{ ...s, marginBottom: "16px" }}>
@@ -445,7 +445,7 @@ export default function PlaybookPage() {
             <div style={{ ...s, borderColor: "#d4af3740" }}>
               <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#d4af37", marginBottom: "12px" }}>The One Thing to Get Across</div>
               <div style={{ fontSize: "15px", color: "#f5f0e0", lineHeight: 1.75 }}>
-                &ldquo;I build and manage the entire online presence for small businesses — website, booking, AI chatbot, social media, all of it. Starting at $75 a month. Less than one employee hour.&rdquo;
+                &ldquo;I build and manage the entire online presence for small businesses, website, booking, AI chatbot, social media, all of it. Starting at $75 a month. Less than one employee hour.&rdquo;
               </div>
             </div>
           </div>
@@ -460,7 +460,7 @@ export default function PlaybookPage() {
             </div>
             {[
               { label: "Day 1 — Text/Email after a walk-in", color: "#7aaa6a", script: `Hey [Name], it's Elijah — I stopped by [Business] earlier today. Wanted to send over what I mentioned: purcellventures.co/digital\n\nBased on what you told me, I think [specific tool] would make the biggest difference for you. Happy to put together a quick overview with pricing if you want to take a look. No pressure either way.\n\n— Elijah Purcell | Purcell Ventures`, note: "Keep it short. Reference something specific from the conversation. Link directly to the digital page." },
-              { label: "Day 3 — If no response", color: "#d4af37", script: `Hey [Name], just circling back. I know you're busy — wanted to leave the door open if you had any questions about what I mentioned.\n\nIf the timing's not right, totally understand. But if you want me to put together a custom quote for [Business], I'm happy to do that. Takes me about 10 minutes.\n\n— Elijah`, note: "One more touch. If they don't reply after this, let them go. Don't spam." },
+              { label: "Day 3 — If no response", color: "#d4af37", script: `Hey [Name], just circling back. I know you're busy, wanted to leave the door open if you had any questions about what I mentioned.\n\nIf the timing's not right, totally understand. But if you want me to put together a custom quote for [Business], I'm happy to do that. Takes me about 10 minutes.\n\n— Elijah`, note: "One more touch. If they don't reply after this, let them go. Don't spam." },
               { label: "Day 7 — Final follow-up", color: "#e8a030", script: `Hey [Name] — last message, I promise. If you ever want to revisit the online presence stuff for [Business], I'm at elijah@purcell-ventures.com.\n\nI do good work and I'm local. Whenever the time is right.\n\n— Elijah`, note: "Leave it warm. Say 'last message' — it's honest and it actually gets replies." },
               { label: "Warm Lead — Custom Proposal Email", color: "#9b7fd4", script: `Hey [Name],\n\nGood talking to you. Based on what you shared, here's what I'd recommend for [Business]:\n\n• [Tool 1] — [one line on why it fits them]\n• [Tool 2] — [one line on why it fits them]\n• [Tool 3] — [one line on why it fits them]\n\nTotal: $[X] setup + $[Y]/month after that.\n\nThat includes me building it, maintaining it, and being reachable when you need something. Full pricing at purcellventures.co/digital.\n\nWant to hop on a 15-minute call to go over it?\n\n— Elijah Purcell | Purcell Ventures LLC\nelijah@purcell-ventures.com`, note: "Always send a written proposal to warm leads. It makes you look professional and gives them something to share with a spouse/partner." },
             ].map((item, i) => (

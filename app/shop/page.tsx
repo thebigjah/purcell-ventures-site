@@ -13,7 +13,7 @@ const PRODUCTS = [
     price: "$39",
     tagline: "All three products + save $18 vs separate",
     blurb: "Starter Kit + Cold Email Mastery Pack + Subject Line Library. 61 files. Single ZIP. The recommended way to buy if you want everything.",
-    bestFor: "Anyone serious about putting all of this to work — most people who buy one end up wanting the others within a week. Bundle solves that.",
+    bestFor: "Anyone serious about putting all of this to work, most people who buy one end up wanting the others within a week. Bundle solves that.",
     sizing: "61 files · 3 folders · one Stripe Checkout",
   },
   {
@@ -73,7 +73,7 @@ export default function ShopPage() {
             Starter Kit ($19) + Cold Email Mastery Pack ($29) = <strong>$48 separately</strong>. Buy both today: <strong style={{ color: "var(--color-warm-accent)" }}>$39</strong>.
           </p>
           <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", fontStyle: "italic", margin: 0 }}>
-            (Bundle requires Stripe Coupon — see <code>~/.claude/elijahbot/drafts/STRIPE-SETUP-STARTER-KIT.md</code> for setup. For now, buy each separately.)
+            (Bundle requires Stripe Coupon, see <code>~/.claude/elijahbot/drafts/STRIPE-SETUP-STARTER-KIT.md</code> for setup. For now, buy each separately.)
           </p>
         </div>
 
@@ -110,7 +110,7 @@ export default function ShopPage() {
             We could lock this stuff behind a $497 course. Most agencies would. We&apos;d rather make it cheap enough that anyone can grab it, validate it works, and then come back when they want the done-for-you version.
           </p>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.7, margin: 0 }}>
-            The kit-to-service funnel: try the kit, see it works, hire us to deploy + maintain a custom version. Or don&apos;t — keep using the kit. Both fine.
+            The kit-to-service funnel: try the kit, see it works, hire us to deploy + maintain a custom version. Or don&apos;t, keep using the kit. Both fine.
           </p>
         </section>
 

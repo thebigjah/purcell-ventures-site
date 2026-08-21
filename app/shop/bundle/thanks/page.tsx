@@ -20,7 +20,7 @@ export default function ThanksPage() {
           <ol style={{ paddingLeft: "20px", fontSize: "13px", color: "var(--color-warm-text)", lineHeight: 1.7, margin: 0 }}>
             <li>Extract the ZIP — you&apos;ll see 3 folders inside</li>
             <li>Open <code>00-BUNDLE-README.md</code> for the overview</li>
-            <li>Start with the Starter Kit — that&apos;s the foundation</li>
+            <li>Start with the Starter Kit, that&apos;s the foundation</li>
             <li>Add the Cold Email Pack templates to your CRM</li>
             <li>Use the Subject Line Library every time you compose a cold email</li>
           </ol>

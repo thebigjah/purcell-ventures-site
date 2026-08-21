@@ -7,7 +7,7 @@ const COURSES = [
     roman: "I.",
     href: "/courses/college-apps",
     title: "The College Application Playbook",
-    desc: "34 acceptances. $530,384 in scholarships. 98 schools researched. The exact process — building your list, writing essays, chasing scholarships, and maximizing your offer.",
+    desc: "34 acceptances. $530,384 in scholarships. 98 schools researched. The exact process, building your list, writing essays, chasing scholarships, and maximizing your offer.",
     price: "$297",
     stats: [
       { v: "34",    l: "Acceptances" },
@@ -19,7 +19,7 @@ const COURSES = [
     roman: "II.",
     href: "/courses/business-launch",
     title: "The Business Launch Playbook",
-    desc: "From idea to LLC to first dollar. 7 modules, 26 lessons, and a full resource pack — every tool, decision, and shortcut from building Purcell Ventures at seventeen.",
+    desc: "From idea to LLC to first dollar. 7 modules, 26 lessons, and a full resource pack, every tool, decision, and shortcut from building Purcell Ventures at seventeen.",
     price: "$397",
     stats: [
       { v: "7",   l: "Modules" },
@@ -31,7 +31,7 @@ const COURSES = [
     roman: "III.",
     href: "/courses/ai-automation",
     title: "Zero to Automated",
-    desc: "8 modules. 25 lessons. Build the AI tools you actually need — email bots, content pipelines, lead scrapers, and personal AI assistants. Every tool taught is a tool I run.",
+    desc: "8 modules. 25 lessons. Build the AI tools you actually need, email bots, content pipelines, lead scrapers, and personal AI assistants. Every tool taught is a tool I run.",
     price: "$397",
     stats: [
       { v: "8",   l: "Modules" },
@@ -77,7 +77,7 @@ export default function CoursesPage() {
             Learn from someone <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>who just did it.</em>
           </h1>
           <p className="deck">
-            No theory. No credentials theater. Just the actual process — documented, structured, and taught by someone who&apos;s been through it recently enough to remember every step.
+            No theory. No credentials theater. Just the actual process, documented, structured, and taught by someone who&apos;s been through it recently enough to remember every step.
           </p>
         </header>
 

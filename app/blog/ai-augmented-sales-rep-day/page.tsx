@@ -32,7 +32,7 @@ export default function Post() {
 
         <article style={{ fontSize: "16px", lineHeight: 1.75, color: "var(--color-warm-text)" }}>
 
-          <p>I keep getting asked what AI tools actually <em>change</em> about a sales rep&apos;s day. Not in theory — in practice. So here&apos;s a real Tuesday, hour by hour, from one of our reps using the rep portal we&apos;ve built at Purcell Ventures.</p>
+          <p>I keep getting asked what AI tools actually <em>change</em> about a sales rep&apos;s day. Not in theory, in practice. So here&apos;s a real Tuesday, hour by hour, from one of our reps using the rep portal we&apos;ve built at Purcell Ventures.</p>
 
           <p>Names changed. Times rough. Tools and workflows are exactly what they did.</p>
 
@@ -40,7 +40,7 @@ export default function Post() {
           <p>Luke logs into the rep portal. The dashboard shows him three things immediately: <strong>2 tasks overdue, 4 due today, $12,400 in open pipeline.</strong> The overdue tasks are color-coded red. He starts with those.</p>
 
           <h2 style={head}>8:18 AM — AI Deal Coach</h2>
-          <p>Before he dives in, he clicks the <strong>Coach</strong> view in the CRM. The AI Deal Coach analyzes his whole pipeline (currently 23 open contacts) and surfaces the three deals he should work on TODAY. Not just by stage — by combination of stage, days-since-last-touch, and his notes.</p>
+          <p>Before he dives in, he clicks the <strong>Coach</strong> view in the CRM. The AI Deal Coach analyzes his whole pipeline (currently 23 open contacts) and surfaces the three deals he should work on TODAY. Not just by stage, by combination of stage, days-since-last-touch, and his notes.</p>
 
           <p>Top priority today: <strong>Sarah Chen at Cherry Blossom Salon.</strong> The Coach says: &quot;Sarah quoted 5 days ago, then went silent. Her LinkedIn shows she posted yesterday about &apos;trying to grow without losing the family feel&apos; — that&apos;s an opening. Reach out today before the deal cools.&quot;</p>
 
@@ -50,7 +50,7 @@ export default function Post() {
           <ul>
             <li><strong>Where we are:</strong> Sarah&apos;s a salon owner who quoted Growth tier 5 days ago. Quote was $179/mo + $700 setup.</li>
             <li><strong>Last meaningful action:</strong> Said &quot;let me think about it&quot; on Tuesday call. Hasn&apos;t responded to Day-3 follow-up.</li>
-            <li><strong>What WE owe them:</strong> Nothing — ball is in her court.</li>
+            <li><strong>What WE owe them:</strong> Nothing, ball is in her court.</li>
             <li><strong>What THEY owe us:</strong> Decision on whether to start with Growth or step down to Starter.</li>
             <li><strong>Vibe read:</strong> <span style={{ color: "#e8b968" }}>Cooling</span>. Was warm when we quoted, now silent for 5 days. Last-touch territory before she goes cold.</li>
           </ul>
@@ -58,9 +58,9 @@ export default function Post() {
           <h2 style={head}>8:25 AM — Next-Step coaching</h2>
           <p>Luke clicks <strong>&quot;Suggest next step.&quot;</strong> AI returns:</p>
 
-          <p><strong>Primary:</strong> &quot;Send a soft re-engagement email referencing her LinkedIn post about growth. Don&apos;t pitch — just acknowledge.&quot;</p>
+          <p><strong>Primary:</strong> &quot;Send a soft re-engagement email referencing her LinkedIn post about growth. Don&apos;t pitch, just acknowledge.&quot;</p>
 
-          <p><strong>Exact words to use:</strong> <em>&quot;Saw your post about growing without losing the family feel — that&apos;s the exact thing the tier we talked about is built for. No pressure on the quote; I just wanted to send you a 2-min note about how 3 salons in similar spots used it. Want me to share, or are you stepping back from this for now? Either&apos;s fine.&quot;</em></p>
+          <p><strong>Exact words to use:</strong> <em>&quot;Saw your post about growing without losing the family feel, that&apos;s the exact thing the tier we talked about is built for. No pressure on the quote; I just wanted to send you a 2-min note about how 3 salons in similar spots used it. Want me to share, or are you stepping back from this for now? Either&apos;s fine.&quot;</em></p>
 
           <p><strong>Why it works:</strong> Acknowledges her post (shows attention), gives explicit permission to opt out (reduces pressure), offers specific value (3 case examples), low-stakes ask.</p>
 
@@ -84,7 +84,7 @@ export default function Post() {
           <p>He adopts the polished version with one tweak. Sends to 8 prospects manually.</p>
 
           <h2 style={head}>10:30 AM — Prospect calls back</h2>
-          <p>Jane Doe — a vet office Luke cold-emailed last week — calls. He hits the <strong>contact detail page</strong> on his phone (mobile-responsive), clicks <strong>&quot;Where are we?&quot;</strong> The AI summary gives him context in 4 seconds. He&apos;s able to say <em>&quot;Hi Jane! Last we talked, you mentioned the front-desk team was getting buried in intake calls — did that resolve, or is that still happening?&quot;</em></p>
+          <p>Jane Doe, a vet office Luke cold-emailed last week, calls. He hits the <strong>contact detail page</strong> on his phone (mobile-responsive), clicks <strong>&quot;Where are we?&quot;</strong> The AI summary gives him context in 4 seconds. He&apos;s able to say <em>&quot;Hi Jane! Last we talked, you mentioned the front-desk team was getting buried in intake calls, did that resolve, or is that still happening?&quot;</em></p>
 
           <p>Jane: &quot;You remembered that?&quot; — and immediately trusts him more. Hooks the discovery call.</p>
 
@@ -93,7 +93,7 @@ export default function Post() {
 
           <ul>
             <li>Likely pain points (3 specific to insurance agencies)</li>
-            <li>Service-fit recommendation (Growth tier, not Starter — agency has 12 employees)</li>
+            <li>Service-fit recommendation (Growth tier, not Starter, agency has 12 employees)</li>
             <li>Opening line that references the agency&apos;s actual industry challenges</li>
             <li>5 discovery questions to ask</li>
             <li>3 red flags to watch for</li>
@@ -138,7 +138,7 @@ export default function Post() {
           <p>His tier ladder rule says 5 closes promotes him from Apprentice to Closer. He has 3. He&apos;s on track.</p>
 
           <h2 style={head}>What changed vs. a non-AI workflow</h2>
-          <p>This day used to take 9-10 hours. With AI augmentation it&apos;s 7 hours of higher-quality work. The compression isn&apos;t the point — the point is each interaction is sharper:</p>
+          <p>This day used to take 9-10 hours. With AI augmentation it&apos;s 7 hours of higher-quality work. The compression isn&apos;t the point, the point is each interaction is sharper:</p>
 
           <ul>
             <li><strong>Catch-up time</strong> on returning contacts: 5 min → 30 seconds (Conversation Summary)</li>
@@ -152,7 +152,7 @@ export default function Post() {
           <p>The result: more deals worked, each one with better preparation, less burn on the rep.</p>
 
           <h2 style={head}>What this isn&apos;t</h2>
-          <p>The AI doesn&apos;t close the deal. The rep still has to actually be on the call, actually listen, actually be human. The AI removes prep burden + improves quality of each touch — it doesn&apos;t replace the rep.</p>
+          <p>The AI doesn&apos;t close the deal. The rep still has to actually be on the call, actually listen, actually be human. The AI removes prep burden + improves quality of each touch, it doesn&apos;t replace the rep.</p>
 
           <p>If your rep is bad at the actual conversation, AI tools won&apos;t fix that. They&apos;ll just make a bad rep more efficient at being bad. Hire the right person first; THEN augment with AI.</p>
 

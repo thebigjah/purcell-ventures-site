@@ -25,7 +25,7 @@ const SESSIONS = [
     title: "ChatGPT in Your Workflow",
     duration: "3 hrs",
     tag: "Hands-on",
-    desc: "Practical, hands-on. We work through email drafting, customer responses, research, content creation, and scheduling — live, with your actual scenarios.",
+    desc: "Practical, hands-on. We work through email drafting, customer responses, research, content creation, and scheduling, live, with your actual scenarios.",
     outcomes: [
       "Write better emails and responses in half the time",
       "Generate content, proposals, and summaries on demand",
@@ -82,7 +82,7 @@ const SESSIONS = [
 ];
 
 const PRICING = [
-  { label: "1-on-1",            rate: "$175",    unit: "/ hour",   desc: "You and me. We go deep on your specific situation, tools, and problems. Most flexible — agenda is entirely yours.", note: "2-hr minimum recommended",   highlight: false },
+  { label: "1-on-1",            rate: "$175",    unit: "/ hour",   desc: "You and me. We go deep on your specific situation, tools, and problems. Most flexible, agenda is entirely yours.", note: "2-hr minimum recommended",   highlight: false },
   { label: "Small Group",       rate: "$125",    unit: "/ person", desc: "2–8 people. Collaborative, interactive, and tailored to the group. Better for teams that work closely together.",  note: "Per session · 2-hr minimum",  highlight: true  },
   { label: "Workshop",          rate: "$2,500",  unit: "flat",     desc: "Up to 20 people. Structured session with Q&A and hands-on exercises. Great for all-hands training or company events.", note: "Half-day · up to 20 people",  highlight: false },
   { label: "Corporate / Custom", rate: "Custom", unit: "quote",    desc: "Larger teams, multi-session programs, or fully custom curriculum. Includes prep time, materials, and follow-up resources.", note: "Contact for pricing",     highlight: false },
@@ -174,7 +174,7 @@ export default function ConsultingPage() {
           <h2>Who books <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>this</em></h2>
         </header>
         <p className="pv-italic" style={{ fontSize: "20px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.5, maxWidth: "640px", marginBottom: "32px" }}>
-          If AI feels like something you&apos;re supposed to understand but don&apos;t — this is for you.
+          If AI feels like something you&apos;re supposed to understand but don&apos;t, this is for you.
         </p>
         <div className="pv-cs-who" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px", marginBottom: "64px" }}>
           {[
@@ -390,11 +390,11 @@ export default function ConsultingPage() {
           I&apos;m nineteen. That&apos;s a feature, not a bug.
         </p>
         <p className="pv-italic" style={{ fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.65, marginBottom: "32px", maxWidth: "720px" }}>
-          Most AI consultants are mid-career adults who came to this stack late. I came up inside it. I&apos;ve been building autonomous systems and shipping production tools for a year — full-time, while still in high school. The work I&apos;m offering is the same work I do in my own infrastructure every day.
+          Most AI consultants are mid-career adults who came to this stack late. I came up inside it. I&apos;ve been building autonomous systems and shipping production tools for a year, full-time, while still in high school. The work I&apos;m offering is the same work I do in my own infrastructure every day.
         </p>
         <div className="pv-cs-stats-band" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px", marginBottom: "32px" }}>
           {[
-            { num: "34",          label: "College acceptances",        desc: "Honors programs across the country evaluated my work. They didn't accept the bio — they accepted the portfolio." },
+            { num: "34",          label: "College acceptances",        desc: "Honors programs across the country evaluated my work. They didn't accept the bio, they accepted the portfolio." },
             { num: "7",           label: "Security audits run",         desc: "Read-only audits of live production applications, each finding delivered with severity, a reproduction path, and a fix." },
             { num: "Honors Coll.", label: "UA New College, Fall 2026", desc: "Self-designed Psychology + Data Science hybrid on a pre-med path. The track is the work." },
             { num: "Live infra",  label: "purcellventures.co +",       desc: "Every tool I teach, I've already built into my own stack. I'm not demo-ing — I'm showing you what already works." },

@@ -34,10 +34,10 @@ export default function Post() {
 
           <h2 style={h2}>1. Email follow-ups for quotes you sent and forgot</h2>
           <p>
-            You quoted a client, they didn&apos;t respond, and now it&apos;s been eleven days and you can&apos;t remember if you followed up. This is the single biggest revenue leak I see — and it&apos;s fixable in 45 minutes with any modern email tool.
+            You quoted a client, they didn&apos;t respond, and now it&apos;s been eleven days and you can&apos;t remember if you followed up. This is the single biggest revenue leak I see, and it&apos;s fixable in 45 minutes with any modern email tool.
           </p>
           <p>
-            Set up a sequence in Gmail (via the &quot;Schedule send&quot; feature) or in a free Zapier+Sheets combo. Day three: a one-line bump. Day eight: an honest &quot;hey, last touch — yes or no is fine.&quot; Day thirty: a 90-day pickup. That&apos;s it. You&apos;ll close 15-25% more of your quoted deals just by not forgetting.
+            Set up a sequence in Gmail (via the &quot;Schedule send&quot; feature) or in a free Zapier+Sheets combo. Day three: a one-line bump. Day eight: an honest &quot;hey, last touch, yes or no is fine.&quot; Day thirty: a 90-day pickup. That&apos;s it. You&apos;ll close 15-25% more of your quoted deals just by not forgetting.
           </p>
 
           <h2 style={h2}>2. New customer onboarding emails</h2>
@@ -66,7 +66,7 @@ export default function Post() {
 
           <h2 style={h2}>5. Social media posting (the calendar, not the writing)</h2>
           <p>
-            Writing social posts is the hard part. Scheduling them is the easy part — and it&apos;s the part most owners trip on. They write four posts in a burst, then disappear from social for three weeks because they don&apos;t want to log in and post manually.
+            Writing social posts is the hard part. Scheduling them is the easy part, and it&apos;s the part most owners trip on. They write four posts in a burst, then disappear from social for three weeks because they don&apos;t want to log in and post manually.
           </p>
           <p>
             Schedule a month&apos;s posts in one sitting using Buffer, Later, or Meta&apos;s built-in scheduler. AI can draft the captions in minutes (our <Link href="/digital/tools/caption-generator" style={{ color: "var(--color-warm-accent)" }}>Caption Generator</Link> spits out five versions per post). You write the prompts, AI does the typing, the tool does the posting. You touch it once a month.
@@ -74,11 +74,11 @@ export default function Post() {
 
           <h2 style={h2}>The pattern</h2>
           <p>
-            None of these are about AI being clever. They&apos;re about taking a thing you already do manually and putting it on a schedule so you don&apos;t have to remember. The leverage isn&apos;t intelligence — it&apos;s patience-at-scale.
+            None of these are about AI being clever. They&apos;re about taking a thing you already do manually and putting it on a schedule so you don&apos;t have to remember. The leverage isn&apos;t intelligence, it&apos;s patience-at-scale.
           </p>
 
           <p>
-            If any of these feel impossible at your current setup, that&apos;s usually the symptom of a deeper problem — your tools don&apos;t talk to each other. That&apos;s a different conversation. <Link href="/consulting" style={{ color: "var(--color-warm-accent)" }}>Book a consulting session</Link> if you want to walk through what your stack should look like.
+            If any of these feel impossible at your current setup, that&apos;s usually the symptom of a deeper problem, your tools don&apos;t talk to each other. That&apos;s a different conversation. <Link href="/consulting" style={{ color: "var(--color-warm-accent)" }}>Book a consulting session</Link> if you want to walk through what your stack should look like.
           </p>
         
 

@@ -1,5 +1,5 @@
 "use client";
-// Full Print Marketing Suite — purcellventures.co/print
+// Full Print Marketing Suite, purcellventures.co/print
 // Materials: Door Hanger · Yard Sign · EDDM Postcard (Purcell Works) + Rack Card (PV Digital)
 
 import React, { useRef } from "react";
@@ -238,7 +238,7 @@ function YardSignFront() {
 
         <div style={{ height: "1px", width: "260px", background: "#d4af3728", marginBottom: "14px" }} />
 
-        {/* Phone — very large */}
+        {/* Phone, very large */}
         <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "46px", fontWeight: 700, color: "#f5f0e0", letterSpacing: "0.05em", marginBottom: "10px" }}>{PHONE}</div>
 
         {/* URL */}
@@ -287,7 +287,7 @@ function PostcardFront() {
         </div>
       </div>
 
-      {/* Right column — before/after placeholders */}
+      {/* Right column, before/after placeholders */}
       <div style={{ position: "absolute", top: 28, right: 28, bottom: 28, width: 258, display: "flex", flexDirection: "column", gap: "10px" }}>
         {["Before", "After"].map(label => (
           <div key={label} style={{
@@ -306,7 +306,7 @@ function PostcardFront() {
 function PostcardBack() {
   return (
     <PostcardShell style={{ background: "#f0ebe2" }}>
-      {/* EDDM Indicia box — top right */}
+      {/* EDDM Indicia box, top right */}
       <div style={{
         position: "absolute", top: 14, right: 14,
         width: 118, height: 68, border: "1px solid #b8a898",
@@ -319,7 +319,7 @@ function PostcardBack() {
         ))}
       </div>
 
-      {/* Return address — top left */}
+      {/* Return address, top left */}
       <div style={{ position: "absolute", top: 14, left: 18 }}>
         <div style={{ fontSize: "8px", fontWeight: 700, color: "#2e2416", fontFamily: "Inter, sans-serif" }}>Purcell Works</div>
         <div style={{ fontSize: "8px", color: "#6a5a4a", fontFamily: "Inter, sans-serif", marginTop: "1px" }}>{PHONE}</div>
@@ -329,7 +329,7 @@ function PostcardBack() {
       {/* Horizontal rule */}
       <div style={{ position: "absolute", top: 96, left: 14, right: 14, height: "1px", background: "#c8b8a8" }} />
 
-      {/* Address area — right side */}
+      {/* Address area, right side */}
       <div style={{
         position: "absolute", top: 110, right: 14, bottom: 14, width: 320,
         border: "1px dashed #c0b0a0",
@@ -379,7 +379,7 @@ function RackCardFront() {
           {[
             { title: "Business Website", desc: "Custom, mobile-ready, SEO-optimized" },
             { title: "AI Chatbot", desc: "Answers customers 24/7 automatically" },
-            { title: "Booking System", desc: "Online appointments — no phone needed" },
+            { title: "Booking System", desc: "Online appointments, no phone needed" },
             { title: "Email Marketing", desc: "Monthly campaigns, auto-generated" },
           ].map(item => (
             <div key={item.title} style={{ display: "flex", alignItems: "flex-start", gap: "8px" }}>
@@ -485,12 +485,12 @@ function MaterialSection({ title, subtitle, Front, Back, filenamePrefix, singleS
 // ─── Printer Guide Data ───────────────────────────────────────────────────────
 
 const PRINTER_GUIDE = [
-  { material: "Business Cards",    printer: "PrintingForLess.com",        cost: "~$40 / 100",          finish: "Soft-touch matte",  notes: "Best dark card quality — reliable" },
+  { material: "Business Cards",    printer: "PrintingForLess.com",        cost: "~$40 / 100",          finish: "Soft-touch matte",  notes: "Best dark card quality, reliable" },
   { material: "Door Hangers",      printer: "PrintingForLess.com",        cost: "~$60 / 250",          finish: "Soft-touch matte",  notes: "Same shop, same quality as cards" },
   { material: "Yard Signs",        printer: "PrintingForLess.com",        cost: "~$25 / ea",           finish: "Coroplast, no lam", notes: "Order 5–10 to start, leave at every job" },
   { material: "EDDM Postcards",    printer: "USPS EDDM + PrintingForLess",cost: "~$200 / 1,000 all-in",finish: "Matte",             notes: "Saturate a zip code — ~$0.20/house" },
   { material: "Rack Cards",        printer: "PrintingForLess.com",        cost: "~$30 / 100",          finish: "Matte",             notes: "Batch with other orders to save shipping" },
-  { material: "Vehicle Decal",     printer: "Local vinyl shop",           cost: "$50–150",             finish: "Vinyl (removable)", notes: "Can't print here — take design to shop" },
+  { material: "Vehicle Decal",     printer: "Local vinyl shop",           cost: "$50–150",             finish: "Vinyl (removable)", notes: "Can't print here, take design to shop" },
 ];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -514,7 +514,7 @@ export default function PrintPage() {
           Print Marketing Suite
         </h1>
         <p style={{ fontSize: "14px", color: "#524d45" }}>
-          Door hangers · Yard signs · EDDM postcards · Rack cards — download as print-ready PNG
+          Door hangers · Yard signs · EDDM postcards · Rack cards, download as print-ready PNG
         </p>
       </div>
 

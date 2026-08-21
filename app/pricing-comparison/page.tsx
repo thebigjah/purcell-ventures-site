@@ -59,7 +59,7 @@ export default function PricingComparisonPage() {
             Pricing, <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>actually compared.</em>
           </h1>
           <p className="deck">
-            Most agencies bury pricing on a &quot;contact us&quot; form. We don&apos;t. Here&apos;s our pricing next to the realistic market alternatives — agencies, freelancers, and DIY tools. Numbers are typical ranges as of 2026. No spin, no &quot;starting from&quot; tricks.
+            Most agencies bury pricing on a &quot;contact us&quot; form. We don&apos;t. Here&apos;s our pricing next to the realistic market alternatives, agencies, freelancers, and DIY tools. Numbers are typical ranges as of 2026. No spin, no &quot;starting from&quot; tricks.
           </p>
         </header>
 
@@ -83,7 +83,7 @@ export default function PricingComparisonPage() {
           <h2 style={sectionHead}>Custom Software</h2>
           <ComparisonTable rows={CUSTOM_SOFTWARE_ROWS} />
           <p style={footnote}>
-            Custom software is where the spread is widest. A $25k agency project and a $5k PV project can produce the same working app — the difference is the agency&apos;s overhead, project managers, and slide decks, not the code.
+            Custom software is where the spread is widest. A $25k agency project and a $5k PV project can produce the same working app, the difference is the agency&apos;s overhead, project managers, and slide decks, not the code.
           </p>
         </section>
 
@@ -91,9 +91,9 @@ export default function PricingComparisonPage() {
         <section style={{ marginBottom: "48px", padding: "32px 36px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)" }}>
           <h2 style={{ ...sectionHead, marginTop: 0 }}>Why we can charge less (and why that&apos;s sustainable)</h2>
           <ul style={{ paddingLeft: "24px", fontSize: "15px", color: "var(--color-warm-text)", lineHeight: 1.8 }}>
-            <li><strong>Solo operator, low overhead.</strong> No salespeople (well — now we have a few), no office, no middle management. Every dollar that&apos;s not building or supporting goes back into lower pricing.</li>
-            <li><strong>Modular, reusable systems.</strong> Our Digital Services skeletons are templates we adapt — not bespoke builds from scratch. That cuts hours without cutting quality.</li>
-            <li><strong>AI in our workflow.</strong> We use AI heavily for first drafts of code, content, and structure — then human-review every output. Speeds the work, doesn&apos;t reduce care.</li>
+            <li><strong>Solo operator, low overhead.</strong> No salespeople (well, now we have a few), no office, no middle management. Every dollar that&apos;s not building or supporting goes back into lower pricing.</li>
+            <li><strong>Modular, reusable systems.</strong> Our Digital Services skeletons are templates we adapt, not bespoke builds from scratch. That cuts hours without cutting quality.</li>
+            <li><strong>AI in our workflow.</strong> We use AI heavily for first drafts of code, content, and structure, then human-review every output. Speeds the work, doesn&apos;t reduce care.</li>
             <li><strong>Long-term relationships pay back.</strong> A $99/mo subscription customer who stays 3 years pays us $3,564. That&apos;s why we don&apos;t need to extract maximum value from each engagement.</li>
             <li><strong>Owner-direct, no commission stack.</strong> Most agencies pay a sales team 15-25% commission, an account manager, a project manager, plus margin. We pay sales reps a commission (now), but the owner is still on every important call.</li>
           </ul>
@@ -135,7 +135,7 @@ export default function PricingComparisonPage() {
             <div>
               <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", color: "var(--color-warm-accent)", fontWeight: 600, margin: "0 0 8px" }}>Want the math for YOUR business?</h3>
               <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: 0, lineHeight: 1.6 }}>
-                Try our free AI Cost Calculator — plug in your team size, hourly rate, and current manual hours. Get a projected ROI + payback period in 30 seconds.
+                Try our free AI Cost Calculator, plug in your team size, hourly rate, and current manual hours. Get a projected ROI + payback period in 30 seconds.
               </p>
             </div>
             <Link href="/ai-cost-calculator" className="pv-btn-primary">Open the calculator</Link>

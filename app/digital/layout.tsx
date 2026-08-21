@@ -63,7 +63,7 @@ const schema = {
           "name": "How is this different from Wix or Squarespace?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Those are tools you manage yourself. I build it, maintain it, update it, and add AI capabilities those platforms don't offer — like a chatbot trained on your business, AI-generated social posts, and automated review responses. You focus on your business, I handle the tech.",
+            "text": "Those are tools you manage yourself. I build it, maintain it, update it, and add AI capabilities those platforms don't offer, like a chatbot trained on your business, AI-generated social posts, and automated review responses. You focus on your business, I handle the tech.",
           },
         },
         {
@@ -79,7 +79,7 @@ const schema = {
           "name": "Do I own my website?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. The site, content, and domain are yours. If you ever want to leave, I hand over everything — full source code, all assets. No hostage-taking.",
+            "text": "Yes. The site, content, and domain are yours. If you ever want to leave, I hand over everything, full source code, all assets. No hostage-taking.",
           },
         },
         {
@@ -95,7 +95,7 @@ const schema = {
           "name": "Why is it cheaper than a typical agency?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Because I build modular, reusable systems — not one-off custom builds from scratch. I use AI tools throughout my workflow, which cuts hours without cutting quality. You get professional-grade work at a fraction of typical agency rates.",
+            "text": "Because I build modular, reusable systems, not one-off custom builds from scratch. I use AI tools throughout my workflow, which cuts hours without cutting quality. You get professional-grade work at a fraction of typical agency rates.",
           },
         },
       ],

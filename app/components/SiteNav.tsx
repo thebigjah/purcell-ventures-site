@@ -11,7 +11,7 @@ const EMBER = "#2e2820";
 const ASH   = "#524d45";
 const CHAR  = "#3a3530";
 
-// Pages that are internal tools or off-brand storefront — no public nav needed
+// Pages that are internal tools or off-brand storefront, no public nav needed
 const HIDE_ON = ["/logos", "/patterns", "/brand", "/resume", "/print", "/qr", "/business-cards", "/crm", "/invoicing", "/newsletter", "/links", "/digital/playbook", "/digital/finder", "/sales-rep", "/rep-portal", "/courses/college-apps/lessons", "/courses/business-launch/lessons", "/courses/ai-automation/lessons", "/shop", "/free"];
 
 const LAMPSTAND = {
@@ -83,7 +83,7 @@ export default function SiteNav() {
             </span>
           </Link>
 
-          {/* Desktop links — mono small-caps */}
+          {/* Desktop links, mono small-caps */}
           <nav className="pv-nav-links" style={{ alignItems: "center", gap: "4px" }}>
             {LINKS.map(link => (
               <Link key={link.href} href={link.href} className="pv-nav-link" style={{

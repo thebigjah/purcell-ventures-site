@@ -6,7 +6,7 @@ const SERVICES = [
   "Digital Services (website, chatbot, booking, etc.)",
   "AI Consulting / Team Training",
   "Custom Software / App Development",
-  "Not sure — just exploring",
+  "Not sure, just exploring",
 ];
 
 interface Lead {

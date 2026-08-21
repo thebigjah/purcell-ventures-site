@@ -238,7 +238,7 @@ export default function EstimatingPage() {
                   return (
                     <tr key={li.id} style={{ borderBottom: "1px solid var(--color-warm-border)" }}>
                       <td style={{ padding: "8px" }}>
-                        <input type="text" value={li.description} onChange={(e) => updateLineItem(li.id, { description: e.target.value })} placeholder="e.g., Labor — install" style={{ ...inputStyle, padding: "6px 8px" }} />
+                        <input type="text" value={li.description} onChange={(e) => updateLineItem(li.id, { description: e.target.value })} placeholder="e.g., Labor, install" style={{ ...inputStyle, padding: "6px 8px" }} />
                       </td>
                       <td style={{ padding: "8px" }}>
                         <input type="number" value={li.qty} onChange={(e) => updateLineItem(li.id, { qty: Number(e.target.value) })} style={{ ...inputStyle, padding: "6px 8px", textAlign: "right" }} />

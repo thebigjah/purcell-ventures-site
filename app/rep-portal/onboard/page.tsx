@@ -7,7 +7,7 @@ import { PortalNav } from "../_components/PortalNav";
 import { isAdmin } from "@/lib/crm-storage";
 
 /**
- * Admin Onboarding Helper — for Elijah to set up a new rep.
+ * Admin Onboarding Helper, for Elijah to set up a new rep.
  * Generates: password, env var line, welcome email, contractor agreement link.
  * Admin-only (checks cookie via isAdmin).
  */
@@ -73,7 +73,7 @@ Here's everything you need to start:
 🔐 REP PORTAL LOGIN
   URL:      https://purcellventures.co/rep-portal/login
   Password: ${password || "(set above)"}
-  (Your name is auto-detected from the password — no need to type it.)
+  (Your name is auto-detected from the password, no need to type it.)
 
 📋 CONTRACTOR AGREEMENT
   Before your first sale, please sign and return:
@@ -87,7 +87,7 @@ Here's everything you need to start:
   • Scripts:     https://purcellventures.co/rep-portal/scripts
 
 🤖 WHEN YOU'RE STUCK MID-PITCH
-  /rep-portal/ask — the AI assistant. Knows pricing, scripts, escalation rules. Type a question, get a tactical answer.
+  /rep-portal/ask, the AI assistant. Knows pricing, scripts, escalation rules. Type a question, get a tactical answer.
 
 🎯 YOUR TIER: ${tier}
   ${tier === "Apprentice" ? "Start with Courses + Mantle (commission paid but doesn't count toward promotion). 5 course closes + 80% on the Closer quiz → Closer tier." : ""}${tier === "Closer" ? "You can sell Digital Services subscriptions. 5 Digital closes + co-pitch with me on a Custom Software deal → Senior tier." : ""}${tier === "Senior" ? "Full catalog access — Consulting + Custom Software included. You're at the top of the tier ladder." : ""}
@@ -192,7 +192,7 @@ elijah@purcell-ventures.com
 
           <div style={{ marginTop: "48px", padding: "20px 24px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>
             <strong style={{ color: "var(--color-warm-accent)", fontFamily: "var(--font-dm-sans), sans-serif", letterSpacing: "0.18em", textTransform: "uppercase", fontSize: "10px" }}>Heads up · </strong>
-            This tool helps you prep an onboarding — it does NOT auto-write to your Vercel env var (that requires the Vercel API). You still have to paste the env-var line manually. Future: integrate with Vercel API for one-click activation.
+            This tool helps you prep an onboarding, it does NOT auto-write to your Vercel env var (that requires the Vercel API). You still have to paste the env-var line manually. Future: integrate with Vercel API for one-click activation.
           </div>
 
         </main>

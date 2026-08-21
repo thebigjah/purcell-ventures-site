@@ -103,7 +103,7 @@ export default function SubjectLinesPage() {
             <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", color: "#7aaa6a", fontWeight: 600, margin: "0 0 8px" }}>Get this if</h3>
             <ul style={{ paddingLeft: "20px", margin: 0, fontSize: "13px", color: "var(--color-warm-text)", lineHeight: 1.7 }}>
               <li>You write cold emails and your subject lines are getting ignored</li>
-              <li>You don&apos;t need a full template pack — just better hooks</li>
+              <li>You don&apos;t need a full template pack, just better hooks</li>
               <li>You want a quick win, not a deep playbook</li>
               <li>$9 is impulse-pricing for you</li>
             </ul>
@@ -111,7 +111,7 @@ export default function SubjectLinesPage() {
           <div style={{ padding: "20px 24px", background: "rgba(229, 74, 40, 0.05)", border: "1px solid #e54a28" }}>
             <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", color: "#e54a28", fontWeight: 600, margin: "0 0 8px" }}>Skip this if</h3>
             <ul style={{ paddingLeft: "20px", margin: 0, fontSize: "13px", color: "var(--color-warm-text)", lineHeight: 1.7 }}>
-              <li>You want the full Cold Email Pack ($29) — it includes this</li>
+              <li>You want the full Cold Email Pack ($29), it includes this</li>
               <li>You don&apos;t send cold emails</li>
               <li>You want a done-for-you outreach service</li>
             </ul>

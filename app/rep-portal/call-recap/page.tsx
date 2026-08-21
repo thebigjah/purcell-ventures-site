@@ -150,7 +150,7 @@ export default function CallRecapPage() {
                 <textarea
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
-                  placeholder="Type or paste — abbreviations, fragments, scribbles all fine. AI will structure. Example: 'Sarah called back, ok w/ $179/mo but wants to skip setup fee. Mentioned a competitor — Greenleaf? Said decision by Friday. Sounded enthusiastic.'"
+                  placeholder="Type or paste, abbreviations, fragments, scribbles all fine. AI will structure. Example: 'Sarah called back, ok w/ $179/mo but wants to skip setup fee. Mentioned a competitor — Greenleaf? Said decision by Friday. Sounded enthusiastic.'"
                   style={{ ...fieldStyle, minHeight: "180px", resize: "vertical", fontFamily: "var(--font-inter), sans-serif" }}
                 />
               </div>
@@ -198,7 +198,7 @@ export default function CallRecapPage() {
                 )}
               </div>
 
-              {/* Next action — big and prominent */}
+              {/* Next action, big and prominent */}
               <div style={{ padding: "20px 24px", background: "rgba(212, 175, 55, 0.06)", border: "2px solid var(--color-warm-accent)" }}>
                 <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "12px", marginTop: 0 }}>Next Action</h3>
                 <p style={{ margin: "0 0 8px", fontSize: "17px", color: "var(--color-warm-text)", lineHeight: 1.5, fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600 }}>{recap.next_action.what}</p>

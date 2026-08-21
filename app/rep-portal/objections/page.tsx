@@ -90,7 +90,7 @@ export default function ObjectionsPage() {
               They said <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>what?</em>
             </h1>
             <p className="deck">
-              Paste the objection a prospect just gave you. AI returns 3 distinct response strategies — agree-and-pivot, clarifying-question, direct-pushback — with word-for-word language. Pick the one that fits the moment.
+              Paste the objection a prospect just gave you. AI returns 3 distinct response strategies, agree-and-pivot, clarifying-question, direct-pushback, with word-for-word language. Pick the one that fits the moment.
             </p>
           </header>
 

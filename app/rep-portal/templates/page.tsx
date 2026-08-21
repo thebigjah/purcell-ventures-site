@@ -29,23 +29,23 @@ A few quick things in case useful:
 • [Specific point 1 from your conversation]
 • [Specific point 2]
 
-Happy to schedule a 15-min call if you want to talk through it, or if you're a 'not right now' that's totally fine — just text NO and I'll move on.
+Happy to schedule a 15-min call if you want to talk through it, or if you're a 'not right now' that's totally fine, just text NO and I'll move on.
 
 — {{repName}}`,
     tags: ["follow-up", "warm"],
   },
   {
-    name: "Cold outreach — local business",
+    name: "Cold outreach, local business",
     subject: "Quick question about {{company}}",
     body: `Hi {{firstName}},
 
-I run Purcell Ventures — we build digital tools for small businesses in Atlanta. I noticed {{company}} and had a quick thought.
+I run Purcell Ventures, we build digital tools for small businesses in Atlanta. I noticed {{company}} and had a quick thought.
 
-[Specific observation about their business — website, hours, social presence, something concrete]
+[Specific observation about their business, website, hours, social presence, something concrete]
 
 We help businesses like yours add [chatbot / booking / CRM / etc.] for $99-279/mo. It's not for everyone but if it's interesting, I'd love to grab 15 minutes.
 
-If not, no worries — just delete this. Take care.
+If not, no worries, just delete this. Take care.
 
 — {{repName}}
 Purcell Ventures`,
@@ -56,7 +56,7 @@ Purcell Ventures`,
     subject: "Pilot Partner spot for {{company}}?",
     body: `Hi {{firstName}},
 
-I mentioned the Pilot Partner program on our call — wanted to put the details in writing.
+I mentioned the Pilot Partner program on our call, wanted to put the details in writing.
 
 We just launched our Digital Services tiers and have 3 Pilot Partner spots left across all of them. If you're a fit:
 • 30% off setup
@@ -67,17 +67,17 @@ We just launched our Digital Services tiers and have 3 Pilot Partner spots left 
 Standard Digital {{tier}}: {{standardPrice}}
 Pilot Partner: {{pilotPrice}}
 
-If you want one of those spots, let me know this week — once they're gone they're gone, and the next 3 prospects pay standard.
+If you want one of those spots, let me know this week, once they're gone they're gone, and the next 3 prospects pay standard.
 
 — {{repName}}`,
     tags: ["pilot-partner", "close"],
   },
   {
-    name: "Final touch — going silent",
-    subject: "Last bump — yes/no/move-on",
+    name: "Final touch, going silent",
+    subject: "Last bump, yes/no/move-on",
     body: `Hi {{firstName}},
 
-Last touch on this. If now's not the right time for {{service}}, just text NO and I'll stop pestering — totally fine.
+Last touch on this. If now's not the right time for {{service}}, just text NO and I'll stop pestering, totally fine.
 
 If you want to keep talking, give me a window this week or next.
 
@@ -184,7 +184,7 @@ export default function TemplatesPage() {
               Your <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>library.</em>
             </h1>
             <p className="deck">
-              Save the emails you send over and over. Use {`{{tokens}}`} like {`{{firstName}}, {{company}}, {{service}}`} as placeholders — fill in when you send. Pairs with the <Link href="/digital/tools/email-composer" style={{ color: "var(--color-warm-accent)" }}>AI Email Composer</Link> for one-off drafts.
+              Save the emails you send over and over. Use {`{{tokens}}`} like {`{{firstName}}, {{company}}, {{service}}`} as placeholders, fill in when you send. Pairs with the <Link href="/digital/tools/email-composer" style={{ color: "var(--color-warm-accent)" }}>AI Email Composer</Link> for one-off drafts.
             </p>
           </header>
 

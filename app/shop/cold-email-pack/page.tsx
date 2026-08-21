@@ -145,7 +145,7 @@ export default function ColdEmailPackPage() {
             <ul style={{ paddingLeft: "20px", margin: 0, fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.8 }}>
               <li>You only do inbound marketing</li>
               <li>You hate sending emails to people you don&apos;t know (this is for people willing to do it honestly)</li>
-              <li>You want a done-for-you cold outreach service (we offer that — start at <Link href="/consulting" style={{ color: "var(--color-warm-accent)" }}>Consulting</Link>)</li>
+              <li>You want a done-for-you cold outreach service (we offer that, start at <Link href="/consulting" style={{ color: "var(--color-warm-accent)" }}>Consulting</Link>)</li>
               <li>You&apos;ve never opened a CRM and don&apos;t want to start (you&apos;ll need somewhere to send these from)</li>
             </ul>
           </div>

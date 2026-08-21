@@ -131,7 +131,7 @@ export default function ExpensesPage() {
                 </select>
               </div>
               <div style={{ gridColumn: "1 / -1" }}>
-                <Input label="Description" value={form.description} onChange={(v) => setForm({ ...form, description: v })} placeholder="e.g., Home Depot — drill bits for Tuesday's job" />
+                <Input label="Description" value={form.description} onChange={(v) => setForm({ ...form, description: v })} placeholder="e.g., Home Depot, drill bits for Tuesday's job" />
               </div>
               <label style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "var(--color-warm-text)" }}>
                 <input type="checkbox" checked={form.taxDeductible} onChange={(e) => setForm({ ...form, taxDeductible: e.target.checked })} />

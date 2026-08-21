@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Elijah Purcell | Founder, Purcell Ventures LLC | University of Alabama Honors College '30 | Software, AI systems, and shipped products. Full work, activities, awards, and scholarship record.",
 };
 
-// Dark Vignette palette — same as the rest of the site
+// Dark Vignette palette, same as the rest of the site
 const C = {
   bg: "#0c0a08",
   bgAlt: "#141210",
@@ -631,7 +631,7 @@ export default function ResumePage() {
           <Row left="Christian Character Award" right="Grove" sub="Selected as one of two students school-wide (one male, one female) for moral excellence, integrity, and leadership." />
           <Row left="Christ-like Leadership Award" right="Grove · End-of-Year Awards" sub="Awarded at the end-of-year awards ceremony for embodying servant leadership and Christian character throughout the school year." />
           <Row left="Lead Role — Christmas Musical" right="Grove" sub="Selected for the lead acting and vocal role in the school&apos;s annual Christmas production." />
-          <Row left="Highest Math Grade in Class" right="9th Grade" sub="Earned 100% both semesters — top math average in the class." />
+          <Row left="Highest Math Grade in Class" right="9th Grade" sub="Earned 100% both semesters, top math average in the class." />
           <Row
             left="Family Foundation & Colson Center — Youth Leadership Summit"
             right="Summer 2023 · Richmond, VA"

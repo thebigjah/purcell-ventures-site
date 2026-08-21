@@ -53,7 +53,7 @@ const SECTIONS = [
     title: "Pricing reference",
     body: (
       <>
-        <p>For current pricing across all divisions, including Pilot Partner offer terms and your commission per close, see the <Link href="/rep-portal/pricing" style={{ color: "var(--color-warm-accent)" }}>Pricing Reference page</Link>. That&apos;s the single source of truth — when prices change, that page changes first.</p>
+        <p>For current pricing across all divisions, including Pilot Partner offer terms and your commission per close, see the <Link href="/rep-portal/pricing" style={{ color: "var(--color-warm-accent)" }}>Pricing Reference page</Link>. That&apos;s the single source of truth, when prices change, that page changes first.</p>
       </>
     ),
   },
@@ -66,11 +66,11 @@ const SECTIONS = [
         <p>The setup: we&apos;re filling our first 3 Pilot Partner spots per Digital tier. Once they&apos;re gone, prices go to standard for everyone after.</p>
         <p><strong>Verbal pitch (memorize the rhythm):</strong></p>
         <blockquote style={{ borderLeft: "3px solid var(--color-warm-accent)", paddingLeft: "16px", fontStyle: "italic" }}>
-          &ldquo;Here&apos;s the deal. We just launched these tiers, and right now I have <strong>3 Pilot Partner spots left across all of them.</strong> I want to fill them with the right businesses, not just the first three to say yes. If you&apos;re a fit, here&apos;s what that means for you: <strong>30% off the setup, 30% off your first 6 months.</strong> After that you transition to standard pricing — but you&apos;ll be paying what&apos;s still well under most agencies. What I need from you: at the 60-day mark, a short testimonial — 2 to 3 sentences. Right to use your business as a case study, anonymous if you prefer. And one introduction within 6 months to another business owner you respect. Doesn&apos;t have to result in a sale. Just an intro. That&apos;s the trade.&rdquo;
+          &ldquo;Here&apos;s the deal. We just launched these tiers, and right now I have <strong>3 Pilot Partner spots left across all of them.</strong> I want to fill them with the right businesses, not just the first three to say yes. If you&apos;re a fit, here&apos;s what that means for you: <strong>30% off the setup, 30% off your first 6 months.</strong> After that you transition to standard pricing, but you&apos;ll be paying what&apos;s still well under most agencies. What I need from you: at the 60-day mark, a short testimonial — 2 to 3 sentences. Right to use your business as a case study, anonymous if you prefer. And one introduction within 6 months to another business owner you respect. Doesn&apos;t have to result in a sale. Just an intro. That&apos;s the trade.&rdquo;
         </blockquote>
         <p><strong>What the pitch is NOT:</strong></p>
         <ul>
-          <li>NOT &ldquo;limited time only — sign today!&rdquo; (manufactured urgency)</li>
+          <li>NOT &ldquo;limited time only, sign today!&rdquo; (manufactured urgency)</li>
           <li>NOT &ldquo;the price will go up tomorrow&rdquo; — it&apos;s &ldquo;the price will go up after 3 closes&rdquo;</li>
           <li>NOT bait-and-switch — Pilot price is real, lock period is real, standard price after IS standard</li>
         </ul>
@@ -108,12 +108,12 @@ const SECTIONS = [
           <li>Custom Software inquiry of any size — Senior reps only, Elijah on call before commitment</li>
           <li>Any deal where the prospect wants to negotiate below Pilot Partner rates</li>
           <li>Any Consulting deal over $2,000</li>
-          <li>Any prospect claiming existing PV history (past customer, referral, etc.) — verify</li>
-          <li>Any prospect from a competitor&apos;s customer base — judgment call, ask first</li>
+          <li>Any prospect claiming existing PV history (past customer, referral, etc.), verify</li>
+          <li>Any prospect from a competitor&apos;s customer base, judgment call, ask first</li>
         </ul>
         <p><strong>How to escalate:</strong></p>
         <p>Text Elijah at <strong>(205) 462-7839</strong>: &ldquo;Got a [SERVICE] prospect, [BUDGET], decision timeline [X]. Need 5 min before I quote.&rdquo;</p>
-        <p>Don&apos;t escalate via email — too slow. Don&apos;t escalate in front of the prospect. Don&apos;t use the chatbot (<Link href="/rep-portal/ask" style={{ color: "var(--color-warm-accent)" }}>Ask</Link>) as a substitute for escalation on high-value deals.</p>
+        <p>Don&apos;t escalate via email, too slow. Don&apos;t escalate in front of the prospect. Don&apos;t use the chatbot (<Link href="/rep-portal/ask" style={{ color: "var(--color-warm-accent)" }}>Ask</Link>) as a substitute for escalation on high-value deals.</p>
       </>
     ),
   },
@@ -142,13 +142,13 @@ const SECTIONS = [
       <>
         <ul>
           <li><strong>Shared Airtable CRM</strong> — track every prospect and conversation (Elijah provides login)</li>
-          <li><strong>Your own <Link href="/rep-portal/deals" style={{ color: "var(--color-warm-accent)" }}>Deals page</Link></strong> in the rep portal — log every prospect + close. Commission paid on what&apos;s logged.</li>
+          <li><strong>Your own <Link href="/rep-portal/deals" style={{ color: "var(--color-warm-accent)" }}>Deals page</Link></strong> in the rep portal, log every prospect + close. Commission paid on what&apos;s logged.</li>
           <li><strong>PV site + Mantle site</strong> — show prospects what they&apos;d be getting</li>
           <li><strong><Link href="/digital/tools" style={{ color: "var(--color-warm-accent)" }}>Live demo tools</Link></strong> — show prospects the working version of what you&apos;re pitching (FAQ Builder, Color Palette, Content Generator, etc.)</li>
           <li><strong>Sales materials Drive folder</strong> — pitch decks, brochures, contracts (Elijah provides)</li>
           <li><strong><Link href="/rep-portal/ask" style={{ color: "var(--color-warm-accent)" }}>Ask AI</Link></strong> — mid-pitch question? Drop it in. Knows pricing, scripts, escalation rules.</li>
         </ul>
-        <p>You&apos;re 1099 — phone bill and gas costs are your own, but deductible. We&apos;ll send a year-end summary of closed deals to make tax season easier.</p>
+        <p>You&apos;re 1099, phone bill and gas costs are your own, but deductible. We&apos;ll send a year-end summary of closed deals to make tax season easier.</p>
       </>
     ),
   },
@@ -237,7 +237,7 @@ export default function HandbookPage() {
           </div>
 
           <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", textAlign: "center", fontStyle: "italic", marginTop: "48px" }}>
-            Handbook v1.0 — last updated May 2026. Notify Elijah if anything here contradicts what you&apos;ve been told elsewhere.
+            Handbook v1.0, last updated May 2026. Notify Elijah if anything here contradicts what you&apos;ve been told elsewhere.
           </p>
         </main>
       </div>

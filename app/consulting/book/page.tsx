@@ -41,7 +41,7 @@ async function saveBooking(booking: Omit<Booking, "id" | "status" | "createdAt">
     existing.unshift({ ...booking, id: Date.now().toString(), status: "New", createdAt: new Date().toISOString() });
     localStorage.setItem("pv_bookings", JSON.stringify(existing));
   } catch {
-    // localStorage might be full or disabled — that's fine, the email is the real channel
+    // localStorage might be full or disabled, that's fine, the email is the real channel
   }
   // Real delivery: POST to the booking API which emails via Resend
   try {
@@ -165,7 +165,7 @@ export default function BookPage() {
         ) : step === 1 ? (
           <div>
             <h1 style={stepHeaderStyle}>Pick a <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>session.</em></h1>
-            <p style={stepDeckStyle}>Every session is customized to your business — this just tells me where to start.</p>
+            <p style={stepDeckStyle}>Every session is customized to your business, this just tells me where to start.</p>
             <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "32px" }}>
               {SESSION_TYPES.map(s => {
                 const isActive = sessionType === s.id;

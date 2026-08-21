@@ -23,7 +23,7 @@ interface Tier {
 const QUESTIONS: Question[] = [
   {
     text: "How does your team currently draft customer communications?",
-    context: "Email, proposals, follow-ups, scripts — anything written.",
+    context: "Email, proposals, follow-ups, scripts, anything written.",
     options: [
       { label: "From scratch every time", points: 0 },
       { label: "From a small template library we maintain", points: 1 },
@@ -33,7 +33,7 @@ const QUESTIONS: Question[] = [
   },
   {
     text: "When was the last time your team adopted a new tool that genuinely saved you 5+ hours a week?",
-    context: "Not a new feature — a whole new tool that changed how someone works.",
+    context: "Not a new feature, a whole new tool that changed how someone works.",
     options: [
       { label: "Can't think of one", points: 0 },
       { label: "A few years ago", points: 1 },
@@ -45,7 +45,7 @@ const QUESTIONS: Question[] = [
     text: "If a competitor automated 50% of your team's daily admin work tomorrow, how long would it take you to match them?",
     context: "Not 'adopt a tool' — actually integrate it and run with it.",
     options: [
-      { label: "We'd never catch up — we don't know what they'd be doing", points: 0 },
+      { label: "We'd never catch up, we don't know what they'd be doing", points: 0 },
       { label: "6+ months of internal restructure", points: 1 },
       { label: "1–3 months with help", points: 2 },
       { label: "Already there or close", points: 3 },
@@ -56,7 +56,7 @@ const QUESTIONS: Question[] = [
     context: "Be honest about repeat work.",
     options: [
       { label: "80% manual, mostly the same tasks every week", points: 0 },
-      { label: "50/50 — some automation, lots of manual fallback", points: 1 },
+      { label: "50/50, some automation, lots of manual fallback", points: 1 },
       { label: "Mostly tooled, but humans review and approve everything", points: 2 },
       { label: "Highly automated; humans handle the edge cases only", points: 3 },
     ],
@@ -95,7 +95,7 @@ const QUESTIONS: Question[] = [
     text: "What's your team's read on the next 18 months of AI?",
     context: "Cultural temperature check.",
     options: [
-      { label: "It's overhyped — we're not changing anything", points: 0 },
+      { label: "It's overhyped, we're not changing anything", points: 0 },
       { label: "We know we should learn it, haven't gotten to it", points: 1 },
       { label: "We're actively testing tools; some are sticking", points: 2 },
       { label: "AI is core to our planning; we map every quarter against it", points: 3 },
@@ -128,12 +128,12 @@ const TIERS: Tier[] = [
     max: 9,
     label: "AT RISK",
     cls: "low",
-    verdict: "You're behind the curve — and the curve is moving faster every quarter.",
+    verdict: "You're behind the curve, and the curve is moving faster every quarter.",
     detail: "This isn't a judgment, it's a heads-up. Most people in this tier don't realize how much room there is to close the gap with one focused session.",
     recs: [
       "Pick ONE workflow your team does weekly that's pure manual work. Automate JUST that one in 2 hours.",
-      "Subscribe to one well-curated AI-for-business newsletter (Lenny's, AI Breakdown). 5 min/day, 90 days. Don't take action yet — just absorb vocabulary.",
-      "Book a 2-hour 'AI Basics for Business' session — designed for exactly this tier.",
+      "Subscribe to one well-curated AI-for-business newsletter (Lenny's, AI Breakdown). 5 min/day, 90 days. Don't take action yet, just absorb vocabulary.",
+      "Book a 2-hour 'AI Basics for Business' session, designed for exactly this tier.",
     ],
     sessionCta: { label: "Book AI Basics for Business →", href: "/consulting/book" },
   },
@@ -142,7 +142,7 @@ const TIERS: Tier[] = [
     label: "WAKING UP",
     cls: "mid",
     verdict: "You see the shift coming. You haven't built around it yet.",
-    detail: "You're not behind — you're at a decision point. The next 6 months are when the gap between 'aware' and 'actively building' becomes hard to close.",
+    detail: "You're not behind, you're at a decision point. The next 6 months are when the gap between 'aware' and 'actively building' becomes hard to close.",
     recs: [
       "Audit your team's top 5 time-wasting workflows. Rank by hours/week × repeatability. Highest-scoring is your first automation candidate.",
       "Allocate 1 person 4 hours/week explicitly for 'AI tooling research and small pilots.' Make it official, not extra duty.",
@@ -157,9 +157,9 @@ const TIERS: Tier[] = [
     verdict: "You're actively building. The question is how much faster you could compound.",
     detail: "You're past the 'should we' phase and into the 'how do we scale this' phase. The biggest unlock now is connecting individual AI wins into integrated workflows.",
     recs: [
-      "Map your existing AI tools and look for the seams — where does an AI-generated output get manually re-entered into another system? That's your next automation.",
+      "Map your existing AI tools and look for the seams, where does an AI-generated output get manually re-entered into another system? That's your next automation.",
       "Establish an internal monthly 'AI demo day' where anyone on the team shows a new tool or workflow. Cultural compounding.",
-      "Consider Custom Team Training — at this tier, generic sessions are below your level. You need a session built around your actual stack.",
+      "Consider Custom Team Training, at this tier, generic sessions are below your level. You need a session built around your actual stack.",
     ],
     sessionCta: { label: "Book Custom Team Training →", href: "/consulting/book" },
   },
@@ -167,10 +167,10 @@ const TIERS: Tier[] = [
     max: 30,
     label: "BUILDING THE FUTURE",
     cls: "high",
-    verdict: "You're not asking the AI-readiness question — you're answering it for other people.",
+    verdict: "You're not asking the AI-readiness question, you're answering it for other people.",
     detail: "At this tier, the value isn't training; it's strategic sounding-boarding. The right next conversation is about positioning your AI capability as a market advantage or even a new revenue line.",
     recs: [
-      "Document your AI infrastructure as a sellable methodology — even internally. The patterns that work for you will work for adjacent businesses.",
+      "Document your AI infrastructure as a sellable methodology, even internally. The patterns that work for you will work for adjacent businesses.",
       "Consider whether your AI capability is a product line, a service offering, or a competitive moat. The three have very different strategies.",
       "Talk to me about a strategic consult, not a training session. Different conversation, different cadence.",
     ],
@@ -407,7 +407,7 @@ export default function AIReadinessPage() {
                 fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.85,
                 maxWidth: "520px", margin: "0 auto 24px", lineHeight: 1.55,
               }}>
-                Based on your tier, this session is the right fit. No upsell — if I think you don&apos;t need it, I&apos;ll tell you straight up.
+                Based on your tier, this session is the right fit. No upsell, if I think you don&apos;t need it, I&apos;ll tell you straight up.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: "10px", alignItems: "center" }}>
                 {tier.sessionCta.href.startsWith("mailto:") ? (

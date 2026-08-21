@@ -1,5 +1,5 @@
 "use client";
-// Business card slash variations — purcellventures.co/business-cards
+// Business card slash variations, purcellventures.co/business-cards
 // 6 designs built around the diagonal gold slash + PV luxury logo mark
 // Print: 3.5" × 2" at 300 DPI · Preview: 630×360px (1.8× scale)
 
@@ -86,7 +86,7 @@ function QRCenter({ src, color = "#d4af37" }: { src: string; color?: string }) {
 }
 
 // ─── V1: The Slash / Classic ──────────────────────────────────────────────────
-// Original refined — two faint diagonals, small PV mark above wordmark
+// Original refined, two faint diagonals, small PV mark above wordmark
 
 function V1Front() {
   return (
@@ -115,7 +115,7 @@ function V1Back() {
 }
 
 // ─── V2: The Slash / Ghost PV ─────────────────────────────────────────────────
-// Massive faded PV watermark fills the card — the slash cuts over it
+// Massive faded PV watermark fills the card, the slash cuts over it
 
 function GhostPV({ opacity = 0.08 }: { opacity?: number }) {
   return (
@@ -165,19 +165,19 @@ function V2Back() {
 //
 // Layout (px from top):
 //   88  — PV top (86px tall → bottom at 174, center at 131)
-//   194 — thin rule
-//   208 — name
-//   222 — title
-//   320 — contact row (bottom: 40)
+//   194, thin rule
+//   208, name
+//   222, title
+//   320, contact row (bottom: 40)
 //
 // Slash: forward / through PV center (315, 131)
-//   from (195, 201) to (435, 61) — midpoint (315, 131) ✓
+//   from (195, 201) to (435, 61), midpoint (315, 131) ✓
 
 function V3Front() { return <PVMark slash={SLASH_RIGHT_FRONT} />; }
 function V3Back()  { return <PVMarkBack slash={SLASH_RIGHT_BACK} />; }
 
 // ─── V7: The Slash / Mark (Left Leg) ──────────────────────────────────────────
-// Same mark, V's LEFT stroke extended — forward slash / direction
+// Same mark, V's LEFT stroke extended, forward slash / direction
 // Front slash: V top-left (315,88) → apex (346,150) → extended (271,0)→(451,360)
 // Back slash:  V top-left (315,100) → apex (373,212) → extended (263,0)→(450,360)
 
@@ -260,14 +260,14 @@ function V7Back()  { return <PVMarkBack slash={SLASH_LEFT_BACK} />; }
 
 // ─── V8: The V-Mark ────────────────────────────────────────────────────────────
 // Both strokes of the V extended across the full card
-// The V's two legs form a massive V shape — converging at the letter's apex
+// The V's two legs form a massive V shape, converging at the letter's apex
 
 function V8Front() { return <PVMark slash={SLASH_BOTH_FRONT} />; }
 function V8Back()  { return <PVMarkBack slash={SLASH_BOTH_BACK} />; }
 
 // ─── V4: The Slash / Cut ──────────────────────────────────────────────────────
 // One fully opaque slash divides the card into two structural zones
-// Wordmark top-left — contact bottom-right — the card is cut in two
+// Wordmark top-left, contact bottom-right, the card is cut in two
 
 function V4Front() {
   // Slash: (428, 0) → (139, 360). At y=180, x≈284 (left-center area)
@@ -304,7 +304,7 @@ function V4Back() {
 }
 
 // ─── V5: The Slash / Rake ─────────────────────────────────────────────────────
-// 9 parallel diagonal lines at same angle — luxury fabric texture
+// 9 parallel diagonal lines at same angle, luxury fabric texture
 // Content sits clean on top
 
 function RakeLines({ opacity = 0.1 }: { opacity?: number }) {
@@ -347,7 +347,7 @@ function V5Back() {
 }
 
 // ─── V6: The Slash / Inverted ─────────────────────────────────────────────────
-// Gold background. Dark slash lines. All-gold front face — maximum boldness.
+// Gold background. Dark slash lines. All-gold front face, maximum boldness.
 
 function V6Front() {
   return (
@@ -502,7 +502,7 @@ function CardSection({ title, subtitle, Front, Back, filenamePrefix }: {
 const DESIGNS = [
   {
     name: "The Slash / Classic",
-    subtitle: "Refined original — subtle diagonals, small PV mark above wordmark",
+    subtitle: "Refined original, subtle diagonals, small PV mark above wordmark",
     Front: V1Front, Back: V1Back,
   },
   {
@@ -512,32 +512,32 @@ const DESIGNS = [
   },
   {
     name: "The Slash / Mark  \\",
-    subtitle: "V's right leg extended — slash descends from upper-right",
+    subtitle: "V's right leg extended, slash descends from upper-right",
     Front: V3Front, Back: V3Back,
   },
   {
     name: "The Slash / Mark  /",
-    subtitle: "V's left leg extended — slash ascends from lower-left",
+    subtitle: "V's left leg extended, slash ascends from lower-left",
     Front: V7Front, Back: V7Back,
   },
   {
     name: "The V-Mark",
-    subtitle: "Both legs extended — the full V shape written across the card",
+    subtitle: "Both legs extended, the full V shape written across the card",
     Front: V8Front, Back: V8Back,
   },
   {
     name: "The Slash / Cut",
-    subtitle: "One bold slash divides the card — wordmark top-left, contact bottom-right",
+    subtitle: "One bold slash divides the card, wordmark top-left, contact bottom-right",
     Front: V4Front, Back: V4Back,
   },
   {
     name: "The Slash / Rake",
-    subtitle: "9 parallel lines as a luxury fabric texture — content sits on top",
+    subtitle: "9 parallel lines as a luxury fabric texture, content sits on top",
     Front: V5Front, Back: V5Back,
   },
   {
     name: "The Slash / Inverted",
-    subtitle: "Gold background with dark slashes — most striking card in any stack",
+    subtitle: "Gold background with dark slashes, most striking card in any stack",
     Front: V6Front, Back: V6Back,
   },
 ];
@@ -562,7 +562,7 @@ export default function BusinessCardsPage() {
         </p>
       </div>
 
-      {/* Your Cards — downloadable */}
+      {/* Your Cards, downloadable */}
       <div style={{ maxWidth: "1400px", margin: "0 auto 80px" }}>
         <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#d4af37", marginBottom: "32px", paddingBottom: "16px", borderBottom: "1px solid #2e2820" }}>
           Your Cards
@@ -618,7 +618,7 @@ export default function BusinessCardsPage() {
             { step: "1", title: "Pick a design", desc: "Screenshot the front and back of your chosen card at full size on this page." },
             { step: "2", title: "Vistaprint", desc: "vistaprint.com → Business Cards → Upload full design. 100 cards ~$20." },
             { step: "3", title: "Or use Canva", desc: "Recreate in Canva's 3.5×2\" business card template. Export as PDF Print." },
-            { step: "4", title: "Finish tip", desc: "Soft-touch matte on dark cards. Standard matte on the gold (Inverted). Never gloss on gold — it washes out." },
+            { step: "4", title: "Finish tip", desc: "Soft-touch matte on dark cards. Standard matte on the gold (Inverted). Never gloss on gold, it washes out." },
           ].map(item => (
             <div key={item.step}>
               <div style={{ fontSize: "11px", fontWeight: 700, color: "#d4af37", marginBottom: "6px" }}>Step {item.step} — {item.title}</div>
