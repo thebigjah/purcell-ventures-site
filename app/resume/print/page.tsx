@@ -390,7 +390,7 @@ export default function ResumePrint() {
                   "Georgia LLC across software, AI integration, digital marketing, field services, and wholesale real estate. Owns the full cycle: acquisition, scoping, pricing, build, deployment, support. Active revenue.",
                   "Filed as Zultar LLC 4/8/2025, renamed 1/27/2026. Control #25075361. EIN and business banking. Registered agent of record."],
                 ["Founder & Operator — Mantle Field Services", "2024–Present",
-                  "Gutter cleaning, pressure washing, and lawn care across metro Atlanta. Client acquisition, quoting, scheduling, equipment maintenance, on-site delivery. Grew out of Autoblade Services.", ""],
+                  "Gutter cleaning, pressure washing, and lawn care across metro Atlanta. Client acquisition, quoting, scheduling, equipment maintenance, on-site delivery. Grew out of Mantle Field Services.", ""],
                 ["AI Data Trainer — Outlier AI", "Oct 2025–May 2026",
                   "Two projects. Evaluated LLM outputs and authored a written rationale for every rating, on accuracy, reasoning quality, and instruction adherence. Wrote spoken-style human-assistant conversations against a fixed per-task tool-call budget, authoring the user turns and editing the model responses.", ""],
                 ["AI Response Evaluator — DataAnnotation", "Spring 2026",

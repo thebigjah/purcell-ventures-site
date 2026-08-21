@@ -530,7 +530,7 @@ export default function ResumePage() {
           <Row
             left="Founder & Operator — Mantle Field Services"
             right="2024 – Present"
-            sub="Sister brand handling gutter cleaning, pressure washing, and lawn care across metro Atlanta. Runs client acquisition, quoting, scheduling, equipment maintenance, and on-site delivery. Grew out of the earlier Autoblade Services operation."
+            sub="Sister brand handling gutter cleaning, pressure washing, and lawn care across metro Atlanta. Runs client acquisition, quoting, scheduling, equipment maintenance, and on-site delivery. Grew out of the earlier Mantle Field Services operation."
           />
           <Row
             left="AI Data Trainer — Outlier AI"

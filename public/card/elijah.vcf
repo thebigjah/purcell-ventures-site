@@ -4,7 +4,8 @@ N:Purcell;Elijah;Brent;;
 FN:Elijah Purcell
 ORG:Purcell Ventures LLC
 TITLE:Founder
-TEL;TYPE=CELL,VOICE:+12054627839
+TEL;TYPE=WORK,VOICE;TYPE=pref:+12054627839
+TEL;TYPE=CELL,VOICE:+17702805319
 EMAIL;TYPE=INTERNET,WORK:elijah@purcell-ventures.com
 URL:https://purcellventures.co
 ADR;TYPE=WORK:;;;Tuscaloosa;AL;;USA
