@@ -234,7 +234,7 @@ const PROJECTS: Project[] = [
     slug: "hesed",
     title: "Hesed",
     subtitle: "Free supplement tracker for family caregivers.",
-    description: "Multi-tenant daily ledger for the people who run a parent's or grandparent's supplement regimen. Three-source affiliate price comparison (iHerb · Amazon · Vitacost) ranked by delivered cost per serving. AI chat for caregiving questions. Push + email reorder alerts. Generalized SaaS evolution of the Kiki/Robert pilot.",
+    description: "Multi-tenant daily ledger for the people who run a parent's or grandparent's supplement regimen. Three-source affiliate price comparison (iHerb · Amazon · Vitacost) ranked by delivered cost per serving. AI chat for caregiving questions. Push + email reorder alerts. Generalised from a private pilot built for one family.",
     category: ["Web", "AI Tools"],
     techStack: ["Next.js 16", "Supabase", "Tailwind 4", "Anthropic Claude", "Resend", "Web Push API"],
     liveUrl: "https://hesed-zeta.vercel.app",

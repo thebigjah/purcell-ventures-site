@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 // He asked to rank for questions like "who is the top AI expert at UA". You cannot win
 // that by claiming it. The claim is unfalsifiable, it is the single most disprovable thing
 // a first-year student could put on the internet, and it is exactly the sentence that
-// would cost him the Mohler relationship if the wrong person read it.
+// would cost him a real relationship at the university if the wrong person read it.
 //
 // You win it by being the only person who has written the page that actually answers the
 // question underneath it. Nobody at UA has published a plain-English guide to what

@@ -326,7 +326,7 @@ export default function ResumePrint() {
         <div className="header">
           <h1>Elijah Purcell</h1>
           <div className="header-sub">
-            Founder, Purcell Ventures LLC · University of Alabama Honors College &apos;30 · Acworth, GA
+            Founder, Purcell Ventures LLC · University of Alabama Honors College &apos;30 · Tuscaloosa, AL
           </div>
           <div className="header-summary">
             I build and ship software end to end: marketplaces, autonomous data pipelines, AI-integrated
@@ -338,7 +338,7 @@ export default function ResumePrint() {
             <span>(205) 462-7839</span>
             <span>purcellventures.co</span>
             <span>github.com/thebigjah</span>
-            <span>Acworth, GA 30101</span>
+            <span>Tuscaloosa, AL</span>
           </div>
           <div className="header-stats">
             {[
@@ -696,7 +696,7 @@ export default function ResumePrint() {
 
         {/* Footer */}
         <div className="footer">
-          <span>Elijah Purcell · elijahpurcell@gmail.com · (205) 462-7839 · Acworth, GA</span>
+          <span>Elijah Purcell · elijahpurcell@gmail.com · (205) 462-7839 · Tuscaloosa, AL</span>
           <span>purcellventures.co · Updated August 2026</span>
         </div>
 
