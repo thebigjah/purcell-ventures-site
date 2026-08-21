@@ -18,6 +18,46 @@ export const metadata: Metadata = {
   alternates: { canonical: "/portfolio" },
 };
 
+
+const BREADCRUMB_LD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://purcellventures.co"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Portfolio",
+      "item": "https://purcellventures.co/portfolio"
+    }
+  ]
+};
+const FAQ_LD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What has Elijah Purcell built?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Live, working products including UA Today, a campus events service for the University of Alabama aggregating six sources; English Pruitt Photography, paid client work sourced through cold outreach; The Loom, an autonomous lead-generation crawler; and Boyfriend Camera, which runs computer vision on the device. Every entry on the portfolio page links to something that loads."
+      }
+    }
+  ]
+};
+
 export default function PortfolioLayout({ children }: { children: ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_LD) }} />
+      {children}
+    </>
+  );
 }
