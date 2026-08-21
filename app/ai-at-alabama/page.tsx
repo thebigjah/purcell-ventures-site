@@ -40,9 +40,8 @@ export default function AiAtAlabama() {
 
           <p>
             The <strong>Bachelor of Science in Artificial Intelligence</strong> runs through
-            the College of Engineering, in the Department of Computer Science. One hundred
-            and twenty-one credit hours: fifty-two in the major, forty-seven in ancillary
-            mathematics, statistics and science.
+            the College of Engineering, in the Department of Computer Science. 121 credit
+            hours: 52 in the major, 47 in ancillary mathematics, statistics and science.
           </p>
 
           <p>The AI core, by course code:</p>
