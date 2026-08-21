@@ -16,6 +16,8 @@ export const metadata: Metadata = {
       "Elijah Purcell is the founder of Purcell Ventures LLC, a Georgia software company building sites, software and AI tooling for local businesses, and a psychology and data science student at the University of Alabama Honors College in Tuscaloosa.",
     url: "https://purcellventures.co/about",
     type: "profile",
+  
+    images: ["/opengraph-image"],
   },
   twitter: {
     card: "summary_large_image",

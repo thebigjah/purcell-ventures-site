@@ -16,6 +16,8 @@ export const metadata: Metadata = {
       "Hands-on AI training for business teams. 1-on-1, small group, or half-day workshop. I come to you. Starting at $125/person.",
     url: "https://purcellventures.co/consulting",
     type: "website",
+  
+    images: ["/opengraph-image"],
   },
   twitter: {
     title: "AI Consulting: Purcell Ventures",

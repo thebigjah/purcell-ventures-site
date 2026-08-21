@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     description: "Single-page browser tools. No account, nothing collected.",
     url: "https://purcellventures.co/tools",
     type: "website",
+  
+    images: ["/opengraph-image"],
   },
 };
 

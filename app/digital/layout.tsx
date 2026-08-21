@@ -16,6 +16,8 @@ export const metadata: Metadata = {
       "Website, AI chatbot, booking system, CRM, and 20+ tools. One subscription. Starting at $99/mo.",
     url: "https://purcellventures.co/digital",
     type: "website",
+  
+    images: ["/opengraph-image"],
   },
   twitter: {
     title: "Digital Services: Purcell Ventures",

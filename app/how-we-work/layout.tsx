@@ -14,6 +14,8 @@ export const metadata: Metadata = {
     description: "Our process, our commitments, when we say no. Honest engagement details before signing.",
     url: "https://purcellventures.co/how-we-work",
     type: "website",
+  
+    images: ["/opengraph-image"],
   },
   alternates: { canonical: "/how-we-work" },
 };

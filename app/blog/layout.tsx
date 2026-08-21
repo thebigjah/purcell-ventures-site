@@ -14,6 +14,8 @@ export const metadata: Metadata = {
     description: "Essays on small business AI, written by people running real systems.",
     url: "https://purcellventures.co/blog",
     type: "website",
+  
+    images: ["/opengraph-image"],
   },
   // NO canonical here. This layout wraps every post as well as the index, and Next
   // inherits it, so a canonical pointing at "/blog" told Google that all nine posts

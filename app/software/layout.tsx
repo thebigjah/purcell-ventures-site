@@ -16,6 +16,8 @@ export const metadata: Metadata = {
       "Mobile apps, web platforms, and AI tools built around your exact problem. Small projects $1,500–3,500, full apps $5,000–15,000+.",
     url: "https://purcellventures.co/software",
     type: "website",
+  
+    images: ["/opengraph-image"],
   },
   twitter: {
     title: "Custom Software Development: Purcell Ventures",

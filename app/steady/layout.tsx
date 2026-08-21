@@ -16,6 +16,8 @@ export const metadata: Metadata = {
       "Personal tech help. AI coaching, phone setup, smart home, password managers, family tech care plans. From $79/mo.",
     url: "https://purcellventures.co/steady",
     type: "website",
+  
+    images: ["/opengraph-image"],
   },
   twitter: {
     title: "Steady: Personal IT for Everyday Life",

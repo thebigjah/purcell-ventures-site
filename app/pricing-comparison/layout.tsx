@@ -14,6 +14,8 @@ export const metadata: Metadata = {
     description: "Our prices side by side with typical agency / freelancer / DIY costs. No spin.",
     url: "https://purcellventures.co/pricing-comparison",
     type: "website",
+  
+    images: ["/opengraph-image"],
   },
   alternates: { canonical: "/pricing-comparison" },
 };

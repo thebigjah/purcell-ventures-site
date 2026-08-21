@@ -15,6 +15,8 @@ export const metadata: Metadata = {
       "Commission-based sales role. 15–20% on closed deals, flat bonuses on subscriptions. Apply via 25-min quiz + interview.",
     url: "https://purcellventures.co/sales-rep",
     type: "website",
+  
+    images: ["/opengraph-image"],
   },
   twitter: {
     title: "Sales Representative: Purcell Ventures",

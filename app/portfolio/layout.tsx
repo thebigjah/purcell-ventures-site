@@ -14,6 +14,8 @@ export const metadata: Metadata = {
     description: "10 live products: web apps, mobile apps, AI tools, internal systems. Real shipped work.",
     url: "https://purcellventures.co/portfolio",
     type: "website",
+  
+    images: ["/opengraph-image"],
   },
   alternates: { canonical: "/portfolio" },
 };

@@ -13,6 +13,8 @@ export const metadata: Metadata = {
       "Elijah Purcell is the founder of Purcell Ventures LLC and a psychology and data science student at the University of Alabama Honors College. Full record of shipped software, AI agent systems, client work, education and awards.",
     url: "https://purcellventures.co/resume",
     type: "profile",
+  
+    images: ["/opengraph-image"],
   },
   twitter: {
     title: "Elijah Purcell: Resume & Scholarship Record",

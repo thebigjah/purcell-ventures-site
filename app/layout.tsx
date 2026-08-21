@@ -51,6 +51,8 @@ export const metadata: Metadata = {
     title: "Purcell Ventures | Elijah Purcell, Founder | Software and AI for Small Business",
     description:
       "Built by one operator for the small businesses who move first. Digital services, AI consulting, and custom software.",
+  
+    images: ["/opengraph-image"],
   },
   twitter: {
     card: "summary_large_image",
