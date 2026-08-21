@@ -67,6 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // them properly rather than by claiming a title, which is the only version of
     // that strategy that survives a reader checking it.
     { url: `${BASE}/ai-at-alabama`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/agentic-ai`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
 
     { url: `${BASE}/blog/canonical-tag-noindex`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 

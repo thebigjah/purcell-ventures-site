@@ -63,6 +63,7 @@ export default function SiteFooter() {
             <li><Link href="/tools" style={{ color: "#8b8578", textDecoration: "none" }}>Free tools</Link></li>
             <li><Link href="/blog" style={{ color: "#8b8578", textDecoration: "none" }}>Writing</Link></li>
             <li><Link href="/ai-at-alabama" style={{ color: "#8b8578", textDecoration: "none" }}>AI at Alabama</Link></li>
+            <li><Link href="/agentic-ai" style={{ color: "#8b8578", textDecoration: "none" }}>Autonomous AI agent systems</Link></li>
           </ul>
         </div>
 
