@@ -75,9 +75,10 @@ export default function Post() {
           </p>
 
           <p>
-            <strong>The Writing Center.</strong> Free, and a proposal is writing. Fifty
-            minutes with somebody who has to read your argument closely is the cheapest
-            editing anywhere, and almost nobody brings commercial writing to it.
+            <strong><a href="https://writingcenter.ua.edu/" style={link} rel="noopener">The Writing Center</a>.</strong>{" "}
+            Free, and a proposal is writing. Fifty minutes with somebody who has to read your
+            argument closely is the cheapest editing anywhere, and almost nobody brings
+            commercial writing to it.
           </p>
 
           <p>

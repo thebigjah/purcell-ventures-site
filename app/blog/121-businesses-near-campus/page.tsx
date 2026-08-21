@@ -78,9 +78,10 @@ export default function Post() {
           <h2>What was actually measured</h2>
 
           <p>
-            This matters more than the number, so it goes first. The source is
-            OpenStreetMap, which is maintained by volunteers, and a business with no
-            website recorded there might still have one. So the honest claim is not that
+            This matters more than the number, so it goes first. The source is{" "}
+            <a href="https://wiki.openstreetmap.org/wiki/Key:website" style={link} rel="noopener">the OpenStreetMap website tag</a>,
+            which is maintained by volunteers, and a business with no website recorded there
+            might still have one. So the honest claim is not that
             ninety-four businesses near campus have no website.
           </p>
 

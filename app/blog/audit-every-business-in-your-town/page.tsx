@@ -58,9 +58,11 @@ export default function Post() {
           <h2 style={H2}>The data source</h2>
 
           <p>
-            OpenStreetMap, queried through Overpass. It is volunteer-maintained, openly
-            licensed, permits this use, and it carries exactly the tag that matters:{" "}
-            <code>website</code>.
+            OpenStreetMap, queried through{" "}
+            <a href="https://wiki.openstreetmap.org/wiki/Overpass_API" style={link} rel="noopener">Overpass</a>.
+            It is volunteer-maintained, openly licensed, permits this use, and it carries
+            exactly the tag that matters:{" "}
+            <a href="https://wiki.openstreetmap.org/wiki/Key:website" style={link} rel="noopener"><code>website</code></a>.
           </p>
 
           <p>

@@ -91,8 +91,10 @@ export default function Post() {
           <h2 style={H2}>The EIN takes ten minutes and is free</h2>
 
           <p>
-            Directly from the IRS. There is an entire industry charging for this and it is
-            free and it is fast. If a page wants money for an EIN, close the page.
+            Directly from{" "}
+            <a href="https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number" style={link} rel="noopener">the IRS</a>.
+            There is an entire industry charging for this and it is free and it is fast. If a
+            page wants money for an EIN, close the page.
           </p>
 
           <h2 style={H2}>The bank account is the actual hard part</h2>

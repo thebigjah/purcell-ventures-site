@@ -152,7 +152,11 @@ export default function Post() {
 
           <p>
             There is no ranking dial here. What there is: be findable, be consistent, and
-            state plainly what you are.
+            state plainly what you are. A{" "}
+            <a href="https://arxiv.org/html/2607.14035v1" style={link} rel="noopener">2026 survey of the research on this</a>{" "}
+            found the dominant factors are topical relevance and position, that statistics
+            and quotable facts help, and that keyword stuffing measurably hurts. It found no
+            established evidence that publishing volume does anything at all.
           </p>
 
           <h2 style={H2}>Do the ordinary thing first</h2>

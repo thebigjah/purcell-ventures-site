@@ -79,7 +79,8 @@ curl -sL  https://example.com/page | grep -o '<meta name="robots"[^>]*'`}</div>
           <p>
             Check the header as well as the tag. An <code>X-Robots-Tag</code> set at the edge
             or in middleware is invisible in the HTML and overrides everything you can see in
-            the source.
+            the source, and{" "}
+            <a href="https://developers.google.com/search/docs/crawling-indexing/block-indexing" style={link} rel="noopener">Google treats the two as equivalent directives</a>.
           </p>
 
           <h2 style={H2}>3. Does your sitemap contradict your robots.txt</h2>
@@ -87,7 +88,9 @@ curl -sL  https://example.com/page | grep -o '<meta name="robots"[^>]*'`}</div>
           <p>
             A URL that appears in the sitemap and is also disallowed in robots.txt is a
             contradiction, and Google resolves it badly: the page can still surface, as a
-            bare link with no description, because the crawler was never allowed to read it.
+            bare link with no description, because the crawler was never allowed to read it.{" "}
+            <a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap" style={link} rel="noopener">The sitemap documentation</a>{" "}
+            is explicit that a sitemap is a request to crawl, not permission to.
           </p>
 
           <div style={pre}>{`curl -s https://example.com/sitemap.xml | grep -o '<loc>[^<]*' | sed 's/<loc>//' > urls.txt

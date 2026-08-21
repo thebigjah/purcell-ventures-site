@@ -46,9 +46,10 @@ export default function Post() {
           <h2 style={H2}>What it is</h2>
 
           <p>
-            New College is an interdisciplinary program inside the Barefield College of Arts
-            and Sciences at the University of Alabama. It has existed since 1971, which
-            surprises people who assume it is a recent experiment.
+            <a href="https://newcollege.ua.edu/" style={link} rel="noopener">New College</a>{" "}
+            is an interdisciplinary program inside the Barefield College of Arts and Sciences
+            at the University of Alabama. It has existed since 1971, which surprises people
+            who assume it is a recent experiment.
           </p>
 
           <p>

@@ -117,7 +117,8 @@ export default function Post() {
           <h3 style={H3}>6. Verification</h3>
           <p>
             Google will verify by postcard, phone, email or video depending on your business
-            type. Video is increasingly common and it means recording a short walkthrough
+            type, and{" "}
+            <a href="https://support.google.com/business/answer/7107242" style={link} rel="noopener">the method available to you is decided by Google rather than chosen by you</a>. Video is increasingly common and it means recording a short walkthrough
             showing your signage, your equipment and your address. Have those visible before
             you start recording.
           </p>

@@ -68,8 +68,8 @@ export default function Post() {
 
           <p>
             The problem is what a layout is. In the Next.js App Router, a layout wraps its
-            own page <em>and every route nested underneath it</em>. And metadata is
-            inherited. So <code>app/blog/layout.tsx</code> wraps <code>/blog</code>,{" "}
+            own page <em>and every route nested underneath it</em>, and{" "}
+            <a href="https://nextjs.org/docs/app/api-reference/functions/generate-metadata" style={link} rel="noopener">metadata is inherited</a>. So <code>app/blog/layout.tsx</code> wraps <code>/blog</code>,{" "}
             <code>/blog/first-post</code>, <code>/blog/second-post</code>, all of them, and
             hands every single one a canonical of <code>/blog</code>.
           </p>
@@ -83,7 +83,9 @@ export default function Post() {
           <p>
             A canonical tag is not a hint about your preferred URL format. It is a
             declaration that this page and the target page are the same content, and that
-            the target is the one worth keeping.
+            the target is the one worth keeping. Google's own documentation on{" "}
+            <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls" style={link} rel="noopener">consolidating duplicate URLs</a>{" "}
+            describes exactly this consolidation behaviour.
           </p>
 
           <p>

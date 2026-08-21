@@ -72,7 +72,9 @@ export default function Post() {
 
           <p>
             Enabling row-level security on a table does not protect it. It means <em>no rows
-            are returned unless a policy permits them</em>. So people write a policy to make
+            are returned unless a policy permits them</em>, which{" "}
+            <a href="https://supabase.com/docs/guides/database/postgres/row-level-security" style={link} rel="noopener">the vendor documentation says plainly</a>
+            and which is still the most commonly misread sentence in it. So people write a policy to make
             the app work again, and the policy they write is usually too broad. A policy
             written without a role clause applies to every role, including the anonymous one,
             and the anonymous key ships inside the page bundle by design. Anyone can read it
@@ -159,7 +161,9 @@ export default function Post() {
 
           <p>
             User text rendered as HTML rather than as text. A display name, a review, a
-            business description, anything that goes in and comes back out.
+            business description, anything that goes in and comes back out. It has been on{" "}
+            <a href="https://owasp.org/www-project-top-ten/" style={link} rel="noopener">the OWASP Top Ten</a>{" "}
+            for two decades and it is still here.
           </p>
 
           <p>

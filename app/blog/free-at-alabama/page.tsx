@@ -71,7 +71,10 @@ export default function Post() {
             This is my first semester here, so I am writing it as I find things rather than
             from four years of knowing. Everything below was checked against a ua.edu page on
             20 August 2026, and where the university's own page did not say something was
-            free, this page does not say it either.
+            free, this page does not say it either. The two most useful starting points are{" "}
+            <a href="https://success.ua.edu/academic-resources-at-ua" style={link} rel="noopener">the Capstone Center for Student Success</a>{" "}
+            and{" "}
+            <a href="https://writingcenter.ua.edu/" style={link} rel="noopener">the Writing Center</a>.
           </p>
 
           <div style={{ overflowX: "auto", margin: "26px 0" }}>
