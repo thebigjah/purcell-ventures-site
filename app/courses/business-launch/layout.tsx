@@ -10,6 +10,40 @@ export const metadata: Metadata = {
   alternates: { canonical: "/courses/business-launch" },
 };
 
+
+// Its own trail. The /courses layout emits a breadcrumb and Next inherits layout
+// output down the tree, so without this the trail on this page ends at the parent
+// rather than here. Same inheritance shape as the canonical bug, different field.
+const BREADCRUMB_LD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://purcellventures.co"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Courses",
+      "item": "https://purcellventures.co/courses"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "The Business Launch Playbook",
+      "item": "https://purcellventures.co/courses/business-launch"
+    }
+  ]
+};
+
 export default function CourseLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
+      {children}
+    </>
+  );
 }
