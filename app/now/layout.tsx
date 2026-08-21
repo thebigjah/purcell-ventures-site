@@ -7,6 +7,31 @@ export const metadata: Metadata = {
   alternates: { canonical: "/now" },
 };
 
+
+const BREADCRUMB_LD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://purcellventures.co"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Now",
+      "item": "https://purcellventures.co/now"
+    }
+  ]
+};
+
 export default function NowLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
+      {children}
+    </>
+  );
 }

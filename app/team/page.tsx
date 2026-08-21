@@ -81,9 +81,31 @@ const HAS_PHOTO = new Set([
   "rhett", "greta", "tobias", "silas", "wren",
 ]);
 
+
+const BREADCRUMB_LD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://purcellventures.co"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "The team",
+      "item": "https://purcellventures.co/team"
+    }
+  ]
+};
+
 export default function TeamPage() {
   return (
-    <main className="mx-auto max-w-4xl px-6 py-20">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
+      <main className="mx-auto max-w-4xl px-6 py-20">
       <p className="text-xs uppercase tracking-[0.2em] text-neutral-500">
         Purcell Ventures LLC
       </p>
@@ -158,5 +180,6 @@ export default function TeamPage() {
         </p>
       </div>
     </main>
+    </>
   );
 }

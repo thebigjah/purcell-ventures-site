@@ -57,9 +57,30 @@ const schema = {
         "https://www.instagram.com/elijah_the_tall/"],
 };
 
+
+const BREADCRUMB_LD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://purcellventures.co"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resume",
+      "item": "https://purcellventures.co/resume"
+    }
+  ]
+};
+
 export default function ResumeLayout({ children }: { children: ReactNode }) {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

@@ -122,9 +122,30 @@ const schema = {
   ],
 };
 
+
+const BREADCRUMB_LD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://purcellventures.co"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About Elijah Purcell",
+      "item": "https://purcellventures.co/about"
+    }
+  ]
+};
+
 export default function AboutLayout({ children }: { children: ReactNode }) {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
