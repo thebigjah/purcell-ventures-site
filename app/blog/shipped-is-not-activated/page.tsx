@@ -66,6 +66,17 @@ export default function Post() {
 
         
 
+
+          <section style={{ marginTop: "44px", paddingTop: "22px", borderTop: "1px solid rgba(212,175,55,0.2)" }}>
+            <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, margin: "0 0 12px" }}>
+              Related reading
+            </h2>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: "15px", lineHeight: 1.8 }}>
+              <li style={{ marginBottom: "7px" }}><Link href="/blog/121-businesses-near-campus" style={{ color: "var(--color-warm-accent)" }}>The same gap, measured across 121 businesses near campus</Link></li>
+              <li style={{ marginBottom: "7px" }}><Link href="/blog/is-your-business-invisible" style={{ color: "var(--color-warm-accent)" }}>A ten-minute self-check for whether yours is one of them</Link></li>
+            </ul>
+          </section>
+
           <PostByline post={{
             slug: "shipped-is-not-activated",
             title: "Shipping is not the same as being able to take a payment",

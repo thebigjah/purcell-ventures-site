@@ -72,6 +72,17 @@ export default function Post() {
           </p>
         
 
+
+          <section style={{ marginTop: "44px", paddingTop: "22px", borderTop: "1px solid rgba(212,175,55,0.2)" }}>
+            <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, margin: "0 0 12px" }}>
+              Related reading
+            </h2>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: "15px", lineHeight: 1.8 }}>
+              <li style={{ marginBottom: "7px" }}><Link href="/blog/what-the-agents-get-wrong" style={{ color: "var(--color-warm-accent)" }}>What fifteen agents in production actually get wrong</Link></li>
+              <li style={{ marginBottom: "7px" }}><Link href="/blog/can-ai-find-your-business" style={{ color: "var(--color-warm-accent)" }}>Whether an assistant can even find your business</Link></li>
+            </ul>
+          </section>
+
           <PostByline post={{
             slug: "why-most-ai-tools-waste-money",
             title: "Why most small business AI tools waste your money | Elijah Purcell",

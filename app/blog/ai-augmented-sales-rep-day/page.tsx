@@ -166,6 +166,17 @@ export default function Post() {
 
         
 
+
+          <section style={{ marginTop: "44px", paddingTop: "22px", borderTop: "1px solid rgba(212,175,55,0.2)" }}>
+            <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, margin: "0 0 12px" }}>
+              Related reading
+            </h2>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: "15px", lineHeight: 1.8 }}>
+              <li style={{ marginBottom: "7px" }}><Link href="/blog/cold-outreach-that-worked" style={{ color: "var(--color-warm-accent)" }}>The cold outreach that worked, and the version that did not</Link></li>
+              <li style={{ marginBottom: "7px" }}><Link href="/blog/audit-every-business-in-your-town" style={{ color: "var(--color-warm-accent)" }}>How the prospect list gets built in an afternoon</Link></li>
+            </ul>
+          </section>
+
           <PostByline post={{
             slug: "ai-augmented-sales-rep-day",
             title: "What a day looks like for an AI-augmented sales rep",

@@ -102,6 +102,17 @@ export default function Post() {
 
         
 
+
+          <section style={{ marginTop: "44px", paddingTop: "22px", borderTop: "1px solid rgba(212,175,55,0.2)" }}>
+            <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, margin: "0 0 12px" }}>
+              Related reading
+            </h2>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: "15px", lineHeight: 1.8 }}>
+              <li style={{ marginBottom: "7px" }}><Link href="/blog/what-a-website-actually-costs" style={{ color: "var(--color-warm-accent)" }}>What a website actually costs, with the numbers</Link></li>
+              <li style={{ marginBottom: "7px" }}><Link href="/blog/starting-a-business-at-alabama" style={{ color: "var(--color-warm-accent)" }}>Starting a business as a student at Alabama</Link></li>
+            </ul>
+          </section>
+
           <PostByline post={{
             slug: "case-for-charging-19",
             title: "The case for charging $19 for what others sell at $497",

@@ -112,6 +112,17 @@ export default function Post() {
 
         
 
+
+          <section style={{ marginTop: "44px", paddingTop: "22px", borderTop: "1px solid rgba(212,175,55,0.2)" }}>
+            <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, margin: "0 0 12px" }}>
+              Related reading
+            </h2>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: "15px", lineHeight: 1.8 }}>
+              <li style={{ marginBottom: "7px" }}><Link href="/blog/what-one-operator-can-deliver" style={{ color: "var(--color-warm-accent)" }}>What one operator can actually deliver</Link></li>
+              <li style={{ marginBottom: "7px" }}><Link href="/blog/what-you-should-own" style={{ color: "var(--color-warm-accent)" }}>What you should own when a project finishes</Link></li>
+            </ul>
+          </section>
+
           <PostByline post={{
             slug: "why-i-built-crm-from-scratch",
             title: "Why I built a CRM from scratch instead of paying $1,200/yr for HubSpot",

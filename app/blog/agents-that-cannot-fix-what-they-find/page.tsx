@@ -73,6 +73,17 @@ export default function Post() {
 
         
 
+
+          <section style={{ marginTop: "44px", paddingTop: "22px", borderTop: "1px solid rgba(212,175,55,0.2)" }}>
+            <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, margin: "0 0 12px" }}>
+              Related reading
+            </h2>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: "15px", lineHeight: 1.8 }}>
+              <li style={{ marginBottom: "7px" }}><Link href="/blog/what-the-agents-get-wrong" style={{ color: "var(--color-warm-accent)" }}>The other four failures in the same system</Link></li>
+              <li style={{ marginBottom: "7px" }}><Link href="/blog/ai-team-page-honesty" style={{ color: "var(--color-warm-accent)" }}>Why the team page says outright that they are software</Link></li>
+            </ul>
+          </section>
+
           <PostByline post={{
             slug: "agents-that-cannot-fix-what-they-find",
             title: "We built agents that cannot fix what they find",
