@@ -47,8 +47,9 @@ export default function Post() {
           <h2 style={H2}>Within-subject design</h2>
 
           <p>
-            The rule is that you measure a person against their own baseline rather than
-            against everybody else's. It sounds obvious written down. It is not what I built.
+            The rule, as{" "}
+            <a href="https://dictionary.apa.org/within-subjects-design" style={{ color: "var(--color-warm-accent)", textDecoration: "underline" }} rel="noopener">the APA defines it</a>, is that you measure a person against their own baseline rather
+            than against everybody else's. It sounds obvious written down. It is not what I built.
           </p>
 
           <p>

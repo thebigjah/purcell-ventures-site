@@ -37,7 +37,7 @@ export default function Post() {
           <p>I evaluated HubSpot for two days. Then I built our own CRM in a week. Here&apos;s the math.</p>
 
           <h2 style={head}>The HubSpot pricing reality</h2>
-          <p>HubSpot has a free tier. That&apos;s the hook. But the free tier excludes:</p>
+          <p>HubSpot has a free tier. That&apos;s the hook. But the free tie (their current pricing is <a href="https://www.hubspot.com/pricing/sales" style={{ color: "var(--color-warm-accent)", textDecoration: "underline" }} rel="noopener">published here</a>)r excludes:</p>
 
           <ul>
             <li>Custom properties beyond 5 — at $50/mo (Starter)</li>
