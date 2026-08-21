@@ -497,7 +497,7 @@ export default function ConsultingPage() {
             fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase",
             color: "var(--color-warm-text-light)",
           }}>
-            elijah@purcell-ventures.com · (770) 280·5319 · 24-hr response
+            elijah@purcell-ventures.com · (205) 462-7839 · 24-hr response
           </div>
         </section>
 

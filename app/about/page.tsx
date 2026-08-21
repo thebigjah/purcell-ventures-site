@@ -285,7 +285,7 @@ function ContactTab() {
       <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginBottom: "56px", marginTop: "28px" }}>
         {[
           { href: "mailto:elijah@purcell-ventures.com", label: "elijah@purcell-ventures.com", primary: true },
-          { href: "tel:+12054627839",                   label: "(770) 280·5319" },
+          { href: "tel:+12054627839",                   label: "(205) 462-7839" },
           { href: "https://www.linkedin.com/in/theelijahpurcell", label: "LinkedIn",  ext: true },
           { href: "/resume",                            label: "Resume →" },
         ].map(({ href, label, primary, ext }) => (

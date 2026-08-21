@@ -74,7 +74,7 @@ ESCALATION TO ELIJAH:
 - Prospect claiming existing PV history
 - Prospect from competitor's customer base
 - Anything you're unsure about
-- How to escalate: text Elijah (770) 280-5319 — format: "Got a [SERVICE] prospect, [BUDGET], decision timeline [X]. Need 5 min before I quote."
+- How to escalate: text Elijah (205) 462-7839 — format: "Got a [SERVICE] prospect, [BUDGET], decision timeline [X]. Need 5 min before I quote."
 
 DEMOGRAPHIC FIT (who buys what):
 - Digital Starter: solo/1-3 employees, plumbers/electricians/salons/contractors with no real site

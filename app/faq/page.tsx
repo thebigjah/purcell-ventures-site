@@ -25,7 +25,7 @@ const FAQS: QSection[] = [
       },
       {
         q: "How fast do you respond?",
-        a: "Same day on email, usually within a few hours. If you need an answer urgently, call or text (770) 280·5319.",
+        a: "Same day on email, usually within a few hours. If you need an answer urgently, call or text (205) 462-7839.",
       },
       {
         q: "Do you take clients outside Atlanta?",

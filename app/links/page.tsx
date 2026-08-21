@@ -62,7 +62,7 @@ const SECTIONS: { roman: string; label: string; items: LinkItem[] }[] = [
     label: "Reach Me",
     items: [
       { href: "mailto:elijah@purcell-ventures.com", label: "elijah@purcell-ventures.com", desc: "Same-day response. Email is best." },
-      { href: "tel:+12054627839",                   label: "(770) 280·5319",              desc: "Call or text." },
+      { href: "tel:+12054627839",                   label: "(205) 462-7839",              desc: "Call or text." },
       { href: "https://www.linkedin.com/in/theelijahpurcell", label: "LinkedIn", external: true },
     ],
   },

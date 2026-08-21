@@ -766,7 +766,7 @@ export default function Home() {
       >
         <ContactBlock title="Reach">
           <a className="pv-mono-link" href="mailto:elijah@purcell-ventures.com">elijah@purcell-ventures.com</a>
-          <a className="pv-mono-link" href="tel:+12054627839">(770) 280·5319</a>
+          <a className="pv-mono-link" href="tel:+12054627839">(205) 462-7839</a>
         </ContactBlock>
         <ContactBlock title="Service Area">
           <p style={{ margin: 0 }}>Metro Atlanta · Cobb County</p>

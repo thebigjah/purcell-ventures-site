@@ -158,7 +158,7 @@ export default function BookPage() {
               Elijah will reach out within 24 hours to confirm and lock in the details.
             </p>
             <div className="pv-mono-label" style={{ marginBottom: "24px", color: "var(--color-warm-text-light)" }}>
-              elijah@purcell-ventures.com · (770) 280·5319
+              elijah@purcell-ventures.com · (205) 462-7839
             </div>
             <a href="/consulting" className="pv-btn-ghost">← Back to consulting</a>
           </div>
