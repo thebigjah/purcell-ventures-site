@@ -2,6 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/canonical-tag-noindex" },
@@ -191,6 +192,15 @@ export const metadata = {
             A build that passes proves the code compiled. It proves nothing at all about
             whether the thing you wanted actually happened.
           </p>
+
+          <PostFaq qa={[
+            ["Why are my blog posts not being indexed by Google?",
+             "One common cause is a canonical tag inherited from a shared layout. In the Next.js App Router a layout wraps every route nested beneath it and metadata is inherited, so a canonical declared on a blog index is handed to every post, and each post then tells Google it is a duplicate of the index."],
+            ["How do I fix a canonical tag pointing at the wrong page?",
+             "Delete it from the layout rather than trying to move it. A page with no canonical tag self-canonicalises, which is correct for both the index and each post, then declare an explicit canonical on each individual page. For pages that are client components and cannot export metadata, add a layout beside the page that carries only the canonical."],
+            ["Does a wrong canonical tag cause an error?",
+             "No, and that is why it survives. The build passes, the pages render, the links work, and the only symptom is pages that never appear in search, which on a new site looks exactly like a new site."],
+          ]} />
 
           <PostByline post={{
             slug: "canonical-tag-noindex",

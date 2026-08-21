@@ -2,6 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import PostFaq from "@/app/components/PostFaq";
 
 // SOURCED FROM WHAT ACTUALLY HAPPENED, INCLUDING THE PARTS THAT DID NOT WORK.
 //
@@ -175,6 +176,15 @@ export default function Post() {
             businesses near campus</Link>, one at a time, with no pitch attached. Turns out
             the best cold outreach is not an email at all.
           </p>
+
+          <PostFaq qa={[
+            ["What makes a cold email actually work?",
+             "Opening with something specific and checkable about the recipient's own business rather than a pitch. Not a compliment, an observation: a booking link that 404s, checked on a phone as well as a laptop. It is worth reading whether or not they hire anybody, and it proves that somebody actually looked."],
+            ["What should you never write in a cold email?",
+             "Three things. That you hope the email finds them well, which tells the reader a template is coming. That you would love to hop on a quick call, because nobody's call is quick. And anything about your passion, journey or mission, because every sentence about you is a sentence not about them."],
+            ["How many times should you follow up on a cold email?",
+             "Once, about a week later, adding something rather than repeating yourself. Most replies come on the second contact and almost none on the third, so one follow-up is worth sending and a fourth is worth skipping."],
+          ]} />
 
           <PostByline post={{
             slug: "cold-outreach-that-worked",

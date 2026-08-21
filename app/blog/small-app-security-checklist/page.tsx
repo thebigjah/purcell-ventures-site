@@ -2,6 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import PostFaq from "@/app/components/PostFaq";
 
 // WRITTEN FROM REAL AUDITS, WITH NONE OF THE ATTRIBUTION.
 //
@@ -214,6 +215,15 @@ FIX        the specific change, not "add validation"`}</div>
             on it, that offer is open and it does not cost anything:{" "}
             <a href="mailto:elijah@purcell-ventures.com" style={link}>elijah@purcell-ventures.com</a>.
           </p>
+
+          <PostFaq qa={[
+            ["What does enabling row-level security actually do?",
+             "It means no rows are returned unless a policy permits them, which is not the same as protecting the table. People then write a policy to make the application work again, and a policy written without a role clause applies to every role including the anonymous one, whose key ships in the page bundle by design."],
+            ["Why are unauthenticated API routes dangerous even without user data?",
+             "Because a route calling a metered service is a billing surface rather than a data breach. The URL is in your JavaScript bundle, somebody loops it, and your card pays for their traffic. It also fails in the worst direction, which is that you find out from the invoice."],
+            ["How do I know if my authentication is real?",
+             "Open a private window, set the cookie in the console, and load the protected page. If the check is a string comparison against something the client controls, the gate is decorative, and it is usually protecting whatever the developer considered too sensitive for the public routes."],
+          ]} />
 
           <PostByline post={{
             slug: "small-app-security-checklist",

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/what-the-agents-get-wrong" },
@@ -226,6 +227,15 @@ export default function Post() {
             it: the interesting failures in automated systems are almost never in the
             automation. They are in the part that tells you how the automation is doing.
           </p>
+
+          <PostFaq qa={[
+            ["What is the most common failure in an AI agent system?",
+             "A harness that cannot tell the difference between working and not working, and is then trusted to report on itself. Every failure in this system was of that kind rather than the model being wrong: a gate that returned true unconditionally, ten of fifteen agents never being invoked while the runner exited zero, and findings closing themselves when a network blip blinded the auditor."],
+            ["Should AI agents be given the same tools as their prompt describes?",
+             "The prompt is not the boundary. A scope stated in a prompt is a request; a scope enforced by the process is a constraint. An agent was found holding a mail connection nobody had granted it, not by breaking out of anything, but because the tooling inherited from its environment included more than the prompt described."],
+            ["How do you keep an AI agent from sending something internal to a client?",
+             "Enforce the check at the single point where anything is recorded as sent, not at drafting time. Twenty drafted proposals all carried internal reasoning and hedges meant for the operator, and none went out only because a separate agent whose entire job is compliance read them at the choke point."],
+          ]} />
 
           <PostByline post={{
             slug: "what-the-agents-get-wrong",

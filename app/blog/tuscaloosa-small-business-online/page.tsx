@@ -2,6 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import PostFaq from "@/app/components/PostFaq";
 
 // THE JOURNALISM PLAY, and the reason it is worth more than another opinion post.
 //
@@ -132,6 +133,13 @@ export default function Post() {
           </p>
 
         
+
+          <PostFaq qa={[
+            ["What is the Tuscaloosa Storefront Project?",
+             "A reporting series by Elijah Purcell on independent businesses around the University of Alabama: who runs each one, how long it has been there, what it does well, and what a student trying to find it on a phone runs into. A business does not have to be a client to be featured and several will not be."],
+            ["How can a business near the University of Alabama be featured?",
+             "By getting in touch. It takes about twenty minutes, in person, at the business, with no obligation to buy anything and a written piece either way. Contact is (205) 462-7839 or elijah@purcell-ventures.com."],
+          ]} />
 
           <PostByline post={{
             slug: "tuscaloosa-small-business-online",

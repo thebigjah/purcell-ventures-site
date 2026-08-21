@@ -2,6 +2,7 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import PostFaq from "@/app/components/PostFaq";
 
 // THE HONEST VERSION OF THIS PIECE.
 //
@@ -197,6 +198,15 @@ export default function Post() {
             ninety-four. The correction stays visible rather than being edited in quietly,
             because the piece is about checking things.
           </p>
+
+          <PostFaq qa={[
+            ["How many businesses near the University of Alabama have a website?",
+             "Of 121 independent businesses within 2500 metres of the Quad, audited on 20 August 2026, 27 had a website that answered a request. 90 listed none at all, three listed one that no longer resolves, and one pointed at a page that has been deleted."],
+            ["How many small businesses list their opening hours online?",
+             "In that same audit of 121 businesses near campus, 23 had opening hours recorded anywhere a machine could read them. For roughly eight in ten, the question of whether they are open right now is only answerable by standing in front of the door."],
+            ["Which types of business are least likely to be findable online?",
+             "Every laundry, florist, jeweller, tailor, ice cream shop, phone repair place and car repair shop inside the audited area came back with no reachable website. Restaurants did best and still only cleared roughly one in four."],
+          ]} />
 
           <PostByline post={{
             slug: "121-businesses-near-campus",
