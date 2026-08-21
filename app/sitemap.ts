@@ -3,7 +3,13 @@ import { MetadataRoute } from "next";
 const BASE = "https://purcellventures.co";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  // Not new Date(). A sitemap built with the current time claims every page changed at
+  // the moment of the crawl, which is a timestamp of the request rather than a fact about
+  // the page. Google learns the field is noise and stops using it, and then it cannot tell
+  // which pages actually changed. This is a literal, and it is meant to be edited by hand
+  // when the site is substantively revised. Everything here genuinely was rewritten on
+  // 20 August 2026.
+  const now = new Date("2026-08-20T00:00:00Z");
   return [
     // /services is deliberately noindex and canonicalises to the Mantle site, so
     // listing it here asked Google to index a page that tells Google not to index it.
