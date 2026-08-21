@@ -345,8 +345,8 @@ export default function ResumePrint() {
               { val: "15+", label: "Products Shipped" },
               { val: "3.92", label: "GPA (Weighted)" },
               { val: "1440", label: "SAT" },
-              { val: "34", label: "Acceptances" },
-              { val: "$530k/yr", label: "Scholarships" },
+              { val: "8", label: "Live Properties" },
+              { val: "29", label: "Free Tools" },
             ].map(s => (
               <div className="stat-block" key={s.label}>
                 <div className="stat-val">{s.val}</div>

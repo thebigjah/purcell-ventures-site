@@ -362,10 +362,10 @@ export default function ResumePage() {
           }}>
             {[
               { val: "15+",        label: "Products shipped" },
+              { val: "8",          label: "Live properties" },
+              { val: "29",         label: "Free tools published" },
               { val: "3.92",       label: "GPA (weighted)" },
               { val: "1440",       label: "SAT score" },
-              { val: "34",         label: "Acceptances" },
-              { val: "$530k/yr",   label: "Scholarships" },
             ].map(({ val, label }, i, arr) => (
               <div key={label} style={{
                 padding: "20px 12px",
