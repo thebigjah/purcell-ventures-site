@@ -247,8 +247,9 @@ export default function ConsultingPage() {
                   </span>
                   <span style={{ fontFamily: "'Cinzel', serif", fontSize: "24px", color: "var(--color-warm-accent)", flexShrink: 0, transition: "transform 0.2s", transform: open ? "rotate(45deg)" : "none" }}>+</span>
                 </button>
-                {open && (
-                  <div style={{ padding: "0 32px 32px 84px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px", borderTop: "1px dashed var(--color-warm-border)", paddingTop: "24px", marginLeft: "20px" }}>
+                {/* In the DOM whether or not it is open. Conditional rendering meant a closed
+    panel was never sent, so a crawler saw the headings and none of the prose. */}
+<div hidden={!open} style={{ padding: "0 32px 32px 84px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px", borderTop: "1px dashed var(--color-warm-border)", paddingTop: "24px", marginLeft: "20px" }}>
                     <div>
                       <p className="pv-italic" style={{ fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.88, lineHeight: 1.55, marginBottom: "20px" }}>
                         {s.desc}
@@ -285,7 +286,6 @@ export default function ConsultingPage() {
                       </a>
                     </div>
                   </div>
-                )}
               </div>
             );
           })}

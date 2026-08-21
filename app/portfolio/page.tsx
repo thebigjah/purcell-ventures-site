@@ -441,8 +441,10 @@ export default function PortfolioPage() {
                   <p style={{ fontSize: "13px", color: "var(--color-warm-accent)", margin: "0 0 12px", fontStyle: "italic" }}>{p.subtitle}</p>
                   <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, margin: "0 0 12px" }}>{p.description}</p>
 
-                  {isOpen && (
-                    <>
+                  {/* In the DOM whether or not it is open. A fragment cannot carry the hidden
+                        attribute, so the panel gets a div that can. Conditional rendering meant
+                        every portfolio detail was withheld from a crawler. */}
+                    <div hidden={!isOpen}>
                       <div style={{ borderTop: "1px solid var(--color-warm-border)", paddingTop: "12px", marginTop: "8px" }}>
                         <h4 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-warm-accent)", margin: "0 0 8px", fontWeight: 700 }}>What&apos;s built</h4>
                         <ul style={{ margin: 0, paddingLeft: "18px", fontSize: "12px", color: "var(--color-warm-text)", lineHeight: 1.7 }}>
@@ -457,8 +459,7 @@ export default function PortfolioPage() {
                           ))}
                         </div>
                       </div>
-                    </>
-                  )}
+                    </div>
 
                   <div style={{ marginTop: "auto", paddingTop: "12px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                     <span style={{ fontSize: "10px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-warm-text-light)", fontFamily: "var(--font-dm-sans), sans-serif" }}>

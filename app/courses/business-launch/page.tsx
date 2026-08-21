@@ -299,8 +299,9 @@ export default function BusinessLaunchPage() {
                       <span style={{ fontSize: "20px", color: "var(--color-warm-accent)", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s", lineHeight: 1 }}>+</span>
                     </div>
                   </button>
-                  {open && (
-                    <div style={{ padding: "0 24px 24px" }}>
+                  {/* In the DOM whether or not it is open. Conditional rendering meant a closed
+    panel was never sent, so a crawler saw the headings and none of the prose. */}
+<div hidden={!open} style={{ padding: "0 24px 24px" }}>
                       {mod.lessons.map((l, li) => (
                         <div key={l.id} style={{
                           display: "flex", alignItems: "center", justifyContent: "space-between",
@@ -319,7 +320,6 @@ export default function BusinessLaunchPage() {
                         </div>
                       ))}
                     </div>
-                  )}
                 </div>
               );
             })}
@@ -541,11 +541,11 @@ export default function BusinessLaunchPage() {
                     <span style={{ fontSize: "14px", fontWeight: 600, color: "var(--color-warm-text)", fontFamily: "var(--font-dm-sans), sans-serif" }}>{faq.q}</span>
                     <span style={{ fontSize: "20px", color: "var(--color-warm-accent)", flexShrink: 0, transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s", lineHeight: 1 }}>+</span>
                   </button>
-                  {open && (
-                    <div style={{ padding: "0 20px 20px" }}>
+                  {/* In the DOM whether or not it is open. Conditional rendering meant a closed
+    panel was never sent, so a crawler saw the headings and none of the prose. */}
+<div hidden={!open} style={{ padding: "0 20px 20px" }}>
                       <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.75, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>{faq.a}</p>
                     </div>
-                  )}
                 </div>
               );
             })}
