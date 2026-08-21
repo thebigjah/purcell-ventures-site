@@ -79,11 +79,13 @@ export default function WhoPage() {
           style={{ objectPosition: "50% 20%" }}
         />
         <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
-          <strong>Elijah Purcell</strong> is the founder of Purcell Ventures LLC, a Georgia
-          software company that builds websites and software for local businesses, and a
-          psychology and data science student at the University of Alabama Honors College,
-          Class of 2030, on a pre-med track toward psychiatry. He founded the company at
-          seventeen and builds and operates the autonomous AI agent systems that run it.
+          <strong>Elijah Purcell</strong> is the founder and CEO of Purcell Ventures LLC, a
+          Georgia software company that builds websites and software for local businesses,
+          and an autonomous AI agent systems engineer. He is also a psychology and data
+          science student at the University of Alabama Honors College, Class of 2030, on a
+          pre-med track toward psychiatry. He founded the company at seventeen, works as an
+          AI consultant out of Tuscaloosa, Alabama, and builds and operates the multi-agent
+          systems that run the company day to day.
         </p>
       </div>
 

@@ -320,7 +320,7 @@ export default function ResumePage() {
             Elijah Brent <em className="pv-italic" style={{ fontWeight: 400, color: C.accent }}>Purcell</em>
           </h1>
           <p className="pv-italic" style={{ marginTop: "16px", fontSize: "18px", color: C.text, opacity: 0.78, maxWidth: "660px", lineHeight: 1.5 }}>
-            Founder, Purcell Ventures LLC · University of Alabama Honors College, Class of 2030 · Tuscaloosa, Alabama
+            Founder and CEO, Purcell Ventures LLC · Autonomous AI agent systems engineer · University of Alabama Honors College, Class of 2030 · Tuscaloosa, Alabama
           </p>
           <p className="pv-italic" style={{ marginTop: "10px", fontSize: "15.5px", color: C.text, opacity: 0.62, maxWidth: "660px", lineHeight: 1.55 }}>
             I build and ship software end to end: marketplaces, autonomous data pipelines, AI-integrated

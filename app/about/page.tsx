@@ -357,7 +357,8 @@ export default function AboutPage() {
             Elijah Brent <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Purcell</em>
           </h1>
           <p className="pv-italic" style={{ marginTop: "14px", fontSize: "18px", color: "var(--color-warm-text)", opacity: 0.78, maxWidth: "560px" }}>
-            Founder · operator · University of Alabama undergraduate in Tuscaloosa.
+            Founder and CEO of Purcell Ventures LLC, and an autonomous AI agent systems
+            engineer. University of Alabama undergraduate in Tuscaloosa.
           </p>
         </div>
 
