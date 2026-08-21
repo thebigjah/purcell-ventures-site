@@ -41,9 +41,31 @@ const COURSES = [
   },
 ];
 
+
+const BREADCRUMB_LD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://purcellventures.co"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Courses",
+      "item": "https://purcellventures.co/courses"
+    }
+  ]
+};
+
 export default function CoursesPage() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden" }}>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
+      <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden" }}>
       <VignetteBackground />
 
       <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
@@ -147,5 +169,6 @@ export default function CoursesPage() {
         <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← Home</a>
       </footer>
     </div>
+    </>
   );
 }

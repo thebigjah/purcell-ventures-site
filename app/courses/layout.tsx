@@ -10,24 +10,9 @@ export const metadata: Metadata = {
 };
 
 
-const BREADCRUMB_LD = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://purcellventures.co"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Courses",
-      "item": "https://purcellventures.co/courses"
-    }
-  ]
-};
+// NO breadcrumb here. This layout wraps all three course pages and Next inherits layout
+// output, so a trail declared here appears on every child alongside the child's own and
+// the two disagree about which page you are on. Each page declares its own instead.
 const FAQ_LD = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -46,7 +31,6 @@ const FAQ_LD = {
 export default function CoursesLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_LD) }} />
       {children}
     </>
