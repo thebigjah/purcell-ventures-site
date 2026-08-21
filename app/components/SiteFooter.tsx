@@ -60,6 +60,7 @@ export default function SiteFooter() {
             <li><Link href="/team" style={{ color: "#8b8578", textDecoration: "none" }}>The team</Link></li>
             <li><Link href="/resume" style={{ color: "#8b8578", textDecoration: "none" }}>Founder resume</Link></li>
             <li><Link href="/portfolio" style={{ color: "#8b8578", textDecoration: "none" }}>Portfolio</Link></li>
+            <li><Link href="/tools" style={{ color: "#8b8578", textDecoration: "none" }}>Free tools</Link></li>
             <li><Link href="/blog" style={{ color: "#8b8578", textDecoration: "none" }}>Writing</Link></li>
             <li><Link href="/ai-at-alabama" style={{ color: "#8b8578", textDecoration: "none" }}>AI at Alabama</Link></li>
           </ul>
