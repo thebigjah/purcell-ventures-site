@@ -24,39 +24,28 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://purcellventures.co/resume" },
 };
 
+// This was a bare Person re-stating the #founder node the root layout already renders
+// on every page. Two effects, both bad. Google merges nodes sharing an @id, so the
+// duplicate added no entity and only a second, thinner set of claims to reconcile. And
+// because the page declared a Person rather than a ProfilePage, Search Console reported
+// NO structured-data enhancement on /resume at all, while /about and /who both show
+// "Profile page: 1 valid item". A resume IS a profile page, so it says so now, and it
+// points at the one canonical Person instead of describing him a second time.
+//
+// The award line is not the lead. His rule, 20 Aug 2026: the scholarship total belongs
+// on the college-application course page and nowhere else, because a number like that
+// in a snippet says "impressive student" where the work says "ships software".
 const schema = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://purcellventures.co/#founder",
-  "name": "Elijah Purcell",
-  "image": "https://purcellventures.co/brand/elijah.jpg",
-  "jobTitle": "Founder & CEO",
-  "worksFor": { "@id": "https://purcellventures.co/#organization" },
-  "url": "https://purcellventures.co",
-  "email": "elijah@purcell-ventures.com",
-  "telephone": "+12054627839",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Tuscaloosa",
-    "addressRegion": "AL",
-    "addressCountry": "US",
-  },
-  "alumniOf": {
-    "@type": "EducationalOrganization",
-    "name": "University of Alabama",
-    "url": "https://www.ua.edu",
-  },
-  // The award list is not the lead. His rule, 20 Aug 2026: the scholarship total
-  // belongs on the college-application course page and nowhere else, because a number
-  // like that in a snippet says "impressive student" where the work says "ships software".
-  "award": "Christian Character Award, Grove Christian School (2024)",
-  "knowsAbout": [
-    "Artificial Intelligence", "Software Engineering", "Digital Marketing",
-    "Business Management", "Web Development", "AI Consulting",
-  ],
-  "sameAs": ["https://www.linkedin.com/in/theelijahpurcell",
-        "https://github.com/thebigjah",
-        "https://www.instagram.com/theelijahpurcell/"],
+  "@type": "ProfilePage",
+  "@id": "https://purcellventures.co/resume",
+  "url": "https://purcellventures.co/resume",
+  "name": "Elijah Purcell — Resume",
+  "description":
+    "Professional resume for Elijah Purcell: founder of Purcell Ventures LLC, autonomous AI agent systems engineer, and psychology and data science student at the University of Alabama Honors College.",
+  "mainEntity": { "@id": "https://purcellventures.co/#founder" },
+  "about": { "@id": "https://purcellventures.co/#founder" },
+  "publisher": { "@id": "https://purcellventures.co/#organization" },
 };
 
 

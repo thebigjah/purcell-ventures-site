@@ -40,50 +40,14 @@ const schema = {
       "about": { "@id": "https://purcellventures.co/#founder" },
       "publisher": { "@id": "https://purcellventures.co/#organization" },
     },
-    {
-      "@type": "Person",
-      "@id": "https://purcellventures.co/#founder",
-      "name": "Elijah Purcell",
-      "image": "https://purcellventures.co/brand/elijah.jpg",
-      "givenName": "Elijah",
-      "familyName": "Purcell",
-      "jobTitle": "Founder & CEO",
-      "description": "Entrepreneur, AI consultant, and software developer based in Tuscaloosa, Alabama. Founder of Purcell Ventures LLC — a multi-division company offering digital services, AI consulting, and custom software development. Also founder of Mantle Field Services, a sister brand handling owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta. Student at the University of Alabama Honors College, Class of 2030, studying psychology and data science.",
-      "worksFor": { "@id": "https://purcellventures.co/#organization" },
-      "url": "https://purcellventures.co",
-      "email": "elijah@purcell-ventures.com",
-      "telephone": "+12054627839",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Acworth",
-        "addressRegion": "GA",
-        "addressCountry": "US",
-      },
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "University of Alabama",
-        "url": "https://www.ua.edu",
-      },
-      "award": "Christian Character Award, Grove Christian School (2024)",
-      "knowsAbout": [
-        "Artificial Intelligence",
-        "AI Consulting",
-        "Digital Marketing",
-        "Web Development",
-        "Software Engineering",
-        "Custom Software Development",
-        "Small Business Automation",
-        "Business Technology",
-        "Gutter Cleaning",
-        "Pressure Washing",
-        "Lawn Care",
-      ],
-      "sameAs": [
-        "https://www.linkedin.com/in/theelijahpurcell",
-        "https://purcellventures.co/resume",
-        "https://github.com/thebigjah",
-        "https://www.instagram.com/theelijahpurcell/"],
-    },
+    // NO Person NODE HERE. The root layout declares the full Person under this same
+    // @id and renders on every page, so re-stating it here did not add a second entity
+    // to Google, it added CONTRADICTIONS to the one entity: this copy said Acworth GA
+    // while the root said Tuscaloosa AL, and it said "Founder & CEO" while the root
+    // said "Autonomous AI Agent Systems Engineer". It also attached Gutter Cleaning,
+    // Pressure Washing and Lawn Care to him personally; those belong to Mantle Field
+    // Services, not to his own expertise. The ProfilePage above already points at the
+    // canonical Person via mainEntity/about, which is what a shared @id is for.
     {
       "@type": "FAQPage",
       "mainEntity": [

@@ -162,7 +162,11 @@ const orgSchema = {
       "image": "https://purcellventures.co/brand/elijah.jpg",
       "givenName": "Elijah",
       "familyName": "Purcell",
-      "jobTitle": "Autonomous AI Agent Systems Engineer",
+      // His rule, 21 Aug 2026: "My Title is primarily always Founder/CEO." schema.org
+      // allows jobTitle to be a list, so the primary title leads and the engineering
+      // title he wants surfaced for search sits beside it rather than replacing it.
+      // hasOccupation below carries the full description of each.
+      "jobTitle": ["Founder & CEO", "Autonomous AI Agent Systems Engineer"],
       "description": "Founder of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama Honors College, Class of 2030, on a pre-med track toward psychiatry. Based in Tuscaloosa, Alabama. Builds and operates autonomous AI agent systems.",
       "worksFor": { "@id": "https://purcellventures.co/#organization" },
       "url": "https://purcellventures.co",
