@@ -162,7 +162,7 @@ const orgSchema = {
       "image": "https://purcellventures.co/brand/elijah.jpg",
       "givenName": "Elijah",
       "familyName": "Purcell",
-      "jobTitle": "Founder & CEO",
+      "jobTitle": "Autonomous AI Agent Systems Engineer",
       "description": "Founder of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama Honors College, Class of 2030, on a pre-med track toward psychiatry. Based in Tuscaloosa, Alabama. Builds and operates autonomous AI agent systems.",
       "worksFor": { "@id": "https://purcellventures.co/#organization" },
       "url": "https://purcellventures.co",
@@ -204,6 +204,13 @@ const orgSchema = {
       "hasOccupation": [
         {
           "@type": "Occupation",
+          "name": "Autonomous AI Agent Systems Engineer",
+          "description":
+            "Builds and operates autonomous AI agent systems in production: a fifteen-agent workforce handling proposals, audits, compliance and outreach on a schedule, with an ELO-scored autonomy tier and an append-only message bus between agents.",
+          "occupationLocation": { "@type": "City", "name": "Tuscaloosa" },
+        },
+        {
+          "@type": "Occupation",
           "name": "Software company founder",
           "occupationLocation": { "@type": "City", "name": "Tuscaloosa" },
         },
@@ -220,10 +227,12 @@ const orgSchema = {
         "Steadfast Award, Grove Christian School (2023)",
       ],
       "knowsAbout": [
-        "Artificial Intelligence", "Autonomous AI agents", "AI Consulting",
-        "Web Development", "Software Engineering", "Custom Software Development",
-        "Small Business Automation", "Psychology", "Data Science",
-        "AI in mental health care", "Search engine optimization",
+        "Autonomous AI agent systems", "Agentic AI architecture", "Multi-agent systems",
+        "AI for mental health care", "AI in healthcare administration",
+        "Artificial Intelligence", "AI consulting", "Large language model evaluation",
+        "Web development for small business", "Custom software development",
+        "Software engineering", "Psychology", "Data science",
+        "Search engine optimization",
       ],
       // Every profile he controls, listed identically here and in the rel="me" links in
       // the footer. Two independent assertions that agree is what merges four profiles

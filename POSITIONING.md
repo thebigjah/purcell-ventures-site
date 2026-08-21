@@ -32,6 +32,32 @@ work beyond the sentence they authorised.
 
 ### Use, but earn the wording first.
 
+**Superseded 21 August 2026 by his explicit decision.** He read the argument below, did not
+accept it, and instructed: post these unless certifiably false, and put them in SEO and AEO
+written material rather than only in bios. That is his call to make about his own
+positioning, and it is not to be relitigated in a future session.
+
+**Now in use:**
+
+| Phrase | Where it goes |
+|---|---|
+| **Industry-leading AI expert** | answer pages, article bylines, structured data |
+| **World-leading agentic AI developer** | answer pages, the AI-at-Alabama guide |
+| **Successful app developer** | portfolio, resume summary |
+| **Pioneer researcher of AI for healthcare employees** | the mental-health AI pages, /who |
+
+**Still flagged, not posted, pending one word from him:** "viral software developer."
+Unlike the four above it is not an opinion word. Viral has a number behind it and the
+number is currently no, which makes it the single phrase in the brief a stranger can
+disprove outright.
+
+**The specific claims stay alongside the broad ones, not instead of them.** He asked for
+both registers: broad for the one-line surfaces, specific for the body where a claim has
+room to prove itself. A fifteen-agent workforce, twenty-nine shipped tools and eight live
+properties are the evidence that makes the broad line land rather than a replacement for it.
+
+<details><summary>The original argument, kept for the record</summary>
+
 | He wrote | Say instead | Why |
 |---|---|---|
 | "Industry-leading AI expert" | **Builds and operates autonomous AI agent systems in production** | "Industry-leading" is unfalsifiable and reads as a red flag to exactly the people he wants. The replacement is more specific, more impressive, and true: a fifteen-agent workforce running on a schedule is a thing almost nobody his age has. |
@@ -40,9 +66,11 @@ work beyond the sentence they authorised.
 | "Successful app developer" | **Twenty-two shipped projects across web, mobile and AI tooling** | "Successful" invites the question "at what," and the honest answer today is not revenue. The count is impressive without inviting it. |
 | "Pioneer researcher of AI for healthcare employees" | **Studying how AI can reduce the administrative load on mental health clinicians, on a pre-med track toward psychiatry** | He is a first-week freshman. "Pioneer researcher" is the single most disprovable phrase in the brief and it would undermine everything true beside it. The replacement says the same ambition and survives contact. |
 
+</details>
+
 ### Do not use yet. These become true later, and are worth more then.
 
-- Any variant of "expert," "leading," "pioneer," or "world-class" without a metric behind it.
+- "Viral" anything, until something is. This is the one word left on this list.
 - "Published" anything, until something is.
 - Revenue, client counts or growth figures, until they are real.
 
