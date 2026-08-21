@@ -210,6 +210,10 @@ export default function Home() {
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", position: "relative", overflowX: "hidden" }}>
+      {/* Client component, so no metadata export. And the canonical cannot go
+          in the root layout: every child inherits it, which put 43 pages on the
+          home page when I tried that. Next hoists this link into the head. */}
+      <link rel="canonical" href="https://purcellventures.co" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
 
       {/* Page-local styles for the things that need media queries / mask-image / hover */}

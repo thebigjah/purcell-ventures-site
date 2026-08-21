@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 export const metadata = {
+  alternates: { canonical: "/team" },
   title: "The Purcell Ventures Team: Elijah Purcell and Fifteen AI Agents",
   description:
     "Purcell Ventures runs on one person and fifteen AI agents. Here is every one of them, what it does, and what it is not allowed to do.",

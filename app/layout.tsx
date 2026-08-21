@@ -29,6 +29,11 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  // NO alternates.canonical HERE. A canonical declared in the root layout is
+  // inherited by every page that does not override it, which on 20 August 2026 had
+  // fourteen pages telling Google they were duplicates of /blog. Adding it back the
+  // same evening put forty-three pages on the homepage. The home page declares its
+  // own in app/page.tsx. Every other page declares its own.
   metadataBase: new URL("https://purcellventures.co"),
   title: {
     default: "Purcell Ventures | Elijah Purcell, Founder | Software and AI for Small Business",
