@@ -13,7 +13,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: { absolute: "Who Is Elijah Purcell? Founder of Purcell Ventures LLC" },
   description:
-    "Elijah Purcell is the teen founder of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama Honors College on a pre-med track toward psychiatry.",
+    "Elijah Purcell is the founder of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama Honors College on a pre-med track toward psychiatry.",
   alternates: { canonical: "https://purcellventures.co/who" },
   openGraph: {
     title: "Who Is Elijah Purcell?",
