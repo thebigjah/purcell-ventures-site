@@ -20,11 +20,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // listing it here asked Google to index a page that tells Google not to index it.
     // Caught by running this site's own published checklist against it.
 
-    // Deliberately absent: /consulting/book, /uses, /verses, /writing and /links.
-    // All five are Disallowed in robots.txt, and listing a page in the sitemap while
+    // Deliberately absent: /consulting/book, /uses, /verses and /writing.
+    // All four are Disallowed in robots.txt, and listing a page in the sitemap while
     // forbidding the crawler to read it is a contradiction Google resolves badly: the
     // URL can surface as a bare link with no description at all. Removed here rather
     // than unblocked there, because unblocking would publish pages he chose to hide.
+    //
+    // /links WAS in that list until 22 Aug 2026. He asked for it to be unblocked, so it
+    // is now allowed in robots.txt and belongs here. The pair has to move together: a
+    // sitemap entry for a Disallowed URL is the contradiction described above, and a
+    // crawlable page missing from the sitemap is a discovery gap.
 
     // Home, top priority
     { url: BASE, lastModified: aug22, changeFrequency: "weekly", priority: 1.0 },
@@ -128,6 +133,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // "who is Elijah Purcell", and it is the highest-priority page on the site for
     // that query, so it outranks the division pages here on purpose.
     { url: `${BASE}/who`,  lastModified: aug22, changeFrequency: "monthly", priority: 0.95, images: [`${BASE}/brand/elijah.jpg`] },
+    { url: `${BASE}/links`, lastModified: aug22, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/team`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
 
     // About + personal depth
