@@ -52,18 +52,38 @@ const SECTIONS: { roman: string; label: string; items: LinkItem[] }[] = [
   },
   {
     roman: "IV.",
-    label: "Sister Brand",
+    label: "Built By Me",
     items: [
-      { href: "https://mantle-field-site.vercel.app", label: "Mantle Field Services", desc: "Gutter cleaning, pressure washing, lawn care. Metro Atlanta only.", external: true },
+      { href: "https://ua-today.vercel.app", label: "UA Today", desc: "Campus events for the University of Alabama, six sources in one place. Free, no account, unaffiliated.", external: true },
+      { href: "/tools",  label: "29 Free Tools", desc: "Small software, one problem each. All live on the open web." },
+      { href: "/portfolio", label: "Portfolio", desc: "Client work and shipped products." },
+      { href: "https://mantle-field-site.vercel.app", label: "Mantle Field Services", desc: "Sister brand. Gutter cleaning, pressure washing, lawn care. Metro Atlanta only.", external: true },
+    ],
+  },
+  // THE PAGE IS CALLED "EVERYTHING FROM ELIJAH PURCELL" AND IT LISTED TWO EXTERNAL LINKS.
+  //
+  // Measured 22 Aug 2026: `"Elijah Purcell" "Purcell Ventures" -site:purcellventures.co`
+  // returns zero relevant results. No page off this domain connects his name to the
+  // company. The profiles below are the entire independent set that exists, so the hub
+  // page that is supposed to point at them should actually point at them.
+  //
+  // ADD HERE AS THEY GO LIVE: Google Business Profile, Crunchbase, Wikidata.
+  {
+    roman: "V.",
+    label: "Elsewhere",
+    items: [
+      { href: "https://github.com/thebigjah", label: "GitHub", desc: "The code. 29 tools and the projects behind them.", external: true },
+      { href: "https://www.linkedin.com/in/theelijahpurcell", label: "LinkedIn", desc: "Professional record.", external: true },
+      { href: "https://www.linkedin.com/company/138853899/", label: "Purcell Ventures on LinkedIn", desc: "The company page.", external: true },
+      { href: "https://www.instagram.com/theelijahpurcell/", label: "Instagram", external: true },
     ],
   },
   {
-    roman: "V.",
+    roman: "VI.",
     label: "Reach Me",
     items: [
       { href: "mailto:elijah@purcell-ventures.com", label: "elijah@purcell-ventures.com", desc: "Same-day response. Email is best." },
       { href: "tel:+12054627839",                   label: "(205) 462-7839",              desc: "Call or text." },
-      { href: "https://www.linkedin.com/in/theelijahpurcell", label: "LinkedIn", external: true },
     ],
   },
 ];
@@ -98,7 +118,9 @@ export default function LinksPage() {
             fontSize: "17px", color: "var(--color-warm-text)", opacity: 0.85,
             lineHeight: 1.5, maxWidth: "440px", margin: "0 auto",
           }}>
-            Founder of Purcell Ventures. Operator, software builder, undergraduate-bound out of Acworth, Georgia.
+            Founder and CEO of Purcell Ventures LLC. Autonomous AI agent systems engineer,
+            software builder, and University of Alabama Honors College undergraduate in
+            Tuscaloosa, Alabama.
           </p>
         </header>
 
