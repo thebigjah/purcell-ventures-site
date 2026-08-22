@@ -89,6 +89,9 @@ const PRICING = [
 ];
 
 const FAQ = [
+  // The city question belongs on the page people land on for consulting, and it is the
+  // internal link into /ai-consultant-tuscaloosa, which was reachable from /about only.
+  { q: "Are you local? Where are you based?",                                        a: "Tuscaloosa, Alabama. The LLC is registered in Acworth, Georgia, where it was formed, and it is operated from Tuscaloosa, where I attend the University of Alabama. Local businesses can meet in person, which is the part that is hard to do remotely. There is a fuller page for local work at purcellventures.co/ai-consultant-tuscaloosa." },
   { q: "Do I need any tech experience to benefit from this?",                       a: "No. Most sessions are designed for people who've never used AI tools before. I meet you where you are and build from there." },
   { q: "What do participants need to bring?",                                       a: "A laptop or tablet and a willingness to try things. I'll handle everything else: setup, demos, exercises, and a takeaway guide." },
   { q: "Can you come to our location?",                                             a: "Yes. I come to you. Your office, your team, your environment. That context makes the session more relevant and the examples more useful." },
@@ -123,6 +126,10 @@ export default function ConsultingPage() {
           </h1>
           <p className="deck">
             I come to your business and teach your team how to actually use AI. Hands-on, practical, tailored to what you do. Not theory. Real tools, real results, same day.
+            Based in Tuscaloosa, Alabama, working nationwide.{" "}
+            <a href="/ai-consultant-tuscaloosa" style={{ color: "var(--color-warm-accent)" }}>
+              Local work in Tuscaloosa →
+            </a>
           </p>
           <div style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
             <a className="pv-btn-primary" href="/consulting/book">Book a session</a>
