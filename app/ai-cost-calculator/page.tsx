@@ -252,6 +252,49 @@ export default function AICostCalculatorPage() {
           </div>
         </section>
 
+        {/* Additive explanatory copy. The calculator is interactive, so most of what it
+            says only exists after input and the page rendered 407 visible words. Same
+            treatment as /ai-readiness: leave the tool alone, give a crawler and an
+            undecided reader the reasoning. */}
+        <section style={{ maxWidth: "720px", margin: "72px auto 0", padding: "0 8px", fontSize: "16px", lineHeight: 1.75 }}>
+          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "0 0 14px", color: "var(--color-warm-text)" }}>
+            How the math works
+          </h2>
+          <p>
+            You enter team size, a loaded hourly rate, and roughly how many hours a week go
+            into the repetitive written work: drafting, replying, summarising, formatting.
+            The calculator applies a conservative recovery rate to those hours and compares
+            the result against the cost of a session, which gives you a payback period in
+            weeks rather than a vague promise of efficiency.
+          </p>
+          <p>
+            Conservative is doing real work in that sentence. The assumed time recovery is
+            deliberately lower than most vendor calculators use, because the number that
+            matters is the one that survives contact with a normal week: interruptions,
+            revisions, and the tasks where a model produces something you have to rewrite
+            anyway.
+          </p>
+          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "36px 0 14px", color: "var(--color-warm-text)" }}>
+            When the answer is no
+          </h2>
+          <p>
+            If your team is small and the repetitive writing is genuinely a couple of hours a
+            week, the payback period will be long and the honest conclusion is to skip it.
+            The calculator will show you that rather than hiding it, which is the entire
+            reason to run the numbers before buying anything.
+          </p>
+          <p>
+            Built by Elijah Purcell, founder and CEO of{" "}
+            <Link href="/about" style={{ color: "var(--color-warm-accent)" }}>Purcell Ventures LLC</Link>{" "}
+            and an autonomous AI agent systems engineer in Tuscaloosa, Alabama. If the
+            payback looks worth it, the{" "}
+            <Link href="/consulting" style={{ color: "var(--color-warm-accent)" }}>consulting page</Link>{" "}
+            explains what a session covers, and{" "}
+            <Link href="/ai-consultant-tuscaloosa" style={{ color: "var(--color-warm-accent)" }}>local work in Tuscaloosa</Link>{" "}
+            covers in-person engagements. No email is required to use this page.
+          </p>
+        </section>
+
       </main>
 
       <footer style={{
