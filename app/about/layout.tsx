@@ -72,7 +72,7 @@ const schema = {
           "name": "Where is Purcell Ventures located?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Purcell Ventures LLC is based in Acworth, Georgia. Digital services and AI consulting are available nationwide. Sister brand Mantle Field Services serves the Metro Atlanta area (Kennesaw, Marietta, Acworth, Canton, Woodstock) with gutter cleaning, pressure washing, and lawn care.",
+            "text": "The LLC is registered in Acworth, Georgia, where it was formed, and it is operated from Tuscaloosa, Alabama, where its founder Elijah Purcell attends the University of Alabama. Digital services and AI consulting are available nationwide. Sister brand Mantle Field Services serves the Metro Atlanta area (Kennesaw, Marietta, Acworth, Canton, Woodstock) with gutter cleaning, pressure washing, and lawn care.",
           },
         },
         {

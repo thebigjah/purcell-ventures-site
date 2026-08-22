@@ -30,7 +30,7 @@ const FAQ_SCHEMA = {
       "name": "Where is Purcell Ventures based?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Purcell Ventures LLC is based in Acworth, Georgia. Digital services and AI consulting are available nationwide. Field services run under our separate Mantle Field Services brand, serving Metro Atlanta: Kennesaw, Marietta, Acworth, Canton, and Woodstock.",
+        "text": "The LLC is registered in Acworth, Georgia, where it was formed, and it is operated from Tuscaloosa, Alabama, where its founder Elijah Purcell attends the University of Alabama. Digital services and AI consulting are available nationwide. Field services run under our separate Mantle Field Services brand, serving Metro Atlanta: Kennesaw, Marietta, Acworth, Canton, and Woodstock.",
       },
     },
     {
