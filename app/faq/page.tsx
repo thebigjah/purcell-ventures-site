@@ -28,12 +28,27 @@ const FAQS: QSection[] = [
         a: "Same day on email, usually within a few hours. If you need an answer urgently, call or text (205) 462-7839.",
       },
       {
-        q: "Do you take clients outside Atlanta?",
-        a: "For digital services, consulting, and software, yes, anywhere. For field work (gutter cleaning, pressure washing, lawn care), see Mantle Field Services — Metro Atlanta only.",
+        q: "Where are you based?",
+        a: "Tuscaloosa, Alabama. Purcell Ventures LLC is registered in Acworth, Georgia, where it was formed in April 2025, and it is operated from Tuscaloosa, where I attend the University of Alabama. Local clients here can meet in person, which is the part that is hard to do remotely.",
+      },
+      {
+        q: "Do you take clients outside Tuscaloosa?",
+        a: "For digital services, AI consulting, and software, yes, anywhere in the United States. For field work (gutter cleaning, pressure washing, lawn care), see Mantle Field Services, which is Metro Atlanta only.",
+      },
+      // PRICING QUESTIONS. This page carried 26 questions and none of them contained the
+      // words "cost", "price" or "how much", which is one of the most common query shapes
+      // there is. An answer engine cannot quote a number that is not written down.
+      {
+        q: "How much does a website cost?",
+        a: "For University of Alabama students and student-run businesses, $500, with an optional $25 a month to keep it maintained and updated. For other small businesses, ongoing digital service starts at $99 a month, which covers the site plus the tooling around it. Custom builds start at $1,500.",
+      },
+      {
+        q: "How much does AI consulting cost?",
+        a: "Sessions start at $125 per person. The first conversation is free and frequently ends with me telling you the problem is smaller than you thought, or that AI is the wrong tool for it.",
       },
       {
         q: "What's the best way to start?",
-        a: "Email with a one-sentence description of what you need. I'll tell you honestly if I can help and what it would look like.",
+        a: "Email elijah@purcell-ventures.com with a one-sentence description of what you are trying to do. Not what you think you need built, what you are trying to do. I'll tell you honestly if I can help and what it would look like.",
       },
     ],
   },
