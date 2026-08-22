@@ -144,7 +144,7 @@ function StoryTab() {
           { label: "Location",           value: "Tuscaloosa, Alabama" },
           { label: "University",         value: "University of Alabama, Class of 2030" },
           { label: "Program",            value: "Honors College, psychology and data science" },
-          { label: "Shipped",            value: "15+ production applications, designed and coded solo" },
+          { label: "Shipped",            value: "29 free tools live, plus client sites and production apps, designed and coded solo" },
           { label: "Company",            value: "Purcell Ventures LLC (founded April 2025)" },
           { label: "Contact",            value: "elijah@purcell-ventures.com" },
         ].map(({ label, value }) => (
@@ -432,6 +432,7 @@ export default function AboutPage() {
           <li><a href="/blog/121-businesses-near-campus" style={{ color: "var(--color-warm-accent)" }}>121 businesses near campus, and what a phone can find</a></li>
           <li><a href="/blog/what-the-agents-get-wrong" style={{ color: "var(--color-warm-accent)" }}>Fifteen AI agents run my company. Here is what they get wrong</a></li>
           <li><a href="/ai-at-alabama" style={{ color: "var(--color-warm-accent)" }}>Studying AI at the University of Alabama</a></li>
+          <li><a href="/ai-consultant-tuscaloosa" style={{ color: "var(--color-warm-accent)" }}>AI consultant in Tuscaloosa, Alabama</a></li>
           <li><a href="/blog" style={{ color: "var(--color-warm-accent)" }}>Everything else</a></li>
         </ul>
       </section>
