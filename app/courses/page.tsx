@@ -153,6 +153,55 @@ export default function CoursesPage() {
           ))}
         </div>
 
+        {/* The index page rendered 281 words for three courses priced $297 to $397. The
+            cards carry the pitch; nothing carried the reasoning, which is the part a person
+            deciding whether to buy actually wants and the part an engine can quote. */}
+        <section style={{ maxWidth: "720px", margin: "72px auto 0", padding: "0 8px", fontSize: "16px", lineHeight: 1.75 }}>
+          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "0 0 14px", color: "var(--color-warm-text)" }}>
+            Why these three, and not a catalogue
+          </h2>
+          <p>
+            I only teach things I finished recently enough to remember the parts that went
+            wrong. That rules out most of what could be sold here and leaves three: applying
+            to college, starting a business, and automating work with AI. Each one I did
+            inside the last two years, with the receipts still in a folder.
+          </p>
+          <p>
+            The tradeoff is honest and worth stating. You are not getting twenty years of
+            perspective. You are getting the current process, including the steps that only
+            exist because of how things work right now, taught by someone who has not yet
+            forgotten how confusing they were the first time.
+          </p>
+          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "36px 0 14px", color: "var(--color-warm-text)" }}>
+            What a course here is
+          </h2>
+          <p>
+            Self-paced, lifetime access, and structured as a sequence of lessons you work
+            through rather than videos you watch. Every course includes the templates and
+            documents I actually used, not recreations. If a lesson tells you to send an
+            email, the email is in there.
+          </p>
+          <p>
+            There is a refund policy and it is not a maze. If the material does not do what
+            the page said it would, ask and you get your money back. I would rather refund
+            you than have you tell someone the course was oversold.
+          </p>
+          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "36px 0 14px", color: "var(--color-warm-text)" }}>
+            Who teaches them
+          </h2>
+          <p>
+            Elijah Purcell, founder and CEO of{" "}
+            <Link href="/about" style={{ color: "var(--color-warm-accent)" }}>Purcell Ventures LLC</Link>,
+            an autonomous AI agent systems engineer, and a psychology and data science
+            student at the University of Alabama Honors College in Tuscaloosa. The{" "}
+            <Link href="/who" style={{ color: "var(--color-warm-accent)" }}>short factual version</Link>{" "}
+            has the record without the sales copy, and if what you need is help rather than a
+            course, the{" "}
+            <Link href="/consulting" style={{ color: "var(--color-warm-accent)" }}>consulting page</Link>{" "}
+            is the cheaper answer more often than not.
+          </p>
+        </section>
+
       </main>
 
       <footer style={{
