@@ -434,6 +434,60 @@ export default function AIReadinessPage() {
           </div>
         )}
 
+        {/* ALWAYS-RENDERED EXPLANATORY COPY.
+            The quiz shows one question at a time, so nine of the ten questions never reach
+            the served HTML and the page rendered 192 visible words. Restructuring working
+            quiz state to fix that is a bigger change than it is worth; this section is
+            additive and gives a crawler, and a person deciding whether to start, something
+            to read. */}
+        <section style={{ maxWidth: "720px", margin: "72px auto 0", padding: "0 8px", fontSize: "16px", lineHeight: 1.75 }}>
+          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "0 0 14px", color: "var(--color-warm-text)" }}>
+            What this test actually measures
+          </h2>
+          <p>
+            Ten questions about how your team works right now, not about what you know
+            regarding AI. The difference matters. Most readiness assessments test vocabulary
+            and hand back a score that flatters whoever took it. This one asks what you
+            currently do when you draft a customer email, when you answer the same question
+            for the twentieth time, when someone leaves and takes a process with them.
+          </p>
+          <p>
+            The questions cover drafting and written communication, repeated manual steps,
+            how knowledge is stored and found, customer response times, how work gets handed
+            off between people, and where your data actually lives. Those six areas are where
+            small teams either gain hours or lose them, and they are the areas where an
+            honest answer predicts whether AI will help you or waste your money.
+          </p>
+          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "36px 0 14px", color: "var(--color-warm-text)" }}>
+            What you get back
+          </h2>
+          <p>
+            A position in the disruption window and a short list of what to do first, in
+            order. Some results say the useful next step is not an AI tool at all, and the
+            test will say so. There is no email capture, no gated report, and no follow-up
+            sequence. It runs in your browser and takes about three minutes.
+          </p>
+          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "36px 0 14px", color: "var(--color-warm-text)" }}>
+            Who built it
+          </h2>
+          <p>
+            Elijah Purcell, founder and CEO of{" "}
+            <Link href="/about" style={{ color: "var(--color-warm-accent)" }}>Purcell Ventures LLC</Link>{" "}
+            and an autonomous AI agent systems engineer, working out of Tuscaloosa, Alabama.
+            The scoring reflects what actually moves for small teams in practice, including a
+            fifteen-agent workforce that runs this company&apos;s own proposals, audits and
+            compliance on a schedule.
+          </p>
+          <p>
+            If the result raises questions, the{" "}
+            <Link href="/consulting" style={{ color: "var(--color-warm-accent)" }}>consulting page</Link>{" "}
+            explains how sessions work, and{" "}
+            <Link href="/ai-consultant-tuscaloosa" style={{ color: "var(--color-warm-accent)" }}>local work in Tuscaloosa</Link>{" "}
+            covers in-person engagements. The first conversation is free and frequently ends
+            with me saying the problem is smaller than you thought.
+          </p>
+        </section>
+
       </main>
 
       <footer style={{
