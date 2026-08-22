@@ -449,15 +449,23 @@ export default function ConsultingPage() {
                   {openFaq === i ? "−" : "+"}
                 </span>
               </button>
-              {openFaq === i && (
-                <div className="pv-italic" style={{
+              {/* ALWAYS RENDERED, TOGGLED WITH CSS. It used to be {openFaq === i && (...)},
+                  which does not hide the answer, it never creates it. Measured 22 Aug 2026:
+                  zero of the six answers appeared in the served HTML. Four survived only
+                  because they are duplicated into FAQPage JSON-LD; two existed nowhere a
+                  crawler or a language model could reach. Google indexes CSS-hidden
+                  accordion content, so display:none costs nothing and the text now ships. */}
+              <div
+                className="pv-italic"
+                style={{
+                  display: openFaq === i ? "block" : "none",
                   padding: "0 28px 22px",
                   fontSize: "15px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.6,
                   borderTop: "1px dashed var(--color-warm-border)", paddingTop: "16px", marginTop: "0",
-                }}>
-                  {item.a}
-                </div>
-              )}
+                }}
+              >
+                {item.a}
+              </div>
             </div>
           ))}
         </div>

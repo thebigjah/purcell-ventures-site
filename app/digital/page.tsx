@@ -1784,9 +1784,9 @@ export default function DigitalPage() {
                   <span style={{ fontSize: "15px", fontWeight: 600, color: "var(--color-warm-text)", lineHeight: 1.5 }}>{item.q}</span>
                   <span style={{ fontSize: "22px", color: "var(--color-warm-accent)", flexShrink: 0, display: "block", transform: openFaq === i ? "rotate(45deg)" : "rotate(0deg)", transition: "transform 0.2s" }}>+</span>
                 </button>
-                {openFaq === i && (
-                  <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.8, marginTop: "12px", paddingRight: "32px" }}>{item.a}</p>
-                )}
+                {/* Rendered always, toggled with CSS. `{openFaq === i && ...}` does not hide
+                    an answer, it never creates it, so none of these ever reached a crawler. */}
+                <p style={{ display: openFaq === i ? "block" : "none", fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.8, marginTop: "12px", paddingRight: "32px" }}>{item.a}</p>
               </div>
             ))}
             <div style={{ borderTop: "1px solid var(--color-warm-border)" }} />

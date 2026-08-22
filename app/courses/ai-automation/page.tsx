@@ -334,8 +334,10 @@ export default function ZeroToAutomatedPage() {
                     </span>
                   </div>
                 </button>
-                {openModule === i && (
-                  <div style={{ background: "var(--color-warm-card)", borderTop: "1px solid var(--color-warm-border)" }}>
+                {/* ALWAYS RENDERED, TOGGLED WITH CSS. `{openModule === i && ...}` does not
+                    hide the curriculum, it never creates it, so the lesson list this course
+                    is sold on never reached a crawler or a language model. */}
+                <div style={{ display: openModule === i ? "block" : "none", background: "var(--color-warm-card)", borderTop: "1px solid var(--color-warm-border)" }}>
                     {mod.lessons.map((lesson, j) => (
                       <div key={lesson.id} style={{
                         display: "flex", alignItems: "center", justifyContent: "space-between",
@@ -357,7 +359,6 @@ export default function ZeroToAutomatedPage() {
                       </div>
                     ))}
                   </div>
-                )}
               </div>
             ))}
           </div>
@@ -470,13 +471,12 @@ export default function ZeroToAutomatedPage() {
                     +
                   </span>
                 </button>
-                {openFaq === i && (
-                  <div style={{ background: "var(--color-warm-card)", borderTop: "1px solid var(--color-warm-border)", padding: "16px 24px 20px" }}>
+                {/* Rendered always, toggled with CSS. See the note on the module list above. */}
+                <div style={{ display: openFaq === i ? "block" : "none", background: "var(--color-warm-card)", borderTop: "1px solid var(--color-warm-border)", padding: "16px 24px 20px" }}>
                     <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.75, fontFamily: "var(--font-dm-sans), sans-serif", margin: 0 }}>
                       {faq.a}
                     </p>
                   </div>
-                )}
               </div>
             ))}
           </div>
