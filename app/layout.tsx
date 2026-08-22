@@ -132,11 +132,11 @@ const orgSchema = {
       // It is not. The LinkedIn company page is verified live (200) before being listed;
       // the Yelp listing exists but returns 403 to a non-browser request, so it stays out
       // until it can be checked properly rather than being asserted on faith.
+      // Same rule as the Person node below: independent records only. ua-today.vercel.app
+      // and purcellventures.co/who are both his, so neither corroborated anything.
       "sameAs": [
         "https://www.linkedin.com/company/138853899/",
-        "https://github.com/thebigjah",
-        "https://ua-today.vercel.app",
-        "https://purcellventures.co/who"],
+        "https://github.com/thebigjah"],
       "founder": { "@id": "https://purcellventures.co/#founder" },
       "employee": { "@id": "https://purcellventures.co/#founder" },
       "knowsAbout": [
@@ -241,13 +241,22 @@ const orgSchema = {
       // Every profile he controls, listed identically here and in the rel="me" links in
       // the footer. Two independent assertions that agree is what merges four profiles
       // into one entity rather than leaving four strangers who share a name.
+      // sameAs NAMES INDEPENDENT RECORDS OF THE SAME ENTITY. It is corroboration, so a
+      // page on this domain does not belong in it: /who and /resume were in here, declared
+      // from a graph that renders on /who and /resume, which is a footnote citing itself.
+      // ua-today.vercel.app is also his, so it corroborated nothing either.
+      //
+      // Measured 22 Aug 2026: `"Elijah Purcell" "Purcell Ventures" -site:purcellventures.co`
+      // returns zero relevant results. There is currently no independent page on the
+      // internet linking his name to the company, which is why every AI engine that
+      // describes him correctly cites only this domain. What is left below is the genuine
+      // third-party set. It is short, and that is the honest picture.
+      //
+      // ADD HERE AS THEY GO LIVE: the Google Business Profile URL, Crunchbase, Wikidata.
       "sameAs": [
         "https://www.linkedin.com/in/theelijahpurcell",
         "https://github.com/thebigjah",
-        "https://www.instagram.com/theelijahpurcell/",
-        "https://purcellventures.co/who",
-        "https://purcellventures.co/resume",
-        "https://ua-today.vercel.app/about.html"],
+        "https://www.instagram.com/theelijahpurcell/"],
     },
   ],
 };
