@@ -10,6 +10,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // when the site is substantively revised. Everything here genuinely was rewritten on
   // 20 August 2026.
   const now = new Date("2026-08-20T00:00:00Z");
+
+  // Pages substantively rewritten on 22 August 2026. Kept separate from `now` on purpose:
+  // stamping all 55 URLs with the same fresh date would recreate exactly the noise the
+  // comment above warns about. lastmod is only a useful recrawl hint while it stays true.
+  const aug22 = new Date("2026-08-22T00:00:00Z");
   return [
     // /services is deliberately noindex and canonicalises to the Mantle site, so
     // listing it here asked Google to index a page that tells Google not to index it.
@@ -22,15 +27,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // than unblocked there, because unblocking would publish pages he chose to hide.
 
     // Home, top priority
-    { url: BASE, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
+    { url: BASE, lastModified: aug22, changeFrequency: "weekly", priority: 1.0 },
 
     // Division pages, high priority, what the business card links to
-    { url: `${BASE}/digital`,     lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE}/consulting`,  lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/digital`,     lastModified: aug22, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/consulting`,  lastModified: aug22, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/software`,    lastModified: now, changeFrequency: "monthly", priority: 0.9 },
 
     // Booking and case studies, conversion paths
-    { url: `${BASE}/ai-readiness`,        lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/ai-readiness`,        lastModified: aug22, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/ai-cost-calculator`,  lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/case-studies`,    lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
@@ -67,7 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // them properly rather than by claiming a title, which is the only version of
     // that strategy that survives a reader checking it.
     { url: `${BASE}/ai-at-alabama`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE}/ai-consultant-tuscaloosa`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/ai-consultant-tuscaloosa`, lastModified: aug22, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/agentic-ai`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
 
     { url: `${BASE}/blog/canonical-tag-noindex`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
@@ -122,20 +127,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // The name-query pages. /who exists specifically to be the answer to
     // "who is Elijah Purcell", and it is the highest-priority page on the site for
     // that query, so it outranks the division pages here on purpose.
-    { url: `${BASE}/who`,  lastModified: now, changeFrequency: "monthly", priority: 0.95, images: [`${BASE}/brand/elijah.jpg`] },
+    { url: `${BASE}/who`,  lastModified: aug22, changeFrequency: "monthly", priority: 0.95, images: [`${BASE}/brand/elijah.jpg`] },
     { url: `${BASE}/team`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
 
     // About + personal depth
-    { url: `${BASE}/about`,   lastModified: now, changeFrequency: "monthly", priority: 0.9, images: [`${BASE}/brand/elijah.jpg`] },
+    { url: `${BASE}/about`,   lastModified: aug22, changeFrequency: "monthly", priority: 0.9, images: [`${BASE}/brand/elijah.jpg`] },
     { url: `${BASE}/now`,     lastModified: now, changeFrequency: "weekly",  priority: 0.6 },
-    { url: `${BASE}/faq`,     lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE}/resume`,  lastModified: now, changeFrequency: "monthly", priority: 0.7, images: [`${BASE}/brand/elijah.jpg`] },
+    { url: `${BASE}/faq`,     lastModified: aug22, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/resume`,  lastModified: aug22, changeFrequency: "monthly", priority: 0.7, images: [`${BASE}/brand/elijah.jpg`] },
 
     // Courses, discoverable
-    { url: `${BASE}/courses`,                  lastModified: now, changeFrequency: "weekly",  priority: 0.8 },
+    { url: `${BASE}/courses`,                  lastModified: aug22, changeFrequency: "weekly",  priority: 0.8 },
     { url: `${BASE}/courses/college-apps`,     lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/courses/business-launch`,  lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/courses/ai-automation`,    lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/courses/ai-automation`,    lastModified: aug22, changeFrequency: "monthly", priority: 0.7 },
 
     // Field services redirect
   ];
