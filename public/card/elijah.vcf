@@ -6,8 +6,8 @@ ORG:Purcell Ventures LLC
 TITLE:Founder/CEO
 TEL;TYPE=CELL,VOICE;TYPE=pref:+17702805319
 TEL;TYPE=WORK,VOICE:+12054627839
+EMAIL;TYPE=INTERNET,HOME;TYPE=pref:elijahpurcell@gmail.com
 EMAIL;TYPE=INTERNET,WORK:elijah@purcell-ventures.com
-EMAIL;TYPE=INTERNET,HOME:elijahpurcell@gmail.com
 URL:https://purcellventures.co
 ADR;TYPE=WORK:;;;Tuscaloosa;AL;;USA
 X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/theelijahpurcell
