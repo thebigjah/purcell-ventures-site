@@ -233,11 +233,18 @@
 
     if (!/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) return;  // href stands
 
-    // iOS wants sms:number&body=, everything else follows RFC 5724 with ?body=. The
-    // anchor's own href uses "?&" to satisfy both. Getting it wrong drops the message
-    // text silently: the SMS app still opens, just empty, so the feature fails while
-    // looking like it worked.
-    var iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    // USE THE EXACT SEPARATOR THE ANCHOR ALREADY USES: "?&".
+    //
+    // iOS does not follow RFC 5724 here; it takes "&body=" while Android takes
+    // "?body=", and "?&" satisfies both at once. Apple's own docs say an sms: URL
+    // "must not include any message text", so every version of this is undocumented
+    // behaviour that works by convention.
+    //
+    // Which is the whole argument for not branching on the user agent. The href above
+    // is the form Elijah has actually confirmed on his own phone, so the scripted path
+    // now inherits that proof instead of running a second, untested construction. A
+    // wrong separator fails silently: Messages still opens, just empty, so the feature
+    // looks like it worked.
 
     function clean(v) { return (v || "").replace(/\s+/g, " ").trim().slice(0, 80); }
     function body() {
@@ -247,8 +254,7 @@
       return "Hey Elijah! This is " + n + (e ? " (" + e + ")" : "") + ".";
     }
     function go() {
-      window.location.href = "sms:" + NUM + (iOS ? "&" : "?")
-        + "body=" + encodeURIComponent(body());
+      window.location.href = "sms:" + NUM + "?&body=" + encodeURIComponent(body());
     }
 
     // The preview earns the field. Nobody fills in a name on a stranger's card for no
