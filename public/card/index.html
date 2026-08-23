@@ -129,8 +129,20 @@
     <p class="role">Founder/CEO of Purcell Ventures and Leading Autonomous AI Agent Systems Engineer</p>
   </header>
 
-  <a class="save" id="save" href="/card/elijah.vcf" download="Elijah-Purcell.vcf">Add to contacts</a>
-  <p class="save-note" id="note">Downloads a contact card. Works on iPhone and Android.</p>
+  <!-- THE BIG BUTTON IS NOW "TEXT ME", NOT "ADD TO CONTACTS".
+       His call, 23 Aug 2026: on a phone the contact sheet already opens by itself
+       (the script below), so a button that does the same thing is a button that
+       does nothing. The one action a tap CANNOT do on its own is start a
+       conversation, so that is what the button is for.
+
+       sms:NUMBER?&body=... is the cross-platform form. iOS wants &body, Android
+       wants ?body; "?&" satisfies both and is not a typo.
+
+       Add to contacts moves down into "Reach me". It still matters on desktop,
+       which the auto-prompt deliberately skips, and as the fallback when the
+       sheet does not fire. -->
+  <a class="save" id="save" href="sms:+12054627839?&amp;body=Hey%20Elijah!">Text me</a>
+  <p class="save-note" id="note">Opens your messages app. Your contact card downloads on its own.</p>
 
   <script>
   // AUTO-PROMPT ON TAP.
@@ -160,14 +172,18 @@
       f.src = "/card/elijah.vcf";
       document.body.appendChild(f);
       var n = document.getElementById("note");
-      if (n) n.textContent = "If the contact card did not open, tap the button above.";
+      // Points at "Add to contacts" in Reach me, NOT "the button above" — the button
+      // above is Text me now, and telling someone to tap it to save a contact would
+      // send them into a blank text message instead.
+      if (n) n.textContent = "If the contact card did not open, use Add to contacts below.";
     }, 700);
   })();
   </script>
 
   <h2>Reach me</h2>
   <ul>
-    <li><a href="tel:+12054627839"><span class="k">Call or text</span><span class="v">(205) 462-7839</span></a></li>
+    <li><a href="/card/elijah.vcf" download="Elijah-Purcell.vcf"><span class="k">Add to contacts<span class="d">If the card did not download on its own</span></span><span class="v">vCard</span></a></li>
+    <li><a href="tel:+12054627839"><span class="k">Call</span><span class="v">(205) 462-7839</span></a></li>
     <li><a href="mailto:elijah@purcell-ventures.com"><span class="k">Email</span><span class="v">elijah@purcell&#8209;ventures.com</span></a></li>
     <li><a href="https://purcellventures.co"><span class="k">See what I build<span class="d">Sites, software and AI tooling for local business</span></span><span class="v">purcellventures.co</span></a></li>
   </ul>
