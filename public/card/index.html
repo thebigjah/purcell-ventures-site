@@ -97,23 +97,27 @@
   /* Text-me box. Square and hairline like the rest; brass only on the one control
      that does something. The input is 16px because anything smaller makes iOS zoom
      the viewport on focus and the whole card lurches sideways. */
-  .txt{margin:20px 0 4px;display:flex;flex-direction:column;gap:12px}
+  .txt{margin:20px 0 4px;display:flex;flex-direction:column;gap:10px}
   .txt-f{display:flex;flex-direction:column;gap:6px}
   .txt-f label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
-  .txt-f .opt{letter-spacing:.06em;text-transform:none;color:var(--faint);font-weight:400}
-  .txt input{
-    width:100%;min-width:0;font-family:inherit;font-size:16px;line-height:1.4;
-    padding:14px 13px;border:1px solid var(--rule);border-radius:0;
-    background:#0d0b09;color:var(--ink);
+  /* Input and arrow are one box: the border lives on the wrapper, the input is bare
+     inside it, and the brass square sits flush on the right. focus-within moves the
+     whole box so the arrow never looks detached from the field it belongs to. */
+  .txt-in{display:flex;align-items:stretch;border:1px solid var(--rule);background:#0d0b09}
+  .txt-in:focus-within{border-color:var(--brass);box-shadow:inset 0 0 0 1px var(--brass)}
+  .txt-in input{
+    flex:1;min-width:0;font-family:inherit;font-size:16px;line-height:1.4;
+    padding:15px 14px;border:0;border-radius:0;background:transparent;color:var(--ink);
   }
-  .txt input::placeholder{color:var(--faint)}
-  .txt input:focus{outline:1px solid var(--brass);outline-offset:-2px;border-color:var(--brass)}
-  .txt button{
-    width:100%;font-family:inherit;font-size:17px;font-weight:700;border:0;border-radius:0;
-    padding:16px 22px;background:var(--brass);color:#12100D;
+  .txt-in input::placeholder{color:var(--faint)}
+  .txt-in input:focus{outline:none}
+  .txt-in button{
+    flex:0 0 54px;display:flex;align-items:center;justify-content:center;
+    border:0;border-radius:0;background:var(--brass);color:#12100D;
   }
-  .txt button:active{opacity:.85}
-  .txt-p{margin:0;font-size:12.5px;color:var(--faint);min-height:1.15em;text-align:center}
+  .txt-in button:active{opacity:.85}
+  .txt-in button svg{display:block}
+  .txt-p{margin:0;font-size:12.5px;color:var(--faint);min-height:1.15em}
   .v{color:var(--brass);font-size:14px;white-space:nowrap;flex:none}
   li a:active .k{color:var(--brass)}
 
@@ -190,34 +194,35 @@
 
        The anchor keeps its plain sms: href. Desktop, no-JS, and any browser where this
        misbehaves all fall through to the original behaviour. -->
-  <!-- TWO FIELDS, ON PURPOSE, AND IT IS NOT ABOUT WANTING THE EMAIL.
-       A lone name input is the worst case for autofill on both platforms. Chrome's
-       heuristics want several classifiable fields before offering a saved profile at
-       all, and iOS surfaces its "AutoFill Contact" chip far more readily when the form
-       reads as a contact form rather than one stray text box. Adding a second real
-       autocomplete field is what makes the FIRST one fire consistently.
+  <!-- ONE FIELD, HIS CALL 23 AUG. The email field was here because a lone input is the
+       weaker case for autofill: WebKit's contact heuristics offer the chip more readily
+       when a form reads as a contact form, and a second real autocomplete field made the
+       FIRST one fire more often. Removing it likely costs some hit rate. It does not
+       break anything, and he did not want an email field on a tap card.
 
-       It costs nothing: iOS and Chrome fill every matched field from one tap, so this
-       is still a single tap, and he ends up with an email he would not have had.
-       Optional, and the message goes fine without it.
+       Note the 3-field Chromium threshold (kMinRequiredFieldsForHeuristics) is NOT the
+       reason: that gates local heuristics, and an explicit autocomplete attribute is
+       honoured with no field-count minimum. So one tagged field is still classified.
 
-       Real <label> elements rather than placeholders alone: labels are a much stronger
-       classification signal than placeholder text, and a placeholder is not a label. -->
+       Real <label> rather than a placeholder alone: labels are a much stronger
+       classification signal, and Safari matches on label text specifically. -->
   <form class="txt" id="txt" hidden>
     <div class="txt-f">
       <label for="who">Your name</label>
-      <input id="who" name="name" type="text" autocomplete="name"
-             autocapitalize="words" autocorrect="off" spellcheck="false"
-             enterkeyhint="next" maxlength="60" placeholder="First and last">
+      <div class="txt-in">
+        <input id="who" name="name" type="text" autocomplete="name"
+               autocapitalize="words" autocorrect="off" spellcheck="false"
+               enterkeyhint="send" maxlength="60" placeholder="First and last">
+        <button type="submit" id="txtb" aria-label="Send text message">
+          <svg viewBox="0 0 24 24" width="21" height="21" aria-hidden="true" focusable="false"
+               fill="none" stroke="currentColor" stroke-width="2.1"
+               stroke-linecap="square" stroke-linejoin="miter">
+            <path d="M4 12h15M13 6l6 6-6 6"/>
+          </svg>
+        </button>
+      </div>
     </div>
-    <div class="txt-f">
-      <label for="mail">Email <span class="opt">optional</span></label>
-      <input id="mail" name="email" type="email" autocomplete="email"
-             autocapitalize="off" autocorrect="off" spellcheck="false"
-             inputmode="email" enterkeyhint="send" maxlength="80" placeholder="you@example.com">
-    </div>
-    <button type="submit" id="txtb">Skip</button>
-    <p class="txt-p" id="txtp">Tap the autofill suggestion, then Send. Or skip it.</p>
+    <p class="txt-p" id="txtp">Tap the autofill suggestion, then the arrow.</p>
   </form>
 
   <script>
@@ -226,10 +231,8 @@
     var save = document.getElementById("save");
     var f = document.getElementById("txt");
     var i = document.getElementById("who");
-    var m = document.getElementById("mail");
     var p = document.getElementById("txtp");
-    var b = document.getElementById("txtb");
-    if (!save || !f || !i || !m || !p || !b) return;
+    if (!save || !f || !i || !p) return;
 
     if (!/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) return;  // href stands
 
@@ -246,12 +249,10 @@
     // wrong separator fails silently: Messages still opens, just empty, so the feature
     // looks like it worked.
 
-    function clean(v) { return (v || "").replace(/\s+/g, " ").trim().slice(0, 80); }
+    function clean(v) { return (v || "").replace(/\s+/g, " ").trim().slice(0, 60); }
     function body() {
-      var n = clean(i.value), e = clean(m.value);
-      if (!n && !e) return "Hey Elijah!";
-      if (!n) return "Hey Elijah! " + e;
-      return "Hey Elijah! This is " + n + (e ? " (" + e + ")" : "") + ".";
+      var n = clean(i.value);
+      return n ? "Hey Elijah! This is " + n + "." : "Hey Elijah!";
     }
     function go() {
       window.location.href = "sms:" + NUM + "?&body=" + encodeURIComponent(body());
@@ -261,9 +262,8 @@
     // stated reason, but everyone understands "this is the message you are sending".
     // Once autofill lands they see their own name inside it and the ask explains itself.
     function preview() {
-      var any = clean(i.value) || clean(m.value);
-      p.textContent = any ? "“" + body() + "”" : "Tap the autofill suggestion, then Send. Or skip it.";
-      b.textContent = any ? "Send" : "Skip";
+      var n = clean(i.value);
+      p.textContent = n ? "“" + body() + "”" : "Tap the autofill suggestion, then the arrow.";
     }
 
     save.addEventListener("click", function (e) {
@@ -275,18 +275,16 @@
       i.focus();                          // inside the gesture, so the keyboard opens
     });
 
-    [i, m].forEach(function (el) {
-      el.addEventListener("input", preview);
-      el.addEventListener("change", preview);
-    });
+    i.addEventListener("input", preview);
+    i.addEventListener("change", preview);
 
-    // Autofill does not fire input on every browser, and filling one field silently
-    // fills the other, so watch BOTH values for a few seconds after they first touch
-    // the form. Cheap, and it stops the preview lying about what is about to be sent.
-    f.addEventListener("focusin", function () {
-      var a = i.value, b2 = m.value, n = 0;
+    // Autofill does not fire input on every browser, so watch the value for a few
+    // seconds after they first touch the field. Cheap, and it stops the preview
+    // lying about what is about to be sent.
+    i.addEventListener("focus", function () {
+      var last = i.value, n = 0;
       var t = setInterval(function () {
-        if (i.value !== a || m.value !== b2) { a = i.value; b2 = m.value; preview(); }
+        if (i.value !== last) { last = i.value; preview(); }
         if (++n > 24) clearInterval(t);
       }, 250);
     }, { once: true });
