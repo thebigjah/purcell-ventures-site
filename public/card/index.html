@@ -117,7 +117,10 @@
   }
   .txt-in button:active{opacity:.85}
   .txt-in button svg{display:block}
-  .txt-p{margin:0;font-size:12.5px;color:var(--faint);min-height:1.15em}
+  /* Empty until there is a message to show, so the reserved height has to match one
+     rendered line exactly or the preview appearing shoves the page down. Pin the
+     line-height rather than inheriting body's 1.55, and reserve the same value. */
+  .txt-p{margin:0;font-size:12.5px;color:var(--faint);line-height:1.5;min-height:1.5em}
   .v{color:var(--brass);font-size:14px;white-space:nowrap;flex:none}
   li a:active .k{color:var(--brass)}
 
@@ -222,7 +225,7 @@
         </button>
       </div>
     </div>
-    <p class="txt-p" id="txtp">Tap the autofill suggestion, then the arrow.</p>
+    <p class="txt-p" id="txtp"></p>
   </form>
 
   <script>
@@ -261,9 +264,13 @@
     // The preview earns the field. Nobody fills in a name on a stranger's card for no
     // stated reason, but everyone understands "this is the message you are sending".
     // Once autofill lands they see their own name inside it and the ask explains itself.
+    // Empty until there is something to preview. The instruction that used to live
+    // here was scaffolding for a flow he has now confirmed works unprompted on a real
+    // phone, and telling someone to do the thing they already did is noise. The height
+    // is still reserved in CSS so the line appearing does not shove the page.
     function preview() {
       var n = clean(i.value);
-      p.textContent = n ? "“" + body() + "”" : "Tap the autofill suggestion, then the arrow.";
+      p.textContent = n ? "“" + body() + "”" : "";
     }
 
     save.addEventListener("click", function (e) {
