@@ -74,6 +74,80 @@
   .save:active{background:#b8942180}
   .save-note{margin:0;text-align:center;font-size:12.5px;color:var(--faint)}
 
+  /* THE CONTACT COACH.
+     iOS draws its own contact sheet over this page and nothing in a web page can
+     reach inside it. There is no API to scroll that sheet, highlight a row in it,
+     tap "Create New Contact" for them, or skip it. Checked before building this:
+     the sheet is system UI, not our DOM.
+
+     So the page does the only thing it can. It shows them a picture of the button
+     they are about to go looking for, a beat BEFORE the sheet covers everything,
+     and it is still sitting here when the sheet is dismissed. Fixed to the bottom
+     on purpose: that is where the real button is, and that is where their thumb
+     already is.
+
+     The failure this exists to stop, in his words: "if they click the checkmark or
+     exit out of that page entirely, my contact is never added." So the copy names
+     the checkmark explicitly rather than only naming the button we want. */
+  .coach{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    background:#191610;border-top:1px solid var(--brass);
+    padding:15px 18px calc(15px + env(safe-area-inset-bottom));
+    transform:translateY(110%);box-shadow:0 -18px 40px rgba(0,0,0,.55);
+    /* visibility, not just the transform: off-screen-by-transform still keeps the two
+       buttons in the tab order and in the accessibility tree, and on desktop the coach
+       never shows at all. */
+    visibility:hidden;
+    transition:transform .34s cubic-bezier(.2,.75,.3,1),visibility 0s linear .34s;
+  }
+  .coach[data-show]{transform:none;visibility:visible;transition-delay:0s}
+  .coach-in{max-width:430px;margin:0 auto;display:grid;grid-template-columns:78px 1fr;gap:14px;align-items:center}
+  .coach h3{margin:0 0 4px;font-size:14.5px;font-weight:700;line-height:1.3}
+  .coach p{margin:0;font-size:12.5px;line-height:1.45;color:var(--muted)}
+  .coach b{color:var(--ink);font-weight:700}
+
+  /* A drawing of the iOS sheet, not a screenshot of it. A screenshot would go stale
+     with the next iOS release and would be a picture of Apple's UI on his page. */
+  .mock{
+    position:relative;border:1px solid var(--rule);border-radius:9px;
+    background:#0d0b09;padding:7px 6px 6px;overflow:hidden;
+  }
+  .mock-hd{display:flex;align-items:center;gap:4px;margin-bottom:6px}
+  .mock-av{width:13px;height:13px;border-radius:50%;background:#3a342b;flex:none}
+  .mock-nm{height:4px;border-radius:2px;background:#3a342b;flex:1}
+  .mock-row{height:3px;border-radius:2px;background:#292420;margin-bottom:4px}
+  .mock-row:nth-child(3){width:82%} .mock-row:nth-child(4){width:66%}
+  .mock-cta{
+    height:13px;border-radius:3px;background:var(--brass);
+    display:flex;align-items:center;justify-content:center;
+    font-size:4.6px;font-weight:700;color:#17140C;letter-spacing:.02em;
+    margin-top:5px;
+  }
+  /* The arrow is the whole point of the drawing: it says "keep going down". */
+  .mock-arrow{
+    position:absolute;right:5px;top:26px;font-size:12px;line-height:1;color:var(--brass);
+    animation:nudge 1.25s ease-in-out infinite;
+  }
+  @keyframes nudge{0%,100%{transform:translateY(0);opacity:.55}50%{transform:translateY(5px);opacity:1}}
+  @media (prefers-reduced-motion:reduce){
+    .mock-arrow{animation:none;opacity:1}
+    .coach{transition:none}
+  }
+
+  /* Confirm state. Two buttons, because "did it work" has exactly two answers and
+     the old code assumed the answer was always yes. */
+  .coach-ask{display:none;gap:8px;max-width:430px;margin:10px auto 0}
+  .coach[data-ask] .coach-in{display:none}
+  .coach[data-ask] .coach-ask{display:grid;grid-template-columns:1fr 1fr}
+  .coach-ask button{
+    font:inherit;font-size:14px;font-weight:700;padding:12px 8px;
+    border:1px solid var(--brass);background:transparent;color:var(--brass);
+    border-radius:0;cursor:pointer;-webkit-appearance:none;
+  }
+  .coach-ask button.yes{background:var(--brass);color:#17140C}
+  .coach-q{max-width:430px;margin:0 auto;text-align:center;font-size:14.5px;font-weight:700;display:none}
+  .coach[data-ask] .coach-q{display:block}
+
   /* Sections. A rule and a label, then rows separated by hairlines. No boxes. */
   h2{
     font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--faint);
@@ -175,7 +249,7 @@
        The 770 is already in the downloadable vCard as TYPE=CELL, so this exposes nothing
        that saving his contact did not already hand over. -->
   <a class="save" id="save" href="sms:+17702805319?&amp;body=Hey%20Elijah!">Text me</a>
-  <p class="save-note" id="note">Opens your messages app. On a phone, my contact card downloads too.</p>
+  <p class="save-note" id="note">Opens your messages app.</p>
 
   <!-- THEIR NAME, WITHOUT MAKING THEM TYPE IT.
        A page cannot read the visitor's name off their phone. No browser exposes the
@@ -300,45 +374,111 @@
   })();
   </script>
 
+  <!-- The coach. Inert markup until the script below shows it. It sits next to the
+       thing it explains rather than at the end of the document. -->
+  <div class="coach" id="coach" role="status" aria-live="polite">
+    <div class="coach-in">
+      <div class="mock" aria-hidden="true">
+        <div class="mock-hd"><span class="mock-av"></span><span class="mock-nm"></span></div>
+        <div class="mock-row"></div><div class="mock-row"></div><div class="mock-row"></div>
+        <div class="mock-cta">Create New Contact</div>
+        <span class="mock-arrow">&#8595;</span>
+      </div>
+      <div>
+        <h3>Scroll down in the card</h3>
+        <p>My contact opens over this page. Scroll to the bottom, tap <b>Create New Contact</b>. The checkmark closes it <b>without saving</b>.</p>
+      </div>
+    </div>
+    <p class="coach-q">Did my contact save?</p>
+    <div class="coach-ask">
+      <button type="button" class="yes" id="coach-yes">Saved it</button>
+      <button type="button" id="coach-retry">Open it again</button>
+    </div>
+  </div>
+
   <script>
-  // AUTO-PROMPT ON TAP.
+  // SAVING THE CONTACT, IN THE ORDER A PERSON ACTUALLY DOES IT.
   //
-  // The tag carries this page's URL, so a tap opens Safari here. Navigating to a
-  // .vcf makes iOS show its own "Add to Contacts" sheet on top of the page, which is
-  // exactly the behaviour we want: they get the card without hunting for a button,
-  // and the page is still underneath when they dismiss it.
+  // What the old version did: 700ms after load it dropped the .vcf into a hidden
+  // iframe, iOS threw its contact sheet over the page unannounced, and the flag
+  // was written BEFORE the sheet appeared. So someone mid-read tapped the checkmark
+  // to get back to what they were looking at, nothing saved, and that phone was
+  // marked "prompted" forever and never offered again. Every bail was permanent.
   //
-  // Fired ONCE per device, and only on a real tap arrival. Two reasons:
-  // someone who already saved the contact and comes back for a link should not be
-  // nagged, and a browser that blocks the navigation still has the button above.
-  // The button is the real interface; this is a convenience on top of it.
+  // Three changes:
+  //   1. The coach is shown FIRST and the sheet follows it, so the last thing they
+  //      read before the sheet covers the page is the name of the button to press.
+  //   2. The flag is written when they say it saved, not when we hope it did.
+  //   3. Dismissing is recoverable. The coach is still on screen underneath with
+  //      "Open it again" on it.
+  //
+  // What this deliberately does NOT do: touch the sheet. It is system UI, not our
+  // DOM. No web API scrolls it, highlights a row in it, presses a button in it, or
+  // replaces it. The drawing above is as close to highlighting that button as a web
+  // page is allowed to get.
   (function () {
-    var KEY = "ep-vcard-prompted";
-    try { if (localStorage.getItem(KEY)) return; } catch (e) { return; }
-
+    var SAVED = "ep-vcard-saved", TRIES = "ep-vcard-tries", MAX = 3;
+    var coach = document.getElementById("coach");
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    if (!isMobile) return;               // desktop gets the button, not a download
+    var askTimer = null;
 
-    // A short beat so the page paints first. A contact sheet over a blank screen
-    // reads as a hijack; over a visible card it reads as the point.
-    setTimeout(function () {
-      try { localStorage.setItem(KEY, "1"); } catch (e) {}
+    function ls(k, v) {
+      try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); }
+      catch (e) { return null; }
+    }
+
+    function show() {
+      coach.removeAttribute("data-ask");
+      coach.setAttribute("data-show", "");
+      // Keep the last row of "Reach me" reachable instead of parked under the coach.
+      document.body.style.paddingBottom = (coach.offsetHeight + 24) + "px";
+    }
+    function hide() {
+      clearTimeout(askTimer);
+      coach.removeAttribute("data-show");
+      document.body.style.paddingBottom = "";
+    }
+
+    function fire() {
       var f = document.createElement("iframe");
       f.style.display = "none";
-      f.src = "/card/elijah.vcf";
+      // Cache-buster: without it a second tap can be a no-op and the sheet never
+      // returns, which is the one thing "Open it again" must not do.
+      f.src = "/card/elijah.vcf?t=" + Date.now();
       document.body.appendChild(f);
-      var n = document.getElementById("note");
-      // Points at "Add to contacts" in Reach me, NOT "the button above" — the button
-      // above is Text me now, and telling someone to tap it to save a contact would
-      // send them into a blank text message instead.
-      if (n) n.textContent = "If the contact card did not open, use Add to contacts below.";
-    }, 700);
+      clearTimeout(askTimer);
+      // A timer, not a detector. No event tells a page that the contact sheet opened
+      // or closed. Either way the question is waiting whenever they look back.
+      askTimer = setTimeout(function () {
+        coach.setAttribute("data-ask", "");
+        document.body.style.paddingBottom = (coach.offsetHeight + 24) + "px";
+      }, 3200);
+    }
+
+    function run() { show(); setTimeout(fire, 1800); }  // read it, THEN get the sheet
+
+    document.getElementById("coach-yes").addEventListener("click", function () { ls(SAVED, "1"); hide(); });
+    document.getElementById("coach-retry").addEventListener("click", run);
+
+    // "Add to contacts" in Reach me. On a phone the download attribute files the .vcf
+    // away in Files instead of opening the contact sheet, so mobile takes the sheet
+    // path and gets the coach with it. Desktop and no-JS keep the plain download,
+    // which is the correct behaviour there and has no sheet to explain.
+    var manual = document.getElementById("vcf-link");
+    if (manual && isMobile) manual.addEventListener("click", function (e) { e.preventDefault(); run(); });
+
+    if (!isMobile) return;                      // desktop gets the link, not a sheet
+    if (ls(SAVED) === "1") return;              // they told us it worked
+    var n = parseInt(ls(TRIES) || "0", 10);
+    if (n >= MAX) return;                       // asked three times, that is enough
+    ls(TRIES, String(n + 1));
+    setTimeout(run, 600);                       // let the page paint first
   })();
   </script>
 
   <h2>Reach me</h2>
   <ul>
-    <li><a href="/card/elijah.vcf" download="Elijah-Purcell.vcf"><span class="k">Add to contacts<span class="d">If the card did not download on its own</span></span><span class="v">vCard</span></a></li>
+    <li><a href="/card/elijah.vcf" download="Elijah-Purcell.vcf" id="vcf-link"><span class="k">Add to contacts<span class="d">Opens the contact card again</span></span><span class="v">vCard</span></a></li>
     <!-- PERSONAL FIRST, WORK SECOND. His rule for the tap card, 23 Aug: someone holding
          this got the tag from him directly, so they get the cell. The 205 stays listed
          but demoted, because it is the number on public listings and some people will
