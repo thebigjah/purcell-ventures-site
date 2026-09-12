@@ -9,9 +9,6 @@ TEL;TYPE=WORK,VOICE:+12054627839
 EMAIL;TYPE=INTERNET,HOME;TYPE=pref:elijahpurcell@gmail.com
 EMAIL;TYPE=INTERNET,WORK:elijah@purcell-ventures.com
 URL:https://purcellventures.co
-X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/theelijahpurcell
-X-SOCIALPROFILE;TYPE=github:https://github.com/thebigjah
-X-SOCIALPROFILE;TYPE=instagram:https://instagram.com/theelijahpurcell
 PHOTO;ENCODING=b;TYPE=JPEG:/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUG
  BgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2w
  BDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQk
@@ -490,4 +487,10 @@ PHOTO;ENCODING=b;TYPE=JPEG:/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUG
  W7pnUIwnpSnxwal6pDDeD5AC30qpWkc6DPIq1dLQNdTESEnmk/VPTCjL0VLVLCS1l7HFNRZKir
  71doqpACBVHeMRZB8Ux7RU1Q1IvykZ5xTVpcNFJ8+ce9L3gkgeaftbMyZYrwPJoE30heyXHL+M
  IjQliTU1dCdF9RjkDxUSGa3sG3jDSDwO1IueoLmYFQ+xPZaOPhZZu3pFNN9n/9k=
+item1.URL:https://www.linkedin.com/in/theelijahpurcell
+item1.X-ABLabel:LinkedIn
+item2.URL:https://github.com/thebigjah
+item2.X-ABLabel:GitHub
+item3.URL:https://instagram.com/theelijahpurcell
+item3.X-ABLabel:Instagram
 END:VCARD
