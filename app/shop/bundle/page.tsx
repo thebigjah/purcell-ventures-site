@@ -11,7 +11,6 @@ export const metadata = {
 const PAYMENT_LINK = process.env.BUNDLE_PAYMENT_LINK || "#configure-stripe";
 
 export default function BundlePage() {
-  const stripeConfigured = !!process.env.BUNDLE_PAYMENT_LINK;
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>

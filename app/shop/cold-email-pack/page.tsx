@@ -48,7 +48,6 @@ const PACK_CONTENTS = [
 ];
 
 export default function ColdEmailPackPage() {
-  const stripeConfigured = !!process.env.COLD_EMAIL_PACK_PAYMENT_LINK;
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>

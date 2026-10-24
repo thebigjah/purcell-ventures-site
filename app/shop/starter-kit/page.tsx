@@ -56,7 +56,6 @@ const KIT_CONTENTS = [
 ];
 
 export default function StarterKitPage() {
-  const stripeConfigured = !!process.env.STARTER_KIT_PAYMENT_LINK;
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>

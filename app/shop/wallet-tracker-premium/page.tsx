@@ -11,7 +11,6 @@ export const metadata = {
 const PAYMENT_LINK = process.env.WALLET_TRACKER_PREMIUM_PAYMENT_LINK || "#configure-stripe";
 
 export default function WalletTrackerPremiumPage() {
-  const stripeConfigured = !!process.env.WALLET_TRACKER_PREMIUM_PAYMENT_LINK;
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>

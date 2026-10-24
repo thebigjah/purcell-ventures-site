@@ -22,7 +22,6 @@ const CATEGORIES = [
 ];
 
 export default function SubjectLinesPage() {
-  const stripeConfigured = !!process.env.SUBJECT_LINES_PAYMENT_LINK;
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
