@@ -46,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Every post, not the two that happened to be listed. A post absent from the
     // sitemap is a post an engine finds only by walking the index page, if it does.
+    { url: `${BASE}/blog/not-secure-label-website-fix`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/blog/agents-that-cannot-fix-what-they-find`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/blog/shipped-is-not-activated`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/blog/ai-augmented-sales-rep-day`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },

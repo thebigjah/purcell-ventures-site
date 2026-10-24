@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "not-secure-label-website-fix",
+    title: "What the \"Not secure\" label next to your website means, and how to fix it",
+    excerpt: "That gray \"Not secure\" label in the address bar shows up for your customers too. Here is what it means and how to clear it on most small business hosts.",
+    date: "October 24, 2026",
+    readingTime: "5 min read",
+    category: "Guide",
+  },
+  {
     slug: "starting-a-business-at-alabama",
     title: "Starting a business as a student at Alabama",
     excerpt: "Almost every student business aims at students. Very few aim at the several hundred local businesses serving them, who have money and decide quickly. Plus the three mistakes that cost the most time.",
