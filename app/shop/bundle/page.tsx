@@ -19,11 +19,6 @@ export default function BundlePage() {
       <RefTracker product="bundle" />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "880px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        {!stripeConfigured && (
-          <div style={{ background: "rgba(229, 74, 40, 0.1)", border: "2px solid #e54a28", padding: "16px 20px", marginBottom: "32px", fontSize: "13px", color: "#e54a28" }}>
-            <strong>⚠ Admin notice:</strong> Set <code style={{ background: "var(--color-warm-bg-alt)", padding: "2px 6px" }}>BUNDLE_PAYMENT_LINK</code> env var. Upload <code>dist/pv-complete-bundle.zip</code> (82 KB, 61 files) to Stripe.
-          </div>
-        )}
 
         {/* Hero */}
         <header style={{ textAlign: "center", marginBottom: "48px" }}>

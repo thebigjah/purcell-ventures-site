@@ -64,12 +64,6 @@ export default function StarterKitPage() {
       <RefTracker product="starter-kit" />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        {/* Configuration warning, only shows if STARTER_KIT_PAYMENT_LINK env var is missing */}
-        {!stripeConfigured && (
-          <div style={{ background: "rgba(229, 74, 40, 0.1)", border: "2px solid #e54a28", padding: "16px 20px", marginBottom: "32px", fontSize: "13px", color: "#e54a28" }}>
-            <strong>⚠ Admin notice:</strong> Set <code style={{ background: "var(--color-warm-bg-alt)", padding: "2px 6px" }}>STARTER_KIT_PAYMENT_LINK</code> env var on Vercel to enable purchases. See setup doc: <code>~/.claude/elijahbot/drafts/STRIPE-SETUP-STARTER-KIT.md</code>
-          </div>
-        )}
 
         {/* Hero */}
         <header style={{ textAlign: "center", marginBottom: "56px" }}>

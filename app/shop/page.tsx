@@ -72,9 +72,7 @@ export default function ShopPage() {
           <p style={{ margin: "0 0 16px", fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>
             The Starter Kit ($19) and Cold Email Mastery Pack ($29) cost <strong>$48 separately</strong>. Buy both for <strong style={{ color: "var(--color-warm-accent)" }}>$39</strong>.
           </p>
-          <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", fontStyle: "italic", margin: 0 }}>
-            (Bundle requires Stripe Coupon, see <code>~/.claude/elijahbot/drafts/STRIPE-SETUP-STARTER-KIT.md</code> for setup. For now, buy each separately.)
-          </p>
+
         </div>
 
         {/* Products grid */}

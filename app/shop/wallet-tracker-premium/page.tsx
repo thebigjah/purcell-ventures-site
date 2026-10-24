@@ -19,11 +19,6 @@ export default function WalletTrackerPremiumPage() {
       <RefTracker product="wallet-tracker-premium" />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "880px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        {!stripeConfigured && (
-          <div style={{ background: "rgba(229, 74, 40, 0.1)", border: "2px solid #e54a28", padding: "16px 20px", marginBottom: "32px", fontSize: "13px", color: "#e54a28" }}>
-            <strong>⚠ Admin notice:</strong> This product launches month 2-3 of the Telegram channel build-up. Set <code style={{ background: "var(--color-warm-bg-alt)", padding: "2px 6px" }}>WALLET_TRACKER_PREMIUM_PAYMENT_LINK</code> when ready. Also configure Stripe webhook + Telegram bot per <code>STRIPE-WEBHOOK-SETUP.md</code>.
-          </div>
-        )}
 
         {/* Hero */}
         <header style={{ textAlign: "center", marginBottom: "48px" }}>
