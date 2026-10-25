@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "start-using-ai-this-week-three-safe-first-tasks",
+    title: "How to start using AI in your business this week: three safe first tasks",
+    excerpt: "You can start using AI in your business this week with one free account and three small writing tasks. Here is how to set it up safely and check every answer before you use it.",
+    date: "October 25, 2026",
+    readingTime: "5 min read",
+    category: "Guide",
+  },
+  {
     slug: "not-secure-label-website-fix",
     title: "What the \"Not secure\" label next to your website means, and how to fix it",
     excerpt: "That gray \"Not secure\" label in the address bar shows up for your customers too. Here is what it means and how to clear it on most small business hosts.",
