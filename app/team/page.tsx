@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { PageHero, Section, Prose } from "@/app/components/ui";
 
 export const metadata = {
   alternates: { canonical: "/team" },
-  title: "The Purcell Ventures Team: Elijah Purcell and Fifteen AI Agents",
+  title: "The team: Elijah Purcell and fifteen AI agents",
   description:
-    "Purcell Ventures runs on one person and fifteen AI agents. Here is every one of them, what it does, and what it is not allowed to do.",
+    "Purcell Ventures runs on one person and fifteen AI agents. This page lists every agent, what it does, and what it is not allowed to do.",
 };
 
 // WHY THIS PAGE SAYS "AI AGENT" IN THE FIRST SENTENCE
@@ -43,7 +44,7 @@ const TEAM: Agent[] = [
     wont: "Start onboarding before the invoice goes out." },
   { key: "audrey", name: "Audrey Ashford", role: "Activation Auditor",
     does: "Visits every live property as a stranger would and reports whether a visitor can buy or get in touch.",
-    wont: "Pass a page just because it loads. A price with no way to pay it gets logged as a finding." },
+    wont: "Pass a page because it loads. A price with no way to pay it gets logged as a finding." },
   { key: "cecily", name: "Cecily Cross", role: "Compliance and Secrets",
     does: "Scans every repository for credentials that should not be in it, and re-checks the ones already flagged.",
     wont: "Close a finding because a scan failed to reach the thing it was checking." },
@@ -106,79 +107,66 @@ export default function TeamPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
-      <main className="mx-auto max-w-4xl px-6 py-20">
-      <p className="text-xs uppercase tracking-[0.2em] text-neutral-500">
-        Purcell Ventures LLC
-      </p>
-      <h1 className="mt-3 text-4xl font-semibold leading-tight sm:text-5xl">
-        One person and fifteen AI agents
-      </h1>
+      <main>
+        <PageHero
+          planet="consulting"
+          kicker="Purcell Ventures LLC"
+          title="One person and fifteen AI agents"
+          lede={<><strong>Everyone below is an AI agent.</strong> They have names and faces because it is easier to ask what Quentin is doing than what the proposal subsystem is doing, and because an agent that signs its own name can be held to what it said.</>}
+        />
 
-      <div className="mt-6 max-w-2xl space-y-4 text-neutral-600 dark:text-neutral-300">
-        <p>
-          <strong>Everyone below is an AI agent.</strong> They have names
-          and faces because it is easier to ask what Quentin is doing than to ask what the
-          proposal subsystem is doing, and because an agent that signs its own name can be
-          held to what it said.
-        </p>
-        <p>
-          Each one runs on a schedule, does a narrow job, and writes down what it found.
-          Each agent also has a list of things it may not do. I set those limits so no agent
-          can invent a price, close its own findings, or send mail as a person.
-        </p>
-        <p className="text-sm">
-          Anything one of them sends you says so in the signature, and a person reads the
-          replies.
-        </p>
-      </div>
+        <Section title="How the agents work">
+          <Prose>
+            <p>
+              Each one runs on a schedule, does a narrow job, and writes down what it found. Each agent also has a list of things it may not do. Elijah set those limits so no agent can invent a price, close its own findings, or send mail as a person.
+            </p>
+            <p>
+              Anything one of them sends you says so in the signature, and a person reads the replies.
+            </p>
+          </Prose>
+        </Section>
 
-      <ul className="mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2">
-        {TEAM.map((a) => (
-          <li key={a.key} className="flex gap-4">
-            {HAS_PHOTO.has(a.key) ? (
-              <Image
-                src={`/team/${a.key}-square.png`}
-                alt=""
-                width={64}
-                height={64}
-                className="h-16 w-16 shrink-0 object-cover"
-              />
-            ) : (
-              // Sable and Henry have no headshot yet. A monogram is a cosmetic gap; a
-              // broken <Image> is a broken page.
-              <div
-                aria-hidden
-                className="flex h-16 w-16 shrink-0 items-center justify-center bg-neutral-200 text-lg font-semibold text-neutral-500 dark:bg-neutral-800"
-              >
-                {a.name.split(" ").map((w) => w[0]).join("")}
-              </div>
-            )}
-            <div className="min-w-0">
-              <p className="font-semibold leading-tight">{a.name}</p>
-              <p className="text-sm text-neutral-500">
-                {a.role}
-                {a.facing ? ", talks to clients" : ""}
-              </p>
-              <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
-                {a.does}
-              </p>
-              <p className="mt-2 border-l-2 border-neutral-300 pl-3 text-sm text-neutral-500 dark:border-neutral-700">
-                <span className="font-medium">Will not: </span>
-                {a.wont}
-              </p>
-            </div>
-          </li>
-        ))}
-      </ul>
+        <Section title="The roster" intro="Four of them talk to clients. The rest work inside the company.">
+          <div className="ui-entries">
+            {TEAM.map((a) => (
+              <article className="ui-entry" key={a.key} style={{ gridTemplateColumns: "64px minmax(0, 1fr)", columnGap: 18 }}>
+                {HAS_PHOTO.has(a.key) ? (
+                  <Image
+                    src={`/team/${a.key}-square.png`}
+                    alt=""
+                    width={64}
+                    height={64}
+                    style={{ width: 64, height: 64, objectFit: "cover" }}
+                  />
+                ) : (
+                  // Sable and Henry have no headshot yet. A monogram is a cosmetic gap; a
+                  // broken <Image> is a broken page.
+                  <div
+                    aria-hidden
+                    style={{ width: 64, height: 64, display: "flex", alignItems: "center", justifyContent: "center", background: "var(--surface-2)", color: "var(--muted)", fontFamily: "var(--font-display)", fontSize: 20 }}
+                  >
+                    {a.name.split(" ").map((w) => w[0]).join("")}
+                  </div>
+                )}
+                <div>
+                  <h3>{a.name}</h3>
+                  <p className="ui-entry__org">{a.role}{a.facing ? ", talks to clients" : ""}</p>
+                  <p style={{ margin: "10px 0 0", color: "var(--fg-2)" }}>{a.does}</p>
+                  <p className="ui-muted" style={{ margin: "8px 0 0" }}>Will not: {a.wont}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </Section>
 
-      <div className="mt-16 border-t border-neutral-200 pt-8 text-sm text-neutral-500 dark:border-neutral-800">
-        <p>
-          The one human is <strong>Elijah Purcell</strong>, who founded the company, does
-          the building, and makes every decision the agents are not allowed to make:
-          prices, what gets sent to a client, and what happens to money.
-        </p>
-      </div>
-    </main>
+        <Section title="The one human">
+          <Prose>
+            <p>
+              <strong>Elijah Purcell</strong>, Founder/CEO, founded the company, does the building, and makes every decision the agents are not allowed to make: prices, what gets sent to a client, and what happens to money.
+            </p>
+          </Prose>
+        </Section>
+      </main>
     </>
   );
 }

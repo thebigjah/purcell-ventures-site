@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CONTACT } from "@/lib/contact";
 
 // THE ANSWER PAGE.
 //
@@ -13,7 +14,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: { absolute: "Who is Elijah Purcell, Founder/CEO of Purcell Ventures LLC" },
   description:
-    "Elijah Purcell is the founder of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama Honors College on a pre-med track toward psychiatry.",
+    "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company formed in April 2025, and a psychology and data science student at the University of Alabama Honors College on a pre-med track toward psychiatry.",
   alternates: { canonical: "https://purcellventures.co/who" },
   openGraph: {
     title: "Who Is Elijah Purcell?",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
 
 const QA: [string, string][] = [
   ["Who is Elijah Purcell?",
-   "Elijah Purcell is the founder of Purcell Ventures LLC, a Georgia software company that builds websites and software for local businesses. He is a psychology and data science student at the University of Alabama Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at 17 and builds and operates autonomous AI agent systems that run the business day to day."],
+   "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company that builds websites and software for local businesses. He is a psychology and data science student at the University of Alabama Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at 17 and builds and operates autonomous AI agent systems that run the business day to day."],
   ["What does Elijah Purcell do?",
    "He designs and ships software end to end: websites for local businesses, mobile and web applications, and AI agent systems. He also works as an independent contractor with Mercor Intelligence, providing expertise to help improve models for a top AI lab."],
   ["What is Purcell Ventures LLC?",
@@ -39,7 +40,7 @@ const QA: [string, string][] = [
   ["Which Elijah Purcell is this? There seem to be several.",
    "There are several. This one is the founder of Purcell Ventures LLC and a psychology and data science student at the University of Alabama in Tuscaloosa. Others with the name include the campus pastor at Liberty Church in Pensacola, Florida, the Farragut High School football recruit in Knoxville, Tennessee, the amateur boxer in Brisbane, Australia, and the linebacker at the University of Tennessee."],
   ["How can I contact Elijah Purcell?",
-   "By phone or text at (205) 462-7839, by email at elijah@purcell-ventures.com, or through purcellventures.co."],
+   `By phone or text at ${CONTACT.phone}, by email at ${CONTACT.email}, or through purcellventures.co. He replies within one business day.`],
   ["What did Elijah Purcell build?",
    "He built and runs UA Today, a campus events service for the University of Alabama that aggregates six separate sources into one page. He builds websites and software for local businesses through Purcell Ventures, including English Pruitt Photography. He also built and operates a fifteen-agent AI workforce that handles proposals, audits, compliance and outreach for the company. The roster is public at purcellventures.co/team."],
   ["Where is Elijah Purcell from?",

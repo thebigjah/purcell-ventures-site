@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Now: What Elijah Purcell Is Focused On",
+  title: "Now: what Elijah Purcell is working on",
   description:
-    "An old-internet /now page from Elijah Purcell: what I'm building, studying, figuring out, practicing, reading and wrestling with.",
+    "Elijah Purcell's /now page: what he is building, studying, figuring out, practicing, reading and thinking through this month.",
   alternates: { canonical: "/now" },
 };
 

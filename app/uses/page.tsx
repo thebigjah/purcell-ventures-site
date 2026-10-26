@@ -1,175 +1,105 @@
-"use client";
+import { PageHero, Section, Rows, Prose } from "@/app/components/ui";
 
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+// Rebuilt on the page kit 26 Oct 2026. The condenser mic line said "for worship"; he is not
+// currently leading worship, so it now says singing.
 
-const STACK = [
+const STACK: { category: string; items: { name: string; line: string }[] }[] = [
   {
-    roman: "I.",
-    category: "The Editor",
+    category: "Editor",
     items: [
-      { name: "Claude Code",  desc: "The terminal AI assistant that wrote most of the code on this site. I pay for a subscription and use it every day." },
-      { name: "VS Code",      desc: "For type-checking, debugging and design previews after the AI hands off." },
-      { name: "Terminal",     desc: "PowerShell on Windows, iTerm2 and zsh on Mac." },
+      { name: "Claude Code", line: "The terminal AI assistant that wrote most of the code on this site. I pay for a subscription and use it every day." },
+      { name: "VS Code", line: "For type-checking, debugging and design previews after the AI hands off." },
+      { name: "Terminal", line: "PowerShell on Windows, iTerm2 and zsh on Mac." },
     ],
   },
   {
-    roman: "II.",
     category: "Languages",
     items: [
-      { name: "TypeScript",   desc: "Default for anything that ships to a browser or a phone." },
-      { name: "Python",       desc: "Default for scraping, automation, AI calls and server code." },
-      { name: "Bash and PowerShell",    desc: "Bash on Mac, PowerShell on Windows. Every workflow eventually gets a script." },
+      { name: "TypeScript", line: "The default for anything that ships to a browser or a phone." },
+      { name: "Python", line: "The default for scraping, automation, AI calls and server code." },
+      { name: "Bash and PowerShell", line: "Bash on Mac, PowerShell on Windows. Every workflow eventually gets a script." },
     ],
   },
   {
-    roman: "III.",
     category: "Frameworks",
     items: [
-      { name: "Next.js",      desc: "purcellventures.co, elijahbot-refresh and every web tool I ship." },
-      { name: "React Native and Expo", desc: "Mobile apps, including Persona AI and a prayer-walk app." },
-      { name: "Electron",     desc: "Desktop apps. ElijahBot Overlay is one." },
-      { name: "Tailwind CSS", desc: "For styling when I am not writing inline styles." },
+      { name: "Next.js", line: "purcellventures.co, elijahbot-refresh and every web tool I ship." },
+      { name: "React Native and Expo", line: "Mobile apps, including Persona AI and a prayer-walk app." },
+      { name: "Electron", line: "Desktop apps. ElijahBot Overlay is one." },
+      { name: "Tailwind CSS", line: "For styling when I am not writing my own CSS." },
     ],
   },
   {
-    roman: "IV.",
-    category: "AI Stack",
+    category: "AI",
     items: [
-      { name: "Claude API",   desc: "Anthropic's API. Default LLM for everything I build." },
-      { name: "OpenAI API",   desc: "Backup model and voice transcription with Whisper." },
-      { name: "ElevenLabs",   desc: "TTS for the overlay's voice output." },
-      { name: "Embedding APIs", desc: "Semantic search across notes, memory and content libraries." },
+      { name: "Claude API", line: "Anthropic's API. The default model for everything I build." },
+      { name: "OpenAI API", line: "The backup model, and voice transcription with Whisper." },
+      { name: "ElevenLabs", line: "Text to speech for the overlay's voice output." },
+      { name: "Embedding APIs", line: "Semantic search across notes, memory and content libraries." },
     ],
   },
   {
-    roman: "V.",
     category: "Infrastructure",
     items: [
-      { name: "Vercel",       desc: "Hosting for every Next.js site I ship." },
-      { name: "Cloudflare Tunnel", desc: "For exposing localhost so the phone can reach the desktop dashboard." },
-      { name: "ntfy.sh",      desc: "Push notifications without an app. Powers ElijahBot's phone-tap approvals." },
-      { name: "Resend",       desc: "Transactional email, booking confirmations, lead notifications." },
-      { name: "Supabase / Firebase", desc: "Whichever fits the app. Supabase for SQL, Firebase for realtime data and auth." },
+      { name: "Vercel", line: "Hosting for every Next.js site I ship." },
+      { name: "Cloudflare Tunnel", line: "Exposes localhost so the phone can reach the desktop dashboard." },
+      { name: "ntfy.sh", line: "Push notifications without an app. It powers ElijahBot's one-tap approvals on the phone." },
+      { name: "Resend", line: "Transactional email, booking confirmations and lead notifications." },
+      { name: "Supabase or Firebase", line: "Whichever fits the app. Supabase for SQL, Firebase for realtime data and auth." },
     ],
   },
   {
-    roman: "VI.",
     category: "Automation",
     items: [
-      { name: "yt-dlp",       desc: "Source footage for the YouTube pipeline." },
-      { name: "MoviePy",      desc: "Assembling generated content into final videos." },
-      { name: "Selenium",     desc: "Headless scraping when an API doesn't exist." },
-      { name: "Task Scheduler", desc: "Windows-side cron. Every ElijahBot job runs on it." },
+      { name: "yt-dlp", line: "Source footage for the YouTube pipeline." },
+      { name: "MoviePy", line: "Assembles generated content into finished videos." },
+      { name: "Selenium", line: "Headless scraping when no API exists." },
+      { name: "Task Scheduler", line: "Cron for Windows. Every ElijahBot job runs on it." },
     ],
   },
   {
-    roman: "VII.",
     category: "Hardware",
     items: [
-      { name: "Windows desktop", desc: "Runs the long-running automations." },
-      { name: "MacBook",         desc: "For travel. Shares the same memory directory, synced through iCloud." },
-      { name: "Android phone",   desc: "ntfy on the home screen for one-tap approvals from anywhere." },
-      { name: "Condenser mic",   desc: "For worship, course recording and voiceover." },
+      { name: "Windows desktop", line: "Runs the long-running automations." },
+      { name: "MacBook", line: "For travel. It shares the same memory directory, synced through iCloud." },
+      { name: "Android phone", line: "ntfy on the home screen for one-tap approvals from anywhere." },
+      { name: "Condenser mic", line: "For singing, course recording and voiceover." },
     ],
   },
   {
-    roman: "VIII.",
     category: "Tools I refuse",
     items: [
-      { name: "Subscription bloat", desc: "If I don't open a subscription weekly, I cancel it." },
-      { name: "No-code platforms", desc: "I used them and stopped because moving off them is hard. I write custom code instead." },
-      { name: "Generic AI 'productivity' tools", desc: "I write my own workflows." },
+      { name: "Subscription bloat", line: "If I do not open a subscription every week, I cancel it." },
+      { name: "No-code platforms", line: "I used them and stopped, because moving off them is hard. I write custom code instead." },
+      { name: "Generic AI productivity tools", line: "I write my own workflows." },
     ],
   },
 ];
 
 export default function UsesPage() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden" }}>
-      <VignetteBackground />
+    <main>
+      <PageHero
+        planet="tools"
+        kicker="Uses"
+        title="The tools I use"
+        lede="My stack: editor, languages, frameworks, AI, infrastructure, automation and hardware. I use every tool here in production work."
+        meta="Updated May 2026"
+      />
 
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "920px", margin: "0 auto", padding: "72px 36px 96px" }}>
+      {STACK.map((bucket) => (
+        <Section key={bucket.category} title={bucket.category}>
+          <Rows items={bucket.items} />
+        </Section>
+      ))}
 
-        {/* Page head */}
-        <header className="pv-page-head">
-          <div className="pv-mono-label">Updated May 2026</div>
-          <h1>
-            What I <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>use</em>
-          </h1>
-          <p className="deck">
-            My stack: editor, languages, frameworks, AI, infrastructure, automation and hardware. I use every tool here in production work.
+      <Section>
+        <Prose>
+          <p className="ui-muted">
+            I update this page when the stack changes. The idea comes from <a href="https://uses.tech" target="_blank" rel="noopener noreferrer">uses.tech</a>.
           </p>
-        </header>
-
-        {/* Stack list */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
-          {STACK.map((bucket) => (
-            <div key={bucket.category} className="pv-card" style={{ padding: "32px 36px 28px" }}>
-              <span className="b3"></span><span className="b4"></span>
-              <div style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "28px", alignItems: "start" }}>
-                <div style={{ borderRight: "1px solid var(--color-warm-border)", paddingRight: "24px", minWidth: "150px" }}>
-                  <div className="pv-italic" style={{ fontSize: "32px", color: "var(--color-warm-accent)", lineHeight: 1, marginBottom: "8px" }}>
-                    {bucket.roman}
-                  </div>
-                  <h2 style={{
-                    fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
-                    fontSize: "16px", letterSpacing: "0.04em",
-                    color: "var(--color-warm-text)", textTransform: "uppercase",
-                    margin: 0, lineHeight: 1.2,
-                  }}>
-                    {bucket.category}
-                  </h2>
-                </div>
-                <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
-                  {bucket.items.map((item) => (
-                    <div key={item.name}>
-                      <div style={{
-                        fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
-                        fontSize: "15px", letterSpacing: "0.02em",
-                        color: "var(--color-warm-text)",
-                        marginBottom: "4px",
-                      }}>
-                        {item.name}
-                      </div>
-                      <div className="pv-italic" style={{
-                        fontSize: "14.5px", lineHeight: 1.55,
-                        color: "var(--color-warm-text)", opacity: 0.85,
-                      }}>
-                        {item.desc}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Closing note */}
-        <p className="pv-italic" style={{
-          marginTop: "48px",
-          fontSize: "14px", color: "var(--color-warm-text-light)",
-          textAlign: "center", lineHeight: 1.7,
-        }}>
-          I update this page when the stack changes. Inspired by{" "}
-          <a href="https://uses.tech" target="_blank" rel="noopener noreferrer" style={{ color: "var(--color-warm-accent)", textDecoration: "underline", textDecorationStyle: "dotted" }}>uses.tech</a>.
-        </p>
-
-      </main>
-
-      <footer style={{
-        position: "relative", zIndex: 5,
-        padding: "24px 36px",
-        borderTop: "1px solid var(--color-warm-border)",
-        display: "flex", justifyContent: "space-between", alignItems: "center",
-        flexWrap: "wrap", gap: "12px",
-        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-        fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
-        color: "var(--color-warm-text-light)",
-      }}>
-        <span>© {new Date().getFullYear()} Purcell Ventures LLC, Acworth, GA</span>
-        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>Home</a>
-      </footer>
-    </div>
+        </Prose>
+      </Section>
+    </main>
   );
 }

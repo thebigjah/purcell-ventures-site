@@ -1,121 +1,89 @@
 import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
 import { QA } from "./layout";
 import { CONTACT } from "@/lib/contact";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import { PageHero, Section, Prose, Facts, Rows } from "@/app/components/ui";
 
-const link = { color: "var(--color-warm-accent)", textDecoration: "underline" };
-const H2 = { fontFamily: "'Cinzel', Georgia, serif", fontSize: "26px", fontWeight: 600, lineHeight: 1.2, margin: "44px 0 14px" } as const;
+// The company's answer page, written in the third person to be quoted. /who answers for
+// the person. Rebuilt on the page kit 26 Oct 2026.
 
 const FACTS: [string, string][] = [
   ["Legal name", "Purcell Ventures LLC"],
-  ["Registered", "Georgia, control number 25075361"],
+  ["Registered", `Georgia, control number ${CONTACT.llcControlNumber}`],
   ["Formed", "8 April 2025"],
-  ["Founder and sole member", "Elijah Purcell"],
+  ["Founder/CEO and sole member", "Elijah Purcell"],
   ["Operated from", "Tuscaloosa, Alabama"],
   ["Registered address", "Acworth, Georgia"],
-  ["People", "One. Plus fifteen AI agents, which are software"],
-  ["Sister brand", "Mantle Field Services, Metro Atlanta"],
+  ["People", "One, plus fifteen AI agents, which are software"],
+  ["Sister brand", "Mantle Field Services, metro Atlanta"],
+];
+
+const DIVISIONS = [
+  { name: "Websites", line: "Custom websites for local businesses, with hosting and updates after launch.", fig: "From $400 setup and $99 a month", href: "/sites" },
+  { name: "Digital", line: "Add-ons and ongoing service for local businesses: chatbots, booking, CRM and more.", fig: "From $99 a month", href: "/digital" },
+  { name: "Consulting", line: "Hands-on AI work: workshops and implementation.", fig: "From $125 a person", href: "/consulting" },
+  { name: "Software", line: "Custom builds: mobile apps, web platforms and internal tools.", href: "/software" },
+  { name: "Steady", line: "Personal IT for people who do not have an IT person.", fig: "From $79 a month", href: "/steady" },
+  { name: "Real estate", line: "Planned. Not taking clients yet." },
 ];
 
 export default function CompanyPage() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <VignetteBackground />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
+    <main>
+      <PageHero
+        kicker="The company"
+        title="What is Purcell Ventures?"
+        lede={<><strong>Purcell Ventures LLC</strong> is a Georgia software company that builds websites, custom software and AI tools for small businesses. <Link className="ui-link" href="/who">Elijah Purcell</Link> founded it on 8 April 2025, and it is registered with the Georgia Secretary of State. One person runs it. He answers the phone, writes the code and signs the contract.</>}
+        meta="Last reviewed 20 August 2026"
+      />
 
-      <Breadcrumbs trail={[
-        { name: "Home", href: "/" },
-        { name: "What is Purcell Ventures", href: "/what-is-purcell-ventures" },
-      ]} />
-        <header className="pv-page-head">
-          <div className="pv-mono-label">Last reviewed 20 August 2026</div>
-          <h1>
-            What is <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Purcell Ventures</em>?
-          </h1>
-        </header>
+      <Section title="At a glance">
+        <Facts items={FACTS} />
+      </Section>
 
-        <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
-
-          <p style={{ fontSize: "18px" }}>
-            <strong>Purcell Ventures LLC</strong> is a Georgia software company that builds
-            websites, custom software and AI tooling for small businesses. It was founded
-            by <Link href="/who" style={link}>Elijah Purcell</Link> on 8 April 2025 and is
-            registered with the Georgia Secretary of State.
-          </p>
-
+      <Section title="Which Purcell Ventures this is">
+        <Prose>
           <p>
-            One person runs it. He answers the phone, writes the code, and signs the
-            contract.
+            An older, unrelated <strong>Purcell Ventures LLC is registered in New York</strong>. This one is the Georgia filing, control number {CONTACT.llcControlNumber}, formed 8 April 2025 by Elijah Purcell, and the record is public and searchable.
           </p>
+        </Prose>
+      </Section>
 
-          <h2 style={H2}>At a glance</h2>
-          <div style={{ overflowX: "auto" }}>
-            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "15px", margin: "16px 0" }}>
-              <tbody>
-                {FACTS.map(([k, v]) => (
-                  <tr key={k}>
-                    <td style={{ padding: "8px 16px 8px 0", borderBottom: "1px solid rgba(212,175,55,0.12)", color: "var(--color-warm-text-muted)", whiteSpace: "nowrap", verticalAlign: "top" }}>{k}</td>
-                    <td style={{ padding: "8px 0", borderBottom: "1px solid rgba(212,175,55,0.12)" }}>{v}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+      <Section title="What it does" intro="Five active divisions and one planned.">
+        <Rows items={DIVISIONS} />
+        <Prose>
+          <p style={{ marginTop: 24 }}>
+            <Link href="/team">Fifteen AI agents</Link> run proposals, audits, compliance and outreach on a schedule. That page opens by saying every one of them is software.
+          </p>
+        </Prose>
+      </Section>
 
-          <h2 style={H2}>Which Purcell Ventures this is</h2>
+      <Section title="Common questions">
+        <div className="ui-entries">
+          {QA.map(([q, a]) => (
+            <article className="ui-entry" key={q}>
+              <div><h3>{q}</h3></div>
+              <div className="ui-entry__body"><p>{a}</p></div>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section title="Contact">
+        <Prose>
           <p>
-            There is an older, unrelated <strong>Purcell Ventures LLC registered in New
-            York</strong>. This one is the Georgia filing, control
-            number 25075361, formed 8 April 2025 by Elijah Purcell, and the record is public
-            and searchable.
+            Phone or text <a href={`tel:${CONTACT.phoneE164}`}>{CONTACT.phone}</a>, or email <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>. Elijah replies within one business day. More about the founder: <Link href="/who">Who is Elijah Purcell</Link>.
           </p>
+        </Prose>
+      </Section>
 
-          <h2 style={H2}>What it does</h2>
-          <ul style={{ paddingLeft: "1.1rem" }}>
-            <li style={{ marginBottom: "9px" }}>
-              <Link href="/digital" style={link}>Digital</Link>. Websites and ongoing service
-              for local businesses, from $99 a month.
-            </li>
-            <li style={{ marginBottom: "9px" }}>
-              <Link href="/consulting" style={link}>Consulting</Link>. Hands-on AI work:
-              workshops and implementation.
-            </li>
-            <li style={{ marginBottom: "9px" }}>
-              <Link href="/software" style={link}>Software</Link>. Custom builds: mobile
-              apps, web platforms, internal tools.
-            </li>
-            <li style={{ marginBottom: "9px" }}>
-              <Link href="/steady" style={link}>Steady</Link>. Personal IT for people who do
-              not have an IT person.
-            </li>
-          </ul>
-          <p>
-            <Link href="/team" style={link}>Fifteen AI agents</Link> run proposals, audits,
-            compliance and outreach on a schedule. That page opens by saying every one of
-            them is software.
-          </p>
-
-          <h2 style={H2}>Common questions</h2>
-          <div style={{ marginTop: "16px" }}>
-            {QA.map(([q, a]) => (
-              <div key={q} style={{ marginBottom: "22px" }}>
-                <h3 style={{ fontSize: "16px", fontWeight: 700, margin: "0 0 6px" }}>{q}</h3>
-                <p style={{ margin: 0, fontSize: "15px", color: "var(--color-warm-text-muted)" }}>{a}</p>
-              </div>
-            ))}
-          </div>
-
-          <div style={{ marginTop: "40px", paddingTop: "22px", borderTop: "1px solid rgba(212,175,55,0.2)", fontSize: "15px", color: "var(--color-warm-text-muted)" }}>
-            <p style={{ margin: 0 }}>
-              Contact: <a href={`tel:${CONTACT.phoneE164}`} style={link}>{CONTACT.phone}</a>{" "}
-              or <a href={`mailto:${CONTACT.email}`} style={link}>{CONTACT.email}</a>.
-              More about the founder: <Link href="/who" style={link}>Who is Elijah Purcell</Link>.
-            </p>
-          </div>
-
-        </article>
-      </main>
-    </div>
+      {/* PageHero has no breadcrumb slot and must stay first in <main>, so the trail sits here. */}
+      <div className="ui-wrap" style={{ paddingBottom: 40 }}>
+        <Breadcrumbs trail={[
+          { name: "Home", href: "/" },
+          { name: "What is Purcell Ventures", href: "/what-is-purcell-ventures" },
+        ]} />
+      </div>
+    </main>
   );
 }

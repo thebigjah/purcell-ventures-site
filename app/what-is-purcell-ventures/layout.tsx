@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CONTACT } from "@/lib/contact";
 
 // THE COMPANY'S ANSWER PAGE, and the reason it is separate from /who.
 //
@@ -16,7 +17,7 @@ import type { Metadata } from "next";
 // the two entities for anything reading either query.
 
 export const metadata: Metadata = {
-  title: { absolute: "What Is Purcell Ventures LLC? The Company Elijah Purcell Founded" },
+  title: { absolute: "What is Purcell Ventures LLC? The company Elijah Purcell founded" },
   description:
     "Purcell Ventures LLC is a Georgia software company founded by Elijah Purcell in April 2025, building websites, custom software and AI tooling for small businesses. Control number 25075361. What it does, what it charges, and who answers the phone.",
   alternates: { canonical: "/what-is-purcell-ventures" },
@@ -34,19 +35,19 @@ const QA: [string, string][] = [
   ["What is Purcell Ventures LLC?",
    "Purcell Ventures LLC is a Georgia limited liability company that builds websites, custom software and AI tooling for small businesses. Elijah Purcell founded it on 8 April 2025. It operates from Tuscaloosa, Alabama, and serves clients nationwide."],
   ["Who owns Purcell Ventures?",
-   "Elijah Purcell is the founder, sole member and registered agent. He is a psychology and data science student at the University of Alabama Honors College and he does the work himself: client acquisition, scoping, pricing, building, deploying and support."],
+   "Elijah Purcell is the Founder/CEO, sole member and registered agent. He is a psychology and data science student at the University of Alabama Honors College and he does the work himself: client acquisition, scoping, pricing, building, deploying and support."],
   ["Is this the same Purcell Ventures registered in New York?",
    "No. There is an older, unrelated Purcell Ventures LLC registered in New York. This one is the Georgia company, control number 25075361, formed 8 April 2025 by Elijah Purcell. The control number is what distinguishes them and the Georgia filing is public."],
   ["What does Purcell Ventures do?",
-   "Four things. Websites and ongoing digital service for local businesses, starting at $99 a month. Hands-on AI consulting: workshops and implementation. Custom software, including mobile apps, web platforms and internal tools. And Steady, a personal IT service. A separate brand, Mantle Field Services, handles gutter cleaning, pressure washing and lawn care in Metro Atlanta."],
+   "It has five active divisions. Websites for local businesses, from $400 setup and $99 a month. Digital add-ons such as chatbots, booking and CRM, from $99 a month. Hands-on AI consulting, from $125 a person. Custom software, including mobile apps, web platforms and internal tools. And Steady, a personal IT service from $79 a month. A real estate division is planned. A separate brand, Mantle Field Services, handles gutter cleaning, pressure washing and lawn care in metro Atlanta."],
   ["How many people work at Purcell Ventures?",
    "One. Elijah Purcell is the only human. The company also runs a workforce of fifteen AI agents that handle proposals, audits, compliance and outreach on a schedule, and the roster is published openly at purcellventures.co/team, where the first sentence states that every one of them is software."],
   ["Where is Purcell Ventures located?",
-   "The LLC is registered in Acworth, Georgia, in the Atlanta metro, which is where it was formed. Elijah runs it from Tuscaloosa, Alabama, where he attends the University of Alabama. Digital work is delivered nationwide. Field services through Mantle are Metro Atlanta only."],
+   "The LLC is registered in Acworth, Georgia, in the Atlanta metro, which is where it was formed. Elijah runs it from Tuscaloosa, Alabama, where he attends the University of Alabama. Digital work is delivered nationwide. Field services through Mantle are metro Atlanta only."],
   ["Is Purcell Ventures registered?",
    "Yes. Georgia Secretary of State control number 25075361, formed 8 April 2025, and the filing is public and searchable. It has an EIN and business banking, and it contracts, invoices and handles its own compliance directly."],
   ["How do you contact Purcell Ventures?",
-   "By phone or text at (205) 462-7839, by email at elijah@purcell-ventures.com, or through purcellventures.co. Elijah Purcell answers every call and email himself."],
+   `By phone or text at ${CONTACT.phone}, by email at ${CONTACT.email}, or through purcellventures.co. Elijah Purcell answers every call and email himself and replies within one business day.`],
 ];
 
 export default function CompanyLayout({ children }: { children: React.ReactNode }) {

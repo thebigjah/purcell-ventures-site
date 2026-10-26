@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { CONTACT } from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "About Elijah Purcell, founder",
   description:
-    "Elijah Purcell is the founder of Purcell Ventures LLC, a Georgia software company building sites, software and AI tooling for local businesses, and a psychology and data science student at the University of Alabama Honors College in Tuscaloosa.",
+    "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia company formed in April 2025 that builds websites, software and AI tools for local businesses, and a psychology and data science student at the University of Alabama Honors College in Tuscaloosa.",
   keywords: [
     "Elijah Purcell", "Elijah Purcell founder", "Purcell Ventures founder",
     "AI consultant Georgia", "entrepreneur Tuscaloosa Alabama", "Elijah Purcell entrepreneur",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Elijah Purcell, Founder/CEO of Purcell Ventures LLC",
     description:
-      "Elijah Purcell is the founder of Purcell Ventures LLC, a Georgia software company building sites, software and AI tooling for local businesses, and a psychology and data science student at the University of Alabama Honors College in Tuscaloosa.",
+      "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia company formed in April 2025 that builds websites, software and AI tools for local businesses, and a psychology and data science student at the University of Alabama Honors College in Tuscaloosa.",
     url: "https://purcellventures.co/about",
     type: "profile",
   
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "About Elijah Purcell, Founder/CEO, Purcell Ventures LLC",
-    description: "Entrepreneur, AI consultant, software developer. Tuscaloosa, Alabama. University of Alabama Honors College, Class of 2030.",
+    description: "Founder/CEO of Purcell Ventures LLC in Tuscaloosa, Alabama, and a University of Alabama Honors College student, Class of 2030.",
   },
   alternates: { canonical: "https://purcellventures.co/about" },
 };
@@ -56,7 +57,7 @@ const schema = {
           "name": "Who is Elijah Purcell?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Elijah Purcell is an entrepreneur, AI consultant, and software developer based in Tuscaloosa, Alabama. He is the founder and CEO of Purcell Ventures LLC, a multi-division company offering digital services, AI consulting, and custom software development. He also founded Mantle Field Services, a sister brand handling owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta. He is a student at the University of Alabama Honors College, having enrolled in Fall 2026.",
+            "text": "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia company formed in April 2025, control number 25075361, that builds websites, AI tools and custom software for small businesses. He runs it from Tuscaloosa, Alabama, where he studies psychology and data science at the University of Alabama Honors College, Class of 2030. He also founded Mantle Field Services, a sister brand for gutter cleaning, pressure washing and lawn care in metro Atlanta.",
           },
         },
         {
@@ -64,7 +65,7 @@ const schema = {
           "name": "What is Purcell Ventures LLC?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Purcell Ventures LLC is a Georgia-based multi-division company founded by Elijah Purcell. Its divisions include: Digital Services (websites, AI tools, CRM, booking systems for small businesses), AI Consulting (hands-on team training and workshops), and Custom Software Development (mobile apps, web apps, AI integrations). A sister brand, Mantle Field Services, handles owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta.",
+            "text": "Purcell Ventures LLC is a Georgia company that Elijah Purcell formed in April 2025. It has five active divisions: websites, digital add-ons for small businesses, AI consulting, custom software, and Steady, a personal IT service. A real estate division is planned. A sister brand, Mantle Field Services, handles gutter cleaning, pressure washing and lawn care in metro Atlanta.",
           },
         },
         {
@@ -72,7 +73,7 @@ const schema = {
           "name": "Where is Purcell Ventures located?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The LLC is registered in Acworth, Georgia, where it was formed, and it is operated from Tuscaloosa, Alabama, where its founder Elijah Purcell attends the University of Alabama. Digital services and AI consulting are available nationwide. Sister brand Mantle Field Services serves the Metro Atlanta area (Kennesaw, Marietta, Acworth, Canton, Woodstock) with gutter cleaning, pressure washing, and lawn care.",
+            "text": "The LLC is registered in Acworth, Georgia, where it was formed. Elijah Purcell runs it from Tuscaloosa, Alabama, where he attends the University of Alabama. Websites, digital services, software and AI consulting are available nationwide. Sister brand Mantle Field Services serves metro Atlanta (Kennesaw, Marietta, Acworth, Canton and Woodstock) with gutter cleaning, pressure washing and lawn care.",
           },
         },
         {
@@ -80,7 +81,7 @@ const schema = {
           "name": "How can I contact Elijah Purcell?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can reach Elijah Purcell by email at elijah@purcell-ventures.com or by phone at (205) 462-7839.",
+            "text": `You can reach Elijah Purcell by email at ${CONTACT.email} or by phone at ${CONTACT.phone}. He replies within one business day.`,
           },
         },
       ],

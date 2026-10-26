@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "How Elijah Purcell Works: Process and Commitments",
+  title: "How Elijah Purcell works with clients",
   description:
-    "Our 5-stage process from the first email through year three, and the 6 commitments in every contract, including no surprise invoices and no vendor lock-in.",
+    "The five stages of a project with Elijah Purcell, from the first email to year three, and the six commitments written into every contract, including no surprise invoices and no vendor lock-in.",
   keywords: [
     "purcell ventures process", "engagement process", "agency commitments",
     "how we work transparency", "small business AI process",
   ],
   openGraph: {
     title: "How Elijah Purcell works",
-    description: "Our 5-stage process, 6 commitments and the work we turn down.",
+    description: "Five stages, six written commitments, and the work I turn down.",
     url: "https://purcellventures.co/how-we-work",
     type: "website",
   

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Links: Everything from Elijah Purcell",
+  title: "Links: everything from Elijah Purcell",
   description:
-    "Every place Elijah Purcell, founder and CEO of Purcell Ventures LLC, appears online: work, free tools, courses, personal pages, the sister brand, external profiles and contact details.",
+    "Every place Elijah Purcell, Founder/CEO of Purcell Ventures LLC, appears online: services, free tools, courses, personal pages, the sister brand, profiles and contact details.",
   alternates: { canonical: "https://purcellventures.co/links" },
 };
 

@@ -124,6 +124,7 @@ const EXPERIENCE: Entry[] = [
     </>,
   },
   { title: "Founder and operator", org: "Mantle Field Services", when: "2024 to present", body: <p>The sister brand for gutter cleaning, pressure washing and lawn care across metro Atlanta. I find clients, quote, schedule, maintain the equipment and do the work on site.</p> },
+  { title: "Independent contractor", org: "Mercor Intelligence", when: "2026", body: <p>Provides expertise to help improve models for a top AI lab.</p> },
   { title: "AI data trainer", org: "Outlier AI", when: "October 2025 to May 2026", body: <p>Two projects. On the first I rated large language model outputs for accuracy, reasoning and instruction-following and wrote the reasoning behind every rating. On the second I wrote spoken-style conversations between a user and an assistant under a fixed budget of tool calls per task, writing the user turns, editing the model&apos;s replies, and rewriting prompts until the model stopped over-calling its tools.</p> },
   { title: "AI response evaluator", org: "DataAnnotation", when: "Spring 2026", body: <p>Rated AI responses against a Helpful, Honest, Harmless rubric that ranks honesty and harmlessness above helpfulness. Flagged invented facts, fabricated links, false premises the model accepted, and faulty reasoning, along with length, repetition and whether the model answered the question the user meant.</p> },
   { title: "Team member", org: "Chick-fil-A", when: "2023", body: <p>Front-line customer service in a high-volume restaurant.</p> },

@@ -1,218 +1,111 @@
-"use client";
+import { PageHero, Section, Rows, Facts } from "@/app/components/ui";
+import { CONTACT } from "@/lib/contact";
 
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+// Rebuilt on the page kit 26 Oct 2026 as a server component.
+// - The college course line no longer prints the scholarship dollar total. His rule keeps
+//   that number on the college-application course page only.
+// - Courses are not finished, so each line says the waitlist is open.
+// - The profiles carry rel="me", matching the footer, so the accounts read as one person.
 
-interface LinkItem {
-  href: string;
-  label: string;
-  desc?: string;
-  badge?: string;
-  external?: boolean;
-}
+type Item = { href: string; name: string; line?: string; fig?: string; me?: boolean };
 
-const SECTIONS: { roman: string; label: string; items: LinkItem[] }[] = [
+const SECTIONS: { label: string; items: Item[] }[] = [
   {
-    roman: "I.",
-    label: "Work With Me",
+    label: "Work with me",
     items: [
-      { href: "/digital",        label: "Digital Services",  desc: "Websites, AI chatbots, booking and marketing. From $99/mo." },
-      { href: "/consulting",     label: "AI Consulting",     desc: "Hands-on training for your team. From $125/person." },
-      { href: "/software",       label: "Custom Software",   desc: "Apps, platforms and AI tools. From $1,500." },
-      { href: "/consulting/book", label: "Book a Session",  badge: "Direct booking" },
+      { href: "/sites", name: "Websites", line: "Custom websites for local businesses.", fig: "From $400 setup and $99 a month" },
+      { href: "/digital", name: "Digital services", line: "Websites, AI chatbots, booking and marketing.", fig: "From $99 a month" },
+      { href: "/consulting", name: "AI consulting", line: "Hands-on training for your team.", fig: "From $125 a person" },
+      { href: "/software", name: "Custom software", line: "Apps, platforms and AI tools.", fig: "From $1,500" },
+      { href: "/consulting/book", name: "Book a session", line: "Direct booking for a consulting session." },
     ],
   },
   {
-    roman: "I.5",
-    label: "Free Tools",
+    label: "Free tools",
     items: [
-      { href: "/ai-readiness",       label: "AI Readiness Test",  desc: "10 questions, 3 minutes. Score how your team uses AI and get next steps. No email required." },
-      { href: "/ai-cost-calculator", label: "AI Cost Calculator", desc: "Enter your team size and workload. See how fast an AI session pays for itself. The assumptions are listed on the page." },
+      { href: "/ai-readiness", name: "AI readiness test", line: "10 questions in 3 minutes. It scores how your team uses AI and suggests next steps. No email required." },
+      { href: "/ai-cost-calculator", name: "AI cost calculator", line: "Enter your team size and workload to see how fast an AI session pays for itself. The page lists its assumptions." },
     ],
   },
   {
-    roman: "II.",
-    label: "Learn From Me",
+    label: "Courses",
     items: [
-      { href: "/courses/college-apps",    label: "College Application Playbook",  desc: "34 acceptances. $530k scholarships. $297." },
-      { href: "/courses/business-launch", label: "Business Launch Playbook",      desc: "From idea to LLC to first dollar. $397." },
-      { href: "/courses/ai-automation",   label: "Zero to Automated",             desc: "Build your own AI tools. $397." },
+      { href: "/courses/college-apps", name: "The College Application Playbook", line: "Built from 34 acceptances. Waitlist open.", fig: "$297" },
+      { href: "/courses/business-launch", name: "The Business Launch Playbook", line: "From idea to LLC to first dollar. Waitlist open.", fig: "$397" },
+      { href: "/courses/ai-automation", name: "Zero to Automated", line: "Build your own AI tools. Waitlist open.", fig: "$397" },
     ],
   },
   {
-    roman: "III.",
-    label: "Personal",
+    label: "Personal pages",
     items: [
-      { href: "/about",   label: "About",   desc: "About me and the Purcell Ventures mark." },
-      { href: "/now",     label: "/now",    desc: "What I'm focused on right now." },
-      { href: "/uses",    label: "/uses",   desc: "The tools I use for my work." },
-      { href: "/verses",  label: "Verses",  desc: "Five scriptures I come back to." },
-      { href: "/writing", label: "Writing", desc: "Essays and posts I have written." },
-      { href: "/resume",  label: "Résumé",  desc: "Education, work, awards and scholarships." },
+      { href: "/about", name: "About", line: "About me and the Purcell Ventures mark." },
+      { href: "/now", name: "Now", line: "What I am working on this month." },
+      { href: "/uses", name: "Uses", line: "The tools I use for my work." },
+      { href: "/verses", name: "Verses", line: "Five scriptures I come back to." },
+      { href: "/writing", name: "Writing", line: "Prose I have written." },
+      { href: "/resume", name: "Résumé", line: "Education, work, awards and scholarships." },
     ],
   },
   {
-    roman: "IV.",
-    label: "Built By Me",
+    label: "Built by me",
     items: [
-      { href: "https://ua-today.vercel.app", label: "UA Today", desc: "Campus events for the University of Alabama, six sources in one place. Free, no account, not affiliated with the university.", external: true },
-      { href: "/tools",  label: "29 Free Tools", desc: "Small software, one problem each. All live on the open web." },
-      { href: "/portfolio", label: "Portfolio", desc: "Client work and shipped products." },
-      { href: "https://mantle-field-site.vercel.app", label: "Mantle Field Services", desc: "Sister brand for gutter cleaning, pressure washing and lawn care. Metro Atlanta only.", external: true },
+      { href: "https://ua-today.vercel.app", name: "UA Today", line: "Campus events for the University of Alabama, six sources in one place. Free, no account, not affiliated with the university." },
+      { href: "/tools", name: "29 free tools", line: "Small programs that each solve one problem, all live on the open web." },
+      { href: "/portfolio", name: "Portfolio", line: "Client work and shipped products." },
+      { href: "https://mantle-field-site.vercel.app", name: "Mantle Field Services", line: "The sister brand for gutter cleaning, pressure washing and lawn care. Metro Atlanta only." },
     ],
   },
-  // THE PAGE IS CALLED "EVERYTHING FROM ELIJAH PURCELL" AND IT LISTED TWO EXTERNAL LINKS.
-  //
-  // Measured 22 Aug 2026: `"Elijah Purcell" "Purcell Ventures" -site:purcellventures.co`
-  // returns zero relevant results. No page off this domain connects his name to the
-  // company. The profiles below are the entire independent set that exists, so the hub
-  // page that is supposed to point at them should actually point at them.
-  //
+  // These profiles are the whole independent set that exists (measured 22 Aug 2026).
   // ADD HERE AS THEY GO LIVE: Google Business Profile, Crunchbase, Wikidata.
   {
-    roman: "V.",
     label: "Elsewhere",
     items: [
-      { href: "https://github.com/thebigjah", label: "GitHub", desc: "Code for the 29 tools and other projects.", external: true },
-      { href: "https://www.linkedin.com/in/theelijahpurcell", label: "LinkedIn", desc: "Professional record.", external: true },
-      { href: "https://www.linkedin.com/company/138853899/", label: "Purcell Ventures on LinkedIn", desc: "The company page.", external: true },
-      { href: "https://www.instagram.com/theelijahpurcell/", label: "Instagram", external: true },
-    ],
-  },
-  {
-    roman: "VI.",
-    label: "Reach Me",
-    items: [
-      { href: "mailto:elijah@purcell-ventures.com", label: "elijah@purcell-ventures.com", desc: "Same-day response. Email is best." },
-      { href: "tel:+12054627839",                   label: "(205) 462-7839",              desc: "Call or text." },
+      { href: "https://github.com/thebigjah", name: "GitHub", line: "Code for the 29 tools and other projects.", me: true },
+      { href: "https://www.linkedin.com/in/theelijahpurcell", name: "LinkedIn", line: "My professional record.", me: true },
+      { href: "https://www.linkedin.com/company/138853899/", name: "Purcell Ventures on LinkedIn", line: "The company page." },
+      { href: "https://www.instagram.com/theelijahpurcell/", name: "Instagram", me: true },
     ],
   },
 ];
 
 export default function LinksPage() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden" }}>
-      <VignetteBackground />
+    <main>
+      <PageHero
+        kicker="Purcell Ventures"
+        title="Elijah Brent Purcell"
+        lede="Founder/CEO of Purcell Ventures LLC. I build software and AI agent systems, and I am a University of Alabama Honors College student in Tuscaloosa, Alabama."
+      />
 
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "56px 28px 96px" }}>
+      {SECTIONS.map((section) => (
+        <Section key={section.label} title={section.label}>
+          {section.label === "Elsewhere" ? (
+            // Rows has no rel option, so the profiles render as kit rows by hand to carry rel="me".
+            <div className="ui-rows">
+              {section.items.map((it) => (
+                <a key={it.href} className="ui-row" href={it.href} target="_blank" rel={it.me ? "me noopener noreferrer" : "noopener noreferrer"}>
+                  <span>
+                    <span className="ui-row__name">{it.name}</span>
+                    {it.line && <span className="ui-row__line">{it.line}</span>}
+                  </span>
+                </a>
+              ))}
+            </div>
+          ) : (
+            <Rows items={section.items} />
+          )}
+        </Section>
+      ))}
 
-        {/* Page head */}
-        <header style={{ textAlign: "center", marginBottom: "48px" }}>
-          <div style={{
-            fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-            fontSize: "10px", fontWeight: 700,
-            letterSpacing: "0.42em", textTransform: "uppercase",
-            color: "var(--color-warm-accent)", marginBottom: "20px",
-          }}>
-            Purcell Ventures
-          </div>
-          <h1 style={{
-            fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700,
-            fontSize: "clamp(36px, 7vw, 64px)",
-            lineHeight: 0.98, letterSpacing: "0.02em",
-            color: "var(--color-warm-text)", margin: "0 0 16px",
-            textTransform: "uppercase",
-          }}>
-            Elijah Brent <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Purcell</em>
-          </h1>
-          <p className="pv-italic" style={{
-            fontSize: "17px", color: "var(--color-warm-text)", opacity: 0.85,
-            lineHeight: 1.5, maxWidth: "440px", margin: "0 auto",
-          }}>
-            Founder/CEO of Purcell Ventures LLC. I build software and AI agent systems,
-            and I am a University of Alabama Honors College student in
-            Tuscaloosa, Alabama.
-          </p>
-        </header>
-
-        {/* Sections */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
-          {SECTIONS.map((section) => (
-            <section key={section.label}>
-              <div style={{
-                display: "grid", gridTemplateColumns: "auto 1fr",
-                gap: "16px", alignItems: "baseline",
-                paddingBottom: "12px",
-                borderBottom: "1px solid var(--color-warm-border)",
-                marginBottom: "16px",
-              }}>
-                <span className="pv-italic" style={{ fontSize: "28px", color: "var(--color-warm-accent)", lineHeight: 1 }}>
-                  {section.roman}
-                </span>
-                <h2 style={{
-                  fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
-                  fontSize: "15px", letterSpacing: "0.32em",
-                  color: "var(--color-warm-text)", textTransform: "uppercase",
-                  margin: 0, lineHeight: 1,
-                }}>
-                  {section.label}
-                </h2>
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                {section.items.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    target={item.external ? "_blank" : undefined}
-                    rel={item.external ? "noopener noreferrer" : undefined}
-                    className="pv-card"
-                    style={{
-                      display: "block",
-                      padding: "18px 22px 16px",
-                      textDecoration: "none",
-                    }}
-                  >
-                    <span className="b3"></span><span className="b4"></span>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "12px", marginBottom: item.desc ? "6px" : 0 }}>
-                      <span style={{
-                        fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
-                        fontSize: "15.5px", letterSpacing: "0.02em",
-                        color: "var(--color-warm-text)",
-                      }}>
-                        {item.label}
-                      </span>
-                      {item.badge && (
-                        <span style={{
-                          fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-                          fontSize: "9px", fontWeight: 700,
-                          letterSpacing: "0.22em", textTransform: "uppercase",
-                          padding: "3px 8px",
-                          border: "1.5px solid var(--color-warm-accent)",
-                          color: "var(--color-warm-accent)",
-                        }}>
-                          {item.badge}
-                        </span>
-                      )}
-                    </div>
-                    {item.desc && (
-                      <p className="pv-italic" style={{
-                        fontSize: "13.5px", color: "var(--color-warm-text)",
-                        opacity: 0.82, lineHeight: 1.5, margin: 0,
-                      }}>
-                        {item.desc}
-                      </p>
-                    )}
-                  </a>
-                ))}
-              </div>
-            </section>
-          ))}
-        </div>
-
-        {/* Closing colophon */}
-        <footer style={{
-          marginTop: "56px",
-          textAlign: "center",
-          fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-          fontSize: "9.5px", letterSpacing: "0.42em", textTransform: "uppercase",
-          color: "var(--color-warm-text-light)",
-          lineHeight: 1.8,
-        }}>
-          <div style={{ marginBottom: "8px", color: "var(--color-warm-accent)", opacity: 0.7 }}></div>
-          <div>Established April 2025, Acworth, GA</div>
-          <div style={{ marginTop: "6px" }}>Control No. 25075361, domestic LLC</div>
-        </footer>
-
-      </main>
-    </div>
+      <Section title="Reach me" intro="Email works best. I reply within one business day.">
+        <Facts
+          items={[
+            ["Email", <a key="e" className="ui-link" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>],
+            ["Phone or text", <a key="p" className="ui-link" href={`tel:${CONTACT.phoneE164}`}>{CONTACT.phone}</a>],
+            ["Company", `Purcell Ventures LLC, a domestic LLC formed April 2025 in Acworth, Georgia, control number ${CONTACT.llcControlNumber}`],
+          ]}
+        />
+      </Section>
+    </main>
   );
 }
