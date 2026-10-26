@@ -28,12 +28,12 @@ export default function Post() {
         checked whether each one had a website that answers, and had the numbers in
         forty minutes.{" "}
         <Link href="/blog/121-businesses-near-campus">The result was 121
-        businesses and 27 working sites</Link>. This is the whole method, so you can run
-        it on your own town.
+        businesses and 27 working sites</Link>. You can run the same check on your own
+        town.
       </p>
 
       <p>
-        It costs nothing. The method needs no API key and no account, and it does not scrape anybody's search results.
+        It costs nothing, needs no API key or account, and does not scrape anybody&apos;s search results.
       </p>
 
       <h2>The data source</h2>
@@ -83,17 +83,17 @@ out center tags;`}</code></pre>
 
       <p>
         OpenStreetMap tags them for you. Drop anything with a <code>brand</code> or{" "}
-        <code>brand:wikidata</code> tag. That is one line of code.
+        <code>brand:wikidata</code> tag, which takes one line of code.
       </p>
 
-      <h2>The check that matters</h2>
+      <h2>Checking each website</h2>
 
       <p>
         For each business with a <code>website</code> tag, make a request and see what
-        happens. Both of my mistakes were here.
+        happens. Both of my mistakes happened at this step.
       </p>
 
-      <h2>Mistake one: HEAD is not enough</h2>
+      <h2>Mistake one: relying on HEAD requests</h2>
 
       <p>
         I sent HEAD requests, because they are cheap and you only need the status code.
@@ -125,7 +125,7 @@ return last`}</code></pre>
         marking it down misreports the business.
       </p>
 
-      <h2>Mistake two: the claim you are entitled to make</h2>
+      <h2>Mistake two: claiming more than the data shows</h2>
 
       <p>
         The headline I wanted was "93 businesses near campus have no website." The data
@@ -145,7 +145,7 @@ return last`}</code></pre>
       <p>
         <strong>Write down the claim your method supports before you write the
         headline.</strong> If the supported claim is weaker, change the method or the
-        headline. Somebody can disprove an overstated claim in one reply.
+        headline, because somebody can disprove an overstated claim in one reply.
       </p>
 
       <h2>What to do with the result</h2>
@@ -159,8 +159,8 @@ return last`}</code></pre>
       <p>
         Keep only name, category, street, and whether the site answers. Leave out phone
         numbers and email addresses. Once
-        you collect contact details you have a marketing list. If you told people you
-        were doing research, you have lied to them, and people notice.
+        you collect contact details you have a marketing list, and if you told people you
+        were doing research, you lied to them.
       </p>
 
       <h2>What I am using it for</h2>

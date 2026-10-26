@@ -24,7 +24,7 @@ export default function ThanksPage() {
           </ol>
         </Prose>
       </Section>
-      <Section title="The full playbook">
+      <Section title="Cold Email Mastery Pack">
         <Prose>
           <p>
             The <Link href="/shop/cold-email-pack">Cold Email Mastery Pack ($29)</Link> includes more than 100 industry templates, reply scripts and email sequences.

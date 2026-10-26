@@ -84,7 +84,7 @@ export default function EventRegistrationPage() {
         <PageHero
           kicker={<ToolsKicker>Free tools: booking and scheduling</ToolsKicker>}
           title="Event registration"
-          lede="Create an event, collect RSVPs and check guests in at the door. Everything stays on this device."
+          lede="Create an event, collect RSVPs and check guests in at the door. Your events save only on your device."
         />
       ) : (
         <PageHero

@@ -85,7 +85,7 @@ const FAQ_LD = {
       "name": "How does a custom software project start?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "With a free 30-minute discovery call. Elijah scopes the work on that call before he quotes anything, so the scope comes from the conversation and not from a package."
+        "text": "With a free 30-minute discovery call. Elijah scopes the work on that call before he quotes anything."
       }
     },
     {
@@ -93,7 +93,7 @@ const FAQ_LD = {
       "name": "What happens after a software project launches?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Elijah stays involved after launch for fixes and follow-on work. One person builds the project, so the person who wrote the code also supports it."
+        "text": "Elijah builds every project himself and stays involved after launch for fixes and follow-on work."
       }
     }
   ]

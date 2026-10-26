@@ -14,7 +14,7 @@ const TEAM_MEMBERS = [
     id: "web",
     title: "Web designer",
     salary: 5000,
-    tagline: "Builds and maintains your online presence.",
+    tagline: "Builds and updates your website.",
     tools: ["Business Website", "Landing Page", "Portfolio and Gallery", "AI Content Generator"],
   },
   {
@@ -56,7 +56,7 @@ const TEAM_MEMBERS = [
     id: "staff",
     title: "Office manager",
     salary: 3500,
-    tagline: "Keeps your team organized and on schedule.",
+    tagline: "Plans staff shifts and tracks who is available.",
     tools: ["Staff Scheduler"],
   },
 ];

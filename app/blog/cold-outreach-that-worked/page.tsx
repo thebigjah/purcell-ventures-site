@@ -13,7 +13,7 @@ export const metadata = {
   alternates: { canonical: "/blog/cold-outreach-that-worked" },
   title: { absolute: "The cold email that got me a client, and the ones that did not, by Elijah Purcell" },
   description:
-    "What worked when a teenager cold-emailed small businesses: leading with a specific observation instead of a pitch, why attaching work beats describing it, and three sentences to cut.",
+    "What worked when a teenager cold-emailed small businesses: leading with a specific observation instead of a pitch, why sending a built page works better than describing one, and three sentences to cut.",
 };
 
 
@@ -31,18 +31,18 @@ export default function Post() {
     >
       <p>
         My first client came from a cold email: a photography business that got a full
-        site, scoped, built and delivered. Most of the emails before it went nowhere.
-        What changed was the first line.
+        site, scoped, built and delivered. Most of the emails before it went nowhere, and
+        the difference was the first line.
       </p>
 
       <p>
-        I did not track replies at the time, so I have no conversion rate to give you.
-        I can tell you what I changed.
+        I did not track replies at the time, so I have no conversion rate to give you,
+        only the changes I made.
       </p>
 
-      <h2>The version that fails</h2>
+      <h2>The email most people send first</h2>
 
-      <p>Everybody writes this one first, including me.</p>
+      <p>I wrote this one first, like most people do.</p>
 
       <blockquote>
         Hi, I&apos;m Elijah, I run a web design company. I noticed your business could
@@ -51,15 +51,14 @@ export default function Post() {
       </blockquote>
 
       <p>
-        Nothing in that is offensive. It also reads like every other version of it in
+        Nothing in that is rude, but it reads like every other version of it in
         their inbox, and it asks a busy person to spend a
         phone call finding out whether it is worth a phone call.
       </p>
 
       <p>
-        The specific failure is "could benefit from a modern website." That sentence
-        contains no evidence that I looked at their business at all. The sentence fits
-        any business, so it shows no research.
+        The weakest line is "could benefit from a modern website," because it contains no
+        evidence that I looked at their business at all.
       </p>
 
       <h2>Opening with something you noticed</h2>
@@ -71,30 +70,27 @@ export default function Post() {
 
       <blockquote>
         Your booking page 404s from the link in your Instagram bio. I checked on a phone
-        in case it was just my laptop, and it does the same thing. Whoever tries to book
+        in case it was only my laptop, and it does the same thing. Whoever tries to book
         you from Instagram is currently hitting a dead end.
       </blockquote>
 
       <p>
-        That is worth reading whether or not they hire anybody. It also shows I spent
-        time on their business before contacting them, which few senders do.
+        The owner gets something useful whether or not they hire anybody, and it shows I
+        spent time on their business before contacting them, which few senders do.
       </p>
 
       <h2>Building the page first, then sending it</h2>
 
       <p>
         The best thing I did in cold outreach was build first and send the link: a live
-        page at its own URL that loads on their phone.
-      </p>
-
-      <p>
-        You show them a page that exists and ask if they want it.
+        page at its own URL that loads on their phone, with a note asking whether they
+        want it.
       </p>
 
       <p>
         The obvious objection is that it is a lot of work for a stranger who might not
-        reply. It is. Most senders skip it, though, and if they never reply you still got
-        practice building the thing.
+        reply, and that is true. Most senders skip it, though, and if they never reply you
+        still got practice building the thing.
       </p>
 
       <h2>Three sentences to cut</h2>
@@ -111,22 +107,21 @@ export default function Post() {
 
       <p>
         <strong>Anything about your story.</strong> A
-        stranger has no reason to care yet, and every sentence about you is a sentence
-        not about them.
+        stranger has no reason to care about it yet, so keep the email about their
+        business.
       </p>
 
-      <h2>On being young</h2>
+      <h2>My age</h2>
 
       <p>
-        I was seventeen when I started sending these. The instinct is to hide it, and
-        that instinct is wrong for one reason: it will come out, and when it comes out
-        after they have decided to trust you, it reads as concealment.
+        I was seventeen when I started sending these, and my first instinct was to hide
+        it. That would have backfired, because it comes out eventually, and when it comes
+        out after a client has decided to trust you, it looks like concealment.
       </p>
 
       <p>
-        Do not lead with it either. Lead with the observation. The age comes up on the
-        call and by then the relevant question has already been answered, which is
-        whether you can do the work.
+        I did not lead with it either. I led with the observation, and my age came up on
+        the call, after the email had already shown I could do the work.
       </p>
 
       <h2>Follow-up</h2>

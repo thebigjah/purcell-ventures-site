@@ -31,7 +31,7 @@ const FAQS: { label: string; qas: QA[] }[] = [
     label: "AI consulting",
     qas: [
       { q: "Do I need tech experience to benefit from a session?", a: "No. I design most sessions for people who have never used AI tools, and I start from what you already know." },
-      { q: "What do participants need to bring?", a: "A laptop or tablet and a willingness to try things. I bring the setup, demos, exercises and a takeaway guide." },
+      { q: "What do participants need to bring?", a: "A laptop or tablet. I bring the setup, the demos, the exercises and a written guide you keep." },
       { q: "Can you come to our office?", a: "Yes. I come to your office, so the examples use your team's own work." },
       { q: "How is this different from using ChatGPT on my own?", a: "I show you prompting techniques, integrations and workflows chosen for your type of business, and you practice them on your own tasks during the session." },
       { q: "Will this lead to a sales pitch for your other services?", a: "Only if it fits. Consulting is a separate service. If I see something in your business I could build for you, I mention it once, outside the session." },
@@ -63,14 +63,14 @@ const FAQS: { label: string; qas: QA[] }[] = [
       { q: "Will they be live or self-paced?", a: "Self-paced. Every lesson is planned as a video with a written takeaway, so you can work through a course in a weekend or over months." },
       { q: "Do I get lifetime access?", a: "Yes. One purchase covers the course and any future updates to its lessons." },
       { q: "Is there a refund policy?", a: "30 days. If the course does not deliver for you, email me within 30 days for a full refund." },
-      { q: "Can I message you while taking a course?", a: "Yes. Email me any time. I read everything." },
+      { q: "Can I message you while taking a course?", a: "Yes. Email me any time and I will reply within one business day." },
     ],
   },
   {
     label: "The company",
     qas: [
       { q: "Are you nineteen?", a: "Yes. I have been building production software for a year. Every portfolio project links to a live site, and the full record is at /resume." },
-      { q: "What is the panopticon mark about?", a: "It inverts Bentham's prison design. In the original, a hidden watcher observes visible prisoners. The mark puts PV at the center as the visible party that answers for its work, with the structure radiating outward. The full explanation is on the /about page under The mark." },
+      { q: "What is the logo based on?", a: "Bentham's panopticon, turned around. In Bentham's prison design, a hidden guard watches prisoners who can always be seen. In the logo, PV sits at the center in plain view, because the company is the one that answers for its work." },
       { q: "Why is it called Ventures?", a: "The company runs several separate ventures: websites, digital services, consulting, software, Steady, and real estate as a planned division. I build and test each one on its own." },
       { q: "Who owns Mantle Field Services?", a: "I do. It is a sister brand to Purcell Ventures, with its own sales operation." },
     ],
@@ -95,7 +95,7 @@ export default function FAQPage() {
       <PageHero
         kicker="Questions"
         title="The questions clients ask most"
-        lede="If yours is missing, email me. I will answer it and add it here so the next person has the answer."
+        lede="Prices, response times, consulting sessions, digital services, custom software, the courses and the company. If your question is missing, email me."
         meta="Revised October 2026"
       />
 
@@ -108,7 +108,7 @@ export default function FAQPage() {
       <Section title="An FAQ for your business" intro="A free tool.">
         <Rows items={[{
           name: "The AI FAQ Builder",
-          line: "Tell it about your business. It writes 6 to 10 questions and answers you can paste into your site, for free.",
+          line: "Describe your business and it writes 6 to 10 questions and answers you can paste into your site.",
           fig: "Try the tool",
           href: "/digital/tools/faq-builder",
         }]} />

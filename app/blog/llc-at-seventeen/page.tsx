@@ -7,7 +7,7 @@ export const metadata = {
   alternates: { canonical: "/blog/llc-at-seventeen" },
   title: { absolute: "What registering an LLC at seventeen involved, by Elijah Purcell" },
   description:
-    "The steps I followed: the Georgia filing, the EIN, the bank account, the registered agent question, and renaming the company nine months later. A description of what I did and not legal advice.",
+    "The steps I followed: the Georgia filing, the EIN, the bank account, the registered agent question, and renaming the company nine months later. It describes what I did and is not legal advice.",
 };
 
 
@@ -33,29 +33,28 @@ export default function Post() {
       <p>
         I filed the LLC as Zultar LLC with the Georgia Secretary of State on 8 April 2025,
         and renamed it Purcell Ventures LLC on 27 January 2026. The control number is
-        25075361 and the filing is public, so everything below is
-        checkable.
+        25075361 and the filing is public, so anyone can check the names and dates.
       </p>
 
       <p>
-        The internet is full of "how to start an LLC" pages written by companies that
-        sell LLC formation. This post includes the parts that went badly.
+        Most "how to start an LLC" pages online are written by companies that sell LLC
+        formation, and they skip the parts that go badly, like the bank account and the
+        rename.
       </p>
 
       <h2>The filing itself is the easy part</h2>
 
       <p>
-        An online form, a name, an address, a registered agent, and a fee. It takes
-        longer to choose the name than to file it. You get a control number and a public
-        record, and at that point the company exists.
+        The filing is an online form with a name, an address, a registered agent and a
+        fee. Choosing the name took me longer than filing it. You get a control number
+        and a public record, and at that point the company exists.
       </p>
 
       <p>
-        Most guides cover this step in detail. The bank account, later in this post, was
-        harder.
+        Most guides cover this step in detail, and for me the bank account was harder.
       </p>
 
-      <h2>The registered agent is you, and that has an address consequence</h2>
+      <h2>The registered agent and the public address</h2>
 
       <p>
         Somebody has to be the legal point of contact, and for a one-person company that
@@ -64,8 +63,8 @@ export default function Post() {
 
       <p>
         If you work from home, your home address becomes a searchable public record
-        attached to your name. Decide on purpose which address goes on the filing.
-        Commercial registered agent services exist for this reason.
+        attached to your name. Commercial registered agent services exist for this
+        reason, so choose the address on the filing deliberately.
       </p>
 
       <h2>The EIN takes ten minutes and is free</h2>
@@ -73,8 +72,8 @@ export default function Post() {
       <p>
         You get it directly from{" "}
         <a href="https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number" rel="noopener">the IRS</a>.
-        Some sites charge for an EIN, which the IRS issues free. If a page wants money for
-        an EIN, close the page.
+        Some sites charge for an EIN even though the IRS issues it free, so skip any page
+        that asks for money.
       </p>
 
       <h2>The bank account is the hardest part</h2>
@@ -98,24 +97,23 @@ export default function Post() {
         separate from yours.
       </p>
 
-      <h2>You can rename it later, and I did</h2>
+      <h2>Renaming the company</h2>
 
       <p>
-        I filed as Zultar LLC. On 27 January 2026 I amended it to Purcell Ventures LLC.
-        Same entity, same control number, same EIN, new name.
+        I filed as Zultar LLC and amended the name to Purcell Ventures LLC on 27 January
+        2026. The entity, the control number and the EIN stayed the same.
       </p>
 
       <p>
-        This is worth knowing because the fear of choosing the wrong name stops people
-        for months. A rename is an amendment and a fee. It also means you have to update
+        Some people put off filing for months because they are afraid of picking the
+        wrong name. A rename takes an amendment and a fee. You also have to update
         anything that carries the old name, and for a while the filing says one thing and
         half your accounts say another.
       </p>
 
       <p>
         <strong>What I would do differently:</strong> spend one afternoon on the name
-        rather than one week, and then file. The cost of the wrong name is an amendment.
-        The cost of not filing is every month you did not have a company.
+        instead of one week, and then file, because a wrong name only costs an amendment.
       </p>
 
       <h2>What the LLC does and does not do for you</h2>
@@ -126,12 +124,12 @@ export default function Post() {
       </p>
 
       <p>
-        Clients rarely check your filing. They judge you by whether you answer the phone,
-        send correct invoices and deliver by the date you said.
+        Clients rarely check your filing, and they judge you by whether you answer the
+        phone, send correct invoices and deliver by the date you said.
       </p>
 
       <p>
-        It also does not protect you from your own conduct, and it comes with obligations:
+        The LLC does not protect you from your own conduct, and it comes with obligations:
         annual registration, keeping the company's money separate from yours, and filing
         things on time.
       </p>
@@ -143,16 +141,17 @@ export default function Post() {
         <li>File with your Secretary of State.</li>
         <li>Get the EIN from the IRS, free, same week.</li>
         <li>Open the bank account. Budget more time than the filing and the EIN took combined.</li>
-        <li>Send an invoice to somebody. Until money has moved through it, none of the above has been tested.</li>
+        <li>Send an invoice to somebody, because none of the above is tested until money moves through the account.</li>
       </ol>
 
       <p>
-        I would stress that last step most to anybody doing this young. It is easy to
-        spend months on paperwork and never once run the business the paperwork exists for.
+        I would stress that last step most to anybody doing this young, because it is easy
+        to spend months on paperwork before sending a single invoice.
       </p>
 
       <p>
-        More about what the company does is on{" "}
+        Purcell Ventures now builds websites, AI tools and custom software for small
+        businesses. You can read more in{" "}
         <Link href="/what-is-purcell-ventures">What is Purcell Ventures</Link>.
       </p>
 

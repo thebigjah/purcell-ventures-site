@@ -56,17 +56,17 @@ export default function CoursesPage() {
         meta={<>Ask me and I will send the material I have so far: <a className="ui-link" href={`mailto:${CONTACT.email}?subject=Course%20material`}>{CONTACT.email}</a></>}
       />
 
-      <Section title="Waitlist open" intro="Self-paced. Each page has the full curriculum, the prices and a waitlist form.">
+      <Section title="Waitlist open" intro="All three are self-paced. You can see the full curriculum and prices for each before you join a waitlist.">
         <Rows items={COURSES} />
       </Section>
 
-      <Section title="Why three courses">
+      <Section title="What I teach">
         <Prose>
           <p>
-            I teach only what I finished recently enough to remember the parts that went wrong. That leaves three subjects: applying to college, starting a business and automating work with AI. I did each one in the last two years.
+            I teach only what I finished recently enough to remember the parts that went wrong. Right now that means applying to college, starting a business and automating work with AI.
           </p>
           <p>
-            The tradeoff is that I do not have twenty years of perspective. These courses cover the current process, including steps that exist only because of how things work now.
+            I do not have twenty years of experience in any of them. The courses cover how each process works today, including steps that only exist because of how things work now.
           </p>
         </Prose>
       </Section>
@@ -74,10 +74,10 @@ export default function CoursesPage() {
       <Section title="What each course includes">
         <Prose>
           <p>
-            Each course is self-paced, with exercises in every lesson, each lesson added as it is finished, and access for life. The templates and documents I used come with every course. If a lesson tells you to send an email, the email is in there.
+            Each course is self-paced, with exercises in every lesson and access for life. I add each lesson as I finish it. The templates and documents I used come with every course, so if a lesson tells you to send an email, the email is included.
           </p>
           <p>
-            Refunds: each course page states its own terms. If the material does not match what its page says, ask and I will refund you.
+            Each course has its own refund terms. If the material does not match its description, ask and I will refund you.
           </p>
         </Prose>
       </Section>
@@ -85,7 +85,7 @@ export default function CoursesPage() {
       <Section title="Who teaches them">
         <Prose>
           <p>
-            I am Elijah Purcell, Founder/CEO of <Link href="/about">Purcell Ventures LLC</Link>. I build AI agent systems and study psychology and data science in the University of Alabama Honors College in Tuscaloosa. The <Link href="/who">short factual version</Link> has the record without the sales copy. If you need help more than a course, see the <Link href="/consulting">consulting page</Link>.
+            I am Elijah Purcell, Founder/CEO of <Link href="/about">Purcell Ventures LLC</Link>. I build AI agent systems and study psychology and data science in the University of Alabama Honors College in Tuscaloosa. More background: <Link href="/who">Who is Elijah Purcell</Link>. If you need direct help more than a course, I also do <Link href="/consulting">consulting</Link>.
           </p>
         </Prose>
       </Section>

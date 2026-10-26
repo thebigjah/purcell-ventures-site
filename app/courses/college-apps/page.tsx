@@ -101,7 +101,7 @@ const TIERS = [
       "A review of your personal statement, with feedback",
       "A school list strategy session",
       "Preparation for your financial aid negotiation",
-      "Email me directly during application season",
+      "Direct email access during application season",
     ],
     children: JOIN,
   },
@@ -118,7 +118,7 @@ const FAQS: { q: ReactNode; a: ReactNode }[] = [
   },
   {
     q: "You are nineteen. Why take college advice from you?",
-    a: "I went through it in the last two years. I researched 98 schools and got 34 acceptances and $530,384 a year in scholarship offers, and I wrote down what worked and what failed as I went. A counselor has more years of experience. I have a recent, documented process.",
+    a: "I went through it in the last two years. I researched 98 schools and got 34 acceptances and $530,384 a year in scholarship offers, and I wrote down what worked and what failed as I went. A counselor has more years of experience than I do, but my process is recent and I documented every step.",
   },
   {
     q: "Does it cover scholarships, or only admissions?",
@@ -145,15 +145,15 @@ export default function CollegeAppsPage() {
         planet="courses"
         kicker="Course: The College Application Playbook"
         title="34 acceptances from 98 schools, and $530,384 a year in scholarship offers."
-        lede="I am Elijah Purcell. I am 19 and went through college applications in the last two years. This course teaches what I learned, in the order I would have wanted it."
+        lede="I am Elijah Purcell. I am 19, and I went through college applications in the last two years. The course teaches what I learned, in the order I wish someone had shown me."
         meta="Waitlist open. I am still recording the course."
         actions={<>
           <Button href="#waitlist">Join the waitlist</Button>
-          <Button href="#curriculum" ghost>See what is inside</Button>
+          <Button href="#curriculum" ghost>See the curriculum</Button>
         </>}
       />
 
-      <Section title="The numbers behind it">
+      <Section title="Results">
         <Figures
           items={[
             ["34", "Acceptances"],
@@ -164,11 +164,11 @@ export default function CollegeAppsPage() {
         />
       </Section>
 
-      <Section title="Who it is for" intro="Four groups get the most from this course.">
+      <Section title="Who it is for">
         <Rows
           items={[
-            { name: "High school students, 9th to 12th grade", line: "Whether you are starting to think about college or finalizing your list in senior year, the course covers your stage." },
-            { name: "Parents of applicants", line: "Especially when scholarship money is the goal. Two modules cover financial aid and scholarships." },
+            { name: "High school students, 9th to 12th grade", line: "It covers every stage, from first thinking about college to finalizing your list in senior year." },
+            { name: "Parents of applicants", line: "Two modules cover financial aid and scholarships, written so a parent can follow them." },
             { name: "First-generation students", line: "No one in your family has applied to college before. The course starts at the beginning: applications, financial aid and choosing schools." },
             { name: "Students who were turned down", line: "Waitlisted, deferred or rejected by your top choice last cycle. The course covers what affects admissions decisions." },
           ]}
@@ -198,19 +198,19 @@ export default function CollegeAppsPage() {
         />
       </Section>
 
-      <Section title="What the course includes">
+      <Section title="What it is based on">
         <Rows
           items={[
-            { name: "Recent experience", line: "I went through admissions in the last two years. Every lesson is based on what I did." },
-            { name: "My numbers", line: "34 acceptances and $530,384 a year in scholarship offers. The course shows the spreadsheet, the emails and the timelines." },
-            { name: "The process on screen", line: "Screen shares of the tools I used, the templates I built and step-by-step walkthroughs of each major task." },
+            { name: "Recent experience", line: "I went through admissions in the last two years, and every lesson comes from what I did." },
+            { name: "My spreadsheet and emails", line: "The course shows the spreadsheet, emails and timelines behind 34 acceptances and $530,384 a year in scholarship offers." },
+            { name: "Screen shares", line: "The tools I used, the templates I built and a step-by-step walkthrough of each major task." },
           ]}
         />
       </Section>
 
       <Section
         id="pricing"
-        title="Three ways to enroll"
+        title="Prices"
         intro="The course opens when recording is complete. Waitlist members get the early-access price."
       >
         <Tiers tiers={TIERS} />
@@ -221,8 +221,8 @@ export default function CollegeAppsPage() {
 
       <Section
         id="waitlist"
-        title="The waitlist"
-        intro="Waitlist members get the early-access price and hear first when the course opens. I send one email when enrollment opens."
+        title="Waitlist"
+        intro="People on the waitlist get the early-access price. I send one email when enrollment opens."
       >
         <WaitlistForm course="college-apps" />
         <p className="ui-muted" style={{ marginTop: 20 }}>
@@ -234,7 +234,7 @@ export default function CollegeAppsPage() {
       <Section title="Questions">
         <Faq items={FAQS} />
         <p className="ui-muted" style={{ marginTop: 28 }}>
-          Questions this page does not answer go to{" "}
+          Send any other questions to{" "}
           <a className="ui-link" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>. I reply within one business day.
         </p>
       </Section>

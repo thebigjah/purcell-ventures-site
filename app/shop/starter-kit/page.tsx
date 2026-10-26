@@ -121,7 +121,7 @@ export default function StarterKitPage() {
         </Prose>
       </Section>
 
-      <Section title="One ZIP, bought once" intro="Stripe emails the download within 60 seconds of purchase. You do not need an account.">
+      <Section title="PV AI Starter Kit, $19" intro="Stripe emails the download within 60 seconds of purchase. You do not need an account.">
         <a className="ui-btn" href={PAYMENT_LINK} style={{ minHeight: 48 }}>Buy the kit for $19</a>
       </Section>
     </main>

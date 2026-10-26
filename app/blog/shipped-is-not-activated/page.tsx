@@ -23,8 +23,9 @@ export default function Post() {
       meta="17 August 2026, 3 minute read"
     >
       <p>
-        A checkout button sits three clicks deep, behind a menu labeled Services, under a
-        tab few visitors open. The site is live and cannot take a payment.
+        Picture a checkout button three clicks deep, behind a menu labeled Services, under
+        a tab few visitors open. A site like that is live, and most visitors will never
+        find a way to pay on it.
       </p>
 
       <p>
@@ -33,7 +34,7 @@ export default function Post() {
         card. Leave out the warm lead who already emailed you.
       </p>
 
-      <h2>Small failures go unfixed</h2>
+      <h2>Common small failures</h2>
 
       <p>
         Most launched sites fail that question in small ways. A payment link still carries a
@@ -43,24 +44,21 @@ export default function Post() {
       </p>
 
       <p>
-        None of that shows up in a deploy log, where every check passes. The gap between a
-        finished site and a working business is usually one broken path, and it stays broken
-        because the owner can&apos;t see it from the inside. You know where the checkout is, so
-        you never go looking for it.
+        None of that shows up in a deploy log, where every check passes. Usually one path
+        is broken, and it stays broken because the owner already knows where the checkout
+        is and never has to look for it.
       </p>
 
       <h2>Why nobody catches it</h2>
 
       <p>
-        Building and buying are different jobs, and few owners do the second one on their
-        own site. The person who built it tests that the page renders. Few people test that
-        a stranger can complete a purchase, because that means spending money on yourself,
-        and that feels absurd.
+        The person who built the site tests that each page loads. Few owners test that a
+        stranger can complete a purchase, because that means spending money on their own
+        business, and that feels absurd. So nobody runs the check, and the broken path can
+        stay broken for months.
       </p>
 
-      <p>So the check never happens, and the site sits there for months looking finished.</p>
-
-      <h2>The check itself</h2>
+      <h2>How to check your own site</h2>
 
       <p>
         Open your own site in a private window. Start from wherever a stranger would land,
@@ -69,9 +67,9 @@ export default function Post() {
       </p>
 
       <p>
-        Write down every place you had to already know something to keep going. That list is
-        the gap between shipped and activated. A clear path from the homepage to the payment
-        usually fixes it, with no redesign needed.
+        Write down every place you had to already know something to keep going. Those are
+        the things to fix. Usually a clear path from the homepage to the payment fixes them
+        without a redesign.
       </p>
 
       <h2>Related reading</h2>

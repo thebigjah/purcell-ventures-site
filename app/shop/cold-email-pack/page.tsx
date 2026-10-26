@@ -103,12 +103,12 @@ export default function ColdEmailPackPage() {
         />
       </Section>
 
-      <Section title="How the price compares" intro="$29 once, against the alternatives.">
+      <Section title="How the price compares">
         <Rows
           items={[
-            { name: "Apollo.io or Lemlist", fig: "$99 to $179 a month", line: "A subscription of $1,200 to $2,100 a year. They sell sending software. This pack is templates." },
+            { name: "Apollo.io or Lemlist", fig: "$99 to $179 a month", line: "A subscription of $1,200 to $2,100 a year for sending software. This pack is templates, which you can use with those tools or without them." },
             { name: "A sales copywriter", fig: "$300 to $2,000", line: "To write 10 to 20 emails. This pack has 100 templates plus the scripts, rubric and sequences above." },
-            { name: "A cold outreach course", fig: "$497 to $1,500", line: "For video lessons. This pack has templates you can send." },
+            { name: "A cold outreach course", fig: "$497 to $1,500", line: "For video lessons. This pack is templates you can send today." },
             { name: "This pack", fig: "$29 once", line: "You pay once and keep the files. Refunds within 30 days, processed through Stripe." },
           ]}
         />

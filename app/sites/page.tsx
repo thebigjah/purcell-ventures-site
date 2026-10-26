@@ -6,7 +6,7 @@ import { CONTACT } from "@/lib/contact";
 export const metadata: Metadata = {
   title: "Custom websites for local businesses",
   description:
-    "Custom websites for local businesses in Tuscaloosa, metro Atlanta and remote: three build tiers, three maintenance plans, and the person who built your site answering the phone.",
+    "Custom websites for local businesses in Tuscaloosa, metro Atlanta and remote: three build tiers and three maintenance plans. When something needs fixing, you call me directly.",
   alternates: { canonical: "/sites" },
 };
 
@@ -16,7 +16,7 @@ const BUILD = [
   {
     name: "Starter",
     price: "A single-page site. Live in 7 to 10 business days.",
-    for: "Solo service providers: caregivers, doctors in solo practice, one-truck trades. Businesses where your own time limits growth more than the number of leads.",
+    for: "Solo service providers, such as caregivers, doctors in solo practice and one-truck trades, whose own hours limit growth more than the number of leads.",
     items: [
       "A one-page custom site with your branding",
       "Built for phones first",
@@ -94,35 +94,35 @@ export default function SitesPage() {
       <PageHero
         planet="websites"
         kicker="Websites"
-        title="Custom websites for local businesses, and the person who built yours on the phone."
-        lede="I build the site, write the plan for it, and keep working on it after launch. Maintenance covers hosting, lead handling, monthly reports and updates."
+        title="I build and maintain websites for local businesses."
+        lede="I write the plan for your site, build it and keep working on it after launch. Maintenance plans cover hosting, lead handling, monthly reports and updates."
         actions={<>
           <Button href={CALL}>Book a 15-minute call</Button>
           <Button href="#build" ghost>See the tiers</Button>
         </>}
       />
 
-      <Section id="build" title="Three ways to build" intro="Each tier ends with a published website. I quote the price on the discovery call, because the right tier depends on what your business needs.">
+      <Section id="build" title="Build tiers" intro="Every tier ends with a published website. I quote the price on the discovery call, once I know what your business needs.">
         <Tiers tiers={BUILD} />
       </Section>
 
-      <Section title="After launch" intro="Hosting and updates continue after launch on one of three plans. You can move between them as the business grows.">
+      <Section title="After launch" intro="After launch I keep hosting and updating the site on one of three plans. You can switch plans as the business grows.">
         <Tiers tiers={CARE} />
       </Section>
 
-      <Section title="The Loom" intro="How some businesses first hear from me.">
+      <Section title="The Loom" intro="Some businesses first hear from me through The Loom.">
         <Prose>
           <p>
-            The Loom is the system I use to find small businesses whose web presence could be doing more, research them, build a preview site, and reach out. It is one of the 17 rooms in COSMIC, my station of 57 AI agents, and its seven agents each do one part of that work. You can meet them on <Link href="/team">the team page</Link>. If you came to this page from a preview of your own business that I built before we spoke, The Loom built it.
+            The Loom is the system I use to find small businesses with a missing or out-of-date website, research them, build a preview site, and reach out. It is one of the 17 rooms in COSMIC, my station of 57 AI agents, and each of its seven agents does one part of that work. All seven are on the <Link href="/team">COSMIC team roster</Link>. If I sent you a preview site for your business before we ever spoke, The Loom built it.
           </p>
         </Prose>
         <div className="ui-hero__actions"><Button href="https://the-loom-gold.vercel.app" ghost>See The Loom</Button></div>
       </Section>
 
-      <Section title="What you can count on">
+      <Section title="What every client gets">
         <Rows
           items={[
-            { name: "One person to call", line: "When something breaks at nine on a Tuesday, you call me, the person who built your site." },
+            { name: "One person to call", line: "When something on your site breaks, you call me directly and I fix it." },
             { name: "You own it", line: "You own the site, the content and the domain. If you leave, I hand over the full source code and every asset, with no penalty." },
             { name: "SSL that renews itself", line: "A site with an expired SSL certificate shows visitors a browser security warning. Every maintenance plan renews the certificate automatically." },
             { name: "A registered business", line: "Purcell Ventures LLC is registered in Acworth, Georgia. I work with businesses in metro Atlanta and Tuscaloosa, and remotely across the country." },

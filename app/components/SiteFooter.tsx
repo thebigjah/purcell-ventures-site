@@ -17,11 +17,11 @@ const COLS: { title: string; links: { href: string; label: string; rel?: string 
       { href: "/consulting", label: "AI consulting" },
       { href: "/software", label: "Custom software" },
       { href: "/steady", label: "Steady, personal IT" },
-      { href: "/pricing-comparison", label: "Pricing, compared" },
+      { href: "/pricing-comparison", label: "Price comparison" },
     ],
   },
   {
-    title: "Proof and learning",
+    title: "Work and resources",
     links: [
       { href: "/portfolio", label: "Portfolio" },
       { href: "/case-studies", label: "Case studies" },
@@ -38,7 +38,7 @@ const COLS: { title: string; links: { href: string; label: string; rel?: string 
       { href: "/who", label: "Who is Elijah Purcell" },
       { href: "/what-is-purcell-ventures", label: "What is Purcell Ventures" },
       { href: "/about", label: "About" },
-      { href: "/how-we-work", label: "How we work" },
+      { href: "/how-we-work", label: "How I work" },
       { href: "/team", label: "The team" },
       { href: "/resume", label: "Founder résumé" },
       { href: "/faq", label: "Questions" },

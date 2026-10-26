@@ -48,7 +48,7 @@ const LD = {
           "name": "What is an autonomous AI agent system?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "An agent is given a goal, a set of tools and limits, and picks its own steps toward the goal. The hard part is the constraints around the model.",
+            "text": "An agent is given a goal, a set of tools and limits, and picks its own steps toward the goal. Most of the engineering work goes into the limits around the model.",
           },
         },
         {
@@ -56,7 +56,7 @@ const LD = {
           "name": "How is an AI agent different from a chatbot?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A chatbot is reactive and stateless between turns. An agent runs on a schedule without being prompted, holds state across runs, uses tools that change things in the world, and produces work a person reviews. A chatbot produces a reply a person reads.",
+            "text": "A chatbot waits for a message, keeps no state between turns and produces a reply a person reads. An agent runs on a schedule without being prompted, holds state across runs, uses tools that change things in the world, and produces work a person reviews.",
           },
         },
         {
@@ -72,7 +72,7 @@ const LD = {
           "name": "What goes wrong with AI agents in production?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The failure mode is an agent that marks work done when it is not. An agent that marks work complete when a network call failed looks identical to one that finished. Every mechanism that can mark something done needs an adversarial read, because its failure looks like success.",
+            "text": "The most common failure is an agent marking work done when it is not. If a network call fails and the agent marks the task complete anyway, the result looks identical to a task that finished. Anything that can mark work done needs a second check whose job is to find that failure.",
           },
         },
         {
@@ -80,7 +80,7 @@ const LD = {
           "name": "Do you need a large team to run an agent system?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Purcell Ventures LLC is one person, Elijah, working with 57 AI agents in COSMIC. The agents are software and the team page says so in its first sentence. The constraint is how much you let run without a person in the loop, and what you do when it is wrong.",
+            "text": "No. Purcell Ventures LLC is one person, Elijah, working with 57 AI agents in COSMIC. The limit is how much work you let run without a person checking it, and how you catch and fix its mistakes.",
           },
         },
       ],

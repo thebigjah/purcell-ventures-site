@@ -22,14 +22,14 @@ const TIERS = [
     name: "Family care",
     price: "$149 a month",
     for: "Everything in Monthly care, for up to 4 family members on one plan.",
-    items: ["Suits adult children who support their parents' devices. Your mom calls me instead of you."],
+    items: ["Suits adult children who support their parents' devices, so your mom calls me instead of you"],
   },
 ];
 
 const PACKAGES = [
   { name: "New phone setup", fig: "$79", line: "An iPhone or Android out of the box: contacts, email, photos, apps, a password manager, two-factor sign-in, accessibility settings, and unused apps removed." },
   { name: "ChatGPT crash course", fig: "$129", line: "A 90-minute hands-on lesson. By the end you can use ChatGPT or Claude for research, writing, planning and decisions. I build it around the things you want to use it for." },
-  { name: "Password manager migration", fig: "$99", line: "I set up 1Password or Bitwarden, move every saved password out of your browsers, and set up family sharing. You stop reusing passwords." },
+  { name: "Password manager migration", fig: "$99", line: "I set up 1Password or Bitwarden, move every saved password out of your browsers, and set up family sharing, so you no longer reuse passwords." },
   { name: "Medication reminder setup", fig: "$99", line: "For an elderly parent or grandparent. Smart speaker reminders, phone reminders and a visual cue system. Includes a 30-minute training session with them." },
   { name: "Smart home starter", fig: "$199", line: "One Echo or Google Home, 4 smart bulbs, 2 plugs, and three routines I set up (morning, evening and away). Includes a 60-minute walkthrough." },
   { name: "Digital legacy plan", fig: "$149", line: "I document every account, password, subscription and digital asset so your family can reach them if something happens to you. I write the plan down, store it securely and test it." },
@@ -41,16 +41,16 @@ const PROBLEMS = [
   { name: "“My passwords are everywhere”", line: "If you reuse passwords or keep them on sticky notes, one breach exposes every account. I set up a password manager." },
   { name: "“My mom can't keep track of her meds”", line: "I set up phone reminders, a smart speaker and visual cues, then teach her to use them." },
   { name: "“I bought an Echo and it is still in the box”", line: "I set up the smart home gear and walk you through it." },
-  { name: "“My digital life is a mess”", line: "I clean up iCloud, Google Drive and forgotten subscriptions, then set up a system you can keep up with." },
+  { name: "“I pay for subscriptions I forgot about”", line: "I clean up iCloud, Google Drive and forgotten subscriptions, then set up a system you can keep up with." },
 ];
 
 const COMPARE: [string, string, string, string, string][] = [
   ["Patience with people who are not technical", "Built for people who are not technical", "Depends on the technician", "Often frustrated", "Nobody to ask"],
   ["Teaches you to do it yourself", "Every session", "Rarely", "Rarely, because they do it for you", "You teach yourself"],
   ["Available between visits", "Unlimited texts on Monthly and Family care", "Pay per visit", "Yes, when they have time", "Nobody to ask"],
-  ["Cost in a typical month", "$79 to $149 a month", "Per-visit fees", "$0, paid in their patience", "$0, paid in your time"],
+  ["Cost in a typical month", "$79 to $149 a month", "Per-visit fees", "$0, but it takes their time", "$0, but it takes your time"],
   ["Knows AI tools well", "My main focus", "Generally no", "Depends on the kid", "YouTube tutorials"],
-  ["Handles family members", "Family care covers up to 4 people", "Each person pays separately", "You become the help desk", "Everyone on their own"],
+  ["Handles family members", "Family care covers up to 4 people", "Each person pays separately", "You answer everyone's questions", "Everyone on their own"],
 ];
 
 const MONTH = [
@@ -76,7 +76,7 @@ const FAQ = [
   { q: "How is this different from your AI consulting?", a: "Consulting is for business teams: I train your staff to use AI in their work. Steady is for you, your household and your parents." },
   { q: "Where do you work in person?", a: "In-person visits cover Tuscaloosa and metro Atlanta. Remote help by video and screen share covers anywhere in the US. Most Monthly care work happens remotely, and I use the in-person visit for setup or family training." },
   { q: "Can you help my elderly parent, who is not comfortable with technology?", a: "Yes. I built Family care for that. I repeat things, write down steps, come back if something breaks, and explain things in plain words." },
-  { q: "Do you fix broken devices?", a: "No. I am not a repair shop. I help you use devices that work. If your laptop is dead, take it to Apple or Best Buy first, and I will help you set up the new one." },
+  { q: "Do you fix broken devices?", a: "No, I do not repair hardware. If your laptop is dead, take it to Apple or Best Buy first, and I will help you set up the new one." },
   { q: "What happens after the first month of Monthly care?", a: "It renews every month. You can cancel any time with a text. There is no contract." },
 ];
 
@@ -87,7 +87,7 @@ export default function SteadyPage() {
         planet="steady"
         kicker="Steady, personal IT"
         title="Personal IT help for families, from $79 a month."
-        lede="For your mom, your dad, your grandparents and you. I set up your devices, teach you to use them, and answer when something breaks."
+        lede="I set up phones, computers and smart home devices, teach you and your parents to use them, and answer when something breaks."
         meta="Monthly care $79 a month. Family care $149 a month. A one-off session $99."
         actions={<>
           <Button href="/steady/start">Fill out the intake</Button>
@@ -100,7 +100,7 @@ export default function SteadyPage() {
       <Section title="Who it is for">
         <Prose>
           <p>
-            Steady is for the family tech person: the one who answers mom&apos;s phone questions, taught dad to use ChatGPT, and still gets texts about grandma&apos;s tablet. <strong>I can take that job.</strong>
+            Steady is for anyone who wants help with their devices, and for the family member who usually gets the calls about them. On a plan, your parents text or call me instead of you.
           </p>
         </Prose>
       </Section>
@@ -109,7 +109,7 @@ export default function SteadyPage() {
         <Tiers tiers={TIERS} />
       </Section>
 
-      <Section id="packages" title="Done-for-you packages" intro="Each package has a flat fee and includes the setup and a short training session, so you, or the person you bought it for, can use it afterward.">
+      <Section id="packages" title="One-off packages" intro="Each package has a flat fee and includes the setup plus a short training session for you or the person you bought it for.">
         <Rows items={PACKAGES} />
       </Section>
 
@@ -117,7 +117,7 @@ export default function SteadyPage() {
         <Rows items={PROBLEMS} />
       </Section>
 
-      <Section title="How Steady compares" intro="Other ways to handle a mom who cannot work out her phone.">
+      <Section title="How Steady compares" intro="Steady next to the other ways people get tech help.">
         <div className="ui-prose" style={{ maxWidth: "none", overflowX: "auto" }}>
           <table style={{ minWidth: 640, display: "table" }}>
             <thead>

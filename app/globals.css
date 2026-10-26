@@ -54,7 +54,7 @@
 
   --gutter: max(24px, env(safe-area-inset-left, 0px));
   --gutter-r: max(24px, env(safe-area-inset-right, 0px));
-  --wrap: 1120px;
+  --wrap: 1280px;
   --measure: 66ch;
   color-scheme: dark;
 }
@@ -157,7 +157,11 @@ a { color: inherit; }
 /* Section: a heading column and a content column, a hairline between sections. */
 .ui-section { padding-block: 64px; border-top: 1px solid var(--line); }
 .ui-section:first-of-type, .ui-hero + .ui-section { border-top: 0; }
-.ui-section__grid { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 20px 56px; }
+.ui-section__grid { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: 20px 72px; }
+/* The heading column stays in view while its section scrolls, so a long section never leaves an empty column beside it. */
+.ui-section__head { position: sticky; top: 108px; align-self: start; }
+.ui-section__aside { margin-top: 28px; }
+.ui-section__aside img { display: block; width: 100%; max-width: 240px; height: auto; aspect-ratio: 1; object-fit: cover; object-position: 50% 20%; }
 .ui-section--stack .ui-section__grid { grid-template-columns: minmax(0, 1fr); }
 .ui-section h2 { font-size: clamp(26px, 3vw, 38px); line-height: 1.1; margin: 0; }
 .ui-section__intro { color: var(--muted); margin: 12px 0 0; font-size: 16px; max-width: 38ch; }
@@ -271,6 +275,8 @@ body[data-chrome="off"] .page { padding-top: 0; }
   .ui-hero__grid { display: flex; flex-direction: column-reverse; }
   .ui-section { padding-block: 48px; }
   .ui-section__grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .ui-section__head { position: static; }
+  .ui-section__aside img { max-width: 160px; }
   .ui-row { grid-template-columns: minmax(0, 1fr); }
   .ui-facts { grid-template-columns: minmax(0, 1fr); }
   .ui-entry { grid-template-columns: minmax(0, 1fr); }

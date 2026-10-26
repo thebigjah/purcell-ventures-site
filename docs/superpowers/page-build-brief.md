@@ -46,7 +46,7 @@ Every sentence on the page, including buttons, labels, alt text, placeholders, m
 
 Keep every fact, price, number, name, link, form field and button on the page. You may reword, regroup and restyle, but a reader must be able to find everything that was there. These are decided and override what a page says:
 
-- Prices: websites from $400 setup and $99 a month. Digital tiers Starter $99, Growth $179, Full Service $279 a month, setup $400 to $1,000. Consulting from $125 a person, 1-on-1 $175 an hour, workshop $2,500 flat up to 20 people. Steady from $79 a month, one-off session $99.
+- Prices: websites from $650 setup and $99 a month. Digital tiers Starter $99, Growth $179, Full Service $279 a month, setup $650 to $1,000. Consulting from $125 a person, 1-on-1 $175 an hour, workshop $2,500 flat up to 20 people. Steady from $79 a month, one-off session $99.
 - Response time: "I reply within one business day" everywhere.
 - Divisions: five active (websites, digital add-ons, AI consulting, custom software, Steady) and real estate shown as planned, with no date.
 - Field services brand: Mantle Field Services (never "Purcell Works").

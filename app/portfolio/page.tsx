@@ -44,7 +44,7 @@ const PROJECTS: Project[] = [
   {
     slug: "the-loom",
     title: "The Loom",
-    subtitle: "A lead-generation engine that runs itself.",
+    subtitle: "A daily crawler that finds and scores sales leads.",
     description:
       "A daily crawler finds local businesses with little or no web presence, researches and scores each one, and emails a ranked packet at 7:15 every morning. Five production website templates let a prospect see a site built for their industry.",
     category: ["AI tools", "Internal"],
@@ -61,7 +61,7 @@ const PROJECTS: Project[] = [
     title: "Boyfriend Camera",
     subtitle: "On-device scene analysis in the browser.",
     description:
-      "A WebGL camera app that reads the scene on the phone and coaches the shot. I built it for the person who keeps getting handed a phone and asked to take the picture.",
+      "A WebGL camera app that reads the scene on the phone and coaches the shot. It is for whoever gets handed the phone and asked to take the picture.",
     category: ["Web", "AI tools"],
     techStack: ["JavaScript", "WebGL", "MediaPipe", "Vercel"],
     liveUrl: "https://boyfriend-camera.vercel.app",
@@ -84,7 +84,7 @@ const PROJECTS: Project[] = [
       "26 AI tools, including an FAQ builder, a content generator, a palette tool, a brand kit and logo concepts",
       "5 tools that save data: loyalty, expenses, inventory, estimating and event registration",
       "A rep portal with password login, a kanban CRM, AI prospect research and a leaderboard",
-      "Each price matches on every page that lists it",
+      "Prices kept the same on every page that lists them",
     ],
   },
   {
@@ -123,15 +123,14 @@ const PROJECTS: Project[] = [
   {
     slug: "tools-hub",
     title: "ElijahBot Tools Hub",
-    subtitle: "My own collection of personal tools.",
+    subtitle: "22 small tools I use every day.",
     description:
-      "A static, password-protected hub of 22 standalone tools. It installs as a web app and tracks affiliate redirects. I built it for my own daily use.",
+      "A static, password-protected hub of 22 standalone tools. It installs as a web app and tracks affiliate redirects.",
     category: ["Web", "AI tools"],
     techStack: ["Vanilla JavaScript", "Fraunces and JetBrains Mono", "Vercel", "Installable web app"],
     liveUrl: "https://elijahbot-tools-hub.vercel.app",
     status: "Live",
     detailLines: [
-      "Stage Fright, a voice analyzer",
       "Longitude, a sealed-letter tool",
       "Park Waits, a queue tracker",
       "Personal OS, a state router",
@@ -192,7 +191,7 @@ const PROJECTS: Project[] = [
     title: "Scholarship Sniper",
     subtitle: "A college application and scholarship tracker.",
     description:
-      "Tracked 98 schools through one application cycle, logged 34 acceptances and the scholarship offers that came with them, and drafted decline emails and appeal letters.",
+      "Tracked 98 schools through one application cycle, logged 34 acceptances and the scholarship offers that came with them, and drafted decline emails.",
     category: ["AI tools", "Internal"],
     techStack: ["Python", "Gmail API", "Anthropic Claude"],
     status: "Internal",
@@ -200,7 +199,6 @@ const PROJECTS: Project[] = [
       "34 college acceptances tracked",
       "Scholarship offers logged with each acceptance",
       "31 decline emails drafted automatically",
-      "A framework for appeal letters to Alabama",
     ],
   },
   {
@@ -297,7 +295,7 @@ export default function PortfolioPage() {
         planet="portfolio"
         kicker="Portfolio"
         title="Seventeen projects I built and still maintain."
-        lede="Live products, client sites and internal systems. Open any entry for the build details and the stack."
+        lede="Live products, a paid client site and the internal systems I use to run the business. Each entry lists the stack it runs on."
       />
 
       <Section stack>
@@ -306,7 +304,7 @@ export default function PortfolioPage() {
 
       <ClosingCall
         title="Custom software from $1,500"
-        line="Apps, web platforms, internal tools and AI integrations. I build and maintain them myself."
+        line="I build and maintain apps, web platforms, internal tools and AI integrations myself."
         button="See custom software pricing"
         href="/software"
       />

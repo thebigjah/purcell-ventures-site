@@ -45,12 +45,12 @@ export default function BundlePage() {
         />
       </Section>
 
-      <Section title="The math">
+      <Section title="Price">
         <Facts
           items={[
             ["Bought separately", "$19 + $29 + $9 = $57"],
             ["The Complete Pack", <strong key="b" className="ui-gold">$39 for all three</strong>],
-            ["What changes", "The bundle costs $18 less and holds the same files, with the same 30-day refund."],
+            ["Difference", "The bundle costs $18 less and holds the same files, with the same 30-day refund."],
           ]}
         />
       </Section>

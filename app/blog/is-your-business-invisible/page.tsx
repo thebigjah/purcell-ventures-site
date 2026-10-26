@@ -10,7 +10,7 @@ export const metadata = {
   alternates: { canonical: "/blog/is-your-business-invisible" },
   title: { absolute: "Is your business invisible online? A ten-minute self-check, by Elijah Purcell" },
   description:
-    "Seven checks a small business owner can run on their own business in ten minutes, with no tools and no account, to find out what a customer with a phone sees. Built from an audit of 121 businesses near the University of Alabama.",
+    "Seven checks a small business owner can run on their own business in ten minutes, with no tools and no account, to find out what a customer with a phone sees, based on an audit of 121 businesses near the University of Alabama.",
 };
 
 
@@ -27,16 +27,15 @@ export default function Post() {
       meta="20 August 2026, 7 minute read"
     >
       <p>
-        These seven checks take ten minutes and need no tools or account. At the
-        end you will know what somebody standing on the sidewalk with a phone sees when
-        they look for you.
+        These seven checks take ten minutes and need no tools or account. They show you
+        what somebody standing on the sidewalk with a phone sees when they look for you.
       </p>
 
       <p>
-        I built this after auditing every independent business within 2500 metres of the
-        Quad in Tuscaloosa. There were 121. Twenty-seven had a website that answered.
-        Twenty-three had opening hours recorded anywhere a machine could read them.{" "}
-        <Link href="/blog/121-businesses-near-campus">The numbers are here</Link>.
+        I put the checks together after auditing every independent business within 2500
+        metres of the Quad in Tuscaloosa. Of the 121 I found, 27 had a website that
+        answered, and 23 had opening hours recorded anywhere a machine could read them.{" "}
+        <Link href="/blog/121-businesses-near-campus">The audit has the full numbers</Link>.
       </p>
 
       <p>
@@ -58,22 +57,22 @@ export default function Post() {
       <p>
         Add the town to the name: "Joe's Barbers Tuscaloosa." Look at the first result. If it is a
         directory site you have never logged into, a Facebook page you stopped updating,
-        or a competitor, that is the answer to the whole question and you can stop
-        reading and go fix it.
+        or a competitor, you have your answer, and fixing that comes before the other
+        checks.
       </p>
       <Note>
         <strong>What good looks like:</strong> a box on the right with your name, hours,
-        phone and a map. That box is a Google Business Profile. It is free.
+        phone and a map. That box is a Google Business Profile, and it is free.
       </Note>
 
       <h3>2. What you sell, plus your town</h3>
       <p>
-        "Barber Tuscaloosa." "Ramen near me." Do you appear in the first ten results, or
-        in the map section at the top? A new customer runs this search because they do
-        not know your name yet.
+        Search something like "Barber Tuscaloosa" or "Ramen near me" and check whether
+        you appear in the first ten results or in the map section at the top. A new
+        customer runs this search because they do not know your name yet.
       </p>
 
-      <h3>3. Are your hours right, everywhere?</h3>
+      <h3>3. Your hours, everywhere they appear</h3>
       <p>
         Check Google, Facebook and whatever directory came up in check one. If the hours
         are wrong, somebody drives over and finds the business closed. Include holiday hours
@@ -111,8 +110,8 @@ export default function Post() {
       <h3>6. Your reviews, and the last one you replied to</h3>
       <p>
         Recent reviews with replies matter more than a five-star average. If the newest
-        review is three years old, it looks as if nothing has happened since. A complaint
-        with no response reads as agreement.
+        review is three years old, it looks as if nothing has happened since. Readers
+        take a complaint with no response as true.
       </p>
       <p>
         Do not pay for reviews, offer discounts for them or write them yourself. Google
@@ -134,7 +133,7 @@ export default function Post() {
       <ol>
         <li>
           <strong>Claim your Google Business Profile and put the hours in it.</strong>{" "}
-          Free, twenty minutes at{" "}
+          It is free and takes twenty minutes at{" "}
           <a href="https://business.google.com">business.google.com</a>.
         </li>
         <li>
@@ -156,9 +155,9 @@ export default function Post() {
       </p>
 
       <p>
-        If you have a queue out the door, if you are booked three weeks ahead, if your
-        customers are the same forty people they have been for a decade, a website may
-        add little. Fix the listing and the hours and go back to work.
+        A website may add little if you already have a queue out the door, are booked
+        three weeks ahead, or serve the same forty customers you have had for a decade.
+        In that case, fix the listing and the hours and leave it there.
       </p>
 
       <p>
@@ -190,12 +189,12 @@ export default function Post() {
             supply={["A phone that is not yours, or a private browser window signed out of everything"]}
             steps={[
             { name: "Use a phone that is not yours", text: "Your own phone has visited your website and knows your business. It shows results a new customer will not see, and every check after this one depends on starting clean." },
-            { name: "Search your business name plus your town", text: "If the first result is a directory you never logged into, an abandoned social page, or a competitor, that is the answer to the whole question." },
+            { name: "Search your business name plus your town", text: "If the first result is a directory you never logged into, an abandoned social page, or a competitor, you have your answer, and fixing that comes first." },
             { name: "Search what you sell plus your town", text: "A customer who does not know your name runs this search." },
-            { name: "Check your hours everywhere", text: "Google, social pages, and any directory that appeared in the first check. Include holiday hours and early closures." },
+            { name: "Check your hours everywhere", text: "Check Google, your social pages and any directory that appeared in the first check. Include holiday hours and early closures." },
             { name: "Tap your own phone number", text: "Find your number online and tap it. Check that it dials and reaches the number you answer. Then look for a way to reach you other than a phone call." },
             { name: "Open your own website on the phone", text: "Check how long it takes to load, whether you can read it without zooming, and whether you can find hours, address and phone without scrolling past a photograph." },
-            { name: "Look at your reviews and your replies", text: "Recency matters as much as rating. A complaint with no reply reads as agreement. Never pay for a review and never write one yourself." },
+            { name: "Look at your reviews and your replies", text: "Recent reviews with replies matter more than a five-star average, and readers take a complaint with no reply as true. Never pay for a review and never write one yourself." },
             { name: "Search your own name in quotes", text: "If you are the business, people also search the owner's name. See who else shares your name, and if somebody does, make sure everything you publish names your town and your trade." },
           ]}
           />

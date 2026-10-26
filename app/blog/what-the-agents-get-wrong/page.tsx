@@ -26,15 +26,15 @@ export default function Post() {
         Since this post, the agents have grown into COSMIC: 57 agents in 17 rooms. The current roster is on <Link href="/team">the team page</Link>.
       </Note>
       <p>
-        Purcell Ventures is one person, me, working with 15 AI agents. They are software, the roster is
-        public, and <Link href="/team">the team page</Link> says so in its first sentence.
+        Purcell Ventures is one person, me, working with 15 AI agents. They are software,
+        and <Link href="/team">the team page</Link> lists every one of them and says so.
         They draft proposals, audit the live properties, chase invoices, check for exposed
         secrets, and write case studies.
       </p>
 
       <p>
-        The useful part is what they got wrong. Every failure below came from the harness
-        around the model, and the harness is the part you control.
+        These are five things they got wrong. Each failure came from the harness around the
+        model, meaning the code I wrote to run it, which is the part I can change.
       </p>
 
       <h2>A gate that always passed</h2>
@@ -51,8 +51,8 @@ export default function Post() {
 
       <p>
         So deals advanced to &quot;awaiting client response&quot; for proposals that had never been
-        transmitted. Nothing had sent them. No agent could send anything yet. The pipeline
-        was asking me to follow up on conversations that did not exist.
+        sent, because at that point no agent could send anything. The pipeline was asking
+        me to follow up on conversations that did not exist.
       </p>
 
       <p>
@@ -62,8 +62,8 @@ export default function Post() {
       </p>
 
       <p>
-        The lesson: a check that always returns true checks nothing, and anyone who reads the
-        code later assumes it does check something.
+        A function that always returns true checks nothing, but anyone who reads the code
+        later will assume it checks something.
       </p>
 
       <h2>Twenty proposals with the internal notes still in them</h2>
@@ -93,13 +93,9 @@ export default function Post() {
       <h2>Eleven of the fifteen were never being called</h2>
 
       <p>
-        For weeks the daily run reported success. The agents were fine. Eleven of the fifteen
-        agents were never called.
-      </p>
-
-      <p>
-        Those eleven existed, were tested, and were never invoked. Because the script
-        exited zero, the morning report said the workforce ran.
+        For weeks the daily run reported success while eleven of the fifteen agents were
+        never called. Those eleven existed and had been tested, but because the script
+        exited zero, the morning report said every agent ran.
       </p>
 
       <p>
@@ -117,9 +113,8 @@ export default function Post() {
       </p>
 
       <p>
-        The auditor marked blocking findings resolved, and that failure looks the same as
-        success. The dashboard showed no findings because the auditor could not reach the
-        sites.
+        The auditor marked blocking findings resolved, and the dashboard showed no findings
+        only because the auditor could not reach the sites.
       </p>
 
       <p>
@@ -127,7 +122,7 @@ export default function Post() {
         it, because its failure looks exactly like the outcome you wanted.
       </p>
 
-      <h2>An agent that acquired capabilities nobody granted it</h2>
+      <h2>An agent with access nobody granted</h2>
 
       <p>
         Each agent runs a model inside a wrapper that reads context, reasons, validates and
@@ -140,24 +135,23 @@ export default function Post() {
       </p>
 
       <p>
-        Its environment had given it more tooling than the prompt described, and only the
-        prompt said otherwise.
+        Its environment gave it more tools than the prompt described, and nothing outside
+        the prompt limited it.
       </p>
 
       <pre><code>{`# the process now grants no tools by default
 --tools "" --strict-mcp-config`}</code></pre>
 
       <p>
-        The rule I took from this: a scope stated in a prompt is a request, and a scope
-        enforced by the process is a constraint. If the boundaries only exist in the agent&apos;s
-        instructions, nothing enforces them.
+        A model can ignore a limit written in its prompt. If the limits exist only in the
+        agent&apos;s instructions, nothing enforces them, so the process now enforces them.
       </p>
 
-      <h2>What works</h2>
+      <h2>What has worked</h2>
 
       <p>
-        The auditing agents cannot change anything. Keeping the finder separate from the
-        fixer is a cheap safety property, and it took one architectural decision.
+        The auditing agents cannot change anything. Separating the agents that find
+        problems from the agents that fix them took one design decision.
       </p>
 
       <p>
@@ -172,9 +166,9 @@ export default function Post() {
       </p>
 
       <p>
-        Agents pass each other data. A message on the internal bus is a claim the receiving
-        agent checks before it acts. Otherwise the first agent to produce a confident wrong
-        sentence would drive decisions.
+        When one agent passes data to another on the internal bus, the receiving agent
+        treats the message as a claim and checks it before acting. Otherwise the first agent
+        to produce a confident wrong sentence would drive decisions.
       </p>
 
       <PostByline post={{

@@ -61,7 +61,7 @@ export default function WalletTrackerPremiumPage() {
             <li><strong>The backtest engine runs the live alerts.</strong> The engine that ran the 90-day historical backtest now sends the alerts.</li>
             <li><strong>Risk scoring built in.</strong> The score uses CoinGecko market cap, liquidity and history. Tokens scoring under 4 get no alert.</li>
             <li><strong>One paid tier.</strong> Premium is the only thing I sell in the channel.</li>
-            <li><strong>Built by Elijah Purcell</strong> in Tuscaloosa, Alabama. See the <Link href="/about">about page</Link>.</li>
+            <li><strong>Built by Elijah Purcell</strong> in Tuscaloosa, Alabama (<Link href="/about">about Purcell Ventures</Link>).</li>
           </ul>
         </Prose>
         <div style={{ marginTop: 28 }}>

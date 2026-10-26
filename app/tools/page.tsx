@@ -31,7 +31,7 @@ const TOOLS: [string, string, string][] = [
   ["dorm-pack", "Dorm Pack", "A packing checklist for freshman move-in at the University of Alabama: more than 130 items in 11 categories. Check them off as you pack and add your own."],
   ["echo", "Echo", "A guided interview for recording the life story of an elderly or dying loved one: 60 questions in 9 chapters. The result is a printable life document laid out like an encyclopedia entry."],
   ["era", "Era", "Pick or roll a year. See the top headlines, music, film and tech from that year as people saw them at the time."],
-  ["examen", "Examen", "The Ignatian Examen in five movements at the end of each day: gratitude, asking for light, review, asking forgiveness and looking toward tomorrow. A 500-year-old practice, in ten minutes a night."],
+  ["examen", "Examen", "The Ignatian Examen in five movements at the end of each day: gratitude, asking for light, review, asking forgiveness and looking toward tomorrow. The practice is 500 years old and takes ten minutes a night."],
   ["friendship-map", "Friendship Map", "A small CRM for the 20 to 30 people closest to you. Track last contact, see who has gone too long without hearing from you, and tier people by closeness."],
   ["future-self", "Future Self", "Write a letter to your future self. The app keeps it sealed until the release date you set, and you can read it on or after that date."],
   ["hangout", "Steal My Hangout", "A list of hangout ideas other people have tried. Browse them and submit your own."],
@@ -54,8 +54,7 @@ export default function ToolsPage() {
       <PageHero
         kicker="Free, no account, nothing collected"
         title={`${count} free single-page tools.`}
-        lede="I built these single-purpose tools. Each one is one file that runs in the browser, keeps what you enter on your own device and needs no account."
-        meta="Until now the only links to them were on my GitHub profile."
+        lede="I built each of these as one file that runs in your browser. What you enter stays on your device, and none of them needs an account."
         crumbs={<Breadcrumbs trail={[
           { name: "Home", href: "/" },
           { name: "Free tools", href: "/tools" },
@@ -72,10 +71,10 @@ export default function ToolsPage() {
         />
       </Section>
 
-      <Section title="More">
+      <Section title="Who built them">
         <Prose>
           <p>
-            More about who made them: <Link href="/who">who Elijah Purcell is</Link>. Paid tools for businesses are on <Link href="/digital">the digital services page</Link>.
+            I am Elijah Purcell, Founder/CEO of Purcell Ventures (<Link href="/who">Who is Elijah Purcell</Link>). I also build paid tools for businesses under <Link href="/digital">digital services</Link>.
           </p>
         </Prose>
       </Section>

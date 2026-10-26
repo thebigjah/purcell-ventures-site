@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s, Purcell Ventures",
   },
   description:
-    "Built by one operator for the small businesses who move first. Digital services from $99/mo, hands-on AI consulting, custom software. Founded by Elijah Purcell, a University of Alabama student, and operated from Tuscaloosa.",
+    "Websites, digital services from $99 a month, hands-on AI consulting and custom software for small businesses. Elijah Purcell, a University of Alabama student, runs Purcell Ventures from Tuscaloosa.",
   keywords: [
     "AI consulting", "digital services for small business", "custom software development",
     "business AI training", "website management", "Purcell Ventures", "Elijah Purcell",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Purcell Ventures",
     title: "Purcell Ventures: software and AI for small businesses, founded by Elijah Purcell",
     description:
-      "Built by one operator for the small businesses who move first. Digital services, AI consulting, and custom software.",
+      "Websites, digital services, AI consulting and custom software for small businesses, from Elijah Purcell in Tuscaloosa, Alabama.",
   
     images: ["/opengraph-image"],
   },
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Purcell Ventures: software and AI for small businesses, founded by Elijah Purcell",
     description:
-      "Built by one operator for the small businesses who move first. Digital services, AI consulting, and custom software.",
+      "Websites, digital services, AI consulting and custom software for small businesses, from Elijah Purcell in Tuscaloosa, Alabama.",
   },
   robots: {
     index: true,
@@ -62,7 +62,7 @@ const orgSchema = {
       "@id": "https://purcellventures.co/#website",
       "url": "https://purcellventures.co",
       "name": "Purcell Ventures",
-      "description": "Digital services, AI consulting, and custom software. Founded by Elijah Purcell.",
+      "description": "Websites, digital services, AI consulting and custom software for small businesses, from Purcell Ventures LLC, founded by Elijah Purcell.",
       "publisher": { "@id": "https://purcellventures.co/#organization" },
       "potentialAction": {
         "@type": "SearchAction",
@@ -85,7 +85,7 @@ const orgSchema = {
         "width": 1200,
         "height": 630,
       },
-      "description": "Multi-division company offering digital services, AI consulting, and custom software development. Founded by Elijah Purcell in Georgia.",
+      "description": "Purcell Ventures LLC builds websites, digital services and custom software for small businesses and runs hands-on AI consulting. Elijah Purcell founded it in Georgia in April 2025 and runs it from Tuscaloosa, Alabama.",
       "foundingDate": "2025-04-08",
       // A logged-out ChatGPT answer on 20 Aug 2026 volunteered that an older New York
       // LLC shares this company name. Stating the distinguishing fact here means an
@@ -132,7 +132,7 @@ const orgSchema = {
         { "@type": "AdministrativeArea", "name": "Metro Atlanta" },
         { "@type": "Country", "name": "United States" },
       ],
-      "slogan": "Built by one operator for the small businesses who move first.",
+      "slogan": "Websites, software and AI training for small businesses.",
       // One human. The 57 COSMIC agents are software and the team page says so in its first
       // sentence, so the count here stays honest rather than flattering.
       "numberOfEmployees": { "@type": "QuantitativeValue", "value": 1 },

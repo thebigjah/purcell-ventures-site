@@ -7,11 +7,11 @@ export const metadata: Metadata = {
     "The five stages of a project with Elijah Purcell, from the first email to year three, and the six commitments written into every contract, including no surprise invoices and no vendor lock-in.",
   keywords: [
     "purcell ventures process", "engagement process", "agency commitments",
-    "how we work transparency", "small business AI process",
+    "how Elijah Purcell works", "small business AI process",
   ],
   openGraph: {
     title: "How Elijah Purcell works",
-    description: "Five stages, six written commitments, and the work I turn down.",
+    description: "How a project with Elijah Purcell runs, what goes into every contract, and the work he turns down.",
     url: "https://purcellventures.co/how-we-work",
     type: "website",
   

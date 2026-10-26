@@ -33,7 +33,7 @@ export default function AiAtAlabama() {
       meta="20 August 2026. Checked against catalog.ua.edu."
     >
       <p>
-        Alabama now has an artificial intelligence degree. The catalog lists the requirements and says nothing about what to do with them, and if you are not in the College of Engineering it does not obviously apply to you at all. I wanted this page in July and could not find it.
+        Alabama now has an artificial intelligence degree. The catalog lists the requirements and says nothing about what to do with them, and if you are not in the College of Engineering it is not clear the degree applies to you at all. In July I looked for a plain explanation of it and could not find one.
       </p>
 
       <h2>What the AI degree requires</h2>
@@ -63,18 +63,18 @@ export default function AiAtAlabama() {
       </p>
 
       <p>
-        One rule limits your plan: <strong>an AI major cannot also major in Computer Science.</strong> The catalog says so outright. The two overlap too heavily to count twice.
+        One rule limits your plan: <strong>an AI major cannot also major in Computer Science.</strong> The catalog states this directly, since the two degrees overlap too heavily to count twice.
       </p>
 
       <h2>Students outside engineering</h2>
 
       <p>
-        The catalog does not cover this case, and most students asking the question are in it. There is no clean second path. These are the options:
+        The catalog does not cover students outside engineering, and most students asking about AI are in that group. There is no single second path, but there are three options:
       </p>
 
       <ul>
         <li>
-          <strong>New College.</strong> You design the degree. A psychology and data science combination reaches AI from the behavioral side without entering engineering. I took that route, and it is the right one only if your question is about people rather than about systems.
+          <strong>New College.</strong> You design the degree. A psychology and data science combination reaches AI from the behavioral side without entering engineering. I took that route, and it fits if your interest in AI is about human behavior.
         </li>
         <li>
           <strong>CS 265 as an elective.</strong> Intro to AI and Data Science is the usual first course, subject to prerequisites.
@@ -84,18 +84,18 @@ export default function AiAtAlabama() {
         </li>
       </ul>
 
-      <h2>What the catalog leaves out</h2>
+      <h2>Experience outside the degree</h2>
 
       <p>
-        I run production AI agent systems. COSMIC, a station of 57 named agents in 17 rooms, does proposals, site audits, security checks, research and outreach for my company. The first of them were running before I had taken an AI course.
+        I run production AI agent systems. COSMIC, a station of 57 named agents in 17 rooms, does proposals, site audits, security checks, research and outreach for my company. The first agents were running before I had taken an AI course.
       </p>
 
       <p>
-        The degree gives you the mathematics, the formal grounding and the credential, and I value the probability sequence highly. It does not give you the experience of running something other people depend on, or of finding out at seven in the morning which of your assumptions was wrong when it breaks.
+        The degree gives you the mathematics, the formal grounding and the credential, and I value the probability sequence highly. It does not give you the experience of running software other people depend on and fixing it when it breaks.
       </p>
 
       <p>
-        Any student here can get that experience now, for free. Build one thing that another person uses and you will learn how a deployed machine learning system fails, which a semester does not cover.
+        Any student here can get that experience now, for free, by building something another person uses and keeping it running.
       </p>
 
       <h2>Common questions</h2>
@@ -112,7 +112,7 @@ export default function AiAtAlabama() {
       <p>
         I read every course code and credit figure above off{" "}
         <a href="https://catalog.ua.edu/undergraduate/engineering/computer-science/artificial-intelligence-bs/">catalog.ua.edu</a>{" "}
-        on 20 August 2026. Curricula change. If something here is wrong, tell me and I will fix it the same day and say what changed: <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>.
+        on 20 August 2026. If the curriculum has changed or something here is wrong, tell me and I will fix it the same day and note what changed: <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>.
       </p>
 
       <p>

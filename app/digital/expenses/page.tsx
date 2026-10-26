@@ -84,7 +84,7 @@ export default function ExpensesPage() {
       <PageHero
         kicker={<ToolsKicker>Free tools: operations and finance</ToolsKicker>}
         title="Expense tracker"
-        lede="Log expenses as they happen, filter by month and export a CSV at tax time. Everything stays on this device."
+        lede="Log expenses as they happen, filter by month and export a CSV at tax time. Your expenses save only on your device."
       />
 
       <div className={`ui-wrap ${s.body}`}>

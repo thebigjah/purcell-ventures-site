@@ -7,9 +7,11 @@ import { CONTACT } from "@/lib/contact";
 // The old page hid three of its four sections behind client-side tabs, so a crawler and
 // anyone following a "Start a project" link to /about#contact landed on the Story tab
 // with no contact details in sight. Every section now renders, and #contact is a real
-// anchor on a real section. /contact redirects here.
+// anchor on a real section.
 //
 // Content decisions made in the rebuild:
+// - 26 Oct, second pass: singing, debate and the "Outside the work" section are gone at
+//   his request, replaced by Missions. "The mark" section (the old PV rings mark) is gone.
 // - His height and the "never met a stranger" line are gone: public pages carry what he
 //   would say introducing himself professionally.
 // - "Same-day response" is now "I reply within one business day", the site-wide promise.
@@ -43,28 +45,29 @@ export default function AboutPage() {
         planet="company"
         kicker="About"
         title="Elijah Brent Purcell"
-        lede="Founder/CEO of Purcell Ventures LLC. I build autonomous AI agent systems, websites and software, and I study at the University of Alabama in Tuscaloosa."
+        lede="Founder/CEO of Purcell Ventures LLC. I build websites, software and AI agent systems for small businesses, and I study at the University of Alabama."
         actions={<>
           <Button href="#contact">Start a project</Button>
           <Button href="/resume" ghost>Résumé</Button>
         </>}
       />
 
-      <Section title="Why I started the company">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/brand/elijah.jpg"
-          alt="Elijah Purcell, founder of Purcell Ventures LLC and University of Alabama student"
-          width={120}
-          height={120}
-          style={{ float: "right", width: 120, height: 120, objectFit: "cover", objectPosition: "50% 20%", margin: "4px 0 12px 20px" }}
-        />
+      <Section
+        title="Why I started the company"
+        aside={
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src="/brand/elijah.jpg" alt="Elijah Purcell, founder of Purcell Ventures LLC and University of Alabama student" width={240} height={240} />
+        }
+      >
         <Prose>
           <p>
-            I am 19. I run a company with five active divisions and software in production. I work fast because small businesses need these tools now. <Link href="/who">The short factual version of who Elijah Purcell is</Link> has its own page.
+            I started Purcell Ventures in April 2025, when I was 17. Most of my clients are local service businesses, like contractors, salons and clinics, with nobody on staff to run their website or set up AI tools. Large companies have had that help for years. I build it for the small ones, and I keep supporting it after launch.
           </p>
           <p>
-            I started Purcell Ventures after noticing that AI automation, custom software and digital infrastructure reach enterprises first and small businesses late, if at all. The HVAC contractor, the barber and the florist work long hours with little technical support. I build tools for them.
+            Today the company has five active divisions and software running in production. I write the code, answer the phone and sign the contracts myself, and the company carries my last name, so the work I ship is work I answer for.
+          </p>
+          <p>
+            <Link className="ui-link" href="/who">Who is Elijah Purcell</Link>
           </p>
         </Prose>
       </Section>
@@ -75,8 +78,8 @@ export default function AboutPage() {
             ["Location", "Tuscaloosa, Alabama"],
             ["University", "The University of Alabama, Class of 2030"],
             ["Program", "Honors College, psychology and data science"],
-            ["Shipped", <><Link className="ui-link" href="/digital/tools">26 free AI tools</Link> for small businesses and <Link className="ui-link" href="/tools">26 free single-file tools</Link> live, plus client sites and production apps, designed and coded by me</>],
-            ["AI agents", <>COSMIC, a station of 57 AI agents in 17 rooms that I built to run company work. <Link className="ui-link" href="/team">The roster</Link> is public.</>],
+            ["Shipped", <><Link className="ui-link" href="/digital/tools">26 free AI tools</Link> for small businesses, <Link className="ui-link" href="/tools">26 free single-file tools</Link>, client sites and production apps, all designed and coded by me</>],
+            ["AI agents", <>COSMIC, a station of 57 AI agents in 17 rooms that runs proposals, site audits, research and outreach for the company. <Link className="ui-link" href="/team">See the roster</Link></>],
             ["Company", `Purcell Ventures LLC, formed April 2025, Georgia control number ${CONTACT.llcControlNumber}`],
             ["Registered in", "Acworth, Georgia"],
             ["Email", <a key="e" className="ui-link" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>],
@@ -84,56 +87,36 @@ export default function AboutPage() {
         />
       </Section>
 
-      <Section title="Outside the work">
+      <Section title="Missions">
         <Prose>
           <p>
-            I sing bass-baritone, with a range of C1 to F5. I competed in apologetics and debate for four years, was a member of my school&apos;s men&apos;s Bible study, and went on mission trips to North Carolina, the Bahamas and Hawaii. I graduated high school with a 3.92 weighted GPA.
+            I am called to missions. I have served on mission trips to North Carolina, the Bahamas and Hawaii, and I have a heart for the nations. The verse behind that is Acts 1:8:
           </p>
+          <blockquote>
+            &ldquo;but you will receive power when the Holy Spirit has come upon you; and you shall be My witnesses both in Jerusalem, and in all Judea and Samaria, and even to the remotest part of the earth.&rdquo; (NASB)
+          </blockquote>
         </Prose>
       </Section>
 
       <Section title="Where this is going">
         <Prose>
           <p>
-            I study psychology and data science at the University of Alabama Honors College. I am aiming for psychiatry, at the point where AI-driven research meets clinical mental health care. I expect the next generation of mental health treatment to rest on behavioral data, and I think the people building it need to understand both the science and the person it serves.
+            I am studying psychology and data science on a pre-med track toward psychiatry. I want to work where AI research meets clinical mental health care, and I think the people who build those tools should understand both the science and the patient.
           </p>
           <p>
-            Purcell Ventures is part of that goal. The systems I build for local businesses and the AI workflows I teach teams are practice in the same work: making technology useful to the people who depend on it.
+            Running Purcell Ventures is practice for that work, because in both cases the technology has to be useful to the person who depends on it.
           </p>
           <p>
-            My faith runs through all of it. I am a Christian, and I believe people are made in the image of God. So every business I advise, every tool I build and every patient I eventually treat deserves work that reflects that. It is the reason I do this work.
+            I am a Christian, and I believe every person is made in the image of God. That belief shapes how I treat clients now and how I plan to treat patients later.
           </p>
         </Prose>
       </Section>
 
-      <Section title="What I build" intro="Five active divisions, one planned, and a sister brand. One person runs all of them.">
+      <Section title="Divisions" intro="Five active divisions, one planned, and a sister brand. I run all of them.">
         <Rows items={DIVISIONS} />
       </Section>
 
-      <Section title="The mark" intro="An inverse panopticon.">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/mark-foil.svg" alt="The Purcell Ventures mark: PV at the center of rings that radiate outward" width={200} height={200} style={{ display: "block", width: 200, height: 200, marginBottom: 28 }} />
-        <Prose>
-          <p>
-            The Purcell Ventures mark inverts Jeremy Bentham&apos;s panopticon, a prison design from 1791 in which one guard in a central tower could watch every prisoner without the prisoners knowing when. The uncertainty alone produced compliance. Michel Foucault later argued that the same design describes modern power in general: institutions control people through the possibility of observation. You regulate yourself because someone might be watching. The watcher stays hidden and the watched stay exposed.
-          </p>
-          <p>
-            The inverse is a principle most free societies claim and few practice: the powerful should be transparent and accountable, and ordinary people should keep their privacy and freedom. The mark draws that idea. PV sits at the center, in plain view. The rings radiate outward toward the people I work with, and the space beyond them belongs to those people. I am the one who can be observed.
-          </p>
-          <p>
-            In 2026 that position is rarer than it should be. The platforms, algorithms and AI models that decide people&apos;s credit, feeds and hiring are opaque by design. Bentham designed that asymmetry for prisoners, and the economy now assumes it. The mark is my answer. My name is on the business, and you deal with me directly.
-          </p>
-          <h3>The name</h3>
-          <p>
-            Purcell Ventures carries my last name. When something ships under this name, I shipped it. When a client has a problem, I answer for it.
-          </p>
-          <p>
-            Ventures, because the company is a set of separate projects that I build, test and grow, and some of them carry risk.
-          </p>
-        </Prose>
-      </Section>
-
-      <Section id="contact" title="Contact" intro="Email works best. I reply within one business day. For something urgent, call or text.">
+      <Section id="contact" title="Contact" intro="Email works best, and I reply within one business day. Call or text if it is urgent.">
         <Facts
           items={[
             ["Email", <a key="e" className="ui-link" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>],
@@ -141,6 +124,7 @@ export default function AboutPage() {
             ["LinkedIn", <a key="l" className="ui-link" href="https://www.linkedin.com/in/theelijahpurcell" target="_blank" rel="me noopener noreferrer">linkedin.com/in/theelijahpurcell</a>],
             ["GitHub", <a key="g" className="ui-link" href="https://github.com/thebigjah" target="_blank" rel="me noopener noreferrer">github.com/thebigjah</a>],
             ["Résumé", <Link key="r" className="ui-link" href="/resume">purcellventures.co/resume</Link>],
+            ["Contact card", <Link key="c" className="ui-link" href="/contact">Save my details to your phone</Link>],
           ]}
         />
         <div className="ui-hero__actions">
@@ -150,16 +134,16 @@ export default function AboutPage() {
         <h3 style={{ marginTop: 48, marginBottom: 8 }}>What to expect</h3>
         <Faq
           items={[
-            { q: "Who will I talk to?", a: "Me, Elijah Purcell. I handle every project myself, from the first message to delivery." },
+            { q: "Who will I talk to?", a: "Me. I handle every project myself, from the first message to delivery." },
             { q: "How fast do you respond?", a: "I reply within one business day. If you need an answer sooner, call or text." },
-            { q: "Do you take clients outside Atlanta?", a: "For websites, digital services, consulting and software, yes. Gutter cleaning, pressure washing and lawn care go through the sister brand Mantle Field Services, in metro Atlanta only." },
-            { q: "What is the best way to start?", a: "An email with one sentence about what you need. I will tell you whether I can help and what the work would involve." },
+            { q: "Do you work outside Tuscaloosa and Atlanta?", a: "For websites, digital add-ons, consulting and software, yes, remotely. Gutter cleaning, pressure washing and lawn care go through the sister brand Mantle Field Services, in metro Atlanta only." },
+            { q: "What is the best way to start?", a: "Send me an email with one sentence about what you need. I will tell you whether I can help and what the work involves." },
           ]}
         />
       </Section>
 
-      {/* /about is one of the few pages Google has indexed, so it links the writing to get
-          the newer posts discovered. */}
+      {/* /about is one of the few pages Google has indexed, so it links recent posts to get
+          them discovered. */}
       <Section title="Recent writing">
         <Rows items={WRITING} />
       </Section>

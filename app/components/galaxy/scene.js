@@ -81,8 +81,8 @@ export function createGalaxy(container, opts = {}) {
   const backBlur = blurTex ? new THREE.Sprite(new THREE.SpriteMaterial({ map: blurTex, depthWrite: false, depthTest: false, transparent: true, opacity: 0 })) : null;
   if (backBlur) { backBlur.renderOrder = -9; backBlur.material.color.setScalar(0.42); scene.add(backBlur); }
 
-  const ORBIT_R = phone ? 80 : 56, ORBIT_EL = phone ? 1.2 : 0.72;
-  const SHIFT = phone ? { x: 0, y: -8 } : { x: -9, y: 1.5 }, SHIFT_FOCUS = phone ? { x: 0, y: -2.2 } : { x: 0, y: -0.9 };
+  const ORBIT_R = phone ? 58 : 56, ORBIT_EL = phone ? 1.05 : 0.72;
+  const SHIFT = phone ? { x: 0, y: -11 } : { x: -9, y: 1.5 }, SHIFT_FOCUS = phone ? { x: 0, y: -2.2 } : { x: 0, y: -0.9 };
   let camAngle = 0.4 + Math.PI;
   const view = { r: ORBIT_R, el: ORBIT_EL, target: new THREE.Vector3() }, viewGoal = { r: ORBIT_R, el: ORBIT_EL, target: new THREE.Vector3() };
 
@@ -170,29 +170,39 @@ export function createGalaxy(container, opts = {}) {
       for (let y = 0; y < S; y++) for (let x = 0; x < S; x++) { const dx = x - cx, dy = y - cy, rr = Math.sqrt(dx * dx + dy * dy); if (rr <= body - 2) continue; const k = (y * S + x) * 4; const lum = Math.max(d[k], d[k + 1], d[k + 2]); const al = lum < 5 ? 0 : lum < 30 ? (lum - 5) / 25 : 1; d[k + 3] = Math.round(255 * al); }
       c.putImageData(id, 0, 0);
       c.globalCompositeOperation = "destination-in"; const gr = c.createRadialGradient(cx, cy, S * 0.44, cx, cy, S * 0.5); gr.addColorStop(0, "rgba(0,0,0,1)"); gr.addColorStop(1, "rgba(0,0,0,0)"); c.fillStyle = gr; c.fillRect(0, 0, S, S);
-      const tx = new THREE.CanvasTexture(cv); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8; entry.tex = tx; entry.cbs.forEach((f) => f(tx)); entry.cbs = []; };
+      const tx = new THREE.CanvasTexture(cv); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8; tx.userData = { body: body ? body / S : 0.44 }; entry.tex = tx; entry.cbs.forEach((f) => f(tx)); entry.cbs = []; };
     img.src = url; }
   if (A.planet) loadPlanet(A.planet, true, (tx) => { planetTex = tx; planetSprites.forEach((sp) => { if (!sp.material.map) { sp.material.map = tx; sp.material.needsUpdate = true; } }); });
   const planetSprites = [];
+  /* Depth for the planet renders. Each sprite writes depth and sits on the planet's near
+     surface, so its own orbit line, the other planets and the sun's glow pass behind it
+     instead of over it. A shade disc darkens the side facing away from the system's sun
+     and turns as the planet orbits, which is what makes a flat render read as a sphere. */
+  const shadeTex = (() => { const S = 256, cv = document.createElement("canvas"); cv.width = cv.height = S; const c = cv.getContext("2d");
+    const g = c.createLinearGradient(0, 0, S, 0); g.addColorStop(0, "rgba(0,0,0,0)"); g.addColorStop(0.42, "rgba(0,0,0,0)"); g.addColorStop(0.62, "rgba(4,3,6,0.55)"); g.addColorStop(1, "rgba(4,3,6,0.86)");
+    c.fillStyle = g; c.beginPath(); c.arc(S / 2, S / 2, S / 2 - 1, 0, Math.PI * 2); c.fill();
+    c.globalCompositeOperation = "destination-in"; const e = c.createRadialGradient(S / 2, S / 2, S * 0.44, S / 2, S / 2, S / 2); e.addColorStop(0, "rgba(0,0,0,1)"); e.addColorStop(1, "rgba(0,0,0,0)"); c.fillStyle = e; c.fillRect(0, 0, S, S);
+    const t = new THREE.CanvasTexture(cv); t.colorSpace = THREE.SRGBColorSpace; return t; })();
   map.systems.forEach((sys, i) => {
     const arm = i % 2, th = (sys.id === "services" ? 4.5 : sys.id === "contact" ? 6.9 : 5.0 + Math.floor(i / 2) * 1.0) + (arm ? 0.5 : 0); const base = armPoint(th, arm);
     const g = new THREE.Group(); g.position.copy(base); g.position.y = (i % 3 - 1) * 0.5;
     g.userData = { system: sys, theta: th, arm, rad: base.length() };
     const starTex = A.star ? (starTexShared || (starTexShared = loadTex(A.star))) : null;
     const sun = new THREE.Sprite(new THREE.SpriteMaterial({ map: starTex || glowTex, color: new THREE.Color(starTex ? "#ffffff" : "#ffd27a"), transparent: true, opacity: 1, blending: THREE.AdditiveBlending, depthWrite: false })); sun.scale.set(sys.star ? 4.2 : 2.6, sys.star ? 4.2 : 2.6, 1);
-    sun.userData = { kind: "system", system: sys, group: g, ph: i * 1.3, base: sys.star ? 4.2 : 2.6 }; g.add(sun);
+    sun.userData = { kind: "system", system: sys, group: g, ph: i * 1.3, base: sys.star ? 4.2 : 2.6 }; sun.renderOrder = 4; g.add(sun);
     const sunPick = new THREE.Mesh(new THREE.SphereGeometry(2.2, 10, 8), new THREE.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false })); sunPick.userData = sun.userData; g.add(sunPick); pickables.push(sunPick);
     const total = sys.planets.length;
     sys.planets.forEach((p, j) => {
       const r = 0.2 + 0.1 * Math.sqrt(p.children || 0);
       const m = new THREE.Mesh(new THREE.SphereGeometry(r, phone ? 24 : 40, phone ? 16 : 28), planetMat()); m.material.visible = false;
       const dot = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex, color: new THREE.Color("#ffd98a"), transparent: true, opacity: 0.9, blending: THREE.AdditiveBlending, depthWrite: false })); dot.scale.set(r * 2.2 + 0.25, r * 2.2 + 0.25, 1); dot.userData = { dot: true }; m.add(dot);
-      const sp = new THREE.Sprite(new THREE.SpriteMaterial({ transparent: true, depthWrite: false, opacity: 0 })); sp.scale.set(r * 2.5, r * 2.5, 1); sp.userData = { rim: true }; m.add(sp); planetSprites.push(sp);
+      const sp = new THREE.Sprite(new THREE.SpriteMaterial({ transparent: true, depthWrite: true, alphaTest: 0.4, opacity: 0 })); sp.scale.set(r * 2.5, r * 2.5, 1); sp.renderOrder = 1; sp.userData = { rim: true, r }; m.add(sp); planetSprites.push(sp);
+      const shade = new THREE.Sprite(new THREE.SpriteMaterial({ map: shadeTex, transparent: true, depthWrite: false, opacity: 0 })); shade.renderOrder = 2; shade.userData = { shade: true, r }; m.add(shade);
       const own = p.tex && A.planets && A.planets[p.tex]; if (own) loadPlanet(own, p.tex !== "blog", (tx) => { sp.material.map = tx; sp.material.needsUpdate = true; });
       m.userData = { kind: "planet", planet: p, system: sys, orbit: 1.15 + j * (total > 5 ? 0.32 : 0.42), speed: (2 * Math.PI) / (45 + j * 14), a0: (j / total) * Math.PI * 2, group: g };
       g.add(m);
       const pick = new THREE.Mesh(new THREE.SphereGeometry(r * 2.2 + 0.35, 10, 8), new THREE.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false })); pick.userData = m.userData; m.add(pick); pickables.push(pick); m.userData.mesh = m;
-      const ring = new THREE.Mesh(new THREE.RingGeometry(m.userData.orbit - 0.01, m.userData.orbit + 0.01, 128), new THREE.MeshBasicMaterial({ color: 0xd9a24a, transparent: true, opacity: 0, side: THREE.DoubleSide, depthWrite: false })); ring.rotation.x = -Math.PI / 2; ring.userData = { ring: true }; g.add(ring);
+      const ring = new THREE.Mesh(new THREE.RingGeometry(m.userData.orbit - 0.01, m.userData.orbit + 0.01, 128), new THREE.MeshBasicMaterial({ color: 0xd9a24a, transparent: true, opacity: 0, side: THREE.DoubleSide, depthWrite: false })); ring.rotation.x = -Math.PI / 2; ring.renderOrder = 3; ring.userData = { ring: true }; g.add(ring);
       const pl = document.createElement("div"); pl.className = "gx-label gx-planet"; pl.textContent = p.name; labelsRoot.appendChild(pl); labels.push({ el: pl, obj: m, off: r + 0.45, kind: "planet", group: g });
     });
     if (sys.belt) {
@@ -248,7 +258,7 @@ export function createGalaxy(container, opts = {}) {
   const clock = new THREE.Clock(); let t = 0, running = true, visible = true, coreTick = 0, active = true;
   new IntersectionObserver((es) => { visible = es[0].isIntersecting; }).observe(container);
   document.addEventListener("visibilitychange", () => { running = !document.hidden; });
-  const tmpV = new THREE.Vector3();
+  const tmpV = new THREE.Vector3(), tmpN = new THREE.Vector3(), tmpW = new THREE.Vector3(), tmpS = new THREE.Vector3();
   function frame() {
     if (destroyed) return; requestAnimationFrame(frame); if (!running || !visible || !active) return;
     const dt = Math.min(clock.getDelta(), 0.1); if (!rm) t += dt;
@@ -258,7 +268,10 @@ export function createGalaxy(container, opts = {}) {
       const open = focused === g; const pf = !!focusedPlanet; const sunO = pf ? 0 : 1;
       g.children[0].material.opacity += (sunO - g.children[0].material.opacity) * k;
       g.children.forEach((c) => { const d = c.userData; if (d.kind === "planet") { const a2 = d.a0 + t * d.speed; c.position.set(Math.cos(a2) * d.orbit, 0, Math.sin(a2) * d.orbit);
-          c.children.forEach((ch) => { const mine = c === focusedPlanet; if (ch.userData.dot) ch.material.opacity += ((open || pf ? 0 : 0.9) - ch.material.opacity) * k; if (ch.userData.rim) { ch.material.opacity += ((open && ch.material.map && (!pf || mine) ? 1 : 0) - ch.material.opacity) * k; ch.material.rotation = (ch.material.rotation || 0); } }); }
+          c.children.forEach((ch) => { const mine = c === focusedPlanet; if (ch.userData.dot) ch.material.opacity += ((open || pf ? 0 : 0.9) - ch.material.opacity) * k; if (ch.userData.rim) { ch.material.opacity += ((open && ch.material.map && (!pf || mine) ? 1 : 0) - ch.material.opacity) * k; }
+            if (ch.userData.rim || ch.userData.shade) { tmpN.copy(camera.position).sub(tmpW.setFromMatrixPosition(c.matrixWorld)).normalize().multiplyScalar(ch.userData.r * (ch.userData.shade ? 1.04 : 1)); ch.position.copy(tmpN); }
+            if (ch.userData.shade) { const rim = c.children.find((x) => x.userData.rim); const body = rim && rim.material.map && rim.material.map.userData ? rim.material.map.userData.body : 0.44; const s = rim ? rim.scale.x * body * 2 : 0; ch.scale.set(s, s, 1); ch.material.opacity = rim ? rim.material.opacity : 0;
+              tmpS.setFromMatrixPosition(g.matrixWorld).project(camera); tmpW.setFromMatrixPosition(c.matrixWorld).project(camera); ch.material.rotation = Math.atan2(tmpW.y - tmpS.y, (tmpW.x - tmpS.x) * camera.aspect); } }); }
         if (d.ring) c.material.opacity += ((open && !pf ? 0.16 : 0) - c.material.opacity) * k;
         if (d.belt) c.material = starMat;
         if (d.belt) c.rotation.y = t * 0.02; }); });

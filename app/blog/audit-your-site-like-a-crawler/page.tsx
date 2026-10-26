@@ -8,7 +8,7 @@ export const metadata = {
   alternates: { canonical: "/blog/audit-your-site-like-a-crawler" },
   title: { absolute: "Auditing your own site the way a crawler does, with curl, by Elijah Purcell" },
   description:
-    "Nine checks you can run against your live site from a terminal, no tools and no account: canonical tags pointing at the wrong page, duplicate titles, sitemap and robots contradictions, missing structured data, and pages that silently tell Google to skip them.",
+    "Nine checks you can run against your live site from a terminal with curl and no account: canonical tags pointing at the wrong page, duplicate titles, sitemap and robots contradictions, missing structured data, and pages that silently tell Google to skip them.",
 };
 
 
@@ -27,7 +27,7 @@ export default function Post() {
       <p>
         These nine curl checks take twenty minutes in a terminal and need no
         account. I ran every one of them against my own site today and found six
-        problems. One of them had kept nine pages out of Google.
+        problems, one of which had kept nine pages out of Google.
       </p>
 
       <p>
@@ -36,24 +36,24 @@ export default function Post() {
         that response.
       </p>
 
-      <h2>1. Does every page canonicalise to itself</h2>
+      <h2>1. Pages that canonicalise to a different URL</h2>
 
       <p>
-        This is the one that cost me nine pages. A canonical tag pointing somewhere else
+        This check found the problem that kept nine of my pages out of Google. A canonical tag pointing somewhere else
         says "I am a duplicate, index that instead," and Google does exactly that.
       </p>
 
       <pre><code>{`curl -sL https://example.com/some/page | grep -o 'rel="canonical"[^>]*'`}</code></pre>
 
       <p>
-        If the href is not the URL you just requested, that page has handed its value to
+        If the href is not the URL you requested, that page has handed its value to
         another one. Check a page from every section, because the usual
         cause is a shared layout handing its own canonical to every child route.{" "}
         I wrote up the full story in{" "}
         <Link href="/blog/canonical-tag-noindex">how one canonical tag hid nine pages</Link>.
       </p>
 
-      <h2>2. Is anything accidentally noindex</h2>
+      <h2>2. Pages set to noindex by accident</h2>
 
       <pre><code>{`curl -sIL https://example.com/page | grep -i x-robots-tag
 curl -sL  https://example.com/page | grep -o '<meta name="robots"[^>]*'`}</code></pre>
@@ -65,22 +65,22 @@ curl -sL  https://example.com/page | grep -o '<meta name="robots"[^>]*'`}</code>
         <a href="https://developers.google.com/search/docs/crawling-indexing/block-indexing" rel="noopener">Google treats the two as equivalent directives</a>.
       </p>
 
-      <h2>3. Does your sitemap contradict your robots.txt</h2>
+      <h2>3. Sitemap URLs that robots.txt blocks</h2>
 
       <p>
         A URL that appears in the sitemap and is also disallowed in robots.txt is a
         contradiction. The page can still show up in results as a bare link with no
         description, because the crawler was never allowed to read it.{" "}
         <a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap" rel="noopener">The sitemap documentation</a>{" "}
-        says a sitemap asks for a crawl. It does not override robots.txt.
+        says a sitemap asks for a crawl and does not override robots.txt.
       </p>
 
       <pre><code>{`curl -s https://example.com/sitemap.xml | grep -o '<loc>[^<]*' | sed 's/<loc>//' > urls.txt
 curl -s https://example.com/robots.txt | grep -i '^disallow'`}</code></pre>
 
-      <p>Then check each sitemap path against each disallow prefix. I had five.</p>
+      <p>Then check each sitemap path against each disallow prefix. My site had five of these conflicts.</p>
 
-      <h2>4. Are any two pages sharing a title</h2>
+      <h2>4. Duplicate page titles</h2>
 
       <p>
         Duplicate titles waste crawl budget and make a search engine choose between your
@@ -93,7 +93,7 @@ curl -s https://example.com/robots.txt | grep -i '^disallow'`}</code></pre>
   curl -sL "$u" | grep -o '<title>[^<]*' | head -1
 done < urls.txt | sort -k2 | uniq -f1 -D`}</code></pre>
 
-      <h2>5. Does your structured data parse</h2>
+      <h2>5. Structured data that fails to parse</h2>
 
       <p>
         Markup that exists can still be broken, so test that it parses. Google skips a
@@ -114,7 +114,7 @@ for b in re.findall(r"<script[^>]*ld\\+json[^>]*>(.*?)</script>", h, re.S):
         print("FAIL", e)
 '`}</code></pre>
 
-      <h2>6. Does your entity have one identity or several</h2>
+      <h2>6. One @id for each person or organisation</h2>
 
       <p>
         If your site names a person or an organisation in several places, every one of
@@ -125,10 +125,10 @@ for b in re.findall(r"<script[^>]*ld\\+json[^>]*>(.*?)</script>", h, re.S):
 
       <p>
         Extract every <code>@type: Person</code> across the site and count the distinct
-        identifiers. Mine was twelve, three of them anonymous. It should be one.
+        identifiers. My site had twelve, three of them anonymous, and it should have had one.
       </p>
 
-      <h2>7. Does the title contain the term you want to rank for</h2>
+      <h2>7. The search term in the page title</h2>
 
       <p>
         The title tag is a strong
@@ -141,7 +141,7 @@ for b in re.findall(r"<script[^>]*ld\\+json[^>]*>(.*?)</script>", h, re.S):
   case "$t" in *"Your Thing"*) : ;; *) echo "MISSING: $u  $t";; esac
 done < urls.txt`}</code></pre>
 
-      <h2>8. How fast is it</h2>
+      <h2>8. Page speed</h2>
 
       <pre><code>{`curl -sL -o /dev/null -w 'ttfb %{time_starttransfer}s  total %{time_total}s  %{size_download} bytes\\n' \\
   https://example.com/page`}</code></pre>
@@ -152,7 +152,7 @@ done < urls.txt`}</code></pre>
         speed is not your bottleneck and your time is better spent on the other checks.
       </p>
 
-      <h2>9. What is indexed</h2>
+      <h2>9. How many pages Google has indexed</h2>
 
       <p>
         Search <code>site:yourdomain.com</code> in a browser, signed out. Count the
@@ -192,7 +192,7 @@ done < urls.txt`}</code></pre>
           <PostByline post={{
             slug: "audit-your-site-like-a-crawler",
             title: "Auditing your own site the way a crawler does, with curl",
-            description: "Nine checks you can run against your live site from a terminal, no tools and no account.",
+            description: "Nine checks you can run against your live site from a terminal with curl and no account.",
             published: "2026-08-20",
           }} />
 

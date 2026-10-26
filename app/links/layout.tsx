@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Links: everything from Elijah Purcell",
+  title: "Elijah Purcell's links",
   description:
-    "Every place Elijah Purcell, Founder/CEO of Purcell Ventures LLC, appears online: services, free tools, courses, personal pages, the sister brand, profiles and contact details.",
+    "Links to Elijah Purcell's services, free tools, courses, profiles and contact details. He is the Founder/CEO of Purcell Ventures LLC.",
   alternates: { canonical: "https://purcellventures.co/links" },
 };
 
@@ -19,9 +19,9 @@ const schema = {
       "@type": "ProfilePage",
       "@id": "https://purcellventures.co/links",
       "url": "https://purcellventures.co/links",
-      "name": "Links: Everything from Elijah Purcell",
+      "name": "Elijah Purcell's links",
       "description":
-        "Index of every public property, profile and contact route for Elijah Purcell and Purcell Ventures LLC.",
+        "Links to the services, free tools, courses, profiles and contact details of Elijah Purcell and Purcell Ventures LLC.",
       "mainEntity": { "@id": "https://purcellventures.co/#founder" },
       "about": { "@id": "https://purcellventures.co/#founder" },
       "publisher": { "@id": "https://purcellventures.co/#organization" },

@@ -98,7 +98,7 @@ export default function BookPage() {
         planet="book"
         kicker="AI consulting"
         title="Session booking"
-        lede="Three short steps. I reply within one business day to confirm the details."
+        lede="Pick a session, tell me when suits you and how to reach you. I reply within one business day to confirm."
         meta={submitted ? undefined : `Step ${step} of 3: ${STEPS[step - 1]}`}
       />
 
@@ -117,7 +117,7 @@ export default function BookPage() {
           </div>
         </Section>
       ) : step === 1 ? (
-        <Section title="Five sessions" intro="Pick the closest session. I adjust it to your business.">
+        <Section title="Session" intro="Pick the closest match and I adjust it to your business.">
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {SESSION_TYPES.map((s) => {
               const isActive = sessionType === s.id;
@@ -190,7 +190,7 @@ export default function BookPage() {
           </div>
         </Section>
       ) : (
-        <Section title="Contact details" intro="How I reach you to confirm.">
+        <Section title="Contact details" intro="I use these to confirm the booking.">
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             <div style={twoUp}>
               <div className="ui-field">

@@ -13,7 +13,7 @@ export default function ChatWidget() {
 
   useEffect(() => {
     if (open && messages.length === 0) {
-      setMessages([{ role: "assistant", content: "Hi, I'm the Purcell Ventures assistant. Ask me about services, prices or how to start a project." }]);
+      setMessages([{ role: "assistant", content: "Hi, I am an AI assistant for Purcell Ventures. Ask me about services, prices or how to start a project." }]);
     }
   }, [open, messages.length]);
 
@@ -37,7 +37,7 @@ export default function ChatWidget() {
       const data = await res.json();
       setMessages(m => [...m, { role: "assistant", content: data.text }]);
     } catch {
-      setMessages(m => [...m, { role: "assistant", content: "Something went wrong. Try calling (205) 462-7839." }]);
+      setMessages(m => [...m, { role: "assistant", content: "The assistant could not reply. Call or text Elijah at (205) 462-7839." }]);
     }
     setLoading(false);
   };
@@ -57,7 +57,7 @@ export default function ChatWidget() {
         <div className="chat-panel" role="dialog" aria-label="Ask Purcell Ventures">
           <div className="chat-head">
             <b>Ask a question</b>
-            <span>The Purcell Ventures assistant. For anything it cannot answer, call {CONTACT_PHONE}.</span>
+            <span>An AI assistant answers here. For anything it cannot answer, call Elijah at {CONTACT_PHONE}.</span>
           </div>
           <div className="chat-msgs">
             {messages.map((m, i) => (

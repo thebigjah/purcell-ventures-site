@@ -122,7 +122,7 @@ export default function EstimatingPage() {
           <PageHero
             kicker={<ToolsKicker>Free tools: operations and finance</ToolsKicker>}
             title="Online estimating"
-            lede="Build job quotes from line items for labor and materials, then print them or save them as a PDF to send. Everything stays on this device."
+            lede="Build job quotes from line items for labor and materials, then print them or save them as a PDF to send. Estimates save only on your device."
           />
 
           <div className={`ui-wrap ${s.body} no-print`}>

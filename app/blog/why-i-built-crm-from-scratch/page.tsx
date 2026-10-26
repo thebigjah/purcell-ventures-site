@@ -21,15 +21,17 @@ export default function Post() {
       title="Why I built a CRM from scratch instead of paying for HubSpot"
       meta="25 May 2026, 5 minute read"
     >
-      <p>When I set up sales at Purcell Ventures, HubSpot was the obvious choice, and it has a free tier.</p>
-
-      <p>I evaluated HubSpot for two days and decided to build. The build took a week.</p>
+      <p>
+        When I set up sales at Purcell Ventures, HubSpot was the obvious choice, and it has a
+        free tier. I spent two days evaluating it, then decided to build my own CRM, which
+        took a week.
+      </p>
 
       <h2>HubSpot pricing</h2>
       <p>
         The free tier excludes the features below. These are the plan prices HubSpot listed
-        when I wrote this post in May 2026. Their current prices are{" "}
-        <a href="https://www.hubspot.com/pricing/sales" rel="noopener">published here</a>.
+        in May 2026, and their current prices are on{" "}
+        <a href="https://www.hubspot.com/pricing/sales" rel="noopener">HubSpot&apos;s pricing page</a>.
       </p>
 
       <ul>
@@ -58,7 +60,7 @@ export default function Post() {
         monthly subscription.
       </p>
 
-      <h2>Why the math works</h2>
+      <h2>Upkeep compared with HubSpot</h2>
       <p>
         The usual objection is that a custom CRM takes more upkeep than HubSpot. For me it
         has taken less, for four reasons.
@@ -72,7 +74,6 @@ export default function Post() {
       </ol>
 
       <h2>What I gave up</h2>
-      <p>Three things:</p>
 
       <ol>
         <li><strong>Polish.</strong> HubSpot looks more sophisticated. Mine looks like a small-team CRM, because that&apos;s what it is. It would matter if I needed to impress investors.</li>
@@ -100,13 +101,13 @@ export default function Post() {
         <li>You want to use AI in custom ways the SaaS CRMs don&apos;t support</li>
       </ul>
 
-      <h2>A side benefit</h2>
+      <h2>Learning my own sales process</h2>
       <p>
         Building my own CRM forced me to learn my sales process in detail, because I had to
         design every stage and field.
       </p>
 
-      <h2>What this looks like in my shop</h2>
+      <h2>The starter kit and custom builds</h2>
       <p>
         I packaged the system prompts, the reasoning behind the database schema and the
         operating handbook into the <Link href="/shop/starter-kit">$19 PV AI Starter Kit</Link>.

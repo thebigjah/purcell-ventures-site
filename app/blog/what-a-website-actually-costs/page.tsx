@@ -30,11 +30,11 @@ export default function Post() {
     >
       <p>
         Ask three providers what a website costs and you will get $400, $4,000 and $15,000,
-        for sites that can look alike to a customer. Here is what drives that spread, with
-        my own numbers on the page so you can see where I sit.
+        for sites that can look alike to a customer. The spread comes from three things you
+        are paying for, and I include my own prices so you can compare.
       </p>
 
-      <h2>The three things you buy</h2>
+      <h2>What the price pays for</h2>
 
       <p>
         The first is design, which means deciding what the site looks like. It ranges from
@@ -74,8 +74,8 @@ export default function Post() {
       <h2>The costs quotes leave out</h2>
 
       <p>
-        These costs continue after the invoice is paid. A quote that omits them is
-        incomplete, and the costs arrive anyway.
+        These costs continue after you pay the invoice, whether or not the quote mentions
+        them.
       </p>
 
       <ul>
@@ -94,9 +94,9 @@ export default function Post() {
       </p>
 
       <p>
-        A fair quote, even an expensive one, is itemised. It says what happens after launch.
-        It states who owns the domain, the hosting and the code. It has a date. It says what
-        is not included.
+        A fair quote, even an expensive one, is itemised and dated. It says what happens
+        after launch, who owns the domain, the hosting and the code, and what is not
+        included.
       </p>
 
       <p>
@@ -123,8 +123,9 @@ export default function Post() {
 
       <p>
         I audited 121 independent businesses near the University of Alabama, and for most of
-        them my recommendation is the free option first.{" "}
-        <Link href="/blog/is-your-business-invisible">The self-check is here</Link>.
+        them I recommend the free option first. My{" "}
+        <Link href="/blog/is-your-business-invisible">ten-minute self-check</Link> shows
+        where your business stands.
       </p>
 
       <PostByline post={{

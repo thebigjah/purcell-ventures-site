@@ -8,27 +8,27 @@ const VERSES = [
   {
     ref: "Romans 8:28",
     text: "And we know that God causes all things to work together for good to those who love God, to those who are called according to His purpose.",
-    why: "The verse I come back to when something has gone wrong. It admits that things hurt and refuses to let them be meaningless.",
+    why: "I read this one when something has gone wrong. It tells me God can use a bad situation for good.",
   },
   {
     ref: "Matthew 5:10",
     text: "Blessed are those who have been persecuted for the sake of righteousness, for theirs is the kingdom of heaven.",
-    why: "For the moments when doing the right thing costs something visible: public ridicule, lost friendships, lost ground. The kingdom is on the other side of those losses.",
+    why: "I read this one when doing the right thing costs me something, like a friendship or other people's respect.",
   },
   {
     ref: "Romans 1:16",
     text: "For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes, to the Jew first and also to the Greek.",
-    why: "This verse rules out being cool about faith. The gospel is either the most embarrassing thing I believe or the most powerful, and no version of Christianity sits between the two.",
+    why: "This verse keeps me from playing down my faith to fit in.",
   },
   {
     ref: "Proverbs 3:5-6",
     text: "Trust in the LORD with all your heart and do not lean on your own understanding. In all your ways acknowledge Him, and He will make your paths straight.",
-    why: "I lean on my own understanding by default, because I am analytical and I plan everything. Every day this verse hands the plan back to God.",
+    why: "I am analytical and I plan everything, so I tend to trust my own reasoning first. This verse reminds me to trust God with the plan.",
   },
   {
     ref: "Psalm 139:13",
     text: "For You formed my inward parts; You wove me in my mother's womb.",
-    why: "The reason I take psychology and psychiatry seriously. God formed every patient I will eventually treat, and the work has to honor that.",
+    why: "I am working toward psychiatry, and this verse is why I take that work seriously. God formed every patient I will treat.",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function VersesPage() {
         planet="websites"
         kicker="Verses"
         title="Five verses I come back to"
-        lede="I have marked these, memorized them and returned to them when life got hard. They are the convictions behind the work."
+        lede="Scriptures I have memorized and come back to often, with a note on why each one matters to me."
         meta="Updated May 2026. All quotations from the NASB."
       />
 
@@ -54,7 +54,7 @@ export default function VersesPage() {
 
       <ClosingCall
         title="Questions about one of these"
-        line="If you are wrestling with one of these verses, email me. I have no pastoral training, and I have spent years wrestling with them myself."
+        line="If you want to talk about one of these verses, email me. I have no pastoral training, but I have spent years thinking about them."
         button="Email me"
         href={`mailto:${CONTACT.email}`}
       />

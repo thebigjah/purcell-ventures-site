@@ -5,7 +5,7 @@ export const metadata = {
   alternates: { canonical: "/team" },
   title: "The team: Elijah Purcell and the 57 AI agents of COSMIC",
   description:
-    "Purcell Ventures runs on one person and COSMIC, a station of 57 AI agents in 17 rooms. This page lists the agents that do company work, what each one does, and what some are not allowed to do.",
+    "Purcell Ventures is one person, Elijah Purcell, working with COSMIC, a station of 57 AI agents in 17 rooms. Each agent's name, its job, and the actions it is not allowed to take.",
 };
 
 // WHY THIS PAGE SAYS "AI AGENT" IN THE FIRST SENTENCE
@@ -96,7 +96,7 @@ const ROOMS: Room[] = [
     about: "Company posts and case studies.",
     agents: [
       { key: "paige", name: "Paige Pryor", role: "Room manager",
-        does: "Keeps company posts accurate, useful and on schedule, and keeps internal details out of them." },
+        does: "Checks company posts for accuracy, keeps them on schedule, and keeps internal details out of them." },
       { key: "wren", name: "Wren Waverly", role: "Purcell Ventures content",
         does: "Drafts posts about what the company did this week, for Elijah to review and publish.",
         wont: "Write about client work that is confidential, or claim a result that has not happened." },
@@ -167,7 +167,7 @@ const ROOMS: Room[] = [
         wont: "Invoice an amount the client did not agree to." },
       { key: "tobias", name: "Tobias Thorne", role: "Tax and ledger",
         does: "Classifies company spending, flags anything that looks commingled, and prepares tax numbers for Elijah to file.",
-        wont: "Categorise a transaction it cannot read. It leaves those uncategorised." },
+        wont: "Categorize a transaction he cannot read. He leaves those uncategorized." },
     ],
   },
   {
@@ -179,9 +179,9 @@ const ROOMS: Room[] = [
       { key: "vera", name: "Vera Vale", role: "YouTube lead",
         does: "Turns every clip Clip Machine renders into an upload packet with the campaign's tags, credit line and hashtags, one YouTube channel per clip." },
       { key: "hook", name: "Hook", role: "Microbot, reports to Vera",
-        does: "Writes each queued Short the strongest title its clip can back up, and sends it through Juno's slop check." },
+        does: "Writes a title for each queued Short that its clip can back up, and sends it through Juno's slop check." },
       { key: "lens", name: "Lens", role: "Microbot, reports to Vera",
-        does: "Studies what gets Shorts in the station's niches their views, and finds new paid clip campaigns." },
+        does: "Studies which Shorts get views in the station's niches, and finds new paid clip campaigns." },
       { key: "tally", name: "Tally", role: "Microbot, reports to Vera",
         does: "Reads the numbers on every posted Short each morning and tells Vera what moved and what did not." },
     ],
@@ -221,7 +221,7 @@ const ROOMS: Room[] = [
     about: "Everything the station knows.",
     agents: [
       { key: "blair", name: "Blair Bennett", role: "Room manager",
-        does: "Makes sure everything the station learns is kept, findable and trusted." },
+        does: "Makes sure everything the station learns is saved with its source and can be found again." },
       { key: "minerva", name: "Minerva Marsh", role: "Memory lead",
         does: "Keeps everything the station knows findable, so no agent researches the same thing twice." },
     ],
@@ -315,7 +315,7 @@ export default function TeamPage() {
           planet="consulting"
           kicker="Purcell Ventures LLC"
           title="One person and COSMIC, 57 AI agents in 17 rooms"
-          lede={<><strong>Everyone below is an AI agent.</strong> They have names because it is easier to ask what Quentin is doing than what the proposal subsystem is doing, and because an agent that signs its own name can be held to what it said.</>}
+          lede={<><strong>Every agent named here is software.</strong> Elijah Purcell is the only person in the company. The agents have names because asking what Quentin is doing is easier than asking what the proposal subsystem is doing, and an agent that signs its name can be held to what it said.</>}
         />
 
         <Section title="How COSMIC works">
@@ -324,7 +324,7 @@ export default function TeamPage() {
               COSMIC stands for Command and Orchestration Systems Manifold Intelligence Center. It is a station app that runs on Elijah&apos;s Mac, with an Android companion app. Each agent is a Claude session with a narrow set of tools and a written charter, and it cannot use any tool outside that set.
             </p>
             <p>
-              The agents work in rooms, one room per part of the business. Each agent has a list of things it may not do. Elijah set those limits so no agent can invent a price, close its own findings, or send mail as a person. Anything one of them sends you says in the signature that an automated agent wrote it, and a person reads the replies.
+              The agents work in rooms, one room per part of the business. Elijah gave each agent a list of things it may not do: no agent can invent a price, close its own findings or send mail as a person. Any email an agent sends you says in the signature that an automated agent wrote it, and Elijah reads the replies.
             </p>
           </Prose>
         </Section>
@@ -343,7 +343,7 @@ export default function TeamPage() {
 
         <Section
           title="The roster"
-          intro={`The ${NAMED} agents that do company work, grouped by room. Seven more handle Elijah's own school and personal work, so this page counts them and leaves their names out.`}
+          intro={`${NAMED} agents do company work, listed by room. Seven more agents handle Elijah's school and personal work, and their names are not published.`}
           stack
         >
           {ROOMS.map((room) => (
@@ -357,10 +357,10 @@ export default function TeamPage() {
           ))}
         </Section>
 
-        <Section title="The one human">
+        <Section title="Elijah Purcell">
           <Prose>
             <p>
-              <strong>Elijah Purcell</strong>, Founder/CEO, founded the company, does the building, and makes every decision the agents are not allowed to make: prices, what gets sent to a client, and what happens to money.
+              <strong>Elijah Purcell</strong> is the Founder/CEO. He builds the software and makes the decisions the agents are not allowed to make: prices, what gets sent to a client, and how money is spent.
             </p>
           </Prose>
         </Section>

@@ -121,7 +121,7 @@ const TIERS = [
       "Three hours one-on-one with me",
       "A review of your business plan and offer",
       "Sales strategy and pitch preparation",
-      "Email me directly for 90 days",
+      "Direct email access for 90 days",
     ],
     children: JOIN,
   },
@@ -138,7 +138,7 @@ const FAQS: { q: ReactNode; a: ReactNode }[] = [
   },
   {
     q: "You are nineteen. Why take business advice from you?",
-    a: "I founded Purcell Ventures at 17 and wrote down the tools, decisions and mistakes as I went. The course teaches the process I used while I still remember it clearly. I use the tools I recommend, and I made the mistakes I warn about.",
+    a: "I founded Purcell Ventures at 17 and wrote down the tools, decisions and mistakes as I went. The course teaches that process while I still remember it clearly, and I still use every tool it recommends.",
   },
   {
     q: "What is in the resource pack?",
@@ -146,7 +146,7 @@ const FAQS: { q: ReactNode; a: ReactNode }[] = [
   },
   {
     q: "What if I already started a business?",
-    a: "The money, legal, branding and sales modules still apply. People who start fast often skip the foundation and fix it later. The course helps you check what you set up correctly and what needs work, and you can move through the early modules quickly.",
+    a: "The money, legal, branding and sales modules still apply. Use them to check what you set up correctly and what needs work, and move through the early modules quickly.",
   },
   {
     q: "How do the Coaching track and the one-on-one intensive differ?",
@@ -172,16 +172,16 @@ export default function BusinessLaunchPage() {
       <PageHero
         planet="pricing"
         kicker="Course: The Business Launch Playbook"
-        title="I started a company at 17. This course covers how."
-        lede="I am Elijah Purcell. I founded Purcell Ventures at 17, and it now runs websites, digital add-ons, AI consulting, custom software and Steady, plus digital products and courses. The course walks through starting a business, from the idea to the legal entity to the first customer, with the tools and decisions I used."
+        title="How I started a company at 17"
+        lede="I am Elijah Purcell. I founded Purcell Ventures at 17, and it now runs websites, digital add-ons, AI consulting, custom software and Steady, plus digital products and courses. The course goes from the idea to the legal entity to the first customer, using the tools and decisions from my own business."
         meta="Waitlist open. I am still recording the course."
         actions={<>
           <Button href="#waitlist">Join the waitlist</Button>
-          <Button href="#curriculum" ghost>See what is inside</Button>
+          <Button href="#curriculum" ghost>See the curriculum</Button>
         </>}
       />
 
-      <Section title="The course in numbers">
+      <Section title="Course facts">
         <Figures
           items={[
             ["17", "My age when I founded the company"],
@@ -192,7 +192,7 @@ export default function BusinessLaunchPage() {
         />
       </Section>
 
-      <Section title="Who it is for" intro="People with an idea and no roadmap.">
+      <Section title="Who it is for">
         <Rows
           items={[
             { name: "People with an idea and no roadmap", line: "You know what you want to build and not how to start. The course goes step by step: testing the idea, legal setup, pricing, the first customer and operations. It assumes no prior knowledge." },
@@ -206,7 +206,7 @@ export default function BusinessLaunchPage() {
       <Section
         id="curriculum"
         title="Seven modules, 26 lessons"
-        intro="From an idea to an operating business. Camera lessons, screen shares of my tools and process, and written notes for every lesson. Planned length: 5 hours of video."
+        intro="Camera lessons, screen shares of my tools and process, and written notes for every lesson. Planned length: 5 hours of video."
       >
         <Faq
           items={MODULES.map((m, i) => ({
@@ -226,16 +226,16 @@ export default function BusinessLaunchPage() {
         />
       </Section>
 
-      <Section title="Six templates and worksheets" intro="Every tier includes the full resource pack. The lessons that use each document link to it.">
+      <Section title="Six templates and worksheets" intro="Every tier includes all six. Each lesson that uses one links to it.">
         <Facts items={RESOURCES} />
       </Section>
 
-      <Section title="What the course includes">
+      <Section title="What it is based on">
         <Rows
           items={[
-            { name: "Built from my business", line: "Purcell Ventures runs websites, digital add-ons, AI consulting, custom software and Steady, plus digital products and courses. Every lesson is based on what I did, the tools I use and the mistakes I made." },
-            { name: "Every decision documented", line: "Screen shares of the tools I use, the templates I built and the reasoning behind each decision." },
-            { name: "Six documents to fill in", line: "The resource pack is six working documents: templates, a pricing calculator and outreach scripts. You fill them in and skip building them yourself." },
+            { name: "My own business", line: "Every lesson comes from what I did at Purcell Ventures, the tools I use and the mistakes I made." },
+            { name: "Screen shares", line: "The tools I use, the templates I built and why I made each decision." },
+            { name: "Six documents to fill in", line: "Templates, a pricing calculator and outreach scripts, ready for your details." },
           ]}
         />
       </Section>
@@ -253,8 +253,8 @@ export default function BusinessLaunchPage() {
 
       <Section
         id="waitlist"
-        title="The waitlist"
-        intro="Waitlist members get the early-access price and hear first when the course opens. I send one email when enrollment opens."
+        title="Waitlist"
+        intro="People on the waitlist get the early-access price. I send one email when enrollment opens."
       >
         <WaitlistForm course="business-launch" />
         <p className="ui-muted" style={{ marginTop: 20 }}>
@@ -266,7 +266,7 @@ export default function BusinessLaunchPage() {
       <Section title="Questions">
         <Faq items={FAQS} />
         <p className="ui-muted" style={{ marginTop: 28 }}>
-          Questions this page does not answer go to{" "}
+          Send any other questions to{" "}
           <a className="ui-link" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>. I reply within one business day.
         </p>
       </Section>

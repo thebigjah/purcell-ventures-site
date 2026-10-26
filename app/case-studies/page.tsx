@@ -32,22 +32,22 @@ export default function CaseStudiesPage() {
       <PageHero
         planet="casestudies"
         kicker="Case studies"
-        title="Case studies, published once each client approves."
-        lede="Each case study will describe the team, the workflow and the hours it saved, and it goes up only with the client's permission."
+        title="Case studies from client work"
+        lede="None are published yet. I publish one only when the client says yes, and each will describe the team, the workflow I changed and the hours it saved."
       />
 
       {liveStudies.length === 0 ? (
-        <Section title="First clients wanted">
+        <Section title="Taking first clients">
           <Prose>
             <p>
-              I am taking a small number of first clients and will ask each one for permission to publish the results. I plan to publish the first case studies within 60 days of starting client work.
+              I am taking a small number of first clients, and I will ask each one for permission to publish the results. I plan to publish the first case studies within 60 days of starting client work.
             </p>
             <p>
-              Early clients get a discounted rate and more of my attention. If you want, you can use the case study in your own marketing.
+              Early clients pay a discounted rate and get more of my time. You can also use your case study in your own marketing.
             </p>
           </Prose>
           <div className="ui-hero__actions">
-            <Button href="/consulting/book">Book the conversation</Button>
+            <Button href="/consulting/book">Book a consulting call</Button>
           </div>
         </Section>
       ) : (
@@ -71,7 +71,7 @@ export default function CaseStudiesPage() {
 
       <ClosingCall
         title="Consulting sessions"
-        line="I work from your team's own workflows. Send me a message and I will recommend a session. I reply within one business day."
+        line="I start from how your team works today. Send me a message and I will recommend a session. I reply within one business day."
         button="See consulting sessions"
         href="/consulting"
       />

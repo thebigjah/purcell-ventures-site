@@ -42,51 +42,51 @@ export default function Post() {
     >
       <p>
         Thirty-eight thousand students arrived in Tuscaloosa this month. Most of them will
-        find where to eat, get a haircut, fix a laptop or buy a gift the same way: they will
-        type something into a phone and take whatever comes back first.
+        find a place to eat or get a haircut by typing a search into a phone and picking
+        whatever comes back first.
       </p>
 
       <p>
-        This series covers local businesses that rank low in that phone search, or do not
-        show up in it.
+        I am writing about local businesses that rank low in that search, or do not show up
+        in it at all.
       </p>
 
-      <h2>What this series is</h2>
+      <h2>About the series</h2>
 
       <p>
         I am a student at the University of Alabama and I build websites for small
         businesses, which means I spend a lot of time looking at how independent shops
-        appear online. The pattern near campus is consistent enough to be worth writing
-        down: a business that has been here for fifteen years, that locals know well, often
-        does not show up when a freshman searches on a phone.
+        appear online. Near campus I keep seeing the same thing. A business that has been
+        here for fifteen years, and that locals know well, often does not show up when a
+        freshman searches on a phone.
       </p>
 
       <p>
-        The usual cause: it has a Facebook page from 2019, an unclaimed Google listing and
-        no website. Together those put it below a chain three miles further away.
+        The usual cause is a Facebook page from 2019, an unclaimed Google listing and no
+        website. Together those put it below a chain three miles further away.
       </p>
 
       <p>
         Each piece in this series covers one business: who runs it, how long it has been
         here, what it does well, and what a student trying to find it runs into. I am not
         selling anything in these pieces, and I feature businesses whether or not they are
-        clients. Several will not be.
+        clients. Several of them will not be.
       </p>
 
-      <h2>Why I am writing it rather than just noticing it</h2>
+      <h2>Why I am writing it</h2>
 
       <p>I have two reasons.</p>
 
       <p>
-        The first is that this is the thing I am studying. I am a psychology and data
+        The first is that it connects to what I study. I am a psychology and data
         science student on a pre-med track, and the part of data science I keep coming back
         to is how people search versus how businesses assume they search. A local shop is a
         small case of that question that I can study in person.
       </p>
 
       <p>
-        The second is that I run a company that builds websites, so I have an obvious
-        interest here. I will report what I find, including when a business does fine
+        The second is that I run a company that builds websites, so I have a business
+        interest in the topic. I will report what I find, including when a business does fine
         without a website.
       </p>
 
@@ -104,7 +104,7 @@ export default function Post() {
         <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>.
       </p>
 
-      <h2>What is coming</h2>
+      <h2>Upcoming pieces</h2>
 
       <p>
         I am reporting the first pieces now. If you want to follow along, the rest of the

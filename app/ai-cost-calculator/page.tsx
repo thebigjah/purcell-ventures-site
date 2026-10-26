@@ -95,7 +95,7 @@ export default function AICostCalculatorPage() {
       <PageHero
         kicker="No login and no tracking"
         title="AI cost calculator"
-        lede="Enter your team size, hourly cost and manual workload. The calculator shows how fast an AI consulting session pays back, in dollars and hours. The assumptions sit below the results."
+        lede="Enter your team size, hourly cost and manual workload to see how fast an AI consulting session pays for itself, in dollars and hours. The formula is under the results."
         meta="Sessions from $125 a person. 1-on-1 at $175 an hour. Half-day workshop at $2,500."
       />
 
@@ -122,7 +122,7 @@ export default function AICostCalculatorPage() {
           <NumberField
             id="calc-rate"
             label="Average hourly cost per person"
-            context="Fully loaded: salary, benefits and overhead. Typical ranges are $40 to $85 for support, $60 to $110 for operations, and $80 to $150 for managers."
+            context="Include salary, benefits and overhead. Typical ranges are $40 to $85 for support, $60 to $110 for operations, and $80 to $150 for managers."
             value={rate} onChange={setRate} min={15} max={500} prefix="$" suffix="an hour"
           />
 
@@ -148,7 +148,7 @@ export default function AICostCalculatorPage() {
 
           <NumberField
             id="calc-cost"
-            label="Consulting session cost, the investment"
+            label="Cost of the consulting session"
             context="My sessions: $175 an hour for 1-on-1, $125 a person for a small group, or a flat $2,500 for a half-day team training. The default is $700 for a 4-hour 1-on-1 session at $175 an hour."
             value={cost} onChange={setCost} min={100} max={20000} prefix="$"
           />
@@ -200,11 +200,11 @@ export default function AICostCalculatorPage() {
             that result too.
           </p>
           <p>
-            Built by Elijah Purcell, Founder/CEO of <Link href="/about">Purcell Ventures LLC</Link>{" "}
-            and an autonomous AI agent systems engineer in Tuscaloosa, Alabama. If the payback
-            looks worth it, the <Link href="/consulting">consulting page</Link> explains what a
-            session covers, and <Link href="/ai-consultant-tuscaloosa">local work in
-            Tuscaloosa</Link> covers in-person engagements. No email is required to use this page.
+            I am Elijah Purcell, Founder/CEO of <Link href="/about">Purcell Ventures LLC</Link>{" "}
+            in Tuscaloosa, Alabama, and I built this calculator. If the payback looks worth it,
+            the <Link href="/consulting">consulting page</Link> explains what a session covers,
+            and <Link href="/ai-consultant-tuscaloosa">AI consulting in Tuscaloosa</Link> covers
+            sessions in person. The calculator asks for no email.
           </p>
           <p>
             <Button href="/ai-readiness" ghost>Take the 3-minute readiness test</Button>

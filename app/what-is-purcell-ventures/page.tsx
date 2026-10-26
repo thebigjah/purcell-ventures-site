@@ -33,7 +33,7 @@ export default function CompanyPage() {
       <PageHero
         kicker="The company"
         title="What is Purcell Ventures?"
-        lede={<><strong>Purcell Ventures LLC</strong> is a Georgia software company that builds websites, custom software and AI tools for small businesses. <Link className="ui-link" href="/who">Elijah Purcell</Link> founded it on 8 April 2025, and it is registered with the Georgia Secretary of State. One person runs it. He answers the phone, writes the code and signs the contract.</>}
+        lede={<><strong>Purcell Ventures LLC</strong> is a Georgia software company that builds websites, custom software and AI tools for small businesses. <Link className="ui-link" href="/who">Elijah Purcell</Link> founded it on 8 April 2025, and it is registered with the Georgia Secretary of State. It is a one-person company, and Elijah does the client calls and the building himself.</>}
         meta="Last reviewed 20 August 2026"
         crumbs={<Breadcrumbs trail={[
           { name: "Home", href: "/" },
@@ -57,7 +57,7 @@ export default function CompanyPage() {
         <Rows items={DIVISIONS} />
         <Prose>
           <p style={{ marginTop: 24 }}>
-            COSMIC, a station of 57 AI agents in 17 rooms, does proposals, site audits, security checks, research and outreach for the company. Each agent is a Claude session with a narrow set of tools and a written charter. <Link href="/team">The team page</Link> lists the agents and opens by saying every one of them is software.
+            COSMIC, a station of 57 AI agents in 17 rooms, does proposals, site audits, security checks, research and outreach for the company. Each agent is a Claude session with a narrow set of tools and a written charter. The <Link href="/team">team roster</Link> names every agent and states that each one is software.
           </p>
         </Prose>
       </Section>

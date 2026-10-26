@@ -4,14 +4,14 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Writing by Elijah Purcell",
   description:
-    "Essays and operational guides on small business AI tooling. Specific, practical, and written by someone who runs the systems he writes about.",
+    "Essays and guides by Elijah Purcell on AI tools for small businesses, websites and software, based on the systems he runs himself.",
   keywords: [
     "small business AI blog", "AI for small business",
     "AI tools writing", "purcell ventures blog",
   ],
   openGraph: {
     title: "Writing by Elijah Purcell",
-    description: "Essays on small business AI, written by someone who runs the systems he writes about.",
+    description: "Essays and guides by Elijah Purcell on AI tools for small businesses, based on the systems he runs himself.",
     url: "https://purcellventures.co/blog",
     type: "website",
   
@@ -62,7 +62,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "Six sources, one page: building a campus events site",
+      "headline": "Building a campus events site from six sources",
       "url": "https://purcellventures.co/blog/six-sources-one-page",
       "datePublished": "2026-08-20",
       "author": {
@@ -206,7 +206,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "Five holes in almost every small production app",
+      "headline": "Five security holes I keep finding in small production apps",
       "url": "https://purcellventures.co/blog/small-app-security-checklist",
       "datePublished": "2026-08-20",
       "author": {

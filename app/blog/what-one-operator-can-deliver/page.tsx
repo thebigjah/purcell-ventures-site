@@ -32,14 +32,15 @@ export default function Post() {
       </p>
 
       <p>
-        So here is how I schedule work, written where a prospective client can read it
-        before they call.
+        If you are thinking of hiring me, you should know how I schedule work before you
+        call.
       </p>
 
-      <h2>Counting builds per month</h2>
+      <h2>Measuring capacity in builds</h2>
 
       <p>
-        Hours are the wrong unit. A build is a sequence with waiting in it: you scope, you
+        I count capacity in builds, because hours miss how a build works. A build is a
+        sequence with waiting in it: you scope, you
         build, you send it, you wait for feedback, you revise, you launch. The waiting
         breaks up everything around it, so it does not turn into free time.
       </p>
@@ -60,8 +61,8 @@ export default function Post() {
       <h2>What happens when two clients want the same fortnight</h2>
 
       <p>
-        The second client waits. The question to ask a solo operator is how they decide who
-        goes second.
+        The second client waits, so the question to ask a solo operator is how they decide
+        who goes second.
       </p>
 
       <p>
@@ -72,16 +73,16 @@ export default function Post() {
 
       <p>
         Ask any solo provider directly: what are you in the middle of, and when does it
-        finish? A person who cannot answer that in one sentence does not have a schedule.
+        finish? If they cannot answer in one sentence, they are not keeping a schedule.
       </p>
 
       <h2>What an agency does better</h2>
 
       <p>
         Continuity is the first. If I became unavailable, your site would be a repository
-        and a hosting account with nobody who knows why anything is the way it is. An agency
-        has other people. The fix for that risk is simple: you should have admin access to
-        everything, in your own name, from day one, and if a provider resists that, leave.
+        and a hosting account with nobody who knows why anything is the way it is, while an
+        agency has other people. To protect yourself, get admin access to everything, in
+        your own name, from day one. If a provider resists that, leave.
       </p>
 
       <p>
@@ -96,9 +97,9 @@ export default function Post() {
       </p>
 
       <p>
-        An agency gives you someone to escalate to. When you are unhappy with a solo
-        provider, you are unhappy at the only person there. Some people find that
-        uncomfortable, and that is a fair preference.
+        An agency gives you someone to escalate to. With a solo provider, the person you
+        complain to is the person you are unhappy with. Some people find that uncomfortable,
+        and that is a fair preference.
       </p>
 
       <h2>What a solo operator does better</h2>
@@ -110,14 +111,11 @@ export default function Post() {
 
       <p>Decisions take minutes, because nobody inside the company needs to sign off.</p>
 
-      <p>
-        The overhead is not in your price. You are not funding an office or an account
-        manager.
-      </p>
+      <p>Your price does not pay for an office or an account manager.</p>
 
       <p>
-        The whole system is in one head. That is a risk, and it is also why a small change
-        takes twenty minutes instead of a ticket, a sprint and a regression.
+        I know the whole system myself. That is a risk, and it is also why a small change
+        takes me twenty minutes instead of waiting in a ticket queue.
       </p>
 
       <h2>Three signs you are being oversold</h2>
@@ -135,7 +133,7 @@ export default function Post() {
 
       <p>
         The third is a team page with no names. If a solo operation calls itself &quot;we&quot; and
-        the team page has stock photographs, the pricing may be presented just as
+        the team page has stock photographs, the pricing may be presented as
         optimistically.
       </p>
 

@@ -47,8 +47,8 @@ export default function Post() {
       </p>
       <p>
         Click the label in Chrome and a small panel opens. It tells the visitor to avoid
-        entering passwords or credit card numbers on the page. That message sits one click
-        away from anyone who wonders whether your site is safe.
+        entering passwords or credit card numbers on the page. Any visitor who wonders
+        whether your site is safe can read that message with one click.
       </p>
 
       <h2>Why browsers show it on a site that sells nothing</h2>
@@ -104,8 +104,8 @@ export default function Post() {
       </p>
       <p>
         If your host uses a different panel, search their help pages for &quot;free SSL&quot; and
-        &quot;force HTTPS.&quot; The button names change from host to host. The two steps stay the
-        same.
+        &quot;force HTTPS.&quot; The button names vary from host to host, but the two steps are
+        the same.
       </p>
       <p>
         If your site runs on Wix or Squarespace, the platform supplies the certificate once
@@ -135,7 +135,7 @@ export default function Post() {
         whole database. Make a full backup before you run it.
       </p>
 
-      <h2>Your checklist for this week</h2>
+      <h2>What to check this week</h2>
       <p>
         Open your site in Chrome on your phone and on a computer. Look at the address bar on
         your homepage, your contact page and any page with a form.

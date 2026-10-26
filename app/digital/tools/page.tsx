@@ -36,7 +36,7 @@ export default function ToolsIndexPage() {
         planet="tools"
         kicker="Digital add-ons"
         title={`${AI_TOOLS.length} free AI tools for small businesses`}
-        lede="Each tool is free to use. Enter your business details and the tool writes the result on the page. If one saves you time, I can add a branded version to your own site."
+        lede="Enter your business details and the tool writes the result for you, free. If one of them saves you time, I can add a branded version to your own site."
         actions={<>
           <Button href="#tools">See the tools</Button>
           <Button href="/digital" ghost>See the digital plans</Button>
@@ -49,7 +49,7 @@ export default function ToolsIndexPage() {
         </Section>
       ))}
 
-      <Section title="Add-on demos" intro="Working versions of add-ons I install on client sites. They run in your browser and save to this device only.">
+      <Section title="Add-on demos" intro="Working versions of add-ons I install on client sites. They run in your browser and save only to your device.">
         <Rows items={DEMOS.map((d) => ({ name: d.name, line: `${d.tagline} ${d.category}.`, href: `/digital/${d.slug}` }))} />
       </Section>
 

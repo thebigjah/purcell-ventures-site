@@ -22,27 +22,24 @@ export default function AiConsultantTuscaloosa() {
       meta="Student websites $500, with optional upkeep at $25 a month. Software and automation quoted per project."
     >
       <p>
-        I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC and an autonomous AI agent
-        systems engineer. I live in Tuscaloosa, I study psychology and data science in the
-        University of Alabama Honors College, and I build websites, custom software and AI
-        automation for businesses here.
+        I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data
+        science student in the University of Alabama Honors College. From Tuscaloosa, I build
+        websites, custom software, AI automation and autonomous AI agent systems for
+        businesses here.
       </p>
 
       <p>
-        Most people who reach this page are asking one of two questions. They want something
-        built and are trying to work out whether AI is involved, or somebody has told them they
-        need AI and they want to know whether that is true.
+        Most business owners who contact me have one of two questions. They want something
+        built and are not sure whether it needs AI, or someone told them they need AI and they
+        want to know if that is true.
       </p>
 
       <h2>What I do and what it costs</h2>
 
-      <p>I do three kinds of work, listed in the order people most often ask for them.</p>
-
       <p>
         <strong>Websites.</strong> Built, hosted and maintained. For University of Alabama
         students and student-run businesses the price is <strong>$500</strong>, with an
-        optional <strong>$25 a month</strong> to keep it current. I charge students less
-        because their budgets are small.
+        optional <strong>$25 a month</strong> to keep it updated.
       </p>
 
       <p>
@@ -53,52 +50,50 @@ export default function AiConsultantTuscaloosa() {
 
       <p>
         <strong>AI automation.</strong> Replacing a repeated manual task with something that
-        runs on a schedule, or adding an AI feature to software you already have. This is also
-        where I tell you not to bother, when that is the right answer.
+        runs on a schedule, or adding an AI feature to software you already have. If automation
+        will not pay off for you, I will tell you that.
       </p>
 
-      <h2>Why hire someone local</h2>
+      <h2>Working with someone local</h2>
 
       <p>
-        You can hire an agency anywhere. The reason to hire someone in Tuscaloosa is that you
-        can sit across a table from them, and the person you meet is the person who writes the
-        code. Purcell Ventures is one operator.
+        If you hire someone in Tuscaloosa, you can meet them in person. Purcell Ventures is a
+        one-person company, so the person you meet with is the person who writes the code.
       </p>
 
       <p>
-        COSMIC, a station of 57 AI agents in 17 rooms that I built, does proposals, site
-        audits, security checks, research and outreach. The agents are software, and the <Link href="/team">team page</Link> says
-        so in its first sentence. A human does the building and a human answers your email.
+        COSMIC, a station of 57 AI agents in 17 rooms that I built, handles proposals, site
+        audits, security checks, research and outreach. You can see what each agent does on
+        the <Link href="/team">COSMIC team list</Link>. I do the building and answer your email myself.
       </p>
 
-      <h2>Work you can check today</h2>
+      <h2>Work you can see</h2>
 
       <p>
         <a href="https://ua-today.vercel.app" target="_blank" rel="noopener noreferrer">UA Today</a>{" "}
         is a campus events site I built for students here. It pulls events from six sources:
-        official University events, student organizations, ministries and athletics. It is free and needs no account. The
-        University has no part in it, and the masthead says so.
+        official University events, student organizations, ministries and athletics. It is free,
+        needs no account and is not affiliated with the University.
       </p>
 
       <p>
         <Link href="/digital/tools">26 free AI tools for small businesses</Link> and{" "}
-        <Link href="/tools">26 free single-file tools</Link> are live on the open web, each one
-        built for a single problem. The <Link href="/portfolio">portfolio</Link> has client
-        work, and the <Link href="/case-studies">case studies</Link> explain what was hard
-        about a few of them.
+        <Link href="/tools">26 free single-file tools</Link> are live, each built for one task.
+        My <Link href="/portfolio">portfolio</Link> has client work, and the{" "}
+        <Link href="/case-studies">case studies</Link> cover what was hard about a few projects.
       </p>
 
       <h2>When I am the wrong fit</h2>
 
       <p>
-        I am nineteen and this is a one-person company. If you need a team of twelve, a signed
-        enterprise MSA, and someone on call at three in the morning, I am the wrong person for
-        the job and I will say so on the first call.
+        Purcell Ventures is one person, and I am 19. If you need a large team, a signed
+        enterprise MSA or support around the clock, I am the wrong fit, and I will tell you on
+        the first call.
       </p>
 
       <p>
-        If a language model cannot solve your problem, I will say so. If a chat box is all your
-        problem needs, it is cheap and I will tell you how to set it up yourself.
+        If AI cannot solve your problem, I will tell you. If an off-the-shelf chatbot is
+        enough, I will show you how to set it up yourself, since that costs you less.
       </p>
 
       <h2>Common questions</h2>
@@ -119,9 +114,9 @@ export default function AiConsultantTuscaloosa() {
       </p>
 
       <p>
-        More on the consulting work is on <Link href="/consulting">the consulting page</Link>,
-        more about me on <Link href="/about">the about page</Link>, and the short factual
-        version at <Link href="/who">who is Elijah Purcell</Link>.
+        Related: <Link href="/consulting">AI consulting and team training</Link>,{" "}
+        <Link href="/about">About Purcell Ventures</Link> and{" "}
+        <Link href="/who">Who is Elijah Purcell</Link>.
       </p>
     </PostLayout>
   );

@@ -41,7 +41,7 @@ const STAGES = [
   {
     title: "Launch and handoff",
     when: "At completion",
-    body: "For digital services, the site goes live and you get a walkthrough video and a written handoff document. For custom software, I transfer the code and IP to you and document the deployment steps. You own everything. If you leave, I hand it all over. The monthly retainer pays for maintenance.",
+    body: "For digital services, the site goes live and you get a walkthrough video and a written handoff document. For custom software, I transfer the code and IP to you and document the deployment steps. You own all of it, and if you leave I hand everything over. The monthly retainer covers maintenance.",
     bullets: [
       "Full code and IP transfer to you on completion",
       "Documentation in plain language",
@@ -64,7 +64,7 @@ const STAGES = [
 
 const COMMITMENTS = [
   { name: "No surprise invoices", line: "Every dollar I charge is in the written proposal. If something changes the scope, you sign off before any work happens." },
-  { name: "No vendor lock-in", line: "You own your code, IP, domain and data. If you leave, you take all of it with no exit fee." },
+  { name: "You can leave with everything", line: "You own your code, IP, domain and data. If you leave, you take all of it and pay no exit fee." },
   { name: "I say when a product does not fit", line: "When my product is the wrong fit, I tell you. I have turned down deals for that reason." },
   { name: "Response times", line: "I reply within one business day. If I am going to miss, I tell you first." },
   { name: "Code you can read", line: "Every custom software project ships with documentation in plain language. A developer who has never worked with me can maintain it later." },
@@ -78,10 +78,10 @@ export default function HowWeWorkPage() {
         planet="book"
         kicker="How I work"
         title="What happens, in order, from the first email to year three"
-        lede="Five stages, six commitments written into every contract, and the work I turn down."
+        lede="How a project runs from your first email through the third year, what goes into every contract, and the work I turn down."
       />
 
-      <Section title="The five stages">
+      <Section title="How a project runs">
         <div className="ui-entries">
           {STAGES.map((s) => (
             <article className="ui-entry" key={s.title}>
@@ -98,11 +98,11 @@ export default function HowWeWorkPage() {
         </div>
       </Section>
 
-      <Section title="Commitments" intro="These appear in every contract. If I break one, you can end the contract and I refund you.">
+      <Section title="What every contract includes" intro="If I break one of these, you can end the contract and I refund you.">
         <Rows items={COMMITMENTS} />
       </Section>
 
-      <Section title="When I say no">
+      <Section title="Work I turn down">
         <Prose>
           <p>I turn down work in these cases:</p>
           <ul>

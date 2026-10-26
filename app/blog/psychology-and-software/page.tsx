@@ -23,9 +23,9 @@ export default function Post() {
       meta="20 August 2026, 6 minute read"
     >
 <p>
-            I am studying psychology and data science, and people assume the software company
-            is the day job and the degree is the plan for later. One week of a methods course
-            has already changed something I had shipped.
+            I run a software company and study psychology and data science. People tend to
+            assume the degree has little to do with the company. In my first week, a
+            psychology methods course changed a product I had already shipped.
           </p>
 
           <h2>Within-subject design</h2>
@@ -33,8 +33,7 @@ export default function Post() {
           <p>
             The rule, as{" "}
             <a href="https://dictionary.apa.org/within-subjects-design" rel="noopener">the APA defines it</a>, is that you measure a person against their own baseline rather
-            than against everybody else's. It sounds obvious written down, and my product did
-            the opposite.
+            than against everybody else's. My product did the opposite.
           </p>
 
           <p>
@@ -44,8 +43,9 @@ export default function Post() {
           </p>
 
           <p>
-            I had applied between-subject thinking and called it product sense. That flattened
-            the one signal I care about most: the change in a single person over time.
+            I had applied between-subject thinking and called it product sense. That approach
+            averaged away the signal I care about most, which is how one person changes over
+            time.
           </p>
 
           <p>
@@ -75,14 +75,14 @@ export default function Post() {
             Every alerting system I have built has this problem. An anomaly detector that is
             right ninety-five per cent of the time, run against a thousand events a day where
             three are true anomalies, produces 50 false alarms for three true ones.
-            People mute it in a week, and a muted monitor is worse than no monitor, because
-            you believe you have one.
+            People mute it within a week, and after that they still believe something is
+            watching when nothing is.
           </p>
 
           <p>
             I hit this with a test-result parser that misread a summary and reported failures
-            that were not there. Fixing the parser was the small part. A monitor that reports
-            false failures gets muted, so one false positive can cost you the whole monitor.
+            that were not there. Fixing the parser took little time. The larger risk was that
+            the false failures would teach people to ignore the monitor entirely.
           </p>
 
           <h2>Construct validity</h2>
@@ -95,9 +95,9 @@ export default function Post() {
 
           <p>
             Software is full of measurements that are precise and about the wrong thing.
-            Engagement time stands in for value and test count for coverage. Both are
-            measurable to three decimal places, and both can move in the wrong direction while
-            the thing they stand in for gets worse.
+            Engagement time stands in for value and test count for coverage. Both are easy to
+            measure precisely, and both can go up while the thing they stand in for gets
+            worse.
           </p>
 
           <p>
@@ -105,7 +105,7 @@ export default function Post() {
             this number went up and the thing I care about got worse, would I be able to tell?
           </p>
 
-          <h2>Why the combination</h2>
+          <h2>Why I am studying both</h2>
 
           <p>
             The plan is psychiatry, and the specific thing I want to work on is how much
@@ -114,16 +114,16 @@ export default function Post() {
           </p>
 
           <p>
-            That problem needs both halves. You cannot design it from the software side
+            That problem needs both fields. You cannot design a solution from the software side
             without knowing what the clinical work involves, and you cannot design it from
             the clinical side without knowing what these systems reliably do and where they
             fail.
           </p>
 
           <p>
-            I am in my first semester, so this describes a plan with no results yet. So far the transfer
-            has gone in the direction I did not expect. Psychology found a defect in software I
-            had already shipped.
+            I am in my first semester, so this is a plan with no results yet. So far the ideas
+            have moved from psychology into software, which I did not expect, and they found a
+            defect in a product I had already shipped.
           </p>
 
           <p>

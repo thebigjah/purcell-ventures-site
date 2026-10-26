@@ -21,11 +21,11 @@ export const metadata = {
 const ROWS: [string, string][] = [
   ["University Recreation", "Membership is covered for every enrolled student registered for at least one credit hour. That covers the Student Recreation Center, the Robert E. Witt Activity Center, the Aquatic Center, the Outdoor Pool Complex and the Tennis Court Complex."],
   ["The Writing Center", "Described on ua.edu as a free service open to all students. Consultations run fifty minutes, by appointment or drop-in, with online appointments and workshops as well. It is for any writing, not only English coursework."],
-  ["Capstone Center for Student Success", "Russell Hall, second and third floors. (205) 348-7011. The umbrella for academic support, and the place to start if you do not know which office you need."],
-  ["Mathematics Technology and Learning Center", "Tutoring for introductory mathematics courses, homework help and self-paced support. If you are in the calculus sequence, you will use this center."],
+  ["Capstone Center for Student Success", "Russell Hall, second and third floors. (205) 348-7011. It oversees academic support, and it is the place to start if you do not know which office you need."],
+  ["Mathematics Technology and Learning Center", "Tutoring for introductory mathematics courses, homework help and self-paced support."],
   ["The Speaking Studio", "Help with public speaking, presentations and oral communication."],
   ["The Career Center", "Major selection, career planning, job search strategy, and professional school planning. Visit in your first year."],
-  ["University Libraries", "Ten libraries and more than three million print and electronic resources. The electronic half includes database access you would otherwise pay for outside a university."],
+  ["University Libraries", "Ten libraries and more than three million print and electronic resources. The electronic resources include database access you would otherwise pay for outside a university."],
   ["The Cube", "A 3D printing and production lab in the College of Engineering."],
   ["ENGenuity Lab", "Tutoring, mentoring and career preparation for engineering students."],
   ["History Peer Mentor Program", "Peer tutoring for the history survey courses."],
@@ -46,15 +46,13 @@ export default function Post() {
       meta="20 August 2026, 5 minute read, checked against ua.edu"
     >
       <p>
-        Tuition and fees pay for services nobody hands you a receipt for. The table lists
-        12 services the university runs for students. Where ua.edu says a service is free
-        or covered, the table says so.
+        Tuition and fees already cover at least 12 services the university runs for
+        students. I marked a service as free or covered only where ua.edu says it is.
       </p>
 
       <p>
         This is my first semester here, so I am writing as I find things. I checked
-        everything below against ua.edu pages on 20 August 2026, and where the university's own page did not say something was
-        free, this page does not say it either. The two most useful starting points are{" "}
+        every service against ua.edu pages on 20 August 2026. The two most useful starting points are{" "}
         <a href="https://success.ua.edu/academic-resources-at-ua" rel="noopener">the Capstone Center for Student Success</a>{" "}
         and{" "}
         <a href="https://writingcenter.ua.edu/" rel="noopener">the Writing Center</a>.
@@ -74,7 +72,7 @@ export default function Post() {
         </tbody>
       </table>
 
-      <h2>The three worth using in week one</h2>
+      <h2>The three I would use first</h2>
 
       <p>
         <strong>University Recreation</strong>, because it is covered and because the
@@ -82,13 +80,13 @@ export default function Post() {
       </p>
 
       <p>
-        <strong>The Writing Center</strong>. Fifty minutes with someone who reads your
-        argument closely is free editing from a trained reader. Bring a draft.
+        <strong>The Writing Center</strong>, because a fifty-minute session gets a trained
+        reader to go through your argument closely at no cost. Bring a draft.
       </p>
 
       <p>
-        <strong>The Career Center</strong>, in your first year. Many students wait until
-        their last year.
+        <strong>The Career Center</strong>, in your first year, even though many students
+        wait until their last year.
       </p>
 
       <h2>What I could not confirm</h2>
@@ -106,7 +104,7 @@ export default function Post() {
         add it with a link and say who corrected it.
       </p>
 
-      <h2>The general rule</h2>
+      <h2>Checking before you pay</h2>
 
       <p>
         Before you pay for something as a student, spend five minutes checking whether
@@ -116,8 +114,8 @@ export default function Post() {
       </p>
 
       <p>
-        This list will go stale. Fees and policies change every year, so treat it as a
-        starting point and confirm anything you are relying on. I checked it on
+        Fees and policies change every year, so treat this list as a starting point and
+        confirm anything you are relying on. I checked it on
         20 August 2026.
       </p>
 

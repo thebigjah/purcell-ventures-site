@@ -25,10 +25,10 @@ export default function ThanksPage() {
           </ol>
         </Prose>
       </Section>
-      <Section title="I can build it for you">
+      <Section title="Custom AI tools">
         <Prose>
           <p>
-            I also build, deploy and maintain custom AI tools for businesses, starting at $99 a month. I use the same playbook as the kit and do the work for you.
+            I also build, deploy and maintain custom AI tools for businesses, starting at $99 a month. I work from the same files as the kit and do the setup for you.
           </p>
         </Prose>
         <div className="ui-hero__actions">

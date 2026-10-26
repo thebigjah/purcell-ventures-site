@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Steady, personal IT for everyday life",
   description:
-    "Personal tech help for people who feel overwhelmed by modern tools: AI coaching, phone setup, password managers, medication reminders and smart home setup. One-off help $99, monthly care from $79.",
+    "Personal tech help for people who want someone to set up and explain their devices: AI coaching, phone setup, password managers, medication reminders and smart home setup. One-off help $99, monthly care from $79.",
   keywords: [
     "personal IT help", "tech help for parents", "AI coaching personal",
     "tech help seniors", "household tech support", "personal tech coach",
@@ -81,7 +81,7 @@ const FAQ_LD = {
       "name": "What is Steady?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Personal IT support for people who never chose to manage their own technology: setup, patient teaching, and somebody to call when something breaks. Elijah Purcell built it for the family member who has been everyone else's tech support."
+        "text": "Personal IT help for individuals and families. Elijah Purcell sets up devices, teaches people to use them and answers texts when something breaks. Monthly care is $79 a month and a one-off session is $99."
       }
     },
     {
@@ -89,7 +89,7 @@ const FAQ_LD = {
       "name": "Who is personal IT support for?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Parents and grandparents, and the person in the family who has answered their questions for years. Steady gives that person someone else to call."
+        "text": "Parents and grandparents who are not comfortable with technology, and the family member who usually answers their tech questions."
       }
     },
     {

@@ -8,7 +8,7 @@ export const metadata = {
   alternates: { canonical: "/blog/can-ai-find-your-business" },
   title: { absolute: "Can an AI find your business? A test you can run in five minutes, by Elijah Purcell" },
   description:
-    "People are starting to ask an assistant instead of searching. Five minutes to find out what ChatGPT and Google's AI answer say about your business, why they get it wrong, and four fixes that change the answer.",
+    "Some people now ask an assistant instead of searching. A five-minute test shows what ChatGPT and Google's AI answer say about your business, why they get it wrong, and four fixes that change the answer.",
 };
 
 
@@ -31,8 +31,8 @@ export default function Post() {
       </p>
 
       <p>
-        So there is a version of your business that exists only inside an assistant's
-        answer, and you may never have seen it. The test below shows it to you.
+        Those answers describe your business, and you may never have read what they say.
+        The test takes five minutes.
       </p>
 
       <h2>The five-minute test</h2>
@@ -45,14 +45,15 @@ export default function Post() {
       <p>
         <strong>Ask a general question first.</strong> Leave your name out. "What are the best
         barbers in Tuscaloosa" or "where can I get a laptop repaired near the University
-        of Alabama." Are you mentioned at all? Who is?
+        of Alabama." Check whether you are mentioned at all, and note who is.
       </p>
 
       <p>
         <strong>Then ask about you specifically.</strong> "Tell me about [your business
-        name] in [your town]." Read the answer as though you were a customer. Are the
-        hours right? The address? Does it say something that was true two years ago? Does
-        it confuse you with a different business that shares your name?
+        name] in [your town]." Read the answer as though you were a customer. Check the
+        hours and the address, look for anything that was true two years ago and is not
+        now, and see whether it confuses you with a different business that shares your
+        name.
       </p>
 
       <p>
@@ -65,15 +66,15 @@ export default function Post() {
         <strong>What I found doing this for my own name.</strong> The answer was drawn
         from a page I had corrected that morning, and it quoted the old version, stale by
         months. It also quoted my own LinkedIn describing me as an eighteen-year-old when
-        I am nineteen. Assistants repeat what is written where they look, and they repeat
-        it long after you change it.
+        I am nineteen. Assistants repeat what their sources say, often for weeks after you
+        change it.
       </Note>
 
       <h2>Why they get it wrong</h2>
 
       <p>
-        <strong>They read cached copies.</strong> Correcting your website today does not
-        correct the answer today. It can take weeks.
+        <strong>They read cached copies.</strong> A correction to your website can take
+        weeks to show up in the answer.
       </p>
 
       <p>
@@ -89,7 +90,7 @@ export default function Post() {
       </p>
 
       <p>
-        <strong>They quote what is stated plainly.</strong> This is the useful one. A
+        <strong>They quote what is stated plainly.</strong> A
         model summarising your page needs a sentence it can lift. Marketing copy that
         never plainly states what you do, where, and for whom gives it nothing to take,
         so it takes something from a directory instead.
@@ -105,9 +106,10 @@ export default function Post() {
       </p>
 
       <p>
-        <strong>2. Make every source agree.</strong> Google Business Profile, your site,
-        any directory that appears. Same name, same address format, same phone, same
-        hours. When the sources agree, an assistant is more likely to repeat your details.
+        <strong>2. Make every source agree.</strong> Your Google Business Profile, your
+        site and every directory that lists you should show the same name, address format,
+        phone number and hours. When the sources agree, an assistant is more likely to
+        repeat your details.
       </p>
 
       <p>
@@ -119,17 +121,16 @@ export default function Post() {
       <p>
         <strong>4. If you share a name, say so outright.</strong> One sentence naming the
         confusion and distinguishing yourself helps assistants tell you apart. I have
-        that sentence on my own site because four other people share my name, and it is
-        the sentence that separates us.
+        that sentence on my own site because four other people share my name.
       </p>
 
       <h2>What does not work</h2>
 
       <p>
-        Keyword stuffing does not work. Neither does paying for an "AI optimisation"
+        Keyword stuffing does not work, and neither does paying for an "AI optimisation"
         service that will not tell you what it does, or adding a page of text written for
-        machines. Assistants summarise, and a page that reads as machine-written
-        summarises badly.
+        machines. Assistants summarise pages, and a page that reads as machine-written
+        produces a poor summary.
       </p>
 
       <p>

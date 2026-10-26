@@ -127,7 +127,7 @@ export default function TutorialsPage() {
       <PageHero
         kicker="How-to guides"
         title="Tutorials for the free tools."
-        lede="Short how-to guides for my tools. Each one covers setup, the steps, an example output and common variations. Reading them needs no login."
+        lede="Short how-to guides for my tools, with setup, the steps, an example output and common variations. You do not need to log in to read them."
       />
 
       {Object.entries(byCategory).map(([category, items]) => (
@@ -144,8 +144,8 @@ export default function TutorialsPage() {
       ))}
 
       <ClosingCall
-        title="I can do the work for you"
-        line={<>These tutorials cover my free tools for customers. For AI workflows I set up and run for you, see the digital services tiers, or <Link className="ui-link" href="/shop">browse the shop</Link>. I reply within one business day.</>}
+        title="AI workflows I run for you"
+        line={<>On the digital services tiers I set up and run AI workflows for your business. I also sell templates and scripts in the <Link className="ui-link" href="/shop">shop</Link>. I reply within one business day.</>}
         button="See digital services"
         href="/digital"
       />

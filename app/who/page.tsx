@@ -38,26 +38,26 @@ const DATED: [string, string][] = [
 
 // Everything he has written, listed on the page that answers for him.
 const WRITING: [string, string, string][] = [
-  ["claim-your-google-listing", "Claiming your own Google listing: a twenty-minute job", "20 August 2026"],
+  ["claim-your-google-listing", "Claiming your Google listing yourself", "20 August 2026"],
   ["cold-outreach-that-worked", "The cold email that got me a client, and the ones that did not", "20 August 2026"],
   ["llc-at-seventeen", "What registering an LLC at seventeen involved", "20 August 2026"],
   ["audit-every-business-in-your-town", "How to audit every business in your town in an afternoon", "20 August 2026"],
   ["new-college-alabama", "New College at Alabama, explained by someone in it", "20 August 2026"],
   ["what-the-agents-get-wrong", "Five failures from running fifteen AI agents", "20 August 2026"],
   ["free-at-alabama", "What you have already paid for at Alabama", "20 August 2026"],
-  ["is-your-business-invisible", "Is your business invisible online? A ten-minute self-check", "20 August 2026"],
-  ["small-app-security-checklist", "Five holes in almost every small production app", "20 August 2026"],
+  ["is-your-business-invisible", "Is your business invisible online?", "20 August 2026"],
+  ["small-app-security-checklist", "Five security holes I keep finding in small production apps", "20 August 2026"],
   ["canonical-tag-noindex", "Every post on my blog was telling Google not to index it", "20 August 2026"],
   ["/ai-at-alabama", "Studying AI at the University of Alabama", "20 August 2026"],
   ["121-businesses-near-campus", "121 businesses near campus, and what a phone can find", "20 August 2026"],
   ["tuscaloosa-small-business-online", "The Tuscaloosa Storefront Project", "20 August 2026"],
-  ["agents-that-cannot-fix-what-they-find", "We built agents that cannot fix what they find", "17 August 2026"],
-  ["shipped-is-not-activated", "Shipping is not the same as being able to take a payment", "17 August 2026"],
+  ["agents-that-cannot-fix-what-they-find", "I built agents that cannot fix what they find", "17 August 2026"],
+  ["shipped-is-not-activated", "A shipped site can still fail to take a payment", "17 August 2026"],
   ["ai-augmented-sales-rep-day", "What a day looks like for an AI-augmented sales rep", "25 May 2026"],
   ["why-i-built-crm-from-scratch", "Why I built a CRM from scratch instead of paying for HubSpot", "25 May 2026"],
   ["case-for-charging-19", "Why I charge $19 for the AI Starter Kit", "25 May 2026"],
   ["five-workflows-no-code", "Five workflows you can automate this week without writing code", "24 May 2026"],
-  ["why-most-ai-tools-waste-money", "Why most small business AI tools waste your money", "24 May 2026"],
+  ["why-most-ai-tools-waste-money", "Why some small business AI tools waste your money", "24 May 2026"],
 ];
 
 export default function WhoPage() {
@@ -74,15 +74,13 @@ export default function WhoPage() {
         ]} />}
       />
 
-      <Section title="At a glance">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/brand/elijah.jpg"
-          alt="Elijah Purcell, founder of Purcell Ventures LLC and University of Alabama student"
-          width={128}
-          height={128}
-          style={{ display: "block", width: 128, height: 128, objectFit: "cover", objectPosition: "50% 20%", marginBottom: 28 }}
-        />
+      <Section
+        title="At a glance"
+        aside={
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src="/brand/elijah.jpg" alt="Elijah Purcell, founder of Purcell Ventures LLC and University of Alabama student" width={240} height={240} />
+        }
+      >
         <Facts items={FACTS} />
       </Section>
 
@@ -101,7 +99,7 @@ export default function WhoPage() {
         </div>
       </Section>
 
-      <Section title="What he has written" intro="The blog has 33 posts dated May to October 2026. These are the ones listed here, and the rest are on the blog.">
+      <Section title="What he has written" intro="A selection of his posts from May to October 2026. The full list is on the blog.">
         <Rows items={WRITING.map(([slug, title, date]) => ({
           name: title,
           line: date,
@@ -112,7 +110,7 @@ export default function WhoPage() {
       <Section title="Contact and profiles">
         <Prose>
           <p>
-            Phone or text <a href={`tel:${CONTACT.phoneE164}`}>{CONTACT.phone}</a>, or email <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>. He replies within one business day. More about the company is on <Link href="/what-is-purcell-ventures">What is Purcell Ventures</Link>.
+            Phone or text <a href={`tel:${CONTACT.phoneE164}`}>{CONTACT.phone}</a>, or email <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>. He replies within one business day. For the company itself, read <Link href="/what-is-purcell-ventures">What is Purcell Ventures</Link>.
           </p>
           <p>
             Elsewhere:{" "}

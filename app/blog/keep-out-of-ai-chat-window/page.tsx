@@ -15,12 +15,12 @@ interface Data {
 const POST: Data = {
   "title": "What to keep out of an AI chat window when you run a business",
   "slug": "keep-out-of-ai-chat-window",
-  "description": "Passwords, customer records and private details do not belong in an AI chat. Here is what to leave out and what to type instead.",
+  "description": "Passwords, customer records and private details do not belong in an AI chat, and placeholders get you the same help without them.",
   "category": "Guide",
   "lede": "Anthropic's AI Fluency course gives a plain rule for business owners: keep private data, passwords and customer details out of prompts unless you have checked that the tool and its settings fit that kind of data. In a small business, that rule covers three groups of information: logins, customer records and private details about you and your staff.",
   "sections": [
     {
-      "heading": "Where your words go",
+      "heading": "Where your text goes",
       "paragraphs": [
         "When you type into a chat tool, the tool sends your text to the company that runs it. Depending on the tool and your plan, that company may store the conversation and may use it to train future models.",
         "You can check your own tool in a few minutes. In ChatGPT, open Settings, then Data controls, and look for the switch labeled Improve the model for everyone. In Claude, open Settings, then Privacy, and look for the switch labeled Help improve Claude. Turn the switch off if you do not want your chats used for training."

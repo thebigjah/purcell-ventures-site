@@ -71,7 +71,7 @@ export default function LoyaltyPage() {
       <PageHero
         kicker={<ToolsKicker>Free tools: customer management</ToolsKicker>}
         title="Loyalty punch card"
-        lede="A digital punch card for repeat customers. Add a punch at each visit, and when a card is full the customer redeems the reward. Everything stays on this device."
+        lede="A digital punch card for repeat customers. Add a punch at each visit, and when a card is full the customer redeems the reward. Your cards save only on your device."
       />
 
       <div className={`ui-wrap ${s.body}`}>

@@ -135,11 +135,11 @@ const FAQS: { q: ReactNode; a: ReactNode }[] = [
   },
   {
     q: "How does this compare with an n8n course or a Zapier tutorial?",
-    a: "No-code tutorials teach a platform someone else built. This course teaches you to write your own tools, so you own the code and can build things those platforms cannot. I use n8n or Zapier to connect pieces in a few places.",
+    a: "An n8n or Zapier course teaches one platform. This course teaches you to write your own tools in Python, so you keep the code and can build things those platforms do not support. I still use n8n or Zapier in a few places to connect pieces.",
   },
   {
     q: "Do you run these tools yourself?",
-    a: "Yes. The email bot processes my inbox every day. The content pipeline runs on a schedule and earns AdSense revenue. I built a listing monitor to find job leads, an inbox harvester to process bulk email and a personal AI that runs on my desktop. I built the tools first and the course around them.",
+    a: "Yes. The email bot processes my inbox every day. The content pipeline runs on a schedule and earns AdSense revenue. I built a listing monitor to find job leads, an inbox harvester to process bulk email and a personal AI that runs on my desktop, all before I wrote the course.",
   },
   {
     q: "What is in the resource pack?",
@@ -165,7 +165,7 @@ export default function ZeroToAutomatedPage() {
       <PageHero
         planet="software"
         kicker="Course: Zero to Automated"
-        title="Zero to Automated: AI tools I built and run every day."
+        title="Zero to Automated: the AI tools I built and run every day"
         lede="I automated my email inbox, my YouTube channel, my lead generation and my scholarship search. The course walks through how I built each one."
         meta="Waitlist open. The course is $397 at launch, and I am still recording it."
         actions={<>
@@ -174,7 +174,7 @@ export default function ZeroToAutomatedPage() {
         </>}
       />
 
-      <Section title="The course in numbers">
+      <Section title="Course facts">
         <Figures
           items={[
             ["8", "Modules"],
@@ -186,7 +186,7 @@ export default function ZeroToAutomatedPage() {
         />
       </Section>
 
-      <Section title="The tools you build" intro="This course teaches you to build tools you run yourself, with code you own.">
+      <Section title="The tools you build" intro="You write each tool yourself, run it on your own machine and keep the code.">
         <Rows items={TOOLS.map((t) => ({ name: t.name, line: <>{t.line} <span className="ui-gold">{t.fig}</span></> }))} />
       </Section>
 
@@ -227,16 +227,16 @@ export default function ZeroToAutomatedPage() {
         <Facts items={RESOURCES} />
       </Section>
 
-      <Section id="pricing" title="Three ways to take the course">
+      <Section id="pricing" title="Prices">
         <Tiers tiers={TIERS} />
       </Section>
 
       <Section
         id="waitlist"
-        title="Early access to Zero to Automated"
-        intro="The early-access list gets a discount. I send one email when the course opens."
+        title="Waitlist"
+        intro="People on the waitlist get a discount. I send one email when the course opens."
       >
-        <WaitlistForm course="ai-automation" done="I will email you when the course opens, and early access gets a discount." />
+        <WaitlistForm course="ai-automation" done="I will email you when the course opens, with your early-access discount." />
         <p className="ui-muted" style={{ marginTop: 20 }}>
           The course is not finished. Ask me and I will send the material I have so far:{" "}
           <a className="ui-link" href={`mailto:${CONTACT.email}?subject=Zero%20to%20Automated`}>{CONTACT.email}</a>.
@@ -246,7 +246,7 @@ export default function ZeroToAutomatedPage() {
       <Section title="Questions">
         <Faq items={FAQS} />
         <p className="ui-muted" style={{ marginTop: 28 }}>
-          The other courses are on the <Link className="ui-link" href="/courses">courses page</Link>. I reply to email within one business day.
+          I also teach <Link className="ui-link" href="/courses">two other courses</Link>. I reply to email within one business day.
         </p>
       </Section>
     </main>

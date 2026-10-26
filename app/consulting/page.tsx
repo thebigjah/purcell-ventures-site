@@ -13,7 +13,7 @@ const SESSIONS = [
     title: "AI basics for business",
     duration: "2 hours",
     tag: "Introductory",
-    desc: "What AI is, what it can do today, and where it fits in your business. No tech background needed. I built it for owners and managers who feel behind.",
+    desc: "What AI is, what it can do today, and where it fits in your business. No tech background needed. I built it for owners and managers who have not started using AI.",
     outcomes: [
       "Which AI tools exist and which ones matter for your type of business",
       "Three to five tools you can use the next day",
@@ -41,7 +41,7 @@ const SESSIONS = [
     title: "AI for marketing and social media",
     duration: "2.5 hours",
     tag: "Marketing",
-    desc: "Caption writing, ad copy, campaign planning and scheduling tools. Your team leaves with a content system it can repeat every month.",
+    desc: "Caption writing, ad copy, campaign planning and scheduling tools. Your team leaves with a monthly content plan it can repeat.",
     outcomes: [
       "A month of social content planned in one sitting",
       "Ad copy, captions and email campaigns drafted with AI",
@@ -89,7 +89,7 @@ const PRICING = [
   {
     name: "Small group",
     price: "$125 a person",
-    for: "2 to 8 people, per session, with a two-hour minimum. Interactive and built around the group. It suits teams that work closely together.",
+    for: "2 to 8 people, per session, with a two-hour minimum. It suits teams that work closely together.",
   },
   {
     name: "Workshop",
@@ -108,13 +108,13 @@ const FAQ = [
   // internal link into /ai-consultant-tuscaloosa, which was reachable from /about only.
   {
     q: "Where are you based?",
-    a: <>Tuscaloosa, Alabama. The LLC is registered in Acworth, Georgia, where I formed it, and I run it from Tuscaloosa, where I attend the University of Alabama. Local businesses can meet in person, which is the part that is hard to do remotely. A fuller page covers <Link className="ui-link" href="/ai-consultant-tuscaloosa">local work in Tuscaloosa</Link>.</>,
+    a: <>Tuscaloosa, Alabama. I formed the LLC in Acworth, Georgia, where it is registered, and I run it from Tuscaloosa while I attend the University of Alabama. Businesses near Tuscaloosa can meet with me in person. More on <Link className="ui-link" href="/ai-consultant-tuscaloosa">AI consulting in Tuscaloosa</Link>.</>,
   },
-  { q: "Does my team need any tech experience?", a: "No. I design most sessions for people who have never used AI tools. I start where your team is and build from there." },
+  { q: "Does my team need any tech experience?", a: "No. I design most sessions for people who have never used AI tools, and I go at your team's pace." },
   { q: "What do participants bring?", a: "A laptop or tablet and a willingness to try things. I handle the setup, demos, exercises and the takeaway guide." },
   { q: "Can you come to our location?", a: "Yes. I come to your office and train your team there. Examples from your own setting make the session more useful." },
   { q: "How is this different from using ChatGPT on my own?", a: "Most people use AI tools for one-off questions. I show you prompting techniques, integrations and workflows that save time in your type of business." },
-  { q: "Will the session turn into a sales pitch for your other services?", a: "Only if something fits. Consulting stands on its own. If I see something in your business that I could build for you, I mention it once, after the session." },
+  { q: "Will the session turn into a sales pitch for your other services?", a: "No. If I see something in your business that I could build for you, I mention it once, after the session." },
   { q: "How far ahead do I need to book?", a: "Standard sessions need 1 to 2 weeks. Custom trainings need more prep time, so contact me as early as you can." },
 ];
 
@@ -154,7 +154,7 @@ export default function ConsultingPage() {
         </p>
       </Section>
 
-      <Section id="sessions" title="Five core sessions" intro="Pick a session. I build it around your industry, your tools and your team.">
+      <Section id="sessions" title="Sessions" intro="There are five core sessions. I adapt each one to your industry and the software your team uses.">
         <div className="ui-entries">
           {SESSIONS.map((s) => (
             <article className="ui-entry" id={s.id} key={s.id}>
@@ -180,7 +180,7 @@ export default function ConsultingPage() {
       <Section title="Who books this" intro="Teams that know they should be using AI and have not started.">
         <Rows
           items={[
-            { name: "Small business owners", line: "You run a tight operation. An hour a day saved on admin is 250 working hours a year." },
+            { name: "Small business owners", line: "An hour a day saved on admin adds up to 250 working hours a year." },
             { name: "Office and operations teams", line: "Your team does repetitive digital work. I show you which parts software can handle." },
             { name: "Marketing departments", line: "Content takes hours to produce. In a session I show how AI shortens drafting, and we time it on your own content." },
             { name: "Teams new to AI", line: "If your team has not used AI tools yet, the AI basics session starts from zero." },
@@ -192,17 +192,17 @@ export default function ConsultingPage() {
         <Rows
           items={[
             { name: "A 15-minute call", line: "You tell me about your business, your team and the tasks that eat the most time. I tell you which session fits and what I will customize." },
-            { name: "I build your session", line: "I build the presentation around your tools, workflows and industry, so the session fits your team." },
-            { name: "We run it", line: "I come to you. Live demos and exercises on your own tools. Every participant gets a takeaway guide." },
+            { name: "I build your session", line: "I build the presentation around your tools, workflows and industry." },
+            { name: "The session", line: "I come to you and run live demos and exercises on your own tools. Every participant gets a takeaway guide." },
             { name: "Follow-up", line: "After the session I send a resource package with the key tools, prompts and next steps from what we covered. You can email me questions afterward." },
           ]}
         />
       </Section>
 
-      <Section title="Why work with me" intro="I am nineteen and I have built these systems for a year.">
+      <Section title="Background">
         <Prose>
           <p>
-            I spent a year building autonomous systems and shipping production tools full-time while still in high school. The work I offer is the same work I do in my own business every day.
+            I am 19. I spent my last year of high school building autonomous AI systems and production tools full-time, and I teach the same tools I use in my own business every day.
           </p>
         </Prose>
         <div style={{ marginTop: 32 }}>
@@ -219,8 +219,8 @@ export default function ConsultingPage() {
 
       <Section title="Early client terms">
         <Prose>
-          <p>I have no corporate testimonials yet. My consulting business is at its start.</p>
-          <p>Early clients get my full attention and lower rates than I will charge in a year. I will also ask to publish the results as my first case studies.</p>
+          <p>The consulting business is new, so I have no corporate testimonials yet.</p>
+          <p>Early clients pay lower rates than I will charge a year from now. I will ask to publish your results as one of my first case studies.</p>
         </Prose>
       </Section>
 

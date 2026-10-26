@@ -76,6 +76,9 @@ export default function Galaxy({ children }: { children: ReactNode }) {
         starD,
         assets: ASSETS,
         onFocus(s: Sys | null) { setSys(s); },
+        // The comet (the blog) opens its page directly. Until 26 Oct this handler was
+        // never passed, so clicking the comet did nothing.
+        onOpen(p: Page) { setOpening(p); setTimeout(() => router.push(p.href), 500); },
         onPlanet(p: Page | null) {
           if (!p) { setOpening(null); return; }
           setOpening(p);
@@ -177,7 +180,7 @@ const GX_CSS = `
 .gx-hero h1{font:600 clamp(34px,5.2vw,62px)/1.04 var(--font-display);margin:0;letter-spacing:-.01em}
 .gx-hero p{margin:0;max-width:44ch;color:#cfc6b2;font-size:18px}
 .gx-hint{position:absolute;z-index:4;bottom:max(16px,env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);color:var(--muted);font-size:14px;white-space:nowrap;margin:0;transition:opacity .4s}
-.gx-cue{position:absolute;z-index:4;right:var(--gutter-r);bottom:max(18px,env(safe-area-inset-bottom,0px));color:#cfc6b2;font-size:14px;text-decoration:none;display:flex;align-items:center;gap:8px;transition:opacity .4s}
+.gx-cue{position:absolute;z-index:4;right:calc(var(--gutter-r) + 76px);bottom:max(18px,env(safe-area-inset-bottom,0px));color:#cfc6b2;font-size:14px;text-decoration:none;display:flex;align-items:center;gap:8px;transition:opacity .4s}
 .gx-cue span{display:inline-block;width:1px;height:34px;background:#cfc6b2;opacity:.6}
 .gx-focused .gx-hero,.gx-focused .gx-hint,.gx-focused .gx-cue{opacity:0;pointer-events:none}
 .gx-focused .gx-hero>*{pointer-events:none}
@@ -205,7 +208,8 @@ const GX_CSS = `
   .gx-hero{width:100%;justify-content:flex-end;gap:12px;padding-bottom:72px;background:linear-gradient(0deg,rgba(7,6,10,.94) 50%,rgba(7,6,10,0))}
   .gx-hero h1{font-size:clamp(30px,8.6vw,38px)}
   .gx-hero p{font-size:16px}
-  .gx-hint{display:none}
+  .gx-hint,.gx-cue{display:none}
+  .gx-hero{background:linear-gradient(0deg,rgba(7,6,10,.96) 38%,rgba(7,6,10,.7) 62%,rgba(7,6,10,0));padding-bottom:40px}
   .gx-strip{grid-template-columns:1fr;max-height:60dvh;overflow:auto;gap:8px}
   .gx-strip h2{font-size:24px}
   .gx-strip ul{flex-direction:column;row-gap:0}

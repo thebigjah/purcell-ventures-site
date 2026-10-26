@@ -30,13 +30,13 @@ export default function Post() {
         You can start using AI in your business this week with one free account. The safest
         way to begin is with small writing jobs where you already know what a good answer
         looks like. I completed 12 Anthropic Academy courses, including AI Fluency:
-        Framework &amp; Foundations, and this post draws on that framework.
+        Framework &amp; Foundations. The steps I recommend come from that course.
       </p>
 
       <h2>Setting up your account before you type anything</h2>
       <p>
-        Pick one tool. ChatGPT, Claude and Gemini all have free plans that can handle the
-        tasks in this post. Sign up with your business email so your work stays separate from
+        Pick one tool. ChatGPT, Claude and Gemini all have free plans that can handle these
+        tasks. Sign up with your business email so your work stays separate from
         your personal chats.
       </p>
       <p>
@@ -55,11 +55,11 @@ export default function Post() {
       <h2>Choosing tasks you can check yourself</h2>
       <p>
         First decide whether AI should do the task at all. For a first week, I pick tasks
-        that pass three tests. You can spot a wrong answer quickly. A mistake costs little to
-        fix. The task takes time you would rather spend with customers.
+        where you can spot a wrong answer quickly, a mistake costs little to fix, and the
+        work takes time you would rather spend with customers.
       </p>
       <p>
-        Short writing drafts pass all three tests. Bookkeeping, legal questions and anything
+        Short writing drafts meet all three conditions. Bookkeeping, legal questions and anything
         involving a customer&apos;s private records fail them, so leave those alone for now.
       </p>
 
@@ -72,9 +72,9 @@ export default function Post() {
         refunds.&quot;
       </p>
       <p>
-        Here the AI follows instructions you wrote. Read the draft side by side with the
-        review. Delete anything the customer never said, and remove any promise you did not
-        make. Then paste your edited version into the Reply box in Google Business Profile
+        Read the draft side by side with the review. Delete anything the customer never
+        said, and remove any promise you did not make. Then paste your edited version into
+        the Reply box in Google Business Profile
         and post it.
       </p>
 
@@ -96,8 +96,8 @@ export default function Post() {
 
       <h2>Task three: writing this week&apos;s customer update</h2>
       <p>
-        Pick one piece of news, such as your Thanksgiving hours, a new service, or a time
-        change for Sunday services. Write the facts yourself first: dates, times, address and
+        Pick one piece of news, such as your Thanksgiving hours or a new service. Write the
+        facts yourself first: dates, times, address and
         phone number.
       </p>
       <p>
@@ -108,7 +108,7 @@ export default function Post() {
 
       <h2>How to check every result before you use it</h2>
       <p>
-        Next, check the output. Models can state wrong things with full confidence, so I
+        Models can state wrong things with full confidence, so I
         check every fact, name, number and quote against a source before I use it.
       </p>
       <p>
@@ -130,8 +130,8 @@ export default function Post() {
       </p>
 
       <p>
-        I check small business websites around Tuscaloosa for problems like these. If you
-        want me to look at yours, <Link href="/contact">send me the address</Link>.
+        I help small businesses around Tuscaloosa start using AI. If you want help choosing
+        your first tasks, <Link href="/contact">send me a message</Link>.
       </p>
 
       <PostByline post={{

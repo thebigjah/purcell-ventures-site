@@ -99,7 +99,7 @@ export default function AIFaqBuilderPage() {
                 onChange={(e) => setTopics(e.target.value)}
                 placeholder="e.g., emergency calls, warranty, after-hours pricing, payment methods"
               />
-              <span className={s.help}>Leave this blank for general FAQs. Hints steer the answers toward the topics your customers ask about.</span>
+              <span className={s.help}>Leave this blank for general FAQs, or list the topics your customers ask about.</span>
             </label>
             {error && <p className={s.error}>{error}</p>}
             <div>
@@ -138,7 +138,7 @@ export default function AIFaqBuilderPage() {
 
             <div style={{ marginTop: 28 }}>
               <Note>
-                If an answer misses, edit the description above and run it again. The model works from your wording, so add the questions your customers ask most.
+                If an answer is off, add detail to the description and run it again. The tool works from your wording, so include the questions your customers ask most.
               </Note>
             </div>
           </section>

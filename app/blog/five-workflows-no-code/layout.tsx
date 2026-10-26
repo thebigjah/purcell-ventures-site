@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: { absolute: "Five workflows any small business can automate without code, by Elijah Purcell" },
   description:
-    "Five automations a small business can set up without writing code, what each one saves, and where they break.",
+    "Five automations a small business can set up without writing code, and the tools I would use for each one.",
   alternates: { canonical: "/blog/five-workflows-no-code" },
 };
 

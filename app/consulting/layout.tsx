@@ -63,7 +63,7 @@ const schema = {
           "name": "Does my team need tech experience for AI consulting?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. I design most sessions for people who have never used AI tools. I start where your team is and build from there.",
+            "text": "No. I design most sessions for people who have never used AI tools, and I go at your team's pace.",
           },
         },
         {

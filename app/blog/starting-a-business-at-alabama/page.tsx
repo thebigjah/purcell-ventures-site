@@ -24,15 +24,16 @@ export default function Post() {
     >
       <p>
         I arrived at the University of Alabama in August 2026 with a company I had already
-        been running for over a year. What follows covers running a company while enrolled.
+        been running for over a year. Running it alongside classes has taught me where a
+        student business should start and what slows it down.
       </p>
 
-      <h2>An advantage most student businesses skip</h2>
+      <h2>Local businesses as customers</h2>
 
       <p>
-        You are surrounded by a concentrated, walkable market of thirty-eight thousand people
-        with predictable needs and no purchasing bureaucracy, and by several hundred local
-        businesses who serve them.
+        Campus is a walkable market of thirty-eight thousand people with predictable needs.
+        Several hundred local businesses serve them, and their owners can say yes without a
+        purchasing department.
       </p>
 
       <p>
@@ -41,22 +42,22 @@ export default function Post() {
       </p>
 
       <p>
-        Your first customer should be a local business. Students have little money and churn
-        quickly. A local business with a specific problem is a better first customer, even
-        though approaching one feels less comfortable.
+        Students have little money and stop paying quickly. A local business with a specific
+        problem is a better first customer, even though walking in to pitch one feels less
+        comfortable.
       </p>
 
-      <h2>The campus resources that apply</h2>
+      <h2>Campus resources that help</h2>
 
       <p>
         Most &quot;resources for student entrepreneurs&quot; lists are competitions, and a competition
-        does not bring you customers. These are the ones that help with running a business.
+        does not bring you customers. These campus services help with running the business.
       </p>
 
       <p>
-        <a href="https://writingcenter.ua.edu/" rel="noopener">The Writing Center</a> is free,
-        and a proposal is writing. You get fifty minutes of free editing from somebody who
-        has to read your argument closely.
+        <a href="https://writingcenter.ua.edu/" rel="noopener">The Writing Center</a> is free
+        and will review a client proposal. You get fifty minutes of editing from somebody
+        who reads your argument closely.
       </p>
 
       <p>The Speaking Studio is available if you are going to pitch.</p>
@@ -73,8 +74,8 @@ export default function Post() {
       </p>
 
       <p>
-        Tuition already covers more than this. The full list is{" "}
-        <Link href="/blog/free-at-alabama">here</Link>.
+        Tuition already pays for more than this. See{" "}
+        <Link href="/blog/free-at-alabama">the full list of what UA students already have</Link>.
       </p>
 
       <h2>Three mistakes that cost time</h2>
@@ -82,15 +83,14 @@ export default function Post() {
       <p>
         The first is building the setup instead of the business. It is easy to spend a term
         on the logo, the LLC, the site and the email signature and never send an invoice.
-        Send the first invoice before you polish the logo.{" "}
-        <Link href="/blog/llc-at-seventeen">Here is what the filing involves</Link>. The
-        filing is an online form.
+        Send the first invoice before you polish the logo. The LLC filing is one online
+        form, and the steps are in{" "}
+        <Link href="/blog/llc-at-seventeen">my post on filing an LLC at seventeen</Link>.
       </p>
 
       <p>
-        The second is waiting for a term with more free time. The schedule you have this
-        semester is the schedule you will have, and a plan that needs a quiet fortnight will
-        not happen.
+        The second is waiting for a term with more free time. Next semester will be as busy
+        as this one, so a plan that needs two quiet weeks will not happen.
       </p>
 
       <p>
@@ -99,15 +99,13 @@ export default function Post() {
         answer truthfully when asked.
       </p>
 
-      <h2>What competes for your hours</h2>
-
-      <p>Classes are scheduled and finite, so they are easy to plan around.</p>
+      <h2>Managing interruptions</h2>
 
       <p>
-        Interruptions are what compete. A client message at eleven in the morning between two
-        lectures, a bug at nine at night, a call that cannot happen in a three-hour lab. The
-        work itself fits. The interruptions are what make a fourteen hour day feel like it
-        produced nothing.
+        Classes run on a fixed schedule, so they are easy to plan around. Interruptions are
+        harder, such as a client message between two lectures or a call that cannot happen
+        during a three-hour lab. The work itself fits in the week, but the interruptions can
+        make a fourteen hour day feel like it produced nothing.
       </p>
 
       <p>
@@ -116,12 +114,11 @@ export default function Post() {
         better served than one who gets an instant reply half the time and silence the rest.
       </p>
 
-      <h2>A problem that already exists is the best place to start</h2>
+      <h2>Finding your first problem to fix</h2>
 
       <p>
-        The best opening for a student here is that many local businesses have a specific
-        problem you can see from outside and fix, and nobody has told them. Begin with one
-        of those problems before you invent an idea.
+        Many local businesses have a specific problem you can see from outside and fix, and
+        nobody has told them about it. Start with one of those before you invent a product.
       </p>
 
       <p>
@@ -131,8 +128,8 @@ export default function Post() {
       </p>
 
       <p>
-        <Link href="/blog/audit-every-business-in-your-town">The method is published</Link>,
-        free, and takes an afternoon.
+        <Link href="/blog/audit-every-business-in-your-town">The audit method</Link> is free
+        to use and takes an afternoon.
       </p>
 
       <PostByline post={{

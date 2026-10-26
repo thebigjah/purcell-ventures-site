@@ -24,7 +24,7 @@ const SECTIONS: { label: string; items: Item[] }[] = [
     label: "Free tools",
     items: [
       { href: "/ai-readiness", name: "AI readiness test", line: "10 questions in 3 minutes. It scores how your team uses AI and suggests next steps. No email required." },
-      { href: "/ai-cost-calculator", name: "AI cost calculator", line: "Enter your team size and workload to see how fast an AI session pays for itself. The page lists its assumptions." },
+      { href: "/ai-cost-calculator", name: "AI cost calculator", line: "Enter your team size and workload to see how fast an AI session pays for itself. It shows the formula it uses." },
     ],
   },
   {
@@ -38,8 +38,8 @@ const SECTIONS: { label: string; items: Item[] }[] = [
   {
     label: "Personal pages",
     items: [
-      { href: "/about", name: "About", line: "About me and the Purcell Ventures mark." },
-      { href: "/now", name: "Now", line: "What I am working on this month." },
+      { href: "/about", name: "About", line: "Who I am and how the company started." },
+      { href: "/now", name: "Now", line: "What I am building and studying this month." },
       { href: "/uses", name: "Uses", line: "The tools I use for my work." },
       { href: "/verses", name: "Verses", line: "Five scriptures I come back to." },
       { href: "/resume", name: "Résumé", line: "Education, work, awards and scholarships." },
@@ -49,7 +49,7 @@ const SECTIONS: { label: string; items: Item[] }[] = [
     label: "Built by me",
     items: [
       { href: "https://ua-today.vercel.app", name: "UA Today", line: "Campus events for the University of Alabama, six sources in one place. Free, no account, not affiliated with the university." },
-      { href: "/tools", name: "26 free single-file tools", line: "Small programs that each solve one problem, all live on the open web." },
+      { href: "/tools", name: "26 free single-file tools", line: "Small programs that each do one job. Anyone can use them without an account." },
       { href: "/portfolio", name: "Portfolio", line: "Client work and shipped products." },
       { href: "https://mantle-field-site.vercel.app", name: "Mantle Field Services", line: "The sister brand for gutter cleaning, pressure washing and lawn care. Metro Atlanta only." },
     ],

@@ -23,17 +23,17 @@ export default function Post() {
     >
       <p>I launched the <Link href="/shop/starter-kit">PV AI Starter Kit</Link> for $19. It contains 24 AI prompts, 5 sales scripts, a rep handbook, 50+ cold outreach templates, a 1099 contractor agreement template, and a CRM CSV template.</p>
 
-      <p>Courses and template bundles in this category often sell for $97, $297 or $497. These are my reasons for pricing mine at $19.</p>
+      <p>Courses and template bundles in this category often sell for $97, $297 or $497, and I chose $19 on purpose.</p>
 
       <h2>A low price lets me skip a sales funnel</h2>
       <p>At $497, I would need a sales funnel: a webinar, an email sequence and testimonials. I would have to build all of that before selling a single copy.</p>
 
-      <p>At $19, I do not need one. Someone tries one of the free tools on the site and can buy the kit at the bottom of the page.</p>
+      <p>At $19 I do not need one. Someone tries one of the free tools on the site and can buy the kit at the bottom of the page.</p>
 
       <p>The $19 price earns less per visit than a $497 price would. I expect repeat customers to close some of that gap, and I do not have the sales data yet to say how much.</p>
 
       <h2>Some $19 buyers may buy a digital services plan</h2>
-      <p>Someone who has paid $19 has already bought from Purcell Ventures once. The second purchase is a smaller decision than the first.</p>
+      <p>Someone who has paid $19 has already bought from Purcell Ventures once, which makes a second purchase an easier decision.</p>
 
       <p>When they need the done-for-you version of one of my products (Digital Services from $99 a month, Consulting $175 an hour, Custom Software from $1,500), they already know how I work and what I deliver.</p>
 
@@ -43,9 +43,7 @@ export default function Post() {
       <p>Each extra copy is a digital download and costs me nothing to deliver, so total sales matter more than margin per copy.</p>
 
       <h2>A $19 purchase carries little risk</h2>
-      <p>A buyer who picks the wrong kit loses $19.</p>
-
-      <p>That changes how people buy. At $19, the buyer is testing: <em>let&apos;s see if this is any good.</em> At $497, the buyer is justifying: <em>I have to prove to myself this was worth it.</em></p>
+      <p>A buyer who picks the wrong kit loses $19, which changes how people buy. At $19, the buyer is testing: <em>let&apos;s see if this is any good.</em> At $497, the buyer is justifying: <em>I have to prove to myself this was worth it.</em></p>
 
       <h2>I list every file in the kit before anyone pays</h2>
       <p>When you sell a $497 course, the customer cannot see the contents until after they pay, so the sales page has to persuade them.</p>
@@ -62,9 +60,9 @@ export default function Post() {
 
       <p>If 10 of them became Digital Services customers at $179 a month for 12 months, that would add $21,480.</p>
 
-      <p>The $19 kit will not cover my costs. I expect it to bring in customers for the paid services.</p>
+      <p>The $19 kit will not cover my costs on its own. I expect most of its value to come from the customers it brings to the paid services.</p>
 
-      <h2>What this means if you are selling something</h2>
+      <h2>If you sell a higher-priced product</h2>
       <p>If you sell at $97, $297, or $497, consider what a $19 version would look like. Use it alongside your main product as a low-cost first step.</p>
 
       <p>The hard part is giving up per-unit margin in exchange for more buyers.</p>

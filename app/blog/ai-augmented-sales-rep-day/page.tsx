@@ -21,12 +21,12 @@ export default function Post() {
       title="What a day looks like for an AI-augmented sales rep"
       meta="25 May 2026, 6 minute read"
     >
-      <p>People ask me what AI tools <em>change</em> in a sales rep&apos;s day. This is what a day could look like for a rep using the tools in the rep portal I built at Purcell Ventures.</p>
+      <p>People ask me what AI tools <em>change</em> in a sales rep&apos;s day, so I wrote out one day for a rep using the rep portal I built at Purcell Ventures.</p>
 
-      <p>This is an example day. Luke, the prospects and their businesses are invented. The tools and the steps are the ones the portal has.</p>
+      <p>Luke, the prospects and their businesses are made up. The tools and the steps are the ones the portal has.</p>
 
       <h2>8:15 AM: Luke opens the dashboard</h2>
-      <p>Luke logs into the rep portal. The dashboard shows three numbers at the top: <strong>2 tasks overdue, 4 due today, $12,400 in open pipeline.</strong> Overdue tasks show in red. He starts with those.</p>
+      <p>Luke logs into the rep portal. The dashboard shows three numbers at the top: <strong>2 tasks overdue, 4 due today, $12,400 in open pipeline.</strong> Overdue tasks show in red, and he starts with those.</p>
 
       <h2>8:18 AM: Luke checks the AI Deal Coach</h2>
       <p>He opens the <strong>Coach</strong> view in the CRM. The AI Deal Coach reads his pipeline of 23 open contacts and names the three deals to work today. It ranks them by stage, days since last touch and his notes.</p>
@@ -86,7 +86,7 @@ export default function Post() {
         <li>3 red flags to watch for</li>
       </ul>
 
-      <p>He goes into the call with a brief in hand. The call goes well and he books a follow-up.</p>
+      <p>He goes into the call with that brief, and he books a follow-up before it ends.</p>
 
       <h2>11:45 AM: Luke logs the call</h2>
       <p>Instead of typing notes by hand, Luke opens <strong>AI Call Recap</strong> and pastes his rough notes (&quot;Talked to Karen 30 min, big agency Pittsford area, current site is wix she hates, 12 employees, decision-maker w/ her business partner, said pricing felt fair, wants proposal by Friday, asked about HIPAA compliance&quot;).</p>
@@ -122,7 +122,7 @@ export default function Post() {
       <h2>4:00 PM: Luke closes out the day</h2>
       <p>Luke opens the <Link href="/rep-portal/calendar">Calendar view</Link>, looks at tomorrow&apos;s tasks and reorders them. His <strong>Personal Metrics</strong> panel shows this month&apos;s closed deals, win rate and average deal size.</p>
 
-      <p>The portal&apos;s tier ladder promotes a rep from Apprentice to Closer at 5 closes. He has 3.</p>
+      <p>The portal&apos;s tier ladder promotes a rep from Apprentice to Closer at 5 closes, and he has 3.</p>
 
       <h2>What changes compared with working without AI</h2>
       <p>The tools cut prep time on each task:</p>
@@ -136,11 +136,11 @@ export default function Post() {
       </ul>
 
       <h2>Limits</h2>
-      <p>The rep still runs the call, listens and decides what to say. The AI removes prep work and drafts messages.</p>
+      <p>The rep still runs the call, listens and decides what to say. The AI handles prep work and first drafts.</p>
 
-      <p>A rep who struggles on calls still struggles with these tools. Hire well first, then add AI.</p>
+      <p>A rep who struggles on calls will still struggle with these tools, so hiring the right rep comes before adding AI.</p>
 
-      <h2>Trying this yourself</h2>
+      <h2>Getting these tools</h2>
       <p>If you run sales for your business, or you are the whole sales team, start with the <Link href="/shop/starter-kit">PV AI Starter Kit ($19)</Link>. It includes the AI tool prompts and sales scripts described above.</p>
 
       <p>If you want me to set this up and manage it, see the <Link href="/digital">Digital Services tiers</Link> ($99 to $279 a month), or <Link href="/software">Custom Software</Link> if you want a rep portal built for your business.</p>

@@ -24,7 +24,7 @@ export const metadata = {
   alternates: { canonical: "/blog/121-businesses-near-campus" },
   title: { absolute: "121 businesses near the University of Alabama, and what a phone can find, by Elijah Purcell" },
   description:
-    "An audit of every independent business within 2500 metres of the Quad: how many list a website a machine can reach, and what that means for a shop competing with a chain three miles away.",
+    "An audit of every independent business within 2500 metres of the Quad, and how many of them list a website a machine can reach.",
 };
 
 const ROWS: [string, number, number][] = [
@@ -127,20 +127,20 @@ export default function Post() {
       <h2>Where a website does not help</h2>
 
       <p>
-        I build websites, so the obvious read is that this is an argument for buying
-        one from me. Two things weaken that read.
+        I build websites, so you could read this as a pitch for my own service. Two
+        things cut against that reading.
       </p>
 
       <p>
         Some of these businesses do not need a website. A barber shop with a line out
-        the door every Saturday gets enough customers without one. A
-        restaurant that fills every night on word of mouth has already solved the
-        problem a website solves.
+        the door every Saturday gets enough customers without one, and a
+        restaurant that fills every night on word of mouth already has the customers a
+        website would bring.
       </p>
 
       <p>
-        For many of the rest, the cheapest fix is claiming the Google listing and
-        entering the hours. Claiming the listing is free and takes twenty minutes.
+        For many of the rest, the cheapest fix is to claim the Google listing and enter
+        the hours, which is free and takes twenty minutes.
       </p>
 
       <h2>What happens next</h2>
@@ -148,9 +148,9 @@ export default function Post() {
       <p>
         I am visiting these places and writing about them one at a time. For each one I
         write who runs it, how long it has been here, what it does well, and what a
-        student trying to find it runs into. That is{" "}
-        <Link href="/blog/tuscaloosa-small-business-online">the Storefront Project</Link>,
-        and it is reporting. I feature businesses whether or not they are clients.
+        student trying to find it runs into. The series is called{" "}
+        <Link href="/blog/tuscaloosa-small-business-online">the Storefront Project</Link>.
+        I feature businesses whether or not they are clients.
       </p>
 
       <p>
@@ -176,8 +176,8 @@ export default function Post() {
         twenty-six working sites and ninety-five without. The script was sending only a
         HEAD request, and two restaurants whose sites are perfectly alive answer GET but
         refuse HEAD, so the script counted them as broken. I corrected the figures above
-        to twenty-seven and ninety-four. The correction stays visible because the piece
-        is about checking things.
+        to twenty-seven and ninety-four, and I left this note up so readers can see what
+        changed.
       </p>
 
       <PostByline post={{

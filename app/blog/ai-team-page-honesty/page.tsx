@@ -7,7 +7,7 @@ export const metadata = {
   alternates: { canonical: "/blog/ai-team-page-honesty" },
   title: { absolute: "My team page lists fifteen people who do not exist, by Elijah Purcell" },
   description:
-    "Why a company running AI agents should name them, say they are software in the first sentence, and never let one sign an email as a human. The disclosure rules I enforce in code.",
+    "Why a company running AI agents should name them, say they are software in the first sentence, and never let one sign an email as a human, with the disclosure rules I enforce in code.",
 };
 
 
@@ -27,49 +27,49 @@ export default function Post() {
         Since this post, the agents have grown into COSMIC: 57 agents in 17 rooms. The current roster is on <Link href="/team">the team page</Link>.
       </Note>
       <p>
-        <Link href="/team">The team page</Link> has fifteen names on it.
-        Audrey, Cecily, Delia, Greta, Henry, Ivor, Margot, Owen, Porter, Quentin, Rhett,
-        Sable, Silas, Tobias, Wren. None of them is a person.
+        <Link href="/team">The team page</Link> lists fifteen names (Audrey, Cecily,
+        Delia, Greta, Henry, Ivor, Margot, Owen, Porter, Quentin, Rhett, Sable, Silas,
+        Tobias and Wren), and all fifteen are AI agents.
       </p>
 
       <p>
-        The first sentence on that page says so. I wrote it that way so I could answer
-        the phone without lying.
+        The first sentence on that page says they are software, so when a client calls
+        and asks who Margot is, I can tell the truth.
       </p>
 
-      <h2>Why name them at all</h2>
+      <h2>Why the agents have names</h2>
 
       <p>
         The alternative is describing them as a system, which tells a client little.
         &quot;Automated proposal generation&quot; says nothing about what happens on a
         Tuesday. &quot;Quentin drafts the proposal, Cecily checks it for anything internal,
         and it does not leave the building until both have passed it&quot; tells you exactly
-        what happens, and the names make the sequence legible.
+        what happens, and the names make the order easy to follow.
       </p>
 
       <p>
         Naming them also makes the boundaries obvious. If Quentin drafts and Audrey
         audits and Audrey cannot change anything, that separation is easy to say and
-        easy to check. It is a much harder sentence to write about &quot;the system.&quot;
+        easy to check. Both are harder when everything is called &quot;the system.&quot;
       </p>
 
       <h2>Why the first sentence has to say what they are</h2>
 
       <p>
-        First, someone will find out. With a roster of invented colleagues and stock
-        photographs, a client will eventually ask to speak to Margot, and the lie ends
-        there.
+        First, clients find out. If the page showed invented colleagues with stock
+        photographs, a client would eventually ask to speak to Margot, and I would have
+        to admit she does not exist.
       </p>
 
       <p>
-        Second, a one-person company with fifteen agents is unusual. Presenting them as
-        staff hides the main fact about the company.
+        Second, a one-person company with fifteen agents is unusual, and presenting them
+        as staff would hide the most unusual fact about how the company works.
       </p>
 
-      <h2>The rules, and where they live</h2>
+      <h2>The three disclosure rules</h2>
 
       <p>
-        There are three, and all three are enforced in code.
+        All three are enforced in code.
       </p>
 
       <p>
@@ -90,31 +90,31 @@ export default function Post() {
 
       <p>
         <strong>The auditors cannot fix anything.</strong> The agents that inspect the
-        live properties are read-only. Separating the finder from the fixer costs one
-        design decision.{" "}
-        <Link href="/blog/agents-that-cannot-fix-what-they-find">It also
-        lets findings pile up unfixed</Link>.
+        live properties are read-only. Keeping the agents that find problems apart from
+        the ones that fix them took one design decision, and{" "}
+        <Link href="/blog/agents-that-cannot-fix-what-they-find">it also
+        let findings pile up unfixed</Link>.
       </p>
 
       <h2>What this costs</h2>
 
       <p>
-        I lose some credibility. &quot;One person and fifteen scripts&quot; sounds smaller than
-        &quot;our team,&quot; and some prospects would have been more impressed by the
-        second sentence.
+        It costs me some credibility. &quot;One person and fifteen scripts&quot; sounds
+        smaller than &quot;our team,&quot; and some prospects would have been more
+        impressed by the second phrase.
       </p>
 
       <p>
-        I would rather have the prospects who are impressed by the first sentence. A client who learns
-        the truth later will wonder what else I overstated.
+        I would rather work with the prospects who are fine with the first one, because a
+        client who learns the truth later will wonder what else I overstated.
       </p>
 
       <h2>If you are building something similar</h2>
 
       <p>
         Say what it is on the page where you say what it does. Put the disclosure inside
-        the function that sends. If you write a sentence about your company that you would
-        be uncomfortable having a client read back to you, that sentence is the problem.
+        the function that sends. If you would be uncomfortable having a client read a
+        sentence about your company back to you, rewrite it.
       </p>
 
       <p>

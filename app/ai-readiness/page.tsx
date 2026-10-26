@@ -130,7 +130,7 @@ const QUESTIONS: Question[] = [
 const TIERS: Tier[] = [
   {
     max: 9,
-    label: "At risk",
+    label: "Mostly manual",
     cls: "low",
     verdict: "Your team does most of its work by hand today.",
     detail: "One focused session on one workflow is a reasonable place to start.",
@@ -143,7 +143,7 @@ const TIERS: Tier[] = [
   },
   {
     max: 17,
-    label: "Waking up",
+    label: "Getting started",
     cls: "mid",
     verdict: "Your team knows AI matters and has not built it into daily work yet.",
     detail: "The next step is choosing one workflow and building around it.",
@@ -156,7 +156,7 @@ const TIERS: Tier[] = [
   },
   {
     max: 24,
-    label: "Moving",
+    label: "Using AI daily",
     cls: "high",
     verdict: "Your team already builds with AI.",
     detail: "The next step is connecting the separate AI tools you use into one workflow.",
@@ -169,7 +169,7 @@ const TIERS: Tier[] = [
   },
   {
     max: 30,
-    label: "Building the future",
+    label: "Built around AI",
     cls: "high",
     verdict: "Your team already runs much of its work through AI.",
     detail: "Training will add little at this tier. A strategy conversation about selling or packaging what you have built is more useful.",
@@ -312,15 +312,13 @@ export default function AIReadinessPage() {
       <Section title="What the test measures">
         <div className="ui-prose">
           <p>
-            Ten questions about how your team works today. They ask what you do when you draft
-            a customer email, when you answer the same question for the twentieth time, and
-            when someone leaves and takes a process with them.
+            Ten questions about how your team works today: how you write to customers, how
+            recently you adopted a tool that saved time, how much admin work repeats every week,
+            how new staff learn the job, how you use data, how you produce marketing, and how you
+            and your team think about AI.
           </p>
           <p>
-            The questions cover drafting and written communication, new tools, repeated manual
-            work, how your team stores and finds what it knows, how data informs decisions,
-            marketing content, and how your team and you personally think about AI. Your answers
-            show which of those areas are ready for AI and which are not.
+            Your answers show which parts of your work are ready for AI and which are not.
           </p>
         </div>
       </Section>
@@ -328,8 +326,8 @@ export default function AIReadinessPage() {
       <Section title="What you get back">
         <div className="ui-prose">
           <p>
-            A readiness level and a short list of what to do first, in order. It needs no email
-            and sends no follow-up. It runs in your browser and takes three minutes.
+            A score out of 30, one of four levels, and three next steps in the order to do them.
+            The test runs in your browser, takes three minutes, and asks for no email.
           </p>
         </div>
       </Section>
@@ -337,11 +335,11 @@ export default function AIReadinessPage() {
       <Section title="Who built it">
         <div className="ui-prose">
           <p>
-            Elijah Purcell, Founder/CEO of <Link href="/about">Purcell Ventures LLC</Link> and an
-            autonomous AI agent systems engineer, working out of Tuscaloosa, Alabama. Each answer
-            scores 0 to 3 points, for a total out of 30, and the total places you in one of four
-            tiers. I set the point values myself, drawing on running COSMIC, a station of 57 AI
-            agents in 17 rooms that does this company&apos;s proposals, site audits and security checks.
+            I am Elijah Purcell, Founder/CEO of <Link href="/about">Purcell Ventures LLC</Link> in
+            Tuscaloosa, Alabama, and I wrote this test. Each answer scores 0 to 3 points, for a
+            total out of 30, and the total places you in one of four tiers. The point values come
+            from running COSMIC, a station of 57 AI agents in 17 rooms that does my company&apos;s
+            proposals, site audits and security checks.
           </p>
           <p>
             If the result raises questions, the <Link href="/consulting">consulting page</Link>{" "}

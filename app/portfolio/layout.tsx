@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "17 projects Elijah Purcell built and maintains: web apps in Next.js and React, a mobile app in Expo, AI tools and internal automation in Python.",
   keywords: [
     "purcell ventures portfolio", "shipped projects", "next.js web apps",
-    "expo mobile apps", "ai tools built", "Atlanta software developer",
+    "expo mobile apps", "ai tools built", "Tuscaloosa software developer",
   ],
   openGraph: {
     title: "Portfolio of shipped software and AI projects",
@@ -48,7 +48,7 @@ const FAQ_LD = {
       "name": "What has Elijah Purcell built?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Working products including UA Today, a University of Alabama events feed built from six sources, English Pruitt Photography, a paid client site found through cold outreach, The Loom, a lead-generation crawler that runs on a schedule, and Boyfriend Camera, which runs computer vision on the phone. The portfolio lists 17 projects, and every live entry links to the working product."
+        "text": "I have built 17 projects. They include UA Today, a University of Alabama events feed built from six sources, English Pruitt Photography, a paid client site I found through cold outreach, The Loom, a lead-generation crawler that runs on a schedule, and Boyfriend Camera, which runs computer vision on the phone. Each live project has a link to the working product."
       }
     }
   ]

@@ -17,15 +17,14 @@ export default function Post() {
       meta="24 May 2026, 5 minute read"
     >
       <p>
-        A plumber I know bought an &quot;AI receptionist&quot; for $400/month. It was supposed to
-        answer his after-hours calls and book appointments. Six months in, he canceled it.
-        The AI worked fine. The problem was that his calendar wasn&apos;t connected to anything,
-        his quote process took 20 minutes per call, and he had no way to follow up on the
-        leads the AI captured.
+        Picture a plumber paying $400 a month for an &quot;AI receptionist&quot; that answers
+        after-hours calls and books appointments. The AI can do its job and still fail him if
+        his calendar is not connected to anything, his quotes take 20 minutes a call, and
+        nobody follows up on the leads it captures.
       </p>
       <p>
-        This is the AI failure I see most often. In these cases the tool worked and the
-        purchase was the mistake.
+        This is the AI failure I see most often: the tool works, and the business has no
+        process ready to use what it produces.
       </p>
 
       <h2>The question to ask before any AI purchase</h2>
@@ -40,9 +39,10 @@ export default function Post() {
 
       <h2>What AI does well</h2>
       <p>
-        Two things, mostly: <strong>generating drafts</strong> (writing, summaries,
-        structured outputs) and <strong>pattern matching at scale</strong> (categorizing,
-        ranking, surfacing). It produces a first version that a person then finishes.
+        AI mostly does two things well: <strong>generating drafts</strong> (writing,
+        summaries, structured outputs) and <strong>pattern matching at scale</strong>
+        (categorizing, ranking, surfacing). In both cases it produces a first version that a
+        person then finishes.
       </p>
       <p>
         It does not make reliable business decisions. It can give answers that sound sure
@@ -50,14 +50,14 @@ export default function Post() {
         business.
       </p>
 
-      <h2>The three questions before you buy anything</h2>
+      <h2>Three questions to ask before you buy</h2>
       <ol>
         <li><strong>Is time the bottleneck?</strong> If you say yes, name the specific hours per week the tool saves. If you can&apos;t name the hours, you do not have a bottleneck yet.</li>
         <li><strong>Where do the AI&apos;s outputs go?</strong> If the answer is &quot;into another tool I haven&apos;t set up yet,&quot; pause. Fix the downstream tool first, then add AI.</li>
         <li><strong>Who reviews the outputs?</strong> AI drafts need a person to check facts, brand voice and edge cases. Without a named reviewer, you risk publishing an error.</li>
       </ol>
 
-      <h2>What I sell, and why</h2>
+      <h2>How I set up the AI tools I sell</h2>
       <p>
         My <Link href="/digital">Digital Services subscription</Link> includes AI tools: a
         chatbot, a content generator and an FAQ builder. When I set them up, I connect each
@@ -66,8 +66,8 @@ export default function Post() {
         site.
       </p>
       <p>
-        This works because each tool sits inside a workflow I built around it. Without that
-        workflow, you are paying for a text-completion box.
+        Each tool is useful because of those connections. Without them, it would produce
+        drafts that nobody uses.
       </p>
 
       <h2>If you are shopping for AI right now</h2>
@@ -83,7 +83,7 @@ export default function Post() {
       <h2>Related reading</h2>
       <ul>
         <li><Link href="/blog/what-the-agents-get-wrong">What fifteen agents in production get wrong</Link></li>
-        <li><Link href="/blog/can-ai-find-your-business">Whether an assistant can even find your business</Link></li>
+        <li><Link href="/blog/can-ai-find-your-business">Whether an AI assistant can find your business</Link></li>
       </ul>
 
       <Note>

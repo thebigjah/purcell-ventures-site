@@ -19,7 +19,7 @@ const PROJECTS = [
     name: "Purcell Ventures",
     type: "Web platform",
     status: "Live site",
-    desc: "This site. It carries several business divisions, AI tools, a business finder built on the Google Places API, and a private sales system.",
+    desc: "This website, with a page for each business division, free AI tools, a business finder built on the Google Places API, and a private sales system.",
     tags: ["Next.js", "TypeScript", "Vercel", "Google Places API"],
   },
   {
@@ -40,7 +40,7 @@ const PROJECTS = [
     name: "Persona AI",
     type: "Mobile app",
     status: "In development",
-    desc: "An AI companion chat app, still in development. I plan for it to track goals, habits and fitness.",
+    desc: "An AI companion chat app. I plan to add goal, habit and fitness tracking.",
     tags: ["Expo", "React Native", "Claude API", "Express"],
   },
 ];
@@ -68,12 +68,12 @@ const ENGAGE = [
   {
     name: "Small projects",
     price: "$1,500 to $3,500",
-    for: "Landing pages, Chrome extensions, small tools and automation scripts. The exact price comes out of the discovery call.",
+    for: "Landing pages, Chrome extensions, small tools and automation scripts.",
   },
   {
     name: "Full apps",
     price: "$5,000 to $15,000 and up",
-    for: "Mobile apps, web platforms, AI tools and full-stack applications. The exact price comes out of the discovery call.",
+    for: "Mobile apps, web platforms, AI tools and full-stack applications.",
   },
   {
     name: "Ongoing work",
@@ -88,8 +88,8 @@ export default function SoftwarePage() {
       <PageHero
         planet="software"
         kicker="Custom software"
-        title="Mobile apps, web platforms and AI tools built for one business."
-        lede="I scope each project on a free 30-minute discovery call, write the proposal, build it, and stay involved after launch."
+        title="I build mobile apps, web platforms and AI tools for businesses."
+        lede="I scope each project on a free 30-minute discovery call, then write the proposal, build it and stay involved after launch."
         meta="Small projects $1,500 to $3,500. Full apps $5,000 to $15,000 and up."
         actions={<>
           <Button href={MAIL}>Start a project</Button>
@@ -97,7 +97,7 @@ export default function SoftwarePage() {
         </>}
       />
 
-      <Section title="What it costs" intro="Every project starts with a free 30-minute discovery call. I set the scope and the price on that call.">
+      <Section title="Prices" intro="Every project starts with a free 30-minute discovery call, and I set the exact scope and price on that call.">
         <Tiers tiers={ENGAGE} />
       </Section>
 
@@ -126,15 +126,15 @@ export default function SoftwarePage() {
           items={[
             { name: "Discovery call", line: "30 minutes. You explain the problem. I ask questions and tell you what it takes to build." },
             { name: "Scoped proposal", line: "I send a written breakdown of what gets built, what it costs and the timeline." },
-            { name: "Build", line: "You get updates throughout. I use Claude Code to write drafts and I review every change." },
+            { name: "Build", line: "I send you updates as I build. Claude Code writes first drafts of the code, and I review every change." },
             { name: "Launch and support", line: "I test and deploy, then stay available for fixes and follow-on work after launch." },
           ]}
         />
       </Section>
 
       <ClosingCall
-        title="Start a project"
-        line="Tell me what you want to build. I tell you whether I can help and what it takes. I reply within one business day."
+        title="Starting a project"
+        line="Tell me what you want built, and I will tell you whether I can help and what it would take. I reply within one business day."
         button="Email Elijah"
         href={MAIL}
       />

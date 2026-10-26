@@ -150,13 +150,13 @@ export default function FreePage() {
           intro="90 more templates, 80 subject lines and reply scripts for 30 scenarios."
         >
           <p className="ui-muted" style={{ marginTop: 0 }}>
-            The full pack has more than 100 templates, an AI scoring rubric, 4 email sequences, reply scripts for 30 scenarios and the list-building playbook.
+            That makes more than 100 templates in all. The pack also has an AI scoring rubric, 4 email sequences and the list-building playbook.
           </p>
           <div className="ui-hero__actions">
             <Link className="ui-btn" href="/shop/cold-email-pack">See the full pack, $29</Link>
           </div>
           <p className="ui-muted ui-small" style={{ marginTop: 24 }}>
-            The <Link className="ui-link" href="/shop/starter-kit">PV AI Starter Kit ($19)</Link> covers more ground: 24 AI prompts, the sales handbook and the rest of the kit.
+            The <Link className="ui-link" href="/shop/starter-kit">PV AI Starter Kit ($19)</Link> has 24 AI prompts, the sales handbook and more than 50 outreach templates.
           </p>
         </Section>
       </main>
@@ -171,7 +171,7 @@ export default function FreePage() {
         lede="Salons, plumbing, dental, real estate, law, marketing agencies, e-commerce, wellness, veterinary practices and accounting each get a template. You can edit every one."
       />
 
-      <Section title="Get the templates" intro="The templates appear on the next page.">
+      <Section title="Templates by email" intro="Enter your email and the templates open on the next screen.">
         <form onSubmit={submit} style={{ display: "grid", gap: 16, maxWidth: 520 }}>
           <div className="ui-field">
             <label htmlFor="free-first-name">First name (optional)</label>
@@ -192,7 +192,7 @@ export default function FreePage() {
           </p>
         </form>
         <p className="ui-muted" style={{ marginTop: 32 }}>
-          The paid version: the <Link className="ui-link" href="/shop/cold-email-pack">full $29 pack</Link> adds 90 more templates, a subject line library, reply handling and email sequences.
+          The <Link className="ui-link" href="/shop/cold-email-pack">full $29 pack</Link> adds 90 more templates, a subject line library, reply handling and email sequences.
         </p>
       </Section>
     </main>

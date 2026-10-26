@@ -81,7 +81,7 @@ export default function InventoryPage() {
       <PageHero
         kicker={<ToolsKicker>Free tools: operations and finance</ToolsKicker>}
         title="Inventory tracker"
-        lede="A product list with stock levels and low-stock alerts. Adjust quantities as you sell. Everything stays on this device."
+        lede="A product list with stock levels and low-stock alerts. Adjust quantities as you sell. Your inventory saves only on your device."
       />
 
       <div className={`ui-wrap ${s.body}`}>

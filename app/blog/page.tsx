@@ -37,7 +37,7 @@ const POSTS: Post[] = [
   {
     slug: "starting-a-business-at-alabama",
     title: "Starting a business as a student at Alabama",
-    excerpt: "Most student businesses aim at students. Fewer aim at the local businesses that serve them. The campus resources that apply, and three mistakes that cost time.",
+    excerpt: "Most student businesses sell to other students, and few sell to the local businesses around campus. The campus resources that help, and three mistakes that cost time.",
     date: "August 20, 2026",
     readingTime: "7 min read",
     category: "Business",
@@ -52,7 +52,7 @@ const POSTS: Post[] = [
   },
   {
     slug: "six-sources-one-page",
-    title: "Six sources, one page: building a campus events site",
+    title: "Building a campus events site from six sources",
     excerpt: "Parsing six feeds took a day. The hard problem came later, when a source returned an empty list with a 200 status and the site showed fewer events.",
     date: "August 20, 2026",
     readingTime: "7 min read",
@@ -61,7 +61,7 @@ const POSTS: Post[] = [
   {
     slug: "write-a-page-an-ai-will-quote",
     title: "How to write a page an AI will quote",
-    excerpt: "A search engine ranks pages. An answer engine extracts sentences. How to write a sentence that still makes sense when it is quoted alone, and why being indexed comes first.",
+    excerpt: "Answer engines quote single sentences where a search engine ranks whole pages. How to write a sentence that still makes sense when it is quoted alone, and why getting indexed comes first.",
     date: "August 20, 2026",
     readingTime: "8 min read",
     category: "Engineering",
@@ -101,7 +101,7 @@ const POSTS: Post[] = [
   {
     slug: "what-one-operator-can-deliver",
     title: "What one operator can deliver",
-    excerpt: "Solo shops promise personal service and direct access. Few of them say what happens when that person is busy. The arithmetic, plus four things an agency does better.",
+    excerpt: "Solo shops promise personal service, and few say what happens when the owner is busy. The math on one person's hours, and four things an agency does better.",
     date: "August 20, 2026",
     readingTime: "7 min read",
     category: "Business",
@@ -180,7 +180,7 @@ const POSTS: Post[] = [
   },
   {
     slug: "small-app-security-checklist",
-    title: "Five holes in almost every small production app",
+    title: "Five security holes I keep finding in small production apps",
     excerpt: "Row-level security that is enabled but enforcing nothing, paid API routes with no authentication, an auth cookie that is not authentication, and two more. From seven read-only audits of live applications.",
     date: "August 20, 2026",
     readingTime: "8 min read",
@@ -189,7 +189,7 @@ const POSTS: Post[] = [
   {
     slug: "canonical-tag-noindex",
     title: "Every post on my blog was telling Google not to index it",
-    excerpt: "One line in a Next.js layout gave nine posts a canonical tag pointing at the index page, which tells Google the page is a duplicate to skip. No error appeared. Nine pages dropped out of the index.",
+    excerpt: "One line in a Next.js layout gave nine posts a canonical tag pointing at the index page, which tells Google to skip them as duplicates. No error appeared, and nine pages dropped out of Google's index.",
     date: "August 20, 2026",
     readingTime: "6 min read",
     category: "Engineering",
@@ -205,7 +205,7 @@ const POSTS: Post[] = [
   {
     slug: "121-businesses-near-campus",
     title: "121 businesses near campus, and what a phone can find",
-    excerpt: "Every independent business within 2500 metres of the Quad, and how many list a website a machine can reach. Twenty-seven of 121 did. Twenty-three list opening hours a machine can read.",
+    excerpt: "Every independent business within 2,500 meters of the Quad, and how many list a website a machine can reach. 27 of the 121 did, and 23 list opening hours a machine can read.",
     date: "August 20, 2026",
     readingTime: "4 min read",
     category: "Reporting",
@@ -221,7 +221,7 @@ const POSTS: Post[] = [
   {
     slug: "agents-that-cannot-fix-what-they-find",
     title: "I built agents that cannot fix what they find",
-    excerpt: "Separating the finder from the fixer is a cheap safety property for an agent system. It also creates a failure mode, and I shipped it.",
+    excerpt: "Keeping the agent that finds a problem separate from the agent that fixes it is a cheap safety measure. It also created a failure mode that I shipped.",
     date: "August 17, 2026",
     readingTime: "4 min read",
     category: "Engineering",
@@ -229,7 +229,7 @@ const POSTS: Post[] = [
   {
     slug: "shipped-is-not-activated",
     title: "A shipped site can still fail to take a payment",
-    excerpt: "A site can be live, green in the deploy log, and still unable to accept a dollar. The gap is usually one broken path, and the owner rarely sees it.",
+    excerpt: "A site can be live and pass its deploy checks and still be unable to take a payment. The cause is usually one broken link in the checkout path, and the owner rarely notices.",
     date: "August 17, 2026",
     readingTime: "3 min read",
     category: "Opinion",
@@ -261,7 +261,7 @@ const POSTS: Post[] = [
   {
     slug: "five-workflows-no-code",
     title: "Five workflows you can automate this week without writing code",
-    excerpt: "These five workflows take small business owners the most time. You can automate each one with off-the-shelf tools in under two hours, without code.",
+    excerpt: "Five workflows that take small business owners the most time, and how to automate each one with off-the-shelf tools in under two hours.",
     date: "May 24, 2026",
     readingTime: "4 min read",
     category: "Practical",
@@ -281,7 +281,7 @@ export default function BlogPage() {
     <main>
       <PageHero
         title="Writing"
-        lede="Writing about AI, small business and software. I draft some posts with AI tools and edit every one before it goes up."
+        lede="Posts about AI, small business and software. I draft some of them with AI tools, and I edit every post before it goes up."
       />
       <Section stack>
         <Rows

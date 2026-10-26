@@ -25,7 +25,7 @@ export default function ThanksPage() {
           </ol>
         </Prose>
       </Section>
-      <Section title="Next: the PV AI Starter Kit">
+      <Section title="PV AI Starter Kit">
         <Prose>
           <p>
             The <Link href="/shop/starter-kit">PV AI Starter Kit ($19)</Link> adds 24 AI tool prompts and the full rep handbook, which this pack does not include.

@@ -12,7 +12,7 @@ import { PostLayout } from "@/app/components/ui";
 
 export const metadata = {
   alternates: { canonical: "/blog/small-app-security-checklist" },
-  title: { absolute: "Five holes in almost every small production app, by Elijah Purcell" },
+  title: { absolute: "Five security holes I keep finding in small production apps, by Elijah Purcell" },
   description:
     "What turns up when you audit small production applications: row-level security with policies that let everyone in, paid API routes with no authentication, auth cookies anyone can forge, and two more. Written from seven read-only audits.",
 };
@@ -23,23 +23,22 @@ export default function Post() {
       crumbs={<Breadcrumbs trail={[
         { name: "Home", href: "/" },
         { name: "Writing", href: "/blog" },
-        { name: "Five holes in almost every small production app", href: "/blog/small-app-security-checklist" },
+        { name: "Five security holes I keep finding in small production apps", href: "/blog/small-app-security-checklist" },
       ]} />}
       kicker="Engineering"
-      title="Five holes in almost every small production app"
+      title="Five security holes I keep finding in small production apps"
       meta="20 August 2026, 8 minute read"
     >
       <p>
-        I have run read-only security audits on 7 live applications. Small ones: solo builds
-        and two-person teams, the kind with users and no security budget. The same five
-        problems kept coming up, and none of them are exotic.
+        I have run read-only security audits on 7 live applications. All of them were small
+        apps built by one or two people, with real users and no security budget. The same
+        five problems kept coming up, and none of them are unusual.
       </p>
 
       <p>
-        No application is named here, and there are no reproduction steps. Some of what I
-        found is still being fixed, and a writeup that points at live holes would help
-        attackers. The vendors whose products these categories involve document them. The
-        specifics stay private.
+        I do not name any application or give reproduction steps. Some of what I found is
+        still being fixed, and a writeup that points at live holes would help attackers.
+        The vendors whose products are involved document each of these categories publicly.
       </p>
 
       <h2>Row-level security is on and enforcing nothing</h2>
@@ -60,9 +59,8 @@ export default function Post() {
       </p>
 
       <p>
-        The failure is that your application layer filters correctly and the attacker does
-        not use your application layer. They call the database API directly with a key you
-        published.
+        Your application may filter rows correctly, but an attacker skips your application
+        and calls the database API directly with a key you published.
       </p>
 
       <p>
@@ -73,18 +71,16 @@ export default function Post() {
       <h2>Paid API routes with no authentication</h2>
 
       <p>
-        Modern small apps ship server routes that call something metered: a language model,
-        a maps API, a transcription service. The route works, the feature ships, and nobody
-        adds authentication because during development you are the only one who knows the
-        URL.
+        Small apps often have server routes that call a metered service, such as a language
+        model or a maps API. Developers skip authentication on these routes because during
+        development they are the only ones who know the URL. That URL is in your JavaScript
+        bundle, where anyone can read it.
       </p>
 
-      <p>The URL is in your JavaScript bundle.</p>
-
       <p>
-        An unauthenticated route that calls a paid API lets anyone run up your bill. Someone
-        loops it and your card pays for their traffic. Nothing alerts you. You find out from
-        the invoice.
+        An unauthenticated route that calls a paid API lets anyone run up your bill. If
+        someone calls it in a loop, your card pays for their traffic, and without alerts you
+        find out from the invoice.
       </p>
 
       <p>
@@ -97,8 +93,9 @@ export default function Post() {
       <h2>An auth cookie anyone can set</h2>
 
       <p>
-        Somewhere in the build, a developer stubbed a gate. The app sets a cookie on login,
-        and the check asks whether the cookie exists, or whether it equals a known constant.
+        This one starts when a developer writes a placeholder login check during the build
+        and never replaces it. The app sets a cookie on login, and the check asks whether
+        the cookie exists, or whether it equals a known constant.
       </p>
 
       <p>
@@ -109,14 +106,14 @@ export default function Post() {
 
       <p>
         To test it, open a private window, set the cookie in the console, and load the
-        protected page. If you get in, so can anyone.
+        protected page. If the page loads, anyone can get in the same way.
       </p>
 
       <h2>Sequential identifiers as authorisation</h2>
 
       <p>
-        A record is at <code>/thing/41</code>. A logged-in user requests{" "}
-        <code>/thing/42</code>. Does anything stop them?
+        Say a record is at <code>/thing/41</code> and a logged-in user requests{" "}
+        <code>/thing/42</code>. Many small apps never check whether that user may see it.
       </p>
 
       <p>
@@ -134,8 +131,8 @@ export default function Post() {
       <h2>Input that becomes markup</h2>
 
       <p>
-        This is user text rendered as HTML. A display name, a review, a business
-        description, anything that goes in and comes back out. Injection is on{" "}
+        This is text a user typed, such as a display name or a review, rendered back out as
+        HTML. Injection is on{" "}
         <a href="https://owasp.org/www-project-top-ten/" rel="noopener">the OWASP Top Ten</a>,
         and I still found it.
       </p>
@@ -165,32 +162,31 @@ FIX        the specific change, not "add validation"`}</code></pre>
 
       <p>
         Keep two lists, one for findings you verified against source and one for findings
-        you suspect but could not confirm. Mixing them is how an audit loses its
-        credibility: one confident claim that turns out to be wrong makes a reader discount
-        the four that were right.
+        you suspect but could not confirm. If you mix them and one confident claim turns out
+        to be wrong, the reader discounts the four that were right.
       </p>
 
-      <h2>Why competent authors miss these</h2>
+      <h2>Why the developer misses these</h2>
 
       <p>
-        These problems come from the gap between the app working and the app being safe, and
-        the author cannot see that gap from inside code that works.
-      </p>
-
-      <p>
-        Someone else should look because they did not write it, so they do not assume they
-        know what it does.
+        Each of these problems sits in code that works. The developer tested that the
+        features work, and that testing does not show what an attacker could do.
       </p>
 
       <p>
-        If you run a small app with users and you would like a second pair of eyes on it, the
-        offer is free:{" "}
+        A second reviewer helps because they did not write the code, so they check what it
+        does instead of assuming they know.
+      </p>
+
+      <p>
+        If you run a small app with users and want someone else to look at it, I will do it
+        for free:{" "}
         <a href="mailto:elijah@purcell-ventures.com">elijah@purcell-ventures.com</a>.
       </p>
 
       <PostByline post={{
         slug: "small-app-security-checklist",
-        title: "Five holes in almost every small production app",
+        title: "Five security holes I keep finding in small production apps",
         description: "What turns up when you audit small production applications, written from seven read-only audits.",
         published: "2026-08-20",
       }} />

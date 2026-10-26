@@ -85,14 +85,14 @@ export default function PricingComparisonPage() {
         planet="pricing"
         kicker="Pricing"
         title="My prices next to agency, freelancer and DIY prices."
-        lede="I publish my prices here beside typical prices from agencies, freelancers and do-it-yourself tools. The competitor figures are typical 2026 ranges for each category."
+        lede="The agency, freelancer and do-it-yourself figures are typical 2026 price ranges for each category."
         meta="Websites from $650 setup and $99 a month. Consulting from $125 a person. Custom software from $1,500."
       />
 
       <Section stack title="Digital services" intro="Subscription tools that plug into your site.">
         <ComparisonTable rows={DIGITAL_ROWS} />
         <Footnote>
-          Year-one cost of ownership: my Growth plan is <strong className="ui-gold">$2,848</strong> (700 setup + 179 × 12). The agency equivalent runs $30,000 to $80,000 bundled. Freelancers run $5,000 to $12,000, plus your time connecting the tools.
+          Year-one cost of ownership: my Growth plan is <strong className="ui-gold">$2,798</strong> ($650 setup plus $179 × 12). The agency equivalent runs $30,000 to $80,000 bundled. Freelancers run $5,000 to $12,000, plus your time connecting the tools.
         </Footnote>
       </Section>
 
@@ -113,8 +113,8 @@ export default function PricingComparisonPage() {
       <Section title="Why I can charge less">
         <Rows
           items={[
-            { name: "Low overhead", line: "I do the work myself, and I am recruiting commissioned sales reps. No office and no middle management." },
-            { name: "Reusable systems", line: "I start digital services sites from templates I adapt to each client, instead of building from scratch." },
+            { name: "Low overhead", line: "I do the work myself, with no office and no middle management." },
+            { name: "Reusable systems", line: "I build client sites from templates I adapt to each business, instead of starting from scratch." },
             { name: "AI in my workflow", line: "I use AI for first drafts of code, content and structure, and I review every output." },
             { name: "Long-term clients", line: "A $99 a month subscriber who stays 3 years pays $3,564 over that time." },
             { name: "The owner on the call", line: "Most agencies pay a sales team 15 to 25% commission, an account manager and a project manager, plus margin. I am recruiting commissioned sales reps, and I am on every important call." },
@@ -122,7 +122,7 @@ export default function PricingComparisonPage() {
         />
       </Section>
 
-      <Section title="When to hire someone else" intro="I point you elsewhere in these cases.">
+      <Section title="When to hire someone else" intro="In these cases I will send you to someone else.">
         <Rows
           items={[
             { name: "A platform for 50 or more people with enterprise compliance, such as SOC 2 or HIPAA", line: "Hire a big agency (Accenture, Deloitte Digital) or a firm that specializes in your industry. I cannot take on that much compliance work." },
@@ -133,7 +133,7 @@ export default function PricingComparisonPage() {
         />
       </Section>
 
-      <Section title="The AI cost calculator" intro="A free tool for the return on AI spending.">
+      <Section title="The AI cost calculator" intro="A free tool that estimates the return on AI spending.">
         <p className="ui-muted" style={{ marginTop: 0, maxWidth: "var(--measure)" }}>
           Enter your team size, hourly rate and current manual hours. The calculator shows a projected return and a payback period.
         </p>

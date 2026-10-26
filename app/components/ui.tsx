@@ -62,11 +62,14 @@ export function Section({
   title,
   intro,
   stack,
+  aside,
   children,
 }: {
   id?: string;
   title?: ReactNode;
   intro?: ReactNode;
+  /** Shown under the heading in the left column, such as a photo. */
+  aside?: ReactNode;
   /** Put the heading above the content instead of beside it. */
   stack?: boolean;
   children: ReactNode;
@@ -74,10 +77,11 @@ export function Section({
   return (
     <section id={id} className={`ui-section${stack ? " ui-section--stack" : ""}`}>
       <div className="ui-wrap ui-section__grid">
-        {(title || intro) && (
-          <div>
+        {(title || intro || aside) && (
+          <div className="ui-section__head">
             {title && <h2>{title}</h2>}
             {intro && <p className="ui-section__intro">{intro}</p>}
+            {aside && <div className="ui-section__aside">{aside}</div>}
           </div>
         )}
         <div className="ui-section__body">{children}</div>
@@ -215,7 +219,7 @@ export function Faq({ items }: { items: { q: ReactNode; a: ReactNode }[] }) {
 /** The closing block on most pages: one line, the phone number, one button. */
 export function ClosingCall({
   title = "Start a project",
-  line = "A discovery call first. If I am the wrong fit for the job, I say so. I reply within one business day.",
+  line = "Every project starts with a discovery call. If I am the wrong fit for the job, I tell you. I reply within one business day.",
   button = "Start a project",
   href = "/about#contact",
 }: {

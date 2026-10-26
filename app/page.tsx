@@ -83,7 +83,7 @@ const SERVICES = [
   {
     name: "Real estate",
     fig: "planned",
-    line: "Wholesale real estate, finding off-market deals for investors. A sister channel that has not opened yet.",
+    line: "Wholesale real estate for investors, finding off-market deals. Not open yet.",
   },
 ];
 
@@ -113,7 +113,7 @@ const FREE = [
   { name: "AI readiness test", href: "/ai-readiness", line: "Ten questions that place your business in one of four tiers, each with next steps." },
   { name: "AI cost calculator", href: "/ai-cost-calculator", line: "Enter your team size, hourly rate and hours of manual work to see how long training takes to pay for itself." },
   { name: "Pricing, compared", href: "/pricing-comparison", line: "My prices next to typical agency, freelancer and do-it-yourself prices." },
-  { name: "How we work", href: "/how-we-work", line: "The five-stage process, six commitments and the work I turn down." },
+  { name: "How I work", href: "/how-we-work", line: "The five stages of a project, six commitments and the work I turn down." },
   { name: "Portfolio", href: "/portfolio", line: "17 projects: web apps, a mobile app, AI tools and internal systems." },
   { name: "Blog", href: "/blog", line: "Posts on search, AI and running a small business online, including five workflows you can automate without code." },
   { name: "Steady, compared", href: "/steady", line: "Tech support for family members who are not comfortable with tech, compared with the alternatives, and what a month of Monthly Care covers." },
@@ -121,7 +121,7 @@ const FREE = [
 
 const DEEPER = [
   { name: "Now", href: "/now", line: "What I am focused on this month." },
-  { name: "Uses", href: "/uses", line: "My working stack, every tool in production." },
+  { name: "Uses", href: "/uses", line: "The software and hardware I work with." },
   { name: "Verses", href: "/verses", line: "Five scriptures I come back to." },
   { name: "Questions", href: "/faq", line: "What people ask before hiring me." },
 ];
@@ -132,25 +132,25 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
 
       <Galaxy>
-        <h1>Websites, AI training and software for small businesses in Tuscaloosa and metro Atlanta.</h1>
-        <p>Every light on this map is a page. Click one to see what it does for a business like yours, or scroll for the plain version.</p>
+        <h1>Websites, software and AI for small businesses.</h1>
+        <p>I build them for local businesses in Tuscaloosa and metro Atlanta, and I keep supporting them after launch.</p>
         <div className="ui-hero__actions" style={{ marginTop: 6 }}>
           <Button href="/about#contact">Start a project</Button>
           <a className="ui-phone" href={`tel:${CONTACT.phoneE164}`}>{CONTACT.phone}</a>
         </div>
       </Galaxy>
 
-      <Section id="what" title="What I build" intro="Five services and one person answering the phone. The prices are the real ones.">
+      <Section id="what" title="What I build" intro="Five services, with the prices I charge.">
         <Rows items={SERVICES} />
       </Section>
 
       <Section title="Work with me" intro="How a project with me starts, and what happens after launch.">
         <div className="ui-prose">
           <p>
-            Most owners I meet have been sold a website or an AI tool by someone who never came back. I work the other way. We start with a call about how your business runs, I build the piece that fixes the bottleneck, and I stay on it after launch. You can reach the person who built it at the number on this page.
+            A project starts with a call about how your business runs. I build the piece that fixes the slowest part of it, and I keep working on it after launch. If something breaks, you call me, and I am the one who built it.
           </p>
           <p>
-            If what you need is a Google listing and not a website, I tell you that on the first call and show you how to claim it.
+            If a Google listing would do more for you than a website, I tell you on the first call and show you how to claim it.
           </p>
         </div>
         <div className="ui-hero__actions">
@@ -159,7 +159,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section title="Proof" intro="Everything here is live and checkable.">
+      <Section title="Proof">
         <Figures
           items={[
             ["17", "shipped projects in the portfolio"],
@@ -183,10 +183,10 @@ export default function Home() {
       <Section title="Elijah Brent Purcell" intro="Founder/CEO">
         <div className="ui-prose">
           <p>
-            I am nineteen. I founded Purcell Ventures LLC in April 2025 in Acworth, Georgia, at seventeen. I now study psychology and data science in the University of Alabama Honors College in Tuscaloosa, on a pre-med track toward psychiatry.
+            I founded Purcell Ventures LLC in Acworth, Georgia, in April 2025, when I was 17. I now study psychology and data science in the University of Alabama Honors College in Tuscaloosa, on a pre-med track toward psychiatry.
           </p>
           <p>
-            I started the company because the small businesses I knew were paying for AI tools that nobody had set up for the way they work. I answer the phone, build the software and come to your business in person.
+            I started the company because the small businesses I knew were paying for AI tools that nobody had set up for the way they work. I build the software and answer the phone myself, and I can meet you at your business.
           </p>
           <blockquote>
             <p>Trust in the LORD with all your heart and do not lean on your own understanding.</p>
@@ -196,15 +196,15 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section title="Free to use" intro="Every tool, calculator, process note and post below is open, with no email signup.">
+      <Section title="Free to use" intro="None of these need an email signup.">
         <Rows items={FREE} />
       </Section>
 
-      <Section title="Going deeper">
+      <Section title="More pages">
         <Rows items={DEEPER} />
       </Section>
 
-      <Section title="Where and who">
+      <Section title="Contact and service area">
         <Facts
           items={[
             ["Reach", <span key="r"><a className="ui-link" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a><br /><a className="ui-link" href={`tel:${CONTACT.phoneE164}`}>{CONTACT.phone}</a></span>],

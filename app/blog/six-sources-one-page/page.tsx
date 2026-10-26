@@ -5,7 +5,7 @@ import { PostLayout } from "@/app/components/ui";
 
 export const metadata = {
   alternates: { canonical: "/blog/six-sources-one-page" },
-  title: { absolute: "Six sources, one page: building a campus events site, by Elijah Purcell" },
+  title: { absolute: "Building a campus events site from six sources, by Elijah Purcell" },
   description:
     "How UA Today combines six separate feeds of University of Alabama events into one page, why the hard part is detecting a source that stops sending events without raising an error, and what a floor check is.",
 };
@@ -16,36 +16,36 @@ export default function Post() {
       crumbs={<Breadcrumbs trail={[
         { name: "Home", href: "/" },
         { name: "Writing", href: "/blog" },
-        { name: "Six sources, one page", href: "/blog/six-sources-one-page" },
+        { name: "Building a campus events site from six sources", href: "/blog/six-sources-one-page" },
       ]} />}
       kicker="Engineering"
-      title="Six sources, one page: building a campus events site"
+      title="Building a campus events site from six sources"
       meta="20 August 2026, 7 minute read"
     >
       <p>
-        Campus information at a large university lives in separate systems. The official
-        calendar has official events. Departments post their own. Student organisations
-        announce on social. Athletics is a separate system. A student who wants to know what
-        is happening tonight has to check several places, so many check none.
+        At a large university, events are listed in separate systems. At Alabama, the
+        official calendar, department pages, student organisations&apos; social accounts and
+        athletics each list their own. A student who wants to know what is happening
+        tonight has to check several places, and many do not bother.
       </p>
 
       <p>
-        <a href="https://ua-today.vercel.app">UA Today</a> checks them on a schedule and shows
-        the result on one page. It pulls events from 6 sources. The hard part was
-        detecting a source that goes quiet.
+        <a href="https://ua-today.vercel.app">UA Today</a> pulls events from 6 sources on a
+        schedule and shows them on one page. The hardest part of the build was detecting a
+        source that stops sending events.
       </p>
 
-      <h2>The easy problem</h2>
+      <h2>Combining the feeds</h2>
 
       <p>
-        Fetching and normalising six feeds is a day of work. Different date formats,
-        different notions of what a location is, different ideas about whether a recurring
-        event is one record or forty.
+        Fetching and normalising six feeds took a day of work. The feeds use different date
+        formats, describe locations differently, and disagree on whether a recurring event
+        is one record or forty.
       </p>
 
-      <h2>The hard problem: a source that stops without failing</h2>
+      <h2>Detecting a source that stops without an error</h2>
 
-      <p>A source that returns an error is easy. You see it and you fix it.</p>
+      <p>A source that returns an error is easy to catch, because you see the error and fix it.</p>
 
       <p>
         A source that returns <em>an empty list</em>, with a 200 status and a well-formed
@@ -90,7 +90,7 @@ export default function Post() {
         rest.
       </p>
 
-      <h2>Two smaller things that mattered more than expected</h2>
+      <h2>Moderation and the unofficial notice</h2>
 
       <p>
         The first is a moderation queue. Anyone can submit an event, and nothing appears
@@ -107,21 +107,19 @@ export default function Post() {
       <h2>What I would do differently</h2>
 
       <p>
-        I would write the floor checks first. I added them after a source went quiet, which
-        is the usual order and the wrong one. Monitoring tells you whether the pipeline
-        works, so build it first. If you build it second, you spend the gap trusting a
-        report you have not tested.
+        I would write the floor checks first. I added them only after a source went quiet,
+        and until then I was trusting a status report I had never tested.
       </p>
 
       <p>
-        An aggregator sells confidence that the listings are right. A student who finds one
-        wrong listing may stop returning. Most of the expensive work in the build went into
-        correct listings.
+        Students use an events site only if they trust its listings, and a student who
+        finds one wrong listing may stop coming back. That is why most of the work in the
+        build went into getting the listings right.
       </p>
 
       <PostByline post={{
         slug: "six-sources-one-page",
-        title: "Six sources, one page: building a campus events site",
+        title: "Building a campus events site from six sources",
         description: "How UA Today combines six feeds into one page, and why the hard part is detecting a source that stops sending events without raising an error.",
         published: "2026-08-20",
       }} />

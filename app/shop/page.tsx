@@ -16,13 +16,13 @@ const PRODUCTS = [
     href: "/shop/bundle",
     name: "The Complete Pack, all three bundled",
     fig: "$39",
-    line: "The Starter Kit, the Cold Email Mastery Pack and the Subject Line Library in one ZIP, in 3 folders, with one Stripe checkout. It costs $18 less than buying the three separately. For buyers who want all three.",
+    line: "The Starter Kit, the Cold Email Mastery Pack and the Subject Line Library in one ZIP, in 3 folders, with one Stripe checkout. It costs $18 less than buying the three separately.",
   },
   {
     href: "/shop/subject-lines",
     name: "Cold Email Subject Line Library",
     fig: "$9",
-    line: "80 subject lines in 8 categories, 10 in each: direct, question, referral, observation, local, value-first, curiosity and time-bound. The library also lists 20 lines to avoid. PDF and markdown. For anyone who wants better subject lines for cold email.",
+    line: "80 subject lines in 8 categories, 10 in each: direct, question, referral, observation, local, value-first, curiosity and time-bound. The library also lists 20 lines to avoid. PDF and markdown.",
   },
   {
     href: "/shop/starter-kit",
@@ -53,10 +53,10 @@ export default function ShopPage() {
         <Rows items={PRODUCTS} />
       </Section>
 
-      <Section title="Why the kits cost $9 to $29">
+      <Section title="Prices">
         <Prose>
           <p>I price the kits at $9 to $29 so small teams can try them before they hire me to set them up.</p>
-          <p>If you want me to build and maintain a custom version, contact me. If you do not, the kit keeps working on its own.</p>
+          <p>The files work on their own. If you want me to build and maintain a custom version for your business, contact me.</p>
         </Prose>
       </Section>
 

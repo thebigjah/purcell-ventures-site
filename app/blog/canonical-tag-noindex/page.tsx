@@ -7,7 +7,7 @@ export const metadata = {
   alternates: { canonical: "/blog/canonical-tag-noindex" },
   title: { absolute: "Every post on my blog was telling Google not to index it, by Elijah Purcell" },
   description:
-    "One line in a Next.js layout gave nine blog posts a canonical tag pointing at the index page. That is the standard way of saying 'I am a duplicate, skip me.' How it happens, how to check your own site in two minutes, and how to fix it.",
+    "One line in a Next.js layout gave nine blog posts a canonical tag pointing at the index page, which tells Google each post is a duplicate to skip. How it happens, how to check your own site in two minutes, and how to fix it.",
 };
 
 
@@ -24,17 +24,17 @@ export default function Post() {
       meta="20 August 2026, 6 minute read"
     >
       <p>
-        I found it this morning by accident, while checking something else. Nine posts, every
-        one carrying a tag that says: this page is a duplicate, index the other one
-        instead. By the end of the afternoon it was 14 pages across three sections.
+        I found it this morning by accident, while checking something else. Nine posts each
+        carried a tag that says the page is a duplicate and a different page should be
+        indexed instead. By the end of the afternoon I had found 14 pages across three
+        sections with the same tag.
       </p>
 
       <p>
-        Nobody wrote that tag nine times. I wrote it once, in a file that has nothing
-        to do with any individual post.
+        I wrote that tag once, in a file that has nothing to do with any individual post.
       </p>
 
-      <h2>The one line</h2>
+      <h2>The line that caused it</h2>
 
       <p>In <code>app/blog/layout.tsx</code>:</p>
 
@@ -44,7 +44,7 @@ export default function Post() {
 };`}</code></pre>
 
       <p>
-        That looks correct. It is the blog index, and its canonical URL is
+        That looks correct, because the blog index&apos;s canonical URL is
         <code> /blog</code>.
       </p>
 
@@ -78,21 +78,21 @@ export default function Post() {
 
       <p>
         Google dropped the author markup, structured data and titles on those pages along
-        with them. All of it was correct, on pages that had asked to be ignored.
+        with them, even though all of it was correct.
       </p>
 
-      <h2>Why it survives so long</h2>
+      <h2>Why the bug goes unnoticed</h2>
 
       <p>I found three reasons.</p>
 
       <p>
         <strong>It looks right in the file.</strong> Every reviewer who opens that layout
-        sees a canonical pointing at the page the file is named after. The bug is in the
-        inheritance.
+        sees a canonical pointing at the page the file is named after, and the bug is in
+        the inheritance.
       </p>
 
       <p>
-        <strong>Nothing fails.</strong> The build passes. The pages render. The links
+        <strong>Nothing fails.</strong> The build passes, the pages render and the links
         work. There is no error state, because the site is doing what it was configured
         to do.
       </p>
@@ -109,7 +109,7 @@ export default function Post() {
       <pre><code>{`curl -sL https://yoursite.com/blog/some-post | grep canonical`}</code></pre>
 
       <p>
-        If the href is anything other than the URL you just requested, that page points
+        If the href is anything other than the URL you requested, that page points
         at a different URL. Check three or four pages from different
         sections. Section index pages are the usual culprits, so try a product page
         under a category and a post under a blog.
@@ -118,11 +118,11 @@ export default function Post() {
       <p>
         I found the same bug in two more places on my own site the same afternoon:
         three course pages canonicalising to <code>/courses</code>, and two pages
-        canonicalising to <code>/digital</code>. Fourteen pages in total. The cause was
-        layout inheritance, and the blog was the first place it showed.
+        canonicalising to <code>/digital</code>. That made fourteen pages in total, all
+        caused by layout inheritance, and the blog was where I noticed it first.
       </p>
 
-      <h2>The fix, and the one that does not work</h2>
+      <h2>The fix that failed and the fix that worked</h2>
 
       <p>
         The obvious fix is to move the canonical from the layout onto the index page
@@ -132,7 +132,7 @@ export default function Post() {
       </p>
 
       <p>
-        The fix that works is simpler. <strong>Delete it.</strong> A page with no canonical
+        The fix that works is to <strong>delete the canonical from the layout</strong>. A page with no canonical
         tag self-canonicalises: the engine treats the URL it fetched as the canonical
         one. That is the right answer for the index and the right answer for every post.
       </p>
@@ -151,7 +151,7 @@ export const metadata = {
         canonical and render its children.
       </p>
 
-      <h2>The general shape</h2>
+      <h2>Testing for this kind of bug</h2>
 
       <p>
         This is the third bug of this kind I have hit this year. In each one, a setting
@@ -159,15 +159,10 @@ export const metadata = {
       </p>
 
       <p>
-        A test that checks the delivered output catches them. A test that only
-        checks nothing threw does not. A test that
+        Tests that check the delivered output catch these bugs, and tests that only check
+        whether an error was thrown miss them. A test that
         fetches four live pages and checks each one canonicalises to itself would have
         caught this the day it shipped, and it is eight lines.
-      </p>
-
-      <p>
-        A passing build shows that the code compiled and says nothing about whether the
-        change took effect.
       </p>
 
 <PostByline post={{

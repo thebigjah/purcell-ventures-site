@@ -24,9 +24,9 @@ export default function Post() {
       meta="20 August 2026, 6 minute read, written in week one"
     >
       <p>
-        Every explanation of New College I read before applying was either a brochure or
-        a forum post from 2014. Here is my account, written in my first week, by someone
-        who chose it and can tell you what it costs.
+        Before I applied, every explanation of New College I found was either a brochure
+        or a forum post from 2014. I wrote this in my first week as a New College student,
+        and it includes the drawbacks I weighed before choosing it.
       </p>
 
       <h2>What it is</h2>
@@ -34,17 +34,16 @@ export default function Post() {
       <p>
         <a href="https://newcollege.ua.edu/" rel="noopener">New College</a>{" "}
         is an interdisciplinary program inside the Barefield College of Arts and Sciences
-        at the University of Alabama. It has existed since 1971, which surprises people
-        who assume it is a recent experiment.
+        at the University of Alabama. It started in 1971.
       </p>
 
       <p>
         Instead of choosing a major off a list, you design one. You work with an advisor
-        to build a program of study around a question you care about, drawing courses
-        from wherever they happen to live in the university.
+        to build a program of study around a question you care about, using courses
+        from any department in the university.
       </p>
 
-      <h2>The vocabulary you will hit immediately</h2>
+      <h2>Terms you will hear in the first week</h2>
 
       <p>
         A depth study is your self-designed concentration. Existing examples include
@@ -61,7 +60,7 @@ export default function Post() {
 
       <p>
         Independent study lets you build coursework around work you are already doing
-        instead of adding it on top. That option is what made the decision for me.
+        instead of adding it on top. I chose New College mainly because of this option.
       </p>
 
       <p>
@@ -70,12 +69,12 @@ export default function Post() {
         real-world problems. If you are building anything, look at the seed grants.
       </p>
 
-      <h2>The case for it</h2>
+      <h2>Reasons to choose it</h2>
 
       <p>
-        If your question does not map onto a department, a traditional major makes you
-        approximate. You pick the closest one and spend four years reading around the
-        edge of the thing you meant.
+        If your question does not fit one department, a traditional major makes you pick
+        the closest one and spend four years taking courses next to the subject you
+        wanted to study.
       </p>
 
       <p>
@@ -85,30 +84,28 @@ export default function Post() {
       </p>
 
       <p>
-        It also rewards people who already do things. If you run or build something,
-        that work can become the coursework instead of competing with it.
+        It also suits students who already run or build something, because that work
+        can count as coursework instead of competing with it for your time.
       </p>
 
-      <h2>The case against it</h2>
+      <h2>Reasons against it</h2>
 
       <p>
-        Few people outside the program know what it is. &quot;Psychology&quot; is legible to a
-        graduate admissions committee, a recruiter and your grandmother. &quot;A self-designed
-        depth study in psycho-social sciences&quot; needs a sentence of explanation every time,
-        and you will give that sentence often.
-      </p>
-
-      <p>
-        You supply the structure. A traditional major is a sequence somebody already
-        thought about. Here, the person deciding whether you take the hard course is you,
-        and the failure mode is a transcript full of interesting courses that do not add
-        up to anything.
+        Few people outside the program know what it is. A graduate admissions committee
+        or a recruiter understands &quot;psychology&quot; right away. &quot;A self-designed
+        depth study in psycho-social sciences&quot; needs a sentence of explanation every
+        time, and you will explain it often.
       </p>
 
       <p>
-        Prerequisite chains still apply. If your question needs a 400-level course, it
-        needs everything under it, and the math sequence requires every course below it,
-        however coherent your plan.
+        You supply the structure. In a traditional major, the department has already
+        planned the sequence. Here you decide whether to take the hard course, and the
+        risk is a transcript full of interesting courses that do not add up to a plan.
+      </p>
+
+      <p>
+        Prerequisites still apply. If your question needs a 400-level course, you still
+        take every course below it in the sequence, however well your plan fits together.
       </p>
 
       <p>
@@ -125,9 +122,9 @@ export default function Post() {
 
       <p>
         Do not pick it because you cannot decide. It gives an undecided student little
-        support, because it removes the guardrails at the moment that student needs them
-        most. A traditional major with a minor is a better tool for finding out what you
-        like, and switching in later is easier than rescuing an incoherent transcript.
+        structure at the point that student most needs it. A traditional major with a
+        minor is a better way to find out what you like, and switching into New College
+        later is easier than fixing a transcript that does not add up.
       </p>
 
       <h2>Practical details</h2>
@@ -140,7 +137,7 @@ export default function Post() {
       </p>
 
       <p>
-        I will write this again at the end of the year, when I know whether I was right.
+        I will update this at the end of the year, once I know whether I chose well.
         If you are a New College student and I have got something wrong here,{" "}
         <a href="mailto:elijah@purcell-ventures.com">tell me</a> and I will
         correct it and say who corrected it.

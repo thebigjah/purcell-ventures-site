@@ -24,15 +24,15 @@ export default function Post() {
     >
       <p>
         Before you sign for a website, ask who will own each account and asset when the
-        project ends. Most proposals do not say.
+        project ends, because most proposals do not say.
       </p>
 
       <p>
-        I build websites, and I want my clients to own all of it. A client who can leave
-        easily and stays anyway is the kind I want to keep.
+        I build websites, and I want my clients to own all of it. I would rather a client
+        stay because the work is good than because leaving is hard.
       </p>
 
-      <h2>The seven things</h2>
+      <h2>Seven accounts and assets to own</h2>
 
       <table>
         <thead>
@@ -52,9 +52,8 @@ export default function Post() {
       <h2>Why the domain comes first</h2>
 
       <p>
-        Everything else can be replaced, though not conveniently. The code can be rebuilt.
-        Hosting can be moved in a day. Losing analytics history hurts, and you recover from
-        it.
+        You can replace everything else with some effort. Code can be rebuilt, hosting can
+        move in a day, and you can recover from losing analytics history.
       </p>
 
       <p>
@@ -63,9 +62,9 @@ export default function Post() {
       </p>
 
       <p>
-        Providers usually register it for convenience, because it was faster during setup
-        than walking a client through it, and then years passed. Ask early, and a good
-        provider will transfer it.
+        Providers usually register it in their own name because that was faster during
+        setup, and then nobody changes it for years. Ask early, and a good provider will
+        transfer it.
       </p>
 
       <h2>Two questions before you sign</h2>
@@ -92,8 +91,8 @@ export default function Post() {
 
       <p>
         They should not keep your domain, your listing, your analytics history, or a content
-        management system you cannot administer. The test is whether the thing is{" "}
-        <em>about you</em>. If it is, it should be yours.
+        management system you cannot administer. If something is specific to{" "}
+        <em>your business</em>, it should be yours.
       </p>
 
       <h2>If you are already in this situation</h2>
@@ -104,7 +103,7 @@ export default function Post() {
       </p>
 
       <p>
-        If you get resistance, you learn early which kind of provider you hired, before any
+        If the provider resists, you have learned what kind of provider you hired before any
         dispute starts. A domain can be recovered through the registrar&apos;s own transfer
         process in most cases, and it is much easier while the relationship is still
         cordial.

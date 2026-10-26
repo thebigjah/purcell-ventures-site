@@ -110,7 +110,7 @@ const PLANS = [
   {
     name: "Starter",
     price: "$99 a month",
-    for: "Light tools, open to every client. I set them up in one to two days. The websites page calls this level Site Care.",
+    for: "Light tools, open to every client. I set them up in one to two days. On the website plans, this level is called Site Care.",
     items: [
       "Color Palette Tool",
       "Brand Kit Builder",
@@ -125,7 +125,7 @@ const PLANS = [
   {
     name: "Growth",
     price: "$179 a month",
-    for: "Tools that connect to your site or send messages for you. The websites page calls this level Site Care plus Lead Ops.",
+    for: "Tools that connect to your site or send messages for you. On the website plans, this level is called Site Care plus Lead Ops.",
     items: [
       "Everything in Starter",
       "Review Request Automation",
@@ -141,7 +141,7 @@ const PLANS = [
   {
     name: "Full Service",
     price: "$279 a month",
-    for: "Marketing add-ons that need ongoing tuning. The websites page calls this level Marketing Partner.",
+    for: "Marketing add-ons that I adjust every month. On the website plans, this level is called Marketing Partner.",
     items: [
       "Everything in Growth",
       "AI Chatbot trained on your business",
@@ -155,7 +155,7 @@ const PLANS = [
   ...p,
   children: (
     <div style={{ marginTop: 18 }}>
-      <Button href={CONTACT_HREF} ghost>Start the conversation</Button>
+      <Button href={CONTACT_HREF} ghost>Ask about this plan</Button>
     </div>
   ),
 }));
@@ -176,7 +176,7 @@ export default function DigitalPage() {
         planet="digital"
         kicker="Digital add-ons"
         title="Websites and business tools for small businesses"
-        lede="I build booking, a CRM, a chatbot and the other tools a small business runs on around your website, and I maintain them for you. Plans start at $99 a month."
+        lede="I add booking, a CRM, a chatbot and other business tools to your website, and I maintain them for you. Plans start at $99 a month."
         meta="Setup $650 to $1,000. No contract. I reply within one business day."
         actions={<>
           <Button href={CONTACT_HREF}>Book a free demo</Button>
@@ -199,7 +199,7 @@ export default function DigitalPage() {
       <Section
         id="services"
         title="The add-on catalog"
-        intro={`${ADDON_COUNT} tools in seven groups, from one person, in whatever combination you need. ${DEMO_COUNT} of them have a free version you can try now.`}
+        intro={`${ADDON_COUNT} tools in seven groups, and you can pick any combination. ${DEMO_COUNT} of them have a free version you can try now.`}
       >
         <Tiers
           tiers={MODULES.map((g) => ({
@@ -212,44 +212,44 @@ export default function DigitalPage() {
 
       <Section
         id="build-team"
-        title="Seven jobs one subscription covers"
-        intro="Each role below is a job you would otherwise hire for. Add roles to compare their cost with my subscription."
+        title="Tools compared with hiring"
+        intro="Pick the jobs you would otherwise hire someone for, and compare their salaries with the cost of my subscription."
       >
         <TeamBuilder />
       </Section>
 
       <Section
         id="pricing"
-        title="Three plans"
-        intro="Each plan includes the tools in the one before it. Every add-on has a setup fee, and setup runs $650 to $1,000. There is no contract and you can cancel at any time."
+        title="Plans and prices"
+        intro="Each plan includes the tools in the one before it. Setup is a one-time fee of $650 to $1,000, depending on the add-ons. There is no contract and you can cancel at any time."
       >
         <Tiers tiers={PLANS} />
       </Section>
 
       <Section
         id="roi"
-        title="What the tools could bring in"
+        title="Estimated return"
         intro="Enter your own numbers. The business-type presets are made-up starting values."
       >
         <ROICalculator />
       </Section>
 
-      <Section title="Custom bundles" intro="You own everything I build for you.">
+      <Section title="Custom bundles">
         <Prose>
-          <p>Tell me which tools you need, two or twelve. I build them as one bundle and quote you a flat monthly price.</p>
+          <p>Tell me which tools you need, whether that is two or twelve. I build them as one bundle for a flat monthly price, and you own everything I build for you.</p>
         </Prose>
         <div className="ui-hero__actions">
-          <Button href={CONTACT_HREF}>Build my bundle</Button>
+          <Button href={CONTACT_HREF}>Ask for a bundle quote</Button>
         </div>
       </Section>
 
-      <Section title="Why work with me" intro="I build it and I support it.">
+      <Section title="Working with me">
         <Rows
           items={[
-            { name: "You talk to the person who built it", line: "You text or call me directly." },
-            { name: "AI from the first build", line: "A chatbot trained on your business, plus AI drafts of your captions and posts." },
+            { name: "Direct contact", line: "You text or call me, the person who built your tools." },
+            { name: "AI tools included", line: "A chatbot trained on your business, plus AI drafts of your captions and posts." },
             { name: "Priced below agency rates", line: "Agencies charge $2,000 or more a month. My plans start at $99." },
-            { name: "Everything is yours", line: "You own the code, the domain and the content. I hand it over when you ask." },
+            { name: "You own everything", line: "You own the code, the domain and the content. I hand it over when you ask." },
           ]}
         />
       </Section>
@@ -260,10 +260,10 @@ export default function DigitalPage() {
             I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC. I am 19 and I study at The University of Alabama.
           </p>
           <p>
-            I started in business doing gutters, pressure washing and lawn care through Mantle Field Services, so I know what a small service business needs from its tools: less time on admin and more customers.
+            My first business was Mantle Field Services, doing gutters, pressure washing and lawn care, so I have done the scheduling, quoting and invoicing these tools handle.
           </p>
           <p>
-            I build with AI coding tools such as Claude Code. They cut my build time, which keeps my prices low.
+            I build with AI coding tools such as Claude Code, which cuts my build time and keeps my prices low.
           </p>
         </Prose>
       </Section>

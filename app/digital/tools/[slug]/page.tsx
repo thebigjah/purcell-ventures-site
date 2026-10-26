@@ -45,7 +45,7 @@ export default function ToolPage({ params }: { params: Promise<{ slug: string }>
         <PageHero
           kicker={<ToolsKicker />}
           title="Tool not found"
-          lede="No tool lives at this address. The full list is on the tools page."
+          lede="There is no tool at this address."
           actions={<Button href="/digital/tools">See all the tools</Button>}
         />
       </main>
@@ -127,7 +127,7 @@ export default function ToolPage({ params }: { params: Promise<{ slug: string }>
               )}
 
               <div style={{ marginTop: 24 }}>
-                <Note>If the result misses, change your inputs above and run it again. Each run starts fresh.</Note>
+                <Note>If the result is off, change your inputs and run the tool again.</Note>
               </div>
             </section>
           )}
