@@ -49,7 +49,6 @@ const SECTIONS: { label: string; items: Item[] }[] = [
     label: "Built by me",
     items: [
       { href: "https://ua-today.vercel.app", name: "UA Today", line: "Campus events for the University of Alabama, six sources in one place. Free, no account, not affiliated with the university." },
-      { href: "/tools", name: "26 free single-file tools", line: "Small programs that each do one job. Anyone can use them without an account." },
       { href: "/portfolio", name: "Portfolio", line: "Client work and shipped products." },
       { href: "https://mantle-field-site.vercel.app", name: "Mantle Field Services", line: "The sister brand for gutter cleaning, pressure washing and lawn care. Metro Atlanta only." },
     ],
@@ -59,7 +58,7 @@ const SECTIONS: { label: string; items: Item[] }[] = [
   {
     label: "Elsewhere",
     items: [
-      { href: "https://github.com/thebigjah", name: "GitHub", line: "Code for the 26 single-file tools and other projects.", me: true },
+      { href: "https://github.com/thebigjah", name: "GitHub", line: "Code for my public projects.", me: true },
       { href: "https://www.linkedin.com/in/theelijahpurcell", name: "LinkedIn", line: "My professional record.", me: true },
       { href: "https://www.linkedin.com/company/138853899/", name: "Purcell Ventures on LinkedIn", line: "The company page." },
       { href: "https://www.instagram.com/theelijahpurcell/", name: "Instagram", me: true },

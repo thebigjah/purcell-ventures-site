@@ -78,7 +78,7 @@ export default function AboutPage() {
             ["Location", "Tuscaloosa, Alabama"],
             ["University", "The University of Alabama, Class of 2030"],
             ["Program", "Honors College, psychology and data science"],
-            ["Shipped", <><Link className="ui-link" href="/digital/tools">26 free AI tools</Link> for small businesses, <Link className="ui-link" href="/tools">26 free single-file tools</Link>, client sites and production apps, all designed and coded by me</>],
+            ["Shipped", <><Link className="ui-link" href="/digital/tools">26 free AI tools</Link> for small businesses, plus client sites and production apps, all designed and coded by me</>],
             ["AI agents", <>COSMIC, a station of 57 AI agents in 17 rooms that runs proposals, site audits, research and outreach for the company. <Link className="ui-link" href="/team">See the roster</Link></>],
             ["Company", `Purcell Ventures LLC, formed April 2025, Georgia control number ${CONTACT.llcControlNumber}`],
             ["Registered in", "Acworth, Georgia"],

@@ -28,7 +28,6 @@ const MENUS: { label: string; items: Item[] }[] = [
   { label: "Learn", items: [
     { href: "/courses", label: "Courses" },
     { href: "/digital/tools", label: "Free AI tools" },
-    { href: "/tools", label: "Free single-page tools" },
     { href: "/shop", label: "Shop" },
   ] },
   { label: "About", items: [

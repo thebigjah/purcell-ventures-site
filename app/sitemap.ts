@@ -130,7 +130,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     { url: `${BASE}/what-is-purcell-ventures`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
 
-    { url: `${BASE}/tools`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // The name-query pages. /who exists specifically to be the answer to
     // "who is Elijah Purcell", and it is the highest-priority page on the site for

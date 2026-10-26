@@ -77,8 +77,7 @@ export default function AiConsultantTuscaloosa() {
       </p>
 
       <p>
-        <Link href="/digital/tools">26 free AI tools for small businesses</Link> and{" "}
-        <Link href="/tools">26 free single-file tools</Link> are live, each built for one task.
+        <Link href="/digital/tools">26 free AI tools for small businesses</Link> are live, each built for one task.
         My <Link href="/portfolio">portfolio</Link> has client work, and the{" "}
         <Link href="/case-studies">case studies</Link> cover what was hard about a few projects.
       </p>

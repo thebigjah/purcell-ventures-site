@@ -306,7 +306,7 @@ export function ResumeDocument() {
           <ul className="rp-figures">
             <li><b>15+</b>products shipped</li>
             <li><b>8</b>live properties</li>
-            <li><b>52</b>free tools published</li>
+            <li><b>26</b>free AI tools published</li>
             <li><b>3.92</b>weighted high school GPA</li>
             <li><b>1440</b>SAT</li>
           </ul>

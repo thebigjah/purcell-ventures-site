@@ -28,7 +28,6 @@ const COLS: { title: string; links: { href: string; label: string; rel?: string 
       { href: "/agentic-ai", label: "Autonomous AI agents" },
       { href: "/courses", label: "Courses" },
       { href: "/shop", label: "Shop" },
-      { href: "/tools", label: "Free tools" },
       { href: "/blog", label: "Blog" },
     ],
   },
