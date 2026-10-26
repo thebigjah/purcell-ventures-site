@@ -36,7 +36,7 @@ export default function WalletTrackerPremiumPage() {
           <p style={{ fontSize: "16px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, maxWidth: "560px", margin: "0 auto 28px" }}>
             Telegram alerts within a minute of a tracked wallet trading on any of 6 chains. Each alert carries a risk score and a position size. $9/mo.
           </p>
-          <BuyButton paymentLink={PAYMENT_LINK} product="wallet-tracker-premium" size="large" />
+          <BuyButton paymentLink={PAYMENT_LINK} product="wallet-tracker-premium" price="$9 a month" size="large" />
           <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "10px", fontStyle: "italic" }}>
             Cancel anytime, 30-day refund, Telegram invite sent to your email
           </p>
@@ -105,7 +105,7 @@ export default function WalletTrackerPremiumPage() {
           <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: "0 0 20px" }}>
             Your invite link arrives by email within 60 seconds. It works once and expires after 24 hours.
           </p>
-          <BuyButton paymentLink={PAYMENT_LINK} product="wallet-tracker-premium" size="small" />
+          <BuyButton paymentLink={PAYMENT_LINK} product="wallet-tracker-premium" price="$9 a month" size="small" />
         </div>
 
       </main>

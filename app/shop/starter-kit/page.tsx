@@ -83,7 +83,7 @@ export default function StarterKitPage() {
           <p style={{ fontSize: "17px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, maxWidth: "640px", margin: "0 auto 32px" }}>
             The Purcell Ventures AI Starter Kit has 24 AI tool prompts, 5 sales scripts, the rep handbook, 50+ cold outreach templates, a 1099 contractor template and a CRM CSV. Every file is editable and yours to keep.
           </p>
-          <BuyButton paymentLink={PAYMENT_LINK} product="starter-kit" size="large" />
+          <BuyButton paymentLink={PAYMENT_LINK} product="starter-kit" price="$19" size="large" />
           <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "10px", fontStyle: "italic" }}>
             Checkout through Stripe, delivery by email, 30-day refund
           </p>

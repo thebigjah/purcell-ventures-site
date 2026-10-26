@@ -6,7 +6,7 @@ import { captureRefFromURL, buildStripeURL, logClick } from "@/lib/affiliate";
 /**
  * Buy button that appends ?client_reference_id=ref to the Stripe URL if a referrer was captured.
  */
-export function BuyButton({ paymentLink, product, size = "large" }: { paymentLink: string; product: string; size?: "large" | "small" }) {
+export function BuyButton({ paymentLink, product, price, size = "large" }: { paymentLink: string; product: string; price: string; size?: "large" | "small" }) {
   const [ref, setRef] = useState<string | null>(null);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export function BuyButton({ paymentLink, product, size = "large" }: { paymentLin
           letterSpacing: "0.04em",
         }}
       >
-        Buy now →
+        Buy now
       </a>
     );
   }
@@ -60,11 +60,11 @@ export function BuyButton({ paymentLink, product, size = "large" }: { paymentLin
           cursor: "pointer",
         }}
       >
-        Buy now — $19 →
+        Buy now for {price}
       </a>
       {ref && (
         <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "8px", fontStyle: "italic" }}>
-          Referred by <strong>{ref}</strong> · they get credit if you purchase
+          Referred by <strong>{ref}</strong>, who gets credit if you buy
         </p>
       )}
     </>

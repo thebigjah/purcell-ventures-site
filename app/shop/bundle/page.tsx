@@ -39,7 +39,7 @@ export default function BundlePage() {
           <p style={{ fontSize: "13px", color: "var(--color-warm-text-light)", margin: "0 0 28px", fontStyle: "italic" }}>
             The three kits cost $57 separately and $39 together.
           </p>
-          <BuyButton paymentLink={PAYMENT_LINK} product="bundle" size="large" />
+          <BuyButton paymentLink={PAYMENT_LINK} product="bundle" price="$39" size="large" />
           <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "10px", fontStyle: "italic" }}>
             One checkout, one ZIP, 30-day refund
           </p>
@@ -115,7 +115,7 @@ export default function BundlePage() {
           <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: "0 0 20px" }}>
             61 files total. Stripe emails the download link after checkout.
           </p>
-          <BuyButton paymentLink={PAYMENT_LINK} product="bundle" size="small" />
+          <BuyButton paymentLink={PAYMENT_LINK} product="bundle" price="$39" size="small" />
         </div>
 
         <p style={{ marginTop: "32px", textAlign: "center", fontSize: "12px", color: "var(--color-warm-text-light)" }}>

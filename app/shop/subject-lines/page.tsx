@@ -47,7 +47,7 @@ export default function SubjectLinesPage() {
           <p style={{ fontSize: "16px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, maxWidth: "560px", margin: "0 auto 28px" }}>
             Each category has 10 subject lines.
           </p>
-          <BuyButton paymentLink={PAYMENT_LINK} product="subject-lines" size="large" />
+          <BuyButton paymentLink={PAYMENT_LINK} product="subject-lines" price="$9" size="large" />
           <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "10px", fontStyle: "italic" }}>
             Checkout through Stripe, delivery by email, 30-day refund
           </p>
@@ -125,7 +125,7 @@ export default function SubjectLinesPage() {
           <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: "0 0 20px" }}>
             Stripe sends the PDF to your email within 60 seconds.
           </p>
-          <BuyButton paymentLink={PAYMENT_LINK} product="subject-lines" size="small" />
+          <BuyButton paymentLink={PAYMENT_LINK} product="subject-lines" price="$9" size="small" />
         </div>
 
       </main>
