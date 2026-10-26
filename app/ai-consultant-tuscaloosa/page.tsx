@@ -1,144 +1,128 @@
 import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import { PostLayout } from "@/app/components/ui";
+import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
 
-const link = { color: "var(--color-warm-accent)", textDecoration: "underline" };
-const H2 = {
-  fontFamily: "'Cinzel', Georgia, serif", fontSize: "26px", fontWeight: 600,
-  lineHeight: 1.2, margin: "44px 0 14px", color: "var(--color-warm-text)",
-} as const;
+// Rebuilt on the page kit 26 Oct 2026 as a single readable column (PostLayout), since
+// the page is one long answer to one question. The what-it-costs paragraphs now come
+// before the reasons to hire locally, because that is what a business owner reads for.
 
 export default function AiConsultantTuscaloosa() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <VignetteBackground />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
+    <PostLayout
+      crumbs={<Breadcrumbs trail={[
+        { name: "Home", href: "/" },
+        { name: "Consulting", href: "/consulting" },
+        { name: "AI Consultant in Tuscaloosa", href: "/ai-consultant-tuscaloosa" },
+      ]} />}
+      kicker="Tuscaloosa, Alabama"
+      title="AI consultant in Tuscaloosa"
+      lede="Websites, custom software and AI automation for Tuscaloosa businesses, built by one person who lives here. The first conversation is free."
+      meta="Student websites $500, with optional upkeep at $25 a month. Software and automation quoted per project."
+    >
+      <p>
+        I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC and an autonomous AI agent
+        systems engineer. I live in Tuscaloosa, I study psychology and data science in the
+        University of Alabama Honors College, and I build websites, custom software and AI
+        automation for businesses here.
+      </p>
 
-        <Breadcrumbs trail={[
-          { name: "Home", href: "/" },
-          { name: "Consulting", href: "/consulting" },
-          { name: "AI Consultant in Tuscaloosa", href: "/ai-consultant-tuscaloosa" },
-        ]} />
+      <p>
+        Most people who reach this page are asking one of two questions. They want something
+        built and are trying to work out whether AI is involved, or somebody has told them they
+        need AI and they want to know whether that is true.
+      </p>
 
-        <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Tuscaloosa, Alabama</div>
-          <h1>
-            AI consultant in <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Tuscaloosa</em>
-          </h1>
-        </header>
+      <h2>What I do and what it costs</h2>
 
-        <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
+      <p>I do three kinds of work, listed in the order people most often ask for them.</p>
 
-          <p style={{ fontSize: "18px" }}>
-            I am Elijah Purcell, founder and CEO of Purcell Ventures LLC and an autonomous AI
-            agent systems engineer. I live in Tuscaloosa, I study psychology and data science
-            at the University of Alabama Honors College, and I build websites, custom software
-            and AI automation for businesses here.
-          </p>
+      <p>
+        <strong>Websites.</strong> Built, hosted and maintained. For University of Alabama
+        students and student-run businesses the price is <strong>$500</strong>, with an
+        optional <strong>$25 a month</strong> to keep it current. I charge students less
+        because their budgets are small.
+      </p>
 
-          <p>
-            Most people who reach this page are asking one of two questions. Either they want
-            something built and are trying to work out whether AI is involved, or somebody has
-            told them they need AI and they are trying to work out whether that is true.
-          </p>
+      <p>
+        <strong>Custom software.</strong> Marketplaces, data pipelines, internal tools, and the
+        compliance and review systems behind them. I quote each project after a free
+        conversation.
+      </p>
 
-          <h2 style={H2}>What I do</h2>
+      <p>
+        <strong>AI automation.</strong> Replacing a repeated manual task with something that
+        runs on a schedule, or adding an AI feature to software you already have. This is also
+        where I tell you not to bother, when that is the right answer.
+      </p>
 
-          <p>
-            I do three kinds of work, listed in the order people usually ask for them.
-          </p>
+      <h2>Why hire someone local</h2>
 
-          <p>
-            <strong>Websites.</strong> Built, hosted, and maintained. For University of Alabama
-            students and student-run businesses the price is <strong>$500</strong>, with an
-            optional <strong>$25 a month</strong> to keep it current. I charge students less because their budgets are small.
-          </p>
+      <p>
+        You can hire an agency anywhere. The reason to hire someone in Tuscaloosa is that you
+        can sit across a table from them, and the person you meet is the person who writes the
+        code. Purcell Ventures is one operator.
+      </p>
 
-          <p>
-            <strong>Custom software.</strong> Marketplaces, data pipelines, internal tools, and
-            the compliance and review systems behind them. I quote per project after a free
-            conversation.
-          </p>
+      <p>
+        A fifteen-agent AI workforce I built handles proposals, audits, compliance and outreach
+        on a schedule. The agents are software, and the <Link href="/team">team page</Link> says
+        so in its first sentence. A human does the building and a human answers your email.
+      </p>
 
-          <p>
-            <strong>AI automation.</strong> Replacing a repeated manual task with something
-            that runs on a schedule, or adding an AI feature to software that already exists.
-            This is also where I will tell you not to bother, if that is the right answer.
-          </p>
+      <h2>Work you can check today</h2>
 
-          <h2 style={H2}>Why hire someone local</h2>
+      <p>
+        <a href="https://ua-today.vercel.app" target="_blank" rel="noopener noreferrer">UA Today</a>{" "}
+        is a campus events site I built for students here. It pulls from six sources and
+        carries a hundred events in a typical week, across official University events, student
+        organizations, ministries and athletics. It is free and needs no account. The
+        University has no part in it, and the masthead says so.
+      </p>
 
-          <p>
-            You can hire an agency anywhere. The reason to hire someone in Tuscaloosa is that
-            you can sit across a table from them, and that the person you meet is the person
-            who writes the code. Purcell Ventures is one operator.
-          </p>
+      <p>
+        <Link href="/tools">Twenty-nine free tools</Link> are live on the open web, each one
+        built for a single problem. The <Link href="/portfolio">portfolio</Link> has client
+        work, and the <Link href="/case-studies">case studies</Link> explain what was hard
+        about a few of them.
+      </p>
 
-          <p>
-            A fifteen-agent AI workforce I built handles
-            proposals, audits, compliance and outreach on a schedule. The agents are software, and the{" "}
-            <Link href="/team" style={link}>team page</Link> says so in its first sentence. A
-            human does the building and a human answers your email.
-          </p>
+      <h2>When I am the wrong fit</h2>
 
-          <h2 style={H2}>Work you can check right now</h2>
+      <p>
+        I am nineteen and this is a one-person company. If you need a team of twelve, a signed
+        enterprise MSA, and someone on call at three in the morning, I am the wrong person for
+        the job and I will say so on the first call.
+      </p>
 
-          <p>
-            <a href="https://ua-today.vercel.app" style={link} target="_blank" rel="noopener noreferrer">UA Today</a>{" "}
-            is a campus events site I built for students here. It pulls from six sources and
-            carries a hundred events in a typical week across official University
-            events, student organizations, ministries and athletics. It is free, there is no
-            account, and it is not affiliated with the University. The masthead says so.
-          </p>
+      <p>
+        If a language model cannot solve your problem, I will say so. If a chat box is all your
+        problem needs, it is cheap and I will tell you how to set it up yourself.
+      </p>
 
-          <p>
-            <Link href="/tools" style={link}>Twenty-nine free tools</Link> are live on the open
-            web, each one solves one problem. The{" "}
-            <Link href="/portfolio" style={link}>portfolio</Link> has client work, and the{" "}
-            <Link href="/case-studies" style={link}>case studies</Link> explain what was
-            hard about a few of them.
-          </p>
+      <h2>Common questions</h2>
 
-          <h2 style={H2}>What I am not</h2>
+      {QA.map(([q, a]) => (
+        <div key={q}>
+          <h3>{q}</h3>
+          <p style={{ marginTop: 6 }}>{a}</p>
+        </div>
+      ))}
 
-          <p>
-            I am nineteen and this is a one-person company. If you need a team of twelve, a
-            signed enterprise MSA, and someone on call at three in the morning, I am the wrong
-            person for the job and I will say so on the first call.
-          </p>
+      <h2>Getting in touch</h2>
 
-          <p>
-            If a language model cannot solve your problem, I will say so. If a chat box is
-            all your problem needs, it is cheap and I will tell you how to do it yourself.
-          </p>
+      <p>
+        Email <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a> or call{" "}
+        <a href={`tel:${CONTACT.phoneE164}`}>{CONTACT.phone}</a> and tell me what you are trying
+        to do. The first conversation is free, and I reply within one business day.
+      </p>
 
-          <h2 style={H2}>Common questions</h2>
-
-          {QA.map(([q, a]) => (
-            <div key={q} style={{ marginTop: "24px" }}>
-              <p style={{ fontWeight: 600, marginBottom: "6px", color: "var(--color-warm-text)" }}>{q}</p>
-              <p style={{ margin: 0 }}>{a}</p>
-            </div>
-          ))}
-
-          <h2 style={H2}>Getting in touch</h2>
-
-          <p>
-            Email{" "}
-            <a href="mailto:elijah@purcell-ventures.com" style={link}>elijah@purcell-ventures.com</a>{" "}
-            and tell me what you are trying to do. The first conversation is free.
-          </p>
-
-          <p style={{ marginTop: "32px" }}>
-            More on the consulting work at{" "}
-            <Link href="/consulting" style={link}>the consulting page</Link>, more about me at{" "}
-            <Link href="/about" style={link}>the about page</Link>, and the short factual
-            version at <Link href="/who" style={link}>who is Elijah Purcell</Link>.
-          </p>
-
-        </article>
-      </main>
-    </div>
+      <p>
+        More on the consulting work is on <Link href="/consulting">the consulting page</Link>,
+        more about me on <Link href="/about">the about page</Link>, and the short factual
+        version at <Link href="/who">who is Elijah Purcell</Link>.
+      </p>
+    </PostLayout>
   );
 }

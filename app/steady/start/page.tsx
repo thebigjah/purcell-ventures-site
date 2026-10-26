@@ -1,8 +1,13 @@
 "use client";
 
+// Rebuilt on the page kit 26 Oct 2026. The submit logic is unchanged: the same
+// localStorage log, the same CRM contact, the same prefilled email. Option values are the
+// strings the CRM and the email receive, so they stay as they were.
+
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+import { PageHero, Section } from "@/app/components/ui";
+import { CONTACT } from "@/lib/contact";
 import { upsertContact, emptyContact, addActivity } from "@/lib/crm-storage";
 
 interface Intake {
@@ -30,7 +35,7 @@ export default function SteadyStartPage() {
     situation: "",
     urgency: "This week",
     contactPreference: "Email",
-    location: "Metro Atlanta",
+    location: "Metro Atlanta (in-person OK)",
     hearAbout: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -50,7 +55,7 @@ export default function SteadyStartPage() {
     e.preventDefault();
     if (!form.name.trim() || !form.situation.trim()) return;
     if (!form.email.trim() && !form.phone.trim()) {
-      alert("Please add either an email or phone number so we can reach you.");
+      alert("Add an email address or a phone number so I can reach you.");
       return;
     }
 
@@ -118,185 +123,158 @@ export default function SteadyStartPage() {
   }
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <VignetteBackground />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
+    <main>
+      <PageHero
+        planet="book"
+        kicker="Steady, personal IT"
+        title={submitted ? "Intake received" : "The Steady intake form"}
+        lede={submitted
+          ? "I logged your intake, and an email window should have opened with your details filled in. Press Send in that window and the email reaches me."
+          : "The form takes five minutes. I read each one and reply within one business day with a recommended plan, or I tell you that you do not need me."}
+        actions={<Link className="ui-link" href="/steady">Back to Steady</Link>}
+      />
 
-        <Link href="/steady" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>Back to Steady</Link>
+      {!submitted ? (
+        <Section stack>
+          <form onSubmit={submit} className="ui-narrow" style={{ display: "flex", flexDirection: "column", gap: 40, padding: 0, margin: 0 }}>
+            <fieldset style={fieldset}>
+              <legend style={legend}>About you</legend>
+              <FormInput id="st-name" label="Your name" required value={form.name} onChange={(v) => update("name", v)} placeholder="Jane Doe" />
+              <div style={twoCol}>
+                <FormInput id="st-email" label="Email" type="email" value={form.email} onChange={(v) => update("email", v)} placeholder="you@example.com" />
+                <FormInput id="st-phone" label="Phone" type="tel" value={form.phone} onChange={(v) => update("phone", v)} placeholder="(770) 555-0100" />
+              </div>
+              <p className="ui-muted ui-small" style={{ margin: 0 }}>Pick whichever you prefer. I need at least one.</p>
+            </fieldset>
 
-        {!submitted ? (
-          <>
-            <header className="pv-page-head" style={{ marginTop: "16px" }}>
-              <div className="pv-mono-label">Steady intake</div>
-              <h1>
-                The <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>intake form</em>
-              </h1>
-              <p className="deck">
-                The form takes five minutes. I read each one and reply within 24 hours with a recommended plan, or I tell you that you don&apos;t need me.
-              </p>
-            </header>
+            <fieldset style={fieldset}>
+              <legend style={legend}>Who the help is for</legend>
+              <Select id="st-for" label="The person who needs help" value={form.helpFor} onChange={(v) => update("helpFor", v)} options={["Yourself", "A parent", "A grandparent", "Your spouse", "Your kid", "Other family member", "A friend"]} />
+            </fieldset>
 
-            <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              <section style={section}>
-                <h3 style={sectionHead}>Who are you?</h3>
-                <FormInput label="Your name" required value={form.name} onChange={(v) => update("name", v)} placeholder="e.g., Jane Doe" />
-                <div style={twoCol}>
-                  <FormInput label="Email" type="email" value={form.email} onChange={(v) => update("email", v)} placeholder="you@example.com" />
-                  <FormInput label="Phone" value={form.phone} onChange={(v) => update("phone", v)} placeholder="(770) 555-0100" />
-                </div>
-                <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", fontStyle: "italic", margin: "4px 0 0" }}>Pick whichever you prefer. At least one is required.</p>
-              </section>
-
-              <section style={section}>
-                <h3 style={sectionHead}>Who is this help for?</h3>
-                <Select value={form.helpFor} onChange={(v) => update("helpFor", v)} options={["Yourself", "A parent", "A grandparent", "Your spouse", "Your kid", "Other family member", "A friend"]} />
-              </section>
-
-              <section style={section}>
-                <h3 style={sectionHead}>What&apos;s going on?</h3>
+            <fieldset style={fieldset}>
+              <legend style={legend}>What is going on</legend>
+              <div className="ui-field">
+                <label htmlFor="st-situation">The problem, in your own words (required)</label>
                 <textarea
+                  id="st-situation"
                   required
+                  rows={6}
                   value={form.situation}
                   onChange={(e) => update("situation", e.target.value)}
-                  placeholder="Examples: 'My mom got a new iPhone and can't figure out anything beyond calling and texting.' 'I need to set up medication reminders for my grandma.' 'I have a smart speaker sitting in the box for 3 months.' 'I want to learn how to use ChatGPT for my small business.'"
-                  style={{ ...fieldStyle, minHeight: "140px", resize: "vertical" }}
+                  placeholder="For example: My mom got a new iPhone and only knows how to call and text. Or: I need medication reminders set up for my grandma. Or: My smart speaker has sat in the box for 3 months. Or: I want to learn ChatGPT for my small business."
+                  style={{ resize: "vertical" }}
                 />
-              </section>
+              </div>
+            </fieldset>
 
-              <section style={section}>
-                <h3 style={sectionHead}>How soon?</h3>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "8px" }}>
-                  {["Now (urgent)", "This week", "This month", "No rush"].map((opt) => (
-                    <button
-                      key={opt}
-                      type="button"
-                      onClick={() => update("urgency", opt)}
-                      style={pillBtn(form.urgency === opt)}
-                    >
-                      {opt}
-                    </button>
-                  ))}
-                </div>
-              </section>
+            <fieldset style={fieldset}>
+              <legend style={legend}>How soon</legend>
+              <div style={choiceGrid} role="group" aria-label="How soon">
+                {["Now (urgent)", "This week", "This month", "No rush"].map((opt) => (
+                  <button
+                    key={opt}
+                    type="button"
+                    aria-pressed={form.urgency === opt}
+                    onClick={() => update("urgency", opt)}
+                    className={`ui-btn${form.urgency === opt ? "" : " ui-btn--ghost"}`}
+                    style={choiceBtn}
+                  >
+                    {opt}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
 
-              <section style={section}>
-                <h3 style={sectionHead}>How should I reach you?</h3>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "8px" }}>
-                  {["Email", "Phone", "Text", "Either"].map((opt) => (
-                    <button
-                      key={opt}
-                      type="button"
-                      onClick={() => update("contactPreference", opt)}
-                      style={pillBtn(form.contactPreference === opt)}
-                    >
-                      {opt}
-                    </button>
-                  ))}
-                </div>
-              </section>
+            <fieldset style={fieldset}>
+              <legend style={legend}>How I should reach you</legend>
+              <div style={choiceGrid} role="group" aria-label="How I should reach you">
+                {["Email", "Phone", "Text", "Either"].map((opt) => (
+                  <button
+                    key={opt}
+                    type="button"
+                    aria-pressed={form.contactPreference === opt}
+                    onClick={() => update("contactPreference", opt)}
+                    className={`ui-btn${form.contactPreference === opt ? "" : " ui-btn--ghost"}`}
+                    style={choiceBtn}
+                  >
+                    {opt}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
 
-              <section style={section}>
-                <h3 style={sectionHead}>Where are you?</h3>
-                <Select value={form.location} onChange={(v) => update("location", v)} options={["Metro Atlanta (in-person OK)", "Georgia (remote)", "Elsewhere US (remote)", "Other"]} />
-              </section>
+            <fieldset style={fieldset}>
+              <legend style={legend}>Where you are</legend>
+              <Select id="st-where" label="Your location" value={form.location} onChange={(v) => update("location", v)} options={["Metro Atlanta (in-person OK)", "Georgia (remote)", "Elsewhere US (remote)", "Other"]} />
+            </fieldset>
 
-              <section style={section}>
-                <h3 style={sectionHead}>How did you find me? (optional)</h3>
-                <FormInput value={form.hearAbout} onChange={(v) => update("hearAbout", v)} placeholder="e.g., Instagram, referred by a friend, Google" />
-              </section>
+            <fieldset style={fieldset}>
+              <legend style={legend}>How you found me</legend>
+              <FormInput id="st-heard" label="Optional" value={form.hearAbout} onChange={(v) => update("hearAbout", v)} placeholder="Instagram, a friend, Google" />
+            </fieldset>
 
-              <button type="submit" className="pv-btn-primary" style={{ border: "none", cursor: "pointer", padding: "16px 32px", fontSize: "12px" }}>
-                Send my intake
-              </button>
-
-              <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", textAlign: "center", fontStyle: "italic" }}>
-                Your form opens an email to me when you hit submit. If your email app doesn&apos;t open, the next screen shows my address and a button to try again.
+            <div>
+              <button type="submit" className="ui-btn">Send my intake</button>
+              <p className="ui-muted ui-small" style={{ marginTop: 14 }}>
+                The form opens an email to me when you submit it. If your email app does not open, the next screen shows my address and a button to try again.
               </p>
-            </form>
-          </>
-        ) : (
-          <>
-            <header className="pv-page-head" style={{ marginTop: "16px" }}>
-              <div className="pv-mono-label">Intake submitted</div>
-              <h1>
-                Got it. <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Thanks.</em>
-              </h1>
-              <p className="deck">
-                Your intake has been logged and an email window should have opened with your details prefilled. Hit Send in that window to send it to me.
-              </p>
-            </header>
-
-            <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", padding: "24px", marginBottom: "20px" }}>
-              <h3 style={sectionHead}>If the email window didn&apos;t open:</h3>
-              <p style={{ fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.6, marginBottom: "16px" }}>
-                Click the button below to open it manually, or copy this email address and send me the form contents:
-              </p>
-              <p style={{ fontFamily: "var(--font-dm-sans), monospace", fontSize: "16px", color: "var(--color-warm-accent)", marginBottom: "16px" }}>
-                elijah@purcell-ventures.com
-              </p>
-              <a href={mailtoLink} className="pv-btn-primary">Open email manually</a>
             </div>
+          </form>
+        </Section>
+      ) : (
+        <>
+          <Section title="If the email window did not open">
+            <div className="ui-prose">
+              <p>Use the button below to open it again, or copy this address and send me the form contents.</p>
+              <p><a className="ui-link" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
+            </div>
+            <div className="ui-hero__actions">
+              <a href={mailtoLink} className="ui-btn">Open the email again</a>
+            </div>
+          </Section>
 
-            <div style={{ background: "rgba(122, 170, 106, 0.08)", border: "1px solid #7aaa6a", padding: "20px 24px" }}>
-              <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: "#7aaa6a", fontWeight: 700, marginBottom: "12px" }}>
-                What happens next
-              </h3>
-              <ol style={{ paddingLeft: "20px", margin: 0, lineHeight: 1.8, fontSize: "14px", color: "var(--color-warm-text)" }}>
-                <li>I read your intake (usually within a few hours)</li>
-                <li>I reply within 24 hours with a recommended plan, or I tell you that you don&apos;t need me</li>
-                <li>If we&apos;re a fit, we schedule the first session (in-person Atlanta or remote video)</li>
-                <li>If we&apos;re not, I&apos;ll point you to something that is</li>
+          <Section title="What happens next">
+            <div className="ui-prose">
+              <ol>
+                <li>I read your intake, often within a few hours.</li>
+                <li>I reply within one business day with a recommended plan, or I tell you that you do not need me.</li>
+                <li>If Steady fits, we schedule the first session, in person in metro Atlanta or over video.</li>
+                <li>If it does not, I point you to something that does.</li>
               </ol>
             </div>
-
-            <div style={{ marginTop: "32px", textAlign: "center" }}>
-              <button onClick={() => { setSubmitted(false); setForm({ name: "", email: "", phone: "", helpFor: "Yourself", situation: "", urgency: "This week", contactPreference: "Email", location: "Metro Atlanta", hearAbout: "" }); }} style={ghostBtn}>Submit another intake</button>
+            <div className="ui-hero__actions">
+              <button type="button" onClick={() => { setSubmitted(false); setForm({ name: "", email: "", phone: "", helpFor: "Yourself", situation: "", urgency: "This week", contactPreference: "Email", location: "Metro Atlanta (in-person OK)", hearAbout: "" }); }} className="ui-btn ui-btn--ghost">Submit another intake</button>
             </div>
-          </>
-        )}
+          </Section>
+        </>
+      )}
+    </main>
+  );
+}
 
-      </main>
+function FormInput({ id, label, value, onChange, placeholder, type = "text", required = false }: { id: string; label?: string; value: string; onChange: (v: string) => void; placeholder?: string; type?: string; required?: boolean }) {
+  return (
+    <div className="ui-field">
+      {label && <label htmlFor={id}>{label}{required && " (required)"}</label>}
+      <input id={id} type={type} value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} required={required} />
     </div>
   );
 }
 
-function FormInput({ label, value, onChange, placeholder, type = "text", required = false }: { label?: string; value: string; onChange: (v: string) => void; placeholder?: string; type?: string; required?: boolean }) {
+function Select({ id, label, value, onChange, options }: { id: string; label: string; value: string; onChange: (v: string) => void; options: string[] }) {
   return (
-    <div>
-      {label && <label style={inputLabel}>{label}{required && " *"}</label>}
-      <input type={type} value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} required={required} style={fieldStyle} />
+    <div className="ui-field">
+      <label htmlFor={id}>{label}</label>
+      <select id={id} value={value} onChange={(e) => onChange(e.target.value)}>
+        {options.map((o) => <option key={o} value={o}>{o}</option>)}
+      </select>
     </div>
   );
 }
 
-function Select({ value, onChange, options }: { value: string; onChange: (v: string) => void; options: string[] }) {
-  return (
-    <select value={value} onChange={(e) => onChange(e.target.value)} style={fieldStyle}>
-      {options.map((o) => <option key={o} value={o}>{o}</option>)}
-    </select>
-  );
-}
-
-const section: React.CSSProperties = { background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", padding: "20px 24px" };
-const sectionHead: React.CSSProperties = { fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "14px", fontWeight: 700, marginTop: 0 };
-const fieldStyle: React.CSSProperties = { width: "100%", padding: "12px 14px", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", border: "1px solid var(--color-warm-border)", borderRadius: 0, fontSize: "15px", fontFamily: "var(--font-inter), sans-serif", marginBottom: "10px" };
-const inputLabel: React.CSSProperties = { display: "block", fontSize: "10px", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "4px", fontFamily: "var(--font-dm-sans), sans-serif" };
-const twoCol: React.CSSProperties = { display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" };
-const ghostBtn: React.CSSProperties = { padding: "10px 18px", background: "transparent", color: "var(--color-warm-text-muted)", border: "1px solid var(--color-warm-border)", fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif", cursor: "pointer", fontWeight: 700, borderRadius: 0 };
-
-function pillBtn(active: boolean): React.CSSProperties {
-  return {
-    padding: "10px 14px",
-    background: active ? "var(--color-warm-accent)" : "transparent",
-    color: active ? "var(--color-warm-bg)" : "var(--color-warm-text-muted)",
-    border: `1px solid ${active ? "var(--color-warm-accent)" : "var(--color-warm-border)"}`,
-    fontSize: "11px",
-    letterSpacing: "0.1em",
-    textTransform: "uppercase",
-    fontFamily: "var(--font-dm-sans), sans-serif",
-    cursor: "pointer",
-    fontWeight: 700,
-    borderRadius: 0,
-    textAlign: "center",
-  };
-}
+const fieldset: React.CSSProperties = { border: 0, padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 14, minWidth: 0 };
+const legend: React.CSSProperties = { font: "600 21px/1.25 var(--font-display)", color: "var(--fg)", padding: 0, marginBottom: 14 };
+const twoCol: React.CSSProperties = { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 };
+const choiceGrid: React.CSSProperties = { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 8 };
+const choiceBtn: React.CSSProperties = { justifyContent: "center", minHeight: 48 };

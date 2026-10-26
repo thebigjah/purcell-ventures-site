@@ -25,6 +25,7 @@ export function PageHero({
   meta,
   planet,
   actions,
+  crumbs,
 }: {
   title: ReactNode;
   lede?: ReactNode;
@@ -34,6 +35,8 @@ export function PageHero({
   meta?: ReactNode;
   planet?: Planet;
   actions?: ReactNode;
+  /** Breadcrumbs component, shown above the kicker. */
+  crumbs?: ReactNode;
 }) {
   const wide = planet === "digital" || planet === "portfolio" || planet === "blog";
   return (
@@ -41,6 +44,7 @@ export function PageHero({
       <div className="ui-hero__sky" aria-hidden="true" />
       <div className="ui-wrap ui-hero__grid">
         <div>
+          {crumbs}
           {kicker && <p className="ui-hero__kicker">{kicker}</p>}
           <h1>{title}</h1>
           {lede && <p className="ui-hero__lede">{lede}</p>}

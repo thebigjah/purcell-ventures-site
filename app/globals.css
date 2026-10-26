@@ -239,6 +239,14 @@ a.ui-row:hover .ui-row__name { color: #f0d79a; }
 .ui-faq details[open] summary::after { content: "\2212"; }
 .ui-faq details > div { padding: 0 0 20px; color: var(--fg-2); max-width: var(--measure); }
 
+/* Choices: options a visitor picks from (quiz answers, presets). */
+.ui-choice { display: block; width: 100%; text-align: left; background: var(--surface); color: var(--fg); border: 1px solid #3a332a; padding: 14px 16px; font: 400 16px/1.4 var(--font-body); cursor: pointer; transition: border-color .15s, background .15s; }
+.ui-choice:hover { border-color: var(--gold); }
+.ui-choice[aria-pressed="true"], .ui-choice.is-on { border-color: var(--gold); background: rgba(184, 134, 43, .14); }
+.ui-btn:disabled, .ui-btn[aria-disabled="true"] { opacity: .45; cursor: not-allowed; }
+/* A wrapper so a wide table scrolls inside itself, never the page. */
+.ui-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
+
 /* Forms. */
 .ui-field { display: flex; flex-direction: column; gap: 6px; }
 .ui-field label { font-size: 14px; color: var(--muted); font-weight: 500; }

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Readiness Test: 10 Questions, 3 Minutes",
+  title: "AI readiness test in 10 questions and 3 minutes",
   description:
-    "A test for small business owners and team leaders. Score your AI readiness in 10 questions and get 3 next steps. No email required. From Elijah Purcell.",
+    "A test for small business owners and team leaders by Elijah Purcell. It scores your team's AI readiness out of 30 in 10 questions and gives you 3 next steps. No email required.",
   alternates: { canonical: "/ai-readiness" },
 };
 

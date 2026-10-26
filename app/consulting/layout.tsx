@@ -4,24 +4,24 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "AI consulting and hands-on team training",
   description:
-    "Hands-on AI training for business teams in Metro Atlanta and beyond. 1-on-1 ($175/hr), small group ($125/person), or half-day workshop ($2,500 flat up to 20 people). I come to you. Every session includes a same-day takeaway guide.",
+    "Hands-on AI training for business teams in Tuscaloosa, metro Atlanta and nationwide: 1-on-1 at $175 an hour, small groups at $125 a person, or a half-day workshop at $2,500 flat for up to 20 people. I come to you, and every session includes a same-day takeaway guide.",
   keywords: [
     "AI consulting for business", "AI training workshop", "ChatGPT for business training",
     "AI consulting Atlanta Georgia", "hands-on AI training", "business AI workshop",
     "AI consulting small business", "AI team training",
   ],
   openGraph: {
-    title: "AI Consulting & Team Training: Purcell Ventures",
+    title: "AI consulting and team training, Purcell Ventures",
     description:
-      "Hands-on AI training for business teams. 1-on-1, small group, or half-day workshop. I come to you. Starting at $125/person.",
+      "Hands-on AI training for business teams: 1-on-1, small group or a half-day workshop. I come to you. From $125 a person.",
     url: "https://purcellventures.co/consulting",
     type: "website",
   
     images: ["/opengraph-image"],
   },
   twitter: {
-    title: "AI Consulting: Purcell Ventures",
-    description: "Hands-on AI training for business teams. Starting at $125/person. I come to you.",
+    title: "AI consulting, Purcell Ventures",
+    description: "Hands-on AI training for business teams, from $125 a person. I come to you.",
   },
   alternates: { canonical: "https://purcellventures.co/consulting" },
 };
@@ -32,9 +32,9 @@ const schema = {
     {
       "@type": "Service",
       "@id": "https://purcellventures.co/consulting#service",
-      "name": "AI Consulting & Team Training",
+      "name": "AI consulting and team training",
       "description":
-        "Hands-on AI training sessions for business teams. Covers ChatGPT workflows, AI for marketing, automation, and custom use cases. Sessions delivered in-person at your location.",
+        "Hands-on AI training sessions for business teams, covering ChatGPT workflows, AI for marketing, automation and custom use cases. I deliver sessions in person at your location.",
       "provider": { "@id": "https://purcellventures.co/#organization" },
       "url": "https://purcellventures.co/consulting",
       "serviceType": "AI Business Consulting",
@@ -59,15 +59,15 @@ const schema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Do I need tech experience to benefit from AI consulting?",
+          "name": "Does my team need tech experience for AI consulting?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Most sessions are designed for people who've never used AI tools before. I meet you where you are and build from there.",
+            "text": "No. I design most sessions for people who have never used AI tools. I start where your team is and build from there.",
           },
         },
         {
           "@type": "Question",
-          "name": "What's the difference between AI consulting and just using ChatGPT on my own?",
+          "name": "How is AI consulting different from using ChatGPT on my own?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Most people use AI tools for one-off questions. I show you prompting techniques, integrations and workflows that save time in your type of business.",
@@ -86,15 +86,15 @@ const schema = {
           "name": "How much does AI consulting cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "1-on-1 sessions are $175/hr (2-hr minimum recommended). Small group sessions are $125/person (2 to 8 people, 2-hr minimum). Workshops are $2,500 flat for up to 20 people, half-day. I quote corporate and multi-session work separately. There are five session types: AI Basics, ChatGPT Workflow, AI for Marketing, Automation, and Custom.",
+            "text": "1-on-1 sessions are $175 an hour, with a two-hour minimum recommended. Small group sessions are $125 a person for 2 to 8 people, with a two-hour minimum. A half-day workshop is $2,500 flat for up to 20 people. I quote corporate and multi-session work separately. There are five session types: AI basics, ChatGPT workflow, AI for marketing, automation, and custom training.",
           },
         },
         {
           "@type": "Question",
-          "name": "How far in advance do I need to book an AI training session?",
+          "name": "How far ahead do I need to book an AI training session?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Usually 1 to 2 weeks for standard sessions. Custom trainings need more prep time. Reach out as early as you can.",
+            "text": "Standard sessions need 1 to 2 weeks. Custom trainings need more prep time, so contact me as early as you can.",
           },
         },
       ],

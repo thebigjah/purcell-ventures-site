@@ -1,8 +1,12 @@
 "use client";
 
+// Rebuilt on the page kit 26 Oct 2026. The questions, point values, tier thresholds and
+// scoring are unchanged. Only labels and copy changed: tier names are in sentence case and
+// the per-tier colours (red, amber, green) are gone, so every tier reads in the site gold.
+
 import { useState } from "react";
 import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+import { PageHero, Section, Button } from "@/app/components/ui";
 
 interface Question {
   text: string;
@@ -27,7 +31,7 @@ const QUESTIONS: Question[] = [
     options: [
       { label: "From scratch every time", points: 0 },
       { label: "From a small template library we maintain", points: 1 },
-      { label: "We use ChatGPT or Claude as a draft starter, then edit", points: 2 },
+      { label: "We start drafts in ChatGPT or Claude, then edit", points: 2 },
       { label: "We keep prompt libraries and start from AI drafts by default", points: 3 },
     ],
   },
@@ -35,37 +39,37 @@ const QUESTIONS: Question[] = [
     text: "When did your team last adopt a new tool that saved 5 or more hours a week?",
     context: "A whole new tool that changed how someone works, rather than a new feature.",
     options: [
-      { label: "Can't think of one", points: 0 },
+      { label: "I cannot think of one", points: 0 },
       { label: "A few years ago", points: 1 },
       { label: "In the last 12 months", points: 2 },
-      { label: "Multiple in the last 6 months", points: 3 },
+      { label: "Several in the last 6 months", points: 3 },
     ],
   },
   {
     text: "If a competitor automated 50% of your team's daily admin work tomorrow, how long would it take you to match them?",
     context: "Count the time to integrate it into daily work, beyond signing up.",
     options: [
-      { label: "We'd never catch up, we don't know what they'd be doing", points: 0 },
-      { label: "6+ months of internal restructure", points: 1 },
+      { label: "We would never catch up. We would not know what they were doing", points: 0 },
+      { label: "6 months or more of internal restructuring", points: 1 },
       { label: "1 to 3 months with help", points: 2 },
       { label: "Already there or close", points: 3 },
     ],
   },
   {
-    text: "Which describes your operations/admin workload best?",
+    text: "Which describes your operations and admin workload best?",
     context: "Count the work your team repeats every week.",
     options: [
       { label: "80% manual, mostly the same tasks every week", points: 0 },
-      { label: "50/50, some automation, lots of manual fallback", points: 1 },
+      { label: "Half and half: some automation, with a lot of manual fallback", points: 1 },
       { label: "Mostly tooled, but humans review and approve everything", points: 2 },
       { label: "Highly automated, and humans handle only the edge cases", points: 3 },
     ],
   },
   {
-    text: "When you onboard a new team member, how is institutional knowledge transferred?",
-    context: "Process docs, recordings, shadowing, or 'figure it out'?",
+    text: "When a new team member starts, how do they learn what the team knows?",
+    context: "Process documents, recordings, shadowing, or working it out alone.",
     options: [
-      { label: "Shadow a senior person, ask questions, sink or swim", points: 0 },
+      { label: "They shadow a senior person, ask questions and learn by trial", points: 0 },
       { label: "Written docs that are mostly out of date", points: 1 },
       { label: "Docs we keep current, maybe with a video library", points: 2 },
       { label: "An AI-searchable knowledge base that new hires can ask questions", points: 3 },
@@ -86,17 +90,17 @@ const QUESTIONS: Question[] = [
     context: "Social posts, blog content, ads, email campaigns.",
     options: [
       { label: "We produce almost no content", points: 1 },
-      { label: "Everything written by humans from scratch", points: 0 },
-      { label: "AI-assisted drafts, human-edited and scheduled", points: 2 },
+      { label: "People write everything from scratch", points: 0 },
+      { label: "AI helps with drafts, and people edit and schedule them", points: 2 },
       { label: "AI drafts and schedules it, and a person approves it", points: 3 },
     ],
   },
   {
-    text: "What's your team's read on the next 18 months of AI?",
+    text: "How does your team see the next 18 months of AI?",
     context: "How your team talks about AI.",
     options: [
-      { label: "It's overhyped, we're not changing anything", points: 0 },
-      { label: "We know we should learn it, haven't gotten to it", points: 1 },
+      { label: "It is overhyped and we are not changing anything", points: 0 },
+      { label: "We know we should learn it and have not started", points: 1 },
       { label: "We're testing tools, and some are sticking", points: 2 },
       { label: "AI is part of our planning every quarter", points: 3 },
     ],
@@ -105,9 +109,9 @@ const QUESTIONS: Question[] = [
     text: "If you needed a custom AI-powered tool built for your specific workflow this month, what would happen?",
     context: "Internal capability or vendor reach.",
     options: [
-      { label: "Wouldn't know where to start", points: 0 },
-      { label: "We'd post on Upwork or hire a generalist", points: 1 },
-      { label: "We have a developer or consultant we'd call", points: 2 },
+      { label: "We would not know where to start", points: 0 },
+      { label: "We would post on Upwork or hire a generalist", points: 1 },
+      { label: "We have a developer or consultant we would call", points: 2 },
       { label: "Our own team could build a working first version within the week", points: 3 },
     ],
   },
@@ -115,10 +119,10 @@ const QUESTIONS: Question[] = [
     text: "Last question: if your job were automated tomorrow, how prepared are you personally?",
     context: "Answer for yourself, not the team.",
     options: [
-      { label: "Hadn't thought about it", points: 0 },
-      { label: "I'd struggle but figure it out", points: 1 },
-      { label: "I've been building skills that would carry over", points: 2 },
-      { label: "I'd be the one building the tool that did it", points: 3 },
+      { label: "I have not thought about it", points: 0 },
+      { label: "I would struggle, then work it out", points: 1 },
+      { label: "I have been building skills that would carry over", points: 2 },
+      { label: "I would be the one building the tool that did it", points: 3 },
     ],
   },
 ];
@@ -126,46 +130,46 @@ const QUESTIONS: Question[] = [
 const TIERS: Tier[] = [
   {
     max: 9,
-    label: "AT RISK",
+    label: "At risk",
     cls: "low",
     verdict: "Your team does most of its work by hand today.",
     detail: "One focused session on one workflow is a reasonable place to start.",
     recs: [
       "Pick one weekly workflow that is all manual work. Spend 2 hours automating only that one.",
       "Subscribe to one AI-for-business newsletter (Lenny's, AI Breakdown) and read it 5 minutes a day for 90 days to learn the vocabulary.",
-      "Book a 2-hour 'AI Basics for Business' session, which I built for this tier.",
+      "Book the 2-hour AI basics for business session, which I built for this tier.",
     ],
-    sessionCta: { label: "Book AI Basics for Business", href: "/consulting/book" },
+    sessionCta: { label: "Book AI basics for business", href: "/consulting/book" },
   },
   {
     max: 17,
-    label: "WAKING UP",
+    label: "Waking up",
     cls: "mid",
     verdict: "Your team knows AI matters and has not built it into daily work yet.",
     detail: "The next step is choosing one workflow and building around it.",
     recs: [
       "List your team's 5 most time-consuming workflows. Rank them by hours per week times how often they repeat. The top one is your first automation candidate.",
       "Give one person 4 hours a week, on the schedule, for AI tool research and small pilots.",
-      "Pick a 3-hour hands-on session, ChatGPT in Your Workflow or AI for Marketing, and bring the team and your own work examples.",
+      "Book a hands-on session, ChatGPT in your workflow (3 hours) or AI for marketing, and bring the team and examples of your own work.",
     ],
-    sessionCta: { label: "Book a Hands-On Session", href: "/consulting/book" },
+    sessionCta: { label: "Book a hands-on session", href: "/consulting/book" },
   },
   {
     max: 24,
-    label: "MOVING",
+    label: "Moving",
     cls: "high",
     verdict: "Your team already builds with AI.",
     detail: "The next step is connecting the separate AI tools you use into one workflow.",
     recs: [
       "Map your AI tools and find where someone retypes an AI output into another system. Automate that step next.",
       "Hold a monthly AI demo day where anyone on the team can show a new tool or workflow.",
-      "Consider Custom Team Training. At this tier a general session will repeat what you know, so the session should be built around your own tools.",
+      "Consider custom team training. At this tier a general session repeats what you know, so I build the session around your own tools.",
     ],
-    sessionCta: { label: "Book Custom Team Training", href: "/consulting/book" },
+    sessionCta: { label: "Book custom team training", href: "/consulting/book" },
   },
   {
     max: 30,
-    label: "BUILDING THE FUTURE",
+    label: "Building the future",
     cls: "high",
     verdict: "Your team already runs much of its work through AI.",
     detail: "Training will add little at this tier. A strategy conversation about selling or packaging what you have built is more useful.",
@@ -174,7 +178,7 @@ const TIERS: Tier[] = [
       "Decide whether your AI capability is something to sell as a product, sell as a service, or keep as an advantage. Each needs a different plan.",
       "Email me about a strategy consult instead of a training session.",
     ],
-    sessionCta: { label: "Email Elijah for a Strategy Consult", href: "mailto:elijah@purcell-ventures.com?subject=Strategic%20Consult%20Inquiry" },
+    sessionCta: { label: "Email Elijah about a strategy consult", href: "mailto:elijah@purcell-ventures.com?subject=Strategic%20Consult%20Inquiry" },
   },
 ];
 
@@ -182,12 +186,6 @@ function tierFromScore(score: number): Tier {
   for (const t of TIERS) if (score <= t.max) return t;
   return TIERS[TIERS.length - 1];
 }
-
-const TIER_COLOR: Record<Tier["cls"], string> = {
-  low:  "#b04030",
-  mid:  "#c89018",
-  high: "#7aaa6a",
-};
 
 export default function AIReadinessPage() {
   const [answers, setAnswers] = useState<number[]>([]);
@@ -218,294 +216,144 @@ export default function AIReadinessPage() {
   }
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden" }}>
-      <VignetteBackground />
+    <main>
+      <PageHero
+        planet="book"
+        kicker="Ten questions, three minutes"
+        title="AI readiness test"
+        lede="How far along your team is with AI, scored out of 30, with three next steps. No email required."
+      />
 
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "780px", margin: "0 auto", padding: "56px 28px 80px" }}>
-
-        {/* Page head */}
-        <header className="pv-page-head" style={{ marginBottom: "32px" }}>
-          <div className="pv-mono-label">Ten questions, three minutes</div>
-          <h1 style={{ margin: 0 }}>
-            AI Readiness <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Test.</em>
-          </h1>
-          <p className="deck">
-            How far along is your team with AI? No email required.
-          </p>
-        </header>
-
-        {/* Progress bar */}
-        {!done && (
-          <div style={{
-            display: "flex", alignItems: "center", gap: "12px",
-            fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-            fontSize: "10px", letterSpacing: "0.28em", textTransform: "uppercase",
-            color: "var(--color-warm-text-light)", marginBottom: "20px",
-          }}>
-            <span>Q{current + 1} / {QUESTIONS.length}</span>
-            <div style={{ flex: 1, height: "1px", background: "var(--color-warm-border)", position: "relative" }}>
-              <div style={{
-                position: "absolute", left: 0, top: 0, bottom: 0,
-                background: "var(--color-warm-accent)",
-                width: `${progress}%`,
-                transition: "width 0.3s ease-out",
-              }} />
+      {!done ? (
+        <Section stack>
+          <div className="ui-narrow" style={{ padding: 0, margin: 0 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 28 }} className="ui-muted ui-small">
+              <span>Question {current + 1} of {QUESTIONS.length}</span>
+              <div aria-hidden="true" style={{ flex: 1, height: 1, background: "var(--line)", position: "relative" }}>
+                <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, background: "var(--gold)", width: `${progress}%`, transition: "width 0.3s ease-out" }} />
+              </div>
+              <span>{Math.round(progress)}%</span>
             </div>
-            <span>{Math.round(progress)}%</span>
-          </div>
-        )}
 
-        {!done ? (
-          // Question card
-          <div className="pv-card" style={{ padding: "36px 36px 28px" }}>
-            <span className="b3"></span><span className="b4"></span>
-            <div className="pv-mono-label" style={{ marginBottom: "16px", color: "var(--color-warm-text-light)" }}>
-              Question {current + 1} of {QUESTIONS.length}
-            </div>
-            <h2 style={{
-              fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
-              fontSize: "22px", letterSpacing: "0.01em",
-              color: "var(--color-warm-text)", lineHeight: 1.3,
-              margin: "0 0 12px",
-            }}>
+            <h2 style={{ fontSize: "clamp(24px, 3vw, 32px)", lineHeight: 1.2, margin: "0 0 10px" }}>
               {QUESTIONS[current].text}
             </h2>
-            <p className="pv-italic" style={{
-              fontSize: "15px", color: "var(--color-warm-text)", opacity: 0.7,
-              lineHeight: 1.5, marginBottom: "24px",
-            }}>
-              {QUESTIONS[current].context}
-            </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "20px" }}>
+            <p className="ui-muted" style={{ margin: "0 0 24px" }}>{QUESTIONS[current].context}</p>
+
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {QUESTIONS[current].options.map((opt, i) => {
                 const isSelected = answers[current] === opt.points;
                 return (
-                  <button key={i} onClick={() => pick(opt.points)} style={{
-                    padding: "16px 22px",
-                    background: isSelected ? "#1e1a14" : "var(--color-warm-bg)",
-                    border: `1.5px solid ${isSelected ? "var(--color-warm-accent)" : "var(--color-warm-border)"}`,
-                    borderRadius: 0, cursor: "pointer", textAlign: "left",
-                    fontFamily: "Georgia, serif", fontStyle: "italic",
-                    fontSize: "15.5px", color: "var(--color-warm-text)",
-                    opacity: isSelected ? 1 : 0.88,
-                    transition: "background 0.12s, border-color 0.12s, opacity 0.12s",
-                  }}
-                  onMouseEnter={e => { if (!isSelected) { e.currentTarget.style.borderColor = "var(--color-warm-accent)"; e.currentTarget.style.opacity = "1"; } }}
-                  onMouseLeave={e => { if (!isSelected) { e.currentTarget.style.borderColor = "var(--color-warm-border)"; e.currentTarget.style.opacity = "0.88"; } }}
+                  <button
+                    key={i}
+                    type="button"
+                    aria-pressed={isSelected}
+                    onClick={() => pick(opt.points)}
+                    className={`ui-btn${isSelected ? "" : " ui-btn--ghost"}`}
+                    style={{ width: "100%", justifyContent: "flex-start", textAlign: "left", fontWeight: 400, lineHeight: 1.4, minHeight: 52 }}
                   >
                     {opt.label}
                   </button>
                 );
               })}
             </div>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "16px" }}>
-              <button onClick={back} disabled={current === 0} className={current === 0 ? "" : "pv-btn-ghost"}
-                style={current === 0 ? { opacity: 0.3, padding: "11px 22px", fontFamily: "var(--font-dm-sans), system-ui, sans-serif", fontSize: "11px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-text-light)", background: "none", border: "1.5px solid var(--color-warm-border)", borderRadius: 0, cursor: "not-allowed" } : {}}
+
+            <div className="ui-hero__actions">
+              <button
+                type="button"
+                onClick={back}
+                disabled={current === 0}
+                className="ui-btn ui-btn--ghost"
+                style={current === 0 ? { opacity: 0.35, cursor: "not-allowed" } : undefined}
               >
                 Back
               </button>
-              <span className="pv-mono-label" style={{ color: "var(--color-warm-text-light)" }}>
-                Tap to continue
-              </span>
+              <span className="ui-muted ui-small">Pick an answer to continue</span>
             </div>
           </div>
-        ) : (
-          // Report
-          <div>
-            {/* Score band */}
-            <div className="pv-card" style={{ padding: "40px 40px 32px", textAlign: "center", marginBottom: "24px" }}>
-              <span className="b3"></span><span className="b4"></span>
-              <div className="pv-mono-label" style={{ marginBottom: "12px", color: "var(--color-warm-text-light)" }}>
-                Your score, {timestampString()}
-              </div>
-              <div style={{
-                fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700,
-                fontSize: "84px", letterSpacing: "-0.02em",
-                color: TIER_COLOR[tier.cls], lineHeight: 1, marginBottom: "8px",
-              }}>
-                {score}
-              </div>
-              <div className="pv-mono-label" style={{ marginBottom: "20px", color: "var(--color-warm-text-light)" }}>
-                out of 30
-              </div>
-              <div style={{
-                display: "inline-block",
-                padding: "8px 24px",
-                border: `2px solid ${TIER_COLOR[tier.cls]}`,
-                fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-                fontSize: "11px", fontWeight: 700,
-                letterSpacing: "0.42em", textTransform: "uppercase",
-                color: TIER_COLOR[tier.cls],
-              }}>
-                Tier: {tier.label}
-              </div>
+        </Section>
+      ) : (
+        <>
+          <Section title="Your score" intro={timestampString()}>
+            <div className="ui-figures">
+              <div className="ui-figure"><b>{score}</b><span>out of 30</span></div>
+              <div className="ui-figure"><b>{tier.label}</b><span>your tier</span></div>
             </div>
-
-            {/* Verdict + detail */}
-            <div className="pv-card" style={{ padding: "32px 36px 28px", marginBottom: "20px" }}>
-              <span className="b3"></span><span className="b4"></span>
-              <div className="pv-mono-label" style={{ marginBottom: "14px" }}>Verdict</div>
-              <p style={{
-                fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
-                fontSize: "22px", letterSpacing: "0.005em",
-                color: "var(--color-warm-text)", lineHeight: 1.3,
-                margin: "0 0 16px",
-              }}>
-                {tier.verdict}
-              </p>
-              <p className="pv-italic" style={{ fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.6, margin: 0 }}>
-                {tier.detail}
-              </p>
+            <div className="ui-prose" style={{ marginTop: 32 }}>
+              <p><strong>{tier.verdict}</strong></p>
+              <p>{tier.detail}</p>
             </div>
+          </Section>
 
-            {/* Recommendations */}
-            <div className="pv-card" style={{ padding: "32px 36px 28px", marginBottom: "20px" }}>
-              <span className="b3"></span><span className="b4"></span>
-              <div className="pv-mono-label" style={{ marginBottom: "16px" }}>Three next steps</div>
-              <ol style={{ margin: 0, paddingLeft: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: "16px", counterReset: "rec-counter" }}>
-                {tier.recs.map((rec, i) => (
-                  <li key={i} style={{
-                    display: "grid", gridTemplateColumns: "auto 1fr", gap: "18px",
-                    paddingTop: "16px",
-                    borderTop: i === 0 ? "none" : "1px dashed var(--color-warm-border)",
-                  }}>
-                    <span className="pv-italic" style={{
-                      fontSize: "28px", color: "var(--color-warm-accent)",
-                      lineHeight: 1, fontWeight: 400, paddingTop: "2px",
-                    }}>
-                      {romanNumeral(i + 1)}
-                    </span>
-                    <p className="pv-italic" style={{ fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.92, lineHeight: 1.6, margin: 0 }}>
-                      {rec}
-                    </p>
-                  </li>
-                ))}
+          <Section title="Three next steps">
+            <div className="ui-prose">
+              <ol>
+                {tier.recs.map((rec, i) => <li key={i}>{rec}</li>)}
               </ol>
             </div>
+          </Section>
 
-            {/* CTA */}
-            <section style={{
-              padding: "40px 36px 36px",
-              borderTop: "1px solid var(--color-warm-border)",
-              borderBottom: "1px solid var(--color-warm-border)",
-              textAlign: "center",
-              marginBottom: "32px",
-            }}>
-              <div style={{
-                fontFamily: "'Cinzel', Georgia, serif", color: "var(--color-warm-accent)",
-                fontSize: "14px", letterSpacing: "0.6em", marginBottom: "20px", opacity: 0.7,
-              }}></div>
-              <h2 style={{
-                fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
-                fontSize: "clamp(22px, 4vw, 32px)", letterSpacing: "0.02em",
-                color: "var(--color-warm-text)", textTransform: "uppercase",
-                marginBottom: "16px", lineHeight: 1.15, margin: "0 0 16px",
-              }}>
-                Where to <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>go next.</em>
-              </h2>
-              <p className="pv-italic" style={{
-                fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.85,
-                maxWidth: "520px", margin: "0 auto 24px", lineHeight: 1.55,
-              }}>
-                This session matches your tier. If I think you don&apos;t need it, I&apos;ll tell you.
-              </p>
-              <div style={{ display: "flex", flexDirection: "column", gap: "10px", alignItems: "center" }}>
-                {tier.sessionCta.href.startsWith("mailto:") ? (
-                  <a href={tier.sessionCta.href} className="pv-btn-primary">
-                    {tier.sessionCta.label}
-                  </a>
-                ) : (
-                  <Link href={tier.sessionCta.href} className="pv-btn-primary">
-                    {tier.sessionCta.label}
-                  </Link>
-                )}
-                <Link href="/ai-cost-calculator" className="pv-btn-ghost">
-                  Estimate the savings with the AI Cost Calculator
-                </Link>
-              </div>
-            </section>
-
-            {/* Restart */}
-            <div style={{ textAlign: "center" }}>
-              <button onClick={restart} className="pv-btn-ghost">
-                Take it again
-              </button>
+          <Section title="The session for your tier" intro="If I think you do not need it, I will tell you.">
+            <div className="ui-hero__actions" style={{ marginTop: 0 }}>
+              <Button href={tier.sessionCta.href}>{tier.sessionCta.label}</Button>
+              <Button href="/ai-cost-calculator" ghost>Estimate the savings with the AI cost calculator</Button>
+              <button type="button" onClick={restart} className="ui-btn ui-btn--ghost">Take it again</button>
             </div>
-          </div>
-        )}
+          </Section>
+        </>
+      )}
 
-        {/* ALWAYS-RENDERED EXPLANATORY COPY.
-            The quiz shows one question at a time, so nine of the ten questions never reach
-            the served HTML and the page rendered 192 visible words. Restructuring working
-            quiz state to fix that is a bigger change than it is worth; this section is
-            additive and gives a crawler, and a person deciding whether to start, something
-            to read. */}
-        <section style={{ maxWidth: "720px", margin: "72px auto 0", padding: "0 8px", fontSize: "16px", lineHeight: 1.75 }}>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "0 0 14px", color: "var(--color-warm-text)" }}>
-            What the test measures
-          </h2>
+      {/* ALWAYS-RENDERED EXPLANATORY COPY.
+          The quiz shows one question at a time, so nine of the ten questions never reach
+          the served HTML and the page rendered 192 visible words. Restructuring working
+          quiz state to fix that is a bigger change than it is worth; this section is
+          additive and gives a crawler, and a person deciding whether to start, something
+          to read. */}
+      <Section title="What the test measures">
+        <div className="ui-prose">
           <p>
-            Ten questions about how your team works right now. They ask what you
-            currently do when you draft a customer email, when you answer the same question
-            for the twentieth time, when someone leaves and takes a process with them.
+            Ten questions about how your team works today. They ask what you do when you draft
+            a customer email, when you answer the same question for the twentieth time, and
+            when someone leaves and takes a process with them.
           </p>
           <p>
-            The questions cover drafting and written communication, new tools, repeated
-            manual work, how knowledge is stored and found, how data informs decisions,
-            marketing content, and how your team and you personally think about AI. Your
-            answers show which of those areas are ready for AI and which are not.
+            The questions cover drafting and written communication, new tools, repeated manual
+            work, how your team stores and finds what it knows, how data informs decisions,
+            marketing content, and how your team and you personally think about AI. Your answers
+            show which of those areas are ready for AI and which are not.
           </p>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "36px 0 14px", color: "var(--color-warm-text)" }}>
-            What you get back
-          </h2>
-          <p>
-            A readiness level and a short list of what to do first, in order. It needs no
-            email and sends no follow-up. It runs in your browser and takes three minutes.
-          </p>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "36px 0 14px", color: "var(--color-warm-text)" }}>
-            Who built it
-          </h2>
-          <p>
-            Elijah Purcell, founder and CEO of{" "}
-            <Link href="/about" style={{ color: "var(--color-warm-accent)" }}>Purcell Ventures LLC</Link>{" "}
-            and an autonomous AI agent systems engineer, working out of Tuscaloosa, Alabama.
-            Each answer scores 0 to 3 points, for a total out of 30, and the total places you
-            in one of four tiers. I set the point values myself, drawing on
-            running a fifteen-agent workforce that handles this company&apos;s proposals,
-            audits and compliance on a schedule.
-          </p>
-          <p>
-            If the result raises questions, the{" "}
-            <Link href="/consulting" style={{ color: "var(--color-warm-accent)" }}>consulting page</Link>{" "}
-            explains how sessions work, and{" "}
-            <Link href="/ai-consultant-tuscaloosa" style={{ color: "var(--color-warm-accent)" }}>local work in Tuscaloosa</Link>{" "}
-            covers in-person engagements. The first conversation is free.
-          </p>
-        </section>
+        </div>
+      </Section>
 
-      </main>
+      <Section title="What you get back">
+        <div className="ui-prose">
+          <p>
+            A readiness level and a short list of what to do first, in order. It needs no email
+            and sends no follow-up. It runs in your browser and takes three minutes.
+          </p>
+        </div>
+      </Section>
 
-      <footer style={{
-        position: "relative", zIndex: 5,
-        padding: "24px 36px",
-        borderTop: "1px solid var(--color-warm-border)",
-        display: "flex", justifyContent: "space-between", alignItems: "center",
-        flexWrap: "wrap", gap: "12px",
-        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-        fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
-        color: "var(--color-warm-text-light)",
-      }}>
-        <span>© {new Date().getFullYear()} Purcell Ventures LLC, Acworth, GA</span>
-        <Link href="/consulting" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>Consulting</Link>
-      </footer>
-    </div>
+      <Section title="Who built it">
+        <div className="ui-prose">
+          <p>
+            Elijah Purcell, Founder/CEO of <Link href="/about">Purcell Ventures LLC</Link> and an
+            autonomous AI agent systems engineer, working out of Tuscaloosa, Alabama. Each answer
+            scores 0 to 3 points, for a total out of 30, and the total places you in one of four
+            tiers. I set the point values myself, drawing on running a fifteen-agent workforce
+            that handles this company&apos;s proposals, audits and compliance on a schedule.
+          </p>
+          <p>
+            If the result raises questions, the <Link href="/consulting">consulting page</Link>{" "}
+            explains how sessions work, and <Link href="/ai-consultant-tuscaloosa">local work in
+            Tuscaloosa</Link> covers in-person engagements. The first conversation is free.
+          </p>
+        </div>
+      </Section>
+    </main>
   );
 }
 
 function timestampString() {
   return new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
-}
-
-function romanNumeral(n: number) {
-  return ["i.", "ii.", "iii."][n - 1] ?? `${n}.`;
 }

@@ -2,26 +2,26 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Steady: Personal IT for Everyday Life",
+  title: "Steady, personal IT for everyday life",
   description:
-    "Personal tech help for people who feel overwhelmed by modern tools. AI coaching, phone setup, password managers, medication reminders and smart home setup. One-off help from $99, monthly care from $79.",
+    "Personal tech help for people who feel overwhelmed by modern tools: AI coaching, phone setup, password managers, medication reminders and smart home setup. One-off help $99, monthly care from $79.",
   keywords: [
     "personal IT help", "tech help for parents", "AI coaching personal",
     "tech help seniors", "household tech support", "personal tech coach",
     "Atlanta tech help", "remote tech help",
   ],
   openGraph: {
-    title: "Steady: Personal IT for Everyday Life",
+    title: "Steady, personal IT for everyday life",
     description:
-      "Personal tech help. AI coaching, phone setup, smart home, password managers, family tech care plans. From $79/mo.",
+      "Personal tech help: AI coaching, phone setup, smart home, password managers and family care plans. From $79 a month.",
     url: "https://purcellventures.co/steady",
     type: "website",
   
     images: ["/opengraph-image"],
   },
   twitter: {
-    title: "Steady: Personal IT for Everyday Life",
-    description: "Personal tech help. From $79/mo.",
+    title: "Steady, personal IT for everyday life",
+    description: "Personal tech help from $79 a month.",
   },
   alternates: { canonical: "/steady" },
 };
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
 const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Steady: Personal IT",
+  "name": "Steady, personal IT",
   "description":
-    "Personal tech help for individuals and households. AI coaching, phone setup, smart home, password managers, medication reminders, family tech care plans.",
+    "Personal tech help for individuals and households: AI coaching, phone setup, smart home, password managers, medication reminders and family care plans.",
   "provider": { "@id": "https://purcellventures.co/#organization" },
   "url": "https://purcellventures.co/steady",
   "serviceType": "Personal Technology Coaching",
@@ -80,7 +80,7 @@ const FAQ_LD = {
       "name": "What is Steady?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Personal IT support for people who never chose to manage their own technology: setup, patient teaching, and somebody to call when something breaks. It is aimed at the family member who has been acting as everyone else's tech support."
+        "text": "Personal IT support for people who never chose to manage their own technology: setup, patient teaching, and somebody to call when something breaks. Elijah Purcell built it for the family member who has been everyone else's tech support."
       }
     },
     {
@@ -88,7 +88,7 @@ const FAQ_LD = {
       "name": "Who is personal IT support for?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Parents and grandparents, and the person in the family who has been fielding their questions for years. The service exists so that person is not the only option."
+        "text": "Parents and grandparents, and the person in the family who has answered their questions for years. Steady gives that person someone else to call."
       }
     },
     {
@@ -96,7 +96,7 @@ const FAQ_LD = {
       "name": "Is this remote or in person?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Both are offered, with plans and one-off packages. The detail is on the Steady page and the fastest route is to email Elijah Purcell directly."
+        "text": "Both. Elijah Purcell visits in person in metro Atlanta and helps remotely by video anywhere in the US, through monthly plans and one-off packages. The fastest route is to email him at elijah@purcell-ventures.com."
       }
     }
   ]

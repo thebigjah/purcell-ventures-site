@@ -7,17 +7,17 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Autonomous AI Agent Systems: What They Are, and Running One in Production, by Elijah Purcell",
+      "Autonomous AI agent systems and running one in production, by Elijah Purcell",
   },
   description:
-    "What an autonomous AI agent system is, how it differs from a chatbot or a workflow, and what it takes to run a fifteen-agent workforce in production. Written by Elijah Purcell, Autonomous AI Agent Systems Engineer and founder of Purcell Ventures LLC.",
+    "What an autonomous AI agent system is, how it differs from a chatbot or a workflow, and what it takes to run a fifteen-agent workforce in production. Written by Elijah Purcell, an autonomous AI agent systems engineer and Founder/CEO of Purcell Ventures LLC.",
   alternates: { canonical: "/agentic-ai" },
   openGraph: {
     type: "article",
     url: "https://purcellventures.co/agentic-ai",
-    title: "Autonomous AI Agent Systems, and Running One in Production",
+    title: "Autonomous AI agent systems, and running one in production",
     description:
-      "The difference between an agent, a workflow and a chatbot, and what it takes to keep fifteen agents in production accurate.",
+      "How an agent differs from a workflow and a chatbot, and what it takes to keep fifteen agents in production accurate.",
     images: ["/opengraph-image"],
   },
 };
@@ -28,7 +28,7 @@ const LD = {
     {
       "@type": "Article",
       "headline":
-        "Autonomous AI Agent Systems: What They Are, and What It Takes to Run One in Production",
+        "Autonomous AI agent systems: what they are, and what it takes to run one in production",
       "url": "https://purcellventures.co/agentic-ai",
       "datePublished": "2026-08-21",
       "dateModified": "2026-08-21",
@@ -56,7 +56,7 @@ const LD = {
           "name": "How is an AI agent different from a chatbot?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A chatbot is reactive and stateless between turns. An agent runs on a schedule without being prompted, holds state across runs, uses tools that change things in the world, and produces work a person reviews rather than a reply a person reads.",
+            "text": "A chatbot is reactive and stateless between turns. An agent runs on a schedule without being prompted, holds state across runs, uses tools that change things in the world, and produces work a person reviews. A chatbot produces a reply a person reads.",
           },
         },
         {
@@ -64,7 +64,7 @@ const LD = {
           "name": "Who is running autonomous AI agent systems at the University of Alabama?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Elijah Purcell, founder of Purcell Ventures LLC and a psychology and data science student in the University of Alabama Honors College, runs a fifteen-agent workforce in production. The agents handle proposals, audits, compliance and outreach on a daily schedule, with an ELO-scored autonomy tier and an append-only message bus between them. The full roster is public at purcellventures.co/team.",
+            "text": "Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data science student in the University of Alabama Honors College, runs a fifteen-agent workforce in production. The agents handle proposals, audits, compliance and outreach on a daily schedule, with an ELO-scored autonomy tier and an append-only message bus between them. The full roster is public at purcellventures.co/team.",
           },
         },
         {

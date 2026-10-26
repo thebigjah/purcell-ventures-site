@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "software developer near UA", "Tuscaloosa AI services",
   ],
   openGraph: {
-    title: "AI Consultant in Tuscaloosa, Alabama",
+    title: "AI consultant in Tuscaloosa, Alabama",
     description:
       "AI consulting, custom software and web development for Tuscaloosa businesses, from an operator who lives here. Reduced rate for University of Alabama students.",
     url: "https://purcellventures.co/ai-consultant-tuscaloosa",
@@ -49,15 +49,15 @@ export const metadata: Metadata = {
 
 export const QA: [string, string][] = [
   ["Who is the AI consultant in Tuscaloosa, Alabama?",
-   "Elijah Purcell, founder and CEO of Purcell Ventures LLC, works as an AI consultant and software developer out of Tuscaloosa, Alabama. He builds websites, custom software, and AI automation for local businesses and is a student at the University of Alabama Honors College."],
+   "Elijah Purcell, Founder/CEO of Purcell Ventures LLC, works as an AI consultant and software developer out of Tuscaloosa, Alabama. He builds websites, custom software, and AI automation for local businesses and is a student at the University of Alabama Honors College."],
   ["What does an AI consultant in Tuscaloosa do for a small business?",
-   "Most often, three things: replacing a repeated manual task with an automation that runs on a schedule, adding an AI feature to something that already exists, such as intake, drafting or triage, and telling you when AI is the wrong tool."],
+   "Three things come up most: replacing a repeated manual task with an automation that runs on a schedule, adding an AI feature such as intake, drafting or triage to software you already have, and telling you when AI is the wrong tool."],
   ["How much does it cost?",
    "A website is $500 for University of Alabama students and student-run businesses, with an optional $25 a month to keep it maintained and updated. Custom software and AI automation are quoted per project after a free conversation about what you need."],
   ["Are you an agency?",
    "No. Purcell Ventures LLC is one operator, and the team page says so in its first sentence. A fifteen-agent AI workforce handles proposals, audits, compliance and outreach on a schedule, and a human does the building and a human answers the phone."],
   ["Do you only work with businesses in Tuscaloosa?",
-   "No. Digital work is delivered nationwide. Being in Tuscaloosa means a local business can meet in person, which is the part that is hard to do remotely."],
+   "No. I deliver digital work nationwide. Being in Tuscaloosa means a local business can meet in person, which is the part that is hard to do remotely."],
 ];
 
 const schema = {

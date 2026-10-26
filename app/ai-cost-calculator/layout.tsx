@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Cost Calculator: What Would an AI Session Save You?",
+  title: "AI cost calculator for the savings from an AI session",
   description:
-    "Enter team size, hourly cost, and manual workload. See how fast an AI consulting session pays back in dollars and hours. From Elijah Purcell.",
+    "A free calculator by Elijah Purcell. It takes team size, hourly cost and manual workload, and shows how fast an AI consulting session pays back in dollars and hours.",
   alternates: { canonical: "/ai-cost-calculator" },
 };
 
