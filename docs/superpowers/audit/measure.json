@@ -1,0 +1,804 @@
+{
+ "lusion-1280": {
+  "bg": "rgb(255, 255, 255)",
+  "color": "rgb(240, 241, 250)",
+  "bodyFont": "Aeonik",
+  "canvases": 3,
+  "fonts": [
+   "Aeonik"
+  ],
+  "h1": {
+   "font": "Aeonik",
+   "size": "32px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "35.2px",
+   "tt": "none",
+   "text": "We create 3D visual storytelling\nand interactive web experiences\nthat help brand"
+  },
+  "h2": {
+   "font": "Aeonik",
+   "size": "19.2px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "26.88px",
+   "tt": "none",
+   "text": "We combine design, motion, 3D, and development to create digital experiences tha"
+  },
+  "p": null,
+  "a": {
+   "font": "Aeonik",
+   "size": "16px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "18.4px",
+   "tt": "none",
+   "text": ""
+  },
+  "button": {
+   "font": "Aeonik",
+   "size": "14px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "16.1px",
+   "tt": "none",
+   "text": ""
+  },
+  "nav": {
+   "bg": "rgba(0, 0, 0, 0)",
+   "pos": "fixed",
+   "h": 146.390625
+  },
+  "radii": [
+   "100px",
+   "87.5px",
+   "10px",
+   "74.375px",
+   "315px",
+   "15px"
+  ],
+  "shadows": 3,
+  "title": "Lusion - Award Winning 3D and Interactive Web Studio",
+  "links": 28,
+  "scrollH": 800
+ },
+ "lusion-390": {
+  "bg": "rgb(255, 255, 255)",
+  "color": "rgb(240, 241, 250)",
+  "bodyFont": "Aeonik",
+  "canvases": 3,
+  "fonts": [
+   "Aeonik"
+  ],
+  "h1": {
+   "font": "Aeonik",
+   "size": "23.4px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "25.74px",
+   "tt": "none",
+   "text": "We create 3D visual storytelling\nand interactive web experiences\nthat help brand"
+  },
+  "h2": {
+   "font": "Aeonik",
+   "size": "16px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "22.4px",
+   "tt": "none",
+   "text": "We combine design, motion, 3D, and development to create digital experiences tha"
+  },
+  "p": null,
+  "a": {
+   "font": "Aeonik",
+   "size": "16px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "18.4px",
+   "tt": "none",
+   "text": ""
+  },
+  "button": {
+   "font": "Aeonik",
+   "size": "14px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "16.1px",
+   "tt": "none",
+   "text": ""
+  },
+  "nav": {
+   "bg": "rgba(0, 0, 0, 0)",
+   "pos": "fixed",
+   "h": 76.390625
+  },
+  "radii": [
+   "100px",
+   "87.5px",
+   "10px",
+   "74.375px",
+   "315px",
+   "15px",
+   "15.75px",
+   "100%"
+  ],
+  "shadows": 3,
+  "title": "Lusion - Award Winning 3D and Interactive Web Studio",
+  "links": 28,
+  "scrollH": 844
+ },
+ "activetheory-1280": {
+  "bg": "rgb(0, 0, 0)",
+  "color": "rgb(255, 255, 255)",
+  "bodyFont": "nbarchitekt",
+  "canvases": 0,
+  "fonts": [
+   "nbarchitekt"
+  ],
+  "h1": {
+   "font": "nbarchitekt",
+   "size": "18px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "ls": "normal",
+   "lh": "normal",
+   "tt": "none",
+   "text": "Your browser is not supported"
+  },
+  "h2": null,
+  "p": null,
+  "a": null,
+  "button": null,
+  "nav": null,
+  "radii": [],
+  "shadows": 0,
+  "title": "Not Supported",
+  "links": 0,
+  "scrollH": 800
+ },
+ "activetheory-390": {
+  "bg": "rgb(0, 0, 0)",
+  "color": "rgb(255, 255, 255)",
+  "bodyFont": "nbarchitekt",
+  "canvases": 0,
+  "fonts": [
+   "nbarchitekt"
+  ],
+  "h1": {
+   "font": "nbarchitekt",
+   "size": "18px",
+   "weight": "700",
+   "color": "rgb(255, 255, 255)",
+   "ls": "normal",
+   "lh": "normal",
+   "tt": "none",
+   "text": "Your browser is not supported"
+  },
+  "h2": null,
+  "p": null,
+  "a": null,
+  "button": null,
+  "nav": null,
+  "radii": [],
+  "shadows": 0,
+  "title": "Not Supported",
+  "links": 0,
+  "scrollH": 844
+ },
+ "igloo-1280": {
+  "bg": "rgb(160, 165, 177)",
+  "color": "rgb(0, 0, 0)",
+  "bodyFont": "Times",
+  "canvases": 0,
+  "fonts": [],
+  "h1": null,
+  "h2": null,
+  "p": null,
+  "a": null,
+  "button": null,
+  "nav": null,
+  "radii": [],
+  "shadows": 0,
+  "title": "Igloo Inc.",
+  "links": 0,
+  "scrollH": 800
+ },
+ "igloo-390": {
+  "bg": "rgb(160, 165, 177)",
+  "color": "rgb(0, 0, 0)",
+  "bodyFont": "Times",
+  "canvases": 0,
+  "fonts": [],
+  "h1": null,
+  "h2": null,
+  "p": null,
+  "a": null,
+  "button": null,
+  "nav": null,
+  "radii": [],
+  "shadows": 0,
+  "title": "Igloo Inc.",
+  "links": 0,
+  "scrollH": 844
+ },
+ "resn-1280": {
+  "bg": "rgb(0, 0, 0)",
+  "color": "rgb(0, 0, 0)",
+  "bodyFont": "sans-serif",
+  "canvases": 6,
+  "fonts": [
+   "Fort-Book",
+   "Fort-Medium",
+   "Fort-Extralight"
+  ],
+  "h1": {
+   "font": "Fort-Extralight",
+   "size": "38.4px",
+   "weight": "400",
+   "color": "rgb(255, 255, 255)",
+   "ls": "normal",
+   "lh": "38.4px",
+   "tt": "none",
+   "text": "Resn \u00b7 Creative Studio\nEst. 2004"
+  },
+  "h2": null,
+  "p": null,
+  "a": null,
+  "button": {
+   "font": "Fort-Medium",
+   "size": "8.8px",
+   "weight": "400",
+   "color": "rgb(255, 255, 255)",
+   "ls": "0.88px",
+   "lh": "17.6px",
+   "tt": "uppercase",
+   "text": "VIEW ALL PROJECTS"
+  },
+  "nav": null,
+  "radii": [
+   "50%"
+  ],
+  "shadows": 0,
+  "title": "Resn - Creative Digital Agency | Ideation, Design, and Development",
+  "links": 1,
+  "scrollH": 800
+ },
+ "resn-390": {
+  "bg": "rgb(0, 0, 0)",
+  "color": "rgb(0, 0, 0)",
+  "bodyFont": "sans-serif",
+  "canvases": 7,
+  "fonts": [
+   "Fort-Book",
+   "Fort-Medium",
+   "Fort-Extralight"
+  ],
+  "h1": {
+   "font": "Fort-Extralight",
+   "size": "28.8px",
+   "weight": "400",
+   "color": "rgb(255, 255, 255)",
+   "ls": "normal",
+   "lh": "28.8px",
+   "tt": "none",
+   "text": "Resn \u00b7 Creative Studio\nEst. 2004"
+  },
+  "h2": null,
+  "p": null,
+  "a": null,
+  "button": {
+   "font": "Fort-Medium",
+   "size": "6.6px",
+   "weight": "400",
+   "color": "rgb(255, 255, 255)",
+   "ls": "0.66px",
+   "lh": "13.2px",
+   "tt": "uppercase",
+   "text": "VIEW ALL PROJECTS"
+  },
+  "nav": null,
+  "radii": [
+   "50%"
+  ],
+  "shadows": 0,
+  "title": "Resn - Creative Digital Agency | Ideation, Design, and Development",
+  "links": 1,
+  "scrollH": 844
+ },
+ "locomotive-1280": {
+  "bg": "rgba(0, 0, 0, 0)",
+  "color": "rgb(0, 0, 0)",
+  "bodyFont": "HelveticaNowDisplay",
+  "canvases": 2,
+  "fonts": [
+   "HelveticaNowDisplay",
+   "LocomotiveNew"
+  ],
+  "h1": {
+   "font": "LocomotiveNew",
+   "size": "70px",
+   "weight": "400",
+   "color": "rgb(255, 255, 255)",
+   "ls": "normal",
+   "lh": "77px",
+   "tt": "none",
+   "text": "\ud83d\udd36 Locomotive\u00ae\nDigital-first Design Agency\ud83c\udf7a\ud83d\udd1e"
+  },
+  "h2": {
+   "font": "HelveticaNowDisplay",
+   "size": "26px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "31.2px",
+   "tt": "none",
+   "text": "Featured work"
+  },
+  "p": {
+   "font": "HelveticaNowDisplay",
+   "size": "26px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "31.2px",
+   "tt": "none",
+   "text": "Seven Years\nRunning\n2018-2024"
+  },
+  "a": {
+   "font": "HelveticaNowDisplay",
+   "size": "26px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "31.2px",
+   "tt": "none",
+   "text": "Locomotive\u00ae"
+  },
+  "button": {
+   "font": "HelveticaNowDisplay",
+   "size": "26px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "26px",
+   "tt": "none",
+   "text": "The dynasty"
+  },
+  "nav": {
+   "bg": "rgba(0, 0, 0, 0)",
+   "pos": "static",
+   "h": 0
+  },
+  "radii": [],
+  "shadows": 0,
+  "title": "Locomotive | Montreal web agency",
+  "links": 54,
+  "scrollH": 6217
+ },
+ "locomotive-390": {
+  "bg": "rgba(0, 0, 0, 0)",
+  "color": "rgb(0, 0, 0)",
+  "bodyFont": "HelveticaNowDisplay",
+  "canvases": 2,
+  "fonts": [
+   "HelveticaNowDisplay",
+   "LocomotiveNew"
+  ],
+  "h1": {
+   "font": "LocomotiveNew",
+   "size": "36px",
+   "weight": "400",
+   "color": "rgb(255, 255, 255)",
+   "ls": "normal",
+   "lh": "39.6px",
+   "tt": "none",
+   "text": "\ud83d\udd36 Locomotive\u00ae\nDigital-first Design Agency\ud83c\udf7a\ud83d\udd1e"
+  },
+  "h2": {
+   "font": "HelveticaNowDisplay",
+   "size": "18px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "21.6px",
+   "tt": "none",
+   "text": "Featured work"
+  },
+  "p": {
+   "font": "HelveticaNowDisplay",
+   "size": "18px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "21.6px",
+   "tt": "none",
+   "text": "Seven Years\nRunning\n2018-2024"
+  },
+  "a": {
+   "font": "HelveticaNowDisplay",
+   "size": "18px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "21.6px",
+   "tt": "none",
+   "text": "Locomotive\u00ae"
+  },
+  "button": {
+   "font": "HelveticaNowDisplay",
+   "size": "18px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "normal",
+   "tt": "none",
+   "text": "Menu"
+  },
+  "nav": {
+   "bg": "rgba(0, 0, 0, 0)",
+   "pos": "static",
+   "h": 0
+  },
+  "radii": [],
+  "shadows": 0,
+  "title": "Locomotive | Montreal web agency",
+  "links": 54,
+  "scrollH": 5438
+ },
+ "hellomonday-1280": {
+  "bg": "rgb(255, 255, 255)",
+  "color": "rgb(0, 0, 0)",
+  "bodyFont": "nb_internationalproregular",
+  "canvases": 2,
+  "fonts": [
+   "nb_internationalproregular",
+   "ClarendonBTWXX-Light",
+   "nb_internationalprolight"
+  ],
+  "h1": {
+   "font": "ClarendonBTWXX-Light",
+   "size": "80px",
+   "weight": "300",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "64px",
+   "tt": "none",
+   "text": "Experiences"
+  },
+  "h2": null,
+  "p": {
+   "font": "nb_internationalproregular",
+   "size": "13px",
+   "weight": "400",
+   "color": "rgb(198, 197, 197)",
+   "ls": "normal",
+   "lh": "16.77px",
+   "tt": "none",
+   "text": "Experiences"
+  },
+  "a": null,
+  "button": {
+   "font": "nb_internationalproregular",
+   "size": "22px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "normal",
+   "tt": "none",
+   "text": ""
+  },
+  "nav": {
+   "bg": "rgba(0, 0, 0, 0)",
+   "pos": "absolute",
+   "h": 67
+  },
+  "radii": [
+   "50%"
+  ],
+  "shadows": 0,
+  "title": "Hello Monday",
+  "links": 53,
+  "scrollH": 9388
+ },
+ "hellomonday-390": {
+  "bg": "rgb(255, 255, 255)",
+  "color": "rgb(0, 0, 0)",
+  "bodyFont": "nb_internationalproregular",
+  "canvases": 2,
+  "fonts": [
+   "nb_internationalproregular",
+   "ClarendonBTWXX-Light",
+   "nb_internationalprolight"
+  ],
+  "h1": {
+   "font": "ClarendonBTWXX-Light",
+   "size": "40px",
+   "weight": "300",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "32px",
+   "tt": "none",
+   "text": "Experiences"
+  },
+  "h2": null,
+  "p": {
+   "font": "nb_internationalproregular",
+   "size": "13px",
+   "weight": "400",
+   "color": "rgb(198, 197, 197)",
+   "ls": "normal",
+   "lh": "16.77px",
+   "tt": "none",
+   "text": "Experiences"
+  },
+  "a": null,
+  "button": {
+   "font": "nb_internationalproregular",
+   "size": "22px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "normal",
+   "tt": "none",
+   "text": ""
+  },
+  "nav": {
+   "bg": "rgba(0, 0, 0, 0)",
+   "pos": "absolute",
+   "h": 90
+  },
+  "radii": [
+   "50%"
+  ],
+  "shadows": 0,
+  "title": "Hello Monday",
+  "links": 53,
+  "scrollH": 8184
+ },
+ "unseen-1280": {
+  "bg": "rgba(0, 0, 0, 0)",
+  "color": "rgb(0, 0, 0)",
+  "bodyFont": "\"Neue Montreal\"",
+  "canvases": 1,
+  "fonts": [
+   "Neue Montreal",
+   "Saol Display"
+  ],
+  "h1": {
+   "font": "\"Neue Montreal\"",
+   "size": "28px",
+   "weight": "700",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "42px",
+   "tt": "none",
+   "text": "Home"
+  },
+  "h2": null,
+  "p": {
+   "font": "\"Neue Montreal\"",
+   "size": "14px",
+   "weight": "400",
+   "color": "rgb(66, 66, 66)",
+   "ls": "-0.35px",
+   "lh": "16.1px",
+   "tt": "none",
+   "text": "A brand, digital and motion studio creating\nrefreshingly unexpected ideas and st"
+  },
+  "a": {
+   "font": "\"Neue Montreal\"",
+   "size": "14px",
+   "weight": "400",
+   "color": "rgb(33, 33, 33)",
+   "ls": "normal",
+   "lh": "21px",
+   "tt": "none",
+   "text": ""
+  },
+  "button": {
+   "font": "\"Neue Montreal\"",
+   "size": "9.8px",
+   "weight": "500",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "14.7px",
+   "tt": "uppercase",
+   "text": "ENTER WITHOUT AUDIO"
+  },
+  "nav": {
+   "bg": "rgba(0, 0, 0, 0)",
+   "pos": "fixed",
+   "h": 79.796875
+  },
+  "radii": [
+   "50%",
+   "100%",
+   "23.1px",
+   "175px",
+   "26.25px",
+   "10px"
+  ],
+  "shadows": 0,
+  "title": "Unseen Studio\u00ae \u2013 Brand, Digital & Motion",
+  "links": 22,
+  "scrollH": 800
+ },
+ "unseen-390": {
+  "bg": "rgba(0, 0, 0, 0)",
+  "color": "rgb(0, 0, 0)",
+  "bodyFont": "\"Neue Montreal\"",
+  "canvases": 1,
+  "fonts": [
+   "Neue Montreal",
+   "Saol Display"
+  ],
+  "h1": {
+   "font": "\"Neue Montreal\"",
+   "size": "28px",
+   "weight": "700",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "42px",
+   "tt": "none",
+   "text": "Home"
+  },
+  "h2": null,
+  "p": {
+   "font": "\"Neue Montreal\"",
+   "size": "14px",
+   "weight": "400",
+   "color": "rgb(66, 66, 66)",
+   "ls": "-0.35px",
+   "lh": "16.1px",
+   "tt": "none",
+   "text": "A brand, digital and motion studio creating\nrefreshingly unexpected ideas and st"
+  },
+  "a": {
+   "font": "\"Neue Montreal\"",
+   "size": "14px",
+   "weight": "400",
+   "color": "rgb(33, 33, 33)",
+   "ls": "normal",
+   "lh": "21px",
+   "tt": "none",
+   "text": ""
+  },
+  "button": {
+   "font": "\"Neue Montreal\"",
+   "size": "9.8px",
+   "weight": "500",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "14.7px",
+   "tt": "uppercase",
+   "text": "ENTER WITHOUT AUDIO"
+  },
+  "nav": {
+   "bg": "rgba(0, 0, 0, 0)",
+   "pos": "fixed",
+   "h": 79.796875
+  },
+  "radii": [
+   "50%",
+   "100%",
+   "23.1px",
+   "26.25px",
+   "175px",
+   "10px"
+  ],
+  "shadows": 0,
+  "title": "Unseen Studio\u00ae \u2013 Brand, Digital & Motion",
+  "links": 22,
+  "scrollH": 844
+ },
+ "obys-1280": {
+  "bg": "rgb(255, 255, 255)",
+  "color": "rgb(0, 0, 0)",
+  "bodyFont": "Obys",
+  "canvases": 1,
+  "fonts": [
+   "Obys"
+  ],
+  "h1": null,
+  "h2": null,
+  "p": {
+   "font": "Obys",
+   "size": "9.77777px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "-0.0977777px",
+   "lh": "11.7333px",
+   "tt": "none",
+   "text": "The studio is shaped by people who care\ndeeply about design and the process behi"
+  },
+  "a": {
+   "font": "Obys",
+   "size": "9.77777px",
+   "weight": "400",
+   "color": "rgb(255, 255, 255)",
+   "ls": "-0.0977777px",
+   "lh": "11.7333px",
+   "tt": "none",
+   "text": ""
+  },
+  "button": {
+   "font": "Obys",
+   "size": "9.77777px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "11.7333px",
+   "tt": "none",
+   "text": "Vertical,"
+  },
+  "nav": {
+   "bg": "rgba(0, 0, 0, 0)",
+   "pos": "fixed",
+   "h": 57.390625
+  },
+  "radii": [],
+  "shadows": 0,
+  "title": "Obys Agency",
+  "links": 194,
+  "scrollH": 800
+ },
+ "obys-390": {
+  "bg": "rgb(255, 255, 255)",
+  "color": "rgb(0, 0, 0)",
+  "bodyFont": "Obys",
+  "canvases": 1,
+  "fonts": [
+   "Obys"
+  ],
+  "h1": null,
+  "h2": null,
+  "p": {
+   "font": "Obys",
+   "size": "2.97916px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "-0.0297916px",
+   "lh": "3.575px",
+   "tt": "none",
+   "text": "The studio is shaped by people who care\ndeeply about design and the process behi"
+  },
+  "a": {
+   "font": "Obys",
+   "size": "2.97916px",
+   "weight": "400",
+   "color": "rgb(255, 255, 255)",
+   "ls": "-0.0297916px",
+   "lh": "3.575px",
+   "tt": "none",
+   "text": ""
+  },
+  "button": {
+   "font": "Obys",
+   "size": "2.97916px",
+   "weight": "400",
+   "color": "rgb(0, 0, 0)",
+   "ls": "normal",
+   "lh": "3.575px",
+   "tt": "none",
+   "text": "Vertical,"
+  },
+  "nav": {
+   "bg": "rgba(0, 0, 0, 0)",
+   "pos": "fixed",
+   "h": 17.484375
+  },
+  "radii": [],
+  "shadows": 0,
+  "title": "Obys Agency",
+  "links": 194,
+  "scrollH": 844
+ }
+}

@@ -1,0 +1,654 @@
+[
+ {
+  "path": "/agentic-ai",
+  "fixes": [
+   {
+    "quote": "Put the scope in the process. A model can ignore a scope written in its prompt.",
+    "rule": "imperative heading",
+    "rewrite": "The scope belongs in the process, because a model can ignore one written in its prompt."
+   },
+   {
+    "quote": "A boundary written in a prompt can be ignored. The fix was",
+    "rule": "passive voice / echo of heading",
+    "rewrite": "The prompt limit did not hold. The fix was"
+   },
+   {
+    "quote": "Anything that can mark work done is a mechanism whose failure mode looks exactly like the thing working, so it needs",
+    "rule": "awkward",
+    "rewrite": "Anything that can mark work done fails in a way that looks like success, so it needs"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/ai-readiness",
+  "fixes": [
+   {
+    "quote": "answers show whether AI is likely to help.",
+    "rule": "vague claim",
+    "rewrite": "answers show which of those areas are ready for AI and which are not."
+   },
+   {
+    "quote": "takes about three minutes.",
+    "rule": "illustrative hedging",
+    "rewrite": "takes three minutes."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/blog/ai-team-page-honesty",
+  "fixes": [
+   {
+    "quote": "Somebody will find out. With a roster",
+    "rule": "illogical (Second without First)",
+    "rewrite": "First, someone will find out. With a roster"
+   },
+   {
+    "quote": "The alternative is describing them as a system, which tells a client little.\n            \"Automated proposal generation\" tells you nothing about what happens on",
+    "rule": "word echo",
+    "rewrite": "The alternative is describing them as a system, which tells a client little.\n            \"Automated proposal generation\" says nothing about what happens on a\n            Tuesday."
+   },
+   {
+    "quote": "It costs some credibility. \"One person",
+    "rule": "word echo with heading",
+    "rewrite": "I lose some credibility. \"One person"
+   },
+   {
+    "quote": "I would rather have the ones who are impressed by the first. A client",
+    "rule": "vague",
+    "rewrite": "I would rather have the prospects who are impressed by the first sentence. A client"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/blog/canonical-tag-noindex",
+  "fixes": [
+   {
+    "quote": "<code> /blog</code>. Fine.",
+    "rule": "filler",
+    "rewrite": "<code> /blog</code>."
+   },
+   {
+    "quote": "<p>Which renders, on every post, as:</p>",
+    "rule": "awkward",
+    "rewrite": "<p>On every post, that renders as:</p>"
+   },
+   {
+    "quote": "The author markup, structured data and titles on those pages were dropped with\n            them. All of it was correct, on pages that had asked to be ignored.",
+    "rule": "passive voice",
+    "rewrite": "Google dropped the author markup, structured data and titles on those pages along\n            with them. All of it was correct, on pages that had asked to be ignored."
+   },
+   {
+    "quote": "that page is\n            pointing its value somewhere else.",
+    "rule": "awkward",
+    "rewrite": "that page points\n            at a different URL."
+   },
+   {
+    "quote": "Which is presumably how\n            it ended up in the layout to begin with.",
+    "rule": "awkward fragment",
+    "rewrite": "That is probably how\n            it ended up in the layout to begin with."
+   },
+   {
+    "quote": "The correct fix is simpler.",
+    "rule": "word echo",
+    "rewrite": "The fix that works is simpler."
+   },
+   {
+    "quote": "A test that checks the output <em>arrives</em> catches them.",
+    "rule": "awkward",
+    "rewrite": "A test that checks the delivered output catches them."
+   },
+   {
+    "quote": "and it is about eight lines.",
+    "rule": "illustrative hedging",
+    "rewrite": "and it is eight lines."
+   },
+   {
+    "quote": "A build that passes shows the code compiled. It does not show that the change\n            took effect.",
+    "rule": "negative parallelism",
+    "rewrite": "A passing build shows that the code compiled and says nothing about whether the\n            change took effect."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/blog/five-workflows-no-code",
+  "fixes": [
+   {
+    "quote": "\n            These five workflows take small business owners the most time.",
+    "rule": "awkward",
+    "rewrite": "\n            These five workflows cost small business owners the most time."
+   },
+   {
+    "quote": "Most small business owners I work with don&apos;t need an AI strategy. They need time back.",
+    "rule": "negative parallelism",
+    "rewrite": "Most small business owners I work with want time back more than they want an AI strategy."
+   },
+   {
+    "quote": "This is a common revenue leak, and you can fix it",
+    "rule": "vague",
+    "rewrite": "Forgotten follow-ups lose sales, and you can fix it"
+   },
+   {
+    "quote": "ConvertKit, MailerLite, even Gmail&apos;s built-in templates all do this for free or close to it.",
+    "rule": "vague hedging",
+    "rewrite": "ConvertKit, MailerLite and Gmail&apos;s built-in templates all do this, and the Gmail templates are free."
+   },
+   {
+    "quote": "5. Social media posting: the schedule",
+    "rule": "awkward heading",
+    "rewrite": "5. Social media posts on a schedule"
+   },
+   {
+    "quote": "generates five captions per post). You write the prompts and schedule a month of posts in one sitting.",
+    "rule": "repeated sentence / word echo",
+    "rewrite": "writes five captions per post). You write the prompts and the tool publishes them."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/blog/llc-at-seventeen",
+  "fixes": [
+   {
+    "quote": "            Directly from{\" \"}",
+    "rule": "fragment",
+    "rewrite": "            You get it directly from{\" \"}"
+   },
+   {
+    "quote": "Budget more time than you think.",
+    "rule": "vague",
+    "rewrite": "Budget more time than the filing and the EIN took combined."
+   },
+   {
+    "quote": "That last one is the step I would emphasise to anybody doing this young. It is\n            very easy to spend months on the apparatus of having a company and ne",
+    "rule": "figurative language / word echo",
+    "rewrite": "I would stress that last step most to anybody doing this young. It is easy to\n            spend months on paperwork and never once run the business the paperwork exists for."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/blog/shipped-is-not-activated",
+  "fixes": [
+   {
+    "quote": "Ask it about someone who found the page cold, decided quickly, and reached for a card, and leave out the warm lead who already emailed you.",
+    "rule": "awkward",
+    "rewrite": "Ask it about a visitor who found the page cold, decided quickly and reached for a card. Leave out the warm lead who already emailed you."
+   },
+   {
+    "quote": "The failures are small, so they last",
+    "rule": "slogan",
+    "rewrite": "Small failures go unfixed"
+   },
+   {
+    "quote": "fail that question in unremarkable ways.",
+    "rule": "vague filler",
+    "rewrite": "fail that question in small ways."
+   },
+   {
+    "quote": "Pay attention to where you stall.",
+    "rule": "vague",
+    "rewrite": "Note where you stall."
+   },
+   {
+    "quote": "Usually the fix is a clear path from the homepage to the payment, and a redesign is rarely needed.",
+    "rule": "awkward",
+    "rewrite": "A clear path from the homepage to the payment usually fixes it, with no redesign needed."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/blog/starting-a-business-at-alabama",
+  "fixes": [
+   {
+    "quote": "Fewer aim at the businesses, and\n            local businesses often decide quickly and you can walk in.",
+    "rule": "awkward",
+    "rewrite": "Fewer aim at local businesses, which\n            often decide quickly and sit within walking distance."
+   },
+   {
+    "quote": "The full list of what is already covered by tuition is{\" \"}\n            <Link href=\"/blog/free-at-alabama\" style={link}>here</Link>.",
+    "rule": "passive voice",
+    "rewrite": "Tuition already covers more than this. The full list is{\" \"}\n            <Link href=\"/blog/free-at-alabama\" style={link}>here</Link>."
+   },
+   {
+    "quote": "It takes less work than most people expect.",
+    "rule": "vague claim",
+    "rewrite": "The filing is an online form."
+   },
+   {
+    "quote": "Interruptions compete for your hours. A client",
+    "rule": "word echo",
+    "rewrite": "Interruptions are what compete. A client"
+   },
+   {
+    "quote": "Start with something that already exists",
+    "rule": "imperative heading",
+    "rewrite": "A problem that already exists is the best place to start"
+   },
+   {
+    "quote": "a lot of local businesses have a\n            specific problem you can see from outside and fix, and no one has told them.\n            Start with that problem on",
+    "rule": "awkward",
+    "rewrite": "many local businesses have a\n            specific problem you can see from outside and fix, and nobody has told them.\n            Begin with one of those problems before you invent an idea."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/blog/what-the-agents-get-wrong",
+  "fixes": [
+   {
+    "quote": "Blocking findings got marked resolved by a mechanism whose failure looks the\n            same as success.",
+    "rule": "passive voice",
+    "rewrite": "The auditor marked blocking findings resolved, and that mechanism fails in a way\n            that looks the same as success."
+   },
+   {
+    "quote": "It had not broken out of anything. The tooling it inherited from its environment\n            included more than the prompt described, and only the prompt said o",
+    "rule": "negative framing",
+    "rewrite": "Its environment had given it more tooling than the prompt described, and only\n            the prompt said otherwise."
+   },
+   {
+    "quote": "is the cheapest safety property available, and it took one architectural\n            decision.",
+    "rule": "unverifiable superlative",
+    "rewrite": "is a cheap safety property, and it took one architectural\n            decision."
+   },
+   {
+    "quote": "is information for\n            another agent to act on, never a command it must obey.",
+    "rule": "negative parallelism",
+    "rewrite": "is a claim the\n            receiving agent checks before it acts."
+   },
+   {
+    "quote": "          <p>\n            Each failure here came from a harness that could not tell working from broken,\n            and from me trusting its report.\n          ",
+    "rule": "recap of the page",
+    "rewrite": ""
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/blog/write-a-page-an-ai-will-quote",
+  "fixes": [
+   {
+    "quote": "comprehensively about a topic",
+    "rule": "reflex word",
+    "rewrite": "thoroughly about a topic"
+   },
+   {
+    "quote": "Write sentences that survive being removed",
+    "rule": "imperative heading",
+    "rewrite": "Sentences that survive being removed"
+   },
+   {
+    "quote": "An About page in first\n            person, which is how a human wants to read it, and{\" \"}\n            <Link href=\"/who\" style={link}>an answer page in third pe",
+    "rule": "fragment",
+    "rewrite": "One is an About page in first\n            person, which is how a human wants to read it. The other is{\" \"}\n            <Link href=\"/who\" style={link}>an answer page in third person</Link>, which is\n  "
+   },
+   {
+    "quote": "Say the disambiguation out loud",
+    "rule": "imperative heading",
+    "rewrite": "Saying the disambiguation out loud"
+   },
+   {
+    "quote": "<h2 style={H2}>Cite sources inline</h2>",
+    "rule": "imperative heading",
+    "rewrite": "<h2 style={H2}>Inline source citations</h2>"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/case-studies",
+  "fixes": [
+   {
+    "quote": "within about 60 days of starting",
+    "rule": "illustrative hedging",
+    "rewrite": "within 60 days of starting"
+   },
+   {
+    "quote": "Book a <em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>session.</em>",
+    "rule": "imperative heading",
+    "rewrite": "Consulting <em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>sessions.</em>"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/courses/college-apps/lessons",
+  "fixes": [
+   {
+    "quote": "            Access the Course\n",
+    "rule": "imperative heading",
+    "rewrite": "            Course access\n"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/digital/ai-faq-builder",
+  "fixes": [
+   {
+    "quote": "Generate FAQs <em",
+    "rule": "imperative heading",
+    "rewrite": "FAQs <em"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/digital/tools/*",
+  "fixes": [
+   {
+    "quote": "Describe the post (or paste a photo description), get back 5 different caption options.",
+    "rule": "comma splice",
+    "rewrite": "Describe the post or paste a photo description, and get back 5 different caption options."
+   },
+   {
+    "quote": "Each labeled with its angle so you can pick by fit.",
+    "rule": "fragment",
+    "rewrite": "Each one carries its angle label so you can pick by fit."
+   },
+   {
+    "quote": "label: \"What's truly different about you\"",
+    "rule": "reflex intensifier",
+    "rewrite": "label: \"What's different about you\""
+   },
+   {
+    "quote": "\"What's the most important early-win for them?\"",
+    "rule": "punctuation",
+    "rewrite": "\"What's the most important early win for them?\""
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/portfolio",
+  "fixes": [
+   {
+    "quote": "What we&apos;ve <em",
+    "rule": "inconsistent voice (we vs I)",
+    "rewrite": "What I&apos;ve <em"
+   },
+   {
+    "quote": "Live products, client sites and internal systems. Each one is live and I maintain it.",
+    "rule": "word echo",
+    "rewrite": "Live products, client sites and internal systems, all maintained by me."
+   },
+   {
+    "quote": "See what your city has been prayed over.",
+    "rule": "illogical",
+    "rewrite": "See which parts of your city have been prayed over."
+   },
+   {
+    "quote": "Built for actual daily use, not as a productivity app.",
+    "rule": "negative parallelism / intensifier",
+    "rewrite": "Built as a daily prayer journal rather than a productivity app."
+   },
+   {
+    "quote": "subtitle: \"A reading app built around curated lists.\"",
+    "rule": "word echo",
+    "rewrite": "subtitle: \"Social reading with lists in place of star ratings.\""
+   },
+   {
+    "quote": "A social reading app built around curated lists instead of ratings.",
+    "rule": "word echo",
+    "rewrite": "A social reading app built around curated lists."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": [
+   {
+    "quote": "around seven hundred at a time (UA Today description)",
+    "why": "Hedged count; the exact figure needs a live count from the UA Today feed, which I could not verify."
+   },
+   {
+    "quote": "A Next.js 16 site with 31 free tools",
+    "why": "Resume print says 29 FREE TOOLS; the counts disagree and need one verified number."
+   }
+  ]
+ },
+ {
+  "path": "/faq",
+  "fixes": [
+   {
+    "quote": "Build an FAQ with the AI FAQ Builder.",
+    "rule": "imperative heading",
+    "rewrite": "The AI FAQ Builder writes your FAQ."
+   },
+   {
+    "quote": "The AI FAQ Builder writes 6 to 10 questions and answers you can paste into your site. It is free.",
+    "rule": "word echo",
+    "rewrite": "It writes 6 to 10 questions and answers you can paste into your site, and it is free."
+   },
+   {
+    "quote": "Most sessions are designed for people who've never used AI tools before.",
+    "rule": "passive voice",
+    "rewrite": "I design most sessions for people who have never used AI tools."
+   },
+   {
+    "quote": "as a fixed-bug-rate retainer",
+    "rule": "illogical wording",
+    "rewrite": "as a fixed-rate bug-fix retainer"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/resume/print",
+  "fixes": [
+   {
+    "quote": "on-site delivery. Grew out of Mantle Field Services.",
+    "rule": "illogical (grew out of itself)",
+    "rewrite": "on-site delivery. Grew out of the earlier Mantle Field Services operation."
+   },
+   {
+    "quote": "Awarded for servant leadership and Christian character throughout the school year.",
+    "rule": "passive voice",
+    "rewrite": "Recognized servant leadership and Christian character throughout the school year."
+   },
+   {
+    "quote": "interventions for mental\n                health, bridging neuroscience, technology, and human dignity. Simultaneously building\n                Purcell Ventures ",
+    "rule": "slogan / figurative",
+    "rewrite": "interventions for mental\n                health. Building Purcell Ventures and a personal content brand on psychology, faith,\n                and public discussion."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": [
+   {
+    "quote": "Active revenue.",
+    "why": "Claim needs the owner to confirm it is currently true."
+   },
+   {
+    "quote": "29 FREE TOOLS",
+    "why": "Conflicts with 31 on /portfolio; verify the count."
+   }
+  ]
+ },
+ {
+  "path": "/shop/subject-lines",
+  "fixes": [
+   {
+    "quote": "One sample shown from each.",
+    "rule": "passive voice",
+    "rewrite": "One sample from each."
+   },
+   {
+    "quote": "<li>You don&apos;t need a full template pack, just better hooks</li>\n              <li>You want better subject lines without the full pack</li>",
+    "rule": "word echo",
+    "rewrite": "<li>You don&apos;t need a full template pack, just better hooks</li>\n              <li>You want to A/B test subject lines against each other</li>"
+   },
+   {
+    "quote": "($29), it includes this</li>",
+    "rule": "comma splice",
+    "rewrite": "($29), which includes this</li>"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/steady",
+  "fixes": [
+   {
+    "quote": "        <div style={{ marginBottom: \"48px\", padding: \"20px 24px\", background: \"rgba(122, 170, 106, 0.06)\", border: \"1px solid #7aaa6a\", fontSize: \"13px\", color:",
+    "rule": "signposted recap of the plan",
+    "rewrite": ""
+   },
+   {
+    "quote": "        <p style={{ fontSize: \"14px\", color: \"var(--color-warm-text-muted)\", marginBottom: \"24px\", lineHeight: 1.6, maxWidth: \"680px\" }}>\n          This is a sa",
+    "rule": "signposted lead-in",
+    "rewrite": ""
+   },
+   {
+    "quote": " Designed for adult children managing parents' or grandparents' tech.",
+    "rule": "word echo with 'Best for' line",
+    "rewrite": ""
+   },
+   {
+    "quote": "desc: \"Set up 1Password or Bitwarden. I move",
+    "rule": "fragment",
+    "rewrite": "desc: \"I set up 1Password or Bitwarden. I move"
+   },
+   {
+    "quote": "The plan is written down, stored securely and tested.",
+    "rule": "passive voice",
+    "rewrite": "I write the plan down, store it securely and test it."
+   },
+   {
+    "quote": "and three routines set up (morning, evening, away)",
+    "rule": "passive voice",
+    "rewrite": "and three routines (morning, evening, away) that I set up"
+   },
+   {
+    "quote": " Here is how they compare.",
+    "rule": "signposted lead-in",
+    "rewrite": ""
+   },
+   {
+    "quote": "The service is built for it",
+    "rule": "passive voice / vague",
+    "rewrite": "Built for non-technical people"
+   },
+   {
+    "quote": "            Start with an intake form\n",
+    "rule": "imperative heading",
+    "rewrite": "            The intake form\n"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/uses",
+  "fixes": [
+   {
+    "quote": "Windows-side cron, every ElijahBot job runs on this.",
+    "rule": "comma splice",
+    "rewrite": "Windows-side cron. Every ElijahBot job runs on it."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/courses/ai-automation/lessons",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/digital/finder",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/digital/tools/about-page",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/digital/tools/caption-generator",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/digital/tools/customer-onboarding",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/digital/tools/faq-builder",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/digital/tools/meeting-agenda",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/digital/tools/review-response",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/digital/tools/tagline",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/icon",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/newsletter",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/services",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/shop/cold-email-pack",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/writing",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ }
+]

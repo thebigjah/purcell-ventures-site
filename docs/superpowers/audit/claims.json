@@ -1,0 +1,4005 @@
+[
+ {
+  "id": "c001",
+  "claim": "Digital services start from $99/month.",
+  "quote": "Digital services from $99/mo",
+  "pages": [
+   "/",
+   "/what-is-purcell-ventures"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c002",
+  "claim": "AI consulting is from $125 per person, 2-hour minimum, on-site or virtual.",
+  "quote": "FROM $125 PER PERSON",
+  "pages": [
+   "/"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c003",
+  "claim": "Steady personal IT is from $79 a month; one-off sessions are $99 a session.",
+  "quote": "FROM $79 A MONTH",
+  "pages": [
+   "/"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c004",
+  "claim": "College Application Playbook course costs $297.",
+  "quote": "$297",
+  "pages": [
+   "/",
+   "/courses"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c005",
+  "claim": "Business Launch Playbook course costs $397 (7 modules, 26 lessons).",
+  "quote": "7 modules, 26 lessons",
+  "pages": [
+   "/",
+   "/courses"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c006",
+  "claim": "Zero to Automated course costs $397 (8 modules, 25 lessons, 7 code templates).",
+  "quote": "8 modules, 25 lessons, 7 code templates",
+  "pages": [
+   "/",
+   "/courses"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c007",
+  "claim": "Websites for University of Alabama students and student-run businesses cost $500, plus optional $25 a month to keep current.",
+  "quote": "the price is $500, with an optional $25 a month",
+  "pages": [
+   "/ai-consultant-tuscaloosa"
+  ],
+  "category": "price",
+  "conflict": "/digital and /sites say pricing starts at $99/mo or is quoted on discovery call."
+ },
+ {
+  "id": "c008",
+  "claim": "Example quote in sales day: Growth tier $179/mo plus $700 setup; tier ladder promotes Apprentice to Closer at 5 closes.",
+  "quote": "$179/mo plus $700 setup",
+  "pages": [
+   "/blog/ai-augmented-sales-rep-day",
+   "/sales-rep"
+  ],
+  "category": "price",
+  "conflict": "/sales-rep says promotion to Closer also requires 80% on the quiz and 5 course closes."
+ },
+ {
+  "id": "c009",
+  "claim": "Blog: small business site pricing tiers: free to $50/mo builder, $400 to $1,500 template, $1,500 to $5,000 custom, $99 to $279/mo subscription, $10,000 and up.",
+  "quote": "$400 to $1,500 once",
+  "pages": [
+   "/blog/what-a-website-actually-costs"
+  ],
+  "category": "price",
+  "conflict": "Blog says custom software work starts at $1,500 and a substantial build runs to $5,000; /software and /pricing-comparison say full apps $5,000-$15,000+."
+ },
+ {
+  "id": "c010",
+  "claim": "Elijah's digital tiers run $99, $179 and $279 a month.",
+  "quote": "My digital tiers run $99, $179 and $279 a month.",
+  "pages": [
+   "/blog/what-a-website-actually-costs"
+  ],
+  "category": "price",
+  "conflict": "/ says digital pricing on discovery call; /digital ROI calculator says $75/$125/$175."
+ },
+ {
+  "id": "c011",
+  "claim": "Domain costs $12 to $20 a year; email at domain a few dollars per user per month.",
+  "quote": "A domain costs $12 to $20 a year.",
+  "pages": [
+   "/blog/what-a-website-actually-costs"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c012",
+  "claim": "Elijah built his own CRM in a week instead of HubSpot, which he says would cost $200 to $400/month ($2,400 to $4,800/year); cost so far about $15 in Anthropic API usage.",
+  "quote": "The build took a week.",
+  "pages": [
+   "/blog/why-i-built-crm-from-scratch",
+   "/portfolio"
+  ],
+  "category": "price",
+  "conflict": "/who lists the post title as 'instead of paying $1,200/yr for HubSpot'; the post says $200-$400 a month and 'HubSpot starts at $50 a month'."
+ },
+ {
+  "id": "c013",
+  "claim": "A plumber the author knows paid $400/month for an AI receptionist and cancelled after six months.",
+  "quote": "$400/month",
+  "pages": [
+   "/blog/why-most-ai-tools-waste-money"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c014",
+  "claim": "Print cost guidance: business cards ~$40/100 at PrintingForLess; Vistaprint 100 cards about $20; EDDM about $0.20 per house.",
+  "quote": "100 cards cost about $20",
+  "pages": [
+   "/business-cards",
+   "/print"
+  ],
+  "category": "price",
+  "conflict": "/business-cards says ~$20/100 on Vistaprint; /print says ~$40/100 at PrintingForLess."
+ },
+ {
+  "id": "c015",
+  "claim": "AI consulting 1-on-1 is $175 per hour (2-hour minimum recommended).",
+  "quote": "1-on-1 ($175/hr)",
+  "pages": [
+   "/consulting"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c016",
+  "claim": "AI consulting small group is $125 per person per session, 2-hour minimum, 2 to 8 people.",
+  "quote": "small group ($125/person)",
+  "pages": [
+   "/consulting",
+   "/"
+  ],
+  "category": "price",
+  "conflict": "/consulting hero says '1-on-1 or up to 30+' participants; pricing says small group 2 to 8, workshop up to 20."
+ },
+ {
+  "id": "c017",
+  "claim": "AI consulting half-day workshop is $2,500 flat for up to 20 people.",
+  "quote": "$2,500 flat up to 20 people",
+  "pages": [
+   "/consulting"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c018",
+  "claim": "Zero to Automated: Self-Paced $397 or 3 payments of $139; Coaching $1,297 or 3 payments of $449; 1:1 Intensive $2,997.",
+  "quote": "or 3 payments of $139",
+  "pages": [
+   "/courses/ai-automation"
+  ],
+  "category": "price",
+  "conflict": "3 x $139 = $417 and 3 x $449 = $1,347, more than the stated lump sums."
+ },
+ {
+  "id": "c019",
+  "claim": "Zero to Automated is $397 at launch.",
+  "quote": "The course is $397 at launch.",
+  "pages": [
+   "/courses/ai-automation",
+   "/courses"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c020",
+  "claim": "Business Launch Playbook: Self-Paced $397, Coaching Track $1,297, 1:1 Intensive $2,997.",
+  "quote": "COACHING TRACK $1,297",
+  "pages": [
+   "/courses/business-launch",
+   "/sales-rep"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c021",
+  "claim": "College Application Playbook: Self-Paced $297, Coaching Track $997, 1:1 Intensive $2,500.",
+  "quote": "COACHING TRACK $997",
+  "pages": [
+   "/courses/college-apps",
+   "/courses",
+   "/"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c022",
+  "claim": "Digital: Starter $99/mo, Growth $179/mo, Full $279/mo; setup $400 to $1,000.",
+  "quote": "Starter $99/mo, Growth $179/mo, Full $279/mo. Setup $400 to $1,000.",
+  "pages": [
+   "/digital"
+  ],
+  "category": "price",
+  "conflict": "/digital ROI calculator lists plans as Starter $75/mo, Growth $125/mo, Full $175/mo; / and /sites say digital pricing is quoted on discovery call."
+ },
+ {
+  "id": "c023",
+  "claim": "Digital ROI calculator lists Starter $75/mo, Growth $125/mo, Full $175/mo.",
+  "quote": "Starter $75/Mo Growth $125/Mo Full $175/Mo",
+  "pages": [
+   "/digital"
+  ],
+  "category": "price",
+  "conflict": "Same page elsewhere: Starter $99, Growth $179, Full $279."
+ },
+ {
+  "id": "c024",
+  "claim": "Agencies charge $2,000 or more per month; Elijah's plans start at $99.",
+  "quote": "Agencies charge $2,000 or more per month.",
+  "pages": [
+   "/digital"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c025",
+  "claim": "Links page: Digital from $99/mo, AI consulting from $125/person, Custom Software from $1,500, College Playbook $297, Business Launch $397, Zero to Automated $397.",
+  "quote": "Custom Software Apps, platforms and AI tools. From $1,500.",
+  "pages": [
+   "/links"
+  ],
+  "category": "price",
+  "conflict": "/ says custom software pricing is set on a discovery call."
+ },
+ {
+  "id": "c026",
+  "claim": "Typical agency website build $5,000-15,000 + $200-500/mo hosting; freelancer $1,500-4,000; DIY $0-29/mo.",
+  "quote": "$5,000-15,000 + $200-500/mo hosting",
+  "pages": [
+   "/pricing-comparison"
+  ],
+  "category": "price",
+  "conflict": "/digital says agencies charge $2,000 or more per month."
+ },
+ {
+  "id": "c027",
+  "claim": "A $99/mo customer staying 3 years pays $3,564.",
+  "quote": "$3,564",
+  "pages": [
+   "/pricing-comparison"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c028",
+  "claim": "Typical agency AI consulting $250-500/hr; freelancer $100-200/hr; enterprise training $400-1,500/person.",
+  "quote": "$250-500/hr enterprise consulting",
+  "pages": [
+   "/pricing-comparison"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c029",
+  "claim": "Small group of 8 people costs $1,000 (8 x $125); workshop of 20 = $125/person.",
+  "quote": "$1,000 (8 × $125)",
+  "pages": [
+   "/pricing-comparison"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c030",
+  "claim": "Custom software small project $1,500-3,500 vs agency $8,000-25,000; full app $5,000-15,000+ vs agency $25,000-150,000+.",
+  "quote": "$25,000-150,000+",
+  "pages": [
+   "/pricing-comparison"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c031",
+  "claim": "Print rack card advertises Digital Services starting at $99/mo.",
+  "quote": "STARTING AT $99 / mo",
+  "pages": [
+   "/print"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c032",
+  "claim": "Digital Starter plan is $99/mo with $400 setup (site, AI chatbot, lead form).",
+  "quote": "STARTER $99/mo $400 setup",
+  "pages": [
+   "/sales-rep",
+   "/pricing-comparison",
+   "/digital"
+  ],
+  "category": "price",
+  "conflict": "/ and /sites say digital pricing is set on a discovery call; /digital ROI calculator says Starter $75/mo."
+ },
+ {
+  "id": "c033",
+  "claim": "Digital Growth plan is $179/mo with $700 setup (adds booking, email, social, reviews).",
+  "quote": "GROWTH $179/mo $700 setup",
+  "pages": [
+   "/sales-rep",
+   "/pricing-comparison",
+   "/digital"
+  ],
+  "category": "price",
+  "conflict": "/digital ROI calculator says Growth $125/mo."
+ },
+ {
+  "id": "c034",
+  "claim": "Digital Full plan is $279/mo with $1,000 setup (adds CRM, invoicing, AI content).",
+  "quote": "FULL $279/mo $1,000 setup",
+  "pages": [
+   "/sales-rep",
+   "/pricing-comparison",
+   "/digital"
+  ],
+  "category": "price",
+  "conflict": "/digital ROI calculator says Full $175/mo."
+ },
+ {
+  "id": "c035",
+  "claim": "Course prices per sales-rep page: College Apps $297 (17 lessons), Business Launch $397 (26 lessons), Zero to Automated $397 self-paced / $1,297 with coaching / $2,997 1:1 (25 lessons, 8 modules).",
+  "quote": "$397 self-paced, $1,297 with coaching, $2,997 1:1",
+  "pages": [
+   "/sales-rep",
+   "/courses"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c036",
+  "claim": "Mantle Field Services: gutter cleaning from $100, pressure washing from $75, lawn care from $50; family runs most jobs.",
+  "quote": "gutter cleaning from $100, pressure washing from $75, lawn care from $50",
+  "pages": [
+   "/sales-rep"
+  ],
+  "category": "price",
+  "conflict": "/ says Mantle is Metro Atlanta; /resume says Elijah is Founder & Operator; /sales-rep says the family runs most jobs."
+ },
+ {
+  "id": "c037",
+  "claim": "PV AI Starter Kit costs $19 one-time.",
+  "quote": "$19",
+  "pages": [
+   "/shop",
+   "/shop/starter-kit",
+   "/shop/bundle",
+   "/shop/cold-email-pack"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c038",
+  "claim": "Cold Email Mastery Pack costs $29 one-time.",
+  "quote": "$29",
+  "pages": [
+   "/shop",
+   "/shop/cold-email-pack",
+   "/shop/bundle",
+   "/free"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c039",
+  "claim": "Cold Email Subject Line Library costs $9 one-time.",
+  "quote": "$9",
+  "pages": [
+   "/shop",
+   "/shop/subject-lines",
+   "/shop/bundle"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c040",
+  "claim": "Bundle price is $39: banner says 'save $9, get both kits' (Starter $19 + Cold Email $29 = $48) while the product says Complete Pack of all 3 saves $18 ($57 separately).",
+  "quote": "Get both kits for $39",
+  "pages": [
+   "/shop",
+   "/shop/bundle",
+   "/shop/cold-email-pack"
+  ],
+  "category": "price",
+  "conflict": "/shop banner: 'SAVE $9, both kits for $39' ($48 separately); /shop product card and /shop/bundle: all three for $39, $18 less than $57. /shop/cold-email-pack: bundle with Starter Kit for $39 instead of $48."
+ },
+ {
+  "id": "c041",
+  "claim": "Comparison prices claimed: Apollo.io/Lemlist $99 to $179/month; sales copywriter $300-$2,000; cold outreach course $497-$1,500.",
+  "quote": "$99 to $179/month subscription",
+  "pages": [
+   "/shop/cold-email-pack"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c042",
+  "claim": "Whale Alerts Premium costs $9/month via Telegram, 6 chains (ETH, Base, ARB, OP, MATIC, SOL), alerts within a minute; free channel is ETH only with 15-minute delay.",
+  "quote": "Whale Alerts Premium. $9/mo.",
+  "pages": [
+   "/shop/wallet-tracker-premium"
+  ],
+  "category": "price",
+  "conflict": "/portfolio says Wallet Tracker watches Ethereum and Solana wallets and alerts via ntfy, Discord or Telegram; /shop meta lists only three products."
+ },
+ {
+  "id": "c043",
+  "claim": "Custom software: small projects $1,500 to $3,500, full apps $5,000 to $15,000 and up; /portfolio says custom software from $1,500.",
+  "quote": "Small projects $1,500 to $3,500, full apps $5,000 to $15,000 and up.",
+  "pages": [
+   "/software",
+   "/portfolio"
+  ],
+  "category": "price",
+  "conflict": "/ and /software body say pricing set on discovery call; meta description and /portfolio give figures."
+ },
+ {
+  "id": "c044",
+  "claim": "Steady One-Off Help is $99 flat: one 90-minute session in person (Metro Atlanta) or video.",
+  "quote": "One-Off Help $99 flat",
+  "pages": [
+   "/steady",
+   "/"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c045",
+  "claim": "Steady Monthly Care is $79/month: unlimited texts in business hours, 30-minute video check-in and 1 in-person visit (Metro Atlanta).",
+  "quote": "Monthly Care $79 / month",
+  "pages": [
+   "/steady",
+   "/"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c046",
+  "claim": "Steady Family Care is $149/month covering up to 4 family members.",
+  "quote": "Family Care $149 / month",
+  "pages": [
+   "/steady"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c047",
+  "claim": "Steady packages: New phone setup $79, ChatGPT crash course $129 (90 min), Password manager migration $99, Medication reminder setup $99, Smart home starter $199, Digital legacy plan $149.",
+  "quote": "Smart home starter $199",
+  "pages": [
+   "/steady"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c048",
+  "claim": "AI Will tool is free for over-60 SMB owners and produces a continuity document from a 30-minute interview.",
+  "quote": "Free for over-60 SMB owners.",
+  "pages": [
+   "/tools"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c049",
+  "claim": "Blog claim: HubSpot costs $1,200/yr; Elijah sells a $19 item others sell at $497.",
+  "quote": "paying $1,200/yr for HubSpot",
+  "pages": [
+   "/who",
+   "/blog"
+  ],
+  "category": "price",
+  "conflict": null
+ },
+ {
+  "id": "c050",
+  "claim": "Home hero says Purcell Ventures has 5 active divisions and 1 pending.",
+  "quote": "5 ACTIVE, 1 PENDING",
+  "pages": [
+   "/"
+  ],
+  "category": "count",
+  "conflict": "Home says 5 active + 1 pending (6 listed); /about says 'four divisions'; /what-is-purcell-ventures says 'Four things' (Digital, Consulting, Software, Steady)."
+ },
+ {
+  "id": "c051",
+  "claim": "Digital Add-ons catalog contains 22 add-ons.",
+  "quote": "22 add-ons that plug into your site",
+  "pages": [
+   "/"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c052",
+  "claim": "Custom software portfolio is 17 projects (web, mobile and AI).",
+  "quote": "PORTFOLIO 17 PROJECTS",
+  "pages": [
+   "/"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c053",
+  "claim": "Site offers 31 free tools.",
+  "quote": "31 free tools",
+  "pages": [
+   "/"
+  ],
+  "category": "count",
+  "conflict": "/ says 31 free tools; /about says 29 free tools live."
+ },
+ {
+  "id": "c054",
+  "claim": "AI Readiness Test is 10 questions placing a business in one of four tiers.",
+  "quote": "10 questions that place your business in one of four tiers",
+  "pages": [
+   "/"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c055",
+  "claim": "How we work: 5-stage process, 6 commitments.",
+  "quote": "Our 5-stage process, 6 commitments",
+  "pages": [
+   "/"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c056",
+  "claim": "Elijah says he runs a company with four divisions.",
+  "quote": "I run a company with four divisions",
+  "pages": [
+   "/about"
+  ],
+  "category": "count",
+  "conflict": "/about says four divisions; / says 5 active, 1 pending."
+ },
+ {
+  "id": "c057",
+  "claim": "Elijah has 29 free tools live.",
+  "quote": "29 free tools live",
+  "pages": [
+   "/about"
+  ],
+  "category": "count",
+  "conflict": "/about says 29 free tools; / says 31 free tools."
+ },
+ {
+  "id": "c058",
+  "claim": "Twenty-nine free tools are live on the open web.",
+  "quote": "Twenty-nine free tools are live",
+  "pages": [
+   "/ai-consultant-tuscaloosa",
+   "/resume",
+   "/about"
+  ],
+  "category": "count",
+  "conflict": "/ and others say 31 free tools."
+ },
+ {
+  "id": "c059",
+  "claim": "AI Readiness Test: 10 questions, about 3 minutes, scored 0 to 3 per answer out of 30, placing the taker in one of four tiers; no email.",
+  "quote": "Each answer scores 0 to 3 points, for a total out of 30",
+  "pages": [
+   "/ai-readiness",
+   "/",
+   "/links"
+  ],
+  "category": "count",
+  "conflict": "Meta description of /ai-readiness says 'get 3 next steps'; / says four tiers, each with next steps."
+ },
+ {
+  "id": "c060",
+  "claim": "Audit: 121 independent businesses within 2500 m of the Quad, 27 with a working site, 94 without (90 none listed, 3 dead, 1 deleted), 23 with machine-readable hours.",
+  "quote": "Twenty-seven had a site that answered.",
+  "pages": [
+   "/blog/121-businesses-near-campus",
+   "/blog",
+   "/who"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c061",
+  "claim": "Category counts: restaurants 64 (15 reachable), clothing 12 (1), barbers and salons 11 (3), cafes 8 (2).",
+  "quote": "Restaurants 64 15",
+  "pages": [
+   "/blog/121-businesses-near-campus"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c062",
+  "claim": "The team page has fifteen names; all AI agents; each signs with its own name with automated-agent disclosure.",
+  "quote": "None of them is a person.",
+  "pages": [
+   "/blog/ai-team-page-honesty",
+   "/team"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c063",
+  "claim": "Elijah ran the 121-business audit in about forty minutes; script under two hundred lines.",
+  "quote": "had the numbers in about forty minutes",
+  "pages": [
+   "/blog/audit-every-business-in-your-town"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c064",
+  "claim": "Elijah's crawler audit found six problems; 7 pages indexed vs 28 in sitemap; five sitemap/robots contradictions.",
+  "quote": "found six problems",
+  "pages": [
+   "/blog/audit-your-site-like-a-crawler"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c065",
+  "claim": "Canonical bug: 9 blog posts carried a canonical to /blog; by end of the afternoon 14 pages across three sections (3 course pages to /courses, 2 pages to /digital).",
+  "quote": "By the end of the afternoon it was 14 pages across three sections.",
+  "pages": [
+   "/blog/canonical-tag-noindex"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c066",
+  "claim": "Starter Kit contents: 24 AI prompts, 5 sales scripts, rep handbook, 50+ cold templates, 1099 contractor agreement, CRM CSV.",
+  "quote": "24 AI prompts, 5 sales scripts",
+  "pages": [
+   "/blog/case-for-charging-19"
+  ],
+  "category": "count",
+  "conflict": "Tool pages say 23 prompts."
+ },
+ {
+  "id": "c067",
+  "claim": "Of 121 businesses, 98 had no hours a machine could read (23 did).",
+  "quote": "The other 98 had no hours a machine could read.",
+  "pages": [
+   "/blog/claim-your-google-listing"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c068",
+  "claim": "Blog lists 12 services UA students have already paid for, checked against ua.edu on 20 August 2026.",
+  "quote": "The table lists 12 services",
+  "pages": [
+   "/blog/free-at-alabama"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c069",
+  "claim": "UA Today shows 6 sources and around 700 events at a time.",
+  "quote": "6 sources, around 700 events at a time",
+  "pages": [
+   "/blog/six-sources-one-page",
+   "/portfolio"
+  ],
+  "category": "count",
+  "conflict": "/ai-consultant-tuscaloosa says about a hundred events in a given week."
+ },
+ {
+  "id": "c070",
+  "claim": "Elijah ran read-only security audits on 7 live applications; five recurring problems.",
+  "quote": "I have run read-only security audits on 7 live applications.",
+  "pages": [
+   "/blog/small-app-security-checklist",
+   "/consulting",
+   "/resume"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c071",
+  "claim": "UA campus market described as thirty-eight thousand people.",
+  "quote": "thirty-eight thousand people",
+  "pages": [
+   "/blog/starting-a-business-at-alabama"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c072",
+  "claim": "Elijah audited 121 independent businesses within walking distance of campus (within 2500 metres of the Quad); twenty-seven had a website that answered; 23 list opening hours a machine can read.",
+  "quote": "I audited 121 independent businesses within walking distance of campus and twenty-seven had a website that answered.",
+  "pages": [
+   "/blog/starting-a-business-at-alabama",
+   "/blog",
+   "/blog/121-businesses-near-campus"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c073",
+  "claim": "Thirty-eight thousand students arrived in Tuscaloosa in August 2026.",
+  "quote": "Thirty-eight thousand students arrived in Tuscaloosa this month.",
+  "pages": [
+   "/blog/tuscaloosa-small-business-online"
+  ],
+  "category": "count",
+  "conflict": "/blog/starting-a-business-at-alabama says 'thirty-eight thousand people'."
+ },
+ {
+  "id": "c074",
+  "claim": "The agent runner called only 4 of the 15 agents; eleven were never invoked.",
+  "quote": "The runner script called 4 of the 15.",
+  "pages": [
+   "/blog/what-the-agents-get-wrong"
+  ],
+  "category": "count",
+  "conflict": "/blog index description says 'ten agents that were never called' and the post's meta says 'eleven agents'; body says 4 of 15 called (11 not)."
+ },
+ {
+  "id": "c075",
+  "claim": "Purcell Ventures has 1 employee and 15 AI agents.",
+  "quote": "Purcell Ventures has 1 employee and 15 AI agents.",
+  "pages": [
+   "/blog/what-the-agents-get-wrong",
+   "/agentic-ai"
+  ],
+  "category": "count",
+  "conflict": "/pricing-comparison says Elijah works with a few commissioned sales reps; /sales-rep says it is hiring reps."
+ },
+ {
+  "id": "c076",
+  "claim": "Elijah had Google index seven of twenty-eight submitted pages; the earlier post says a canonical tag kept nine pages out.",
+  "quote": "seven of the twenty-eight I submitted",
+  "pages": [
+   "/blog/write-a-page-an-ai-will-quote",
+   "/blog/canonical-tag-noindex"
+  ],
+  "category": "count",
+  "conflict": "This post: 7 of 28 indexed; canonical post: nine posts told Google not to index."
+ },
+ {
+  "id": "c077",
+  "claim": "Elijah's structured data had twelve distinct Person nodes (three anonymous) before being fixed to one.",
+  "quote": "twelve distinct Person nodes",
+  "pages": [
+   "/blog/write-a-page-an-ai-will-quote"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c078",
+  "claim": "Five core consulting sessions: AI Basics for Business (2 hrs), ChatGPT in Your Workflow (3 hrs), AI for Marketing & Social Media (2.5 hrs), Automating Your Business (4 hrs), Custom Team Training.",
+  "quote": "5 CORE SESSIONS",
+  "pages": [
+   "/consulting",
+   "/consulting/book"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c079",
+  "claim": "Consulting group size stated as '1-on-1 or up to 30+'.",
+  "quote": "1-on-1 OR UP TO 30+",
+  "pages": [
+   "/consulting"
+  ],
+  "category": "count",
+  "conflict": "Pricing section caps workshop at 20 people and small group at 8."
+ },
+ {
+  "id": "c080",
+  "claim": "Elijah has run 7 read-only security audits of live production applications.",
+  "quote": "7 SECURITY AUDITS RUN",
+  "pages": [
+   "/consulting",
+   "/resume"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c081",
+  "claim": "34 college acceptances.",
+  "quote": "34 COLLEGE ACCEPTANCES",
+  "pages": [
+   "/consulting",
+   "/",
+   "/resume"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c082",
+  "claim": "College Application Playbook: 98 schools researched, 34 acceptances, $530,384 per year in offers.",
+  "quote": "98 SCHOOLS RESEARCHED",
+  "pages": [
+   "/courses",
+   "/courses/college-apps",
+   "/portfolio"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c083",
+  "claim": "Zero to Automated: 8 modules, 25 lessons, 5.2 hrs video, 7 code templates, 5 tools in production.",
+  "quote": "5.2 hrs",
+  "pages": [
+   "/courses/ai-automation",
+   "/courses",
+   "/"
+  ],
+  "category": "count",
+  "conflict": "Page lists six tools (Email Bot, Content Pipeline, Listing Monitor, Opportunity Scorer, Inbox Harvester, Personal AI Assistant) but says 5 in production."
+ },
+ {
+  "id": "c084",
+  "claim": "Business Launch Playbook: 7 modules, 26 lessons, 6 templates, planned 5 hours of video.",
+  "quote": "7 modules. 26 lessons.",
+  "pages": [
+   "/courses/business-launch",
+   "/courses",
+   "/"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c085",
+  "claim": "College Application Playbook: 6 modules, 17 lessons, planned 3 hours of video.",
+  "quote": "6 modules. 17 lessons.",
+  "pages": [
+   "/courses/college-apps",
+   "/courses",
+   "/sales-rep"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c086",
+  "claim": "Digital services tool count: '25+ tools', '25 tools, one partner', '20+ tools', 22 add-ons.",
+  "quote": "25 TOOLS, ONE PARTNER",
+  "pages": [
+   "/digital",
+   "/",
+   "/resume"
+  ],
+  "category": "count",
+  "conflict": "/digital says 25+ / 25 tools and meta says 20+; / says 22 add-ons; /resume says twenty modules."
+ },
+ {
+  "id": "c087",
+  "claim": "One subscription covers tools for seven roles.",
+  "quote": "tools for seven roles",
+  "pages": [
+   "/digital"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c088",
+  "claim": "/digital/tools lists 31 free AI/ops tools (the free versions of every tool sold).",
+  "quote": "Free versions of every tool we sell.",
+  "pages": [
+   "/digital/tools",
+   "/"
+  ],
+  "category": "count",
+  "conflict": "/digital says 25 tools; meta says 20+; / says 22 add-ons; /tools says 29 free tools (a different set)."
+ },
+ {
+  "id": "c089",
+  "claim": "Starter Kit is described as 23 AI prompts on individual tool pages.",
+  "quote": "GET ALL 23 PROMPTS FOR $19",
+  "pages": [
+   "/digital/tools/about-page",
+   "/digital/tools/cold-email-audit",
+   "/digital/tools/pricing-audit",
+   "/digital/tools/bio-writer",
+   "/digital/tools/tagline"
+  ],
+  "category": "count",
+  "conflict": "Tool pages say 23 AI prompts; /shop and /shop/starter-kit say 24 AI prompts."
+ },
+ {
+  "id": "c090",
+  "claim": "How we work: 5-stage process.",
+  "quote": "5-stage process",
+  "pages": [
+   "/how-we-work",
+   "/"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c091",
+  "claim": "AI Readiness Test is 10 questions, 3 minutes.",
+  "quote": "10 questions, 3 minutes",
+  "pages": [
+   "/links",
+   "/tools",
+   "/consulting"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c092",
+  "claim": "Logo page offers 6 logo treatments.",
+  "quote": "6 treatments.",
+  "pages": [
+   "/logos"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c093",
+  "claim": "Spring classes total seventeen hours across math, CS, psychology and sociology.",
+  "quote": "Seventeen hours across math, computer science, psychology and sociology.",
+  "pages": [
+   "/now"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c094",
+  "claim": "Brand pattern library has ten patterns (SVG/PNG downloads).",
+  "quote": "Ten patterns",
+  "pages": [
+   "/patterns"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c095",
+  "claim": "Portfolio lists 17 projects.",
+  "quote": "17 projects",
+  "pages": [
+   "/portfolio",
+   "/"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c096",
+  "claim": "UA Today shows around seven hundred events at a time.",
+  "quote": "around seven hundred at a time",
+  "pages": [
+   "/portfolio"
+  ],
+  "category": "count",
+  "conflict": "/ai-consultant-tuscaloosa says about a hundred events in a given week."
+ },
+ {
+  "id": "c097",
+  "claim": "UA Today aggregates six sources.",
+  "quote": "six separate sources",
+  "pages": [
+   "/portfolio",
+   "/who",
+   "/now"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c098",
+  "claim": "ElijahBot Tools Hub has 22 standalone tools.",
+  "quote": "22 standalone tools",
+  "pages": [
+   "/portfolio"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c099",
+  "claim": "Resume: 15+ products shipped, 8 live properties, 29 free tools published.",
+  "quote": "15+ PRODUCTS SHIPPED",
+  "pages": [
+   "/resume"
+  ],
+  "category": "count",
+  "conflict": "/resume says 29 free tools; / says 31 free tools."
+ },
+ {
+  "id": "c100",
+  "claim": "Purcell Ventures Digital Division has twenty reusable modules.",
+  "quote": "Twenty reusable modules",
+  "pages": [
+   "/resume"
+  ],
+  "category": "count",
+  "conflict": "/resume says twenty modules; / says 22 add-ons."
+ },
+ {
+  "id": "c101",
+  "claim": "Complete Pack contains 61 files in 3 folders (Starter Kit 42 files; Cold Email Pack 200+ files; Subject Library).",
+  "quote": "61 files in 3 folders",
+  "pages": [
+   "/shop",
+   "/shop/bundle"
+  ],
+  "category": "count",
+  "conflict": "/shop/cold-email-pack says 200+ pieces of content in one ZIP with 6 folders and /shop/starter-kit says 42 files; 42 + Cold Email Pack + Library cannot total 61 files if Cold Email Pack alone has 200+ files."
+ },
+ {
+  "id": "c102",
+  "claim": "Starter Kit lists 24 AI prompts, 5 sales scripts, rep handbook, 50+ cold-outreach templates, 1099 contractor agreement, CRM CSV; 42 files.",
+  "quote": "42 files in a ZIP",
+  "pages": [
+   "/shop",
+   "/shop/bundle",
+   "/shop/starter-kit"
+  ],
+  "category": "count",
+  "conflict": "File lists on /shop/starter-kit sum to 24+8+7+5+5 = 49 files."
+ },
+ {
+  "id": "c103",
+  "claim": "Cold Email Pack: 100 templates for 10 industries, 80 subject lines, 30 reply-handling scripts, 4 sequences, 6 folders.",
+  "quote": "100 cold email templates",
+  "pages": [
+   "/shop",
+   "/shop/cold-email-pack",
+   "/shop/bundle"
+  ],
+  "category": "count",
+  "conflict": "/shop/starter-kit says 50+ cold outreach templates in a different product."
+ },
+ {
+  "id": "c104",
+  "claim": "Starter Kit includes 'Subject line library, 40 tested options' while the Library is 80 lines.",
+  "quote": "Subject line library, 40 tested options",
+  "pages": [
+   "/shop/starter-kit"
+  ],
+  "category": "count",
+  "conflict": "/shop/subject-lines says 80 lines."
+ },
+ {
+  "id": "c105",
+  "claim": "Subject Line Library has 80 subject lines in 8 categories (10 each) plus 20 lines to avoid.",
+  "quote": "80 cold email subject lines in 8 categories",
+  "pages": [
+   "/shop/subject-lines",
+   "/shop"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c106",
+  "claim": "The team is one human and fifteen AI agents (15 named agents listed).",
+  "quote": "One person and fifteen AI agents",
+  "pages": [
+   "/team",
+   "/what-is-purcell-ventures",
+   "/who",
+   "/resume"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c107",
+  "claim": "/tools lists twenty-nine free single-file tools needing no account; code for 29 tools on GitHub.",
+  "quote": "Twenty-nine free tools",
+  "pages": [
+   "/tools",
+   "/links",
+   "/about",
+   "/resume",
+   "/ai-consultant-tuscaloosa"
+  ],
+  "category": "count",
+  "conflict": "/ and /portfolio say 31 free tools."
+ },
+ {
+  "id": "c108",
+  "claim": "Dorm Pack has 130+ items across 11 categories; Echo has 60 questions across 9 chapters; Day Sheet has hour blocks 6am to 11pm.",
+  "quote": "130+ items across 11 categories",
+  "pages": [
+   "/tools"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c109",
+  "claim": "Tutorials: 14 how-to guides for AI tools (3-5 minute reads).",
+  "quote": "3 MIN READ",
+  "pages": [
+   "/tutorials"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c110",
+  "claim": "Purcell Ventures does four things: websites/digital, AI consulting, custom software, and Steady personal IT.",
+  "quote": "Four things.",
+  "pages": [
+   "/what-is-purcell-ventures"
+  ],
+  "category": "count",
+  "conflict": "/ lists six divisions (Sites, Digital Add-ons, AI Consulting, Custom Software, Steady, Real Estate); this page lists four."
+ },
+ {
+  "id": "c111",
+  "claim": "Elijah has built English Pruitt Photography as a client site.",
+  "quote": "English Pruitt Photography",
+  "pages": [
+   "/who"
+  ],
+  "category": "count",
+  "conflict": null
+ },
+ {
+  "id": "c112",
+  "claim": "Purcell Ventures LLC was founded in April 2025.",
+  "quote": "FOUNDED APRIL 2025",
+  "pages": [
+   "/",
+   "/about",
+   "/what-is-purcell-ventures"
+  ],
+  "category": "date",
+  "conflict": null
+ },
+ {
+  "id": "c113",
+  "claim": "Purcell Ventures LLC was formed/filed with the Georgia Secretary of State on 8 April 2025 (04.08.2025).",
+  "quote": "Established April 8, 2025",
+  "pages": [
+   "/",
+   "/who",
+   "/what-is-purcell-ventures"
+  ],
+  "category": "date",
+  "conflict": null
+ },
+ {
+  "id": "c114",
+  "claim": "Elijah founded Purcell Ventures at seventeen in April 2025 in Acworth, Georgia.",
+  "quote": "Founded Purcell Ventures LLC in April 2025, in Acworth, Georgia, at seventeen",
+  "pages": [
+   "/",
+   "/who"
+  ],
+  "category": "date",
+  "conflict": null
+ },
+ {
+  "id": "c115",
+  "claim": "AI at Alabama guide dated 20 August 2026, checked against catalog.ua.edu.",
+  "quote": "GUIDE, AUGUST 20, 2026",
+  "pages": [
+   "/ai-at-alabama"
+  ],
+  "category": "date",
+  "conflict": null
+ },
+ {
+  "id": "c116",
+  "claim": "Audit was run 20 August 2026 with a script scout.py; first version said 26/95, corrected to 27/94.",
+  "quote": "The first version of this piece said twenty-six working sites and ninety-five without.",
+  "pages": [
+   "/blog/121-businesses-near-campus"
+  ],
+  "category": "date",
+  "conflict": null
+ },
+ {
+  "id": "c117",
+  "claim": "Blog posts dated 17 August 2026 (agents, shipped-not-activated), 20 August 2026 (most), 24-26 October 2026 (three guides), 24-25 May 2026 (five posts).",
+  "quote": "AUGUST 17, 2026",
+  "pages": [
+   "/blog/agents-that-cannot-fix-what-they-find",
+   "/blog/shipped-is-not-activated",
+   "/blog"
+  ],
+  "category": "date",
+  "conflict": "/who lists 'August 20, 2026' and May 2026 posts; /blog index shows posts through October 26, 2026 that /who does not list."
+ },
+ {
+  "id": "c118",
+  "claim": "Launch of PV AI Starter Kit at $19 (post dated 25 May 2026); title differs: /who calls it 'The case for charging $19 for what others sell at $497'.",
+  "quote": "I launched the PV AI Starter Kit for $19.",
+  "pages": [
+   "/blog/case-for-charging-19",
+   "/who",
+   "/blog"
+  ],
+  "category": "date",
+  "conflict": "/who title 'The case for charging $19 for what others sell at $497'; /blog title 'Why I charge $19 for the AI Starter Kit'."
+ },
+ {
+  "id": "c119",
+  "claim": "Elijah was seventeen when he started sending cold emails.",
+  "quote": "I was seventeen when I started sending these.",
+  "pages": [
+   "/blog/cold-outreach-that-worked"
+  ],
+  "category": "date",
+  "conflict": "Founded April 2025 at 17; born August 2007 so 17 until August 2025 (consistent)."
+ },
+ {
+  "id": "c120",
+  "claim": "Elijah filed Purcell Ventures with the Georgia SOS on 8 April 2025, control number 25075361.",
+  "quote": "I filed Purcell Ventures with the Georgia Secretary of State on 8 April 2025.",
+  "pages": [
+   "/blog/llc-at-seventeen"
+  ],
+  "category": "date",
+  "conflict": "Same post says he filed as Zultar LLC and amended to Purcell Ventures LLC on 27 January 2026, so the name filed on 8 April 2025 was Zultar LLC."
+ },
+ {
+  "id": "c121",
+  "claim": "Company was filed as Zultar LLC and renamed Purcell Ventures LLC on 27 January 2026 (nine months later); same control number and EIN.",
+  "quote": "On 27 January 2026 I amended it to Purcell Ventures LLC.",
+  "pages": [
+   "/blog/llc-at-seventeen",
+   "/resume"
+  ],
+  "category": "date",
+  "conflict": null
+ },
+ {
+  "id": "c122",
+  "claim": "Elijah arrived at UA in August 2026 with a company he had been running for over a year.",
+  "quote": "a company I had already been running for over a year",
+  "pages": [
+   "/blog/starting-a-business-at-alabama"
+  ],
+  "category": "date",
+  "conflict": null
+ },
+ {
+  "id": "c123",
+  "claim": "Google stopped showing FAQ rich results on 7 May 2026.",
+  "quote": "Google stopped showing FAQ rich results on 7 May 2026",
+  "pages": [
+   "/blog/write-a-page-an-ai-will-quote"
+  ],
+  "category": "date",
+  "conflict": null
+ },
+ {
+  "id": "c124",
+  "claim": "Elijah founded Purcell Ventures at age 17.",
+  "quote": "AGE WHEN I FOUNDED 17",
+  "pages": [
+   "/courses/business-launch",
+   "/",
+   "/who"
+  ],
+  "category": "date",
+  "conflict": null
+ },
+ {
+  "id": "c125",
+  "claim": "/digital footer says Purcell Ventures LLC registered in Georgia, 2026.",
+  "quote": "registered in Georgia, 2026",
+  "pages": [
+   "/digital"
+  ],
+  "category": "date",
+  "conflict": "Other pages say formed/registered 8 April 2025."
+ },
+ {
+  "id": "c126",
+  "claim": "Established April 2025, Acworth GA; Control No. 25075361, domestic LLC.",
+  "quote": "CONTROL NO. 25075361, DOMESTIC LLC",
+  "pages": [
+   "/links"
+  ],
+  "category": "date",
+  "conflict": null
+ },
+ {
+  "id": "c127",
+  "claim": "Fall 2026 /now page updated 26 October 2026; Elijah updates it about once a month.",
+  "quote": "UPDATED 26 OCTOBER 2026",
+  "pages": [
+   "/now"
+  ],
+  "category": "date",
+  "conflict": null
+ },
+ {
+  "id": "c128",
+  "claim": "Elijah moved in to UA on 14 August 2026; first class 19 August 2026, his birthday.",
+  "quote": "Moved in 14 August 2026, first class on the 19th, which was also my birthday.",
+  "pages": [
+   "/now"
+  ],
+  "category": "date",
+  "conflict": "/who says born August 2007 and turned 19 in August 2026 (consistent)."
+ },
+ {
+  "id": "c129",
+  "claim": "Company was filed as Zultar LLC on 4/8/2025 and renamed Purcell Ventures LLC on 1/27/2026.",
+  "quote": "Filed as Zultar LLC 4/8/2025, renamed Purcell Ventures LLC 1/27/2026.",
+  "pages": [
+   "/resume"
+  ],
+  "category": "date",
+  "conflict": "Home/who/what-is say 'Purcell Ventures LLC' formed 8 April 2025 and omit the Zultar name and 27 Jan 2026 rename."
+ },
+ {
+  "id": "c130",
+  "claim": "Born August 2007; turned 19 in August 2026.",
+  "quote": "Born August 2007",
+  "pages": [
+   "/who"
+  ],
+  "category": "date",
+  "conflict": null
+ },
+ {
+  "id": "c131",
+  "claim": "Elijah enrolled at UA Honors College in 2026.",
+  "quote": "Enrolled at the University of Alabama Honors College",
+  "pages": [
+   "/who"
+  ],
+  "category": "date",
+  "conflict": null
+ },
+ {
+  "id": "c132",
+  "claim": "Writing: The Husks the Swine Did Eat (Jan 2025), The Rebuking of Loki (2024), Injustice Scorned (March 2025).",
+  "quote": "PROSE, JANUARY 2025",
+  "pages": [
+   "/writing"
+  ],
+  "category": "date",
+  "conflict": "/resume spells 'Injustice Scorned' and lists the same three titles; page titles itself 'INJUSTICE SCORNED' and meta says 'Scorned/Scorned' (consistent)."
+ },
+ {
+  "id": "c133",
+  "claim": "The LLC is registered in Acworth, Cobb County, Georgia.",
+  "quote": "ACWORTH, COBB COUNTY",
+  "pages": [
+   "/",
+   "/what-is-purcell-ventures"
+  ],
+  "category": "place",
+  "conflict": null
+ },
+ {
+  "id": "c134",
+  "claim": "The company serves small businesses in Tuscaloosa and metro Atlanta.",
+  "quote": "small businesses in Tuscaloosa and metro Atlanta",
+  "pages": [
+   "/"
+  ],
+  "category": "place",
+  "conflict": null
+ },
+ {
+  "id": "c135",
+  "claim": "Digital add-ons reach is nationwide.",
+  "quote": "REACH NATIONWIDE",
+  "pages": [
+   "/"
+  ],
+  "category": "place",
+  "conflict": null
+ },
+ {
+  "id": "c136",
+  "claim": "Steady reach is Atlanta and remote.",
+  "quote": "ATLANTA AND REMOTE",
+  "pages": [
+   "/"
+  ],
+  "category": "place",
+  "conflict": null
+ },
+ {
+  "id": "c137",
+  "claim": "Service area: Metro Atlanta and Cobb County (Kennesaw, Marietta, Acworth, Canton, Woodstock), remote nationwide.",
+  "quote": "Kennesaw, Marietta, Acworth, Canton and Woodstock",
+  "pages": [
+   "/"
+  ],
+  "category": "place",
+  "conflict": null
+ },
+ {
+  "id": "c138",
+  "claim": "Elijah runs the company from Tuscaloosa, Alabama.",
+  "quote": "Elijah runs it from Tuscaloosa, Alabama",
+  "pages": [
+   "/",
+   "/who",
+   "/what-is-purcell-ventures"
+  ],
+  "category": "place",
+  "conflict": null
+ },
+ {
+  "id": "c139",
+  "claim": "Consulting is based in Tuscaloosa, working nationwide; also 'Metro Atlanta and beyond'.",
+  "quote": "Based in Tuscaloosa, Alabama, working nationwide.",
+  "pages": [
+   "/consulting"
+  ],
+  "category": "place",
+  "conflict": null
+ },
+ {
+  "id": "c140",
+  "claim": "Consulting comes to the office in Metro Atlanta or remote.",
+  "quote": "Yes (Metro Atlanta) or remote",
+  "pages": [
+   "/pricing-comparison"
+  ],
+  "category": "place",
+  "conflict": "/consulting says based in Tuscaloosa working nationwide, 'Local work in Tuscaloosa'."
+ },
+ {
+  "id": "c141",
+  "claim": "/services states Purcell Ventures is a company in Acworth, GA, phone (205) 462-7839.",
+  "quote": "A PURCELL VENTURES COMPANY IN ACWORTH, GA",
+  "pages": [
+   "/services"
+  ],
+  "category": "place",
+  "conflict": null
+ },
+ {
+  "id": "c142",
+  "claim": "Steady in-person visits are Metro Atlanta only; remote elsewhere.",
+  "quote": "in-person visit (Metro Atlanta only)",
+  "pages": [
+   "/steady",
+   "/steady/start"
+  ],
+  "category": "place",
+  "conflict": "Elijah is based in Tuscaloosa per /about."
+ },
+ {
+  "id": "c143",
+  "claim": "Elijah is based in Tuscaloosa and moved there August 2026; he grew up in Acworth, Georgia.",
+  "quote": "He moved to Tuscaloosa, Alabama in August 2026",
+  "pages": [
+   "/who"
+  ],
+  "category": "place",
+  "conflict": null
+ },
+ {
+  "id": "c144",
+  "claim": "Purcell Ventures LLC is a Georgia LLC with Georgia SOS control number 25075361.",
+  "quote": "Control № 25075361",
+  "pages": [
+   "/",
+   "/who",
+   "/what-is-purcell-ventures"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c145",
+  "claim": "Elijah is a psychology and data science student at the University of Alabama Honors College, pre-med track toward psychiatry.",
+  "quote": "psychology and data science student at the University of Alabama Honors College in Tuscaloosa, on a pre-med track toward psychiatry",
+  "pages": [
+   "/",
+   "/who"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c146",
+  "claim": "Elijah is University of Alabama Class of 2030.",
+  "quote": "Class of 2030",
+  "pages": [
+   "/about",
+   "/who"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c147",
+  "claim": "Elijah did mission trips to North Carolina, the Bahamas, Hawaii and Alaska.",
+  "quote": "mission trips to North Carolina, the Bahamas, Hawaii, and Alaska",
+  "pages": [
+   "/about"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c148",
+  "claim": "Elijah competed in apologetics and debate for four years and earned a 3.92 GPA.",
+  "quote": "3.92 GPA",
+  "pages": [
+   "/about"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c149",
+  "claim": "Elijah was in his school's men's Bible study.",
+  "quote": "member of my school's men's Bible study",
+  "pages": [
+   "/about"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c150",
+  "claim": "Elijah completed 12 Anthropic Academy courses, including AI Fluency: Framework & Foundations.",
+  "quote": "I completed 12 Anthropic Academy courses",
+  "pages": [
+   "/blog/start-using-ai-this-week-three-safe-first-tasks"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c151",
+  "claim": "Elijah's New College degree is a self-designed psychology and data science hybrid.",
+  "quote": "Self-designed Psychology and Data Science hybrid",
+  "pages": [
+   "/consulting",
+   "/ai-at-alabama"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c152",
+  "claim": "Resume: Weighted GPA 3.92, SAT 1440.",
+  "quote": "3.92 GPA (WEIGHTED) 1440 SAT SCORE",
+  "pages": [
+   "/resume",
+   "/about"
+  ],
+  "category": "credential",
+  "conflict": "/about says 3.92 GPA without 'weighted' qualifier; /resume says 3.92 weighted."
+ },
+ {
+  "id": "c153",
+  "claim": "Elijah is Founder & Operator of Mantle Field Services (gutter cleaning, pressure washing, lawn care, metro Atlanta) 2024 to present.",
+  "quote": "Founder & Operator, Mantle Field Services",
+  "pages": [
+   "/resume",
+   "/what-is-purcell-ventures"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c154",
+  "claim": "Elijah was an AI Data Trainer at Outlier AI Oct 2025 to May 2026.",
+  "quote": "AI Data Trainer, Outlier AI",
+  "pages": [
+   "/resume"
+  ],
+  "category": "credential",
+  "conflict": "/who says independent contractor with Mercor Intelligence; /resume lists Outlier AI and DataAnnotation, not Mercor."
+ },
+ {
+  "id": "c155",
+  "claim": "Elijah was AI Response Evaluator at DataAnnotation, spring 2026.",
+  "quote": "AI Response Evaluator, DataAnnotation",
+  "pages": [
+   "/resume"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c156",
+  "claim": "Elijah worked at Chick-fil-A (2023) and was peer tutor 2022-2026.",
+  "quote": "Team Member, Chick-fil-A",
+  "pages": [
+   "/resume"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c157",
+  "claim": "Education: UA Honors College B.S. Psychology/Data Science via New College, Presidential Merit Scholarship $28,000/yr, 2026 to 2030.",
+  "quote": "Presidential Merit Scholarship ($28,000/yr)",
+  "pages": [
+   "/resume"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c158",
+  "claim": "Graduated Cornerstone Preparatory Academy, Acworth GA, May 2026; Beta Club.",
+  "quote": "GRADUATED MAY 2026",
+  "pages": [
+   "/resume"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c159",
+  "claim": "Lee University Summer Honors Program summer 2025: Cryptography & Social Media, 6 credit hours.",
+  "quote": "6 college credit hours earned",
+  "pages": [
+   "/resume"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c160",
+  "claim": "Grove Christian School (Midlothian, VA), 9th to mid-10th grade, 2022-2023.",
+  "quote": "Grove Christian School, Midlothian, VA",
+  "pages": [
+   "/resume"
+  ],
+  "category": "credential",
+  "conflict": "/who dates Christian Character Award 2024 and Steadfast Award 2023; /resume dates Grove attendance 2022-2023, Steadfast in 10th grade."
+ },
+ {
+  "id": "c161",
+  "claim": "Awards: Behold (9th), Steadfast (10th), Christian Character Award, Christ-like Leadership Award, Highest Math Grade (9th, 100% both semesters), lead in Christmas musical.",
+  "quote": "Highest Math Grade in Class",
+  "pages": [
+   "/resume"
+  ],
+  "category": "credential",
+  "conflict": "/who says Steadfast Award 2023 and Christian Character Award 2024; /resume places Grove attendance 2022-2023."
+ },
+ {
+  "id": "c162",
+  "claim": "Christian Character Award: one of two students school-wide.",
+  "quote": "one male, one female",
+  "pages": [
+   "/resume"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c163",
+  "claim": "Honors College admission at UA and Georgia State (2026); Family Foundation & Colson Center Youth Leadership Summit summer 2023 Richmond VA.",
+  "quote": "Georgia State University, Honors College Admission",
+  "pages": [
+   "/resume"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c164",
+  "claim": "Leadership: Mighty Men member 11th-12th grade, Head Chaplain, Worship Team Lead Vocalist 9th-12th, Youth Group Leader & camp counselor.",
+  "quote": "Head Chaplain",
+  "pages": [
+   "/resume"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c165",
+  "claim": "Mission trips: North Carolina (Praying Pelican Missions, sophomore year), Bahamas (Christian Education Relief, junior), Hawaii (disaster relief, March 2026 after flooding).",
+  "quote": "Praying Pelican Missions",
+  "pages": [
+   "/resume",
+   "/about"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c166",
+  "claim": "Volunteer: 200+ cumulative volunteer hours; MUST Ministries; Stonebridge Church Marietta kids ministry.",
+  "quote": "200+ cumulative volunteer hours",
+  "pages": [
+   "/resume"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c167",
+  "claim": "YouTube channel has 2,800+ subscribers; content creation 2023 to present.",
+  "quote": "2,800+ subscribers",
+  "pages": [
+   "/resume"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c168",
+  "claim": "Poetry writes across 8 distinct styles.",
+  "quote": "8 distinct styles",
+  "pages": [
+   "/resume"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c169",
+  "claim": "Cheerleader 9th-10th grade; Track & Field 9th grade; weightlifting ongoing.",
+  "quote": "Cheerleader, Back / Base",
+  "pages": [
+   "/resume"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c170",
+  "claim": "Uses: Claude Code subscription wrote most of the code on the site; Windows desktop and MacBook, Android phone; stack updated May 2026.",
+  "quote": "wrote most of the code on this site",
+  "pages": [
+   "/uses"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c171",
+  "claim": "Elijah is an independent contractor with Mercor Intelligence, improving models for a top AI lab.",
+  "quote": "Independent contractor with Mercor Intelligence",
+  "pages": [
+   "/who"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c172",
+  "claim": "Elijah received the Christian Character Award (2024) and Steadfast Award (2023) from Grove Christian School.",
+  "quote": "Christian Character Award, Grove Christian School",
+  "pages": [
+   "/who"
+  ],
+  "category": "credential",
+  "conflict": null
+ },
+ {
+  "id": "c173",
+  "claim": "Sites division offers custom websites and monthly maintenance with three build tiers (Starter, Pro, Custom) and three maintenance tiers.",
+  "quote": "Three build tiers and three maintenance tiers",
+  "pages": [
+   "/"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c174",
+  "claim": "UA Today: campus events site pulling from six sources with about a hundred events per week; free, no account, not affiliated with the University.",
+  "quote": "about a hundred events in a given week",
+  "pages": [
+   "/ai-consultant-tuscaloosa",
+   "/who",
+   "/now"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c175",
+  "claim": "Reporting agent showed a hardcoded zero findings resolved; agents run with no tools by default.",
+  "quote": "a hardcoded zero",
+  "pages": [
+   "/blog/agents-that-cannot-fix-what-they-find"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c176",
+  "claim": "Rep portal includes AI Deal Coach, Conversation Summary, Suggest next step, AI Prospect Research, Call Recap, Email Polish, Objection Handler, Cmd+K search; the example day uses invented people (Luke).",
+  "quote": "Luke, the prospects and their businesses are invented.",
+  "pages": [
+   "/blog/ai-augmented-sales-rep-day"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c177",
+  "claim": "Caption Generator generates five captions per post.",
+  "quote": "generates five captions per post",
+  "pages": [
+   "/blog/five-workflows-no-code"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c178",
+  "claim": "UA Today has a moderation queue and an unofficial masthead notice; floor checks per source (official floor 40, student org 20 shown in code).",
+  "quote": "nothing appears until a person reviews it",
+  "pages": [
+   "/blog/six-sources-one-page"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c179",
+  "claim": "The CRM has 6 views (List, Kanban, Tasks, Stats, Coach, Reps), per-rep auth and AI features running on Claude Haiku at about $0.001 per call.",
+  "quote": "6 views (List, Kanban, Tasks, Stats, Coach, Reps)",
+  "pages": [
+   "/blog/why-i-built-crm-from-scratch"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c180",
+  "claim": "Digital Services subscription includes a chatbot, content generator and FAQ builder connected to the client's booking system, blog and live site.",
+  "quote": "The chatbot connects to your booking system",
+  "pages": [
+   "/blog/why-most-ai-tools-waste-money"
+  ],
+  "category": "product",
+  "conflict": "/digital lists chatbot and booking only in Tier III (Marketing Partner); /pricing-comparison says chatbot included from Starter."
+ },
+ {
+  "id": "c181",
+  "claim": "AI FAQ Builder is built using Claude Haiku 4.5.",
+  "quote": "Built using Claude Haiku 4.5.",
+  "pages": [
+   "/digital/ai-faq-builder"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c182",
+  "claim": "AI FAQ Builder returns 6 to 10 Q&A pairs.",
+  "quote": "6 to 10 question and answer pairs",
+  "pages": [
+   "/digital/ai-faq-builder",
+   "/faq",
+   "/digital/tools/faq-builder"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c183",
+  "claim": "Bio Writer returns three bios: 140 chars, 80 words, 250 words.",
+  "quote": "short (140 chars for X/Twitter), medium (LinkedIn or About page, 80 words), long (full About page, 250 words)",
+  "pages": [
+   "/digital/tools/bio-writer"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c184",
+  "claim": "Caption generator returns 5 captions; /digital/tools says 5 captions in different voices.",
+  "quote": "5 different caption options",
+  "pages": [
+   "/digital/tools/caption-generator",
+   "/digital/tools",
+   "/digital"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c185",
+  "claim": "Cold Email Audit grades subject line, hook, ask and ethics and rewrites it about 30% shorter.",
+  "quote": "rewrites it about 30% shorter",
+  "pages": [
+   "/digital/tools/cold-email-audit"
+  ],
+  "category": "product",
+  "conflict": "/tutorials says the tool returns a 0 to 100 score, top 3 improvements and a rewritten version."
+ },
+ {
+  "id": "c186",
+  "claim": "Digital tools: Persona Builder gives 3 personas; Logo Concepts 5; Tagline Generator 10 taglines over 5 angles; Onboarding sequence 5 emails on days 0,1,3,7,14; Lead magnet 5 ideas; Brand Kit 5-color palette.",
+  "quote": "10 taglines across 5 distinct angles",
+  "pages": [
+   "/digital/tools/tagline",
+   "/digital/tools/customer-persona",
+   "/digital/tools/logo-concepts",
+   "/digital/tools/customer-onboarding",
+   "/digital/tools/lead-magnet",
+   "/digital/tools/brand-kit"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c187",
+  "claim": "Free cold outreach templates: 10 templates, one per industry; paid pack is $29 and adds 90 more templates, subject-line library, reply handling and cadences.",
+  "quote": "the full $29 pack adds 90 more templates",
+  "pages": [
+   "/free",
+   "/shop/cold-email-pack"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c188",
+  "claim": "Newsletter: weekly email, AI tips for local business owners, free, one email per week.",
+  "quote": "One email per week.",
+  "pages": [
+   "/newsletter"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c189",
+  "claim": "COSMIC is a set of AI agents that runs outreach: finds local businesses, audits sites, emails those needing help; roster public on team page.",
+  "quote": "COSMIC, the set of AI agents that runs the company's outreach",
+  "pages": [
+   "/now"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c190",
+  "claim": "Elijah does search and AI visibility work for a flooring installer in Georgia, measured in booked jobs.",
+  "quote": "Search and AI visibility work for a flooring installer in Georgia",
+  "pages": [
+   "/now"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c191",
+  "claim": "English Pruitt Photography: photography site for a North Georgia photographer, found through cold outreach.",
+  "quote": "A full photography site for a North Georgia photographer",
+  "pages": [
+   "/portfolio",
+   "/resume"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c192",
+  "claim": "Purcell Ventures site is Next.js 16 with 31 free tools, a rep portal and a CRM.",
+  "quote": "A Next.js 16 site with 31 free tools, a rep portal and a CRM.",
+  "pages": [
+   "/portfolio"
+  ],
+  "category": "product",
+  "conflict": "/about and /resume say 29 free tools."
+ },
+ {
+  "id": "c193",
+  "claim": "Wallet Tracker watches Ethereum and Solana wallets.",
+  "quote": "Watches Ethereum and Solana wallets",
+  "pages": [
+   "/portfolio"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c194",
+  "claim": "Hesed is a free supplement tracker comparing iHerb, Amazon and Vitacost prices.",
+  "quote": "iHerb, Amazon and Vitacost",
+  "pages": [
+   "/portfolio"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c195",
+  "claim": "Gran's Supplements pilot has 25 numbered bottles.",
+  "quote": "25 numbered bottles",
+  "pages": [
+   "/portfolio"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c196",
+  "claim": "Returns Void rotation queue surfaces 2 people per notification.",
+  "quote": "surfaces 2 people per notification",
+  "pages": [
+   "/portfolio"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c197",
+  "claim": "Middleman: two-sided sales marketplace (2026), Stripe escrow, 14 database migrations with RLS, 92 automated tests including 20 adversarial cases.",
+  "quote": "92 automated tests, including 20 adversarial cases",
+  "pages": [
+   "/resume"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c198",
+  "claim": "The Loom: daily crawler delivering ranked packet by email at 7:15 AM; currently tracking 97 actionable leads against a $529,675 pipeline; five production website templates.",
+  "quote": "97 actionable leads against a $529,675 pipeline",
+  "pages": [
+   "/resume"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c199",
+  "claim": "Blast Studio: game platform; iOS build delivered to App Store Connect.",
+  "quote": "Delivered the iOS build to App Store Connect",
+  "pages": [
+   "/resume"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c200",
+  "claim": "ElijahBot OS: command center over a 441-node knowledge graph, eight stations, briefing emailed at 7:30, 200-token chunks.",
+  "quote": "441-node personal knowledge graph",
+  "pages": [
+   "/resume"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c201",
+  "claim": "Boyfriend Camera: WebGL color-grading camera app, eight-channel HSL editor.",
+  "quote": "eight-channel HSL",
+  "pages": [
+   "/resume"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c202",
+  "claim": "Wholesale Engine: real-estate pipeline, 279,000-record assessor GIS layer.",
+  "quote": "279,000-record assessor GIS layer",
+  "pages": [
+   "/resume"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c203",
+  "claim": "Outreach Engine: four-tier risk classifier, 22-check safety suite.",
+  "quote": "22-check safety suite",
+  "pages": [
+   "/resume"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c204",
+  "claim": "Fellowship of the Round: 3D multiplayer arena game, seven species, 131-card upgrade pool, twelve-player online multiplayer, three maps, Godot 4.7.",
+  "quote": "131-card stacking upgrade pool",
+  "pages": [
+   "/resume"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c205",
+  "claim": "Sites Starter tier: one-page custom site, mobile-first, Google Business profile managed, SSL, contact form; live in 7 to 10 business days.",
+  "quote": "LIVE IN 7 TO 10 BUSINESS DAYS",
+  "pages": [
+   "/sites"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c206",
+  "claim": "Sites Pro tier: multi-page (Home, Services, Past Projects, Contact), SMS plus email lead form, project gallery; live in 14 to 21 business days.",
+  "quote": "LIVE IN 14 TO 21 BUSINESS DAYS",
+  "pages": [
+   "/sites"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c207",
+  "claim": "Sites Custom tier: quoted per project, paid in phases, discovery call required.",
+  "quote": "Quoted per project, paid in phases",
+  "pages": [
+   "/sites"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c208",
+  "claim": "Maintenance tiers: Site Care (hosting, uptime monitoring, one small content update per quarter), Site Care Plus Lead Ops, Marketing Partner.",
+  "quote": "One small content update per quarter",
+  "pages": [
+   "/sites"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c209",
+  "claim": "Marketing Partner includes four Instagram posts a month via PV Social, one AI-drafted blog post a month, 1-2 Higgsfield visuals a month, quarterly 15-minute health call, up to one hour small updates per month.",
+  "quote": "Four Instagram posts per month scheduled through PV Social",
+  "pages": [
+   "/sites"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c210",
+  "claim": "The Loom is the system used to find small businesses, research them, build a preview and reach out.",
+  "quote": "The Loom is the system we use to find a small business",
+  "pages": [
+   "/sites",
+   "/resume"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c211",
+  "claim": "Pulse: Android rhythm game with Spotify integration, live on Google Play Store.",
+  "quote": "Live on the Google Play Store.",
+  "pages": [
+   "/software"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c212",
+  "claim": "ColdMaid: multiplayer card game Chrome extension with neural network bots trained by genetic algorithm.",
+  "quote": "Neural network bots trained via genetic algorithm",
+  "pages": [
+   "/software"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c213",
+  "claim": "ElijahBot Overlay: Electron desktop overlay using Claude API and ElevenLabs.",
+  "quote": "Built with Electron and the Claude API.",
+  "pages": [
+   "/software"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c214",
+  "claim": "Cipher Lab has 6 classic ciphers (Caesar, Atbash, Vigenere, Bacon, ROT13, Rail Fence).",
+  "quote": "6 classic ciphers",
+  "pages": [
+   "/tools"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c215",
+  "claim": "Elijah founded and operates a fifteen-agent AI workforce for proposals, audits, compliance and outreach (2026).",
+  "quote": "fifteen-agent AI workforce",
+  "pages": [
+   "/who",
+   "/what-is-purcell-ventures",
+   "/blog"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c216",
+  "claim": "Elijah built UA Today, a University of Alabama campus events page pulling from six sources (2026).",
+  "quote": "pulls from six sources",
+  "pages": [
+   "/who"
+  ],
+  "category": "product",
+  "conflict": null
+ },
+ {
+  "id": "c217",
+  "claim": "The principal is Elijah Brent Purcell.",
+  "quote": "ELIJAH BRENT PURCELL",
+  "pages": [
+   "/",
+   "/about",
+   "/who"
+  ],
+  "category": "person",
+  "conflict": null
+ },
+ {
+  "id": "c218",
+  "claim": "Elijah is nineteen years old.",
+  "quote": "Nineteen years old.",
+  "pages": [
+   "/",
+   "/about"
+  ],
+  "category": "person",
+  "conflict": null
+ },
+ {
+  "id": "c219",
+  "claim": "Elijah answers the phone, builds the software and comes to the business in person.",
+  "quote": "I answer the phone, build the software and come to your business in person.",
+  "pages": [
+   "/"
+  ],
+  "category": "person",
+  "conflict": null
+ },
+ {
+  "id": "c220",
+  "claim": "Elijah is an autonomous AI agent systems engineer and Founder/CEO.",
+  "quote": "autonomous AI agent systems engineer",
+  "pages": [
+   "/about",
+   "/who"
+  ],
+  "category": "person",
+  "conflict": null
+ },
+ {
+  "id": "c221",
+  "claim": "Elijah is a bass-baritone vocalist with range C1 to F5 and leads worship at church most Sundays.",
+  "quote": "bass-baritone vocalist, range C1 to F5, and I lead worship at church most Sundays",
+  "pages": [
+   "/about"
+  ],
+  "category": "person",
+  "conflict": "/about says he leads worship most Sundays; /who also says he leads worship."
+ },
+ {
+  "id": "c222",
+  "claim": "Elijah is 6'3\" and from Georgia.",
+  "quote": "I'm 6'3\"",
+  "pages": [
+   "/about"
+  ],
+  "category": "person",
+  "conflict": null
+ },
+ {
+  "id": "c223",
+  "claim": "Elijah says his team page names fifteen agents and says in first sentence they are software.",
+  "quote": "names fifteen agents and says in the first sentence that every one of them is software",
+  "pages": [
+   "/blog/what-one-operator-can-deliver"
+  ],
+  "category": "person",
+  "conflict": null
+ },
+ {
+  "id": "c224",
+  "claim": "Elijah is 19, founded PV, studies at UA, started the business doing gutters, pressure washing and lawn care.",
+  "quote": "I started this business doing gutters, pressure washing and lawn care",
+  "pages": [
+   "/digital"
+  ],
+  "category": "person",
+  "conflict": "/resume says Mantle Field Services started 2024; /resume says PV started April 2025."
+ },
+ {
+  "id": "c225",
+  "claim": "One person runs the company; client calls Elijah when something breaks.",
+  "quote": "One person runs the company.",
+  "pages": [
+   "/sites"
+  ],
+  "category": "person",
+  "conflict": null
+ },
+ {
+  "id": "c226",
+  "claim": "AI agent roster: Margot Merrick (Chief of Staff), Quentin Quill (Proposals), Ivor Ingram (Invoice Chaser), Owen Oakes (Client Onboarding), Audrey Ashford (Activation Auditor), Cecily Cross (Compliance and Secrets), Porter Prewitt (Prospector, Services), Delia Dunmore (Prospector, Real Estate), Rhett Ramsey (Deal Sourcing), Greta Glennon (Grants and Scholarships), Tobias Thorne (Tax and Ledger), Silas Sutton (Case Studies), Wren Waverly (Content), Henry Haroldson (personal channel content), Sable Sinclair (Social Distribution).",
+  "quote": "Margot Merrick Chief of Staff",
+  "pages": [
+   "/team"
+  ],
+  "category": "person",
+  "conflict": null
+ },
+ {
+  "id": "c227",
+  "claim": "Elijah is the sole member and registered agent of the LLC; the only human; one person plus fifteen AI agents.",
+  "quote": "Founder and sole member",
+  "pages": [
+   "/who",
+   "/what-is-purcell-ventures"
+  ],
+  "category": "person",
+  "conflict": null
+ },
+ {
+  "id": "c228",
+  "claim": "Each AI consulting session ends with a written guide the team keeps.",
+  "quote": "Each session ends with a written guide your team keeps",
+  "pages": [
+   "/"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c229",
+  "claim": "The first conversation is free; custom software and AI automation quoted per project after a free conversation.",
+  "quote": "The first conversation is free.",
+  "pages": [
+   "/ai-consultant-tuscaloosa"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c230",
+  "claim": "Consulting session: Elijah comes to the office and builds at least one automation with the team during the session.",
+  "quote": "build at least one automation with you during the session",
+  "pages": [
+   "/ai-cost-calculator"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c231",
+  "claim": "AI Cost Calculator needs no login, no tracking, no email.",
+  "quote": "NO LOGIN, NO TRACKING",
+  "pages": [
+   "/ai-cost-calculator"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c232",
+  "claim": "Elijah offers twenty minutes at a business near campus for a free written Storefront Project piece, no obligation.",
+  "quote": "You get a written piece about your business either way",
+  "pages": [
+   "/blog/121-businesses-near-campus"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c233",
+  "claim": "Agent disclosure is enforced in code at the send function: 'An automated agent of Purcell Ventures LLC. Reply and a person will read it.'",
+  "quote": "An automated agent of Purcell Ventures LLC.",
+  "pages": [
+   "/blog/ai-team-page-honesty",
+   "/team"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c234",
+  "claim": "Being featured in the Tuscaloosa Storefront Project is free; Elijah asks for twenty minutes at the business.",
+  "quote": "being featured is free",
+  "pages": [
+   "/blog/is-your-business-invisible"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c235",
+  "claim": "Elijah offers free second-pair-of-eyes security review of UA students' apps and free Google listing advice by email.",
+  "quote": "that offer is open and it does not cost anything",
+  "pages": [
+   "/blog/small-app-security-checklist",
+   "/blog/claim-your-google-listing",
+   "/ai-at-alabama"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c236",
+  "claim": "Elijah's rule: whoever signs first goes first, and a second client is told before paying.",
+  "quote": "whoever signed first goes first, and if you are second I tell you that before you pay",
+  "pages": [
+   "/blog/what-one-operator-can-deliver"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c237",
+  "claim": "Elijah's stated principle: clients own all seven assets (domain, hosting, code, CMS login, Google Business Profile, analytics, domain email).",
+  "quote": "I build websites, and I want my clients to own all of it.",
+  "pages": [
+   "/blog/what-you-should-own"
+  ],
+  "category": "promise",
+  "conflict": "/sites says client owns site, content, domain and gets source code on leaving; /pricing-comparison and /how-we-work say full IP transfer."
+ },
+ {
+  "id": "c238",
+  "claim": "Consulting participants get a takeaway guide the same day; follow-up resource package afterward.",
+  "quote": "Same-day TAKEAWAYS",
+  "pages": [
+   "/consulting",
+   "/"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c239",
+  "claim": "Consulting reply and quote within 24 hours; booking confirmed within 24 hours.",
+  "quote": "I REPLY WITHIN 24 HOURS",
+  "pages": [
+   "/consulting",
+   "/consulting/book",
+   "/digital"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c240",
+  "claim": "Initial consulting call is 15 minutes.",
+  "quote": "We talk for 15 minutes.",
+  "pages": [
+   "/consulting"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c241",
+  "claim": "Courses are self-paced with lifetime access; refund if material does not match the page.",
+  "quote": "if the material does not match what the page says, ask and I will refund you",
+  "pages": [
+   "/courses"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c242",
+  "claim": "Course access code arrives by email within 5 minutes of purchase; payments via Lemon Squeezy.",
+  "quote": "within 5 minutes of purchase",
+  "pages": [
+   "/courses/college-apps",
+   "/courses/business-launch"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c243",
+  "claim": "Waitlist members get early-access pricing.",
+  "quote": "Waitlist members get the early-access price.",
+  "pages": [
+   "/courses/college-apps",
+   "/courses/business-launch",
+   "/courses/ai-automation"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c244",
+  "claim": "Digital response time: 24 hours.",
+  "quote": "I reply within 24 hours.",
+  "pages": [
+   "/digital"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c245",
+  "claim": "Add-on setup in one to two days for Tier I tools; no contract, cancel anytime.",
+  "quote": "There is no contract and you can cancel anytime.",
+  "pages": [
+   "/digital"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c246",
+  "claim": "Written proposal within 2 business days (24-48 hours) after the call.",
+  "quote": "within 2 business days",
+  "pages": [
+   "/how-we-work"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c247",
+  "claim": "First email gets a response within 24 hours, usually same day; 30-minute free call.",
+  "quote": "I respond within 24 hours, usually same day.",
+  "pages": [
+   "/how-we-work"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c248",
+  "claim": "Deposit is 50% for Custom Software, full setup fee for Digital Services.",
+  "quote": "50% for Custom Software",
+  "pages": [
+   "/how-we-work"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c249",
+  "claim": "Digital Services site live in 5-7 business days.",
+  "quote": "5-7 business days",
+  "pages": [
+   "/how-we-work"
+  ],
+  "category": "promise",
+  "conflict": "/sites says Starter live in 7 to 10 business days and Pro in 14 to 21 business days."
+ },
+ {
+  "id": "c250",
+  "claim": "Milestones every 2 weeks for Custom Software, weekly for Digital Services setup.",
+  "quote": "Milestones every 2 weeks for Custom Software",
+  "pages": [
+   "/how-we-work"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c251",
+  "claim": "30-day post-launch warranty on custom software; retainer can end with 14 days notice.",
+  "quote": "30-day post-launch warranty",
+  "pages": [
+   "/how-we-work"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c252",
+  "claim": "Response time: same day on most emails; 4 hours on Full Service subscriptions during business hours; 24-hour max elsewhere; client may text Elijah's personal cell.",
+  "quote": "4 hours on Full Service subscriptions during business hours",
+  "pages": [
+   "/how-we-work"
+  ],
+  "category": "promise",
+  "conflict": "/how-we-work says same-day for Full Service ($279/mo) in the process section and 4 hours in commitments; /digital says reply within 24 hours."
+ },
+ {
+  "id": "c253",
+  "claim": "Six commitments in every contract: no surprise invoices, no vendor lock-in, say when product does not fit, response times, code you can read, Christian-rooted ethics; breaking one lets client end contract and get refund.",
+  "quote": "you can end the contract and we refund you",
+  "pages": [
+   "/how-we-work",
+   "/"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c254",
+  "claim": "Client owns code, IP, domain and data; no exit fee.",
+  "quote": "no exit fee",
+  "pages": [
+   "/how-we-work"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c255",
+  "claim": "Digital Services clients get monthly check-in and quarterly review.",
+  "quote": "Quarterly review of metrics",
+  "pages": [
+   "/how-we-work"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c256",
+  "claim": "Elijah promises same-day response; email is best.",
+  "quote": "Same-day response. Email is best.",
+  "pages": [
+   "/links"
+  ],
+  "category": "promise",
+  "conflict": "/digital, /consulting, /steady say reply within 24 hours; /pricing-comparison says same day."
+ },
+ {
+  "id": "c257",
+  "claim": "Digital setup time to live is 5-7 business days (agency 8-16 weeks).",
+  "quote": "Setup time to live 5-7 business days",
+  "pages": [
+   "/pricing-comparison",
+   "/how-we-work"
+  ],
+  "category": "promise",
+  "conflict": "/sites says Starter 7 to 10 business days, Pro 14 to 21."
+ },
+ {
+  "id": "c258",
+  "claim": "Direct access to the owner; Elijah replies the same day.",
+  "quote": "Yes, Elijah replies the same day",
+  "pages": [
+   "/pricing-comparison"
+  ],
+  "category": "promise",
+  "conflict": "/digital says reply within 24 hours."
+ },
+ {
+  "id": "c259",
+  "claim": "PV does not take one-time builds and works on retainers.",
+  "quote": "We work on retainers and do not take one-time builds.",
+  "pages": [
+   "/pricing-comparison"
+  ],
+  "category": "promise",
+  "conflict": "/software and /sites offer one-time custom builds paid in phases."
+ },
+ {
+  "id": "c260",
+  "claim": "First 30-minute conversation is free.",
+  "quote": "The first 30-minute conversation is free.",
+  "pages": [
+   "/pricing-comparison",
+   "/how-we-work"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c261",
+  "claim": "Purcell Works door hanger offers free quote with same-day response and 10% off first service.",
+  "quote": "10% OFF your first service",
+  "pages": [
+   "/print"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c262",
+  "claim": "Sales rep promotion: Closer after 5 course closes and 80% on quiz; Senior after 5 Digital closes and co-pitch.",
+  "quote": "after 5 course closes and 80% on the quiz",
+  "pages": [
+   "/sales-rep"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c263",
+  "claim": "Commission paid the 1st of each month after a 30-day clawback window.",
+  "quote": "after a 30-day clawback window",
+  "pages": [
+   "/sales-rep"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c264",
+  "claim": "Sales rep quiz: 20 minutes, pass 14/18 objective, 6/10 ethics; Elijah reviews within 7 days; phone interview 20 minutes; onboarding call 30 minutes.",
+  "quote": "Elijah reviews within 7 days",
+  "pages": [
+   "/sales-rep"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c265",
+  "claim": "All shop products have a 30-day refund; download emailed within 60 seconds of checkout.",
+  "quote": "Every product has a 30-day refund.",
+  "pages": [
+   "/shop",
+   "/shop/starter-kit",
+   "/shop/cold-email-pack",
+   "/shop/subject-lines"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c266",
+  "claim": "Whale Alerts: 2 to 5 alerts per day; Telegram invite link single-use, expires 24 hours; paper-trading PnL posted every Sunday.",
+  "quote": "Expect 2 to 5 per day",
+  "pages": [
+   "/shop/wallet-tracker-premium/thanks",
+   "/shop/wallet-tracker-premium"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c267",
+  "claim": "Sites: 15-minute discovery call; prices quoted on the call.",
+  "quote": "BOOK A 15-MINUTE CALL",
+  "pages": [
+   "/sites"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c268",
+  "claim": "Lead Ops routes lead form to SMS plus email within 60 seconds.",
+  "quote": "within 60 seconds",
+  "pages": [
+   "/sites"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c269",
+  "claim": "Client owns the site, content and domain; if they leave, full source code and assets handed over with no penalty.",
+  "quote": "hand over the full source code and all assets with no penalty",
+  "pages": [
+   "/sites",
+   "/digital"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c270",
+  "claim": "Maintenance tiers renew SSL certificates automatically.",
+  "quote": "SSL RENEWS AUTOMATICALLY",
+  "pages": [
+   "/sites"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c271",
+  "claim": "Custom software discovery call is free and 30 minutes.",
+  "quote": "free 30-minute discovery call",
+  "pages": [
+   "/software",
+   "/how-we-work"
+  ],
+  "category": "promise",
+  "conflict": "/sites and /consulting offer a 15-minute call."
+ },
+ {
+  "id": "c272",
+  "claim": "Elijah uses Claude Code to write drafts and reviews every change.",
+  "quote": "I use Claude Code to write drafts and I review every change.",
+  "pages": [
+   "/software"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c273",
+  "claim": "Steady intake: reply within 24 hours; form takes 5 minutes.",
+  "quote": "I reply within 24 hours with a recommended plan",
+  "pages": [
+   "/steady",
+   "/steady/start"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c274",
+  "claim": "Agents are limited so none can invent a price, close its own findings, or send mail as a person; agent emails say so in the signature and a person reads the replies.",
+  "quote": "Anything one of them sends you says so in the signature, and a person reads the replies.",
+  "pages": [
+   "/team"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c275",
+  "claim": "No post is published without Elijah approving that exact post first.",
+  "quote": "Publish anything without Elijah approving that exact post first",
+  "pages": [
+   "/team"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c276",
+  "claim": "Quentin Quill prices every line off the rate card and refuses to quote a scope with no rate.",
+  "quote": "prices every line off the rate card",
+  "pages": [
+   "/team"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c277",
+  "claim": "Elijah answers every call and email himself.",
+  "quote": "Elijah Purcell answers every call and email himself.",
+  "pages": [
+   "/what-is-purcell-ventures"
+  ],
+  "category": "promise",
+  "conflict": null
+ },
+ {
+  "id": "c278",
+  "claim": "Sites division status is Accepting.",
+  "quote": "ACCEPTING",
+  "pages": [
+   "/"
+  ],
+  "category": "status",
+  "conflict": null
+ },
+ {
+  "id": "c279",
+  "claim": "Real Estate (wholesale, off-market deals for investors) is pending and opens 2026.",
+  "quote": "Sister channel, opens 2026.",
+  "pages": [
+   "/"
+  ],
+  "category": "status",
+  "conflict": null
+ },
+ {
+  "id": "c280",
+  "claim": "Home page lists Sites, Digital Add-ons, AI Consulting, Custom Software, Steady, Real Estate as divisions; home footer also lists a fifth link Autonomous AI agent systems.",
+  "quote": "THE DIVISIONS at present",
+  "pages": [
+   "/"
+  ],
+  "category": "status",
+  "conflict": "Other pages: four divisions (/about, /what-is-purcell-ventures); /resume lists software, AI integration, digital marketing, field services, wholesale real estate."
+ },
+ {
+  "id": "c281",
+  "claim": "Real estate wholesale (Wholesale Engine) is pending/opens 2026 on the home page but described as a built 2026 product on the resume.",
+  "quote": "Wholesale Engine",
+  "pages": [
+   "/",
+   "/resume"
+  ],
+  "category": "status",
+  "conflict": "/ says Real Estate opens 2026 (pending); /resume lists Wholesale Engine as shipped in 2026 and wholesale real estate as an existing operation."
+ },
+ {
+  "id": "c282",
+  "claim": "Case studies: none published yet; first case studies planned within about 60 days of starting client work.",
+  "quote": "within about 60 days of starting client work",
+  "pages": [
+   "/case-studies"
+  ],
+  "category": "status",
+  "conflict": "/resume lists English Pruitt Photography and several shipped builds, /case-studies says none published; /team says Silas Sutton writes case studies."
+ },
+ {
+  "id": "c283",
+  "claim": "Consulting has no corporate testimonials yet; early clients get lower rates and will be asked to be published as first case studies.",
+  "quote": "I don't have a wall of corporate testimonials yet.",
+  "pages": [
+   "/consulting"
+  ],
+  "category": "status",
+  "conflict": null
+ },
+ {
+  "id": "c284",
+  "claim": "All three courses are waitlist-open, not yet on sale; course opens when recording is complete.",
+  "quote": "The course opens when recording is complete.",
+  "pages": [
+   "/courses",
+   "/courses/college-apps",
+   "/courses/business-launch",
+   "/courses/ai-automation"
+  ],
+  "category": "status",
+  "conflict": "/ labels all three 'AVAILABLE NOW' with 'VIEW COURSE'; /courses and course pages say WAITLIST OPEN; /now says none is finished."
+ },
+ {
+  "id": "c285",
+  "claim": "Internal pages /crm, /invoicing exist and are empty (0 leads, 0 invoices).",
+  "quote": "Leads, bookings and the newsletter in one place",
+  "pages": [
+   "/crm",
+   "/invoicing"
+  ],
+  "category": "status",
+  "conflict": null
+ },
+ {
+  "id": "c286",
+  "claim": "FAQ page is a reference page revised May 2026; answers are collapsed in the rendered text (no answer text captured).",
+  "quote": "REFERENCE PAGE, REVISED MAY 2026",
+  "pages": [
+   "/faq"
+  ],
+  "category": "status",
+  "conflict": null
+ },
+ {
+  "id": "c287",
+  "claim": "Three courses (College Application Playbook, Business Launch Playbook, Zero to Automated) are described as 'None is finished' and material is sent on request.",
+  "quote": "None is finished. Ask me and I will send the material.",
+  "pages": [
+   "/now"
+  ],
+  "category": "status",
+  "conflict": "/ and /courses list all three as 'AVAILABLE NOW'; /now says none is finished."
+ },
+ {
+  "id": "c288",
+  "claim": "Prayer Walk Mobile: production AAB built, Play Store launch pending.",
+  "quote": "Play Store launch pending.",
+  "pages": [
+   "/portfolio"
+  ],
+  "category": "status",
+  "conflict": null
+ },
+ {
+  "id": "c289",
+  "claim": "PV Social Instagram posting is not connected yet; accounts @purcellventures and @elijahbot.",
+  "quote": "Instagram posting is not connected yet.",
+  "pages": [
+   "/portfolio"
+  ],
+  "category": "status",
+  "conflict": "/sites says Marketing Partner tier includes four Instagram posts per month scheduled through PV Social."
+ },
+ {
+  "id": "c290",
+  "claim": "Sales rep role: hiring commission-only 1099 contractors; 15% Apprentice, 20% Closer plus flat $100/$150/$200 per Digital tier, Senior adds Consulting 20% and Custom Software 15%.",
+  "quote": "15 to 20% on closed deals",
+  "pages": [
+   "/sales-rep"
+  ],
+  "category": "status",
+  "conflict": null
+ },
+ {
+  "id": "c291",
+  "claim": "Field services (gutter cleaning, pressure washing, lawn care) have moved to Mantle Field Services, which Purcell Ventures still owns.",
+  "quote": "Purcell Ventures still owns it.",
+  "pages": [
+   "/services",
+   "/faq"
+  ],
+  "category": "status",
+  "conflict": "/what-is-purcell-ventures calls Mantle a 'sister brand'/'separate brand'; /services says Purcell Ventures still owns it; /resume says Elijah is Founder & Operator."
+ },
+ {
+  "id": "c292",
+  "claim": "Persona AI is an AI companion chat app still in development.",
+  "quote": "still in development",
+  "pages": [
+   "/software"
+  ],
+  "category": "status",
+  "conflict": null
+ },
+ {
+  "id": "c293",
+  "claim": "Elijah earned 34 college acceptances and $530,384 in scholarships.",
+  "quote": "34 acceptances and $530,384 in scholarships",
+  "pages": [
+   "/"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c294",
+  "claim": "Elijah's agents once had a stage reporting quotes sent when none were sent; a network blip closed blocking findings as resolved.",
+  "quote": "No quotes were sent.",
+  "pages": [
+   "/agentic-ai"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c295",
+  "claim": "AI Cost Calculator default example: 104 hours/month saved, $6,755/month, $81,058/year, payback 7 days for a $1,500 4-hour session.",
+  "quote": "pays back in 7 days",
+  "pages": [
+   "/ai-cost-calculator"
+  ],
+  "category": "result",
+  "conflict": "Default session $1,500 for 4 hours conflicts with the stated $175/hr 1-on-1 ($700 for 4h), $125/person, or $2,500 workshop pricing."
+ },
+ {
+  "id": "c296",
+  "claim": "The proposal agent once drafted twenty proposals that all carried internal notes; none went out.",
+  "quote": "twenty documents that all carried internal notes",
+  "pages": [
+   "/blog/ai-team-page-honesty",
+   "/blog"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c297",
+  "claim": "Projection: 200 kits at $19 = $3,800; 10 converting to $179/mo for 12 months = $21,480; 100 copies = $1,900 or ~$47/hour; 1,000 copies = $19,000 or ~$475/hour.",
+  "quote": "$21,480",
+  "pages": [
+   "/blog/case-for-charging-19"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c298",
+  "claim": "Elijah's first client came from a cold email: a photography business that got a full site scoped, built and delivered; he did not track reply rates.",
+  "quote": "My first client came from a cold email",
+  "pages": [
+   "/blog/cold-outreach-that-worked",
+   "/portfolio",
+   "/resume"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c299",
+  "claim": "A network blip made live properties unreachable and the audit agent closed several blocking findings as resolved.",
+  "quote": "a network blip made several live properties unreachable",
+  "pages": [
+   "/blog/what-the-agents-get-wrong",
+   "/agentic-ai"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c300",
+  "claim": "The proposal agent drafted 20 documents all containing internal notes; a compliance agent flagged them and none went out.",
+  "quote": "The proposal agent drafted 20 documents.",
+  "pages": [
+   "/blog/what-the-agents-get-wrong",
+   "/blog/ai-team-page-honesty"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c301",
+  "claim": "Consulting: Elijah has built these systems for a year, full-time while in high school.",
+  "quote": "I'm nineteen and I have built these systems for a year.",
+  "pages": [
+   "/consulting"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c302",
+  "claim": "Elijah automated his email inbox, YouTube channel, lead generation and scholarship search and runs every tool the course teaches.",
+  "quote": "I automated my email inbox, my YouTube channel, my lead generation and my scholarship search.",
+  "pages": [
+   "/courses/ai-automation",
+   "/courses"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c303",
+  "claim": "ROI calculator example: Hair Salon gives +$1,058/mo net, 846% monthly ROI, 3-day payback (presets are made up).",
+  "quote": "846%",
+  "pages": [
+   "/digital"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c304",
+  "claim": "College Playbook: 34 acceptances, $530k scholarships.",
+  "quote": "34 acceptances. $530k scholarships. $297.",
+  "pages": [
+   "/links"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c305",
+  "claim": "Scholarship Sniper tracked 98 schools; 34 acceptances came with $530,384 a year in scholarship offers.",
+  "quote": "Tracked 98 schools through one application cycle",
+  "pages": [
+   "/portfolio"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c306",
+  "claim": "Year 1 PV Growth cost ~$2,848 (700 setup + 179x12), versus agency ~$30,000-80,000 bundled and freelancer ~$5,000-12,000.",
+  "quote": "PV Growth ~$2,848",
+  "pages": [
+   "/pricing-comparison"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c307",
+  "claim": "English Pruitt Photography site was sourced through cold outreach, scoped and built (2026).",
+  "quote": "Sourced through cold outreach, scoped, and built",
+  "pages": [
+   "/resume"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c308",
+  "claim": "Elijah ran read-only security audits across seven live applications.",
+  "quote": "seven live applications",
+  "pages": [
+   "/resume"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c309",
+  "claim": "Purcell Ventures generates active revenue.",
+  "quote": "Generates active revenue.",
+  "pages": [
+   "/resume"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c310",
+  "claim": "Scholarship record: total confirmed offers $530,384/yr; 34 acceptances; enrolled at Alabama. Offers include Kalamazoo $48,000/yr, Susquehanna $48,000/yr, Drake $31,000, Hood $31,000, Transylvania $30,000, UA $28,000, etc.",
+  "quote": "TOTAL CONFIRMED OFFERS $530,384 / yr",
+  "pages": [
+   "/resume",
+   "/"
+  ],
+  "category": "result",
+  "conflict": "/ says $530,384 in scholarships; /resume says $530,384 / yr as total of per-year offers."
+ },
+ {
+  "id": "c311",
+  "claim": "Rep earnings projections: $300-500/mo Apprentice, $1,000-1,500 Closer, $2,000+ Senior at 10 hours/week; not actual payouts yet.",
+  "quote": "These are projections from the commission rates above, not payouts a rep has received yet.",
+  "pages": [
+   "/sales-rep"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c312",
+  "claim": "Paper trading results: 60% win rate, +14% average winner; 90-day historical backtest; tokens scoring under 4 get no alert.",
+  "quote": "60% win rate, +14% avg winner",
+  "pages": [
+   "/shop/wallet-tracker-premium"
+  ],
+  "category": "result",
+  "conflict": null
+ },
+ {
+  "id": "c313",
+  "claim": "Contact phone is (205) 462-7839 and email elijah@purcell-ventures.com.",
+  "quote": "(205) 462-7839",
+  "pages": [
+   "/",
+   "/about",
+   "/who",
+   "/what-is-purcell-ventures"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c314",
+  "claim": "Sister brand Mantle Field Services operates in Metro Atlanta only.",
+  "quote": "Mantle Field Services Metro Atlanta only",
+  "pages": [
+   "/",
+   "/what-is-purcell-ventures"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c315",
+  "claim": "Elijah's Proverbs 3:5 NASB is quoted.",
+  "quote": "Proverbs 3:5, NASB",
+  "pages": [
+   "/"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c316",
+  "claim": "Fifteen-agent workforce running daily since 2026, with ELO-scored autonomy tier and append-only message bus.",
+  "quote": "ELO-scored autonomy tier",
+  "pages": [
+   "/agentic-ai"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c317",
+  "claim": "Purcell Ventures LLC has one human employee.",
+  "quote": "one human employee",
+  "pages": [
+   "/agentic-ai"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c318",
+  "claim": "UA B.S. in Artificial Intelligence is 121 credit hours, 52 in the major and 47 ancillary; AI majors cannot double-major in CS.",
+  "quote": "121 credit hours, with 52 in the major and 47 in ancillary",
+  "pages": [
+   "/ai-at-alabama"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c319",
+  "claim": "Elijah's agents were running before he took an AI course.",
+  "quote": "They were running before I had taken an AI course.",
+  "pages": [
+   "/ai-at-alabama"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c320",
+  "claim": "Posts are drafted with AI tools and edited before publishing.",
+  "quote": "I draft some posts with AI tools and edit every one before it goes up.",
+  "pages": [
+   "/blog",
+   "/blog/case-for-charging-19"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c321",
+  "claim": "Claiming a Google listing takes about twenty minutes and is free.",
+  "quote": "about twenty minutes",
+  "pages": [
+   "/blog/121-businesses-near-campus",
+   "/blog/claim-your-google-listing"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c322",
+  "claim": "Elijah's LinkedIn once described him as an eighteen-year-old when he is nineteen.",
+  "quote": "my own LinkedIn describing me as an eighteen-year-old",
+  "pages": [
+   "/blog/can-ai-find-your-business"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c323",
+  "claim": "Elijah's stated pricing in the $19 post: Digital Services $179/mo, Consulting $175/hr, Custom Software $1,500+; content took about 40 hours.",
+  "quote": "Digital Services $179/mo, Consulting $175/hr, Custom Software $1,500+",
+  "pages": [
+   "/blog/case-for-charging-19"
+  ],
+  "category": "other",
+  "conflict": "Digital Services priced $99/$179/$279 elsewhere; this post treats $179/mo as the Digital Services price."
+ },
+ {
+  "id": "c324",
+  "claim": "Elijah uses Stripe and a custom workflow for Purcell Ventures invoices (set up in 90 minutes).",
+  "quote": "I use Stripe and a custom workflow for Purcell Ventures invoices. Setup took 90 minutes.",
+  "pages": [
+   "/blog/five-workflows-no-code"
+  ],
+  "category": "other",
+  "conflict": "/team has an Invoice Chaser agent (Ivor Ingram) that drafts invoices; /invoicing page is an empty app."
+ },
+ {
+  "id": "c325",
+  "claim": "Capstone Center for Student Success is in Russell Hall, (205) 348-7011; UA Libraries ten libraries and 3 million resources.",
+  "quote": "(205) 348-7011",
+  "pages": [
+   "/blog/free-at-alabama"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c326",
+  "claim": "The EIN takes ten minutes and is free from the IRS; one bank branch said yes by phone and no at the desk.",
+  "quote": "The EIN takes ten minutes and is free",
+  "pages": [
+   "/blog/llc-at-seventeen"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c327",
+  "claim": "New College has existed since 1971, inside the Barefield College of Arts and Sciences; contact (205) 348-4600, ncfrndsk@ua.edu.",
+  "quote": "It has existed since 1971",
+  "pages": [
+   "/blog/new-college-alabama"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c328",
+  "claim": "Elijah's depth study combines psychology and data science, aimed at psychiatry; he combines New College with the Honors College.",
+  "quote": "Mine combines psychology and data science",
+  "pages": [
+   "/blog/new-college-alabama"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c329",
+  "claim": "Elijah builds and fixes websites for local businesses around Tuscaloosa.",
+  "quote": "I build and fix websites for local businesses around Tuscaloosa.",
+  "pages": [
+   "/blog/not-secure-label-website-fix"
+  ],
+  "category": "other",
+  "conflict": "/sites and / emphasize Atlanta/metro Georgia and nationwide; this says Tuscaloosa."
+ },
+ {
+  "id": "c330",
+  "claim": "Elijah's personal AI product (Persona AI) stores trajectory rather than profiles; he is one semester into his degree.",
+  "quote": "I am one semester in",
+  "pages": [
+   "/blog/psychology-and-software"
+  ],
+  "category": "other",
+  "conflict": "Resume says UA enrolment since August 2026 (consistent); blog dated 20 Aug 2026 says 'one week of a methods course' though first class was 19 Aug 2026."
+ },
+ {
+  "id": "c331",
+  "claim": "Elijah plans psychiatry, targeting reducing clinician administrative load (notes, documentation).",
+  "quote": "The plan is psychiatry",
+  "pages": [
+   "/blog/psychology-and-software",
+   "/who"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c332",
+  "claim": "Elijah checks small business websites around Tuscaloosa for problems and offers to look at readers' sites.",
+  "quote": "I check small business websites around Tuscaloosa for problems like these.",
+  "pages": [
+   "/blog/start-using-ai-this-week-three-safe-first-tasks",
+   "/blog/not-secure-label-website-fix"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c333",
+  "claim": "Elijah says Levitetz Leadership Program (New College) offers seed grants.",
+  "quote": "New College's Levitetz Leadership Program offers them alongside workshops and internships.",
+  "pages": [
+   "/blog/starting-a-business-at-alabama",
+   "/blog/new-college-alabama"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c334",
+  "claim": "Storefront Project: each piece covers one business; featured businesses need not be clients; interview takes about twenty minutes in person.",
+  "quote": "a business does not have to be a client to be in one",
+  "pages": [
+   "/blog/tuscaloosa-small-business-online",
+   "/blog/121-businesses-near-campus"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c335",
+  "claim": "Elijah recommends the free option first for most of the 121 audited businesses.",
+  "quote": "for most of them my recommendation is the free option first",
+  "pages": [
+   "/blog/what-a-website-actually-costs"
+  ],
+  "category": "other",
+  "conflict": "/digital and / market paid plans from $99/mo."
+ },
+ {
+  "id": "c336",
+  "claim": "The Steady intake form and the /sales-rep form each create a CRM contact automatically.",
+  "quote": "both create a CRM contact automatically",
+  "pages": [
+   "/blog/why-i-built-crm-from-scratch"
+  ],
+  "category": "other",
+  "conflict": "/steady/start says the form opens an email to Elijah when submitted."
+ },
+ {
+  "id": "c337",
+  "claim": "HubSpot plan prices cited (May 2026): Starter $50/mo, Marketing Hub Pro $890/mo, Sales Hub Pro $720/mo.",
+  "quote": "Workflow automation, at $890/mo (Marketing Hub Pro)",
+  "pages": [
+   "/blog/why-i-built-crm-from-scratch"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c338",
+  "claim": "Elijah says three other people share his name.",
+  "quote": "Three other people share mine.",
+  "pages": [
+   "/blog/write-a-page-an-ai-will-quote",
+   "/blog/can-ai-find-your-business"
+  ],
+  "category": "other",
+  "conflict": "/who lists four other Elijah Purcells (Pensacola pastor, Farragut football recruit, Brisbane boxer, UT linebacker)."
+ },
+ {
+  "id": "c339",
+  "claim": "Brand palette has seven colors; Purcell Gold #D4AF37, Purcell Dark #0C0A08, Cream #F5F0E0; font Cinzel.",
+  "quote": "Seven colors. Three primary, four functional.",
+  "pages": [
+   "/brand",
+   "/logos"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c340",
+  "claim": "Business card lists Elijah Purcell as FOUNDER/CEO of Purcell Ventures and OWNER of Purcell Works.",
+  "quote": "OWNER",
+  "pages": [
+   "/business-cards"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c341",
+  "claim": "Business cards are 3.5 x 2 inches with 8 slash variations.",
+  "quote": "Eight cards built around the diagonal gold slash. 3.5 by 2 inches.",
+  "pages": [
+   "/business-cards"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c342",
+  "claim": "Elijah says each course documents a process from the last two years.",
+  "quote": "a process I went through in the last two years",
+  "pages": [
+   "/courses"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c343",
+  "claim": "Module 7-1 of Business Launch course points to Zero to Automated.",
+  "quote": "Module 7-1 of the Business Launch course points here",
+  "pages": [
+   "/courses/ai-automation"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c344",
+  "claim": "Business Launch course claims Purcell Ventures runs consulting, software, digital products and courses.",
+  "quote": "It runs consulting, software, digital products and courses.",
+  "pages": [
+   "/courses/business-launch"
+  ],
+  "category": "other",
+  "conflict": "/ lists Sites, Digital Add-ons, AI Consulting, Software, Steady, Real Estate; course page omits Steady and Sites."
+ },
+ {
+  "id": "c345",
+  "claim": "Elijah builds with AI coding tools such as Claude Code.",
+  "quote": "I build with AI coding tools such as Claude Code.",
+  "pages": [
+   "/digital"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c346",
+  "claim": "Digital page shows sample cards (Sarah M. booking $120, Mark Rivera $450 payment) labelled as example.",
+  "quote": "Example review",
+  "pages": [
+   "/digital"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c347",
+  "claim": "Digital tool data stays on the user's device (estimating, expenses, inventory, loyalty, event registration).",
+  "quote": "Stays on this device.",
+  "pages": [
+   "/digital/estimating",
+   "/digital/expenses",
+   "/digital/inventory",
+   "/digital/loyalty",
+   "/digital/event-registration"
+  ],
+  "category": "other",
+  "conflict": "/digital pricing lists these as paid add-ons priced on the discovery call."
+ },
+ {
+  "id": "c348",
+  "claim": "Business Finder page shows demo data of 12 businesses with scores (Marietta, Kennesaw, Acworth GA) using Google Places.",
+  "quote": "Demo Data",
+  "pages": [
+   "/digital/finder"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c349",
+  "claim": "Sales Playbook for reps is private (disallowed in robots.txt) and says 'I run a small tech company out of [city]'.",
+  "quote": "I run a small tech company out of [city] called Purcell Ventures",
+  "pages": [
+   "/digital/playbook"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c350",
+  "claim": "Elijah's work is shaped by Christian-rooted ethics.",
+  "quote": "Christian-rooted ethics",
+  "pages": [
+   "/how-we-work"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c351",
+  "claim": "Work refused: adult content, gambling, predatory finance, MLM, deceptive practices.",
+  "quote": "adult content, gambling, predatory finance or MLM",
+  "pages": [
+   "/how-we-work"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c352",
+  "claim": "Calls are by phone or Zoom, or in person if in Metro Atlanta.",
+  "quote": "in person if you're in Metro Atlanta",
+  "pages": [
+   "/how-we-work"
+  ],
+  "category": "other",
+  "conflict": "Elijah is based in Tuscaloosa per other pages."
+ },
+ {
+  "id": "c353",
+  "claim": "Links list a LinkedIn page for Purcell Ventures, GitHub (thebigjah), Instagram.",
+  "quote": "Purcell Ventures on LinkedIn",
+  "pages": [
+   "/links"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c354",
+  "claim": "Elijah is rebuilding the Purcell Ventures site with a new mark and new gold.",
+  "quote": "Rebuilding this site from the ground up",
+  "pages": [
+   "/now"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c355",
+  "claim": "Elijah keeps a calibration journal; reads NASB for devotion and NRSVue for study; non-Calvinist.",
+  "quote": "NASB for devotion, NRSVue for study",
+  "pages": [
+   "/now",
+   "/verses"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c356",
+  "claim": "AI chatbot is included from the Starter plan.",
+  "quote": "Included in Starter+",
+  "pages": [
+   "/pricing-comparison"
+  ],
+  "category": "other",
+  "conflict": "/pricing-comparison and /sales-rep: chatbot in Starter ($99). /digital: AI Chatbot is Tier III (Marketing Partner) add-on."
+ },
+ {
+  "id": "c357",
+  "claim": "Elijah works with a few commissioned sales reps; sales reps paid commission; agencies pay 15-25%.",
+  "quote": "a few commissioned sales reps",
+  "pages": [
+   "/pricing-comparison"
+  ],
+  "category": "other",
+  "conflict": "/team says Elijah is the one human and company has one person; /what-is says 'People: One'."
+ },
+ {
+  "id": "c358",
+  "claim": "Field services brand is called Purcell Works (works.purcellventures.co) on print materials and business cards, vs Mantle Field Services elsewhere.",
+  "quote": "PURCELL WORKS FIELD SERVICES",
+  "pages": [
+   "/print",
+   "/business-cards"
+  ],
+  "category": "other",
+  "conflict": "/, /services, /faq, /qr, /links say field services run as Mantle Field Services (mantle-field-site.vercel.app); /print and /business-cards say Purcell Works at works.purcellventures.co."
+ },
+ {
+  "id": "c359",
+  "claim": "Company operates across software, AI integration, digital marketing, field services, wholesale real estate.",
+  "quote": "software development, AI integration, digital marketing, field services, and wholesale real estate",
+  "pages": [
+   "/resume"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c360",
+  "claim": "Church: Stonebridge Church Marietta, baptized at 15; Kennesaw First Baptist Wednesday youth.",
+  "quote": "baptized here at 15",
+  "pages": [
+   "/resume"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c361",
+  "claim": "Career goal: MD in Psychiatry integrating AI research and faith-based counseling.",
+  "quote": "MD in Psychiatry",
+  "pages": [
+   "/resume"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c362",
+  "claim": "Resume lists Elijah's personal email elijahpurcell@gmail.com and GitHub thebigjah.",
+  "quote": "github.com/thebigjah",
+  "pages": [
+   "/resume"
+  ],
+  "category": "other",
+  "conflict": "/ lists elijah@purcell-ventures.com as contact; /resume lists a gmail address."
+ },
+ {
+  "id": "c363",
+  "claim": "Boyfriend Camera, Middleman, The Loom, ElijahBot OS hosted on vercel.app URLs.",
+  "quote": "middleman-lime.vercel.app",
+  "pages": [
+   "/resume"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c364",
+  "claim": "Sitemap lists 59 URLs while crawl covered 134 pages; robots.txt disallows /digital/playbook, /digital/finder, /crm, /invoicing, /newsletter, /qr, /business-cards, /logos, /consulting/book, /writing, /verses, /sales-rep, /rep-portal, /uses, /shop, /free.",
+  "quote": "Disallow: /shop",
+  "pages": [
+   "/robots.txt",
+   "/sitemap.xml"
+  ],
+  "category": "other",
+  "conflict": "Several disallowed pages (/shop, /sales-rep, /verses, /writing, /uses) are linked from public pages."
+ },
+ {
+  "id": "c365",
+  "claim": "Under 18 reps need a parent/guardian co-signature.",
+  "quote": "one of your parents or legal guardians has to co-sign",
+  "pages": [
+   "/sales-rep"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c366",
+  "claim": "The company describes itself as a Christian business with three selling rules.",
+  "quote": "We're a Christian business.",
+  "pages": [
+   "/sales-rep"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c367",
+  "claim": "Sales role is for a 'Georgia-based company'.",
+  "quote": "a Georgia-based company that's small enough that you'll talk to the owner every week",
+  "pages": [
+   "/sales-rep"
+  ],
+  "category": "other",
+  "conflict": "Elijah operates from Tuscaloosa, Alabama per other pages."
+ },
+ {
+  "id": "c368",
+  "claim": "Shop payments are processed via Stripe; courses via Lemon Squeezy.",
+  "quote": "Lemon Squeezy processes payments.",
+  "pages": [
+   "/shop",
+   "/courses/college-apps"
+  ],
+  "category": "other",
+  "conflict": "Shop uses Stripe checkout; courses use Lemon Squeezy; /digital invoicing uses Stripe."
+ },
+ {
+  "id": "c369",
+  "claim": "Shop products are things used internally at Purcell Ventures; kits priced $19 to $29.",
+  "quote": "Every product on this page is something we use internally",
+  "pages": [
+   "/shop"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c370",
+  "claim": "Cold Email Pack templates are the ones the company's sales reps work from; cold sequence 5 emails over 21 days.",
+  "quote": "These are the templates our sales reps work from.",
+  "pages": [
+   "/shop/cold-email-pack"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c371",
+  "claim": "Steady is run by Elijah himself and is a service of Purcell Ventures LLC.",
+  "quote": "Steady is a service of Purcell Ventures LLC. I run it myself.",
+  "pages": [
+   "/steady"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c372",
+  "claim": "Elijah decides prices, what is sent to a client, and what happens to money.",
+  "quote": "makes every decision the agents are not allowed to make: prices, what gets sent to a client, and what happens to money",
+  "pages": [
+   "/team"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c373",
+  "claim": "Stack: Next.js, React Native/Expo, Electron, Claude API default LLM, OpenAI Whisper, ElevenLabs, Vercel, Supabase/Firebase, Resend, ntfy.sh.",
+  "quote": "Claude API Anthropic's API. Default LLM for everything I build.",
+  "pages": [
+   "/uses"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c374",
+  "claim": "Elijah uses a MacBook synced via iCloud and a Windows desktop; condenser mic for worship and course recording.",
+  "quote": "MacBook For travel.",
+  "pages": [
+   "/uses"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c375",
+  "claim": "Five scriptures: Romans 8:28, Matthew 5:10, Romans 1:16, Proverbs 3:5-6, Psalm 139:13 (NASB).",
+  "quote": "Five scriptures that have shaped me.",
+  "pages": [
+   "/verses",
+   "/"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c376",
+  "claim": "Elijah says he has no pastoral training.",
+  "quote": "I have no pastoral training",
+  "pages": [
+   "/verses"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c377",
+  "claim": "An older unrelated Purcell Ventures LLC is registered in New York.",
+  "quote": "older, unrelated Purcell Ventures LLC registered in New York",
+  "pages": [
+   "/what-is-purcell-ventures"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c378",
+  "claim": "The LLC has an EIN and business banking.",
+  "quote": "It has an EIN and business banking",
+  "pages": [
+   "/what-is-purcell-ventures"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c379",
+  "claim": "Other people named Elijah Purcell: Liberty Church Pensacola campus pastor, Farragut HS football recruit, Brisbane amateur boxer, UT linebacker.",
+  "quote": "campus pastor at Liberty Church in Pensacola, Florida",
+  "pages": [
+   "/who"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c380",
+  "claim": "Elijah is reading Lewis, Craig, McDowell and Tozer.",
+  "quote": "Lewis, Craig, McDowell and Tozer",
+  "pages": [
+   "/who"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c381",
+  "claim": "Elijah writes a reporting series called the Tuscaloosa Storefront Project; blog lists ~20 posts dated May-Aug 2026.",
+  "quote": "Tuscaloosa Storefront Project",
+  "pages": [
+   "/who"
+  ],
+  "category": "other",
+  "conflict": null
+ },
+ {
+  "id": "c382",
+  "claim": "Elijah is interested in AI reducing administrative load of mental health clinicians.",
+  "quote": "reduce the administrative load carried by mental health clinicians",
+  "pages": [
+   "/who"
+  ],
+  "category": "other",
+  "conflict": null
+ }
+]

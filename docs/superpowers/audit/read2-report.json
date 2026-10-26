@@ -1,0 +1,730 @@
+[
+ {
+  "path": "/about",
+  "fixes": [
+   {
+    "quote": "I&apos;m in a hurry because the work matters.",
+    "rule": "vague/empty",
+    "rewrite": "I work fast because small businesses need these tools now."
+   },
+   {
+    "quote": "and earned a 3.92 GPA without once finding it particularly interesting to coast.",
+    "rule": "awkward",
+    "rewrite": "and earned a 3.92 GPA without coasting."
+   },
+   {
+    "quote": "I care about doing things that last. That&apos;s true of the software, the businesses, the relationships, and the faith. I don&apos;t think those are separate categories.",
+    "rule": "slogan/rule of three/awkward",
+    "rewrite": "I care about building things that last: the software, the businesses, the relationships and the faith. I treat them as one commitment."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/ai-cost-calculator",
+  "fixes": [
+   {
+    "quote": "Pick a share you believe for your team. The slider starts at 60%.",
+    "rule": "awkward",
+    "rewrite": "Choose the share of this work you expect AI to handle for your team. The slider starts at 60%."
+   },
+   {
+    "quote": "The calculator applies a conservative recovery rate to those hours and compares\n            the result against the cost of a session, which gives you a payback period in\n            weeks.",
+    "rule": "vague/illogical (conservative rate vs 60% default)",
+    "rewrite": "The calculator multiplies those hours by the automation share you pick, compares\n            the savings with the cost of a session, and gives you the payback period."
+   },
+   {
+    "quote": "The recovery rate is set low to allow for interruptions, revisions, and the tasks\n            where a model produces something you have to rewrite.",
+    "rule": "vague/passive",
+    "rewrite": "Lower the automation share to allow for interruptions, revisions, and tasks\n            where a model produces something you have to rewrite."
+   },
+   {
+    "quote": "When the answer is no",
+    "rule": "vague heading",
+    "rewrite": "When to skip the session"
+   },
+   {
+    "quote": "the sensible answer is to skip the session. The\n            calculator shows that result too.",
+    "rule": "vague/hedging",
+    "rewrite": "you should skip the session. The\n            calculator shows that result too."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/business-cards",
+  "fixes": [
+   {
+    "quote": "Do not use gloss on gold. It washes out.",
+    "rule": "awkward",
+    "rewrite": "Gloss washes out the gold, so skip it."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/ai-at-alabama/page.tsx",
+  "fixes": [
+   {
+    "quote": "Know one rule before you plan anything. <strong>an AI major cannot\n            also major in Computer Science.</strong> The catalog says so outright.",
+    "rule": "imperative / grammar error",
+    "rewrite": "One rule limits your plan: <strong>an AI major cannot\n            also major in Computer Science.</strong> The catalog says so outright."
+   },
+   {
+    "quote": "and I would not trade the probability sequence for anything. It does not give you is the experience",
+    "rule": "hyperbole / grammar error",
+    "rewrite": "and I value the probability sequence highly. It does not give you the experience"
+   },
+   {
+    "quote": "you will learn things about running machine learning\n            that a semester does not cover.",
+    "rule": "vague",
+    "rewrite": "you will learn how a deployed machine learning system fails,\n            which a semester does not cover."
+   },
+   {
+    "quote": "Plus eight\n            hours of natural science and three of cognitive or neuroscience.",
+    "rule": "fragment",
+    "rewrite": "It also requires eight\n            hours of natural science and three of cognitive science or neuroscience."
+   },
+   {
+    "quote": "that offer is open and it does not cost anything.",
+    "rule": "filler",
+    "rewrite": "that offer is free."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/ai-at-alabama/layout.tsx",
+  "fixes": [
+   {
+    "quote": "overlap too heavily to be counted twice.",
+    "rule": "passive",
+    "rewrite": "overlap too heavily to count twice."
+   },
+   {
+    "quote": "Individual CS courses can be taken as electives subject to prerequisites, and",
+    "rule": "passive",
+    "rewrite": "Students can take individual CS courses as electives, subject to prerequisites, and"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/blog/121-businesses-near-campus/page.tsx",
+  "fixes": [
+   {
+    "quote": "Two caveats cut against that.",
+    "rule": "figurative",
+    "rewrite": "Two caveats weaken that read."
+   },
+   {
+    "quote": "free and takes about twenty minutes.",
+    "rule": "illustrative hedging",
+    "rewrite": "free and takes twenty minutes."
+   },
+   {
+    "quote": "A business does not have to be a client to be featured.",
+    "rule": "negative framing / passive",
+    "rewrite": "I feature businesses whether or not they are clients."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/blog/audit-every-business-in-your-town/page.tsx",
+  "fixes": [
+   {
+    "quote": "the numbers in about\n            forty minutes.",
+    "rule": "illustrative hedging",
+    "rewrite": "the numbers in\n            forty minutes."
+   },
+   {
+    "quote": "The moment\n            you collect contact details you have built a marketing list, and if the reason\n            you told people you were doing this was resear",
+    "rule": "awkward / illogical",
+    "rewrite": "Once\n            you collect contact details you have a marketing list. If you told people you\n            were doing research, you have lied to them, and people notice."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/blog/case-for-charging-19/page.tsx",
+  "fixes": [
+   {
+    "quote": "often sell for hundreds of dollars.",
+    "rule": "vague",
+    "rewrite": "often sell for $97, $297 or $497."
+   },
+   {
+    "quote": "took about 40 hours of work. If I sell 100 copies, that is $1,900, or about $47 for each hour of build time. If I sell 1,000 copies, that is $19,000, or about $",
+    "rule": "illustrative hedging",
+    "rewrite": "took 40 hours of work. If I sell 100 copies, that is $1,900, or $47.50 for each hour of build time. If I sell 1,000 copies, that is $19,000, or $475 an hour,"
+   },
+   {
+    "quote": "<p>A $19 mistake costs the buyer little.</p>",
+    "rule": "echo",
+    "rewrite": "<p>A buyer who picks the wrong kit loses $19.</p>"
+   },
+   {
+    "quote": "5. Agencies hide the contents until you pay. I list every file.",
+    "rule": "slogan / generalization",
+    "rewrite": "5. I list every file in the kit before anyone pays"
+   },
+   {
+    "quote": "I list every file in the kit on the <Link href=\"/shop/starter-kit\" style={linkStyle}>shop page</Link>, so the customer knows what they are getting before they b",
+    "rule": "echo",
+    "rewrite": "I list every file on the <Link href=\"/shop/starter-kit\" style={linkStyle}>shop page</Link>."
+   },
+   {
+    "quote": "6. Cheap entry products force operational discipline",
+    "rule": "slogan",
+    "rewrite": "6. A $19 price tests my delivery pipeline"
+   },
+   {
+    "quote": "The kit is a test of my delivery pipeline. It has to deliver",
+    "rule": "echo",
+    "rewrite": "The kit has to deliver"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/blog/free-at-alabama/page.tsx",
+  "fixes": [
+   {
+    "quote": "Consultations run about fifty minutes,",
+    "rule": "illustrative hedging",
+    "rewrite": "Consultations run fifty minutes,"
+   },
+   {
+    "quote": "If you are in the calculus sequence this is the building you should already know.",
+    "rule": "awkward",
+    "rewrite": "If you are in the calculus sequence, you will use this center."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/blog/new-college-alabama/page.tsx",
+  "fixes": [
+   {
+    "quote": "and can tell you what the trade is.",
+    "rule": "vague",
+    "rewrite": "and can tell you what it costs."
+   },
+   {
+    "quote": "Psycho-Social Sciences and Neuroscience, which gives you a\n            sense of the range. Mine",
+    "rule": "filler",
+    "rewrite": "Psycho-Social Sciences and Neuroscience. Mine"
+   },
+   {
+    "quote": "Some paths conflict with it. Pre-med works,",
+    "rule": "illogical",
+    "rewrite": "Some paths need extra care. Pre-med works,"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/blog/six-sources-one-page/page.tsx",
+  "fixes": [
+   {
+    "quote": "is scattered across separate systems.",
+    "rule": "passive",
+    "rewrite": "lives in separate systems."
+   },
+   {
+    "quote": "nobody notices because a quiet week on\n            campus looks exactly like a quiet week on campus.",
+    "rule": "illogical tautology",
+    "rewrite": "nobody notices because a broken feed\n            looks like a quiet week on campus."
+   },
+   {
+    "quote": "The fix is to assert a minimum rather than the absence of an exception.",
+    "rule": "negative contrast",
+    "rewrite": "The fix is to assert a minimum event count."
+   },
+   {
+    "quote": "the morning check reads that endpoint rather than trusting that the\n            job ran.",
+    "rule": "negative contrast",
+    "rewrite": "the morning check reads that endpoint to see whether the\n            job produced events."
+   },
+   {
+    "quote": "Choosing the number is a judgement call, and the failure mode of choosing badly\n            is worse than you would expect. A floor",
+    "rule": "vague",
+    "rewrite": "Choosing the number is a judgement call. A floor"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": [
+   {
+    "quote": "6 sources, around 700 events at a time",
+    "why": "Hedged number; exact count needs verification against UA Today"
+   }
+  ]
+ },
+ {
+  "path": "app/blog/tuscaloosa-small-business-online/page.tsx",
+  "fixes": [
+   {
+    "quote": "and a business does not\n            have to be a client to be in one. Several will not be.",
+    "rule": "negative framing",
+    "rewrite": "and I feature businesses\n            whether or not they are clients. Several will not be."
+   },
+   {
+    "quote": "It takes about twenty minutes,",
+    "rule": "illustrative hedging",
+    "rewrite": "It takes twenty minutes,"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/blog/what-you-should-own/page.tsx",
+  "fixes": [
+   {
+    "quote": "Everything else is replaceable, inconveniently.",
+    "rule": "awkward",
+    "rewrite": "Everything else can be replaced, though not conveniently."
+   },
+   {
+    "quote": "          <p>\n            Providers can reasonably keep some things.\n          </p>\n\n          <p>\n            Their own internal tooling,",
+    "rule": "filler",
+    "rewrite": "          <p>\n            Providers can reasonably keep their own internal tooling,"
+   },
+   {
+    "quote": "you have learned something worth knowing, and you have\n            learned it now rather than during a dispute.",
+    "rule": "vague",
+    "rewrite": "you learn early which kind of provider you hired, before\n            any dispute starts."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/blog/page.tsx",
+  "fixes": [
+   {
+    "quote": "excerpt: \"Ask who owns the domain and the code when the project ends. Seven",
+    "rule": "imperative opener",
+    "rewrite": "excerpt: \"Who owns the domain and the code when the project ends. Seven"
+   },
+   {
+    "quote": "Ask three providers and you get $400, $4,000 and $15,000 for sites",
+    "rule": "imperative opener",
+    "rewrite": "Three providers quote $400, $4,000 and $15,000 for sites"
+   },
+   {
+    "quote": "None of them say what happens when that person is busy.",
+    "rule": "over-generalization",
+    "rewrite": "Few of them say what happens when that person is busy."
+   },
+   {
+    "quote": "You can do this in about twenty minutes without",
+    "rule": "illustrative hedging",
+    "rewrite": "You can do this in twenty minutes without"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/consulting/book/page.tsx",
+  "fixes": [
+   {
+    "quote": "Book a <em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>session.</em>\n          </h1>",
+    "rule": "imperative heading",
+    "rewrite": "Session <em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>booking.</em>\n          </h1>"
+   },
+   {
+    "quote": "Choose a <em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>session.</em></h1>",
+    "rule": "imperative heading",
+    "rewrite": "Five <em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>sessions.</em></h1>"
+   },
+   {
+    "quote": "Pick the closest session. I will adjust it to your business.",
+    "rule": "imperative",
+    "rewrite": "The closest session works. I will adjust it to your business."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/courses/ai-automation/page.tsx",
+  "fixes": [
+   {
+    "quote": "from personal use to sellable thing",
+    "rule": "awkward",
+    "rewrite": "from personal use to something you can sell"
+   },
+   {
+    "quote": "Build AI tools for your own work. I use these every day.",
+    "rule": "imperative / echo",
+    "rewrite": "I use these tools every day."
+   },
+   {
+    "quote": " A production workflow that runs on a schedule.\"",
+    "rule": "echo",
+    "rewrite": "\""
+   },
+   {
+    "quote": "Pricing\n          </h2>",
+    "rule": "word echo",
+    "rewrite": "Three ways to take the course\n          </h2>"
+   },
+   {
+    "quote": "Join the waitlist for Zero to Automated.",
+    "rule": "imperative heading",
+    "rewrite": "The Zero to Automated waitlist"
+   },
+   {
+    "quote": "Get notified when Zero to Automated opens.",
+    "rule": "imperative heading",
+    "rewrite": "Early access to Zero to Automated"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/courses/college-apps/page.tsx",
+  "fixes": [
+   {
+    "quote": "<em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>34 acceptances.</em>\n            <br />\n            <em className=\"pv-i",
+    "rule": "fragment chain / slogan",
+    "rewrite": "<em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>34 acceptances</em> from 98 schools,\n            <br />\n            <em className=\"pv-italic\" style={{ fontWeig"
+   },
+   {
+    "quote": "If the process feels overwhelming,<br />this course is for you.",
+    "rule": "vague conditional",
+    "rewrite": "Four groups get the most<br />from this course."
+   },
+   {
+    "quote": "this course meets you where you are.",
+    "rule": "cliche",
+    "rewrite": "the course covers your stage."
+   },
+   {
+    "quote": "6 modules. 17 lessons.<br />The whole process.",
+    "rule": "overpromise / fragment",
+    "rewrite": "6 modules and 17 lessons<br />from list to decision."
+   },
+   {
+    "quote": "            Pricing\n          </h2>",
+    "rule": "word echo",
+    "rewrite": "            Three ways to enroll\n          </h2>"
+   },
+   {
+    "quote": "            Join the waitlist.\n          </h2>",
+    "rule": "imperative heading",
+    "rewrite": "            The waitlist\n          </h2>"
+   },
+   {
+    "quote": "No spam. One email when enrollment opens.",
+    "rule": "self-assurance filler",
+    "rewrite": "I send one email when enrollment opens."
+   },
+   {
+    "quote": "The content is written so the student can follow it alone,",
+    "rule": "passive",
+    "rewrite": "I wrote the content so the student can follow it alone,"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "lib/ai-tools.ts",
+  "fixes": [
+   {
+    "quote": "Send us the cold outreach you've been sending. It grades the subject line, hook, ask and ethics, then rewrites it about 30% shorter.",
+    "rule": "illustrative hedging",
+    "rewrite": "Paste the cold email you have been sending. It grades the subject line, hook, ask and ethics, then rewrites it 30% shorter."
+   },
+   {
+    "quote": "Professional bios in your voice, in several lengths for several platforms.",
+    "rule": "vague",
+    "rewrite": "Three bios in your voice, from a 140-character X bio to a full About page."
+   },
+   {
+    "quote": "For when you need to announce something publicly and don't want to write a press release from scratch. AI generates a complete press release with",
+    "rule": "awkward / filler",
+    "rewrite": "Announce something publicly without writing a press release from scratch. AI generates a press release with"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/free/page.tsx",
+  "fixes": [
+   {
+    "quote": "One template per industry (salons, plumbing, dental, real estate, law, marketing agencies, e-commerce, wellness, vets and accounting). You can edit every one.",
+    "rule": "word echo",
+    "rewrite": "Salons, plumbing, dental, real estate, law, marketing agencies, e-commerce, wellness, vets and accounting each get a template. You can edit every one."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/shop/starter-kit/thanks/page.tsx",
+  "fixes": [
+   {
+    "quote": "What to do first when you have the kit",
+    "rule": "imperative-style heading",
+    "rewrite": "First steps with the kit"
+   },
+   {
+    "quote": "          Want us to build it for you?",
+    "rule": "rhetorical question",
+    "rewrite": "          We build it for you"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/shop/bundle/thanks/page.tsx",
+  "fixes": [
+   {
+    "quote": ">What to do first</h3>",
+    "rule": "imperative-style heading",
+    "rewrite": ">First steps</h3>"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/now/page.tsx",
+  "fixes": [
+   {
+    "quote": "Rebuilding this site from the ground up, with a new mark",
+    "rule": "cliche",
+    "rewrite": "Rebuilding this site with a new mark"
+   },
+   {
+    "quote": "a multi-year commitment rather than a season.",
+    "rule": "negative contrast",
+    "rewrite": "a multi-year commitment."
+   },
+   {
+    "quote": "The Bible, daily, no streak required.",
+    "rule": "slogan",
+    "rewrite": "The Bible, daily."
+   },
+   {
+    "quote": "Firmly non-Calvinist, still exploring.",
+    "rule": "illogical",
+    "rewrite": "Non-Calvinist, still exploring."
+   },
+   {
+    "quote": "How much of the hard parts belongs",
+    "rule": "grammar",
+    "rewrite": "How many of the hard parts belong"
+   },
+   {
+    "quote": "I update this page about once a month. It lists what I was working on as of the date at the top.",
+    "rule": "illustrative hedging",
+    "rewrite": "I update this page monthly. The date at the top shows when."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/pricing-comparison/page.tsx",
+  "fixes": [
+   {
+    "quote": "are typical 2026 ranges, not quotes from specific firms.",
+    "rule": "negative contrast",
+    "rewrite": "are typical 2026 ranges across each category."
+   },
+   {
+    "quote": "PV Growth ~$2,848</strong>",
+    "rule": "illustrative hedging",
+    "rewrite": "PV Growth $2,848</strong>"
+   },
+   {
+    "quote": "agency equivalent ~$30,000-80,000</strong>",
+    "rule": "illustrative hedging",
+    "rewrite": "agency equivalent $30,000-80,000</strong>"
+   },
+   {
+    "quote": "freelancer ~$5,000-12,000 plus",
+    "rule": "illustrative hedging",
+    "rewrite": "freelancer $5,000-12,000 plus"
+   },
+   {
+    "quote": "Why we can charge less (and why that&apos;s sustainable)",
+    "rule": "parenthetical filler",
+    "rewrite": "Why we can charge less"
+   },
+   {
+    "quote": "When you should hire someone else (and who)",
+    "rule": "awkward",
+    "rewrite": "When to hire someone else"
+   },
+   {
+    "quote": ">Run the numbers for your business</h3>",
+    "rule": "imperative heading",
+    "rewrite": ">The AI Cost Calculator</h3>"
+   },
+   {
+    "quote": ">Start with a free conversation</h3>",
+    "rule": "imperative heading",
+    "rewrite": ">A free first conversation</h3>"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/team/page.tsx",
+  "fixes": [
+   {
+    "quote": "ranks it, so the most urgent thing is first rather than whichever finished last.",
+    "rule": "negative contrast",
+    "rewrite": "ranks it by urgency."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/sites/page.tsx",
+  "fixes": [
+   {
+    "quote": "Businesses where each new lead is worth a lot and the owner has no time to handle marketing.",
+    "rule": "vague",
+    "rewrite": "Businesses with high-value leads and an owner who has no time for marketing."
+   },
+   {
+    "quote": "monthly reports and updates, done by the people who built the site.",
+    "rule": "passive",
+    "rewrite": "monthly reports and updates. The people who built the site do the work."
+   },
+   {
+    "quote": "Talk to Elijah about your <em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>site.</em>",
+    "rule": "imperative heading",
+    "rewrite": "Fifteen minutes with <em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>Elijah.</em>"
+   },
+   {
+    "quote": "Fifteen minutes with <em",
+    "rule": "echo",
+    "rewrite": "A call with <em"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/verses/page.tsx",
+  "fixes": [
+   {
+    "quote": "costs you something visible, public ridicule, lost friendships, lost ground.",
+    "rule": "comma splice",
+    "rewrite": "costs you something visible: public ridicule, lost friendships, lost ground."
+   },
+   {
+    "quote": "the most powerful, there is no Christianity that hedges between.",
+    "rule": "comma splice",
+    "rewrite": "the most powerful, and no version of Christianity hedges between the two."
+   },
+   {
+    "quote": "by default, analytical, planning, strategic.",
+    "rule": "comma splice",
+    "rewrite": "by default, because I am analytical, a planner and a strategist."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/resume/page.tsx",
+  "fixes": [
+   {
+    "quote": "so a photo is composed with its final look already applied rather than graded afterward.",
+    "rule": "negative contrast",
+    "rewrite": "so the photographer composes each photo with its final look already applied."
+   },
+   {
+    "quote": "sources whose terms prohibit scraping are refused, and estate-owned parcels are held for human review instead of auto-contacted.",
+    "rule": "passive / contrast",
+    "rewrite": "the pipeline refuses sources whose terms prohibit scraping, and estate-owned parcels go to human review and are never auto-contacted."
+   },
+   {
+    "quote": "with copy written to match the client's own voice rather than generic template language.",
+    "rule": "negative contrast",
+    "rewrite": "with copy written in the client's own voice."
+   },
+   {
+    "quote": "instruction adherence rather than returning a bare score.",
+    "rule": "negative contrast",
+    "rewrite": "instruction adherence."
+   },
+   {
+    "quote": "Character and excellence recognition awarded to select students for demonstrated moral integrity and spiritual maturity.",
+    "rule": "passive",
+    "rewrite": "The school gives this recognition to select students for demonstrated moral integrity and spiritual maturity."
+   },
+   {
+    "quote": "Awarded at the end-of-year awards ceremony for embodying",
+    "rule": "passive",
+    "rewrite": "The school gave this award at the end-of-year ceremony for embodying"
+   },
+   {
+    "quote": "sub=\"Selected for the lead acting and vocal role in the school&apos;s annual Christmas production.\"",
+    "rule": "passive",
+    "rewrite": "sub=\"Cast in the lead acting and vocal role in the school&apos;s annual Christmas production.\""
+   },
+   {
+    "quote": "sub=\"Selected for the lead role in the school&apos;s annual Christmas production.",
+    "rule": "passive",
+    "rewrite": "sub=\"Cast in the lead role in the school&apos;s annual Christmas production."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": [
+   {
+    "quote": "Generates active revenue.",
+    "why": "Vague, unverifiable claim; owner should state a figure or cut"
+   }
+  ]
+ },
+ {
+  "path": "app/digital/tools/[slug]/page.tsx",
+  "fixes": [],
+  "shared_component_issues": [
+   {
+    "file": "app/digital/tools/[slug]/page.tsx",
+    "quote": "23 AI prompts (including this one), 5 sales scripts...",
+    "rule": "inconsistent count",
+    "suggested_rewrite": "Shop page and blog say 24 prompts; make the tool-page upsell match (24)."
+   }
+  ],
+  "unfixable": []
+ },
+ {
+  "path": "app/blog/what-the-agents-get-wrong/page.tsx (title)",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": [
+   {
+    "quote": "Fifteen agents help run my company. Here is what they get wrong",
+    "why": "Signposted title; lives in app/blog/page.tsx, app/about, app/who and another post outside my batch"
+   }
+  ]
+ }
+]

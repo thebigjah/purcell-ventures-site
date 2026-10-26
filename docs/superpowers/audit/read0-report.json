@@ -1,0 +1,782 @@
+[
+ {
+  "path": "/about",
+  "fixes": [
+   {
+    "quote": "I&apos;m in a hurry because the work matters.",
+    "rule": "vague/empty",
+    "rewrite": "I work fast because small businesses need these tools now."
+   },
+   {
+    "quote": "and earned a 3.92 GPA without once finding it particularly interesting to coast.",
+    "rule": "awkward",
+    "rewrite": "and earned a 3.92 GPA without coasting."
+   },
+   {
+    "quote": "I care about doing things that last. That&apos;s true of the software, the businesses, the relationships, and the faith. I don&apos;t think those are separate categories.",
+    "rule": "slogan/rule of three/awkward",
+    "rewrite": "I care about building things that last: the software, the businesses, the relationships and the faith. I treat them as one commitment."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": [
+   {
+    "quote": "I lead worship at church most Sundays",
+    "why": "Memory says he is not currently leading worship. Left as is, Elijah must confirm. Same claim on /who."
+   }
+  ]
+ },
+ {
+  "path": "/ai-cost-calculator",
+  "fixes": [
+   {
+    "quote": "Pick a share you believe for your team. The slider starts at 60%.",
+    "rule": "awkward",
+    "rewrite": "Choose the share of this work you expect AI to handle for your team. The slider starts at 60%."
+   },
+   {
+    "quote": "The calculator applies a conservative recovery rate to those hours and compares\n            the result against the cost of a session, which gives you a payback period in\n            weeks.",
+    "rule": "vague/illogical (conservative rate vs 60% default)",
+    "rewrite": "The calculator multiplies those hours by the automation share you pick, compares\n            the savings with the cost of a session, and gives you the payback period."
+   },
+   {
+    "quote": "The recovery rate is set low to allow for interruptions, revisions, and the tasks\n            where a model produces something you have to rewrite.",
+    "rule": "vague/passive",
+    "rewrite": "Lower the automation share to allow for interruptions, revisions, and tasks\n            where a model produces something you have to rewrite."
+   },
+   {
+    "quote": "When the answer is no",
+    "rule": "vague heading",
+    "rewrite": "When to skip the session"
+   },
+   {
+    "quote": "the sensible answer is to skip the session. The\n            calculator shows that result too.",
+    "rule": "vague/hedging",
+    "rewrite": "you should skip the session. The\n            calculator shows that result too."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/blog/ai-augmented-sales-rep-day",
+  "fixes": [
+   {
+    "quote": "AI tools do not fix weak conversations. Hire well first, then add AI.",
+    "rule": "slogan/vague",
+    "rewrite": "A rep who struggles on calls still struggles with these tools. Hire well first, then add AI."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/blog/can-ai-find-your-business",
+  "fixes": [
+   {
+    "quote": "Consistency across sources is most of what makes an assistant confident.",
+    "rule": "unverifiable claim",
+    "rewrite": "When the sources agree, an assistant is more likely to repeat your details."
+   },
+   {
+    "quote": "Claim your Google Business Profile first</h2>",
+    "rule": "imperative heading",
+    "rewrite": "Why the Google Business Profile comes first</h2>"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/blog/cold-outreach-that-worked",
+  "fixes": [
+   {
+    "quote": "Few senders do it, though, and",
+    "rule": "word echo",
+    "rewrite": "Most senders skip it, though, and"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/blog/keep-out-of-ai-chat-window",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/blog/psychology-and-software",
+  "fixes": [
+   {
+    "quote": "That felt like product sense and I\n            would have defended it if anyone had asked.",
+    "rule": "word echo",
+    "rewrite": "That felt right and I would have\n            defended it if anyone had asked."
+   },
+   {
+    "quote": "I had used between-subject thinking and called it product sense, and in doing it\n            I flattened the one signal I care about most: the change in a single person over\n            time.",
+    "rule": "awkward",
+    "rewrite": "I had applied between-subject thinking and called it product sense. That flattened\n            the one signal I care about most: the change in a single person over time."
+   },
+   {
+    "quote": "it means quite a lot, and that difference",
+    "rule": "vague",
+    "rewrite": "it can signal a problem, and that difference"
+   },
+   {
+    "quote": "produces about fifty false alarms for three true ones.",
+    "rule": "illustrative hedging",
+    "rewrite": "produces 50 false alarms for three true ones."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/blog/start-using-ai-this-week-three-safe-first-tasks",
+  "fixes": [
+   {
+    "quote": "\"heading\": \"Set up your account before you type anything\"",
+    "rule": "imperative heading",
+    "rewrite": "\"heading\": \"Setting up your account before you type anything\""
+   },
+   {
+    "quote": "\"heading\": \"Choose tasks you can check yourself\"",
+    "rule": "imperative heading",
+    "rewrite": "\"heading\": \"Choosing tasks you can check yourself\""
+   },
+   {
+    "quote": "\"heading\": \"Task one: draft replies to your Google reviews\"",
+    "rule": "imperative heading",
+    "rewrite": "\"heading\": \"Task one: drafting replies to your Google reviews\""
+   },
+   {
+    "quote": "\"heading\": \"Task two: rewrite one page of your website\"",
+    "rule": "imperative heading",
+    "rewrite": "\"heading\": \"Task two: rewriting one page of your website\""
+   },
+   {
+    "quote": "\"heading\": \"Task three: write this week's customer update\"",
+    "rule": "imperative heading",
+    "rewrite": "\"heading\": \"Task three: writing this week's customer update\""
+   },
+   {
+    "quote": "Next, judge how useful the output is. Models",
+    "rule": "illogical/vague",
+    "rewrite": "Next, check the output. Models"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/blog/what-one-operator-can-deliver",
+  "fixes": [
+   {
+    "quote": "Every solo shop's website promises",
+    "rule": "overgeneralization",
+    "rewrite": "Most solo shops' websites promise"
+   },
+   {
+    "quote": "Count builds per month</h2>",
+    "rule": "imperative heading",
+    "rewrite": "Counting builds per month</h2>"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/blog/why-most-ai-tools-waste-money",
+  "fixes": [
+   {
+    "quote": "It gives answers that sound sure and are wrong.",
+    "rule": "overgeneralization",
+    "rewrite": "It can give answers that sound sure and are wrong."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/business-cards",
+  "fixes": [
+   {
+    "quote": "Do not use gloss on gold. It washes out.",
+    "rule": "awkward",
+    "rewrite": "Gloss washes out the gold, so skip it."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/contact",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": [
+   {
+    "quote": "(308 redirect to /about)",
+    "why": "Text is the /about page, fixed there."
+   }
+  ]
+ },
+ {
+  "path": "/courses/business-launch",
+  "fixes": [
+   {
+    "quote": "Resources That Work",
+    "rule": "vague slogan heading/echo",
+    "rewrite": "Six Fill-In Documents"
+   },
+   {
+    "quote": "Consulting is available for one-on-one h",
+    "rule": "vague/passive-ish",
+    "rewrite": "I also offer one-on-one h"
+   },
+   {
+    "quote": "            Join the waitlist.\n",
+    "rule": "imperative heading",
+    "rewrite": "            Waitlist for early access.\n"
+   },
+   {
+    "quote": "The course teaches the process I used, while it is recent.",
+    "rule": "awkward",
+    "rewrite": "The course teaches the process I used, and it is still fresh."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/crm",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/digital/expenses",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/digital/playbook",
+  "fixes": [
+   {
+    "quote": "A slow site hurts their search ranking and gives you a contrast",
+    "rule": "awkward",
+    "rewrite": "A slow site hurts their search ranking, and you can show a faster one"
+   },
+   {
+    "quote": "It took me about 30 seconds to spot that.",
+    "rule": "illustrative hedging",
+    "rewrite": "It took me 30 seconds to spot that."
+   },
+   {
+    "quote": "Totally, I won't take long.",
+    "rule": "reflex filler",
+    "rewrite": "I won't take long."
+   },
+   {
+    "quote": "Only ask after they're engaged. The question is whether they see the value.",
+    "rule": "vague/illogical",
+    "rewrite": "Ask this only after they're engaged. The answer shows whether they see the value."
+   },
+   {
+    "quote": "Only use this if they're clearly interested.",
+    "rule": "redundant",
+    "rewrite": "Use this only with a prospect who has shown clear interest."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": [
+   {
+    "quote": "It's $75 a month and I run it for them",
+    "why": "Conflicts with the $99/mo starting price on /digital and /sales-rep."
+   }
+  ]
+ },
+ {
+  "path": "/digital/tools/business-card-copy",
+  "fixes": [],
+  "shared_component_issues": [
+   {
+    "file": "app/digital/tools/[slug]/page.tsx",
+    "quote": "23 AI prompts (including this one), 5 sales scripts...",
+    "rule": "number conflict",
+    "suggested_rewrite": "Use 24 AI prompts, matching /shop, /free and the starter-kit pages"
+   }
+  ],
+  "unfixable": []
+ },
+ {
+  "path": "/digital/tools/content-generator",
+  "fixes": [
+   {
+    "quote": "Write marketing and business content in your voice. Pick a type, tell it about your business, get back a draft ready to edit and publish.",
+    "rule": "imperative/awkward",
+    "rewrite": "Writes marketing and business content in your voice. You pick a type and describe your business, and it returns a draft ready to edit and publish."
+   },
+   {
+    "quote": "2-4 sentences. The more specific the better.",
+    "rule": "slogan",
+    "rewrite": "2-4 sentences. Specific details produce better drafts."
+   }
+  ],
+  "shared_component_issues": [
+   {
+    "file": "app/digital/tools/[slug]/page.tsx",
+    "quote": "23 AI prompts (including this one), 5 sales scripts...",
+    "rule": "number conflict",
+    "suggested_rewrite": "Use 24 AI prompts, matching /shop, /free and the starter-kit pages"
+   }
+  ],
+  "unfixable": []
+ },
+ {
+  "path": "/digital/tools/estimate-generator",
+  "fixes": [
+   {
+    "quote": "Tell us what the job is. Get back a clean estimate description with line-item breakdown logic, scope notes, exclusions, and a recommended pricing tier.",
+    "rule": "imperative/vague",
+    "rewrite": "You describe the job. It returns an estimate description with line-item breakdown logic, scope notes, exclusions and a recommended pricing tier."
+   }
+  ],
+  "shared_component_issues": [
+   {
+    "file": "app/digital/tools/[slug]/page.tsx",
+    "quote": "23 AI prompts (including this one), 5 sales scripts...",
+    "rule": "number conflict",
+    "suggested_rewrite": "Use 24 AI prompts, matching /shop, /free and the starter-kit pages"
+   }
+  ],
+  "unfixable": []
+ },
+ {
+  "path": "/digital/tools/logo-concepts",
+  "fixes": [
+   {
+    "quote": "Get 5 different logo concept directions for your business, each with an icon idea, type treatment and rationale. Use them to brief a designer or sketch your own.",
+    "rule": "imperative",
+    "rewrite": "Returns 5 different logo concept directions for your business, each with an icon idea, type treatment and rationale. You can use them to brief a designer or sketch your own."
+   }
+  ],
+  "shared_component_issues": [
+   {
+    "file": "app/digital/tools/[slug]/page.tsx",
+    "quote": "23 AI prompts (including this one), 5 sales scripts...",
+    "rule": "number conflict",
+    "suggested_rewrite": "Use 24 AI prompts, matching /shop, /free and the starter-kit pages"
+   }
+  ],
+  "unfixable": []
+ },
+ {
+  "path": "/digital/tools/review-request",
+  "fixes": [
+   {
+    "quote": "After a positive customer interaction, send a request for a Google/Yelp/Facebook review. AI personalizes it with what they bought and a specific moment from their visit.",
+    "rule": "imperative/vague",
+    "rewrite": "Drafts a request for a Google, Yelp or Facebook review to send after a positive customer interaction. It personalizes the message with what they bought and a specific moment from their visit."
+   }
+  ],
+  "shared_component_issues": [
+   {
+    "file": "app/digital/tools/[slug]/page.tsx",
+    "quote": "23 AI prompts (including this one), 5 sales scripts...",
+    "rule": "number conflict",
+    "suggested_rewrite": "Use 24 AI prompts, matching /shop, /free and the starter-kit pages"
+   }
+  ],
+  "unfixable": []
+ },
+ {
+  "path": "/digital/tools/sop-writer",
+  "fixes": [
+   {
+    "quote": "Describe a process you do (or someone on your team does). AI structures it into a clean SOP with steps, decision points, common mistakes and a quality check, ready to print.",
+    "rule": "imperative/vague",
+    "rewrite": "You describe a process that you or someone on your team does. It structures the process into an SOP with steps, decision points, common mistakes and a quality check, ready to print."
+   },
+   {
+    "quote": "Write a process down once and reuse it to train new hires.",
+    "rule": "imperative",
+    "rewrite": "Turns a process into a reusable SOP for training new hires."
+   }
+  ],
+  "shared_component_issues": [
+   {
+    "file": "app/digital/tools/[slug]/page.tsx",
+    "quote": "23 AI prompts (including this one), 5 sales scripts...",
+    "rule": "number conflict",
+    "suggested_rewrite": "Use 24 AI prompts, matching /shop, /free and the starter-kit pages"
+   }
+  ],
+  "unfixable": []
+ },
+ {
+  "path": "/digital",
+  "fixes": [
+   {
+    "quote": "          Build Your Team\n",
+    "rule": "imperative heading",
+    "rewrite": "          Seven roles\n"
+   },
+   {
+    "quote": "25 tools, one partner.{\" \"}",
+    "rule": "slogan",
+    "rewrite": "25 tools from one person,{\" \"}"
+   },
+   {
+    "quote": "                Pick the ones you need.\n",
+    "rule": "imperative heading",
+    "rewrite": "                in the combination you need.\n"
+   },
+   {
+    "quote": "                tied to your maintenance level.\n",
+    "rule": "passive",
+    "rewrite": "                matched to your maintenance level.\n"
+   },
+   {
+    "quote": "                Need a custom set of tools?{\" \"}",
+    "rule": "rhetorical question then answer",
+    "rewrite": "                A custom set of tools,{\" \"}"
+   },
+   {
+    "quote": "                  I will build the bundle.\n",
+    "rule": "rhetorical question then answer",
+    "rewrite": "                  built as one bundle for you.\n"
+   },
+   {
+    "quote": "Pick the tools you need, two or twelve. I will build the bundle and quote you a flat monthly price.",
+    "rule": "imperative",
+    "rewrite": "You tell me which tools you need, two or twelve. I build the bundle and quote you a flat monthly price."
+   },
+   {
+    "quote": "I build it, I support it, and you can reach me directly.",
+    "rule": "rule-of-three padding / duplicates first bullet",
+    "rewrite": "I build it and I support it."
+   },
+   {
+    "quote": "<h2>Get in <em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>touch</em></h2>",
+    "rule": "imperative heading",
+    "rewrite": "<h2>How to <em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>reach me</em></h2>"
+   }
+  ],
+  "shared_component_issues": [
+   {
+    "file": "app/components/ROICalculator.tsx",
+    "quote": "Estimate your return",
+    "rule": "imperative heading",
+    "suggested_rewrite": "Estimated return"
+   },
+   {
+    "file": "app/components/ROICalculator.tsx",
+    "quote": "Your results will vary.",
+    "rule": "self-assurance filler / vague",
+    "suggested_rewrite": "Cut, or state which inputs drive the result"
+   }
+  ],
+  "unfixable": [
+   {
+    "quote": "ROI calculator plans Starter $75, Growth $125, Full $175 vs $99/$179/$279 elsewhere on the page",
+    "why": "Price conflict inside one page. Elijah must pick the correct prices."
+   }
+  ]
+ },
+ {
+  "path": "/how-we-work",
+  "fixes": [
+   {
+    "quote": " The proposal lists every price.\"",
+    "rule": "unnecessary/redundant",
+    "rewrite": "\""
+   },
+   {
+    "quote": "Launch + handoff",
+    "rule": "arrow/plus connector",
+    "rewrite": "Launch and handoff"
+   },
+   {
+    "quote": "We say when a product does not fit\", body: \"If our product doesn't fit, we tell you, and we have turned down deals for that reason.",
+    "rule": "vague/redundant",
+    "rewrite": "We say when a product does not fit\", body: \"When our product is the wrong fit, we tell you. We have turned down deals for that reason."
+   },
+   {
+    "quote": "We don't evangelize, but our work is shaped by it. Honesty over closing, respect over urgency, the work is the witness. If you don't share the faith, that's fine, but the ethical floor is the ethical floor.",
+    "rule": "slogans/tautology",
+    "rewrite": "We do not evangelize to clients. Our work follows Christian ethics: we choose honesty over closing a sale and respect over pressure. These standards apply to every client, whether or not you share the faith."
+   },
+   {
+    "quote": "We turn down work. Specifically:",
+    "rule": "vague signpost",
+    "rewrite": "We turn down work in these cases:"
+   },
+   {
+    "quote": ">Start the first conversation</h3>",
+    "rule": "imperative heading",
+    "rewrite": ">How to start the first conversation</h3>"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/logos",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/patterns",
+  "fixes": [
+   {
+    "quote": "Each element placed at 2\u03c0/\u03c6\u00b2 from the last, the golden angle, so the seeds pack evenly. Seeds in a sunflower follow this angle. It's the geometry of growth, of things built to endure, of divine proportion encoded in biology. Kepler",
+    "rule": "repetition/flowery",
+    "rewrite": "Each element sits at 2\u03c0/\u03c6\u00b2 from the last, the golden angle, so the seeds pack evenly. Kepler"
+   },
+   {
+    "quote": "The structural substrate underneath everything. Architects and engineers draw on this grid before making design decisions, so it sits under the finished design.",
+    "rule": "slogan/vague",
+    "rewrite": "Architects and engineers draw on this grid before they make design decisions, so it sits under the finished design."
+   },
+   {
+    "quote": " The pattern is most beautiful at the collision points. This one connects",
+    "rule": "unnecessary/flowery",
+    "rewrite": " This one connects"
+   },
+   {
+    "quote": "The structure comes from adjacency. This maps",
+    "rule": "vague",
+    "rewrite": "Each cell shares its walls with its neighbors. This maps"
+   },
+   {
+    "quote": "Distance from center is a cosine function of angle, rotate through the full period and you trace a flower.",
+    "rule": "awkward",
+    "rewrite": "Distance from center is a cosine function of angle, and one full rotation traces a flower."
+   },
+   {
+    "quote": "Use one pattern per surface.</div>",
+    "rule": "redundant",
+    "rewrite": "Two patterns on one surface compete, so choose one.</div>"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/qr",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/sales-rep",
+  "fixes": [
+   {
+    "quote": "path: \"Promoted to Closer after 5 course closes and 80% on the quiz\"",
+    "rule": "passive",
+    "rewrite": "path: \"You become a Closer after 5 course closes and 80% on the quiz\""
+   },
+   {
+    "quote": "path: \"Promoted to Senior after 5 Digital closes and a co-pitch with Elijah\"",
+    "rule": "passive",
+    "rewrite": "path: \"You become a Senior after 5 Digital closes and a co-pitch with Elijah\""
+   },
+   {
+    "quote": "label: \"Take the application + quiz\"",
+    "rule": "imperative/plus connector",
+    "rewrite": "label: \"Application and quiz\""
+   },
+   {
+    "quote": "label: \"Contractor agreement + handbook\"",
+    "rule": "plus connector",
+    "rewrite": "label: \"Contractor agreement and handbook\""
+   },
+   {
+    "quote": "label: \"30-minute onboarding call + materials drop\"",
+    "rule": "jargon/plus connector",
+    "rewrite": "label: \"30-minute onboarding call and materials\""
+   },
+   {
+    "quote": "label: \"Start selling\", detail: \"Work on your own schedule. Commission paid on the 1st of each month, after the 30-day clawback window.\"",
+    "rule": "imperative/passive",
+    "rewrite": "label: \"First sales\", detail: \"You work on your own schedule. We pay commission on the 1st of each month, after the 30-day clawback window.\""
+   },
+   {
+    "quote": "What it can earn you</strong>",
+    "rule": "vague heading",
+    "rewrite": "Projected earnings</strong>"
+   },
+   {
+    "quote": "could earn about <strong>",
+    "rule": "illustrative hedging",
+    "rewrite": "could earn <strong>"
+   },
+   {
+    "quote": "These are projections from the commission rates above, not payouts a rep has received yet. Commission paid the 1st of each month, after a 30-day clawback window clears.",
+    "rule": "negative parallelism/passive",
+    "rewrite": "These are projections from the commission rates above. No rep has received these payouts yet. We pay commission on the 1st of each month, after a 30-day clawback window clears."
+   },
+   {
+    "quote": "Concrete: when a prospect",
+    "rule": "filler",
+    "rewrite": "For example, when a prospect"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/shop/cold-email-pack/thanks",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/shop/subject-lines/thanks",
+  "fixes": [
+   {
+    "quote": "Want the full playbook?",
+    "rule": "rhetorical question",
+    "rewrite": "The full playbook"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/shop",
+  "fixes": [
+   {
+    "quote": "Every product on this page is something we use internally at Purcell Ventures. You can edit every file and keep it after you buy. Stripe emails the download after checkout. Every product has a 30-day refund.",
+    "rule": "word echo",
+    "rewrite": "We use each product on this page internally at Purcell Ventures. You can edit the files and keep them after you buy. Stripe emails the download after checkout, and a 30-day refund covers every product."
+   },
+   {
+    "quote": "Bundle deal: save $9",
+    "rule": "illogical (bundle holds three kits)",
+    "rewrite": "Bundle deal: save $18"
+   },
+   {
+    "quote": "Get both kits for <em",
+    "rule": "illogical",
+    "rewrite": "Get all three kits for <em"
+   },
+   {
+    "quote": "The Starter Kit ($19) and Cold Email Mastery Pack ($29) cost <strong>$48 separately</strong>. Buy both for",
+    "rule": "illogical",
+    "rewrite": "The Starter Kit ($19), Cold Email Mastery Pack ($29) and Subject Line Library ($9) cost <strong>$57 separately</strong>. Buy all three for"
+   },
+   {
+    "quote": "Why we sell our internal templates as $19 to $29 kits",
+    "rule": "wrong range",
+    "rewrite": "Why we sell our internal templates as $9 to $29 kits"
+   },
+   {
+    "quote": "We price the kits at $19 to $29 so",
+    "rule": "wrong range",
+    "rewrite": "We price the kits at $9 to $29 so"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/steady/start",
+  "fixes": [
+   {
+    "quote": "The form takes about five minutes.",
+    "rule": "illustrative hedging",
+    "rewrite": "The form takes five minutes."
+   },
+   {
+    "quote": "Start with an <em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>intake form</em>",
+    "rule": "imperative heading",
+    "rewrite": "The <em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>intake form</em>"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/tutorials",
+  "fixes": [
+   {
+    "quote": "\"Build a brand kit with the Brand Kit Builder\"",
+    "rule": "imperative title",
+    "rewrite": "\"How to build a brand kit with the Brand Kit Builder\""
+   },
+   {
+    "quote": "\"Build a customer persona with the Customer Persona Builder\"",
+    "rule": "imperative title",
+    "rewrite": "\"How to build a customer persona with the Customer Persona Builder\""
+   },
+   {
+    "quote": "\"Audit your pricing page with the Pricing Audit tool\"",
+    "rule": "imperative title",
+    "rewrite": "\"How to audit your pricing page with the Pricing Audit tool\""
+   },
+   {
+    "quote": "\"Handle sales objections with three response options\"",
+    "rule": "imperative title",
+    "rewrite": "\"Three response options for handling sales objections\""
+   },
+   {
+    "quote": "\"Critique your own sales pitch\"",
+    "rule": "imperative title",
+    "rewrite": "\"How to critique your own sales pitch\""
+   },
+   {
+    "quote": "\"Turn 90 seconds of notes into a structured call recap\"",
+    "rule": "imperative title",
+    "rewrite": "\"Turning 90 seconds of notes into a structured call recap\""
+   },
+   {
+    "quote": "\"Polish an email draft in 30 seconds\"",
+    "rule": "imperative title",
+    "rewrite": "\"Polishing an email draft in 30 seconds\""
+   },
+   {
+    "quote": "\"Set up a simple customer loyalty system\"",
+    "rule": "imperative title",
+    "rewrite": "\"How to set up a simple customer loyalty system\""
+   },
+   {
+    "quote": "\"Create line-item estimates with tax and terms\"",
+    "rule": "imperative title",
+    "rewrite": "\"How to create line-item estimates with tax and terms\""
+   },
+   {
+    "quote": "Want us to do the work <em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>for you?</em>",
+    "rule": "rhetorical question",
+    "rewrite": "We can do the work <em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>for you.</em>"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "/who",
+  "fixes": [
+   {
+    "quote": "and reads apologetics seriously, currently working through",
+    "rule": "self-assurance filler",
+    "rewrite": "and reads apologetics, currently working through"
+   },
+   {
+    "quote": " Those are four different people.\"]",
+    "rule": "unnecessary",
+    "rewrite": "\"]"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": [
+   {
+    "quote": "He leads worship as a bass-baritone vocalist",
+    "why": "Same worship claim as /about."
+   }
+  ]
+ }
+]

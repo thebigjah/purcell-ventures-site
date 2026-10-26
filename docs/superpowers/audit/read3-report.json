@@ -1,0 +1,673 @@
+[
+ {
+  "path": "app/ai-consultant-tuscaloosa/page.tsx",
+  "fixes": [
+   {
+    "quote": "Purcell Ventures is one operator. One person does the work.",
+    "rule": "word echo / filler",
+    "rewrite": "Purcell Ventures is one operator."
+   },
+   {
+    "quote": "The work is supported by a fifteen-agent AI workforce I built, which handles\n            proposals, audits, compliance a",
+    "rule": "passive voice",
+    "rewrite": "A fifteen-agent AI workforce I built handles\n            proposals, audits, compliance and outreach on a schedule. The agents are software, and the{\" \"}"
+   },
+   {
+    "quote": "          <p>\n            Examples you can open:\n          </p>\n\n",
+    "rule": "unnecessary line under a heading that says the same",
+    "rewrite": ""
+   },
+   {
+    "quote": "carries about a hundred events in a given week across official University",
+    "rule": "illustrative hedging",
+    "rewrite": "carries a hundred events in a typical week across official University"
+   },
+   {
+    "quote": "account, and it is not affiliated with the University, which the masthead says\n            plainly.",
+    "rule": "vague adverb",
+    "rewrite": "account, and it is not affiliated with the University. The masthead says so."
+   },
+   {
+    "quote": "each one a small piece of software solving one problem.",
+    "rule": "wordiness",
+    "rewrite": "each one solves one problem."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": [
+   {
+    "quote": "carries a hundred events in a typical week",
+    "why": "Hedge word removed but the figure is not verified; UA Today counts come from its live API. Confirm the number."
+   }
+  ]
+ },
+ {
+  "path": "app/ai-consultant-tuscaloosa/layout.tsx",
+  "fixes": [
+   {
+    "quote": "The work is supported by a fifteen-agent AI workforce that handles proposals, audits, compliance and outreach on a sched",
+    "rule": "passive voice",
+    "rewrite": "A fifteen-agent AI workforce handles proposals, audits, compliance and outreach on a schedule, and a human does"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/blog/agents-that-cannot-fix-what-they-find/page.tsx",
+  "fixes": [
+   {
+    "quote": "It cost us one design decision, and it caused a failure we did not expect.",
+    "rule": "awkward",
+    "rewrite": "It took one design decision and caused a failure we did not expect."
+   },
+   {
+    "quote": "It had gone and read the client file, found",
+    "rule": "wordiness",
+    "rewrite": "It read the client file, found"
+   },
+   {
+    "quote": "Everything it may see is passed in by the agent&apos;s own code, which already enforces the scope and is already tested.",
+    "rule": "passive voice",
+    "rewrite": "The agent&apos;s own code passes in everything the model may see. That code already enforces the scope and is already tested."
+   },
+   {
+    "quote": "A model can ignore a scope written in a prompt. It cannot ignore a scope enforced in code.",
+    "rule": "slogan / negative parallelism",
+    "rewrite": "Code enforces a scope. A prompt only asks the model to respect one."
+   },
+   {
+    "quote": "Fix a broken checkout and the finding describing it would have stayed open forever.",
+    "rule": "imperative-style fragment",
+    "rewrite": "If we had fixed a broken checkout, the finding describing it would have stayed open forever."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/blog/audit-your-site-like-a-crawler/page.tsx",
+  "fixes": [
+   {
+    "quote": "name: \"Audit your site like a crawler\"",
+    "rule": "imperative heading",
+    "rewrite": "name: \"Auditing your site like a crawler\""
+   },
+   {
+    "quote": "take about twenty minutes in a terminal",
+    "rule": "illustrative hedging",
+    "rewrite": "take twenty minutes in a terminal"
+   },
+   {
+    "quote": "Check that the markup parses, beyond checking that it is present. Google skips",
+    "rule": "negative parallelism / awkward",
+    "rewrite": "Markup that exists can still be broken, so test that it parses. Google skips"
+   },
+   {
+    "quote": "which is\n            the exact ambiguity you are presumably trying to remove.",
+    "rule": "vague / hedging",
+    "rewrite": "which is\n            the ambiguity the markup exists to remove."
+   },
+   {
+    "quote": "The title tag is the strongest\n            on-page signal for a query,",
+    "rule": "unverifiable superlative",
+    "rewrite": "The title tag is a strong\n            on-page signal for a query,"
+   },
+   {
+    "quote": "If it is under about 200 milliseconds,",
+    "rule": "illustrative hedging",
+    "rewrite": "If it is under 200 milliseconds,"
+   },
+   {
+    "quote": "That gap is the most useful\n            number in this list, and it takes ten seconds to get.",
+    "rule": "superlative",
+    "rewrite": "That gap shows the problem\n            faster than any other check here, and it takes ten seconds to get."
+   },
+   {
+    "quote": "<h2 style={H2}>Check rankings in a browser</h2>",
+    "rule": "imperative heading",
+    "rewrite": "<h2 style={H2}>Why I check rankings in a browser</h2>"
+   },
+   {
+    "quote": "does not appear in the top\n            twenty at all.",
+    "rule": "filler",
+    "rewrite": "does not appear in the top\n            twenty."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/blog/claim-your-google-listing/page.tsx",
+  "fixes": [
+   {
+    "quote": "Agencies write most guides to this, and they would like to manage it for you. I\n            wrote this one so you can do",
+    "rule": "illustrative hedging / wordiness",
+    "rewrite": "Agencies write most guides to this and want to manage it for you. I\n            wrote this one so you can do it yourself. It takes twenty minutes and it is\n            free."
+   },
+   {
+    "quote": "I audited 121 independent businesses near the University of Alabama. 27 had a website\n            that answered and 23 h",
+    "rule": "sentence opens on a numeral",
+    "rewrite": "I audited 121 independent businesses near the University of Alabama. Of those, 27 had a website\n            that answered and 23 had opening hours"
+   },
+   {
+    "quote": "<h3 style={H3}>1. Check for an existing listing</h3>",
+    "rule": "imperative heading",
+    "rewrite": "<h3 style={H3}>1. Existing listings</h3>"
+   },
+   {
+    "quote": "<h3 style={H3}>2. Go to business.google.com</h3>",
+    "rule": "imperative heading",
+    "rewrite": "<h3 style={H3}>2. The login at business.google.com</h3>"
+   },
+   {
+    "quote": "Wrong hours send customers\n            to a locked door.",
+    "rule": "figurative",
+    "rewrite": "Wrong hours send customers\n            to a closed business."
+   },
+   {
+    "quote": "A postcard takes about two weeks. Do not create",
+    "rule": "illustrative hedging",
+    "rewrite": "A postcard takes up to two weeks. Do not create"
+   },
+   {
+    "quote": "Postcard takes about two weeks. Do not create a second listing while waiting.",
+    "rule": "illustrative hedging",
+    "rewrite": "Postcard takes up to two weeks. Do not create a second listing while waiting."
+   },
+   {
+    "quote": "<h3 style={H3}>7. Photos, more than you think</h3>",
+    "rule": "slogan-like heading",
+    "rewrite": "<h3 style={H3}>7. Photos</h3>"
+   },
+   {
+    "quote": "Google does not rank on it and a human reading a keyword-stuffed paragraph\n            concludes something about you tha",
+    "rule": "awkward",
+    "rewrite": "Google does not rank on it, and readers who see a keyword-stuffed paragraph\n            judge the business by it."
+   },
+   {
+    "quote": "            That last one surprises people. Other people can change",
+    "rule": "self-signposting",
+    "rewrite": "            Other people can change"
+   },
+   {
+    "quote": "\n            I will answer by email.\n",
+    "rule": "redundant",
+    "rewrite": "\n"
+   },
+   {
+    "quote": "it does not affect ranking and it tells a human reader something you do not want them concluding.",
+    "rule": "awkward",
+    "rewrite": "it does not affect ranking and readers judge the business by it."
+   },
+   {
+    "quote": " Google can suspend a listing for any of these.\n          </div>",
+    "rule": "redundant with lead",
+    "rewrite": "\n          </div>"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/blog/is-your-business-invisible/page.tsx",
+  "fixes": [
+   {
+    "quote": "These seven checks take about ten minutes",
+    "rule": "illustrative hedging",
+    "rewrite": "These seven checks take ten minutes"
+   },
+   {
+    "quote": "Do this first: use a phone that is not yours",
+    "rule": "imperative heading",
+    "rewrite": "Starting with a phone that is not yours"
+   },
+   {
+    "quote": "1. Search your business name plus your town",
+    "rule": "imperative heading",
+    "rewrite": "1. Your business name plus your town"
+   },
+   {
+    "quote": "2. Search what you sell, plus your town",
+    "rule": "imperative heading",
+    "rewrite": "2. What you sell, plus your town"
+   },
+   {
+    "quote": "somebody drives over and finds a locked door.",
+    "rule": "figurative",
+    "rewrite": "somebody drives over and finds the business closed."
+   },
+   {
+    "quote": "4. Tap your own phone number",
+    "rule": "imperative heading",
+    "rewrite": "4. Your own phone number"
+   },
+   {
+    "quote": "5. Open your own website on the phone",
+    "rule": "imperative heading",
+    "rewrite": "5. Your own website on the phone"
+   },
+   {
+    "quote": "6. Look at your reviews, and at the last one you replied to",
+    "rule": "imperative heading",
+    "rewrite": "6. Your reviews, and the last one you replied to"
+   },
+   {
+    "quote": "7. Search your own name in quotes",
+    "rule": "imperative heading",
+    "rewrite": "7. Your own name in quotes"
+   },
+   {
+    "quote": "built more than about six years ago",
+    "rule": "illustrative hedging",
+    "rewrite": "built more than six years ago"
+   },
+   {
+    "quote": "Free, about twenty minutes at",
+    "rule": "illustrative hedging",
+    "rewrite": "Free, twenty minutes at"
+   },
+   {
+    "quote": "Twenty minutes at your place:{\" \"}",
+    "rule": "fragment",
+    "rewrite": "I can visit your place for twenty minutes. Call{\" \"}"
+   },
+   {
+    "quote": "in about ten minutes, with no tools and no account.\"",
+    "rule": "illustrative hedging",
+    "rewrite": "in ten minutes, with no tools and no account.\""
+   },
+   {
+    "quote": "at a time. Who runs it, how long it has been there, what it does well, and what\n            a student trying to find it ",
+    "rule": "fragment list",
+    "rewrite": "at a time. Each post covers who runs the business, how long it has been there, what it does well and what\n            a student trying to find it runs into. The series is{\" \"}"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/blog/small-app-security-checklist/page.tsx",
+  "fixes": [
+   {
+    "quote": "The categories below are documented by the vendors whose\n            products they involve.",
+    "rule": "passive voice",
+    "rewrite": "The vendors whose products these categories involve\n            document them."
+   },
+   {
+    "quote": "the vendor documentation says plainly</a>",
+    "rule": "vague adverb",
+    "rewrite": "the vendor documentation says so</a>"
+   },
+   {
+    "quote": "Somewhere in the build, a gate got stubbed. A cookie is set on login, and the\n            check is whether the cookie ex",
+    "rule": "passive voice",
+    "rewrite": "Somewhere in the build, a developer stubbed a gate. The app sets a cookie on login, and the\n            check asks whether the cookie exists, or whether it equals a known constant."
+   },
+   {
+    "quote": "on it, that offer is open and it does not cost anything:{\" \"}",
+    "rule": "wordiness",
+    "rewrite": "on it, the offer is free:{\" \"}"
+   },
+   {
+    "quote": "it is because someone deliberately opted out to get some formatting working.",
+    "rule": "vague",
+    "rewrite": "it is because someone deliberately opted out to get formatting working."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/blog/what-a-website-actually-costs/page.tsx",
+  "fixes": [
+   {
+    "quote": "The first is design, meaning somebody decides what the site looks like. This\n            ranges from picking a template ",
+    "rule": "awkward",
+    "rewrite": "The first is design, which means deciding what the site looks like. It\n            ranges from picking a template to creating a visual identity, and it drives\n            much of the spread."
+   },
+   {
+    "quote": "takes about ten times the work of",
+    "rule": "illustrative hedging",
+    "rewrite": "takes ten times the work of"
+   },
+   {
+    "quote": "No large upfront number, and you are renting rather than owning the arrangement.",
+    "rule": "illogical wording / negative contrast",
+    "rewrite": "There is no large upfront cost, and you rent the site instead of owning it."
+   },
+   {
+    "quote": "These continue after the invoice is paid. A quote that omits them is less\n            complete, and the costs still arri",
+    "rule": "wordiness",
+    "rewrite": "These costs continue after the invoice is paid. A quote that omits them\n            is incomplete, and the costs arrive anyway."
+   },
+   {
+    "quote": "free to about $20 a month",
+    "rule": "illustrative hedging",
+    "rewrite": "free to $20 a month"
+   },
+   {
+    "quote": "What is a customer worth to you?",
+    "rule": "rhetorical question heading",
+    "rewrite": "What a customer is worth to you"
+   },
+   {
+    "quote": "no website at any price is the thing\n            that changes your business, and you should",
+    "rule": "wordiness",
+    "rewrite": "no website at any price changes your\n            business, and you should"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/blog/why-i-built-crm-from-scratch/page.tsx",
+  "fixes": [
+   {
+    "quote": "The cost so far is about $15 in Anthropic",
+    "rule": "illustrative hedging",
+    "rewrite": "The cost so far is $15 in Anthropic"
+   },
+   {
+    "quote": "Claude Haiku at about $0.001 per call",
+    "rule": "illustrative hedging",
+    "rewrite": "Claude Haiku at $0.001 per call"
+   },
+   {
+    "quote": "an activity log structured for the sales conversations my reps and I have.",
+    "rule": "passive / vague",
+    "rewrite": "an activity log built around the sales conversations my reps and I have."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/brand/page.tsx",
+  "fixes": [
+   {
+    "quote": " Never use as a background for text-heavy content. Use it as the accent.\",",
+    "rule": "filler",
+    "rewrite": " Never use as a background for text-heavy content.\","
+   },
+   {
+    "quote": "One step lighter than Purcell Dark, creates depth without introducing a new color.",
+    "rule": "awkward",
+    "rewrite": "It sits one step lighter than Purcell Dark and creates depth without a new color."
+   },
+   {
+    "quote": "This is the baseline. Every surface defaults here. Gold for accents and marks only.",
+    "rule": "word echo",
+    "rewrite": "The baseline for every surface. Gold for accents and marks only."
+   },
+   {
+    "quote": "Cream stock with dark text and gold accents. Use on cream stock. For digital, use Warm White.",
+    "rule": "word echo",
+    "rewrite": "Dark text and gold accents on cream stock. For digital, use Warm White."
+   },
+   {
+    "quote": "Seven colors. Three primary, four functional. Every brand decision is made from this set, no ad-hoc additions.",
+    "rule": "passive voice",
+    "rewrite": "Seven colors: three primary and four functional. Every brand decision draws from this set, with no ad-hoc additions."
+   },
+   {
+    "quote": "These combinations exist in the wild. None of them are approved.",
+    "rule": "figurative",
+    "rewrite": "None of these combinations is approved."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/consulting/page.tsx",
+  "fixes": [
+   {
+    "quote": "Each session is hands-on and built around your tools.",
+    "rule": "word echo",
+    "rewrite": "I build each session around your tools."
+   },
+   {
+    "quote": "Rate is based on group size and session length.",
+    "rule": "passive voice",
+    "rewrite": "The rate depends on group size and session length."
+   },
+   {
+    "quote": "desc: \"Up to 20 people. Structured session with Q&A",
+    "rule": "word echo",
+    "rewrite": "desc: \"Structured session with Q&A"
+   },
+   {
+    "quote": "Not sure which session fits? <a",
+    "rule": "copy",
+    "rewrite": "If you are not sure which session fits, <a"
+   },
+   {
+    "quote": "Send me a message</a> and I&apos;ll recommend one.",
+    "rule": "copy",
+    "rewrite": "send me a message</a> and I&apos;ll recommend one."
+   },
+   {
+    "quote": "You get a session built for your team.",
+    "rule": "word echo",
+    "rewrite": "The session fits your team."
+   },
+   {
+    "quote": "I&apos;ve been building autonomous systems and shipping production tools for a year, full-time, while still in high scho",
+    "rule": "word echo",
+    "rewrite": "I&apos;ve spent a year building autonomous systems and shipping production tools full-time, while still in high school."
+   },
+   {
+    "quote": "I don&apos;t have a wall of corporate testimonials yet.",
+    "rule": "figurative",
+    "rewrite": "I have no corporate testimonials yet."
+   },
+   {
+    "quote": "Most sessions are designed for people who've never used AI tools before.",
+    "rule": "passive voice",
+    "rewrite": "I design most sessions for people who've never used AI tools before."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/courses/page.tsx",
+  "fixes": [
+   {
+    "quote": "What a course here is",
+    "rule": "awkward heading",
+    "rewrite": "What each course includes"
+   },
+   {
+    "quote": "Self-paced, lifetime access, structured as lessons with exercises.",
+    "rule": "passive/awkward",
+    "rewrite": "Each course is self-paced, with lifetime access and lessons that include exercises."
+   },
+   {
+    "quote": "I teach them. I am Elijah Purcell,",
+    "rule": "filler",
+    "rewrite": "I am Elijah Purcell,"
+   },
+   {
+    "quote": "lessons that include exercises. Every course\n            includes the templates and documents I used.",
+    "rule": "word echo",
+    "rewrite": "exercises in each lesson. The templates\n            and documents I used come with every course."
+   },
+   {
+    "quote": "Purcell Ventures LLC</Link>,\n            I build",
+    "rule": "comma splice",
+    "rewrite": "Purcell Ventures LLC</Link>,\n            and I build"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/digital/tools/page.tsx",
+  "fixes": [
+   {
+    "quote": "All of these tools are free here. We can brand them and connect them to your own site and your business data.",
+    "rule": "word echo / redundancy",
+    "rewrite": "We can brand any of these tools and connect it to your own site and your business data."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/page.tsx",
+  "fixes": [
+   {
+    "quote": "The tools, calculators, process notes and blog posts below are free, with no email gate.",
+    "rule": "word echo",
+    "rewrite": "Every tool, calculator, process note and blog post below is open to read and use."
+   },
+   {
+    "quote": "desc: \"Selected original prose.\"",
+    "rule": "vague",
+    "rewrite": "desc: \"Essays and posts I have written.\""
+   },
+   {
+    "quote": "Use anything <em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>now.</em>",
+    "rule": "imperative heading",
+    "rewrite": "Everything below is <em className=\"pv-italic\" style={{ fontWeight: 400, color: \"var(--color-warm-accent)\" }}>free.</em>"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": [
+   {
+    "quote": "31 free tools (home) vs Twenty-nine free tools (/tools, /links, /ai-consultant-tuscaloosa)",
+    "why": "Two different counts. /digital/tools AI set vs /tools static set may be different lists. Needs owner decision."
+   }
+  ]
+ },
+ {
+  "path": "app/tools/page.tsx",
+  "fixes": [
+   {
+    "quote": "Single-page tools built by Elijah Purcell. Each one is a single file that runs in\n          the browser,",
+    "rule": "word echo",
+    "rewrite": "Elijah Purcell built these single-purpose tools. Each one is one file that runs in\n          the browser,"
+   },
+   {
+    "quote": " Save sets and reuse them. For worship leaders planning a set.",
+    "rule": "word echo",
+    "rewrite": " Save sets and reuse them."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": [
+   {
+    "quote": "If you found this, you found a door.",
+    "why": "Deliberate puzzle tease for Project Prowess; left as is."
+   }
+  ]
+ },
+ {
+  "path": "app/links/page.tsx",
+  "fixes": [
+   {
+    "quote": "Selected original prose.",
+    "rule": "vague",
+    "rewrite": "Essays and posts I have written."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/print/page.tsx",
+  "fixes": [
+   {
+    "quote": "cost: \"~$40 / 100\"",
+    "rule": "illustrative hedging",
+    "rewrite": "cost: \"$40 / 100\""
+   },
+   {
+    "quote": "cost: \"~$60 / 250\"",
+    "rule": "illustrative hedging",
+    "rewrite": "cost: \"$60 / 250\""
+   },
+   {
+    "quote": "cost: \"~$25 / ea\"",
+    "rule": "illustrative hedging",
+    "rewrite": "cost: \"$25 / ea\""
+   },
+   {
+    "quote": "cost: \"~$200 / 1,000 all-in\"",
+    "rule": "illustrative hedging",
+    "rewrite": "cost: \"$200 / 1,000 all-in\""
+   },
+   {
+    "quote": "cost: \"~$30 / 100\"",
+    "rule": "illustrative hedging",
+    "rewrite": "cost: \"$30 / 100\""
+   },
+   {
+    "quote": "Mail a whole zip code for about $0.20 per house",
+    "rule": "illustrative hedging",
+    "rewrite": "Mail a whole zip code for $0.20 per house"
+   },
+   {
+    "quote": "near jobs, about $0.20 per house.",
+    "rule": "illustrative hedging",
+    "rewrite": "near jobs, $0.20 per house."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/shop/bundle/page.tsx",
+  "fixes": [
+   {
+    "quote": "Buy them individually: <Link",
+    "rule": "awkward",
+    "rewrite": "To buy them one at a time, <Link"
+   },
+   {
+    "quote": "See all 3 separately</Link>.",
+    "rule": "awkward",
+    "rewrite": "see all 3 separately</Link>."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/shop/wallet-tracker-premium/page.tsx",
+  "fixes": [
+   {
+    "quote": "+14% avg winner",
+    "rule": "abbreviation",
+    "rewrite": "+14% average winner"
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/software/page.tsx",
+  "fixes": [
+   {
+    "quote": "We scope each project on a discovery call, and I stay involved after launch.",
+    "rule": "pronoun inconsistency",
+    "rewrite": "I scope each project on a discovery call and stay involved after launch."
+   }
+  ],
+  "shared_component_issues": [],
+  "unfixable": []
+ },
+ {
+  "path": "app/digital/tools/[slug]/page.tsx",
+  "fixes": [],
+  "shared_component_issues": [],
+  "unfixable": [
+   {
+    "quote": "23 AI prompts / Get all 23 PROMPTS FOR $19",
+    "why": "Shop pages say 24 prompts; counts disagree. Needs owner decision. File is the tool slug page (not edited)."
+   }
+  ]
+ }
+]
