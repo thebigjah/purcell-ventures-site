@@ -2,7 +2,6 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
-import PostFaq from "@/app/components/PostFaq";
 
 // SOURCED FROM WHAT ACTUALLY HAPPENED, INCLUDING THE PARTS THAT DID NOT WORK.
 //
@@ -12,9 +11,9 @@ import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/cold-outreach-that-worked" },
-  title: { absolute: "The cold email that got me a client, and the fifty that did not | Elijah Purcell" },
+  title: { absolute: "The cold email that got me a client, and the ones that did not | Elijah Purcell" },
   description:
-    "What actually works when a teenager cold-emails small businesses: leading with a specific observation instead of a pitch, why attaching work beats describing it, and the three sentences that get deleted every time.",
+    "What worked when a teenager cold-emailed small businesses: leading with a specific observation instead of a pitch, why attaching work beats describing it, and three sentences to cut.",
 };
 
 const H2 = { fontFamily: "'Cinzel', Georgia, serif", fontSize: "25px", fontWeight: 600, lineHeight: 1.2, margin: "42px 0 10px" } as const;
@@ -35,10 +34,10 @@ export default function Post() {
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },
           { name: "Writing", href: "/blog" },
-          { name: "The cold email that got me a client, and the fifty that did ", href: "/blog/cold-outreach-that-worked" },
+          { name: "The cold email that got me a client, and the ones that did not", href: "/blog/cold-outreach-that-worked" },
         ]} />
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Business · August 20, 2026 · 6 min read</div>
+          <div className="pv-mono-label">Business, August 20, 2026, 6 min read</div>
           <h1>
             The cold email that got me a client, and the ones that{" "}
             <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>did not</em>
@@ -48,15 +47,14 @@ export default function Post() {
         <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
 
           <p style={{ fontSize: "18px" }}>
-            My first real client came from a cold email. A photography business, a full site,
-            scoped and built and delivered. Most of the emails before it went nowhere, and
-            the difference between them was not the writing quality.
+            My first client came from a cold email: a photography business that got a full
+            site, scoped, built and delivered. Most of the emails before it went nowhere.
+            What changed was the first line.
           </p>
 
           <p>
-            I am not going to give you a conversion rate, because I did not instrument it
-            properly at the time and a number I cannot stand behind is worth less than
-            nothing. What I can tell you is what changed.
+            I did not track replies at the time, so I have no conversion rate to give you.
+            I can tell you what I changed.
           </p>
 
           <h2 style={H2}>The version that fails</h2>
@@ -70,23 +68,22 @@ export default function Post() {
           </div>
 
           <p>
-            Nothing in that is offensive. It is also indistinguishable from the forty other
-            versions of it that arrived that month, and it asks a busy person to spend a
+            Nothing in that is offensive. It also reads like every other version of it in
+            their inbox, and it asks a busy person to spend a
             phone call finding out whether it is worth a phone call.
           </p>
 
           <p>
             The specific failure is "could benefit from a modern website." That sentence
-            contains no evidence that I looked at their business at all. It would be equally
-            true of every business on earth, which is another way of saying it is not about
-            them.
+            contains no evidence that I looked at their business at all. The sentence fits
+            any business, so it shows no research.
           </p>
 
-          <h2 style={H2}>What changed: lead with the thing you noticed</h2>
+          <h2 style={H2}>Open with something you noticed</h2>
 
           <p>
             The version that works opens with something specific and checkable about
-            <em> their</em> business. Not a compliment. An observation.
+            <em> their</em> business. Write an observation about it, and skip the praise.
           </p>
 
           <div style={quote}>
@@ -96,30 +93,25 @@ export default function Post() {
           </div>
 
           <p>
-            That is worth reading whether or not they hire anybody. It also proves the
-            twenty minutes, which is the actual message underneath it: somebody looked
-            properly at your business before contacting you, which is roughly nobody.
+            That is worth reading whether or not they hire anybody. It also shows I spent
+            time on their business before contacting them, which few senders do.
           </p>
 
-          <h2 style={H2}>Attach the work, do not describe it</h2>
+          <h2 style={H2}>Build the page first, then send it</h2>
 
           <p>
-            The strongest thing I ever did in cold outreach was build first and send the
-            link. Not a mockup, not a Figma file. A real page at a real URL that loads on
-            their phone.
+            The best thing I did in cold outreach was build first and send the link: a live
+            page at its own URL that loads on their phone.
           </p>
 
           <p>
-            It reframes the entire conversation. You are no longer asking them to imagine
-            something and pay for it. You are showing them a thing that exists and asking
-            whether they want it.
+            You show them a page that exists and ask if they want it.
           </p>
 
           <p>
             The obvious objection is that it is a lot of work for a stranger who might not
-            reply. It is. It is also the only version where you are not competing on the same
-            axis as everybody else in their inbox, and it means the worst case is that you
-            got better at building the thing.
+            reply. It is. Few senders do it, though, and if they never reply you still got
+            practice building the thing.
           </p>
 
           <h2 style={H2}>Three sentences to cut</h2>
@@ -130,12 +122,12 @@ export default function Post() {
           </p>
 
           <p>
-            <strong>"I'd love to hop on a quick call."</strong> Nobody's call is quick. Say
+            <strong>"I'd love to hop on a quick call."</strong> Most calls run longer than promised. Say
             what you want and give them a way to say yes in writing.
           </p>
 
           <p>
-            <strong>Anything about your passion, your journey, or your mission.</strong> A
+            <strong>Anything about your story.</strong> A
             stranger has no reason to care yet, and every sentence about you is a sentence
             not about them.
           </p>
@@ -145,8 +137,7 @@ export default function Post() {
           <p>
             I was seventeen when I started sending these. The instinct is to hide it, and
             that instinct is wrong for one reason: it will come out, and when it comes out
-            after they have decided to trust you, it reads as something you concealed rather
-            than something you did not lead with.
+            after they have decided to trust you, it reads as concealment.
           </p>
 
           <p>
@@ -155,41 +146,30 @@ export default function Post() {
             whether you can do the work.
           </p>
 
-          <h2 style={H2}>The part that actually decides it</h2>
+          <h2 style={H2}>Follow-up</h2>
 
           <p>
-            Follow-up. One message, about a week later, adding something rather than
-            repeating yourself. Most of my replies came on the second contact and almost
-            none came on the third, so one follow-up is worth sending and a fourth is worth
-            skipping.
+            Send one message about a week later that adds something new. Most of my replies
+            came on the second contact and almost none came on the third, so a third contact
+            is rarely worth sending.
           </p>
 
           <p>
             And when somebody says no, say thank you and mean it. Tuscaloosa is small,
-            Acworth is smaller, and the person who said no in March is the person who
-            mentions you to somebody else in October.
+            Acworth is smaller, and someone who said no may still recommend you later.
           </p>
 
           <p>
             I am currently doing a slower version of the same thing:{" "}
             <Link href="/blog/tuscaloosa-small-business-online" style={link}>writing about
-            businesses near campus</Link>, one at a time, with no pitch attached. Turns out
-            the best cold outreach is not an email at all.
+            businesses near campus</Link>, one at a time, with no pitch attached. So far that
+            has worked better than cold email.
           </p>
-
-          <PostFaq qa={[
-            ["What makes a cold email actually work?",
-             "Opening with something specific and checkable about the recipient's own business rather than a pitch. Not a compliment, an observation: a booking link that 404s, checked on a phone as well as a laptop. It is worth reading whether or not they hire anybody, and it proves that somebody actually looked."],
-            ["What should you never write in a cold email?",
-             "Three things. That you hope the email finds them well, which tells the reader a template is coming. That you would love to hop on a quick call, because nobody's call is quick. And anything about your passion, journey or mission, because every sentence about you is a sentence not about them."],
-            ["How many times should you follow up on a cold email?",
-             "Once, about a week later, adding something rather than repeating yourself. Most replies come on the second contact and almost none on the third, so one follow-up is worth sending and a fourth is worth skipping."],
-          ]} />
 
           <PostByline post={{
             slug: "cold-outreach-that-worked",
             title: "The cold email that got me a client, and the ones that did not",
-            description: "Leading with a specific observation instead of a pitch, why attaching work beats describing it, and the three sentences that get deleted every time.",
+            description: "Leading with a specific observation instead of a pitch, sending a built page instead of a description, and three sentences to cut.",
             published: "2026-08-20",
           }} />
 

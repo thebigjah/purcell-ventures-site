@@ -2,7 +2,6 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
-import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/canonical-tag-noindex" },
@@ -33,7 +32,7 @@ export default function Post() {
           { name: "Every post on my blog was telling Google not to index it", href: "/blog/canonical-tag-noindex" },
         ]} />
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Engineering · August 20, 2026 · 6 min read</div>
+          <div className="pv-mono-label">Engineering, August 20, 2026, 6 min read</div>
           <h1>
             Every post on my blog was telling Google{" "}
             <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>not to index it</em>
@@ -49,8 +48,8 @@ export default function Post() {
           </p>
 
           <p>
-            Nobody wrote that tag nine times. It was written once, in a file that had
-            nothing to do with any individual post.
+            Nobody wrote that tag nine times. I wrote it once, in a file that has nothing
+            to do with any individual post.
           </p>
 
           <h2 style={H2}>The one line</h2>
@@ -68,7 +67,7 @@ export default function Post() {
           </p>
 
           <p>
-            The problem is what a layout is. In the Next.js App Router, a layout wraps its
+            In the Next.js App Router, a layout wraps its
             own page <em>and every route nested underneath it</em>, and{" "}
             <a href="https://nextjs.org/docs/app/api-reference/functions/generate-metadata" style={link} rel="noopener">metadata is inherited</a>. So <code>app/blog/layout.tsx</code> wraps <code>/blog</code>,{" "}
             <code>/blog/first-post</code>, <code>/blog/second-post</code>, all of them, and
@@ -79,36 +78,35 @@ export default function Post() {
 
           <div style={pre}>{`<link rel="canonical" href="https://purcellventures.co/blog"/>`}</div>
 
-          <h2 style={H2}>What that actually tells a search engine</h2>
+          <h2 style={H2}>What that tells a search engine</h2>
 
           <p>
-            A canonical tag is not a hint about your preferred URL format. It is a
-            declaration that this page and the target page are the same content, and that
-            the target is the one worth keeping. Google's own documentation on{" "}
+            A canonical tag tells a search engine that this page and the target page are the
+            same content, and that the target is the one to keep. Google treats it as a strong
+            signal. Google's documentation on{" "}
             <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls" style={link} rel="noopener">consolidating duplicate URLs</a>{" "}
-            describes exactly this consolidation behaviour.
+            describes this consolidation behaviour.
           </p>
 
           <p>
             When a post says its canonical is the index, Google reads it as: this post is a
             duplicate of the listing page. So it consolidates the two, keeps the index, and
-            drops the post. Not with an error. Not with a warning. It does exactly what it
-            was told.
+            drops the post. It shows no error or warning, because it is following the tag.
           </p>
 
           <p>
-            Everything on those pages went with it. The author markup. The structured data.
-            The titles. All of it correct, all of it on pages that had asked to be ignored.
+            The author markup, structured data and titles on those pages were dropped with
+            them. All of it was correct, on pages that had asked to be ignored.
           </p>
 
           <h2 style={H2}>Why it survives so long</h2>
 
-          <p>Three reasons, and they compound.</p>
+          <p>I found three reasons.</p>
 
           <p>
             <strong>It looks right in the file.</strong> Every reviewer who opens that layout
-            sees a canonical pointing at the page the file is named after. The bug is not in
-            the line, it is in the inheritance.
+            sees a canonical pointing at the page the file is named after. The bug is in the
+            inheritance.
           </p>
 
           <p>
@@ -118,14 +116,13 @@ export default function Post() {
           </p>
 
           <p>
-            <strong>The symptom is absence.</strong> The only evidence is pages that never
-            show up in search, and a new site with pages that never show up in search looks
-            exactly like a new site.
+            <strong>The only symptom is missing search results.</strong> Pages never show up
+            in search, and on a new site that is easy to blame on the site being new.
           </p>
 
           <h2 style={H2}>Check your own in two minutes</h2>
 
-          <p>One line, no tools, no account:</p>
+          <p>One command:</p>
 
           <div style={pre}>{`curl -sL https://yoursite.com/blog/some-post | grep canonical`}</div>
 
@@ -139,9 +136,8 @@ export default function Post() {
           <p>
             I found the same bug in two more places on my own site the same afternoon:
             three course pages canonicalising to <code>/courses</code>, and two pages
-            canonicalising to <code>/digital</code>. Fourteen pages in total. It was not a
-            blog problem. It was a layout-inheritance problem that happened to hit the blog
-            first.
+            canonicalising to <code>/digital</code>. Fourteen pages in total. The cause was
+            layout inheritance, and the blog was the first place it showed.
           </p>
 
           <h2 style={H2}>The fix, and the one that does not work</h2>
@@ -176,31 +172,22 @@ export const metadata = {
           <h2 style={H2}>The general shape</h2>
 
           <p>
-            This is the third bug of the same family I have hit this year. Something is
-            configured once, inherited widely, and fails by producing nothing rather than by
-            producing an error.
+            This is the third bug of this kind I have hit this year. In each one, a setting
+            made once and inherited widely failed without an error.
           </p>
 
           <p>
-            The pattern that catches them is not more careful reading. It is asserting that
-            output <em>arrives</em>, rather than asserting that nothing threw. A test that
+            A test that checks the output <em>arrives</em> catches them. A test that only
+            checks nothing threw does not. A test that
             fetches four live pages and checks each one canonicalises to itself would have
             caught this the day it shipped, and it is about eight lines.
           </p>
 
           <p>
-            A build that passes proves the code compiled. It proves nothing at all about
-            whether the thing you wanted actually happened.
+            A build that passes shows the code compiled. It does not show that the change
+            took effect.
           </p>
 
-          <PostFaq qa={[
-            ["Why are my blog posts not being indexed by Google?",
-             "One common cause is a canonical tag inherited from a shared layout. In the Next.js App Router a layout wraps every route nested beneath it and metadata is inherited, so a canonical declared on a blog index is handed to every post, and each post then tells Google it is a duplicate of the index."],
-            ["How do I fix a canonical tag pointing at the wrong page?",
-             "Delete it from the layout rather than trying to move it. A page with no canonical tag self-canonicalises, which is correct for both the index and each post, then declare an explicit canonical on each individual page. For pages that are client components and cannot export metadata, add a layout beside the page that carries only the canonical."],
-            ["Does a wrong canonical tag cause an error?",
-             "No, and that is why it survives. The build passes, the pages render, the links work, and the only symptom is pages that never appear in search, which on a new site looks exactly like a new site."],
-          ]} />
 
           <PostByline post={{
             slug: "canonical-tag-noindex",

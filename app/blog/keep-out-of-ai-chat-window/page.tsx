@@ -22,7 +22,7 @@ const POST: Data = {
     {
       "heading": "Where your words go",
       "paragraphs": [
-        "When you type into a chat tool, your words travel to the company that runs it. Depending on the tool and your plan, that company may store the conversation and may use it to train future models.",
+        "When you type into a chat tool, the tool sends your text to the company that runs it. Depending on the tool and your plan, that company may store the conversation and may use it to train future models.",
         "You can check your own tool in a few minutes. In ChatGPT, open Settings, then Data controls, and look for the switch labeled Improve the model for everyone. In Claude, open Settings, then Privacy, and look for the switch labeled Help improve Claude. Turn the switch off if you do not want your chats used for training."
       ]
     },
@@ -52,7 +52,7 @@ const POST: Data = {
       "heading": "What you can paste freely",
       "paragraphs": [
         "Your public menu, your posted hours, the text on your website, a product description and a job listing you plan to publish are all fine to paste. So is a rough draft of a social media post or a question about how to word a refund policy.",
-        "To decide, ask one question: will this text appear on your website or your storefront window anyway? If yes, it is fine to paste."
+        "To decide, ask whether the text will appear on your website or your storefront window anyway. If it will, you can paste it."
       ]
     },
     {
@@ -65,16 +65,8 @@ const POST: Data = {
   ],
   "faq": [
     [
-      "Can I paste a customer's email into an AI tool to draft a reply?",
-      "Yes, after you swap the name, phone number, address and order details for placeholders such as [Customer]."
-    ],
-    [
       "Where do I find my AI tool's data terms?",
       "Most AI companies publish a privacy policy and a page on how they use chats. Search the tool's name plus privacy policy, and read the section on training."
-    ],
-    [
-      "Which AI Fluency skill covers data privacy?",
-      "Diligence, which means owning how you use AI and what you do with its output."
     ]
   ]
 };
@@ -103,7 +95,7 @@ export default function Post() {
         ]} />
 
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">{POST.category} · October 26, 2026 · 3 min read</div>
+          <div className="pv-mono-label">{POST.category}, October 26, 2026, 3 min read</div>
           <h1>{POST.title}</h1>
         </header>
 
@@ -118,8 +110,8 @@ export default function Post() {
           ))}
 
           <p>
-            I check small business websites around Tuscaloosa for problems like these. If you
-            want me to look at yours, <Link href="/contact" style={link}>send me the address</Link>.
+            I help small businesses around Tuscaloosa set up AI tools and the rules for using
+            them. If you want help writing yours, <Link href="/contact" style={link}>send me a message</Link>.
           </p>
 
           <PostFaq qa={POST.faq} />

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
-import PostFaq from "@/app/components/PostFaq";
 
 export default function Post() {
   return (
@@ -17,78 +16,68 @@ export default function Post() {
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },
           { name: "Writing", href: "/blog" },
-          { name: "Five workflows you can automate this week without writing co", href: "/blog/five-workflows-no-code" },
+          { name: "Five workflows you can automate this week without writing code", href: "/blog/five-workflows-no-code" },
         ]} />
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Practical · May 24, 2026 · 4 min read</div>
+          <div className="pv-mono-label">Practical, May 24, 2026, 4 min read</div>
           <h1>Five workflows you can automate this week without writing code</h1>
           <p className="deck">
-            The five workflows I see small business owners burn the most time on. Each is automatable with off-the-shelf tools in under two hours. No code required.
+            These five workflows take small business owners the most time. You can automate each one with off-the-shelf tools in under two hours.
           </p>
         </header>
 
         <article style={{ fontSize: "16px", lineHeight: 1.8, color: "var(--color-warm-text)" }}>
           <p>
-            Most small business owners I work with don&apos;t need AI strategy. They need ten hours back in their week. Here are five places to find them, ranked by how fast you can ship the fix.
+            Most small business owners I work with don&apos;t need an AI strategy. They need time back. Here are five places to find it, ordered by setup time.
           </p>
 
           <h2 style={h2}>1. Email follow-ups for quotes you sent and forgot</h2>
           <p>
-            You quoted a client, they didn&apos;t respond, and now it&apos;s been eleven days and you can&apos;t remember if you followed up. This is the single biggest revenue leak I see, and it&apos;s fixable in 45 minutes with any modern email tool.
+            You quoted a client, they didn&apos;t respond, and now it&apos;s been eleven days and you can&apos;t remember if you followed up. This is a common revenue leak, and you can fix it in 45 minutes with Gmail.
           </p>
           <p>
-            Set up a sequence in Gmail (via the &quot;Schedule send&quot; feature) or in a free Zapier+Sheets combo. Day three: a one-line bump. Day eight: an honest &quot;hey, last touch, yes or no is fine.&quot; Day thirty: a 90-day pickup. That&apos;s it. You&apos;ll close 15-25% more of your quoted deals just by not forgetting.
+            Set up a sequence in Gmail (via the &quot;Schedule send&quot; feature) or in a free Zapier+Sheets combo. Day three: a one-line bump. Day eight: a plain &quot;last touch, yes or no is fine.&quot; Day thirty: a 90-day pickup.
           </p>
 
           <h2 style={h2}>2. New customer onboarding emails</h2>
           <p>
-            Every time someone buys, you send roughly the same three emails: welcome + confirmation + here&apos;s-what-happens-next. Most owners write these from scratch every time. The fix: write them once, set them on a delay, never think about it again.
+            Every time someone buys, you send roughly the same three emails: welcome, confirmation and next steps. Most owners write these from scratch every time. Write them once and schedule them.
           </p>
           <p>
-            ConvertKit, MailerLite, even Gmail&apos;s built-in templates all do this for free or close to it. The time you spend setting up the sequence pays back the first week.
-          </p>
-
-          <h2 style={h2}>3. Invoice + payment reminders</h2>
-          <p>
-            If you&apos;re manually sending invoices and chasing payments, stop. Stripe + a simple invoicing tool handles this entirely. The customer gets the invoice, gets reminded at 7 / 14 / 30 days, and pays via card link. You stop being a debt collector.
-          </p>
-          <p>
-            We use Stripe + a custom workflow on the back end of Purcell Ventures invoices. Setup took 90 minutes. We&apos;ve been paid faster every month since.
+            ConvertKit, MailerLite, even Gmail&apos;s built-in templates all do this for free or close to it.
           </p>
 
-          <h2 style={h2}>4. Lead capture forms that actually notify you</h2>
+          <h2 style={h2}>3. Invoice and payment reminders</h2>
           <p>
-            Your contact form sits there collecting submissions in a database you never check. By the time you reply, the lead has bought from someone else. This is fixable in twenty minutes with Zapier or n8n: form submission → Slack DM or text message → you call back within an hour.
+            If you&apos;re sending invoices and chasing payments by hand, Stripe plus an invoicing tool can send the invoices and reminders for you. The customer gets the invoice, gets reminded at 7, 14 and 30 days, and pays by card link.
           </p>
           <p>
-            The companies that win in services right now are the ones that respond inside 60 minutes. Form-to-text is the cheapest way to be that company.
+            I use Stripe and a custom workflow for Purcell Ventures invoices. Setup took 90 minutes.
           </p>
 
-          <h2 style={h2}>5. Social media posting (the calendar, not the writing)</h2>
+          <h2 style={h2}>4. Lead forms that notify you</h2>
           <p>
-            Writing social posts is the hard part. Scheduling them is the easy part, and it&apos;s the part most owners trip on. They write four posts in a burst, then disappear from social for three weeks because they don&apos;t want to log in and post manually.
+            Your contact form sits there collecting submissions in a database you never check. By the time you reply, the lead has bought from someone else. You can fix this in twenty minutes with Zapier or n8n: a form submission sends you a Slack message or text, and you call back within an hour.
+          </p>
+
+          <h2 style={h2}>5. Social media posting: the schedule</h2>
+          <p>
+            Most owners write posts but skip scheduling them. They write four posts in a burst, then disappear from social for three weeks because they don&apos;t want to log in and post manually.
           </p>
           <p>
-            Schedule a month&apos;s posts in one sitting using Buffer, Later, or Meta&apos;s built-in scheduler. AI can draft the captions in minutes (our <Link href="/digital/tools/caption-generator" style={{ color: "var(--color-warm-accent)" }}>Caption Generator</Link> spits out five versions per post). You write the prompts, AI does the typing, the tool does the posting. You touch it once a month.
+            Schedule a month&apos;s posts in one sitting using Buffer, Later, or Meta&apos;s built-in scheduler. AI can draft the captions in minutes (our <Link href="/digital/tools/caption-generator" style={{ color: "var(--color-warm-accent)" }}>Caption Generator</Link> generates five captions per post). You write the prompts and schedule a month of posts in one sitting.
           </p>
 
           <h2 style={h2}>The pattern</h2>
           <p>
-            None of these are about AI being clever. They&apos;re about taking a thing you already do manually and putting it on a schedule so you don&apos;t have to remember. The leverage isn&apos;t intelligence, it&apos;s patience-at-scale.
+            Each workflow takes a task you already do by hand and puts it on a schedule so you don&apos;t have to remember it.
           </p>
 
           <p>
-            If any of these feel impossible at your current setup, that&apos;s usually the symptom of a deeper problem, your tools don&apos;t talk to each other. That&apos;s a different conversation. <Link href="/consulting" style={{ color: "var(--color-warm-accent)" }}>Book a consulting session</Link> if you want to walk through what your stack should look like.
+            If any of these feel impossible at your current setup, you may be using tools that do not connect to each other. <Link href="/consulting" style={{ color: "var(--color-warm-accent)" }}>Book a consulting session</Link> if you want to work out which tools you need.
           </p>
         
 
-
-          <PostFaq qa={[
-            ["What can a small business automate without writing code?",
-             "Five things, each doable in under two hours with off-the-shelf tools: follow-ups on quotes you sent and forgot, new customer onboarding emails, and three more. Most owners do not need an AI strategy, they need ten hours back in the week."],
-            ["How do I automate quote follow-ups?",
-             "A three-touch sequence built with scheduled send in Gmail or a free Zapier and Sheets combination. Day three, a one-line bump. Day eight, an honest last touch where yes or no is fine. Day thirty, a ninety-day pickup. It takes about forty-five minutes to set up and closes 15 to 25 per cent more of your quoted deals purely by not forgetting."],
-          ]} />
 
           <section style={{ marginTop: "44px", paddingTop: "22px", borderTop: "1px solid rgba(212,175,55,0.2)" }}>
             <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, margin: "0 0 12px" }}>
@@ -103,14 +92,14 @@ export default function Post() {
           <PostByline post={{
             slug: "five-workflows-no-code",
             title: "Five workflows you can automate this week without writing code | Elijah Purcell",
-            description: "The five workflows I see small business owners burn the most time on. Each is automatable with off-the-shelf tools in under two hours. No code required.",
+            description: "These five workflows take small business owners the most time. You can automate each one with off-the-shelf tools in under two hours.",
             published: "2026-05-24",
           }} />
 
         </article>
 
         <footer style={{ marginTop: "48px", paddingTop: "24px", borderTop: "1px solid var(--color-warm-border)", fontSize: "12px", color: "var(--color-warm-text-light)", fontStyle: "italic" }}>
-          First draft written by our <Link href="/digital/tools/content-generator" style={{ color: "var(--color-warm-accent)" }}>AI Content Generator</Link>. Edited and signed off by Elijah Purcell. — Purcell Ventures
+          I drafted this post with <Link href="/digital/tools/content-generator" style={{ color: "var(--color-warm-accent)" }}>AI tools</Link> and edited it before publishing.
         </footer>
 
       </main>

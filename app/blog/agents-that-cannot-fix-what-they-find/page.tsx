@@ -2,13 +2,12 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
-import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/agents-that-cannot-fix-what-they-find" },
   title: { absolute: "We built agents that cannot fix what they find | Elijah Purcell" },
   description:
-    "Separating the finder from the fixer is the cheapest safety property you can buy in an agent system. It also creates a failure mode nobody warns you about, and we shipped it.",
+    "We split the agent that finds problems from the one that fixes them. That split kept agents out of files they had no business reading, and it also left every finding open forever until we built a way to close them.",
 };
 
 const head = { marginTop: "36px", marginBottom: "12px" };
@@ -27,7 +26,7 @@ export default function Post() {
           { name: "We built agents that cannot fix what they find", href: "/blog/agents-that-cannot-fix-what-they-find" },
         ]} />
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Engineering · August 17, 2026 · 4 min read</div>
+          <div className="pv-mono-label">Engineering, August 17, 2026, 4 min read</div>
           <h1>
             We built agents that cannot{" "}
             <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>fix what they find</em>
@@ -36,19 +35,19 @@ export default function Post() {
 
         <article style={{ fontSize: "16px", lineHeight: 1.75, color: "var(--color-warm-text)" }}>
 
-          <p>One of our agents can read every repository we own. It cannot change a single line of any of them. That separation is deliberate, it is the cheapest safety property in the whole system, and it produced a failure we did not see coming.</p>
+          <p>One of our agents can read every repository we own. It cannot change a single line of any of them. The separation is deliberate. It cost us one design decision, and it caused a failure we did not expect.</p>
 
-          <h2 style={head}>Remove the capability, don&apos;t deny the permission</h2>
+          <h2 style={head}>Agents get text and no tools</h2>
 
-          <p>The first version of our reasoning layer passed the model a prompt describing exactly what it was allowed to look at. That prompt was honest, specific, and completely unenforced.</p>
+          <p>The first version of our reasoning layer passed the model a prompt describing exactly what it was allowed to look at. The prompt described the scope accurately, and nothing enforced it.</p>
 
-          <p>We found out when an agent asked to draft a payment-chase email refused to write it. It had gone and read the client file, found no matching record, and objected. The objection was correct. It was also proof that the scope in the prompt was a request rather than a constraint, because the process could open any file on the machine.</p>
+          <p>We found out when an agent asked to draft a payment-chase email refused to write it. It had gone and read the client file, found no matching record, and objected. The objection was correct. It was also proof that the scope in the prompt was only a request, because the process could open any file on the machine.</p>
 
           <p>Closing the filesystem was not enough either. Asked afterwards what it could still reach, the model listed email, calendar and drive, because removing built-in tools leaves externally configured servers inherited from the user&apos;s own config. An agent reasoning about a code repository must not be able to read your inbox.</p>
 
           <p>The fix was to hand the model nothing but text and no tools at all. Everything it may see is passed in by the agent&apos;s own code, which already enforces the scope and is already tested. It reasons over what it was given and cannot go looking.</p>
 
-          <p><strong>A scope stated in a prompt is a request. A scope enforced by the process is a constraint.</strong> Only one of those survives a model that decides to be helpful.</p>
+          <p><strong>A model can ignore a scope written in a prompt. It cannot ignore a scope enforced in code.</strong></p>
 
           <h2 style={head}>The failure this design creates</h2>
 
@@ -56,33 +55,25 @@ export default function Post() {
 
           <p>So the ledger only ever grew. The auditor re-checked every property every morning, correctly refused to file duplicates, and had no way to record that anything had been resolved. Fix a broken checkout and the finding describing it would have stayed open forever.</p>
 
-          <p>The reporting agent, meanwhile, told us that zero findings had been resolved. That read as a damning statistic about follow-through. It was actually a hardcoded zero, sitting there because no code path existed that could produce any other number. The report was accurate and told us nothing.</p>
+          <p>The reporting agent, meanwhile, told us that zero findings had been resolved. That read as a bad statistic about follow-through. It was a hardcoded zero, because no code path could produce any other number. The report was correct and carried no information.</p>
 
           <h2 style={head}>What closing has to mean</h2>
 
-          <p>A finding is now resolved when a later audit looks for it and cannot reproduce it. The subtlety is in the word <em>looks</em>.</p>
+          <p>A finding is now resolved when a later audit looks for it and cannot reproduce it.</p>
 
-          <p>&quot;Not observed&quot; only means &quot;fixed&quot; if you actually checked. A property dropped from the registry, or one whose check errored, is unaudited, not repaired. Closing those would launder a gap into a win, which is worse than leaving them open, because now the number lies in the flattering direction.</p>
+          <p>&quot;Not observed&quot; means &quot;fixed&quot; only if the audit checked. A property dropped from the registry, or one whose check errored, is unaudited. Closing those would report a gap as a fix, which is worse than leaving them open, because the resolved count would then overstate the work done.</p>
 
-          <p>So closure is scoped to what a run genuinely checked, and the test that matters most is the one asserting that an unaudited property is never closed by silence.</p>
+          <p>So a run can close only findings it checked, and the test that matters most is the one asserting that an unaudited property is never closed by silence.</p>
 
           <h2 style={head}>The pattern underneath</h2>
 
-          <p>Every one of these failures had the same shape: an empty result that reads as good news. No exception, no error, no red anywhere. An auditor that finds nothing, a ledger with nothing resolved, a scan that returns zero rows.</p>
+          <p>Every one of these failures had the same shape: an empty result that reads as good news, with no exception raised. An auditor that finds nothing, a ledger with nothing resolved, a scan that returns zero rows.</p>
 
-          <p>Which gives the rule we now build to: <strong>assert on counts and on values, never on the absence of an exception.</strong> A test that only proves the code did not crash would have passed on every single one of these.</p>
+          <p><strong>We now write tests that assert on counts and values.</strong> A test that only proves the code did not crash would have passed on all of these.</p>
 
         
 
 
-          <PostFaq qa={[
-            ["How do you stop an AI agent from accessing things it should not?",
-             "Remove the capability rather than denying the permission. A prompt describing what an agent may look at is honest, specific and completely unenforced, because the process can still open any file on the machine. We found out when an agent asked to draft a payment-chase email went and read the client file first, found no matching record, and objected. The objection was correct and it was also proof that the scope was a request."],
-            ["Is removing built-in tools enough to constrain an agent?",
-             "No. Asked afterwards what it could still reach, the model listed email, calendar and drive, because removing built-in tools leaves externally configured servers inherited from the user's own configuration. An agent reasoning about a code repository must not be able to read your inbox, and that requires closing the external config too."],
-            ["Why separate the agent that finds problems from the one that fixes them?",
-             "It is the cheapest safety property in the system: an agent that can read every repository and change no line of any of them cannot cause the failure it was inspecting for. It also produces a failure that nobody warns you about, which is what the rest of this post is about."],
-          ]} />
 
           <section style={{ marginTop: "44px", paddingTop: "22px", borderTop: "1px solid rgba(212,175,55,0.2)" }}>
             <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, margin: "0 0 12px" }}>
@@ -97,7 +88,7 @@ export default function Post() {
           <PostByline post={{
             slug: "agents-that-cannot-fix-what-they-find",
             title: "We built agents that cannot fix what they find",
-            description: "Separating the finder from the fixer is the cheapest safety property you can buy in an agent system. It also creates a failure mode nobody warns you about, and we shipped it.",
+            description: "We split the agent that finds problems from the one that fixes them. That split kept agents out of files they had no business reading, and it also left every finding open forever until we built a way to close them.",
             published: "2026-08-17",
           }} />
 

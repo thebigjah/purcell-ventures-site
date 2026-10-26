@@ -1,14 +1,13 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
-import PostFaq from "@/app/components/PostFaq";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/audit-every-business-in-your-town" },
   title: { absolute: "How to audit every business in your town in an afternoon | Elijah Purcell" },
   description:
-    "The method behind auditing 121 independent businesses near the University of Alabama: one free Overpass query against OpenStreetMap, a real HTTP request per site, and the two mistakes that will make your numbers wrong.",
+    "The method behind auditing 121 independent businesses near the University of Alabama: one free Overpass query against OpenStreetMap, an HTTP request per site, and the two mistakes that will make your numbers wrong.",
 };
 
 const H2 = { fontFamily: "'Cinzel', Georgia, serif", fontSize: "25px", fontWeight: 600, lineHeight: 1.2, margin: "42px 0 12px" } as const;
@@ -33,7 +32,7 @@ export default function Post() {
           { name: "How to audit every business in your town in an afternoon", href: "/blog/audit-every-business-in-your-town" },
         ]} />
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Method · August 20, 2026 · 7 min read</div>
+          <div className="pv-mono-label">Method, August 20, 2026, 7 min read</div>
           <h1>
             How to audit every business in your town in an{" "}
             <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>afternoon</em>
@@ -52,7 +51,7 @@ export default function Post() {
           </p>
 
           <p>
-            It costs nothing. No API key, no account, no scraping anybody's search results.
+            It costs nothing. The method needs no API key and no account, and it does not scrape anybody's search results.
           </p>
 
           <h2 style={H2}>The data source</h2>
@@ -89,8 +88,8 @@ out center tags;`}</div>
 
           <p>
             POST that to <code>overpass-api.de/api/interpreter</code> with the query in a
-            form field called <code>data</code>. Send a real User-Agent with a contact
-            address in it. It is a free volunteer service and being identifiable is the rent.
+            form field called <code>data</code>. Send a User-Agent with a contact address in
+            it. It is a free volunteer service, and the address lets the operators reach you.
           </p>
 
           <h2 style={H2}>Filtering to independents</h2>
@@ -102,15 +101,14 @@ out center tags;`}</div>
 
           <p>
             OpenStreetMap tags them for you. Drop anything with a <code>brand</code> or{" "}
-            <code>brand:wikidata</code> tag. That is one line and it is more accurate than
-            anything you would write by hand.
+            <code>brand:wikidata</code> tag. That is one line of code.
           </p>
 
           <h2 style={H2}>The check that matters</h2>
 
           <p>
-            For each business with a <code>website</code> tag, make a real request and see
-            what happens. This is where both of my mistakes live.
+            For each business with a <code>website</code> tag, make a request and see what
+            happens. Both of my mistakes were here.
           </p>
 
           <h2 style={H2}>Mistake one: HEAD is not enough</h2>
@@ -120,8 +118,8 @@ out center tags;`}</div>
           </p>
 
           <p>
-            Plenty of live servers do not answer HEAD. Two restaurants whose sites are
-            perfectly fine came back as broken, and that number reached a published page
+            Plenty of live servers do not answer HEAD. Two restaurants with working sites
+            came back as broken, and that number reached a published page
             before I caught it. I had to correct the post in public.
           </p>
 
@@ -141,16 +139,15 @@ out center tags;`}</div>
 return last`}</div>
 
           <p>
-            Note the 403 and 405 handling too. A server that refuses to be probed is not a
-            server that is down, and treating it as down is a false statement about a real
-            business.
+            Note the 403 and 405 handling too. A server that refuses a probe is up. Marking it
+            down misreports the business.
           </p>
 
           <h2 style={H2}>Mistake two: the claim you are entitled to make</h2>
 
           <p>
-            The headline I wanted was "93 businesses near campus have no website." I could
-            not have that one, because it is not what the data says.
+            The headline I wanted was "93 businesses near campus have no website." The data
+            does not support it.
           </p>
 
           <p>
@@ -160,45 +157,36 @@ return last`}</div>
           </p>
 
           <p>
-            That turns out to be the better claim anyway, because it is the same question a
-            customer with a phone is asking. Nobody types a business into a search bar hoping
-            it exists somewhere. They type it hoping something comes back.
+            A customer searching on a phone runs into the same gap, so that claim is still
+            worth publishing.
           </p>
 
           <p>
-            <strong>Write down the claim your method actually supports before you write the
-            headline.</strong> If the honest version is weaker, you either need a different
-            method or a different headline, and reaching for the strong version anyway is how
-            a piece of research becomes a thing somebody can disprove in one reply.
+            <strong>Write down the claim your method supports before you write the
+            headline.</strong> If the supported claim is weaker, change the method or the
+            headline. Somebody can disprove an overstated claim in one reply.
           </p>
 
           <h2 style={H2}>What to do with the result</h2>
 
           <p>
-            Sort by how interesting the row is rather than alphabetically. The most
-            interesting are the businesses that list a website which no longer answers,
+            Sort the businesses that list a website which no longer answers to the top,
             because they already decided a site was worth paying for and theirs broke. That
             is a much shorter conversation than convincing somebody they need one.
           </p>
 
           <p>
-            Then: name, category, street, and whether the site answers.{" "}
-            <strong>Nothing else.</strong> No phone numbers, no email addresses. The moment
+            Keep only name, category, street, and whether the site answers. Leave out phone
+            numbers and email addresses. The moment
             you collect contact details you have built a marketing list, and if the reason
             you told people you were doing this was research, you have made yourself a liar
             in a way that is very easy to notice.
           </p>
 
-          <h2 style={H2}>The whole thing</h2>
+          <h2 style={H2}>What I am using it for</h2>
 
           <p>
-            One Overpass query, a brand-tag filter, an HTTP request per site with a GET
-            fallback, and a sort. Under two hundred lines including the comments explaining
-            why the GET fallback is not optional.
-          </p>
-
-          <p>
-            I am using mine to write about{" "}
+            My script is under two hundred lines. I am using it to write about{" "}
             <Link href="/blog/tuscaloosa-small-business-online" style={link}>independent
             businesses near campus</Link>, one at a time. If you run it on your town and find
             something surprising,{" "}
@@ -206,19 +194,10 @@ return last`}</div>
             it</a>.
           </p>
 
-          <PostFaq qa={[
-            ["How can I find businesses without a website?",
-             "Query OpenStreetMap through the Overpass API for shops and food businesses within a radius of a point, drop anything carrying a brand or brand:wikidata tag to remove chains, then make a real HTTP request to every website tag that exists. It is free, needs no API key, and takes an afternoon."],
-            ["Is it accurate to say a business has no website if OpenStreetMap has no website tag?",
-             "No, and claiming it is the main way this kind of audit goes wrong. OpenStreetMap is volunteer-maintained, so a missing tag proves that a machine looking for a website does not find one, not that none exists. The honest claim is the more useful one anyway, because it is the same question a customer with a phone is asking."],
-            ["Why do HEAD requests give the wrong answer when checking if a site is live?",
-             "Plenty of live servers do not answer HEAD requests. Checking with HEAD alone marks working sites as broken. Fall back to GET whenever HEAD fails, and treat a 403 or 405 as working rather than down, because a server refusing to be probed is not a server that is offline."],
-          ]} />
-
           <PostByline post={{
             slug: "audit-every-business-in-your-town",
             title: "How to audit every business in your town in an afternoon",
-            description: "The method behind auditing 121 independent businesses: one free Overpass query, a real HTTP request per site, and the two mistakes that make your numbers wrong.",
+            description: "The method behind auditing 121 independent businesses: one free Overpass query, an HTTP request per site, and the two mistakes that make your numbers wrong.",
             published: "2026-08-20",
           }} />
 

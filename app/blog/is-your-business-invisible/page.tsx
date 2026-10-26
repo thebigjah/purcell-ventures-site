@@ -9,7 +9,7 @@ export const metadata = {
   alternates: { canonical: "/blog/is-your-business-invisible" },
   title: { absolute: "Is your business invisible online? A ten-minute self-check | Elijah Purcell" },
   description:
-    "Seven checks a small business owner can run on their own business in ten minutes, with no tools and no account, to find out what a customer with a phone actually sees. Built from an audit of 121 businesses near the University of Alabama.",
+    "Seven checks a small business owner can run on their own business in ten minutes, with no tools and no account, to find out what a customer with a phone sees. Built from an audit of 121 businesses near the University of Alabama.",
 };
 
 const H2 = { fontFamily: "'Cinzel', Georgia, serif", fontSize: "25px", fontWeight: 600, lineHeight: 1.2, margin: "42px 0 10px" } as const;
@@ -34,7 +34,7 @@ export default function Post() {
           { name: "Is your business invisible online? A ten-minute self-check", href: "/blog/is-your-business-invisible" },
         ]} />
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Guide · August 20, 2026 · The Tuscaloosa Storefront Project</div>
+          <div className="pv-mono-label">Guide, August 20, 2026, The Tuscaloosa Storefront Project</div>
           <h1>
             Is your business{" "}
             <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>invisible</em> online?
@@ -44,9 +44,9 @@ export default function Post() {
         <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
 
           <p style={{ fontSize: "18px" }}>
-            Seven checks. Ten minutes. No tools, no account, nothing to install. At the end
-            you will know what somebody standing on the sidewalk with a phone actually sees
-            when they look for you.
+            These seven checks take about ten minutes and need no tools or account. At the
+            end you will know what somebody standing on the sidewalk with a phone sees when
+            they look for you.
           </p>
 
           <p>
@@ -57,24 +57,23 @@ export default function Post() {
           </p>
 
           <p>
-            None of what follows requires buying anything, including from me. Most of the
-            fixes are free and take an afternoon.
+            You can do all of this without buying anything, from me or anyone else. Most of
+            the fixes are free and take an afternoon.
           </p>
 
           <h2 style={H2}>Do this first: use a phone that is not yours</h2>
 
           <p>
             Borrow one, or open a private window and sign out of everything. Your own phone
-            has been to your website. It knows your business. It will show you a version of
-            reality that no new customer will ever see, and if you skip this step every
-            check below will lie to you.
+            has visited your website and remembers your searches, so it shows you results a
+            new customer will not see. Every check below depends on starting clean.
           </p>
 
           <h2 style={H2}>The seven checks</h2>
 
           <h3 style={H3}>1. Search your business name plus your town</h3>
           <p>
-            Not just the name. "Joe's Barbers Tuscaloosa." What comes back first? If it is a
+            Add the town to the name: "Joe's Barbers Tuscaloosa." Look at the first result. If it is a
             directory site you have never logged into, a Facebook page you stopped updating,
             or a competitor, that is the answer to the whole question and you can stop
             reading and go fix it.
@@ -87,17 +86,15 @@ export default function Post() {
           <h3 style={H3}>2. Search what you sell, plus your town</h3>
           <p>
             "Barber Tuscaloosa." "Ramen near me." Do you appear in the first ten results, or
-            in the map section at the top? This is the search a new customer actually runs,
-            because they do not know your name yet. Almost every business owner checks
-            number one and never checks number two.
+            in the map section at the top? A new customer runs this search because they do
+            not know your name yet.
           </p>
 
           <h3 style={H3}>3. Are your hours right, everywhere?</h3>
           <p>
-            Check Google, check Facebook, check whatever directory came up in check one.
-            Wrong hours are worse than no hours: somebody drives over and finds a locked
-            door, and that is the last time they try. Holiday hours count. So does the day
-            you close early.
+            Check Google, Facebook and whatever directory came up in check one. If the hours
+            are wrong, somebody drives over and finds a locked door. Include holiday hours
+            and the days you close early.
           </p>
           <div style={box}>
             <strong>The figure that surprised me:</strong> of 121 businesses near campus,
@@ -107,43 +104,41 @@ export default function Post() {
 
           <h3 style={H3}>4. Tap your own phone number</h3>
           <p>
-            On the phone that is not yours, find your number online and tap it. Does it
-            dial? Does it reach you? Is it the number you actually answer, or the landline
-            in the back that rings out?
+            On the phone that is not yours, find your number online and tap it. Check that
+            it dials and reaches the number you answer, and not a landline in the back that
+            rings out.
           </p>
           <p>
-            While you are there: does anything online give someone a way to reach you that
-            is not a phone call? A lot of people under thirty will not call a stranger. If
-            the only path is a phone call, you are choosing not to hear from them.
+            While you are there, look for a way to reach you other than a phone call. Some
+            customers prefer to text or fill in a form, so offer one.
           </p>
 
           <h3 style={H3}>5. Open your own website on the phone</h3>
           <p>
-            Three questions, in order. Does it load in under about three seconds. Can you
-            read it without pinching to zoom. Can you find the hours, the address and the
-            phone number without scrolling past a picture of a building.
+            Time how long it takes to load. Try to read it without pinching to zoom. Then
+            look for the hours, the address and the phone number, and note whether you had
+            to scroll past a picture of a building to get to them.
           </p>
           <p>
             If your site was built more than about six years ago, it was probably designed
-            for a desktop and adapted for a phone afterwards. Most of your visitors are on
-            the phone.
+            for a desktop and adapted for a phone afterwards. If your site has analytics,
+            check what share of visitors come from phones.
           </p>
 
           <h3 style={H3}>6. Look at your reviews, and at the last one you replied to</h3>
           <p>
-            You do not need five stars. You need recent ones and you need replies. A
-            three-year-old review is a signal that nothing has happened since. A complaint
+            Recent reviews with replies matter more than a five-star average. If the newest
+            review is three years old, it looks as if nothing has happened since. A complaint
             with no response reads as agreement.
           </p>
           <p>
-            Never pay for a review, never offer a discount for one, and never write one
-            yourself. Every platform can detect it and the penalty is losing the listing,
-            which is worse than having no reviews at all.
+            Do not pay for reviews, offer discounts for them or write them yourself. Google
+            and the other platforms ban this and can remove the listing.
           </p>
 
           <h3 style={H3}>7. Search your own name in quotes</h3>
           <p>
-            If you are the business, people search you and not just the shop. Put your name
+            If you are the business, people also search the owner&apos;s name. Put your name
             in quotation marks and see who else has it. You may be competing with somebody
             who shares your name, and if so, everything you publish should say your town and
             your trade so a search engine can tell you apart.
@@ -151,25 +146,23 @@ export default function Post() {
 
           <h2 style={H2}>What to fix first</h2>
 
-          <p>In this order, because this is the order that pays.</p>
+          <p>In this order:</p>
 
           <ol style={{ paddingLeft: "1.15rem" }}>
             <li style={{ marginBottom: "10px" }}>
               <strong>Claim your Google Business Profile and put the hours in it.</strong>{" "}
               Free, about twenty minutes at{" "}
-              <a href="https://business.google.com" style={link}>business.google.com</a>. For
-              most local businesses this single step is worth more than a website, and it is
-              the one almost nobody has done.
+              <a href="https://business.google.com" style={link}>business.google.com</a>.
             </li>
             <li style={{ marginBottom: "10px" }}>
               <strong>Fix the phone number and add one non-phone way to reach you.</strong>
             </li>
             <li style={{ marginBottom: "10px" }}>
-              <strong>Ask five recent happy customers for a review.</strong> Just ask. No
-              incentive.
+              <strong>Ask five recent happy customers for a review.</strong> Ask without
+              offering anything in return.
             </li>
             <li style={{ marginBottom: "10px" }}>
-              <strong>Then, and only then, worry about the website.</strong>
+              <strong>Then work on the website.</strong>
             </li>
           </ol>
 
@@ -181,15 +174,14 @@ export default function Post() {
 
           <p>
             If you have a queue out the door, if you are booked three weeks ahead, if your
-            customers are the same forty people they have been for a decade, a website will
-            not change your business. Fix the listing, fix the hours, and go back to work.
+            customers are the same forty people they have been for a decade, a website may
+            add little. Fix the listing and the hours and go back to work.
           </p>
 
           <p>
-            A site earns its keep when people need to see the work before they call, when
-            you need bookings without a phone call, when you are competing with a chain that
-            outranks you, or when you need somewhere for people to land that you actually
-            control. If none of those are true for you, you have my honest answer.
+            A site pays off when people need to see the work before they call, when you need
+            bookings without a phone call, when you are competing with a chain that outranks
+            you, or when you need a page you control. If none of those apply, skip it for now.
           </p>
 
           <h2 style={H2}>If you are near campus</h2>
@@ -199,7 +191,7 @@ export default function Post() {
             at a time. Who runs it, how long it has been there, what it does well, and what
             a student trying to find it runs into. That is{" "}
             <Link href="/blog/tuscaloosa-small-business-online" style={link}>the Storefront Project</Link>,
-            and being featured costs nothing and does not require buying anything.
+            and being featured is free.
           </p>
 
           <p>
@@ -214,28 +206,20 @@ export default function Post() {
             totalTime="PT10M"
             supply={["A phone that is not yours, or a private browser window signed out of everything"]}
             steps={[
-            { name: "Use a phone that is not yours", text: "Your own phone has visited your website and knows your business. It will show you results no new customer will ever see, and every check after this one depends on starting clean." },
+            { name: "Use a phone that is not yours", text: "Your own phone has visited your website and knows your business. It shows results a new customer will not see, and every check after this one depends on starting clean." },
             { name: "Search your business name plus your town", text: "If the first result is a directory you never logged into, an abandoned social page, or a competitor, that is the answer to the whole question." },
-            { name: "Search what you sell plus your town", text: "This is the search a customer who does not know your name actually runs. Most owners check their name and never check this one." },
+            { name: "Search what you sell plus your town", text: "A customer who does not know your name runs this search." },
             { name: "Check your hours everywhere", text: "Google, social pages, and any directory that appeared in the first check. Include holiday hours and early closures." },
-            { name: "Tap your own phone number", text: "Find your number online and tap it. Does it dial, does it reach you, and is it the number you actually answer? Then check whether anything offers a way to reach you that is not a phone call." },
-            { name: "Open your own website on the phone", text: "Three questions: does it load in about three seconds, can you read it without zooming, and can you find hours, address and phone without scrolling past a photograph." },
+            { name: "Tap your own phone number", text: "Find your number online and tap it. Check that it dials and reaches the number you answer. Then look for a way to reach you other than a phone call." },
+            { name: "Open your own website on the phone", text: "Check how long it takes to load, whether you can read it without zooming, and whether you can find hours, address and phone without scrolling past a photograph." },
             { name: "Look at your reviews and your replies", text: "Recency matters as much as rating. A complaint with no reply reads as agreement. Never pay for a review and never write one yourself." },
-            { name: "Search your own name in quotes", text: "If you are the business, people search you and not only the shop. See who else shares your name, and if somebody does, make sure everything you publish names your town and your trade." },
+            { name: "Search your own name in quotes", text: "If you are the business, people also search the owner's name. See who else shares your name, and if somebody does, make sure everything you publish names your town and your trade." },
           ]}
           />
 
           <PostFaq qa={[
-            ["How do I check if my business shows up on Google?",
-             "Borrow a phone that is not yours, or open a private window signed out of everything, and search your business name plus your town. Your own phone has visited your website and will show you results no new customer sees. Then search what you sell plus your town, because that is the search somebody who does not know your name actually runs."],
             ["Why is my business not showing up on Google Maps?",
-             "The most common reason is that the Google Business Profile has never been claimed. Google may have generated a listing without you, in which case you claim it rather than create a new one. Creating a second listing for a business that already has one produces a duplicate, and duplicates get suppressed."],
-            ["Does my small business actually need a website?",
-             "Not always. If you have a queue out the door, are booked weeks ahead, and your customers are the same people they have been for years, a website will not change your business. A site earns its keep when people need to see the work before calling, when you want bookings without a phone call, when a chain outranks you, or when you need somewhere you control. Fix the Google listing and the hours first either way."],
-            ["What should a small business fix first online?",
-             "In order: claim the Google Business Profile and put accurate hours in it, fix the phone number and add one way to reach you that is not a phone call, ask five recent happy customers for a review, and only then think about the website. The listing is free and takes about twenty minutes and for most local businesses it outperforms a new site."],
-            ["Are wrong opening hours online really a problem?",
-             "Wrong hours are worse than no hours. Somebody drives over, finds a locked door, and does not try again. Holiday hours and early closures count. In an audit of 121 independent businesses near the University of Alabama, only 23 had opening hours recorded anywhere a machine could read them."],
+             "The most common reason is that nobody has claimed the Google Business Profile. Google may have created a listing without you, in which case you claim it instead of creating a new one. Creating a second listing for a business that already has one produces a duplicate, and Google can hide duplicates."],
           ]} />
 
           <PostByline post={{

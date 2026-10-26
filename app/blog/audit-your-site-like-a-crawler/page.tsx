@@ -34,7 +34,7 @@ export default function Post() {
         ]} />
 
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Engineering · August 20, 2026 · 9 min read</div>
+          <div className="pv-mono-label">Engineering, August 20, 2026, 9 min read</div>
           <h1>
             Audit your own site the way a{" "}
             <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>crawler</em> does
@@ -44,15 +44,15 @@ export default function Post() {
         <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
 
           <p style={{ fontSize: "18px" }}>
-            Nine checks, a terminal, and about twenty minutes. No tools, no account, no
-            trial. I ran every one of these against my own site today and found six real
-            problems, one of which had been quietly suppressing nine pages.
+            These nine curl checks take about twenty minutes in a terminal and need no
+            account. I ran every one of them against my own site today and found six
+            problems. One of them had kept nine pages out of Google.
           </p>
 
           <p>
-            The reason to do it with curl rather than a crawler product is not price. It is
-            that you see the raw response, which is what a search engine sees, rather than a
-            product's interpretation of it.
+            I use curl instead of a crawler product because curl shows the raw response,
+            which is what a search engine sees. A product shows you its interpretation of
+            that response.
           </p>
 
           <h2 style={H2}>1. Does every page canonicalise to itself</h2>
@@ -68,7 +68,8 @@ export default function Post() {
             If the href is not the URL you just requested, that page has handed its value to
             another one. Check a page from every section, not just the homepage: the usual
             cause is a shared layout handing its own canonical to every child route.{" "}
-            <Link href="/blog/canonical-tag-noindex" style={link}>Long version here</Link>.
+            I wrote up the full story in{" "}
+            <Link href="/blog/canonical-tag-noindex" style={link}>how one canonical tag hid nine pages</Link>.
           </p>
 
           <h2 style={H2}>2. Is anything accidentally noindex</h2>
@@ -87,10 +88,10 @@ curl -sL  https://example.com/page | grep -o '<meta name="robots"[^>]*'`}</div>
 
           <p>
             A URL that appears in the sitemap and is also disallowed in robots.txt is a
-            contradiction, and Google resolves it badly: the page can still surface, as a
-            bare link with no description, because the crawler was never allowed to read it.{" "}
+            contradiction. The page can still show up in results as a bare link with no
+            description, because the crawler was never allowed to read it.{" "}
             <a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap" style={link} rel="noopener">The sitemap documentation</a>{" "}
-            is explicit that a sitemap is a request to crawl, not permission to.
+            says a sitemap asks for a crawl. It does not override robots.txt.
           </p>
 
           <div style={pre}>{`curl -s https://example.com/sitemap.xml | grep -o '<loc>[^<]*' | sed 's/<loc>//' > urls.txt
@@ -114,11 +115,11 @@ done < urls.txt | sort -k2 | uniq -f1 -D`}</div>
           <h2 style={H2}>5. Does your structured data parse</h2>
 
           <p>
-            Not "is it present." Does it parse. A JSON-LD block with a trailing comma is
-            skipped in silence, and the page behaves exactly as if you never wrote it. It is
-            also worth reading{" "}
-            <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" style={link} rel="noopener">what Google says it is actually assessing</a>,
-            because no amount of valid markup substitutes for it.
+            Check that the markup parses, beyond checking that it is present. Google skips a
+            JSON-LD block with a trailing comma without any warning, and the page behaves as
+            if you never wrote it. Valid markup does not replace the content itself, so also
+            read{" "}
+            <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" style={link} rel="noopener">Google's guidance on which content it evaluates</a>.
           </p>
 
           <div style={pre}>{`curl -sL https://example.com/page | python3 -c '
@@ -146,10 +147,10 @@ for b in re.findall(r"<script[^>]*ld\\+json[^>]*>(.*?)</script>", h, re.S):
             identifiers. Mine was twelve, three of them anonymous. It should be one.
           </p>
 
-          <h2 style={H2}>7. Does the title actually contain the thing you want to rank for</h2>
+          <h2 style={H2}>7. Does the title contain the term you want to rank for</h2>
 
           <p>
-            Embarrassingly basic and worth checking anyway. The title tag is the strongest
+            The title tag is the strongest
             on-page signal for a query, and my homepage did not contain my own name, which
             meant the highest-authority page on my domain could not rank for it.
           </p>
@@ -159,19 +160,18 @@ for b in re.findall(r"<script[^>]*ld\\+json[^>]*>(.*?)</script>", h, re.S):
   case "$t" in *"Your Thing"*) : ;; *) echo "MISSING: $u  $t";; esac
 done < urls.txt`}</div>
 
-          <h2 style={H2}>8. How fast is it, really</h2>
+          <h2 style={H2}>8. How fast is it</h2>
 
           <div style={pre}>{`curl -sL -o /dev/null -w 'ttfb %{time_starttransfer}s  total %{time_total}s  %{size_download} bytes\\n' \\
   https://example.com/page`}</div>
 
           <p>
             Time to first byte is the number worth watching, because it is the part your
-            hosting and your server code control. If it is under about 200 milliseconds you
-            have a design problem, not a speed problem, and you should go and fix something
-            else.
+            hosting and your server code control. If it is under about 200 milliseconds,
+            speed is not your bottleneck and your time is better spent on the other checks.
           </p>
 
-          <h2 style={H2}>9. What is actually indexed</h2>
+          <h2 style={H2}>9. What is indexed</h2>
 
           <p>
             Search <code>site:yourdomain.com</code> in a browser, signed out. Count the
@@ -179,23 +179,21 @@ done < urls.txt`}</div>
           </p>
 
           <p>
-            I had 7 pages indexed against 28 in the sitemap. That gap is the single most useful
-            number in this entire list, and it is the one people never
-            look at because it takes ten seconds and tells you something you would rather not
-            know.
+            I had 7 pages indexed against 28 in the sitemap. That gap is the most useful
+            number in this list, and it takes ten seconds to get.
           </p>
 
-          <h2 style={H2}>Do it in a browser, not through an API</h2>
+          <h2 style={H2}>Check rankings in a browser</h2>
 
           <p>
-            One warning, learned expensively today. A search API is not a window onto Google.
-            It is a separate index with separate ranking, and for a low-volume query the two
-            can disagree completely.
+            One warning from today. A search API queries a separate index with its own
+            ranking, and for a low-volume query its results and Google's can disagree
+            completely.
           </p>
 
           <p>
             I optimised against an API result set for half a day and named the wrong
-            competitor on three live pages before checking in an actual browser and finding
+            competitor on three live pages before checking in a browser and finding
             that the person I was distinguishing myself from does not appear in the top
             twenty at all.
           </p>
@@ -206,16 +204,8 @@ done < urls.txt`}</div>
           </p>
 
           <PostFaq qa={[
-            ["How do I check if a page has the wrong canonical tag?",
-             "Fetch the page and print the canonical link: curl -sL https://example.com/page | grep -o 'rel=\"canonical\"[^>]*'. If the href is not the URL you requested, that page is telling search engines to index a different one instead. Check a page from every section, because the usual cause is a shared layout handing its canonical to every nested route."],
-            ["Why are my pages not showing up in Google even though they are in my sitemap?",
-             "Being in the sitemap only asks for a crawl. Common causes of pages still not appearing: a canonical tag pointing at another page, a noindex directive in an X-Robots-Tag header rather than in the HTML, a robots.txt rule blocking the URL you also listed in the sitemap, or duplicate titles causing the engine to choose between your own pages."],
             ["What is the difference between a noindex tag and a canonical tag?",
-             "A noindex directive says do not index this page at all. A canonical tag says this page is a duplicate of another one, so index that other one and give it the credit. The second is easier to set by accident, because it usually looks correct in the file where it is written and only misbehaves through inheritance."],
-            ["Can I check my SEO without paying for a tool?",
-             "Yes, for most of the technical checks. curl plus grep will tell you about canonicals, robots directives, titles, structured data validity and response times. A paid crawler saves time at scale, but every check in this article runs from a terminal with no account."],
-            ["Why does a search API give different results from Google in a browser?",
-             "A search API is a separate index with its own ranking, not a view into Google's results. For low-volume queries the two can disagree entirely. Verify any claim about where something ranks in a real browser, signed out, and record the date you checked."],
+             "A noindex directive says do not index this page at all. A canonical tag says this page is a duplicate of another one, so index that other one and give it the credit. The canonical is easier to set by accident, because it looks correct in the file where it is written and only misbehaves when child pages inherit it."],
           ]} />
 
           <PostByline post={{

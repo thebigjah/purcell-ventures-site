@@ -2,7 +2,6 @@ import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
-import PostFaq from "@/app/components/PostFaq";
 
 // THE HONEST VERSION OF THIS PIECE.
 //
@@ -24,7 +23,7 @@ export const metadata = {
   alternates: { canonical: "/blog/121-businesses-near-campus" },
   title: { absolute: "121 businesses near the University of Alabama, and what a phone can find | Elijah Purcell" },
   description:
-    "An audit of every independent business within 2500 metres of the Quad: how many list a website a machine can actually reach, and what that means for a shop competing with a chain three miles away.",
+    "An audit of every independent business within 2500 metres of the Quad: how many list a website a machine can reach, and what that means for a shop competing with a chain three miles away.",
 };
 
 const link = { color: "var(--color-warm-accent)", textDecoration: "underline" };
@@ -61,7 +60,7 @@ export default function Post() {
           { name: "121 businesses near the University of Alabama, and what a ph", href: "/blog/121-businesses-near-campus" },
         ]} />
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Reporting · August 20, 2026 · The Tuscaloosa Storefront Project</div>
+          <div className="pv-mono-label">Reporting, August 20, 2026, The Tuscaloosa Storefront Project</div>
           <h1>
             121 businesses near campus, and what a phone can{" "}
             <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>find</em>
@@ -76,26 +75,25 @@ export default function Post() {
             website. There were 121 of them. Twenty-seven had a site that answered.
           </p>
 
-          <h2>What was actually measured</h2>
+          <h2>What was measured</h2>
 
           <p>
-            This matters more than the number, so it goes first. The source is{" "}
+            The source is{" "}
             <a href="https://wiki.openstreetmap.org/wiki/Key:website" style={link} rel="noopener">the OpenStreetMap website tag</a>,
             which is maintained by volunteers, and a business with no website recorded there
-            might still have one. So the honest claim is not that
-            ninety-four businesses near campus have no website.
+            might still have one. The data cannot show whether ninety-four businesses near
+            campus have a website.
           </p>
 
           <p>
-            The honest claim is that for ninety-four of them, <em>a machine looking for a
-            website does not find one</em>. Ninety list none at all. Three list one that no
-            longer answers. One points at a page that has been deleted.
+            It can show that for ninety-four of them, <em>a machine looking for a website
+            finds none</em>. Ninety list none at all. Three list one that no longer answers.
+            One points at a page its owner deleted.
           </p>
 
           <p>
-            That is the more interesting claim anyway, because it is the same question a
-            student with a phone is asking. Nobody types a business into a search bar
-            hoping it exists somewhere. They type it hoping something comes back.
+            A student with a phone runs into the same gap. Someone searching for a business
+            wants its hours and phone number, and the search comes back empty.
           </p>
 
           <h2>By category</h2>
@@ -131,34 +129,31 @@ export default function Post() {
 
           <p>
             Twenty-three of the 121 have opening hours recorded anywhere a machine can read
-            them. Not a website. Just the hours.
+            them.
           </p>
 
           <p>
-            Which means that for roughly eight in ten businesses within walking distance of
-            forty thousand students, the answer to &ldquo;are they open right now&rdquo; is
-            not available to anyone who is not already standing in front of the door.
+            For roughly eight in ten businesses within walking distance of campus, only
+            someone standing at the door can tell whether they are open right now.
           </p>
 
-          <h2>Why this is not a sales pitch</h2>
+          <h2>Where a website does not help</h2>
 
           <p>
             I build websites, so the obvious read is that this is an argument for buying
-            one from me. A few honest caveats against my own interest.
+            one from me. Two caveats cut against that.
           </p>
 
           <p>
-            Some of these businesses genuinely do not need a website. A barber shop with a
-            forty-year queue out the door is not being held back by its web presence. A
+            Some of these businesses do not need a website. A barber shop with a line out
+            the door every Saturday gets enough customers without one. A
             restaurant that fills every night on word of mouth has already solved the
             problem a website solves.
           </p>
 
           <p>
-            And for many of the rest, the cheapest fix is not a website at all. It is
-            claiming the Google listing and putting the hours in it. That is free, it takes
-            twenty minutes, and it would move more of these businesses further than
-            anything I could sell them.
+            For many of the rest, the cheapest fix is claiming the Google listing and
+            entering the hours. Claiming the listing is free and takes about twenty minutes.
           </p>
 
           <h2>What happens next</h2>
@@ -168,8 +163,7 @@ export default function Post() {
             how long it has been here, what it does well, and what a student trying to find
             it runs into. That is{" "}
             <Link href="/blog/tuscaloosa-small-business-online" style={link}>the Storefront Project</Link>,
-            and it is reporting rather than sales: a business does not have to be a client
-            to be in one, and several will not be.
+            and it is reporting. A business does not have to be a client to be featured.
           </p>
 
           <p>
@@ -184,9 +178,9 @@ export default function Post() {
 
           <p>
             One Overpass query against OpenStreetMap for shops and food businesses within
-            2500 metres of the Quad, on 20 August 2026. Anything tagged with a chain brand
-            was dropped. Every listed website got a real HTTP request, and a 403 or a 405
-            was counted as working, because plenty of live sites refuse a bare HEAD. The
+            2500 metres of the Quad, on 20 August 2026. I dropped anything tagged with a
+            chain brand. I sent an HTTP request to every listed website and counted a 403 or
+            a 405 as working, because plenty of live sites refuse a bare HEAD. The
             script is <code>scout.py</code> and re-running it reproduces every figure above.
           </p>
 
@@ -194,24 +188,15 @@ export default function Post() {
             <strong>Correction, same day.</strong> The first version of this piece said
             twenty-six working sites and ninety-five without. The script was sending only a
             HEAD request, and two restaurants whose sites are perfectly alive answer GET but
-            refuse HEAD, so they were counted as broken. Corrected above to twenty-seven and
-            ninety-four. The correction stays visible rather than being edited in quietly,
-            because the piece is about checking things.
+            refuse HEAD, so the script counted them as broken. I corrected the figures above
+            to twenty-seven and ninety-four. The correction stays visible because the piece
+            is about checking things.
           </p>
-
-          <PostFaq qa={[
-            ["How many businesses near the University of Alabama have a website?",
-             "Of 121 independent businesses within 2500 metres of the Quad, audited on 20 August 2026, 27 had a website that answered a request. 90 listed none at all, three listed one that no longer resolves, and one pointed at a page that has been deleted."],
-            ["How many small businesses list their opening hours online?",
-             "In that same audit of 121 businesses near campus, 23 had opening hours recorded anywhere a machine could read them. For roughly eight in ten, the question of whether they are open right now is only answerable by standing in front of the door."],
-            ["Which types of business are least likely to be findable online?",
-             "Every laundry, florist, jeweller, tailor, ice cream shop, phone repair place and car repair shop inside the audited area came back with no reachable website. Restaurants did best and still only cleared roughly one in four."],
-          ]} />
 
           <PostByline post={{
             slug: "121-businesses-near-campus",
             title: "121 businesses near the University of Alabama, and what a phone can find",
-            description: "An audit of every independent business within 2500 metres of the Quad: how many list a website a machine can actually reach.",
+            description: "An audit of every independent business within 2500 metres of the Quad: how many list a website a machine can reach.",
             published: "2026-08-20",
           }} />
 

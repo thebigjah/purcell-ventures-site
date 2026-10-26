@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
-import PostFaq from "@/app/components/PostFaq";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 // SOURCED, NOT REMEMBERED.
@@ -15,7 +14,7 @@ export const metadata = {
   alternates: { canonical: "/blog/free-at-alabama" },
   title: { absolute: "What is already free at the University of Alabama | Elijah Purcell" },
   description:
-    "Services a University of Alabama student has already paid for through tuition and fees, with the exact office names: University Recreation, the Writing Center, the Capstone Center for Student Success, the Career Center, CrimsonRide and more. Checked against ua.edu.",
+    "Services a University of Alabama student has already paid for through tuition and fees, with the exact office names: University Recreation, the Writing Center, the Capstone Center for Student Success, the Career Center, CrimsonRide and more, checked against ua.edu.",
 };
 
 const H2 = { fontFamily: "'Cinzel', Georgia, serif", fontSize: "25px", fontWeight: 600, lineHeight: 1.2, margin: "42px 0 10px" } as const;
@@ -28,9 +27,9 @@ const ROWS: [string, string][] = [
   ["The Writing Center", "Described on ua.edu as a free service open to all students. Consultations run about fifty minutes, by appointment or drop-in, with online appointments and workshops as well. It is for any writing, not only English coursework."],
   ["Capstone Center for Student Success", "Russell Hall, second and third floors. (205) 348-7011. The umbrella for academic support, and the place to start if you do not know which office you need."],
   ["Mathematics Technology and Learning Center", "Tutoring for introductory mathematics courses, homework help and self-paced support. If you are in the calculus sequence this is the building you should already know."],
-  ["The Speaking Studio", "Help with public speaking, presentations and oral communication. Almost nobody uses it, which is strange given how many courses are graded on a presentation."],
-  ["The Career Center", "Major selection, career planning, job search strategy, and professional school planning. Worth visiting in your first year rather than your last."],
-  ["University Libraries", "Ten libraries and more than three million print and electronic resources. The electronic half is the part students underuse: database access that costs real money outside a university."],
+  ["The Speaking Studio", "Help with public speaking, presentations and oral communication."],
+  ["The Career Center", "Major selection, career planning, job search strategy, and professional school planning. Visit in your first year."],
+  ["University Libraries", "Ten libraries and more than three million print and electronic resources. The electronic half includes database access you would otherwise pay for outside a university."],
   ["The Cube", "A 3D printing and production lab in the College of Engineering."],
   ["ENGenuity Lab", "Tutoring, mentoring and career preparation for engineering students."],
   ["History Peer Mentor Program", "Peer tutoring for the history survey courses."],
@@ -52,7 +51,7 @@ export default function Post() {
           { name: "What is already free at the University of Alabama", href: "/blog/free-at-alabama" },
         ]} />
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Guide · August 20, 2026 · Checked against ua.edu</div>
+          <div className="pv-mono-label">Guide, August 20, 2026, checked against ua.edu</div>
           <h1>
             What you have{" "}
             <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>already paid for</em> at Alabama
@@ -62,15 +61,14 @@ export default function Post() {
         <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
 
           <p style={{ fontSize: "18px" }}>
-            Tuition and fees buy a long list of things nobody hands you a receipt for. 12 of them
-            are below. Most students use two or three and graduate without finding out the
-            rest existed.
+            Tuition and fees pay for services nobody hands you a receipt for. The table lists
+            12 services the university runs for students. Where ua.edu says a service is free
+            or covered, the table says so.
           </p>
 
           <p>
-            This is my first semester here, so I am writing it as I find things rather than
-            from four years of knowing. Everything below was checked against a ua.edu page on
-            20 August 2026, and where the university's own page did not say something was
+            This is my first semester here, so I am writing as I find things. I checked
+            everything below against ua.edu pages on 20 August 2026, and where the university's own page did not say something was
             free, this page does not say it either. The two most useful starting points are{" "}
             <a href="https://success.ua.edu/academic-resources-at-ua" style={link} rel="noopener">the Capstone Center for Student Success</a>{" "}
             and{" "}
@@ -96,29 +94,27 @@ export default function Post() {
           <h2 style={H2}>The three worth using in week one</h2>
 
           <p>
-            <strong>University Recreation</strong>, because it is genuinely covered and
-            because the habit is easier to start in the first fortnight than in the eighth
-            week.
+            <strong>University Recreation</strong>, because it is covered and because the
+            habit is easier to start in the first two weeks than in the eighth.
           </p>
 
           <p>
-            <strong>The Writing Center</strong>, and not because your writing is bad. Fifty
-            minutes with someone who has to read your argument closely is the cheapest
-            editing you will ever get, and it is free. Bring a draft, not a blank page.
+            <strong>The Writing Center</strong>. Fifty minutes with someone who reads your
+            argument closely is free editing from a trained reader. Bring a draft.
           </p>
 
           <p>
-            <strong>The Career Center</strong>, in your first year. Everyone goes in their
-            last year, when the useful window has mostly closed.
+            <strong>The Career Center</strong>, in your first year. Many students wait until
+            their last year.
           </p>
 
-          <h2 style={H2}>What I could not confirm, and am therefore not claiming</h2>
+          <h2 style={H2}>What I could not confirm</h2>
 
           <p>
             Software licences, athletics ticket allocations, museum admission and health
             centre pricing all vary by year, by student status and sometimes by college. I
-            found conflicting or undated information for each and I am not going to publish
-            a number I cannot stand behind.
+            found conflicting or undated information for each, so I left them out until I
+            can verify a number.
           </p>
 
           <p>
@@ -132,36 +128,25 @@ export default function Post() {
           <p>
             Before you pay for something as a student, spend five minutes checking whether
             the university already provides it. Tutoring, editing, printing, fitness,
-            counselling, career advice, software, research databases and transport are all
-            things students routinely buy that are frequently already covered.
+            counselling, career advice, research databases and transport are things students
+            often pay for when the university already offers them.
           </p>
 
           <p>
             This list will go stale. Fees and policies change every year, so treat it as a
-            starting point and confirm anything you are relying on. The date it was checked
-            is at the top for exactly that reason.
+            starting point and confirm anything you are relying on. The date I checked it is
+            at the top.
           </p>
 
           <h2 style={H2}>Related</h2>
 
           <p>
-            What is actually happening on campus this week is on{" "}
-            <a href="https://ua-today.vercel.app" style={link}>UA Today</a>, which pulls six
-            sources into one page and which I also built. If you are trying to work out how
+            Campus events for this week are on{" "}
+            <a href="https://ua-today.vercel.app" style={link}>UA Today</a>, which I built and
+            which combines six sources. If you are trying to work out how
             to study AI here, that is{" "}
             <Link href="/ai-at-alabama" style={link}>a separate guide</Link>.
           </p>
-
-          <PostFaq qa={[
-            ["Is the gym free for University of Alabama students?",
-             "University Recreation membership is covered for every enrolled student registered for at least one credit hour, with no additional fee. That covers the Student Recreation Center, the Robert E. Witt Activity Center, the Aquatic Center, the Outdoor Pool Complex and the Tennis Court Complex."],
-            ["Does the University of Alabama have free tutoring?",
-             "Yes, through several offices. The Capstone Center for Student Success in Russell Hall is the umbrella, reachable at (205) 348-7011. The Mathematics Technology and Learning Center covers introductory maths courses, the Writing Center is described by the university as a free service open to all students, and the Speaking Studio covers presentations and oral communication."],
-            ["Is the Writing Center at Alabama free?",
-             "Yes. The University of Alabama Writing Center is described on ua.edu as a free service open to all students. Consultations run about fifty minutes and are available by appointment or drop-in, with online appointments and workshops as well. It is for any writing, not only English coursework."],
-            ["What counseling is available to University of Alabama students?",
-             "The Camellia Center provides free, confidential and voluntary counseling and advocacy services to members of the University of Alabama community."],
-          ]} />
 
           <PostByline post={{
             slug: "free-at-alabama",

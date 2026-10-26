@@ -34,7 +34,7 @@ export default function Post() {
           { name: "Claim your Google listing yourself, in about twenty minutes", href: "/blog/claim-your-google-listing" },
         ]} />
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Guide · August 20, 2026 · 8 min read</div>
+          <div className="pv-mono-label">Guide, August 20, 2026, 8 min read</div>
           <h1>
             Claim your Google listing{" "}
             <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>yourself</em>
@@ -44,18 +44,17 @@ export default function Post() {
         <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
 
           <p style={{ fontSize: "18px" }}>
-            Most guides to this are written by agencies who would like to manage it for you.
-            This one is written so you do not need anybody, including me. It takes about
-            twenty minutes and it is free.
+            Agencies write most guides to this, and they would like to manage it for you. I
+            wrote this one so you can do it yourself. It takes about twenty minutes and it is
+            free.
           </p>
 
           <p>
-            For a lot of small local businesses this single thing is worth more than a
-            website. I audited 121 independent businesses near the University of Alabama. 27 had a website
+            In my audit, this mattered more than a website for many of the businesses. I audited 121 independent businesses near the University of Alabama. 27 had a website
             that answered and 23 had opening hours recorded anywhere a machine could read
             them.{" "}
-            <Link href="/blog/121-businesses-near-campus" style={link}>The rest are invisible
-            to the question "are they open right now"</Link>.
+            <Link href="/blog/121-businesses-near-campus" style={link}>The other 98 had no
+            hours a machine could read</Link>.
           </p>
 
           <h2 style={H2}>What it is</h2>
@@ -67,25 +66,25 @@ export default function Post() {
           </p>
 
           <p>
-            Your business may already have one that Google generated without you. That is
-            why the first step is claiming rather than creating.
+            Your business may already have one that Google generated without you. So claim
+            the profile before you create one.
           </p>
 
           <h2 style={H2}>Step by step</h2>
 
-          <h3 style={H3}>1. Search your business name first</h3>
+          <h3 style={H3}>1. Check for an existing listing</h3>
           <p>
             If a panel appears, look for "Own this business?" or "Claim this business."
             Start there. Creating a second profile for a business that already has one is
-            the most common way people end up with a duplicate, and duplicates get
-            suppressed.
+            the most common way people end up with a duplicate, and Google may suppress
+            duplicates.
           </p>
 
           <h3 style={H3}>2. Go to business.google.com</h3>
           <p>
-            Use an email address you will still control in five years. Not an employee's
-            personal account, not an address at a domain you might drop. This login is the
-            key to the listing and getting it back after losing it is genuinely painful.
+            Use an email address you will still control in five years. Avoid an employee's
+            personal account or an address at a domain you may drop. This login is the key
+            to the listing, and getting it back after losing it is slow and hard.
           </p>
 
           <h3 style={H3}>3. Category is the field that matters most</h3>
@@ -93,7 +92,7 @@ export default function Post() {
             Your primary category does more to determine which searches you appear in than
             anything else on the form. Be specific. "Barber shop" beats "hair salon" if you
             are a barber. You can add secondary categories afterwards, and you should, but
-            the primary one is the load-bearing choice.
+            the primary one matters most.
           </p>
 
           <h3 style={H3}>4. Address, and how to hide it</h3>
@@ -103,23 +102,22 @@ export default function Post() {
           <p>
             If you work from home or go to the customer, choose the option that says you
             deliver goods and services to customers, set a service area, and <strong>hide the
-            address</strong>. Google supports this explicitly. Otherwise your home address is
-            on a public map, which is a decision you should make deliberately rather than by
-            filling in a form.
+            address</strong>. Google supports this explicitly. Otherwise your home address
+            goes on a public map, so decide on purpose whether to show it.
           </p>
 
           <h3 style={H3}>5. Hours, including the ones you forget</h3>
           <p>
-            Regular hours, then special hours for holidays. Wrong hours are worse than no
-            hours: somebody drives over, finds a locked door, and does not come back. Put a
-            reminder in your calendar for the week before every holiday.
+            Enter regular hours, then special hours for holidays. Wrong hours send customers
+            to a locked door. Put a reminder in your calendar for the week before every
+            holiday.
           </p>
 
           <h3 style={H3}>6. Verification</h3>
           <p>
             Google will verify by postcard, phone, email or video depending on your business
             type, and{" "}
-            <a href="https://support.google.com/business/answer/7107242" style={link} rel="noopener">the method available to you is decided by Google rather than chosen by you</a>. Video is increasingly common and it means recording a short walkthrough
+            <a href="https://support.google.com/business/answer/7107242" style={link} rel="noopener">Google decides which method you get</a>. Video verification means recording a short walkthrough
             showing your signage, your equipment and your address. Have those visible before
             you start recording.
           </p>
@@ -129,9 +127,8 @@ export default function Post() {
 
           <h3 style={H3}>7. Photos, more than you think</h3>
           <p>
-            The exterior including your sign, so people recognise the building. The interior.
-            The work itself. Ten real photos taken on a phone beat two professional ones,
-            because the panel rotates them and freshness counts.
+            Add the exterior including your sign, so people recognise the building, then the
+            interior and the work itself. Phone photos are fine.
           </p>
 
           <h3 style={H3}>8. The description</h3>
@@ -141,27 +138,24 @@ export default function Post() {
             concludes something about you that you do not want them concluding.
           </p>
 
-          <h2 style={H2}>Then the part that actually moves it: reviews</h2>
+          <h2 style={H2}>Reviews</h2>
 
           <p>
-            A listing with no reviews is a weak signal. A listing with recent ones is a
-            strong one, and recency matters as much as the rating.
+            A listing with recent reviews gives a searcher more to go on than one with none.
           </p>
 
-          <p>Ask. Out loud, at the moment somebody says the work was good. That is it.</p>
+          <p>Ask out loud when a customer says the work was good.</p>
 
           <div style={warn}>
             <strong>Three things that get a listing suspended.</strong> Paying for reviews or
             offering a discount for one. Writing them yourself or having staff and family do
             it. Keyword-stuffing the business name field, so "Joe's Barbers" becomes "Joe's
-            Barbers Best Haircut Tuscaloosa." Every one of these is detectable and the
-            penalty is losing the listing, which is worse than never having claimed it.
+            Barbers Best Haircut Tuscaloosa." Google can suspend a listing for any of these.
           </div>
 
           <p>
-            Reply to reviews. All of them, briefly. A complaint with no reply reads as
-            agreement, and a reply that is not defensive reads better than the complaint
-            does.
+            Reply to every review in a sentence or two. A complaint with no reply reads as
+            agreement. A calm reply gives readers your side.
           </p>
 
           <h2 style={H2}>Once a month, five minutes</h2>
@@ -174,28 +168,28 @@ export default function Post() {
           </ul>
 
           <p>
-            That last one surprises people. Your listing is not entirely yours. Checking it
-            occasionally is how you find out someone marked you permanently closed.
+            That last one surprises people. Other people can change your listing, and a
+            monthly check is how you find out someone marked you permanently closed.
           </p>
 
           <h2 style={H2}>When to get help</h2>
 
           <p>
-            Honestly: mostly you do not. This is a form and a verification and a habit.
+            Most owners do not need help.
           </p>
 
           <p>
-            The cases where a second pair of hands earns its keep are a duplicate listing you
+            Help is worth it for a duplicate listing you
             cannot merge, a suspension you do not understand, or multiple locations. If you
             are near the University of Alabama and stuck on one of those, ask me and I will
             tell you what I would do:{" "}
             <a href="mailto:elijah@purcell-ventures.com" style={link}>elijah@purcell-ventures.com</a>.
-            That is not a sales call, it is an answer.
+            I will answer by email.
           </p>
 
           <p>
-            The rest of the self-check is{" "}
-            <Link href="/blog/is-your-business-invisible" style={link}>here</Link>.
+            The rest of the self-check is in{" "}
+            <Link href="/blog/is-your-business-invisible" style={link}>Is your business invisible?</Link>.
           </p>
 
           <PostHowTo
@@ -204,28 +198,20 @@ export default function Post() {
             totalTime="PT20M"
             supply={["A business name", "A phone number you answer", "An email address you will still control in five years"]}
             steps={[
-            { name: "Search your business name first", text: "If a panel already appears beside the search results, look for the option to claim the business and start there. Creating a second profile for a business that already has one produces a duplicate, and duplicates get suppressed." },
-            { name: "Go to business.google.com", text: "Use an email address you will still control in five years. Not an employee's personal account and not an address at a domain you might drop, because that login is the key to the listing." },
+            { name: "Search your business name first", text: "If a panel already appears beside the search results, look for the option to claim the business and start there. Creating a second profile for a business that already has one produces a duplicate, and Google may suppress duplicates." },
+            { name: "Go to business.google.com", text: "Use an email address you will still control in five years. Avoid an employee's personal account or a domain you may drop, because that login is the key to the listing." },
             { name: "Choose the primary category carefully", text: "The primary category does more to determine which searches you appear in than any other field. Be specific, then add secondary categories afterwards." },
             { name: "Set the address, or hide it", text: "If customers come to you, show the address. If you work from home or travel to customers, choose the service-area option and hide the address so it does not appear on a public map." },
-            { name: "Enter regular and holiday hours", text: "Wrong hours are worse than no hours. Add special hours for holidays and set a calendar reminder for the week before each one." },
+            { name: "Enter regular and holiday hours", text: "Add special hours for holidays and set a calendar reminder for the week before each one." },
             { name: "Complete verification", text: "Google verifies by postcard, phone, email or video depending on the business. Postcard takes about two weeks. Do not create a second listing while waiting." },
-            { name: "Add ten real photos", text: "Exterior including the sign, interior, and the work itself. Ten phone photos beat two professional ones because the panel rotates them and freshness counts." },
+            { name: "Add photos", text: "Exterior including the sign, interior, and the work itself. Phone photos are fine." },
             { name: "Write a plain description", text: "Say what you do, where, and for whom. No keyword stuffing: it does not affect ranking and it tells a human reader something you do not want them concluding." },
           ]}
           />
 
           <PostFaq qa={[
-            ["How do I claim my Google Business Profile?",
-             "Search your business name first. If a panel appears, look for the option to claim or own the business and start there. Otherwise go to business.google.com. Use an email address you will still control in five years, because that login is the key to the listing and recovering it later is genuinely painful."],
             ["How long does Google Business Profile verification take?",
              "It depends on the method. Postcard verification takes roughly two weeks. Phone, email and video verification are faster. Video means recording a short walkthrough showing your signage, your equipment and your address, so have those visible before you start. Do not create a second listing while you are waiting for a postcard."],
-            ["Can I hide my home address on a Google Business Profile?",
-             "Yes, and you should if you work from home. Choose the option saying you deliver goods and services to your customers, set a service area, and hide the address. Google supports this explicitly. Otherwise your home address appears on a public map attached to your business name."],
-            ["What gets a Google Business Profile suspended?",
-             "Three things account for most suspensions: paying for reviews or offering a discount in exchange for one, writing reviews yourself or having staff and family write them, and keyword stuffing the business name field with extra search terms. All three are detectable and the penalty is losing the listing."],
-            ["Which Google Business Profile category should I choose?",
-             "The primary category does more to determine which searches you appear in than any other field on the form, so be specific. Barber shop beats hair salon if you are a barber. Add secondary categories afterwards, but treat the primary one as the load-bearing choice."],
           ]} />
 
           <PostByline post={{
