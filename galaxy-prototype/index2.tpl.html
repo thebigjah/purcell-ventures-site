@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<title>PV Nebula Prototype</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+@font-face{font-family:"Clash Display";font-weight:600;src:url(%%CLASH600%%) format("woff2")}
+@font-face{font-family:"Satoshi";font-weight:400;src:url(%%SAT400%%) format("woff2")}
+@font-face{font-family:"Satoshi";font-weight:700;src:url(%%SAT700%%) format("woff2")}
+:root{--bg:#07060a;--fg:#efe8d8;--muted:#a69d8b;--ochre:#b8862b;--line:#2a251e;--display:"Clash Display",Georgia,serif;--body:"Satoshi",system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.55 var(--body)}
+a{color:inherit}
+#top{position:relative;height:100dvh;overflow:hidden}
+#stage{position:absolute;inset:0;z-index:0}
+#labels{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.gx-label{position:absolute;left:0;top:0;white-space:nowrap;font:700 13px/1 var(--body);letter-spacing:.02em;color:#e8c777;opacity:.92;transition:opacity .4s,color .2s;text-shadow:0 1px 10px #000,0 0 2px #000}
+.gx-label.gx-core{font:600 15px/1 var(--display);letter-spacing:.06em;color:#d2b26c}
+.gx-label.gx-hot{color:#fff0c8}
+.gx-label.gx-dim{opacity:.25}
+.gx-label.gx-hide{opacity:0 !important}
+.gx-label.gx-planet{opacity:0;font-weight:400;color:#efe8d8}
+.gx-label.gx-planet.gx-show{opacity:.95}
+#nav.solid{background:rgba(7,6,10,.92);border-bottom:1px solid var(--line)}
+#nav{position:fixed;transition:background .3s;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));background:linear-gradient(rgba(7,6,10,.75),rgba(7,6,10,0));pointer-events:none}
+#nav>*{pointer-events:auto}
+.lock{display:flex;align-items:center;gap:12px;text-decoration:none}
+.lock svg{width:46px;height:46px}
+.lock b{font:600 22px/1 var(--display);letter-spacing:.06em}
+#nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:16px;justify-self:end}
+#nav ul a{text-decoration:none;color:#d9d0bc}
+#nav ul a:hover{color:#fff0c8}
+.btn{display:inline-block;background:var(--ochre);color:#0c0a08;font:700 15px/1 var(--body);padding:13px 18px;text-decoration:none;border:0;cursor:pointer}
+.btn:hover{background:#c9963a}
+.btn:focus-visible,.ghost:focus-visible,#nav a:focus-visible{outline:2px solid var(--ochre);outline-offset:3px}
+.ghost{background:transparent;color:var(--fg);border:1px solid #4a4236;font:700 15px/1 var(--body);padding:12px 16px;cursor:pointer}
+.ghost:hover{border-color:var(--ochre)}
+#hero{position:absolute;left:0;top:0;bottom:0;z-index:1;display:flex;flex-direction:column;justify-content:center;gap:18px;padding-block:96px 48px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));width:min(560px,100%);pointer-events:none;background:linear-gradient(90deg,rgba(7,6,10,.8),rgba(7,6,10,.55) 70%,rgba(7,6,10,0));transition:opacity .2s linear}
+#hero>*{pointer-events:auto}
+#hero h1{font:600 clamp(34px,5.2vw,62px)/1.04 var(--display);margin:0;text-wrap:balance;letter-spacing:-.01em}
+#hero p{margin:0;max-width:42ch;color:#cfc6b2;font-size:18px}
+.row{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center}
+#phone{color:var(--fg);text-decoration:none;font-weight:700;font-size:17px}
+#hint{position:absolute;z-index:1;bottom:max(16px,env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);color:var(--muted);font-size:14px;white-space:nowrap;transition:opacity .2s}
+#scrollcue{position:absolute;z-index:1;right:max(24px,env(safe-area-inset-right,0px));bottom:max(18px,env(safe-area-inset-bottom,0px));color:#cfc6b2;font-size:14px;text-decoration:none;display:flex;align-items:center;gap:8px;transition:opacity .2s}
+#scrollcue span{display:inline-block;width:1px;height:34px;background:#cfc6b2;opacity:.6}
+#strip{position:absolute;z-index:4;left:0;right:0;bottom:0;padding-block:18px max(18px,env(safe-area-inset-bottom,0px));padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));background:linear-gradient(rgba(7,6,10,0),rgba(7,6,10,.9) 30%);transform:translateY(110%);transition:transform .5s cubic-bezier(.2,.7,.2,1);display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:10px 40px;align-items:end}
+#strip.open{transform:none}
+#strip h2{font:600 30px/1.05 var(--display);margin:0}
+#strip .line{margin:6px 0 0;color:#cfc6b2;font-size:15px;max-width:34ch}
+#strip ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;row-gap:14px}
+#strip li{padding:0 22px;border-left:1px solid rgba(239,232,216,.18)}
+#strip li:first-child{padding-left:0;border-left:0}
+#strip li a{display:block;text-decoration:none;color:var(--fg)}
+#strip li a b{display:block;font:600 19px/1.15 var(--display);transition:color .2s}
+#strip li a small{display:block;color:#b3a98f;font-size:13px;margin-top:3px}
+#strip li a:hover b,#strip li a.sel b{color:#f0d79a}
+#strip li a.sel small{color:#e8c777}
+#back{grid-column:1/-1;justify-self:start;margin-bottom:4px}
+.gx-focused #hero,.gx-focused #hint,.gx-focused #scrollcue{opacity:0 !important;pointer-events:none}
+#vig{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at 50% 42%,rgba(7,6,10,0) 28%,rgba(7,6,10,.55) 62%,rgba(7,6,10,.92) 100%);opacity:0;transition:opacity .8s}
+.gx-planet #vig{opacity:1}
+#vig{transition:none}
+.gx-planet #strip{transform:translateY(110%)}
+#pagehead{position:absolute;z-index:4;left:0;right:0;bottom:0;padding-block:16px max(18px,env(safe-area-inset-bottom,0px));padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;transform:translateY(110%);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.gx-planet #pagehead{transform:none}
+#pagehead h2{font:600 clamp(28px,4vw,46px)/1.05 var(--display);margin:0}
+#pagehead p{margin:6px 0 0;color:#cfc6b2;max-width:46ch}
+#pagehead .acts{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+#pagesec{display:none}
+.gx-planet #pagesec{display:block}
+#pagesec .sec{border-top:0}
+#pagesec .body h3{font:600 clamp(20px,2.2vw,26px)/1.2 var(--display);margin:28px 0 8px}
+#pagesec .body h3:first-child{margin-top:0}
+#pagesec .body p{margin:0 0 12px;max-width:64ch;color:#d9d0bc}
+#pagesec .sib{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+#pagesec .sib a{display:block;padding:0;border:0;color:#cfc6b2;text-decoration:none;font-size:15px;font-weight:400}
+#pagesec .sib a:hover{color:#f0d79a}
+#site{position:relative;z-index:2;background:var(--bg)}
+
+.sec{max-width:1120px;margin:0 auto;padding-block:72px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:24px 56px;border-top:1px solid var(--line)}
+.sec:first-child{border-top:0}
+.sec h2{font:600 clamp(28px,3.4vw,40px)/1.1 var(--display);margin:0;text-wrap:balance}
+.sec .intro{color:var(--muted);margin:10px 0 0;font-size:16px;max-width:36ch}
+.rows{display:flex;flex-direction:column;min-width:0}
+.rowl{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 24px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--fg)}
+.rowl div{min-width:0}
+.rowl:first-child{border-top:0}
+.rowl:hover b{color:#fff0c8}
+.rowl b{font:600 22px/1.2 var(--display);display:block}
+.rowl span{display:block;color:var(--muted);margin-top:4px;max-width:60ch}
+.rowl .pages{font-size:14px;color:#8f866f}
+.rowl em{font-style:normal;color:#e8c777;font-weight:700;white-space:nowrap}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:24px 32px}
+.stats div b{font:600 44px/1 var(--display);display:block;color:#e8c777}
+.stats div span{color:var(--muted);font-size:15px}
+.contact p{margin:0 0 14px;max-width:56ch}
+.contact .big{font:600 clamp(24px,3vw,34px)/1.2 var(--display);text-decoration:none;display:block;margin:4px 0 14px}
+footer{max-width:1120px;margin:0 auto;padding-block:28px 48px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;border-top:1px solid var(--line)}
+#loader{position:fixed;inset:0;z-index:20;background:#000;display:flex;align-items:center;justify-content:center;transition:opacity .35s ease}
+#loader svg{width:min(34vw,160px);height:auto;transition:opacity .15s ease}
+#loader.out svg{opacity:0}
+#loader.gone{opacity:0;pointer-events:none}
+@media (max-width:760px){
+  #nav ul{display:none}
+  #hero{width:100%;justify-content:flex-end;gap:12px;padding-bottom:72px;background:linear-gradient(0deg,rgba(7,6,10,.94) 50%,rgba(7,6,10,0))}
+  #hero h1{font-size:clamp(30px,8.6vw,38px)}
+  #hero p{font-size:16px}
+  #hint{display:none}
+  #strip{grid-template-columns:1fr;max-height:60dvh;overflow:auto;gap:8px}
+  #strip h2{font-size:24px}
+  #strip ul{flex-direction:column;row-gap:0}
+  #strip li{padding:10px 0;border-left:0;border-top:1px solid rgba(239,232,216,.14)}
+  #strip li:first-child{border-top:0;padding-top:0}
+  .lock svg{width:36px;height:36px}
+  .lock b{font-size:17px;white-space:nowrap}
+  #nav{grid-template-columns:auto auto;justify-content:space-between;gap:12px}
+  #nav .btn{padding:11px 14px;font-size:14px;white-space:nowrap}
+  .sec{grid-template-columns:1fr;gap:16px;padding-block:52px}
+  .rowl{grid-template-columns:1fr}
+  .gx-label{font-size:12px}
+}
+@media (prefers-reduced-motion:reduce){#hint,#scrollcue span{display:none}}
+</style>
+<div id="loader" aria-hidden="true"><svg viewBox="0 0 800 800"><defs><linearGradient id="lf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7a5a22"/><stop offset=".5" stop-color="#c0913a"/><stop offset="1" stop-color="#8c6a27"/></linearGradient><clipPath id="lhx"><path d="M400 40 L88.231 220 L88.231 580 L400 760 L711.769 580 L711.769 220Z"/></clipPath></defs><path d="M400 40 L88.231 220 L88.231 580 L400 760 L711.769 580 L711.769 220Z" fill="url(#lf)"/><g clip-path="url(#lhx)"><path id="lstar" fill="#000" d=""/></g></svg></div>
+<nav id="nav">
+  <a class="lock" href="#top" aria-label="Purcell Ventures, home"><svg viewBox="0 0 800 800" aria-hidden="true"><defs><linearGradient id="nf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7a5a22"/><stop offset=".5" stop-color="#c0913a"/><stop offset="1" stop-color="#8c6a27"/></linearGradient></defs><path id="navmark" fill="url(#nf)" fill-rule="evenodd" d=""/></svg><b>Purcell Ventures</b></a>
+  <ul><li><a href="#what">What I build</a></li><li><a href="#proof">Proof</a></li><li><a href="#contact">Contact</a></li></ul>
+  <a class="btn" href="#contact">Start a project</a>
+</nav>
+<div id="top">
+<div id="stage"><div id="labels"></div></div>
+<div id="vig" aria-hidden="true"></div>
+<section id="hero">
+  <h1>Websites, AI training and software for small businesses in Tuscaloosa and metro Atlanta.</h1>
+  <p>Every light on this map is a page. Click one to see what it does for a business like yours, or scroll for the plain version.</p>
+  <div class="row"><a class="btn" href="#contact">Start a project</a><a id="phone" href="tel:+12054627839">(205) 462-7839</a></div>
+</section>
+<div id="hint">Click any light to open it.</div>
+<a id="scrollcue" href="#site">Scroll <span></span></a>
+<aside id="strip" aria-live="polite">
+  <button id="back" class="ghost" type="button">Back to the map</button>
+  <div><h2 id="p-title"></h2><p class="line" id="p-line"></p></div>
+  <ul id="p-list"></ul>
+</aside>
+<aside id="pagehead" aria-live="polite"><div><h2 id="ph-title"></h2><p id="ph-line"></p></div><div class="acts"><a class="btn" id="ph-open" href="#pagesec">Read the page</a><button class="ghost" id="ph-back" type="button">Back to the system</button></div></aside>
+</div>
+<main id="site">
+  <section id="pagesec"><div class="sec"><div><p class="intro" id="ps-line" style="margin-top:0"></p><p class="intro" style="margin-top:18px">Other pages in this system</p><span id="ps-title" hidden></span><div class="sib" id="ps-sib"></div></div><div class="body" id="ps-body"></div></div></section>
+  <section class="sec" id="what"><div><h2>What I build</h2><p class="intro">Five services, one person answering the phone. Prices are the real ones.</p></div>
+    <div class="rows" id="divisions"></div></section>
+  <section class="sec" id="proof"><div><h2>Proof</h2><p class="intro">Everything here is live and checkable.</p></div>
+    <div class="stats"><div><b>12</b><span>shipped projects in the portfolio</span></div><div><b>33</b><span>posts on the blog</span></div><div><b>26</b><span>free AI tools, no email required</span></div><div><b>2025</b><span>founded, April, in Georgia</span></div></div></section>
+  <section class="sec" id="contact"><div><h2>Start a project</h2><p class="intro">A discovery call first. If I am the wrong fit, I say so.</p></div>
+    <div class="contact"><p>Call or email with what you are trying to fix. I reply within one business day.</p><a class="big" href="tel:+12054627839">(205) 462-7839</a><a class="big" href="mailto:elijah@purcell-ventures.com">elijah@purcell-ventures.com</a><a class="btn" href="https://purcellventures.co/about#contact" target="_blank" rel="noopener">Start a project</a></div></section>
+</main>
+<footer><span>Purcell Ventures LLC, founded 2025 in Georgia, run from Tuscaloosa, Alabama.</span><span>Elijah Purcell, Founder/CEO</span></footer>
+<script>%%STARCORE%%</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<script type="module">
+%%DATA%%
+%%GALAXY%%
+const phone=matchMedia("(max-width:760px)").matches;
+const rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+document.getElementById("navmark").setAttribute("d","M400 40 L88.231 220 L88.231 580 L400 760 L711.769 580 L711.769 220Z "+window.starD(0));
+const lstar=document.getElementById("lstar"); const L0=performance.now();
+function ease(x){return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;}
+let loaderOn=true; (function lt(){ if(!loaderOn) return; const t=performance.now()-L0; const step=Math.floor(t/1400), f=Math.min(1,(t%1400)/700); lstar.setAttribute("d",window.starD(-(step+ease(f))*60)); requestAnimationFrame(lt); })();
+const stage=document.getElementById("stage"), panel=document.getElementById("strip"), hero=document.getElementById("hero");
+const g=createGalaxy(stage,{map:MAP,phone,reducedMotion:rm,labelsRoot:document.getElementById("labels"),starD:window.starD,
+  assets:{nebulaWide:"assets/nebula-wide.jpg",nebulaTall:"assets/nebula-tall.jpg",nebulaWideBlur:"assets/nebula-wide-blur.jpg",nebulaTallBlur:"assets/nebula-tall-blur.jpg",gasBlue:"assets/gas-blue.jpg",gasRust:"assets/gas-rust.jpg",planet:"assets/planet-rim.jpg",planets:{websites:"assets/planets/websites.jpg",pricing:"assets/planets/pricing.jpg",portfolio:"assets/planets/portfolio.jpg",casestudies:"assets/planets/casestudies.jpg",digital:"assets/planets/digital.jpg",tools:"assets/planets/tools.jpg",consulting:"assets/planets/consulting.jpg",book:"assets/planets/book.jpg",software:"assets/planets/software.jpg",steady:"assets/planets/steady.jpg",courses:"assets/planets/courses.jpg",company:"assets/planets/company.jpg",blog:"assets/planets/blog.jpg"},blackhole:"assets/blackhole.jpg",star:"assets/star-gold.jpg"},
+  onFocus(sys){ if(!sys){panel.classList.remove("open");return;}
+    document.getElementById("p-title").textContent=sys.name; document.getElementById("p-line").textContent=sys.line;
+    const ul=document.getElementById("p-list"); ul.innerHTML="";
+    const add=(name,href,small)=>{const li=document.createElement("li");const a=document.createElement("a");a.href="https://purcellventures.co"+href;a.target="_blank";a.rel="noopener";a.dataset.href=href;const s1=document.createElement("b");s1.textContent=name;a.appendChild(s1);const s2=document.createElement("small");s2.textContent=small||"\u00a0";a.appendChild(s2);a.addEventListener("click",e=>{e.preventDefault();g.selectPlanet(href,true);});li.appendChild(a);ul.appendChild(li);};
+    sys.planets.forEach(p=>add(p.name,p.href,p.price||(p.children?`${p.children} ${p.children===1?"page":"pages"}`:"")));
+    if(sys.belt) add(sys.belt.name,sys.belt.href,`${sys.belt.count} tools`);
+    panel.classList.add("open"); },
+  onPlanet(page,sys){ document.body.classList.toggle("gx-planet",!!page); document.querySelectorAll("#p-list a").forEach(a=>a.classList.toggle("sel",!!page&&a.dataset.href===page.href));
+    if(!page) return; const line=page.price?`${sys.name}. ${page.price}.`:sys.line;
+    document.getElementById("ph-title").textContent=page.name; document.getElementById("ph-line").textContent=line; 
+    document.getElementById("ps-title").textContent=page.name; document.getElementById("ps-line").textContent=line; const body=document.getElementById("ps-body"); body.innerHTML=""; (PAGES[page.href]||[["p","This page's content goes here."]]).forEach(([k,txt])=>{const el=document.createElement(k==="h"?"h3":"p"); el.textContent=txt; body.appendChild(el);});
+    const sb=document.getElementById("ps-sib"); sb.innerHTML=""; sys.planets.filter(p=>p.href!==page.href).forEach(p=>{const a=document.createElement("a");a.href="https://purcellventures.co"+p.href;a.target="_blank";a.rel="noopener";a.textContent=p.name;sb.appendChild(a);}); }});
+document.getElementById("ph-back").addEventListener("click",()=>g.back());
+document.getElementById("back").addEventListener("click",()=>g.back());
+document.addEventListener("keydown",e=>{if(e.key==="Escape")g.back();});
+const dv=document.getElementById("divisions");
+MAP.systems[0].planets.forEach(s=>{const a=document.createElement("a");a.className="rowl";a.href="https://purcellventures.co"+s.href;a.target="_blank";a.rel="noopener";const d=document.createElement("div");const b=document.createElement("b");b.textContent=s.name;const sys=MAP.systems.find(x=>x.href===s.href);const sp=document.createElement("span");sp.textContent={"/sites":"Custom websites for local businesses, with maintenance after launch.","/digital":"Chatbots, booking, reviews, invoicing and 22 more add-ons for a site.","/consulting":"On-site and virtual AI training for teams.","/software":"Apps, platforms and automation scoped around one problem.","/steady":"Personal tech help for households."}[s.href]||"";d.append(b,sp);const em=document.createElement("em");em.textContent=s.price||"";a.append(d,em);dv.appendChild(a);});
+function onScroll(){ document.getElementById("nav").classList.toggle("solid", scrollY>innerHeight*0.6); }
+addEventListener("scroll",onScroll,{passive:true}); onScroll();
+const minHold=new Promise(r=>setTimeout(r,900));
+Promise.all([g.ready,minHold]).then(()=>{ const ld=document.getElementById("loader"); ld.classList.add("out"); setTimeout(()=>{ ld.classList.add("gone"); loaderOn=false; setTimeout(()=>ld.remove(),400); },160); });
+window.__gx=g;
+</script>

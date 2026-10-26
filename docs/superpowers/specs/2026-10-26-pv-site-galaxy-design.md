@@ -126,6 +126,18 @@ Every body is a real route. Sizes and positions encode real things.
 5. A fact-check page: every factual claim on the site, one at a time, for him to confirm or correct. His answers go into the copy.
 6. A content ledger generated from the crawl: every heading, price, link, button and form per route. After the redesign the ledger must diff to zero lost items.
 
+## State at the end of 26 Oct (galaxy locked)
+
+He locked the galaxy look on the prototype at https://claude.ai/artifact/JWrhYB2KNSFty3mwdybeEy (v9). Its source is committed in `galaxy-prototype/` on this branch: `galaxy2.js` (three.js scene), `data.js` (the map), `star-core.js` (live mark), `index2.tpl.html` (page shell, loader, nav, strip, planet focus, page section), `assets/` (Higgsfield art: nebula backdrops and blurred twins, gas, black hole, gold star, 13 planets). What is decided and must survive the port:
+
+- Five systems in visitor order: Services, Proof, Learn, Elijah, Start a project. The blog is a comet through Learn. Moons listed under their parent.
+- Core is a black hole with a gold accretion disc. The mark lives in the nav lockup (46px mark, 22px wordmark) and in the loader (black screen, Ratchet mark, half-second fade).
+- Click a system: camera eases in, editorial strip at the bottom (display-face names, price beneath, hairline rules, no boxes). Click a planet: everything else fades, blurred backdrop under a vignette, planet framed at half the viewport, page title and line beneath, the page content below for scrolling.
+- The galaxy is in the page flow and scrolls up with the page. Pointer parallax is a tenth inside a system. Pick spheres are twice the visual size. Labels separate when they collide.
+- Planet renders are masked by finding the sphere radius (sampled above and below the centre) and keying black only outside it. The comet is a glowing nucleus with a particle trail.
+
+His next words: "the pages need visual help too (e.g., resume formatting is broken, lots of AI-isms left on pages like roman numerals and dashes)." So Phases 1, 3, 4, 5 run together: every page gets its planet or object at the top and its content rewritten and re-laid on the new components, with the roman numerals, mono labels, dot grids, corner brackets and "WHO IT IS FOR" chrome removed. The résumé is a known broken layout. Run the build phase on Opus.
+
 ## Phases
 
 | Phase | Work | Done when |
