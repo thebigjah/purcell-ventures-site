@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import { PostLayout } from "@/app/components/ui";
+import { CONTACT } from "@/lib/contact";
 
 // THE HONEST VERSION OF THIS PIECE.
 //
@@ -26,8 +27,6 @@ export const metadata = {
     "An audit of every independent business within 2500 metres of the Quad: how many list a website a machine can reach, and what that means for a shop competing with a chain three miles away.",
 };
 
-const link = { color: "var(--color-warm-accent)", textDecoration: "underline" };
-
 const ROWS: [string, number, number][] = [
   ["Restaurants", 64, 15],
   ["Clothing", 12, 1],
@@ -48,160 +47,146 @@ const ROWS: [string, number, number][] = [
 
 export default function Post() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <VignetteBackground />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
+    <PostLayout
+      crumbs={<Breadcrumbs trail={[
+        { name: "Home", href: "/" },
+        { name: "Writing", href: "/blog" },
+        { name: "121 businesses near the University of Alabama, and what a phone can find", href: "/blog/121-businesses-near-campus" },
+      ]} />}
+      kicker="Reporting"
+      title="121 businesses near campus, and what a phone can find"
+      meta="20 August 2026, 4 minute read"
+    >
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
+      <p>
+        I pulled every independent business inside a 2500 metre circle around the Quad,
+        dropped anything carrying a chain brand, and then tried to open each one&apos;s
+        website. There were 121 of them. Twenty-seven had a site that answered.
+      </p>
 
-        <Breadcrumbs trail={[
-          { name: "Home", href: "/" },
-          { name: "Writing", href: "/blog" },
-          { name: "121 businesses near the University of Alabama, and what a ph", href: "/blog/121-businesses-near-campus" },
-        ]} />
-        <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Reporting, August 20, 2026, The Tuscaloosa Storefront Project</div>
-          <h1>
-            121 businesses near campus, and what a phone can{" "}
-            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>find</em>
-          </h1>
-        </header>
+      <h2>What I measured</h2>
 
-        <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
+      <p>
+        The source is{" "}
+        <a href="https://wiki.openstreetmap.org/wiki/Key:website" rel="noopener">the OpenStreetMap website tag</a>,
+        which volunteers maintain, and a business with no website recorded there
+        might still have one. The data cannot show whether ninety-four businesses near
+        campus have a website.
+      </p>
 
-          <p style={{ fontSize: "18px" }}>
-            I pulled every independent business inside a 2500 metre circle around the Quad,
-            dropped anything carrying a chain brand, and then tried to open each one&apos;s
-            website. There were 121 of them. Twenty-seven had a site that answered.
-          </p>
+      <p>
+        It does show that for ninety-four of them, <em>a machine looking for a website
+        finds none</em>. Ninety list none at all. Three list one that no longer answers.
+        One points at a page its owner deleted.
+      </p>
 
-          <h2>What was measured</h2>
+      <p>
+        A student with a phone runs into the same gap. Someone searching for a business
+        wants its hours and phone number, and the search comes back empty.
+      </p>
 
-          <p>
-            The source is{" "}
-            <a href="https://wiki.openstreetmap.org/wiki/Key:website" style={link} rel="noopener">the OpenStreetMap website tag</a>,
-            which is maintained by volunteers, and a business with no website recorded there
-            might still have one. The data cannot show whether ninety-four businesses near
-            campus have a website.
-          </p>
+      <h2>By category</h2>
 
-          <p>
-            It can show that for ninety-four of them, <em>a machine looking for a website
-            finds none</em>. Ninety list none at all. Three list one that no longer answers.
-            One points at a page its owner deleted.
-          </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Found</th>
+            <th>Reachable site</th>
+          </tr>
+        </thead>
+        <tbody>
+          {ROWS.map(([name, total, ok]) => (
+            <tr key={name}>
+              <td>{name}</td>
+              <td>{total}</td>
+              <td>{ok}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
 
-          <p>
-            A student with a phone runs into the same gap. Someone searching for a business
-            wants its hours and phone number, and the search comes back empty.
-          </p>
+      <p>
+        Restaurants do best, and they still clear only one in four. Every laundry,
+        florist, jeweller, tailor, ice cream shop, phone repair place and car repair
+        shop in the circle came back with nothing.
+      </p>
 
-          <h2>By category</h2>
+      <h2>The number that surprised me</h2>
 
-          <div style={{ overflowX: "auto" }}>
-            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "14px", margin: "20px 0" }}>
-              <thead>
-                <tr>
-                  <th style={{ textAlign: "left", padding: "8px 0", borderBottom: "2px solid rgba(212,175,55,0.3)", fontSize: "11px", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-text-muted)" }}>Category</th>
-                  <th style={{ textAlign: "right", padding: "8px 12px", borderBottom: "2px solid rgba(212,175,55,0.3)", fontSize: "11px", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-text-muted)" }}>Found</th>
-                  <th style={{ textAlign: "right", padding: "8px 0", borderBottom: "2px solid rgba(212,175,55,0.3)", fontSize: "11px", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-text-muted)" }}>Reachable site</th>
-                </tr>
-              </thead>
-              <tbody>
-                {ROWS.map(([name, total, ok]) => (
-                  <tr key={name}>
-                    <td style={{ padding: "7px 0", borderBottom: "1px solid rgba(212,175,55,0.12)" }}>{name}</td>
-                    <td style={{ padding: "7px 12px", borderBottom: "1px solid rgba(212,175,55,0.12)", textAlign: "right", fontVariantNumeric: "tabular-nums" }}>{total}</td>
-                    <td style={{ padding: "7px 0", borderBottom: "1px solid rgba(212,175,55,0.12)", textAlign: "right", fontVariantNumeric: "tabular-nums", color: ok === 0 ? "var(--color-warm-text-muted)" : "inherit" }}>{ok}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+      <p>
+        Twenty-three of the 121 have opening hours recorded anywhere a machine can read
+        them.
+      </p>
 
-          <p>
-            Restaurants do best, and they still only clear one in four. Every laundry,
-            florist, jeweller, tailor, ice cream shop, phone repair place and car repair
-            shop in the circle came back with nothing.
-          </p>
+      <p>
+        For eight in ten businesses within walking distance of campus, only
+        someone standing at the door can tell whether they are open right now.
+      </p>
 
-          <h2>The number that surprised me</h2>
+      <h2>Where a website does not help</h2>
 
-          <p>
-            Twenty-three of the 121 have opening hours recorded anywhere a machine can read
-            them.
-          </p>
+      <p>
+        I build websites, so the obvious read is that this is an argument for buying
+        one from me. Two things weaken that read.
+      </p>
 
-          <p>
-            For eight in ten businesses within walking distance of campus, only
-            someone standing at the door can tell whether they are open right now.
-          </p>
+      <p>
+        Some of these businesses do not need a website. A barber shop with a line out
+        the door every Saturday gets enough customers without one. A
+        restaurant that fills every night on word of mouth has already solved the
+        problem a website solves.
+      </p>
 
-          <h2>Where a website does not help</h2>
+      <p>
+        For many of the rest, the cheapest fix is claiming the Google listing and
+        entering the hours. Claiming the listing is free and takes twenty minutes.
+      </p>
 
-          <p>
-            I build websites, so the obvious read is that this is an argument for buying
-            one from me. Two caveats weaken that read.
-          </p>
+      <h2>What happens next</h2>
 
-          <p>
-            Some of these businesses do not need a website. A barber shop with a line out
-            the door every Saturday gets enough customers without one. A
-            restaurant that fills every night on word of mouth has already solved the
-            problem a website solves.
-          </p>
+      <p>
+        I am visiting these places and writing about them one at a time. For each one I
+        write who runs it, how long it has been here, what it does well, and what a
+        student trying to find it runs into. That is{" "}
+        <Link href="/blog/tuscaloosa-small-business-online">the Storefront Project</Link>,
+        and it is reporting. I feature businesses whether or not they are clients.
+      </p>
 
-          <p>
-            For many of the rest, the cheapest fix is claiming the Google listing and
-            entering the hours. Claiming the listing is free and takes twenty minutes.
-          </p>
+      <p>
+        If you run something near campus, I would like twenty minutes at your place.
+        You get a written piece about your business either way, and you owe me nothing.
+        Reach me at{" "}
+        <a href={`tel:${CONTACT.phoneE164}`}>{CONTACT.phone}</a> or{" "}
+        <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>.
+      </p>
 
-          <h2>What happens next</h2>
+      <h2>Method</h2>
 
-          <p>
-            I am visiting these places and writing about them one at a time. Who runs it,
-            how long it has been here, what it does well, and what a student trying to find
-            it runs into. That is{" "}
-            <Link href="/blog/tuscaloosa-small-business-online" style={link}>the Storefront Project</Link>,
-            and it is reporting. I feature businesses whether or not they are clients.
-          </p>
+      <p>
+        I ran one Overpass query against OpenStreetMap for shops and food businesses within
+        2500 metres of the Quad, on 20 August 2026. I dropped anything tagged with a
+        chain brand. I sent an HTTP request to every listed website and counted a 403 or
+        a 405 as working, because plenty of live sites refuse a bare HEAD. The
+        script is <code>scout.py</code> and re-running it reproduces every figure above.
+      </p>
 
-          <p>
-            If you run something near campus, I would like twenty minutes at your place.
-            You get a written piece about your business either way, and no obligation to
-            buy anything.{" "}
-            <a href="tel:+12054627839" style={link}>(205) 462-7839</a> or{" "}
-            <a href="mailto:elijah@purcell-ventures.com" style={link}>elijah@purcell-ventures.com</a>.
-          </p>
+      <p>
+        <strong>Correction, same day.</strong> The first version of this piece said
+        twenty-six working sites and ninety-five without. The script was sending only a
+        HEAD request, and two restaurants whose sites are perfectly alive answer GET but
+        refuse HEAD, so the script counted them as broken. I corrected the figures above
+        to twenty-seven and ninety-four. The correction stays visible because the piece
+        is about checking things.
+      </p>
 
-          <h2>Method</h2>
+      <PostByline post={{
+        slug: "121-businesses-near-campus",
+        title: "121 businesses near the University of Alabama, and what a phone can find",
+        description: "An audit of every independent business within 2500 metres of the Quad: how many list a website a machine can reach.",
+        published: "2026-08-20",
+      }} />
 
-          <p>
-            One Overpass query against OpenStreetMap for shops and food businesses within
-            2500 metres of the Quad, on 20 August 2026. I dropped anything tagged with a
-            chain brand. I sent an HTTP request to every listed website and counted a 403 or
-            a 405 as working, because plenty of live sites refuse a bare HEAD. The
-            script is <code>scout.py</code> and re-running it reproduces every figure above.
-          </p>
-
-          <p>
-            <strong>Correction, same day.</strong> The first version of this piece said
-            twenty-six working sites and ninety-five without. The script was sending only a
-            HEAD request, and two restaurants whose sites are perfectly alive answer GET but
-            refuse HEAD, so the script counted them as broken. I corrected the figures above
-            to twenty-seven and ninety-four. The correction stays visible because the piece
-            is about checking things.
-          </p>
-
-          <PostByline post={{
-            slug: "121-businesses-near-campus",
-            title: "121 businesses near the University of Alabama, and what a phone can find",
-            description: "An audit of every independent business within 2500 metres of the Quad: how many list a website a machine can reach.",
-            published: "2026-08-20",
-          }} />
-
-        </article>
-      </main>
-    </div>
+    </PostLayout>
   );
 }

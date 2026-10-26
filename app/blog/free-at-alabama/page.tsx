@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
-import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import { PostLayout } from "@/app/components/ui";
+import PostByline from "@/app/components/PostByline";
 
 // SOURCED, NOT REMEMBERED.
 //
@@ -17,10 +17,6 @@ export const metadata = {
     "Services a University of Alabama student has already paid for through tuition and fees, with the exact office names: University Recreation, the Writing Center, the Capstone Center for Student Success, the Career Center, CrimsonRide and more, checked against ua.edu.",
 };
 
-const H2 = { fontFamily: "'Cinzel', Georgia, serif", fontSize: "25px", fontWeight: 600, lineHeight: 1.2, margin: "42px 0 10px" } as const;
-const link = { color: "var(--color-warm-accent)", textDecoration: "underline" };
-const td: React.CSSProperties = { padding: "10px 14px 10px 0", borderBottom: "1px solid rgba(212,175,55,0.12)", verticalAlign: "top" };
-const th: React.CSSProperties = { ...td, fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10.5px", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-text-muted)", fontWeight: 700, borderBottom: "2px solid rgba(212,175,55,0.3)" };
 
 const ROWS: [string, string][] = [
   ["University Recreation", "Membership is covered for every enrolled student registered for at least one credit hour. That covers the Student Recreation Center, the Robert E. Witt Activity Center, the Aquatic Center, the Outdoor Pool Complex and the Tennis Court Complex."],
@@ -39,124 +35,110 @@ const ROWS: [string, string][] = [
 
 export default function Post() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <VignetteBackground />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
+    <PostLayout
+      crumbs={<Breadcrumbs trail={[
+        { name: "Home", href: "/" },
+        { name: "Writing", href: "/blog" },
+        { name: "What is already free at the University of Alabama", href: "/blog/free-at-alabama" },
+      ]} />}
+      kicker="Guide"
+      title="What you have already paid for at Alabama"
+      meta="20 August 2026, 5 minute read, checked against ua.edu"
+    >
+      <p>
+        Tuition and fees pay for services nobody hands you a receipt for. The table lists
+        12 services the university runs for students. Where ua.edu says a service is free
+        or covered, the table says so.
+      </p>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
+      <p>
+        This is my first semester here, so I am writing as I find things. I checked
+        everything below against ua.edu pages on 20 August 2026, and where the university's own page did not say something was
+        free, this page does not say it either. The two most useful starting points are{" "}
+        <a href="https://success.ua.edu/academic-resources-at-ua" rel="noopener">the Capstone Center for Student Success</a>{" "}
+        and{" "}
+        <a href="https://writingcenter.ua.edu/" rel="noopener">the Writing Center</a>.
+      </p>
 
-        <Breadcrumbs trail={[
-          { name: "Home", href: "/" },
-          { name: "Writing", href: "/blog" },
-          { name: "What is already free at the University of Alabama", href: "/blog/free-at-alabama" },
-        ]} />
-        <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Guide, August 20, 2026, checked against ua.edu</div>
-          <h1>
-            What you have{" "}
-            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>already paid for</em> at Alabama
-          </h1>
-        </header>
+      <table>
+        <thead>
+          <tr><th>Service</th><th>What it is</th></tr>
+        </thead>
+        <tbody>
+          {ROWS.map(([a, b]) => (
+            <tr key={a}>
+              <td><strong>{a}</strong></td>
+              <td>{b}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
 
-        <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
+      <h2>The three worth using in week one</h2>
 
-          <p style={{ fontSize: "18px" }}>
-            Tuition and fees pay for services nobody hands you a receipt for. The table lists
-            12 services the university runs for students. Where ua.edu says a service is free
-            or covered, the table says so.
-          </p>
+      <p>
+        <strong>University Recreation</strong>, because it is covered and because the
+        habit is easier to start in the first two weeks than in the eighth.
+      </p>
 
-          <p>
-            This is my first semester here, so I am writing as I find things. I checked
-            everything below against ua.edu pages on 20 August 2026, and where the university's own page did not say something was
-            free, this page does not say it either. The two most useful starting points are{" "}
-            <a href="https://success.ua.edu/academic-resources-at-ua" style={link} rel="noopener">the Capstone Center for Student Success</a>{" "}
-            and{" "}
-            <a href="https://writingcenter.ua.edu/" style={link} rel="noopener">the Writing Center</a>.
-          </p>
+      <p>
+        <strong>The Writing Center</strong>. Fifty minutes with someone who reads your
+        argument closely is free editing from a trained reader. Bring a draft.
+      </p>
 
-          <div style={{ overflowX: "auto", margin: "26px 0" }}>
-            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "15px" }}>
-              <thead>
-                <tr><th style={{ ...th, width: "34%" }}>Service</th><th style={th}>What it is</th></tr>
-              </thead>
-              <tbody>
-                {ROWS.map(([a, b]) => (
-                  <tr key={a}>
-                    <td style={{ ...td, fontWeight: 700 }}>{a}</td>
-                    <td style={td}>{b}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+      <p>
+        <strong>The Career Center</strong>, in your first year. Many students wait until
+        their last year.
+      </p>
 
-          <h2 style={H2}>The three worth using in week one</h2>
+      <h2>What I could not confirm</h2>
 
-          <p>
-            <strong>University Recreation</strong>, because it is covered and because the
-            habit is easier to start in the first two weeks than in the eighth.
-          </p>
+      <p>
+        Software licences, athletics ticket allocations, museum admission and health
+        centre pricing all vary by year, by student status and sometimes by college. I
+        found conflicting or undated information for each, so I left them out until I
+        can verify a number.
+      </p>
 
-          <p>
-            <strong>The Writing Center</strong>. Fifty minutes with someone who reads your
-            argument closely is free editing from a trained reader. Bring a draft.
-          </p>
+      <p>
+        If you know the current answer for any of them and can point at the page,{" "}
+        <a href="mailto:elijah@purcell-ventures.com">tell me</a> and I will
+        add it with a link and say who corrected it.
+      </p>
 
-          <p>
-            <strong>The Career Center</strong>, in your first year. Many students wait until
-            their last year.
-          </p>
+      <h2>The general rule</h2>
 
-          <h2 style={H2}>What I could not confirm</h2>
+      <p>
+        Before you pay for something as a student, spend five minutes checking whether
+        the university already provides it. Tutoring, editing, printing, fitness,
+        counselling, career advice, research databases and transport are things students
+        often pay for when the university already offers them.
+      </p>
 
-          <p>
-            Software licences, athletics ticket allocations, museum admission and health
-            centre pricing all vary by year, by student status and sometimes by college. I
-            found conflicting or undated information for each, so I left them out until I
-            can verify a number.
-          </p>
+      <p>
+        This list will go stale. Fees and policies change every year, so treat it as a
+        starting point and confirm anything you are relying on. I checked it on
+        20 August 2026.
+      </p>
 
-          <p>
-            If you know the current answer for any of them and can point at the page,{" "}
-            <a href="mailto:elijah@purcell-ventures.com" style={link}>tell me</a> and I will
-            add it with a link and say who corrected it.
-          </p>
+      <h2>Related</h2>
 
-          <h2 style={H2}>The general rule</h2>
+      <p>
+        Campus events for this week are on{" "}
+        <a href="https://ua-today.vercel.app">UA Today</a>, which I built and
+        which combines six sources. If you are trying to work out how
+        to study AI here, that is{" "}
+        <Link href="/ai-at-alabama">a separate guide</Link>.
+      </p>
 
-          <p>
-            Before you pay for something as a student, spend five minutes checking whether
-            the university already provides it. Tutoring, editing, printing, fitness,
-            counselling, career advice, research databases and transport are things students
-            often pay for when the university already offers them.
-          </p>
-
-          <p>
-            This list will go stale. Fees and policies change every year, so treat it as a
-            starting point and confirm anything you are relying on. The date I checked it is
-            at the top.
-          </p>
-
-          <h2 style={H2}>Related</h2>
-
-          <p>
-            Campus events for this week are on{" "}
-            <a href="https://ua-today.vercel.app" style={link}>UA Today</a>, which I built and
-            which combines six sources. If you are trying to work out how
-            to study AI here, that is{" "}
-            <Link href="/ai-at-alabama" style={link}>a separate guide</Link>.
-          </p>
-
-          <PostByline post={{
+<PostByline post={{
             slug: "free-at-alabama",
             title: "What you have already paid for at Alabama",
             description: "Services a University of Alabama student has already paid for through tuition and fees, with the exact office names, checked against ua.edu.",
             published: "2026-08-20",
           }} />
 
-        </article>
-      </main>
-    </div>
+
+    </PostLayout>
   );
 }

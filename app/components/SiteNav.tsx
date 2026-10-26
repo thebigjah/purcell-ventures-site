@@ -41,8 +41,10 @@ export default function SiteNav() {
     return () => window.removeEventListener("scroll", on);
   }, []);
   useEffect(() => { setOpen(false); setMenu(false); }, [pathname]);
+  const hidden = HIDE_CHROME_ON.some((p) => pathname.startsWith(p));
+  useEffect(() => { document.body.dataset.chrome = hidden ? "off" : "on"; }, [hidden]);
 
-  if (HIDE_CHROME_ON.some((p) => pathname.startsWith(p))) return null;
+  if (hidden) return null;
   const active = (href: string) => pathname === href || pathname.startsWith(href + "/");
   const inServices = SERVICES.some((s) => active(s.href));
 

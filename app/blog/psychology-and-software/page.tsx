@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import { PostLayout } from "@/app/components/ui";
 
 export const metadata = {
   alternates: { canonical: "/blog/psychology-and-software" },
@@ -10,44 +10,29 @@ export const metadata = {
     "Within-subject design, base rates and construct validity are three ideas from a first-semester psychology methods course that changed a product I had already shipped.",
 };
 
-const H2 = { fontFamily: "'Cinzel', Georgia, serif", fontSize: "25px", fontWeight: 600, lineHeight: 1.2, margin: "40px 0 10px" } as const;
-const link = { color: "var(--color-warm-accent)", textDecoration: "underline" };
-
 export default function Post() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <VignetteBackground />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
-
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
-
-        <Breadcrumbs trail={[
-          { name: "Home", href: "/" },
-          { name: "Writing", href: "/blog" },
-          { name: "Psychology and software", href: "/blog/psychology-and-software" },
-        ]} />
-
-        <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Notes, August 20, 2026, 6 min read</div>
-          <h1>
-            What psychology has to do with the software I{" "}
-            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>build</em>
-          </h1>
-        </header>
-
-        <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
-
-          <p style={{ fontSize: "18px" }}>
+    <PostLayout
+      crumbs={<Breadcrumbs trail={[
+        { name: "Home", href: "/" },
+        { name: "Writing", href: "/blog" },
+        { name: "Psychology and software", href: "/blog/psychology-and-software" },
+      ]} />}
+      kicker="Notes"
+      title="What psychology has to do with the software I build"
+      meta="20 August 2026, 6 minute read"
+    >
+<p>
             I am studying psychology and data science, and people assume the software company
             is the day job and the degree is the plan for later. One week of a methods course
             has already changed something I had shipped.
           </p>
 
-          <h2 style={H2}>Within-subject design</h2>
+          <h2>Within-subject design</h2>
 
           <p>
             The rule, as{" "}
-            <a href="https://dictionary.apa.org/within-subjects-design" style={{ color: "var(--color-warm-accent)", textDecoration: "underline" }} rel="noopener">the APA defines it</a>, is that you measure a person against their own baseline rather
+            <a href="https://dictionary.apa.org/within-subjects-design" rel="noopener">the APA defines it</a>, is that you measure a person against their own baseline rather
             than against everybody else's. It sounds obvious written down, and my product did
             the opposite.
           </p>
@@ -78,7 +63,7 @@ export default function Post() {
             that subject&apos;s own baseline.
           </p>
 
-          <h2 style={H2}>Base rates</h2>
+          <h2>Base rates</h2>
 
           <p>
             The second idea that transferred is base rates. A test that is ninety-nine per cent
@@ -100,7 +85,7 @@ export default function Post() {
             false failures gets muted, so one false positive can cost you the whole monitor.
           </p>
 
-          <h2 style={H2}>Construct validity</h2>
+          <h2>Construct validity</h2>
 
           <p>
             Psychology spends a lot of effort on whether the thing you measured is the thing
@@ -120,7 +105,7 @@ export default function Post() {
             this number went up and the thing I care about got worse, would I be able to tell?
           </p>
 
-          <h2 style={H2}>Why the combination</h2>
+          <h2>Why the combination</h2>
 
           <p>
             The plan is psychiatry, and the specific thing I want to work on is how much
@@ -143,8 +128,8 @@ export default function Post() {
 
           <p>
             More on the degree structure that allows this combination:{" "}
-            <Link href="/blog/new-college-alabama" style={link}>New College at Alabama</Link>{" "}
-            and <Link href="/ai-at-alabama" style={link}>studying AI here</Link>.
+            <Link href="/blog/new-college-alabama">New College at Alabama</Link>{" "}
+            and <Link href="/ai-at-alabama">studying AI here</Link>.
           </p>
 
           <PostByline post={{
@@ -154,8 +139,6 @@ export default function Post() {
             published: "2026-08-20",
           }} />
 
-        </article>
-      </main>
-    </div>
+            </PostLayout>
   );
 }

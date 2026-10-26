@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 
-// This post is a client component and cannot export metadata itself, so its
-// self-canonical lives here. Without it the post inherits the blog layout and
+// This layout gives the post its own canonical. Without it the post inherits the blog layout and
 // declares itself a duplicate of the index, which is what all nine were doing.
 export const metadata: Metadata = {
-  title: { absolute: "Five Workflows Any Small Business Can Automate Without Code, by Elijah Purcell" },
+  title: { absolute: "Five workflows any small business can automate without code, by Elijah Purcell" },
   description:
     "Five automations a small business can set up without writing code, what each one saves, and where they break.",
   alternates: { canonical: "/blog/five-workflows-no-code" },

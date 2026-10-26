@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
-import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import { PostLayout } from "@/app/components/ui";
+import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
   alternates: { canonical: "/blog/canonical-tag-noindex" },
@@ -10,194 +10,174 @@ export const metadata = {
     "One line in a Next.js layout gave nine blog posts a canonical tag pointing at the index page. That is the standard way of saying 'I am a duplicate, skip me.' How it happens, how to check your own site in two minutes, and how to fix it.",
 };
 
-const link = { color: "var(--color-warm-accent)", textDecoration: "underline" };
-const H2 = { fontFamily: "'Cinzel', Georgia, serif", fontSize: "25px", fontWeight: 600, lineHeight: 1.2, margin: "42px 0 12px" } as const;
-const pre: React.CSSProperties = {
-  background: "rgba(0,0,0,0.28)", border: "1px solid rgba(212,175,55,0.18)",
-  padding: "14px 16px", overflowX: "auto", fontSize: "13.5px", lineHeight: 1.6,
-  fontFamily: "ui-monospace, 'SF Mono', Menlo, monospace", margin: "16px 0",
-};
 
 export default function Post() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <VignetteBackground />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
+    <PostLayout
+      crumbs={<Breadcrumbs trail={[
+        { name: "Home", href: "/" },
+        { name: "Writing", href: "/blog" },
+        { name: "Every post on my blog was telling Google not to index it", href: "/blog/canonical-tag-noindex" },
+      ]} />}
+      kicker="Engineering"
+      title="Every post on my blog was telling Google not to index it"
+      meta="20 August 2026, 6 minute read"
+    >
+      <p>
+        I found it this morning by accident, while checking something else. Nine posts, every
+        one carrying a tag that says: this page is a duplicate, index the other one
+        instead. By the end of the afternoon it was 14 pages across three sections.
+      </p>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
+      <p>
+        Nobody wrote that tag nine times. I wrote it once, in a file that has nothing
+        to do with any individual post.
+      </p>
 
-        <Breadcrumbs trail={[
-          { name: "Home", href: "/" },
-          { name: "Writing", href: "/blog" },
-          { name: "Every post on my blog was telling Google not to index it", href: "/blog/canonical-tag-noindex" },
-        ]} />
-        <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Engineering, August 20, 2026, 6 min read</div>
-          <h1>
-            Every post on my blog was telling Google{" "}
-            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>not to index it</em>
-          </h1>
-        </header>
+      <h2>The one line</h2>
 
-        <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
+      <p>In <code>app/blog/layout.tsx</code>:</p>
 
-          <p style={{ fontSize: "18px" }}>
-            I found it this morning by accident, while checking something else. 9 posts, every
-            one carrying a tag that says: this page is a duplicate, index the other one
-            instead. By the end of the afternoon it was 14 pages across three sections.
-          </p>
-
-          <p>
-            Nobody wrote that tag nine times. I wrote it once, in a file that has nothing
-            to do with any individual post.
-          </p>
-
-          <h2 style={H2}>The one line</h2>
-
-          <p>In <code>app/blog/layout.tsx</code>:</p>
-
-          <div style={pre}>{`export const metadata: Metadata = {
+      <pre><code>{`export const metadata: Metadata = {
   title: "Writing",
   alternates: { canonical: "/blog" },   //  <- this
-};`}</div>
+};`}</code></pre>
 
-          <p>
-            That looks correct. It is the blog index, and its canonical URL is
-            <code> /blog</code>.
-          </p>
+      <p>
+        That looks correct. It is the blog index, and its canonical URL is
+        <code> /blog</code>.
+      </p>
 
-          <p>
-            In the Next.js App Router, a layout wraps its
-            own page <em>and every route nested underneath it</em>, and{" "}
-            <a href="https://nextjs.org/docs/app/api-reference/functions/generate-metadata" style={link} rel="noopener">metadata is inherited</a>. So <code>app/blog/layout.tsx</code> wraps <code>/blog</code>,{" "}
-            <code>/blog/first-post</code>, <code>/blog/second-post</code>, all of them, and
-            hands every single one a canonical of <code>/blog</code>.
-          </p>
+      <p>
+        In the Next.js App Router, a layout wraps its
+        own page <em>and every route nested underneath it</em>, and{" "}
+        <a href="https://nextjs.org/docs/app/api-reference/functions/generate-metadata" rel="noopener">metadata is inherited</a>. So <code>app/blog/layout.tsx</code> wraps <code>/blog</code>,{" "}
+        <code>/blog/first-post</code>, <code>/blog/second-post</code>, all of them, and
+        hands every single one a canonical of <code>/blog</code>.
+      </p>
 
-          <p>On every post, that renders as:</p>
+      <p>On every post, that renders as:</p>
 
-          <div style={pre}>{`<link rel="canonical" href="https://purcellventures.co/blog"/>`}</div>
+      <pre><code>{`<link rel="canonical" href="https://purcellventures.co/blog"/>`}</code></pre>
 
-          <h2 style={H2}>What that tells a search engine</h2>
+      <h2>What that tells a search engine</h2>
 
-          <p>
-            A canonical tag tells a search engine that this page and the target page are the
-            same content, and that the target is the one to keep. Google treats it as a strong
-            signal. Google's documentation on{" "}
-            <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls" style={link} rel="noopener">consolidating duplicate URLs</a>{" "}
-            describes this consolidation behaviour.
-          </p>
+      <p>
+        A canonical tag tells a search engine that this page and the target page are the
+        same content, and that the target is the one to keep. Google treats it as a strong
+        signal. Google's documentation on{" "}
+        <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls" rel="noopener">consolidating duplicate URLs</a>{" "}
+        describes this consolidation behaviour.
+      </p>
 
-          <p>
-            When a post says its canonical is the index, Google reads it as: this post is a
-            duplicate of the listing page. So it consolidates the two, keeps the index, and
-            drops the post. It shows no error or warning, because it is following the tag.
-          </p>
+      <p>
+        When a post says its canonical is the index, Google reads it as: this post is a
+        duplicate of the listing page. So it consolidates the two, keeps the index, and
+        drops the post. It shows no error or warning, because it is following the tag.
+      </p>
 
-          <p>
-            Google dropped the author markup, structured data and titles on those pages along
-            with them. All of it was correct, on pages that had asked to be ignored.
-          </p>
+      <p>
+        Google dropped the author markup, structured data and titles on those pages along
+        with them. All of it was correct, on pages that had asked to be ignored.
+      </p>
 
-          <h2 style={H2}>Why it survives so long</h2>
+      <h2>Why it survives so long</h2>
 
-          <p>I found three reasons.</p>
+      <p>I found three reasons.</p>
 
-          <p>
-            <strong>It looks right in the file.</strong> Every reviewer who opens that layout
-            sees a canonical pointing at the page the file is named after. The bug is in the
-            inheritance.
-          </p>
+      <p>
+        <strong>It looks right in the file.</strong> Every reviewer who opens that layout
+        sees a canonical pointing at the page the file is named after. The bug is in the
+        inheritance.
+      </p>
 
-          <p>
-            <strong>Nothing fails.</strong> The build passes. The pages render. The links
-            work. There is no error state, because the site is doing what it was configured
-            to do.
-          </p>
+      <p>
+        <strong>Nothing fails.</strong> The build passes. The pages render. The links
+        work. There is no error state, because the site is doing what it was configured
+        to do.
+      </p>
 
-          <p>
-            <strong>The only symptom is missing search results.</strong> Pages never show up
-            in search, and on a new site that is easy to blame on the site being new.
-          </p>
+      <p>
+        <strong>The only symptom is missing search results.</strong> Pages never show up
+        in search, and on a new site that is easy to blame on the site being new.
+      </p>
 
-          <h2 style={H2}>Check your own in two minutes</h2>
+      <h2>Checking your own site in two minutes</h2>
 
-          <p>One command:</p>
+      <p>One command:</p>
 
-          <div style={pre}>{`curl -sL https://yoursite.com/blog/some-post | grep canonical`}</div>
+      <pre><code>{`curl -sL https://yoursite.com/blog/some-post | grep canonical`}</code></pre>
 
-          <p>
-            If the href is anything other than the URL you just requested, that page points
-            at a different URL. Check three or four pages from different
-            sections. Section index pages are the usual culprits, so try a product page
-            under a category and a post under a blog.
-          </p>
+      <p>
+        If the href is anything other than the URL you just requested, that page points
+        at a different URL. Check three or four pages from different
+        sections. Section index pages are the usual culprits, so try a product page
+        under a category and a post under a blog.
+      </p>
 
-          <p>
-            I found the same bug in two more places on my own site the same afternoon:
-            three course pages canonicalising to <code>/courses</code>, and two pages
-            canonicalising to <code>/digital</code>. Fourteen pages in total. The cause was
-            layout inheritance, and the blog was the first place it showed.
-          </p>
+      <p>
+        I found the same bug in two more places on my own site the same afternoon:
+        three course pages canonicalising to <code>/courses</code>, and two pages
+        canonicalising to <code>/digital</code>. Fourteen pages in total. The cause was
+        layout inheritance, and the blog was the first place it showed.
+      </p>
 
-          <h2 style={H2}>The fix, and the one that does not work</h2>
+      <h2>The fix, and the one that does not work</h2>
 
-          <p>
-            The obvious fix is to move the canonical from the layout onto the index page
-            itself. That failed for me: <code>app/blog/page.tsx</code> is a client
-            component, and client components cannot export metadata. That is probably how
-            it ended up in the layout to begin with.
-          </p>
+      <p>
+        The obvious fix is to move the canonical from the layout onto the index page
+        itself. That failed for me: <code>app/blog/page.tsx</code> is a client
+        component, and client components cannot export metadata. That is probably how
+        it ended up in the layout to begin with.
+      </p>
 
-          <p>
-            The fix that works is simpler. <strong>Delete it.</strong> A page with no canonical
-            tag self-canonicalises: the engine treats the URL it fetched as the canonical
-            one. That is the right answer for the index and the right answer for every post.
-          </p>
+      <p>
+        The fix that works is simpler. <strong>Delete it.</strong> A page with no canonical
+        tag self-canonicalises: the engine treats the URL it fetched as the canonical
+        one. That is the right answer for the index and the right answer for every post.
+      </p>
 
-          <p>Then give each post its own, explicitly:</p>
+      <p>Then give each post its own, explicitly:</p>
 
-          <div style={pre}>{`// app/blog/my-post/page.tsx
+      <pre><code>{`// app/blog/my-post/page.tsx
 export const metadata = {
   title: "My post",
   alternates: { canonical: "/blog/my-post" },
-};`}</div>
+};`}</code></pre>
 
-          <p>
-            For posts that are client components and cannot export metadata, add a
-            <code> layout.tsx</code> beside the page that does nothing but carry the
-            canonical and render its children.
-          </p>
+      <p>
+        For posts that are client components and cannot export metadata, add a
+        <code> layout.tsx</code> beside the page that does nothing but carry the
+        canonical and render its children.
+      </p>
 
-          <h2 style={H2}>The general shape</h2>
+      <h2>The general shape</h2>
 
-          <p>
-            This is the third bug of this kind I have hit this year. In each one, a setting
-            made once and inherited widely failed without an error.
-          </p>
+      <p>
+        This is the third bug of this kind I have hit this year. In each one, a setting
+        made once and inherited widely failed without an error.
+      </p>
 
-          <p>
-            A test that checks the delivered output catches them. A test that only
-            checks nothing threw does not. A test that
-            fetches four live pages and checks each one canonicalises to itself would have
-            caught this the day it shipped, and it is eight lines.
-          </p>
+      <p>
+        A test that checks the delivered output catches them. A test that only
+        checks nothing threw does not. A test that
+        fetches four live pages and checks each one canonicalises to itself would have
+        caught this the day it shipped, and it is eight lines.
+      </p>
 
-          <p>
-            A passing build shows that the code compiled and says nothing about whether the
-            change took effect.
-          </p>
+      <p>
+        A passing build shows that the code compiled and says nothing about whether the
+        change took effect.
+      </p>
 
-
-          <PostByline post={{
+<PostByline post={{
             slug: "canonical-tag-noindex",
             title: "Every post on my blog was telling Google not to index it",
             description: "One line in a Next.js layout gave nine blog posts a canonical tag pointing at the index page. How it happens, how to check yours, and how to fix it.",
             published: "2026-08-20",
           }} />
 
-        </article>
-      </main>
-    </div>
+
+    </PostLayout>
   );
 }

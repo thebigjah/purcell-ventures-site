@@ -252,6 +252,7 @@ a.ui-row:hover .ui-row__name { color: #f0d79a; }
 
 .page { padding-top: 76px; }
 .page:has(> .ui-hero:first-child), .page:has(> main > .ui-hero:first-child), .page:has(> div > .ui-hero:first-child), .page:has(.gx-home) { padding-top: 0; }
+body[data-chrome="off"] .page { padding-top: 0; }
 .ui-muted { color: var(--muted); }
 .ui-small { font-size: 14px; }
 .ui-gold { color: var(--gold-text); }

@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import PostFaq from "@/app/components/PostFaq";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import { PostLayout } from "@/app/components/ui";
 
 // Written by the daily blog engine (~/blog-engine), held overnight for Elijah's veto.
 
@@ -38,7 +38,7 @@ const POST: Data = {
       "paragraphs": [
         "Customer names, phone numbers, home addresses, card numbers and order histories are private to your customers. Keep them inside the systems where you already store them, such as your point of sale and your email.",
         "You can still get help with customer work. Before you paste, replace each real detail with a placeholder. Write [Customer] in place of a name, [Phone] in place of a number and [Order] in place of an order ID. The AI drafts the reply around the placeholders, and you type the real details into your own email program.",
-        "Spreadsheets work the same way. For help with a formula, paste the column headings and two rows of made up data, then test the formula on a copy of your real file."
+        "Spreadsheets work the same way. For help with a formula, paste the column headings and two rows of made-up data, then test the formula on a copy of your real file."
       ]
     },
     {
@@ -58,7 +58,7 @@ const POST: Data = {
     {
       "heading": "A written rule for your team",
       "paragraphs": [
-        "Pick one AI tool for the business and note which plan you pay for. Open its privacy settings and decide whether chats may go toward training. Then write a three line note for everyone who uses it: no passwords, no customer details, use placeholders. Pin it in your team chat or tape it next to the register.",
+        "Pick one AI tool for the business and note which plan you pay for. Open its privacy settings and decide whether chats may go toward training. Then write a three-line note for everyone who uses it: no passwords, no customer details, use placeholders. Pin it in your team chat or tape it next to the register.",
         "AI Fluency calls this skill Diligence. It is one of the framework's four skills, and it means taking responsibility for how you use AI and for what you do with its output."
       ]
     }
@@ -77,53 +77,40 @@ export const metadata = {
   description: POST.description,
 };
 
-const H2 = { fontFamily: "'Cinzel', Georgia, serif", fontSize: "25px", fontWeight: 600, lineHeight: 1.2, margin: "40px 0 10px" } as const;
-const link = { color: "var(--color-warm-accent)", textDecoration: "underline" };
-
 export default function Post() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <VignetteBackground />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
+    <PostLayout
+      crumbs={<Breadcrumbs trail={[
+        { name: "Home", href: "/" },
+        { name: "Writing", href: "/blog" },
+        { name: POST.title, href: "/blog/keep-out-of-ai-chat-window" },
+      ]} />}
+      kicker={POST.category}
+      title={POST.title}
+      meta="26 October 2026, 3 minute read"
+    >
+      <p>{POST.lede}</p>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
+      {POST.sections.map((s) => (
+        <section key={s.heading}>
+          <h2>{s.heading}</h2>
+          {s.paragraphs.map((t, i) => <p key={i}>{t}</p>)}
+        </section>
+      ))}
 
-        <Breadcrumbs trail={[
-          { name: "Home", href: "/" },
-          { name: "Writing", href: "/blog" },
-          { name: POST.title, href: "/blog/keep-out-of-ai-chat-window" },
-        ]} />
+      <p>
+        I help small businesses around Tuscaloosa set up AI tools and the rules for using
+        them. If you want help writing yours, <Link href="/contact">send me a message</Link>.
+      </p>
 
-        <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">{POST.category}, October 26, 2026, 3 min read</div>
-          <h1>{POST.title}</h1>
-        </header>
+      <PostFaq qa={POST.faq} />
 
-        <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
-          <p style={{ fontSize: "18px" }}>{POST.lede}</p>
-
-          {POST.sections.map((s) => (
-            <section key={s.heading}>
-              <h2 style={H2}>{s.heading}</h2>
-              {s.paragraphs.map((t, i) => <p key={i}>{t}</p>)}
-            </section>
-          ))}
-
-          <p>
-            I help small businesses around Tuscaloosa set up AI tools and the rules for using
-            them. If you want help writing yours, <Link href="/contact" style={link}>send me a message</Link>.
-          </p>
-
-          <PostFaq qa={POST.faq} />
-
-          <PostByline post={{
-            slug: "keep-out-of-ai-chat-window",
-            title: POST.title,
-            description: POST.description,
-            published: "2026-10-26",
-          }} />
-        </article>
-      </main>
-    </div>
+      <PostByline post={{
+        slug: "keep-out-of-ai-chat-window",
+        title: POST.title,
+        description: POST.description,
+        published: "2026-10-26",
+      }} />
+    </PostLayout>
   );
 }

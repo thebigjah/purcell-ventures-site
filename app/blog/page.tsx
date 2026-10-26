@@ -1,7 +1,4 @@
-"use client";
-
-import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+import { PageHero, Section, Rows } from "@/app/components/ui";
 
 interface Post {
   slug: string;
@@ -159,8 +156,8 @@ const POSTS: Post[] = [
   },
   {
     slug: "what-the-agents-get-wrong",
-    title: "Fifteen agents help run my company. Here is what they get wrong",
-    excerpt: "A stage that could not fail, twenty proposals with the internal notes still in them, ten agents that were never called, findings that closed themselves, and an agent that picked up access nobody granted it.",
+    title: "Five failures from running fifteen AI agents",
+    excerpt: "A stage that could not fail, twenty proposals with the internal notes still in them, eleven agents that were never called, findings that closed themselves, and an agent that picked up access nobody granted it.",
     date: "August 20, 2026",
     readingTime: "9 min read",
     category: "Engineering",
@@ -223,8 +220,8 @@ const POSTS: Post[] = [
   },
   {
     slug: "agents-that-cannot-fix-what-they-find",
-    title: "We built agents that cannot fix what they find",
-    excerpt: "Separating the finder from the fixer is a cheap safety property for an agent system. It also creates a failure mode. We shipped it.",
+    title: "I built agents that cannot fix what they find",
+    excerpt: "Separating the finder from the fixer is a cheap safety property for an agent system. It also creates a failure mode, and I shipped it.",
     date: "August 17, 2026",
     readingTime: "4 min read",
     category: "Engineering",
@@ -281,43 +278,30 @@ const POSTS: Post[] = [
 
 export default function BlogPage() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <VignetteBackground />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "820px", margin: "0 auto", padding: "72px 36px 96px" }}>
-
-        <header className="pv-page-head">
-          <div className="pv-mono-label">Notebook</div>
-          <h1>
-            Blog <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>and notes.</em>
-          </h1>
-          <p className="deck">
-            Writing about AI, small business and software. I draft some posts with AI tools and edit every one before it goes up.
-          </p>
-        </header>
-
-        <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-          {POSTS.map((post) => (
-            <Link
-              key={post.slug}
-              // A slug beginning with "/" is a full path. The AI guide lives outside /blog
-              // and "/blog/../ai-at-alabama" is a different URL to a crawler even though a
-              // browser resolves it.
-              href={post.slug.startsWith("/") ? post.slug : `/blog/${post.slug}`}
-              className="pv-card"
-              style={{ display: "block" }}
-            >
-              <span className="b3"></span><span className="b4"></span>
-              <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", marginBottom: "10px", flexWrap: "wrap" }}>
-                <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.24em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700 }}>{post.category}</span>
-                <span style={{ fontSize: "11px", color: "var(--color-warm-text-light)", fontFamily: "var(--font-dm-sans), sans-serif", letterSpacing: "0.1em" }}>{post.date}, {post.readingTime}</span>
-              </div>
-              <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", color: "var(--color-warm-text)", margin: "0 0 12px", fontWeight: 700, lineHeight: 1.3 }}>{post.title}</h2>
-              <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: 0, lineHeight: 1.6 }}>{post.excerpt}</p>
-            </Link>
-          ))}
-        </div>
-
-      </main>
-    </div>
+    <main>
+      <PageHero
+        title="Writing"
+        lede="Writing about AI, small business and software. I draft some posts with AI tools and edit every one before it goes up."
+      />
+      <Section stack>
+        <Rows
+          items={POSTS.map((post) => ({
+            name: post.title,
+            line: post.excerpt,
+            // A slug beginning with "/" is a full path. The AI guide lives outside /blog
+            // and "/blog/../ai-at-alabama" is a different URL to a crawler even though a
+            // browser resolves it.
+            href: post.slug.startsWith("/") ? post.slug : `/blog/${post.slug}`,
+            fig: (
+              <>
+                {post.date}
+                <br />
+                {post.readingTime}
+              </>
+            ),
+          }))}
+        />
+      </Section>
+    </main>
   );
 }

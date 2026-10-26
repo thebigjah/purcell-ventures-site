@@ -4,20 +4,20 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Writing by Elijah Purcell",
   description:
-    "Essays and operational guides on small business AI tooling. Specific, practical, written by people running real systems, not consultants writing about consulting.",
+    "Essays and operational guides on small business AI tooling. Specific, practical, and written by someone who runs the systems he writes about.",
   keywords: [
     "small business AI blog", "AI for small business",
     "AI tools writing", "purcell ventures blog",
   ],
   openGraph: {
     title: "Writing by Elijah Purcell",
-    description: "Essays on small business AI, written by people running real systems.",
+    description: "Essays on small business AI, written by someone who runs the systems he writes about.",
     url: "https://purcellventures.co/blog",
     type: "website",
   
     images: ["/opengraph-image"],
   },
-  // NO canonical here. This layout wraps every post as well as the index, and Next
+  // No canonical here. This layout wraps every post as well as the index, and Next
   // inherits it, so a canonical pointing at "/blog" told Google that all nine posts
   // were duplicates of the index page. Each post declares its own below.
 };
@@ -179,7 +179,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "Fifteen agents help run my company. Here is what they get wrong",
+      "headline": "Five failures from running fifteen AI agents",
       "url": "https://purcellventures.co/blog/what-the-agents-get-wrong",
       "datePublished": "2026-08-20",
       "author": {
@@ -251,7 +251,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "We built agents that cannot fix what they find",
+      "headline": "I built agents that cannot fix what they find",
       "url": "https://purcellventures.co/blog/agents-that-cannot-fix-what-they-find",
       "datePublished": "2026-08-17",
       "author": {
