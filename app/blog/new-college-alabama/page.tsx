@@ -39,7 +39,7 @@ export default function Post() {
           <p style={{ fontSize: "18px" }}>
             Every explanation of New College I read before applying was either a brochure or
             a forum post from 2014. Here is my account, written in my first week, by someone
-            who chose it and can tell you what the trade is.
+            who chose it and can tell you what it costs.
           </p>
 
           <h2 style={H2}>What it is</h2>
@@ -61,8 +61,7 @@ export default function Post() {
 
           <p>
             A depth study is your self-designed concentration. Existing examples include
-            Socio-Legal Studies, Psycho-Social Sciences and Neuroscience, which gives you a
-            sense of the range. Mine combines psychology and data science, aimed at
+            Socio-Legal Studies, Psycho-Social Sciences and Neuroscience. Mine combines psychology and data science, aimed at
             psychiatry and at how AI can reduce the administrative load on mental health
             clinicians.
           </p>
@@ -126,7 +125,7 @@ export default function Post() {
           </p>
 
           <p>
-            Some paths conflict with it. Pre-med works, because medical schools care about
+            Some paths need extra care. Pre-med works, because medical schools care about
             the prerequisites and the MCAT more than the major&apos;s name. If your field has a
             licensure body or an accredited curriculum, check with them before you commit.
           </p>

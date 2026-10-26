@@ -17,7 +17,7 @@ const STAGES = [
   {
     roman: "II.",
     title: "Written proposal (24-48 hours after the call)",
-    body: "If we're a fit, you get a written proposal within 2 business days. It lists what we will build, what we will not build (the out-of-scope section), a price breakdown, a timeline with milestones and what we need from you to start. The proposal lists every price.",
+    body: "If we're a fit, you get a written proposal within 2 business days. It lists what we will build, what we will not build (the out-of-scope section), a price breakdown, a timeline with milestones and what we need from you to start.",
     bullets: [
       "Specific scope and a bulleted list of deliverables",
       "Both parties sign the out-of-scope section, which keeps the project from growing past what you agreed to pay for",
@@ -40,7 +40,7 @@ const STAGES = [
   },
   {
     roman: "IV.",
-    title: "Launch + handoff",
+    title: "Launch and handoff",
     body: "For Digital Services, the site goes live and you get a walkthrough video and a written handoff document. For Custom Software, we transfer the code and IP to you and document the deployment steps. You own everything. If you leave, we hand it all over. The monthly retainer pays for maintenance.",
     bullets: [
       "Full code and IP transfer to you on completion",
@@ -67,10 +67,10 @@ const STAGES = [
 const COMMITMENTS = [
   { title: "No surprise invoices", body: "Every dollar we charge is in the written proposal. If something changes scope, you sign off before any work happens." },
   { title: "No vendor lock-in", body: "You own your code, IP, domain and data. If you leave, you take all of it with no exit fee." },
-  { title: "We say when a product does not fit", body: "If our product doesn't fit, we tell you, and we have turned down deals for that reason." },
+  { title: "We say when a product does not fit", body: "When our product is the wrong fit, we tell you. We have turned down deals for that reason." },
   { title: "Response times", body: "Same day on most emails. 4 hours on Full Service subscriptions during business hours. 24-hour max anywhere else. If we're going to miss, we tell you first." },
   { title: "Code you can read", body: "Every Custom Software project ships with plain-language documentation. A developer who has never worked with us can maintain it later." },
-  { title: "Christian-rooted ethics", body: "We don't evangelize, but our work is shaped by it. Honesty over closing, respect over urgency, the work is the witness. If you don't share the faith, that's fine, but the ethical floor is the ethical floor." },
+  { title: "Christian-rooted ethics", body: "We do not evangelize to clients. Our work follows Christian ethics: we choose honesty over closing a sale and respect over pressure. These standards apply to every client, whether or not you share the faith." },
 ];
 
 export default function HowWeWorkPage() {
@@ -134,7 +134,7 @@ export default function HowWeWorkPage() {
         </header>
 
         <p style={{ fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.7, marginBottom: "16px" }}>
-          We turn down work. Specifically:
+          We turn down work in these cases:
         </p>
         <ul style={{ paddingLeft: "24px", fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.8, marginBottom: "48px" }}>
           <li>If your business model relies on practices we won&apos;t support: adult content, gambling, predatory finance or MLM.</li>
@@ -146,7 +146,7 @@ export default function HowWeWorkPage() {
 
         {/* CTA */}
         <div style={{ textAlign: "center", padding: "40px 32px", background: "var(--color-warm-bg-alt)", border: "2px solid var(--color-warm-accent)" }}>
-          <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "26px", color: "var(--color-warm-text)", fontWeight: 700, margin: "0 0 12px" }}>Start the first conversation</h3>
+          <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "26px", color: "var(--color-warm-text)", fontWeight: 700, margin: "0 0 12px" }}>How to start the first conversation</h3>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: "0 0 24px", maxWidth: "560px", marginLeft: "auto", marginRight: "auto", lineHeight: 1.6 }}>
             Email me a one-sentence description of what you&apos;re trying to do. I&apos;ll respond same day with whether we&apos;re a fit.
           </p>

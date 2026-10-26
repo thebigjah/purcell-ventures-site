@@ -87,7 +87,7 @@ export default function WalletTrackerPremiumPage() {
 
         {/* Disclaimers */}
         <section style={{ marginBottom: "40px", padding: "20px 24px", background: "rgba(229, 74, 40, 0.05)", border: "1px solid #e54a28", fontSize: "12px", color: "var(--color-warm-text-muted)", lineHeight: 1.7 }}>
-          <strong style={{ color: "#e54a28" }}>Not financial advice.</strong> Alerts report what known wallets did. They say nothing about future price. Past paper-trading results (60% win rate, +14% avg winner) do not predict future returns.
+          <strong style={{ color: "#e54a28" }}>Not financial advice.</strong> Alerts report what known wallets did. They say nothing about future price. Past paper-trading results (60% win rate, +14% average winner) do not predict future returns.
           Trade only what you can afford to lose.
         </section>
 

@@ -485,11 +485,11 @@ function MaterialSection({ title, subtitle, Front, Back, filenamePrefix, singleS
 // ─── Printer Guide Data ───────────────────────────────────────────────────────
 
 const PRINTER_GUIDE = [
-  { material: "Business Cards",    printer: "PrintingForLess.com",        cost: "~$40 / 100",          finish: "Soft-touch matte",  notes: "Best dark card quality, reliable" },
-  { material: "Door Hangers",      printer: "PrintingForLess.com",        cost: "~$60 / 250",          finish: "Soft-touch matte",  notes: "Same shop, same quality as cards" },
-  { material: "Yard Signs",        printer: "PrintingForLess.com",        cost: "~$25 / ea",           finish: "Coroplast, no lam", notes: "Order 5 to 10 to start and leave one at every job" },
-  { material: "EDDM Postcards",    printer: "USPS EDDM + PrintingForLess",cost: "~$200 / 1,000 all-in",finish: "Matte",             notes: "Mail a whole zip code for about $0.20 per house" },
-  { material: "Rack Cards",        printer: "PrintingForLess.com",        cost: "~$30 / 100",          finish: "Matte",             notes: "Batch with other orders to save shipping" },
+  { material: "Business Cards",    printer: "PrintingForLess.com",        cost: "$40 / 100",          finish: "Soft-touch matte",  notes: "Best dark card quality, reliable" },
+  { material: "Door Hangers",      printer: "PrintingForLess.com",        cost: "$60 / 250",          finish: "Soft-touch matte",  notes: "Same shop, same quality as cards" },
+  { material: "Yard Signs",        printer: "PrintingForLess.com",        cost: "$25 / ea",           finish: "Coroplast, no lam", notes: "Order 5 to 10 to start and leave one at every job" },
+  { material: "EDDM Postcards",    printer: "USPS EDDM + PrintingForLess",cost: "$200 / 1,000 all-in",finish: "Matte",             notes: "Mail a whole zip code for $0.20 per house" },
+  { material: "Rack Cards",        printer: "PrintingForLess.com",        cost: "$30 / 100",          finish: "Matte",             notes: "Batch with other orders to save shipping" },
   { material: "Vehicle Decal",     printer: "Local vinyl shop",           cost: "$50 to $150",             finish: "Vinyl (removable)", notes: "Can't print here. Take the design to the shop" },
 ];
 
@@ -541,7 +541,7 @@ export default function PrintPage() {
 
           <MaterialSection
             title="EDDM Postcard"
-            subtitle='6.25" × 9". Direct mail to zip codes near jobs, about $0.20 per house.'
+            subtitle='6.25" × 9". Direct mail to zip codes near jobs, $0.20 per house.'
             Front={PostcardFront}
             Back={PostcardBack}
             filenamePrefix="PW-Postcard"

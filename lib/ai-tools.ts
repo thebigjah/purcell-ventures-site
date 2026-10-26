@@ -74,10 +74,10 @@ Return ONLY valid JSON in this exact shape, no markdown fences:
     slug: "content-generator",
     name: "AI Content Generator",
     tagline: "Drafts blog posts, descriptions, bios and emails.",
-    description: "Write marketing and business content in your voice. Pick a type, tell it about your business, get back a draft ready to edit and publish.",
+    description: "Writes marketing and business content in your voice. You pick a type and describe your business, and it returns a draft ready to edit and publish.",
     category: "AI-Powered",
     fields: [
-      { name: "businessContext", label: "About your business", type: "textarea", required: true, placeholder: "e.g., Family-owned plumbing in Metro Atlanta since 1995. 24/7 emergency service, licensed and insured.", helpText: "2-4 sentences. The more specific the better." },
+      { name: "businessContext", label: "About your business", type: "textarea", required: true, placeholder: "e.g., Family-owned plumbing in Metro Atlanta since 1995. 24/7 emergency service, licensed and insured.", helpText: "2-4 sentences. Specific details produce better drafts." },
       { name: "contentType", label: "Content type", type: "select", required: true, options: ["Blog post", "Product / service description", "Bio (third-person)", "Email", "Social caption (3 variants)"], default: "Blog post" },
       { name: "topic", label: "What should it be about?", type: "textarea", required: true, placeholder: "e.g., Why you should flush your water heater annually" },
       { name: "tone", label: "Tone (optional)", type: "text", placeholder: "e.g., friendly but technical, slightly humorous" },
@@ -115,7 +115,7 @@ Output ONLY the content. No preamble like "Here's your post:".`,
     slug: "caption-generator",
     name: "AI Caption Generator",
     tagline: "5 captions in different voices.",
-    description: "Describe the post (or paste a photo description), get back 5 different caption options.",
+    description: "Describe the post or paste a photo description, and get back 5 different caption options.",
     category: "AI-Powered",
     fields: [
       { name: "postContext", label: "Describe the post or photo", type: "textarea", required: true, placeholder: "e.g., Behind-the-scenes shot of me organizing the new tool inventory in the truck before a job tomorrow" },
@@ -237,7 +237,7 @@ Quality bar:
     slug: "logo-concepts",
     name: "Logo Concept Generator",
     tagline: "5 logo concepts with a short rationale for each.",
-    description: "Get 5 different logo concept directions for your business, each with an icon idea, type treatment and rationale. Use them to brief a designer or sketch your own.",
+    description: "Returns 5 different logo concept directions for your business, each with an icon idea, type treatment and rationale. You can use them to brief a designer or sketch your own.",
     category: "Branding & Identity",
     fields: [
       { name: "businessName", label: "Business name", type: "text", required: true, placeholder: "e.g., Bob's Plumbing" },
@@ -443,7 +443,7 @@ Output 3 variants, numbered, with character counts in parens.`,
     slug: "estimate-generator",
     name: "Estimate Generator",
     tagline: "Detailed estimate copy from rough notes.",
-    description: "Tell us what the job is. Get back a clean estimate description with line-item breakdown logic, scope notes, exclusions, and a recommended pricing tier.",
+    description: "You describe the job. It returns an estimate description with line-item breakdown logic, scope notes, exclusions and a recommended pricing tier.",
     category: "Operations & Finance",
     fields: [
       { name: "businessType", label: "What type of business", type: "text", required: true, placeholder: "e.g., Residential plumbing" },
@@ -549,13 +549,13 @@ Quality bar:
     slug: "tagline",
     name: "Tagline Generator",
     tagline: "10 taglines from different angles.",
-    description: "Tell us your business and what makes it different. Get 10 taglines across 5 distinct angles (benefit, contrarian, founder-voice, audience-mirror, time-based). Each labeled with its angle so you can pick by fit.",
+    description: "Tell us your business and what makes it different. Get 10 taglines across 5 distinct angles (benefit, contrarian, founder-voice, audience-mirror, time-based). Each one carries its angle label so you can pick by fit.",
     category: "Branding & Identity",
     fields: [
       { name: "businessName", label: "Business name", type: "text", required: true },
       { name: "what", label: "What you do (1 sentence)", type: "text", required: true },
       { name: "audience", label: "Who you serve", type: "text", required: true, placeholder: "e.g., Atlanta-area homeowners 35-65" },
-      { name: "differentiator", label: "What's truly different about you", type: "text", required: true },
+      { name: "differentiator", label: "What's different about you", type: "text", required: true },
       { name: "avoid", label: "Words / phrases to AVOID (comma-separated)", type: "text", placeholder: "e.g., innovative, premium, solutions, partner" },
     ],
     systemPrompt: `You write taglines. 10 of them across 5 distinct angles. Each labeled so the user can choose by what fits, not by which "sounds best".
@@ -608,8 +608,8 @@ Quality bar:
   {
     slug: "sop-writer",
     name: "SOP Writer (Standard Operating Procedure)",
-    tagline: "Write a process down once and reuse it to train new hires.",
-    description: "Describe a process you do (or someone on your team does). AI structures it into a clean SOP with steps, decision points, common mistakes and a quality check, ready to print.",
+    tagline: "Turns a process into a reusable SOP for training new hires.",
+    description: "You describe a process that you or someone on your team does. It structures the process into an SOP with steps, decision points, common mistakes and a quality check, ready to print.",
     category: "Operations & Finance",
     fields: [
       { name: "processName", label: "Process name", type: "text", required: true, placeholder: "e.g., 'Opening the salon at 8 AM'" },
@@ -733,7 +733,7 @@ Quality bar:
       { name: "businessName", label: "Business name", type: "text", required: true },
       { name: "businessType", label: "What you do (1 sentence)", type: "text", required: true },
       { name: "purchase", label: "What did they buy?", type: "text", required: true, placeholder: "e.g., 1-year gym membership, salon-membership package, $99/mo subscription" },
-      { name: "valueGoal", label: "What's the most important early-win for them?", type: "text", placeholder: "e.g., 'completing first 3 workouts within 14 days predicts retention'" },
+      { name: "valueGoal", label: "What's the most important early win for them?", type: "text", placeholder: "e.g., 'completing first 3 workouts within 14 days predicts retention'" },
     ],
     systemPrompt: `You write customer onboarding email sequences. NOT corporate "welcome to the family" energy. Real, useful, sets expectations.
 
@@ -1047,7 +1047,7 @@ Quality bar:
     slug: "cold-email-audit",
     name: "Cold Email Audit",
     tagline: "Paste your cold email. You get a grade and a rewrite.",
-    description: "Send us the cold outreach you've been sending. It grades the subject line, hook, ask and ethics, then rewrites it about 30% shorter. It uses the same AI we use for our own outreach.",
+    description: "Paste the cold email you have been sending. It grades the subject line, hook, ask and ethics, then rewrites it 30% shorter. It uses the same AI we use for our own outreach.",
     category: "Communication & Marketing",
     fields: [
       { name: "subject", label: "Subject line", type: "text", required: true, placeholder: "e.g., Quick question about Cherry Blossom Salon" },
@@ -1115,7 +1115,7 @@ Quality bar:
   {
     slug: "bio-writer",
     name: "AI Bio Writer",
-    tagline: "Professional bios in your voice, in several lengths for several platforms.",
+    tagline: "Three bios in your voice, from a 140-character X bio to a full About page.",
     description: "Paste a few facts about yourself or your business. AI returns three bios: short (140 chars for X/Twitter), medium (LinkedIn or About page, 80 words), long (full About page, 250 words).",
     category: "Communication & Marketing",
     fields: [
@@ -1162,7 +1162,7 @@ Quality bar:
     slug: "press-release",
     name: "AI Press Release Writer",
     tagline: "Drafts a press release for a launch, hire or milestone.",
-    description: "For when you need to announce something publicly and don't want to write a press release from scratch. AI generates a complete press release with headline, dateline, lead, body, boilerplate and contact info.",
+    description: "Announce something publicly without writing a press release from scratch. AI generates a press release with headline, dateline, lead, body, boilerplate and contact info.",
     category: "Communication & Marketing",
     fields: [
       { name: "announcement", label: "What are you announcing", type: "textarea", required: true, placeholder: "e.g., Launch of new AI consulting service / hiring of a new VP / $50k seed funding / new partnership with Local Bank" },
@@ -1223,7 +1223,7 @@ Quality bar:
     slug: "review-request",
     name: "AI Customer Review Request",
     tagline: "Drafts a polite, specific review request by email or text.",
-    description: "After a positive customer interaction, send a request for a Google/Yelp/Facebook review. AI personalizes it with what they bought and a specific moment from their visit.",
+    description: "Drafts a request for a Google, Yelp or Facebook review to send after a positive customer interaction. It personalizes the message with what they bought and a specific moment from their visit.",
     category: "Communication & Marketing",
     fields: [
       { name: "customerName", label: "Customer's first name", type: "text", required: true, placeholder: "e.g., Sarah" },

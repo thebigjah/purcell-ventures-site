@@ -164,7 +164,7 @@ const PROJECTS: Project[] = [
   {
     slug: "prayer-walk",
     title: "Prayer Walk Mobile",
-    subtitle: "See what your city has been prayed over.",
+    subtitle: "See which parts of your city have been prayed over.",
     description: "Expo mobile app that tracks walking routes, attaches prayers to locations on the map, and builds 'coverage' over time. Production AAB built, Play Store launch pending.",
     category: ["Mobile"],
     techStack: ["Expo", "React Native", "Supabase", "MapLibre"],
@@ -253,7 +253,7 @@ const PROJECTS: Project[] = [
     slug: "returns-void",
     title: "Returns Void",
     subtitle: "Daily prayer ledger.",
-    description: "Hand-bound prayer journal as software. Rotation queue surfaces 2 people per notification (longest-since-prayed-for first), records voice prayers cloud-synced via Supabase, Isaiah 55:11 framing. Built for actual daily use, not as a productivity app.",
+    description: "Hand-bound prayer journal as software. Rotation queue surfaces 2 people per notification (longest-since-prayed-for first), records voice prayers cloud-synced via Supabase, Isaiah 55:11 framing. Built as a daily prayer journal rather than a productivity app.",
     category: ["Web"],
     techStack: ["Next.js 14", "Supabase Storage", "Tailwind"],
     liveUrl: "https://returns-void.vercel.app",
@@ -270,8 +270,8 @@ const PROJECTS: Project[] = [
   {
     slug: "folio",
     title: "Folio",
-    subtitle: "A reading app built around curated lists.",
-    description: "A social reading app built around curated lists instead of ratings. Phase A: profiles, list CRUD, share cards. Phase B: follows, trending, comments, realtime status, sessions, Bookshop affiliate links to support indie bookstores.",
+    subtitle: "Social reading with lists in place of star ratings.",
+    description: "A social reading app built around curated lists. Phase A: profiles, list CRUD, share cards. Phase B: follows, trending, comments, realtime status, sessions, Bookshop affiliate links to support indie bookstores.",
     category: ["Web"],
     techStack: ["Next.js 16", "Supabase", "Tailwind 4", "Open Library API"],
     liveUrl: "https://folio-now.vercel.app",
@@ -350,10 +350,10 @@ export default function PortfolioPage() {
         <header className="pv-page-head">
           <div className="pv-mono-label">Portfolio of shipped work</div>
           <h1>
-            What we&apos;ve <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>built.</em>
+            What I&apos;ve <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>built.</em>
           </h1>
           <p className="deck">
-            Live products, client sites and internal systems. Each one is live and I maintain it. Click any tile to see the build details.
+            Live products, client sites and internal systems, all maintained by me. Click any tile to see the build details.
           </p>
         </header>
 

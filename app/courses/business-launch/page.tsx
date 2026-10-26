@@ -136,7 +136,7 @@ const FAQS = [
   },
   {
     q: "You are nineteen. Why should I take business advice from you?",
-    a: "I founded Purcell Ventures at 17 and wrote down the tools, decisions and mistakes as I went. The course teaches the process I used, while it is recent. I use the tools I recommend, and I made the mistakes I warn about.",
+    a: "I founded Purcell Ventures at 17 and wrote down the tools, decisions and mistakes as I went. The course teaches the process I used, and it is still fresh. I use the tools I recommend, and I made the mistakes I warn about.",
   },
   {
     q: "What's the resource pack?",
@@ -374,7 +374,7 @@ export default function BusinessLaunchPage() {
                 body: "This course shows screen shares of the tools I use, the templates I built and the reasoning behind each decision.",
               },
               {
-                title: "Resources That Work",
+                title: "Six Fill-In Documents",
                 body: "The resource pack is six working documents: templates, a pricing calculator and outreach scripts. You fill them in instead of building them from scratch.",
               },
             ].map(d => (
@@ -458,7 +458,7 @@ export default function BusinessLaunchPage() {
         <div style={{ maxWidth: "760px", margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "32px", flexWrap: "wrap" }}>
           <div>
             <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "10px", fontFamily: "var(--font-inter), sans-serif" }}>One-on-one help</div>
-            <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "8px" }}>Consulting is available for one-on-one help.</h3>
+            <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "8px" }}>I also offer one-on-one help.</h3>
             <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.7, maxWidth: "460px", fontFamily: "var(--font-dm-sans), sans-serif", margin: 0 }}>
               If you want me to look at your idea, your offer or your pitch, book a consulting session.
             </p>
@@ -481,7 +481,7 @@ export default function BusinessLaunchPage() {
             Waitlist
           </div>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "16px", lineHeight: 1.1 }}>
-            Join the waitlist.
+            Waitlist for early access.
           </h2>
           <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.75, marginBottom: "40px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
             Waitlist members get early access pricing and first notification when the course opens.

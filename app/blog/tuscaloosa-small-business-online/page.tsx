@@ -81,8 +81,8 @@ export default function Post() {
           <p>
             Each piece in this series covers one business: who runs it, how long it has
             been here, what it does well, and what a student trying to find it
-            runs into. I am not selling anything in these pieces, and a business does not
-            have to be a client to be in one. Several will not be.
+            runs into. I am not selling anything in these pieces, and I feature businesses
+            whether or not they are clients. Several will not be.
           </p>
 
           <h2>Why I am writing it rather than just noticing it</h2>
@@ -107,7 +107,7 @@ export default function Post() {
           <h2>If you run a business near campus</h2>
 
           <p>
-            I would like to feature you. It takes about twenty minutes, in person, at your
+            I would like to feature you. It takes twenty minutes, in person, at your
             place. I will ask what you do, how people find you, and what has changed since
             the students came back. You get a written piece about your business either way,
             and you are under no obligation to buy anything.

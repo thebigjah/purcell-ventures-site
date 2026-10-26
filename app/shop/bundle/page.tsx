@@ -113,7 +113,7 @@ export default function BundlePage() {
         </div>
 
         <p style={{ marginTop: "32px", textAlign: "center", fontSize: "12px", color: "var(--color-warm-text-light)" }}>
-          Buy them individually: <Link href="/shop" style={{ color: "var(--color-warm-accent)" }}>See all 3 separately</Link>.
+          To buy them one at a time, <Link href="/shop" style={{ color: "var(--color-warm-accent)" }}>see all 3 separately</Link>.
         </p>
 
       </main>

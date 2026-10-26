@@ -44,7 +44,7 @@ export default function Post() {
         <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
 
           <p style={{ fontSize: "18px" }}>
-            These seven checks take about ten minutes and need no tools or account. At the
+            These seven checks take ten minutes and need no tools or account. At the
             end you will know what somebody standing on the sidewalk with a phone sees when
             they look for you.
           </p>
@@ -61,7 +61,7 @@ export default function Post() {
             the fixes are free and take an afternoon.
           </p>
 
-          <h2 style={H2}>Do this first: use a phone that is not yours</h2>
+          <h2 style={H2}>Starting with a phone that is not yours</h2>
 
           <p>
             Borrow one, or open a private window and sign out of everything. Your own phone
@@ -71,7 +71,7 @@ export default function Post() {
 
           <h2 style={H2}>The seven checks</h2>
 
-          <h3 style={H3}>1. Search your business name plus your town</h3>
+          <h3 style={H3}>1. Your business name plus your town</h3>
           <p>
             Add the town to the name: "Joe's Barbers Tuscaloosa." Look at the first result. If it is a
             directory site you have never logged into, a Facebook page you stopped updating,
@@ -83,7 +83,7 @@ export default function Post() {
             phone and a map. That box is a Google Business Profile. It is free.
           </div>
 
-          <h3 style={H3}>2. Search what you sell, plus your town</h3>
+          <h3 style={H3}>2. What you sell, plus your town</h3>
           <p>
             "Barber Tuscaloosa." "Ramen near me." Do you appear in the first ten results, or
             in the map section at the top? A new customer runs this search because they do
@@ -93,7 +93,7 @@ export default function Post() {
           <h3 style={H3}>3. Are your hours right, everywhere?</h3>
           <p>
             Check Google, Facebook and whatever directory came up in check one. If the hours
-            are wrong, somebody drives over and finds a locked door. Include holiday hours
+            are wrong, somebody drives over and finds the business closed. Include holiday hours
             and the days you close early.
           </p>
           <div style={box}>
@@ -102,7 +102,7 @@ export default function Post() {
             now" is only answerable by standing in front of the door.
           </div>
 
-          <h3 style={H3}>4. Tap your own phone number</h3>
+          <h3 style={H3}>4. Your own phone number</h3>
           <p>
             On the phone that is not yours, find your number online and tap it. Check that
             it dials and reaches the number you answer, and not a landline in the back that
@@ -113,19 +113,19 @@ export default function Post() {
             customers prefer to text or fill in a form, so offer one.
           </p>
 
-          <h3 style={H3}>5. Open your own website on the phone</h3>
+          <h3 style={H3}>5. Your own website on the phone</h3>
           <p>
             Time how long it takes to load. Try to read it without pinching to zoom. Then
             look for the hours, the address and the phone number, and note whether you had
             to scroll past a picture of a building to get to them.
           </p>
           <p>
-            If your site was built more than about six years ago, it was probably designed
+            If your site was built more than six years ago, it was probably designed
             for a desktop and adapted for a phone afterwards. If your site has analytics,
             check what share of visitors come from phones.
           </p>
 
-          <h3 style={H3}>6. Look at your reviews, and at the last one you replied to</h3>
+          <h3 style={H3}>6. Your reviews, and the last one you replied to</h3>
           <p>
             Recent reviews with replies matter more than a five-star average. If the newest
             review is three years old, it looks as if nothing has happened since. A complaint
@@ -136,7 +136,7 @@ export default function Post() {
             and the other platforms ban this and can remove the listing.
           </p>
 
-          <h3 style={H3}>7. Search your own name in quotes</h3>
+          <h3 style={H3}>7. Your own name in quotes</h3>
           <p>
             If you are the business, people also search the owner&apos;s name. Put your name
             in quotation marks and see who else has it. You may be competing with somebody
@@ -151,7 +151,7 @@ export default function Post() {
           <ol style={{ paddingLeft: "1.15rem" }}>
             <li style={{ marginBottom: "10px" }}>
               <strong>Claim your Google Business Profile and put the hours in it.</strong>{" "}
-              Free, about twenty minutes at{" "}
+              Free, twenty minutes at{" "}
               <a href="https://business.google.com" style={link}>business.google.com</a>.
             </li>
             <li style={{ marginBottom: "10px" }}>
@@ -188,21 +188,21 @@ export default function Post() {
 
           <p>
             I am writing about independent businesses around the University of Alabama, one
-            at a time. Who runs it, how long it has been there, what it does well, and what
-            a student trying to find it runs into. That is{" "}
+            at a time. Each post covers who runs the business, how long it has been there, what it does well and what
+            a student trying to find it runs into. The series is{" "}
             <Link href="/blog/tuscaloosa-small-business-online" style={link}>the Storefront Project</Link>,
             and being featured is free.
           </p>
 
           <p>
-            Twenty minutes at your place:{" "}
+            I can visit your place for twenty minutes. Call{" "}
             <a href="tel:+12054627839" style={link}>(205) 462-7839</a> or{" "}
             <a href="mailto:elijah@purcell-ventures.com" style={link}>elijah@purcell-ventures.com</a>.
           </p>
 
           <PostHowTo
             name="Check whether your business is findable online"
-            description="Seven checks a small business owner can run on their own business in about ten minutes, with no tools and no account."
+            description="Seven checks a small business owner can run on their own business in ten minutes, with no tools and no account."
             totalTime="PT10M"
             supply={["A phone that is not yours, or a private browser window signed out of everything"]}
             steps={[

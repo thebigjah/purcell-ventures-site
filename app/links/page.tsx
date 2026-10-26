@@ -46,7 +46,7 @@ const SECTIONS: { roman: string; label: string; items: LinkItem[] }[] = [
       { href: "/now",     label: "/now",    desc: "What I'm focused on right now." },
       { href: "/uses",    label: "/uses",   desc: "The tools I use for my work." },
       { href: "/verses",  label: "Verses",  desc: "Five scriptures I come back to." },
-      { href: "/writing", label: "Writing", desc: "Selected original prose." },
+      { href: "/writing", label: "Writing", desc: "Essays and posts I have written." },
       { href: "/resume",  label: "Résumé",  desc: "Education, work, awards and scholarships." },
     ],
   },

@@ -24,9 +24,9 @@ const th: React.CSSProperties = { ...td, fontFamily: "var(--font-dm-sans), sans-
 
 const ROWS: [string, string][] = [
   ["University Recreation", "Membership is covered for every enrolled student registered for at least one credit hour. That covers the Student Recreation Center, the Robert E. Witt Activity Center, the Aquatic Center, the Outdoor Pool Complex and the Tennis Court Complex."],
-  ["The Writing Center", "Described on ua.edu as a free service open to all students. Consultations run about fifty minutes, by appointment or drop-in, with online appointments and workshops as well. It is for any writing, not only English coursework."],
+  ["The Writing Center", "Described on ua.edu as a free service open to all students. Consultations run fifty minutes, by appointment or drop-in, with online appointments and workshops as well. It is for any writing, not only English coursework."],
   ["Capstone Center for Student Success", "Russell Hall, second and third floors. (205) 348-7011. The umbrella for academic support, and the place to start if you do not know which office you need."],
-  ["Mathematics Technology and Learning Center", "Tutoring for introductory mathematics courses, homework help and self-paced support. If you are in the calculus sequence this is the building you should already know."],
+  ["Mathematics Technology and Learning Center", "Tutoring for introductory mathematics courses, homework help and self-paced support. If you are in the calculus sequence, you will use this center."],
   ["The Speaking Studio", "Help with public speaking, presentations and oral communication."],
   ["The Career Center", "Major selection, career planning, job search strategy, and professional school planning. Visit in your first year."],
   ["University Libraries", "Ten libraries and more than three million print and electronic resources. The electronic half includes database access you would otherwise pay for outside a university."],

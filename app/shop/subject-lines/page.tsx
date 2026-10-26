@@ -53,7 +53,7 @@ export default function SubjectLinesPage() {
             The <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>8 categories.</em>
           </h2>
           <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", marginBottom: "24px", fontStyle: "italic" }}>
-            One sample shown from each. The full pack has 10 per category.
+            One sample from each. The full pack has 10 per category.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
             {CATEGORIES.map((c) => (
@@ -98,13 +98,13 @@ export default function SubjectLinesPage() {
             <ul style={{ paddingLeft: "20px", margin: 0, fontSize: "13px", color: "var(--color-warm-text)", lineHeight: 1.7 }}>
               <li>You write cold emails and your subject lines are getting ignored</li>
               <li>You don&apos;t need a full template pack, just better hooks</li>
-              <li>You want better subject lines without the full pack</li>
+              <li>You want to A/B test subject lines against each other</li>
             </ul>
           </div>
           <div style={{ padding: "20px 24px", background: "rgba(229, 74, 40, 0.05)", border: "1px solid #e54a28" }}>
             <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", color: "#e54a28", fontWeight: 600, margin: "0 0 8px" }}>Skip this if</h3>
             <ul style={{ paddingLeft: "20px", margin: 0, fontSize: "13px", color: "var(--color-warm-text)", lineHeight: 1.7 }}>
-              <li>You want the full Cold Email Pack ($29), it includes this</li>
+              <li>You want the full Cold Email Pack ($29), which includes this</li>
               <li>You don&apos;t send cold emails</li>
               <li>You want a done-for-you outreach service</li>
             </ul>

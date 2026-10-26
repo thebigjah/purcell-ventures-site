@@ -170,11 +170,11 @@ export default function CoursesPage() {
             current process, including steps that exist only because of how things work now.
           </p>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "36px 0 14px", color: "var(--color-warm-text)" }}>
-            What a course here is
+            What each course includes
           </h2>
           <p>
-            Self-paced, lifetime access, structured as lessons with exercises. Every course
-            includes the templates and documents I used. If a lesson tells you to send an
+            Each course is self-paced, with lifetime access and exercises in each lesson. The templates
+            and documents I used come with every course. If a lesson tells you to send an
             email, the email is in there.
           </p>
           <p>
@@ -185,9 +185,9 @@ export default function CoursesPage() {
             Who teaches them
           </h2>
           <p>
-            I teach them. I am Elijah Purcell, founder and CEO of{" "}
+            I am Elijah Purcell, founder and CEO of{" "}
             <Link href="/about" style={{ color: "var(--color-warm-accent)" }}>Purcell Ventures LLC</Link>,
-            I build autonomous AI agent systems and study psychology and data science
+            and I build autonomous AI agent systems and study psychology and data science
             in the University of Alabama Honors College in Tuscaloosa. The{" "}
             <Link href="/who" style={{ color: "var(--color-warm-accent)" }}>short factual version</Link>{" "}
             has the record without the sales copy. If you need help rather than a course, see

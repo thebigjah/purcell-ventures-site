@@ -519,7 +519,7 @@ const PATTERNS: PatternEntry[] = [
   {
     name: "Phi Array",
     subtitle: "Golden angle phyllotaxis, 137.508°, Fibonacci sequence",
-    concept: "The arrangement of seeds in a sunflower. Each element placed at 2π/φ² from the last, the golden angle, so the seeds pack evenly. Seeds in a sunflower follow this angle. It's the geometry of growth, of things built to endure, of divine proportion encoded in biology. Kepler called it one of the two great treasures of geometry.",
+    concept: "The arrangement of seeds in a sunflower. Each element sits at 2π/φ² from the last, the golden angle, so the seeds pack evenly. Kepler called it one of the two great treasures of geometry.",
     application: "Featured section backgrounds, large-format print, stationery, brand book cover",
     primary: <PhiArray />,
     variants: [
@@ -534,7 +534,7 @@ const PATTERNS: PatternEntry[] = [
   {
     name: "Blueprint Grid",
     subtitle: "45°-rotated square lattice, engineering drafting grid",
-    concept: "The structural substrate underneath everything. Architects and engineers draw on this grid before making design decisions, so it sits under the finished design. At low opacity it looks precise.",
+    concept: "Architects and engineers draw on this grid before they make design decisions, so it sits under the finished design. At low opacity it looks precise.",
     application: "Slide deck backgrounds, document templates, envelope interior, dense cover texture",
     primary: <Blueprint />,
     variants: [
@@ -549,7 +549,7 @@ const PATTERNS: PatternEntry[] = [
   {
     name: "Interference",
     subtitle: "Wave superposition, constructive and destructive overlap",
-    concept: "Two or more point sources radiating outward. Where their waves meet, they either reinforce (constructive) or cancel (destructive). It's a physical model for how distinct forces interact: technology and humanity, power and accountability, faith and reason. The pattern is most beautiful at the collision points. This one connects most directly to the sousveillance concept: several independent centers, each one visible.",
+    concept: "Two or more point sources radiating outward. Where their waves meet, they either reinforce (constructive) or cancel (destructive). It's a physical model for how distinct forces interact: technology and humanity, power and accountability, faith and reason. This one connects most directly to the sousveillance concept: several independent centers, each one visible.",
     application: "Hero section backgrounds, presentation title slides, large-format prints",
     primary: <Interference />,
     variants: [
@@ -564,7 +564,7 @@ const PATTERNS: PatternEntry[] = [
   {
     name: "Honeycomb",
     subtitle: "Regular hexagonal tessellation, honeycomb conjecture, Hales 1999",
-    concept: "The most efficient partition of the plane, mathematically proved by Thomas Hales in 1999. Bees discovered it without calculus. Each cell is independent and bounded. The structure comes from adjacency. This maps to the privacy principle: each person or business has its own domain, held together by shared structure.",
+    concept: "The most efficient partition of the plane, mathematically proved by Thomas Hales in 1999. Bees discovered it without calculus. Each cell is independent and bounded. Each cell shares its walls with its neighbors. This maps to the privacy principle: each person or business has its own domain, held together by shared structure.",
     application: "Business card back, dense surface texture, physical materials (embossing, debossing), merchandise",
     primary: <Honeycomb />,
     variants: [
@@ -579,7 +579,7 @@ const PATTERNS: PatternEntry[] = [
   {
     name: "Polar Rose",
     subtitle: "r = a·cos(k·θ), rhodonea curve, Grandi 1728",
-    concept: "The simplest non-trivial polar curve. Distance from center is a cosine function of angle, rotate through the full period and you trace a flower. Three petals when k=3, four when k=2, eight when k=4 (an even k gives 2k petals). Grandi found it while studying Archimedes. The whole pattern comes from one polar equation.",
+    concept: "The simplest non-trivial polar curve. Distance from center is a cosine function of angle, and one full rotation traces a flower. Three petals when k=3, four when k=2, eight when k=4 (an even k gives 2k petals). Grandi found it while studying Archimedes. The whole pattern comes from one polar equation.",
     application: "Business card back, premium stationery, large-format print, brand book sections",
     primary: <PolarRose />,
     variants: [
@@ -688,7 +688,7 @@ export default function PatternsPage() {
         <div style={{ fontSize: "13px", fontWeight: 700, color: GOLD, marginBottom: "14px" }}>Usage Rules</div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "20px", fontSize: "12px", color: "#6a6458", lineHeight: 1.7 }}>
           <div><strong style={{ color: "#8a8070" }}>Opacity:</strong> Keep patterns behind the content: 10 to 20% on dark backgrounds and 6 to 12% on light backgrounds, so text stays readable.</div>
-          <div><strong style={{ color: "#8a8070" }}>Single pattern per surface:</strong> Use one pattern per surface.</div>
+          <div><strong style={{ color: "#8a8070" }}>Single pattern per surface:</strong> Two patterns on one surface compete, so choose one.</div>
           <div><strong style={{ color: "#8a8070" }}>Card back:</strong> Broadcast Field and Honeycomb are most legible at card scale. Phi Array and Interference read better large-format.</div>
           <div><strong style={{ color: "#8a8070" }}>Color:</strong> Gold on dark for print and premium materials. Cream on dark for digital. Dark on cream or gold only for inverted applications.</div>
         </div>

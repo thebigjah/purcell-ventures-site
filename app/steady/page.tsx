@@ -27,7 +27,7 @@ const TIERS = [
     name: "Family Care",
     price: "$149",
     unit: "/ month",
-    desc: "Everything in Monthly Care, covering up to 4 family members under one plan. Designed for adult children managing parents' or grandparents' tech.",
+    desc: "Everything in Monthly Care, covering up to 4 family members under one plan.",
     fits: "Best for adult children who support their parents' devices. Your mom calls me instead of you.",
     highlight: false,
   },
@@ -36,10 +36,10 @@ const TIERS = [
 const PACKAGES = [
   { name: "New phone setup", price: "$79", desc: "Out-of-box iPhone or Android: contacts, email, photos, apps, password manager, 2FA, accessibility settings, and unused apps removed." },
   { name: "ChatGPT crash course", price: "$129", desc: "A 90-minute hands-on lesson. By the end you can use ChatGPT or Claude for research, writing, planning and decisions. I build it around the things you want to use it for." },
-  { name: "Password manager migration", price: "$99", desc: "Set up 1Password or Bitwarden. I move every saved password out of your browsers and set up family sharing. You stop reusing passwords." },
+  { name: "Password manager migration", price: "$99", desc: "I set up 1Password or Bitwarden. I move every saved password out of your browsers and set up family sharing. You stop reusing passwords." },
   { name: "Medication reminder setup", price: "$99", desc: "For an elderly parent or grandparent. Smart speaker reminders, phone reminders and a visual cue system. Includes a 30-minute training session with them." },
-  { name: "Smart home starter", price: "$199", desc: "One Echo or Google Home, 4 smart bulbs, 2 plugs and three routines set up (morning, evening, away). Includes a 60-minute walkthrough." },
-  { name: "Digital legacy plan", price: "$149", desc: "I document every account, password, subscription and digital asset so your family can access them if something happens to you. The plan is written down, stored securely and tested." },
+  { name: "Smart home starter", price: "$199", desc: "One Echo or Google Home, 4 smart bulbs, 2 plugs and three routines (morning, evening, away) that I set up. Includes a 60-minute walkthrough." },
+  { name: "Digital legacy plan", price: "$149", desc: "I document every account, password, subscription and digital asset so your family can access them if something happens to you. I write the plan down, store it securely and test it." },
 ];
 
 const PROBLEMS = [
@@ -186,7 +186,7 @@ export default function SteadyPage() {
         </header>
 
         <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "20px", lineHeight: 1.6, maxWidth: "680px" }}>
-          There are other ways to handle the &quot;my mom can&apos;t figure out her phone&quot; problem. Here is how they compare.
+          There are other ways to handle the &quot;my mom can&apos;t figure out her phone&quot; problem.
         </p>
 
         <div style={{ overflowX: "auto", marginBottom: "48px" }}>
@@ -203,7 +203,7 @@ export default function SteadyPage() {
             <tbody>
               <tr style={{ borderBottom: "1px solid var(--color-warm-border)" }}>
                 <td style={compareTd}><strong style={{ color: "var(--color-warm-text)" }}>Patience with non-techies</strong></td>
-                <td style={compareCheck}>The service is built for it</td>
+                <td style={compareCheck}>Built for non-technical people</td>
                 <td style={compareTd}>Hit or miss by tech</td>
                 <td style={compareTd}>Often frustrated</td>
                 <td style={compareTd}>No one to ask</td>
@@ -253,10 +253,6 @@ export default function SteadyPage() {
           <h2>A sample Monthly Care <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>month</em></h2>
         </header>
 
-        <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "24px", lineHeight: 1.6, maxWidth: "680px" }}>
-          This is a sample month to show what the plan covers.
-        </p>
-
         <div style={{ display: "grid", gap: "12px", marginBottom: "48px" }}>
           {[
             { week: "Week 1", events: [{ day: "Mon", text: "Onboarding video call, 30 minutes. We get on Zoom, you tell me what's broken, and I take notes." }, { day: "Wed", text: "You text: 'My mom can't print from her phone.' I send her a 3-step walkthrough with screenshots." }] },
@@ -276,10 +272,6 @@ export default function SteadyPage() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div style={{ marginBottom: "48px", padding: "20px 24px", background: "rgba(122, 170, 106, 0.06)", border: "1px solid #7aaa6a", fontSize: "13px", color: "var(--color-warm-text)", lineHeight: 1.7 }}>
-          <strong style={{ color: "#7aaa6a", fontFamily: "var(--font-dm-sans), sans-serif", letterSpacing: "0.18em", textTransform: "uppercase", fontSize: "10px" }}>Monthly Care includes:</strong> unlimited texts during business hours, a 30-minute video check-in and 1 in-person visit, for $79/mo. Family Care covers up to 4 people for $149/mo.
         </div>
 
         {/* FAQ */}
@@ -302,7 +294,7 @@ export default function SteadyPage() {
         {/* Final CTA */}
         <div style={{ textAlign: "center", padding: "48px 24px", background: "var(--color-warm-bg-alt)", border: "2px solid var(--color-warm-accent)" }}>
           <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", fontWeight: 700, color: "var(--color-warm-text)", margin: "0 0 16px" }}>
-            Start with an intake form
+            The intake form
           </h3>
           <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", margin: "0 0 24px", lineHeight: 1.6, maxWidth: "560px", marginLeft: "auto", marginRight: "auto" }}>
             The form takes 5 minutes. I reply within 24 hours with a recommended plan, or I tell you that you don&apos;t need me.

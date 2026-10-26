@@ -227,7 +227,7 @@ function TeamBuilder() {
     <section id="build-team" style={{ padding: "100px 24px", borderTop: "1px solid var(--color-warm-border)" }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
         <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px" }}>
-          Build Your Team
+          Seven roles
         </p>
         <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", letterSpacing: "0.03em", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, marginBottom: "16px", lineHeight: 1.1 }}>
           One subscription<br />covers the tools for seven roles.
@@ -1584,9 +1584,9 @@ export default function DigitalPage() {
           <header className="pv-section-head" style={{ marginBottom: "48px" }}>
             <span className="roman">I.</span>
             <h2>
-              25 tools, one partner.{" "}
+              25 tools from one person,{" "}
               <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>
-                Pick the ones you need.
+                in the combination you need.
               </em>
             </h2>
           </header>
@@ -1640,7 +1640,7 @@ export default function DigitalPage() {
             <h2>
               Three tiers,{" "}
               <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>
-                tied to your maintenance level.
+                matched to your maintenance level.
               </em>
             </h2>
           </header>
@@ -1704,13 +1704,13 @@ export default function DigitalPage() {
                 color: "var(--color-warm-text)", textTransform: "uppercase",
                 lineHeight: 1.15, marginBottom: "16px",
               }}>
-                Need a custom set of tools?{" "}
+                A custom set of tools,{" "}
                 <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>
-                  I will build the bundle.
+                  built as one bundle for you.
                 </em>
               </h3>
               <p className="pv-italic" style={{ fontSize: "16.5px", color: "var(--color-warm-text)", opacity: 0.88, lineHeight: 1.55, maxWidth: "520px" }}>
-                Pick the tools you need, two or twelve. I will build the bundle and quote you a flat monthly price.
+                You tell me which tools you need, two or twelve. I build the bundle and quote you a flat monthly price.
               </p>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "12px", alignItems: "flex-start" }}>
@@ -1734,7 +1734,7 @@ export default function DigitalPage() {
               <h2>Why <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>me</em></h2>
             </header>
             <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", letterSpacing: "0.03em", fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 600, marginBottom: "32px", lineHeight: 1.2, color: "var(--color-warm-text)" }}>
-              I build it, I support it, and you can reach me directly.
+              I build it and I support it.
             </h3>
             <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
               {[
@@ -1795,7 +1795,7 @@ export default function DigitalPage() {
           <div>
             <header className="pv-section-head" style={{ marginBottom: "20px" }}>
               <span className="roman">V.</span>
-              <h2>Get in <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>touch</em></h2>
+              <h2>How to <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>reach me</em></h2>
             </header>
             <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.8, marginBottom: "40px" }}>
               Tell me about your business. I'll get back to you within 24 hours with a recommendation and a quote.

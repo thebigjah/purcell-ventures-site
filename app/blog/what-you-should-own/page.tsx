@@ -72,7 +72,7 @@ export default function Post() {
           <h2 style={H2}>Why the domain comes first</h2>
 
           <p>
-            Everything else is replaceable, inconveniently. The code can be rebuilt. Hosting
+            Everything else can be replaced, though not conveniently. The code can be rebuilt. Hosting
             can be moved in a day. Losing analytics history hurts, and you recover from it.
           </p>
 
@@ -104,11 +104,7 @@ export default function Post() {
           <h2 style={H2}>What is reasonable for a provider to keep</h2>
 
           <p>
-            Providers can reasonably keep some things.
-          </p>
-
-          <p>
-            Their own internal tooling, their project management system, and any
+            Providers can reasonably keep their own internal tooling, their project management system, and any
             general-purpose components they built before you and will use again after you.
             Reusing components is normal, and it keeps prices down.
           </p>
@@ -127,8 +123,8 @@ export default function Post() {
           </p>
 
           <p>
-            If you get resistance, you have learned something worth knowing, and you have
-            learned it now rather than during a dispute. A domain can be recovered through
+            If you get resistance, you learn early which kind of provider you hired, before
+            any dispute starts. A domain can be recovered through
             the registrar's own transfer process in most cases, and it is much easier while
             the relationship is still cordial.
           </p>

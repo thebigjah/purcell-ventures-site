@@ -390,7 +390,7 @@ export default function ResumePrint() {
                   "Georgia LLC across software, AI integration, digital marketing, field services, and wholesale real estate. Owns the full cycle: acquisition, scoping, pricing, build, deployment, support. Active revenue.",
                   "Filed as Zultar LLC 4/8/2025, renamed 1/27/2026. Control #25075361. EIN and business banking. Registered agent of record."],
                 ["Founder & Operator, Mantle Field Services", "2024 to Present",
-                  "Gutter cleaning, pressure washing, and lawn care across metro Atlanta. Client acquisition, quoting, scheduling, equipment maintenance, on-site delivery. Grew out of Mantle Field Services.", ""],
+                  "Gutter cleaning, pressure washing, and lawn care across metro Atlanta. Client acquisition, quoting, scheduling, equipment maintenance, on-site delivery. Grew out of the earlier Mantle Field Services operation.", ""],
                 ["AI Data Trainer, Outlier AI", "Oct 2025 to May 2026",
                   "Two projects. Evaluated LLM outputs and authored a written rationale for every rating, on accuracy, reasoning quality, and instruction adherence. Wrote spoken-style human-assistant conversations against a fixed per-task tool-call budget, authoring the user turns and editing the model responses.", ""],
                 ["AI Response Evaluator, DataAnnotation", "Spring 2026",
@@ -501,7 +501,7 @@ export default function ResumePrint() {
                 ["Behold Award", "9th Grade, Grove", "Character and excellence recognition for moral integrity and spiritual maturity."],
                 ["Steadfast Award", "10th Grade, Grove", "Recognition for perseverance, faithfulness, and character under pressure."],
                 ["Christian Character Award", "Grove", "One of two students school-wide selected for moral excellence and leadership."],
-                ["Christ-like Leadership Award", "End-of-Year Awards, Grove", "Awarded for servant leadership and Christian character throughout the school year."],
+                ["Christ-like Leadership Award", "End-of-Year Awards, Grove", "Recognized servant leadership and Christian character throughout the school year."],
                 ["Lead Role, Christmas Musical", "Grove", "Lead acting and vocal role in the annual Christmas production."],
                 ["Highest Math Grade in Class", "9th Grade", "100% both semesters, top math average in the class."],
                 ["Youth Leadership Summit", "Summer 2023", "Family Foundation & Colson Center, Richmond, VA. Invitation-only seminar on worldview, cultural analysis, and Christian civic leadership."],
@@ -686,9 +686,8 @@ export default function ResumePrint() {
               <p style={{ fontSize: "9.5px", color: "#2d1f0e", lineHeight: 1.6 }}>
                 Pursuing an MD in Psychiatry, integrating clinical care with AI-driven research and
                 faith-based counseling. Goal: develop accessible, data-informed interventions for mental
-                health, bridging neuroscience, technology, and human dignity. Simultaneously building
-                Purcell Ventures and a personal content brand at the intersection of psychology, faith,
-                and intellectual discourse.
+                health. Building Purcell Ventures and a personal content brand on psychology, faith,
+                and public discussion.
               </p>
             </div>
 

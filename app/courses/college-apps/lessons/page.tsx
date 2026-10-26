@@ -428,7 +428,7 @@ export default function LessonsPage() {
             <PanopticonMark size={52} color="#d4af37" bg="var(--color-warm-bg)" cfg={LAMPSTAND} />
           </div>
           <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "10px" }}>
-            Access the Course
+            Course access
           </h1>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "32px", lineHeight: 1.65, fontFamily: "var(--font-dm-sans), sans-serif" }}>
             Enter the access code from your purchase confirmation email.

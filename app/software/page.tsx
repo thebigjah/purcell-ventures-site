@@ -97,7 +97,7 @@ export default function SoftwarePage() {
             Custom software for <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>your business.</em>
           </h1>
           <p className="deck">
-            I build mobile apps, web platforms and AI tools. We scope each project on a discovery call, and I stay involved after launch.
+            I build mobile apps, web platforms and AI tools. I scope each project on a discovery call and stay involved after launch.
           </p>
           <div style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
             <a className="pv-btn-primary" href="mailto:elijah@purcell-ventures.com?subject=Software Project Inquiry">

@@ -110,7 +110,7 @@ export default function Post() {
 
           <p>
             The obvious objection is that it is a lot of work for a stranger who might not
-            reply. It is. Few senders do it, though, and if they never reply you still got
+            reply. It is. Most senders skip it, though, and if they never reply you still got
             practice building the thing.
           </p>
 

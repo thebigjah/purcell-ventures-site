@@ -27,7 +27,7 @@ export default function ThanksPage() {
           </ol>
         </div>
         <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", color: "var(--color-warm-text)", margin: "32px 0 12px", fontWeight: 600 }}>
-          Want the full playbook?
+          The full playbook
         </h3>
         <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: "0 0 20px" }}>
           The <Link href="/shop/cold-email-pack" style={{ color: "var(--color-warm-accent)" }}>Cold Email Mastery Pack ($29)</Link> includes 100+ industry templates, reply scripts and cadences.

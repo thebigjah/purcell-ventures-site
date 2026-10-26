@@ -33,7 +33,7 @@ export default function Post() {
 
           <p>I launched the <Link href="/shop/starter-kit" style={linkStyle}>PV AI Starter Kit</Link> for $19. It contains 24 AI prompts, 5 sales scripts, a rep handbook, 50+ cold outreach templates, a 1099 contractor agreement template, and a CRM CSV template.</p>
 
-          <p>Courses and template bundles in this category often sell for hundreds of dollars. These are my reasons for pricing mine at $19.</p>
+          <p>Courses and template bundles in this category often sell for $97, $297 or $497. These are my reasons for pricing mine at $19.</p>
 
           <h2 style={head}>1. A low price lets me skip a sales funnel</h2>
           <p>At $497, I would need a sales funnel: a webinar, an email sequence and testimonials. I would have to build all of that before selling a single copy.</p>
@@ -48,24 +48,24 @@ export default function Post() {
           <p>When they need the done-for-you version of one of my products (Digital Services $179/mo, Consulting $175/hr, Custom Software $1,500+), they already know how I work and what I deliver.</p>
 
           <h2 style={head}>3. Unit economics</h2>
-          <p>The content in the $19 kit took about 40 hours of work. If I sell 100 copies, that is $1,900, or about $47 for each hour of build time. If I sell 1,000 copies, that is $19,000, or about $475 an hour, which is above my $175 hourly consulting rate.</p>
+          <p>The content in the $19 kit took 40 hours of work. If I sell 100 copies, that is $1,900, or $47.50 for each hour of build time. If I sell 1,000 copies, that is $19,000, or $475 an hour, which is above my $175 hourly consulting rate.</p>
 
           <p>Each extra copy is a digital download and costs me nothing to deliver, so total sales matter more than margin per copy.</p>
 
           <h2 style={head}>4. A $19 purchase carries little risk</h2>
-          <p>A $19 mistake costs the buyer little.</p>
+          <p>A buyer who picks the wrong kit loses $19.</p>
 
           <p>That changes how people buy. At $19, the buyer is testing: <em>let&apos;s see if this is any good.</em> At $497, the buyer is justifying: <em>I have to prove to myself this was worth it.</em></p>
 
-          <h2 style={head}>5. Agencies hide the contents until you pay. I list every file.</h2>
+          <h2 style={head}>5. I list every file in the kit before anyone pays</h2>
           <p>When you sell a $497 course, the customer can&apos;t see the contents until after they pay, so the sales page has to persuade them.</p>
 
-          <p>When you sell a $19 kit, you can show people exactly what&apos;s inside. I list every file in the kit on the <Link href="/shop/starter-kit" style={linkStyle}>shop page</Link>, so the customer knows what they are getting before they buy.</p>
+          <p>When you sell a $19 kit, you can show people exactly what&apos;s inside. I list every file on the <Link href="/shop/starter-kit" style={linkStyle}>shop page</Link>.</p>
 
-          <h2 style={head}>6. Cheap entry products force operational discipline</h2>
+          <h2 style={head}>6. A $19 price tests my delivery pipeline</h2>
           <p>If I can&apos;t deliver $19 of value automatically, every time, with no effort per sale, my operations are not ready for a $497 product either.</p>
 
-          <p>The kit is a test of my delivery pipeline. It has to deliver instantly through Stripe and need no support.</p>
+          <p>The kit has to deliver instantly through Stripe and need no support.</p>
 
           <h2 style={head}>What 200 sales would mean</h2>
           <p>If I sell 200 kits a year at $19, that is $3,800 toward the build time and 200 people who have bought from me once.</p>

@@ -57,20 +57,20 @@ export default function ShopPage() {
             Self-serve kits from <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Purcell Ventures</em>
           </h1>
           <p className="deck">
-            Every product on this page is something we use internally at Purcell Ventures. You can edit every file and keep it after you buy. Stripe emails the download after checkout. Every product has a 30-day refund.
+            We use each product on this page internally at Purcell Ventures. You can edit the files and keep them after you buy. Stripe emails the download after checkout, and a 30-day refund covers every product.
           </p>
         </header>
 
         {/* Bundle CTA */}
         <div style={{ marginBottom: "48px", padding: "28px 32px", background: "linear-gradient(135deg, rgba(212,175,55,0.10), rgba(212,175,55,0.02))", border: "2px dashed var(--color-warm-accent)", textAlign: "center" }}>
           <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "10px" }}>
-            Bundle deal: save $9
+            Bundle deal: save $18
           </div>
           <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", color: "var(--color-warm-text)", margin: "0 0 8px", fontWeight: 700 }}>
-            Get both kits for <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>$39</em>
+            Get all three kits for <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>$39</em>
           </h3>
           <p style={{ margin: "0 0 16px", fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>
-            The Starter Kit ($19) and Cold Email Mastery Pack ($29) cost <strong>$48 separately</strong>. Buy both for <strong style={{ color: "var(--color-warm-accent)" }}>$39</strong>.
+            The Starter Kit ($19), Cold Email Mastery Pack ($29) and Subject Line Library ($9) cost <strong>$57 separately</strong>. Buy all three for <strong style={{ color: "var(--color-warm-accent)" }}>$39</strong>.
           </p>
 
         </div>
@@ -102,10 +102,10 @@ export default function ShopPage() {
         {/* Why */}
         <section style={{ marginBottom: "48px", padding: "28px 32px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)" }}>
           <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", color: "var(--color-warm-text)", margin: "0 0 12px", fontWeight: 700 }}>
-            Why we sell our internal templates as $19 to $29 kits
+            Why we sell our internal templates as $9 to $29 kits
           </h3>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.7, margin: "0 0 12px" }}>
-            We price the kits at $19 to $29 so small teams can try them before they hire us to set them up.
+            We price the kits at $9 to $29 so small teams can try them before they hire us to set them up.
           </p>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.7, margin: 0 }}>
             If you want us to build and maintain a custom version, contact us. If you don&apos;t, the kit keeps working on its own.

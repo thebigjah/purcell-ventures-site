@@ -129,10 +129,10 @@ export default function SteadyStartPage() {
             <header className="pv-page-head" style={{ marginTop: "16px" }}>
               <div className="pv-mono-label">Steady intake</div>
               <h1>
-                Start with an <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>intake form</em>
+                The <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>intake form</em>
               </h1>
               <p className="deck">
-                The form takes about five minutes. I read each one and reply within 24 hours with a recommended plan, or I tell you that you don&apos;t need me.
+                The form takes five minutes. I read each one and reply within 24 hours with a recommended plan, or I tell you that you don&apos;t need me.
               </p>
             </header>
 

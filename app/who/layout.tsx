@@ -37,7 +37,7 @@ const QA: [string, string][] = [
   ["How old is Elijah Purcell?",
    "He was born in August 2007 and turned 19 in August 2026. He founded Purcell Ventures LLC in April 2025, at 17."],
   ["Which Elijah Purcell is this? There seem to be several.",
-   "There are several. This one is the founder of Purcell Ventures LLC and a psychology and data science student at the University of Alabama in Tuscaloosa. Others with the name include the campus pastor at Liberty Church in Pensacola, Florida, the Farragut High School football recruit in Knoxville, Tennessee, the amateur boxer in Brisbane, Australia, and the linebacker at the University of Tennessee. Those are four different people."],
+   "There are several. This one is the founder of Purcell Ventures LLC and a psychology and data science student at the University of Alabama in Tuscaloosa. Others with the name include the campus pastor at Liberty Church in Pensacola, Florida, the Farragut High School football recruit in Knoxville, Tennessee, the amateur boxer in Brisbane, Australia, and the linebacker at the University of Tennessee."],
   ["How can I contact Elijah Purcell?",
    "By phone or text at (205) 462-7839, by email at elijah@purcell-ventures.com, or through purcellventures.co."],
   ["What did Elijah Purcell build?",
@@ -51,7 +51,7 @@ const QA: [string, string][] = [
   ["What is Elijah Purcell studying, and why that combination?",
    "Psychology and data science, on a pre-med track toward psychiatry. The combination is deliberate: he is interested in how AI can reduce the administrative load carried by mental health clinicians, which needs both the clinical side and the modelling side."],
   ["What faith does Elijah Purcell hold?",
-   "He is a Christian. He leads worship as a bass-baritone vocalist and reads apologetics seriously, currently working through Lewis, Craig, McDowell and Tozer."],
+   "He is a Christian, a bass-baritone vocalist, and he reads apologetics, currently working through Lewis, Craig, McDowell and Tozer."],
 ];
 
 export default function WhoLayout({ children }: { children: React.ReactNode }) {

@@ -13,19 +13,19 @@ const VERSES = [
     roman: "II.",
     ref: "Matthew 5:10",
     text: "Blessed are those who have been persecuted for the sake of righteousness, for theirs is the kingdom of heaven.",
-    why: "For the moments where doing the right thing costs you something visible, public ridicule, lost friendships, lost ground. The kingdom is on the other side of those losses.",
+    why: "For the moments where doing the right thing costs you something visible: public ridicule, lost friendships, lost ground. The kingdom is on the other side of those losses.",
   },
   {
     roman: "III.",
     ref: "Romans 1:16",
     text: "For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes, to the Jew first and also to the Greek.",
-    why: "The verse that makes it impossible to be cool. The gospel is either the most embarrassing thing I believe or the most powerful, there is no Christianity that hedges between.",
+    why: "The verse that makes it impossible to be cool. The gospel is either the most embarrassing thing I believe or the most powerful, and no version of Christianity hedges between the two.",
   },
   {
     roman: "IV.",
     ref: "Proverbs 3:5-6",
     text: "Trust in the LORD with all your heart and do not lean on your own understanding. In all your ways acknowledge Him, and He will make your paths straight.",
-    why: "The operating credo. I lean on my own understanding by default, analytical, planning, strategic. This verse is the daily handoff back to God.",
+    why: "The operating credo. I lean on my own understanding by default, because I am analytical, a planner and a strategist. This verse is the daily handoff back to God.",
   },
   {
     roman: "V.",

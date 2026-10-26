@@ -135,8 +135,8 @@ export default function Post() {
           </p>
 
           <p>
-            Blocking findings got marked resolved by a mechanism whose failure looks the
-            same as success. The dashboard showed no findings because the auditor could not
+            The auditor marked blocking findings resolved, and that mechanism fails in a way
+            that looks the same as success. The dashboard showed no findings because the auditor could not
             reach the sites.
           </p>
 
@@ -158,8 +158,8 @@ export default function Post() {
           </p>
 
           <p>
-            It had not broken out of anything. The tooling it inherited from its environment
-            included more than the prompt described, and only the prompt said otherwise.
+            Its environment had given it more tooling than the prompt described, and only
+            the prompt said otherwise.
           </p>
 
           <div style={pre}>{`# the process now grants no tools by default
@@ -175,7 +175,7 @@ export default function Post() {
 
           <p>
             The auditing agents cannot change anything. Keeping the finder separate from the
-            fixer is the cheapest safety property available, and it took one architectural
+            fixer is a cheap safety property, and it took one architectural
             decision.
           </p>
 
@@ -191,15 +191,11 @@ export default function Post() {
           </p>
 
           <p>
-            Agents pass each other data. A message on the internal bus is information for
-            another agent to act on, never a command it must obey. Otherwise the first agent
+            Agents pass each other data. A message on the internal bus is a claim the
+            receiving agent checks before it acts. Otherwise the first agent
             to produce a confident wrong sentence would drive decisions.
           </p>
 
-          <p>
-            Each failure here came from a harness that could not tell working from broken,
-            and from me trusting its report.
-          </p>
 
           <PostByline post={{
             slug: "what-the-agents-get-wrong",

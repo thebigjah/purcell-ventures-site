@@ -59,7 +59,7 @@ export default function PricingComparisonPage() {
             Our pricing, <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>compared.</em>
           </h1>
           <p className="deck">
-            We publish our prices here, next to typical prices from agencies, freelancers and DIY tools. The competitor figures are typical 2026 ranges, not quotes from specific firms.
+            We publish our prices here, next to typical prices from agencies, freelancers and DIY tools. The competitor figures are typical 2026 ranges across each category.
           </p>
         </header>
 
@@ -67,7 +67,7 @@ export default function PricingComparisonPage() {
           <h2 style={sectionHead}>Digital Services (subscription tools)</h2>
           <ComparisonTable rows={DIGITAL_ROWS} />
           <p style={footnote}>
-            Digital total cost of ownership for year 1: <strong style={{ color: "var(--color-warm-accent)" }}>PV Growth ~$2,848</strong> (700 setup + 179×12), <strong>agency equivalent ~$30,000-80,000</strong> bundled, <strong>freelancer ~$5,000-12,000 plus your time connecting the tools</strong>.
+            Digital total cost of ownership for year 1: <strong style={{ color: "var(--color-warm-accent)" }}>PV Growth $2,848</strong> (700 setup + 179×12), <strong>agency equivalent $30,000-80,000</strong> bundled, <strong>freelancer $5,000-12,000 plus your time connecting the tools</strong>.
           </p>
         </section>
 
@@ -89,7 +89,7 @@ export default function PricingComparisonPage() {
 
         {/* Why we can charge less */}
         <section style={{ marginBottom: "48px", padding: "32px 36px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)" }}>
-          <h2 style={{ ...sectionHead, marginTop: 0 }}>Why we can charge less (and why that&apos;s sustainable)</h2>
+          <h2 style={{ ...sectionHead, marginTop: 0 }}>Why we can charge less</h2>
           <ul style={{ paddingLeft: "24px", fontSize: "15px", color: "var(--color-warm-text)", lineHeight: 1.8 }}>
             <li><strong>Low overhead.</strong> I do the work myself with a few commissioned sales reps, no office and no middle management.</li>
             <li><strong>Reusable systems.</strong> We start Digital Services sites from templates we adapt to each client instead of building from scratch.</li>
@@ -101,7 +101,7 @@ export default function PricingComparisonPage() {
 
         {/* When you should hire someone else */}
         <section style={{ marginBottom: "48px" }}>
-          <h2 style={sectionHead}>When you should hire someone else (and who)</h2>
+          <h2 style={sectionHead}>When to hire someone else</h2>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.7, marginBottom: "20px" }}>
             We point you elsewhere in these cases:
           </p>
@@ -133,7 +133,7 @@ export default function PricingComparisonPage() {
         <div style={{ marginBottom: "32px", padding: "28px 32px", background: "linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02))", border: "1px solid var(--color-warm-accent)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "24px", alignItems: "center", flexWrap: "wrap" }}>
             <div>
-              <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", color: "var(--color-warm-accent)", fontWeight: 600, margin: "0 0 8px" }}>Run the numbers for your business</h3>
+              <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", color: "var(--color-warm-accent)", fontWeight: 600, margin: "0 0 8px" }}>The AI Cost Calculator</h3>
               <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: 0, lineHeight: 1.6 }}>
                 Enter your team size, hourly rate and current manual hours in the free AI Cost Calculator. It shows a projected ROI and payback period.
               </p>
@@ -144,7 +144,7 @@ export default function PricingComparisonPage() {
 
         {/* CTA */}
         <div style={{ textAlign: "center", padding: "40px 32px", background: "var(--color-warm-bg-alt)", border: "2px solid var(--color-warm-accent)" }}>
-          <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "26px", color: "var(--color-warm-text)", fontWeight: 700, margin: "0 0 12px" }}>Start with a free conversation</h3>
+          <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "26px", color: "var(--color-warm-text)", fontWeight: 700, margin: "0 0 12px" }}>A free first conversation</h3>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: "0 0 24px", maxWidth: "560px", marginLeft: "auto", marginRight: "auto", lineHeight: 1.6 }}>
             The first 30-minute conversation is free. We will tell you which tier fits, or whether you need us at all.
           </p>

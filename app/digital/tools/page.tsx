@@ -74,7 +74,7 @@ export default function ToolsIndexPage() {
 
         <div style={{ marginTop: "48px", textAlign: "center", padding: "32px 24px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-accent)" }}>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text)", margin: "0 0 12px", lineHeight: 1.6 }}>
-            All of these tools are free here. We can brand them and connect them to your own site and your business data.
+            We can brand any of these tools and connect it to your own site and your business data.
           </p>
           <Link href="/digital" className="pv-btn-primary">See Digital subscription tiers</Link>
         </div>

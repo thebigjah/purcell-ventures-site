@@ -169,7 +169,7 @@ export default function AICostCalculatorPage() {
               Share of that work AI could automate
             </label>
             <p className="pv-italic" style={{ fontSize: "13px", color: "var(--color-warm-text-light)", lineHeight: 1.5, marginBottom: "12px" }}>
-              Pick a share you believe for your team. The slider starts at 60%.
+              Choose the share of this work you expect AI to handle for your team. The slider starts at 60%.
             </p>
             <input type="range" min={20} max={80} value={auto} step={5} onChange={e => setAuto(parseInt(e.target.value))} style={{ width: "100%", accentColor: "var(--color-warm-accent)" }} />
             <div style={{ display: "flex", justifyContent: "space-between", marginTop: "4px", fontFamily: "var(--font-dm-sans), system-ui, sans-serif", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-text-light)" }}>
@@ -263,20 +263,19 @@ export default function AICostCalculatorPage() {
           <p>
             You enter team size, a loaded hourly rate, and how many hours a week go
             into the repetitive written work: drafting, replying, summarising, formatting.
-            The calculator applies a conservative recovery rate to those hours and compares
-            the result against the cost of a session, which gives you a payback period in
-            weeks.
+            The calculator multiplies those hours by the automation share you pick, compares
+            the savings with the cost of a session, and gives you the payback period.
           </p>
           <p>
-            The recovery rate is set low to allow for interruptions, revisions, and the tasks
+            Lower the automation share to allow for interruptions, revisions, and tasks
             where a model produces something you have to rewrite.
           </p>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "36px 0 14px", color: "var(--color-warm-text)" }}>
-            When the answer is no
+            When to skip the session
           </h2>
           <p>
             If your team is small and the repetitive writing is a couple of hours a week, the
-            payback period will be long and the sensible answer is to skip the session. The
+            payback period will be long and you should skip the session. The
             calculator shows that result too.
           </p>
           <p>

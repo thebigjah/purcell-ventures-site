@@ -58,13 +58,13 @@ export default function Post() {
           </p>
 
           <p>
-            Ranking rewards a page that is comprehensively about a topic. Extraction rewards
+            Ranking rewards a page that is thoroughly about a topic. Extraction rewards
             a page containing a self-contained sentence that answers a question without
             needing the paragraph around it. You can be excellent at one and invisible in the
             other.
           </p>
 
-          <h2 style={H2}>Write sentences that survive being removed</h2>
+          <h2 style={H2}>Sentences that survive being removed</h2>
 
           <p>
             The test: cut any sentence out of your page, show it to someone who has not read
@@ -96,8 +96,8 @@ export default function Post() {
           </p>
 
           <p>
-            This is why I have two pages about the same person. An About page in first
-            person, which is how a human wants to read it, and{" "}
+            This is why I have two pages about the same person. One is an About page in first
+            person, which is how a human wants to read it. The other is{" "}
             <Link href="/who" style={link}>an answer page in third person</Link>, which is
             the shape an engine can use. They link to each other and say which is which.
           </p>
@@ -154,7 +154,7 @@ export default function Post() {
             one.
           </p>
 
-          <h2 style={H2}>Say the disambiguation out loud</h2>
+          <h2 style={H2}>Saying the disambiguation out loud</h2>
 
           <p>
             If somebody shares your name, say which one you are. schema.org has{" "}
@@ -182,7 +182,7 @@ export default function Post() {
             in one sentence, without marketing language. That exercise is useful by itself.
           </p>
 
-          <h2 style={H2}>Cite sources inline</h2>
+          <h2 style={H2}>Inline source citations</h2>
 
           <p>
             Cite external sources in the text, and link them.

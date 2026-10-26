@@ -116,7 +116,7 @@ export default function BookPage() {
         <header className="pv-page-head" style={{ marginBottom: "40px" }}>
           <div className="pv-mono-label">Booking</div>
           <h1 style={{ margin: 0 }}>
-            Book a <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>session.</em>
+            Session <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>booking.</em>
           </h1>
           <p className="deck">
             Three short steps. I&apos;ll reach out within 24 hours to confirm.
@@ -164,8 +164,8 @@ export default function BookPage() {
           </div>
         ) : step === 1 ? (
           <div>
-            <h1 style={stepHeaderStyle}>Choose a <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>session.</em></h1>
-            <p style={stepDeckStyle}>Pick the closest session. I will adjust it to your business.</p>
+            <h1 style={stepHeaderStyle}>Five <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>sessions.</em></h1>
+            <p style={stepDeckStyle}>The closest session works. I will adjust it to your business.</p>
             <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "32px" }}>
               {SESSION_TYPES.map(s => {
                 const isActive = sessionType === s.id;

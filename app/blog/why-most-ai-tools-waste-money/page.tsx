@@ -48,7 +48,7 @@ export default function Post() {
             Two things, mostly: <strong>generating drafts</strong> (writing, summaries, structured outputs) and <strong>pattern matching at scale</strong> (categorizing, ranking, surfacing). It produces a first version that a person then finishes.
           </p>
           <p>
-            It does not make reliable business decisions. It gives answers that sound sure and are wrong. Be skeptical of anyone selling &quot;AI that makes decisions&quot; to a small business.
+            It does not make reliable business decisions. It can give answers that sound sure and are wrong. Be skeptical of anyone selling &quot;AI that makes decisions&quot; to a small business.
           </p>
 
           <h2 style={h2}>The three questions before you buy anything</h2>

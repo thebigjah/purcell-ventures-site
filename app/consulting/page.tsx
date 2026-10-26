@@ -84,7 +84,7 @@ const SESSIONS = [
 const PRICING = [
   { label: "1-on-1",            rate: "$175",    unit: "/ hour",   desc: "One-on-one, on your situation, tools and problems. You set the agenda.", note: "2-hr minimum recommended",   highlight: false },
   { label: "Small Group",       rate: "$125",    unit: "/ person", desc: "2 to 8 people. Interactive and built around the group. Best for teams that work closely together.",  note: "Per session, 2-hr minimum",  highlight: true  },
-  { label: "Workshop",          rate: "$2,500",  unit: "flat",     desc: "Up to 20 people. Structured session with Q&A and hands-on exercises. Suited to all-hands training or company events.", note: "Half-day, up to 20 people",  highlight: false },
+  { label: "Workshop",          rate: "$2,500",  unit: "flat",     desc: "Structured session with Q&A and hands-on exercises. Suited to all-hands training or company events.", note: "Half-day, up to 20 people",  highlight: false },
   { label: "Corporate / Custom", rate: "Custom", unit: "quote",    desc: "Larger teams, multi-session programs, or fully custom curriculum. Includes prep time, materials, and follow-up resources.", note: "Contact for pricing",     highlight: false },
 ];
 
@@ -92,7 +92,7 @@ const FAQ = [
   // The city question belongs on the page people land on for consulting, and it is the
   // internal link into /ai-consultant-tuscaloosa, which was reachable from /about only.
   { q: "Are you local? Where are you based?",                                        a: "Tuscaloosa, Alabama. The LLC is registered in Acworth, Georgia, where it was formed, and it is operated from Tuscaloosa, where I attend the University of Alabama. Local businesses can meet in person, which is the part that is hard to do remotely. There is a fuller page for local work at purcellventures.co/ai-consultant-tuscaloosa." },
-  { q: "Do I need any tech experience to benefit from this?",                       a: "No. Most sessions are designed for people who've never used AI tools before. I meet you where you are and build from there." },
+  { q: "Do I need any tech experience to benefit from this?",                       a: "No. I design most sessions for people who've never used AI tools before. I meet you where you are and build from there." },
   { q: "What do participants need to bring?",                                       a: "A laptop or tablet and a willingness to try things. I'll handle everything else: setup, demos, exercises, and a takeaway guide." },
   { q: "Can you come to our location?",                                             a: "Yes. I come to your office and train your team there. Examples from your own setting make the session more useful." },
   { q: "What's the difference between this and just using ChatGPT on my own?",      a: "Most people use AI tools for one-off questions. I show you prompting techniques, integrations and workflows that save time in your type of business." },
@@ -125,7 +125,7 @@ export default function ConsultingPage() {
             Hands-on AI training <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>for your team.</em>
           </h1>
           <p className="deck">
-            I come to your business and teach your team to use AI. Each session is hands-on and built around your tools. Your team leaves with a takeaway guide the same day.
+            I come to your business and teach your team to use AI. I build each session around your tools. Your team leaves with a takeaway guide the same day.
             Based in Tuscaloosa, Alabama, working nationwide.{" "}
             <a href="/ai-consultant-tuscaloosa" style={{ color: "var(--color-warm-accent)" }}>
               Local work in Tuscaloosa
@@ -304,7 +304,7 @@ export default function ConsultingPage() {
           <h2>Pricing <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>by group size</em></h2>
         </header>
         <p className="pv-italic" style={{ fontSize: "17px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.55, maxWidth: "560px", marginBottom: "28px" }}>
-          Rate is based on group size and session length. The more people, the lower the per-person cost. All sessions include a takeaway guide.
+          The rate depends on group size and session length. The more people, the lower the per-person cost. All sessions include a takeaway guide.
         </p>
         <div className="pv-cs-pricing" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "12px", marginBottom: "20px" }}>
           {PRICING.map((p) => (
@@ -348,7 +348,7 @@ export default function ConsultingPage() {
           <span className="b3"></span><span className="b4"></span>
           <span style={{ fontFamily: "'Cinzel', Georgia, serif", color: "var(--color-warm-accent)", fontSize: "18px" }}>?</span>
           <p className="pv-italic" style={{ fontSize: "15px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.55, margin: 0 }}>
-            Not sure which session fits? <a href="#contact" style={{ color: "var(--color-warm-accent)", textDecoration: "underline", textDecorationStyle: "dotted", fontWeight: 600 }}>Send me a message</a> and I&apos;ll recommend one.
+            If you are not sure which session fits, <a href="#contact" style={{ color: "var(--color-warm-accent)", textDecoration: "underline", textDecorationStyle: "dotted", fontWeight: 600 }}>send me a message</a> and I&apos;ll recommend one.
           </p>
         </div>
 
@@ -360,7 +360,7 @@ export default function ConsultingPage() {
         <div className="pv-cs-process" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px", marginBottom: "64px" }}>
           {[
             { step: "01", title: "Quick Call",         desc: "We talk for 15 minutes. You tell me about your business, your team, and your biggest time-wasters. I tell you which session fits and what I'll customize." },
-            { step: "02", title: "I Build Your Session", desc: "I build the presentation around your tools, workflows and industry. You get a session built for your team." },
+            { step: "02", title: "I Build Your Session", desc: "I build the presentation around your tools, workflows and industry. The session fits your team." },
             { step: "03", title: "We Run It",            desc: "I come to you. Live demos and exercises on your own tools. Every participant gets a takeaway guide." },
             { step: "04", title: "Follow-Up",            desc: "After the session I send a resource package: key tools, prompts, and next steps specific to what we covered. You can email me questions afterward." },
           ].map((item) => (
@@ -397,7 +397,7 @@ export default function ConsultingPage() {
           I&apos;m nineteen and I have built these systems for a year.
         </p>
         <p className="pv-italic" style={{ fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.65, marginBottom: "32px", maxWidth: "720px" }}>
-          I&apos;ve been building autonomous systems and shipping production tools for a year, full-time, while still in high school. The work I offer is the same work I do in my own business every day.
+          I&apos;ve spent a year building autonomous systems and shipping production tools full-time, while still in high school. The work I offer is the same work I do in my own business every day.
         </p>
         <div className="pv-cs-stats-band" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px", marginBottom: "32px" }}>
           {[
@@ -426,7 +426,7 @@ export default function ConsultingPage() {
           <span className="b3"></span><span className="b4"></span>
           <div className="pv-mono-label" style={{ marginBottom: "12px" }}>Early client terms</div>
           <p style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "17px", color: "var(--color-warm-text)", lineHeight: 1.5, marginBottom: "12px", letterSpacing: "0.01em" }}>
-            I don&apos;t have a wall of corporate testimonials yet. I&apos;m at the start of my consulting business.
+            I have no corporate testimonials yet. I&apos;m at the start of my consulting business.
           </p>
           <p className="pv-italic" style={{ fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.6, margin: 0 }}>
             Early clients get my full attention and lower rates than I&apos;ll charge in a year. I will also ask to publish the results as my first case studies.

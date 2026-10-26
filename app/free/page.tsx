@@ -181,7 +181,7 @@ export default function FreePage() {
             10 cold outreach templates, <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>one per industry.</em>
           </h1>
           <p style={{ fontSize: "17px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, maxWidth: "560px", margin: "0 auto" }}>
-            One template per industry (salons, plumbing, dental, real estate, law, marketing agencies, e-commerce, wellness, vets and accounting). You can edit every one.
+            Salons, plumbing, dental, real estate, law, marketing agencies, e-commerce, wellness, vets and accounting each get a template. You can edit every one.
           </p>
         </div>
 

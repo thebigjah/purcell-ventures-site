@@ -64,7 +64,7 @@ const SIGHT_AUDIT = [
     { item: "How busy are they? Is anyone waiting, or is it empty?", signal: "Empty with a good location points to a marketing or booking problem" },
   ]},
   { category: "Quick Website Check", checks: [
-    { item: "Does their site load fast on mobile?", signal: "A slow site hurts their search ranking and gives you a contrast" },
+    { item: "Does their site load fast on mobile?", signal: "A slow site hurts their search ranking, and you can show a faster one" },
     { item: "Is there online booking or a contact form?", signal: "No booking means they lose customers who will not call" },
     { item: "When was the last update, blog post or event?", signal: "2019 or older means the site is abandoned, which is a good pitch" },
     { item: "Is it an unedited Wix or Squarespace template?", signal: "A default template means they built it themselves" },
@@ -77,12 +77,12 @@ const COLD_WALKIN = {
     script: [
       { line: "Hey, is [owner's name / the owner] around?", note: "Ask for the owner by name if you saw it on Google. People respond to their name." },
       { line: "My name's Elijah. I run a small tech company out of [city] called Purcell Ventures. We help local businesses like yours set up websites, AI tools and online booking.", note: "Slow down. Give them time to take it in." },
-      { line: "I was in the area and looked you up. I noticed [specific thing you saw in your audit]. It took me about 30 seconds to spot that.", note: "This line gets their attention because it shows you did homework on them specifically." },
+      { line: "I was in the area and looked you up. I noticed [specific thing you saw in your audit]. It took me 30 seconds to spot that.", note: "This line gets their attention because it shows you did homework on them specifically." },
       { line: "I'm not here to sell you anything today. I want to ask a couple of questions and see if what I do would be useful to you.", note: "Say it plainly and mean it." },
     ],
   },
   transitions: [
-    { trigger: "They say 'I'm busy'", response: "Totally, I won't take long. I have one or two questions. If it doesn't click in 2 minutes, I'll leave you to it." },
+    { trigger: "They say 'I'm busy'", response: "I won't take long. I have one or two questions. If it doesn't click in 2 minutes, I'll leave you to it." },
     { trigger: "They say 'we already have a website'", response: "Nice. Is the site bringing you customers, or does it mostly list your contact details?" },
     { trigger: "They say 'we don't need that'", response: "Fair enough. Can I ask how most new customers find you right now?" },
     { trigger: "They say 'I'm not the right person'", response: "Who would be? I'd love to leave my info with them or come back at a better time." },
@@ -107,14 +107,14 @@ const DISCOVERY = [
     { q: "Have you ever looked into getting help with any of this before? What stopped you?", listen: "For a price objection, lead with what they get. For a trust objection, stress that you are local and do the work yourself." },
     { q: "What would it mean for you if twice as many people found you online?", listen: "Let them describe it. Their answer becomes your close." },
     { q: "What are you spending right now on marketing or anything digital?", listen: "If nothing: 'So you're getting $0 in return right now.'" },
-    { q: "Is there a budget you work with for this kind of thing?", listen: "Only ask after they're engaged. The question is whether they see the value." },
+    { q: "Is there a budget you work with for this kind of thing?", listen: "Ask this only after they're engaged. The answer shows whether they see the value." },
   ]},
 ];
 
 const CLOSES = [
   { type: "Soft Close (preferred first)", script: "Here's what I'd suggest. Let me put together a quick overview of what I'd build for you, with pricing, and we can look at it together. No commitment. Would that be useful?", note: "This gives them an easy 'yes' and gives you a reason to follow up." },
   { type: "Demo Close", script: "Can I show you something quickly? [Pull up purcellventures.co/digital on your phone] This is what a full setup looks like for a business like yours. Starting at $99 a month.", note: "Always have the site up and ready on your phone." },
-  { type: "Urgency Close (only when they're warm)", script: "I only take on a few new clients at a time so I can give each one attention. I've got a slot opening up this month. Want to get on a call this week?", note: "Only use this if they're clearly interested." },
+  { type: "Urgency Close (only when they're warm)", script: "I only take on a few new clients at a time so I can give each one attention. I've got a slot opening up this month. Want to get on a call this week?", note: "Use this only with a prospect who has shown clear interest." },
   { type: "Leave-Behind", script: "Here's my card. My site is purcellventures.co, where you can see pricing and the tools. I'll follow up in a day or two if that's okay.", note: "Always get permission to follow up. Always follow up." },
 ];
 
@@ -130,12 +130,12 @@ const OBJECTIONS = [
 const WORD_OF_MOUTH = [
   { context: "Casual conversation (friends, church, family)", lines: [
     "I run a company called Purcell Ventures. I build websites and AI tools for small businesses: booking, chatbots and social media, all managed for them.",
-    "If you know any small business owners, like salons, contractors or restaurants, who are unhappy with their online presence or don't have one, send them my way. It's $75 a month and I run it for them.",
+    "If you know any small business owners, like salons, contractors or restaurants, who are unhappy with their online presence or don't have one, send them my way. It's $99 a month and I run it for them.",
     "I do what a digital agency does at a lower price, and I answer my own phone.",
   ]},
   { context: "Someone asks what you do", lines: [
     "I build and manage the digital side of small businesses: websites, booking systems, AI chatbots and social media tools, all under one subscription.",
-    "It covers what a web designer, a marketing person and an AI specialist would do, for $75 a month.",
+    "It covers what a web designer, a marketing person and an AI specialist would do, for $99 a month.",
   ]},
   { context: "They mention a business that's struggling with marketing", lines: [
     "What's their online presence like? That's usually the first thing to fix.",
@@ -445,7 +445,7 @@ export default function PlaybookPage() {
             <div style={{ ...s, borderColor: "#d4af3740" }}>
               <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#d4af37", marginBottom: "12px" }}>The One Thing to Get Across</div>
               <div style={{ fontSize: "15px", color: "#f5f0e0", lineHeight: 1.75 }}>
-                &ldquo;I build and manage the online presence for small businesses: website, booking, AI chatbot and social media. Starting at $75 a month.&rdquo;
+                &ldquo;I build and manage the online presence for small businesses: website, booking, AI chatbot and social media. Starting at $99 a month.&rdquo;
               </div>
             </div>
           </div>

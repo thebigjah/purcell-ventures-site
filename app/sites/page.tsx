@@ -77,7 +77,7 @@ const MAINTENANCE_TIERS = [
     roman: "iii.",
     name: "Marketing Partner",
     tagline: "Part-time marketing on top of site care.",
-    who: "Businesses where each new lead is worth a lot and the owner has no time to handle marketing.",
+    who: "Businesses with high-value leads and an owner who has no time for marketing.",
     what: [
       "Everything in Site Care plus Lead Ops",
       "Four Instagram posts per month scheduled through PV Social",
@@ -137,7 +137,7 @@ export default function SitesPage() {
             Custom websites and ongoing partnership for <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>local businesses.</em>
           </h1>
           <p className="deck">
-            We build the site, write the plan for it, and keep working on it after launch. Maintenance covers hosting plus lead handling, monthly reports and updates, done by the people who built the site.
+            We build the site, write the plan for it, and keep working on it after launch. Maintenance covers hosting plus lead handling, monthly reports and updates. The people who built the site do the work.
           </p>
           <div style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
             <a className="pv-btn-primary" href="mailto:elijah@purcell-ventures.com?subject=Sites%20%E2%80%94%20Discovery%20Call">
@@ -304,7 +304,7 @@ export default function SitesPage() {
             color: "var(--color-warm-text)", textTransform: "uppercase",
             marginBottom: "16px", lineHeight: 1.15,
           }}>
-            Talk to Elijah about your <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>site.</em>
+            A call with <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Elijah.</em>
           </h2>
           <p className="pv-italic" style={{
             fontSize: "18px", color: "var(--color-warm-text)", opacity: 0.85,

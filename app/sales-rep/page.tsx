@@ -5,8 +5,8 @@ import { VignetteBackground } from "@/app/components/VignetteBackground";
 const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScsnKqYgNWbJe3wD9ju3jRkToOf7Eiu4ecjCV-b99XemX59gQ/viewform";
 
 const COMMISSION = [
-  { tier: "Apprentice", sells: "Courses and Mantle Field Services", earn: "15% on every close", path: "Promoted to Closer after 5 course closes and 80% on the quiz" },
-  { tier: "Closer", sells: "Adds Digital Services subscriptions", earn: "20%, plus a flat $100, $150 or $200 per Digital tier", path: "Promoted to Senior after 5 Digital closes and a co-pitch with Elijah" },
+  { tier: "Apprentice", sells: "Courses and Mantle Field Services", earn: "15% on every close", path: "You become a Closer after 5 course closes and 80% on the quiz" },
+  { tier: "Closer", sells: "Adds Digital Services subscriptions", earn: "20%, plus a flat $100, $150 or $200 per Digital tier", path: "You become a Senior after 5 Digital closes and a co-pitch with Elijah" },
   { tier: "Senior", sells: "Adds AI Consulting and Custom Software", earn: "20% on Consulting, 15% on Custom Software", path: "Final tier" },
 ];
 
@@ -65,12 +65,12 @@ const AUTO_REJECTS = [
 ];
 
 const PROCESS = [
-  { step: "1", label: "Take the application + quiz", detail: "20 to 30 minutes. The quiz covers product knowledge, ethics and judgment." },
+  { step: "1", label: "Application and quiz", detail: "20 to 30 minutes. The quiz covers product knowledge, ethics and judgment." },
   { step: "2", label: "Elijah reviews within 7 days", detail: "You get an email either way, interview invite or polite no." },
   { step: "3", label: "20-minute phone interview", detail: "A conversation about whether the role fits you." },
-  { step: "4", label: "Contractor agreement + handbook", detail: "1099 contractor relationship. Standard terms. Parent co-signs if you're under 18." },
-  { step: "5", label: "30-minute onboarding call + materials drop", detail: "You get access to the rep portal: product encyclopedia, pricing, scripts, CRM." },
-  { step: "6", label: "Start selling", detail: "Work on your own schedule. Commission paid on the 1st of each month, after the 30-day clawback window." },
+  { step: "4", label: "Contractor agreement and handbook", detail: "1099 contractor relationship. Standard terms. Parent co-signs if you're under 18." },
+  { step: "5", label: "30-minute onboarding call and materials", detail: "You get access to the rep portal: product encyclopedia, pricing, scripts, CRM." },
+  { step: "6", label: "First sales", detail: "You work on your own schedule. We pay commission on the 1st of each month, after the 30-day clawback window." },
 ];
 
 export default function SalesRepPage() {
@@ -141,9 +141,9 @@ export default function SalesRepPage() {
         </div>
 
         <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", padding: "20px 24px", marginBottom: "48px", fontSize: "14px", lineHeight: 1.6 }}>
-          <strong style={{ color: "var(--color-warm-accent)", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", letterSpacing: "0.18em", textTransform: "uppercase" }}>What it can earn you</strong>
+          <strong style={{ color: "var(--color-warm-accent)", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", letterSpacing: "0.18em", textTransform: "uppercase" }}>Projected earnings</strong>
           <p style={{ margin: "10px 0 0" }}>
-            A rep working 10 hours a week could earn about <strong>$300 to $500/mo at Apprentice</strong>, <strong>$1,000 to $1,500 at Closer</strong> and <strong>$2,000+ at Senior</strong>. These are projections from the commission rates above, not payouts a rep has received yet. Commission paid the 1st of each month, after a 30-day clawback window clears.
+            A rep working 10 hours a week could earn <strong>$300 to $500/mo at Apprentice</strong>, <strong>$1,000 to $1,500 at Closer</strong> and <strong>$2,000+ at Senior</strong>. These are projections from the commission rates above. No rep has received these payouts yet. We pay commission on the 1st of each month, after a 30-day clawback window clears.
           </p>
         </div>
 
@@ -211,7 +211,7 @@ export default function SalesRepPage() {
         </div>
 
         <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", padding: "20px 24px", marginBottom: "48px", fontSize: "14px", lineHeight: 1.7 }}>
-          <strong style={{ color: "var(--color-warm-text)" }}>Concrete: when a prospect offers you cash to drop the price, you refuse, document, and tell Elijah. When a prospect doesn&apos;t need our full product, you redirect them to a smaller fit, even if it costs you the bigger commission. The quiz tests for this and the role doesn&apos;t work without it.</strong>
+          <strong style={{ color: "var(--color-warm-text)" }}>For example, when a prospect offers you cash to drop the price, you refuse, document, and tell Elijah. When a prospect doesn&apos;t need our full product, you redirect them to a smaller fit, even if it costs you the bigger commission. The quiz tests for this and the role doesn&apos;t work without it.</strong>
         </div>
 
         {/* Quiz prep */}

@@ -148,7 +148,7 @@ export default function Post() {
           <h2 style={head}>Limits</h2>
           <p>The rep still runs the call, listens and decides what to say. The AI removes prep work and drafts messages.</p>
 
-          <p>AI tools do not fix weak conversations. Hire well first, then add AI.</p>
+          <p>A rep who struggles on calls still struggles with these tools. Hire well first, then add AI.</p>
 
           <h2 style={head}>How to try this yourself</h2>
           <p>If you run sales for your business, or you are the whole sales team, start with the <Link href="/shop/starter-kit" style={linkStyle}>PV AI Starter Kit ($19)</Link>. It includes the AI tool prompts and sales scripts described above.</p>

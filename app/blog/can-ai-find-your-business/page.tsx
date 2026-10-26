@@ -125,7 +125,7 @@ export default function Post() {
           <p>
             <strong>2. Make every source agree.</strong> Google Business Profile, your site,
             any directory that appears. Same name, same address format, same phone, same
-            hours. Consistency across sources is most of what makes an assistant confident.
+            hours. When the sources agree, an assistant is more likely to repeat your details.
           </p>
 
           <p>
@@ -158,7 +158,7 @@ export default function Post() {
             established evidence that publishing volume does anything at all.
           </p>
 
-          <h2 style={H2}>Claim your Google Business Profile first</h2>
+          <h2 style={H2}>Why the Google Business Profile comes first</h2>
 
           <p>
             Assistant answers about local businesses draw on listings like Google Business

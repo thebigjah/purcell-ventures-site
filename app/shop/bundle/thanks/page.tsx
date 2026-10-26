@@ -16,7 +16,7 @@ export default function ThanksPage() {
           Stripe will email you one ZIP with 61 files in three folders.
         </p>
         <div style={{ padding: "20px 24px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", marginBottom: "32px", textAlign: "left" }}>
-          <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "10px", marginTop: 0, fontWeight: 700 }}>What to do first</h3>
+          <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "10px", marginTop: 0, fontWeight: 700 }}>First steps</h3>
           <ol style={{ paddingLeft: "20px", fontSize: "13px", color: "var(--color-warm-text)", lineHeight: 1.7, margin: 0 }}>
             <li>Extract the ZIP. It contains 3 folders</li>
             <li>Open <code>00-BUNDLE-README.md</code> for the overview</li>

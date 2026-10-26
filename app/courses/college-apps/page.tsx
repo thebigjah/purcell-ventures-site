@@ -115,7 +115,7 @@ const TIERS = [
 const FAQS = [
   {
     q: "Is this for high schoolers or parents?",
-    a: "Both. The content is written so the student can follow it alone, but parents can use it too, especially the financial aid and scholarship modules.",
+    a: "Both. I wrote the content so the student can follow it alone, but parents can use it too, especially the financial aid and scholarship modules.",
   },
   {
     q: "I'm already a junior or senior. Is it too late?",
@@ -188,11 +188,9 @@ export default function CollegeAppsPage() {
         <header className="pv-page-head" style={{ marginBottom: 0 }}>
           <div className="pv-mono-label">Course: College Application Playbook</div>
           <h1 style={{ margin: 0 }}>
-            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>34 acceptances.</em>
+            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>34 acceptances</em> from 98 schools,
             <br />
-            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>$530,384 per year in offers.</em>
-            <br />
-            How I applied to 98 schools.
+            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>$530,384 per year</em> in offers.
           </h1>
           <p className="deck">
             I&apos;m Elijah Purcell. I&apos;m 19 and I went through the college application process recently. This course is what I learned, documented and taught in the order I would have wanted.
@@ -238,11 +236,11 @@ export default function CollegeAppsPage() {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontFamily: "var(--font-inter), sans-serif" }}>Who This Is For</div>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(24px, 3.5vw, 36px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "48px", lineHeight: 1.1 }}>
-            If the process feels overwhelming,<br />this course is for you.
+            Four groups get the most<br />from this course.
           </h2>
           <div className="ca-who-grid" style={{ background: "var(--color-warm-border)", borderRadius: 10, overflow: "hidden" }}>
             {[
-              { title: "High schoolers (9th to 12th grade)", body: "You're in the middle of it. Whether you're just starting to think about college or finalizing your list senior year, this course meets you where you are." },
+              { title: "High schoolers (9th to 12th grade)", body: "You're in the middle of it. Whether you're just starting to think about college or finalizing your list senior year, the course covers your stage." },
               { title: "Parents of applicants", body: "Especially if scholarship money is the goal. Two modules cover financial aid and scholarships." },
               { title: "First-generation students", body: "Nobody in your family has done this before. The course starts from the beginning on applications, financial aid and choosing schools." },
               { title: "Students who've been rejected", body: "Waitlisted, deferred or turned down by your top choice last cycle. The course covers what affects admissions decisions." },
@@ -262,7 +260,7 @@ export default function CollegeAppsPage() {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontFamily: "var(--font-inter), sans-serif" }}>Curriculum</div>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(24px, 3.5vw, 36px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "8px", lineHeight: 1.1 }}>
-            6 modules. 17 lessons.<br />The whole process.
+            6 modules and 17 lessons<br />from list to decision.
           </h2>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "48px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
             Camera lessons, screen shares of my process, and written notes for every lesson. Planned length: 3 hours of video.
@@ -358,7 +356,7 @@ export default function CollegeAppsPage() {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontFamily: "var(--font-inter), sans-serif" }}>Pricing</div>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(24px, 3.5vw, 36px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "16px", lineHeight: 1.1 }}>
-            Pricing
+            Three ways to enroll
           </h2>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "40px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
             The course opens when recording is complete. Waitlist members get the early-access price.
@@ -426,7 +424,7 @@ export default function CollegeAppsPage() {
             Waitlist
           </div>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "16px", lineHeight: 1.1 }}>
-            Join the waitlist.
+            The waitlist
           </h2>
           <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.75, marginBottom: "40px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
             Waitlist members get early access pricing and first notification when the course opens.
@@ -462,7 +460,7 @@ export default function CollegeAppsPage() {
             </form>
           )}
           <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "14px", fontFamily: "var(--font-inter), sans-serif" }}>
-            No spam. One email when enrollment opens.
+            I send one email when enrollment opens.
           </p>
         </div>
       </section>

@@ -20,12 +20,12 @@ const QA: [string, string][] = [
 ];
 
 const LESSONS: [string, string][] = [
-  ["Put the scope in the process. A model can ignore a scope written in its prompt.",
-   "I told an agent to stay inside its task and later found it reading files and holding a mail connection. A boundary written in a prompt can be ignored. The fix was to launch it with no tools and a strict config, so the limit exists outside the thing being limited."],
+  ["The scope belongs in the process, because a model can ignore one written in its prompt.",
+   "I told an agent to stay inside its task and later found it reading files and holding a mail connection. The prompt limit did not hold. The fix was to launch it with no tools and a strict config, so the limit exists outside the thing being limited."],
   ["A pipeline stage that swallows its own errors reports success every time.",
    "A pipeline reported that quotes had been sent. No quotes were sent. The code caught its own exception and carried on, so success and silence looked the same. The fix was to assert on counts."],
   ["Marking work done is the riskiest action an agent takes.",
-   "A network blip closed open blocking findings as resolved. Anything that can mark work done is a mechanism whose failure mode looks exactly like the thing working, so it needs a second reader whose job is to find the failure."],
+   "A network blip closed open blocking findings as resolved. Anything that can mark work done fails in a way that looks like success, so it needs a second reader whose job is to find the failure."],
   ["Agents treat every bus message as a claim to evaluate.",
    "Agents that talk to each other will eventually read each other's output as a command. The bus is append-only, and each agent checks a message before acting on it."],
 ];

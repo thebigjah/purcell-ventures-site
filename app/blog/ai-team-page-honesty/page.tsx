@@ -57,7 +57,7 @@ export default function Post() {
 
           <p>
             The alternative is describing them as a system, which tells a client little.
-            "Automated proposal generation" tells you nothing about what happens on a
+            "Automated proposal generation" says nothing about what happens on a
             Tuesday. "Quentin drafts the proposal, Cecily checks it for anything internal,
             and it does not leave the building until both have passed it" tells you exactly
             what happens, and the names are what make the sequence legible.
@@ -72,7 +72,7 @@ export default function Post() {
           <h2 style={H2}>Why the first sentence has to say what they are</h2>
 
           <p>
-            Somebody will find out. With a roster of invented colleagues and stock
+            First, someone will find out. With a roster of invented colleagues and stock
             photographs, a client will eventually ask to speak to Margot, and the lie ends
             there.
           </p>
@@ -115,13 +115,13 @@ export default function Post() {
           <h2 style={H2}>What this costs</h2>
 
           <p>
-            It costs some credibility. "One person and fifteen scripts" sounds smaller than
+            I lose some credibility. "One person and fifteen scripts" sounds smaller than
             "our team," and there are prospects who would have been more impressed by the
             second sentence.
           </p>
 
           <p>
-            I would rather have the ones who are impressed by the first. A client who learns
+            I would rather have the prospects who are impressed by the first sentence. A client who learns
             the truth later will wonder what else I overstated.
           </p>
 

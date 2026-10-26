@@ -87,7 +87,7 @@ export default function Post() {
           <h2 style={H2}>The EIN takes ten minutes and is free</h2>
 
           <p>
-            Directly from{" "}
+            You get it directly from{" "}
             <a href="https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number" style={link} rel="noopener">the IRS</a>.
             Some sites charge for an EIN, which the IRS issues free. If a page wants money for
             an EIN, close the page.
@@ -158,14 +158,13 @@ export default function Post() {
             <li style={{ marginBottom: "8px" }}>Decide the name in an afternoon.</li>
             <li style={{ marginBottom: "8px" }}>File with your Secretary of State.</li>
             <li style={{ marginBottom: "8px" }}>Get the EIN from the IRS, free, same week.</li>
-            <li style={{ marginBottom: "8px" }}>Open the bank account. Budget more time than you think.</li>
+            <li style={{ marginBottom: "8px" }}>Open the bank account. Budget more time than the filing and the EIN took combined.</li>
             <li style={{ marginBottom: "8px" }}>Send an invoice to somebody. Until money has moved through it, none of the above has been tested.</li>
           </ol>
 
           <p>
-            That last one is the step I would emphasise to anybody doing this young. It is
-            very easy to spend months on the apparatus of having a company and never once run
-            the thing the apparatus exists for.
+            I would stress that last step most to anybody doing this young. It is easy to
+            spend months on paperwork and never once run the business the paperwork exists for.
           </p>
 
           <p>

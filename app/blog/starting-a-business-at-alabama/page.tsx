@@ -53,8 +53,8 @@ export default function Post() {
           </p>
 
           <p>
-            Most student businesses aim at the students. Fewer aim at the businesses, and
-            local businesses often decide quickly and you can walk in.
+            Most student businesses aim at the students. Fewer aim at local businesses, which
+            often decide quickly and sit within walking distance.
           </p>
 
           <p>
@@ -93,7 +93,7 @@ export default function Post() {
           </p>
 
           <p>
-            The full list of what is already covered by tuition is{" "}
+            Tuition already covers more than this. The full list is{" "}
             <Link href="/blog/free-at-alabama" style={link}>here</Link>.
           </p>
 
@@ -104,7 +104,7 @@ export default function Post() {
             term on the logo, the LLC, the site and the email signature and never send an
             invoice. Send the first invoice before you polish the logo.{" "}
             <Link href="/blog/llc-at-seventeen" style={link}>Here is what the filing
-            involves</Link>. It takes less work than most people expect.
+            involves</Link>. The filing is an online form.
           </p>
 
           <p>
@@ -126,7 +126,7 @@ export default function Post() {
           </p>
 
           <p>
-            Interruptions compete for your hours. A client message at eleven in the morning
+            Interruptions are what compete. A client message at eleven in the morning
             between two lectures, a bug at nine at night, a call that cannot happen in a
             three-hour lab. The work itself fits. The interruptions are what make a fourteen
             hour day feel like it produced nothing.
@@ -138,12 +138,12 @@ export default function Post() {
             than one who gets an instant reply half the time and silence the rest.
           </p>
 
-          <h2 style={H2}>Start with something that already exists</h2>
+          <h2 style={H2}>A problem that already exists is the best place to start</h2>
 
           <p>
-            The best opening for a student here is that a lot of local businesses have a
-            specific problem you can see from outside and fix, and no one has told them.
-            Start with that problem on a local business, before you start on an idea.
+            The best opening for a student here is that many local businesses have a
+            specific problem you can see from outside and fix, and nobody has told them.
+            Begin with one of those problems before you invent an idea.
           </p>
 
           <p>

@@ -39,7 +39,7 @@ export default function Post() {
         <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
 
           <p style={{ fontSize: "18px" }}>
-            Every solo shop's website promises personal service and direct access to the
+            Most solo shops' websites promise personal service and direct access to the
             person doing the work. Those claims are true, and they leave out what a client
             needs to know: what happens when that one person is already busy.
           </p>
@@ -49,7 +49,7 @@ export default function Post() {
             before they call.
           </p>
 
-          <h2 style={H2}>Count builds per month</h2>
+          <h2 style={H2}>Counting builds per month</h2>
 
           <p>
             Hours are the wrong unit. A build is a sequence with waiting in it: you scope,

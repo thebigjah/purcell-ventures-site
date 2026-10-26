@@ -141,7 +141,7 @@ export default function Post() {
 
           <p>
             I build websites, so the obvious read is that this is an argument for buying
-            one from me. Two caveats cut against that.
+            one from me. Two caveats weaken that read.
           </p>
 
           <p>
@@ -153,7 +153,7 @@ export default function Post() {
 
           <p>
             For many of the rest, the cheapest fix is claiming the Google listing and
-            entering the hours. Claiming the listing is free and takes about twenty minutes.
+            entering the hours. Claiming the listing is free and takes twenty minutes.
           </p>
 
           <h2>What happens next</h2>
@@ -163,7 +163,7 @@ export default function Post() {
             how long it has been here, what it does well, and what a student trying to find
             it runs into. That is{" "}
             <Link href="/blog/tuscaloosa-small-business-online" style={link}>the Storefront Project</Link>,
-            and it is reporting. A business does not have to be a client to be featured.
+            and it is reporting. I feature businesses whether or not they are clients.
           </p>
 
           <p>

@@ -696,7 +696,7 @@ export default function Home() {
             { href: "/now",     label: "/now",     desc: "What I'm focused on right now." },
             { href: "/uses",    label: "/uses",    desc: "My working stack, every tool in production." },
             { href: "/verses",  label: "Verses",   desc: "Five scriptures I come back to." },
-            { href: "/writing", label: "Writing",  desc: "Selected original prose." },
+            { href: "/writing", label: "Writing",  desc: "Essays and posts I have written." },
             { href: "/faq",     label: "FAQ",      desc: "What people ask before hiring me." },
           ].map(item => (
             <Link key={item.href} href={item.href} className="pv-card" style={{
@@ -735,10 +735,10 @@ export default function Home() {
             <span style={{ fontFamily: "Georgia, serif", fontSize: "11px", color: "var(--color-warm-text-light)", fontStyle: "italic" }}>Free to use, with no email signup.</span>
           </div>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "32px", fontWeight: 700, color: "var(--color-warm-text)", margin: "0 0 12px" }}>
-            Use anything <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>now.</em>
+            Everything below is <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>free.</em>
           </h2>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, margin: "0 0 32px", maxWidth: "640px" }}>
-            The tools, calculators, process notes and blog posts below are free, with no email gate.
+            Every tool, calculator, process note and blog post below is open to read and use.
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "12px" }}>

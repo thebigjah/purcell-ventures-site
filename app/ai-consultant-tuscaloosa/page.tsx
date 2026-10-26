@@ -72,11 +72,11 @@ export default function AiConsultantTuscaloosa() {
           <p>
             You can hire an agency anywhere. The reason to hire someone in Tuscaloosa is that
             you can sit across a table from them, and that the person you meet is the person
-            who writes the code. Purcell Ventures is one operator. One person does the work.
+            who writes the code. Purcell Ventures is one operator.
           </p>
 
           <p>
-            The work is supported by a fifteen-agent AI workforce I built, which handles
+            A fifteen-agent AI workforce I built handles
             proposals, audits, compliance and outreach on a schedule. The agents are software, and the{" "}
             <Link href="/team" style={link}>team page</Link> says so in its first sentence. A
             human does the building and a human answers your email.
@@ -85,21 +85,16 @@ export default function AiConsultantTuscaloosa() {
           <h2 style={H2}>Work you can check right now</h2>
 
           <p>
-            Examples you can open:
-          </p>
-
-          <p>
             <a href="https://ua-today.vercel.app" style={link} target="_blank" rel="noopener noreferrer">UA Today</a>{" "}
             is a campus events site I built for students here. It pulls from six sources and
-            carries about a hundred events in a given week across official University
+            carries a hundred events in a typical week across official University
             events, student organizations, ministries and athletics. It is free, there is no
-            account, and it is not affiliated with the University, which the masthead says
-            plainly.
+            account, and it is not affiliated with the University. The masthead says so.
           </p>
 
           <p>
             <Link href="/tools" style={link}>Twenty-nine free tools</Link> are live on the open
-            web, each one a small piece of software solving one problem. The{" "}
+            web, each one solves one problem. The{" "}
             <Link href="/portfolio" style={link}>portfolio</Link> has client work, and the{" "}
             <Link href="/case-studies" style={link}>case studies</Link> explain what was
             hard about a few of them.

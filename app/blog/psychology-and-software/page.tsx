@@ -54,21 +54,20 @@ export default function Post() {
 
           <p>
             My instinct on a personal AI product was to cluster users, find the pattern most
-            of them shared, and build toward that pattern. That felt like product sense and I
-            would have defended it if anyone had asked.
+            of them shared, and build toward that pattern. That felt right and I would have
+            defended it if anyone had asked.
           </p>
 
           <p>
-            I had used between-subject thinking and called it product sense, and in doing it
-            I flattened the one signal I care about most: the change in a single person over
-            time.
+            I had applied between-subject thinking and called it product sense. That flattened
+            the one signal I care about most: the change in a single person over time.
           </p>
 
           <p>
             A population average tells you what a typical user tends to do. It cannot tell
             you whether the particular person in front of you right now is drifting away from
             wherever they usually sit. A flat day on its own means nothing. Held against that
-            same user&apos;s last three weeks it means quite a lot, and that difference is what
+            same user&apos;s last three weeks it can signal a problem, and that difference is what
             the product measures.
           </p>
 
@@ -90,7 +89,7 @@ export default function Post() {
           <p>
             Every alerting system I have built has this problem. An anomaly detector that is
             right ninety-five per cent of the time, run against a thousand events a day where
-            three are true anomalies, produces about fifty false alarms for three true ones.
+            three are true anomalies, produces 50 false alarms for three true ones.
             People mute it in a week, and a muted monitor is worse than no monitor, because
             you believe you have one.
           </p>

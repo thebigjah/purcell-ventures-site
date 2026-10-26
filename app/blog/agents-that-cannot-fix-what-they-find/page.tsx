@@ -35,25 +35,25 @@ export default function Post() {
 
         <article style={{ fontSize: "16px", lineHeight: 1.75, color: "var(--color-warm-text)" }}>
 
-          <p>One of our agents can read every repository we own. It cannot change a single line of any of them. The separation is deliberate. It cost us one design decision, and it caused a failure we did not expect.</p>
+          <p>One of our agents can read every repository we own. It cannot change a single line of any of them. The separation is deliberate. It took one design decision and caused a failure we did not expect.</p>
 
           <h2 style={head}>Agents get text and no tools</h2>
 
           <p>The first version of our reasoning layer passed the model a prompt describing exactly what it was allowed to look at. The prompt described the scope accurately, and nothing enforced it.</p>
 
-          <p>We found out when an agent asked to draft a payment-chase email refused to write it. It had gone and read the client file, found no matching record, and objected. The objection was correct. It was also proof that the scope in the prompt was only a request, because the process could open any file on the machine.</p>
+          <p>We found out when an agent asked to draft a payment-chase email refused to write it. It read the client file, found no matching record, and objected. The objection was correct. It was also proof that the scope in the prompt was only a request, because the process could open any file on the machine.</p>
 
           <p>Closing the filesystem was not enough either. Asked afterwards what it could still reach, the model listed email, calendar and drive, because removing built-in tools leaves externally configured servers inherited from the user&apos;s own config. An agent reasoning about a code repository must not be able to read your inbox.</p>
 
-          <p>The fix was to hand the model nothing but text and no tools at all. Everything it may see is passed in by the agent&apos;s own code, which already enforces the scope and is already tested. It reasons over what it was given and cannot go looking.</p>
+          <p>The fix was to hand the model nothing but text and no tools at all. The agent&apos;s own code passes in everything the model may see. That code already enforces the scope and is already tested. It reasons over what it was given and cannot go looking.</p>
 
-          <p><strong>A model can ignore a scope written in a prompt. It cannot ignore a scope enforced in code.</strong></p>
+          <p><strong>Code enforces a scope. A prompt only asks the model to respect one.</strong></p>
 
           <h2 style={head}>The failure this design creates</h2>
 
           <p>If the finder cannot fix, someone else has to, and that someone is a person. We built the finding half carefully and never built the closing half at all.</p>
 
-          <p>So the ledger only ever grew. The auditor re-checked every property every morning, correctly refused to file duplicates, and had no way to record that anything had been resolved. Fix a broken checkout and the finding describing it would have stayed open forever.</p>
+          <p>So the ledger only ever grew. The auditor re-checked every property every morning, correctly refused to file duplicates, and had no way to record that anything had been resolved. If we had fixed a broken checkout, the finding describing it would have stayed open forever.</p>
 
           <p>The reporting agent, meanwhile, told us that zero findings had been resolved. That read as a bad statistic about follow-through. It was a hardcoded zero, because no code path could produce any other number. The report was correct and carried no information.</p>
 

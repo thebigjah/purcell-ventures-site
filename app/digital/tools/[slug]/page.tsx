@@ -162,13 +162,13 @@ export default function ToolPage({ params }: { params: Promise<{ slug: string }>
           <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "24px", alignItems: "center", flexWrap: "wrap" }}>
             <div>
               <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "6px" }}>
-                Get all 23 prompts for $19
+                Get all 24 prompts for $19
               </div>
               <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", color: "var(--color-warm-text)", fontWeight: 600, margin: "0 0 6px" }}>
                 The PV AI Starter Kit
               </h3>
               <p style={{ margin: 0, fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.5 }}>
-                23 AI prompts (including this one), 5 sales scripts, the full rep handbook, 50+ cold-outreach templates, a contractor agreement and a CRM CSV. All files are editable. $19 one time, with an instant download.
+                24 AI prompts (including this one), 5 sales scripts, the full rep handbook, 50+ cold-outreach templates, a contractor agreement and a CRM CSV. All files are editable. $19 one time, with an instant download.
               </p>
             </div>
             <span style={{

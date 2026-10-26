@@ -17,7 +17,7 @@ export default function ROICalculator() {
   const [plan, setPlan] = useState<"starter" | "growth" | "full">("growth");
   const [selectedPreset, setSelectedPreset] = useState("Hair Salon");
 
-  const planCosts = { starter: 75, growth: 125, full: 175 };
+  const planCosts = { starter: 99, growth: 179, full: 279 };
   const planCost = planCosts[plan];
 
   const extraMonthly = extraPerWeek * 4.3 * bookingValue;
@@ -35,7 +35,7 @@ export default function ROICalculator() {
     <section className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="max-w-2xl mb-10">
-          <h2 className="text-3xl font-bold mb-4">Estimate your return</h2>
+          <h2 className="text-3xl font-bold mb-4">What a session would save you</h2>
           <p className="text-[var(--color-warm-text-muted)] leading-relaxed">
             Enter your own numbers. The business-type presets are made-up starting values.
           </p>
@@ -184,7 +184,7 @@ export default function ROICalculator() {
 
             <p className="text-xs text-[var(--color-warm-text-light)] leading-relaxed px-1">
               This is arithmetic on the numbers above. It assumes online booking, the chatbot and review
-              requests bring in the extra bookings you entered. Your results will vary.
+              requests bring in the extra bookings you entered.
             </p>
 
             <a

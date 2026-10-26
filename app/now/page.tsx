@@ -8,7 +8,7 @@ const FOCUS = [
     roman: "I.",
     label: "Building",
     items: [
-      "Purcell Ventures. Rebuilding this site from the ground up, with a new mark and a new gold.",
+      "Purcell Ventures. Rebuilding this site with a new mark and a new gold.",
       "COSMIC, the set of AI agents that runs the company's outreach: finding local businesses, auditing their sites and emailing the ones that need help. The roster is public on the team page.",
       "Three courses: The College Application Playbook, The Business Launch Playbook and Zero to Automated. None is finished. Ask me and I will send the material.",
       "UA Today. Campus events for the University of Alabama, pulled from six sources into one place, and used by students who are not me.",
@@ -40,7 +40,7 @@ const FOCUS = [
     label: "Practicing",
     items: [
       "Bass-baritone vocals, range C1 to F5.",
-      "Strength and conditioning, scientific hypertrophy programming, a multi-year commitment rather than a season.",
+      "Strength and conditioning, scientific hypertrophy programming, a multi-year commitment.",
       "Writing. Poetry nobody asked for, fiction drafts, this site, and my own infrastructure.",
     ],
   },
@@ -48,7 +48,7 @@ const FOCUS = [
     roman: "V.",
     label: "Reading",
     items: [
-      "The Bible, daily, no streak required. NASB for devotion, NRSVue for study.",
+      "The Bible, daily. NASB for devotion, NRSVue for study.",
       "Annie Duke and the decision-making canon. Thinking in Bets is why I keep a calibration journal.",
     ],
   },
@@ -56,9 +56,9 @@ const FOCUS = [
     roman: "VI.",
     label: "Wrestling with",
     items: [
-      "Free will and determinism. Firmly non-Calvinist, still exploring.",
+      "Free will and determinism. Non-Calvinist, still exploring.",
       "The right cadence for school and business without either one taking the other's hours.",
-      "How much of the hard parts belongs on the public internet.",
+      "How many of the hard parts belong on the public internet.",
     ],
   },
 ];
@@ -154,7 +154,7 @@ export default function NowPage() {
           fontSize: "14px", color: "var(--color-warm-text-light)",
           textAlign: "center", lineHeight: 1.7,
         }}>
-          I update this page about once a month. It lists what I was working on as of the date at the top.
+          I update this page monthly. The date at the top shows when.
         </p>
 
       </main>

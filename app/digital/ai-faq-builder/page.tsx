@@ -73,7 +73,7 @@ export default function AIFaqBuilderPage() {
         <header className="pv-page-head">
           <div className="pv-mono-label">AI FAQ Builder</div>
           <h1>
-            Generate FAQs <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>for your business.</em>
+            FAQs <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>for your business.</em>
           </h1>
           <p className="deck">
             Tell me about your business. You get 6 to 10 question and answer pairs to paste onto your site.

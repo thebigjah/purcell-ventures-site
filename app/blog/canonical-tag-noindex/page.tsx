@@ -63,7 +63,7 @@ export default function Post() {
 
           <p>
             That looks correct. It is the blog index, and its canonical URL is
-            <code> /blog</code>. Fine.
+            <code> /blog</code>.
           </p>
 
           <p>
@@ -74,7 +74,7 @@ export default function Post() {
             hands every single one a canonical of <code>/blog</code>.
           </p>
 
-          <p>Which renders, on every post, as:</p>
+          <p>On every post, that renders as:</p>
 
           <div style={pre}>{`<link rel="canonical" href="https://purcellventures.co/blog"/>`}</div>
 
@@ -95,8 +95,8 @@ export default function Post() {
           </p>
 
           <p>
-            The author markup, structured data and titles on those pages were dropped with
-            them. All of it was correct, on pages that had asked to be ignored.
+            Google dropped the author markup, structured data and titles on those pages along
+            with them. All of it was correct, on pages that had asked to be ignored.
           </p>
 
           <h2 style={H2}>Why it survives so long</h2>
@@ -127,8 +127,8 @@ export default function Post() {
           <div style={pre}>{`curl -sL https://yoursite.com/blog/some-post | grep canonical`}</div>
 
           <p>
-            If the href is anything other than the URL you just requested, that page is
-            pointing its value somewhere else. Check three or four pages from different
+            If the href is anything other than the URL you just requested, that page points
+            at a different URL. Check three or four pages from different
             sections. Section index pages are the usual culprits, so try a product page
             under a category and a post under a blog.
           </p>
@@ -145,12 +145,12 @@ export default function Post() {
           <p>
             The obvious fix is to move the canonical from the layout onto the index page
             itself. That failed for me: <code>app/blog/page.tsx</code> is a client
-            component, and client components cannot export metadata. Which is presumably how
+            component, and client components cannot export metadata. That is probably how
             it ended up in the layout to begin with.
           </p>
 
           <p>
-            The correct fix is simpler. <strong>Delete it.</strong> A page with no canonical
+            The fix that works is simpler. <strong>Delete it.</strong> A page with no canonical
             tag self-canonicalises: the engine treats the URL it fetched as the canonical
             one. That is the right answer for the index and the right answer for every post.
           </p>
@@ -177,15 +177,15 @@ export const metadata = {
           </p>
 
           <p>
-            A test that checks the output <em>arrives</em> catches them. A test that only
+            A test that checks the delivered output catches them. A test that only
             checks nothing threw does not. A test that
             fetches four live pages and checks each one canonicalises to itself would have
-            caught this the day it shipped, and it is about eight lines.
+            caught this the day it shipped, and it is eight lines.
           </p>
 
           <p>
-            A build that passes shows the code compiled. It does not show that the change
-            took effect.
+            A passing build shows that the code compiled and says nothing about whether the
+            change took effect.
           </p>
 
 

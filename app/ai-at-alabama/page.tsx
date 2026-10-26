@@ -76,12 +76,12 @@ export default function AiAtAlabama() {
           <p>
             The degree requires this mathematics:
             Calculus I through III, MATH 237 Linear Algebra, MATH 301 Discrete Mathematics,
-            MATH 355 Theory of Probability, and GES 255 Engineering Statistics I. Plus eight
-            hours of natural science and three of cognitive or neuroscience.
+            MATH 355 Theory of Probability, and GES 255 Engineering Statistics I. It also requires eight
+            hours of natural science and three of cognitive science or neuroscience.
           </p>
 
           <p>
-            Know one rule before you plan anything. <strong>an AI major cannot
+            One rule limits your plan: <strong>an AI major cannot
             also major in Computer Science.</strong> The catalog says so outright. The two
             overlap too heavily to count twice.
           </p>
@@ -124,15 +124,15 @@ export default function AiAtAlabama() {
 
           <p>
             The degree gives you the mathematics, the formal grounding and the credential,
-            and I would not trade the probability sequence for anything. It does not give you is the experience of running
+            and I value the probability sequence highly. It does not give you the experience of running
             something other people depend on, and finding out which of your assumptions was
             wrong at seven in the morning when it breaks.
           </p>
 
           <p>
             Any student here can get that experience now, for free. If you build one thing
-            that another person uses, you will learn things about running machine learning
-            that a semester does not cover.
+            that another person uses, you will learn how a deployed machine learning system fails,
+            which a semester does not cover.
           </p>
 
           <h2 style={H2}>Common questions</h2>
@@ -158,7 +158,7 @@ export default function AiAtAlabama() {
 
           <p>
             If you are a UA student trying to build something and want a second pair of
-            eyes on it, that offer is open and it does not cost anything. Campus events and
+            eyes on it, that offer is free. Campus events and
             what is happening this week are on{" "}
             <a href="https://ua-today.vercel.app" style={link}>UA Today</a>, which I also
             built.

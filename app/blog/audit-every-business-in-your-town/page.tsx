@@ -43,7 +43,7 @@ export default function Post() {
 
           <p style={{ fontSize: "18px" }}>
             I pulled every independent business within 2500 metres of the Quad in Tuscaloosa,
-            checked whether each one had a website that answers, and had the numbers in about
+            checked whether each one had a website that answers, and had the numbers in
             forty minutes.{" "}
             <Link href="/blog/121-businesses-near-campus" style={link}>The result was 121
             businesses and 27 working sites</Link>. Here is the whole method, so you can run
@@ -177,10 +177,9 @@ return last`}</div>
 
           <p>
             Keep only name, category, street, and whether the site answers. Leave out phone
-            numbers and email addresses. The moment
-            you collect contact details you have built a marketing list, and if the reason
-            you told people you were doing this was research, you have made yourself a liar
-            in a way that is very easy to notice.
+            numbers and email addresses. Once
+            you collect contact details you have a marketing list. If you told people you
+            were doing research, you have lied to them, and people notice.
           </p>
 
           <h2 style={H2}>What I am using it for</h2>

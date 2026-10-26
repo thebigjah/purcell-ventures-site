@@ -56,14 +56,14 @@ export default function Post() {
           <h2 style={H2}>The three things you buy</h2>
 
           <p>
-            The first is design, meaning somebody decides what the site looks like. This
+            The first is design, which means deciding what the site looks like. It
             ranges from picking a template to creating a visual identity, and it drives
             much of the spread.
           </p>
 
           <p>
             The second is the build, which turns that design into a working site. A site
-            with bookings, payments and accounts takes about ten times the work of a
+            with bookings, payments and accounts takes ten times the work of a
             five-page brochure site.
           </p>
 
@@ -87,7 +87,7 @@ export default function Post() {
                 <tr><td style={{ ...td, fontWeight: 700 }}>Free to $50/mo</td><td style={td}>You build it on a site builder. A workable option for many businesses, and your time is the cost.</td></tr>
                 <tr><td style={{ ...td, fontWeight: 700 }}>$400 to $1,500 once</td><td style={td}>A template configured for you. Somebody else does the work, the design is not original, and this tier fits most small business sites.</td></tr>
                 <tr><td style={{ ...td, fontWeight: 700 }}>$1,500 to $5,000 once</td><td style={td}>Custom build. Original layout, your content structure, functionality beyond pages. My custom software work starts at $1,500 and a substantial build runs to $5,000.</td></tr>
-                <tr><td style={{ ...td, fontWeight: 700 }}>$99 to $279/mo</td><td style={td}>A subscription covers the site and somebody maintaining it. My digital tiers run $99, $179 and $279 a month. No large upfront number, and you are renting rather than owning the arrangement.</td></tr>
+                <tr><td style={{ ...td, fontWeight: 700 }}>$99 to $279/mo</td><td style={td}>A subscription covers the site and somebody maintaining it. My digital tiers run $99, $179 and $279 a month. There is no large upfront cost, and you rent the site instead of owning it.</td></tr>
                 <tr><td style={{ ...td, fontWeight: 700 }}>$10,000 and up</td><td style={td}>Original design, multiple specialists, strategy, photography. Useful work, rarely needed by a barber shop.</td></tr>
               </tbody>
             </table>
@@ -96,13 +96,13 @@ export default function Post() {
           <h2 style={H2}>The costs quotes leave out</h2>
 
           <p>
-            These continue after the invoice is paid. A quote that omits them is less
-            complete, and the costs still arrive.
+            These costs continue after the invoice is paid. A quote that omits them
+            is incomplete, and the costs arrive anyway.
           </p>
 
           <ul style={{ paddingLeft: "1.1rem" }}>
             <li style={{ marginBottom: "9px" }}>A domain costs $12 to $20 a year. Register it in your name.</li>
-            <li style={{ marginBottom: "9px" }}>Hosting runs from free to about $20 a month for a site this size. Free tiers exist and are adequate for small sites.</li>
+            <li style={{ marginBottom: "9px" }}>Hosting runs from free to $20 a month for a site this size. Free tiers exist and are adequate for small sites.</li>
             <li style={{ marginBottom: "9px" }}>Email at your domain costs a few dollars per user per month. It is worth paying for, because customers notice the address.</li>
             <li style={{ marginBottom: "9px" }}>Changes cause the most disputes. Every site needs edits, and if the price of edits is not agreed in writing it becomes an argument in month four.</li>
             <li style={{ marginBottom: "9px" }}>Your own time goes to photographs, copy, decisions and feedback, and it is more than most clients expect.</li>
@@ -127,7 +127,7 @@ export default function Post() {
             costs, and pushes you to decide this week.
           </p>
 
-          <h2 style={H2}>What is a customer worth to you?</h2>
+          <h2 style={H2}>What a customer is worth to you</h2>
 
           <p>
             Work out what one customer is worth, and how many extra customers would make the
@@ -137,8 +137,8 @@ export default function Post() {
           <p>
             If your average customer is worth $2,000, a $3,000 site needs to find you two
             over its lifetime and the decision is easy. If your average sale is $12 and your
-            customers are the same regulars every week, no website at any price is the thing
-            that changes your business, and you should{" "}
+            customers are the same regulars every week, no website at any price changes your
+            business, and you should{" "}
             <Link href="/blog/claim-your-google-listing" style={link}>claim your Google
             listing</Link> and go back to work.
           </p>

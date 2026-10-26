@@ -22,18 +22,18 @@ export default function Post() {
           <div className="pv-mono-label">Practical, May 24, 2026, 4 min read</div>
           <h1>Five workflows you can automate this week without writing code</h1>
           <p className="deck">
-            These five workflows take small business owners the most time. You can automate each one with off-the-shelf tools in under two hours.
+            These five workflows cost small business owners the most time. You can automate each one with off-the-shelf tools in under two hours.
           </p>
         </header>
 
         <article style={{ fontSize: "16px", lineHeight: 1.8, color: "var(--color-warm-text)" }}>
           <p>
-            Most small business owners I work with don&apos;t need an AI strategy. They need time back. Here are five places to find it, ordered by setup time.
+            Most small business owners I work with want time back more than they want an AI strategy. Here are five places to find it, ordered by setup time.
           </p>
 
           <h2 style={h2}>1. Email follow-ups for quotes you sent and forgot</h2>
           <p>
-            You quoted a client, they didn&apos;t respond, and now it&apos;s been eleven days and you can&apos;t remember if you followed up. This is a common revenue leak, and you can fix it in 45 minutes with Gmail.
+            You quoted a client, they didn&apos;t respond, and now it&apos;s been eleven days and you can&apos;t remember if you followed up. Forgotten follow-ups lose sales, and you can fix it in 45 minutes with Gmail.
           </p>
           <p>
             Set up a sequence in Gmail (via the &quot;Schedule send&quot; feature) or in a free Zapier+Sheets combo. Day three: a one-line bump. Day eight: a plain &quot;last touch, yes or no is fine.&quot; Day thirty: a 90-day pickup.
@@ -44,7 +44,7 @@ export default function Post() {
             Every time someone buys, you send the same three emails: welcome, confirmation and next steps. Most owners write these from scratch every time. Write them once and schedule them.
           </p>
           <p>
-            ConvertKit, MailerLite, even Gmail&apos;s built-in templates all do this for free or close to it.
+            ConvertKit, MailerLite and Gmail&apos;s built-in templates all do this, and the Gmail templates are free.
           </p>
 
           <h2 style={h2}>3. Invoice and payment reminders</h2>
@@ -60,12 +60,12 @@ export default function Post() {
             Your contact form sits there collecting submissions in a database you never check. By the time you reply, the lead has bought from someone else. You can fix this in twenty minutes with Zapier or n8n: a form submission sends you a Slack message or text, and you call back within an hour.
           </p>
 
-          <h2 style={h2}>5. Social media posting: the schedule</h2>
+          <h2 style={h2}>5. Social media posts on a schedule</h2>
           <p>
             Most owners write posts but skip scheduling them. They write four posts in a burst, then disappear from social for three weeks because they don&apos;t want to log in and post manually.
           </p>
           <p>
-            Schedule a month&apos;s posts in one sitting using Buffer, Later, or Meta&apos;s built-in scheduler. AI can draft the captions in minutes (our <Link href="/digital/tools/caption-generator" style={{ color: "var(--color-warm-accent)" }}>Caption Generator</Link> generates five captions per post). You write the prompts and schedule a month of posts in one sitting.
+            Schedule a month&apos;s posts in one sitting using Buffer, Later, or Meta&apos;s built-in scheduler. AI can draft the captions in minutes (our <Link href="/digital/tools/caption-generator" style={{ color: "var(--color-warm-accent)" }}>Caption Generator</Link> writes five captions per post). You write the prompts and the tool publishes them.
           </p>
 
           <h2 style={h2}>The pattern</h2>

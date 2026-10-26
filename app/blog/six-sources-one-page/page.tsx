@@ -44,7 +44,7 @@ export default function Post() {
         <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
 
           <p style={{ fontSize: "18px" }}>
-            Campus information at a large university is scattered across separate systems.
+            Campus information at a large university lives in separate systems.
             The official calendar has official events. Departments post their own. Student
             organisations announce on social. Athletics is a separate system. A student who
             wants to know what is happening tonight has to check several places, so many
@@ -75,8 +75,8 @@ export default function Post() {
             A source that returns <em>an empty list</em>, with a 200 status and a
             well-formed response, is harder to catch. Somebody renames a query parameter
             over winter break. The feed still answers with nothing, and your site shows
-            fewer events, and nobody notices because a quiet week on
-            campus looks exactly like a quiet week on campus.
+            fewer events, and nobody notices because a broken feed
+            looks like a quiet week on campus.
           </p>
 
           <p>
@@ -91,7 +91,7 @@ export default function Post() {
           <h2 style={H2}>Floor checks</h2>
 
           <p>
-            The fix is to assert a minimum rather than the absence of an exception. Each
+            The fix is to assert a minimum event count. Each
             source declares how many events it should plausibly produce, and returning fewer
             is a failure even when the request succeeded.
           </p>
@@ -105,13 +105,12 @@ export default function Post() {
           <p>
             The floor is loose enough to pass a slow week and still catch a source that
             returns a 200 status with nothing in it. A health endpoint reports each source with its count and its response
-            time, and the morning check reads that endpoint rather than trusting that the
-            job ran.
+            time, and the morning check reads that endpoint to see whether the
+            job produced events.
           </p>
 
           <p>
-            Choosing the number is a judgement call, and the failure mode of choosing badly
-            is worse than you would expect. A floor set too high fires on every quiet week,
+            Choosing the number is a judgement call. A floor set too high fires on every quiet week,
             people learn to ignore it, and the alert that matters gets ignored with the rest.
           </p>
 

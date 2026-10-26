@@ -457,7 +457,7 @@ export default function ResumePage() {
             live="boyfriend-camera.vercel.app"
             stack="WebGL / GLSL, three.js, MediaPipe, IndexedDB, PWA"
             bullets={[
-              "Camera app whose live viewfinder runs through a WebGL color-grading shader, so a photo is composed with its final look already applied rather than graded afterward.",
+              "Camera app whose live viewfinder runs through a WebGL color-grading shader, so the photographer composes each photo with its final look already applied.",
               "On-device scene analysis reads luminance, color cast, and edge orientation to suggest and place a pose. three.js renders lit 3D mannequin figures in-frame as posing guides.",
               "Full non-destructive editor: curves, eight-channel HSL, three-way color wheels, radial and linear masks, video grading with audio re-encode, and a local library.",
             ]}
@@ -470,7 +470,7 @@ export default function ResumePage() {
             stack="Python, SQLite / Supabase, ArcGIS, pytest, Windows Task Scheduler"
             bullets={[
               "Parses county tax-delinquent PDFs by word coordinates, enriches each parcel against a 279,000-record assessor GIS layer, prices deals by maximum allowable offer, matches against a buyer CRM, and emails a daily packet.",
-              "Encoded ethical exclusions directly into the pipeline: sources whose terms prohibit scraping are refused, and estate-owned parcels are held for human review instead of auto-contacted.",
+              "Encoded ethical exclusions directly into the pipeline: the pipeline refuses sources whose terms prohibit scraping, and estate-owned parcels go to human review and are never auto-contacted.",
             ]}
           />
 
@@ -500,7 +500,7 @@ export default function ResumePage() {
             <Row
               left="English Pruitt Photography, Website"
               right="2026"
-              sub="Sourced through cold outreach, scoped, and built: a hand-coded editorial portfolio site with a true masonry gallery, film-grain texture, and scroll-reveal motion, with copy written to match the client's own voice rather than generic template language."
+              sub="Sourced through cold outreach, scoped, and built: a hand-coded editorial portfolio site with a true masonry gallery, film-grain texture, and scroll-reveal motion, with copy written in the client's own voice."
             />
             <Row
               left="Purcell Ventures Digital Division, Small-business tooling"
@@ -537,7 +537,7 @@ export default function ResumePage() {
           <Row
             left="AI Data Trainer, Outlier AI"
             right="Oct 2025 to May 2026"
-            sub="Two projects. On the first, evaluated large language model outputs and authored a written rationale in support of every rating, assessing accuracy, reasoning quality, and instruction adherence rather than returning a bare score. On the second, wrote realistic spoken-style human-assistant conversations against a fixed per-task tool-call budget, authoring the user turns and editing the model responses, and rewriting prompts until the model stopped over-calling its tools."
+            sub="Two projects. On the first, evaluated large language model outputs and authored a written rationale in support of every rating, assessing accuracy, reasoning quality, and instruction adherence. On the second, wrote realistic spoken-style human-assistant conversations against a fixed per-task tool-call budget, authoring the user turns and editing the model responses, and rewriting prompts until the model stopped over-calling its tools."
           />
           <Row
             left="AI Response Evaluator, DataAnnotation"
@@ -628,11 +628,11 @@ export default function ResumePage() {
         <Section roman="V." title="Awards" em="and honors">
           <Row left="University of Alabama, Honors College Admission" right="2026" />
           <Row left="Georgia State University, Honors College Admission" right="2026" />
-          <Row left="Behold Award" right="9th Grade, Grove" sub="Character and excellence recognition awarded to select students for demonstrated moral integrity and spiritual maturity." />
+          <Row left="Behold Award" right="9th Grade, Grove" sub="The school gives this recognition to select students for demonstrated moral integrity and spiritual maturity." />
           <Row left="Steadfast Award" right="10th Grade, Grove" sub="Recognition for consistent perseverance, faithfulness, and character under pressure." />
           <Row left="Christian Character Award" right="Grove" sub="Selected as one of two students school-wide (one male, one female) for moral excellence, integrity, and leadership." />
-          <Row left="Christ-like Leadership Award" right="Grove, End-of-Year Awards" sub="Awarded at the end-of-year awards ceremony for embodying servant leadership and Christian character throughout the school year." />
-          <Row left="Lead Role, Christmas Musical" right="Grove" sub="Selected for the lead acting and vocal role in the school&apos;s annual Christmas production." />
+          <Row left="Christ-like Leadership Award" right="Grove, End-of-Year Awards" sub="The school gave this award at the end-of-year ceremony for embodying servant leadership and Christian character throughout the school year." />
+          <Row left="Lead Role, Christmas Musical" right="Grove" sub="Cast in the lead acting and vocal role in the school&apos;s annual Christmas production." />
           <Row left="Highest Math Grade in Class" right="9th Grade" sub="Earned 100% both semesters, top math average in the class." />
           <Row
             left="Family Foundation & Colson Center, Youth Leadership Summit"
@@ -751,7 +751,7 @@ export default function ResumePage() {
         {/* ─── Arts & Creative ─── */}
         <Section roman="IX." title="Arts" em="media, creative work">
           <Row left="Vocalist, Bass-Baritone" right="Ongoing" sub="Range C1 to F5. Led worship vocals at school and church through 12th grade. Active in performance and rehearsal since 9th grade." />
-          <Row left="Lead Actor, Christmas Musical" right="Grove" sub="Selected for the lead role in the school&apos;s annual Christmas production. Combined vocal performance with acting and stage presence." />
+          <Row left="Lead Actor, Christmas Musical" right="Grove" sub="Cast in the lead role in the school&apos;s annual Christmas production. Combined vocal performance with acting and stage presence." />
           <Row left="Poetry & Creative Writing" right="Ongoing" sub='Original works include "The Husks the Swine Did Eat," "Injustice Scorned," "The Rebuking of Loki," fiction novel drafts, and personal essays. Writes across 8 distinct styles.' />
           <Row left="Content Creation, YouTube & Social Media" right="2023 to Present" sub="Scripts, films, and edits commentary content on psychology, faith, and culture. YouTube channel with 2,800+ subscribers transitioning to intellectual commentary." />
           <Row left="Design, Photography & Videography" right="Ongoing" sub="Brand identity, product photography, and video production for Purcell Ventures clients and personal projects. Built a full color-grading and posing toolchain from scratch." />

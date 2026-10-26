@@ -59,7 +59,7 @@ const STACK = [
       { name: "yt-dlp",       desc: "Source footage for the YouTube pipeline." },
       { name: "MoviePy",      desc: "Assembling generated content into final videos." },
       { name: "Selenium",     desc: "Headless scraping when an API doesn't exist." },
-      { name: "Task Scheduler", desc: "Windows-side cron, every ElijahBot job runs on this." },
+      { name: "Task Scheduler", desc: "Windows-side cron. Every ElijahBot job runs on it." },
     ],
   },
   {

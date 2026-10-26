@@ -48,7 +48,7 @@ const POSTS: Post[] = [
   {
     slug: "what-you-should-own",
     title: "What you should own at the end of a project",
-    excerpt: "Ask who owns the domain and the code when the project ends. Seven assets that should be in your name, why the domain matters most, and what a provider can reasonably keep.",
+    excerpt: "Who owns the domain and the code when the project ends. Seven assets that should be in your name, why the domain matters most, and what a provider can reasonably keep.",
     date: "August 20, 2026",
     readingTime: "6 min read",
     category: "Business",
@@ -96,7 +96,7 @@ const POSTS: Post[] = [
   {
     slug: "what-a-website-actually-costs",
     title: "What a small business website costs",
-    excerpt: "Ask three providers and you get $400, $4,000 and $15,000 for sites a customer could not tell apart. What drives the spread, the ongoing costs a quote often leaves out, and how to tell expensive from overpriced.",
+    excerpt: "Three providers quote $400, $4,000 and $15,000 for sites a customer could not tell apart. What drives the spread, the ongoing costs a quote often leaves out, and how to tell expensive from overpriced.",
     date: "August 20, 2026",
     readingTime: "8 min read",
     category: "Business",
@@ -104,7 +104,7 @@ const POSTS: Post[] = [
   {
     slug: "what-one-operator-can-deliver",
     title: "What one operator can deliver",
-    excerpt: "Solo shops promise personal service and direct access. None of them say what happens when that person is busy. The arithmetic, plus four things an agency does better.",
+    excerpt: "Solo shops promise personal service and direct access. Few of them say what happens when that person is busy. The arithmetic, plus four things an agency does better.",
     date: "August 20, 2026",
     readingTime: "7 min read",
     category: "Business",
@@ -120,7 +120,7 @@ const POSTS: Post[] = [
   {
     slug: "claim-your-google-listing",
     title: "Claiming your Google listing yourself",
-    excerpt: "You can do this in about twenty minutes without hiring anyone, including me. What to put in every field, how to hide a home address, three things that get a listing suspended, and a five-minute monthly check.",
+    excerpt: "You can do this in twenty minutes without hiring anyone, including me. What to put in every field, how to hide a home address, three things that get a listing suspended, and a five-minute monthly check.",
     date: "August 20, 2026",
     readingTime: "8 min read",
     category: "Guide",

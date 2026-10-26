@@ -59,8 +59,8 @@ export default function Post() {
           <p>
             No application is named here, and there are no reproduction steps. Some of what
             I found is still being fixed, and a writeup that points at live holes would help
-            attackers. The categories below are documented by the vendors whose
-            products they involve. The specifics stay private.
+            attackers. The vendors whose products these categories involve
+            document them. The specifics stay private.
           </p>
 
           <h2 style={H2}>Row-level security is on, and enforcing nothing</h2>
@@ -73,7 +73,7 @@ export default function Post() {
           <p>
             Enabling row-level security on a table means <em>no rows are returned unless a
             policy permits them</em>, which{" "}
-            <a href="https://supabase.com/docs/guides/database/postgres/row-level-security" style={link} rel="noopener">the vendor documentation says plainly</a>.
+            <a href="https://supabase.com/docs/guides/database/postgres/row-level-security" style={link} rel="noopener">the vendor documentation says so</a>.
             Many people misread that sentence. They write a policy to make the app work
             again, and the policy they write is usually too broad. A policy
             written without a role clause applies to every role, including the anonymous one,
@@ -121,8 +121,8 @@ export default function Post() {
           <h2 style={H2}>An auth cookie anyone can set</h2>
 
           <p>
-            Somewhere in the build, a gate got stubbed. A cookie is set on login, and the
-            check is whether the cookie exists, or whether it equals a known constant.
+            Somewhere in the build, a developer stubbed a gate. The app sets a cookie on login, and the
+            check asks whether the cookie exists, or whether it equals a known constant.
           </p>
 
           <p>
@@ -167,7 +167,7 @@ export default function Post() {
 
           <p>
             Frameworks escape by default now, which has made this rarer. Where it survives,
-            it is because someone deliberately opted out to get some formatting working. Search your codebase for whatever your
+            it is because someone deliberately opted out to get formatting working. Search your codebase for whatever your
             framework calls "render this as raw HTML" and check where each one gets its
             input.
           </p>
@@ -206,7 +206,7 @@ FIX        the specific change, not "add validation"`}</div>
 
           <p>
             If you run a small app with users and you would like a second pair of eyes
-            on it, that offer is open and it does not cost anything:{" "}
+            on it, the offer is free:{" "}
             <a href="mailto:elijah@purcell-ventures.com" style={link}>elijah@purcell-ventures.com</a>.
           </p>
 

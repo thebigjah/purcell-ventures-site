@@ -73,7 +73,7 @@ const MODULES = [
     num: "08", title: "Stack, Scale & What's Next", lessonCount: 2, totalMin: 25,
     lessons: [
       { id: "8-1", title: "Your complete AI stack, assembling the pieces", duration: "13 min", format: "Camera + Screen" },
-      { id: "8-2", title: "Turning tools into products, from personal use to sellable thing", duration: "12 min", format: "Camera" },
+      { id: "8-2", title: "Turning tools into products, from personal use to something you can sell", duration: "12 min", format: "Camera" },
     ],
   },
 ];
@@ -190,7 +190,7 @@ export default function ZeroToAutomatedPage() {
             Zero to <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Automated.</em>
           </h1>
           <p className="deck">
-            Build AI tools for your own work. I use these every day. I automated my email inbox, my YouTube channel, my lead generation and my scholarship search. The course walks through how I built each one.
+            I use these tools every day. I automated my email inbox, my YouTube channel, my lead generation and my scholarship search. The course walks through how I built each one.
           </p>
           {/* Stats band */}
           <div style={{
@@ -238,7 +238,7 @@ export default function ZeroToAutomatedPage() {
               },
               {
                 name: "Content Pipeline",
-                desc: "Downloads source footage, generates AI commentary, assembles with captions and a thumbnail, and uploads it. A production workflow that runs on a schedule.",
+                desc: "Downloads source footage, generates AI commentary, assembles with captions and a thumbnail, and uploads it.",
                 stats: "Runs on a schedule. yt-dlp, MoviePy, YouTube API.",
               },
               {
@@ -393,7 +393,7 @@ export default function ZeroToAutomatedPage() {
             Pricing
           </p>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "28px" }}>
-            Pricing
+            Three ways to take the course
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1px", background: "var(--color-warm-border)", borderRadius: 8, overflow: "hidden" }}>
             {TIERS.map(tier => (
@@ -482,7 +482,7 @@ export default function ZeroToAutomatedPage() {
             Waitlist open
           </p>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 700, color: "var(--color-warm-text)", lineHeight: 1.1, maxWidth: "500px" }}>
-            Join the waitlist for Zero to Automated.
+            The Zero to Automated waitlist
           </h2>
           <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", maxWidth: "440px", lineHeight: 1.7, fontFamily: "var(--font-dm-sans), sans-serif" }}>
             The course is $397 at launch. I'll email you when it opens.
@@ -545,7 +545,7 @@ function WaitlistBlock() {
       ) : (
         <div>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(18px, 2.5vw, 24px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "8px" }}>
-            Get notified when Zero to Automated opens.
+            Early access to Zero to Automated
           </h2>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "20px", fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.7 }}>
             The early access list gets a discount. I send one email when it opens.

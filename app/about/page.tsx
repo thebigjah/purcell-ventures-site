@@ -131,7 +131,7 @@ function StoryTab() {
         }}
       />
       <p className="pv-italic" style={{ ...prose, fontSize: "22px", maxWidth: "640px" }}>
-        I&apos;m 19 years old. I run a company with four divisions and software in production. I&apos;m in a hurry because the work matters. <a href="/who" style={{ color: "var(--color-warm-accent)" }}>The short factual version of who Elijah Purcell is</a> lives on its own page.
+        I&apos;m 19 years old. I run a company with four divisions and software in production. I work fast because small businesses need these tools now. <a href="/who" style={{ color: "var(--color-warm-accent)" }}>The short factual version of who Elijah Purcell is</a> lives on its own page.
       </p>
       <p style={prose}>
         I started Purcell Ventures out of a simple observation: the tools that change how businesses operate, meaning AI automation, custom software and digital infrastructure, get built for enterprises first and reach small businesses late, if at all. The HVAC contractor, the barber and the florist work long hours and have little technical support. So I started building tools for them.
@@ -162,10 +162,10 @@ function StoryTab() {
 
       <SectionHead roman="" title="Outside the work" />
       <p style={prose}>
-        I&apos;m a bass-baritone vocalist, range C1 to F5, and I lead worship at church most Sundays. I write poetry nobody asked for. I&apos;m 6&apos;3&quot; and from Georgia, which means I&apos;ve never met a stranger in my life. I&apos;ve done mission trips to North Carolina, the Bahamas, Hawaii, and Alaska. I was a member of my school&apos;s men&apos;s Bible study, competed in apologetics and debate for four years, and earned a 3.92 GPA without once finding it particularly interesting to coast.
+        I&apos;m a bass-baritone vocalist, range C1 to F5. I write poetry nobody asked for. I&apos;m 6&apos;3&quot; and from Georgia, which means I&apos;ve never met a stranger in my life. I&apos;ve done mission trips to North Carolina, the Bahamas, Hawaii, and Alaska. I was a member of my school&apos;s men&apos;s Bible study, competed in apologetics and debate for four years, and earned a 3.92 GPA without coasting.
       </p>
       <p style={{ ...prose, marginBottom: 0 }}>
-        I care about doing things that last. That&apos;s true of the software, the businesses, the relationships, and the faith. I don&apos;t think those are separate categories.
+        I care about building things that last: the software, the businesses, the relationships and the faith. I treat them as one commitment.
       </p>
     </div>
   );

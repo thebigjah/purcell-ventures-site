@@ -30,7 +30,7 @@ type Agent = {
 
 const TEAM: Agent[] = [
   { key: "margot", name: "Margot Merrick", role: "Chief of Staff",
-    does: "Collects what every other agent found and ranks it, so the most urgent thing is first rather than whichever finished last.",
+    does: "Collects what every other agent found and ranks it by urgency.",
     wont: "Decide anything. She reports and Elijah decides." },
   { key: "quentin", name: "Quentin Quill", role: "Proposals", facing: true,
     does: "Writes the proposal, prices every line off the rate card, and states the assumptions out loud so scope cannot creep quietly.",

@@ -42,7 +42,7 @@ const TOOLS: [string, string, string][] = [
   ["verse-vault", "Verse Vault", "A spaced-recall tool for scripture memorization. Add verses you want to know cold. The tool progressively hides words across review sessions until you're saying the whole thing from memory."],
   ["weekly-skill", "Weekly Skill", "A new skill each week: card flourishes, knots, juggling, spinning, beatbox and magic. One per week, your choice or random. Track what you've mastered."],
   ["wisdom-prep", "Wisdom Conversation Prep", "A 5-minute prep tool for a conversation with someone wiser than you. Pick the mentor and topic to get custom questions, pre-call notes and a post-call reflection template."],
-  ["worship-set", "Worship Set", "Plan worship sets: song, key, BPM, transition notes, scripture segue, leader notes. Save sets and reuse them. For worship leaders planning a set."]
+  ["worship-set", "Worship Set", "Plan worship sets: song, key, BPM, transition notes, scripture segue, leader notes. Save sets and reuse them."]
 ];
 
 export default function ToolsPage() {
@@ -65,7 +65,7 @@ export default function ToolsPage() {
         </header>
 
         <p style={{ fontSize: "17px", lineHeight: 1.75, marginBottom: "8px" }}>
-          Single-page tools built by Elijah Purcell. Each one is a single file that runs in
+          Elijah Purcell built these single-purpose tools. Each one is one file that runs in
           the browser, stores what you enter on your own device, and needs no account.
         </p>
         <p style={{ fontSize: "15px", lineHeight: 1.7, color: "var(--color-warm-text-muted)", marginBottom: "34px" }}>

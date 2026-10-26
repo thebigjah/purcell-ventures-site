@@ -618,7 +618,7 @@ export default function BusinessCardsPage() {
             { step: "1", title: "Pick a design", desc: "Screenshot the front and back of your chosen card at full size on this page." },
             { step: "2", title: "Vistaprint", desc: "On vistaprint.com choose Business Cards, then upload the full design. 100 cards cost about $20." },
             { step: "3", title: "Or use Canva", desc: "Recreate in Canva's 3.5×2\" business card template. Export as PDF Print." },
-            { step: "4", title: "Finish tip", desc: "Soft-touch matte on dark cards. Standard matte on the gold (Inverted). Do not use gloss on gold. It washes out." },
+            { step: "4", title: "Finish tip", desc: "Soft-touch matte on dark cards. Standard matte on the gold (Inverted). Gloss washes out the gold, so skip it." },
           ].map(item => (
             <div key={item.step}>
               <div style={{ fontSize: "11px", fontWeight: 700, color: "#d4af37", marginBottom: "6px" }}>Step {item.step}: {item.title}</div>

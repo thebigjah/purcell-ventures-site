@@ -30,7 +30,7 @@ export default function Post() {
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },
           { name: "Writing", href: "/blog" },
-          { name: "Audit your site like a crawler", href: "/blog/audit-your-site-like-a-crawler" },
+          { name: "Auditing your site like a crawler", href: "/blog/audit-your-site-like-a-crawler" },
         ]} />
 
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
@@ -44,7 +44,7 @@ export default function Post() {
         <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
 
           <p style={{ fontSize: "18px" }}>
-            These nine curl checks take about twenty minutes in a terminal and need no
+            These nine curl checks take twenty minutes in a terminal and need no
             account. I ran every one of them against my own site today and found six
             problems. One of them had kept nine pages out of Google.
           </p>
@@ -115,7 +115,7 @@ done < urls.txt | sort -k2 | uniq -f1 -D`}</div>
           <h2 style={H2}>5. Does your structured data parse</h2>
 
           <p>
-            Check that the markup parses, beyond checking that it is present. Google skips a
+            Markup that exists can still be broken, so test that it parses. Google skips a
             JSON-LD block with a trailing comma without any warning, and the page behaves as
             if you never wrote it. Valid markup does not replace the content itself, so also
             read{" "}
@@ -139,7 +139,7 @@ for b in re.findall(r"<script[^>]*ld\\+json[^>]*>(.*?)</script>", h, re.S):
             If your site names a person or an organisation in several places, every one of
             those nodes needs the same <code>@id</code>. Without it you are describing
             several different people who happen to share a name, on your own domain, which is
-            the exact ambiguity you are presumably trying to remove.
+            the ambiguity the markup exists to remove.
           </p>
 
           <p>
@@ -150,7 +150,7 @@ for b in re.findall(r"<script[^>]*ld\\+json[^>]*>(.*?)</script>", h, re.S):
           <h2 style={H2}>7. Does the title contain the term you want to rank for</h2>
 
           <p>
-            The title tag is the strongest
+            The title tag is a strong
             on-page signal for a query, and my homepage did not contain my own name, which
             meant the highest-authority page on my domain could not rank for it.
           </p>
@@ -167,7 +167,7 @@ done < urls.txt`}</div>
 
           <p>
             Time to first byte is the number worth watching, because it is the part your
-            hosting and your server code control. If it is under about 200 milliseconds,
+            hosting and your server code control. If it is under 200 milliseconds,
             speed is not your bottleneck and your time is better spent on the other checks.
           </p>
 
@@ -179,11 +179,11 @@ done < urls.txt`}</div>
           </p>
 
           <p>
-            I had 7 pages indexed against 28 in the sitemap. That gap is the most useful
-            number in this list, and it takes ten seconds to get.
+            I had 7 pages indexed against 28 in the sitemap. That gap shows the problem
+            faster than any other check here, and it takes ten seconds to get.
           </p>
 
-          <h2 style={H2}>Check rankings in a browser</h2>
+          <h2 style={H2}>Why I check rankings in a browser</h2>
 
           <p>
             One warning from today. A search API queries a separate index with its own
@@ -195,7 +195,7 @@ done < urls.txt`}</div>
             I optimised against an API result set for half a day and named the wrong
             competitor on three live pages before checking in a browser and finding
             that the person I was distinguishing myself from does not appear in the top
-            twenty at all.
+            twenty.
           </p>
 
           <p>

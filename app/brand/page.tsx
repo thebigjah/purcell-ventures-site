@@ -28,7 +28,7 @@ const PALETTE = [
     hex: "#d4af37",
     rgb: "212, 175, 55",
     role: "Brand accent",
-    usage: "CTAs, highlights, the mark, active states, eyebrow labels, price tags. Never use as body text on dark because it is too bright for long reading. Never use as a background for text-heavy content. Use it as the accent.",
+    usage: "CTAs, highlights, the mark, active states, eyebrow labels, price tags. Never use as body text on dark because it is too bright for long reading. Never use as a background for text-heavy content.",
     swatch: GOLD,
     textColor: DARK,
   },
@@ -46,7 +46,7 @@ const PALETTE = [
     hex: "#2e2820",
     rgb: "46, 40, 32",
     role: "Borders and card backgrounds",
-    usage: "All borders, dividers, and card backgrounds. One step lighter than Purcell Dark, creates depth without introducing a new color. Never use as text color.",
+    usage: "All borders, dividers, and card backgrounds. It sits one step lighter than Purcell Dark and creates depth without a new color. Never use as text color.",
     swatch: EMBER,
     textColor: CREAM,
   },
@@ -83,7 +83,7 @@ const COMBOS = [
   {
     label: "Default, digital and dark-stock print",
     bg: DARK, text: CREAM, accent: GOLD, border: EMBER,
-    rule: "This is the baseline. Every surface defaults here. Gold for accents and marks only.",
+    rule: "The baseline for every surface. Gold for accents and marks only.",
     context: "Website, dark business cards, dark stationery, brand presentations",
   },
   {
@@ -95,7 +95,7 @@ const COMBOS = [
   {
     label: "Cream surface, light-stock print",
     bg: CREAM, text: DARK, accent: GOLD, border: ASH,
-    rule: "Cream stock with dark text and gold accents. Use on cream stock. For digital, use Warm White.",
+    rule: "Dark text and gold accents on cream stock. For digital, use Warm White.",
     context: "Cream-stock stationery, letterhead, printed proposals, brand book pages",
   },
   {
@@ -118,7 +118,7 @@ function ColorSection() {
     <div>
       <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Named Palette</h2>
       <p style={{ fontSize: "13px", color: ASH, marginBottom: "32px", maxWidth: "560px", lineHeight: 1.65 }}>
-        Seven colors. Three primary, four functional. Every brand decision is made from this set, no ad-hoc additions.
+        Seven colors: three primary and four functional. Every brand decision draws from this set, with no ad-hoc additions.
       </p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "16px", marginBottom: "64px" }}>
         {PALETTE.map(c => (
@@ -172,7 +172,7 @@ function ColorSection() {
 
       <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Never Use</h2>
       <p style={{ fontSize: "13px", color: ASH, marginBottom: "24px", maxWidth: "560px", lineHeight: 1.65 }}>
-        These combinations exist in the wild. None of them are approved.
+        None of these combinations is approved.
       </p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: "12px" }}>
         {FORBIDDEN.map(f => (

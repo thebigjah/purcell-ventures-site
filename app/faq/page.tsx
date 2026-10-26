@@ -58,7 +58,7 @@ const FAQS: QSection[] = [
     qas: [
       {
         q: "Do I need tech experience to benefit from a session?",
-        a: "No. Most sessions are designed for people who've never used AI tools before. I start from what you already know.",
+        a: "No. I design most sessions for people who have never used AI tools. I start from what you already know.",
       },
       {
         q: "What do participants need to bring?",
@@ -122,7 +122,7 @@ const FAQS: QSection[] = [
       },
       {
         q: "Can you maintain it after launch?",
-        a: "Yes, either as a fixed-bug-rate retainer or as ongoing feature development. We decide what works for both of us at the end of the build.",
+        a: "Yes, either as a fixed-rate bug-fix retainer or as ongoing feature development. We decide what works for both of us at the end of the build.",
       },
     ],
   },
@@ -290,10 +290,10 @@ export default function FAQPage() {
               For your business
             </div>
             <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, color: "var(--color-warm-text)", margin: "0 0 8px" }}>
-              Build an FAQ with the AI FAQ Builder.
+              The AI FAQ Builder writes your FAQ.
             </h3>
             <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: 0, lineHeight: 1.5, maxWidth: "560px" }}>
-              Tell us about your business. The AI FAQ Builder writes 6 to 10 questions and answers you can paste into your site. It is free.
+              Tell us about your business. It writes 6 to 10 questions and answers you can paste into your site, and it is free.
             </p>
           </div>
           <a className="pv-btn-primary" href="/digital/tools/faq-builder">Try the tool</a>

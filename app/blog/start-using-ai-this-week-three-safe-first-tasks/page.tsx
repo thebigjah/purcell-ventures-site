@@ -20,7 +20,7 @@ const POST: Data = {
   "lede": "You can start using AI in your business this week with one free account. The safest way to begin is with small writing jobs where you already know what a good answer looks like. I completed 12 Anthropic Academy courses, including AI Fluency: Framework & Foundations, and this post draws on that framework.",
   "sections": [
     {
-      "heading": "Set up your account before you type anything",
+      "heading": "Setting up your account before you type anything",
       "paragraphs": [
         "Pick one tool. ChatGPT, Claude and Gemini all have free plans that can handle the tasks in this post. Sign up with your business email so your work stays separate from your personal chats.",
         "Next, open the privacy settings. In ChatGPT, go to Settings, then Data Controls, and find the switch for Improve the model for everyone. In Claude, go to Settings, then Privacy, and find Help improve Claude. Turn these off if you want to keep your chats out of model training.",
@@ -28,21 +28,21 @@ const POST: Data = {
       ]
     },
     {
-      "heading": "Choose tasks you can check yourself",
+      "heading": "Choosing tasks you can check yourself",
       "paragraphs": [
         "First decide whether AI should do the task at all. For a first week, I pick tasks that pass three tests. You can spot a wrong answer quickly. A mistake costs little to fix. The task takes time you would rather spend with customers.",
         "Short writing drafts pass all three tests. Bookkeeping, legal questions and anything involving a customer's private records fail them, so leave those alone for now."
       ]
     },
     {
-      "heading": "Task one: draft replies to your Google reviews",
+      "heading": "Task one: drafting replies to your Google reviews",
       "paragraphs": [
         "Open your Google Business Profile, go to Reviews, and copy the text of one review. Paste it into the AI tool with a prompt like this: \"Write a short, friendly reply to this review for my barbecue restaurant in Tuscaloosa. Thank the customer, mention the dish they named, and keep it under four sentences. Do not offer discounts or refunds.\"",
         "Here the AI follows instructions you wrote. Read the draft side by side with the review. Delete anything the customer never said, and remove any promise you did not make. Then paste your edited version into the Reply box in Google Business Profile and post it."
       ]
     },
     {
-      "heading": "Task two: rewrite one page of your website",
+      "heading": "Task two: rewriting one page of your website",
       "paragraphs": [
         "Pick the page you like least, often the services page or the about page, and copy its text into the tool. This task works best as a back-and-forth where you and the tool work on the page together.",
         "Good output depends on clear instructions and context, so tell the tool four things: who reads the page, what a good result looks like, an example you like, and your limits. For example: \"This page is for first-time customers looking for a tattoo shop in Tuscaloosa. A good result explains our booking process in one read. Here is a paragraph from our FAQ page whose tone I like. Keep every price and policy exactly as written. Before you rewrite, ask me three questions about anything unclear.\"",
@@ -50,7 +50,7 @@ const POST: Data = {
       ]
     },
     {
-      "heading": "Task three: write this week's customer update",
+      "heading": "Task three: writing this week's customer update",
       "paragraphs": [
         "Pick one piece of news, such as your Thanksgiving hours, a new service, or a time change for Sunday services. Write the facts yourself first: dates, times, address and phone number.",
         "A model knows only its training data up to a cutoff date plus what you put in front of it. It cannot know your hours for this November unless you paste them in. Give it your exact facts and ask for a short email and a Facebook post in plain language."
@@ -59,7 +59,7 @@ const POST: Data = {
     {
       "heading": "How to check every result before you use it",
       "paragraphs": [
-        "Next, judge how useful the output is. Models can state wrong things with full confidence, so I check every fact, name, number and quote against a source before I use it.",
+        "Next, check the output. Models can state wrong things with full confidence, so I check every fact, name, number and quote against a source before I use it.",
         "Compare every date, time, price and phone number with your own records, such as your booking calendar, your price list or the hours on your Google Business Profile. Delete claims you cannot back up, such as \"best in town\" or \"fastest service.\" Read the draft out loud and change any sentence you would never say to a customer.",
         "You are responsible for how you use AI and what you do with its output. Your business name goes on every reply and post, so you approve each one yourself. When a prompt works well, save it in a note on your phone. Once you trust a few saved prompts, you can set up a Project in Claude or ChatGPT with saved instructions so it can handle similar tasks for you later.",
         "Your first step this week: open Google Business Profile, copy your most recent review, and draft a reply with the prompt above."

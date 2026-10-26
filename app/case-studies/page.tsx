@@ -83,7 +83,7 @@ export default function CaseStudiesPage() {
               fontSize: "19px", color: "var(--color-warm-text)", opacity: 0.85,
               maxWidth: "560px", margin: "0 auto 24px", lineHeight: 1.55,
             }}>
-              I am taking a small number of first clients and will ask each for permission to publish the results. I plan to publish the first case studies within about 60 days of starting client work.
+              I am taking a small number of first clients and will ask each for permission to publish the results. I plan to publish the first case studies within 60 days of starting client work.
             </p>
             <p style={{
               fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
@@ -212,7 +212,7 @@ export default function CaseStudiesPage() {
             color: "var(--color-warm-text)", textTransform: "uppercase",
             marginBottom: "16px", lineHeight: 1.15,
           }}>
-            Book a <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>session.</em>
+            Consulting <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>sessions.</em>
           </h2>
           <p className="pv-italic" style={{
             fontSize: "18px", color: "var(--color-warm-text)", opacity: 0.85,

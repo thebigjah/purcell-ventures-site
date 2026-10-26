@@ -38,11 +38,11 @@ export default function Post() {
 
           <p>A checkout button sits three clicks deep, behind a menu labeled Services, under a tab few visitors open. The site is live and cannot take a payment.</p>
 
-          <p>Ask one question of everything you&apos;ve shipped: can a stranger pay for this today? Ask it about someone who found the page cold, decided quickly, and reached for a card, and leave out the warm lead who already emailed you.</p>
+          <p>Ask one question of everything you&apos;ve shipped: can a stranger pay for this today? Ask it about a visitor who found the page cold, decided quickly and reached for a card. Leave out the warm lead who already emailed you.</p>
 
-          <h2 style={head}>The failures are small, so they last</h2>
+          <h2 style={head}>Small failures go unfixed</h2>
 
-          <p>Most launched sites fail that question in unremarkable ways. A payment link still carries a placeholder token from testing, so it loads and looks finished but takes no money. A pricing page lists tiers with no way to select one. A form collects an email and promises a follow-up that never got automated.</p>
+          <p>Most launched sites fail that question in small ways. A payment link still carries a placeholder token from testing, so it loads and looks finished but takes no money. A pricing page lists tiers with no way to select one. A form collects an email and promises a follow-up that never got automated.</p>
 
           <p>None of that shows up in a deploy log, where every check passes. The gap between a finished site and a working business is usually one broken path, and it stays broken because the owner can&apos;t see it from the inside. You know where the checkout is, so you never go looking for it.</p>
 
@@ -54,9 +54,9 @@ export default function Post() {
 
           <h2 style={head}>The check itself</h2>
 
-          <p>Open your own site in a private window. Start from wherever a stranger would land, which is often a different page from the one you&apos;re proud of. Try to buy from yourself. Pay attention to where you stall.</p>
+          <p>Open your own site in a private window. Start from wherever a stranger would land, which is often a different page from the one you&apos;re proud of. Try to buy from yourself. Note where you stall.</p>
 
-          <p>Write down every place you had to already know something to keep going. That list is the gap between shipped and activated. Usually the fix is a clear path from the homepage to the payment, and a redesign is rarely needed.</p>
+          <p>Write down every place you had to already know something to keep going. That list is the gap between shipped and activated. A clear path from the homepage to the payment usually fixes it, with no redesign needed.</p>
 
           <section style={{ marginTop: "44px", paddingTop: "22px", borderTop: "1px solid rgba(212,175,55,0.2)" }}>
             <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, margin: "0 0 12px" }}>

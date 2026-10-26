@@ -453,14 +453,14 @@ export default function AIReadinessPage() {
             The questions cover drafting and written communication, new tools, repeated
             manual work, how knowledge is stored and found, how data informs decisions,
             marketing content, and how your team and you personally think about AI. Your
-            answers show whether AI is likely to help.
+            answers show which of those areas are ready for AI and which are not.
           </p>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "36px 0 14px", color: "var(--color-warm-text)" }}>
             What you get back
           </h2>
           <p>
             A readiness level and a short list of what to do first, in order. It needs no
-            email and sends no follow-up. It runs in your browser and takes about three minutes.
+            email and sends no follow-up. It runs in your browser and takes three minutes.
           </p>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "36px 0 14px", color: "var(--color-warm-text)" }}>
             Who built it

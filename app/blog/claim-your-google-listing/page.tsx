@@ -44,13 +44,13 @@ export default function Post() {
         <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
 
           <p style={{ fontSize: "18px" }}>
-            Agencies write most guides to this, and they would like to manage it for you. I
-            wrote this one so you can do it yourself. It takes about twenty minutes and it is
+            Agencies write most guides to this and want to manage it for you. I
+            wrote this one so you can do it yourself. It takes twenty minutes and it is
             free.
           </p>
 
           <p>
-            In my audit, this mattered more than a website for many of the businesses. I audited 121 independent businesses near the University of Alabama. 27 had a website
+            In my audit, this mattered more than a website for many of the businesses. I audited 121 independent businesses near the University of Alabama. Of those, 27 had a website
             that answered and 23 had opening hours recorded anywhere a machine could read
             them.{" "}
             <Link href="/blog/121-businesses-near-campus" style={link}>The other 98 had no
@@ -72,7 +72,7 @@ export default function Post() {
 
           <h2 style={H2}>Step by step</h2>
 
-          <h3 style={H3}>1. Check for an existing listing</h3>
+          <h3 style={H3}>1. Existing listings</h3>
           <p>
             If a panel appears, look for "Own this business?" or "Claim this business."
             Start there. Creating a second profile for a business that already has one is
@@ -80,7 +80,7 @@ export default function Post() {
             duplicates.
           </p>
 
-          <h3 style={H3}>2. Go to business.google.com</h3>
+          <h3 style={H3}>2. The login at business.google.com</h3>
           <p>
             Use an email address you will still control in five years. Avoid an employee's
             personal account or an address at a domain you may drop. This login is the key
@@ -109,7 +109,7 @@ export default function Post() {
           <h3 style={H3}>5. Hours, including the ones you forget</h3>
           <p>
             Enter regular hours, then special hours for holidays. Wrong hours send customers
-            to a locked door. Put a reminder in your calendar for the week before every
+            to a closed business. Put a reminder in your calendar for the week before every
             holiday.
           </p>
 
@@ -122,10 +122,10 @@ export default function Post() {
             you start recording.
           </p>
           <p>
-            A postcard takes about two weeks. Do not create a second listing while you wait.
+            A postcard takes up to two weeks. Do not create a second listing while you wait.
           </p>
 
-          <h3 style={H3}>7. Photos, more than you think</h3>
+          <h3 style={H3}>7. Photos</h3>
           <p>
             Add the exterior including your sign, so people recognise the building, then the
             interior and the work itself. Phone photos are fine.
@@ -134,8 +134,8 @@ export default function Post() {
           <h3 style={H3}>8. The description</h3>
           <p>
             Say what you do, where, and for whom, in plain sentences. No keyword stuffing:
-            Google does not rank on it and a human reading a keyword-stuffed paragraph
-            concludes something about you that you do not want them concluding.
+            Google does not rank on it, and readers who see a keyword-stuffed paragraph
+            judge the business by it.
           </p>
 
           <h2 style={H2}>Reviews</h2>
@@ -150,7 +150,7 @@ export default function Post() {
             <strong>Three things that get a listing suspended.</strong> Paying for reviews or
             offering a discount for one. Writing them yourself or having staff and family do
             it. Keyword-stuffing the business name field, so "Joe's Barbers" becomes "Joe's
-            Barbers Best Haircut Tuscaloosa." Google can suspend a listing for any of these.
+            Barbers Best Haircut Tuscaloosa."
           </div>
 
           <p>
@@ -168,7 +168,7 @@ export default function Post() {
           </ul>
 
           <p>
-            That last one surprises people. Other people can change your listing, and a
+            Other people can change your listing, and a
             monthly check is how you find out someone marked you permanently closed.
           </p>
 
@@ -184,7 +184,6 @@ export default function Post() {
             are near the University of Alabama and stuck on one of those, ask me and I will
             tell you what I would do:{" "}
             <a href="mailto:elijah@purcell-ventures.com" style={link}>elijah@purcell-ventures.com</a>.
-            I will answer by email.
           </p>
 
           <p>
@@ -203,9 +202,9 @@ export default function Post() {
             { name: "Choose the primary category carefully", text: "The primary category does more to determine which searches you appear in than any other field. Be specific, then add secondary categories afterwards." },
             { name: "Set the address, or hide it", text: "If customers come to you, show the address. If you work from home or travel to customers, choose the service-area option and hide the address so it does not appear on a public map." },
             { name: "Enter regular and holiday hours", text: "Add special hours for holidays and set a calendar reminder for the week before each one." },
-            { name: "Complete verification", text: "Google verifies by postcard, phone, email or video depending on the business. Postcard takes about two weeks. Do not create a second listing while waiting." },
+            { name: "Complete verification", text: "Google verifies by postcard, phone, email or video depending on the business. Postcard takes up to two weeks. Do not create a second listing while waiting." },
             { name: "Add photos", text: "Exterior including the sign, interior, and the work itself. Phone photos are fine." },
-            { name: "Write a plain description", text: "Say what you do, where, and for whom. No keyword stuffing: it does not affect ranking and it tells a human reader something you do not want them concluding." },
+            { name: "Write a plain description", text: "Say what you do, where, and for whom. No keyword stuffing: it does not affect ranking and readers judge the business by it." },
           ]}
           />
 

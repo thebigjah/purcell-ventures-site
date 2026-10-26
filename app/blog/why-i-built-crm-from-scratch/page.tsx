@@ -50,9 +50,9 @@ export default function Post() {
           <p>I needed multi-rep visibility, AI-assisted next steps, custom contact stages, an activity timeline and email templates with tokens. That would have cost $200 to $400 a month, or $2,400 to $4,800 a year.</p>
 
           <h2 style={head}>What I built instead</h2>
-          <p>One week of focused work produced a CRM with 6 views (List, Kanban, Tasks, Stats, Coach, Reps), per-rep auth, AI features specific to my workflow, and an activity log structured for the sales conversations my reps and I have.</p>
+          <p>One week of focused work produced a CRM with 6 views (List, Kanban, Tasks, Stats, Coach, Reps), per-rep auth, AI features specific to my workflow, and an activity log built around the sales conversations my reps and I have.</p>
 
-          <p>The cost so far is about $15 in Anthropic API usage for the AI features. There is no monthly subscription.</p>
+          <p>The cost so far is $15 in Anthropic API usage for the AI features. There is no monthly subscription.</p>
 
           <h2 style={head}>Why the math works</h2>
           <p>The usual objection is that a custom CRM takes more upkeep than HubSpot. For me it has taken less, for four reasons.</p>
@@ -63,7 +63,7 @@ export default function Post() {
 
           <p><strong>3. Integrations are small jobs.</strong> The Steady intake form and the /sales-rep form both create a CRM contact automatically. With HubSpot, that is either a paid feature at $50 a month or a Zapier connection at $30 a month plus API setup time.</p>
 
-          <p><strong>4. AI features cost extra on third-party CRMs.</strong> HubSpot&apos;s AI features (Breeze) are tied to a $720 a month plan. Mine run on Claude Haiku at about $0.001 per call.</p>
+          <p><strong>4. AI features cost extra on third-party CRMs.</strong> HubSpot&apos;s AI features (Breeze) are tied to a $720 a month plan. Mine run on Claude Haiku at $0.001 per call.</p>
 
           <h2 style={head}>What I gave up</h2>
           <p>Three things:</p>
