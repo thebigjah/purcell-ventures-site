@@ -1,21 +1,27 @@
 "use client";
 
 import { useState } from "react";
+import s from "./ROICalculator.module.css";
+
+// Rebuilt on the page kit 26 Oct 2026. The maths, the inputs, their ranges and the presets'
+// numbers are unchanged. Only /digital uses this, and the page supplies the section heading.
 
 const INDUSTRY_PRESETS = [
-  { label: "Hair Salon", bookingValue: 55, extraBookings: 5 },
-  { label: "Barber Shop", bookingValue: 30, extraBookings: 8 },
-  { label: "HVAC / Contractor", bookingValue: 350, extraBookings: 2 },
+  { label: "Hair salon", bookingValue: 55, extraBookings: 5 },
+  { label: "Barber shop", bookingValue: 30, extraBookings: 8 },
+  { label: "HVAC or contractor", bookingValue: 350, extraBookings: 2 },
   { label: "Restaurant", bookingValue: 45, extraBookings: 20 },
-  { label: "Massage / Spa", bookingValue: 90, extraBookings: 4 },
-  { label: "Lawn Care", bookingValue: 120, extraBookings: 3 },
+  { label: "Massage or spa", bookingValue: 90, extraBookings: 4 },
+  { label: "Lawn care", bookingValue: 120, extraBookings: 3 },
 ];
+
+const PLAN_NAMES = { starter: "Starter", growth: "Growth", full: "Full Service" } as const;
 
 export default function ROICalculator() {
   const [bookingValue, setBookingValue] = useState(55);
   const [extraPerWeek, setExtraPerWeek] = useState(5);
   const [plan, setPlan] = useState<"starter" | "growth" | "full">("growth");
-  const [selectedPreset, setSelectedPreset] = useState("Hair Salon");
+  const [selectedPreset, setSelectedPreset] = useState("Hair salon");
 
   const planCosts = { starter: 99, growth: 179, full: 279 };
   const planCost = planCosts[plan];
@@ -32,170 +38,117 @@ export default function ROICalculator() {
   }
 
   return (
-    <section className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="max-w-2xl mb-10">
-          <h2 className="text-3xl font-bold mb-4">What a session would save you</h2>
-          <p className="text-[var(--color-warm-text-muted)] leading-relaxed">
-            Enter your own numbers. The business-type presets are made-up starting values.
-          </p>
+    <div className={s.calc}>
+      <div>
+        <div className={s.group}>
+          <p className={s.label} id="roi-type">Business type</p>
+          <div className={s.choices} role="group" aria-labelledby="roi-type">
+            {INDUSTRY_PRESETS.map((p) => (
+              <button
+                key={p.label}
+                type="button"
+                className={s.choice}
+                aria-pressed={selectedPreset === p.label}
+                onClick={() => applyPreset(p)}
+              >
+                {p.label}
+              </button>
+            ))}
+          </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
-
-          {/* Left: inputs */}
-          <div className="bg-[var(--color-warm-card)] rounded-2xl p-8 border border-[var(--color-warm-border)]">
-
-            {/* Presets */}
-            <div className="mb-8">
-              <label className="block text-sm font-semibold mb-3">Business type</label>
-              <div className="flex flex-wrap gap-2">
-                {INDUSTRY_PRESETS.map((p) => (
-                  <button
-                    key={p.label}
-                    onClick={() => applyPreset(p)}
-                    className={`text-xs px-3 py-1.5 rounded-full border font-medium transition-colors ${
-                      selectedPreset === p.label
-                        ? "bg-[var(--color-warm-accent)] text-white border-[var(--color-warm-accent)]"
-                        : "border-[var(--color-warm-border)] text-[var(--color-warm-text-muted)] hover:border-[var(--color-warm-accent)] hover:text-[var(--color-warm-accent)]"
-                    }`}
-                  >
-                    {p.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Sliders */}
-            <div className="space-y-8">
-              <div>
-                <div className="flex justify-between mb-2">
-                  <label className="text-sm font-semibold">Average booking / job value</label>
-                  <span className="text-[var(--color-warm-accent)] font-bold">${bookingValue}</span>
-                </div>
-                <input
-                  type="range"
-                  min={15}
-                  max={500}
-                  step={5}
-                  value={bookingValue}
-                  onChange={(e) => { setBookingValue(+e.target.value); setSelectedPreset("Custom"); }}
-                  className="w-full accent-[var(--color-warm-accent)]"
-                />
-                <div className="flex justify-between text-xs text-[var(--color-warm-text-light)] mt-1">
-                  <span>$15</span><span>$500</span>
-                </div>
-              </div>
-
-              <div>
-                <div className="flex justify-between mb-2">
-                  <label className="text-sm font-semibold">Extra bookings per week the tools would bring in</label>
-                  <span className="text-[var(--color-warm-accent)] font-bold">{extraPerWeek}/week</span>
-                </div>
-                <input
-                  type="range"
-                  min={1}
-                  max={30}
-                  step={1}
-                  value={extraPerWeek}
-                  onChange={(e) => { setExtraPerWeek(+e.target.value); setSelectedPreset("Custom"); }}
-                  className="w-full accent-[var(--color-warm-accent)]"
-                />
-                <div className="flex justify-between text-xs text-[var(--color-warm-text-light)] mt-1">
-                  <span>1</span><span>30</span>
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold mb-3">Which plan?</label>
-                <div className="grid grid-cols-3 gap-2">
-                  {(["starter", "growth", "full"] as const).map((p) => (
-                    <button
-                      key={p}
-                      onClick={() => setPlan(p)}
-                      className={`py-2 px-3 rounded-lg border text-sm font-medium transition-colors capitalize ${
-                        plan === p
-                          ? "bg-[var(--color-warm-accent)] text-white border-[var(--color-warm-accent)]"
-                          : "border-[var(--color-warm-border)] text-[var(--color-warm-text-muted)] hover:border-[var(--color-warm-accent)]"
-                      }`}
-                    >
-                      {p}<br />
-                      <span className="text-xs font-normal opacity-80">
-                        ${planCosts[p]}/mo
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
+        <div className={s.group}>
+          <div className={s.labelRow}>
+            <label className={s.label} htmlFor="roi-value">Average booking or job value</label>
+            <span className={s.value}>${bookingValue}</span>
           </div>
+          <input
+            id="roi-value"
+            className={s.range}
+            type="range"
+            min={15}
+            max={500}
+            step={5}
+            value={bookingValue}
+            onChange={(e) => { setBookingValue(+e.target.value); setSelectedPreset("Custom"); }}
+          />
+          <div className={s.ends}><span>$15</span><span>$500</span></div>
+        </div>
 
-          {/* Right: results */}
-          <div className="space-y-4">
+        <div className={s.group}>
+          <div className={s.labelRow}>
+            <label className={s.label} htmlFor="roi-extra">Extra bookings a week from the tools</label>
+            <span className={s.value}>{extraPerWeek} a week</span>
+          </div>
+          <input
+            id="roi-extra"
+            className={s.range}
+            type="range"
+            min={1}
+            max={30}
+            step={1}
+            value={extraPerWeek}
+            onChange={(e) => { setExtraPerWeek(+e.target.value); setSelectedPreset("Custom"); }}
+          />
+          <div className={s.ends}><span>1</span><span>30</span></div>
+        </div>
 
-            {/* Main result */}
-            <div className={`rounded-2xl p-8 border ${netGain > 0 ? "bg-[var(--color-warm-accent)] text-white border-[var(--color-warm-accent-dark)]" : "bg-[var(--color-warm-card)] border-[var(--color-warm-border)]"}`}>
-              <p className={`text-sm font-semibold mb-2 ${netGain > 0 ? "text-white/70" : "text-[var(--color-warm-text-muted)]"}`}>
-                Estimated monthly net gain
-              </p>
-              <p className="text-5xl font-bold mb-1">
-                {netGain >= 0 ? "+" : ""}${Math.abs(netGain).toLocaleString()}
-              </p>
-              <p className={`text-sm ${netGain > 0 ? "text-white/70" : "text-[var(--color-warm-text-muted)]"}`}>
-                every month, after the subscription cost
-              </p>
-            </div>
-
-            {/* Breakdown */}
-            <div className="bg-[var(--color-warm-card)] rounded-2xl p-6 border border-[var(--color-warm-border)] space-y-4">
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-[var(--color-warm-text-muted)]">Extra revenue/month</span>
-                <span className="font-semibold text-[var(--color-warm-success)]">
-                  +${extraMonthly.toLocaleString(undefined, { maximumFractionDigits: 0 })}
-                </span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-[var(--color-warm-text-muted)]">Subscription cost</span>
-                <span className="font-semibold text-[var(--color-warm-text-muted)]">
-                  −${planCost}/mo
-                </span>
-              </div>
-              <div className="border-t border-[var(--color-warm-border)] pt-4 flex justify-between items-center">
-                <span className="text-sm font-semibold">Net gain</span>
-                <span className={`font-bold text-lg ${netGain >= 0 ? "text-[var(--color-warm-success)]" : "text-red-500"}`}>
-                  ${netGain.toLocaleString(undefined, { maximumFractionDigits: 0 })}/mo
-                </span>
-              </div>
-            </div>
-
-            {/* Stats row */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-[var(--color-warm-card)] rounded-xl p-5 border border-[var(--color-warm-border)] text-center">
-                <p className="text-3xl font-bold text-[var(--color-warm-accent)]">{roi > 0 ? roi : 0}%</p>
-                <p className="text-xs text-[var(--color-warm-text-muted)] mt-1">monthly ROI</p>
-              </div>
-              <div className="bg-[var(--color-warm-card)] rounded-xl p-5 border border-[var(--color-warm-border)] text-center">
-                <p className="text-3xl font-bold text-[var(--color-warm-accent)]">
-                  {paybackDays <= 30 ? `${paybackDays}d` : "Over 30d"}
-                </p>
-                <p className="text-xs text-[var(--color-warm-text-muted)] mt-1">payback period</p>
-              </div>
-            </div>
-
-            <p className="text-xs text-[var(--color-warm-text-light)] leading-relaxed px-1">
-              This is arithmetic on the numbers above. It assumes online booking, the chatbot and review
-              requests bring in the extra bookings you entered.
-            </p>
-
-            <a
-              href="#contact"
-              className="block text-center px-6 py-3.5 bg-[var(--color-warm-accent)] text-white font-semibold rounded-xl hover:bg-[var(--color-warm-accent-dark)] transition-colors"
-            >
-              Talk to me about your numbers
-            </a>
+        <div className={s.group}>
+          <p className={s.label} id="roi-plan">Plan</p>
+          <div className={s.plans} role="group" aria-labelledby="roi-plan">
+            {(["starter", "growth", "full"] as const).map((p) => (
+              <button
+                key={p}
+                type="button"
+                className={s.choice}
+                aria-pressed={plan === p}
+                onClick={() => setPlan(p)}
+              >
+                {PLAN_NAMES[p]}
+                <small>${planCosts[p]} a month</small>
+              </button>
+            ))}
           </div>
         </div>
       </div>
-    </section>
+
+      <div aria-live="polite">
+        <div className={s.result}>
+          <p>Estimated net gain each month, after the plan cost</p>
+          <span className={`${s.big}${netGain < 0 ? ` ${s.loss}` : ""}`}>
+            {netGain >= 0 ? "+" : "−"}${Math.abs(netGain).toLocaleString()}
+          </span>
+        </div>
+
+        <dl className="ui-facts">
+          <dt>Extra revenue a month</dt>
+          <dd>+${extraMonthly.toLocaleString(undefined, { maximumFractionDigits: 0 })}</dd>
+          <dt>Plan cost</dt>
+          <dd>{"−"}${planCost} a month</dd>
+          <dt>Net gain</dt>
+          <dd className={netGain >= 0 ? "ui-gold" : undefined}>
+            {netGain < 0 ? "−" : ""}${Math.abs(netGain).toLocaleString(undefined, { maximumFractionDigits: 0 })} a month
+          </dd>
+        </dl>
+
+        <div className={`ui-figures ${s.figs}`}>
+          <div className="ui-figure">
+            <b>{roi > 0 ? roi : 0}%</b>
+            <span>Monthly return on the plan</span>
+          </div>
+          <div className="ui-figure">
+            <b>{paybackDays <= 30 ? `${paybackDays} days` : "Over 30 days"}</b>
+            <span>Time to pay back the plan</span>
+          </div>
+        </div>
+
+        <p className={s.fine}>
+          This is arithmetic on the numbers above. It assumes online booking, the chatbot and review
+          requests bring in the extra bookings you entered.
+        </p>
+
+        <a className="ui-btn" href="#contact">Talk to me about your numbers</a>
+      </div>
+    </div>
   );
 }

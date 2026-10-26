@@ -1,0 +1,28 @@
+/* Page-local layout for /digital. Everything else comes from the .ui-* kit. */
+
+.addon { font-weight: 700; color: var(--fg); }
+.demo { white-space: nowrap; }
+
+.toggle {
+  min-height: 44px; padding: 10px 16px; margin-top: 14px; background: transparent; color: var(--fg);
+  border: 1px solid var(--line); font: 700 15px/1.2 var(--font-body); cursor: pointer;
+  transition: color .15s, border-color .15s, background .15s;
+}
+.toggle:hover { border-color: var(--gold); }
+.toggle[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: var(--bg); }
+
+.salary { color: var(--gold-text); font-weight: 700; white-space: nowrap; }
+
+.summary { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--line); }
+.summary h3 { font-size: 22px; margin: 0 0 18px; }
+
+.formRow { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+.form { display: flex; flex-direction: column; gap: 18px; max-width: 640px; }
+.form textarea { resize: vertical; }
+.form :global(.ui-btn) { align-self: flex-start; min-height: 44px; }
+.reach { margin-top: 28px; }
+.reach p { margin: 0 0 8px; }
+
+@media (max-width: 860px) {
+  .formRow { grid-template-columns: minmax(0, 1fr); }
+}

@@ -1,85 +1,64 @@
-"use client";
+import type { Metadata } from "next";
+import { PageHero, Section, Rows, Button, ClosingCall } from "@/app/components/ui";
+import { AI_TOOLS, type AIToolConfig } from "@/lib/ai-tools";
 
-import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
-import { AI_TOOLS } from "@/lib/ai-tools";
+export const metadata: Metadata = {
+  title: "Free AI tools for small businesses",
+  description: `${AI_TOOLS.length} free AI tools for small businesses: FAQ pages, review replies, emails, captions, color palettes, job posts and more, plus working demos of the loyalty, expense, inventory, estimating and event add-ons.`,
+  alternates: { canonical: "/digital/tools" },
+};
 
-const STATE_TOOLS = [
-  { slug: "loyalty",            name: "Loyalty Punch Card",   tagline: "Digital punch card for repeat customers",     category: "Customer Management" as const },
-  { slug: "expenses",           name: "Expense Tracker",      tagline: "Log expenses and see monthly summaries",     category: "Operations & Finance" as const },
-  { slug: "inventory",          name: "Inventory Tracker",    tagline: "Product list and low-stock alerts",     category: "Operations & Finance" as const },
-  { slug: "estimating",         name: "Online Estimating",    tagline: "Job quotes with line items, printable as a PDF", category: "Operations & Finance" as const },
-  { slug: "event-registration", name: "Event Registration",   tagline: "RSVP form and attendee list",     category: "Booking & Scheduling" as const },
+// Display names for the registry's category values. The values themselves stay as they are
+// in lib/ai-tools.ts because the type union is shared with the API route.
+const CATEGORY_LABEL: Record<AIToolConfig["category"], string> = {
+  "AI-Powered": "Writing and research",
+  "Branding & Identity": "Branding and identity",
+  "Communication & Marketing": "Communication and marketing",
+  "Operations & Finance": "Operations and finance",
+};
+
+const CATEGORY_ORDER: AIToolConfig["category"][] = ["AI-Powered", "Communication & Marketing", "Branding & Identity", "Operations & Finance"];
+
+const DEMOS = [
+  { slug: "loyalty", name: "Loyalty punch card", tagline: "A digital punch card for repeat customers.", category: "Customer management" },
+  { slug: "expenses", name: "Expense tracker", tagline: "Log expenses and see monthly totals by category.", category: "Operations and finance" },
+  { slug: "inventory", name: "Inventory tracker", tagline: "A product list with low-stock alerts.", category: "Operations and finance" },
+  { slug: "estimating", name: "Online estimating", tagline: "Job quotes with line items, printable as a PDF.", category: "Operations and finance" },
+  { slug: "event-registration", name: "Event registration", tagline: "An RSVP form and attendee list with check-in.", category: "Booking and scheduling" },
 ];
 
-type ToolCard = { slug: string; name: string; tagline: string; category: string; isAI: boolean };
-
 export default function ToolsIndexPage() {
-  const allTools: ToolCard[] = [
-    ...AI_TOOLS.map((t) => ({ slug: t.slug, name: t.name, tagline: t.tagline, category: t.category, isAI: true })),
-    ...STATE_TOOLS.map((t) => ({ slug: t.slug, name: t.name, tagline: t.tagline, category: t.category, isAI: false })),
-  ];
-
-  const grouped = allTools.reduce<Record<string, ToolCard[]>>((acc, tool) => {
-    if (!acc[tool.category]) acc[tool.category] = [];
-    acc[tool.category].push(tool);
-    return acc;
-  }, {});
+  const grouped = CATEGORY_ORDER.map((cat) => ({ cat, tools: AI_TOOLS.filter((t) => t.category === cat) })).filter((g) => g.tools.length > 0);
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <VignetteBackground />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
+    <main>
+      <PageHero
+        planet="tools"
+        kicker="Digital add-ons"
+        title={`${AI_TOOLS.length} free AI tools for small businesses`}
+        lede="Each tool is free to use. Enter your business details and the tool writes the result on the page. If one saves you time, I can add a branded version to your own site."
+        actions={<>
+          <Button href="#tools">See the tools</Button>
+          <Button href="/digital" ghost>See the digital plans</Button>
+        </>}
+      />
 
-        <header className="pv-page-head">
-          <div className="pv-mono-label">Digital services: live tools</div>
-          <h1>
-            Free versions of <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>every tool we sell.</em>
-          </h1>
-          <p className="deck">
-            Each tool is free. Enter your business details to see its output. If one saves you time, we can add a branded version to your own site. <Link href="/digital" style={{ color: "var(--color-warm-accent)" }}>See subscription tiers</Link>.
-          </p>
-        </header>
+      {grouped.map(({ cat, tools }, i) => (
+        <Section key={cat} id={i === 0 ? "tools" : undefined} title={CATEGORY_LABEL[cat]} intro={`${tools.length} ${tools.length === 1 ? "tool" : "tools"}`}>
+          <Rows items={tools.map((t) => ({ name: t.name, line: t.tagline, href: `/digital/tools/${t.slug}` }))} />
+        </Section>
+      ))}
 
-        {Object.entries(grouped).map(([category, tools]) => (
-          <section key={category} style={{ marginBottom: "48px" }}>
-            <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", color: "var(--color-warm-accent)", fontWeight: 600, marginBottom: "20px", letterSpacing: "0.02em", borderBottom: "1px solid var(--color-warm-border)", paddingBottom: "12px" }}>
-              {category}
-            </h2>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "12px" }}>
-              {tools.map((t) => (
-                <Link
-                  key={t.slug}
-                  href={t.isAI ? `/digital/tools/${t.slug}` : `/digital/${t.slug}`}
-                  className="pv-card"
-                  style={{ display: "block" }}
-                >
-                  <span className="b3"></span><span className="b4"></span>
-                  {t.isAI && (
-                    <div style={{ fontSize: "9px", letterSpacing: "0.24em", color: "var(--color-warm-accent)", textTransform: "uppercase", fontWeight: 700, marginBottom: "8px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-                      AI-Powered
-                    </div>
-                  )}
-                  <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", color: "var(--color-warm-text)", fontWeight: 600, margin: "0 0 6px", lineHeight: 1.3 }}>
-                    {t.name}
-                  </h3>
-                  <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: 0, lineHeight: 1.5 }}>
-                    {t.tagline}
-                  </p>
-                </Link>
-              ))}
-            </div>
-          </section>
-        ))}
+      <Section title="Add-on demos" intro="Working versions of add-ons I install on client sites. They run in your browser and save to this device only.">
+        <Rows items={DEMOS.map((d) => ({ name: d.name, line: `${d.tagline} ${d.category}.`, href: `/digital/${d.slug}` }))} />
+      </Section>
 
-        <div style={{ marginTop: "48px", textAlign: "center", padding: "32px 24px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-accent)" }}>
-          <p style={{ fontSize: "14px", color: "var(--color-warm-text)", margin: "0 0 12px", lineHeight: 1.6 }}>
-            We can brand any of these tools and connect it to your own site and your business data.
-          </p>
-          <Link href="/digital" className="pv-btn-primary">See Digital subscription tiers</Link>
-        </div>
-
-      </main>
-    </div>
+      <ClosingCall
+        title="A branded version on your site"
+        line="I can brand any of these tools and connect it to your own site and your business data. The digital plans start at $99 a month."
+        button="See the digital plans"
+        href="/digital"
+      />
+    </main>
   );
 }

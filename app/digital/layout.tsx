@@ -5,24 +5,24 @@ export const metadata: Metadata = {
   alternates: { canonical: "/digital" },
   title: "Digital services for small businesses: AI tools, CRM and booking",
   description:
-    "Complete digital toolkit: website, AI chatbot, booking system, CRM, email marketing, social scheduling, and 20+ tools. One monthly subscription, Starter $99/mo, Growth $179/mo, Full $279/mo. Setup $400 to $1,000.",
+    "26 add-ons for small businesses, from booking and a CRM to an AI chatbot and email marketing, built and maintained by one person. Starter $99, Growth $179 and Full Service $279 a month. Setup $400 to $1,000.",
   keywords: [
     "digital services small business", "AI chatbot for website", "business website management",
     "CRM for small business", "email marketing automation", "booking system",
     "social media scheduling", "website plus AI tools",
   ],
   openGraph: {
-    title: "Digital Services for Small Businesses: Purcell Ventures",
+    title: "Digital add-ons for small businesses, Purcell Ventures",
     description:
-      "Website, AI chatbot, booking system, CRM, and 20+ tools. One subscription. Starting at $99/mo.",
+      "Booking, a CRM, an AI chatbot and 23 more add-ons for small businesses. Plans from $99 a month.",
     url: "https://purcellventures.co/digital",
     type: "website",
   
     images: ["/opengraph-image"],
   },
   twitter: {
-    title: "Digital Services: Purcell Ventures",
-    description: "Website, AI chatbot, booking, CRM, and 20+ tools for small businesses. From $99/mo.",
+    title: "Digital add-ons, Purcell Ventures",
+    description: "Booking, a CRM, an AI chatbot and 23 more add-ons for small businesses. Plans from $99 a month.",
   },
   // NO canonical here. This layout wraps every /digital child route and Next
   // inherits it, so each child was declaring itself a duplicate of /digital.
@@ -37,7 +37,7 @@ const schema = {
       "@id": "https://purcellventures.co/digital#service",
       "name": "Digital Services for Small Businesses",
       "description":
-        "Complete digital toolkit: website, AI chatbot, booking system, CRM, email marketing, social scheduling, and 20+ tools. I manage it. One monthly subscription.",
+        "26 add-ons for small businesses, including a website, an AI chatbot, booking, a CRM, email marketing and social scheduling. I build and maintain them for one monthly subscription.",
       "provider": { "@id": "https://purcellventures.co/#organization" },
       "url": "https://purcellventures.co/digital",
       "serviceType": "Digital Business Services",
@@ -51,7 +51,7 @@ const schema = {
         "offers": [
           { "@type": "Offer", "name": "Starter Plan", "price": "99", "priceCurrency": "USD" },
           { "@type": "Offer", "name": "Growth Plan", "price": "179", "priceCurrency": "USD" },
-          { "@type": "Offer", "name": "Full Suite Plan", "price": "279", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Full Service Plan", "price": "279", "priceCurrency": "USD" },
         ],
       },
     },
@@ -71,7 +71,7 @@ const schema = {
           "name": "How much does a digital services subscription cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Plans start at $99/mo (Starter), $179/mo (Growth), or $279/mo (Full Suite). There is a one-time setup fee of $400 to $1,000.",
+            "text": "Starter is $99 a month, Growth $179 a month and Full Service $279 a month. There is a one-time setup fee of $400 to $1,000.",
           },
         },
         {
@@ -79,7 +79,7 @@ const schema = {
           "name": "Do I own my website?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. The site, content, and domain are yours. If you ever want to leave, I hand over the full source code and all assets.",
+            "text": "Yes. The site, content and domain are yours. If you leave, I hand over the full source code and all assets.",
           },
         },
         {
@@ -92,7 +92,7 @@ const schema = {
         },
         {
           "@type": "Question",
-          "name": "Why is it cheaper than a typical agency?",
+          "name": "Why does it cost less than a typical agency?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "I reuse the same modules across clients instead of building each site from scratch, and I use AI tools to write and test code. Both cut my hours, so I can charge less.",

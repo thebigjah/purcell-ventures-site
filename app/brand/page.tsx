@@ -1,341 +1,271 @@
 "use client";
 import { useState } from "react";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+import type { CSSProperties } from "react";
 
-const GOLD       = "#d4af37";
-const DARK       = "#0c0a08";
-const CREAM      = "#f5f0e0";
-const EMBER      = "#2e2820";
-const ASH        = "#524d45";
-const CHAR       = "#3a3530";
-const WARM_WHITE = "#faf8f4";
-const MID        = "#141210";
+// Internal brand reference. Reads from the site's CSS variables so it cannot drift from the live palette.
+// PAPER is the one literal colour: warm white for printed pages, which has no site token.
+const PAPER = "#faf8f4";
 
-// ─── Color System ─────────────────────────────────────────────────────────────
+const CSS = `
+.br { min-height: 100vh; background: var(--bg); color: var(--fg); font-family: var(--font-body); padding: 40px 0 72px; }
+.br h1, .br h2, .br h3 { font-family: var(--font-display); font-weight: 600; color: var(--fg); margin: 0; }
+.br h1 { font-size: clamp(32px, 6vw, 44px); line-height: 1.1; letter-spacing: -0.01em; }
+.br h2 { font-size: 22px; line-height: 1.2; margin-bottom: 8px; }
+.br h3 { font-size: 17px; line-height: 1.3; margin-bottom: 6px; }
+.br p { margin: 0; }
+.br-head { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+.br-head img { width: 56px; height: 56px; flex-shrink: 0; }
+.br-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); margin: 28px 0 40px; overflow-x: auto; }
+.br-tab { background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; color: var(--muted); font: 500 15px var(--font-body); padding: 0 18px; min-height: 44px; cursor: pointer; white-space: nowrap; }
+.br-tab:hover { color: var(--fg); }
+.br-tab[aria-selected="true"] { color: var(--gold-text); border-bottom-color: var(--gold-text); font-weight: 700; }
+.br-lede { font-size: 15px; color: var(--muted); line-height: 1.65; max-width: 60ch; margin-bottom: 28px !important; }
+.br-block { margin-bottom: 64px; }
+.br-grid { display: grid; gap: 16px; }
+.br-g-swatch { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.br-g-fonts { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.br-g-subj { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.br-g-bad { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.br-g-rules { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.br-g-usage { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.br-card { border: 1px solid var(--line); overflow: hidden; background: var(--surface); }
+.br-card__body { padding: 14px 16px; }
+.br-card__foot { padding: 14px 20px; border-top: 1px solid var(--line); background: var(--surface); }
+.br-small { font-size: 13px; line-height: 1.6; color: var(--muted); }
+.br-tiny { font-size: 12px; line-height: 1.55; color: var(--subtle); }
+.br-gold { color: var(--gold-text); font-weight: 600; font-size: 13px; }
+.br-chip { display: inline-block; font-size: 12px; padding: 3px 8px; border: 1px solid var(--line); color: var(--subtle); }
+.br-demo { padding: 28px 24px; }
+.br-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid; font: 600 14px var(--font-body); }
+.br-ctl { background: none; border: 1px solid var(--line); color: var(--muted); font: 500 13px var(--font-body); min-height: 44px; min-width: 44px; padding: 0 12px; cursor: pointer; }
+.br-ctl:hover { color: var(--fg); border-color: var(--subtle); }
+.br-ctl[aria-pressed="true"] { border-color: var(--gold-text); color: var(--gold-text); background: var(--surface-2); }
+.br-type { border: 1px solid var(--line); }
+.br-type__row { display: grid; grid-template-columns: 120px minmax(0, 1fr) 190px; gap: 16px; align-items: center; padding: 16px 24px; border-bottom: 1px solid var(--line); }
+.br-type__row:nth-child(odd) { background: var(--surface); }
+.br-type__row:last-child { border-bottom: 0; }
+.br-type__sample { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.br-type__spec { text-align: right; }
+.br-grade { display: grid; grid-template-columns: 150px 70px 1fr; gap: 16px; align-items: center; padding: 13px 24px; border-bottom: 1px solid var(--line); }
+.br-grade:last-child { border-bottom: 0; }
+.br-grade:nth-child(odd) { background: var(--surface); }
+.br-bad { border: 1px solid color-mix(in srgb, var(--danger) 45%, var(--bg)); background: color-mix(in srgb, var(--danger) 8%, var(--bg)); }
+.br-bad p { color: var(--danger); font-size: 14px; line-height: 1.6; padding: 14px 16px; }
+.br-list { margin: 0 0 18px; padding-left: 18px; }
+.br-list li { font-size: 14px; line-height: 1.65; margin-bottom: 4px; color: var(--fg-2); }
+.br-list--avoid li { color: var(--muted); }
+.br-ratios { display: flex; gap: 24px; flex-wrap: wrap; align-items: flex-end; }
+.br-foot { display: flex; gap: 8px; margin-top: 64px; }
+.br-foot a { color: var(--gold-text); text-decoration: underline; text-underline-offset: 3px; min-height: 44px; display: inline-flex; align-items: center; padding-right: 16px; font-size: 15px; }
+.br-icon-card { border: 1px solid var(--line); overflow: hidden; }
+.br-icon-card[data-copied="true"] { border-color: var(--gold-text); }
+.br-icon-stage { height: 100px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--line); }
+.br-icon-meta { padding: 10px 12px; background: var(--surface); }
+@media (max-width: 860px) {
+  .br-type__row { grid-template-columns: 1fr; gap: 6px; padding: 14px 16px; }
+  .br-type__spec { text-align: left; }
+  .br-grade { grid-template-columns: 1fr auto; padding: 12px 16px; }
+  .br-grade > :last-child { grid-column: 1 / -1; }
+}
+`;
+
+function Intro({ children }: { children: React.ReactNode }) {
+  return <p className="br-lede">{children}</p>;
+}
+
+// ─── Colour system ────────────────────────────────────────────────────────────
 
 const PALETTE = [
-  {
-    name: "Purcell Dark",
-    hex: "#0c0a08",
-    rgb: "12, 10, 8",
-    role: "Primary background",
-    usage: "Default background for all brand materials. Near-black with a warm brown undertone because pure black looks cold. Every surface starts here unless a specific rule says otherwise.",
-    swatch: DARK,
-    textColor: CREAM,
-  },
-  {
-    name: "Purcell Gold",
-    hex: "#d4af37",
-    rgb: "212, 175, 55",
-    role: "Brand accent",
-    usage: "CTAs, highlights, the mark, active states, eyebrow labels, price tags. Never use as body text on dark because it is too bright for long reading. Never use as a background for text-heavy content.",
-    swatch: GOLD,
-    textColor: DARK,
-  },
-  {
-    name: "Purcell Cream",
-    hex: "#f5f0e0",
-    rgb: "245, 240, 224",
-    role: "Primary text on dark",
-    usage: "Headings and body text on dark backgrounds. Light backgrounds on cream-stock print. Never use cream text on white, insufficient contrast. On light backgrounds, switch to Purcell Dark for text.",
-    swatch: CREAM,
-    textColor: DARK,
-  },
-  {
-    name: "Ember",
-    hex: "#2e2820",
-    rgb: "46, 40, 32",
-    role: "Borders and card backgrounds",
-    usage: "All borders, dividers, and card backgrounds. It sits one step lighter than Purcell Dark and creates depth without a new color. Never use as text color.",
-    swatch: EMBER,
-    textColor: CREAM,
-  },
-  {
-    name: "Ash",
-    hex: "#524d45",
-    rgb: "82, 77, 69",
-    role: "Secondary text and muted content",
-    usage: "Subheadings, descriptions, secondary body copy, anything that should recede behind primary cream text. Muted tone for long-form content.",
-    swatch: ASH,
-    textColor: CREAM,
-  },
-  {
-    name: "Char",
-    hex: "#3a3530",
-    rgb: "58, 53, 48",
-    role: "Tertiary text and labels",
-    usage: "Category labels, fine print, metadata, timestamps, the most muted readable text. Below this level, content is invisible.",
-    swatch: CHAR,
-    textColor: CREAM,
-  },
-  {
-    name: "Warm White",
-    hex: "#faf8f4",
-    rgb: "250, 248, 244",
-    role: "Forced-light background",
-    usage: "Use when printing on standard white paper or generating a PDF that will be viewed on a white background. Warm tint of white for print, light enough to stay legible. Text on this surface: Purcell Dark. Accent: Gold.",
-    swatch: WARM_WHITE,
-    textColor: DARK,
-  },
+  { name: "Night", hex: "#07060a", rgb: "7, 6, 10", role: "Primary background", token: "--bg", swatch: "var(--bg)", on: "var(--fg)", usage: "The default background for every brand surface. Near-black with a faint violet-brown cast, so it reads warmer than pure black." },
+  { name: "Surface", hex: "#100e0c", rgb: "16, 14, 12", role: "Panels and cards", token: "--surface", swatch: "var(--surface)", on: "var(--fg)", usage: "One step above Night. Panels, tables and form fields sit here. Surface 2 (#171411) is the step above that, for hover and selected states." },
+  { name: "Line", hex: "#2a251e", rgb: "42, 37, 30", role: "Borders and dividers", token: "--line", swatch: "var(--line)", on: "var(--fg)", usage: "Every border and divider. Never used as a text colour." },
+  { name: "Cream", hex: "#efe8d8", rgb: "239, 232, 216", role: "Primary text on dark", token: "--fg", swatch: "var(--fg)", on: "var(--bg)", usage: "Headings and body text on dark. Cream text never goes on white. On light paper, use Night for text." },
+  { name: "Muted", hex: "#a69d8b", rgb: "166, 157, 139", role: "Secondary text", token: "--muted", swatch: "var(--muted)", on: "var(--bg)", usage: "Descriptions and supporting copy that sits behind the cream text. Subtle (#8a8270) is the quietest readable level, for fine print and metadata." },
+  { name: "Gold", hex: "#b8862b", rgb: "184, 134, 43", role: "Brand accent, fills", token: "--gold", swatch: "var(--gold)", on: "var(--bg)", usage: "Buttons, rules, the mark and other filled shapes. Night text goes on gold fills. Gold deep (#6b4e1a) is the shadow end of the foil." },
+  { name: "Gold text", hex: "#e3bd6a", rgb: "227, 189, 106", role: "Accent text on dark", token: "--gold-text", swatch: "var(--gold-text)", on: "var(--bg)", usage: "Links, prices and highlights set as text on dark. It is a lighter gold than the fill so it passes contrast. Use it for short phrases, never for paragraphs." },
 ];
 
 const COMBOS = [
-  {
-    label: "Default, digital and dark-stock print",
-    bg: DARK, text: CREAM, accent: GOLD, border: EMBER,
-    rule: "The baseline for every surface. Gold for accents and marks only.",
-    context: "Website, dark business cards, dark stationery, brand presentations",
-  },
-  {
-    label: "Gold background pairing",
-    bg: GOLD, text: DARK, accent: DARK, border: DARK,
-    rule: "Gold as a background works only for short-form content, a card back, a section banner, a pull quote. Never for body text paragraphs.",
-    context: "Card accent elements, pull quotes, pricing highlights, CTA banners",
-  },
-  {
-    label: "Cream surface, light-stock print",
-    bg: CREAM, text: DARK, accent: GOLD, border: ASH,
-    rule: "Dark text and gold accents on cream stock. For digital, use Warm White.",
-    context: "Cream-stock stationery, letterhead, printed proposals, brand book pages",
-  },
-  {
-    label: "Forced light, white paper and standard PDFs",
-    bg: WARM_WHITE, text: DARK, accent: GOLD, border: CHAR,
-    rule: "When you have no choice but a light background. Warm White instead of pure white keeps the brand temperature. Dark text, gold accents, Char for borders.",
-    context: "Standard PDFs, Google Docs, printed emails, white-stock invoices",
-  },
+  { label: "Default, for screens and dark stock", bg: "var(--bg)", text: "var(--fg)", accent: "var(--gold-text)", rule: "The baseline for every surface. Gold is for accents and the mark only.", context: "Website, dark business cards, dark stationery, presentations" },
+  { label: "Gold background", bg: "var(--gold)", text: "var(--bg)", accent: "var(--bg)", rule: "Gold as a background works for short content: a card back, a banner or a pull quote. Never for paragraphs.", context: "Card accents, pull quotes, pricing highlights, call-to-action banners" },
+  { label: "Cream stock, printed", bg: "var(--fg)", text: "var(--bg)", accent: "var(--gold-deep)", rule: "Night text with deep-gold accents on cream stock.", context: "Letterhead, printed proposals, brand book pages" },
+  { label: "White paper and standard PDFs", bg: PAPER, text: "var(--bg)", accent: "var(--gold-deep)", rule: "When the page has to be light, use warm white instead of pure white. Night text, deep-gold accents, Line for borders.", context: "Standard PDFs, printed emails, white-stock invoices, the printed résumé" },
 ];
 
 const FORBIDDEN = [
-  { bg: "#ffffff", text: CREAM, label: "Cream on white, insufficient contrast. Text disappears." },
-  { bg: DARK, text: GOLD, label: "Gold as body text on dark, too vibrant. Use Cream for prose." },
-  { bg: GOLD, text: CREAM, label: "Cream on gold, washes out. Only Dark on gold." },
-  { bg: DARK, text: "#000000", label: "Pure black text on dark, invisible and wrong temperature." },
+  { bg: PAPER, text: "var(--fg)", label: "Cream on white. The text disappears." },
+  { bg: "var(--bg)", text: "var(--gold)", label: "Fill gold as body text on dark. It is too dim. Use Cream for prose, and Gold text only for short phrases." },
+  { bg: "var(--gold)", text: "var(--fg)", label: "Cream on gold. It washes out. Only Night goes on gold." },
+  { bg: "var(--surface)", text: "var(--line)", label: "Line colour as text. It is invisible, and it is for borders." },
 ];
 
 function ColorSection() {
   return (
     <div>
-      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Named Palette</h2>
-      <p style={{ fontSize: "13px", color: ASH, marginBottom: "32px", maxWidth: "560px", lineHeight: 1.65 }}>
-        Seven colors: three primary and four functional. Every brand decision draws from this set, with no ad-hoc additions.
-      </p>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "16px", marginBottom: "64px" }}>
-        {PALETTE.map(c => (
-          <div key={c.name} style={{ border: `1px solid ${EMBER}`, borderRadius: 8, overflow: "hidden" }}>
-            <div style={{ background: c.swatch, height: 80, display: "flex", alignItems: "flex-end", padding: "10px 16px" }}>
-              <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "13px", fontWeight: 700, color: c.textColor, letterSpacing: "0.08em" }}>
-                {c.name}
-              </span>
-            </div>
-            <div style={{ padding: "14px 16px", background: MID }}>
-              <div style={{ display: "flex", gap: "16px", marginBottom: "8px" }}>
-                <span style={{ fontSize: "11px", fontWeight: 700, color: GOLD, letterSpacing: "0.06em" }}>{c.hex.toUpperCase()}</span>
-                <span style={{ fontSize: "11px", color: CHAR, letterSpacing: "0.04em" }}>RGB {c.rgb}</span>
+      <div className="br-block">
+        <h2>Named palette</h2>
+        <Intro>Seven colours. Each is a CSS variable in globals.css, and every brand decision draws from this set.</Intro>
+        <div className="br-grid br-g-swatch">
+          {PALETTE.map(c => (
+            <div key={c.name} className="br-card">
+              <div style={{ background: c.swatch, height: 80, display: "flex", alignItems: "flex-end", padding: "10px 16px" }}>
+                <span style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 600, color: c.on }}>{c.name}</span>
               </div>
-              <div style={{ fontSize: "11px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: CHAR, marginBottom: "6px" }}>{c.role}</div>
-              <p style={{ fontSize: "12px", color: ASH, lineHeight: 1.6, margin: 0 }}>{c.usage}</p>
+              <div className="br-card__body">
+                <div style={{ display: "flex", gap: 16, flexWrap: "wrap", marginBottom: 8 }}>
+                  <span className="br-gold">{c.hex}</span>
+                  <span className="br-tiny">RGB {c.rgb}</span>
+                  <span className="br-tiny">var({c.token})</span>
+                </div>
+                <p style={{ fontSize: 13, fontWeight: 600, color: "var(--fg-2)", marginBottom: 6 }}>{c.role}</p>
+                <p className="br-small">{c.usage}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Approved Combinations</h2>
-      <p style={{ fontSize: "13px", color: ASH, marginBottom: "32px", maxWidth: "560px", lineHeight: 1.65 }}>
-        Four approved pairings. Each is shown at scale with sample content.
-      </p>
-      <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "64px" }}>
-        {COMBOS.map(combo => (
-          <div key={combo.label} style={{ border: `1px solid ${EMBER}`, borderRadius: 8, overflow: "hidden" }}>
-            <div style={{ background: combo.bg, padding: "28px 32px" }}>
-              <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: combo.accent, marginBottom: "8px" }}>
-                Purcell Ventures
+      <div className="br-block">
+        <h2>Approved combinations</h2>
+        <Intro>Four approved pairings, each at scale with sample content.</Intro>
+        <div className="br-grid">
+          {COMBOS.map(combo => (
+            <div key={combo.label} className="br-card">
+              <div className="br-demo" style={{ background: combo.bg }}>
+                <p style={{ fontSize: 14, fontWeight: 600, color: combo.accent, marginBottom: 8 }}>Purcell Ventures</p>
+                <p style={{ fontFamily: "var(--font-display)", fontSize: 24, fontWeight: 600, color: combo.text, marginBottom: 8, lineHeight: 1.2 }}>Sample heading</p>
+                <p style={{ fontSize: 15, color: combo.text, opacity: 0.8, lineHeight: 1.7, marginBottom: 16, maxWidth: "46ch" }}>
+                  Body copy showing how text reads on this background. It shows line length, weight and colour in this pairing.
+                </p>
+                <span className="br-btn" style={{ borderColor: combo.accent, color: combo.accent }}>Action</span>
               </div>
-              <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 700, color: combo.text, marginBottom: "8px", letterSpacing: "-0.01em" }}>
-                Sample Heading Text
-              </div>
-              <p style={{ fontSize: "14px", color: combo.text, opacity: 0.72, lineHeight: 1.7, margin: "0 0 16px", maxWidth: "480px" }}>
-                Body copy demonstrating how text reads against this background. It shows line length, weight and color in this combination.
-              </p>
-              <div style={{ display: "inline-block", padding: "8px 18px", border: `1px solid ${combo.accent}`, color: combo.accent, fontSize: "12px", fontWeight: 700, letterSpacing: "0.08em", borderRadius: 4 }}>
-                Action
+              <div className="br-card__foot">
+                <p className="br-gold" style={{ marginBottom: 4 }}>{combo.label}</p>
+                <p className="br-small" style={{ marginBottom: 4 }}>{combo.rule}</p>
+                <p className="br-tiny">{combo.context}</p>
               </div>
             </div>
-            <div style={{ padding: "14px 20px", background: MID, borderTop: `1px solid ${EMBER}` }}>
-              <div style={{ fontSize: "11px", fontWeight: 600, color: GOLD, letterSpacing: "0.08em", marginBottom: "4px" }}>{combo.label}</div>
-              <div style={{ fontSize: "12px", color: ASH, marginBottom: "4px" }}>{combo.rule}</div>
-              <div style={{ fontSize: "11px", color: CHAR, letterSpacing: "0.04em" }}>{combo.context}</div>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Never Use</h2>
-      <p style={{ fontSize: "13px", color: ASH, marginBottom: "24px", maxWidth: "560px", lineHeight: 1.65 }}>
-        None of these combinations is approved.
-      </p>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: "12px" }}>
-        {FORBIDDEN.map(f => (
-          <div key={f.label} style={{ border: `1px solid #4a1a1a`, borderRadius: 8, overflow: "hidden" }}>
-            <div style={{ background: f.bg, padding: "20px", position: "relative" }}>
-              <span style={{ color: f.text, fontSize: "15px", fontWeight: 600 }}>Sample text</span>
-              <span style={{ position: "absolute", top: 8, right: 10, fontSize: "18px", opacity: 0.7 }}>✕</span>
-            </div>
-            <div style={{ padding: "10px 14px", background: "#1a0808" }}>
-              <p style={{ fontSize: "11px", color: "#a06060", lineHeight: 1.55, margin: 0 }}>{f.label}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-// ─── Typography System ────────────────────────────────────────────────────────
-
-const TYPE_SCALE = [
-  { name: "Hero",       size: "clamp(44px, 7vw, 72px)", weight: 700, font: "cinzel", ls: "-0.02em", lh: 1.05, use: "Page titles, brand moments" },
-  { name: "H1",         size: "clamp(32px, 5vw, 52px)", weight: 700, font: "cinzel", ls: "-0.02em", lh: 1.1,  use: "Section heroes, major headings" },
-  { name: "H2",         size: "22px",                   weight: 600, font: "cinzel", ls: "-0.01em", lh: 1.2,  use: "Section headings" },
-  { name: "H3",         size: "17px",                   weight: 600, font: "cinzel", ls: "0em",     lh: 1.35, use: "Card titles, sub-sections" },
-  { name: "Body Large", size: "18px",                   weight: 400, font: "dm",     ls: "0em",     lh: 1.75, use: "Lead paragraphs, intros" },
-  { name: "Body",       size: "16px",                   weight: 400, font: "dm",     ls: "0em",     lh: 1.85, use: "Standard prose" },
-  { name: "Body Small", size: "14px",                   weight: 400, font: "dm",     ls: "0em",     lh: 1.7,  use: "Card descriptions, secondary prose" },
-  { name: "Label",      size: "11px",                   weight: 700, font: "inter",  ls: "0.12em",  lh: 1.4,  use: "Eyebrows, category labels, caps" },
-  { name: "Caption",    size: "12px",                   weight: 400, font: "dm",     ls: "0.02em",  lh: 1.6,  use: "Footnotes, timestamps, meta" },
-  { name: "UI",         size: "13px",                   weight: 600, font: "inter",  ls: "0.04em",  lh: 1.4,  use: "Buttons, nav links, form labels" },
-];
-
-function TypographySection() {
-  return (
-    <div>
-      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Font Families</h2>
-      <p style={{ fontSize: "13px", color: ASH, marginBottom: "32px", maxWidth: "560px", lineHeight: 1.65 }}>
-        Three fonts, three roles. Each one has a specific job and doesn't cross into the others.
-      </p>
-
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "16px", marginBottom: "56px" }}>
-        {[
-          {
-            name: "Cinzel",
-            role: "Display, headings, brand",
-            weights: ["400 Regular", "600 SemiBold", "700 Bold", "900 Black"],
-            note: "Roman letterforms based on classical inscriptions. Use for everything that IS the brand, the mark, headings, section titles, the logo. Never for body copy or UI.",
-            sample: "PURCELL VENTURES",
-            sampleFont: "'Cinzel', Georgia, serif",
-            sampleSize: "28px",
-          },
-          {
-            name: "DM Sans",
-            role: "Body, prose, descriptions",
-            weights: ["300 Light", "400 Regular", "500 Medium", "600 SemiBold", "700 Bold"],
-            note: "Designed specifically for readability in digital prose. Warmer and more distinctive than Inter. Use for all paragraph text, card descriptions, long-form content.",
-            sample: "Built for the people who work hardest.",
-            sampleFont: "var(--font-dm-sans), sans-serif",
-            sampleSize: "18px",
-          },
-          {
-            name: "Inter",
-            role: "UI, labels, micro-copy",
-            weights: ["400 Regular", "500 Medium", "600 SemiBold", "700 Bold"],
-            note: "Purpose-built for screen UI elements. Use for buttons, navigation links, form labels, eyebrow labels in all-caps, and any text that's a functional UI element rather than content.",
-            sample: "GET IN TOUCH",
-            sampleFont: "var(--font-inter), sans-serif",
-            sampleSize: "13px",
-          },
-        ].map(f => (
-          <div key={f.name} style={{ border: `1px solid ${EMBER}`, borderRadius: 8, overflow: "hidden" }}>
-            <div style={{ background: MID, padding: "24px", borderBottom: `1px solid ${EMBER}` }}>
-              <div style={{ fontSize: f.sampleSize, fontFamily: f.sampleFont, fontWeight: 700, color: CREAM, marginBottom: "16px", lineHeight: 1.2 }}>
-                {f.sample}
+      <div>
+        <h2>Combinations not approved</h2>
+        <Intro>None of these is allowed anywhere.</Intro>
+        <div className="br-grid br-g-bad">
+          {FORBIDDEN.map(f => (
+            <div key={f.label} className="br-bad">
+              <div style={{ background: f.bg, padding: 20 }}>
+                <span style={{ color: f.text, fontSize: 16, fontWeight: 600 }}>Sample text</span>
               </div>
-              <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
-                {f.weights.map(w => (
-                  <span key={w} style={{ fontSize: "10px", padding: "3px 8px", border: `1px solid ${CHAR}`, borderRadius: 3, color: CHAR, letterSpacing: "0.06em" }}>
-                    {w}
-                  </span>
-                ))}
-              </div>
+              <p>{f.label}</p>
             </div>
-            <div style={{ padding: "16px" }}>
-              <div style={{ fontSize: "16px", fontWeight: 700, fontFamily: "'Cinzel', Georgia, serif", color: GOLD, marginBottom: "4px" }}>{f.name}</div>
-              <div style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: CHAR, marginBottom: "10px" }}>{f.role}</div>
-              <p style={{ fontSize: "12px", color: ASH, lineHeight: 1.65, margin: 0 }}>{f.note}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Type Scale</h2>
-      <p style={{ fontSize: "13px", color: ASH, marginBottom: "32px", maxWidth: "560px", lineHeight: 1.65 }}>
-        Ten levels. Every size decision in the system maps to one of these. Don't invent intermediate sizes.
-      </p>
-      <div style={{ border: `1px solid ${EMBER}`, borderRadius: 8, overflow: "hidden" }}>
-        {TYPE_SCALE.map((t, i) => (
-          <div key={t.name} style={{
-            display: "grid", gridTemplateColumns: "100px 1fr 200px",
-            gap: "16px", alignItems: "center",
-            padding: "16px 24px",
-            borderBottom: i < TYPE_SCALE.length - 1 ? `1px solid ${EMBER}` : "none",
-            background: i % 2 === 0 ? DARK : MID,
-          }}>
-            <div>
-              <div style={{ fontSize: "11px", fontWeight: 700, color: GOLD, letterSpacing: "0.08em", marginBottom: "2px" }}>{t.name}</div>
-              <div style={{ fontSize: "10px", color: CHAR, letterSpacing: "0.04em" }}>
-                {t.font === "cinzel" ? "Cinzel" : t.font === "dm" ? "DM Sans" : "Inter"}, {t.weight}
-              </div>
-            </div>
-            <div style={{
-              fontSize: t.size,
-              fontFamily: t.font === "cinzel"
-                ? "'Cinzel', Georgia, serif"
-                : t.font === "dm"
-                ? "var(--font-dm-sans), sans-serif"
-                : "var(--font-inter), sans-serif",
-              fontWeight: t.weight,
-              color: CREAM,
-              letterSpacing: t.ls,
-              lineHeight: t.lh,
-              overflow: "hidden",
-              whiteSpace: "nowrap",
-              textOverflow: "ellipsis",
-            }}>
-              {t.name === "Label" || t.name === "UI" ? t.use.toUpperCase() : t.use}
-            </div>
-            <div style={{ textAlign: "right" }}>
-              <div style={{ fontSize: "11px", color: ASH, marginBottom: "2px" }}>{t.size}</div>
-              <div style={{ fontSize: "10px", color: CHAR }}>ls {t.ls}, lh {t.lh}</div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, margin: "56px 0 8px" }}>In Use</h2>
-      <p style={{ fontSize: "13px", color: ASH, marginBottom: "24px", maxWidth: "560px", lineHeight: 1.65 }}>
-        The scale applied to a sample content block, showing how the fonts work together.
-      </p>
-      <div style={{ border: `1px solid ${EMBER}`, borderRadius: 8, padding: "40px 48px", background: DARK, maxWidth: "680px" }}>
-        <p style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: GOLD, marginBottom: "16px", fontFamily: "var(--font-inter), sans-serif" }}>
-          Digital Services
-        </p>
-        <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "36px", fontWeight: 700, color: CREAM, marginBottom: "20px", letterSpacing: "-0.01em", lineHeight: 1.1 }}>
-          Everything your business needs to operate online.
-        </h2>
-        <p style={{ fontSize: "18px", fontFamily: "var(--font-dm-sans), sans-serif", color: CREAM, opacity: 0.8, lineHeight: 1.75, marginBottom: "16px" }}>
-          Website, AI chatbot, booking system, CRM and more, on one managed subscription.
-        </p>
-        <p style={{ fontSize: "15px", fontFamily: "var(--font-dm-sans), sans-serif", color: ASH, lineHeight: 1.8, marginBottom: "28px" }}>
-          Most small business software is priced for larger companies. These tools are priced for a small business.
-        </p>
-        <div style={{ display: "inline-block", padding: "10px 22px", border: `1px solid ${GOLD}`, color: GOLD, fontSize: "13px", fontWeight: 600, letterSpacing: "0.06em", borderRadius: 4, fontFamily: "var(--font-inter), sans-serif" }}>
-          See Plans
+          ))}
         </div>
       </div>
     </div>
   );
 }
 
-// ─── Icon System ──────────────────────────────────────────────────────────────
+// ─── Typography ───────────────────────────────────────────────────────────────
+
+const TYPE_SCALE = [
+  { name: "Hero", size: "clamp(44px, 7vw, 72px)", weight: 600, font: "display", ls: "-0.02em", lh: 1.05, use: "Page titles and brand moments" },
+  { name: "H1", size: "clamp(32px, 5vw, 52px)", weight: 600, font: "display", ls: "-0.02em", lh: 1.1, use: "Section heroes and major headings" },
+  { name: "H2", size: "22px", weight: 600, font: "display", ls: "-0.01em", lh: 1.2, use: "Section headings" },
+  { name: "H3", size: "17px", weight: 600, font: "display", ls: "0em", lh: 1.35, use: "Card titles and subsections" },
+  { name: "Body large", size: "18px", weight: 400, font: "body", ls: "0em", lh: 1.75, use: "Lead paragraphs and intros" },
+  { name: "Body", size: "16px", weight: 400, font: "body", ls: "0em", lh: 1.85, use: "Standard prose" },
+  { name: "Body small", size: "14px", weight: 400, font: "body", ls: "0em", lh: 1.7, use: "Card descriptions and secondary prose" },
+  { name: "Label", size: "13px", weight: 700, font: "body", ls: "0em", lh: 1.4, use: "Category labels and field labels, in sentence case" },
+  { name: "Caption", size: "12px", weight: 400, font: "body", ls: "0.01em", lh: 1.6, use: "Footnotes, timestamps and metadata" },
+  { name: "UI", size: "14px", weight: 600, font: "body", ls: "0em", lh: 1.4, use: "Buttons, navigation links and form labels" },
+];
+
+function TypographySection() {
+  return (
+    <div>
+      <div className="br-block">
+        <h2>Font families</h2>
+        <Intro>Two fonts with two jobs. Neither does the other&apos;s work.</Intro>
+        <div className="br-grid br-g-fonts">
+          {[
+            {
+              name: "Clash Display", role: "Display, headings and the wordmark",
+              weights: ["500 Medium", "600 Semibold", "700 Bold"],
+              note: "A sharp, high-contrast display face. It sets the mark, the wordmark, page titles and section headings. It does not set body copy or interface text.",
+              sample: "Purcell Ventures", sampleFont: "var(--font-display)", sampleSize: "30px",
+            },
+            {
+              name: "Satoshi", role: "Body, interface and small text",
+              weights: ["400 Regular", "500 Medium", "700 Bold"],
+              note: "A clean geometric sans that stays readable at small sizes. It sets paragraphs, buttons, navigation, form labels and every functional piece of text.",
+              sample: "Built for the people who work hardest.", sampleFont: "var(--font-body)", sampleSize: "20px",
+            },
+          ].map(f => (
+            <div key={f.name} className="br-card">
+              <div style={{ padding: 24, borderBottom: "1px solid var(--line)" }}>
+                <div style={{ fontSize: f.sampleSize, fontFamily: f.sampleFont, fontWeight: 600, color: "var(--fg)", marginBottom: 16, lineHeight: 1.2 }}>{f.sample}</div>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  {f.weights.map(w => <span key={w} className="br-chip">{w}</span>)}
+                </div>
+              </div>
+              <div className="br-card__body">
+                <div style={{ fontSize: 17, fontWeight: 600, fontFamily: "var(--font-display)", color: "var(--gold-text)", marginBottom: 4 }}>{f.name}</div>
+                <p style={{ fontSize: 13, fontWeight: 600, color: "var(--fg-2)", marginBottom: 8 }}>{f.role}</p>
+                <p className="br-small">{f.note}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="br-block">
+        <h2>Type scale</h2>
+        <Intro>Ten levels. Every size on the site maps to one of these, so intermediate sizes are not invented.</Intro>
+        <div className="br-type">
+          {TYPE_SCALE.map(t => (
+            <div key={t.name} className="br-type__row">
+              <div>
+                <div className="br-gold">{t.name}</div>
+                <div className="br-tiny">{t.font === "display" ? "Clash Display" : "Satoshi"}, {t.weight}</div>
+              </div>
+              <div className="br-type__sample" style={{
+                fontSize: t.size,
+                fontFamily: t.font === "display" ? "var(--font-display)" : "var(--font-body)",
+                fontWeight: t.weight, color: "var(--fg)", letterSpacing: t.ls, lineHeight: t.lh,
+              }}>
+                {t.use}
+              </div>
+              <div className="br-type__spec">
+                <div className="br-small">{t.size}</div>
+                <div className="br-tiny">tracking {t.ls}, leading {t.lh}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2>Applied to a sample</h2>
+        <Intro>The scale on a content block, showing how the two fonts work together.</Intro>
+        <div className="br-card" style={{ padding: "36px 28px", maxWidth: 680, background: "var(--bg)" }}>
+          <p style={{ fontSize: 14, fontWeight: 600, color: "var(--gold-text)", marginBottom: 14 }}>Digital services</p>
+          <h2 style={{ fontSize: "clamp(26px, 5vw, 36px)", marginBottom: 20, lineHeight: 1.15 }}>Everything your business needs to operate online.</h2>
+          <p style={{ fontSize: 18, color: "var(--fg)", opacity: 0.85, lineHeight: 1.75, marginBottom: 16 }}>
+            A website, an AI chatbot, a booking system, a CRM and more, on one managed subscription.
+          </p>
+          <p style={{ fontSize: 15, color: "var(--muted)", lineHeight: 1.8, marginBottom: 28 }}>
+            Most small business software is priced for larger companies. These tools are priced for a small business.
+          </p>
+          <span className="br-btn" style={{ borderColor: "var(--gold-text)", color: "var(--gold-text)" }}>See plans</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── Icon system ──────────────────────────────────────────────────────────────
 
 type IconDef = {
   key: string;
@@ -351,7 +281,7 @@ const ICONS: IconDef[] = [
     key: "globe",
     name: "Globe",
     category: "brand",
-    description: "Digital & web services, the connected world as a managed presence.",
+    description: "Websites and digital add-ons.",
     svgContent: `<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2c-3 4-4.5 7-4.5 10s1.5 6 4.5 10"/><path d="M12 2c3 4 4.5 7 4.5 10s-1.5 6-4.5 10"/>`,
   },
   {
@@ -365,56 +295,56 @@ const ICONS: IconDef[] = [
     key: "terminal",
     name: "Terminal",
     category: "brand",
-    description: "Custom software, built from source.",
+    description: "Custom software.",
     svgContent: `<polyline points="8 7 3 12 8 17"/><polyline points="16 7 21 12 16 17"/><line x1="14.5" y1="5" x2="9.5" y2="19"/>`,
   },
   {
     key: "droplet",
     name: "Droplet",
     category: "brand",
-    description: "Field services, pressure washing, gutters, and exterior care.",
+    description: "Mantle Field Services: pressure washing, gutters and exterior care.",
     svgContent: `<path d="M12 3 C8 7 6 10 6 13 a6 6 0 0 1 12 0 C18 10 16 7 12 3"/>`,
   },
   {
     key: "eye",
     name: "Eye",
     category: "brand",
-    description: "The Mark, transparency and accountability at the center of the work.",
+    description: "Transparency and accountability in the work.",
     svgContent: `<path d="M1 12s4.5-8 11-8 11 8 11 8-4.5 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>`,
   },
   {
     key: "layers",
     name: "Layers",
     category: "brand",
-    description: "Multi-division structure, distinct services, unified under one mark.",
+    description: "The divisions under one mark.",
     svgContent: `<polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>`,
   },
 
   // ── UI icons ─────────────────────────────────────────────────────────────
   {
     key: "arrow-right",
-    name: "Arrow Right",
+    name: "Arrow right",
     category: "ui",
-    description: "Forward navigation, CTAs.",
+    description: "Forward navigation and calls to action.",
     svgContent: `<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>`,
   },
   {
     key: "arrow-left",
-    name: "Arrow Left",
+    name: "Arrow left",
     category: "ui",
     description: "Back navigation.",
     svgContent: `<line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>`,
   },
   {
     key: "arrow-up",
-    name: "Arrow Up",
+    name: "Arrow up",
     category: "ui",
-    description: "Back to top, upload.",
+    description: "Back to top and upload.",
     svgContent: `<line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/>`,
   },
   {
     key: "external",
-    name: "External Link",
+    name: "External link",
     category: "ui",
     description: "Opens in new tab.",
     svgContent: `<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>`,
@@ -423,28 +353,28 @@ const ICONS: IconDef[] = [
     key: "menu",
     name: "Menu",
     category: "ui",
-    description: "Hamburger / nav open.",
+    description: "Opens the navigation.",
     svgContent: `<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>`,
   },
   {
     key: "close",
     name: "Close",
     category: "ui",
-    description: "Dismiss, clear, cancel.",
+    description: "Dismiss, clear and cancel.",
     svgContent: `<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>`,
   },
   {
     key: "check",
     name: "Check",
     category: "ui",
-    description: "Confirm, success, complete.",
+    description: "Confirm, success and done.",
     svgContent: `<polyline points="20 6 9 17 4 12"/>`,
   },
   {
     key: "mail",
     name: "Mail",
     category: "ui",
-    description: "Email, contact, message.",
+    description: "Email, contact and message.",
     svgContent: `<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/>`,
   },
   {
@@ -458,28 +388,28 @@ const ICONS: IconDef[] = [
     key: "pin",
     name: "Pin",
     category: "ui",
-    description: "Location, service area.",
+    description: "Location and service area.",
     svgContent: `<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>`,
   },
   {
     key: "download",
     name: "Download",
     category: "ui",
-    description: "Save file, export.",
+    description: "Save a file and export.",
     svgContent: `<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>`,
   },
   {
     key: "copy",
     name: "Copy",
     category: "ui",
-    description: "Duplicate, clipboard.",
+    description: "Duplicate and clipboard.",
     svgContent: `<rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>`,
   },
   {
     key: "info",
     name: "Info",
     category: "ui",
-    description: "Help, tooltip, detail.",
+    description: "Help, tooltip and detail.",
     svgContent: `<circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>`,
   },
 ];
@@ -487,12 +417,12 @@ const ICONS: IconDef[] = [
 const ICON_SIZES = [16, 20, 24, 32, 48];
 
 function IconsSection() {
-  const [size, setSize]   = useState(24);
-  const [mode, setMode]   = useState<"dark" | "gold" | "light">("dark");
+  const [size, setSize] = useState(24);
+  const [mode, setMode] = useState<"dark" | "gold" | "light">("dark");
   const [copied, setCopied] = useState<string | null>(null);
 
-  const iconColor = mode === "dark" ? CREAM : mode === "gold" ? GOLD : DARK;
-  const previewBg = mode === "light" ? WARM_WHITE : DARK;
+  const iconColor = mode === "dark" ? "var(--fg)" : mode === "gold" ? "var(--gold-text)" : "var(--bg)";
+  const previewBg = mode === "light" ? PAPER : "var(--bg)";
 
   function copyIcon(icon: IconDef) {
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${icon.svgContent}</svg>`;
@@ -502,67 +432,29 @@ function IconsSection() {
   }
 
   const brandIcons = ICONS.filter(i => i.category === "brand");
-  const uiIcons    = ICONS.filter(i => i.category === "ui");
+  const uiIcons = ICONS.filter(i => i.category === "ui");
 
-  const iconCardStyle = (key: string): React.CSSProperties => ({
-    border: `1px solid ${copied === key ? GOLD : EMBER}`,
-    borderRadius: 8,
-    overflow: "hidden",
-    transition: "border-color 0.2s",
-  });
-
-  function renderGrid(icons: IconDef[], columns: string) {
+  function renderGrid(icons: IconDef[], min: number) {
+    const style: CSSProperties = { gridTemplateColumns: `repeat(auto-fill, minmax(${min}px, 1fr))`, gap: 12 };
     return (
-      <div style={{ display: "grid", gridTemplateColumns: columns, gap: "12px" }}>
+      <div className="br-grid" style={style}>
         {icons.map(icon => (
-          <div key={icon.key} style={iconCardStyle(icon.key)}>
-            <div style={{
-              background: previewBg,
-              height: 100,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              borderBottom: `1px solid ${EMBER}`,
-            }}>
+          <div key={icon.key} className="br-icon-card" data-copied={copied === icon.key}>
+            <div className="br-icon-stage" style={{ background: previewBg }}>
               <svg
-                width={size}
-                height={size}
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke={iconColor}
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+                width={size} height={size} viewBox="0 0 24 24" fill="none"
+                stroke={iconColor} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
                 dangerouslySetInnerHTML={{ __html: icon.svgContent }}
               />
             </div>
-            <div style={{ padding: "10px 12px", background: MID }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "8px", marginBottom: icon.category === "brand" ? "5px" : "0" }}>
-                <span style={{ fontSize: "12px", fontWeight: 600, color: CREAM, fontFamily: "'Cinzel', Georgia, serif", whiteSpace: "nowrap" }}>
-                  {icon.name}
-                </span>
-                <button
-                  onClick={() => copyIcon(icon)}
-                  style={{
-                    background: "none",
-                    border: `1px solid ${copied === icon.key ? GOLD : CHAR}`,
-                    borderRadius: 3,
-                    padding: "2px 8px",
-                    fontSize: "10px",
-                    color: copied === icon.key ? GOLD : CHAR,
-                    cursor: "pointer",
-                    letterSpacing: "0.04em",
-                    whiteSpace: "nowrap",
-                    transition: "color 0.15s, border-color 0.15s",
-                    fontFamily: "Inter, sans-serif",
-                  }}
-                >
+            <div className="br-icon-meta">
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8, marginBottom: icon.category === "brand" ? 5 : 0 }}>
+                <span style={{ fontSize: 14, fontWeight: 600, color: "var(--fg)" }}>{icon.name}</span>
+                <button className="br-ctl" aria-pressed={copied === icon.key} onClick={() => copyIcon(icon)}>
                   {copied === icon.key ? "Copied" : "Copy SVG"}
                 </button>
               </div>
-              {icon.category === "brand" && (
-                <p style={{ fontSize: "11px", color: ASH, margin: 0, lineHeight: 1.5 }}>{icon.description}</p>
-              )}
+              {icon.category === "brand" && <p className="br-tiny">{icon.description}</p>}
             </div>
           </div>
         ))}
@@ -572,88 +464,46 @@ function IconsSection() {
 
   return (
     <div>
-      {/* Intro + controls */}
-      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>
-        Custom Icon Set
-      </h2>
-      <p style={{ fontSize: "13px", color: ASH, marginBottom: "28px", maxWidth: "600px", lineHeight: 1.65 }}>
-        19 icons drawn on a 24×24 grid. All stroke-based, 1.5px weight, round joins and caps. Six brand icons tied to the company's divisions and 13 UI icons for navigation and interface. Consistent geometric language with the Lampstand mark.
-      </p>
+      <h2>Custom icon set</h2>
+      <Intro>
+        19 icons drawn on a 24 by 24 grid. All are stroke-based at 1.5px with round joins and caps. Six brand icons tie to the company&apos;s divisions and 13 interface icons cover navigation and forms.
+      </Intro>
 
-      {/* Controls bar */}
-      <div style={{ display: "flex", gap: "24px", alignItems: "center", flexWrap: "wrap", marginBottom: "40px" }}>
-        <div style={{ display: "flex", gap: "6px" }}>
-          <span style={{ fontSize: "11px", fontWeight: 600, color: CHAR, letterSpacing: "0.08em", alignSelf: "center", marginRight: "4px", fontFamily: "Inter, sans-serif" }}>SIZE</span>
+      <div style={{ display: "flex", gap: 24, alignItems: "center", flexWrap: "wrap", marginBottom: 40 }}>
+        <div style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap" }}>
+          <span className="br-small" style={{ marginRight: 4 }}>Size</span>
           {ICON_SIZES.map(s => (
-            <button key={s} onClick={() => setSize(s)} style={{
-              background: size === s ? EMBER : "none",
-              border: `1px solid ${size === s ? GOLD : CHAR}`,
-              borderRadius: 3,
-              padding: "3px 9px",
-              fontSize: "11px",
-              color: size === s ? GOLD : CHAR,
-              cursor: "pointer",
-              fontFamily: "Inter, sans-serif",
-              transition: "all 0.12s",
-            }}>
-              {s}
-            </button>
+            <button key={s} className="br-ctl" aria-pressed={size === s} onClick={() => setSize(s)}>{s}</button>
           ))}
         </div>
-        <div style={{ display: "flex", gap: "6px" }}>
-          <span style={{ fontSize: "11px", fontWeight: 600, color: CHAR, letterSpacing: "0.08em", alignSelf: "center", marginRight: "4px", fontFamily: "Inter, sans-serif" }}>MODE</span>
+        <div style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap" }}>
+          <span className="br-small" style={{ marginRight: 4 }}>Mode</span>
           {(["dark", "gold", "light"] as const).map(m => (
-            <button key={m} onClick={() => setMode(m)} style={{
-              background: mode === m ? EMBER : "none",
-              border: `1px solid ${mode === m ? GOLD : CHAR}`,
-              borderRadius: 3,
-              padding: "3px 9px",
-              fontSize: "11px",
-              color: mode === m ? GOLD : CHAR,
-              cursor: "pointer",
-              fontFamily: "Inter, sans-serif",
-              transition: "all 0.12s",
-              textTransform: "capitalize",
-            }}>
-              {m}
-            </button>
+            <button key={m} className="br-ctl" aria-pressed={mode === m} onClick={() => setMode(m)} style={{ textTransform: "capitalize" }}>{m}</button>
           ))}
         </div>
       </div>
 
-      {/* Brand icons */}
-      <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "16px", fontWeight: 600, color: CREAM, marginBottom: "6px" }}>
-        Brand Icons
-      </h3>
-      <p style={{ fontSize: "12px", color: ASH, marginBottom: "20px", lineHeight: 1.6 }}>
-        Division marks and conceptual icons. Use on service cards, section headers, and identity materials.
-      </p>
-      <div style={{ marginBottom: "48px" }}>
-        {renderGrid(brandIcons, "repeat(auto-fill, minmax(190px, 1fr))")}
-      </div>
+      <h3>Brand icons</h3>
+      <p className="br-small" style={{ marginBottom: 20 }}>Division marks and concept icons, for service rows, section headers and identity materials.</p>
+      <div style={{ marginBottom: 48 }}>{renderGrid(brandIcons, 190)}</div>
 
-      {/* UI icons */}
-      <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "16px", fontWeight: 600, color: CREAM, marginBottom: "6px" }}>
-        UI Icons
-      </h3>
-      <p style={{ fontSize: "12px", color: ASH, marginBottom: "20px", lineHeight: 1.6 }}>
-        Navigation and interface icons. Consistent with brand stroke weight, don't mix with unrelated icon families.
-      </p>
-      {renderGrid(uiIcons, "repeat(auto-fill, minmax(150px, 1fr))")}
+      <h3>Interface icons</h3>
+      <p className="br-small" style={{ marginBottom: 20 }}>Navigation and form icons at the same stroke weight. Do not mix them with another icon family.</p>
+      {renderGrid(uiIcons, 150)}
 
-      {/* Usage notes */}
-      <div style={{ marginTop: "56px", border: `1px solid ${EMBER}`, borderRadius: 8, padding: "28px 32px", background: MID }}>
-        <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "15px", fontWeight: 600, color: CREAM, marginBottom: "16px" }}>Usage Rules</h3>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "16px" }}>
+      <div className="br-card" style={{ marginTop: 56, padding: "28px 24px" }}>
+        <h3 style={{ marginBottom: 16 }}>Usage rules</h3>
+        <div className="br-grid br-g-usage">
           {[
-            ["Stroke only", "Never fill icons. The 1.5px stroke is the identity. Filled versions look wrong against the mark."],
-            ["Color discipline", "Default is Cream on Dark. Gold stroke only for highlighted or active states. Never render icons in Ash or Char."],
-            ["Minimum size", "16px minimum on screen. Below that, simplify the icon or replace it with a label. The neural and eye icons are especially sensitive to size."],
-            ["Spacing", "Icons need at least 4px breathing room from adjacent text. At 24px, pair with 14px+ type. Don't crowd them."],
+            ["Stroke only", "Icons are never filled. The 1.5px stroke is the identity, and filled versions look wrong beside the mark."],
+            ["Colour", "Cream on Night by default. Gold text colour only for highlighted or active states. Icons are never Muted or Subtle."],
+            ["Minimum size", "16px on screen. Below that, simplify the icon or use a label. The neural and eye icons lose detail first."],
+            ["Spacing", "Leave at least 4px between an icon and adjacent text. At 24px, pair it with type of 14px or larger."],
           ].map(([title, body]) => (
             <div key={title}>
-              <div style={{ fontSize: "11px", fontWeight: 700, color: GOLD, letterSpacing: "0.08em", marginBottom: "6px", fontFamily: "Inter, sans-serif" }}>{title}</div>
-              <p style={{ fontSize: "12px", color: ASH, lineHeight: 1.65, margin: 0 }}>{body}</p>
+              <p className="br-gold" style={{ marginBottom: 6 }}>{title}</p>
+              <p className="br-small">{body}</p>
             </div>
           ))}
         </div>
@@ -662,267 +512,242 @@ function IconsSection() {
   );
 }
 
-// ─── Photo Style ──────────────────────────────────────────────────────────────
+// ─── Photo style ──────────────────────────────────────────────────────────────
 
 const GRADING = [
-  { param: "Temperature",  value: "+15",  note: "Push toward amber. Never neutral or cool." },
-  { param: "Tint",         value: "+5",   note: "Slight magenta warmth. Avoid green cast." },
-  { param: "Exposure",     value: "−0.3", note: "Slightly underexposed for richness. Don't clip highlights." },
-  { param: "Highlights",   value: "−30",  note: "Protect against blow-out. Preserve sky and skin detail." },
-  { param: "Shadows",      value: "+10",  note: "Lift slightly. Shadows should be warm brown, not black." },
-  { param: "Whites",       value: "−20",  note: "Pull back. Prevents clinical white from entering the frame." },
-  { param: "Blacks",       value: "+5",   note: "Never crush to pure black. Match Purcell Dark (#0c0a08)." },
-  { param: "Clarity",      value: "+10",  note: "Subtle micro-contrast. More on tools/texture. Less on faces." },
-  { param: "Vibrance",     value: "−15",  note: "Mute colors without removing them. Earthy tones should stay present." },
-  { param: "Saturation",   value: "−10",  note: "Second pass muting. Prevents any color from dominating." },
+  { param: "Temperature", value: "+15", note: "Push toward amber. Never neutral or cool." },
+  { param: "Tint", value: "+5", note: "A slight magenta warmth. Avoid a green cast." },
+  { param: "Exposure", value: "−0.3", note: "Slightly underexposed for richness. Do not clip highlights." },
+  { param: "Highlights", value: "−30", note: "Protect against blow-out. Keep sky and skin detail." },
+  { param: "Shadows", value: "+10", note: "Lift slightly. Shadows read as warm brown, not black." },
+  { param: "Whites", value: "−20", note: "Pull back, so clinical white stays out of the frame." },
+  { param: "Blacks", value: "+5", note: "Never crush to pure black. Match Night (#07060a)." },
+  { param: "Clarity", value: "+10", note: "Subtle micro-contrast. More on tools and texture, less on faces." },
+  { param: "Vibrance", value: "−15", note: "Mute colours without removing them. Earthy tones stay present." },
+  { param: "Saturation", value: "−10", note: "A second pass of muting, so no colour dominates." },
 ];
 
 const SUBJECTS = [
   {
-    category: "People / Portraits",
-    icon: "eye",
+    category: "People and portraits",
     do: [
-      "Direct eye contact or purposeful gaze",
-      "Natural or soft window light. Hard shadows are fine on one side.",
-      "Candid over posed, mid-movement, mid-conversation, working",
+      "Direct eye contact or a purposeful gaze",
+      "Natural or soft window light, with hard shadows on one side if needed",
+      "Candid over posed: mid-movement, mid-conversation, working",
       "Working environments: a desk, a truck cab, a job site",
     ],
     avoid: [
-      "Stock-photo smiles, teeth, staged handshakes, \"team building\" body language",
+      "Stock-photo smiles, teeth, staged handshakes and team-building body language",
       "Pure white or seamless studio backgrounds",
       "Over-retouched skin",
-      "Overly formal attire unless the context demands it",
+      "Formal attire unless the context calls for it",
     ],
   },
   {
-    category: "Field Work",
-    icon: "droplet",
+    category: "Field work",
     do: [
       "The work itself: spray hitting a surface, gutters mid-clean, equipment in motion",
-      "Before/after juxtaposition, the transformation is the story",
+      "Before and after pairs, since the change is the story",
       "Close-up texture: grime, water beads, clean concrete",
-      "Golden hour light where possible, flatters everything outdoors",
+      "Golden hour light where possible",
     ],
     avoid: [
       "Cluttered staging, or safety gear added for the photo",
       "Flat overcast light with no direction",
-      "Posed \"look at the camera\" shots mid-job",
-      "Editing that makes the job site look glamorous, authenticity matters more",
+      "Posed look-at-the-camera shots mid-job",
+      "Editing that makes the job site look glamorous. Authenticity matters more.",
     ],
   },
   {
-    category: "Technology / Workspace",
-    icon: "terminal",
+    category: "Technology and workspace",
     do: [
       "Screens showing interfaces, data and work in progress",
-      "Intentional shallow depth of field. Bokeh is fine when purposeful.",
-      "Warm ambient light: desk lamp, window light at dusk",
-      "Context over equipment, what's being built matters more than the gear",
+      "Shallow depth of field, used on purpose",
+      "Warm ambient light: a desk lamp, window light at dusk",
+      "Context over equipment. What is being built matters more than the gear.",
     ],
     avoid: [
-      "Generic \"laptop on table\" stock photos",
-      "Glowing blue screens in dark rooms (reads as stock, reads as cold)",
-      "Cables everywhere for aesthetics, clutter without purpose",
-      "Staged \"thinking\" poses (hand on chin, looking at ceiling)",
+      "Generic laptop-on-a-table stock photos",
+      "Glowing blue screens in dark rooms, which read as cold",
+      "Cables everywhere for atmosphere",
+      "Staged thinking poses, such as a hand on the chin",
     ],
   },
   {
-    category: "Environment / Context",
-    icon: "pin",
+    category: "Environment and context",
     do: [
       "Georgia landscape: red clay, green hills, suburban neighborhoods",
-      "Architecture with warm light, brick, wood, weathered surfaces",
-      "Empty spaces that feel inhabited, a workshop, a driveway, a kitchen",
+      "Architecture in warm light: brick, wood, weathered surfaces",
+      "Empty spaces that feel lived in: a workshop, a driveway, a kitchen",
       "Wide establishing shots for location-specific work",
     ],
     avoid: [
-      "Skylines that read as generic metropolitan",
-      "Nature photography with no human element (this isn't a travel brand)",
+      "Skylines that read as any large city",
+      "Nature photography with no human element, since this is not a travel brand",
       "Cold industrial spaces with no warmth",
-      "Anything that reads as aspirational for its own sake",
+      "Anything aspirational for its own sake",
     ],
   },
 ];
+
+const warm = (pct: number, base: string) => `color-mix(in srgb, var(--gold) ${pct}%, ${base})`;
 
 const OVERLAYS = [
   {
     label: "Standard dark overlay",
-    rule: "Default for hero and card images with text. DARK at 72% opacity.",
-    bg: "linear-gradient(135deg, #3a2a18 0%, #1a1208 100%)",
-    overlay: "rgba(12,10,8,0.72)",
-    heading: "Gutters Cleaned Right",
+    rule: "The default for hero and card images with text. Night at 72% opacity.",
+    bg: `linear-gradient(135deg, ${warm(30, "var(--bg)")} 0%, ${warm(8, "var(--bg)")} 100%)`,
+    overlay: "color-mix(in srgb, var(--bg) 72%, transparent)",
+    heading: "Gutters cleaned right",
     sub: "Metro Atlanta service area",
   },
   {
-    label: "Heavy overlay, light body copy",
-    rule: "When body copy appears over an image. Needs more coverage to stay readable.",
-    bg: "linear-gradient(135deg, #4a3520 0%, #0c0a08 100%)",
-    overlay: "rgba(12,10,8,0.85)",
-    heading: "Custom Software",
+    label: "Heavy overlay for body copy",
+    rule: "For body copy over an image, which needs more coverage to stay readable. Night at 85%.",
+    bg: `linear-gradient(135deg, ${warm(36, "var(--bg)")} 0%, var(--bg) 100%)`,
+    overlay: "color-mix(in srgb, var(--bg) 85%, transparent)",
+    heading: "Custom software",
     sub: "Built around your workflow.",
   },
   {
-    label: "Gradient fade, bottom-anchored text",
-    rule: "When text needs to appear at the bottom of an image. Gradient from transparent to DARK.",
-    bg: "linear-gradient(160deg, #5a3a1a 0%, #2e1c0a 100%)",
-    overlay: "linear-gradient(to top, rgba(12,10,8,0.95) 0%, rgba(12,10,8,0.4) 50%, transparent 100%)",
-    heading: "Acworth, Georgia",
+    label: "Bottom-anchored gradient",
+    rule: "For text at the bottom of an image. A gradient from transparent to Night.",
+    bg: `linear-gradient(160deg, ${warm(40, "var(--bg)")} 0%, ${warm(14, "var(--bg)")} 100%)`,
+    overlay: "linear-gradient(to top, color-mix(in srgb, var(--bg) 95%, transparent) 0%, color-mix(in srgb, var(--bg) 40%, transparent) 50%, transparent 100%)",
+    heading: "Mantle Field Services",
     sub: "Owner-operated.",
   },
 ];
 
+const TONES = [
+  { label: "Shadow floor", pct: 10, note: "Darkest allowed" },
+  { label: "Deep warm", pct: 18, note: "Card backgrounds" },
+  { label: "Midtone amber", pct: 40, note: "Ideal shadow range" },
+  { label: "Warm highlight", pct: 70, note: "Highlight ceiling" },
+  { label: "Hot limit", pct: 95, note: "Never exceed this" },
+];
+
 const RATIOS = [
-  { name: "Hero",      ratio: "16:9",  w: 320, h: 180, use: "Page banners, section headers with full-bleed images" },
-  { name: "Wide Hero", ratio: "21:9",  w: 320, h: 137, use: "Landing page hero, cinematic moments. Crop tightly." },
-  { name: "Card",      ratio: "4:3",   w: 240, h: 180, use: "Service cards, blog thumbnails, case study covers" },
-  { name: "Portrait",  ratio: "4:5",   w: 192, h: 240, use: "Team photos, person-centered social content" },
-  { name: "Square",    ratio: "1:1",   w: 200, h: 200, use: "Profile photos, social avatars, icon-scale thumbnails" },
+  { name: "Hero", ratio: "16:9", w: 320, h: 180, use: "Page banners and section headers with full-bleed images" },
+  { name: "Wide hero", ratio: "21:9", w: 320, h: 137, use: "Landing page heroes. Crop tightly." },
+  { name: "Card", ratio: "4:3", w: 240, h: 180, use: "Service rows, blog thumbnails and case study covers" },
+  { name: "Portrait", ratio: "4:5", w: 192, h: 240, use: "Team photos and person-centered social content" },
+  { name: "Square", ratio: "1:1", w: 200, h: 200, use: "Profile photos, social avatars and icon-scale thumbnails" },
 ];
 
 function PhotoSection() {
   return (
     <div>
-      {/* Tone reference */}
-      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Tone Reference</h2>
-      <p style={{ fontSize: "13px", color: ASH, marginBottom: "24px", maxWidth: "600px", lineHeight: 1.65 }}>
-        All brand photography lives in the warm-dark range. These gradients show the acceptable tonal spectrum, from rich shadow to warm highlight. Nothing cooler than the middle column. Nothing brighter than the right column.
-      </p>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "8px", marginBottom: "48px" }}>
-        {[
-          { label: "Shadow floor",  grad: "linear-gradient(160deg, #1a140c 0%, #0c0a08 100%)", note: "Darkest allowed" },
-          { label: "Deep warm",     grad: "linear-gradient(160deg, #2e2014 0%, #1a130a 100%)", note: "Card backgrounds" },
-          { label: "Midtone amber", grad: "linear-gradient(160deg, #5a3a1a 0%, #2e200e 100%)", note: "Ideal shadow range" },
-          { label: "Warm highlight", grad: "linear-gradient(160deg, #a07040 0%, #5a3a18 100%)", note: "Highlight ceiling" },
-          { label: "Hot limit",     grad: "linear-gradient(160deg, #c49040 0%, #8a5a28 100%)", note: "Never exceed this" },
-        ].map(s => (
-          <div key={s.label} style={{ borderRadius: 6, overflow: "hidden", border: `1px solid ${EMBER}` }}>
-            <div style={{ background: s.grad, height: 80 }} />
-            <div style={{ padding: "8px 10px", background: MID }}>
-              <div style={{ fontSize: "10px", fontWeight: 700, color: CREAM, marginBottom: "2px" }}>{s.label}</div>
-              <div style={{ fontSize: "10px", color: CHAR }}>{s.note}</div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Grading parameters */}
-      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Color Grading</h2>
-      <p style={{ fontSize: "13px", color: ASH, marginBottom: "24px", maxWidth: "600px", lineHeight: 1.65 }}>
-        Starting point for any photo entering brand materials. Use Lightroom, Capture One, or equivalent. These are relative adjustments from the photo's neutral edit.
-      </p>
-      <div style={{ border: `1px solid ${EMBER}`, borderRadius: 8, overflow: "hidden", marginBottom: "56px" }}>
-        {GRADING.map((g, i) => (
-          <div key={g.param} style={{
-            display: "grid", gridTemplateColumns: "160px 80px 1fr",
-            gap: "16px", alignItems: "center",
-            padding: "13px 24px",
-            borderBottom: i < GRADING.length - 1 ? `1px solid ${EMBER}` : "none",
-            background: i % 2 === 0 ? DARK : MID,
-          }}>
-            <div style={{ fontSize: "13px", fontWeight: 600, color: CREAM, fontFamily: "var(--font-inter), sans-serif" }}>{g.param}</div>
-            <div style={{ fontSize: "14px", fontWeight: 700, color: GOLD, fontFamily: "var(--font-inter), sans-serif" }}>{g.value}</div>
-            <div style={{ fontSize: "12px", color: ASH, lineHeight: 1.55 }}>{g.note}</div>
-          </div>
-        ))}
-      </div>
-
-      {/* Subject categories */}
-      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Subject Guidelines</h2>
-      <p style={{ fontSize: "13px", color: ASH, marginBottom: "28px", maxWidth: "600px", lineHeight: 1.65 }}>
-        Four categories covering every context the brand will use photography. Each has a do list and an avoid list, the avoid list is more important.
-      </p>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "16px", marginBottom: "56px" }}>
-        {SUBJECTS.map(s => (
-          <div key={s.category} style={{ border: `1px solid ${EMBER}`, borderRadius: 8, overflow: "hidden" }}>
-            <div style={{ padding: "16px 20px", background: MID, borderBottom: `1px solid ${EMBER}` }}>
-              <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "14px", fontWeight: 700, color: CREAM }}>{s.category}</div>
-            </div>
-            <div style={{ padding: "16px 20px", background: DARK }}>
-              <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", color: GOLD, marginBottom: "10px", fontFamily: "Inter, sans-serif" }}>DO</div>
-              <ul style={{ margin: "0 0 18px", paddingLeft: "16px" }}>
-                {s.do.map(d => (
-                  <li key={d} style={{ fontSize: "12px", color: CREAM, lineHeight: 1.65, marginBottom: "4px" }}>{d}</li>
-                ))}
-              </ul>
-              <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", color: "#a06060", marginBottom: "10px", fontFamily: "Inter, sans-serif" }}>AVOID</div>
-              <ul style={{ margin: 0, paddingLeft: "16px" }}>
-                {s.avoid.map(a => (
-                  <li key={a} style={{ fontSize: "12px", color: ASH, lineHeight: 1.65, marginBottom: "4px" }}>{a}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Overlay system */}
-      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Overlay System</h2>
-      <p style={{ fontSize: "13px", color: ASH, marginBottom: "28px", maxWidth: "600px", lineHeight: 1.65 }}>
-        Three approved overlays for text-over-image situations. Gradients below simulate the photo tone, the overlay treatment is what matters. Never put text directly on an unprocessed photo without one of these.
-      </p>
-      <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "56px" }}>
-        {OVERLAYS.map(ov => (
-          <div key={ov.label} style={{ border: `1px solid ${EMBER}`, borderRadius: 8, overflow: "hidden" }}>
-            <div style={{ position: "relative", background: ov.bg, height: 140 }}>
-              <div style={{ position: "absolute", inset: 0, background: ov.overlay }} />
-              <div style={{ position: "relative", padding: "24px 32px", zIndex: 1 }}>
-                <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 700, color: CREAM, marginBottom: "6px" }}>
-                  {ov.heading}
-                </div>
-                <div style={{ fontSize: "14px", color: ASH }}>{ov.sub}</div>
+      <div className="br-block">
+        <h2>Tone reference</h2>
+        <Intro>
+          All brand photography sits in the warm-dark range. These swatches show the acceptable tonal spectrum, from rich shadow to warm highlight. Nothing cooler than the middle swatch and nothing brighter than the fourth.
+        </Intro>
+        <div className="br-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: 8 }}>
+          {TONES.map(s => (
+            <div key={s.label} className="br-card">
+              <div style={{ background: `linear-gradient(160deg, ${warm(s.pct, "var(--bg)")} 0%, ${warm(Math.round(s.pct * 0.6), "var(--bg)")} 100%)`, height: 80 }} />
+              <div style={{ padding: "8px 10px" }}>
+                <div style={{ fontSize: 13, fontWeight: 600, color: "var(--fg)", marginBottom: 2 }}>{s.label}</div>
+                <div className="br-tiny">{s.note}</div>
               </div>
             </div>
-            <div style={{ padding: "12px 20px", background: MID, borderTop: `1px solid ${EMBER}` }}>
-              <div style={{ fontSize: "11px", fontWeight: 600, color: GOLD, marginBottom: "3px", letterSpacing: "0.06em" }}>{ov.label}</div>
-              <div style={{ fontSize: "12px", color: ASH }}>{ov.rule}</div>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      {/* Aspect ratios */}
-      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Aspect Ratios</h2>
-      <p style={{ fontSize: "13px", color: ASH, marginBottom: "28px", maxWidth: "600px", lineHeight: 1.65 }}>
-        Five ratios covering every use case. When cropping, prioritize the subject over including more context, a tight crop reads more confidently than a loose one.
-      </p>
-      <div style={{ display: "flex", gap: "24px", flexWrap: "wrap", alignItems: "flex-end", marginBottom: "56px" }}>
-        {RATIOS.map(r => (
-          <div key={r.name}>
-            <div style={{
-              width: r.w / 2,
-              height: r.h / 2,
-              background: `linear-gradient(135deg, ${EMBER} 0%, ${MID} 100%)`,
-              border: `1px solid ${ASH}`,
-              borderRadius: 4,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              marginBottom: "10px",
-            }}>
-              <span style={{ fontSize: "12px", fontWeight: 700, color: GOLD, fontFamily: "Inter, sans-serif" }}>{r.ratio}</span>
+      <div className="br-block">
+        <h2>Colour grading</h2>
+        <Intro>The starting point for any photo entering brand materials, in Lightroom, Capture One or similar. These are relative adjustments from the photo&apos;s neutral edit.</Intro>
+        <div className="br-type">
+          {GRADING.map(g => (
+            <div key={g.param} className="br-grade">
+              <div style={{ fontSize: 15, fontWeight: 600, color: "var(--fg)" }}>{g.param}</div>
+              <div style={{ fontSize: 15, fontWeight: 700, color: "var(--gold-text)" }}>{g.value}</div>
+              <div className="br-small">{g.note}</div>
             </div>
-            <div style={{ fontSize: "12px", fontWeight: 600, color: CREAM, marginBottom: "3px", fontFamily: "'Cinzel', Georgia, serif" }}>{r.name}</div>
-            <div style={{ fontSize: "11px", color: CHAR, maxWidth: r.w / 2, lineHeight: 1.5 }}>{r.use}</div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      {/* Hard rules */}
-      <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Hard Rules</h2>
-      <p style={{ fontSize: "13px", color: ASH, marginBottom: "20px" }}>Do not break these.</p>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "10px" }}>
-        {[
-          "No pure white or cool-gray backgrounds anywhere in brand photography.",
-          "No photos with blue-tinted shadows. Shadows must read warm.",
-          "No stock photo people. Every face in brand materials must be real and known.",
-          "No named filters such as Instagram presets, VSCO packs or Lightroom influencer presets. Derive from the grading table.",
-          "No photography that would look at home on a Fortune 500 corporate site.",
-          "No mixing photo styles in the same layout, match grading before publishing.",
-        ].map(rule => (
-          <div key={rule} style={{ padding: "14px 16px", border: `1px solid #4a1a1a`, borderRadius: 6, background: "#0e0808" }}>
-            <p style={{ fontSize: "12px", color: "#c07070", lineHeight: 1.6, margin: 0 }}>{rule}</p>
-          </div>
-        ))}
+      <div className="br-block">
+        <h2>Subject guidelines</h2>
+        <Intro>Four categories cover every context where the brand uses photography. Each has a do list and an avoid list. The avoid list matters more.</Intro>
+        <div className="br-grid br-g-subj">
+          {SUBJECTS.map(s => (
+            <div key={s.category} className="br-card">
+              <div className="br-card__body" style={{ borderBottom: "1px solid var(--line)" }}>
+                <h3 style={{ marginBottom: 0 }}>{s.category}</h3>
+              </div>
+              <div style={{ padding: "16px 20px", background: "var(--bg)" }}>
+                <p className="br-gold" style={{ marginBottom: 10 }}>Do</p>
+                <ul className="br-list">{s.do.map(d => <li key={d}>{d}</li>)}</ul>
+                <p style={{ fontSize: 13, fontWeight: 600, color: "var(--danger)", marginBottom: 10 }}>Avoid</p>
+                <ul className="br-list br-list--avoid" style={{ marginBottom: 0 }}>{s.avoid.map(a => <li key={a}>{a}</li>)}</ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="br-block">
+        <h2>Overlay system</h2>
+        <Intro>Three approved overlays for text over an image. The gradients below stand in for the photo, so the overlay treatment is what to read. Text never goes on an unprocessed photo without one of these.</Intro>
+        <div className="br-grid">
+          {OVERLAYS.map(ov => (
+            <div key={ov.label} className="br-card">
+              <div style={{ position: "relative", background: ov.bg, minHeight: 140 }}>
+                <div style={{ position: "absolute", inset: 0, background: ov.overlay }} />
+                <div style={{ position: "relative", padding: "24px 20px", zIndex: 1 }}>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 24, fontWeight: 600, color: "var(--fg)", marginBottom: 6 }}>{ov.heading}</div>
+                  <div style={{ fontSize: 15, color: "var(--muted)" }}>{ov.sub}</div>
+                </div>
+              </div>
+              <div className="br-card__foot">
+                <p className="br-gold" style={{ marginBottom: 3 }}>{ov.label}</p>
+                <p className="br-small">{ov.rule}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="br-block">
+        <h2>Aspect ratios</h2>
+        <Intro>Five ratios cover every use. When cropping, favor the subject over extra context, since a tight crop reads more confidently than a loose one.</Intro>
+        <div className="br-ratios">
+          {RATIOS.map(r => (
+            <div key={r.name} style={{ maxWidth: "100%" }}>
+              <div style={{
+                width: r.w / 2, height: r.h / 2, maxWidth: "100%",
+                background: "linear-gradient(135deg, var(--line) 0%, var(--surface) 100%)",
+                border: "1px solid var(--subtle)",
+                display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 10,
+              }}>
+                <span style={{ fontSize: 13, fontWeight: 700, color: "var(--gold-text)" }}>{r.ratio}</span>
+              </div>
+              <div style={{ fontSize: 14, fontWeight: 600, color: "var(--fg)", marginBottom: 3 }}>{r.name}</div>
+              <div className="br-tiny" style={{ maxWidth: Math.max(r.w / 2, 150) }}>{r.use}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2>Hard rules</h2>
+        <Intro>These are not negotiable.</Intro>
+        <div className="br-grid br-g-rules">
+          {[
+            "No pure white or cool-gray backgrounds anywhere in brand photography.",
+            "No photos with blue-tinted shadows. Shadows read warm.",
+            "No stock-photo people. Every face in brand materials is real and known.",
+            "No named filters such as Instagram presets, VSCO packs or influencer Lightroom presets. Derive the look from the grading table.",
+            "No photography that would look at home on a Fortune 500 corporate site.",
+            "No mixing photo styles in one layout. Match the grading before publishing.",
+          ].map(rule => (
+            <div key={rule} className="br-bad"><p>{rule}</p></div>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -932,58 +757,43 @@ function PhotoSection() {
 
 type Tab = "colors" | "type" | "icons" | "photo";
 const TABS: { id: Tab; label: string }[] = [
-  { id: "colors", label: "Color Rules" },
-  { id: "type",   label: "Typography" },
-  { id: "icons",  label: "Icons" },
-  { id: "photo",  label: "Photo Style" },
+  { id: "colors", label: "Colour rules" },
+  { id: "type", label: "Typography" },
+  { id: "icons", label: "Icons" },
+  { id: "photo", label: "Photo style" },
 ];
 
 export default function BrandPage() {
   const [tab, setTab] = useState<Tab>("colors");
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: CREAM, fontFamily: "Inter, sans-serif", padding: "48px 32px", position: "relative", overflowX: "hidden" }}>
-      <VignetteBackground />
-      <div style={{ position: "relative", zIndex: 5 }}>
-
-      <div style={{ maxWidth: "1100px", margin: "0 auto 48px" }}>
-        <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: GOLD, marginBottom: "10px" }}>
-          Purcell Ventures brand identity
+    <main className="br">
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
+      <div className="ui-wrap">
+        <div className="br-head">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/mark-foil.svg" alt="Purcell Ventures mark" width={56} height={56} />
+          <div>
+            <p className="br-small">Purcell Ventures brand identity</p>
+            <h1>Brand system</h1>
+          </div>
         </div>
-        <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "36px", fontWeight: 700, color: CREAM, marginBottom: "12px" }}>
-          Brand System
-        </h1>
 
-        <div style={{ display: "flex", borderBottom: `1px solid ${EMBER}`, marginTop: "32px" }}>
+        <div className="br-tabs" role="tablist">
           {TABS.map(({ id, label }) => (
-            <button key={id} onClick={() => setTab(id)} style={{
-              background: "none", border: "none", cursor: "pointer",
-              padding: "10px 22px",
-              fontSize: "13px", fontWeight: tab === id ? 700 : 500,
-              letterSpacing: "0.04em",
-              color: tab === id ? GOLD : ASH,
-              borderBottom: tab === id ? `2px solid ${GOLD}` : "2px solid transparent",
-              marginBottom: "-1px",
-              transition: "color 0.15s",
-              fontFamily: "Inter, sans-serif",
-            }}>
-              {label}
-            </button>
+            <button key={id} role="tab" aria-selected={tab === id} className="br-tab" onClick={() => setTab(id)}>{label}</button>
           ))}
         </div>
-      </div>
 
-      <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
         {tab === "colors" && <ColorSection />}
-        {tab === "type"   && <TypographySection />}
-        {tab === "icons"  && <IconsSection />}
-        {tab === "photo"  && <PhotoSection />}
-      </div>
+        {tab === "type" && <TypographySection />}
+        {tab === "icons" && <IconsSection />}
+        {tab === "photo" && <PhotoSection />}
 
-      <div style={{ maxWidth: "1100px", margin: "64px auto 0", display: "flex", gap: "24px" }}>
-        <a href="/logos"    style={{ fontSize: "13px", color: CHAR, textDecoration: "none" }}>Logos</a>
-        <a href="/patterns" style={{ fontSize: "13px", color: CHAR, textDecoration: "none" }}>Patterns</a>
+        <div className="br-foot">
+          <a href="/logos">Logos</a>
+          <a href="/patterns">Patterns</a>
+        </div>
       </div>
-      </div>
-    </div>
+    </main>
   );
 }

@@ -2,15 +2,41 @@
 // Brand identity options, purcellventures.co/logos
 // SVG-backed, resolution-independent previews
 
-import React, { useRef } from "react";
-import { PanopConfig, PanopticonMark, PanopticonSplit } from "@/app/components/PanopticonMark";
+import React, { useEffect, useRef, useState } from "react";
 import { downloadPrintAsset, downloadSvgElement, downloadSvgAsPng } from "@/lib/printDownload";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
 
-const GOLD  = "#d4af37";
-const DARK  = "#0c0a08";
-const CREAM = "#f5f0e0";
-const MID   = "#141210";
+const GOLD = "var(--gold)";
+const GOLD_TEXT = "var(--gold-text)";
+const DARK = "var(--bg)";
+const CREAM = "var(--fg)";
+// Warm white for printed pages. It has no site token.
+const PAPER = "#faf8f4";
+
+const CSS = `
+.lg { min-height: 100vh; background: var(--bg); color: var(--fg); font-family: var(--font-body); padding: 40px 0 72px; }
+.lg h1, .lg h2 { font-family: var(--font-display); font-weight: 600; margin: 0; color: var(--fg); }
+.lg h1 { font-size: clamp(30px, 6vw, 40px); line-height: 1.1; margin-bottom: 8px; }
+.lg h2 { font-size: 22px; line-height: 1.2; }
+.lg p { margin: 0; }
+.lg-intro { font-size: 15px; color: var(--muted); line-height: 1.7; max-width: 56ch; }
+.lg-list { display: flex; flex-direction: column; gap: 64px; margin-top: 48px; }
+.lg-title { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
+.lg-sub { font-size: 14px; color: var(--muted); }
+.lg-label { font-size: 13px; font-weight: 600; color: var(--subtle); margin-bottom: 10px; }
+.lg-scroll { max-width: 100%; overflow-x: auto; padding-bottom: 4px; }
+.lg-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 16px; background: none; border: 1px solid var(--line); color: var(--muted); font: 600 13px var(--font-body); cursor: pointer; }
+.lg-btn:hover { color: var(--fg); border-color: var(--subtle); }
+.lg-btn--gold { border-color: var(--gold-text); color: var(--gold-text); }
+.lg-btn--gold:hover { color: var(--fg); border-color: var(--gold-text); }
+.lg-btn--small { display: flex; width: 100%; margin-top: 6px; min-height: 44px; }
+.lg-variants { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+.lg-variant-label { font-size: 13px; color: var(--subtle); margin-top: 4px; max-width: 160px; line-height: 1.4; }
+.lg-notes { margin-top: 72px; padding: 28px 24px; background: var(--surface); border: 1px solid var(--line); }
+.lg-notes h2 { font-size: 17px; color: var(--gold-text); margin-bottom: 14px; }
+.lg-notes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; font-size: 14px; color: var(--muted); line-height: 1.7; }
+.lg-notes-grid strong { color: var(--fg-2); }
+.lg-mark svg { display: block; width: 100%; height: 100%; }
+`;
 
 function Box({
   w, h, bg = DARK, children, style,
@@ -18,8 +44,7 @@ function Box({
   return (
     <div style={{
       width: w, height: h, position: "relative", background: bg,
-      borderRadius: 8, overflow: "hidden",
-      boxShadow: "0 6px 32px rgba(0,0,0,0.5)", flexShrink: 0,
+      outline: "1px solid var(--line)", flexShrink: 0,
       ...style,
     }}>
       {children}
@@ -35,81 +60,86 @@ function Center({ children }: { children: React.ReactNode }) {
   );
 }
 
-// ─── 1. The Wordmark ──────────────────────────────────────────────────────────
+// The final mark, inlined from /mark-foil.svg or /mark-ochre.svg so it can be exported as SVG or PNG.
+const markCache: Record<string, string> = {};
 
-function Wordmark({ color = GOLD, size = 30 }: { color?: string; size?: number }) {
+function Mark({ kind = "foil", size = 100, bg }: { kind?: "foil" | "ochre"; size?: number; bg?: string }) {
+  const [svg, setSvg] = useState<string>(markCache[kind] ?? "");
+  useEffect(() => {
+    if (markCache[kind]) return;
+    let live = true;
+    fetch(`/mark-${kind}.svg`).then(r => r.text()).then(t => {
+      t = t.replace("<svg ", '<svg width="800" height="800" ');
+      markCache[kind] = t;
+      if (live) setSvg(t);
+    }).catch(() => {});
+    return () => { live = false; };
+  }, [kind]);
   return (
-    <div style={{ textAlign: "center" }}>
-      <div style={{
-        fontFamily: "'Cinzel', Georgia, serif",
-        fontSize: `${size}px`, fontWeight: 700,
-        color, letterSpacing: "0.42em", lineHeight: 1,
-      }}>PURCELL</div>
-      <div style={{
-        fontFamily: "'Cinzel', Georgia, serif",
-        fontSize: `${Math.round(size * 0.44)}px`, fontWeight: 400,
-        color, letterSpacing: "0.58em", lineHeight: 1,
-        marginTop: `${Math.round(size * 0.2)}px`, opacity: 0.8,
-      }}>VENTURES</div>
-    </div>
+    <div
+      className="lg-mark"
+      role="img"
+      aria-label="Purcell Ventures mark"
+      style={{ width: size, height: size, background: bg, flexShrink: 0 }}
+      dangerouslySetInnerHTML={{ __html: svg }}
+    />
   );
 }
 
-// ─── 2. The Stacked ───────────────────────────────────────────────────────────
+// ─── The wordmark ─────────────────────────────────────────────────────────────
+
+function Wordmark({ color = GOLD_TEXT, size = 34 }: { color?: string; size?: number }) {
+  return (
+    <div style={{
+      fontFamily: "var(--font-display)", fontSize: `${size}px`, fontWeight: 600,
+      color, letterSpacing: "-0.01em", lineHeight: 1, whiteSpace: "nowrap",
+    }}>Purcell Ventures</div>
+  );
+}
+
+// ─── The stacked lockup ───────────────────────────────────────────────────────
 
 function Stacked({
-  top = GOLD, btm = GOLD, rule = GOLD, fs1 = 44, fs2 = 13,
+  top = GOLD_TEXT, btm = GOLD_TEXT, rule = GOLD_TEXT, fs1 = 44, fs2 = 20,
 }: { top?: string; btm?: string; rule?: string; fs1?: number; fs2?: number }) {
   return (
     <div style={{ textAlign: "center" }}>
-      <div style={{
-        fontFamily: "'Cinzel', Georgia, serif",
-        fontSize: `${fs1}px`, fontWeight: 700,
-        color: top, letterSpacing: "0.18em", lineHeight: 1,
-      }}>PURCELL</div>
-      <div style={{ height: "1px", background: rule, opacity: 0.45, margin: `${Math.round(fs1 * 0.3)}px auto`, width: `${Math.round(fs1 * 1.4)}px` }} />
-      <div style={{
-        fontFamily: "'Cinzel', Georgia, serif",
-        fontSize: `${fs2}px`, fontWeight: 400,
-        color: btm, letterSpacing: "0.58em", lineHeight: 1, opacity: 0.85,
-      }}>VENTURES</div>
+      <div style={{ fontFamily: "var(--font-display)", fontSize: `${fs1}px`, fontWeight: 600, color: top, letterSpacing: "-0.01em", lineHeight: 1 }}>Purcell</div>
+      <div style={{ height: "1px", background: rule, opacity: 0.45, margin: `${Math.round(fs1 * 0.28)}px auto`, width: `${Math.round(fs1 * 1.9)}px` }} />
+      <div style={{ fontFamily: "var(--font-display)", fontSize: `${fs2}px`, fontWeight: 500, color: btm, letterSpacing: "0.04em", lineHeight: 1, opacity: 0.85 }}>Ventures</div>
     </div>
   );
 }
 
-// ─── 3. The Monogram ──────────────────────────────────────────────────────────
+// ─── The monogram ─────────────────────────────────────────────────────────────
 
-function Mono({ color = GOLD, size = 100 }: { color?: string; size?: number }) {
+function Mono({ color = GOLD_TEXT, size = 100 }: { color?: string; size?: number }) {
   return (
     <div style={{
-      fontFamily: "'Cinzel', Georgia, serif",
-      fontSize: `${size}px`, fontWeight: 700,
-      color, lineHeight: 1, letterSpacing: "0.06em",
-      whiteSpace: "nowrap",
+      fontFamily: "var(--font-display)", fontSize: `${size}px`, fontWeight: 600,
+      color, lineHeight: 1, letterSpacing: "0.02em", whiteSpace: "nowrap",
     }}>PV</div>
   );
 }
 
-// ─── 4. The Slash Mark ────────────────────────────────────────────────────────
+// ─── The slash mark ───────────────────────────────────────────────────────────
 
 function SlashMark({
-  color = GOLD, bg = DARK, size = 220,
+  color = GOLD_TEXT, bg = DARK, size = 220,
   direction = "right",
 }: { color?: string; bg?: string; size?: number; direction?: "right" | "left" | "both" }) {
   const scale = size / 220;
-  const pv    = Math.round(88 * scale);
-  const sw    = Math.max(1, 1.5 * scale);
-  const mt    = Math.round(-8 * scale);
-  const [rx1, rx2] = [Math.round(192 * scale), Math.round(96  * scale)];
-  const [lx1, lx2] = [Math.round(28  * scale), Math.round(124 * scale)];
+  const pv = Math.round(88 * scale);
+  const sw = Math.max(1, 1.5 * scale);
+  const mt = Math.round(-8 * scale);
+  const [rx1, rx2] = [Math.round(192 * scale), Math.round(96 * scale)];
+  const [lx1, lx2] = [Math.round(28 * scale), Math.round(124 * scale)];
   return (
     <Box w={size} h={size} bg={bg}>
       <Center>
         <div style={{
-          fontFamily: "'Cinzel', Georgia, serif",
-          fontSize: `${pv}px`, fontWeight: 700,
-          color, lineHeight: 1, letterSpacing: "0.06em",
-          whiteSpace: "nowrap", marginTop: `${mt}px`,
+          fontFamily: "var(--font-display)", fontSize: `${pv}px`, fontWeight: 600,
+          color, lineHeight: 1, letterSpacing: "0.02em", whiteSpace: "nowrap", marginTop: `${mt}px`,
         }}>PV</div>
       </Center>
       <svg style={{ position: "absolute", inset: 0, pointerEvents: "none" }} width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
@@ -124,38 +154,17 @@ function SlashMark({
   );
 }
 
-// ─── 5. The Full Lockup ───────────────────────────────────────────────────────
+// ─── The full lockup ──────────────────────────────────────────────────────────
 
-function Lockup({ color = GOLD, bg = DARK }: { color?: string; bg?: string }) {
+function Lockup({ kind = "foil", color = GOLD_TEXT, bg = DARK }: { kind?: "foil" | "ochre"; color?: string; bg?: string }) {
   return (
     <Box w={500} h={140} bg={bg}>
-      <div style={{
-        position: "absolute", top: "50%", left: 65,
-        transform: "translate(-50%, -50%)",
-        fontFamily: "'Cinzel', Georgia, serif",
-        fontSize: "58px", fontWeight: 700,
-        color, lineHeight: 1, letterSpacing: "0.06em",
-        whiteSpace: "nowrap", marginTop: "-4px",
-      }}>PV</div>
-      <svg style={{ position: "absolute", inset: 0, pointerEvents: "none" }} width={500} height={140} viewBox="0 0 500 140">
-        <line x1={118} y1={0} x2={57} y2={140} stroke={color} strokeWidth="1.5" opacity="0.6" />
-      </svg>
-      <div style={{
-        position: "absolute", left: 148, top: 24, bottom: 24,
-        width: "1px", background: color, opacity: 0.22,
-      }} />
-      <div style={{ position: "absolute", left: 168, top: "50%", transform: "translateY(-50%)" }}>
-        <div style={{
-          fontFamily: "'Cinzel', Georgia, serif",
-          fontSize: "26px", fontWeight: 700,
-          color, letterSpacing: "0.38em", lineHeight: 1,
-        }}>PURCELL</div>
-        <div style={{
-          fontFamily: "'Cinzel', Georgia, serif",
-          fontSize: "10px", fontWeight: 400,
-          color, letterSpacing: "0.55em", lineHeight: 1, opacity: 0.8,
-          marginTop: "9px", width: "100%", textAlign: "center",
-        }}>VENTURES</div>
+      <div style={{ position: "absolute", left: 28, top: 20 }}>
+        <Mark kind={kind} size={100} />
+      </div>
+      <div style={{ position: "absolute", left: 150, top: 24, bottom: 24, width: "1px", background: color, opacity: 0.22 }} />
+      <div style={{ position: "absolute", left: 172, top: "50%", transform: "translateY(-50%)" }}>
+        <Wordmark color={color} size={34} />
       </div>
     </Box>
   );
@@ -171,29 +180,7 @@ type LogoEntry = {
   isSvg?: boolean;
 };
 
-function PanopticonVariant({ size, color = GOLD, bg = DARK, cfg }: {
-  size: number; color?: string; bg?: string; cfg?: PanopConfig;
-}) {
-  return (
-    <div style={{ borderRadius: 8, overflow: "hidden", boxShadow: "0 4px 16px rgba(0,0,0,0.45)", display: "inline-block" }}>
-      <PanopticonMark size={size} color={color} bg={bg} cfg={cfg} />
-    </div>
-  );
-}
-
-const btnBase: React.CSSProperties = {
-  display: "inline-block", padding: "8px 16px", background: "none",
-  border: "1px solid #2e2820", color: "#6a6458", fontSize: "11px",
-  fontWeight: 600, letterSpacing: "0.08em", cursor: "pointer",
-  borderRadius: "4px", fontFamily: "Inter, sans-serif",
-};
-const btnGoldStyle: React.CSSProperties = { ...btnBase, borderColor: GOLD, color: GOLD };
-const btnSmallStyle: React.CSSProperties = {
-  ...btnBase, display: "block", width: "100%", marginTop: "6px",
-  padding: "5px 0", fontSize: "10px", letterSpacing: "0.06em", textAlign: "center",
-};
-
-function LogoSection({ logo, idx }: { logo: LogoEntry; idx: number }) {
+function LogoSection({ logo }: { logo: LogoEntry }) {
   const mainRef = useRef<HTMLDivElement>(null);
   const varRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -220,264 +207,83 @@ function LogoSection({ logo, idx }: { logo: LogoEntry; idx: number }) {
     await downloadPrintAsset({ current: el }, label);
   }
 
-  const num = String(idx + 1).padStart(2, "0");
-
   return (
-    <div>
-      <div style={{ display: "flex", alignItems: "baseline", gap: "14px", marginBottom: "24px" }}>
-        <span style={{ fontSize: "11px", fontWeight: 700, color: GOLD, letterSpacing: "0.1em" }}>{num}</span>
-        <span style={{ fontSize: "20px", fontWeight: 700, color: CREAM }}>{logo.name}</span>
-        <span style={{ fontSize: "13px", color: "#524d45" }}>{logo.subtitle}</span>
+    <section>
+      <div className="lg-title">
+        <h2>{logo.name}</h2>
+        <span className="lg-sub">{logo.subtitle}</span>
       </div>
 
-      <div style={{ marginBottom: "16px" }}>
-        <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "10px" }}>Primary</div>
-        <div ref={mainRef} style={{ display: "inline-block" }}>{logo.main}</div>
-        <div style={{ display: "flex", gap: "8px", marginTop: "10px" }}>
-          <button style={btnBase} onClick={dlMain}>Download PNG</button>
-          {logo.isSvg && <button style={btnGoldStyle} onClick={dlMainSvg}>Download SVG</button>}
+      <div style={{ marginBottom: 24 }}>
+        <p className="lg-label">Primary</p>
+        <div className="lg-scroll">
+          <div ref={mainRef} style={{ display: "inline-block" }}>{logo.main}</div>
+        </div>
+        <div style={{ display: "flex", gap: 8, marginTop: 10, flexWrap: "wrap" }}>
+          <button className="lg-btn" onClick={dlMain}>Download PNG</button>
+          {logo.isSvg && <button className="lg-btn lg-btn--gold" onClick={dlMainSvg}>Download SVG</button>}
         </div>
       </div>
 
       <div>
-        <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "10px" }}>Variants</div>
-        <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "flex-start" }}>
+        <p className="lg-label">Variants</p>
+        <div className="lg-variants">
           {logo.variants.map((v, vi) => (
             <div key={v.label}>
               <div ref={el => { varRefs.current[vi] = el; }}>{v.node}</div>
-              <button style={btnSmallStyle} onClick={() => dlVariant(vi, `${logo.name} ${v.label}`)}>PNG</button>
-              <div style={{ fontSize: "10px", color: "#3a3530", marginTop: "4px", letterSpacing: "0.04em", maxWidth: "140px" }}>{v.label}</div>
+              <button className="lg-btn lg-btn--small" onClick={() => dlVariant(vi, `${logo.name} ${v.label}`)}>PNG</button>
+              <p className="lg-variant-label">{v.label}</p>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
 const LOGOS: LogoEntry[] = [
   {
-    name: "The Panopticon Mark",
-    subtitle: "Reverse panopticon ring, inward cell groups, concentric field and a PV center",
+    name: "The mark",
+    subtitle: "The hexagon with the ring and the PV cut out of it. The primary identity.",
     isSvg: true,
-    main: (
-      <div style={{ borderRadius: 8, overflow: "hidden", boxShadow: "0 6px 32px rgba(0,0,0,0.55)", display: "inline-block" }}>
-        <PanopticonMark size={280} cfg={{
-          cellStyle: "outlined",
-          pvSize: 70, pvClearR: 58,
-          ringStart: 70, ringEnd: 116,
-          numRings: 7,
-          ringFadeToCenter: true,
-        }} />
-      </div>
-    ),
+    main: <Mark kind="foil" size={280} />,
     variants: [
-      {
-        label: "Standard, gold on dark",
-        node: <PanopticonVariant size={140} />,
-      },
-      {
-        label: "Minimal: 4 groups, no rings",
-        node: <PanopticonVariant size={140} cfg={{ numGroups: 4, includeFlankers: false, numRings: 0, tallH: 44 }} />,
-      },
-      {
-        label: "Dense: 12 groups, 14 rings",
-        node: <PanopticonVariant size={140} cfg={{ numGroups: 12, numRings: 14, tallH: 26, shortH: 12 }} />,
-      },
-      {
-        label: "Outlined / Wireframe",
-        node: <PanopticonVariant size={140} cfg={{ cellStyle: "outlined" }} />,
-      },
-      {
-        label: "Light, dark on cream",
-        node: <PanopticonVariant size={140} color={DARK} bg={CREAM} />,
-      },
-      {
-        label: "Split: half gold, half inverted",
-        node: <div style={{ borderRadius: 8, overflow: "hidden", boxShadow: "0 4px 16px rgba(0,0,0,0.45)", display: "inline-block" }}><PanopticonSplit size={140} /></div>,
-      },
-      {
-        label: "Lampstand: wireframe with fading rings and a solid center",
-        node: <PanopticonVariant size={140} cfg={{
-          cellStyle: "outlined",
-          pvSize: 70, pvClearR: 58,
-          ringStart: 70, ringEnd: 116,
-          numRings: 7,
-          ringFadeToCenter: true,
-        }} />,
-      },
-      {
-        label: "Lampstand: 5 rings, more open field",
-        node: <PanopticonVariant size={140} cfg={{
-          cellStyle: "outlined",
-          pvSize: 70, pvClearR: 58,
-          ringStart: 72, ringEnd: 116,
-          numRings: 5,
-          ringFadeToCenter: true,
-        }} />,
-      },
-      {
-        label: "Lampstand: 12 groups, dense arms",
-        node: <PanopticonVariant size={140} cfg={{
-          cellStyle: "outlined",
-          numGroups: 12, tallH: 26, shortH: 12,
-          pvSize: 70, pvClearR: 58,
-          ringStart: 70, ringEnd: 116,
-          numRings: 7,
-          ringFadeToCenter: true,
-        }} />,
-      },
-      {
-        label: "Lampstand: 6 spokes, no flankers",
-        node: <PanopticonVariant size={140} cfg={{
-          cellStyle: "outlined",
-          numGroups: 6, includeFlankers: false, tallH: 38,
-          pvSize: 70, pvClearR: 58,
-          ringStart: 70, ringEnd: 116,
-          numRings: 7,
-          ringFadeToCenter: true,
-        }} />,
-      },
-      {
-        label: "Lampstand, light, dark on cream",
-        node: <PanopticonVariant size={140} color={DARK} bg={CREAM} cfg={{
-          cellStyle: "outlined",
-          pvSize: 70, pvClearR: 58,
-          ringStart: 70, ringEnd: 116,
-          numRings: 7,
-          ringFadeToCenter: true,
-        }} />,
-      },
-      {
-        label: "Ripple: wide band, heavy fade, large PV",
-        node: <PanopticonVariant size={140} cfg={{
-          cellStyle: "outlined",
-          pvSize: 50, pvClearR: 56,
-          ringStart: 60, ringEnd: 118,
-          numRings: 10,
-          ringFadeToCenter: true,
-        }} />,
-      },
-      {
-        label: "Signal: 6 spokes, sparse outer field",
-        node: <PanopticonVariant size={140} cfg={{
-          cellStyle: "outlined",
-          numGroups: 6, includeFlankers: false,
-          tallH: 40,
-          pvSize: 52, pvClearR: 58,
-          ringStart: 72, ringEnd: 114,
-          numRings: 4,
-          ringFadeToCenter: true,
-        }} />,
-      },
-      {
-        label: "Cardinal: 4 directions, open and bold",
-        node: <PanopticonVariant size={140} cfg={{
-          cellStyle: "outlined",
-          numGroups: 4, includeFlankers: true, flankerDeg: 8,
-          tallH: 40, shortH: 20,
-          pvSize: 54, pvClearR: 60,
-          ringStart: 74, ringEnd: 114,
-          numRings: 5,
-          ringFadeToCenter: true,
-        }} />,
-      },
-      {
-        label: "Filled Broadcast: large PV, rings pushed out",
-        node: <PanopticonVariant size={140} cfg={{
-          pvSize: 48, pvClearR: 54,
-          ringStart: 62, ringEnd: 88,
-          numRings: 6,
-          ringFadeToCenter: true,
-        }} />,
-      },
-      {
-        label: "Filled Cardinal: 4 groups, bold center",
-        node: <PanopticonVariant size={140} cfg={{
-          numGroups: 4, includeFlankers: true, flankerDeg: 8,
-          tallH: 40, shortH: 20,
-          pvSize: 50, pvClearR: 56,
-          ringStart: 64, ringEnd: 88,
-          numRings: 5,
-          ringFadeToCenter: true,
-        }} />,
-      },
-      {
-        label: "Declaration: rings at the edge, open center",
-        node: <PanopticonVariant size={140} cfg={{
-          cellStyle: "outlined",
-          pvSize: 56, pvClearR: 62,
-          ringStart: 96, ringEnd: 114,
-          numRings: 3,
-          ringFadeToCenter: false,
-        }} />,
-      },
-      {
-        label: "Free Field: open space, 6 spokes, 2 outer rings",
-        node: <PanopticonVariant size={140} cfg={{
-          cellStyle: "outlined",
-          numGroups: 6, includeFlankers: false,
-          tallH: 42,
-          pvSize: 58, pvClearR: 64,
-          ringStart: 106, ringEnd: 118,
-          numRings: 2,
-          ringFadeToCenter: false,
-        }} />,
-      },
-      {
-        label: "Sousveillance: bold outer ring, open interior",
-        node: <PanopticonVariant size={140} cfg={{
-          numGroups: 8, includeFlankers: true,
-          pvSize: 52, pvClearR: 58,
-          ringStart: 94, ringEnd: 114,
-          numRings: 4,
-          ringFadeToCenter: false,
-        }} />,
-      },
-      {
-        label: "Perimeter: 4 cardinal spokes, rings at boundary only",
-        node: <PanopticonVariant size={140} cfg={{
-          cellStyle: "outlined",
-          numGroups: 4, includeFlankers: true, flankerDeg: 9,
-          tallH: 42, shortH: 22,
-          pvSize: 56, pvClearR: 62,
-          ringStart: 92, ringEnd: 114,
-          numRings: 4,
-          ringFadeToCenter: false,
-        }} />,
-      },
+      { label: "Foil, from /mark-foil.svg", node: <Mark kind="foil" size={140} /> },
+      { label: "Ochre, from /mark-ochre.svg", node: <Mark kind="ochre" size={140} /> },
+      { label: "Ochre on cream", node: <Mark kind="ochre" size={140} bg={CREAM} /> },
+      { label: "Ochre on warm white", node: <Mark kind="ochre" size={140} bg={PAPER} /> },
     ],
   },
   {
-    name: "The Wordmark",
-    subtitle: "Single horizontal line for headers, footers, signage and email signatures",
+    name: "The wordmark",
+    subtitle: "A single line for headers, footers, signage and email signatures",
     main: (
       <Box w={520} h={140} bg={DARK}>
-        <Center><Wordmark /></Center>
+        <Center><Wordmark size={44} /></Center>
       </Box>
     ),
     variants: [
-      { label: "Gold on dark",  node: <Box w={200} h={80} bg={DARK}><Center><Wordmark size={16} /></Center></Box> },
-      { label: "Cream on dark", node: <Box w={200} h={80} bg={DARK}><Center><Wordmark size={16} color={CREAM} /></Center></Box> },
-      { label: "Dark on gold",  node: <Box w={200} h={80} bg={GOLD}><Center><Wordmark size={16} color={DARK} /></Center></Box> },
+      { label: "Gold on Night", node: <Box w={220} h={80} bg={DARK}><Center><Wordmark size={22} /></Center></Box> },
+      { label: "Cream on Night", node: <Box w={220} h={80} bg={DARK}><Center><Wordmark size={22} color={CREAM} /></Center></Box> },
+      { label: "Night on gold", node: <Box w={220} h={80} bg={GOLD}><Center><Wordmark size={22} color={DARK} /></Center></Box> },
     ],
   },
   {
-    name: "The Stacked",
-    subtitle: "Two-line lockup for print, packaging, social profiles and formal documents",
+    name: "The stacked lockup",
+    subtitle: "Two lines for print, packaging, social profiles and formal documents",
     main: (
       <Box w={400} h={200} bg={DARK}>
         <Center><Stacked /></Center>
       </Box>
     ),
     variants: [
-      { label: "Gold on dark",  node: <Box w={160} h={100} bg={DARK}><Center><Stacked fs1={22} fs2={7} /></Center></Box> },
-      { label: "Dark on cream", node: <Box w={160} h={100} bg={CREAM}><Center><Stacked top={DARK} btm={DARK} rule={DARK} fs1={22} fs2={7} /></Center></Box> },
-      { label: "Dark on gold",  node: <Box w={160} h={100} bg={GOLD}><Center><Stacked top={DARK} btm={DARK} rule={DARK} fs1={22} fs2={7} /></Center></Box> },
+      { label: "Gold on Night", node: <Box w={170} h={100} bg={DARK}><Center><Stacked fs1={26} fs2={12} /></Center></Box> },
+      { label: "Night on cream", node: <Box w={170} h={100} bg={CREAM}><Center><Stacked top={DARK} btm={DARK} rule={DARK} fs1={26} fs2={12} /></Center></Box> },
+      { label: "Night on gold", node: <Box w={170} h={100} bg={GOLD}><Center><Stacked top={DARK} btm={DARK} rule={DARK} fs1={26} fs2={12} /></Center></Box> },
     ],
   },
   {
-    name: "The Monogram",
+    name: "The monogram",
     subtitle: "Plain PV for embossing, stamps, card backs, watermarks and app icons",
     main: (
       <Box w={220} h={220} bg={DARK}>
@@ -485,72 +291,59 @@ const LOGOS: LogoEntry[] = [
       </Box>
     ),
     variants: [
-      { label: "Gold on dark",  node: <Box w={88} h={88} bg={DARK}><Center><Mono size={44} /></Center></Box> },
-      { label: "Dark on cream", node: <Box w={88} h={88} bg={CREAM}><Center><Mono size={44} color={DARK} /></Center></Box> },
-      { label: "Dark on gold",  node: <Box w={88} h={88} bg={GOLD}><Center><Mono size={44} color={DARK} /></Center></Box> },
+      { label: "Gold on Night", node: <Box w={88} h={88} bg={DARK}><Center><Mono size={44} /></Center></Box> },
+      { label: "Night on cream", node: <Box w={88} h={88} bg={CREAM}><Center><Mono size={44} color={DARK} /></Center></Box> },
+      { label: "Night on gold", node: <Box w={88} h={88} bg={GOLD}><Center><Mono size={44} color={DARK} /></Center></Box> },
     ],
   },
   {
-    name: "The Slash Mark",
+    name: "The slash mark",
     subtitle: "PV with the V stroke extended, for business cards and the brand icon",
     main: <SlashMark />,
     variants: [
-      { label: "Right leg  \\  (V's right stroke)", node: <SlashMark size={120} direction="right" /> },
-      { label: "Left leg  /  (V's left stroke)",   node: <SlashMark size={120} direction="left" /> },
-      { label: "Both legs, the full V",            node: <SlashMark size={120} direction="both" /> },
+      { label: "Right leg, the V's right stroke", node: <SlashMark size={120} direction="right" /> },
+      { label: "Left leg, the V's left stroke", node: <SlashMark size={120} direction="left" /> },
+      { label: "Both legs, the full V", node: <SlashMark size={120} direction="both" /> },
     ],
   },
   {
-    name: "The Full Lockup",
-    subtitle: "Primary logo with the mark and wordmark together, for websites, proposals and decks",
+    name: "The full lockup",
+    subtitle: "The mark and wordmark together, for websites, proposals and decks",
     main: <Lockup />,
     variants: [
-      { label: "Gold on dark",  node: <Lockup color={GOLD} bg={DARK} /> },
-      { label: "Cream on dark", node: <Lockup color={CREAM} bg={DARK} /> },
-      { label: "Dark on gold",  node: <Lockup color={DARK} bg={GOLD} /> },
+      { label: "Foil mark, gold on Night", node: <Lockup kind="foil" color={GOLD_TEXT} bg={DARK} /> },
+      { label: "Foil mark, cream on Night", node: <Lockup kind="foil" color={CREAM} bg={DARK} /> },
+      { label: "Ochre mark, Night on cream", node: <Lockup kind="ochre" color={DARK} bg={CREAM} /> },
     ],
   },
 ];
 
 export default function LogosPage() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: CREAM, fontFamily: "Inter, sans-serif", padding: "48px 32px", position: "relative", overflowX: "hidden" }}>
-      <VignetteBackground />
-      <div style={{ position: "relative", zIndex: 5 }}>
+    <main className="lg">
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
+      <div className="ui-wrap">
+        <header>
+          <h1>Logo options</h1>
+          <p className="lg-intro">
+            Six treatments. Download a PNG from any logo, or an SVG from the mark. The mark is fully vector, so the SVG scales to any size.
+          </p>
+        </header>
 
-      {/* Header */}
-      <div style={{ maxWidth: "1200px", margin: "0 auto 56px" }}>
-        <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: GOLD, marginBottom: "10px" }}>
-          Purcell Ventures brand identity
+        <div className="lg-list">
+          {LOGOS.map(logo => <LogoSection key={logo.name} logo={logo} />)}
         </div>
-        <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "36px", fontWeight: 700, color: CREAM, marginBottom: "8px" }}>
-          Logo Options
-        </h1>
-        <p style={{ fontSize: "14px", color: "#524d45", maxWidth: "480px", lineHeight: 1.7 }}>
-          6 treatments. Download PNG or SVG directly from each logo. The Panopticon mark is fully vector, so the SVG scales to any size.
-        </p>
-      </div>
 
-      {/* Logos */}
-      <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "72px" }}>
-        {LOGOS.map((logo, i) => (
-          <LogoSection key={logo.name} logo={logo} idx={i} />
-        ))}
+        <aside className="lg-notes">
+          <h2>Usage notes</h2>
+          <div className="lg-notes-grid">
+            <div><strong>Fonts:</strong> Clash Display for PV and the wordmark, at weight 600. Satoshi for everything else.</div>
+            <div><strong>Colors:</strong> gold #b8862b, text gold #e3bd6a, Night #07060a, cream #efe8d8.</div>
+            <div><strong>The mark SVG:</strong> use it for print, embroidery, large formats and app icons. It scales to any size.</div>
+            <div><strong>The slash:</strong> it follows the exact angle of the V&apos;s right stroke, so the two read as one extended element.</div>
+          </div>
+        </aside>
       </div>
-
-      {/* Notes */}
-      <div style={{ maxWidth: "1200px", margin: "72px auto 0", padding: "28px 32px", background: MID, border: "1px solid #2e2820", borderRadius: "10px" }}>
-        <div style={{ fontSize: "13px", fontWeight: 700, color: GOLD, marginBottom: "14px" }}>Usage Notes</div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "20px", fontSize: "12px", color: "#6a6458", lineHeight: 1.7 }}>
-          <div><strong style={{ color: "#8a8070" }}>Font:</strong> Cinzel (Google Fonts, free). Bold 700 for PV and PURCELL. Regular 400 for VENTURES.</div>
-          <div><strong style={{ color: "#8a8070" }}>Colors:</strong> gold #d4af37, near-black #0c0a08, cream #f5f0e0</div>
-          <div><strong style={{ color: "#8a8070" }}>Panopticon SVG:</strong> Use the SVG for print, embroidery, large formats and app icons. It scales to any size.</div>
-          <div><strong style={{ color: "#8a8070" }}>The Slash:</strong> The slash follows the exact angle of the V's right stroke. They are one extended element.</div>
-        </div>
-      </div>
-
-      <div style={{ height: "64px" }} />
-      </div>
-    </div>
+    </main>
   );
 }

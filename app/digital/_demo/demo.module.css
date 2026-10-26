@@ -1,0 +1,145 @@
+/* Shared layout for the /digital demo add-ons, the free AI tool pages and the rep tools.
+   The page kit has no form-plus-list or form-plus-output pattern, so these pages share
+   this one file instead of each carrying its own inline style objects. Same rules as the
+   kit: square corners, rules between things, colour change on hover only. */
+
+.body { padding-bottom: 88px; }
+
+/* toolbars and button rows */
+.bar { display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: center; margin: 0 0 28px; }
+.bar > input, .bar > select { min-height: 44px; }
+.grow { flex: 1 1 220px; min-width: 0; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px 12px; align-items: center; margin-top: 20px; }
+.spread { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px 20px; }
+
+/* a quiet secondary button: 44px tap target, an inset rule, colour change on hover */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  min-height: 44px; padding: 10px 16px;
+  background: transparent; color: var(--fg-2);
+  border: 0; box-shadow: inset 0 0 0 1px var(--line);
+  font: 600 15px/1.2 var(--font-body); text-decoration: none; cursor: pointer;
+  transition: color .15s, box-shadow .15s;
+}
+.btn:hover { color: var(--fg); box-shadow: inset 0 0 0 1px var(--gold); }
+.btn:disabled { color: var(--subtle); cursor: default; box-shadow: inset 0 0 0 1px var(--line); }
+.btnOn { color: var(--gold-text); box-shadow: inset 0 0 0 1px var(--gold); }
+.btnOk { color: var(--ok); box-shadow: inset 0 0 0 1px var(--ok); }
+.btnDanger { color: var(--danger); }
+.btnDanger:hover { color: var(--danger); box-shadow: inset 0 0 0 1px var(--danger); }
+.primary:disabled { opacity: .55; cursor: wait; }
+
+/* forms */
+.form { padding: 0 0 28px; margin: 0 0 32px; border-bottom: 1px solid var(--line); }
+.form h3, .sub { font-size: 22px; margin: 0 0 18px; }
+.grid { display: grid; gap: 16px; }
+.grid2 { display: grid; gap: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid3 { display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.full { grid-column: 1 / -1; }
+.help { margin: 0; font-size: 14px; color: var(--subtle); }
+.check { display: flex; align-items: center; gap: 10px; min-height: 44px; color: var(--fg-2); font-size: 16px; cursor: pointer; }
+.check input { width: 20px; height: 20px; accent-color: var(--gold); }
+.error { margin: 0; border-left: 2px solid var(--danger); padding: 4px 0 4px 14px; color: var(--danger); }
+.empty { color: var(--muted); padding: 24px 0; margin: 0; }
+
+/* lists of saved records: rules between, no boxes */
+.list { display: flex; flex-direction: column; }
+.item { padding: 20px 0; border-top: 1px solid var(--line); }
+.item:first-child { border-top: 0; padding-top: 4px; }
+.itemName { font: 600 21px/1.25 var(--font-display); margin: 0; color: var(--fg); }
+.itemMeta { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
+.itemFig { font: 600 22px/1 var(--font-display); color: var(--gold-text); white-space: nowrap; }
+.ready { color: var(--gold-text); }
+.okText { color: var(--ok); }
+.dangerText { color: var(--danger); }
+.clickable { cursor: pointer; }
+.clickable:hover .itemName { color: var(--gold-text); }
+
+/* tables sit in a sideways-scroll wrapper so a phone never scrolls the page */
+.tableWrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 560px; }
+.table th { text-align: left; font-weight: 600; color: var(--muted); font-size: 14px; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); }
+.table td { padding: 12px 12px 12px 0; border-bottom: 1px solid var(--line); color: var(--fg); vertical-align: middle; }
+.num { text-align: right !important; white-space: nowrap; }
+.table input { width: 100%; }
+
+/* small bits */
+.punches { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.punch { width: 22px; height: 22px; box-shadow: inset 0 0 0 1.5px var(--line); }
+.punchOn { background: var(--gold); box-shadow: none; }
+.track { height: 4px; background: var(--surface-2); margin-top: 6px; }
+.fill { height: 100%; background: var(--gold); }
+.qty { display: inline-flex; align-items: center; gap: 4px; }
+.qty .btn { min-width: 44px; padding: 0; }
+.qtyN { min-width: 36px; text-align: center; font-weight: 700; }
+.stats { margin: 0 0 40px; }
+
+/* AI tool output */
+.output { margin-top: 8px; }
+.result {
+  margin: 0; padding: 20px; background: var(--surface); border: 1px solid var(--line);
+  white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word;
+  font: 400 16px/1.7 var(--font-body); color: var(--fg);
+}
+.resultCode { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14px; line-height: 1.6; }
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; }
+.swatch { height: 88px; border: 1px solid var(--line); }
+.swatchName { font: 600 17px/1.3 var(--font-display); margin: 10px 0 0; }
+.swatchHex { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14px; color: var(--gold-text); margin: 2px 0 0; }
+.swatchText { font-size: 15px; color: var(--muted); margin: 6px 0 0; }
+
+/* the rep tools (finder, playbook) have no site nav, so they keep this header */
+.repHead { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--line); }
+.repHeadIn { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 20px; padding-block: 12px; }
+.repTitle { font: 600 20px/1.2 var(--font-display); margin: 0; color: var(--fg); }
+.repLinks { display: flex; flex-wrap: wrap; gap: 4px 18px; align-items: center; font-size: 15px; }
+.repLinks a { color: var(--muted); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+.repLinks a:hover { color: var(--fg); }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.repMain { padding-block: 32px 80px; }
+
+@media (max-width: 860px) {
+  .grid2, .grid3 { grid-template-columns: minmax(0, 1fr); }
+  .result { padding: 16px 14px; font-size: 16px; }
+  .body { padding-bottom: 64px; }
+}
+
+@media print {
+  .noPrint { display: none !important; }
+}
+
+/* rep tools: finder rows and playbook blocks (appended for finder and playbook) */
+.score { font: 600 26px/1 var(--font-display); white-space: nowrap; text-align: right; }
+.scoreLabel { display: block; font: 600 14px/1.2 var(--font-body); margin-top: 4px; }
+.rowHead { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 16px; align-items: start; }
+.gaps { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 8px 0 0; font-size: 15px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 20px; margin: 0 0 24px; font-size: 15px; color: var(--muted); }
+.block { border-top: 1px solid var(--line); }
+.block:last-child { border-bottom: 1px solid var(--line); }
+.blockHead {
+  width: 100%; min-height: 56px; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  background: none; border: 0; padding: 16px 0; cursor: pointer; text-align: left; color: var(--fg);
+  font: 600 20px/1.3 var(--font-display);
+}
+.blockHead:hover { color: var(--gold-text); }
+.blockSign { color: var(--gold-text); font: 400 24px/1 var(--font-body); }
+.blockBody { padding: 0 0 28px; }
+.pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 6px 24px; padding: 12px 0; border-top: 1px solid var(--line); }
+.pair:first-of-type { border-top: 0; }
+.say { color: var(--fg); font-size: 17px; line-height: 1.55; margin: 0; }
+.why { color: var(--muted); font-size: 15px; margin: 6px 0 0; }
+.groupName { font-size: 18px; margin: 24px 0 8px; color: var(--fg); }
+.groupName:first-child { margin-top: 0; }
+.script { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: 400 16px/1.7 var(--font-body); color: var(--fg-2); background: var(--surface); border: 1px solid var(--line); padding: 16px; }
+.toggles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.toggles .btn { justify-content: flex-start; text-align: left; }
+.choice4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.choice3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.hotText { color: var(--ok); }
+.warmText { color: var(--gold-text); }
+.coldText { color: var(--muted); }
+@media (max-width: 860px) {
+  .pair { grid-template-columns: minmax(0, 1fr); }
+  .toggles { grid-template-columns: minmax(0, 1fr); }
+  .choice4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

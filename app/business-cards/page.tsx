@@ -1,54 +1,65 @@
 "use client";
-// Business card slash variations, purcellventures.co/business-cards
-// 6 designs built around the diagonal gold slash + PV luxury logo mark
-// Print: 3.5" × 2" at 300 DPI · Preview: 630×360px (1.8× scale)
+// Business card designs, purcellventures.co/business-cards
+// Eight designs built around the diagonal gold slash and the Purcell Ventures mark.
+// Print: 3.5 by 2 inches at 300 DPI. Preview: 630 by 360 px (1.8 times scale).
 
 import React, { useRef } from "react";
 import { downloadPrintAsset, downloadPrintAssetPDF } from "@/lib/printDownload";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+import { CONTACT } from "@/lib/contact";
 
 const W = 630;
 const H = 360;
 const PAD = 40;
 
+// The card artwork is captured to PNG and PDF. Inline SVG is rasterised on its own,
+// where CSS variables do not resolve, so SVG strokes use the token values directly:
+// SVG_GOLD is --gold and SVG_INK is --bg.
+const SVG_GOLD = "#b8862b";
+const SVG_INK = "#07060a";
+
 const INFO = {
   name: "Elijah Purcell",
   title: "Founder/CEO",
-  phone: "(205) 462-7839",
-  email: "elijah@purcell-ventures.com",
+  phone: CONTACT.phone,
+  email: CONTACT.email,
   web: "purcellventures.co",
 };
 
-const QR_DARK = `https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://purcellventures.co&bgcolor=0d0b09&color=d4af37`;
-const QR_GOLD = `https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://purcellventures.co&bgcolor=d4af37&color=0c0a08`;
+// The QR service takes bare hex: gold-text on bg, and bg on gold.
+const QR_DARK = `https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://purcellventures.co&bgcolor=07060a&color=e3bd6a`;
+
+const DISPLAY = "var(--font-display)";
+const BODY = "var(--font-body)";
 
 // ─── Shared ───────────────────────────────────────────────────────────────────
 
-function ContactLines({ color = "#8a8070", size = 11 }: { color?: string; size?: number }) {
+type Info = { name: string; title: string; phone: string; email: string; web: string };
+
+function ContactLines({ info = INFO, color = "var(--muted)", size = 12 }: { info?: Info; color?: string; size?: number }) {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "3px" }}>
-      {[INFO.phone, INFO.email, INFO.web].map(line => (
-        <div key={line} style={{ fontSize: `${size}px`, color, letterSpacing: "0.02em", fontFamily: "Inter, sans-serif" }}>{line}</div>
+      {[info.phone, info.email, info.web].map(line => (
+        <div key={line} style={{ fontSize: `${size}px`, color, fontFamily: BODY }}>{line}</div>
       ))}
     </div>
   );
 }
 
-function ContactRow({ color = "#4a4540", size = 9.5 }: { color?: string; size?: number }) {
+function ContactRow({ color = "var(--subtle)", size = 11 }: { color?: string; size?: number }) {
   return (
     <div style={{ display: "flex", gap: "18px", flexWrap: "wrap", justifyContent: "center" }}>
       {[INFO.phone, INFO.email, INFO.web].map(line => (
-        <div key={line} style={{ fontSize: `${size}px`, color, letterSpacing: "0.02em", fontFamily: "Inter, sans-serif" }}>{line}</div>
+        <div key={line} style={{ fontSize: `${size}px`, color, fontFamily: BODY }}>{line}</div>
       ))}
     </div>
   );
 }
 
-function NameBlock({ nameColor = "#f5f0e0", titleColor = "#8a8070", size = 13 }: { nameColor?: string; titleColor?: string; size?: number }) {
+function NameBlock({ info = INFO, nameColor = "var(--fg)", titleColor = "var(--muted)", size = 16 }: { info?: Info; nameColor?: string; titleColor?: string; size?: number }) {
   return (
     <div>
-      <div style={{ fontSize: `${size}px`, fontWeight: 700, color: nameColor, letterSpacing: "0.06em", textTransform: "uppercase", fontFamily: "Inter, sans-serif" }}>{INFO.name}</div>
-      <div style={{ fontSize: `${Math.round(size * 0.8)}px`, color: titleColor, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "Inter, sans-serif", marginTop: "3px" }}>{INFO.title}</div>
+      <div style={{ fontSize: `${size}px`, fontWeight: 700, color: nameColor, fontFamily: BODY }}>{info.name}</div>
+      <div style={{ fontSize: `${Math.round(size * 0.8)}px`, color: titleColor, fontFamily: BODY, marginTop: "3px" }}>{info.title}</div>
     </div>
   );
 }
@@ -57,8 +68,7 @@ function CardShell({ children, style }: { children: React.ReactNode; style?: Rea
   return (
     <div style={{
       width: W, height: H, position: "relative", overflow: "hidden",
-      borderRadius: "8px", flexShrink: 0,
-      boxShadow: "0 8px 40px rgba(0,0,0,0.6)",
+      flexShrink: 0,
       ...style,
     }}>
       {children}
@@ -66,8 +76,29 @@ function CardShell({ children, style }: { children: React.ReactNode; style?: Rea
   );
 }
 
+// The final mark, foil on dark cards and ochre on the gold card.
+function Mark({ size, style, ochre = false }: { size: number; style?: React.CSSProperties; ochre?: boolean }) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img src={ochre ? "/mark-ochre.svg" : "/mark-foil.svg"} width={size} height={size} alt="" style={{ display: "block", ...style }} />
+  );
+}
+
+function Wordmark({ color = "var(--gold)", sub = "Ventures", ink = false }: { color?: string; sub?: string; ink?: boolean }) {
+  return (
+    <div>
+      <div style={{ fontFamily: DISPLAY, fontSize: "40px", fontWeight: 600, color, lineHeight: 1 }}>Purcell</div>
+      <div style={{ fontFamily: DISPLAY, fontSize: "20px", fontWeight: 400, color, letterSpacing: "0.12em", marginTop: "4px", opacity: ink ? 0.75 : 0.85 }}>{sub}</div>
+    </div>
+  );
+}
+
+function Rule({ color = "var(--gold)", style }: { color?: string; style?: React.CSSProperties }) {
+  return <div style={{ height: "1px", background: color, opacity: 0.3, margin: "14px 0", ...style }} />;
+}
+
 // Standard two-line slash (upper-right sweeping to lower-left)
-function Slashes({ color = "#d4af37", o1 = 0.35, o2 = 0.2 }: { color?: string; o1?: number; o2?: number }) {
+function Slashes({ color = SVG_GOLD, o1 = 0.35, o2 = 0.2 }: { color?: string; o1?: number; o2?: number }) {
   return (
     <svg style={{ position: "absolute", inset: 0, pointerEvents: "none" }} width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
       <line x1={W * 0.55} y1={0} x2={W * 0.35} y2={H} stroke={color} strokeWidth="1.5" opacity={o1} />
@@ -76,28 +107,46 @@ function Slashes({ color = "#d4af37", o1 = 0.35, o2 = 0.2 }: { color?: string; o
   );
 }
 
-function QRCenter({ src, color = "#d4af37" }: { src: string; color?: string }) {
+function QRCenter({ src }: { src: string }) {
   return (
     <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "14px" }}>
-      <img src={src} width={110} height={110} alt="QR" style={{ display: "block" }} />
-      <div style={{ fontSize: "11px", color, letterSpacing: "0.14em", textTransform: "uppercase", fontFamily: "Inter, sans-serif" }}>purcellventures.co</div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={src} width={110} height={110} alt="QR code for purcellventures.co" style={{ display: "block" }} />
+      <div style={{ fontSize: "12px", color: "var(--gold-text)", fontFamily: BODY }}>purcellventures.co</div>
     </div>
   );
 }
 
-// ─── V1: The Slash / Classic ──────────────────────────────────────────────────
-// Original refined, two faint diagonals, small PV mark above wordmark
+function FrontLayout({ sub = "Ventures", info = INFO }: { sub?: string; info?: Info }) {
+  return (
+    <div style={{ position: "absolute", inset: PAD, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+      <div>
+        <Wordmark sub={sub} />
+        <Rule />
+        <NameBlock info={info} />
+      </div>
+      <ContactLines info={info} />
+    </div>
+  );
+}
+
+// Large faded mark behind the slashes.
+function GhostMark({ opacity = 0.1 }: { opacity?: number }) {
+  return <Mark size={300} style={{ position: "absolute", left: (W - 300) / 2, top: (H - 300) / 2, opacity, pointerEvents: "none" }} />;
+}
+
+// ─── Design 1: Classic ────────────────────────────────────────────────────────
+// Two faint diagonals, small mark above the wordmark
 
 function V1Front() {
   return (
-    <CardShell style={{ background: "#0f0d0b" }}>
+    <CardShell style={{ background: "var(--surface)" }}>
       <Slashes />
       <div style={{ position: "absolute", inset: PAD, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
         <div>
-          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "10px", fontWeight: 700, color: "#d4af37", letterSpacing: "0.4em", marginBottom: "12px", opacity: 0.6 }}>PV</div>
-          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "40px", fontWeight: 700, color: "#d4af37", lineHeight: 1 }}>Purcell</div>
-          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", fontWeight: 400, color: "#d4af37", letterSpacing: "0.26em", marginTop: "2px", opacity: 0.8 }}>VENTURES</div>
-          <div style={{ height: "1px", background: "#d4af3730", margin: "14px 0" }} />
+          <Mark size={36} style={{ marginBottom: "10px" }} />
+          <Wordmark />
+          <Rule />
           <NameBlock />
         </div>
         <ContactLines />
@@ -107,96 +156,71 @@ function V1Front() {
 }
 function V1Back() {
   return (
-    <CardShell style={{ background: "#0f0d0b" }}>
+    <CardShell style={{ background: "var(--surface)" }}>
       <Slashes o1={0.2} o2={0.12} />
       <QRCenter src={QR_DARK} />
     </CardShell>
   );
 }
 
-// ─── V2: The Slash / Ghost PV ─────────────────────────────────────────────────
-// Massive faded PV watermark fills the card, the slash cuts over it
-
-function GhostPV({ opacity = 0.08 }: { opacity?: number }) {
-  return (
-    <svg style={{ position: "absolute", inset: 0, pointerEvents: "none", overflow: "hidden" }} width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
-      <text
-        x={W / 2} y={H / 2}
-        textAnchor="middle" dominantBaseline="central"
-        fontFamily="'Cinzel', Georgia, serif"
-        fontSize="252" fontWeight="700"
-        fill="#d4af37" opacity={opacity}
-        letterSpacing="10"
-      >PV</text>
-    </svg>
-  );
-}
+// ─── Design 2: Ghost mark ─────────────────────────────────────────────────────
+// Large faded mark fills the card, the slash cuts over it
 
 function V2Front() {
   return (
-    <CardShell style={{ background: "#0c0a08" }}>
-      <GhostPV />
+    <CardShell style={{ background: "var(--bg)" }}>
+      <GhostMark />
       <Slashes />
-      <div style={{ position: "absolute", inset: PAD, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-        <div>
-          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "40px", fontWeight: 700, color: "#d4af37", lineHeight: 1 }}>Purcell</div>
-          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", fontWeight: 400, color: "#d4af37", letterSpacing: "0.26em", marginTop: "2px", opacity: 0.8 }}>VENTURES</div>
-          <div style={{ height: "1px", background: "#d4af3730", margin: "14px 0" }} />
-          <NameBlock />
-        </div>
-        <ContactLines />
-      </div>
+      <FrontLayout />
     </CardShell>
   );
 }
 function V2Back() {
   return (
-    <CardShell style={{ background: "#0c0a08" }}>
-      <GhostPV />
+    <CardShell style={{ background: "var(--bg)" }}>
+      <GhostMark />
       <Slashes o1={0.2} o2={0.12} />
       <QRCenter src={QR_DARK} />
     </CardShell>
   );
 }
 
-// ─── V3: The Slash / Mark ─────────────────────────────────────────────────────
-// The PV IS the logo: large centered monogram, single slash cutting through it
-// Most minimal. Most luxury.
-//
-// Layout (px from top):
-//   88  — PV top (86px tall → bottom at 174, center at 131)
-//   194, thin rule
-//   208, name
-//   222, title
-//   320, contact row (bottom: 40)
-//
-// Slash: forward / through PV center (315, 131)
-//   from (195, 201) to (435, 61), midpoint (315, 131) ✓
+// ─── Designs 3, 4, 5: centered mark with slashes ──────────────────────────────
 
-function V3Front() { return <PVMark slash={SLASH_RIGHT_FRONT} />; }
-function V3Back()  { return <PVMarkBack slash={SLASH_RIGHT_BACK} />; }
-
-// ─── V7: The Slash / Mark (Left Leg) ──────────────────────────────────────────
-// Same mark, V's LEFT stroke extended, forward slash / direction
-// Front slash: V top-left (315,88) → apex (346,150) → extended (271,0)→(451,360)
-// Back slash:  V top-left (315,100) → apex (373,212) → extended (263,0)→(450,360)
-
-function PVMark({ slash }: { slash: React.ReactNode }) {
+function SlashSvg({ children }: { children: React.ReactNode }) {
   return (
-    <CardShell style={{ background: "#0d0b09" }}>
-      <div style={{
-        position: "absolute", top: 88, left: "50%",
-        transform: "translateX(-50%)",
-        fontFamily: "'Cinzel', Georgia, serif",
-        fontSize: "86px", fontWeight: 700,
-        color: "#d4af37", lineHeight: 1, letterSpacing: "0.06em",
-        whiteSpace: "nowrap",
-      }}>PV</div>
+    <svg style={{ position: "absolute", inset: 0, pointerEvents: "none" }} width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
+      {children}
+    </svg>
+  );
+}
+
+const SLASH_RIGHT_FRONT = <SlashSvg><line x1={427} y1={0} x2={270} y2={360} stroke={SVG_GOLD} strokeWidth="1.5" opacity="0.65" /></SlashSvg>;
+const SLASH_LEFT_FRONT = <SlashSvg><line x1={203} y1={0} x2={360} y2={360} stroke={SVG_GOLD} strokeWidth="1.5" opacity="0.65" /></SlashSvg>;
+const SLASH_BOTH_FRONT = (
+  <SlashSvg>
+    <line x1={427} y1={0} x2={270} y2={360} stroke={SVG_GOLD} strokeWidth="1.5" opacity="0.55" />
+    <line x1={203} y1={0} x2={360} y2={360} stroke={SVG_GOLD} strokeWidth="1.5" opacity="0.55" />
+  </SlashSvg>
+);
+const SLASH_RIGHT_BACK = <SlashSvg><line x1={455} y1={0} x2={298} y2={360} stroke={SVG_GOLD} strokeWidth="2.5" opacity="0.5" /></SlashSvg>;
+const SLASH_LEFT_BACK = <SlashSvg><line x1={175} y1={0} x2={332} y2={360} stroke={SVG_GOLD} strokeWidth="2.5" opacity="0.5" /></SlashSvg>;
+const SLASH_BOTH_BACK = (
+  <SlashSvg>
+    <line x1={455} y1={0} x2={298} y2={360} stroke={SVG_GOLD} strokeWidth="2.5" opacity="0.45" />
+    <line x1={175} y1={0} x2={332} y2={360} stroke={SVG_GOLD} strokeWidth="2.5" opacity="0.45" />
+  </SlashSvg>
+);
+
+function MarkFront({ slash }: { slash: React.ReactNode }) {
+  return (
+    <CardShell style={{ background: "var(--bg)" }}>
+      <Mark size={110} style={{ position: "absolute", top: 60, left: "50%", transform: "translateX(-50%)" }} />
       {slash}
-      <div style={{ position: "absolute", top: 194, left: "50%", transform: "translateX(-50%)", width: 52, height: 1, background: "#d4af3750" }} />
+      <div style={{ position: "absolute", top: 194, left: "50%", transform: "translateX(-50%)", width: 52, height: 1, background: "var(--gold)", opacity: 0.4 }} />
       <div style={{ position: "absolute", top: 208, left: 0, right: 0, textAlign: "center" }}>
-        <div style={{ fontSize: "11px", fontWeight: 700, color: "#d8d0c4", letterSpacing: "0.12em", textTransform: "uppercase", fontFamily: "Inter, sans-serif" }}>{INFO.name}</div>
-        <div style={{ fontSize: "9px", color: "#6a6458", letterSpacing: "0.14em", textTransform: "uppercase", fontFamily: "Inter, sans-serif", marginTop: "4px" }}>{INFO.title}</div>
+        <div style={{ fontSize: "14px", fontWeight: 700, color: "var(--fg-2)", fontFamily: BODY }}>{INFO.name}</div>
+        <div style={{ fontSize: "12px", color: "var(--muted)", fontFamily: BODY, marginTop: "4px" }}>{INFO.title}</div>
       </div>
       <div style={{ position: "absolute", bottom: PAD, left: 0, right: 0 }}>
         <ContactRow />
@@ -205,107 +229,52 @@ function PVMark({ slash }: { slash: React.ReactNode }) {
   );
 }
 
-function PVMarkBack({ slash }: { slash: React.ReactNode }) {
+function MarkBack({ slash }: { slash: React.ReactNode }) {
   return (
-    <CardShell style={{ background: "#0d0b09" }}>
-      <div style={{
-        position: "absolute", top: 100, left: "50%",
-        transform: "translateX(-50%)",
-        fontFamily: "'Cinzel', Georgia, serif",
-        fontSize: "160px", fontWeight: 700,
-        color: "#d4af37", lineHeight: 1, letterSpacing: "0.06em",
-        whiteSpace: "nowrap",
-      }}>PV</div>
+    <CardShell style={{ background: "var(--bg)" }}>
+      <Mark size={190} style={{ position: "absolute", top: 85, left: "50%", transform: "translateX(-50%)" }} />
       {slash}
     </CardShell>
   );
 }
 
-// Slash SVG helpers for the mark
-const SLASH_RIGHT_FRONT = (
-  <svg style={{ position: "absolute", inset: 0, pointerEvents: "none" }} width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
-    <line x1={427} y1={0} x2={270} y2={360} stroke="#d4af37" strokeWidth="1.5" opacity="0.65" />
-  </svg>
-);
-const SLASH_LEFT_FRONT = (
-  <svg style={{ position: "absolute", inset: 0, pointerEvents: "none" }} width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
-    <line x1={203} y1={0} x2={360} y2={360} stroke="#d4af37" strokeWidth="1.5" opacity="0.65" />
-  </svg>
-);
-const SLASH_BOTH_FRONT = (
-  <svg style={{ position: "absolute", inset: 0, pointerEvents: "none" }} width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
-    <line x1={427} y1={0} x2={270} y2={360} stroke="#d4af37" strokeWidth="1.5" opacity="0.55" />
-    <line x1={203} y1={0} x2={360} y2={360} stroke="#d4af37" strokeWidth="1.5" opacity="0.55" />
-  </svg>
-);
-const SLASH_RIGHT_BACK = (
-  <svg style={{ position: "absolute", inset: 0, pointerEvents: "none" }} width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
-    <line x1={455} y1={0} x2={298} y2={360} stroke="#d4af37" strokeWidth="2.5" opacity="0.5" />
-  </svg>
-);
-const SLASH_LEFT_BACK = (
-  <svg style={{ position: "absolute", inset: 0, pointerEvents: "none" }} width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
-    <line x1={175} y1={0} x2={332} y2={360} stroke="#d4af37" strokeWidth="2.5" opacity="0.5" />
-  </svg>
-);
-const SLASH_BOTH_BACK = (
-  <svg style={{ position: "absolute", inset: 0, pointerEvents: "none" }} width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
-    <line x1={455} y1={0} x2={298} y2={360} stroke="#d4af37" strokeWidth="2.5" opacity="0.45" />
-    <line x1={175} y1={0} x2={332} y2={360} stroke="#d4af37" strokeWidth="2.5" opacity="0.45" />
-  </svg>
-);
+function V3Front() { return <MarkFront slash={SLASH_RIGHT_FRONT} />; }
+function V3Back()  { return <MarkBack slash={SLASH_RIGHT_BACK} />; }
+function V7Front() { return <MarkFront slash={SLASH_LEFT_FRONT} />; }
+function V7Back()  { return <MarkBack slash={SLASH_LEFT_BACK} />; }
+function V8Front() { return <MarkFront slash={SLASH_BOTH_FRONT} />; }
+function V8Back()  { return <MarkBack slash={SLASH_BOTH_BACK} />; }
 
-function V7Front() { return <PVMark slash={SLASH_LEFT_FRONT} />; }
-function V7Back()  { return <PVMarkBack slash={SLASH_LEFT_BACK} />; }
-
-// ─── V8: The V-Mark ────────────────────────────────────────────────────────────
-// Both strokes of the V extended across the full card
-// The V's two legs form a massive V shape, converging at the letter's apex
-
-function V8Front() { return <PVMark slash={SLASH_BOTH_FRONT} />; }
-function V8Back()  { return <PVMarkBack slash={SLASH_BOTH_BACK} />; }
-
-// ─── V4: The Slash / Cut ──────────────────────────────────────────────────────
-// One fully opaque slash divides the card into two structural zones
-// Wordmark top-left, contact bottom-right, the card is cut in two
+// ─── Design 6: Cut ────────────────────────────────────────────────────────────
+// One opaque slash divides the card into two zones
 
 function V4Front() {
-  // Slash: (428, 0) → (139, 360). At y=180, x≈284 (left-center area)
   return (
-    <CardShell style={{ background: "#0f0d0b" }}>
-      <svg style={{ position: "absolute", inset: 0, pointerEvents: "none" }} width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
-        <line x1={428} y1={0} x2={139} y2={360} stroke="#d4af37" strokeWidth="1.5" opacity="1" />
-      </svg>
-      {/* Upper-left: wordmark */}
+    <CardShell style={{ background: "var(--surface)" }}>
+      <SlashSvg><line x1={428} y1={0} x2={139} y2={360} stroke={SVG_GOLD} strokeWidth="1.5" /></SlashSvg>
       <div style={{ position: "absolute", top: PAD, left: PAD }}>
-        <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "38px", fontWeight: 700, color: "#d4af37", lineHeight: 1 }}>Purcell</div>
-        <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "17px", fontWeight: 400, color: "#d4af37", letterSpacing: "0.26em", marginTop: "2px", opacity: 0.8 }}>VENTURES</div>
+        <Wordmark />
       </div>
-      {/* Mid-left: name */}
       <div style={{ position: "absolute", top: "50%", left: PAD, transform: "translateY(-50%)" }}>
-        <NameBlock size={12} />
+        <NameBlock size={14} />
       </div>
-      {/* Lower-right: contact */}
       <div style={{ position: "absolute", bottom: PAD, right: PAD, textAlign: "right" }}>
-        <ContactLines color="#6a6458" size={10} />
+        <ContactLines color="var(--muted)" size={12} />
       </div>
     </CardShell>
   );
 }
 function V4Back() {
   return (
-    <CardShell style={{ background: "#0f0d0b" }}>
-      <svg style={{ position: "absolute", inset: 0, pointerEvents: "none" }} width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
-        <line x1={428} y1={0} x2={139} y2={360} stroke="#d4af37" strokeWidth="1.5" opacity="0.7" />
-      </svg>
+    <CardShell style={{ background: "var(--surface)" }}>
+      <SlashSvg><line x1={428} y1={0} x2={139} y2={360} stroke={SVG_GOLD} strokeWidth="1.5" opacity="0.7" /></SlashSvg>
       <QRCenter src={QR_DARK} />
     </CardShell>
   );
 }
 
-// ─── V5: The Slash / Rake ─────────────────────────────────────────────────────
-// 9 parallel diagonal lines at same angle, luxury fabric texture
-// Content sits clean on top
+// ─── Design 7: Rake ───────────────────────────────────────────────────────────
+// Nine parallel diagonal lines as texture, content clean on top
 
 function RakeLines({ opacity = 0.1 }: { opacity?: number }) {
   const lines = Array.from({ length: 9 }, (_, i) => {
@@ -313,145 +282,106 @@ function RakeLines({ opacity = 0.1 }: { opacity?: number }) {
     return { x1: W * (t + 0.2), x2: W * (t - 0.2) };
   });
   return (
-    <svg style={{ position: "absolute", inset: 0, pointerEvents: "none" }} width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
+    <SlashSvg>
       {lines.map((l, i) => (
-        <line key={i} x1={l.x1} y1={0} x2={l.x2} y2={H} stroke="#d4af37" strokeWidth="1" opacity={opacity} />
+        <line key={i} x1={l.x1} y1={0} x2={l.x2} y2={H} stroke={SVG_GOLD} strokeWidth="1" opacity={opacity} />
       ))}
-    </svg>
+    </SlashSvg>
   );
 }
 
 function V5Front() {
   return (
-    <CardShell style={{ background: "#0c0a08" }}>
+    <CardShell style={{ background: "var(--bg)" }}>
       <RakeLines />
-      <div style={{ position: "absolute", inset: PAD, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-        <div>
-          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "40px", fontWeight: 700, color: "#d4af37", lineHeight: 1 }}>Purcell</div>
-          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", fontWeight: 400, color: "#d4af37", letterSpacing: "0.26em", marginTop: "2px", opacity: 0.8 }}>VENTURES</div>
-          <div style={{ height: "1px", background: "#d4af3730", margin: "14px 0" }} />
-          <NameBlock />
-        </div>
-        <ContactLines />
-      </div>
+      <FrontLayout />
     </CardShell>
   );
 }
 function V5Back() {
   return (
-    <CardShell style={{ background: "#0c0a08" }}>
+    <CardShell style={{ background: "var(--bg)" }}>
       <RakeLines opacity={0.08} />
       <QRCenter src={QR_DARK} />
     </CardShell>
   );
 }
 
-// ─── V6: The Slash / Inverted ─────────────────────────────────────────────────
-// Gold background. Dark slash lines. All-gold front face, maximum boldness.
+// ─── Design 8: Inverted ───────────────────────────────────────────────────────
+// Gold background, dark slash lines
 
 function V6Front() {
   return (
-    <CardShell style={{ background: "#d4af37" }}>
-      <svg style={{ position: "absolute", inset: 0, pointerEvents: "none" }} width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
-        <line x1={W * 0.55} y1={0} x2={W * 0.35} y2={H} stroke="#0c0a08" strokeWidth="1.5" opacity="0.18" />
-        <line x1={W * 0.58} y1={0} x2={W * 0.38} y2={H} stroke="#0c0a08" strokeWidth="0.75" opacity="0.1" />
-      </svg>
+    <CardShell style={{ background: "var(--gold)" }}>
+      <SlashSvg>
+        <line x1={W * 0.55} y1={0} x2={W * 0.35} y2={H} stroke={SVG_INK} strokeWidth="1.5" opacity="0.18" />
+        <line x1={W * 0.58} y1={0} x2={W * 0.38} y2={H} stroke={SVG_INK} strokeWidth="0.75" opacity="0.1" />
+      </SlashSvg>
       <div style={{ position: "absolute", inset: PAD, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
         <div>
-          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "40px", fontWeight: 700, color: "#0c0a08", lineHeight: 1 }}>Purcell</div>
-          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", fontWeight: 400, color: "#0c0a08", letterSpacing: "0.26em", marginTop: "2px", opacity: 0.7 }}>VENTURES</div>
-          <div style={{ height: "1px", background: "#0c0a0820", margin: "14px 0" }} />
-          <NameBlock nameColor="#0c0a08" titleColor="#3a3020" />
+          <Wordmark color="var(--bg)" ink />
+          <Rule color="var(--bg)" />
+          <NameBlock nameColor="var(--bg)" titleColor="var(--bg)" />
         </div>
-        <ContactLines color="#3a3020" />
+        <ContactLines color="var(--bg)" />
       </div>
     </CardShell>
   );
 }
 function V6Back() {
   return (
-    <CardShell style={{ background: "#0f0d0b" }}>
+    <CardShell style={{ background: "var(--surface)" }}>
       <Slashes o1={0.25} o2={0.15} />
       <QRCenter src={QR_DARK} />
     </CardShell>
   );
 }
 
-// ─── Purcell Works Card ───────────────────────────────────────────────────────
+// ─── Mantle Field Services card ───────────────────────────────────────────────
 
-const INFO_WORKS = {
+const INFO_MANTLE: Info = {
   name: "Elijah Purcell",
-  title: "Owner",
-  phone: "(205) 462-7839",
-  email: "elijah@purcell-ventures.com",
+  title: "Founder and operator",
+  phone: CONTACT.phone,
+  email: CONTACT.email,
   web: "works.purcellventures.co",
 };
 
-const QR_WORKS = `https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://works.purcellventures.co&bgcolor=0c0a08&color=d4af37`;
+const QR_MANTLE = `https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://works.purcellventures.co&bgcolor=07060a&color=e3bd6a`;
 
-function GhostPW({ opacity = 0.08 }: { opacity?: number }) {
+function MantleFront() {
   return (
-    <svg style={{ position: "absolute", inset: 0, pointerEvents: "none", overflow: "hidden" }} width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
-      <text
-        x={W / 2} y={H / 2}
-        textAnchor="middle" dominantBaseline="central"
-        fontFamily="'Cinzel', Georgia, serif"
-        fontSize="252" fontWeight="700"
-        fill="#d4af37" opacity={opacity}
-        letterSpacing="10"
-      >PW</text>
-    </svg>
-  );
-}
-
-function WorksContactLines({ color = "#8a8070", size = 11 }: { color?: string; size?: number }) {
-  return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "3px" }}>
-      {[INFO_WORKS.phone, INFO_WORKS.email, INFO_WORKS.web].map(line => (
-        <div key={line} style={{ fontSize: `${size}px`, color, letterSpacing: "0.02em", fontFamily: "Inter, sans-serif" }}>{line}</div>
-      ))}
-    </div>
-  );
-}
-
-function WorksNameBlock({ nameColor = "#f5f0e0", titleColor = "#8a8070", size = 13 }: { nameColor?: string; titleColor?: string; size?: number }) {
-  return (
-    <div>
-      <div style={{ fontSize: `${size}px`, fontWeight: 700, color: nameColor, letterSpacing: "0.06em", textTransform: "uppercase", fontFamily: "Inter, sans-serif" }}>{INFO_WORKS.name}</div>
-      <div style={{ fontSize: `${Math.round(size * 0.8)}px`, color: titleColor, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "Inter, sans-serif", marginTop: "3px" }}>{INFO_WORKS.title}</div>
-    </div>
-  );
-}
-
-function WorksV2Front() {
-  return (
-    <CardShell style={{ background: "#0c0a08" }}>
-      <GhostPV />
+    <CardShell style={{ background: "var(--bg)" }}>
       <Slashes />
       <div style={{ position: "absolute", inset: PAD, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
         <div>
-          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "40px", fontWeight: 700, color: "#d4af37", lineHeight: 1 }}>Purcell</div>
-          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", fontWeight: 400, color: "#d4af37", letterSpacing: "0.26em", marginTop: "2px", opacity: 0.8 }}>WORKS</div>
-          <div style={{ height: "1px", background: "#d4af3730", margin: "14px 0" }} />
-          <WorksNameBlock />
+          <div style={{ fontFamily: DISPLAY, fontSize: "40px", fontWeight: 600, color: "var(--gold)", lineHeight: 1 }}>Mantle</div>
+          <div style={{ fontFamily: DISPLAY, fontSize: "20px", fontWeight: 400, color: "var(--gold)", letterSpacing: "0.12em", marginTop: "4px", opacity: 0.85 }}>Field Services</div>
+          <Rule />
+          <NameBlock info={INFO_MANTLE} />
         </div>
-        <WorksContactLines />
+        <ContactLines info={INFO_MANTLE} />
       </div>
     </CardShell>
   );
 }
 
-function WorksV2Back() {
+function MantleBack() {
   return (
-    <CardShell style={{ background: "#0c0a08" }}>
-      <GhostPV />
+    <CardShell style={{ background: "var(--bg)" }}>
       <Slashes o1={0.2} o2={0.12} />
-      <QRCenter src={QR_WORKS} />
+      <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "14px" }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={QR_MANTLE} width={110} height={110} alt="QR code for works.purcellventures.co" style={{ display: "block" }} />
+        <div style={{ fontSize: "12px", color: "var(--gold-text)", fontFamily: BODY }}>{INFO_MANTLE.web}</div>
+      </div>
     </CardShell>
   );
 }
 
 // ─── Download wrapper ─────────────────────────────────────────────────────────
+
+const smallHead: React.CSSProperties = { fontSize: 14, fontWeight: 600, color: "var(--muted)", marginBottom: 8 };
 
 function CardSection({ title, subtitle, Front, Back, filenamePrefix }: {
   title: string;
@@ -464,33 +394,32 @@ function CardSection({ title, subtitle, Front, Back, filenamePrefix }: {
   const backRef = useRef<HTMLDivElement>(null);
 
   const btnStyle: React.CSSProperties = {
-    marginTop: "8px", padding: "7px 14px", background: "none",
-    border: "1px solid #2e2820", color: "#8a8070", fontSize: "11px",
-    fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase",
-    cursor: "pointer", borderRadius: "4px", display: "block", width: "100%",
-    fontFamily: "Inter, sans-serif",
+    marginTop: "8px", minHeight: 44, padding: "0 14px", background: "none",
+    border: "1px solid var(--line)", color: "var(--fg-2)", fontSize: 14,
+    fontWeight: 500, cursor: "pointer", borderRadius: 0, display: "block", width: "100%",
+    fontFamily: "var(--font-body)",
   };
   const btnPdfStyle: React.CSSProperties = {
     ...btnStyle,
-    border: "1px solid #4a3a1a", color: "#d4af37",
+    border: "1px solid var(--gold)", color: "var(--gold-text)",
   };
 
   return (
     <div>
-      <div style={{ fontSize: "20px", fontWeight: 700, color: "#f5f0e0", marginBottom: "4px" }}>{title}</div>
-      <div style={{ fontSize: "13px", color: "#524d45", marginBottom: "20px" }}>{subtitle}</div>
+      <h3 style={{ fontFamily: DISPLAY, fontSize: 24, fontWeight: 600, color: "var(--fg)", margin: "0 0 4px" }}>{title}</h3>
+      <p style={{ fontSize: 15, color: "var(--muted)", margin: "0 0 20px" }}>{subtitle}</p>
       <div style={{ display: "flex", gap: "24px", flexWrap: "wrap", alignItems: "flex-start" }}>
-        <div>
-          <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "8px" }}>Front</div>
+        <div className="bc-card">
+          <div style={smallHead}>Front</div>
           <div ref={frontRef} style={{ display: "inline-block" }}><Front /></div>
-          <button style={btnPdfStyle} onClick={() => downloadPrintAssetPDF(frontRef, `${filenamePrefix}-Front`)}>Download Front PDF</button>
-          <button style={btnStyle} onClick={() => downloadPrintAsset(frontRef, `${filenamePrefix}-Front`)}>Download Front PNG</button>
+          <button style={btnPdfStyle} onClick={() => downloadPrintAssetPDF(frontRef, `${filenamePrefix}-Front`)}>Download front PDF</button>
+          <button style={btnStyle} onClick={() => downloadPrintAsset(frontRef, `${filenamePrefix}-Front`)}>Download front PNG</button>
         </div>
-        <div>
-          <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "8px" }}>Back</div>
+        <div className="bc-card">
+          <div style={smallHead}>Back</div>
           <div ref={backRef} style={{ display: "inline-block" }}><Back /></div>
-          <button style={btnPdfStyle} onClick={() => downloadPrintAssetPDF(backRef, `${filenamePrefix}-Back`)}>Download Back PDF</button>
-          <button style={btnStyle} onClick={() => downloadPrintAsset(backRef, `${filenamePrefix}-Back`)}>Download Back PNG</button>
+          <button style={btnPdfStyle} onClick={() => downloadPrintAssetPDF(backRef, `${filenamePrefix}-Back`)}>Download back PDF</button>
+          <button style={btnStyle} onClick={() => downloadPrintAsset(backRef, `${filenamePrefix}-Back`)}>Download back PNG</button>
         </div>
       </div>
     </div>
@@ -500,136 +429,98 @@ function CardSection({ title, subtitle, Front, Back, filenamePrefix }: {
 // ─── Registry ─────────────────────────────────────────────────────────────────
 
 const DESIGNS = [
-  {
-    name: "The Slash / Classic",
-    subtitle: "The original with thin diagonals and a small PV mark above the wordmark",
-    Front: V1Front, Back: V1Back,
-  },
-  {
-    name: "The Slash / Ghost PV",
-    subtitle: "Large faded PV watermark behind the slashes",
-    Front: V2Front, Back: V2Back,
-  },
-  {
-    name: "The Slash / Mark  \\",
-    subtitle: "V's right leg extended, slash descends from upper-right",
-    Front: V3Front, Back: V3Back,
-  },
-  {
-    name: "The Slash / Mark  /",
-    subtitle: "V's left leg extended, slash ascends from lower-left",
-    Front: V7Front, Back: V7Back,
-  },
-  {
-    name: "The V-Mark",
-    subtitle: "Both legs extended, the full V shape written across the card",
-    Front: V8Front, Back: V8Back,
-  },
-  {
-    name: "The Slash / Cut",
-    subtitle: "One bold slash divides the card, wordmark top-left, contact bottom-right",
-    Front: V4Front, Back: V4Back,
-  },
-  {
-    name: "The Slash / Rake",
-    subtitle: "Nine parallel lines as a texture behind the text",
-    Front: V5Front, Back: V5Back,
-  },
-  {
-    name: "The Slash / Inverted",
-    subtitle: "Gold background with dark slashes",
-    Front: V6Front, Back: V6Back,
-  },
+  { name: "Classic", subtitle: "Thin diagonals and a small mark above the wordmark", Front: V1Front, Back: V1Back },
+  { name: "Ghost mark", subtitle: "Large faded mark behind the slashes", Front: V2Front, Back: V2Back },
+  { name: "Mark with right slash", subtitle: "Slash descends from the upper right through the mark", Front: V3Front, Back: V3Back },
+  { name: "Mark with left slash", subtitle: "Slash ascends from the lower left through the mark", Front: V7Front, Back: V7Back },
+  { name: "Mark with both slashes", subtitle: "Both slashes cross the card and form a V", Front: V8Front, Back: V8Back },
+  { name: "Cut", subtitle: "One slash divides the card, wordmark top left, contact bottom right", Front: V4Front, Back: V4Back },
+  { name: "Rake", subtitle: "Nine parallel lines as a texture behind the text", Front: V5Front, Back: V5Back },
+  { name: "Inverted", subtitle: "Gold background with dark slashes", Front: V6Front, Back: V6Back },
+];
+
+const ORDER_STEPS = [
+  { title: "Pick a design", desc: "Screenshot the front and back of your chosen card at full size on this page." },
+  { title: "Vistaprint", desc: "On vistaprint.com choose Business Cards, then upload the full design. 100 cards cost about $20." },
+  { title: "Or use Canva", desc: "Recreate it in Canva's 3.5 by 2 inch business card template. Export as PDF Print." },
+  { title: "Finish", desc: "Soft-touch matte on dark cards. Standard matte on the gold one (Inverted). Gloss washes out the gold, so skip it." },
 ];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function BusinessCardsPage() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "#f5f0e0", fontFamily: "Inter, sans-serif", padding: "48px 32px", position: "relative", overflowX: "hidden" }}>
-      <VignetteBackground />
-      <div style={{ position: "relative", zIndex: 5 }}>
+    <div style={{ minHeight: "100vh", background: "var(--bg)", color: "var(--fg)", fontFamily: BODY, padding: "48px var(--gutter)", overflowX: "hidden" }}>
+      <style>{`.bc-card { max-width: 100%; } .bc-card > div:nth-child(2) { max-width: 100%; overflow-x: auto; }`}</style>
 
-      <div style={{ maxWidth: "1400px", margin: "0 auto 64px" }}>
-        <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d4af37", marginBottom: "10px" }}>
-          Purcell Ventures private
-        </div>
-        <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "36px", fontWeight: 700, color: "#f5f0e0", marginBottom: "8px" }}>
-          The Slash, 8 variations
+      <header style={{ maxWidth: 1400, margin: "0 auto 64px" }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/mark-foil.svg" alt="" width={44} height={44} style={{ display: "block", marginBottom: 16 }} />
+        <h1 style={{ fontFamily: DISPLAY, fontSize: "clamp(30px, 6vw, 44px)", fontWeight: 600, margin: "0 0 8px" }}>
+          Business cards
         </h1>
-        <p style={{ fontSize: "14px", color: "#524d45" }}>
+        <p style={{ fontSize: 16, color: "var(--fg-2)", margin: 0 }}>
           Eight cards built around the diagonal gold slash. 3.5 by 2 inches.
         </p>
-      </div>
+      </header>
 
-      {/* Your Cards, downloadable */}
-      <div style={{ maxWidth: "1400px", margin: "0 auto 80px" }}>
-        <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#d4af37", marginBottom: "32px", paddingBottom: "16px", borderBottom: "1px solid #2e2820" }}>
-          Your Cards
-        </div>
+      <section style={{ maxWidth: 1400, margin: "0 auto 80px" }}>
+        <h2 style={{ fontFamily: DISPLAY, fontSize: 28, fontWeight: 600, margin: "0 0 32px", paddingBottom: 16, borderBottom: "1px solid var(--line)" }}>
+          Cards in use
+        </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: "64px" }}>
           <CardSection
             title="Purcell Ventures"
-            subtitle="The Slash / Ghost PV, the chosen PV card"
+            subtitle="Ghost mark, the chosen Purcell Ventures card"
             Front={V2Front}
             Back={V2Back}
-            filenamePrefix="PV-Ghost-PV"
+            filenamePrefix="PV-Ghost-Mark"
           />
           <CardSection
-            title="Purcell Works"
-            subtitle="The Slash / Ghost PW, field services card"
-            Front={WorksV2Front}
-            Back={WorksV2Back}
-            filenamePrefix="PW-Ghost-PW"
+            title="Mantle Field Services"
+            subtitle="The field services card"
+            Front={MantleFront}
+            Back={MantleBack}
+            filenamePrefix="Mantle-Field-Services"
           />
         </div>
-      </div>
+      </section>
 
-      {/* All variations */}
-      <div style={{ maxWidth: "1400px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "64px" }}>
-        <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#524d45", paddingBottom: "16px", borderBottom: "1px solid #1e1c1a" }}>
-          All Variations
-        </div>
-        {DESIGNS.map((d, i) => (
+      <section style={{ maxWidth: 1400, margin: "0 auto", display: "flex", flexDirection: "column", gap: "64px" }}>
+        <h2 style={{ fontFamily: DISPLAY, fontSize: 28, fontWeight: 600, margin: 0, paddingBottom: 16, borderBottom: "1px solid var(--line)" }}>
+          All designs
+        </h2>
+        {DESIGNS.map((d) => (
           <div key={d.name}>
-            <div style={{ display: "flex", alignItems: "baseline", gap: "14px", marginBottom: "20px" }}>
-              <span style={{ fontSize: "11px", fontWeight: 700, color: "#d4af37", letterSpacing: "0.1em" }}>{String(i + 1).padStart(2, "0")}</span>
-              <span style={{ fontSize: "20px", fontWeight: 700, color: "#f5f0e0" }}>{d.name}</span>
-              <span style={{ fontSize: "13px", color: "#524d45" }}>{d.subtitle}</span>
-            </div>
+            <h3 style={{ fontFamily: DISPLAY, fontSize: 22, fontWeight: 600, margin: "0 0 4px" }}>{d.name}</h3>
+            <p style={{ fontSize: 15, color: "var(--muted)", margin: "0 0 20px" }}>{d.subtitle}</p>
             <div style={{ display: "flex", gap: "24px", flexWrap: "wrap", alignItems: "flex-start" }}>
-              <div>
-                <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "8px" }}>Front</div>
-                <d.Front />
+              <div className="bc-card">
+                <div style={smallHead}>Front</div>
+                <div><d.Front /></div>
               </div>
-              <div>
-                <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "8px" }}>Back</div>
-                <d.Back />
+              <div className="bc-card">
+                <div style={smallHead}>Back</div>
+                <div><d.Back /></div>
               </div>
             </div>
           </div>
         ))}
-      </div>
+      </section>
 
-      <div style={{ maxWidth: "1400px", margin: "64px auto 0", padding: "32px", background: "#141210", border: "1px solid #2e2820", borderRadius: "10px" }}>
-        <div style={{ fontSize: "13px", fontWeight: 700, color: "#d4af37", marginBottom: "16px" }}>How to Order</div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "24px" }}>
-          {[
-            { step: "1", title: "Pick a design", desc: "Screenshot the front and back of your chosen card at full size on this page." },
-            { step: "2", title: "Vistaprint", desc: "On vistaprint.com choose Business Cards, then upload the full design. 100 cards cost about $20." },
-            { step: "3", title: "Or use Canva", desc: "Recreate in Canva's 3.5×2\" business card template. Export as PDF Print." },
-            { step: "4", title: "Finish tip", desc: "Soft-touch matte on dark cards. Standard matte on the gold (Inverted). Gloss washes out the gold, so skip it." },
-          ].map(item => (
-            <div key={item.step}>
-              <div style={{ fontSize: "11px", fontWeight: 700, color: "#d4af37", marginBottom: "6px" }}>Step {item.step}: {item.title}</div>
-              <div style={{ fontSize: "12px", color: "#8a8070", lineHeight: 1.65 }}>{item.desc}</div>
-            </div>
+      <section style={{ maxWidth: 1400, margin: "64px auto 0" }}>
+        <h2 style={{ fontFamily: DISPLAY, fontSize: 28, fontWeight: 600, margin: "0 0 20px" }}>How to order</h2>
+        <ol style={{ margin: 0, padding: 0, listStyle: "none", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(220px, 100%), 1fr))", gap: 24 }}>
+          {ORDER_STEPS.map(item => (
+            <li key={item.title}>
+              <div style={{ fontSize: 16, fontWeight: 700, color: "var(--gold-text)", marginBottom: 6 }}>{item.title}</div>
+              <div style={{ fontSize: 15, color: "var(--fg-2)", lineHeight: 1.65 }}>{item.desc}</div>
+            </li>
           ))}
-        </div>
-      </div>
+        </ol>
+      </section>
 
       <div style={{ height: "64px" }} />
-      </div>
     </div>
   );
 }

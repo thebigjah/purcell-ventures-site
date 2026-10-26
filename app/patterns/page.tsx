@@ -1,17 +1,18 @@
 "use client";
 import React, { useRef } from "react";
 import { downloadSvgElement } from "@/lib/printDownload";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
 
-const GOLD  = "#d4af37";
-const DARK  = "#0c0a08";
-const CREAM = "#f5f0e0";
-const MID   = "#141210";
+// Pattern artwork downloads as standalone SVG and PNG, where CSS variables do not
+// resolve, so the artwork colours are the site tokens written out as values.
+// Gold is --gold, dark is --bg, cream is --fg.
+const GOLD  = "#b8862b";
+const DARK  = "#07060a";
+const CREAM = "#efe8d8";
 
 // ─── Pattern Engines ──────────────────────────────────────────────────────────
 
 // 1. BROADCAST FIELD
-// Derived from the panopticon mark, ring clusters repeating across a grid.
+// Derived from the mark, ring clusters repeating across a grid.
 // Each node is a small accountability center; together they form a distributed field.
 function BroadcastField({
   width = 600, height = 280, color = GOLD, bg = DARK,
@@ -384,8 +385,8 @@ function CardBack({ pattern, color = GOLD, bg = DARK, patternOpacity = 0.18 }: {
 }) {
   const W = 350, H = 200;
   return (
-    <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{ display: "block", borderRadius: 6 }}>
-      <rect width={W} height={H} fill={bg} rx="4" />
+    <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{ display: "block" }}>
+      <rect width={W} height={H} fill={bg} />
       {pattern === "broadcast"   && <BroadcastField  width={W} height={H} color={color} bg="transparent" spacing={48} rings={4} maxOpacity={patternOpacity} />}
       {pattern === "phi"         && <PhiArray         width={W} height={H} color={color} bg="transparent" n={400} dotSize={1.1} spread={0.42} />}
       {pattern === "blueprint"   && <Blueprint        width={W} height={H} color={color} bg="transparent" spacing={18} opacity={patternOpacity} />}
@@ -396,24 +397,20 @@ function CardBack({ pattern, color = GOLD, bg = DARK, patternOpacity = 0.18 }: {
       {pattern === "dots"        && <DotField         width={W} height={H} color={color} bg="transparent" spacing={14} dotR={1.0} opacity={patternOpacity} />}
       {pattern === "chevron"     && <ChevronField     width={W} height={H} color={color} bg="transparent" vW={34} vH={15} rowSpacing={26} opacity={patternOpacity} />}
       {pattern === "lissajous"   && <LissajousField   width={W} height={H} color={color} bg="transparent" amplitude={22} spacing={64} opacity={patternOpacity} />}
-      <text x={W / 2} y={H / 2} textAnchor="middle" dominantBaseline="central"
-        fontFamily="'Cinzel', Georgia, serif" fontSize="28" fontWeight="700"
-        fill={color} opacity="0.18" style={{ letterSpacing: "3px" }}>PV</text>
+      <image href="/mark-ochre.svg" x={W / 2 - 22} y={H / 2 - 22} width="44" height="44" opacity="0.4" />
     </svg>
   );
 }
 
 // ─── Shared UI ────────────────────────────────────────────────────────────────
 const btnBase: React.CSSProperties = {
-  display: "inline-block", padding: "8px 16px", background: "none",
-  border: "1px solid #2e2820", color: "#6a6458", fontSize: "11px",
-  fontWeight: 600, letterSpacing: "0.08em", cursor: "pointer",
-  borderRadius: "4px", fontFamily: "Inter, sans-serif",
+  display: "inline-flex", alignItems: "center", justifyContent: "center", minHeight: 44, padding: "0 16px",
+  background: "none", border: "1px solid var(--line)", color: "var(--muted)", fontSize: 14,
+  fontWeight: 500, cursor: "pointer", borderRadius: 0, fontFamily: "var(--font-body)",
 };
-const btnGold: React.CSSProperties = { ...btnBase, borderColor: GOLD, color: GOLD };
+const btnGold: React.CSSProperties = { ...btnBase, borderColor: "var(--gold)", color: "var(--gold-text)" };
 const btnSmall: React.CSSProperties = {
-  ...btnBase, display: "block", width: "100%", marginTop: "6px",
-  padding: "5px 0", fontSize: "10px", letterSpacing: "0.06em", textAlign: "center",
+  ...btnBase, display: "flex", width: "100%", marginTop: "6px", fontSize: 14,
 };
 
 type PatternEntry = {
@@ -425,10 +422,9 @@ type PatternEntry = {
   variants: { label: string; node: React.ReactNode }[];
 };
 
-function PatternSection({ p, idx }: { p: PatternEntry; idx: number }) {
+function PatternSection({ p }: { p: PatternEntry }) {
   const mainRef = useRef<HTMLDivElement>(null);
   const varRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const num = String(idx + 1).padStart(2, "0");
 
   function dlSvg(ref: React.RefObject<HTMLDivElement | null>, filename: string) {
     const svg = ref.current?.querySelector("svg");
@@ -455,47 +451,38 @@ function PatternSection({ p, idx }: { p: PatternEntry; idx: number }) {
   }
 
   return (
-    <div>
-      <div style={{ display: "flex", alignItems: "baseline", gap: "14px", marginBottom: "10px" }}>
-        <span style={{ fontSize: "11px", fontWeight: 700, color: GOLD, letterSpacing: "0.1em" }}>{num}</span>
-        <span style={{ fontSize: "20px", fontWeight: 700, color: CREAM }}>{p.name}</span>
-        <span style={{ fontSize: "13px", color: "#524d45" }}>{p.subtitle}</span>
-      </div>
+    <section>
+      <h2 style={{ fontFamily: "var(--font-display)", fontSize: 24, fontWeight: 600, color: "var(--fg)", margin: "0 0 4px" }}>{p.name}</h2>
+      <p style={{ fontSize: 14, color: "var(--muted)", margin: "0 0 12px" }}>{p.subtitle}</p>
+      <p style={{ fontSize: 15, color: "var(--fg-2)", lineHeight: 1.65, margin: "0 0 6px", maxWidth: 620 }}>{p.concept}</p>
+      <p style={{ fontSize: 14, color: "var(--subtle)", margin: "0 0 20px" }}>Use on: {p.application}</p>
 
-      <p style={{ fontSize: "13px", color: "#524d45", lineHeight: 1.65, marginBottom: "4px", maxWidth: "600px" }}>
-        {p.concept}
-      </p>
-      <p style={{ fontSize: "11px", fontWeight: 600, letterSpacing: "0.08em", color: "#3a3530", textTransform: "uppercase", marginBottom: "20px" }}>
-        Use on: {p.application}
-      </p>
-
-      <div style={{ marginBottom: "16px" }}>
-        <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "10px" }}>Primary</div>
-        <div ref={mainRef} style={{ display: "inline-block", borderRadius: 8, overflow: "hidden", boxShadow: "0 6px 32px rgba(0,0,0,0.5)" }}>
+      <div style={{ marginBottom: 20 }}>
+        <h3 style={{ fontSize: 14, fontWeight: 600, color: "var(--muted)", margin: "0 0 10px" }}>Primary</h3>
+        <div ref={mainRef} style={{ display: "inline-block", maxWidth: "100%", overflowX: "auto" }}>
           {p.primary}
         </div>
-        <div style={{ display: "flex", gap: "8px", marginTop: "10px" }}>
-          <button style={btnBase} onClick={() => dlPng(mainRef, p.name)}>PNG</button>
-          <button style={btnGold} onClick={() => dlSvg(mainRef, p.name)}>SVG</button>
+        <div style={{ display: "flex", gap: 8, marginTop: 10 }}>
+          <button style={btnBase} onClick={() => dlPng(mainRef, p.name)}>Download PNG</button>
+          <button style={btnGold} onClick={() => dlSvg(mainRef, p.name)}>Download SVG</button>
         </div>
       </div>
 
-      <div style={{ marginBottom: "0" }}>
-        <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "10px" }}>Variants</div>
-        <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "flex-start" }}>
+      <div>
+        <h3 style={{ fontSize: 14, fontWeight: 600, color: "var(--muted)", margin: "0 0 10px" }}>Variants</h3>
+        <div style={{ display: "flex", gap: 16, flexWrap: "wrap", alignItems: "flex-start" }}>
           {p.variants.map((v, vi) => (
-            <div key={v.label}>
-              <div ref={el => { varRefs.current[vi] = el; }}
-                style={{ borderRadius: 6, overflow: "hidden", boxShadow: "0 4px 16px rgba(0,0,0,0.4)", display: "inline-block" }}>
+            <div key={v.label} style={{ maxWidth: "100%" }}>
+              <div ref={el => { varRefs.current[vi] = el; }} style={{ display: "inline-block", maxWidth: "100%", overflowX: "auto" }}>
                 {v.node}
               </div>
-              <button style={btnSmall} onClick={() => dlPng({ current: varRefs.current[vi] }, `${p.name} ${v.label}`)}>PNG</button>
-              <div style={{ fontSize: "10px", color: "#3a3530", marginTop: "4px", letterSpacing: "0.04em", maxWidth: "180px" }}>{v.label}</div>
+              <button style={btnSmall} onClick={() => dlPng({ current: varRefs.current[vi] }, `${p.name} ${v.label}`)}>Download PNG</button>
+              <div style={{ fontSize: 13, color: "var(--subtle)", marginTop: 4, maxWidth: 220 }}>{v.label}</div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -503,7 +490,7 @@ function PatternSection({ p, idx }: { p: PatternEntry; idx: number }) {
 const PATTERNS: PatternEntry[] = [
   {
     name: "Broadcast Field",
-    subtitle: "Radial ring clusters, derived from the panopticon mark",
+    subtitle: "Radial ring clusters, derived from the mark",
     concept: "The mark tiled across a surface. Together the tiles form a distributed field: a network of visible actors.",
     application: "Business card back, website section backgrounds, document headers, envelope interior",
     primary: <BroadcastField />,
@@ -549,7 +536,7 @@ const PATTERNS: PatternEntry[] = [
   {
     name: "Interference",
     subtitle: "Wave superposition, constructive and destructive overlap",
-    concept: "Two or more point sources radiating outward. Where their waves meet, they either reinforce (constructive) or cancel (destructive). It's a physical model for how distinct forces interact: technology and humanity, power and accountability, faith and reason. This one connects most directly to the sousveillance concept: several independent centers, each one visible.",
+    concept: "Two or more point sources radiating outward. Where their waves meet, they either reinforce (constructive) or cancel (destructive). It is a physical model for how distinct forces interact: technology and humanity, power and accountability, faith and reason. Several independent centers, each one visible.",
     application: "Hero section backgrounds, presentation title slides, large-format prints",
     primary: <Interference />,
     variants: [
@@ -656,47 +643,38 @@ const PATTERNS: PatternEntry[] = [
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function PatternsPage() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: CREAM, fontFamily: "Inter, sans-serif", padding: "48px 32px", position: "relative", overflowX: "hidden" }}>
-      <VignetteBackground />
-      <div style={{ position: "relative", zIndex: 5 }}>
-
-      {/* Header */}
-      <div style={{ maxWidth: "1200px", margin: "0 auto 56px" }}>
-        <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: GOLD, marginBottom: "10px" }}>
-          Purcell Ventures brand identity
-        </div>
-        <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "36px", fontWeight: 700, color: CREAM, marginBottom: "12px" }}>
-          Pattern Library
+    <div style={{ minHeight: "100vh", background: "var(--bg)", color: "var(--fg)", fontFamily: "var(--font-body)", padding: "48px var(--gutter)", overflowX: "hidden" }}>
+      <header style={{ maxWidth: 1200, margin: "0 auto 56px" }}>
+        <img src="/mark-foil.svg" alt="" width={44} height={44} style={{ display: "block", marginBottom: 16 }} />
+        <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(30px, 6vw, 44px)", fontWeight: 600, color: "var(--fg)", margin: "0 0 12px" }}>
+          Pattern library
         </h1>
-        <p style={{ fontSize: "14px", color: "#524d45", maxWidth: "560px", lineHeight: 1.75, marginBottom: "8px" }}>
+        <p style={{ fontSize: 16, color: "var(--fg-2)", maxWidth: 600, lineHeight: 1.7, margin: "0 0 8px" }}>
           Ten patterns, each built from a geometric or mathematical rule. Each one downloads as a vector file. Use them only as low-opacity background texture.
         </p>
-        <p style={{ fontSize: "12px", color: "#3a3530", maxWidth: "560px", lineHeight: 1.7 }}>
+        <p style={{ fontSize: 14, color: "var(--muted)", maxWidth: 600, lineHeight: 1.7, margin: 0 }}>
           Source mathematics: polar coordinates, the Fibonacci sequence, the golden ratio, wave superposition, hexagonal close-packing, rhodonea curves, the Archimedean spiral, halftone grids and Lissajous figures.
         </p>
-      </div>
+      </header>
 
-      {/* Patterns */}
-      <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "80px" }}>
-        {PATTERNS.map((p, i) => (
-          <PatternSection key={p.name} p={p} idx={i} />
+      <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", flexDirection: "column", gap: 72 }}>
+        {PATTERNS.map((p) => (
+          <PatternSection key={p.name} p={p} />
         ))}
       </div>
 
-      {/* Usage Notes */}
-      <div style={{ maxWidth: "1200px", margin: "72px auto 0", padding: "28px 32px", background: MID, border: "1px solid #2e2820", borderRadius: "10px" }}>
-        <div style={{ fontSize: "13px", fontWeight: 700, color: GOLD, marginBottom: "14px" }}>Usage Rules</div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "20px", fontSize: "12px", color: "#6a6458", lineHeight: 1.7 }}>
-          <div><strong style={{ color: "#8a8070" }}>Opacity:</strong> Keep patterns behind the content: 10 to 20% on dark backgrounds and 6 to 12% on light backgrounds, so text stays readable.</div>
-          <div><strong style={{ color: "#8a8070" }}>Single pattern per surface:</strong> Two patterns on one surface compete, so choose one.</div>
-          <div><strong style={{ color: "#8a8070" }}>Card back:</strong> Broadcast Field and Honeycomb are most legible at card scale. Phi Array and Interference read better large-format.</div>
-          <div><strong style={{ color: "#8a8070" }}>Color:</strong> Gold on dark for print and premium materials. Cream on dark for digital. Dark on cream or gold only for inverted applications.</div>
-        </div>
-      </div>
+      <section style={{ maxWidth: 1200, margin: "72px auto 0" }}>
+        <h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 600, margin: "0 0 14px" }}>Usage rules</h2>
+        <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "grid", gap: 12, fontSize: 15, color: "var(--fg-2)", lineHeight: 1.65, maxWidth: 720 }}>
+          <li><strong>Opacity.</strong> Keep patterns behind the content: 10 to 20% on dark backgrounds and 6 to 12% on light backgrounds, so text stays readable.</li>
+          <li><strong>One pattern per surface.</strong> Two patterns on one surface compete, so choose one.</li>
+          <li><strong>Card back.</strong> Broadcast Field and Honeycomb are most legible at card scale. Phi Array and Interference read better large-format.</li>
+          <li><strong>Color.</strong> Gold on dark for print and premium materials. Cream on dark for digital. Dark on cream or gold only for inverted applications.</li>
+        </ul>
+      </section>
 
-      <div style={{ maxWidth: "1200px", margin: "24px auto 0", padding: "0 0 64px" }}>
-        <a href="/logos" style={{ fontSize: "13px", color: "#3a3530", textDecoration: "none" }}>Logo Options</a>
-      </div>
+      <div style={{ maxWidth: 1200, margin: "24px auto 0", paddingBottom: 64 }}>
+        <a className="ui-link" href="/logos">Logo options</a>
       </div>
     </div>
   );

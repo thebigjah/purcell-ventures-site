@@ -28,9 +28,14 @@ export default function SiteNav() {
   const [open, setOpen] = useState(false);
   const [menu, setMenu] = useState(false);
   const [solid, setSolid] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const on = () => setSolid(window.scrollY > 40);
+    const on = () => {
+      setSolid(window.scrollY > 40);
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(max > 600 ? Math.min(1, window.scrollY / max) : 0);
+    };
     on();
     window.addEventListener("scroll", on, { passive: true });
     return () => window.removeEventListener("scroll", on);
@@ -75,6 +80,7 @@ export default function SiteNav() {
         </button>
       </div>
 
+      <div className="nav__progress" style={{ transform: `scaleX(${progress})` }} aria-hidden="true" />
       {open && (
         <div className="nav__sheet">
           <p className="nav__group">Services</p>
@@ -91,6 +97,7 @@ export default function SiteNav() {
 const NAV_CSS = `
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,border-color .3s;border-bottom:1px solid transparent;background:linear-gradient(rgba(7,6,10,.7),rgba(7,6,10,0))}
 .nav--solid{background:rgba(7,6,10,.94);border-bottom-color:var(--line);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.nav__progress{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--gold);transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
 .nav__in{max-width:1240px;margin:0 auto;padding:14px var(--gutter-r) 14px var(--gutter);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px 28px}
 .nav__lock{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--fg)}
 .nav__lock img{width:44px;height:44px}
@@ -110,7 +117,8 @@ const NAV_CSS = `
 @media (max-width:900px){
   .nav__links,.nav__cta{display:none}
   .nav__burger{display:flex}
-  .nav__in{grid-template-columns:auto auto;justify-content:space-between}
+  .nav__progress{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--gold);transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
+.nav__in{grid-template-columns:auto auto;justify-content:space-between}
   .nav__lock img{width:36px;height:36px}
   .nav__lock b{font-size:18px}
 }`;

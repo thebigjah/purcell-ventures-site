@@ -84,6 +84,7 @@ html, body {
   overflow-x: hidden;
 }
 body {
+  font-feature-settings: "ss01";
   font-family: var(--font-body);
   font-size: 17px;
   line-height: 1.6;
@@ -92,7 +93,7 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   text-wrap: balance;
 }
 a { color: inherit; }
@@ -110,6 +111,7 @@ a { color: inherit; }
 /* Page hero: blurred nebula, a vignette, the page's planet, the title. */
 .ui-hero { position: relative; overflow: hidden; background: var(--bg); padding-block: 132px 64px; isolation: isolate; }
 .ui-hero__sky { position: absolute; inset: 0; z-index: -2; background: url("/galaxy/nebula-wide-blur.jpg") center / cover no-repeat; opacity: 0.55; }
+.ui-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: url("/galaxy/stars.png") 0 0 / 900px repeat; opacity: .55; -webkit-mask-image: linear-gradient(#000 40%, transparent); mask-image: linear-gradient(#000 40%, transparent); pointer-events: none; }
 .ui-hero__sky::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 45%, rgba(7,6,10,0) 20%, rgba(7,6,10,.65) 62%, var(--bg) 100%), linear-gradient(rgba(7,6,10,0) 60%, var(--bg)); }
 .ui-hero__grid { display: grid; grid-template-columns: minmax(0, 1fr); position: relative; }
 .ui-hero__grid > div { max-width: 760px; position: relative; z-index: 1; }
@@ -187,7 +189,7 @@ a { color: inherit; }
 .ui-row:first-child { border-top: 0; padding-top: 0; }
 .ui-row__name { font: 600 22px/1.2 var(--font-display); display: block; }
 .ui-row__line { display: block; color: var(--muted); margin-top: 6px; max-width: 62ch; }
-.ui-row__fig { color: var(--gold-text); font-weight: 700; white-space: nowrap; }
+.ui-row__fig { color: var(--gold-text); font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
 a.ui-row:hover .ui-row__name { color: #f0d79a; }
 
 /* Facts: label and value pairs. */
@@ -199,7 +201,7 @@ a.ui-row:hover .ui-row__name { color: #f0d79a; }
 
 /* Figures: a few large numbers. */
 .ui-figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 28px 32px; }
-.ui-figure b { display: block; font: 600 clamp(36px, 4vw, 48px)/1 var(--font-display); color: var(--gold-text); }
+.ui-figure b { font-variant-numeric: tabular-nums; display: block; font: 600 clamp(36px, 4vw, 48px)/1 var(--font-display); color: var(--gold-text); }
 .ui-figure span { display: block; color: var(--muted); font-size: 15px; margin-top: 8px; }
 
 /* Tiers: offers as full-width rows. Name and price on the left, the details on the right. */
@@ -207,7 +209,7 @@ a.ui-row:hover .ui-row__name { color: #f0d79a; }
 .ui-tier { display: grid; grid-template-columns: minmax(0, 260px) minmax(0, 1fr); gap: 10px 40px; padding: 28px 0; border-top: 1px solid var(--line); }
 .ui-tier:first-child { border-top: 0; padding-top: 0; }
 .ui-tier h3 { font-size: 26px; margin: 0; }
-.ui-tier__price { color: var(--gold-text); font-weight: 700; margin: 8px 0 0; font-size: 16px; }
+.ui-tier__price { font-variant-numeric: tabular-nums; color: var(--gold-text); font-weight: 700; margin: 8px 0 0; font-size: 16px; }
 .ui-tier__for { color: var(--muted); margin: 0; font-size: 16px; }
 .ui-tier__detail { min-width: 0; }
 .ui-tier ul { margin: 14px 0 0; padding-left: 1.2em; color: var(--fg-2); font-size: 16px; list-style: disc; }

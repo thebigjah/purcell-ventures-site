@@ -1,9 +1,9 @@
 "use client";
-// QR Code Hub, purcellventures.co/qr
-// All brand URLs as downloadable high-res QR codes (1000×1000px)
+// QR code hub, purcellventures.co/qr
+// All brand URLs as downloadable high-res QR codes (1000 by 1000 px)
 
 import React from "react";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+import { CONTACT } from "@/lib/contact";
 
 // ─── QR items ────────────────────────────────────────────────────────────────
 
@@ -18,27 +18,27 @@ const CATEGORIES = [
   {
     label: "Services",
     items: [
-      { name: "Digital Services", data: "https://purcellventures.co/digital",     desc: "purcellventures.co/digital" },
+      { name: "Digital services", data: "https://purcellventures.co/digital",     desc: "purcellventures.co/digital" },
       { name: "Consulting",       data: "https://purcellventures.co/consulting",  desc: "purcellventures.co/consulting" },
-      { name: "Custom Software",  data: "https://purcellventures.co/software",    desc: "purcellventures.co/software" },
+      { name: "Custom software",  data: "https://purcellventures.co/software",    desc: "purcellventures.co/software" },
       { name: "Mantle Field Services", data: "https://mantle-field-site.vercel.app", desc: "mantle-field-site.vercel.app" },
     ],
   },
   {
     label: "Contact",
     items: [
-      { name: "Call / Text",  data: "tel:+12054627839",                         desc: "(205) 462-7839" },
-      { name: "Email",        data: "mailto:elijah@purcell-ventures.com",        desc: "elijah@purcell-ventures.com" },
-      { name: "vCard",        data: "BEGIN:VCARD\nVERSION:3.0\nFN:Elijah Purcell\nORG:Purcell Ventures\nTEL:+12054627839\nEMAIL:elijah@purcell-ventures.com\nURL:https://purcellventures.co\nEND:VCARD", desc: "Save contact" },
+      { name: "Call or text",  data: `tel:${CONTACT.phoneE164}`, desc: CONTACT.phone },
+      { name: "Email",        data: `mailto:${CONTACT.email}`, desc: CONTACT.email },
+      { name: "vCard",        data: `BEGIN:VCARD\nVERSION:3.0\nFN:Elijah Purcell\nORG:Purcell Ventures\nTITLE:Founder/CEO\nTEL:${CONTACT.phoneE164}\nEMAIL:${CONTACT.email}\nURL:https://purcellventures.co\nEND:VCARD`, desc: "Save contact" },
     ],
   },
   {
-    label: "Internal Tools",
+    label: "Internal tools",
     items: [
-      { name: "Sales Playbook", data: "https://purcellventures.co/digital/playbook", desc: "purcellventures.co/digital/playbook" },
-      { name: "Business Finder", data: "https://purcellventures.co/digital/finder",  desc: "purcellventures.co/digital/finder" },
-      { name: "Business Cards",  data: "https://purcellventures.co/business-cards",  desc: "purcellventures.co/business-cards" },
-      { name: "Print Materials", data: "https://purcellventures.co/print",           desc: "purcellventures.co/print" },
+      { name: "Sales playbook", data: "https://purcellventures.co/digital/playbook", desc: "purcellventures.co/digital/playbook" },
+      { name: "Business finder", data: "https://purcellventures.co/digital/finder",  desc: "purcellventures.co/digital/finder" },
+      { name: "Business cards",  data: "https://purcellventures.co/business-cards",  desc: "purcellventures.co/business-cards" },
+      { name: "Print materials", data: "https://purcellventures.co/print",           desc: "purcellventures.co/print" },
     ],
   },
 ];
@@ -46,8 +46,9 @@ const CATEGORIES = [
 // ─── QR URL helpers ───────────────────────────────────────────────────────────
 
 function qrUrl(data: string, size: number, dark = true) {
-  const fg = dark ? "d4af37" : "0c0a08";
-  const bg = dark ? "0c0a08" : "f5f0e0";
+  // The QR service takes bare hex. These are --gold-text, --bg and --fg.
+  const fg = dark ? "e3bd6a" : "07060a";
+  const bg = dark ? "07060a" : "efe8d8";
   return `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${encodeURIComponent(data)}&color=${fg}&bgcolor=${bg}&margin=16`;
 }
 
@@ -77,43 +78,32 @@ function QrCard({ name, data, desc }: { name: string; data: string; desc: string
     setLoading(false);
   };
 
+  const btn: React.CSSProperties = {
+    minHeight: 44, padding: "0 14px", fontSize: 14, fontWeight: 500, cursor: "pointer",
+    borderRadius: 0, fontFamily: "var(--font-body)",
+  };
+
   return (
-    <div style={{
-      background: "#0f0d0b", border: "1px solid #2e2820", borderRadius: "10px",
-      padding: "24px", display: "flex", flexDirection: "column", gap: "16px",
-      alignItems: "center",
-    }}>
-      {/* QR preview */}
-      <div style={{ borderRadius: "8px", overflow: "hidden", flexShrink: 0 }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={qrUrl(data, 200, dark)}
-          width={160} height={160}
-          alt={`QR for ${name}`}
-          style={{ display: "block" }}
-        />
+    <div style={{ borderTop: "1px solid var(--line)", paddingTop: 20, display: "flex", flexDirection: "column", gap: 14 }}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={qrUrl(data, 200, dark)} width={160} height={160} alt={`QR code for ${name}`} style={{ display: "block" }} />
+
+      <div>
+        <div style={{ fontSize: 16, fontWeight: 700, color: "var(--fg)" }}>{name}</div>
+        <div style={{ fontSize: 14, color: "var(--muted)", marginTop: 2, overflowWrap: "anywhere" }}>{desc}</div>
       </div>
 
-      {/* Info */}
-      <div style={{ textAlign: "center" }}>
-        <div style={{ fontSize: "13px", fontWeight: 700, color: "#f5f0e0", letterSpacing: "0.04em" }}>{name}</div>
-        <div style={{ fontSize: "10px", color: "#524d45", marginTop: "4px", fontFamily: "monospace" }}>{desc}</div>
-      </div>
-
-      {/* Theme toggle */}
-      <div style={{ display: "flex", gap: "6px" }}>
+      <div style={{ display: "flex", gap: 8 }}>
         {[true, false].map(d => (
           <button
             key={String(d)}
             onClick={() => setDark(d)}
+            aria-pressed={dark === d}
             style={{
-              padding: "4px 12px", fontSize: "10px", fontWeight: 600,
-              letterSpacing: "0.08em", textTransform: "uppercase",
-              cursor: "pointer", borderRadius: "4px", fontFamily: "Inter, sans-serif",
-              background: dark === d ? "#d4af37" : "none",
-              color: dark === d ? "#0c0a08" : "#524d45",
-              border: dark === d ? "1px solid #d4af37" : "1px solid #2e2820",
-              transition: "all 0.15s",
+              ...btn,
+              background: dark === d ? "var(--gold)" : "none",
+              color: dark === d ? "var(--bg)" : "var(--muted)",
+              border: dark === d ? "1px solid var(--gold)" : "1px solid var(--line)",
             }}
           >
             {d ? "Dark" : "Light"}
@@ -121,19 +111,12 @@ function QrCard({ name, data, desc }: { name: string; data: string; desc: string
         ))}
       </div>
 
-      {/* Download */}
       <button
         onClick={handleDownload}
         disabled={loading}
-        style={{
-          width: "100%", padding: "8px 0", background: "none",
-          border: "1px solid #2e2820", color: loading ? "#3a3530" : "#8a8070",
-          fontSize: "11px", fontWeight: 600, letterSpacing: "0.08em",
-          textTransform: "uppercase", cursor: loading ? "wait" : "pointer",
-          borderRadius: "4px", fontFamily: "Inter, sans-serif",
-        }}
+        style={{ ...btn, width: "100%", background: "none", border: "1px solid var(--line)", color: loading ? "var(--subtle)" : "var(--fg-2)", cursor: loading ? "wait" : "pointer" }}
       >
-        {loading ? "Downloading..." : "Download 1000 by 1000"}
+        {loading ? "Downloading" : "Download 1000 by 1000"}
       </button>
     </div>
   );
@@ -143,32 +126,27 @@ function QrCard({ name, data, desc }: { name: string; data: string; desc: string
 
 export default function QrPage() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden", fontFamily: "Inter, sans-serif", padding: "48px 32px" }}>
-      <VignetteBackground />
-      <div style={{ position: "relative", zIndex: 5, maxWidth: "1100px", margin: "0 auto" }}>
+    <div style={{ minHeight: "100vh", background: "var(--bg)", color: "var(--fg)", fontFamily: "var(--font-body)", padding: "48px var(--gutter)", overflowX: "hidden" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
 
-        <header className="pv-page-head" style={{ marginBottom: "48px" }}>
-          <div className="pv-mono-label">Internal QR code hub</div>
-          <h1 style={{ margin: 0 }}>
-            QR <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Hub.</em>
-          </h1>
-          <p className="deck">
-            1000 by 1000 px downloads in dark or light, ready for stickers, cards and print.
+        <header style={{ marginBottom: 48 }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/mark-foil.svg" alt="" width={44} height={44} style={{ display: "block", marginBottom: 16 }} />
+          <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(30px, 6vw, 44px)", fontWeight: 600, margin: "0 0 10px" }}>QR code hub</h1>
+          <p style={{ fontSize: 16, color: "var(--fg-2)", margin: 0, maxWidth: 560 }}>
+            1000 by 1000 pixel downloads in dark or light, ready for stickers, cards and print.
           </p>
         </header>
 
         {CATEGORIES.map(cat => (
-          <div key={cat.label} style={{ marginBottom: "56px" }}>
-            <header className="pv-section-head" style={{ marginBottom: "24px", padding: "20px 0 14px" }}>
-              <span className="roman"></span>
-              <h2>{cat.label}</h2>
-            </header>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))", gap: "16px" }}>
+          <section key={cat.label} style={{ marginBottom: 56 }}>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: 24, fontWeight: 600, margin: "0 0 20px" }}>{cat.label}</h2>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(210px, 100%), 1fr))", gap: 24 }}>
               {cat.items.map(item => (
                 <QrCard key={item.name} {...item} />
               ))}
             </div>
-          </div>
+          </section>
         ))}
 
       </div>

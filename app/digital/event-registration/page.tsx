@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+import { PageHero } from "@/app/components/ui";
+import s from "../_demo/demo.module.css";
+import { Field, ToolsKicker } from "../_demo/parts";
 
 interface Attendee {
   id: string;
@@ -53,7 +54,7 @@ export default function EventRegistrationPage() {
   }
 
   function deleteEvent(id: string) {
-    if (!confirm("Delete this event and all RSVPs?")) return;
+    if (!confirm("Delete this event and all its RSVPs?")) return;
     save(events.filter((e) => e.id !== id));
     if (selectedId === id) setSelectedId(null);
   }
@@ -75,67 +76,75 @@ export default function EventRegistrationPage() {
   }
 
   const selected = events.find((e) => e.id === selectedId);
+  const full = selected ? selected.attendees.length >= selected.capacity : false;
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <VignetteBackground />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
-        <Link href="/digital/tools" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All tools</Link>
+    <main>
+      {!selected ? (
+        <PageHero
+          kicker={<ToolsKicker>Free tools: booking and scheduling</ToolsKicker>}
+          title="Event registration"
+          lede="Create an event, collect RSVPs and check guests in at the door. Everything stays on this device."
+        />
+      ) : (
+        <PageHero
+          kicker={
+            <button type="button" onClick={() => setSelectedId(null)} className="ui-gold" style={{ background: "none", border: 0, padding: 0, font: "inherit", cursor: "pointer", minHeight: 44 }}>
+              All events
+            </button>
+          }
+          title={selected.name}
+          lede={`${selected.location || "Location to be set"}. ${selected.attendees.length} of ${selected.capacity} registered, ${selected.attendees.filter((a) => a.checkedIn).length} checked in.`}
+          meta={[selected.date, selected.time].filter(Boolean).join(" at ") || undefined}
+        />
+      )}
 
-        <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Booking: Event Registration</div>
-          <h1>
-            Event <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>RSVPs</em>
-          </h1>
-          <p className="deck">
-            Create an event, collect RSVPs and check guests in at the door. Stays on this device.
-          </p>
-        </header>
-
+      <div className={`ui-wrap ${s.body}`}>
         {!selected && (
           <>
-            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "20px", flexWrap: "wrap", gap: "12px" }}>
-              <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", color: "var(--color-warm-text)", fontWeight: 600, margin: 0 }}>Your events ({events.length})</h2>
-              {!creatingEvent && <button onClick={() => setCreatingEvent(true)} className="pv-btn-primary" style={{ border: "none", cursor: "pointer" }}>+ Event</button>}
+            <div className={s.spread} style={{ marginBottom: 24 }}>
+              <h2 className={s.sub} style={{ margin: 0 }}>Your events ({events.length})</h2>
+              {!creatingEvent && <button type="button" onClick={() => setCreatingEvent(true)} className="ui-btn">Create an event</button>}
             </div>
 
             {creatingEvent && (
-              <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-accent)", padding: "24px", marginBottom: "24px" }}>
-                <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: "12px" }}>
-                  <Input label="Event name *" value={eventForm.name} onChange={(v) => setEventForm({ ...eventForm, name: v })} placeholder="e.g., AI for Small Business Workshop" />
-                  <Input label="Date" type="date" value={eventForm.date} onChange={(v) => setEventForm({ ...eventForm, date: v })} />
-                  <Input label="Time" type="time" value={eventForm.time} onChange={(v) => setEventForm({ ...eventForm, time: v })} />
-                  <Input label="Location" value={eventForm.location} onChange={(v) => setEventForm({ ...eventForm, location: v })} placeholder="e.g., 123 Main St, Marietta" />
-                  <Input label="Capacity" type="number" value={String(eventForm.capacity)} onChange={(v) => setEventForm({ ...eventForm, capacity: Number(v) })} />
-                  <div style={{ gridColumn: "1 / -1" }}>
-                    <Input label="Description" value={eventForm.description} onChange={(v) => setEventForm({ ...eventForm, description: v })} placeholder="What's the event about?" />
-                  </div>
+              <div className={s.form}>
+                <h3>New event</h3>
+                <div className={s.grid3}>
+                  <Field label="Event name (required)" value={eventForm.name} onChange={(v) => setEventForm({ ...eventForm, name: v })} placeholder="e.g., AI for Small Business Workshop" />
+                  <Field label="Date" type="date" value={eventForm.date} onChange={(v) => setEventForm({ ...eventForm, date: v })} />
+                  <Field label="Time" type="time" value={eventForm.time} onChange={(v) => setEventForm({ ...eventForm, time: v })} />
+                  <Field label="Location" value={eventForm.location} onChange={(v) => setEventForm({ ...eventForm, location: v })} placeholder="e.g., 123 Main St, Marietta" />
+                  <Field label="Capacity" type="number" value={String(eventForm.capacity)} onChange={(v) => setEventForm({ ...eventForm, capacity: Number(v) })} />
+                  <Field className={s.full} label="Description" value={eventForm.description} onChange={(v) => setEventForm({ ...eventForm, description: v })} placeholder="What the event covers" />
                 </div>
-                <div style={{ display: "flex", gap: "12px", marginTop: "16px" }}>
-                  <button onClick={addEvent} className="pv-btn-primary" style={{ border: "none", cursor: "pointer" }}>Create</button>
-                  <button onClick={() => setCreatingEvent(false)} className="pv-btn-ghost" style={{ cursor: "pointer", background: "transparent" }}>Cancel</button>
+                <div className={s.actions}>
+                  <button type="button" onClick={addEvent} className="ui-btn">Create</button>
+                  <button type="button" onClick={() => setCreatingEvent(false)} className="ui-btn ui-btn--ghost">Cancel</button>
                 </div>
               </div>
             )}
 
             {events.length === 0 ? (
-              <p style={{ textAlign: "center", color: "var(--color-warm-text-muted)", padding: "40px", fontStyle: "italic" }}>No events yet.</p>
+              <p className={s.empty}>No events yet.</p>
             ) : (
-              <div style={{ display: "grid", gap: "12px" }}>
+              <div className={s.list}>
                 {events.map((e) => (
-                  <div key={e.id} className="pv-card" style={{ cursor: "pointer" }} onClick={() => setSelectedId(e.id)}>
-                    <span className="b3"></span><span className="b4"></span>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "12px", flexWrap: "wrap" }}>
+                  <article key={e.id} className={`${s.item} ${s.clickable}`} onClick={() => setSelectedId(e.id)}>
+                    <div className={s.spread}>
                       <div>
-                        <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", color: "var(--color-warm-text)", margin: "0 0 4px", fontWeight: 600 }}>{e.name}</h3>
-                        <div style={{ fontSize: "13px", color: "var(--color-warm-text-muted)" }}>
-                          {e.date} {e.time && `at ${e.time}`}, {e.location || "TBD"}, {e.attendees.length}/{e.capacity} registered
-                        </div>
-                        {e.description && <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: "8px 0 0", lineHeight: 1.5 }}>{e.description}</p>}
+                        <h3 className={s.itemName}>{e.name}</h3>
+                        <p className={s.itemMeta}>
+                          {e.date || "No date"}{e.time && ` at ${e.time}`}, {e.location || "location to be set"}. {e.attendees.length} of {e.capacity} registered.
+                        </p>
+                        {e.description && <p className="ui-muted" style={{ margin: "8px 0 0" }}>{e.description}</p>}
                       </div>
-                      <button onClick={(ev) => { ev.stopPropagation(); deleteEvent(e.id); }} style={{ background: "transparent", border: "none", color: "var(--color-warm-text-light)", cursor: "pointer", padding: "4px 8px", fontSize: "16px" }}>×</button>
+                      <div className={s.actions} style={{ marginTop: 0 }}>
+                        <button type="button" onClick={() => setSelectedId(e.id)} className={s.btn}>Open</button>
+                        <button type="button" onClick={(ev) => { ev.stopPropagation(); deleteEvent(e.id); }} className={`${s.btn} ${s.btnDanger}`}>Delete</button>
+                      </div>
                     </div>
-                  </div>
+                  </article>
                 ))}
               </div>
             )}
@@ -144,63 +153,48 @@ export default function EventRegistrationPage() {
 
         {selected && (
           <>
-            <button onClick={() => setSelectedId(null)} style={{ marginBottom: "16px", background: "transparent", border: "none", color: "var(--color-warm-text-muted)", cursor: "pointer", fontSize: "12px", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif", padding: 0 }}>All events</button>
-
-            <header className="pv-page-head">
-              <div className="pv-mono-label">{selected.date} {selected.time}</div>
-              <h1>{selected.name}</h1>
-              <p className="deck">{selected.location}, {selected.attendees.length} of {selected.capacity} registered, {selected.attendees.filter((a) => a.checkedIn).length} checked in</p>
-            </header>
-
-            <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-accent)", padding: "24px", marginBottom: "24px" }}>
-              <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", color: "var(--color-warm-text)", margin: "0 0 16px" }}>RSVP</h3>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "12px" }}>
-                <Input label="Name *" value={registerForm.name} onChange={(v) => setRegisterForm({ ...registerForm, name: v })} />
-                <Input label="Email *" type="email" value={registerForm.email} onChange={(v) => setRegisterForm({ ...registerForm, email: v })} />
-                <Input label="Phone" value={registerForm.phone} onChange={(v) => setRegisterForm({ ...registerForm, phone: v })} />
-                <div style={{ gridColumn: "1 / -1" }}>
-                  <Input label="Notes (dietary, accessibility, etc.)" value={registerForm.notes} onChange={(v) => setRegisterForm({ ...registerForm, notes: v })} />
-                </div>
+            <div className={s.form}>
+              <h3>RSVP</h3>
+              <div className={s.grid3}>
+                <Field label="Name (required)" value={registerForm.name} onChange={(v) => setRegisterForm({ ...registerForm, name: v })} />
+                <Field label="Email (required)" type="email" value={registerForm.email} onChange={(v) => setRegisterForm({ ...registerForm, email: v })} />
+                <Field label="Phone" value={registerForm.phone} onChange={(v) => setRegisterForm({ ...registerForm, phone: v })} />
+                <Field className={s.full} label="Notes, such as dietary or accessibility needs" value={registerForm.notes} onChange={(v) => setRegisterForm({ ...registerForm, notes: v })} />
               </div>
-              <button onClick={() => register(selected.id)} className="pv-btn-primary" style={{ marginTop: "16px", border: "none", cursor: "pointer" }} disabled={selected.attendees.length >= selected.capacity}>
-                {selected.attendees.length >= selected.capacity ? "Capacity reached" : "Register"}
-              </button>
+              <div className={s.actions}>
+                <button type="button" onClick={() => register(selected.id)} className="ui-btn" disabled={full}>
+                  {full ? "This event is full" : "Register"}
+                </button>
+              </div>
             </div>
 
-            <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", color: "var(--color-warm-text)", margin: "0 0 16px" }}>Attendees ({selected.attendees.length})</h3>
+            <h2 className={s.sub}>Attendees ({selected.attendees.length})</h2>
             {selected.attendees.length === 0 ? (
-              <p style={{ color: "var(--color-warm-text-muted)", fontStyle: "italic" }}>No RSVPs yet.</p>
+              <p className={s.empty}>No RSVPs yet.</p>
             ) : (
-              <div style={{ display: "grid", gap: "8px" }}>
+              <div className={s.list}>
                 {selected.attendees.map((a) => (
-                  <div key={a.id} style={{ padding: "12px 16px", background: "var(--color-warm-bg-alt)", border: `1px solid ${a.checkedIn ? "#7aaa6a" : "var(--color-warm-border)"}`, display: "flex", justifyContent: "space-between", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
-                    <div>
-                      <div style={{ fontFamily: "'Cinzel', Georgia, serif", color: "var(--color-warm-text)", fontWeight: 600, fontSize: "15px" }}>{a.name}</div>
-                      <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)" }}>{a.email}, {a.phone || "no phone"}</div>
-                      {a.notes && <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", fontStyle: "italic", marginTop: "4px" }}>{a.notes}</div>}
+                  <article key={a.id} className={s.item}>
+                    <div className={s.spread}>
+                      <div>
+                        <h3 className={s.itemName} style={{ fontSize: 19 }}>{a.name}</h3>
+                        <p className={s.itemMeta}>{a.email}, {a.phone || "no phone"}</p>
+                        {a.notes && <p className="ui-muted ui-small" style={{ margin: "4px 0 0" }}>{a.notes}</p>}
+                      </div>
+                      <div className={s.actions} style={{ marginTop: 0 }}>
+                        <button type="button" onClick={() => toggleCheckIn(selected.id, a.id)} className={`${s.btn} ${a.checkedIn ? s.btnOk : ""}`}>
+                          {a.checkedIn ? "Checked in" : "Check in"}
+                        </button>
+                        <button type="button" onClick={() => removeAttendee(selected.id, a.id)} className={`${s.btn} ${s.btnDanger}`}>Remove</button>
+                      </div>
                     </div>
-                    <div style={{ display: "flex", gap: "6px" }}>
-                      <button onClick={() => toggleCheckIn(selected.id, a.id)} style={{ padding: "6px 10px", border: `1px solid ${a.checkedIn ? "#7aaa6a" : "var(--color-warm-border)"}`, background: "transparent", color: a.checkedIn ? "#7aaa6a" : "var(--color-warm-text-muted)", cursor: "pointer", fontSize: "10px", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 700 }}>
-                        {a.checkedIn ? "✓ In" : "Check in"}
-                      </button>
-                      <button onClick={() => removeAttendee(selected.id, a.id)} style={{ background: "transparent", border: "none", color: "var(--color-warm-text-light)", cursor: "pointer", padding: "4px 8px", fontSize: "16px" }}>×</button>
-                    </div>
-                  </div>
+                  </article>
                 ))}
               </div>
             )}
           </>
         )}
-      </main>
-    </div>
-  );
-}
-
-function Input({ label, value, onChange, placeholder, type = "text" }: { label: string; value: string; onChange: (v: string) => void; placeholder?: string; type?: string }) {
-  return (
-    <div>
-      <label style={{ display: "block", fontSize: "10px", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "4px", fontFamily: "var(--font-dm-sans), sans-serif" }}>{label}</label>
-      <input type={type} value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} style={{ width: "100%", padding: "10px 12px", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", border: "1px solid var(--color-warm-border)", borderRadius: 0, fontSize: "14px", fontFamily: "var(--font-inter), sans-serif" }} />
-    </div>
+      </div>
+    </main>
   );
 }

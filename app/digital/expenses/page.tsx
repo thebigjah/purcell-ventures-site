@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
-import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+import { PageHero, Figures } from "@/app/components/ui";
+import s from "../_demo/demo.module.css";
+import { Field, ToolsKicker } from "../_demo/parts";
 
 interface Expense {
   id: string;
@@ -13,7 +14,7 @@ interface Expense {
   taxDeductible: boolean;
 }
 
-const CATEGORIES = ["Materials", "Tools", "Vehicle / Fuel", "Subscriptions", "Marketing", "Office", "Meals", "Travel", "Insurance", "Other"];
+const CATEGORIES = ["Materials", "Tools", "Vehicle and fuel", "Subscriptions", "Marketing", "Office", "Meals", "Travel", "Insurance", "Other"];
 const KEY = "pv_expenses_v1";
 
 export default function ExpensesPage() {
@@ -53,8 +54,8 @@ export default function ExpensesPage() {
   }
 
   const filtered = useMemo(() => expenses.filter((e) => e.date.startsWith(monthFilter)), [expenses, monthFilter]);
-  const monthTotal = filtered.reduce((s, e) => s + e.amount, 0);
-  const monthDeductible = filtered.filter((e) => e.taxDeductible).reduce((s, e) => s + e.amount, 0);
+  const monthTotal = filtered.reduce((sum, e) => sum + e.amount, 0);
+  const monthDeductible = filtered.filter((e) => e.taxDeductible).reduce((sum, e) => sum + e.amount, 0);
 
   const byCategory = useMemo(() => {
     const map = new Map<string, number>();
@@ -62,141 +63,131 @@ export default function ExpensesPage() {
     return Array.from(map.entries()).sort((a, b) => b[1] - a[1]);
   }, [filtered]);
 
+  // The page has always promised a CSV at tax time. This writes the month on screen.
+  function exportCsv() {
+    const esc = (v: string) => `"${v.replace(/"/g, '""')}"`;
+    const rows = [
+      ["Date", "Category", "Description", "Amount", "Tax deductible"].join(","),
+      ...filtered.map((e) => [e.date, esc(e.category), esc(e.description), e.amount.toFixed(2), e.taxDeductible ? "Yes" : "No"].join(",")),
+    ];
+    const blob = new Blob([rows.join("\n")], { type: "text/csv" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `expenses-${monthFilter}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <style dangerouslySetInnerHTML={{ __html: `
-        @media (max-width: 720px) {
-          .expense-stats { grid-template-columns: 1fr !important; }
-          .expense-form-row { grid-template-columns: 1fr !important; }
-          .expense-table { font-size: 12px !important; }
-          .expense-table td, .expense-table th { padding: 8px !important; }
-        }
-      ` }} />
-      <VignetteBackground />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
-        <Link href="/digital/tools" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All tools</Link>
+    <main>
+      <PageHero
+        kicker={<ToolsKicker>Free tools: operations and finance</ToolsKicker>}
+        title="Expense tracker"
+        lede="Log expenses as they happen, filter by month and export a CSV at tax time. Everything stays on this device."
+      />
 
-        <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Operations: Expense Tracker</div>
-          <h1>
-            Expense <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>tracker</em>
-          </h1>
-          <p className="deck">
-            Log expenses as they happen, filter by month and export a CSV at tax time. Stays on this device.
-          </p>
-        </header>
-
-        <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "12px", marginBottom: "20px", alignItems: "center" }}>
-          <input type="month" value={monthFilter} onChange={(e) => setMonthFilter(e.target.value)} style={{ padding: "10px 14px", background: "var(--color-warm-bg-alt)", color: "var(--color-warm-text)", border: "1px solid var(--color-warm-border)", borderRadius: 0, fontFamily: "var(--font-inter), sans-serif" }} />
-          {!adding && (
-            <button onClick={() => setAdding(true)} className="pv-btn-primary" style={{ border: "none", cursor: "pointer" }}>+ Expense</button>
-          )}
+      <div className={`ui-wrap ${s.body}`}>
+        <div className={s.bar}>
+          <label className="ui-field">
+            <span className="ui-small ui-muted">Month</span>
+            <input type="month" value={monthFilter} onChange={(e) => setMonthFilter(e.target.value)} />
+          </label>
+          <div className={s.actions} style={{ marginTop: "auto" }}>
+            {!adding && (
+              <button type="button" onClick={() => setAdding(true)} className="ui-btn">Add an expense</button>
+            )}
+            <button type="button" onClick={exportCsv} disabled={filtered.length === 0} className={s.btn}>Export CSV</button>
+          </div>
         </div>
 
-        <div className="expense-stats" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px", marginBottom: "32px" }}>
-          <Stat n={`$${monthTotal.toFixed(2)}`} label="Month total" />
-          <Stat n={`$${monthDeductible.toFixed(2)}`} label="Tax-deductible" color="#7aaa6a" />
-          <Stat n={filtered.length} label="Expense count" />
+        <div className={s.stats}>
+          <Figures
+            items={[
+              [`$${monthTotal.toFixed(2)}`, "Month total"],
+              [<span key="d" className={s.okText}>${monthDeductible.toFixed(2)}</span>, "Tax deductible"],
+              [filtered.length, "Expenses this month"],
+            ]}
+          />
         </div>
 
         {byCategory.length > 0 && (
-          <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", padding: "20px 24px", marginBottom: "32px" }}>
-            <h4 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", color: "var(--color-warm-accent)", letterSpacing: "0.18em", textTransform: "uppercase", margin: "0 0 12px" }}>Breakdown by category</h4>
+          <section style={{ marginBottom: 40, maxWidth: 640 }}>
+            <h2 className={s.sub}>By category</h2>
             {byCategory.map(([cat, total]) => {
               const pct = monthTotal > 0 ? (total / monthTotal) * 100 : 0;
               return (
-                <div key={cat} style={{ marginBottom: "10px" }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", fontSize: "13px", marginBottom: "4px" }}>
-                    <span style={{ color: "var(--color-warm-text)" }}>{cat}</span>
-                    <span style={{ color: "var(--color-warm-text-muted)" }}>${total.toFixed(2)} ({pct.toFixed(0)}%)</span>
+                <div key={cat} style={{ marginBottom: 14 }}>
+                  <div className={s.spread}>
+                    <span>{cat}</span>
+                    <span className="ui-muted">${total.toFixed(2)} ({pct.toFixed(0)}%)</span>
                   </div>
-                  <div style={{ width: "100%", height: "4px", background: "var(--color-warm-bg)", overflow: "hidden" }}>
-                    <div style={{ width: `${pct}%`, height: "100%", background: "var(--color-warm-accent)" }} />
-                  </div>
+                  <div className={s.track}><div className={s.fill} style={{ width: `${pct}%` }} /></div>
                 </div>
               );
             })}
-          </div>
+          </section>
         )}
 
         {adding && (
-          <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-accent)", padding: "24px", marginBottom: "24px" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "12px" }}>
-              <Input label="Date" type="date" value={form.date} onChange={(v) => setForm({ ...form, date: v })} />
-              <Input label="Amount $" type="number" value={String(form.amount)} onChange={(v) => setForm({ ...form, amount: Number(v) })} />
-              <div>
-                <label style={inputLabel}>Category</label>
-                <select value={form.category} onChange={(e) => setForm({ ...form, category: e.target.value })} style={inputStyle}>
+          <div className={s.form}>
+            <h3>New expense</h3>
+            <div className={s.grid3}>
+              <Field label="Date" type="date" value={form.date} onChange={(v) => setForm({ ...form, date: v })} />
+              <Field label="Amount in dollars" type="number" value={String(form.amount)} onChange={(v) => setForm({ ...form, amount: Number(v) })} />
+              <label className="ui-field">
+                <span className="ui-small ui-muted">Category</span>
+                <select value={form.category} onChange={(e) => setForm({ ...form, category: e.target.value })}>
                   {CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
                 </select>
-              </div>
-              <div style={{ gridColumn: "1 / -1" }}>
-                <Input label="Description" value={form.description} onChange={(v) => setForm({ ...form, description: v })} placeholder="e.g., Home Depot, drill bits for Tuesday's job" />
-              </div>
-              <label style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "var(--color-warm-text)" }}>
+              </label>
+              <Field className={s.full} label="Description" value={form.description} onChange={(v) => setForm({ ...form, description: v })} placeholder="e.g., Home Depot, drill bits for Tuesday's job" />
+              <label className={`${s.check} ${s.full}`}>
                 <input type="checkbox" checked={form.taxDeductible} onChange={(e) => setForm({ ...form, taxDeductible: e.target.checked })} />
                 Tax-deductible business expense
               </label>
             </div>
-            <div style={{ display: "flex", gap: "12px", marginTop: "16px" }}>
-              <button onClick={add} className="pv-btn-primary" style={{ border: "none", cursor: "pointer" }}>Add</button>
-              <button onClick={() => setAdding(false)} className="pv-btn-ghost" style={{ cursor: "pointer", background: "transparent" }}>Cancel</button>
+            <div className={s.actions}>
+              <button type="button" onClick={add} className="ui-btn">Add</button>
+              <button type="button" onClick={() => setAdding(false)} className="ui-btn ui-btn--ghost">Cancel</button>
             </div>
           </div>
         )}
 
         {filtered.length === 0 ? (
-          <p style={{ textAlign: "center", color: "var(--color-warm-text-muted)", padding: "40px", fontStyle: "italic" }}>No expenses for {monthFilter}.</p>
+          <p className={s.empty}>No expenses logged for {monthFilter}.</p>
         ) : (
-          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "14px" }}>
-            <thead>
-              <tr style={{ background: "var(--color-warm-bg-alt)", borderBottom: "2px solid var(--color-warm-border)" }}>
-                <th style={th}>Date</th>
-                <th style={th}>Category</th>
-                <th style={th}>Description</th>
-                <th style={{ ...th, textAlign: "right" }}>Amount</th>
-                <th style={th}></th>
-              </tr>
-            </thead>
-            <tbody>
-              {filtered.map((e) => (
-                <tr key={e.id} style={{ borderBottom: "1px solid var(--color-warm-border)" }}>
-                  <td style={td}>{e.date}</td>
-                  <td style={td}>{e.category} {e.taxDeductible && <span style={{ color: "#7aaa6a", fontSize: "10px", marginLeft: "4px" }}>•TAX</span>}</td>
-                  <td style={{ ...td, color: "var(--color-warm-text-muted)", fontSize: "13px" }}>{e.description || "—"}</td>
-                  <td style={{ ...td, textAlign: "right", fontWeight: 600, color: "var(--color-warm-text)" }}>${e.amount.toFixed(2)}</td>
-                  <td style={{ ...td, textAlign: "right" }}>
-                    <button onClick={() => remove(e.id)} style={{ background: "transparent", border: "none", color: "var(--color-warm-text-light)", cursor: "pointer", padding: "4px 8px", fontSize: "16px" }}>×</button>
-                  </td>
+          <div className={s.tableWrap}>
+            <table className={s.table}>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Category</th>
+                  <th>Description</th>
+                  <th className={s.num}>Amount</th>
+                  <th><span className="sr-only">Remove</span></th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {filtered.map((e) => (
+                  <tr key={e.id}>
+                    <td style={{ whiteSpace: "nowrap" }}>{e.date}</td>
+                    <td>
+                      {e.category}
+                      {e.taxDeductible && <span className={`ui-small ${s.okText}`} style={{ display: "block" }}>Tax deductible</span>}
+                    </td>
+                    <td className="ui-muted">{e.description || "None"}</td>
+                    <td className={s.num} style={{ fontWeight: 600 }}>${e.amount.toFixed(2)}</td>
+                    <td className={s.num}>
+                      <button type="button" onClick={() => remove(e.id)} className={`${s.btn} ${s.btnDanger}`}>Remove</button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         )}
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
-
-function Stat({ n, label, color }: { n: string | number; label: string; color?: string }) {
-  return (
-    <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", padding: "20px", textAlign: "center" }}>
-      <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", fontWeight: 700, color: color || "var(--color-warm-accent)" }}>{n}</div>
-      <div style={{ fontSize: "10px", letterSpacing: "0.24em", textTransform: "uppercase", color: "var(--color-warm-text-muted)", marginTop: "4px" }}>{label}</div>
-    </div>
-  );
-}
-
-function Input({ label, value, onChange, placeholder, type = "text" }: { label: string; value: string; onChange: (v: string) => void; placeholder?: string; type?: string }) {
-  return (
-    <div>
-      <label style={inputLabel}>{label}</label>
-      <input type={type} value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} style={inputStyle} />
-    </div>
-  );
-}
-
-const inputStyle: React.CSSProperties = { width: "100%", padding: "10px 12px", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", border: "1px solid var(--color-warm-border)", borderRadius: 0, fontSize: "14px", fontFamily: "var(--font-inter), sans-serif" };
-const inputLabel: React.CSSProperties = { display: "block", fontSize: "10px", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "4px", fontFamily: "var(--font-dm-sans), sans-serif" };
-const th: React.CSSProperties = { padding: "12px", textAlign: "left", fontSize: "10px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-warm-accent)" };
-const td: React.CSSProperties = { padding: "12px", color: "var(--color-warm-text)" };

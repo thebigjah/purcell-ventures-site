@@ -1,0 +1,71 @@
+"use client";
+
+import { useState } from "react";
+import s from "./digital.module.css";
+import { CONTACT } from "@/lib/contact";
+
+// The /digital contact form. Until 26 Oct 2026 its submit handler only called
+// preventDefault, so every enquiry typed into it was lost. The site has no endpoint that
+// delivers a lead to Elijah (/api/lead-capture logs and emails the visitor), so the form
+// now opens the visitor's email app with the message to Elijah already written. The page
+// says so under the button, and the email address is printed for anyone without a mail app.
+
+const PLANS: Record<string, string> = {
+  "": "Not sure, help me pick",
+  starter: "Starter, $99 a month",
+  growth: "Growth, $179 a month",
+  full: "Full Service, $279 a month",
+  custom: "Custom",
+};
+
+export default function ContactForm() {
+  const [f, setF] = useState({ name: "", business: "", contact: "", need: "", plan: "" });
+  const set = (k: keyof typeof f) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => setF({ ...f, [k]: e.target.value });
+
+  const send = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = `Digital add-ons: ${f.business || f.name || "a question"}`;
+    const body = [
+      `Name: ${f.name}`,
+      `Business: ${f.business}`,
+      `Reach me at: ${f.contact}`,
+      `Plan: ${PLANS[f.plan]}`,
+      "",
+      f.need,
+    ].join("\n");
+    window.location.href = `mailto:${CONTACT.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
+  return (
+    <form className={s.form} onSubmit={send}>
+      <div className={s.formRow}>
+        <div className="ui-field">
+          <label htmlFor="dg-name">Your name</label>
+          <input id="dg-name" name="name" type="text" required placeholder="Jane Smith" value={f.name} onChange={set("name")} />
+        </div>
+        <div className="ui-field">
+          <label htmlFor="dg-business">Business name</label>
+          <input id="dg-business" name="business" type="text" placeholder="Smith Salon" value={f.business} onChange={set("business")} />
+        </div>
+      </div>
+      <div className="ui-field">
+        <label htmlFor="dg-contact">Email or phone</label>
+        <input id="dg-contact" name="contact" type="text" required placeholder="jane@smithsalon.com or (770) 555-0100" value={f.contact} onChange={set("contact")} />
+      </div>
+      <div className="ui-field">
+        <label htmlFor="dg-need">What you need</label>
+        <textarea id="dg-need" name="need" rows={4} placeholder="Your business and the problem you want solved" value={f.need} onChange={set("need")} />
+      </div>
+      <div className="ui-field">
+        <label htmlFor="dg-fit">Which plan fits</label>
+        <select id="dg-fit" name="plan" value={f.plan} onChange={set("plan")}>
+          {Object.entries(PLANS).map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+        </select>
+      </div>
+      <button type="submit" className="ui-btn">Send message</button>
+      <p className="ui-muted ui-small" style={{ margin: 0 }}>
+        This opens your email app with your message to me filled in. You can also write to {CONTACT.email} or call {CONTACT.phone}.
+      </p>
+    </form>
+  );
+}

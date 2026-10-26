@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import VideoEmbed from "@/app/components/VideoEmbed";
-import { PanopticonMark } from "@/app/components/PanopticonMark";
 
 const VALID_CODE = process.env.NEXT_PUBLIC_COURSE_ACCESS_CODE ?? "COLLEGE2026";
 type GateState = "loading" | "locked" | "unlocked";
@@ -35,7 +34,7 @@ const MODULES: Module[] = [
             "Most students approach college admissions like a job application, they try to look as impressive as possible and hope for the best. That's not how it works. Colleges are building a class. Every acceptance is a decision about who they want in the room with everyone else.",
             "Admissions officers read thousands of applications. At most schools, your file gets 8 to 12 minutes of attention total. The question they ask is 'does this student make our class more interesting?' That distinction changes everything about how you should present yourself.",
             "Selective admissions is partly a numbers game and partly not. The numbers (GPA, test scores) get you past the first filter. After that, it's about story, fit, and what you add to the school's needs that cycle. A school short on bassoonists, first-generation students, or students from Wyoming might accept someone they'd otherwise waitlist. Understanding this removes some of the mystery, and a lot of the self-blame.",
-            "Financial considerations also shape acceptance decisions in ways schools don't advertise. Need-blind admissions is real at a handful of schools. At most schools, whether your family can pay full freight, or whether you'd qualify for institutional aid the school has budgeted, is factored in. This isn't a reason to avoid schools. It's a reason to understand which ones want you.",
+            "Financial considerations also shape acceptance decisions in ways schools don't advertise. Need-blind admissions is real at a handful of schools. At most schools, whether your family can pay full freight, or whether you'd qualify for institutional aid the school has budgeted, is factored in. Use this to find the schools that want you.",
           ],
           takeaways: [
             "Colleges are building a class, not hiring individuals, your story matters more than your stats above the filter threshold",
@@ -49,8 +48,8 @@ const MODULES: Module[] = [
         id: "1-2", moduleId: "module-1", title: "The timeline: 9th grade through senior fall", duration: "8 min", format: "Screen share", videoUrl: null,
         notes: {
           intro: [
-            "The students who get the best outcomes don't suddenly get serious senior year. They've been building a story since 9th grade, not because they were planning everything perfectly, but because they were doing things they cared about consistently. That record is what applications are made of.",
-            "9th and 10th grade: this is when you explore. Try things. Some will stick, some won't. The goal isn't to look impressive, it's to find the 2 to 3 things you're interested in enough to keep doing for three years. Depth in a few areas beats breadth in many.",
+            "The students who get the best outcomes don't suddenly get serious senior year. They've been building a story since 9th grade, by doing things they cared about, consistently, without a perfect plan. That record is what applications are made of.",
+            "9th and 10th grade: this is when you explore. Try things. Some will stick, some won't. The goal is to find the 2 to 3 things you're interested in enough to keep doing for three years. Depth in a few areas beats breadth in many.",
             "11th grade: this is the most important year of high school for college applications. Junior year GPA is the most scrutinized. PSAT/SAT/ACT testing, AP coursework, and the beginning of your activities list all take shape. This is also when you should start researching schools seriously and visiting if possible.",
             "Summer before senior year: write your personal statement. Not in September, in June or July, when you have time to think and revise. Students who write their essays under deadline pressure produce work that reads like it was written under deadline pressure.",
             "Senior fall: submit Early Action or Early Decision applications in November. Regular Decision deadlines are January 1 or January 15 for most schools. Managing 15 to 30 applications means having a submission system from day one.",
@@ -70,11 +69,11 @@ const MODULES: Module[] = [
     id: "module-2", num: "02", title: "Building Your School List",
     lessons: [
       {
-        id: "2-1", moduleId: "module-2", title: "How I found 98 schools, live spreadsheet walkthrough", duration: "14 min", format: "Screen share", videoUrl: null,
+        id: "2-1", moduleId: "module-2", title: "How I found 98 schools: a live spreadsheet walkthrough", duration: "14 min", format: "Screen share", videoUrl: null,
         notes: {
           intro: [
-            "Most students apply to 8 to 12 schools. I applied to more. The reason isn't that I wanted to collect acceptances, it's that a larger list, built methodically, dramatically increases your expected scholarship offers. With the right list, you can engineer a situation where multiple schools compete for you.",
-            "My process started with Niche, College Board's BigFuture, and College Confidential, not for their rankings, but for their filter tools. I filtered by: size, location preference, acceptance rate range, known merit scholarship programs, and specific majors I was considering. That initial pull gave me ~150 schools, which I narrowed to 98 based on deeper research.",
+            "Most students apply to 8 to 12 schools. I applied to more. I did not want to collect acceptances. A larger list, built methodically, dramatically increases your expected scholarship offers. With the right list, you can engineer a situation where multiple schools compete for you.",
+            "My process started with Niche, College Board's BigFuture, and College Confidential, for their filter tools and not their rankings. I filtered by: size, location preference, acceptance rate range, known merit scholarship programs, and specific majors I was considering. That initial pull gave me 150 schools, which I narrowed to 98 based on deeper research.",
             "For each school, I tracked: acceptance rate, average merit scholarship offered (not just available, average offered to students with my profile), known scholarship programs with specific dollar amounts, cost of attendance, net price calculator result, application requirements, and deadline. This spreadsheet became my operating system for the entire application season.",
             "The list wasn't random. It was built in tiers, schools where my stats put me in the top 25% of admitted students (high scholarship likelihood), schools where I was solidly mid-range (match), and schools where I was a stretch. The top-25% schools are where the money is.",
           ],
@@ -93,7 +92,7 @@ const MODULES: Module[] = [
           intro: [
             "Reach, match, and safety aren't fixed categories, they're relative to your stats. A school that's a reach for a 3.5 GPA student is a match for a 4.0 student. The categories only mean something in context of your actual profile.",
             "A true safety is a school you'd be happy attending, where you're certain of acceptance, and where you'd receive significant merit aid. If the only schools on your safety tier are ones you'd be miserable at, they're not functioning as safeties. A school that demoralizes you is not a fallback, it's a trap.",
-            "The common advice is '3 to 4 safety, 3 to 4 match, 3 to 4 reach.' That's fine for a traditional application strategy. If you're optimizing for scholarship money, weight your list toward schools where you're in the top 25% of their admitted class. That's where you get leveraged offers. Reaches are exciting but rarely the schools that give you the most money.",
+            "The common advice is '3 to 4 safety, 3 to 4 match, 3 to 4 reach.' That's fine for a traditional application strategy. If you're optimizing for scholarship money, weight your list toward schools where you're in the top 25% of their admitted class. That's where the strong offers come from. Reaches are exciting but rarely the schools that give you the most money.",
             "Acceptance rate is a rough proxy for selectivity, not a perfect measure. A 40% acceptance rate school can be harder to get into than a 15% school if your profile is unusual. Look at where your test scores and GPA sit relative to the middle 50% of admitted students, that's a more accurate signal.",
           ],
           takeaways: [
@@ -129,7 +128,7 @@ const MODULES: Module[] = [
     id: "module-3", num: "03", title: "Your Application Foundation",
     lessons: [
       {
-        id: "3-1", moduleId: "module-3", title: "The activities list, making anything count", duration: "9 min", format: "Camera", videoUrl: null,
+        id: "3-1", moduleId: "module-3", title: "The activities list: making every activity count", duration: "9 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
             "The Common App activities section gives you 10 slots and 150 characters per description. It's the most underused, undertreated part of most applications, students list what they did without explaining what it meant or what they built.",
@@ -165,7 +164,7 @@ const MODULES: Module[] = [
         },
       },
       {
-        id: "3-3", moduleId: "module-3", title: "Letters of rec strategy", duration: "7 min", format: "Camera", videoUrl: null,
+        id: "3-3", moduleId: "module-3", title: "Letters of recommendation strategy", duration: "7 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
             "Letters of recommendation don't make applications, but weak ones can break them. The goal is to get letters that add specific, personal evidence about who you are that your transcript and activities list can't show.",
@@ -210,7 +209,7 @@ const MODULES: Module[] = [
         notes: {
           intro: [
             "In this lesson, I walk through the actual process I used to draft my personal statement, from the blank page to a working first draft. The lesson is a screen share so you can see exactly how I think through it.",
-            "The process I use: start with a list of 10 experiences that felt meaningful, then identify which ones have something interesting to say about how I see the world. Not the most impressive, the most revealing. From that list, draft three different opening sentences for the top two candidates and see which one has more energy.",
+            "The process I use: start with a list of 10 experiences that felt meaningful, then identify which ones have something interesting to say about how I see the world. Pick the most revealing, whether or not it is the most impressive. From that list, draft three different opening sentences for the top two candidates and see which one has more energy.",
             "First drafts are supposed to be bad. The students who struggle most with essays are perfectionists who can't tolerate writing something rough. Write the whole thing badly, all the way to the end, before you edit anything. You can't fix a blank page.",
             "The revision process is where the essay becomes good. In the first draft, you find out what you're trying to say. In the revision, you say it more precisely. Cut anything that could have been written by any applicant, the more specific and personal, the better. If a sentence doesn't add something only you could have written, cut it.",
           ],
@@ -224,13 +223,13 @@ const MODULES: Module[] = [
         },
       },
       {
-        id: "4-3", moduleId: "module-4", title: "Supplementals, efficiency at scale", duration: "12 min", format: "Camera + Screen", videoUrl: null,
+        id: "4-3", moduleId: "module-4", title: "Supplementals: efficiency at scale", duration: "12 min", format: "Camera + Screen", videoUrl: null,
         notes: {
           intro: [
             "Supplemental essays are shorter (50 to 400 words typically) and school-specific. They ask things like: Why this school? What will you contribute to our community? Describe a challenge you've overcome. Some schools have 1 to 2 supplements. Others have 5 to 7.",
             "The efficiency principle: most supplemental prompts cluster into 4 to 5 categories. The 'Why this school?' essay can be adapted with 15 minutes of research per school. The 'Describe a challenge' essay can be a refined version of your personal statement material. Build master responses for each category, then customize.",
-            "The 'Why this school?' essay is the most important supplemental you'll write. It needs to be specific, not 'your beautiful campus and strong academics' (that's every school). Specific means: a professor's research you looked up, a specific program or course, a tradition or community element you found compelling. Admissions officers know if you've done your homework.",
-            "Don't treat supplements as an afterthought. A strong supplement can elevate a borderline application. A weak one, especially a generic 'Why us?', signals low interest. Demonstrated interest is real and schools track it.",
+            "The 'Why this school?' essay is the most important supplemental you'll write. Avoid 'your beautiful campus and strong academics', which fits every school. Be specific: a professor's research you looked up, a specific program or course, a tradition or community element you found compelling. Admissions officers know if you've done your homework.",
+            "Don't treat supplements as an afterthought. A strong supplement can lift a borderline application. A weak one, especially a generic 'Why us?', signals low interest. Demonstrated interest is real and schools track it.",
           ],
           takeaways: [
             "Build master essays for each supplement category (Why Us, challenge, community contribution, etc.) then customize",
@@ -246,7 +245,7 @@ const MODULES: Module[] = [
         notes: {
           intro: [
             "Getting feedback on your essays is valuable, but the wrong feedback can make your essay worse. People who haven't read thousands of college essays often give advice that pushes students toward safer, blander writing. Know whose feedback to weight.",
-            "The best feedback comes from: people who've read your work before and know your voice, people who've worked in admissions or read applications professionally, and people who are simply good readers (they notice when something feels false or when something resonates).",
+            "The best feedback comes from: people who've read your work before and know your voice, people who've worked in admissions or read applications professionally, and people who are good readers (they notice when something feels false or when something resonates).",
             "What to ask for: 'Tell me what you think I'm saying about myself in this essay' and 'Tell me what you found most interesting.' If their answer doesn't match your intention, you have revision work to do. Don't ask 'Is this good?' It doesn't produce useful feedback.",
             "Revise toward clarity and specificity, not toward impressiveness. If a revision makes the essay sound smarter but less like you, undo it. The essay is supposed to sound like an 18-year-old who thinks carefully, not like a college admissions essay.",
           ],
@@ -262,10 +261,10 @@ const MODULES: Module[] = [
     ],
   },
   {
-    id: "module-5", num: "05", title: "Financial Aid & Scholarships",
+    id: "module-5", num: "05", title: "Financial aid and scholarships",
     lessons: [
       {
-        id: "5-1", moduleId: "module-5", title: "FAFSA + CSS Profile explained", duration: "15 min", format: "Screen share", videoUrl: null,
+        id: "5-1", moduleId: "module-5", title: "The FAFSA and CSS Profile explained", duration: "15 min", format: "Screen share", videoUrl: null,
         notes: {
           intro: [
             "The FAFSA (Free Application for Federal Student Aid) opens October 1 each year and should be submitted as early as possible, many schools use it to determine institutional grants on a first-come basis. Waiting until spring to file costs money.",
@@ -290,7 +289,7 @@ const MODULES: Module[] = [
             "The sites I used most: Scholarship America, Fastweb, Bold.org, Going Merry, and Scholarships.com. Each has a different database and different filters. Don't rely on one. The overlap between them is smaller than you'd expect.",
             "Filtering for fit: I filtered by eligibility criteria I met, state, intended major, test score range, extracurricular activities. Generic scholarships open to everyone get thousands of applications. Niche scholarships for students matching specific criteria get dozens. Apply where you're competitive.",
             "Volume is part of the strategy for external scholarships. A $1,000 scholarship that takes 90 minutes of work is $667/hour. A $500 scholarship that takes 20 minutes of work (because it reuses your personal statement) is $1,500/hour. Prioritize by dollars-per-hour, not dollar amount.",
-            "The scholarships that added the largest numbers to my total came from institutional merit awards, not external scholarships. External scholarships are real money but they're supplemental. Build your school list around schools with strong institutional merit aid first.",
+            "The scholarships that added the largest numbers to my total came from institutional merit awards. External scholarships add money but only as a supplement. Build your school list around schools with strong institutional merit aid first.",
           ],
           takeaways: [
             "Use multiple scholarship databases, don't rely on any single platform",
@@ -306,13 +305,13 @@ const MODULES: Module[] = [
         notes: {
           intro: [
             "Most families don't know that financial aid packages are negotiable. They treat the first offer as final. It almost never has to be. Schools want you, especially if you've been admitted, and the financial aid office has discretionary authority to adjust packages in response to competing offers or special circumstances.",
-            "The strongest leverage you have is a competing offer from a comparable school. 'University A offered me $X, which is $Y more per year than your offer. Is there anything you can do to match or get closer to that?' is a straightforward, professional request that schools are used to hearing. Have the competing offer in writing before you call.",
+            "Your strongest bargaining position is a competing offer from a comparable school. 'University A offered me $X, which is $Y more per year than your offer. Is there anything you can do to match or get closer to that?' is a straightforward, professional request that schools are used to hearing. Have the competing offer in writing before you call.",
             "Professional judgment appeals are for circumstances that changed after your FAFSA was filed, job loss, medical expenses, divorce, or other significant changes. These require documentation but can result in substantial increases to your aid package.",
             "When you call the financial aid office, be specific about what you're asking for, be polite, and get the name of the person you spoke with. Follow up in writing (email) to document the conversation. Don't be apologetic, you're not asking for a favor, you're having a business conversation.",
           ],
           takeaways: [
             "Financial aid packages are negotiable, always ask before accepting the first offer",
-            "A competing offer from a comparable school is the strongest leverage you have",
+            "A competing offer from a comparable school is your strongest bargaining position",
             "Professional judgment appeals work for significant changed circumstances after filing",
             "Call, be specific, use the person's name, and follow up in writing",
             "The worst they can say is no, and even then, you've demonstrated you take this seriously",
@@ -325,7 +324,7 @@ const MODULES: Module[] = [
     id: "module-6", num: "06", title: "The Final Stretch",
     lessons: [
       {
-        id: "6-1", moduleId: "module-6", title: "EA/ED strategy, when to commit early", duration: "11 min", format: "Camera", videoUrl: null,
+        id: "6-1", moduleId: "module-6", title: "EA/ED strategy: when to commit early", duration: "11 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
             "Early Action (EA) and Early Decision (ED) both have earlier deadlines (typically November 1 or November 15) but work very differently. EA is non-binding, you apply early, hear back earlier, and make your decision by May 1 like everyone else. ED is binding, if accepted, you commit to attending and withdraw all other applications.",
@@ -366,9 +365,70 @@ const MODULES: Module[] = [
 
 const ALL_LESSONS = MODULES.flatMap(m => m.lessons);
 
-const LAMPSTAND = { cellStyle: "outlined" as const, pvSize: 70, pvClearR: 58, ringStart: 70, ringEnd: 116, numRings: 7, ringFadeToCenter: true };
-
-// ─────────────────────────────────────────────────────────────────────────────
+const LESSON_CSS = `
+.lp { height: 100vh; height: 100dvh; display: flex; flex-direction: column; background: var(--bg); color: var(--fg); font-family: var(--font-body); overflow: hidden; }
+.lp-gate { min-height: 100vh; min-height: 100dvh; display: flex; align-items: center; justify-content: center; padding: 24px; background: var(--bg); color: var(--fg); font-family: var(--font-body); }
+.lp-gate__in { max-width: 400px; width: 100%; }
+.lp-gate img { display: block; margin-bottom: 24px; }
+.lp-gate h1, .lp-title { font-family: var(--font-display); font-weight: 600; color: var(--fg); line-height: 1.15; margin: 0; }
+.lp-gate h1 { font-size: 28px; margin-bottom: 10px; }
+.lp-gate p { color: var(--muted); line-height: 1.65; margin: 0 0 24px; font-size: 15px; }
+.lp-gate form { display: flex; flex-direction: column; gap: 12px; }
+.lp-gate .lp-help { font-size: 14px; margin: 20px 0 0; color: var(--subtle); }
+.lp-input { min-height: 48px; padding: 0 14px; font-size: 16px; font-family: inherit; background: var(--surface); border: 1px solid var(--line); border-radius: 0; color: var(--fg); outline: none; }
+.lp-input:focus { border-color: var(--gold); }
+.lp-input[aria-invalid="true"] { border-color: var(--danger); }
+.lp-error { color: var(--danger); font-size: 14px; margin: 0 !important; }
+.lp-btn { min-height: 44px; padding: 0 20px; font-size: 15px; font-weight: 600; font-family: inherit; background: none; border: 1px solid var(--line); border-radius: 0; color: var(--fg-2); cursor: pointer; }
+.lp-btn:hover:not(:disabled) { border-color: var(--gold); color: var(--gold-text); }
+.lp-btn:disabled { color: var(--subtle); cursor: default; }
+.lp-btn--primary { background: var(--gold); border-color: var(--gold); color: var(--bg); }
+.lp-btn--primary:hover:not(:disabled) { background: var(--gold-hover); border-color: var(--gold-hover); color: var(--bg); }
+.lp-btn--primary:disabled { background: none; border-color: var(--gold); color: var(--gold-text); }
+.lp-link { color: var(--gold-text); }
+.lp-top { min-height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 16px; border-bottom: 1px solid var(--line); flex-shrink: 0; }
+.lp-top__l { display: flex; align-items: center; gap: 16px; min-width: 0; font-size: 14px; }
+.lp-top__l a { color: var(--muted); text-decoration: none; }
+.lp-top__l a:hover { color: var(--gold-text); }
+.lp-top__l span { color: var(--subtle); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lp-top__pct { font-size: 14px; color: var(--gold-text); font-weight: 600; white-space: nowrap; }
+.lp-menu { display: none; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; background: none; border: 0; cursor: pointer; color: var(--fg); }
+.lp-body { flex: 1; display: flex; overflow: hidden; }
+.lp-side { display: flex; width: 280px; flex-direction: column; border-right: 1px solid var(--line); overflow-y: auto; flex-shrink: 0; background: var(--bg); }
+.lp-side__head { padding: 8px 8px 8px 16px; border-bottom: 1px solid var(--line); display: none; justify-content: space-between; align-items: center; font-size: 14px; color: var(--muted); }
+.lp-bar { height: 3px; background: var(--line); margin: 14px 16px; }
+.lp-bar i { display: block; height: 100%; background: var(--gold); }
+.lp-mod { padding: 14px 16px 6px; font-size: 14px; font-weight: 600; color: var(--fg-2); line-height: 1.35; }
+.lp-item { width: 100%; min-height: 44px; display: flex; align-items: center; gap: 10px; padding: 8px 16px; background: none; border: 0; border-left: 2px solid transparent; cursor: pointer; text-align: left; font-family: inherit; color: var(--muted); }
+.lp-item:hover { color: var(--gold-text); }
+.lp-item[aria-current="true"] { background: var(--surface); border-left-color: var(--gold); color: var(--fg); }
+.lp-item__t { font-size: 14px; line-height: 1.4; flex: 1; }
+.lp-item__m { font-size: 13px; color: var(--subtle); flex-shrink: 0; text-align: right; }
+.lp-item__m b { display: block; font-weight: 500; color: var(--gold-text); }
+.lp-main { flex: 1; overflow-y: auto; padding: 40px var(--gutter-r) 64px 40px; }
+.lp-col { max-width: 760px; }
+.lp-crumb { font-size: 14px; color: var(--muted); margin: 0 0 8px; }
+.lp-title { font-size: clamp(26px, 3.4vw, 36px); }
+.lp-meta { font-size: 14px; color: var(--subtle); margin: 12px 0 28px; }
+.lp-video { margin-bottom: 40px; }
+.lp-notes { border-top: 1px solid var(--line); padding-top: 32px; }
+.lp-notes h2 { font-family: var(--font-display); font-weight: 600; font-size: 22px; color: var(--fg); margin: 0 0 16px; }
+.lp-notes p { font-size: 17px; line-height: 1.75; color: var(--fg-2); margin: 0 0 16px; }
+.lp-notes ul { margin: 0 0 8px; padding-left: 20px; }
+.lp-notes li { font-size: 16px; line-height: 1.65; color: var(--fg); margin-bottom: 10px; padding-left: 4px; }
+.lp-notes li::marker { color: var(--gold); }
+.lp-notes h2 + ul { margin-top: 0; }
+.lp-notes .lp-gap { margin-top: 36px; }
+.lp-nav { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+@media (max-width: 860px) {
+  .lp-menu { display: flex; }
+  .lp-side { display: none; position: fixed; inset: 0; z-index: 200; width: 100%; }
+  .lp-side--open { display: flex; }
+  .lp-side__head { display: flex; }
+  .lp-main { padding: 24px var(--gutter-r) 48px var(--gutter); }
+  .lp-nav .lp-btn { flex: 1 1 140px; }
+}
+`;
 
 export default function LessonsPage() {
   const [gate, setGate]             = useState<GateState>("loading");
@@ -416,136 +476,75 @@ export default function LessonsPage() {
   const pct        = Math.round((progress.length / ALL_LESSONS.length) * 100);
   const done       = progress.includes(activeId);
 
-  // ── Loading ───────────────────────────────────────────────────────────────
-  if (gate === "loading") return <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)" }} />;
+  if (gate === "loading") return <div style={{ minHeight: "100vh", background: "var(--bg)" }} />;
 
-  // ── Gate ──────────────────────────────────────────────────────────────────
   if (gate === "locked") {
     return (
-      <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", display: "flex", alignItems: "center", justifyContent: "center", padding: "24px" }}>
-        <div style={{ maxWidth: "400px", width: "100%", textAlign: "center" }}>
-          <div style={{ display: "flex", justifyContent: "center", marginBottom: "28px" }}>
-            <PanopticonMark size={52} color="#d4af37" bg="var(--color-warm-bg)" cfg={LAMPSTAND} />
-          </div>
-          <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "10px" }}>
-            Course access
-          </h1>
-          <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "32px", lineHeight: 1.65, fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            Enter the access code from your purchase confirmation email.
-          </p>
-          <form onSubmit={handleCode} style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+      <div className="lp-gate">
+        <style>{LESSON_CSS}</style>
+        <div className="lp-gate__in">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/mark-foil.svg" alt="" width={52} height={52} />
+          <h1>Course access</h1>
+          <p>Enter the access code from your purchase confirmation email.</p>
+          <form onSubmit={handleCode}>
             <input
+              className="lp-input"
               type="text"
-              placeholder="ACCESS CODE"
+              aria-label="Access code"
+              aria-invalid={codeError}
+              placeholder="Access code"
+              autoComplete="off"
               value={codeInput}
               onChange={e => { setCodeInput(e.target.value); setCodeError(false); }}
-              style={{
-                padding: "13px 16px", fontSize: "14px", letterSpacing: "0.12em", textAlign: "center", textTransform: "uppercase",
-                background: "var(--color-warm-card)", border: `1px solid ${codeError ? "#e05c5c" : "var(--color-warm-border)"}`,
-                borderRadius: 6, color: "var(--color-warm-text)", outline: "none",
-                fontFamily: "var(--font-inter), sans-serif",
-              }}
             />
-            {codeError && (
-              <p style={{ fontSize: "12px", color: "#e05c5c", margin: 0, fontFamily: "var(--font-inter), sans-serif" }}>
-                That code isn't right, check your confirmation email.
-              </p>
-            )}
-            <button type="submit" style={{
-              padding: "13px", fontSize: "14px", fontWeight: 700,
-              background: "var(--color-warm-accent)", color: "var(--color-warm-bg)",
-              border: "none", borderRadius: 6, cursor: "pointer",
-              fontFamily: "var(--font-inter), sans-serif", letterSpacing: "0.06em",
-            }}>
-              Enter
-            </button>
+            {codeError && <p className="lp-error" role="alert">That code is wrong. Check your confirmation email.</p>}
+            <button type="submit" className="lp-btn lp-btn--primary">Enter</button>
           </form>
-          <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", marginTop: "20px", fontFamily: "var(--font-inter), sans-serif" }}>
-            No code? <a href="mailto:elijah@purcell-ventures.com" style={{ color: "var(--color-warm-accent)" }}>elijah@purcell-ventures.com</a>
-          </p>
+          <p className="lp-help">No code? Email <a className="lp-link" href="mailto:elijah@purcell-ventures.com">elijah@purcell-ventures.com</a></p>
         </div>
       </div>
     );
   }
 
-  // ── Course player ─────────────────────────────────────────────────────────
   return (
-    <div style={{ height: "100vh", display: "flex", flexDirection: "column", background: "var(--color-warm-bg)", overflow: "hidden" }}>
-      <style>{`
-        .lesson-sidebar { display: flex; }
-        .lesson-hamburger { display: none; }
-        @media (max-width: 767px) {
-          .lesson-sidebar { display: ${sidebarOpen ? "flex" : "none"}; position: fixed; inset: 0; z-index: 200; width: 100%; }
-          .lesson-hamburger { display: flex; }
-        }
-      `}</style>
+    <div className="lp">
+      <style>{LESSON_CSS}</style>
 
-      {/* Top bar */}
-      <div style={{ height: "50px", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 20px", borderBottom: "1px solid var(--color-warm-border)", flexShrink: 0, background: "var(--color-warm-bg)" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-          <button className="lesson-hamburger" onClick={() => setSidebarOpen(o => !o)} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--color-warm-text)", padding: "4px", alignItems: "center" }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+      <div className="lp-top">
+        <div className="lp-top__l">
+          <button className="lp-menu" aria-label="Open course menu" onClick={() => setSidebarOpen(o => !o)}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square">
               <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
             </svg>
           </button>
-          <Link href="/courses" style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", textDecoration: "none", fontFamily: "var(--font-inter), sans-serif" }}>
-            Courses
-          </Link>
-          <span style={{ fontSize: "12px", color: "var(--color-warm-text-light)", fontFamily: "var(--font-inter), sans-serif" }}>College Application Playbook</span>
+          <Link href="/courses">Courses</Link>
+          <span>College Application Playbook</span>
         </div>
-        <div style={{ fontSize: "12px", color: "var(--color-warm-accent)", fontFamily: "var(--font-inter), sans-serif", fontWeight: 600 }}>
-          {pct}% complete
-        </div>
+        <div className="lp-top__pct">{pct}% complete</div>
       </div>
 
-      {/* Body */}
-      <div style={{ flex: 1, display: "flex", overflow: "hidden" }}>
-
-        {/* Sidebar */}
-        <aside className="lesson-sidebar" style={{ width: 260, flexDirection: "column", borderRight: "1px solid var(--color-warm-border)", overflowY: "auto", flexShrink: 0, background: "var(--color-warm-bg)" }}>
-          {/* Mobile close */}
-          <div style={{ padding: "12px 16px", borderBottom: "1px solid var(--color-warm-border)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>COURSE MENU</span>
-            <button className="lesson-hamburger" onClick={() => setSidebarOpen(false)} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--color-warm-text-muted)", alignItems: "center" }}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      <div className="lp-body">
+        <aside className={`lp-side${sidebarOpen ? " lp-side--open" : ""}`} aria-label="Course menu">
+          <div className="lp-side__head">
+            <span>Course menu</span>
+            <button className="lp-menu" aria-label="Close course menu" onClick={() => setSidebarOpen(false)}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
           </div>
 
-          {/* Progress bar */}
-          <div style={{ padding: "12px 16px", borderBottom: "1px solid var(--color-warm-border)" }}>
-            <div style={{ height: 3, background: "var(--color-warm-border)", borderRadius: 2, overflow: "hidden" }}>
-              <div style={{ height: "100%", width: `${pct}%`, background: "var(--color-warm-accent)", transition: "width 0.3s" }} />
-            </div>
-          </div>
+          <div className="lp-bar" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100}><i style={{ width: `${pct}%` }} /></div>
 
-          {/* Module list */}
           {MODULES.map(m => (
             <div key={m.id}>
-              <div style={{ padding: "12px 16px 6px", fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", color: "var(--color-warm-text-light)", textTransform: "uppercase", fontFamily: "var(--font-inter), sans-serif" }}>
-                MODULE {m.num}: {m.title}
-              </div>
+              <div className="lp-mod">Module {parseInt(m.num, 10)}: {m.title}</div>
               {m.lessons.map(l => {
                 const isActive = l.id === activeId;
                 const isDone   = progress.includes(l.id);
                 return (
-                  <button key={l.id} onClick={() => selectLesson(l.id)} style={{
-                    width: "100%", display: "flex", alignItems: "center", gap: "10px",
-                    padding: "9px 16px", background: isActive ? "var(--color-warm-card)" : "none",
-                    borderLeft: `2px solid ${isActive ? "var(--color-warm-accent)" : "transparent"}`,
-                    border: "none", borderRight: "none", borderTop: "none", borderBottom: "none",
-                    cursor: "pointer", textAlign: "left",
-                  }}>
-                    <div style={{
-                      width: 8, height: 8, borderRadius: "50%", flexShrink: 0,
-                      background: isDone ? "var(--color-warm-accent)" : isActive ? "transparent" : "var(--color-warm-border)",
-                      border: isActive && !isDone ? `1.5px solid var(--color-warm-accent)` : "none",
-                    }} />
-                    <span style={{ fontSize: "12px", color: isActive ? "var(--color-warm-text)" : "var(--color-warm-text-muted)", lineHeight: 1.4, flex: 1, fontFamily: "var(--font-dm-sans), sans-serif" }}>
-                      {l.title}
-                    </span>
-                    <span style={{ fontSize: "10px", color: "var(--color-warm-text-light)", flexShrink: 0, fontFamily: "var(--font-inter), sans-serif" }}>
-                      {l.duration}
-                    </span>
+                  <button key={l.id} className="lp-item" aria-current={isActive} onClick={() => selectLesson(l.id)}>
+                    <span className="lp-item__t">{l.title}</span>
+                    <span className="lp-item__m">{isDone && <b>Done</b>}{l.duration}</span>
                   </button>
                 );
               })}
@@ -553,95 +552,34 @@ export default function LessonsPage() {
           ))}
         </aside>
 
-        {/* Main content */}
-        <main style={{ flex: 1, overflowY: "auto", padding: "40px" }}>
-          <div style={{ maxWidth: "760px" }}>
+        <main className="lp-main">
+          <div className="lp-col">
+            <p className="lp-crumb">Module {parseInt(mod.num, 10)}: {mod.title}</p>
+            <h1 className="lp-title">{lesson.title}</h1>
+            <p className="lp-meta">{lesson.format}, {lesson.duration}</p>
 
-            {/* Breadcrumb */}
-            <div style={{ display: "flex", gap: "8px", alignItems: "center", marginBottom: "24px", fontSize: "11px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>
-              <span>MODULE {mod.num}:</span>
-              <span style={{ color: "var(--color-warm-text)" }}>{lesson.title}</span>
-            </div>
-
-            {/* Lesson header */}
-            <div style={{ marginBottom: "28px" }}>
-              <div style={{ display: "flex", gap: "8px", marginBottom: "12px", flexWrap: "wrap" }}>
-                <span style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", padding: "3px 10px", background: "rgba(212,175,55,0.12)", border: "1px solid rgba(212,175,55,0.3)", borderRadius: 20, color: "var(--color-warm-accent)", fontFamily: "var(--font-inter), sans-serif" }}>
-                  {mod.title}
-                </span>
-                <span style={{ fontSize: "10px", padding: "3px 10px", border: "1px solid var(--color-warm-border)", borderRadius: 20, color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>
-                  {lesson.format}
-                </span>
-                <span style={{ fontSize: "10px", padding: "3px 10px", border: "1px solid var(--color-warm-border)", borderRadius: 20, color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>
-                  {lesson.duration}
-                </span>
-              </div>
-              <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(22px, 3vw, 30px)", fontWeight: 700, color: "var(--color-warm-text)", lineHeight: 1.2 }}>
-                {lesson.title}
-              </h1>
-            </div>
-
-            {/* Video */}
-            <div style={{ marginBottom: "40px" }}>
+            <div className="lp-video">
               <VideoEmbed url={lesson.videoUrl} title={lesson.title} />
             </div>
 
-            {/* Written notes */}
-            <div style={{ borderTop: "1px solid var(--color-warm-border)", paddingTop: "36px" }}>
-              <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "20px", fontFamily: "var(--font-inter), sans-serif" }}>
-                Lesson Notes
-              </div>
-              <div style={{ marginBottom: "32px" }}>
-                {lesson.notes.intro.map((p, i) => (
-                  <p key={i} style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.85, marginBottom: "16px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-                    {p}
-                  </p>
-                ))}
-              </div>
+            <div className="lp-notes">
+              <h2>Lesson notes</h2>
+              {lesson.notes.intro.map((p, i) => <p key={i}>{p}</p>)}
 
-              <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px", fontFamily: "var(--font-inter), sans-serif" }}>
-                Key Takeaways
-              </div>
-              <ul style={{ margin: 0, paddingLeft: 0, listStyle: "none" }}>
-                {lesson.notes.takeaways.map((t, i) => (
-                  <li key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start", marginBottom: "12px" }}>
-                    <div style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--color-warm-accent)", flexShrink: 0, marginTop: 8 }} />
-                    <span style={{ fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.65, fontFamily: "var(--font-dm-sans), sans-serif" }}>{t}</span>
-                  </li>
-                ))}
+              <h2 className="lp-gap">Key takeaways</h2>
+              <ul>
+                {lesson.notes.takeaways.map((t, i) => <li key={i}>{t}</li>)}
               </ul>
             </div>
 
-            {/* Bottom nav */}
-            <div style={{ marginTop: "48px", paddingTop: "24px", borderTop: "1px solid var(--color-warm-border)", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
-              <button
-                onClick={() => prevLesson && selectLesson(prevLesson.id)}
-                disabled={!prevLesson}
-                style={{ padding: "9px 18px", fontSize: "13px", fontWeight: 600, background: "none", border: "1px solid var(--color-warm-border)", borderRadius: 5, color: prevLesson ? "var(--color-warm-text-muted)" : "var(--color-warm-text-light)", cursor: prevLesson ? "pointer" : "not-allowed", fontFamily: "var(--font-inter), sans-serif" }}
-              >
+            <div className="lp-nav">
+              <button className="lp-btn" onClick={() => prevLesson && selectLesson(prevLesson.id)} disabled={!prevLesson}>
                 Previous
               </button>
-
-              <button
-                onClick={handleComplete}
-                disabled={done}
-                style={{
-                  padding: "9px 22px", fontSize: "13px", fontWeight: 700,
-                  background: done ? "none" : "var(--color-warm-accent)",
-                  color: done ? "var(--color-warm-accent)" : "var(--color-warm-bg)",
-                  border: `1px solid ${done ? "var(--color-warm-accent)" : "var(--color-warm-accent)"}`,
-                  borderRadius: 5, cursor: done ? "default" : "pointer",
-                  fontFamily: "var(--font-inter), sans-serif", letterSpacing: "0.04em",
-                }}
-              >
-                {done ? "✓ Completed" : "Mark Complete"}
+              <button className="lp-btn lp-btn--primary" onClick={handleComplete} disabled={done}>
+                {done ? "Completed" : "Mark complete"}
               </button>
-
-              <button
-                onClick={() => nextLesson && selectLesson(nextLesson.id)}
-                disabled={!nextLesson}
-                style={{ padding: "9px 18px", fontSize: "13px", fontWeight: 600, background: "none", border: "1px solid var(--color-warm-border)", borderRadius: 5, color: nextLesson ? "var(--color-warm-text-muted)" : "var(--color-warm-text-light)", cursor: nextLesson ? "pointer" : "not-allowed", fontFamily: "var(--font-inter), sans-serif" }}
-              >
+              <button className="lp-btn" onClick={() => nextLesson && selectLesson(nextLesson.id)} disabled={!nextLesson}>
                 Next lesson
               </button>
             </div>

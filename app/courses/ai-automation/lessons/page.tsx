@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import VideoEmbed from "@/app/components/VideoEmbed";
 
 const ACCESS_CODE = process.env.NEXT_PUBLIC_AUTOMATION_ACCESS_CODE ?? "AUTOMATE2026";
 const STORAGE_KEY  = "pv_automation_access";
@@ -24,7 +25,7 @@ The distinction between "more than once" and "follows a pattern" is important. M
 
 Walk through three real examples: the email bot, which replaced my habit of scanning my inbox every hour, a listing monitor, which replaced my weekly manual search for job leads, and an inbox harvester that turned what would have been two weeks of reading emails into a 20-minute automated run. In each case, the pattern was there long before I automated it. I just wasn't looking for it. The "more than once" rule trains you to start looking.
 
-The practical exercise for this lesson is to open your last week of work and count repetitions. Not tasks, repetitions. How many times did you do essentially the same thing? How much of your inbox management is classification? How many of your recurring tasks have an identifiable trigger (new email, new day, someone fills out a form)? That count is your automation backlog. Most people, when they first do this honestly, find they have ten to fifteen hours of automatable work per week. That's not a small number.`,
+The practical exercise for this lesson is to open your last week of work and count repetitions. Not tasks, repetitions. How many times did you do essentially the same thing? How much of your inbox management is classification? How many of your recurring tasks have an identifiable trigger (new email, new day, someone fills out a form)? That count is your automation backlog. Most people, when they first do this count, find they have ten to fifteen hours of automatable work per week. That's not a small number.`,
         takeaways: [
           "The 'more than once' rule: if it happens more than once and follows a pattern, it's a candidate",
           "Pattern = the steps are the same even when the specific data is different",
@@ -269,7 +270,7 @@ Whisper is OpenAI's speech recognition model. The local version (via the whisper
 
 Clip selection logic: take the transcript segments, group them into candidate clips of target length (30 to 90 seconds works well for YouTube), and score each candidate based on energy signals in the transcript, question marks, exclamation points, quotations, named entities, and high word density per second indicate more interesting content. The scoring is heuristic and imperfect, but "imperfect automated selection" is still faster than manual selection at scale.
 
-The clips/ready/ and clips/pending/ directories are the handoff between the download step and the commentary step. A clip in clips/pending/ has been selected and extracted but not yet processed. A clip in clips/ready/ has commentary and is waiting for assembly. This directory-based state management is crude but robust: you can inspect it with a file browser, manually move files between states, and the pipeline handles whatever state it finds on startup.`,
+The clips/ready/ and clips/pending/ directories are the handoff between the download step and the commentary step. A clip in clips/pending/ has been selected and extracted but not yet processed. A clip in clips/ready/ has commentary and is waiting for assembly. This directory-based state management is crude but sturdy: you can inspect it with a file browser, manually move files between states, and the pipeline handles whatever state it finds on startup.`,
         takeaways: [
           "yt-dlp: --format for quality, --no-playlist to avoid accidental full downloads, --cookies-from-browser for gated content",
           "Whisper-base is sufficient for commentary generation. Save whisper-large for caption accuracy",
@@ -399,7 +400,7 @@ The slash commands system is what makes it feel like a purpose-built tool rather
 
 The particle effects HUD is not functional, it's purely aesthetic. The personal AI has an animated particle overlay that reacts to voice input and AI processing states. Particles move faster when voice is detected, cluster when Claude is thinking, and disperse on response. This sounds frivolous, but it makes the tool feel more alive and easier to use. The UI isn't just a text box. When you're working with a tool for hours every day, whether it feels pleasant matters.
 
-The deeper point about personal AI tools: the best ones are deeply specific to the person who built them. A general-purpose AI assistant is less useful than one calibrated to your exact voice, your exact workflow, your exact slash commands. The investment in building something this personal pays back every day you use it. The tool took about two weeks to build and has already saved more than that in time. The willingness to build the personalized version instead of settling for the generic one is what separates people who get leverage from AI from people who just use it occasionally.`,
+The deeper point about personal AI tools: the best ones are deeply specific to the person who built them. A general-purpose AI assistant is less useful than one calibrated to your exact voice, your exact workflow, your exact slash commands. The investment in building something this personal pays back every day you use it. The tool took about two weeks to build and has already saved more than that in time. The willingness to build the personalized version instead of settling for the generic one is what separates people who get value from AI from people who just use it occasionally.`,
         takeaways: [
           "Electron overlay: always visible, no context-switch, Electron desktopCapturer for screen vision",
           "Web Speech API for voice input (browser-native, free), ElevenLabs for voice output",
@@ -543,7 +544,7 @@ The meta-skill this course builds is the ability to look at any repetitive workf
       {
         id: "8-2", title: "Turning tools into products, from personal use to sellable thing",
         duration: "12 min", format: "Camera",
-        notes: `Personal tools become products through one of three paths: you sell access to the tool (SaaS), you sell the knowledge of how to build it (course, which is what this is), or you sell the outcome the tool produces as a service (your time + the tool's leverage). The third path is the most underrated. My consulting practice started as tools I built for myself, the website builder, the CRM template, the lead gen system. Clients pay for the outcome. The tool is my leverage for delivering that outcome faster and more reliably.
+        notes: `Personal tools become products through one of three paths: you sell access to the tool (SaaS), you sell the knowledge of how to build it (course, which is what this is), or you sell the outcome the tool produces as a service (your time plus the tool). The third path is the most underrated. My consulting practice started as tools I built for myself, the website builder, the CRM template, the lead gen system. Clients pay for the outcome. The tool lets me deliver that outcome faster and more reliably.
 
 A personal tool becomes productizable when it has three properties: it solves a problem that more than one person has, its configuration is separable from its logic (so you can customize it per client without rewriting the code), and its inputs and outputs are clear enough to explain to someone who didn't build it. The YouTube pipeline fails the first test partially, most people don't need a three-times-daily automated upload pipeline. The Places lead gen tool passes all three. The email bot passes the first two but fails the third for non-technical clients (explaining OAuth2 and app passwords is a friction point).
 
@@ -621,198 +622,166 @@ export default function AutomationLessonsPage() {
   }
 
   if (gate === "loading") {
-    return <div style={{ minHeight: "100vh", background: "#0c0a08", display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <div style={{ width: 32, height: 32, border: "2px solid #d4af37", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.7s linear infinite" }} />
-      <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
-    </div>;
+    return <main className="lp-gate" aria-busy="true"><style dangerouslySetInnerHTML={{ __html: LP_CSS }} /><p className="lp-muted">Loading</p></main>;
   }
 
   if (gate === "locked") {
     return (
-      <div style={{ minHeight: "100vh", background: "#0c0a08", display: "flex", alignItems: "center", justifyContent: "center", padding: "24px" }}>
-        <div style={{ maxWidth: "380px", width: "100%", textAlign: "center" }}>
-          <p style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d4af37", marginBottom: "16px", fontFamily: "var(--font-inter), sans-serif" }}>
-            Zero to Automated
-          </p>
-          <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", fontWeight: 700, color: "#f5f0e0", marginBottom: "24px" }}>
-            Enter your access code
-          </h1>
-          <div style={{ display: "flex", gap: "8px" }}>
+      <main className="lp-gate">
+        <style dangerouslySetInnerHTML={{ __html: LP_CSS }} />
+        <form className="lp-gate__box" onSubmit={e => { e.preventDefault(); unlock(); }}>
+          <img src="/mark-foil.svg" alt="" width={48} height={48} />
+          <p className="lp-course">Zero to Automated</p>
+          <h1>Access code</h1>
+          <label htmlFor="lp-code" className="lp-muted">Your code is in your purchase confirmation.</label>
+          <div className="lp-row">
             <input
+              id="lp-code"
+              className="lp-input"
               type="text"
               placeholder="Access code"
               value={input}
               onChange={e => setInput(e.target.value)}
               onKeyDown={e => e.key === "Enter" && unlock()}
-              style={{
-                flex: 1, padding: "11px 14px", background: "#1a1710", border: `1px solid ${error ? "#c0392b" : "#3a3530"}`,
-                borderRadius: 4, fontSize: "14px", color: "#f5f0e0",
-                fontFamily: "var(--font-dm-sans), sans-serif", outline: "none",
-              }}
+              aria-invalid={error}
+              autoComplete="off"
             />
-            <button onClick={unlock} style={{
-              padding: "11px 20px", background: "#d4af37", border: "none", borderRadius: 4,
-              fontSize: "13px", fontWeight: 700, color: "#0c0a08", cursor: "pointer",
-              fontFamily: "var(--font-inter), sans-serif", letterSpacing: "0.06em",
-            }}>
-              Enter
-            </button>
+            <button type="submit" className="lp-btn lp-btn--solid">Enter</button>
           </div>
-          {error && <p style={{ fontSize: "13px", color: "#c0392b", marginTop: "10px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            Invalid access code. Check your purchase confirmation.
-          </p>}
-          <p style={{ fontSize: "12px", color: "#524d45", marginTop: "16px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            Don&apos;t have the course? <a href="/courses/ai-automation" style={{ color: "#d4af37", textDecoration: "none" }}>View course details</a>
-          </p>
-        </div>
-      </div>
+          {error && <p className="lp-error" role="alert">That code did not match. Check your purchase confirmation.</p>}
+          <p className="lp-muted">Do not have the course yet? <a href="/courses/ai-automation">See the course details</a></p>
+        </form>
+      </main>
     );
   }
 
   const currentLesson = TOTAL_LESSONS.find(l => l.id === currentId) ?? TOTAL_LESSONS[0];
   const currentIndex = TOTAL_LESSONS.findIndex(l => l.id === currentId);
   const progressPct = Math.round((completed.size / TOTAL_LESSONS.length) * 100);
+  const isDone = completed.has(currentLesson.id);
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0c0a08", display: "flex", flexDirection: "column" }}>
-      {/* Top bar */}
-      <div style={{ height: "52px", background: "#0c0a08", borderBottom: "1px solid #2e2820", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 20px", flexShrink: 0 }}>
-        <a href="/courses/ai-automation" style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "13px", fontWeight: 700, color: "#d4af37", textDecoration: "none", letterSpacing: "0.08em" }}>
-          Zero to Automated
+    <div className="lp">
+      <style dangerouslySetInnerHTML={{ __html: LP_CSS }} />
+      <header className="lp-top">
+        <a href="/courses/ai-automation" className="lp-brand">
+          <img src="/mark-foil.svg" alt="" width={28} height={28} />
+          <span>Zero to Automated</span>
         </a>
-        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-          <div style={{ fontSize: "12px", color: "#524d45", fontFamily: "var(--font-inter), sans-serif" }}>
-            {completed.size}/{TOTAL_LESSONS.length} complete
-          </div>
-          <div style={{ width: "80px", height: "4px", background: "#2e2820", borderRadius: 2, overflow: "hidden" }}>
-            <div style={{ width: `${progressPct}%`, height: "100%", background: "#d4af37", borderRadius: 2, transition: "width 0.3s" }} />
+        <div className="lp-progress">
+          <span>{completed.size} of {TOTAL_LESSONS.length} complete</span>
+          <div className="lp-bar" role="progressbar" aria-valuenow={progressPct} aria-valuemin={0} aria-valuemax={100}>
+            <div style={{ width: `${progressPct}%` }} />
           </div>
         </div>
-      </div>
+      </header>
 
-      <div style={{ display: "flex", flex: 1, overflow: "hidden" }}>
-        {/* Sidebar */}
-        <div style={{ width: "280px", flexShrink: 0, borderRight: "1px solid #2e2820", overflowY: "auto", background: "#0e0c09" }}>
-          {MODULES.map(mod => (
-            <div key={mod.num}>
-              <div style={{ padding: "14px 16px 8px", borderBottom: "1px solid #1a1710" }}>
-                <span style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#d4af37", fontFamily: "var(--font-inter), sans-serif" }}>
-                  {mod.num}: {mod.title}
-                </span>
+      <div className="lp-body">
+        <nav className="lp-side" aria-label="Lessons">
+          <details className="lp-side__details" open>
+            <summary>All lessons</summary>
+            {MODULES.map(mod => (
+              <div key={mod.num}>
+                <p className="lp-mod">Module {Number(mod.num)}. {mod.title}</p>
+                {mod.lessons.map(lesson => {
+                  const active = lesson.id === currentId;
+                  const done = completed.has(lesson.id);
+                  return (
+                    <button key={lesson.id} onClick={() => selectLesson(lesson.id)} className={`lp-item${active ? " is-active" : ""}`} aria-current={active ? "true" : undefined}>
+                      <span className={`lp-dot${done ? " is-done" : ""}`} aria-hidden="true" />
+                      <span>{lesson.title}{done && <span className="lp-sr"> (complete)</span>}</span>
+                    </button>
+                  );
+                })}
               </div>
-              {mod.lessons.map(lesson => {
-                const isActive = lesson.id === currentId;
-                const isDone = completed.has(lesson.id);
-                return (
-                  <button key={lesson.id} onClick={() => selectLesson(lesson.id)} style={{
-                    width: "100%", textAlign: "left", padding: "10px 16px",
-                    background: isActive ? "#1a1710" : "transparent",
-                    border: "none", cursor: "pointer",
-                    borderLeft: isActive ? "2px solid #d4af37" : "2px solid transparent",
-                    display: "flex", alignItems: "center", gap: "8px",
-                  }}>
-                    <span style={{
-                      width: 14, height: 14, borderRadius: "50%",
-                      border: `1.5px solid ${isDone ? "#d4af37" : "#3a3530"}`,
-                      background: isDone ? "#d4af37" : "transparent",
-                      flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center",
-                    }}>
-                      {isDone && <span style={{ fontSize: "8px", color: "#0c0a08", fontWeight: 900 }}>✓</span>}
-                    </span>
-                    <span style={{ fontSize: "12px", color: isActive ? "#f5f0e0" : "#7a756d", fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.4 }}>
-                      {lesson.title}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-          ))}
-        </div>
+            ))}
+          </details>
+        </nav>
 
-        {/* Main content */}
-        <div style={{ flex: 1, overflowY: "auto", padding: "48px 48px 80px" }}>
-          <div style={{ maxWidth: "760px" }}>
-            {/* Lesson header */}
-            <div style={{ marginBottom: "32px" }}>
-              <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#d4af37", marginBottom: "10px", fontFamily: "var(--font-inter), sans-serif" }}>
-                Lesson {currentLesson.id}, {currentLesson.duration}, {currentLesson.format}
-              </div>
-              <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 700, color: "#f5f0e0", lineHeight: 1.15, marginBottom: "0" }}>
-                {currentLesson.title}
-              </h1>
-            </div>
+        <main className="lp-main">
+          <div className="lp-col">
+            <p className="lp-meta">Lesson {currentLesson.id}, {currentLesson.duration}, {currentLesson.format}</p>
+            <h1>{currentLesson.title}</h1>
 
-            {/* Video placeholder */}
-            <div style={{ background: "#131007", border: "1px solid #2e2820", borderRadius: 6, aspectRatio: "16/9", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "40px" }}>
-              <div style={{ textAlign: "center" }}>
-                <div style={{ width: 48, height: 48, borderRadius: "50%", border: "2px solid #3a3530", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 12px" }}>
-                  <div style={{ width: 0, height: 0, borderTop: "8px solid transparent", borderBottom: "8px solid transparent", borderLeft: "14px solid #524d45", marginLeft: "3px" }} />
-                </div>
-                <p style={{ fontSize: "13px", color: "#524d45", fontFamily: "var(--font-dm-sans), sans-serif" }}>Video coming soon</p>
-              </div>
-            </div>
+            <VideoEmbed url={null} title={currentLesson.title} />
 
-            {/* Lesson notes */}
-            <div style={{ marginBottom: "40px" }}>
-              <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "14px", fontWeight: 700, color: "#d4af37", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "20px" }}>
-                Lesson Notes
-              </h2>
-              {currentLesson.notes.split("\n\n").map((para, i) => (
-                <p key={i} style={{ fontSize: "15px", color: "#c8c2b6", lineHeight: 1.85, marginBottom: "20px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-                  {para}
-                </p>
-              ))}
-            </div>
+            <section className="lp-notes">
+              <h2>Lesson notes</h2>
+              {currentLesson.notes.split("\n\n").map((para, i) => <p key={i}>{para}</p>)}
+            </section>
 
-            {/* Takeaways */}
-            <div style={{ background: "#0e0c09", border: "1px solid #2e2820", borderRadius: 6, padding: "28px", marginBottom: "40px" }}>
-              <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "13px", fontWeight: 700, color: "#d4af37", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "16px" }}>
-                Key Takeaways
-              </h2>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                {currentLesson.takeaways.map((t, i) => (
-                  <li key={i} style={{ display: "flex", gap: "10px", alignItems: "flex-start", padding: "8px 0", borderBottom: i < currentLesson.takeaways.length - 1 ? "1px solid #1a1710" : "none" }}>
-                    <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#d4af37", flexShrink: 0, marginTop: "8px" }} />
-                    <span style={{ fontSize: "13px", color: "#9a9490", fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.65 }}>{t}</span>
-                  </li>
-                ))}
+            <section className="lp-take">
+              <h2>Key takeaways</h2>
+              <ul>
+                {currentLesson.takeaways.map((t, i) => <li key={i}>{t}</li>)}
               </ul>
-            </div>
+            </section>
 
-            {/* Navigation */}
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", borderTop: "1px solid #2e2820", paddingTop: "28px" }}>
-              <button onClick={goPrev} disabled={currentIndex === 0} style={{
-                padding: "10px 20px", background: "transparent", border: "1px solid #3a3530",
-                borderRadius: 4, fontSize: "13px", color: currentIndex === 0 ? "#3a3530" : "#9a9490",
-                cursor: currentIndex === 0 ? "not-allowed" : "pointer",
-                fontFamily: "var(--font-inter), sans-serif", fontWeight: 600,
-              }}>
-                Previous
+            <div className="lp-nav">
+              <button onClick={goPrev} disabled={currentIndex === 0} className="lp-btn">Previous</button>
+              <button onClick={() => toggleComplete(currentLesson.id)} className={`lp-btn ${isDone ? "" : "lp-btn--solid"}`}>
+                {isDone ? "Mark incomplete" : "Mark complete"}
               </button>
-
-              <button onClick={() => toggleComplete(currentLesson.id)} style={{
-                padding: "10px 24px",
-                background: completed.has(currentLesson.id) ? "transparent" : "#d4af37",
-                border: `1px solid ${completed.has(currentLesson.id) ? "#d4af37" : "#d4af37"}`,
-                borderRadius: 4, fontSize: "13px", fontWeight: 700,
-                color: completed.has(currentLesson.id) ? "#d4af37" : "#0c0a08",
-                cursor: "pointer", fontFamily: "var(--font-inter), sans-serif", letterSpacing: "0.06em",
-              }}>
-                {completed.has(currentLesson.id) ? "Mark Incomplete" : "Mark Complete"}
-              </button>
-
-              <button onClick={goNext} disabled={currentIndex === TOTAL_LESSONS.length - 1} style={{
-                padding: "10px 20px", background: "transparent", border: "1px solid #3a3530",
-                borderRadius: 4, fontSize: "13px", color: currentIndex === TOTAL_LESSONS.length - 1 ? "#3a3530" : "#9a9490",
-                cursor: currentIndex === TOTAL_LESSONS.length - 1 ? "not-allowed" : "pointer",
-                fontFamily: "var(--font-inter), sans-serif", fontWeight: 600,
-              }}>
-                Next
-              </button>
+              <button onClick={goNext} disabled={currentIndex === TOTAL_LESSONS.length - 1} className="lp-btn">Next</button>
             </div>
           </div>
-        </div>
+        </main>
       </div>
     </div>
   );
 }
+
+const LP_CSS = `
+.lp, .lp-gate { background: var(--bg); color: var(--fg-2); font-family: var(--font-body); min-height: 100vh; }
+.lp h1, .lp h2, .lp-gate h1 { font-family: var(--font-display); color: var(--fg); font-weight: 600; margin: 0; }
+.lp-gate { display: flex; align-items: center; justify-content: center; padding: 24px; }
+.lp-gate__box { width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 14px; }
+.lp-gate h1 { font-size: 30px; line-height: 1.15; }
+.lp-course { font-family: var(--font-display); color: var(--gold-text); font-size: 17px; margin: 0; }
+.lp-muted { color: var(--muted); font-size: 14px; margin: 0; line-height: 1.5; }
+.lp-muted a { color: var(--gold-text); }
+.lp-error { color: var(--danger); font-size: 14px; margin: 0; }
+.lp-row { display: flex; gap: 8px; }
+.lp-input { flex: 1; min-width: 0; min-height: 44px; padding: 0 14px; background: var(--surface); border: 1px solid var(--line); color: var(--fg); font: inherit; font-size: 16px; border-radius: 0; }
+.lp-input:focus-visible, .lp-btn:focus-visible, .lp-item:focus-visible, .lp-side summary:focus-visible { outline: 2px solid var(--gold-text); outline-offset: 2px; }
+.lp-input[aria-invalid="true"] { border-color: var(--danger); }
+.lp-btn { min-height: 44px; padding: 0 20px; background: transparent; border: 1px solid var(--line); color: var(--fg-2); font: inherit; font-weight: 600; font-size: 15px; cursor: pointer; border-radius: 0; transition: color .15s, border-color .15s, background-color .15s; }
+.lp-btn:hover:not(:disabled) { border-color: var(--gold); color: var(--gold-text); }
+.lp-btn:disabled { color: var(--subtle); opacity: .5; cursor: not-allowed; }
+.lp-btn--solid { background: var(--gold); border-color: var(--gold); color: var(--bg); }
+.lp-btn--solid:hover:not(:disabled) { background: var(--gold-hover); border-color: var(--gold-hover); color: var(--bg); }
+.lp-top { min-height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 8px 20px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.lp-brand { display: flex; align-items: center; gap: 10px; color: var(--gold-text); text-decoration: none; font-family: var(--font-display); font-weight: 600; font-size: 17px; min-height: 44px; }
+.lp-progress { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--muted); }
+.lp-bar { width: 96px; height: 4px; background: var(--line); }
+.lp-bar > div { height: 100%; background: var(--gold); transition: width .3s; }
+.lp-body { display: flex; align-items: flex-start; }
+.lp-side { width: 300px; flex-shrink: 0; border-right: 1px solid var(--line); background: var(--surface); position: sticky; top: 0; max-height: 100vh; overflow-y: auto; }
+.lp-side summary { display: none; }
+.lp-mod { margin: 0; padding: 18px 16px 8px; font-family: var(--font-display); font-size: 15px; color: var(--gold-text); }
+.lp-item { width: 100%; min-height: 44px; text-align: left; padding: 10px 16px; background: transparent; border: 0; border-left: 2px solid transparent; color: var(--muted); font: inherit; font-size: 14px; line-height: 1.4; display: flex; gap: 10px; align-items: flex-start; cursor: pointer; transition: color .15s; }
+.lp-item:hover { color: var(--fg); }
+.lp-item.is-active { background: var(--surface-2); border-left-color: var(--gold); color: var(--fg); }
+.lp-dot { width: 14px; height: 14px; margin-top: 3px; border: 1.5px solid var(--subtle); border-radius: 50%; flex-shrink: 0; }
+.lp-dot.is-done { background: var(--gold); border-color: var(--gold); }
+.lp-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.lp-main { flex: 1; min-width: 0; padding: 48px 48px 80px; }
+.lp-col { max-width: 760px; }
+.lp-meta { margin: 0 0 8px; color: var(--muted); font-size: 15px; }
+.lp-col h1 { font-size: clamp(24px, 3.4vw, 34px); line-height: 1.15; margin-bottom: 28px; }
+.lp-notes { margin-top: 36px; }
+.lp-notes h2, .lp-take h2 { font-size: 22px; margin-bottom: 16px; }
+.lp-notes p { font-size: 17px; line-height: 1.75; color: var(--fg-2); margin: 0 0 20px; overflow-wrap: anywhere; }
+.lp-take { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
+.lp-take ul { margin: 0; padding-left: 20px; }
+.lp-take li { font-size: 16px; line-height: 1.65; color: var(--fg-2); padding: 4px 0; }
+.lp-nav { display: flex; gap: 12px; justify-content: space-between; flex-wrap: wrap; border-top: 1px solid var(--line); margin-top: 40px; padding-top: 28px; }
+@media (max-width: 860px) {
+  .lp-body { flex-direction: column; }
+  .lp-side { width: 100%; position: static; max-height: none; border-right: 0; border-bottom: 1px solid var(--line); }
+  .lp-side summary { display: flex; align-items: center; min-height: 48px; padding: 0 16px; cursor: pointer; font-weight: 600; color: var(--fg); }
+  .lp-side__details:not([open]) > :not(summary) { display: none; }
+  .lp-main { padding: 28px 20px 64px; }
+  .lp-nav .lp-btn { flex: 1 1 auto; }
+}
+`;

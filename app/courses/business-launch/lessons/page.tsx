@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import VideoEmbed from "@/app/components/VideoEmbed";
-import { PanopticonMark } from "@/app/components/PanopticonMark";
 
 const VALID_CODE = process.env.NEXT_PUBLIC_BUSINESS_ACCESS_CODE ?? "BUSINESS2026";
 type GateState = "loading" | "locked" | "unlocked";
@@ -32,10 +31,10 @@ const MODULES: Module[] = [
         id: "1-1", moduleId: "module-1", title: "Is your idea a business or a hobby?", duration: "11 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
-            "Most people who want to start a business already have an idea. The problem isn't the idea, it's that they can't tell whether it's a real business or a thing they like doing. These are not the same thing, and confusing them is the most common reason people spend months building something nobody pays for.",
+            "Most people who want to start a business already have an idea. The idea is rarely the problem. The problem is that they can't tell whether it's a real business or a thing they like doing. These are not the same thing, and confusing them is the most common reason people spend months building something nobody pays for.",
             "A business solves a problem someone else has and is willing to pay to fix. A hobby solves a problem you have and enjoy working on. The test is simple: would someone hand you money for this without you being their friend, their family member, or someone they feel obligated to support? If you have to imagine a sympathetic buyer, you have a hobby.",
             "There's also the lifestyle trap, people build a 'business' around something they love without ever asking whether the market values it. A passion for something is not evidence of demand. It's evidence that you would enjoy doing the work. Enjoyment and market demand occasionally overlap, but they're independent variables. Build around demand first, and find ways to enjoy the work second.",
-            "The good news: this distinction is testable before you spend a dime. In the next lesson, we'll build your customer profile. In Lesson 1-3, you'll validate whether people will pay. But you have to start by being honest with yourself here, if this is a hobby, that's fine. The course will still help you build systems around it. But don't call it a business until the market confirms it.",
+            "The good news: this distinction is testable before you spend a dime. In the next lesson, you will build your customer profile. In Lesson 1-3, you'll validate whether people will pay. But you have to start by being honest with yourself here, if this is a hobby, that's fine. The course will still help you build systems around it. But don't call it a business until the market confirms it.",
           ],
           takeaways: [
             "A business solves someone else's problem at a price they'll pay, not just something you enjoy doing",
@@ -47,11 +46,11 @@ const MODULES: Module[] = [
         },
       },
       {
-        id: "1-2", moduleId: "module-1", title: "Who exactly is your customer, market research done simply", duration: "13 min", format: "Camera + Screen", videoUrl: null,
+        id: "1-2", moduleId: "module-1", title: "Who your customer is: market research that stays simple", duration: "13 min", format: "Camera + Screen", videoUrl: null,
         notes: {
           intro: [
             "Most founders can describe their product in detail and their customer in vague generalities. 'Anyone who wants X' is not a customer profile, it's an avoidance of the question. The sharper your customer definition, the more effective every subsequent decision is: your messaging, your pricing, your outreach, your offer structure.",
-            "A real customer profile has three layers. First: demographics and situation, who they are, what they do, what stage of life or business they're in. Second: the problem they have, specifically, not abstractly. Not 'they want to grow their business' but 'they're spending 15 hours a week on a task they hate and know they should delegate but don't know how.' Third: their trigger, what's happening in their life right now that makes them willing to buy a solution today. People buy when the problem becomes urgent.",
+            "A real customer profile has three layers. First: demographics and situation, who they are, what they do, what stage of life or business they're in. Second: the problem they have, specifically, not abstractly. Write 'they're spending 15 hours a week on a task they hate and know they should delegate but don't know how.' Third: their trigger, what's happening in their life right now that makes them willing to buy a solution today. People buy when the problem becomes urgent.",
             "The best market research is primary: actual conversations with people who fit your target profile. Five conversations will tell you more than 50 hours of reading industry reports. Ask them to describe the problem in their own words. Where do they look for solutions? What have they tried? What did it cost? What didn't work about it? You're not pitching yet, you're listening. The words they use to describe their problem become your marketing copy.",
             "The Customer Profile worksheet in your resource pack structures these conversations and organizes your findings into a single document you'll reference throughout the course. Fill it in after your first five conversations. It will be wrong in some ways, that's expected. You'll update it as you learn more.",
           ],
@@ -85,13 +84,13 @@ const MODULES: Module[] = [
         },
       },
       {
-        id: "1-4", moduleId: "module-1", title: "Choosing your model, service, product, digital, or hybrid", duration: "10 min", format: "Camera", videoUrl: null,
+        id: "1-4", moduleId: "module-1", title: "Choosing your model: service, product, digital or hybrid", duration: "10 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
             "Your business model determines how you make money, how much time you trade per dollar, and what your ceiling looks like. Choosing the wrong model for your situation, even with a great idea, creates structural problems you'll spend years trying to fix. Get this decision right early.",
             "Service businesses trade time for money. You do something for a client and they pay you for it. The upside: fast to start, low overhead, high margins on your time, direct customer feedback. The downside: limited by hours in the day, hard to scale without hiring, and client-dependent income. If you need revenue quickly and have a marketable skill, start here.",
             "Product businesses build something once and sell it many times. Physical products have manufacturing, inventory, and shipping complexity. Digital products, courses, templates, software tools, ebooks, have near-zero marginal cost and can scale indefinitely. The tradeoff is upfront investment: you build before you sell, which requires more certainty about demand. This is why Module 1 spends time on validation before you get here.",
-            "Hybrid models combine both. Purcell Ventures runs consulting (service), courses (digital product), and software (product). The services fund the early stage while the products scale. If you have the capacity, a hybrid gives you both the cash flow of services and the leverage of products. Build the service business first, let it validate your expertise and your market, then productize what you've learned.",
+            "Hybrid models combine both. Purcell Ventures runs consulting (service), courses (digital product), and software (product). The services fund the early stage while the products scale. If you have the capacity, a hybrid gives you both the cash flow of services and the scale of products. Build the service business first, let it validate your expertise and your market, then productize what you've learned.",
           ],
           takeaways: [
             "Services: fast to start, high margin per hour, limited by time, best if you need revenue now",
@@ -106,7 +105,7 @@ const MODULES: Module[] = [
     ],
   },
   {
-    id: "module-2", num: "02", title: "Legal & Structure",
+    id: "module-2", num: "02", title: "Legal and structure",
     lessons: [
       {
         id: "2-1", moduleId: "module-2", title: "Sole prop vs LLC: when each makes sense", duration: "9 min", format: "Camera", videoUrl: null,
@@ -164,7 +163,7 @@ const MODULES: Module[] = [
         },
       },
       {
-        id: "2-4", moduleId: "module-2", title: "Contracts and protecting yourself, scope, payment, disputes", duration: "11 min", format: "Camera", videoUrl: null,
+        id: "2-4", moduleId: "module-2", title: "Contracts and protecting yourself: scope, payment and disputes", duration: "11 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
             "Most early-stage business problems, scope creep, unpaid invoices, dispute escalations, could have been prevented with a clear contract signed before the work started. Contracts aren't about distrust. They're about alignment. A good contract forces both parties to think through the details before they become problems.",
@@ -185,10 +184,10 @@ const MODULES: Module[] = [
     ],
   },
   {
-    id: "module-3", num: "03", title: "Money, Pricing & Banking",
+    id: "module-3", num: "03", title: "Money, pricing and banking",
     lessons: [
       {
-        id: "3-1", moduleId: "module-3", title: "Opening a business bank account, why and how", duration: "10 min", format: "Screen share", videoUrl: null,
+        id: "3-1", moduleId: "module-3", title: "Opening a business bank account: why and how", duration: "10 min", format: "Screen share", videoUrl: null,
         notes: {
           intro: [
             "A separate business bank account is not optional if you have an LLC. Mixing personal and business finances, paying business expenses from your personal account, depositing client payments into your personal account, is called 'piercing the corporate veil.' It undermines the legal separation your LLC is supposed to provide. If you're ever sued, a court can look at your finances and decide the LLC and you were never really separate, removing your liability protection.",
@@ -206,13 +205,13 @@ const MODULES: Module[] = [
         },
       },
       {
-        id: "3-2", moduleId: "module-3", title: "Pricing your offer, the math and the psychology", duration: "13 min", format: "Camera", videoUrl: null,
+        id: "3-2", moduleId: "module-3", title: "Pricing your offer: the math and the psychology", duration: "13 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
             "Most people price by asking 'what would I be comfortable charging?' That's the wrong question. It produces prices based on your insecurity, not on the value you deliver. The right questions are: what is this worth to the buyer? What does the alternative cost them? What are comparable solutions priced at? Your price is a claim about value, make sure the claim is honest and defensible.",
             "For service businesses: start with cost-plus pricing to establish a floor (your cost of time × your minimum acceptable hourly rate), then check that floor against market rates. If the market pays more than your floor, move toward market rate. If the market pays significantly more than that, you have room to price on value, charge based on outcomes delivered, not hours spent. A contract lawyer doesn't charge you by how long it takes to draft a document. They charge by the value of the legal protection.",
             "The Pricing Calculator in your resource pack handles the floor calculation and projects revenue at different rates and volumes. Use it before setting your first price. The psychological reality: most new founders underprice by 30 to 50% because they're afraid of rejection. A higher price reduces the number of clients you need, attracts more serious buyers, and gives you margin to over-deliver. Cheap pricing signals low confidence and attracts the clients most likely to cause problems.",
-            "Test your price by making an offer. If everyone says yes immediately, you're probably underpriced. If nobody engages at all, you may have a messaging problem or a real price mismatch. If some people say yes and some say no, you're in the right range. The goal isn't to be the cheapest option, it's to be the right option for the right client at a price that reflects what you deliver.",
+            "Test your price by making an offer. If everyone says yes immediately, you're probably underpriced. If nobody engages at all, you may have a messaging problem or a real price mismatch. If some people say yes and some say no, you're in the right range. The goal is to be the right option for the right client at a price that reflects what you deliver.",
           ],
           takeaways: [
             "Price based on value delivered to the buyer, not on what you're comfortable charging",
@@ -225,7 +224,7 @@ const MODULES: Module[] = [
         },
       },
       {
-        id: "3-3", moduleId: "module-3", title: "Invoicing, Stripe, and collecting actual money", duration: "11 min", format: "Screen share", videoUrl: null,
+        id: "3-3", moduleId: "module-3", title: "Invoicing, Stripe and getting paid", duration: "11 min", format: "Screen share", videoUrl: null,
         notes: {
           intro: [
             "Getting paid is the part most people don't think through until they have their first client ready to pay and no way to collect. Don't improvise this. Set up your payment infrastructure before you have your first sale.",
@@ -243,11 +242,11 @@ const MODULES: Module[] = [
         },
       },
       {
-        id: "3-4", moduleId: "module-3", title: "Taxes, bookkeeping, and cash flow, year one survival guide", duration: "13 min", format: "Screen share", videoUrl: null,
+        id: "3-4", moduleId: "module-3", title: "Taxes, bookkeeping and cash flow in year one", duration: "13 min", format: "Screen share", videoUrl: null,
         notes: {
           intro: [
             "Most first-time business owners get blindsided by taxes. As a sole proprietor or single-member LLC, your business income flows through to your personal taxes, but unlike a W-2 employee, nobody is withholding anything. You're responsible for setting aside money for taxes yourself, including self-employment tax (15.3% on net income), on top of income tax. The common mistake is spending all your revenue assuming it's profit. It isn't.",
-            "The rule of thumb for year one: set aside 25 to 30% of every dollar of profit for taxes. This isn't precise, it depends on your income level, deductions, and state tax rate, but it prevents the scenario where you owe $8,000 in April and have $400 in the account. Open a dedicated savings account for tax reserves and move that percentage every time you get paid.",
+            "The rule of thumb for year one: set aside 25 to 30% of every dollar of profit for taxes. The exact figure depends on your income level, deductions and state tax rate, but this rule prevents the scenario where you owe $8,000 in April and have $400 in the account. Open a dedicated savings account for tax reserves and move that percentage every time you get paid.",
             "Quarterly estimated taxes: if you expect to owe more than $1,000 in taxes for the year, the IRS requires you to pay in quarterly installments (April 15, June 15, September 15, January 15). Missing these payments results in underpayment penalties. Your first year, an accountant or CPA is worth the cost, typically $200 to $500 for a simple business return, to make sure you set this up correctly.",
             "Basic bookkeeping is just tracking money in and money out. You need to know: total revenue, total expenses by category, net profit, and outstanding receivables. Wave is free and handles this well for small businesses. QuickBooks is more powerful but costs $30+/month. Connect your business bank account so transactions import automatically, categorize them consistently, and reconcile monthly. Doing this in real time throughout the year makes tax season a non-event instead of a crisis.",
           ],
@@ -264,7 +263,7 @@ const MODULES: Module[] = [
     ],
   },
   {
-    id: "module-4", num: "04", title: "Brand & Presence",
+    id: "module-4", num: "04", title: "Brand and presence",
     lessons: [
       {
         id: "4-1", moduleId: "module-4", title: "Your brand: name, positioning and what you stand for", duration: "13 min", format: "Camera", videoUrl: null,
@@ -286,7 +285,7 @@ const MODULES: Module[] = [
         },
       },
       {
-        id: "4-2", moduleId: "module-4", title: "Your digital presence, website vs social vs both", duration: "12 min", format: "Camera + Screen", videoUrl: null,
+        id: "4-2", moduleId: "module-4", title: "Your digital presence: website, social or both", duration: "12 min", format: "Camera + Screen", videoUrl: null,
         notes: {
           intro: [
             "You don't need a website to start a business. You need clients. The mistake most new founders make is spending the first two weeks building a website instead of the first two weeks building pipeline. A website is a long-term asset. A client is immediate validation and revenue. Do the outreach first.",
@@ -309,7 +308,7 @@ const MODULES: Module[] = [
         notes: {
           intro: [
             "Content marketing is a long game that pays compounding returns. One piece of useful content, a video, an article, a guide, can bring inbound leads for months or years. But 'content' is a broad word that gets used to justify a lot of activity that produces no results. The question is not 'should I make content?' The question is 'what piece of content would make my target customer trust me enough to reach out?'",
-            "The highest-value content answers a question your customer is already asking. Not a question you want to answer, but a question they're actively searching for, talking about, or struggling with. Your customer profile work from Lesson 1-2 tells you what those questions are. A single detailed, honest answer to one of those questions, published where your customers will find it, is more valuable than fifty generic posts.",
+            "The highest-value content answers a question your customer is already asking. Pick a question they are actively searching for, talking about or struggling with, whether or not you want to answer it. Your customer profile work from Lesson 1-2 tells you what those questions are. A single detailed, honest answer to one of those questions, published where your customers will find it, is more valuable than fifty generic posts.",
             "For service businesses: a case study or before/after story about a problem you solved (even informally, before you had formal clients) is your most powerful first piece of content. It demonstrates competence, shows a real outcome, and is specific enough to attract the right audience. 'I helped my neighbor's restaurant reduce food waste by 30% with a simple inventory system.' If that's your niche, that story is your content.",
             "Format and platform: video performs well because it builds trust faster than text. Written content ranks in search if it's detailed and specific. Short-form social content builds awareness but rarely drives direct action. For a new business, I'd focus first on one piece of longer-form content (a detailed post, a case study, a short video explaining something specific) that demonstrates expertise rather than broadcasting. Show, don't just tell.",
           ],
@@ -326,7 +325,7 @@ const MODULES: Module[] = [
     ],
   },
   {
-    id: "module-5", num: "05", title: "Building & Delivering the Offer",
+    id: "module-5", num: "05", title: "Building and delivering the offer",
     lessons: [
       {
         id: "5-1", moduleId: "module-5", title: "Defining exactly what you sell and how you deliver it", duration: "10 min", format: "Camera", videoUrl: null,
@@ -347,13 +346,13 @@ const MODULES: Module[] = [
         },
       },
       {
-        id: "5-2", moduleId: "module-5", title: "Your first deliverable, building it regardless of type", duration: "12 min", format: "Screen share", videoUrl: null,
+        id: "5-2", moduleId: "module-5", title: "Your first deliverable: building it, whatever the type", duration: "12 min", format: "Screen share", videoUrl: null,
         notes: {
           intro: [
             "This lesson walks through how to build your first deliverable, whatever type of business you're running. The principles apply whether you're delivering a consulting report, a website, a physical product prototype, or a digital download.",
-            "Start with the minimum version that delivers the core value. Not the minimum you can get away with, the minimum that solves the customer's problem. Everything beyond that is a future version. The temptation to over-build before the first delivery is how projects take six months when they should take two weeks.",
+            "Start with the minimum version that delivers the core value. Choose the minimum that solves the customer's problem, however small. Everything beyond that is a future version. The temptation to over-build before the first delivery is how projects take six months when they should take two weeks.",
             "For service deliverables: document your process as you work. Not for the client necessarily, for you. The notes you take on project one become the process documentation that makes project two twice as fast. By project five, you have a repeatable system. This is how a service business begins to scale without working more hours.",
-            "For digital products: build the real first draft and get one person to consume it and give you feedback before you finalize anything. One person who goes through your course, uses your template, or reads your guide and tells you honestly what was confusing or missing is worth more than any amount of internal review. Build fast, get feedback, revise, ship.",
+            "For digital products: build the real first draft and get one person to consume it and give you feedback before you finalize anything. One person who goes through your course, uses your template, or reads your guide and tells you what was confusing or missing is worth more than any amount of internal review. Build fast, get feedback, revise, ship.",
           ],
           takeaways: [
             "Build the minimum version that solves the problem, not the minimum you can get away with",
@@ -365,7 +364,7 @@ const MODULES: Module[] = [
         },
       },
       {
-        id: "5-3", moduleId: "module-5", title: "Overdelivering early, reputation as a growth engine", duration: "9 min", format: "Camera", videoUrl: null,
+        id: "5-3", moduleId: "module-5", title: "Overdelivering early: reputation as a growth engine", duration: "9 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
             "Your first five clients are the most important people in your business. Not because of what they pay you, but because of what they tell other people. Word-of-mouth is the highest-converting, lowest-cost customer acquisition channel that exists. It's also the one you build in Lessons 1 to 3 with great work and then activate in Lesson 7-2 with a deliberate referral system.",
@@ -388,7 +387,7 @@ const MODULES: Module[] = [
     id: "module-6", num: "06", title: "Getting Your First Customer",
     lessons: [
       {
-        id: "6-1", moduleId: "module-6", title: "Warm outreach, using who you already know", duration: "11 min", format: "Camera", videoUrl: null,
+        id: "6-1", moduleId: "module-6", title: "Warm outreach: using the people you already know", duration: "11 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
             "Your first client is almost certainly someone you already know, or someone a degree of separation away. Not because warm outreach is a compromise, because it's the highest-probability path to a first engagement. Trust is the bottleneck in every sales process. Warm relationships already have trust. Cold outreach has to build it from scratch.",
@@ -425,12 +424,12 @@ const MODULES: Module[] = [
         },
       },
       {
-        id: "6-3", moduleId: "module-6", title: "The first sales conversation, what to say and when", duration: "12 min", format: "Camera", videoUrl: null,
+        id: "6-3", moduleId: "module-6", title: "The first sales conversation: what to say and when", duration: "12 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
             "The goal of a sales conversation is not to pitch. It's to listen. The more you understand about the prospect's specific situation, what they're struggling with, what they've tried, what success looks like to them, the more precisely you can position what you offer as the solution to their specific problem. Listening is the first and most important sales skill.",
             "Structure of an effective sales call: spend the first 10 to 15 minutes asking questions and understanding their situation. Then briefly present how you've helped similar people with the same problem. Then present your offer with pricing. Then stop talking and let them respond. Most salespeople who fail do so because they talk too much, especially after presenting price, and talk prospects out of deals they would have closed with silence.",
-            "The questions that matter most: What are you currently doing about this problem? What's working and what isn't? What would a successful outcome look like in 6 months? What's the cost of not solving this? The last question is the most important. If the problem costs them $10,000/month in wasted time, your $2,000 service isn't expensive, it's a 5x ROI in the first month. Help them see that math.",
+            "The questions that matter most: What are you currently doing about this problem? What's working and what isn't? What would a successful outcome look like in 6 months? What's the cost of not solving this? The last question is the most important. If the problem costs them $10,000/month in wasted time, your $2,000 service returns 5 times its cost in the first month. Help them see that math.",
             "When they raise objections, price, timing, needing to think about it, treat them as questions, not rejections. 'The price feels high' often means 'I don't yet see the full value.' 'I need to think about it' often means 'I have a concern I haven't said yet.' Ask: 'What specifically would need to be true for this to feel like the right decision?' That question surfaces the real objection.",
           ],
           takeaways: [
@@ -465,13 +464,13 @@ const MODULES: Module[] = [
     ],
   },
   {
-    id: "module-7", num: "07", title: "Running It, Growing & The Mental Side",
+    id: "module-7", num: "07", title: "Running it, growing and the mental side",
     lessons: [
       {
         id: "7-1", moduleId: "module-7", title: "The exact tool stack I run Purcell Ventures with", duration: "14 min", format: "Screen share", videoUrl: null,
         notes: {
           intro: [
-            "This lesson is a screen share of the actual tools I use to run Purcell Ventures, not a list of 50 options to consider, but the specific tools I've settled on and why. You don't need most tools people recommend. You need a small number of well-integrated tools that handle communication, project tracking, finance, and client management without requiring you to spend more time managing systems than running the business.",
+            "This lesson is a screen share of the tools I use to run Purcell Ventures. It covers the specific tools I settled on and why, with no list of 50 options. You don't need most tools people recommend. You need a small number of well-integrated tools that handle communication, project tracking, finance, and client management without requiring you to spend more time managing systems than running the business.",
             "Communication: email (Gmail with custom domain) for client communication, Notion for internal documentation and knowledge base, Slack if you have a team. For a solo operation, Gmail + Notion handles 90% of communication and documentation needs. Keep it simple.",
             "Finance: Mercury for business banking, Stripe for payments, Wave for bookkeeping and invoicing. These three tools handle all money movement and financial tracking at near-zero cost. Connect them so transactions flow automatically into Wave, reconcile monthly and you're done.",
             "Client management: HoneyBook for proposals, contracts, and invoicing for service businesses. Notion can handle a simple CRM for a small client list. Calendly for scheduling discovery calls. The goal is to remove all friction from the client experience, they should be able to book a call, receive a proposal, sign a contract, and pay in a single continuous flow without you having to coordinate each step manually.",
@@ -525,12 +524,12 @@ const MODULES: Module[] = [
         },
       },
       {
-        id: "7-4", moduleId: "module-7", title: "The founder mindset, fear, imposter syndrome, and what keeps you going", duration: "11 min", format: "Camera", videoUrl: null,
+        id: "7-4", moduleId: "module-7", title: "The founder mindset: fear, imposter syndrome and what keeps you going", duration: "11 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
             "Everything in this course has been practical and tactical. This lesson is different. I want to talk about what it feels like to build something, because nobody tells you in advance, and it matters as much as anything else we've covered.",
             "Starting a business feels like confidence from the outside and mostly fear from the inside. Fear of being wrong about the idea. Fear of looking foolish in front of people who said it wouldn't work. Fear of the first conversation, the first contract, the first time something goes badly. This is normal. Everyone who has ever built anything felt this. The difference between people who start and people who don't isn't the absence of fear, it's the decision to move anyway.",
-            "Imposter syndrome, the feeling that you're not qualified to do this, that you're pretending, that someone will eventually discover you don't know what you're doing, is nearly universal among founders, especially young ones. The antidote isn't more credentials or more experience. It's action. You start to feel legitimate when you have legitimate clients, legitimate results, and a legitimate track record. That track record only comes from doing the work before you feel ready.",
+            "Imposter syndrome, the feeling that you're not qualified to do this, that you're pretending, that someone will eventually discover you don't know what you're doing, is common among founders, especially young ones. The antidote is action, and more credentials or experience will not replace it. You start to feel legitimate when you have legitimate clients, legitimate results, and a legitimate track record. That track record only comes from doing the work before you feel ready.",
             "The things that keep founders going through the hard periods: a clear sense of why they're doing it that's bigger than money, a community of people who understand what this is like, and a realistic assessment of what's happening versus what they fear is happening. I am a Christian, and my faith is a genuine anchor for me in this, the conviction that what I'm building has a purpose beyond profit, and that the work itself is worth doing regardless of the outcome. Whatever your foundation, know what it is. You'll need it.",
           ],
           takeaways: [
@@ -549,16 +548,77 @@ const MODULES: Module[] = [
 
 const ALL_LESSONS = MODULES.flatMap(m => m.lessons);
 
-const LAMPSTAND = { cellStyle: "outlined" as const, pvSize: 70, pvClearR: 58, ringStart: 70, ringEnd: 116, numRings: 7, ringFadeToCenter: true };
-
-// ─────────────────────────────────────────────────────────────────────────────
+const LESSON_CSS = `
+.lp { height: 100vh; height: 100dvh; display: flex; flex-direction: column; background: var(--bg); color: var(--fg); font-family: var(--font-body); overflow: hidden; }
+.lp-gate { min-height: 100vh; min-height: 100dvh; display: flex; align-items: center; justify-content: center; padding: 24px; background: var(--bg); color: var(--fg); font-family: var(--font-body); }
+.lp-gate__in { max-width: 400px; width: 100%; }
+.lp-gate img { display: block; margin-bottom: 24px; }
+.lp-gate h1, .lp-title { font-family: var(--font-display); font-weight: 600; color: var(--fg); line-height: 1.15; margin: 0; }
+.lp-gate h1 { font-size: 28px; margin-bottom: 10px; }
+.lp-gate p { color: var(--muted); line-height: 1.65; margin: 0 0 24px; font-size: 15px; }
+.lp-gate form { display: flex; flex-direction: column; gap: 12px; }
+.lp-gate .lp-help { font-size: 14px; margin: 20px 0 0; color: var(--subtle); }
+.lp-input { min-height: 48px; padding: 0 14px; font-size: 16px; font-family: inherit; background: var(--surface); border: 1px solid var(--line); border-radius: 0; color: var(--fg); outline: none; }
+.lp-input:focus { border-color: var(--gold); }
+.lp-input[aria-invalid="true"] { border-color: var(--danger); }
+.lp-error { color: var(--danger); font-size: 14px; margin: 0 !important; }
+.lp-btn { min-height: 44px; padding: 0 20px; font-size: 15px; font-weight: 600; font-family: inherit; background: none; border: 1px solid var(--line); border-radius: 0; color: var(--fg-2); cursor: pointer; }
+.lp-btn:hover:not(:disabled) { border-color: var(--gold); color: var(--gold-text); }
+.lp-btn:disabled { color: var(--subtle); cursor: default; }
+.lp-btn--primary { background: var(--gold); border-color: var(--gold); color: var(--bg); }
+.lp-btn--primary:hover:not(:disabled) { background: var(--gold-hover); border-color: var(--gold-hover); color: var(--bg); }
+.lp-btn--primary:disabled { background: none; border-color: var(--gold); color: var(--gold-text); }
+.lp-link { color: var(--gold-text); }
+.lp-top { min-height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 16px; border-bottom: 1px solid var(--line); flex-shrink: 0; }
+.lp-top__l { display: flex; align-items: center; gap: 16px; min-width: 0; font-size: 14px; }
+.lp-top__l a { color: var(--muted); text-decoration: none; }
+.lp-top__l a:hover { color: var(--gold-text); }
+.lp-top__l span { color: var(--subtle); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lp-top__pct { font-size: 14px; color: var(--gold-text); font-weight: 600; white-space: nowrap; }
+.lp-menu { display: none; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; background: none; border: 0; cursor: pointer; color: var(--fg); }
+.lp-body { flex: 1; display: flex; overflow: hidden; }
+.lp-side { display: flex; width: 280px; flex-direction: column; border-right: 1px solid var(--line); overflow-y: auto; flex-shrink: 0; background: var(--bg); }
+.lp-side__head { padding: 8px 8px 8px 16px; border-bottom: 1px solid var(--line); display: none; justify-content: space-between; align-items: center; font-size: 14px; color: var(--muted); }
+.lp-bar { height: 3px; background: var(--line); margin: 14px 16px; }
+.lp-bar i { display: block; height: 100%; background: var(--gold); }
+.lp-mod { padding: 14px 16px 6px; font-size: 14px; font-weight: 600; color: var(--fg-2); line-height: 1.35; }
+.lp-item { width: 100%; min-height: 44px; display: flex; align-items: center; gap: 10px; padding: 8px 16px; background: none; border: 0; border-left: 2px solid transparent; cursor: pointer; text-align: left; font-family: inherit; color: var(--muted); }
+.lp-item:hover { color: var(--gold-text); }
+.lp-item[aria-current="true"] { background: var(--surface); border-left-color: var(--gold); color: var(--fg); }
+.lp-item__t { font-size: 14px; line-height: 1.4; flex: 1; }
+.lp-item__m { font-size: 13px; color: var(--subtle); flex-shrink: 0; text-align: right; }
+.lp-item__m b { display: block; font-weight: 500; color: var(--gold-text); }
+.lp-main { flex: 1; overflow-y: auto; padding: 40px var(--gutter-r) 64px 40px; }
+.lp-col { max-width: 760px; }
+.lp-crumb { font-size: 14px; color: var(--muted); margin: 0 0 8px; }
+.lp-title { font-size: clamp(26px, 3.4vw, 36px); }
+.lp-meta { font-size: 14px; color: var(--subtle); margin: 12px 0 28px; }
+.lp-video { margin-bottom: 40px; }
+.lp-notes { border-top: 1px solid var(--line); padding-top: 32px; }
+.lp-notes h2 { font-family: var(--font-display); font-weight: 600; font-size: 22px; color: var(--fg); margin: 0 0 16px; }
+.lp-notes p { font-size: 17px; line-height: 1.75; color: var(--fg-2); margin: 0 0 16px; }
+.lp-notes ul { margin: 0 0 8px; padding-left: 20px; }
+.lp-notes li { font-size: 16px; line-height: 1.65; color: var(--fg); margin-bottom: 10px; padding-left: 4px; }
+.lp-notes li::marker { color: var(--gold); }
+.lp-notes h2 + ul { margin-top: 0; }
+.lp-notes .lp-gap { margin-top: 36px; }
+.lp-nav { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+@media (max-width: 860px) {
+  .lp-menu { display: flex; }
+  .lp-side { display: none; position: fixed; inset: 0; z-index: 200; width: 100%; }
+  .lp-side--open { display: flex; }
+  .lp-side__head { display: flex; }
+  .lp-main { padding: 24px var(--gutter-r) 48px var(--gutter); }
+  .lp-nav .lp-btn { flex: 1 1 140px; }
+}
+`;
 
 export default function BusinessLessonsPage() {
-  const [gate, setGate]               = useState<GateState>("loading");
-  const [codeInput, setCodeInput]     = useState("");
-  const [codeError, setCodeError]     = useState(false);
-  const [activeId, setActiveId]       = useState<string>("1-1");
-  const [progress, setProgress]       = useState<string[]>([]);
+  const [gate, setGate]             = useState<GateState>("loading");
+  const [codeInput, setCodeInput]   = useState("");
+  const [codeError, setCodeError]   = useState(false);
+  const [activeId, setActiveId]     = useState<string>("1-1");
+  const [progress, setProgress]     = useState<string[]>([]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
@@ -599,130 +659,75 @@ export default function BusinessLessonsPage() {
   const pct        = Math.round((progress.length / ALL_LESSONS.length) * 100);
   const done       = progress.includes(activeId);
 
-  if (gate === "loading") return <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)" }} />;
+  if (gate === "loading") return <div style={{ minHeight: "100vh", background: "var(--bg)" }} />;
 
   if (gate === "locked") {
     return (
-      <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", display: "flex", alignItems: "center", justifyContent: "center", padding: "24px" }}>
-        <div style={{ maxWidth: "400px", width: "100%", textAlign: "center" }}>
-          <div style={{ display: "flex", justifyContent: "center", marginBottom: "28px" }}>
-            <PanopticonMark size={52} color="#d4af37" bg="var(--color-warm-bg)" cfg={LAMPSTAND} />
-          </div>
-          <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "10px" }}>
-            Access the Course
-          </h1>
-          <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "32px", lineHeight: 1.65, fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            Enter the access code from your purchase confirmation email.
-          </p>
-          <form onSubmit={handleCode} style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+      <div className="lp-gate">
+        <style>{LESSON_CSS}</style>
+        <div className="lp-gate__in">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/mark-foil.svg" alt="" width={52} height={52} />
+          <h1>Course access</h1>
+          <p>Enter the access code from your purchase confirmation email.</p>
+          <form onSubmit={handleCode}>
             <input
+              className="lp-input"
               type="text"
-              placeholder="ACCESS CODE"
+              aria-label="Access code"
+              aria-invalid={codeError}
+              placeholder="Access code"
+              autoComplete="off"
               value={codeInput}
               onChange={e => { setCodeInput(e.target.value); setCodeError(false); }}
-              style={{
-                padding: "13px 16px", fontSize: "14px", letterSpacing: "0.12em", textAlign: "center", textTransform: "uppercase",
-                background: "var(--color-warm-card)", border: `1px solid ${codeError ? "#e05c5c" : "var(--color-warm-border)"}`,
-                borderRadius: 6, color: "var(--color-warm-text)", outline: "none",
-                fontFamily: "var(--font-inter), sans-serif",
-              }}
             />
-            {codeError && (
-              <p style={{ fontSize: "12px", color: "#e05c5c", margin: 0, fontFamily: "var(--font-inter), sans-serif" }}>
-                That code isn't right, check your confirmation email.
-              </p>
-            )}
-            <button type="submit" style={{
-              padding: "13px", fontSize: "14px", fontWeight: 700,
-              background: "var(--color-warm-accent)", color: "var(--color-warm-bg)",
-              border: "none", borderRadius: 6, cursor: "pointer",
-              fontFamily: "var(--font-inter), sans-serif", letterSpacing: "0.06em",
-            }}>
-              Enter
-            </button>
+            {codeError && <p className="lp-error" role="alert">That code is wrong. Check your confirmation email.</p>}
+            <button type="submit" className="lp-btn lp-btn--primary">Enter</button>
           </form>
-          <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", marginTop: "20px", fontFamily: "var(--font-inter), sans-serif" }}>
-            No code? <a href="mailto:elijah@purcell-ventures.com" style={{ color: "var(--color-warm-accent)" }}>elijah@purcell-ventures.com</a>
-          </p>
+          <p className="lp-help">No code? Email <a className="lp-link" href="mailto:elijah@purcell-ventures.com">elijah@purcell-ventures.com</a></p>
         </div>
       </div>
     );
   }
 
   return (
-    <div style={{ height: "100vh", display: "flex", flexDirection: "column", background: "var(--color-warm-bg)", overflow: "hidden" }}>
-      <style>{`
-        .bl-lesson-sidebar { display: flex; }
-        .bl-lesson-hamburger { display: none; }
-        @media (max-width: 767px) {
-          .bl-lesson-sidebar { display: ${sidebarOpen ? "flex" : "none"}; position: fixed; inset: 0; z-index: 200; width: 100%; }
-          .bl-lesson-hamburger { display: flex; }
-        }
-      `}</style>
+    <div className="lp">
+      <style>{LESSON_CSS}</style>
 
-      {/* Top bar */}
-      <div style={{ height: "50px", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 20px", borderBottom: "1px solid var(--color-warm-border)", flexShrink: 0, background: "var(--color-warm-bg)" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-          <button className="bl-lesson-hamburger" onClick={() => setSidebarOpen(o => !o)} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--color-warm-text)", padding: "4px", alignItems: "center" }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+      <div className="lp-top">
+        <div className="lp-top__l">
+          <button className="lp-menu" aria-label="Open course menu" onClick={() => setSidebarOpen(o => !o)}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square">
               <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
             </svg>
           </button>
-          <Link href="/courses" style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", textDecoration: "none", fontFamily: "var(--font-inter), sans-serif" }}>
-            Courses
-          </Link>
-          <span style={{ fontSize: "12px", color: "var(--color-warm-text-light)", fontFamily: "var(--font-inter), sans-serif" }}>Business Launch Playbook</span>
+          <Link href="/courses">Courses</Link>
+          <span>Business Launch Playbook</span>
         </div>
-        <div style={{ fontSize: "12px", color: "var(--color-warm-accent)", fontFamily: "var(--font-inter), sans-serif", fontWeight: 600 }}>
-          {pct}% complete
-        </div>
+        <div className="lp-top__pct">{pct}% complete</div>
       </div>
 
-      {/* Body */}
-      <div style={{ flex: 1, display: "flex", overflow: "hidden" }}>
-
-        {/* Sidebar */}
-        <aside className="bl-lesson-sidebar" style={{ width: 260, flexDirection: "column", borderRight: "1px solid var(--color-warm-border)", overflowY: "auto", flexShrink: 0, background: "var(--color-warm-bg)" }}>
-          <div style={{ padding: "12px 16px", borderBottom: "1px solid var(--color-warm-border)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>COURSE MENU</span>
-            <button className="bl-lesson-hamburger" onClick={() => setSidebarOpen(false)} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--color-warm-text-muted)", alignItems: "center" }}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      <div className="lp-body">
+        <aside className={`lp-side${sidebarOpen ? " lp-side--open" : ""}`} aria-label="Course menu">
+          <div className="lp-side__head">
+            <span>Course menu</span>
+            <button className="lp-menu" aria-label="Close course menu" onClick={() => setSidebarOpen(false)}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
           </div>
 
-          <div style={{ padding: "12px 16px", borderBottom: "1px solid var(--color-warm-border)" }}>
-            <div style={{ height: 3, background: "var(--color-warm-border)", borderRadius: 2, overflow: "hidden" }}>
-              <div style={{ height: "100%", width: `${pct}%`, background: "var(--color-warm-accent)", transition: "width 0.3s" }} />
-            </div>
-          </div>
+          <div className="lp-bar" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100}><i style={{ width: `${pct}%` }} /></div>
 
           {MODULES.map(m => (
             <div key={m.id}>
-              <div style={{ padding: "12px 16px 6px", fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", color: "var(--color-warm-text-light)", textTransform: "uppercase", fontFamily: "var(--font-inter), sans-serif" }}>
-                MODULE {m.num}: {m.title}
-              </div>
+              <div className="lp-mod">Module {parseInt(m.num, 10)}: {m.title}</div>
               {m.lessons.map(l => {
                 const isActive = l.id === activeId;
                 const isDone   = progress.includes(l.id);
                 return (
-                  <button key={l.id} onClick={() => selectLesson(l.id)} style={{
-                    width: "100%", display: "flex", alignItems: "center", gap: "10px",
-                    padding: "9px 16px", background: isActive ? "var(--color-warm-card)" : "none",
-                    borderLeft: `2px solid ${isActive ? "var(--color-warm-accent)" : "transparent"}`,
-                    border: "none", borderRight: "none", borderTop: "none", borderBottom: "none",
-                    cursor: "pointer", textAlign: "left",
-                  }}>
-                    <div style={{
-                      width: 8, height: 8, borderRadius: "50%", flexShrink: 0,
-                      background: isDone ? "var(--color-warm-accent)" : isActive ? "transparent" : "var(--color-warm-border)",
-                      border: isActive && !isDone ? `1.5px solid var(--color-warm-accent)` : "none",
-                    }} />
-                    <span style={{ fontSize: "12px", color: isActive ? "var(--color-warm-text)" : "var(--color-warm-text-muted)", lineHeight: 1.4, flex: 1, fontFamily: "var(--font-dm-sans), sans-serif" }}>
-                      {l.title}
-                    </span>
-                    <span style={{ fontSize: "10px", color: "var(--color-warm-text-light)", flexShrink: 0, fontFamily: "var(--font-inter), sans-serif" }}>
-                      {l.duration}
-                    </span>
+                  <button key={l.id} className="lp-item" aria-current={isActive} onClick={() => selectLesson(l.id)}>
+                    <span className="lp-item__t">{l.title}</span>
+                    <span className="lp-item__m">{isDone && <b>Done</b>}{l.duration}</span>
                   </button>
                 );
               })}
@@ -730,90 +735,34 @@ export default function BusinessLessonsPage() {
           ))}
         </aside>
 
-        {/* Main content */}
-        <main style={{ flex: 1, overflowY: "auto", padding: "40px" }}>
-          <div style={{ maxWidth: "760px" }}>
+        <main className="lp-main">
+          <div className="lp-col">
+            <p className="lp-crumb">Module {parseInt(mod.num, 10)}: {mod.title}</p>
+            <h1 className="lp-title">{lesson.title}</h1>
+            <p className="lp-meta">{lesson.format}, {lesson.duration}</p>
 
-            <div style={{ display: "flex", gap: "8px", alignItems: "center", marginBottom: "24px", fontSize: "11px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>
-              <span>MODULE {mod.num}:</span>
-              <span style={{ color: "var(--color-warm-text)" }}>{lesson.title}</span>
-            </div>
-
-            <div style={{ marginBottom: "28px" }}>
-              <div style={{ display: "flex", gap: "8px", marginBottom: "12px", flexWrap: "wrap" }}>
-                <span style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", padding: "3px 10px", background: "rgba(212,175,55,0.12)", border: "1px solid rgba(212,175,55,0.3)", borderRadius: 20, color: "var(--color-warm-accent)", fontFamily: "var(--font-inter), sans-serif" }}>
-                  {mod.title}
-                </span>
-                <span style={{ fontSize: "10px", padding: "3px 10px", border: "1px solid var(--color-warm-border)", borderRadius: 20, color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>
-                  {lesson.format}
-                </span>
-                <span style={{ fontSize: "10px", padding: "3px 10px", border: "1px solid var(--color-warm-border)", borderRadius: 20, color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>
-                  {lesson.duration}
-                </span>
-              </div>
-              <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(22px, 3vw, 30px)", fontWeight: 700, color: "var(--color-warm-text)", lineHeight: 1.2 }}>
-                {lesson.title}
-              </h1>
-            </div>
-
-            <div style={{ marginBottom: "40px" }}>
+            <div className="lp-video">
               <VideoEmbed url={lesson.videoUrl} title={lesson.title} />
             </div>
 
-            <div style={{ borderTop: "1px solid var(--color-warm-border)", paddingTop: "36px" }}>
-              <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "20px", fontFamily: "var(--font-inter), sans-serif" }}>
-                Lesson Notes
-              </div>
-              <div style={{ marginBottom: "32px" }}>
-                {lesson.notes.intro.map((p, i) => (
-                  <p key={i} style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.85, marginBottom: "16px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-                    {p}
-                  </p>
-                ))}
-              </div>
+            <div className="lp-notes">
+              <h2>Lesson notes</h2>
+              {lesson.notes.intro.map((p, i) => <p key={i}>{p}</p>)}
 
-              <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px", fontFamily: "var(--font-inter), sans-serif" }}>
-                Key Takeaways
-              </div>
-              <ul style={{ margin: 0, paddingLeft: 0, listStyle: "none" }}>
-                {lesson.notes.takeaways.map((t, i) => (
-                  <li key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start", marginBottom: "12px" }}>
-                    <div style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--color-warm-accent)", flexShrink: 0, marginTop: 8 }} />
-                    <span style={{ fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.65, fontFamily: "var(--font-dm-sans), sans-serif" }}>{t}</span>
-                  </li>
-                ))}
+              <h2 className="lp-gap">Key takeaways</h2>
+              <ul>
+                {lesson.notes.takeaways.map((t, i) => <li key={i}>{t}</li>)}
               </ul>
             </div>
 
-            <div style={{ marginTop: "48px", paddingTop: "24px", borderTop: "1px solid var(--color-warm-border)", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
-              <button
-                onClick={() => prevLesson && selectLesson(prevLesson.id)}
-                disabled={!prevLesson}
-                style={{ padding: "9px 18px", fontSize: "13px", fontWeight: 600, background: "none", border: "1px solid var(--color-warm-border)", borderRadius: 5, color: prevLesson ? "var(--color-warm-text-muted)" : "var(--color-warm-text-light)", cursor: prevLesson ? "pointer" : "not-allowed", fontFamily: "var(--font-inter), sans-serif" }}
-              >
+            <div className="lp-nav">
+              <button className="lp-btn" onClick={() => prevLesson && selectLesson(prevLesson.id)} disabled={!prevLesson}>
                 Previous
               </button>
-
-              <button
-                onClick={handleComplete}
-                disabled={done}
-                style={{
-                  padding: "9px 22px", fontSize: "13px", fontWeight: 700,
-                  background: done ? "none" : "var(--color-warm-accent)",
-                  color: done ? "var(--color-warm-accent)" : "var(--color-warm-bg)",
-                  border: `1px solid var(--color-warm-accent)`,
-                  borderRadius: 5, cursor: done ? "default" : "pointer",
-                  fontFamily: "var(--font-inter), sans-serif", letterSpacing: "0.04em",
-                }}
-              >
-                {done ? "✓ Completed" : "Mark Complete"}
+              <button className="lp-btn lp-btn--primary" onClick={handleComplete} disabled={done}>
+                {done ? "Completed" : "Mark complete"}
               </button>
-
-              <button
-                onClick={() => nextLesson && selectLesson(nextLesson.id)}
-                disabled={!nextLesson}
-                style={{ padding: "9px 18px", fontSize: "13px", fontWeight: 600, background: "none", border: "1px solid var(--color-warm-border)", borderRadius: 5, color: nextLesson ? "var(--color-warm-text-muted)" : "var(--color-warm-text-light)", cursor: nextLesson ? "pointer" : "not-allowed", fontFamily: "var(--font-inter), sans-serif" }}
-              >
+              <button className="lp-btn" onClick={() => nextLesson && selectLesson(nextLesson.id)} disabled={!nextLesson}>
                 Next lesson
               </button>
             </div>

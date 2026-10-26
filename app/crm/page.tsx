@@ -1,15 +1,15 @@
 "use client";
-// CRM — purcellventures.co/crm
-// Reads leads, bookings, and newsletter subs from localStorage
-// Private tool, same style as /print
+// CRM, purcellventures.co/crm
+// Reads leads, bookings, and newsletter subs from localStorage.
+// Private tool.
 
 import { useState, useEffect } from "react";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+import Link from "next/link";
 
 const LEAD_STATUSES = ["New", "Contacted", "Proposal Sent", "Closed Won", "Closed Lost", "Pass"];
 const STATUS_COLORS: Record<string, string> = {
-  "New": "#d4af37", "Contacted": "#7aaa6a", "Proposal Sent": "#9b7fd4",
-  "Closed Won": "#4a9a6a", "Closed Lost": "#6a4a4a", "Pass": "#524d45",
+  "New": "var(--gold-text)", "Contacted": "var(--ok)", "Proposal Sent": "var(--fg-2)",
+  "Closed Won": "var(--ok)", "Closed Lost": "var(--danger)", "Pass": "var(--subtle)",
 };
 
 interface Lead {
@@ -30,6 +30,57 @@ function fmt(iso: string) {
   try { return new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }); }
   catch { return iso; }
 }
+
+const CSS = `
+.tool { min-height: 100vh; background: var(--bg); color: var(--fg); font-family: var(--font-body); }
+.tool__bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px var(--gutter); border-bottom: 1px solid var(--line); }
+.tool__brand { display: inline-flex; align-items: center; gap: 10px; color: var(--fg); text-decoration: none; font: 600 17px/1 var(--font-display); min-height: 44px; }
+.tool__bar a.tool__home { color: var(--muted); font-size: 14px; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+.tool__bar a.tool__home:hover { color: var(--gold-text); }
+.tool__main { max-width: 1100px; margin: 0 auto; padding: 40px var(--gutter) 80px; }
+.tool h1 { font: 600 clamp(28px, 5vw, 40px)/1.1 var(--font-display); margin: 0 0 8px; }
+.tool__sub { color: var(--muted); margin: 0 0 32px; }
+.crm-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 28px; }
+.crm-stat { padding: 20px 0; }
+.crm-stat + .crm-stat { padding-left: 20px; border-left: 1px solid var(--line); }
+.crm-stat b { display: block; font: 600 32px/1 var(--font-display); }
+.crm-stat span { display: block; color: var(--muted); font-size: 14px; margin-top: 4px; }
+.crm-stat em { display: block; font-style: normal; color: var(--gold-text); font-size: 14px; margin-top: 4px; }
+.crm-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.crm-tab { min-height: 44px; padding: 0 16px; background: transparent; border: 1px solid var(--line); color: var(--muted); font: 600 15px/1 var(--font-body); cursor: pointer; }
+.crm-tab:hover { color: var(--fg); border-color: var(--gold); }
+.crm-tab[aria-pressed="true"] { color: var(--gold-text); border-color: var(--gold); }
+.crm-h { font: 600 22px/1.2 var(--font-display); margin: 0 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.crm-empty { padding: 40px 0; color: var(--muted); }
+.crm-list { display: flex; flex-direction: column; }
+.crm-row { border-bottom: 1px solid var(--line); }
+.crm-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 12px 0; cursor: pointer; min-height: 44px; }
+.crm-name { flex: 1 1 200px; min-width: 0; font-weight: 700; }
+.crm-name small { font-weight: 400; color: var(--muted); font-size: 14px; margin-left: 8px; }
+.crm-meta { color: var(--muted); font-size: 14px; }
+.crm-status { min-height: 44px; padding: 0 10px; background: var(--surface); border: 1px solid var(--line); font: 600 14px/1 var(--font-body); cursor: pointer; }
+.crm-toggle { color: var(--subtle); font-size: 14px; min-width: 44px; text-align: right; background: none; border: 0; cursor: pointer; font-family: var(--font-body); min-height: 44px; }
+.crm-body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 4px 0 20px; }
+.crm-dl { display: flex; flex-direction: column; gap: 8px; font-size: 15px; color: var(--fg-2); overflow-wrap: anywhere; }
+.crm-dl b { color: var(--muted); font-weight: 500; }
+.crm-col { display: flex; flex-direction: column; gap: 12px; }
+.crm-lab { display: block; font-size: 14px; color: var(--muted); margin-bottom: 4px; }
+.crm-in { width: 100%; box-sizing: border-box; background: var(--surface); color: var(--fg); border: 1px solid var(--line); padding: 10px 12px; font: 400 16px/1.4 var(--font-body); border-radius: 0; }
+.crm-in:focus { outline: none; border-color: var(--gold); }
+.crm-act { display: flex; flex-wrap: wrap; gap: 8px; }
+.crm-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 16px; background: transparent; border: 1px solid var(--line); color: var(--fg-2); font: 600 15px/1 var(--font-body); text-decoration: none; cursor: pointer; }
+.crm-btn:hover { border-color: var(--gold); color: var(--gold-text); }
+.crm-btn--del:hover { border-color: var(--danger); color: var(--danger); }
+.crm-scroll { overflow-x: auto; }
+.crm-table { width: 100%; border-collapse: collapse; min-width: 560px; }
+.crm-table th { text-align: left; padding: 10px 12px 10px 0; color: var(--muted); font-weight: 500; font-size: 14px; border-bottom: 1px solid var(--line); }
+.crm-table td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); font-size: 15px; vertical-align: middle; }
+@media (max-width: 860px) {
+  .crm-body { grid-template-columns: minmax(0, 1fr); }
+  .crm-stat + .crm-stat { padding-left: 12px; }
+  .crm-stat b { font-size: 26px; }
+}
+`;
 
 export default function CRMPage() {
   const [tab, setTab] = useState<"leads" | "bookings" | "newsletter">("leads");
@@ -72,125 +123,102 @@ export default function CRMPage() {
     setSubs(prev => { const u = prev.filter(s => s.id !== id); localStorage.setItem("pv_newsletter", JSON.stringify(u)); return u; });
   };
 
-  const sectionLabel: React.CSSProperties = {
-    fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase",
-    color: "#d4af37", paddingBottom: "14px", borderBottom: "1px solid #2e2820", marginBottom: "20px",
-  };
-
-  const tabStyle = (active: boolean): React.CSSProperties => ({
-    padding: "8px 18px", background: active ? "#d4af3715" : "none",
-    border: `1px solid ${active ? "#d4af37" : "#2e2820"}`, borderRadius: "6px",
-    color: active ? "#d4af37" : "#524d45", fontSize: "12px", fontWeight: 700,
-    letterSpacing: "0.08em", textTransform: "uppercase", cursor: "pointer",
-    fontFamily: "Inter, sans-serif",
-  });
-
-  const inputSmall: React.CSSProperties = {
-    padding: "6px 10px", background: "#161412", border: "1px solid #2e2820",
-    borderRadius: "4px", color: "#f5f0e0", fontSize: "12px", fontFamily: "Inter, sans-serif",
-    outline: "none", width: "100%", boxSizing: "border-box",
-  };
+  const statusStyle = (s: string): React.CSSProperties => ({ color: STATUS_COLORS[s] || "var(--fg)" });
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "#f5f0e0", fontFamily: "Inter, sans-serif", padding: "48px 32px", position: "relative", overflowX: "hidden" }}>
-      <VignetteBackground />
-      <div style={{ position: "relative", zIndex: 5 }}>
-      <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+    <div className="tool">
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
+      <div className="tool__bar">
+        <Link href="/" className="tool__brand">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/mark-foil.svg" alt="" width={32} height={32} />
+          Purcell Ventures
+        </Link>
+        <Link href="/" className="tool__home">Home</Link>
+      </div>
+      <main className="tool__main">
+        <h1>CRM</h1>
+        <p className="tool__sub">Leads, bookings and newsletter subscribers in one place. Private to this browser.</p>
 
-        {/* Header */}
-        <div style={{ marginBottom: "48px" }}>
-          <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d4af37", marginBottom: "10px" }}>
-            Purcell Ventures, private
-          </div>
-          <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "32px", fontWeight: 700, color: "#f5f0e0", marginBottom: "8px" }}>CRM</h1>
-          <p style={{ fontSize: "14px", color: "#524d45" }}>Leads, bookings and the newsletter in one place</p>
-        </div>
-
-        {/* Stats row */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1px", background: "#2e2820", marginBottom: "32px", borderRadius: "8px", overflow: "hidden" }}>
+        <div className="crm-stats">
           {[
             { label: "Leads", count: leads.length, hot: leads.filter(l => l.status === "New").length },
             { label: "Bookings", count: bookings.length, hot: bookings.filter(b => b.status === "New").length },
             { label: "Subscribers", count: subs.length, hot: 0 },
           ].map(item => (
-            <div key={item.label} style={{ padding: "24px 28px", background: "#0d0c0a" }}>
-              <div style={{ fontSize: "32px", fontWeight: 800, color: "#f5f0e0", fontFamily: "'Cinzel', Georgia, serif" }}>{item.count}</div>
-              <div style={{ fontSize: "12px", color: "#524d45", marginTop: "2px" }}>{item.label}</div>
-              {item.hot > 0 && <div style={{ fontSize: "11px", color: "#d4af37", marginTop: "6px" }}>{item.hot} new</div>}
+            <div key={item.label} className="crm-stat">
+              <b>{item.count}</b>
+              <span>{item.label}</span>
+              {item.hot > 0 && <em>{item.hot} new</em>}
             </div>
           ))}
         </div>
 
-        {/* Tabs */}
-        <div style={{ display: "flex", gap: "8px", marginBottom: "32px" }}>
-          <button style={tabStyle(tab === "leads")} onClick={() => setTab("leads")}>Leads ({leads.length})</button>
-          <button style={tabStyle(tab === "bookings")} onClick={() => setTab("bookings")}>Bookings ({bookings.length})</button>
-          <button style={tabStyle(tab === "newsletter")} onClick={() => setTab("newsletter")}>Newsletter ({subs.length})</button>
+        <div className="crm-tabs">
+          <button className="crm-tab" aria-pressed={tab === "leads"} onClick={() => setTab("leads")}>Leads ({leads.length})</button>
+          <button className="crm-tab" aria-pressed={tab === "bookings"} onClick={() => setTab("bookings")}>Bookings ({bookings.length})</button>
+          <button className="crm-tab" aria-pressed={tab === "newsletter"} onClick={() => setTab("newsletter")}>Newsletter ({subs.length})</button>
         </div>
 
-        {/* ── LEADS ──────────────────────────────────────────────────────── */}
         {tab === "leads" && (
           <div>
-            <div style={sectionLabel}>Leads</div>
+            <h2 className="crm-h">Leads</h2>
             {leads.length === 0 ? (
-              <div style={{ padding: "48px", textAlign: "center", color: "#3a3530", border: "1px solid #2e2820", borderRadius: "8px" }}>
-                No leads yet. Submissions from the quote forms will appear here.
-              </div>
+              <p className="crm-empty">No leads yet. Submissions from the quote forms will appear here.</p>
             ) : (
-              <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+              <div className="crm-list">
                 {leads.map(lead => (
-                  <div key={lead.id} style={{ background: "#0d0c0a", border: "1px solid #2e2820", borderRadius: "8px", overflow: "hidden" }}>
-                    <div
-                      onClick={() => setExpanded(expanded === lead.id ? null : lead.id)}
-                      style={{ padding: "16px 20px", cursor: "pointer", display: "flex", alignItems: "center", gap: "14px" }}
-                    >
-                      <div style={{ flex: 1 }}>
-                        <span style={{ fontSize: "15px", fontWeight: 700, color: "#f5f0e0" }}>{lead.name}</span>
-                        {lead.business && <span style={{ fontSize: "13px", color: "#6a6458", marginLeft: "8px" }}>{lead.business}</span>}
+                  <div key={lead.id} className="crm-row">
+                    <div className="crm-head" onClick={() => setExpanded(expanded === lead.id ? null : lead.id)}>
+                      <div className="crm-name">
+                        {lead.name}
+                        {lead.business && <small>{lead.business}</small>}
                       </div>
-                      <span style={{ fontSize: "11px", color: "#6a6458", flexShrink: 0 }}>{lead.service?.split("(")[0].trim()}</span>
-                      <span style={{ fontSize: "10px", color: "#524d45", flexShrink: 0 }}>{fmt(lead.createdAt)}</span>
+                      <span className="crm-meta">{lead.service?.split("(")[0].trim()}</span>
+                      <span className="crm-meta">{fmt(lead.createdAt)}</span>
                       <select
+                        className="crm-status"
                         value={lead.status}
+                        aria-label="Lead status"
                         onChange={e => { e.stopPropagation(); updateLead(lead.id, { status: e.target.value }); }}
                         onClick={e => e.stopPropagation()}
-                        style={{ padding: "4px 8px", background: "#161412", border: `1px solid ${STATUS_COLORS[lead.status] || "#2e2820"}40`, borderRadius: "4px", color: STATUS_COLORS[lead.status] || "#f5f0e0", fontSize: "11px", fontWeight: 700, fontFamily: "Inter, sans-serif", cursor: "pointer" }}
+                        style={statusStyle(lead.status)}
                       >
                         {LEAD_STATUSES.map(s => <option key={s} value={s}>{s}</option>)}
                       </select>
-                      <span style={{ color: "#3a3530", fontSize: "14px" }}>{expanded === lead.id ? "−" : "+"}</span>
+                      <span className="crm-toggle">{expanded === lead.id ? "Close" : "Open"}</span>
                     </div>
 
                     {expanded === lead.id && (
-                      <div style={{ borderTop: "1px solid #2e2820", padding: "16px 20px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-                        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                          <div style={{ fontSize: "12px", color: "#524d45" }}><span style={{ color: "#8a8070" }}>Phone:</span> {lead.phone || "—"}</div>
-                          <div style={{ fontSize: "12px", color: "#524d45" }}><span style={{ color: "#8a8070" }}>Email:</span> {lead.email || "—"}</div>
-                          <div style={{ fontSize: "12px", color: "#524d45" }}><span style={{ color: "#8a8070" }}>Service:</span> {lead.service}</div>
-                          {lead.message && <div style={{ fontSize: "12px", color: "#524d45" }}><span style={{ color: "#8a8070" }}>Message:</span> {lead.message}</div>}
+                      <div className="crm-body">
+                        <div className="crm-dl">
+                          <div><b>Phone:</b> {lead.phone || "none"}</div>
+                          <div><b>Email:</b> {lead.email || "none"}</div>
+                          <div><b>Service:</b> {lead.service}</div>
+                          {lead.message && <div><b>Message:</b> {lead.message}</div>}
                         </div>
-                        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                        <div className="crm-col">
                           <div>
-                            <div style={{ fontSize: "10px", color: "#524d45", marginBottom: "4px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>Follow-up date</div>
-                            <input type="date" style={inputSmall}
+                            <label className="crm-lab">Follow-up date</label>
+                            <input type="date" className="crm-in"
                               value={editFollowUp[lead.id] ?? lead.followUp}
                               onChange={e => setEditFollowUp(p => ({ ...p, [lead.id]: e.target.value }))}
                               onBlur={() => { if (editFollowUp[lead.id] !== undefined) updateLead(lead.id, { followUp: editFollowUp[lead.id] }); }}
                             />
                           </div>
                           <div>
-                            <div style={{ fontSize: "10px", color: "#524d45", marginBottom: "4px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>Notes</div>
-                            <textarea style={{ ...inputSmall, resize: "vertical", minHeight: "60px" }}
-                              placeholder="Add notes..."
+                            <label className="crm-lab">Notes</label>
+                            <textarea className="crm-in" style={{ resize: "vertical", minHeight: 72 }}
+                              placeholder="Add notes"
                               value={editNotes[lead.id] ?? lead.notes}
                               onChange={e => setEditNotes(p => ({ ...p, [lead.id]: e.target.value }))}
                               onBlur={() => { if (editNotes[lead.id] !== undefined) updateLead(lead.id, { notes: editNotes[lead.id] }); }}
                             />
                           </div>
-                          <div style={{ display: "flex", gap: "8px" }}>
-                            <a href={`tel:${lead.phone}`} style={{ flex: 1, padding: "7px", background: "#d4af3715", border: "1px solid #d4af3730", borderRadius: "4px", color: "#d4af37", fontSize: "11px", fontWeight: 700, textAlign: "center", textDecoration: "none", letterSpacing: "0.06em" }}>Call</a>
-                            <a href={`sms:${lead.phone}`} style={{ flex: 1, padding: "7px", background: "#1a1714", border: "1px solid #2e2820", borderRadius: "4px", color: "#8a8070", fontSize: "11px", fontWeight: 700, textAlign: "center", textDecoration: "none", letterSpacing: "0.06em" }}>Text</a>
-                            <button onClick={() => deleteLead(lead.id)} style={{ padding: "7px 12px", background: "none", border: "1px solid #3a2020", borderRadius: "4px", color: "#6a3a3a", fontSize: "11px", cursor: "pointer", fontFamily: "Inter, sans-serif" }}>Delete</button>
+                          <div className="crm-act">
+                            <a href={`tel:${lead.phone}`} className="crm-btn">Call</a>
+                            <a href={`sms:${lead.phone}`} className="crm-btn">Text</a>
+                            <button onClick={() => deleteLead(lead.id)} className="crm-btn crm-btn--del">Delete</button>
                           </div>
                         </div>
                       </div>
@@ -202,54 +230,50 @@ export default function CRMPage() {
           </div>
         )}
 
-        {/* ── BOOKINGS ──────────────────────────────────────────────────── */}
         {tab === "bookings" && (
           <div>
-            <div style={sectionLabel}>Consulting Bookings</div>
+            <h2 className="crm-h">Consulting bookings</h2>
             {bookings.length === 0 ? (
-              <div style={{ padding: "48px", textAlign: "center", color: "#3a3530", border: "1px solid #2e2820", borderRadius: "8px" }}>
-                No bookings yet. Submissions from /consulting/book will appear here.
-              </div>
+              <p className="crm-empty">No bookings yet. Submissions from /consulting/book will appear here.</p>
             ) : (
-              <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+              <div className="crm-list">
                 {bookings.map(b => (
-                  <div key={b.id} style={{ background: "#0d0c0a", border: "1px solid #2e2820", borderRadius: "8px", overflow: "hidden" }}>
-                    <div
-                      onClick={() => setExpanded(expanded === b.id ? null : b.id)}
-                      style={{ padding: "16px 20px", cursor: "pointer", display: "flex", alignItems: "center", gap: "14px" }}
-                    >
-                      <div style={{ flex: 1 }}>
-                        <span style={{ fontSize: "15px", fontWeight: 700, color: "#f5f0e0" }}>{b.name}</span>
-                        {b.business && <span style={{ fontSize: "13px", color: "#6a6458", marginLeft: "8px" }}>{b.business}</span>}
+                  <div key={b.id} className="crm-row">
+                    <div className="crm-head" onClick={() => setExpanded(expanded === b.id ? null : b.id)}>
+                      <div className="crm-name">
+                        {b.name}
+                        {b.business && <small>{b.business}</small>}
                       </div>
-                      <span style={{ fontSize: "11px", color: "#6a6458", flexShrink: 0 }}>{b.format}</span>
-                      <span style={{ fontSize: "10px", color: "#524d45", flexShrink: 0 }}>{fmt(b.createdAt)}</span>
+                      <span className="crm-meta">{b.format}</span>
+                      <span className="crm-meta">{fmt(b.createdAt)}</span>
                       <select
+                        className="crm-status"
                         value={b.status}
+                        aria-label="Booking status"
                         onChange={e => { e.stopPropagation(); updateBooking(b.id, { status: e.target.value }); }}
                         onClick={e => e.stopPropagation()}
-                        style={{ padding: "4px 8px", background: "#161412", border: `1px solid ${STATUS_COLORS[b.status] || "#2e2820"}40`, borderRadius: "4px", color: STATUS_COLORS[b.status] || "#f5f0e0", fontSize: "11px", fontWeight: 700, fontFamily: "Inter, sans-serif", cursor: "pointer" }}
+                        style={statusStyle(b.status)}
                       >
                         {["New", "Confirmed", "Completed", "Cancelled"].map(s => <option key={s} value={s}>{s}</option>)}
                       </select>
-                      <span style={{ color: "#3a3530", fontSize: "14px" }}>{expanded === b.id ? "−" : "+"}</span>
+                      <span className="crm-toggle">{expanded === b.id ? "Close" : "Open"}</span>
                     </div>
                     {expanded === b.id && (
-                      <div style={{ borderTop: "1px solid #2e2820", padding: "16px 20px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-                        <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "12px", color: "#524d45" }}>
-                          <div><span style={{ color: "#8a8070" }}>Session:</span> {b.sessionType}</div>
-                          <div><span style={{ color: "#8a8070" }}>Format:</span> {b.format}{b.groupSize ? `, ${b.groupSize}` : ""}</div>
-                          <div><span style={{ color: "#8a8070" }}>Date pref:</span> {b.datePreference}</div>
-                          {b.timePreference && <div><span style={{ color: "#8a8070" }}>Time pref:</span> {b.timePreference}</div>}
-                          <div><span style={{ color: "#8a8070" }}>Phone:</span> {b.phone}</div>
-                          <div><span style={{ color: "#8a8070" }}>Email:</span> {b.email || "—"}</div>
-                          {b.notes && <div><span style={{ color: "#8a8070" }}>Notes:</span> {b.notes}</div>}
+                      <div className="crm-body">
+                        <div className="crm-dl">
+                          <div><b>Session:</b> {b.sessionType}</div>
+                          <div><b>Format:</b> {b.format}{b.groupSize ? `, ${b.groupSize}` : ""}</div>
+                          <div><b>Date preference:</b> {b.datePreference}</div>
+                          {b.timePreference && <div><b>Time preference:</b> {b.timePreference}</div>}
+                          <div><b>Phone:</b> {b.phone}</div>
+                          <div><b>Email:</b> {b.email || "none"}</div>
+                          {b.notes && <div><b>Notes:</b> {b.notes}</div>}
                         </div>
-                        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                          <div style={{ display: "flex", gap: "8px" }}>
-                            <a href={`tel:${b.phone}`} style={{ flex: 1, padding: "7px", background: "#d4af3715", border: "1px solid #d4af3730", borderRadius: "4px", color: "#d4af37", fontSize: "11px", fontWeight: 700, textAlign: "center", textDecoration: "none" }}>Call</a>
-                            <a href={`sms:${b.phone}`} style={{ flex: 1, padding: "7px", background: "#1a1714", border: "1px solid #2e2820", borderRadius: "4px", color: "#8a8070", fontSize: "11px", fontWeight: 700, textAlign: "center", textDecoration: "none" }}>Text</a>
-                            <button onClick={() => deleteBooking(b.id)} style={{ padding: "7px 12px", background: "none", border: "1px solid #3a2020", borderRadius: "4px", color: "#6a3a3a", fontSize: "11px", cursor: "pointer", fontFamily: "Inter, sans-serif" }}>Delete</button>
+                        <div className="crm-col">
+                          <div className="crm-act">
+                            <a href={`tel:${b.phone}`} className="crm-btn">Call</a>
+                            <a href={`sms:${b.phone}`} className="crm-btn">Text</a>
+                            <button onClick={() => deleteBooking(b.id)} className="crm-btn crm-btn--del">Delete</button>
                           </div>
                         </div>
                       </div>
@@ -261,34 +285,27 @@ export default function CRMPage() {
           </div>
         )}
 
-        {/* ── NEWSLETTER ───────────────────────────────────────────────── */}
         {tab === "newsletter" && (
           <div>
-            <div style={sectionLabel}>Newsletter Subscribers</div>
+            <h2 className="crm-h">Newsletter subscribers</h2>
             {subs.length === 0 ? (
-              <div style={{ padding: "48px", textAlign: "center", color: "#3a3530", border: "1px solid #2e2820", borderRadius: "8px" }}>
-                No subscribers yet. Signups from /newsletter will appear here.
-              </div>
+              <p className="crm-empty">No subscribers yet. Signups from /newsletter will appear here.</p>
             ) : (
-              <div style={{ background: "#0d0c0a", border: "1px solid #2e2820", borderRadius: "8px", overflow: "hidden" }}>
-                <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "Inter, sans-serif" }}>
+              <div className="crm-scroll">
+                <table className="crm-table">
                   <thead>
-                    <tr style={{ borderBottom: "1px solid #2e2820" }}>
-                      {["Name", "Email", "Business Type", "Date", ""].map(h => (
-                        <th key={h} style={{ padding: "12px 16px", textAlign: "left", fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#524d45" }}>{h}</th>
-                      ))}
+                    <tr>
+                      {["Name", "Email", "Business type", "Date", ""].map((h, i) => <th key={i}>{h}</th>)}
                     </tr>
                   </thead>
                   <tbody>
-                    {subs.map((s, i) => (
-                      <tr key={s.id} style={{ borderBottom: i < subs.length - 1 ? "1px solid #1a1816" : "none" }}>
-                        <td style={{ padding: "12px 16px", fontSize: "13px", color: "#f5f0e0", fontWeight: 600 }}>{s.name}</td>
-                        <td style={{ padding: "12px 16px", fontSize: "12px", color: "#d4af37" }}>{s.email}</td>
-                        <td style={{ padding: "12px 16px", fontSize: "12px", color: "#6a6458" }}>{s.businessType || "—"}</td>
-                        <td style={{ padding: "12px 16px", fontSize: "11px", color: "#3a3530", whiteSpace: "nowrap" }}>{fmt(s.createdAt)}</td>
-                        <td style={{ padding: "12px 16px" }}>
-                          <button onClick={() => deleteSub(s.id)} style={{ padding: "4px 10px", background: "none", border: "1px solid #3a2020", borderRadius: "4px", color: "#6a3a3a", fontSize: "10px", cursor: "pointer", fontFamily: "Inter, sans-serif" }}>Remove</button>
-                        </td>
+                    {subs.map(s => (
+                      <tr key={s.id}>
+                        <td>{s.name}</td>
+                        <td className="ui-gold">{s.email}</td>
+                        <td className="ui-muted">{s.businessType || "none"}</td>
+                        <td className="ui-muted" style={{ whiteSpace: "nowrap" }}>{fmt(s.createdAt)}</td>
+                        <td><button onClick={() => deleteSub(s.id)} className="crm-btn crm-btn--del">Remove</button></td>
                       </tr>
                     ))}
                   </tbody>
@@ -297,10 +314,7 @@ export default function CRMPage() {
             )}
           </div>
         )}
-
-      </div>
-      <div style={{ height: "64px" }} />
-      </div>
+      </main>
     </div>
   );
 }
