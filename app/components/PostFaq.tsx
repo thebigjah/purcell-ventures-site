@@ -14,7 +14,7 @@ interface Props {
   heading?: string;
 }
 
-export default function PostFaq({ qa, heading = "Common questions" }: Props) {
+export default function PostFaq({ qa, heading = "Questions" }: Props) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -30,14 +30,12 @@ export default function PostFaq({ qa, heading = "Common questions" }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <section style={{ marginTop: "48px", paddingTop: "26px", borderTop: "1px solid rgba(212,175,55,0.2)" }}>
-        <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "25px", fontWeight: 600, lineHeight: 1.2, margin: "0 0 18px" }}>
-          {heading}
-        </h2>
+      <section className="ui-postfaq">
+        <h2>{heading}</h2>
         {qa.map(([q, a]) => (
-          <div key={q} style={{ marginBottom: "22px" }}>
-            <h3 style={{ fontSize: "16px", fontWeight: 700, margin: "0 0 6px" }}>{q}</h3>
-            <p style={{ margin: 0, fontSize: "15px", lineHeight: 1.7, color: "var(--color-warm-text-muted)" }}>{a}</p>
+          <div key={q}>
+            <h3>{q}</h3>
+            <p>{a}</p>
           </div>
         ))}
       </section>

@@ -133,6 +133,16 @@ a { color: inherit; }
 .ui-note { border-left: 2px solid var(--gold); padding: 4px 0 4px 18px; color: var(--fg); }
 .ui-note--warn { border-left-color: #c1553a; }
 
+.ui-byline { display: flex; gap: 18px; align-items: flex-start; margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--line); font-size: 15px; line-height: 1.6; color: var(--muted); }
+.ui-byline img { width: 72px; height: 72px; flex: 0 0 72px; object-fit: cover; object-position: 50% 20%; }
+.ui-byline p { margin: 0 0 8px; }
+.ui-byline__by { color: var(--fg); font-weight: 700; }
+.ui-byline a { color: var(--gold-text); }
+.ui-postfaq { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--line); }
+.ui-postfaq h2 { margin: 0 0 18px; }
+.ui-postfaq h3 { font-size: 18px; margin: 22px 0 6px; }
+.ui-postfaq p { margin: 0; color: var(--fg-2); font-size: 16px; }
+
 /* Buttons. Hover changes colour only. */
 .ui-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: #0c0a08; font: 700 15px/1 var(--font-body); padding: 14px 20px; text-decoration: none; border: 0; cursor: pointer; transition: background .15s; }
 .ui-btn:hover { background: var(--gold-hover); }

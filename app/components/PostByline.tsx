@@ -77,39 +77,25 @@ export default function PostByline({ post }: { post: PostMeta }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <aside
-        style={{
-          display: "flex",
-          gap: "18px",
-          alignItems: "flex-start",
-          marginTop: "56px",
-          paddingTop: "28px",
-          borderTop: "1px solid rgba(212,175,55,0.20)",
-        }}
-      >
+      <aside className="ui-byline">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/brand/elijah.jpg"
           alt="Elijah Purcell, founder of Purcell Ventures LLC and University of Alabama student"
           width={72}
           height={72}
-          style={{ width: "72px", height: "72px", flex: "0 0 72px", objectFit: "cover", objectPosition: "50% 20%", display: "block" }}
         />
-        <div style={{ fontSize: "14px", lineHeight: 1.65, color: "var(--color-warm-text-muted)" }}>
-          <div style={{ fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "6px" }}>
-            Written by
-          </div>
-          <p style={{ margin: 0 }}>
-            <strong style={{ color: "var(--color-warm-text)" }}>Elijah Purcell</strong> founded
-            Purcell Ventures LLC, which builds websites and software for local businesses. He
-            studies psychology and data science in the University of Alabama Honors College and
-            built COSMIC, the set of AI agents that runs the company's outreach.
+        <div>
+          <p className="ui-byline__by">Written by Elijah Purcell</p>
+          <p>
+            Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, which builds websites and software for local businesses. He studies psychology and data science in the University of Alabama Honors College and built COSMIC, the set of AI agents that runs the company&apos;s outreach.
           </p>
-          <p style={{ margin: "8px 0 0" }}>
+          <p>
             {/* The anchor text is the point. "More about him" tells a crawler nothing about
-                who "him" is, on nine pages that all carry his byline. */}
-            <Link href="/who" style={{ color: "var(--color-warm-accent)" }}>More about Elijah Purcell</Link>
+                who "him" is, on the pages that carry his byline. */}
+            <Link href="/who">More about Elijah Purcell</Link>
             {" or "}
-            <Link href="/blog" style={{ color: "var(--color-warm-accent)" }}>read all posts</Link>
+            <Link href="/blog">read all posts</Link>
           </p>
         </div>
       </aside>
