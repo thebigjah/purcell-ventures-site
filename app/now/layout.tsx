@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Now: What Elijah Purcell Is Focused On",
   description:
-    "An old-internet /now page from Elijah Purcell, what I'm building, studying, going, practicing, reading, and wrestling with right now (May 2026).",
+    "An old-internet /now page from Elijah Purcell: what I'm building, studying, figuring out, practicing, reading and wrestling with.",
   alternates: { canonical: "/now" },
 };
 

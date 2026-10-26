@@ -260,8 +260,8 @@ function PostcardFront() {
       <div style={{ position: "absolute", top: 28, left: 28, bottom: 28, width: 300, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
         <div>
           <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "9px", color: "#d4af37", letterSpacing: "0.30em", marginBottom: "10px", opacity: 0.6 }}>PURCELL WORKS</div>
-          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 700, color: "#f5f0e0", lineHeight: 1.2 }}>Your property.</div>
-          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 700, color: "#d4af37", lineHeight: 1.2 }}>Done right.</div>
+          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 700, color: "#f5f0e0", lineHeight: 1.2 }}>Gutters, pressure washing</div>
+          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 700, color: "#d4af37", lineHeight: 1.2 }}>and lawn care.</div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -335,7 +335,7 @@ function PostcardBack() {
         border: "1px dashed #c0b0a0",
         display: "flex", flexDirection: "column", justifyContent: "center", padding: "14px 18px",
       }}>
-        <div style={{ fontSize: "8.5px", color: "#b0a090", fontFamily: "Inter, sans-serif", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "14px" }}>Postal Patron — Local</div>
+        <div style={{ fontSize: "8.5px", color: "#b0a090", fontFamily: "Inter, sans-serif", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "14px" }}>Local Postal Customer</div>
         {[...Array(4)].map((_, i) => (
           <div key={i} style={{ height: "1px", background: "#c8b8a8", margin: "9px 0" }} />
         ))}
@@ -348,7 +348,7 @@ function PostcardBack() {
           <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "8px", letterSpacing: "0.30em", color: "#6a5a4a", marginTop: "2px" }}>WORKS</div>
         </div>
         <div>
-          <div style={{ fontSize: "9.5px", fontWeight: 700, color: "#3a2e1a", fontFamily: "Inter, sans-serif", marginBottom: "4px" }}>Free Quote · Same Day</div>
+          <div style={{ fontSize: "9.5px", fontWeight: 700, color: "#3a2e1a", fontFamily: "Inter, sans-serif", marginBottom: "4px" }}>Free same-day quote</div>
           <div style={{ fontSize: "8.5px", color: "#6a5a4a", fontFamily: "Inter, sans-serif" }}>{PHONE}</div>
           <div style={{ fontSize: "8.5px", color: "#6a5a4a", fontFamily: "Inter, sans-serif" }}>{WORKS_WEB}</div>
         </div>
@@ -377,8 +377,8 @@ function RackCardFront() {
         {/* Features */}
         <div style={{ display: "flex", flexDirection: "column", gap: "11px", flex: 1 }}>
           {[
-            { title: "Business Website", desc: "Custom, mobile-ready, SEO-optimized" },
-            { title: "AI Chatbot", desc: "Answers customers 24/7 automatically" },
+            { title: "Business Website", desc: "Custom website that works on phones" },
+            { title: "AI Chatbot", desc: "Answers common customer questions" },
             { title: "Booking System", desc: "Online appointments, no phone needed" },
             { title: "Email Marketing", desc: "Monthly campaigns, auto-generated" },
           ].map(item => (
@@ -467,14 +467,14 @@ function MaterialSection({ title, subtitle, Front, Back, filenamePrefix, singleS
           <div style={labelStyle}>{singleSide ? "Design" : "Front"}</div>
           <div ref={frontRef} style={{ display: "inline-block" }}><Front /></div>
           <button style={btnStyle} onClick={() => download(frontRef, singleSide ? filenamePrefix : `${filenamePrefix}-Front`)}>
-            ↓ Download {singleSide ? "" : "Front"}
+            Download {singleSide ? "" : "Front"}
           </button>
         </div>
         {!singleSide && Back && (
           <div>
             <div style={labelStyle}>Back</div>
             <div ref={backRef} style={{ display: "inline-block" }}><Back /></div>
-            <button style={btnStyle} onClick={() => download(backRef, `${filenamePrefix}-Back`)}>↓ Download Back</button>
+            <button style={btnStyle} onClick={() => download(backRef, `${filenamePrefix}-Back`)}>Download Back</button>
           </div>
         )}
       </div>
@@ -487,10 +487,10 @@ function MaterialSection({ title, subtitle, Front, Back, filenamePrefix, singleS
 const PRINTER_GUIDE = [
   { material: "Business Cards",    printer: "PrintingForLess.com",        cost: "~$40 / 100",          finish: "Soft-touch matte",  notes: "Best dark card quality, reliable" },
   { material: "Door Hangers",      printer: "PrintingForLess.com",        cost: "~$60 / 250",          finish: "Soft-touch matte",  notes: "Same shop, same quality as cards" },
-  { material: "Yard Signs",        printer: "PrintingForLess.com",        cost: "~$25 / ea",           finish: "Coroplast, no lam", notes: "Order 5–10 to start, leave at every job" },
-  { material: "EDDM Postcards",    printer: "USPS EDDM + PrintingForLess",cost: "~$200 / 1,000 all-in",finish: "Matte",             notes: "Saturate a zip code — ~$0.20/house" },
+  { material: "Yard Signs",        printer: "PrintingForLess.com",        cost: "~$25 / ea",           finish: "Coroplast, no lam", notes: "Order 5 to 10 to start and leave one at every job" },
+  { material: "EDDM Postcards",    printer: "USPS EDDM + PrintingForLess",cost: "~$200 / 1,000 all-in",finish: "Matte",             notes: "Mail a whole zip code for about $0.20 per house" },
   { material: "Rack Cards",        printer: "PrintingForLess.com",        cost: "~$30 / 100",          finish: "Matte",             notes: "Batch with other orders to save shipping" },
-  { material: "Vehicle Decal",     printer: "Local vinyl shop",           cost: "$50–150",             finish: "Vinyl (removable)", notes: "Can't print here, take design to shop" },
+  { material: "Vehicle Decal",     printer: "Local vinyl shop",           cost: "$50–150",             finish: "Vinyl (removable)", notes: "Can't print here. Take the design to the shop" },
 ];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -508,24 +508,24 @@ export default function PrintPage() {
       {/* Header */}
       <div style={{ maxWidth: "1400px", margin: "0 auto 64px" }}>
         <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d4af37", marginBottom: "10px" }}>
-          Purcell Ventures — Private
+          Purcell Ventures, private
         </div>
         <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "36px", fontWeight: 700, color: "#f5f0e0", marginBottom: "8px" }}>
           Print Marketing Suite
         </h1>
         <p style={{ fontSize: "14px", color: "#524d45" }}>
-          Door hangers · Yard signs · EDDM postcards · Rack cards, download as print-ready PNG
+          Door hangers, yard signs, EDDM postcards and rack cards. Download each as a print-ready PNG.
         </p>
       </div>
 
       {/* ── Purcell Works Materials ───────────────────────────────────────────── */}
       <div style={{ maxWidth: "1400px", margin: "0 auto 80px" }}>
-        <div style={sectionLabelStyle}>Purcell Works — Field Services</div>
+        <div style={sectionLabelStyle}>Purcell Works field services</div>
         <div style={{ display: "flex", flexDirection: "column", gap: "72px" }}>
 
           <MaterialSection
             title="Door Hanger"
-            subtitle='3.5" × 8.5" — drop on doors in neighborhoods near every job'
+            subtitle='3.5" × 8.5". Drop on doors near every job.'
             Front={DoorHangerFront}
             Back={DoorHangerBack}
             filenamePrefix="PW-DoorHanger"
@@ -533,7 +533,7 @@ export default function PrintPage() {
 
           <MaterialSection
             title="Yard Sign"
-            subtitle='24" × 18" — leave at every job site for a week'
+            subtitle='24" × 18". Leave at every job site for a week.'
             Front={YardSignFront}
             filenamePrefix="PW-YardSign"
             singleSide
@@ -541,7 +541,7 @@ export default function PrintPage() {
 
           <MaterialSection
             title="EDDM Postcard"
-            subtitle='6.25" × 9" — direct mail to zip codes near jobs (~$0.20 / house)'
+            subtitle='6.25" × 9". Direct mail to zip codes near jobs, about $0.20 per house.'
             Front={PostcardFront}
             Back={PostcardBack}
             filenamePrefix="PW-Postcard"
@@ -552,11 +552,11 @@ export default function PrintPage() {
 
       {/* ── Purcell Ventures Digital Materials ──────────────────────────────── */}
       <div style={{ maxWidth: "1400px", margin: "0 auto 80px" }}>
-        <div style={sectionLabelStyle}>Purcell Ventures — Digital Services</div>
+        <div style={sectionLabelStyle}>Purcell Ventures digital services</div>
 
         <MaterialSection
           title="Rack Card"
-          subtitle='4" × 9" — leave at networking events, hand to business owners'
+          subtitle='4" × 9". Leave at networking events and hand to business owners.'
           Front={RackCardFront}
           Back={RackCardBack}
           filenamePrefix="PV-RackCard"

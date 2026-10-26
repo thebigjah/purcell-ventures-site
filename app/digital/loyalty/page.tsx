@@ -70,16 +70,16 @@ export default function LoyaltyPage() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
         <Link href="/digital/tools" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-          ← All tools
+          All tools
         </Link>
 
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Customer Management · Loyalty</div>
+          <div className="pv-mono-label">Customer Management: Loyalty</div>
           <h1>
             Loyalty <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>punch card</em>
           </h1>
           <p className="deck">
-            Digital punch card for repeat customers. Add a punch each visit. Hit the cap, redeem the reward. Stays on this device.
+            Digital punch card for repeat customers. Add a punch each visit. At the cap, the customer redeems the reward. Stays on this device.
           </p>
         </header>
 
@@ -132,7 +132,7 @@ export default function LoyaltyPage() {
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px", flexWrap: "wrap", gap: "8px" }}>
                     <div>
                       <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", color: "var(--color-warm-text)", margin: "0 0 4px", fontWeight: 600 }}>{c.name}</h3>
-                      <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)" }}>{c.phone || "No phone"} · {c.redeemedCount} reward(s) redeemed</div>
+                      <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)" }}>{c.phone || "No phone"}, {c.redeemedCount} reward(s) redeemed</div>
                     </div>
                     <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
                       <button onClick={() => punch(c.id)} disabled={ready} style={btn("primary")}>+ Punch</button>

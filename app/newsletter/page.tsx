@@ -55,26 +55,26 @@ export default function NewsletterPage() {
         <a href="/" style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "16px", fontWeight: 700, color: "#f5f0e0", textDecoration: "none" }}>
           Purcell <span style={{ color: "#d4af37" }}>Ventures</span>
         </a>
-        <a href="/" style={{ fontSize: "12px", color: "#524d45", textDecoration: "none" }}>← Home</a>
+        <a href="/" style={{ fontSize: "12px", color: "#524d45", textDecoration: "none" }}>Home</a>
       </nav>
 
       <div style={{ maxWidth: "600px", margin: "0 auto", padding: "80px 24px" }}>
         <p style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d4af37", marginBottom: "16px" }}>Newsletter</p>
         <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(32px, 6vw, 52px)", fontWeight: 700, lineHeight: 1.1, marginBottom: "20px" }}>
-          AI for local business.<br />
-          <span style={{ color: "#d4af37" }}>In plain English.</span>
+          AI tips for<br />
+          <span style={{ color: "#d4af37" }}>local business owners.</span>
         </h1>
         <p style={{ fontSize: "16px", color: "#8a8070", lineHeight: 1.8, marginBottom: "48px", maxWidth: "480px" }}>
-          Practical tools, honest takes, and real examples of how small businesses are using AI to save time and grow. No fluff. Once a week.
+          A weekly email on how small businesses use AI tools to save time.
         </p>
 
         {/* What to expect */}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "48px" }}>
           {[
-            { title: "Tool of the week", desc: "One AI tool, how to use it, how much it costs." },
-            { title: "Real case studies", desc: "Actual businesses, actual results. Not hypotheticals." },
+            { title: "Tool of the week", desc: "One AI tool each week, with how to use it and what it costs." },
+            { title: "Case studies", desc: "Examples from small businesses that use AI." },
             { title: "Prompts you can use", desc: "Copy-paste prompts built for small business owners." },
-            { title: "No spam. Ever.", desc: "One email per week. Unsubscribe anytime." },
+            { title: "Unsubscribe anytime", desc: "Every email has an unsubscribe link." },
           ].map(item => (
             <div key={item.title} style={{ padding: "18px 20px", background: "#0e0c0a", border: "1px solid #2e2820", borderRadius: "8px" }}>
               <div style={{ fontSize: "13px", fontWeight: 700, color: "#d4af37", marginBottom: "6px" }}>{item.title}</div>
@@ -104,13 +104,13 @@ export default function NewsletterPage() {
               cursor: loading ? "not-allowed" : "pointer", opacity: loading ? 0.7 : 1,
               fontFamily: "Inter, sans-serif",
             }}>
-              {loading ? "Subscribing..." : "Subscribe — It's Free →"}
+              {loading ? "Subscribing..." : "Subscribe (free)"}
             </button>
           </form>
         )}
 
         <p style={{ fontSize: "11px", color: "#3a3530", marginTop: "16px", textAlign: "center" }}>
-          No spam. One email per week. Unsubscribe anytime.
+          One email per week.
         </p>
       </div>
       </div>

@@ -475,8 +475,8 @@ function PatternSection({ p, idx }: { p: PatternEntry; idx: number }) {
           {p.primary}
         </div>
         <div style={{ display: "flex", gap: "8px", marginTop: "10px" }}>
-          <button style={btnBase} onClick={() => dlPng(mainRef, p.name)}>↓ PNG</button>
-          <button style={btnGold} onClick={() => dlSvg(mainRef, p.name)}>↓ SVG</button>
+          <button style={btnBase} onClick={() => dlPng(mainRef, p.name)}>PNG</button>
+          <button style={btnGold} onClick={() => dlSvg(mainRef, p.name)}>SVG</button>
         </div>
       </div>
 
@@ -489,7 +489,7 @@ function PatternSection({ p, idx }: { p: PatternEntry; idx: number }) {
                 style={{ borderRadius: 6, overflow: "hidden", boxShadow: "0 4px 16px rgba(0,0,0,0.4)", display: "inline-block" }}>
                 {v.node}
               </div>
-              <button style={btnSmall} onClick={() => dlPng({ current: varRefs.current[vi] }, `${p.name} ${v.label}`)}>↓ PNG</button>
+              <button style={btnSmall} onClick={() => dlPng({ current: varRefs.current[vi] }, `${p.name} ${v.label}`)}>PNG</button>
               <div style={{ fontSize: "10px", color: "#3a3530", marginTop: "4px", letterSpacing: "0.04em", maxWidth: "180px" }}>{v.label}</div>
             </div>
           ))}
@@ -503,9 +503,9 @@ function PatternSection({ p, idx }: { p: PatternEntry; idx: number }) {
 const PATTERNS: PatternEntry[] = [
   {
     name: "Broadcast Field",
-    subtitle: "Radial ring clusters · derived from the panopticon mark",
-    concept: "The mark tiled across a surface. Each node is a small center of accountability radiating outward. Together they form a distributed field, not a single surveillance point but a network of declared, visible actors.",
-    application: "Business card back · website section backgrounds · document headers · envelope interior",
+    subtitle: "Radial ring clusters, derived from the panopticon mark",
+    concept: "The mark tiled across a surface. Together the tiles form a distributed field: a network of visible actors.",
+    application: "Business card back, website section backgrounds, document headers, envelope interior",
     primary: <BroadcastField />,
     variants: [
       { label: "Dense",                node: <BroadcastField width={220} height={140} spacing={54} rings={4} maxOpacity={0.28} /> },
@@ -518,9 +518,9 @@ const PATTERNS: PatternEntry[] = [
   },
   {
     name: "Phi Array",
-    subtitle: "Golden angle phyllotaxis · 137.508° · Fibonacci sequence",
-    concept: "The arrangement of seeds in a sunflower. Each element placed at 2π/φ² from the last, the golden angle, so nothing ever perfectly repeats and no space is wasted. Nature found this solution without mathematics. It's the geometry of growth, of things built to endure, of divine proportion encoded in biology. Kepler called it one of the two great treasures of geometry.",
-    application: "Featured section backgrounds · large-format print · stationery · brand book cover",
+    subtitle: "Golden angle phyllotaxis, 137.508°, Fibonacci sequence",
+    concept: "The arrangement of seeds in a sunflower. Each element placed at 2π/φ² from the last, the golden angle, so the seeds pack evenly. Seeds in a sunflower follow this angle. It's the geometry of growth, of things built to endure, of divine proportion encoded in biology. Kepler called it one of the two great treasures of geometry.",
+    application: "Featured section backgrounds, large-format print, stationery, brand book cover",
     primary: <PhiArray />,
     variants: [
       { label: "Tight, high density",  node: <PhiArray width={220} height={140} n={500} dotSize={1.0} spread={0.42} /> },
@@ -533,9 +533,9 @@ const PATTERNS: PatternEntry[] = [
   },
   {
     name: "Blueprint Grid",
-    subtitle: "45°-rotated square lattice · engineering drafting grid",
-    concept: "The structural substrate underneath everything. Architects and engineers use this grid before any design decisions are made, it's the foundation, not the surface. At low opacity it communicates precision, intentionality, and the existence of a rigorous system beneath the visible layer.",
-    application: "Slide deck backgrounds · document templates · envelope interior · dense cover texture",
+    subtitle: "45°-rotated square lattice, engineering drafting grid",
+    concept: "The structural substrate underneath everything. Architects and engineers draw on this grid before making design decisions, so it sits under the finished design. At low opacity it looks precise.",
+    application: "Slide deck backgrounds, document templates, envelope interior, dense cover texture",
     primary: <Blueprint />,
     variants: [
       { label: "Fine, tight grid",    node: <Blueprint width={220} height={140} spacing={18} opacity={0.16} /> },
@@ -548,9 +548,9 @@ const PATTERNS: PatternEntry[] = [
   },
   {
     name: "Interference",
-    subtitle: "Wave superposition · constructive and destructive overlap",
-    concept: "Two or more point sources radiating outward. Where their waves meet, they either reinforce (constructive) or cancel (destructive). It's a physical model for how distinct forces interact: technology and humanity, power and accountability, faith and reason. The pattern is most beautiful at the collision points. This one has the most direct connection to the sousveillance concept, multiple independent centers, each visible, each radiating.",
-    application: "Hero section backgrounds · presentation title slides · large-format prints",
+    subtitle: "Wave superposition, constructive and destructive overlap",
+    concept: "Two or more point sources radiating outward. Where their waves meet, they either reinforce (constructive) or cancel (destructive). It's a physical model for how distinct forces interact: technology and humanity, power and accountability, faith and reason. The pattern is most beautiful at the collision points. This one connects most directly to the sousveillance concept: several independent centers, each one visible.",
+    application: "Hero section backgrounds, presentation title slides, large-format prints",
     primary: <Interference />,
     variants: [
       { label: "Tight wavelength",       node: <Interference width={220} height={140} wavelength={26} rings={18} opacity={0.20} /> },
@@ -563,9 +563,9 @@ const PATTERNS: PatternEntry[] = [
   },
   {
     name: "Honeycomb",
-    subtitle: "Regular hexagonal tessellation · honeycomb conjecture · Hales 1999",
-    concept: "The most efficient partition of the plane, mathematically proved by Thomas Hales in 1999. Bees discovered it without calculus. Each cell is independent, bounded, sovereign; the structure emerges from adjacency alone. This maps directly to the privacy/freedom principle: each person or business in their own domain, the whole held together by shared structure rather than surveillance.",
-    application: "Business card back · dense surface texture · physical materials (embossing, debossing) · merchandise",
+    subtitle: "Regular hexagonal tessellation, honeycomb conjecture, Hales 1999",
+    concept: "The most efficient partition of the plane, mathematically proved by Thomas Hales in 1999. Bees discovered it without calculus. Each cell is independent and bounded. The structure comes from adjacency. This maps to the privacy principle: each person or business has its own domain, held together by shared structure.",
+    application: "Business card back, dense surface texture, physical materials (embossing, debossing), merchandise",
     primary: <Honeycomb />,
     variants: [
       { label: "Small cells",           node: <Honeycomb width={220} height={140} size={14} opacity={0.22} /> },
@@ -578,9 +578,9 @@ const PATTERNS: PatternEntry[] = [
   },
   {
     name: "Polar Rose",
-    subtitle: "r = a·cos(k·θ) · rhodonea curve · Grandi 1728",
-    concept: "The simplest non-trivial polar curve. Distance from center is a cosine function of angle, rotate through the full period and you trace a flower. Three petals when k=3, four when k=4, eight when k=4 (even k doubles). Grandi found it while studying Archimedes. It's pure classical geometry, no approximation, no construction, just the polar equation doing its thing.",
-    application: "Business card back · premium stationery · large-format print · brand book sections",
+    subtitle: "r = a·cos(k·θ), rhodonea curve, Grandi 1728",
+    concept: "The simplest non-trivial polar curve. Distance from center is a cosine function of angle, rotate through the full period and you trace a flower. Three petals when k=3, four when k=2, eight when k=4 (an even k gives 2k petals). Grandi found it while studying Archimedes. The whole pattern comes from one polar equation.",
+    application: "Business card back, premium stationery, large-format print, brand book sections",
     primary: <PolarRose />,
     variants: [
       { label: "3-petal, k=3",          node: <PolarRose width={220} height={140} k={3} a={26} spacing={72} opacity={0.26} /> },
@@ -593,9 +593,9 @@ const PATTERNS: PatternEntry[] = [
   },
   {
     name: "Archimedean Spiral",
-    subtitle: "r = b·θ · constant pitch · On Spirals (225 BC)",
-    concept: "Archimedes described this curve in 225 BC — one of the first serious mathematical treatises on curves. Unlike the golden/logarithmic spiral, this one has constant spacing between turns. Each revolution goes exactly b further out. It's the spiral of mechanical things: watch springs, vinyl records, drill bits. Methodical, precise, unrelenting forward motion, every turn the same discipline as the last.",
-    application: "Section backgrounds · document covers · featured content areas",
+    subtitle: "r = b·θ, constant pitch, On Spirals (225 BC)",
+    concept: "Archimedes described this curve in On Spirals, around 225 BC, one of the first mathematical treatises on curves. Unlike the golden/logarithmic spiral, this one has constant spacing between turns. Each revolution goes exactly b further out. Watch springs and vinyl record grooves follow this spiral.",
+    application: "Section backgrounds, document covers, featured content areas",
     primary: <ArchimedeanField />,
     variants: [
       { label: "Tight, more turns",     node: <ArchimedeanField width={220} height={140} b={4} turns={3.5} spacing={82} opacity={0.24} /> },
@@ -608,9 +608,9 @@ const PATTERNS: PatternEntry[] = [
   },
   {
     name: "Dot Field",
-    subtitle: "Offset grid of dots · halftone · Ben-Day · precision print",
-    concept: "The most elemental pattern in print design. Ben-Day dots (1879) are what Lichtenstein used in his paintings and what newspapers used to print color before digital. A refined dot grid reads as precision, measurement paper, scientific grids, the substrate underlying exact work. Offset rows create a denser, more organic feel than a strict square grid.",
-    application: "Business card back · subtle website texture · document watermark · any surface needing understated depth",
+    subtitle: "Offset grid of dots, halftone, Ben-Day, precision print",
+    concept: "A basic pattern in print design. Ben-Day dots (1879) are what Lichtenstein used in his paintings and what newspapers used to print color before digital. A fine dot grid looks like measurement paper. Offset rows create a denser, more organic feel than a strict square grid.",
+    application: "Business card back, subtle website texture, document watermark, any surface needing understated depth",
     primary: <DotField />,
     variants: [
       { label: "Micro, tight grid",     node: <DotField width={220} height={140} spacing={10} dotR={0.8} opacity={0.26} /> },
@@ -623,9 +623,9 @@ const PATTERNS: PatternEntry[] = [
   },
   {
     name: "Chevron Field",
-    subtitle: "V-shapes in staggered rows · PV letterform · forward motion",
-    concept: "The V in PV is the typographic backbone of the mark. A chevron is a V. Stacked in rows they represent rank (military insignia), achievement (athletic patches), and direction, everything moving forward at the same angle. This is the most literal brand-derived pattern: the letter itself tiled as texture. Dense at small scale, bold at large scale.",
-    application: "Business card back · garment/merchandise embroidery · athletic/apparel contexts · brand presentations",
+    subtitle: "V-shapes in staggered rows, PV letterform, forward motion",
+    concept: "The V in PV is the typographic backbone of the mark. A chevron is a V. Stacked in rows, chevrons appear on military rank insignia and athletic patches. This pattern tiles the letter itself as texture. Dense at small scale, bold at large scale.",
+    application: "Business card back, garment/merchandise embroidery, athletic/apparel contexts, brand presentations",
     primary: <ChevronField />,
     variants: [
       { label: "Tight, small V",        node: <ChevronField width={220} height={140} vW={26} vH={12} rowSpacing={22} opacity={0.24} /> },
@@ -638,9 +638,9 @@ const PATTERNS: PatternEntry[] = [
   },
   {
     name: "Lissajous",
-    subtitle: "x = A·sin(at + δ), y = B·sin(bt) · Lissajous 1857 · oscilloscope",
-    concept: "When two perpendicular sinusoidal signals interact, as they do in an oscilloscope, the combined trace is a Lissajous curve. The shape depends entirely on the ratio of the frequencies (a:b) and the phase shift (δ). Rational ratios produce closed curves; 3:2 produces a figure with 3 vertical lobes and 2 horizontal. They appear in antenna design, mechanical harmonographs, pendulum physics, and signal analysis. This is technology made visible, the direct output of two forces in precise relationship.",
-    application: "Technical presentations · digital-first surfaces · hero backgrounds · brand book interior",
+    subtitle: "x = A·sin(at + δ), y = B·sin(bt), Lissajous 1857, oscilloscope",
+    concept: "When two perpendicular sinusoidal signals interact, as they do in an oscilloscope, the combined trace is a Lissajous curve. The shape depends entirely on the ratio of the frequencies (a:b) and the phase shift (δ). Rational ratios produce closed curves. A 3:2 ratio produces a figure with 3 vertical lobes and 2 horizontal. They appear in antenna design, mechanical harmonographs, pendulum physics and signal analysis.",
+    application: "Technical presentations, digital-first surfaces, hero backgrounds, brand book interior",
     primary: <LissajousField />,
     variants: [
       { label: "3:2 ratio, standard",   node: <LissajousField width={220} height={140} a={3} b={2} amplitude={26} spacing={76} opacity={0.24} /> },
@@ -663,16 +663,16 @@ export default function PatternsPage() {
       {/* Header */}
       <div style={{ maxWidth: "1200px", margin: "0 auto 56px" }}>
         <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: GOLD, marginBottom: "10px" }}>
-          Purcell Ventures — Brand Identity
+          Purcell Ventures brand identity
         </div>
         <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "36px", fontWeight: 700, color: CREAM, marginBottom: "12px" }}>
           Pattern Library
         </h1>
         <p style={{ fontSize: "14px", color: "#524d45", maxWidth: "560px", lineHeight: 1.75, marginBottom: "8px" }}>
-          Ten patterns derived from mathematical and philosophical principles aligned with the brand. Each is fully vectorized and downloadable. All are designed to work at low opacity as surface texture, never as primary visual elements.
+          Ten patterns, each built from a geometric or mathematical rule. Each one downloads as a vector file. Use them only as low-opacity background texture.
         </p>
         <p style={{ fontSize: "12px", color: "#3a3530", maxWidth: "560px", lineHeight: 1.7 }}>
-          Source mathematics: polar coordinates · Fibonacci sequence · golden ratio · wave superposition · hexagonal close-packing · rhodonea curves · Archimedean spiral · halftone grids · Lissajous figures. Each chosen because it has an intellectual basis that maps to something the brand actually means.
+          Source mathematics: polar coordinates, the Fibonacci sequence, the golden ratio, wave superposition, hexagonal close-packing, rhodonea curves, the Archimedean spiral, halftone grids and Lissajous figures.
         </p>
       </div>
 
@@ -687,15 +687,15 @@ export default function PatternsPage() {
       <div style={{ maxWidth: "1200px", margin: "72px auto 0", padding: "28px 32px", background: MID, border: "1px solid #2e2820", borderRadius: "10px" }}>
         <div style={{ fontSize: "13px", fontWeight: 700, color: GOLD, marginBottom: "14px" }}>Usage Rules</div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "20px", fontSize: "12px", color: "#6a6458", lineHeight: 1.7 }}>
-          <div><strong style={{ color: "#8a8070" }}>Opacity:</strong> Patterns are always secondary. 10–20% on dark backgrounds. 6–12% on light backgrounds. Never compete with text.</div>
-          <div><strong style={{ color: "#8a8070" }}>Single pattern per surface:</strong> Don't layer two patterns on the same material. Pick one and let it breathe.</div>
+          <div><strong style={{ color: "#8a8070" }}>Opacity:</strong> Keep patterns behind the content: 10 to 20% on dark backgrounds and 6 to 12% on light backgrounds, so text stays readable.</div>
+          <div><strong style={{ color: "#8a8070" }}>Single pattern per surface:</strong> Use one pattern per surface.</div>
           <div><strong style={{ color: "#8a8070" }}>Card back:</strong> Broadcast Field and Honeycomb are most legible at card scale. Phi Array and Interference read better large-format.</div>
-          <div><strong style={{ color: "#8a8070" }}>Color:</strong> Gold on dark for print and premium materials. Cream on dark for digital. Dark on cream/gold only when inverting for specific applications.</div>
+          <div><strong style={{ color: "#8a8070" }}>Color:</strong> Gold on dark for print and premium materials. Cream on dark for digital. Dark on cream or gold only for inverted applications.</div>
         </div>
       </div>
 
       <div style={{ maxWidth: "1200px", margin: "24px auto 0", padding: "0 0 64px" }}>
-        <a href="/logos" style={{ fontSize: "13px", color: "#3a3530", textDecoration: "none" }}>← Logo Options</a>
+        <a href="/logos" style={{ fontSize: "13px", color: "#3a3530", textDecoration: "none" }}>Logo Options</a>
       </div>
       </div>
     </div>

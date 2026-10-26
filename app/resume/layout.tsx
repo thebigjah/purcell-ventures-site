@@ -40,7 +40,7 @@ const schema = {
   "@type": "ProfilePage",
   "@id": "https://purcellventures.co/resume",
   "url": "https://purcellventures.co/resume",
-  "name": "Elijah Purcell — Resume",
+  "name": "Elijah Purcell: Resume",
   "description":
     "Professional resume for Elijah Purcell: founder of Purcell Ventures LLC, autonomous AI agent systems engineer, and psychology and data science student at the University of Alabama Honors College.",
   "mainEntity": { "@id": "https://purcellventures.co/#founder" },

@@ -19,27 +19,27 @@ const DIGITAL_ROWS: Row[] = [
   { category: "Email marketing platform", pv: "Included in Growth+", agency: "$0 platform fee + $500-1,500/mo management", freelancer: "$300-800/mo retainer", diy: "$10-100/mo (Mailchimp/ConvertKit)" },
   { category: "CRM with pipeline tracking", pv: "Included in Full", agency: "$5,000 HubSpot setup + $150-1,800/mo", freelancer: "$1,000 setup + DIY", diy: "$0-50/user/mo (HubSpot free / Pipedrive)" },
   { category: "Social media scheduling", pv: "Included in Growth+", agency: "$1,500-3,000/mo full management", freelancer: "$500-1,500/mo content + posting", diy: "$15-99/mo (Buffer/Later)" },
-  { category: "Review management + responses", pv: "Included in Growth+", agency: "$300-800/mo", freelancer: "Per-response", diy: "Manual / $30-100/mo tools" },
-  { category: "Setup time to live", pv: "5-7 business days", agency: "8-16 weeks", freelancer: "2-6 weeks", diy: "Hours-to-weeks depending on you" },
-  { category: "Maintenance + updates", pv: "Always included", agency: "Hourly $150-300", freelancer: "Hourly $50-150", diy: "Your time" },
-  { category: "Direct access to the owner", pv: "Always (Elijah, same day)", agency: "Never (account managers)", freelancer: "Yes (one person)", diy: "N/A" },
+  { category: "Review management and responses", pv: "Included in Growth+", agency: "$300-800/mo", freelancer: "Per-response", diy: "Manual / $30-100/mo tools" },
+  { category: "Setup time to live", pv: "5-7 business days", agency: "8-16 weeks", freelancer: "2-6 weeks", diy: "Hours to weeks, depending on you" },
+  { category: "Maintenance and updates", pv: "Included", agency: "Hourly $150-300", freelancer: "Hourly $50-150", diy: "Your time" },
+  { category: "Direct access to the owner", pv: "Yes, Elijah replies the same day", agency: "Usually through an account manager", freelancer: "Yes (one person)", diy: "N/A" },
 ];
 
 const CONSULTING_ROWS: Row[] = [
   { category: "1-on-1 AI consulting (1 hour)", pv: "$175/hr (2-hr min)", agency: "$250-500/hr enterprise consulting", freelancer: "$100-200/hr Upwork-tier", diy: "Free (your time learning)" },
-  { category: "Small group AI training (8 people)", pv: "$1,000 (8 × $125)", agency: "$3,000-8,000 corporate workshop", freelancer: "$800-2,000 group session", diy: "Free + group YouTube" },
+  { category: "Small group AI training (8 people)", pv: "$1,000 (8 × $125)", agency: "$3,000-8,000 corporate workshop", freelancer: "$800-2,000 group session", diy: "Free, using YouTube as a group" },
   { category: "Half-day workshop (up to 20)", pv: "$2,500 flat", agency: "$8,000-25,000 corporate training", freelancer: "$2,000-5,000 group facilitator", diy: "N/A practical at this scale" },
-  { category: "Comes to your office", pv: "Yes (Metro Atlanta) or remote", agency: "Yes with travel fees", freelancer: "Sometimes", diy: "—" },
-  { category: "Curriculum customized to your industry", pv: "Always", agency: "Sometimes + add-on cost", freelancer: "Depends on freelancer", diy: "You do it" },
+  { category: "Comes to your office", pv: "Yes (Metro Atlanta) or remote", agency: "Yes, with travel fees", freelancer: "Sometimes", diy: "N/A" },
+  { category: "Curriculum customized to your industry", pv: "Yes", agency: "Sometimes, at extra cost", freelancer: "Depends on freelancer", diy: "You do it" },
 ];
 
 const CUSTOM_SOFTWARE_ROWS: Row[] = [
-  { category: "Small project (single tool/script)", pv: "$1,500-3,500", agency: "$8,000-25,000 minimum engagement", freelancer: "$2,000-8,000", diy: "$0 + weeks of your time" },
-  { category: "Full mobile/web app", pv: "$5,000-15,000+", agency: "$25,000-150,000+", freelancer: "$10,000-50,000", diy: "Months + significant skill required" },
+  { category: "Small project (single tool/script)", pv: "$1,500-3,500", agency: "$8,000-25,000 minimum engagement", freelancer: "$2,000-8,000", diy: "$0 plus weeks of your time" },
+  { category: "Full mobile/web app", pv: "$5,000-15,000+", agency: "$25,000-150,000+", freelancer: "$10,000-50,000", diy: "Months, and it takes significant skill" },
   { category: "AI integration", pv: "Included scope", agency: "Specialty add-on $5k+", freelancer: "Depends on skill", diy: "Self-taught" },
-  { category: "Code ownership + transfer", pv: "Always 100% yours", agency: "Often source-code-restricted contracts", freelancer: "Usually yours", diy: "Yours" },
-  { category: "Owner on the build call", pv: "Always (Elijah scopes)", agency: "Never (project manager)", freelancer: "One person + maybe contractors", diy: "—" },
-  { category: "Discovery call before commitment", pv: "Free, 30 min", agency: "Free but high-pressure", freelancer: "Free usually", diy: "—" },
+  { category: "Code ownership and transfer", pv: "Yours", agency: "Often source-code-restricted contracts", freelancer: "Usually yours", diy: "Yours" },
+  { category: "Owner on the build call", pv: "Yes, Elijah scopes it", agency: "Usually a project manager", freelancer: "One person, sometimes with contractors", diy: "N/A" },
+  { category: "Discovery call before commitment", pv: "Free, 30 min", agency: "Free, often with a sales pitch", freelancer: "Usually free", diy: "N/A" },
 ];
 
 export default function PricingComparisonPage() {
@@ -54,12 +54,12 @@ export default function PricingComparisonPage() {
       <main style={{ position: "relative", zIndex: 5, maxWidth: "1180px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
         <header className="pv-page-head">
-          <div className="pv-mono-label">A Financial Comparison · Without spin</div>
+          <div className="pv-mono-label">Pricing comparison</div>
           <h1>
-            Pricing, <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>actually compared.</em>
+            Our pricing, <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>compared.</em>
           </h1>
           <p className="deck">
-            Most agencies bury pricing on a &quot;contact us&quot; form. We don&apos;t. Here&apos;s our pricing next to the realistic market alternatives, agencies, freelancers, and DIY tools. Numbers are typical ranges as of 2026. No spin, no &quot;starting from&quot; tricks.
+            We publish our prices here, next to typical prices from agencies, freelancers and DIY tools. The competitor figures are typical 2026 ranges, not quotes from specific firms.
           </p>
         </header>
 
@@ -67,7 +67,7 @@ export default function PricingComparisonPage() {
           <h2 style={sectionHead}>Digital Services (subscription tools)</h2>
           <ComparisonTable rows={DIGITAL_ROWS} />
           <p style={footnote}>
-            Digital total cost of ownership for year 1: <strong style={{ color: "var(--color-warm-accent)" }}>PV Growth ~$2,848</strong> (700 setup + 179×12) · <strong>Agency equivalent ~$30,000-80,000</strong> bundled · <strong>Freelancer ~$5,000-12,000 + your time stitching tools together</strong>.
+            Digital total cost of ownership for year 1: <strong style={{ color: "var(--color-warm-accent)" }}>PV Growth ~$2,848</strong> (700 setup + 179×12), <strong>agency equivalent ~$30,000-80,000</strong> bundled, <strong>freelancer ~$5,000-12,000 plus your time connecting the tools</strong>.
           </p>
         </section>
 
@@ -75,7 +75,7 @@ export default function PricingComparisonPage() {
           <h2 style={sectionHead}>AI Consulting</h2>
           <ComparisonTable rows={CONSULTING_ROWS} />
           <p style={footnote}>
-            Workshop math: PV $2,500 for 20 people = <strong style={{ color: "var(--color-warm-accent)" }}>$125/person</strong>. Enterprise training: typically $400-1,500/person. Your team learns the same things either way.
+            Workshop math: PV $2,500 for 20 people = <strong style={{ color: "var(--color-warm-accent)" }}>$125/person</strong>. Enterprise training: typically $400-1,500/person.
           </p>
         </section>
 
@@ -83,7 +83,7 @@ export default function PricingComparisonPage() {
           <h2 style={sectionHead}>Custom Software</h2>
           <ComparisonTable rows={CUSTOM_SOFTWARE_ROWS} />
           <p style={footnote}>
-            Custom software is where the spread is widest. A $25k agency project and a $5k PV project can produce the same working app, the difference is the agency&apos;s overhead, project managers, and slide decks, not the code.
+            Custom software has the widest price spread. A $25k agency project and a $5k PV project can produce the same working app. Agencies charge more to cover overhead and project managers.
           </p>
         </section>
 
@@ -91,11 +91,11 @@ export default function PricingComparisonPage() {
         <section style={{ marginBottom: "48px", padding: "32px 36px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)" }}>
           <h2 style={{ ...sectionHead, marginTop: 0 }}>Why we can charge less (and why that&apos;s sustainable)</h2>
           <ul style={{ paddingLeft: "24px", fontSize: "15px", color: "var(--color-warm-text)", lineHeight: 1.8 }}>
-            <li><strong>Solo operator, low overhead.</strong> No salespeople (well, now we have a few), no office, no middle management. Every dollar that&apos;s not building or supporting goes back into lower pricing.</li>
-            <li><strong>Modular, reusable systems.</strong> Our Digital Services skeletons are templates we adapt, not bespoke builds from scratch. That cuts hours without cutting quality.</li>
-            <li><strong>AI in our workflow.</strong> We use AI heavily for first drafts of code, content, and structure, then human-review every output. Speeds the work, doesn&apos;t reduce care.</li>
-            <li><strong>Long-term relationships pay back.</strong> A $99/mo subscription customer who stays 3 years pays us $3,564. That&apos;s why we don&apos;t need to extract maximum value from each engagement.</li>
-            <li><strong>Owner-direct, no commission stack.</strong> Most agencies pay a sales team 15-25% commission, an account manager, a project manager, plus margin. We pay sales reps a commission (now), but the owner is still on every important call.</li>
+            <li><strong>Low overhead.</strong> I do the work myself with a few commissioned sales reps, no office and no middle management.</li>
+            <li><strong>Reusable systems.</strong> We start Digital Services sites from templates we adapt to each client instead of building from scratch.</li>
+            <li><strong>AI in our workflow.</strong> We use AI for first drafts of code, content and structure, and I review every output.</li>
+            <li><strong>Long-term relationships pay back.</strong> A $99/mo subscription customer who stays 3 years pays us $3,564.</li>
+            <li><strong>Owner on the call.</strong> Most agencies pay a sales team 15-25% commission, an account manager and a project manager, plus margin. We pay our sales reps a commission, and I am on every important call.</li>
           </ul>
         </section>
 
@@ -103,27 +103,27 @@ export default function PricingComparisonPage() {
         <section style={{ marginBottom: "48px" }}>
           <h2 style={sectionHead}>When you should hire someone else (and who)</h2>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.7, marginBottom: "20px" }}>
-            Not every prospect is a fit. Here&apos;s when we&apos;ll point you elsewhere:
+            We point you elsewhere in these cases:
           </p>
           <div style={{ display: "grid", gap: "12px" }}>
             <RecommendCard
-              when="You need a 50+ person platform with enterprise compliance (SOC 2, HIPAA, etc.)"
-              recommend="Big agency (Accenture, Deloitte Digital) or a specialized firm in your vertical. We're not built for that scale of compliance overhead."
+              when="You need a platform for 50+ people with enterprise compliance (SOC 2, HIPAA and similar)"
+              recommend="Big agency (Accenture, Deloitte Digital) or a specialized firm in your vertical. We can't take on that much compliance work."
             />
             <RecommendCard
-              when="You have a $200-500 monthly budget and you JUST want a website"
-              recommend="Squarespace or Wix with one of their built-in templates. PV is overkill if you don't need AI tools, booking, CRM, or ongoing maintenance."
+              when="You have a $200-500 monthly budget and only want a website"
+              recommend="Squarespace or Wix with one of their built-in templates. You don't need PV if you don't need AI tools, booking, a CRM or ongoing maintenance."
             />
             <RecommendCard
               when="You want a one-time build with no ongoing relationship"
-              recommend="Hire a freelancer through Upwork or Toptal. Our model is built on retainer relationships; one-and-done isn't where we shine."
+              recommend="Hire a freelancer through Upwork or Toptal. We work on retainers and do not take one-time builds."
             />
             <RecommendCard
-              when="You need physical store-front retail POS / inventory at scale"
-              recommend="Shopify POS or Square. Specialty tools beat our generalist approach here."
+              when="You need a retail point-of-sale system or inventory at scale"
+              recommend="Shopify POS or Square. Those tools do this better than we do."
             />
             <RecommendCard
-              when="Your problem is genuinely 'I'm overwhelmed and don't know where to start'"
+              when="Your problem is that you don't know where to start"
               recommend="Take our free AI Readiness Test first. If you score in the bottom tier, save your money and read for 6 months before buying anything from anyone."
             />
           </div>
@@ -133,9 +133,9 @@ export default function PricingComparisonPage() {
         <div style={{ marginBottom: "32px", padding: "28px 32px", background: "linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02))", border: "1px solid var(--color-warm-accent)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "24px", alignItems: "center", flexWrap: "wrap" }}>
             <div>
-              <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", color: "var(--color-warm-accent)", fontWeight: 600, margin: "0 0 8px" }}>Want the math for YOUR business?</h3>
+              <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", color: "var(--color-warm-accent)", fontWeight: 600, margin: "0 0 8px" }}>Run the numbers for your business</h3>
               <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: 0, lineHeight: 1.6 }}>
-                Try our free AI Cost Calculator, plug in your team size, hourly rate, and current manual hours. Get a projected ROI + payback period in 30 seconds.
+                Enter your team size, hourly rate and current manual hours in the free AI Cost Calculator. It shows a projected ROI and payback period.
               </p>
             </div>
             <Link href="/ai-cost-calculator" className="pv-btn-primary">Open the calculator</Link>
@@ -144,9 +144,9 @@ export default function PricingComparisonPage() {
 
         {/* CTA */}
         <div style={{ textAlign: "center", padding: "40px 32px", background: "var(--color-warm-bg-alt)", border: "2px solid var(--color-warm-accent)" }}>
-          <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "26px", color: "var(--color-warm-text)", fontWeight: 700, margin: "0 0 12px" }}>The math checks out?</h3>
+          <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "26px", color: "var(--color-warm-text)", fontWeight: 700, margin: "0 0 12px" }}>Start with a free conversation</h3>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: "0 0 24px", maxWidth: "560px", marginLeft: "auto", marginRight: "auto", lineHeight: 1.6 }}>
-            Start with a free 30-min conversation. We&apos;ll honestly tell you which tier fits or whether you need us at all.
+            The first 30-minute conversation is free. We will tell you which tier fits, or whether you need us at all.
           </p>
           <Link href="/how-we-work" className="pv-btn-primary" style={{ marginRight: "12px" }}>See how we work</Link>
           <a href="mailto:elijah@purcell-ventures.com?subject=First%20conversation" className="pv-btn-ghost">Email Elijah</a>

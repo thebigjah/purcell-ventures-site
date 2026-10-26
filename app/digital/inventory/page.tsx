@@ -85,15 +85,15 @@ export default function InventoryPage() {
       ` }} />
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
-        <Link href="/digital/tools" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All tools</Link>
+        <Link href="/digital/tools" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All tools</Link>
 
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Operations · Inventory</div>
+          <div className="pv-mono-label">Operations: Inventory</div>
           <h1>
             Inventory <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>tracker</em>
           </h1>
           <p className="deck">
-            Product list with stock levels + low-stock alerts. Adjust quantities as you sell. Stays on this device.
+            Product list with stock levels and low-stock alerts. Adjust quantities as you sell. Stays on this device.
           </p>
         </header>
 
@@ -107,7 +107,7 @@ export default function InventoryPage() {
           <div style={{ background: "rgba(229, 74, 40, 0.08)", border: "1px solid #e54a28", padding: "16px 20px", marginBottom: "24px" }}>
             <strong style={{ color: "#e54a28", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", letterSpacing: "0.18em", textTransform: "uppercase" }}>Reorder soon ({lowStock.length})</strong>
             <p style={{ margin: "8px 0 0", fontSize: "13px", color: "var(--color-warm-text)", lineHeight: 1.6 }}>
-              {lowStock.map((i) => `${i.name} (${i.qty})`).join(" · ")}
+              {lowStock.map((i) => `${i.name} (${i.qty})`).join(", ")}
             </p>
           </div>
         )}

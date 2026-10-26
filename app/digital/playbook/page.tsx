@@ -52,39 +52,39 @@ const INTEREST_CONFIG: Record<Interest, { label: string; color: string; bg: stri
 
 const SIGHT_AUDIT = [
   { category: "Google Presence", checks: [
-    { item: "Search the business name on your phone before walking in", signal: "No Google Business Profile = instant pitch" },
-    { item: "Check their review count and rating", signal: "<20 reviews = they're invisible. <4.0 = they need reputation help" },
-    { item: "Do they have a website listed?", signal: "No website = strong cold open. Bad website = strong pitch" },
-    { item: "Are their hours and photos up to date?", signal: "Outdated or missing = they're not managing their presence at all" },
+    { item: "Search the business name on your phone before walking in", signal: "No Google Business Profile means you can pitch them right away" },
+    { item: "Check their review count and rating", signal: "Fewer than 20 reviews means customers rarely find them. Under 4.0 means they need help with reviews" },
+    { item: "Do they have a website listed?", signal: "No website gives you a strong opener. A bad website gives you a strong pitch" },
+    { item: "Are their hours and photos up to date?", signal: "Outdated or missing means nobody is managing their listing" },
   ]},
   { category: "Physical First Impression", checks: [
-    { item: "Is their signage professional?", signal: "Rough signage = probably rough digital too" },
-    { item: "Is there a social media handle posted anywhere?", signal: "None = they're not active. Old handle = inactive" },
-    { item: "Do they have a QR code, loyalty card, or any tech touch?", signal: "None = very low digital maturity, easy win" },
-    { item: "How busy are they? Waiting? Empty?", signal: "Empty + good location = marketing/booking problem" },
+    { item: "Is their signage professional?", signal: "Rough signage usually means a rough online presence too" },
+    { item: "Is there a social media handle posted anywhere?", signal: "No handle means they are not active. An old handle means the account is inactive" },
+    { item: "Do they have a QR code, loyalty card or any other tech?", signal: "None means they have little tech in place, so the first step is easy to show" },
+    { item: "How busy are they? Is anyone waiting, or is it empty?", signal: "Empty with a good location points to a marketing or booking problem" },
   ]},
   { category: "Quick Website Check", checks: [
-    { item: "Does their site load fast on mobile?", signal: "Slow = terrible SEO score, easy to contrast against" },
-    { item: "Is there online booking or a contact form?", signal: "No booking = they're losing customers who won't call" },
-    { item: "When was the last update / blog post / event?", signal: "2019 or older = abandoned site, perfect pitch" },
-    { item: "Does it look like it cost $0 to build?", signal: "Squarespace/Wix default template = they DIY'd it and it shows" },
+    { item: "Does their site load fast on mobile?", signal: "A slow site hurts their search ranking and gives you a contrast" },
+    { item: "Is there online booking or a contact form?", signal: "No booking means they lose customers who will not call" },
+    { item: "When was the last update, blog post or event?", signal: "2019 or older means the site is abandoned, which is a good pitch" },
+    { item: "Is it an unedited Wix or Squarespace template?", signal: "A default template means they built it themselves" },
   ]},
 ];
 
 const COLD_WALKIN = {
   opener: {
-    goal: "Get to the decision-maker. Be friendly, direct, zero pressure.",
+    goal: "Reach the decision-maker. Stay friendly and direct.",
     script: [
       { line: "Hey, is [owner's name / the owner] around?", note: "Ask for the owner by name if you saw it on Google. People respond to their name." },
-      { line: "My name's Elijah — I run a small tech company out of [city] called Purcell Ventures. We help local businesses like yours get set up with websites, AI tools, and online booking.", note: "Slow down. Let them absorb it." },
-      { line: "I was just in the area and looked you up real quick — I noticed [specific thing you saw in your audit]. Took me about 30 seconds to spot that.", note: "THIS is what gets their attention. You did homework. You know something specific about them." },
-      { line: "I'm not here to sell you anything right now. I just want to ask a couple questions and see if what I do would actually be useful to you.", note: "Drop the pressure completely. This line matters." },
+      { line: "My name's Elijah. I run a small tech company out of [city] called Purcell Ventures. We help local businesses like yours set up websites, AI tools and online booking.", note: "Slow down. Give them time to take it in." },
+      { line: "I was in the area and looked you up. I noticed [specific thing you saw in your audit]. It took me about 30 seconds to spot that.", note: "This line gets their attention because it shows you did homework on them specifically." },
+      { line: "I'm not here to sell you anything today. I want to ask a couple of questions and see if what I do would be useful to you.", note: "Say it plainly and mean it." },
     ],
   },
   transitions: [
-    { trigger: "They say 'I'm busy'", response: "Totally, I won't take long — I just have one or two questions. If it doesn't click in 2 minutes, I'll leave you to it." },
-    { trigger: "They say 'we already have a website'", response: "Nice, is it bringing in customers, or is it more like a digital business card? Most websites are the second one." },
-    { trigger: "They say 'we don't need that'", response: "Fair enough. Can I ask, how are most new customers finding you right now?" },
+    { trigger: "They say 'I'm busy'", response: "Totally, I won't take long. I have one or two questions. If it doesn't click in 2 minutes, I'll leave you to it." },
+    { trigger: "They say 'we already have a website'", response: "Nice. Is the site bringing you customers, or does it mostly list your contact details?" },
+    { trigger: "They say 'we don't need that'", response: "Fair enough. Can I ask how most new customers find you right now?" },
     { trigger: "They say 'I'm not the right person'", response: "Who would be? I'd love to leave my info with them or come back at a better time." },
     { trigger: "They seem interested immediately", response: "Move straight into discovery questions. Don't over-explain. Listen more than you talk." },
   ],
@@ -92,55 +92,55 @@ const COLD_WALKIN = {
 
 const DISCOVERY = [
   { section: "Understand Their Current Situation", color: "#d4af37", questions: [
-    { q: "How are new customers finding you right now?", listen: "If they say 'word of mouth only' — they have zero digital. If they say Google, ask how many reviews they have." },
+    { q: "How are new customers finding you right now?", listen: "If they say 'word of mouth only', they have no online presence. If they say Google, ask how many reviews they have." },
     { q: "Do you have a website? When did you last update it?", listen: "Most small businesses haven't touched their site in years. 'We have one but...' always ends with a problem you can solve." },
-    { q: "Are you on social media? Who runs that?", listen: "'I try to post but I don't have time' = social media scheduler + AI captions is your pitch." },
-    { q: "How do customers usually book or contact you, phone, walk-in, online?", listen: "If they say phone only, booking system is the sell." },
+    { q: "Are you on social media? Who runs that?", listen: "If they say 'I try to post but I don't have time', pitch the social media scheduler and AI captions." },
+    { q: "How do customers usually book or contact you: phone, walk-in or online?", listen: "If they say phone only, pitch the booking system." },
   ]},
   { section: "Find the Pain", color: "#e8a030", questions: [
-    { q: "What's the most time-consuming thing in your week that isn't actually serving customers?", listen: "This reveals the ops tool they need, invoicing, scheduling, CRM, follow-ups." },
-    { q: "Do you ever lose track of leads or follow-ups?", listen: "'Yes' = CRM and lead capture." },
-    { q: "Have you ever gotten a bad review online that you didn't get to respond to?", listen: "Yes = review manager pitch." },
-    { q: "How much time does your team spend answering the same questions, hours, prices, location?", listen: "'A lot' = AI chatbot on website is the exact solution." },
+    { q: "What takes up the most time in your week without serving customers?", listen: "This shows which ops tool they need: invoicing, scheduling, CRM or follow-ups." },
+    { q: "Do you ever lose track of leads or follow-ups?", listen: "If yes, pitch the CRM and lead capture." },
+    { q: "Have you ever gotten a bad review online that you didn't get to respond to?", listen: "If yes, pitch the review manager." },
+    { q: "How much time does your team spend answering the same questions about hours, prices and location?", listen: "If 'a lot', pitch the AI chatbot for their website." },
   ]},
   { section: "Qualify the Opportunity", color: "#7aaa6a", questions: [
-    { q: "Have you ever looked into getting help with any of this before? What stopped you?", listen: "Price objection = lead with value. Trust objection = emphasize local + personal." },
-    { q: "What would it mean for you if you had twice as many people finding you online?", listen: "Let them paint the picture. Their answer becomes your close." },
+    { q: "Have you ever looked into getting help with any of this before? What stopped you?", listen: "For a price objection, lead with what they get. For a trust objection, stress that you are local and do the work yourself." },
+    { q: "What would it mean for you if twice as many people found you online?", listen: "Let them describe it. Their answer becomes your close." },
     { q: "What are you spending right now on marketing or anything digital?", listen: "If nothing: 'So you're getting $0 in return right now.'" },
-    { q: "Is there a budget you work with for this kind of thing?", listen: "Only ask after they're engaged. It's about whether they see the value." },
+    { q: "Is there a budget you work with for this kind of thing?", listen: "Only ask after they're engaged. The question is whether they see the value." },
   ]},
 ];
 
 const CLOSES = [
-  { type: "Soft Close (preferred first)", script: "Here's what I'd suggest, let me put together a quick overview of exactly what I'd build for you, with pricing, and we can look at it together. No commitment. Would that be useful?", note: "This gives them an easy 'yes' and you a reason to follow up." },
-  { type: "Demo Close", script: "Can I show you something real quick? [Pull up purcellventures.co/digital on your phone] This is what a full setup looks like for a business like yours. Starting at $99 a month.", note: "Always have the site up and ready on your phone." },
-  { type: "Urgency Close (only when they're warm)", script: "I only take on a few new clients at a time so I can actually give each one attention. I've got a slot opening up this month, want to get on a call this week?", note: "Only use this if they're genuinely interested." },
-  { type: "Leave-Behind", script: "Here's my card. My site is purcellventures.co, you can see pricing, tools, the whole thing. I'll follow up in a day or two if that's okay.", note: "Always get permission to follow up. Always follow up." },
+  { type: "Soft Close (preferred first)", script: "Here's what I'd suggest. Let me put together a quick overview of what I'd build for you, with pricing, and we can look at it together. No commitment. Would that be useful?", note: "This gives them an easy 'yes' and gives you a reason to follow up." },
+  { type: "Demo Close", script: "Can I show you something quickly? [Pull up purcellventures.co/digital on your phone] This is what a full setup looks like for a business like yours. Starting at $99 a month.", note: "Always have the site up and ready on your phone." },
+  { type: "Urgency Close (only when they're warm)", script: "I only take on a few new clients at a time so I can give each one attention. I've got a slot opening up this month. Want to get on a call this week?", note: "Only use this if they're clearly interested." },
+  { type: "Leave-Behind", script: "Here's my card. My site is purcellventures.co, where you can see pricing and the tools. I'll follow up in a day or two if that's okay.", note: "Always get permission to follow up. Always follow up." },
 ];
 
 const OBJECTIONS = [
-  { obj: "\"That's too expensive.\"", response: "What are you spending right now to get new customers? If the answer is nothing, you're already paying, in customers you're not getting. Most clients make it back in 1–2 new bookings a month." },
-  { obj: "\"We're doing fine without it.\"", response: "That's fair. Quick question, do you know what your competitors are doing online? I'm not saying you need this, I'm saying your competition might be using it on you already." },
-  { obj: "\"I need to think about it.\"", response: "Of course. What's the biggest thing you'd want to think through? I'd rather you feel good about it, can I put together something specific for your business so you have something concrete to look at?" },
-  { obj: "\"I tried something like this before and it didn't work.\"", response: "What happened? That's really common, a lot of what's out there is either too generic or nobody maintains it. What I do is different because I stay involved. It's not a build-and-disappear thing." },
-  { obj: "\"I don't have time to deal with this.\"", response: "That's exactly why people hire me. You don't have to deal with any of it — I handle the setup, the updates, and the maintenance. You look at it when something needs your approval, and that's it." },
-  { obj: "\"I don't know anything about tech.\"", response: "Good, then you're my favorite kind of client. I explain everything in plain terms, and once it's set up you don't need to know how it works. You just see the results." },
+  { obj: "\"That's too expensive.\"", response: "What are you spending right now to get new customers? If the answer is nothing, you're already paying in customers you're not getting. One or two new bookings a month usually covers it." },
+  { obj: "\"We're doing fine without it.\"", response: "That's fair. Quick question: do you know what your competitors are doing online? You may not need this, but your competition might already be using it." },
+  { obj: "\"I need to think about it.\"", response: "Of course. What's the biggest thing you'd want to think through? Can I put together something specific for your business so you have something concrete to look at?" },
+  { obj: "\"I tried something like this before and it didn't work.\"", response: "What happened? That's common. A lot of what's out there is generic, or nobody maintains it. I stay involved after the build and keep maintaining it." },
+  { obj: "\"I don't have time to deal with this.\"", response: "That's why people hire me. I handle the setup, the updates and the maintenance. You look at it when something needs your approval, and that's it." },
+  { obj: "\"I don't know anything about tech.\"", response: "That's fine. Most of my clients don't. I explain everything in plain terms, and once it's set up you don't need to know how it works." },
 ];
 
 const WORD_OF_MOUTH = [
   { context: "Casual conversation (friends, church, family)", lines: [
-    "I run a thing called Purcell Ventures — I build websites and AI tools for small businesses. Like, the whole online setup. Booking, chatbots, social media, all managed for them.",
-    "If you know any small business owners, salons, contractors, restaurants, who feel like their online presence is embarrassing or just nonexistent, send them my way. It's $75 a month and it actually runs itself.",
-    "I'm basically the young, affordable version of a digital agency. But I actually pick up the phone.",
+    "I run a company called Purcell Ventures. I build websites and AI tools for small businesses: booking, chatbots and social media, all managed for them.",
+    "If you know any small business owners, like salons, contractors or restaurants, who are unhappy with their online presence or don't have one, send them my way. It's $75 a month and I run it for them.",
+    "I do what a digital agency does at a lower price, and I answer my own phone.",
   ]},
   { context: "Someone asks what you do", lines: [
-    "I build and manage the digital side of small businesses, websites, booking systems, AI chatbots, social media tools. All under one subscription.",
-    "Think of it like hiring a web designer, a marketing person, and an AI specialist, but for $75 a month instead of three salaries.",
+    "I build and manage the digital side of small businesses: websites, booking systems, AI chatbots and social media tools, all under one subscription.",
+    "It covers what a web designer, a marketing person and an AI specialist would do, for $75 a month.",
   ]},
   { context: "They mention a business that's struggling with marketing", lines: [
-    "What's their online presence like? Because that's usually the first domino.",
-    "That sounds like a website + Google reviews problem. I actually fix that, want me to take a look?",
-    "Tell them to go to purcellventures.co/digital. Everything's there, prices and all.",
+    "What's their online presence like? That's usually the first thing to fix.",
+    "That sounds like a website and Google reviews problem. I fix that. Want me to take a look?",
+    "Tell them to go to purcellventures.co/digital. The services and prices are all there.",
   ]},
 ];
 
@@ -166,7 +166,7 @@ See the full breakdown at purcellventures.co/digital
 
 Want to hop on a 15-minute call to go over it?
 
-— Elijah Purcell | Purcell Ventures LLC
+Elijah Purcell, Purcell Ventures LLC
 elijah@purcell-ventures.com`;
 }
 
@@ -178,7 +178,7 @@ function generateSummary(v: Visit): string {
     v.googleProfile !== "complete" && `Google profile: ${v.googleProfile}`,
   ].filter(Boolean).join(", ");
 
-  return `VISIT LOG — ${new Date(v.date).toLocaleDateString()}
+  return `Visit log: ${new Date(v.date).toLocaleDateString()}
 Business: ${v.businessName}
 Owner: ${v.ownerName || "—"} | Phone: ${v.phone || "—"}
 Type: ${v.type || "—"} | Address: ${v.address || "—"}
@@ -286,11 +286,11 @@ export default function PlaybookPage() {
       {/* Header */}
       <div style={{ background: "#141210", borderBottom: "1px solid #2e2820", padding: "14px 24px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0, zIndex: 50, gap: "12px", flexWrap: "wrap" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-          <a href="/digital" style={{ fontSize: "12px", color: "#524d45", textDecoration: "none" }}>← Digital</a>
+          <a href="/digital" style={{ fontSize: "12px", color: "#524d45", textDecoration: "none" }}>Back to Digital</a>
           <span style={{ color: "#2e2820" }}>|</span>
           <span style={{ fontSize: "15px", fontWeight: 700, color: "#d4af37", fontFamily: "'Cinzel', Georgia, serif" }}>Sales Playbook</span>
           <span style={{ fontSize: "10px", padding: "2px 7px", background: "#d4af3715", border: "1px solid #d4af3730", borderRadius: "3px", color: "#d4af37" }}>Private</span>
-          <a href="/digital/finder" style={{ fontSize: "12px", color: "#8a8070", textDecoration: "none", marginLeft: "4px" }}>Finder →</a>
+          <a href="/digital/finder" style={{ fontSize: "12px", color: "#8a8070", textDecoration: "none", marginLeft: "4px" }}>Finder</a>
         </div>
         <div style={{ display: "flex", gap: "4px", flexWrap: "wrap" }}>
           {([["walkin","Walk-In"],["wom","Word of Mouth"],["followup","Follow-Up"],["log","Log Visit"],["visits","My Visits"]] as [Mode, string][]).map(([m, label]) => (
@@ -316,7 +316,7 @@ export default function PlaybookPage() {
         {mode === "walkin" && (
           <div>
             <div style={{ background: "#141210", border: "1px solid #2e2820", borderRadius: "10px", marginBottom: "16px", overflow: "hidden" }}>
-              {sectionHeader("sight", "STEP 1 — Sight Audit (Do this BEFORE you walk in)", "#d4af37")}
+              {sectionHeader("sight", "Step 1: Sight audit. Do this before you walk in.", "#d4af37")}
               {openSections.has("sight") && (
                 <div style={{ padding: "0 20px 20px" }}>
                   {SIGHT_AUDIT.map((cat) => (
@@ -340,7 +340,7 @@ export default function PlaybookPage() {
             </div>
 
             <div style={{ background: "#141210", border: "1px solid #2e2820", borderRadius: "10px", marginBottom: "16px", overflow: "hidden" }}>
-              {sectionHeader("opener", "STEP 2 — The Opener (First 30 Seconds)")}
+              {sectionHeader("opener", "Step 2: The opener (first 30 seconds)")}
               {openSections.has("opener") && (
                 <div style={{ padding: "0 20px 20px" }}>
                   <div style={{ fontSize: "13px", color: "#8a8070", marginBottom: "16px" }}>Goal: {COLD_WALKIN.opener.goal}</div>
@@ -349,7 +349,7 @@ export default function PlaybookPage() {
                       <div style={{ fontSize: "15px", color: "#f5f0e0", fontWeight: 600, marginBottom: "8px", lineHeight: 1.5 }}>
                         <span style={{ color: "#d4af37" }}>&#34;</span>{item.line}<span style={{ color: "#d4af37" }}>&#34;</span>
                       </div>
-                      <div style={{ fontSize: "12px", color: "#7aaa6a", fontStyle: "italic" }}>→ {item.note}</div>
+                      <div style={{ fontSize: "12px", color: "#7aaa6a", fontStyle: "italic" }}>{item.note}</div>
                     </div>
                   ))}
                   <div style={{ marginTop: "16px" }}>
@@ -366,7 +366,7 @@ export default function PlaybookPage() {
             </div>
 
             <div style={{ background: "#141210", border: "1px solid #2e2820", borderRadius: "10px", marginBottom: "16px", overflow: "hidden" }}>
-              {sectionHeader("discovery", "STEP 3 — Discovery Questions")}
+              {sectionHeader("discovery", "Step 3: Discovery questions")}
               {openSections.has("discovery") && (
                 <div style={{ padding: "0 20px 20px" }}>
                   <div style={{ fontSize: "13px", color: "#8a8070", marginBottom: "20px" }}>Ask these in order. Listen more than you talk.</div>
@@ -393,7 +393,7 @@ export default function PlaybookPage() {
             </div>
 
             <div style={{ background: "#141210", border: "1px solid #2e2820", borderRadius: "10px", marginBottom: "16px", overflow: "hidden" }}>
-              {sectionHeader("objections", "STEP 4 — Handling Objections")}
+              {sectionHeader("objections", "Step 4: Handling objections")}
               {openSections.has("objections") && (
                 <div style={{ padding: "0 20px 20px" }}>
                   {OBJECTIONS.map((o, i) => (
@@ -407,7 +407,7 @@ export default function PlaybookPage() {
             </div>
 
             <div style={{ background: "#141210", border: "1px solid #2e2820", borderRadius: "10px", overflow: "hidden" }}>
-              {sectionHeader("close", "STEP 5 — The Close")}
+              {sectionHeader("close", "Step 5: The close")}
               {openSections.has("close") && (
                 <div style={{ padding: "0 20px 20px" }}>
                   {CLOSES.map((c, i) => (
@@ -416,7 +416,7 @@ export default function PlaybookPage() {
                       <div style={{ fontSize: "15px", color: "#f5f0e0", fontWeight: 600, marginBottom: "8px", lineHeight: 1.55 }}>
                         <span style={{ color: "#d4af37" }}>&#34;</span>{c.script}<span style={{ color: "#d4af37" }}>&#34;</span>
                       </div>
-                      <div style={{ fontSize: "12px", color: "#7aaa6a", fontStyle: "italic" }}>→ {c.note}</div>
+                      <div style={{ fontSize: "12px", color: "#7aaa6a", fontStyle: "italic" }}>{c.note}</div>
                     </div>
                   ))}
                 </div>
@@ -430,7 +430,7 @@ export default function PlaybookPage() {
           <div>
             <div style={{ marginBottom: "24px" }}>
               <div style={{ fontSize: "22px", fontWeight: 700, color: "#f5f0e0", marginBottom: "8px" }}>Word of Mouth Lines</div>
-              <div style={{ fontSize: "14px", color: "#8a8070" }}>Ready-to-use language for any casual conversation. Don't memorize, internalize.</div>
+              <div style={{ fontSize: "14px", color: "#8a8070" }}>Lines for casual conversations. Learn the idea, not the exact words.</div>
             </div>
             {WORD_OF_MOUTH.map((section, i) => (
               <div key={i} style={{ ...s, marginBottom: "16px" }}>
@@ -445,7 +445,7 @@ export default function PlaybookPage() {
             <div style={{ ...s, borderColor: "#d4af3740" }}>
               <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#d4af37", marginBottom: "12px" }}>The One Thing to Get Across</div>
               <div style={{ fontSize: "15px", color: "#f5f0e0", lineHeight: 1.75 }}>
-                &ldquo;I build and manage the entire online presence for small businesses, website, booking, AI chatbot, social media, all of it. Starting at $75 a month. Less than one employee hour.&rdquo;
+                &ldquo;I build and manage the online presence for small businesses: website, booking, AI chatbot and social media. Starting at $75 a month.&rdquo;
               </div>
             </div>
           </div>
@@ -456,18 +456,18 @@ export default function PlaybookPage() {
           <div>
             <div style={{ marginBottom: "24px" }}>
               <div style={{ fontSize: "22px", fontWeight: 700, color: "#f5f0e0", marginBottom: "8px" }}>Follow-Up Scripts</div>
-              <div style={{ fontSize: "14px", color: "#8a8070" }}>Most deals close on the follow-up. This is where discipline beats talent.</div>
+              <div style={{ fontSize: "14px", color: "#8a8070" }}>Most of my deals close on a follow-up, so send every one.</div>
             </div>
             {[
-              { label: "Day 1 — Text/Email after a walk-in", color: "#7aaa6a", script: `Hey [Name], it's Elijah — I stopped by [Business] earlier today. Wanted to send over what I mentioned: purcellventures.co/digital\n\nBased on what you told me, I think [specific tool] would make the biggest difference for you. Happy to put together a quick overview with pricing if you want to take a look. No pressure either way.\n\n— Elijah Purcell | Purcell Ventures`, note: "Keep it short. Reference something specific from the conversation. Link directly to the digital page." },
-              { label: "Day 3 — If no response", color: "#d4af37", script: `Hey [Name], just circling back. I know you're busy, wanted to leave the door open if you had any questions about what I mentioned.\n\nIf the timing's not right, totally understand. But if you want me to put together a custom quote for [Business], I'm happy to do that. Takes me about 10 minutes.\n\n— Elijah`, note: "One more touch. If they don't reply after this, let them go. Don't spam." },
-              { label: "Day 7 — Final follow-up", color: "#e8a030", script: `Hey [Name] — last message, I promise. If you ever want to revisit the online presence stuff for [Business], I'm at elijah@purcell-ventures.com.\n\nI do good work and I'm local. Whenever the time is right.\n\n— Elijah`, note: "Leave it warm. Say 'last message' — it's honest and it actually gets replies." },
-              { label: "Warm Lead — Custom Proposal Email", color: "#9b7fd4", script: `Hey [Name],\n\nGood talking to you. Based on what you shared, here's what I'd recommend for [Business]:\n\n• [Tool 1] — [one line on why it fits them]\n• [Tool 2] — [one line on why it fits them]\n• [Tool 3] — [one line on why it fits them]\n\nTotal: $[X] setup + $[Y]/month after that.\n\nThat includes me building it, maintaining it, and being reachable when you need something. Full pricing at purcellventures.co/digital.\n\nWant to hop on a 15-minute call to go over it?\n\n— Elijah Purcell | Purcell Ventures LLC\nelijah@purcell-ventures.com`, note: "Always send a written proposal to warm leads. It makes you look professional and gives them something to share with a spouse/partner." },
+              { label: "Day 1: Text or email after a walk-in", color: "#7aaa6a", script: `Hey [Name], it's Elijah. I stopped by [Business] earlier today. Wanted to send over what I mentioned: purcellventures.co/digital\n\nBased on what you told me, I think [specific tool] would make the biggest difference for you. Happy to put together a quick overview with pricing if you want to take a look. No pressure either way.\n\nElijah Purcell, Purcell Ventures`, note: "Keep it short. Reference something specific from the conversation. Link directly to the digital page." },
+              { label: "Day 3: If no response", color: "#d4af37", script: `Hey [Name], just circling back. I know you're busy, wanted to leave the door open if you had any questions about what I mentioned.\n\nIf the timing's not right, totally understand. But if you want me to put together a custom quote for [Business], I'm happy to do that. Takes me about 10 minutes.\n\nElijah`, note: "One more touch. If they don't reply after this, let them go. Don't spam." },
+              { label: "Day 7: Final follow-up", color: "#e8a030", script: `Hey [Name], last message, I promise. If you ever want to revisit the online presence stuff for [Business], I'm at elijah@purcell-ventures.com.\n\nI do good work and I'm local. Whenever the time is right.\n\nElijah`, note: "Leave it warm. Saying 'last message' tells them the truth, and it gets replies." },
+              { label: "Warm lead: custom proposal email", color: "#9b7fd4", script: `Hey [Name],\n\nGood talking to you. Based on what you shared, here's what I'd recommend for [Business]:\n\n• [Tool 1]: [one line on why it fits them]\n• [Tool 2]: [one line on why it fits them]\n• [Tool 3]: [one line on why it fits them]\n\nTotal: $[X] setup + $[Y]/month after that.\n\nThat includes me building it, maintaining it, and being reachable when you need something. Full pricing at purcellventures.co/digital.\n\nWant to hop on a 15-minute call to go over it?\n\nElijah Purcell, Purcell Ventures LLC\nelijah@purcell-ventures.com`, note: "Always send a written proposal to warm leads. It makes you look professional and gives them something to share with a spouse/partner." },
             ].map((item, i) => (
               <div key={i} style={{ ...s, borderColor: item.color + "40", marginBottom: "16px" }}>
                 <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: item.color, marginBottom: "12px" }}>{item.label}</div>
                 <pre style={{ fontSize: "13px", color: "#c8c0b0", lineHeight: 1.75, whiteSpace: "pre-wrap", fontFamily: "Inter, sans-serif", marginBottom: "12px", background: "#141210", padding: "14px", borderRadius: "6px", border: "1px solid #2e2820" }}>{item.script}</pre>
-                <div style={{ fontSize: "12px", color: "#7aaa6a", fontStyle: "italic" }}>→ {item.note}</div>
+                <div style={{ fontSize: "12px", color: "#7aaa6a", fontStyle: "italic" }}>{item.note}</div>
               </div>
             ))}
           </div>
@@ -589,7 +589,7 @@ export default function PlaybookPage() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "24px", flexWrap: "wrap", gap: "12px" }}>
               <div>
                 <div style={{ fontSize: "22px", fontWeight: 700, color: "#f5f0e0", marginBottom: "4px" }}>My Visits</div>
-                <div style={{ fontSize: "13px", color: "#8a8070" }}>{visits.length} logged · {hotLeads.length} hot · {upcomingFollowUps.length} follow-ups due</div>
+                <div style={{ fontSize: "13px", color: "#8a8070" }}>{visits.length} logged, {hotLeads.length} hot, {upcomingFollowUps.length} follow-ups due</div>
               </div>
               <button onClick={() => setMode("log")}
                 style={{ padding: "9px 18px", background: "#d4af37", border: "none", borderRadius: "6px", color: "#0c0a08", fontSize: "13px", fontWeight: 700, cursor: "pointer" }}>
@@ -603,7 +603,7 @@ export default function PlaybookPage() {
                 <div style={{ fontSize: "12px", fontWeight: 700, color: "#d4af37", marginBottom: "8px" }}>Follow-Ups Due</div>
                 {upcomingFollowUps.map(v => (
                   <div key={v.id} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: "13px", color: "#c8c0b0", marginBottom: "4px" }}>
-                    <span>{v.businessName} — {v.ownerName || "owner"}</span>
+                    <span>{v.businessName}, {v.ownerName || "owner"}</span>
                     <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
                       <span style={{ color: "#d4af37" }}>{new Date(v.followUpDate).toLocaleDateString()}</span>
                       <button onClick={() => toggleFollowUp(v.id)} style={{ padding: "3px 8px", background: "#d4af37", border: "none", borderRadius: "4px", color: "#0c0a08", fontSize: "11px", fontWeight: 700, cursor: "pointer" }}>Done</button>
@@ -634,8 +634,8 @@ export default function PlaybookPage() {
                         <div>
                           <div style={{ fontSize: "14px", fontWeight: 700, color: "#f5f0e0" }}>{v.businessName}</div>
                           <div style={{ fontSize: "11px", color: "#524d45", marginTop: "2px" }}>
-                            {v.ownerName && `${v.ownerName} · `}{v.type && `${v.type} · `}{new Date(v.date).toLocaleDateString()}
-                            {v.followUpDate && !v.followUpDone && ` · Follow-up: ${new Date(v.followUpDate).toLocaleDateString()}`}
+                            {v.ownerName && `${v.ownerName}, `}{v.type && `${v.type}, `}{new Date(v.date).toLocaleDateString()}
+                            {v.followUpDate && !v.followUpDone && `, follow-up: ${new Date(v.followUpDate).toLocaleDateString()}`}
                           </div>
                         </div>
                         <div style={{ display: "flex", gap: "6px", fontSize: "11px" }}>
@@ -678,7 +678,7 @@ export default function PlaybookPage() {
                               style={{ padding: "8px 14px", background: "#d4af3712", border: "1px solid #d4af3740", borderRadius: "6px", color: copiedId === `proposal-${v.id}` ? "#7aaa6a" : "#d4af37", fontSize: "12px", cursor: "pointer", fontWeight: 600 }}>
                               {copiedId === `proposal-${v.id}` ? "✓ Copied" : "Generate Proposal"}
                             </button>
-                            <a href={`mailto:elijah@purcell-ventures.com?subject=Visit Log — ${v.businessName}&body=${encodeURIComponent(generateSummary(v))}`}
+                            <a href={`mailto:elijah@purcell-ventures.com?subject=Visit log: ${v.businessName}&body=${encodeURIComponent(generateSummary(v))}`}
                               style={{ padding: "8px 14px", background: "#1a1714", border: "1px solid #2e2820", borderRadius: "6px", color: "#8a8070", fontSize: "12px", textDecoration: "none", fontWeight: 600 }}>
                               Email to Self
                             </a>

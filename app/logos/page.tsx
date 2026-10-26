@@ -234,8 +234,8 @@ function LogoSection({ logo, idx }: { logo: LogoEntry; idx: number }) {
         <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "10px" }}>Primary</div>
         <div ref={mainRef} style={{ display: "inline-block" }}>{logo.main}</div>
         <div style={{ display: "flex", gap: "8px", marginTop: "10px" }}>
-          <button style={btnBase} onClick={dlMain}>↓ Download PNG</button>
-          {logo.isSvg && <button style={btnGoldStyle} onClick={dlMainSvg}>↓ Download SVG</button>}
+          <button style={btnBase} onClick={dlMain}>Download PNG</button>
+          {logo.isSvg && <button style={btnGoldStyle} onClick={dlMainSvg}>Download SVG</button>}
         </div>
       </div>
 
@@ -245,7 +245,7 @@ function LogoSection({ logo, idx }: { logo: LogoEntry; idx: number }) {
           {logo.variants.map((v, vi) => (
             <div key={v.label}>
               <div ref={el => { varRefs.current[vi] = el; }}>{v.node}</div>
-              <button style={btnSmallStyle} onClick={() => dlVariant(vi, `${logo.name} ${v.label}`)}>↓ PNG</button>
+              <button style={btnSmallStyle} onClick={() => dlVariant(vi, `${logo.name} ${v.label}`)}>PNG</button>
               <div style={{ fontSize: "10px", color: "#3a3530", marginTop: "4px", letterSpacing: "0.04em", maxWidth: "140px" }}>{v.label}</div>
             </div>
           ))}
@@ -258,7 +258,7 @@ function LogoSection({ logo, idx }: { logo: LogoEntry; idx: number }) {
 const LOGOS: LogoEntry[] = [
   {
     name: "The Panopticon Mark",
-    subtitle: "Reverse panopticon ring · inward cell groups · concentric field · PV center",
+    subtitle: "Reverse panopticon ring, inward cell groups, concentric field and a PV center",
     isSvg: true,
     main: (
       <div style={{ borderRadius: 8, overflow: "hidden", boxShadow: "0 6px 32px rgba(0,0,0,0.55)", display: "inline-block" }}>
@@ -277,11 +277,11 @@ const LOGOS: LogoEntry[] = [
         node: <PanopticonVariant size={140} />,
       },
       {
-        label: "Minimal — 4 groups, no rings",
+        label: "Minimal: 4 groups, no rings",
         node: <PanopticonVariant size={140} cfg={{ numGroups: 4, includeFlankers: false, numRings: 0, tallH: 44 }} />,
       },
       {
-        label: "Dense — 12 groups, 14 rings",
+        label: "Dense: 12 groups, 14 rings",
         node: <PanopticonVariant size={140} cfg={{ numGroups: 12, numRings: 14, tallH: 26, shortH: 12 }} />,
       },
       {
@@ -293,11 +293,11 @@ const LOGOS: LogoEntry[] = [
         node: <PanopticonVariant size={140} color={DARK} bg={CREAM} />,
       },
       {
-        label: "Split, half gold / half inverted",
+        label: "Split: half gold, half inverted",
         node: <div style={{ borderRadius: 8, overflow: "hidden", boxShadow: "0 4px 16px rgba(0,0,0,0.45)", display: "inline-block" }}><PanopticonSplit size={140} /></div>,
       },
       {
-        label: "Lampstand, wireframe + fading rings, sovereign center",
+        label: "Lampstand: wireframe with fading rings and a solid center",
         node: <PanopticonVariant size={140} cfg={{
           cellStyle: "outlined",
           pvSize: 70, pvClearR: 58,
@@ -307,7 +307,7 @@ const LOGOS: LogoEntry[] = [
         }} />,
       },
       {
-        label: "Lampstand — 5 rings, more open field",
+        label: "Lampstand: 5 rings, more open field",
         node: <PanopticonVariant size={140} cfg={{
           cellStyle: "outlined",
           pvSize: 70, pvClearR: 58,
@@ -317,7 +317,7 @@ const LOGOS: LogoEntry[] = [
         }} />,
       },
       {
-        label: "Lampstand — 12 groups, dense arms",
+        label: "Lampstand: 12 groups, dense arms",
         node: <PanopticonVariant size={140} cfg={{
           cellStyle: "outlined",
           numGroups: 12, tallH: 26, shortH: 12,
@@ -328,7 +328,7 @@ const LOGOS: LogoEntry[] = [
         }} />,
       },
       {
-        label: "Lampstand — 6 spokes, no flankers",
+        label: "Lampstand: 6 spokes, no flankers",
         node: <PanopticonVariant size={140} cfg={{
           cellStyle: "outlined",
           numGroups: 6, includeFlankers: false, tallH: 38,
@@ -349,7 +349,7 @@ const LOGOS: LogoEntry[] = [
         }} />,
       },
       {
-        label: "Ripple, wide band, heavy fade, PV dominant",
+        label: "Ripple: wide band, heavy fade, large PV",
         node: <PanopticonVariant size={140} cfg={{
           cellStyle: "outlined",
           pvSize: 50, pvClearR: 56,
@@ -359,7 +359,7 @@ const LOGOS: LogoEntry[] = [
         }} />,
       },
       {
-        label: "Signal — 6 spokes, sparse outer field",
+        label: "Signal: 6 spokes, sparse outer field",
         node: <PanopticonVariant size={140} cfg={{
           cellStyle: "outlined",
           numGroups: 6, includeFlankers: false,
@@ -371,7 +371,7 @@ const LOGOS: LogoEntry[] = [
         }} />,
       },
       {
-        label: "Cardinal — 4 directions, open and bold",
+        label: "Cardinal: 4 directions, open and bold",
         node: <PanopticonVariant size={140} cfg={{
           cellStyle: "outlined",
           numGroups: 4, includeFlankers: true, flankerDeg: 8,
@@ -383,7 +383,7 @@ const LOGOS: LogoEntry[] = [
         }} />,
       },
       {
-        label: "Filled Broadcast, large PV, rings pushed out",
+        label: "Filled Broadcast: large PV, rings pushed out",
         node: <PanopticonVariant size={140} cfg={{
           pvSize: 48, pvClearR: 54,
           ringStart: 62, ringEnd: 88,
@@ -392,7 +392,7 @@ const LOGOS: LogoEntry[] = [
         }} />,
       },
       {
-        label: "Filled Cardinal — 4 groups, bold center",
+        label: "Filled Cardinal: 4 groups, bold center",
         node: <PanopticonVariant size={140} cfg={{
           numGroups: 4, includeFlankers: true, flankerDeg: 8,
           tallH: 40, shortH: 20,
@@ -403,7 +403,7 @@ const LOGOS: LogoEntry[] = [
         }} />,
       },
       {
-        label: "Declaration, accountability at the perimeter, free field within",
+        label: "Declaration: rings at the edge, open center",
         node: <PanopticonVariant size={140} cfg={{
           cellStyle: "outlined",
           pvSize: 56, pvClearR: 62,
@@ -413,7 +413,7 @@ const LOGOS: LogoEntry[] = [
         }} />,
       },
       {
-        label: "Free Field, maximum open space, 6 spokes, 2 outer rings",
+        label: "Free Field: open space, 6 spokes, 2 outer rings",
         node: <PanopticonVariant size={140} cfg={{
           cellStyle: "outlined",
           numGroups: 6, includeFlankers: false,
@@ -425,7 +425,7 @@ const LOGOS: LogoEntry[] = [
         }} />,
       },
       {
-        label: "Sousveillance, bold boundary, declared center, open interior",
+        label: "Sousveillance: bold outer ring, open interior",
         node: <PanopticonVariant size={140} cfg={{
           numGroups: 8, includeFlankers: true,
           pvSize: 52, pvClearR: 58,
@@ -435,7 +435,7 @@ const LOGOS: LogoEntry[] = [
         }} />,
       },
       {
-        label: "Perimeter — 4 cardinal spokes, rings at boundary only",
+        label: "Perimeter: 4 cardinal spokes, rings at boundary only",
         node: <PanopticonVariant size={140} cfg={{
           cellStyle: "outlined",
           numGroups: 4, includeFlankers: true, flankerDeg: 9,
@@ -450,7 +450,7 @@ const LOGOS: LogoEntry[] = [
   },
   {
     name: "The Wordmark",
-    subtitle: "Single stacked horizontal, headers, footers, signage, email signatures",
+    subtitle: "Single horizontal line for headers, footers, signage and email signatures",
     main: (
       <Box w={520} h={140} bg={DARK}>
         <Center><Wordmark /></Center>
@@ -464,7 +464,7 @@ const LOGOS: LogoEntry[] = [
   },
   {
     name: "The Stacked",
-    subtitle: "Two-line lockup, print, packaging, social profiles, formal documents",
+    subtitle: "Two-line lockup for print, packaging, social profiles and formal documents",
     main: (
       <Box w={400} h={200} bg={DARK}>
         <Center><Stacked /></Center>
@@ -478,7 +478,7 @@ const LOGOS: LogoEntry[] = [
   },
   {
     name: "The Monogram",
-    subtitle: "Clean PV — embossing, stamps, card backs, watermarks, app icon base",
+    subtitle: "Plain PV for embossing, stamps, card backs, watermarks and app icons",
     main: (
       <Box w={220} h={220} bg={DARK}>
         <Center><Mono /></Center>
@@ -492,7 +492,7 @@ const LOGOS: LogoEntry[] = [
   },
   {
     name: "The Slash Mark",
-    subtitle: "PV + V-stroke extended, the signature mark · business cards · brand icon",
+    subtitle: "PV with the V stroke extended, for business cards and the brand icon",
     main: <SlashMark />,
     variants: [
       { label: "Right leg  \\  (V's right stroke)", node: <SlashMark size={120} direction="right" /> },
@@ -502,7 +502,7 @@ const LOGOS: LogoEntry[] = [
   },
   {
     name: "The Full Lockup",
-    subtitle: "Primary logo, the mark + wordmark together · websites, proposals, decks",
+    subtitle: "Primary logo with the mark and wordmark together, for websites, proposals and decks",
     main: <Lockup />,
     variants: [
       { label: "Gold on dark",  node: <Lockup color={GOLD} bg={DARK} /> },
@@ -521,13 +521,13 @@ export default function LogosPage() {
       {/* Header */}
       <div style={{ maxWidth: "1200px", margin: "0 auto 56px" }}>
         <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: GOLD, marginBottom: "10px" }}>
-          Purcell Ventures — Brand Identity
+          Purcell Ventures brand identity
         </div>
         <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "36px", fontWeight: 700, color: CREAM, marginBottom: "8px" }}>
           Logo Options
         </h1>
         <p style={{ fontSize: "14px", color: "#524d45", maxWidth: "480px", lineHeight: 1.7 }}>
-          6 treatments. Download PNG or SVG directly from each logo. Panopticon Mark is fully vector — SVG download scales to any size.
+          6 treatments. Download PNG or SVG directly from each logo. The Panopticon mark is fully vector, so the SVG scales to any size.
         </p>
       </div>
 
@@ -543,9 +543,9 @@ export default function LogosPage() {
         <div style={{ fontSize: "13px", fontWeight: 700, color: GOLD, marginBottom: "14px" }}>Usage Notes</div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "20px", fontSize: "12px", color: "#6a6458", lineHeight: 1.7 }}>
           <div><strong style={{ color: "#8a8070" }}>Font:</strong> Cinzel (Google Fonts, free). Bold 700 for PV and PURCELL. Regular 400 for VENTURES.</div>
-          <div><strong style={{ color: "#8a8070" }}>Colors:</strong> Gold: #d4af37 · Near-black: #0c0a08 · Cream: #f5f0e0</div>
-          <div><strong style={{ color: "#8a8070" }}>Panopticon SVG:</strong> Download SVG for fully scalable vector, use for print, embroidery, large format, and app icons.</div>
-          <div><strong style={{ color: "#8a8070" }}>The Slash:</strong> The slash in the mark follows the exact angle of the V's right stroke, they are one element extended.</div>
+          <div><strong style={{ color: "#8a8070" }}>Colors:</strong> gold #d4af37, near-black #0c0a08, cream #f5f0e0</div>
+          <div><strong style={{ color: "#8a8070" }}>Panopticon SVG:</strong> Use the SVG for print, embroidery, large formats and app icons. It scales to any size.</div>
+          <div><strong style={{ color: "#8a8070" }}>The Slash:</strong> The slash follows the exact angle of the V's right stroke. They are one extended element.</div>
         </div>
       </div>
 

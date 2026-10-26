@@ -21,16 +21,16 @@ type Business = {
 const MOCK_BUSINESSES: Business[] = [
   { name: "Martinez Hair Studio", type: "Salon", distance: "0.3 mi", reviews: 7, rating: 4.1, hasWebsite: false, hasSocial: false, hasBooking: false, googleProfile: "partial", score: 94, address: "412 Canton Rd, Marietta, GA", notes: "No website, 7 reviews, no social presence. Owner visible on Google listing." },
   { name: "Kennesaw Cuts Barbershop", type: "Barber", distance: "0.6 mi", reviews: 23, rating: 3.8, hasWebsite: false, hasSocial: true, hasBooking: false, googleProfile: "partial", score: 82, address: "1806 Jiles Rd NW, Kennesaw, GA", notes: "Low rating, no website, phone-only booking. Last IG post 8 months ago." },
-  { name: "Quick Trim Lawncare", type: "Landscaping", distance: "0.9 mi", reviews: 4, rating: 4.5, hasWebsite: false, hasSocial: false, hasBooking: false, googleProfile: "none", score: 96, address: "214 Pine St, Acworth, GA", notes: "Barely exists online. 4 reviews only. No website, no socials, no booking." },
+  { name: "Quick Trim Lawncare", type: "Landscaping", distance: "0.9 mi", reviews: 4, rating: 4.5, hasWebsite: false, hasSocial: false, hasBooking: false, googleProfile: "none", score: 96, address: "214 Pine St, Acworth, GA", notes: "4 reviews, no website, no social accounts and no booking." },
   { name: "Bella's Nail Spa", type: "Nail Salon", distance: "1.1 mi", reviews: 41, rating: 3.9, hasWebsite: true, hasSocial: true, hasBooking: false, googleProfile: "complete", score: 58, address: "3200 George Busbee Pkwy, Kennesaw, GA", notes: "Has a site but it's outdated Wix. No online booking. Reviews mention difficulty reaching them." },
-  { name: "Pro Clean Pressure Washing", type: "Services", distance: "1.4 mi", reviews: 12, rating: 4.7, hasWebsite: false, hasSocial: false, hasBooking: false, googleProfile: "partial", score: 88, address: "604 Roberts Rd NW, Marietta, GA", notes: "Great reviews but zero digital presence. Lost in search behind competitors." },
+  { name: "Pro Clean Pressure Washing", type: "Services", distance: "1.4 mi", reviews: 12, rating: 4.7, hasWebsite: false, hasSocial: false, hasBooking: false, googleProfile: "partial", score: 88, address: "604 Roberts Rd NW, Marietta, GA", notes: "Good reviews but no website or social accounts. Competitors rank above them in search." },
   { name: "Fusion Tacos", type: "Restaurant", distance: "1.6 mi", reviews: 89, rating: 4.2, hasWebsite: true, hasSocial: true, hasBooking: false, googleProfile: "complete", score: 42, address: "1020 E Marietta St, Kennesaw, GA", notes: "Decent presence. Could use review management and social automation, not a priority." },
-  { name: "Sunrise Cleaning Co", type: "Cleaning", distance: "2.0 mi", reviews: 6, rating: 5.0, hasWebsite: false, hasSocial: false, hasBooking: false, googleProfile: "none", score: 97, address: "888 Cherokee St, Marietta, GA", notes: "5-star with zero marketing. Website + chatbot would convert their word-of-mouth into referrals." },
-  { name: "Crown Auto Detail", type: "Auto", distance: "2.3 mi", reviews: 31, rating: 4.4, hasWebsite: false, hasSocial: true, hasBooking: false, googleProfile: "partial", score: 76, address: "2245 N Marietta Pkwy, Marietta, GA", notes: "Active Instagram but no website or booking. Social following ready to convert." },
+  { name: "Sunrise Cleaning Co", type: "Cleaning", distance: "2.0 mi", reviews: 6, rating: 5.0, hasWebsite: false, hasSocial: false, hasBooking: false, googleProfile: "none", score: 97, address: "888 Cherokee St, Marietta, GA", notes: "5-star rating with no marketing. A website and chatbot would give word-of-mouth customers a place to book." },
+  { name: "Crown Auto Detail", type: "Auto", distance: "2.3 mi", reviews: 31, rating: 4.4, hasWebsite: false, hasSocial: true, hasBooking: false, googleProfile: "partial", score: 76, address: "2245 N Marietta Pkwy, Marietta, GA", notes: "Active Instagram but no website or booking." },
   { name: "The Brow Bar", type: "Beauty", distance: "2.7 mi", reviews: 18, rating: 4.0, hasWebsite: false, hasSocial: true, hasBooking: false, googleProfile: "partial", score: 80, address: "455 Ernest Barrett Pkwy, Kennesaw, GA", notes: "Posts regularly but sends customers to DMs for booking. Booking system would close that gap." },
-  { name: "HandyPro Home Repair", type: "Contractor", distance: "3.1 mi", reviews: 3, rating: 4.3, hasWebsite: false, hasSocial: false, hasBooking: false, googleProfile: "none", score: 95, address: "112 Old 41 Hwy NW, Kennesaw, GA", notes: "3 reviews, completely invisible online. High value per job, website + estimating tool = strong pitch." },
+  { name: "HandyPro Home Repair", type: "Contractor", distance: "3.1 mi", reviews: 3, rating: 4.3, hasWebsite: false, hasSocial: false, hasBooking: false, googleProfile: "none", score: 95, address: "112 Old 41 Hwy NW, Kennesaw, GA", notes: "3 reviews, completely invisible online. High value per job. Pitch a website and the estimating tool." },
   { name: "Magnolia Day Spa", type: "Spa", distance: "3.4 mi", reviews: 64, rating: 4.6, hasWebsite: true, hasSocial: true, hasBooking: true, googleProfile: "complete", score: 22, address: "700 Ernest W Barrett Pkwy, Kennesaw, GA", notes: "Well set up already. Low priority unless you can offer something they don't have." },
-  { name: "Ramos Electrical", type: "Contractor", distance: "3.8 mi", reviews: 9, rating: 4.8, hasWebsite: false, hasSocial: false, hasBooking: false, googleProfile: "partial", score: 89, address: "3400 Canton Rd, Marietta, GA", notes: "Exceptional work, terrible online presence. Estimating + website would be perfect fit." },
+  { name: "Ramos Electrical", type: "Contractor", distance: "3.8 mi", reviews: 9, rating: 4.8, hasWebsite: false, hasSocial: false, hasBooking: false, googleProfile: "partial", score: 89, address: "3400 Canton Rd, Marietta, GA", notes: "Strong reviews for the work, weak online presence. Pitch a website and the estimating tool." },
 ];
 
 const RADIUS_OPTIONS = [
@@ -127,7 +127,7 @@ export default function FinderPage() {
       {/* Header */}
       <div style={{ background: "#141210", borderBottom: "1px solid #2e2820", padding: "14px 24px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0, zIndex: 50 }}>
         <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-          <a href="/digital/playbook" style={{ fontSize: "12px", color: "#524d45", textDecoration: "none" }}>← Playbook</a>
+          <a href="/digital/playbook" style={{ fontSize: "12px", color: "#524d45", textDecoration: "none" }}>Back to Playbook</a>
           <span style={{ color: "#2e2820" }}>|</span>
           <span style={{ fontSize: "15px", fontWeight: 700, color: "#d4af37", fontFamily: "'Cinzel', Georgia, serif" }}>Business Finder</span>
           <span style={{ fontSize: "10px", padding: "2px 7px", background: isLive ? "#7aaa6a18" : "#e8a03015", border: `1px solid ${isLive ? "#7aaa6a40" : "#e8a03040"}`, borderRadius: "3px", color: isLive ? "#7aaa6a" : "#e8a030" }}>
@@ -135,7 +135,7 @@ export default function FinderPage() {
           </span>
         </div>
         <div style={{ fontSize: "12px", color: "#524d45" }}>
-          {hotLeads} hot leads · {targets.size} targeted
+          {hotLeads} hot leads, {targets.size} targeted
         </div>
       </div>
 
@@ -170,7 +170,7 @@ export default function FinderPage() {
 
         {!isLive && !loading && (
           <span style={{ fontSize: "12px", color: "#524d45" }}>
-            Hit the button to scan real businesses near your location using Google Places.
+            Press Search My Area to list businesses near you from Google Places.
           </span>
         )}
         {error && (
@@ -213,7 +213,7 @@ export default function FinderPage() {
               <span>({r})</span>
             </div>
           ))}
-          <span style={{ fontSize: "11px", color: "#3a3530", marginLeft: "auto" }}>Score = gaps in online presence weighted by impact</span>
+          <span style={{ fontSize: "11px", color: "#3a3530", marginLeft: "auto" }}>The score adds up the gaps in each business&apos;s online presence, weighted by impact</span>
         </div>
 
         {/* Results */}
@@ -237,7 +237,7 @@ export default function FinderPage() {
                   {/* Name */}
                   <div>
                     <div style={{ fontSize: "14px", fontWeight: 700, color: "#f5f0e0", marginBottom: "3px" }}>{b.name}</div>
-                    <div style={{ fontSize: "11px", color: "#524d45" }}>{b.type} · {b.address}</div>
+                    <div style={{ fontSize: "11px", color: "#524d45" }}>{b.type}, {b.address}</div>
                   </div>
                   {/* Distance */}
                   <div style={{ fontSize: "12px", color: "#8a8070", textAlign: "center" }}>
@@ -280,7 +280,7 @@ export default function FinderPage() {
                       <span style={{ color: "#d4af37", fontWeight: 600 }}>Intel: </span>{b.notes}
                     </div>
                     <a href="/digital/playbook" style={{ padding: "8px 16px", background: "#d4af37", color: "#0c0a08", fontSize: "12px", fontWeight: 700, borderRadius: "6px", textDecoration: "none", whiteSpace: "nowrap" }}>
-                      Open Playbook →
+                      Open Playbook
                     </a>
                   </div>
                 )}
@@ -292,7 +292,7 @@ export default function FinderPage() {
         {/* Target List Summary */}
         {targets.size > 0 && (
           <div style={{ marginTop: "24px", padding: "20px 24px", background: "#141210", border: "2px solid #d4af3740", borderRadius: "10px" }}>
-            <div style={{ fontSize: "13px", fontWeight: 700, color: "#d4af37", marginBottom: "12px" }}>Target List — {targets.size} businesses</div>
+            <div style={{ fontSize: "13px", fontWeight: 700, color: "#d4af37", marginBottom: "12px" }}>Target list: {targets.size} businesses</div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
               {Array.from(targets).map(name => (
                 <div key={name} style={{ padding: "5px 12px", background: "#d4af3718", border: "1px solid #d4af3740", borderRadius: "20px", fontSize: "12px", color: "#d4af37", display: "flex", alignItems: "center", gap: "6px" }}>

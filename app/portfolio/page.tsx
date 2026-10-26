@@ -25,7 +25,7 @@ const PROJECTS: Project[] = [
   {
     slug: "ua-today",
     title: "UA Today",
-    subtitle: "Everything happening on campus, in one place.",
+    subtitle: "University of Alabama events from six sources in one feed.",
     description: "Aggregates six separate sources into a single feed of University of Alabama events, roughly seven hundred at a time, with a moderation console, a student pickup-games board, and org profiles. Unofficial, and it says so in the masthead.",
     category: ["Web", "AI Tools"],
     techStack: ["Node.js", "Vercel", "Six upstream sources", "Automated health checks"],
@@ -43,8 +43,8 @@ const PROJECTS: Project[] = [
   {
     slug: "english-pruitt",
     title: "English Pruitt Photography",
-    subtitle: "Client work, sourced through cold outreach.",
-    description: "A full photography site for a North Georgia photographer: portfolio galleries, service and pricing pages, and an enquiry path. Scoped, built, and delivered end to end.",
+    subtitle: "A client I found through cold outreach.",
+    description: "A full photography site for a North Georgia photographer: portfolio galleries, service and pricing pages, and an enquiry path. I scoped, built and delivered it.",
     category: ["Web"],
     techStack: ["Next.js", "TypeScript", "Vercel"],
     liveUrl: "https://english-pruitt.vercel.app",
@@ -52,7 +52,7 @@ const PROJECTS: Project[] = [
     visualSymbol: "EP",
     visualColor: "#8A7B5E",
     detailLines: [
-      "Found through cold outreach, quoted, and built to brief",
+      "Found through cold outreach, quoted and built to brief",
       "Galleries, services, pricing and an enquiry path",
     ],
   },
@@ -60,7 +60,7 @@ const PROJECTS: Project[] = [
     slug: "the-loom",
     title: "The Loom",
     subtitle: "Autonomous lead-generation engine.",
-    description: "A daily crawler that finds local businesses with no real web presence, researches each one, scores it, and delivers a ranked packet by email at 7:15 in the morning. Five production website templates so a prospect sees a real site built for their industry rather than a generic demo.",
+    description: "A daily crawler that finds local businesses with little or no web presence, researches each one, scores it and delivers a ranked packet by email at 7:15 in the morning. Five production website templates so a prospect sees a site built for their industry.",
     category: ["AI Tools", "Internal"],
     techStack: ["Python", "Google Places API", "Supabase", "GitHub Actions", "Resend"],
     liveUrl: "https://the-loom-gold.vercel.app",
@@ -91,8 +91,8 @@ const PROJECTS: Project[] = [
   {
     slug: "pv-site",
     title: "Purcell Ventures",
-    subtitle: "The site you're on right now.",
-    description: "Full-stack Next.js 16 site with 4 service divisions, 17 customer-facing tools, a rep portal with CRM, AI-powered features end-to-end, and a Soft Autumn editorial design language.",
+    subtitle: "This site.",
+    description: "A Next.js 16 site with 31 free tools, a rep portal and a CRM.",
     category: ["Web", "AI Tools"],
     techStack: ["Next.js 16", "React 19", "TypeScript", "Anthropic Claude", "Vercel"],
     liveUrl: "https://purcellventures.co",
@@ -101,34 +101,34 @@ const PROJECTS: Project[] = [
     visualSymbol: "PV",
     visualColor: "#d4af37",
     detailLines: [
-      "12 AI tools (FAQ, content gen, palette, brand kit, logo concepts, etc.)",
-      "5 stateful tools (CRM, loyalty, inventory, estimating, events)",
-      "Rep portal with password auth, kanban CRM, AI prospect research, leaderboard",
-      "Pricing reconciled across 30+ touchpoints",
+      "26 AI tools, including an FAQ builder, content generator, palette tool, brand kit and logo concepts",
+      "5 tools that save data: loyalty, expenses, inventory, estimating and event registration",
+      "Rep portal with password login, a kanban CRM, AI prospect research and a leaderboard",
+      "Prices kept the same on every page that lists them",
     ],
   },
   {
     slug: "elijahbot",
     title: "ElijahBot",
     subtitle: "Personal AI infrastructure.",
-    description: "Autonomous task system + dashboard server + global kill-switch. Runs background work, posts updates via mobile push, manages the user's life ops layer.",
+    description: "An autonomous task system with a dashboard server and a global kill switch. It runs background work, sends updates to my phone and manages my daily tasks.",
     category: ["AI Tools", "Internal"],
     techStack: ["Python", "FastAPI", "ntfy", "Anthropic Claude"],
     status: "Internal",
     visualSymbol: "EB",
     visualColor: "#9b7fd4",
     detailLines: [
-      "Hooks for session tracking + auto memory",
-      "Phone command vocab + dispatcher",
-      "Wisdom log + decision journal",
+      "Hooks for session tracking and automatic memory",
+      "Phone commands and a dispatcher",
+      "Wisdom log and decision journal",
       "Status dashboard accessible from phone",
     ],
   },
   {
     slug: "elijahbot-refresh",
     title: "ElijahBot Refresh",
-    subtitle: "Habit-tracker + accountability chatbot.",
-    description: "Multi-tenant Next.js app, habit tracking, daily journal, week heatmap, Claude-powered conversation that pushes back when you flake. Friends sign up under their own Google account.",
+    subtitle: "Habit tracker and accountability chatbot.",
+    description: "Multi-tenant Next.js app, habit tracking, daily journal, week heatmap and a Claude chatbot that follows up when you miss a habit. Friends sign up under their own Google account.",
     category: ["Web", "AI Tools"],
     techStack: ["Next.js 16", "Auth.js v5", "Firestore", "Claude Haiku", "Vercel"],
     liveUrl: "https://elijahbot-refresh.vercel.app",
@@ -139,14 +139,14 @@ const PROJECTS: Project[] = [
       "13-habit default template",
       "Daily AM briefing via Vercel Cron",
       "Conversation summarization at 15 turns",
-      "Recharts visualizations + achievements",
+      "Recharts charts and achievements",
     ],
   },
   {
     slug: "tools-hub",
     title: "ElijahBot Tools Hub",
     subtitle: "Editorial-design personal tool collection.",
-    description: "Static hub with 22+ standalone tools, PWA-installable, affiliate redirect tracking, password-gated. Built for the user's own daily-driver needs.",
+    description: "A static, password-protected hub with 22 standalone tools that installs as a PWA and tracks affiliate redirects. I built it for my own daily use.",
     category: ["Web", "AI Tools"],
     techStack: ["Vanilla JS", "Fraunces + JetBrains Mono", "Vercel", "PWA"],
     liveUrl: "https://elijahbot-tools-hub.vercel.app",
@@ -182,8 +182,8 @@ const PROJECTS: Project[] = [
   {
     slug: "wallet-tracker",
     title: "Wallet Tracker",
-    subtitle: "On-chain smart-money signal alerter.",
-    description: "Watches Ethereum + Solana wallets, scores tokens by risk, alerts via ntfy/Discord/Telegram when whale movement matches alpha-signal criteria. Backtested + parameter-swept.",
+    subtitle: "Crypto wallet alerts.",
+    description: "Watches Ethereum and Solana wallets, scores tokens by risk and sends an alert through ntfy, Discord or Telegram when a watched wallet makes a large move. Backtested, with a parameter sweep.",
     category: ["AI Tools", "Internal"],
     techStack: ["Python", "Etherscan API", "Helius API", "ntfy"],
     status: "Internal",
@@ -191,7 +191,7 @@ const PROJECTS: Project[] = [
     visualColor: "#4a9a6a",
     detailLines: [
       "Backtest framework (90d replay)",
-      "Parameter sweep for optimal M+window",
+      "Parameter sweep for the alert threshold and time window",
       "Risk scoring per token (0-10)",
       "Multi-channel alert fanout",
     ],
@@ -199,8 +199,8 @@ const PROJECTS: Project[] = [
   {
     slug: "yt-pipeline",
     title: "YouTube Pipeline",
-    subtitle: "Faceless-channel content factory.",
-    description: "End-to-end script → voice → video → schedule pipeline. Hook quality grader + auto-regen, scheduler resilience, per-channel dashboard.",
+    subtitle: "Automated video pipeline for faceless channels.",
+    description: "A pipeline that writes the script, records the voice, builds the video and schedules it. It grades each hook and regenerates weak ones, and each channel has a dashboard.",
     category: ["AI Tools", "Internal"],
     techStack: ["Python", "OpenAI", "FFmpeg", "YouTube API"],
     status: "Internal",
@@ -208,16 +208,16 @@ const PROJECTS: Project[] = [
     visualColor: "#e54a28",
     detailLines: [
       "Hook grader (auto-regen if score < threshold)",
-      "Scheduler resilience + health monitoring",
-      "Calendar preview + per-channel dashboard",
+      "Scheduler retries and health monitoring",
+      "Calendar preview and per-channel dashboard",
       "Amazon Associates affiliate hooks",
     ],
   },
   {
     slug: "scholarship-sniper",
     title: "Scholarship Sniper",
-    subtitle: "Automated college acceptance + scholarship intelligence.",
-    description: "Tracked 98 schools through college application cycle, automated decline emails + appeal letters, surfaced $530k/yr in scholarships across 34 acceptances.",
+    subtitle: "College application and scholarship tracker.",
+    description: "Tracked 98 schools through one application cycle and drafted decline emails and appeal letters. The 34 acceptances it tracked came with $530,384 a year in scholarship offers.",
     category: ["AI Tools", "Internal"],
     techStack: ["Python", "Gmail API", "Anthropic Claude"],
     status: "Internal",
@@ -225,7 +225,7 @@ const PROJECTS: Project[] = [
     visualColor: "#9b7fd4",
     detailLines: [
       "34 college acceptances tracked",
-      "$530,384/yr in scholarships surfaced",
+      "$530,384 a year in scholarship offers tracked",
       "31 decline emails drafted automatically",
       "Alabama appeal letter framework",
     ],
@@ -234,7 +234,7 @@ const PROJECTS: Project[] = [
     slug: "hesed",
     title: "Hesed",
     subtitle: "Free supplement tracker for family caregivers.",
-    description: "Multi-tenant daily ledger for the people who run a parent's or grandparent's supplement regimen. Three-source affiliate price comparison (iHerb · Amazon · Vitacost) ranked by delivered cost per serving. AI chat for caregiving questions. Push + email reorder alerts. Generalised from a private pilot built for one family.",
+    description: "Multi-tenant daily ledger for the people who run a parent's or grandparent's supplement regimen. It compares affiliate prices from iHerb, Amazon and Vitacost and ranks them by delivered cost per serving. It has an AI chat for caregiving questions and push and email reorder alerts. Generalised from a private pilot built for one family.",
     category: ["Web", "AI Tools"],
     techStack: ["Next.js 16", "Supabase", "Tailwind 4", "Anthropic Claude", "Resend", "Web Push API"],
     liveUrl: "https://hesed-zeta.vercel.app",
@@ -244,9 +244,9 @@ const PROJECTS: Project[] = [
     visualColor: "#A8804B",
     detailLines: [
       "Multi-channel affiliate stack with best-price-per-serving ranking",
-      "Active delivery: 3 AM ET price refresh cron + 9 AM ET reorder alerts",
-      "Web push + email reorder reminders (caregiver-configurable frequency)",
-      "FTC-disclosed, no ads, no data sold, free forever",
+      "Prices refresh at 3 AM ET and reorder alerts go out at 9 AM ET",
+      "Web push and email reorder reminders, with the frequency set by the caregiver",
+      "FTC-disclosed affiliate links. Free, with no ads and no data sales",
     ],
   },
   {
@@ -263,15 +263,15 @@ const PROJECTS: Project[] = [
     detailLines: [
       "Rotation queue with longest-since-prayed-for prioritization",
       "Voice prayer recording with cloud-synced .mp3 storage",
-      "Estate-ledger editorial aesthetic (Fraunces + cream paper)",
+      "Ledger-style design in Fraunces on a cream background",
       "Push notifications via service worker",
     ],
   },
   {
     slug: "folio",
     title: "Folio",
-    subtitle: "Goodreads if it shipped in 2026.",
-    description: "Reader's social app where the unit is the curated list, not the rating. Phase A: profiles, list CRUD, share cards. Phase B: follows, trending, comments, realtime status, sessions, Bookshop affiliate links to support indie bookstores.",
+    subtitle: "A reading app built around curated lists.",
+    description: "A social reading app built around curated lists instead of ratings. Phase A: profiles, list CRUD, share cards. Phase B: follows, trending, comments, realtime status, sessions, Bookshop affiliate links to support indie bookstores.",
     category: ["Web"],
     techStack: ["Next.js 16", "Supabase", "Tailwind 4", "Open Library API"],
     liveUrl: "https://folio-now.vercel.app",
@@ -279,7 +279,7 @@ const PROJECTS: Project[] = [
     visualSymbol: "FO",
     visualColor: "#7B2D26",
     detailLines: [
-      "Bookshop.org affiliate (supports indie bookstores, not Amazon)",
+      "Bookshop.org affiliate links, which support indie bookstores",
       "OG share cards generated server-side via @vercel/og",
       "Realtime reading-status presence",
       "Trending lists refreshed daily via cron",
@@ -289,7 +289,7 @@ const PROJECTS: Project[] = [
     slug: "grans-supplements",
     title: "Gran's Supplements",
     subtitle: "Pilot version for grandma + grandpa.",
-    description: "Single-family supplement tracker built before Hesed generalized the model. 25 numbered bottles, dose checklists, reorder alerts, AI chat. Kept untouched as the proof-of-concept that validated the multi-tenant SaaS pivot.",
+    description: "Single-family supplement tracker built before Hesed generalized the model. 25 numbered bottles, dose checklists, reorder alerts, AI chat. I kept this first version as it was. It led to Hesed.",
     category: ["Web"],
     techStack: ["Next.js", "Supabase"],
     liveUrl: "https://grans-supplements.vercel.app",
@@ -307,7 +307,7 @@ const PROJECTS: Project[] = [
     slug: "pv-social",
     title: "PV Social",
     subtitle: "Internal Instagram ops console.",
-    description: "Scheduler + AI composer + reply review + audit + kill switch + sentinel filter + privacy blocklist for the @purcellventures and @elijahbot Instagram accounts. Meta Graph API stubbed pending FB Dev setup.",
+    description: "A scheduler, AI composer, reply review, audit log, kill switch, sentinel filter and privacy blocklist for the @purcellventures and @elijahbot Instagram accounts. Instagram posting is not connected yet.",
     category: ["AI Tools", "Internal"],
     techStack: ["Next.js 16", "Supabase", "Anthropic Claude", "Meta Graph API"],
     liveUrl: "https://pv-social.vercel.app",
@@ -348,12 +348,12 @@ export default function PortfolioPage() {
       <main style={{ position: "relative", zIndex: 5, maxWidth: "1200px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
         <header className="pv-page-head">
-          <div className="pv-mono-label">Portfolio · Shipped Work</div>
+          <div className="pv-mono-label">Portfolio of shipped work</div>
           <h1>
             What we&apos;ve <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>built.</em>
           </h1>
           <p className="deck">
-            Live products, internal systems, and tools-as-art. Each one shipped, used and maintained, rather than slide-deck portfolio fluff. Click any tile to see the build details.
+            Live products, client sites and internal systems. Each one is live and I maintain it. Click any tile to see the build details.
           </p>
         </header>
 
@@ -473,7 +473,7 @@ export default function PortfolioPage() {
                         onClick={(e) => e.stopPropagation()}
                         style={{ fontSize: "11px", color: p.visualColor, textDecoration: "none", letterSpacing: "0.1em", fontWeight: 700 }}
                       >
-                        Visit →
+                        Visit
                       </a>
                     )}
                   </div>
@@ -485,9 +485,9 @@ export default function PortfolioPage() {
 
         {/* CTA */}
         <div style={{ marginTop: "64px", padding: "40px 32px", textAlign: "center", background: "var(--color-warm-bg-alt)", border: "2px solid var(--color-warm-accent)" }}>
-          <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", color: "var(--color-warm-text)", margin: "0 0 12px", fontWeight: 700 }}>Want something like this?</h3>
+          <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", color: "var(--color-warm-text)", margin: "0 0 12px", fontWeight: 700 }}>Custom software from $1,500</h3>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: "0 0 24px", maxWidth: "560px", marginLeft: "auto", marginRight: "auto", lineHeight: 1.6 }}>
-            Custom software from $1,500: apps, web platforms, internal tools, AI integrations. Owner-built, owner-maintained.
+            Apps, web platforms, internal tools and AI integrations. I build and maintain them myself.
           </p>
           <Link href="/software" className="pv-btn-primary">See custom software pricing</Link>
         </div>

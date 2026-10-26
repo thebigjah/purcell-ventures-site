@@ -64,7 +64,7 @@ const DIVISIONS: Division[] = [
     roman: "I.",
     label: "Sites",
     tagline:
-      "Custom websites and ongoing partnership for local businesses. Three build tiers, three maintenance tiers, scoped on a discovery call.",
+      "Custom websites and monthly maintenance for local businesses. Three build tiers and three maintenance tiers. I scope each project on a discovery call.",
     status: "live",
     href: "/sites",
     span: "span-7",
@@ -119,7 +119,7 @@ const DIVISIONS: Division[] = [
     specs: [
       { label: "Status",    value: "Accepting" },
       { label: "Pricing",   value: "Discovery call" },
-      { label: "Portfolio", value: "12 shipped",        muted: true },
+      { label: "Portfolio", value: "17 projects",       muted: true },
       { label: "Scope",     value: "Web, mobile and AI", muted: true },
     ],
   },
@@ -164,7 +164,7 @@ const COURSES = [
   {
     href: "/courses/college-apps",
     title: "The College Application Playbook",
-    desc: "34 acceptances. $530,384 in scholarships. The exact process, school list, essays, financial aid, and negotiation.",
+    desc: "The process I used to earn 34 acceptances and $530,384 in scholarships, including the school list, essays, financial aid and negotiation.",
     price: "$297",
   },
   {
@@ -176,7 +176,7 @@ const COURSES = [
   {
     href: "/courses/ai-automation",
     title: "Zero to Automated",
-    desc: "Email bots, YouTube pipelines, lead scrapers, personal AI assistants. 8 modules, 25 lessons, 7 real code templates.",
+    desc: "Email bots, YouTube pipelines, lead scrapers, personal AI assistants. 8 modules, 25 lessons, 7 code templates.",
     price: "$397",
   },
 ];
@@ -738,18 +738,18 @@ export default function Home() {
             Use anything <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>now.</em>
           </h2>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, margin: "0 0 32px", maxWidth: "640px" }}>
-            We publish the tools, the math, the process, and the writing. No gated downloads. If we&apos;re right for your business, you&apos;ll know before any conversation.
+            The tools, calculators, process notes and blog posts below are free, with no email gate.
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "12px" }}>
-            <ResourceCard href="/digital/tools" label="17 free tools" body="AI FAQ Builder, content generator, palette tool, brand kit, logo concepts, review responder, estimate generator, and more, running with our Anthropic key." />
+            <ResourceCard href="/digital/tools" label="31 free tools" body="AI FAQ Builder, content generator, palette tool, brand kit, logo concepts, review responder, estimate generator and more." />
             <ResourceCard href="/ai-readiness" label="AI Readiness Test" body="10 questions that place your business in one of four tiers, each with next steps." />
             <ResourceCard href="/ai-cost-calculator" label="Cost Calculator" body="Enter your team size, hourly rate and hours of manual work to see how long training takes to pay for itself." />
             <ResourceCard href="/pricing-comparison" label="Pricing, compared" body="Our prices next to typical agency, freelancer and do-it-yourself prices." />
-            <ResourceCard href="/how-we-work" label="How we work" body="5-stage process. 6 commitments. When we say no. Read this before signing anything." />
-            <ResourceCard href="/portfolio" label="Portfolio" body="12 shipped projects. Web apps, mobile apps, AI tools, internal systems." />
+            <ResourceCard href="/how-we-work" label="How we work" body="Our 5-stage process, 6 commitments and the work we turn down." />
+            <ResourceCard href="/portfolio" label="Portfolio" body="17 projects: web apps, a mobile app, AI tools and internal systems." />
             <ResourceCard href="/blog" label="Blog" body="Five workflows you can automate without code. Why most AI tools waste money." />
-            <ResourceCard href="/steady" label="Steady, personal IT" body="Tech support for non-tech-savvy family. Comparison vs alternatives + what a Monthly Care month actually looks like." />
+            <ResourceCard href="/steady" label="Steady, personal IT" body="Tech support for family members who are not comfortable with tech. A comparison with the alternatives and what a Monthly Care month looks like." />
           </div>
         </div>
       </section>

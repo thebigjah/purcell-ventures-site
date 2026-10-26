@@ -7,59 +7,58 @@ const STAGES = [
   {
     roman: "I.",
     title: "First conversation (free, 30 min)",
-    body: "You email me with a one-sentence description of the problem. I respond within 24 hours, usually same day. We set up a 30-min call, phone, Zoom, or in-person if you're Metro Atlanta. The call is honest scoping: I tell you which of our services fits, what doesn't, and if you'd be better off NOT working with us.",
+    body: "You email me with a one-sentence description of the problem. I respond within 24 hours, usually same day. We set up a 30-minute call by phone or Zoom, or in person if you're in Metro Atlanta. On the call I scope the work and tell you which of our services fits, which doesn't, and whether you would do better with someone else.",
     bullets: [
       "30 minutes, free, no slides",
-      "You leave with a written recommendation in your inbox by EOD",
-      "I'll explicitly tell you if our products don't fit your situation",
+      "You get a written recommendation by email the same day",
     ],
     color: "var(--color-warm-accent)",
   },
   {
     roman: "II.",
     title: "Written proposal (24-48 hours after the call)",
-    body: "If we're a fit, you get a written proposal within 2 business days. It includes exactly what's being built, what's NOT being built (the out-of-scope section is the most important part), pricing breakdown, timeline with milestones, and what we need from you to start. No mystery markup, no 'enterprise pricing on request.' Real numbers.",
+    body: "If we're a fit, you get a written proposal within 2 business days. It lists what we will build, what we will not build (the out-of-scope section), a price breakdown, a timeline with milestones and what we need from you to start. The proposal lists every price.",
     bullets: [
-      "Specific scope, bullet-listed deliverables, not vague promises",
-      "Out-of-scope section is signed by both parties, protects you from scope creep, protects us from feature drift",
-      "Timeline with milestones every 2 weeks (for Custom Software) or per-week for Digital Services setup",
-      "Total cost upfront, setup + monthly, no hidden fees",
+      "Specific scope and a bulleted list of deliverables",
+      "Both parties sign the out-of-scope section, which keeps the project from growing past what you agreed to pay for",
+      "Milestones every 2 weeks for Custom Software, or every week for Digital Services setup",
+      "Total cost up front, with setup and monthly fees listed",
     ],
     color: "#7aaa6a",
   },
   {
     roman: "III.",
     title: "Build (per scope)",
-    body: "Once you sign and pay the deposit (50% for Custom Software, full setup fee for Digital Services), we start. You see milestones every 2 weeks for Custom Software. For Digital Services, your site is live in 5-7 business days. We send updates without you asking. If something is going to be late, you hear about it from us before the deadline, not after.",
+    body: "Once you sign and pay the deposit (50% for Custom Software, full setup fee for Digital Services), we start. You see milestones every 2 weeks for Custom Software. For Digital Services, your site is live in 5-7 business days. We send updates without you asking. If something is going to be late, we tell you before the deadline.",
     bullets: [
       "Digital Services setup: 5-7 business days to live site",
-      "Custom Software: bi-weekly milestone reviews + sign-off before next phase",
-      "We push proactive updates (you don't have to chase us)",
-      "Slack/text/email, whichever channel YOU prefer",
+      "Custom Software: milestone reviews every 2 weeks and your sign-off before the next phase",
+      "We send updates on a schedule, so you don't have to ask",
+      "We use the channel you prefer: Slack, text or email",
     ],
     color: "#9b7fd4",
   },
   {
     roman: "IV.",
     title: "Launch + handoff",
-    body: "For Digital Services: site goes live, you get walkthrough video + written handoff doc. For Custom Software: code transferred, IP transferred, deployment instructions documented. You own everything, if you ever want to leave, we hand it all over with no hostage-taking. We charge a monthly retainer because the value is in maintenance, not because we're holding your work captive.",
+    body: "For Digital Services, the site goes live and you get a walkthrough video and a written handoff document. For Custom Software, we transfer the code and IP to you and document the deployment steps. You own everything. If you leave, we hand it all over. The monthly retainer pays for maintenance.",
     bullets: [
-      "Full code + IP transfer to you on completion",
-      "Documentation in plain language (not just code comments)",
-      "30-day post-launch warranty, anything that breaks, we fix at no charge",
-      "Off-ramp clause: terminate the retainer with 14 days notice, we hand over everything",
+      "Full code and IP transfer to you on completion",
+      "Plain-language documentation",
+      "30-day post-launch warranty: we fix anything that breaks at no charge",
+      "Off-ramp clause: end the retainer with 14 days notice and we hand over everything",
     ],
     color: "#e8b968",
   },
   {
     roman: "V.",
     title: "Ongoing relationship",
-    body: "Digital Services clients get monthly updates + quarterly review of what's working. Custom Software clients can opt into a maintenance retainer or pay-per-fix. We respond to client emails within 24 hours during business hours, same-day for Full Service ($279/mo) subscribers. You text Elijah's personal cell when something urgent comes up, that's not a bug, that's the model.",
+    body: "Digital Services clients get monthly updates and a quarterly review of what's working. Custom Software clients can opt into a maintenance retainer or pay-per-fix. We respond to client emails within 24 hours during business hours, same-day for Full Service ($279/mo) subscribers. When something urgent comes up, you can text my personal cell.",
     bullets: [
       "Monthly check-in for Digital Services clients",
-      "Quarterly review of metrics + roadmap input",
-      "Direct text access for urgent stuff (no support ticket bureaucracy)",
-      "Always-on transparency about what we're working on and why",
+      "Quarterly review of metrics, with your input on what comes next",
+      "Text me directly about urgent problems",
+      "A monthly update on what we are working on and why",
     ],
     color: "#c2754a",
   },
@@ -67,10 +66,10 @@ const STAGES = [
 
 const COMMITMENTS = [
   { title: "No surprise invoices", body: "Every dollar we charge is in the written proposal. If something changes scope, you sign off before any work happens." },
-  { title: "No vendor lock-in", body: "Your code, your IP, your domain, your data. If you leave, you take it all. We don't make leaving painful." },
-  { title: "Honesty over closing", body: "If our product doesn't fit, we say so. We've turned down deals that would have been bad fit, we'd rather lose the sale than burn the relationship." },
-  { title: "Real response times", body: "Same day on most emails. 4 hours on Full Service subscriptions during business hours. 24-hour max anywhere else. If we're going to miss, we tell you first." },
-  { title: "Code you can read", body: "Every Custom Software project ships with plain-language documentation. Even if a senior developer with no PV history needs to maintain it later, they can." },
+  { title: "No vendor lock-in", body: "You own your code, IP, domain and data. If you leave, you take all of it with no exit fee." },
+  { title: "We say when a product does not fit", body: "If our product doesn't fit, we tell you, and we have turned down deals for that reason." },
+  { title: "Response times", body: "Same day on most emails. 4 hours on Full Service subscriptions during business hours. 24-hour max anywhere else. If we're going to miss, we tell you first." },
+  { title: "Code you can read", body: "Every Custom Software project ships with plain-language documentation. A developer who has never worked with us can maintain it later." },
   { title: "Christian-rooted ethics", body: "We don't evangelize, but our work is shaped by it. Honesty over closing, respect over urgency, the work is the witness. If you don't share the faith, that's fine, but the ethical floor is the ethical floor." },
 ];
 
@@ -81,12 +80,12 @@ export default function HowWeWorkPage() {
       <main style={{ position: "relative", zIndex: 5, maxWidth: "880px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
         <header className="pv-page-head">
-          <div className="pv-mono-label">A Standing Process · How clients actually work with us</div>
+          <div className="pv-mono-label">How clients work with us</div>
           <h1>
             How we <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>work.</em>
           </h1>
           <p className="deck">
-            Most agencies are intentionally vague about the process. We&apos;re intentionally specific. Here&apos;s what happens, in order, from the first email to year three of being a client. Read this before signing anything with anyone, us included.
+            Here is what happens, in order, from the first email to year three of being a client.
           </p>
         </header>
 
@@ -112,11 +111,11 @@ export default function HowWeWorkPage() {
         {/* The commitments, what's actually in writing */}
         <header className="pv-section-head">
           <span className="roman"></span>
-          <h2>The <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>commitments.</em></h2>
+          <h2>Our <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>commitments.</em></h2>
         </header>
 
         <p className="pv-italic" style={{ fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.6, marginBottom: "24px", maxWidth: "680px" }}>
-          These aren&apos;t a marketing list. They&apos;re in every contract, every engagement, every email. If we violate any of them, you have grounds to terminate and we refund.
+          These commitments appear in every contract. If we break one, you can end the contract and we refund you.
         </p>
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "48px" }}>
@@ -138,16 +137,16 @@ export default function HowWeWorkPage() {
           We turn down work. Specifically:
         </p>
         <ul style={{ paddingLeft: "24px", fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.8, marginBottom: "48px" }}>
-          <li>If your business model relies on practices we&apos;re uncomfortable with, adult, gambling, predatory finance, MLM.</li>
+          <li>If your business model relies on practices we won&apos;t support: adult content, gambling, predatory finance or MLM.</li>
           <li>If you&apos;re asking us to build something that misleads your customers (fake reviews, deceptive countdown timers, dark patterns).</li>
           <li>If the timeline you need is faster than we can deliver well. We&apos;d rather refer you elsewhere than ship something we&apos;d be embarrassed by.</li>
-          <li>If a chemistry mismatch shows up on the first call, for both of us. Engagements need both sides to want to work together.</li>
-          <li>If your problem is genuinely better solved by an off-the-shelf tool. We&apos;ll tell you which one to use and walk away.</li>
+          <li>If either of us finds on the first call that we don&apos;t work well together.</li>
+          <li>If an off-the-shelf tool solves your problem better. We&apos;ll tell you which one to use.</li>
         </ul>
 
         {/* CTA */}
         <div style={{ textAlign: "center", padding: "40px 32px", background: "var(--color-warm-bg-alt)", border: "2px solid var(--color-warm-accent)" }}>
-          <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "26px", color: "var(--color-warm-text)", fontWeight: 700, margin: "0 0 12px" }}>Ready for the first conversation?</h3>
+          <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "26px", color: "var(--color-warm-text)", fontWeight: 700, margin: "0 0 12px" }}>Start the first conversation</h3>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: "0 0 24px", maxWidth: "560px", marginLeft: "auto", marginRight: "auto", lineHeight: 1.6 }}>
             Email me a one-sentence description of what you&apos;re trying to do. I&apos;ll respond same day with whether we&apos;re a fit.
           </p>

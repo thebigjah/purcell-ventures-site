@@ -6,10 +6,10 @@ import { AI_TOOLS } from "@/lib/ai-tools";
 
 const STATE_TOOLS = [
   { slug: "loyalty",            name: "Loyalty Punch Card",   tagline: "Digital punch card for repeat customers",     category: "Customer Management" as const },
-  { slug: "expenses",           name: "Expense Tracker",      tagline: "Log expenses + monthly summaries",     category: "Operations & Finance" as const },
-  { slug: "inventory",          name: "Inventory Tracker",    tagline: "Product list + low-stock alerts",     category: "Operations & Finance" as const },
-  { slug: "estimating",         name: "Online Estimating",    tagline: "Job quotes with line items + print/PDF", category: "Operations & Finance" as const },
-  { slug: "event-registration", name: "Event Registration",   tagline: "RSVP form + attendee management",     category: "Booking & Scheduling" as const },
+  { slug: "expenses",           name: "Expense Tracker",      tagline: "Log expenses and see monthly summaries",     category: "Operations & Finance" as const },
+  { slug: "inventory",          name: "Inventory Tracker",    tagline: "Product list and low-stock alerts",     category: "Operations & Finance" as const },
+  { slug: "estimating",         name: "Online Estimating",    tagline: "Job quotes with line items, printable as a PDF", category: "Operations & Finance" as const },
+  { slug: "event-registration", name: "Event Registration",   tagline: "RSVP form and attendee list",     category: "Booking & Scheduling" as const },
 ];
 
 type ToolCard = { slug: string; name: string; tagline: string; category: string; isAI: boolean };
@@ -32,12 +32,12 @@ export default function ToolsIndexPage() {
       <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
         <header className="pv-page-head">
-          <div className="pv-mono-label">Digital Services · Live Tools</div>
+          <div className="pv-mono-label">Digital services: live tools</div>
           <h1>
-            Try them <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>before you buy them.</em>
+            Free versions of <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>every tool we sell.</em>
           </h1>
           <p className="deck">
-            Working versions of every digital tool we sell. Free to use. Plug in your business, see what comes out. If it saves you time, we can integrate the branded version into your own site. <Link href="/digital" style={{ color: "var(--color-warm-accent)" }}>See subscription tiers</Link>.
+            Each tool is free. Enter your business details to see its output. If one saves you time, we can add a branded version to your own site. <Link href="/digital" style={{ color: "var(--color-warm-accent)" }}>See subscription tiers</Link>.
           </p>
         </header>
 
@@ -74,7 +74,7 @@ export default function ToolsIndexPage() {
 
         <div style={{ marginTop: "48px", textAlign: "center", padding: "32px 24px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-accent)" }}>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text)", margin: "0 0 12px", lineHeight: 1.6 }}>
-            All of these are FREE to use here. Want them branded + integrated into your own site, with your business&apos;s data feeding them?
+            All of these tools are free here. We can brand them and connect them to your own site and your business data.
           </p>
           <Link href="/digital" className="pv-btn-primary">See Digital subscription tiers</Link>
         </div>

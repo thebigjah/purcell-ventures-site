@@ -114,9 +114,9 @@ export default function InvoicingPage() {
         {/* Header */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "48px", flexWrap: "wrap", gap: "16px" }}>
           <div>
-            <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d4af37", marginBottom: "10px" }}>Purcell Ventures — Private</div>
+            <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d4af37", marginBottom: "10px" }}>Purcell Ventures, private</div>
             <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "32px", fontWeight: 700, color: "#f5f0e0", marginBottom: "4px" }}>Invoicing</h1>
-            <p style={{ fontSize: "14px", color: "#524d45" }}>Create, track, and manage invoices</p>
+            <p style={{ fontSize: "14px", color: "#524d45" }}>Create and track invoices</p>
           </div>
           {view !== "create" && (
             <button onClick={() => setView("create")} style={{ padding: "12px 22px", background: "#d4af37", color: "#0c0a08", fontWeight: 700, fontSize: "13px", border: "none", borderRadius: "6px", cursor: "pointer", fontFamily: "Inter, sans-serif" }}>
@@ -168,7 +168,7 @@ export default function InvoicingPage() {
                           <span style={{ fontSize: "10px", fontWeight: 700, color: STATUS_COLORS[inv.status], background: `${STATUS_COLORS[inv.status]}18`, padding: "3px 9px", borderRadius: "20px" }}>{inv.status}</span>
                         </td>
                         <td style={{ padding: "13px 16px" }}>
-                          <span style={{ fontSize: "12px", color: "#3a3530" }}>→</span>
+                          <span style={{ fontSize: "12px", color: "#3a3530" }}>Open</span>
                         </td>
                       </tr>
                     ))}
@@ -182,7 +182,7 @@ export default function InvoicingPage() {
         {view === "create" && (
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "32px" }}>
-              <button onClick={() => setView("list")} style={{ padding: "8px 16px", background: "none", border: "1px solid #2e2820", borderRadius: "6px", color: "#524d45", fontSize: "12px", cursor: "pointer", fontFamily: "Inter, sans-serif" }}>← Back</button>
+              <button onClick={() => setView("list")} style={{ padding: "8px 16px", background: "none", border: "1px solid #2e2820", borderRadius: "6px", color: "#524d45", fontSize: "12px", cursor: "pointer", fontFamily: "Inter, sans-serif" }}>Back</button>
               <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 700 }}>New Invoice</h2>
             </div>
 
@@ -247,14 +247,14 @@ export default function InvoicingPage() {
             <button onClick={createInvoice} disabled={!client.trim() || items.every(i => !i.description.trim())} style={{
               padding: "13px 32px", background: "#d4af37", color: "#0c0a08", fontWeight: 700, fontSize: "14px",
               border: "none", borderRadius: "6px", cursor: "pointer", fontFamily: "Inter, sans-serif",
-            }}>Create Invoice →</button>
+            }}>Create Invoice</button>
           </div>
         )}
 
         {view === "detail" && selected && (
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "32px", flexWrap: "wrap" }}>
-              <button onClick={() => setView("list")} style={{ padding: "8px 16px", background: "none", border: "1px solid #2e2820", borderRadius: "6px", color: "#524d45", fontSize: "12px", cursor: "pointer", fontFamily: "Inter, sans-serif" }}>← All Invoices</button>
+              <button onClick={() => setView("list")} style={{ padding: "8px 16px", background: "none", border: "1px solid #2e2820", borderRadius: "6px", color: "#524d45", fontSize: "12px", cursor: "pointer", fontFamily: "Inter, sans-serif" }}>All Invoices</button>
               <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 700, flex: 1 }}>{selected.number}</h2>
               <span style={{ fontSize: "11px", fontWeight: 700, color: STATUS_COLORS[selected.status], background: `${STATUS_COLORS[selected.status]}18`, padding: "4px 12px", borderRadius: "20px" }}>{selected.status}</span>
               <div style={{ display: "flex", gap: "8px" }}>
@@ -270,7 +270,7 @@ export default function InvoicingPage() {
                 <div>
                   <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 700, color: "#d4af37", marginBottom: "4px" }}>Purcell Ventures</div>
                   <div style={{ fontSize: "12px", color: "#6a6458" }}>{selected.division}</div>
-                  <div style={{ fontSize: "12px", color: "#6a6458" }}>elijah@purcell-ventures.com · (205) 462-7839</div>
+                  <div style={{ fontSize: "12px", color: "#6a6458" }}>elijah@purcell-ventures.com, (205) 462-7839</div>
                 </div>
                 <div style={{ textAlign: "right" }}>
                   <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 700, color: "#f5f0e0" }}>{selected.number}</div>

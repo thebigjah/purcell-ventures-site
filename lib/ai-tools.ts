@@ -35,8 +35,8 @@ export const AI_TOOLS: AIToolConfig[] = [
   {
     slug: "faq-builder",
     name: "AI FAQ Builder",
-    tagline: "Customer-quality FAQ pairs in 30 seconds.",
-    description: "Tell us about your business. Get back 6-10 FAQ pairs phrased the way real customers ask — not how the business would say it.",
+    tagline: "FAQ questions and answers for your business.",
+    description: "Tell us about your business. Get back 6-10 FAQ pairs phrased the way customers ask them.",
     category: "AI-Powered",
     fields: [
       { name: "businessName", label: "Business name", type: "text", required: true, placeholder: "e.g., Bob's Plumbing" },
@@ -73,7 +73,7 @@ Return ONLY valid JSON in this exact shape, no markdown fences:
   {
     slug: "content-generator",
     name: "AI Content Generator",
-    tagline: "Blog posts, descriptions, bios, emails in minutes.",
+    tagline: "Drafts blog posts, descriptions, bios and emails.",
     description: "Write marketing and business content in your voice. Pick a type, tell it about your business, get back a draft ready to edit and publish.",
     category: "AI-Powered",
     fields: [
@@ -114,8 +114,8 @@ Output ONLY the content. No preamble like "Here's your post:".`,
   {
     slug: "caption-generator",
     name: "AI Caption Generator",
-    tagline: "5 captions in different voices, every time.",
-    description: "Describe the post (or paste a photo description), get back 5 distinct caption options. Pick one, post.",
+    tagline: "5 captions in different voices.",
+    description: "Describe the post (or paste a photo description), get back 5 different caption options.",
     category: "AI-Powered",
     fields: [
       { name: "postContext", label: "Describe the post or photo", type: "textarea", required: true, placeholder: "e.g., Behind-the-scenes shot of me organizing the new tool inventory in the truck before a job tomorrow" },
@@ -156,11 +156,11 @@ Format as plain markdown numbered list with caption + (style: X) tag after.`,
   {
     slug: "color-palette",
     name: "Color Palette Tool",
-    tagline: "Describe your vibe, get a real palette.",
-    description: "Tell us what your business should feel like. Get back a 5-color palette with hex codes, names, and how to use each.",
+    tagline: "Describe your brand and get a color palette.",
+    description: "Tell us what your business should feel like. Get back a 5-color palette with hex codes, names and how to use each color.",
     category: "Branding & Identity",
     fields: [
-      { name: "businessDescription", label: "About your business", type: "textarea", required: true, placeholder: "e.g., Cozy coffee shop in a historic downtown — books, mismatched chairs, regulars who know each other" },
+      { name: "businessDescription", label: "About your business", type: "textarea", required: true, placeholder: "e.g., Cozy coffee shop in a historic downtown with books, mismatched chairs and regulars who know each other" },
       { name: "vibe", label: "Vibe you want", type: "textarea", required: true, placeholder: "e.g., Warm but not cheesy. A little bookish. Should feel like sweater weather and pour-over coffee." },
       { name: "avoid", label: "Things to avoid", type: "text", placeholder: "e.g., neon, anything Starbucks-green" },
     ],
@@ -192,8 +192,8 @@ Return ONLY this JSON shape, no markdown fences:
   {
     slug: "brand-kit",
     name: "Brand Kit Builder",
-    tagline: "Color palette + fonts + voice in one export.",
-    description: "Get a complete starter brand guide: 5-color palette, font pairing recommendation, voice characteristics, and a tagline draft. Refine and use.",
+    tagline: "Color palette, fonts and voice in one export.",
+    description: "Get a complete starter brand guide: 5-color palette, font pairing recommendation, voice characteristics and a tagline draft.",
     category: "Branding & Identity",
     fields: [
       { name: "businessDescription", label: "About your business", type: "textarea", required: true, placeholder: "e.g., Mobile dog grooming, focused on anxious dogs and senior pets" },
@@ -236,8 +236,8 @@ Quality bar:
   {
     slug: "logo-concepts",
     name: "Logo Concept Generator",
-    tagline: "5 logo directions, picked apart and explained.",
-    description: "Get 5 different logo concept directions for your business — each with an icon idea, type treatment, and rationale. Use to brief a designer or sketch yourself.",
+    tagline: "5 logo concepts with a short rationale for each.",
+    description: "Get 5 different logo concept directions for your business, each with an icon idea, type treatment and rationale. Use them to brief a designer or sketch your own.",
     category: "Branding & Identity",
     fields: [
       { name: "businessName", label: "Business name", type: "text", required: true, placeholder: "e.g., Bob's Plumbing" },
@@ -271,14 +271,14 @@ Output markdown — clear headings per concept.`,
   {
     slug: "business-card-copy",
     name: "Business Card Copy Generator",
-    tagline: "What to put on a card that earns a callback.",
-    description: "Generate the front + back copy for a business card. Tagline, what you do, contact format, and an optional QR-side message that gives someone a reason to scan.",
+    tagline: "Suggested wording for your business card.",
+    description: "Writes the front and back copy for a business card: a tagline, what you do, contact layout and an optional message for the QR side.",
     category: "Branding & Identity",
     fields: [
       { name: "businessName", label: "Business name", type: "text", required: true },
       { name: "ownerName", label: "Owner / contact name", type: "text", required: true },
       { name: "whatYouDo", label: "What you do (one sentence)", type: "text", required: true, placeholder: "e.g., I fix gutters and clean siding for homeowners in North Metro Atlanta" },
-      { name: "contact", label: "Contact info (phone, email, site)", type: "text", required: true, placeholder: "(770) 555-1234 · me@example.com · example.com" },
+      { name: "contact", label: "Contact info (phone, email, site)", type: "text", required: true, placeholder: "(770) 555-1234, me@example.com, example.com" },
     ],
     systemPrompt: `You write business card copy. Output a complete recommendation in markdown.
 
@@ -312,7 +312,7 @@ Quality bar:
     slug: "social-templates",
     name: "Social Media Templates",
     tagline: "Reusable post formats matched to your brand.",
-    description: "Get 5 reusable social media post templates designed for your specific business — quote, before/after, weekly-tip, customer-spotlight, behind-the-scenes — each with brand voice notes and a fill-in-the-blank structure.",
+    description: "Get 5 reusable social media post templates for your business (quote, before and after, weekly tip, customer spotlight and behind the scenes), each with brand voice notes and a fill-in-the-blank structure.",
     category: "Branding & Identity",
     fields: [
       { name: "businessDescription", label: "About your business", type: "textarea", required: true },
@@ -341,12 +341,12 @@ Make templates SPECIFIC to the business. A plumber's "customer spotlight" is dif
   {
     slug: "review-response",
     name: "Review Response Generator",
-    tagline: "Reply to any review in seconds, well.",
-    description: "Paste a customer review. Get back a thoughtful response that protects your reputation, addresses the specific complaint or compliment, and sounds human.",
+    tagline: "Drafts a reply to any customer review.",
+    description: "Paste a customer review. Get back a reply that addresses the specific complaint or compliment in a plain, polite tone.",
     category: "Communication & Marketing",
     fields: [
       { name: "businessName", label: "Business name", type: "text", required: true },
-      { name: "review", label: "The review (paste it)", type: "textarea", required: true, placeholder: "Star rating + the actual text" },
+      { name: "review", label: "The review (paste it)", type: "textarea", required: true, placeholder: "Star rating and the review text" },
       { name: "context", label: "Context (optional)", type: "textarea", placeholder: "e.g., Was a $200 gutter cleaning, did notice the spider webs but they didn't ask us to clean those" },
     ],
     systemPrompt: `You write professional responses to customer reviews. Tone: ${TONE_DEFAULT}.
@@ -373,12 +373,12 @@ Output: just the response text, ready to paste.`,
   {
     slug: "email-composer",
     name: "Email Composer",
-    tagline: "Professional emails written for your inbox.",
-    description: "Write any business email — outreach, follow-up, response, announcement. Tell us the situation, get back a draft ready to edit and send.",
+    tagline: "Drafts professional emails for you.",
+    description: "Write a business email, such as outreach, a follow-up, a reply or an announcement. Tell us the situation, get back a draft ready to edit and send.",
     category: "Communication & Marketing",
     fields: [
       { name: "emailType", label: "Email type", type: "select", required: true, options: ["Cold outreach", "Warm follow-up", "Response to inquiry", "Customer announcement", "Apology / make-good", "Quote / proposal", "Thank you"], default: "Warm follow-up" },
-      { name: "context", label: "Context (who, what, why)", type: "textarea", required: true, placeholder: "e.g., Following up with Jane Smith — toured her salon last week, quoted Digital Growth at $179/mo, hasn't responded in 5 days" },
+      { name: "context", label: "Context (who, what, why)", type: "textarea", required: true, placeholder: "e.g., Following up with Jane Smith. I toured her salon last week, quoted Digital Growth at $179/mo, hasn't responded in 5 days" },
       { name: "yourName", label: "Your name", type: "text", required: true },
       { name: "tone", label: "Tone (optional)", type: "text", placeholder: "e.g., warm but direct, low pressure" },
     ],
@@ -412,8 +412,8 @@ Quality bar:
   {
     slug: "sms-composer",
     name: "SMS Composer",
-    tagline: "Texts that don't read like spam.",
-    description: "Write a customer text — booking reminder, promotion, follow-up, status update. SMS-appropriate length and tone.",
+    tagline: "Short customer texts in a plain tone.",
+    description: "Write a customer text, such as a booking reminder, promotion, follow-up or status update, at a length that fits an SMS.",
     category: "Communication & Marketing",
     fields: [
       { name: "businessName", label: "Business name", type: "text", required: true },
@@ -491,17 +491,17 @@ Quality bar:
   {
     slug: "about-page",
     name: "About Page Writer",
-    tagline: "About page that doesn't sound like every other About page.",
-    description: "Tell us your founding story, what you actually do, and the values you act on (not the words on the wall). Get back an About page that builds trust without being insufferable.",
+    tagline: "Drafts an About page from your business details.",
+    description: "Tell us your founding story, what you do and the values you act on. Get back a draft About page.",
     category: "Communication & Marketing",
     fields: [
       { name: "businessName", label: "Business name", type: "text", required: true },
       { name: "founderName", label: "Founder / owner name", type: "text", required: true },
       { name: "founded", label: "Year founded", type: "text", placeholder: "e.g., 2019" },
-      { name: "story", label: "Why does this business exist? (1-3 sentences)", type: "textarea", required: true, placeholder: "The honest reason. Not 'to deliver world-class...' — what frustration or opportunity made you start?" },
+      { name: "story", label: "Why does this business exist? (1-3 sentences)", type: "textarea", required: true, placeholder: "What frustration or opportunity made you start?" },
       { name: "what", label: "What you do (1 sentence)", type: "text", required: true },
-      { name: "differentiator", label: "What's actually different about how you do it?", type: "textarea", required: true, placeholder: "Be specific. 'We're family-owned' doesn't count unless you tie it to what that means in practice." },
-      { name: "values", label: "Values you actually act on (1-3)", type: "text", placeholder: "e.g., 'we never upsell unless asked' or 'we return calls same day even on Saturdays'" },
+      { name: "differentiator", label: "What is different about how you do it?", type: "textarea", required: true, placeholder: "Be specific. 'We're family-owned' doesn't count unless you tie it to what that means in practice." },
+      { name: "values", label: "Values you act on (1-3)", type: "text", placeholder: "e.g., 'we never upsell unless asked' or 'we return calls same day even on Saturdays'" },
     ],
     systemPrompt: `You write About pages that build trust without corporate bloat. Honest > polished. Specific > generic.
 
@@ -548,8 +548,8 @@ Quality bar:
   {
     slug: "tagline",
     name: "Tagline Generator",
-    tagline: "10 taglines from different angles — pick the one that fits.",
-    description: "Tell us your business + what makes it different. Get 10 taglines across 5 distinct angles (benefit, contrarian, founder-voice, audience-mirror, time-based). Each labeled with its angle so you can pick by fit.",
+    tagline: "10 taglines from different angles.",
+    description: "Tell us your business and what makes it different. Get 10 taglines across 5 distinct angles (benefit, contrarian, founder-voice, audience-mirror, time-based). Each labeled with its angle so you can pick by fit.",
     category: "Branding & Identity",
     fields: [
       { name: "businessName", label: "Business name", type: "text", required: true },
@@ -608,8 +608,8 @@ Quality bar:
   {
     slug: "sop-writer",
     name: "SOP Writer (Standard Operating Procedure)",
-    tagline: "Document a process once. Train every new hire in 10 min instead of an hour.",
-    description: "Describe a process you do (or someone on your team does). AI structures it into a clean SOP with steps, decision points, gotchas, and a quality check. Print-ready.",
+    tagline: "Write a process down once and reuse it to train new hires.",
+    description: "Describe a process you do (or someone on your team does). AI structures it into a clean SOP with steps, decision points, common mistakes and a quality check, ready to print.",
     category: "Operations & Finance",
     fields: [
       { name: "processName", label: "Process name", type: "text", required: true, placeholder: "e.g., 'Opening the salon at 8 AM'" },
@@ -677,8 +677,8 @@ Quality bar:
   {
     slug: "lead-magnet",
     name: "Lead Magnet Idea Generator",
-    tagline: "5 lead magnet ideas your audience would actually trade an email for.",
-    description: "Tell us your business + audience. Get 5 distinct lead magnet ideas — not generic 'free ebook' garbage. Each idea is specific, valuable, and shippable in 1-2 days.",
+    tagline: "5 lead magnet ideas for your audience.",
+    description: "Tell us your business and audience. Get 5 specific lead magnet ideas, each small enough to make in 1 to 2 days.",
     category: "Communication & Marketing",
     fields: [
       { name: "businessName", label: "Business name", type: "text", required: true },
@@ -727,7 +727,7 @@ Quality bar:
     slug: "customer-onboarding",
     name: "New Customer Onboarding Sequence",
     tagline: "5-email onboarding sequence ready to schedule.",
-    description: "Tell us about your business + what your customer just bought. Get 5 emails sequenced (day 0, 1, 3, 7, 14) that set expectations, deliver value, and turn the buyer into a repeat customer.",
+    description: "Tell us about your business and what your customer just bought. Get 5 emails for days 0, 1, 3, 7 and 14 that set expectations and invite the buyer back.",
     category: "Communication & Marketing",
     fields: [
       { name: "businessName", label: "Business name", type: "text", required: true },
@@ -774,7 +774,7 @@ Quality bar:
     slug: "win-back",
     name: "Customer Win-Back Email",
     tagline: "Email to bring back a customer who went silent.",
-    description: "Customer hasn't booked / ordered / engaged in months. AI writes a win-back email that doesn't grovel, doesn't oversell, and gives them a concrete reason to come back.",
+    description: "For a customer who has not booked, ordered or replied in months. AI writes a short win-back email with a concrete reason to come back.",
     category: "Communication & Marketing",
     fields: [
       { name: "businessName", label: "Business name", type: "text", required: true },
@@ -814,8 +814,8 @@ Quality bar:
   {
     slug: "meeting-agenda",
     name: "Meeting Agenda Generator",
-    tagline: "Structured agenda for any meeting in 30 seconds.",
-    description: "Tell us the meeting type, who's there, and what you want to accomplish. Get a clean agenda with time allocations + pre-work + outcomes-focused structure.",
+    tagline: "Drafts a structured agenda for a meeting.",
+    description: "Tell us the meeting type, who's there, and what you want to accomplish. Get an agenda with time for each item, pre-work and the outcomes you want.",
     category: "Operations & Finance",
     fields: [
       { name: "meetingType", label: "Meeting type", type: "select", required: true, options: ["Sales discovery call", "Sales close meeting", "Client kickoff", "Internal team standup", "1-on-1", "Quarterly review", "Project status", "Decision-making meeting", "Brainstorm", "Other"] },
@@ -877,14 +877,14 @@ Quality bar:
   {
     slug: "job-posting",
     name: "Hiring Job Posting Generator",
-    tagline: "Job description that actually attracts the right person.",
-    description: "Tell us what role + business. Get back a job posting written like a human: who you are, what they'll do, who fits, who shouldn't apply, how to apply. Cuts through the corporate template noise.",
+    tagline: "Drafts a job posting for the role.",
+    description: "Tell us the role and the business. Get back a job posting that covers who you are, what they will do, who fits, who should not apply and how to apply.",
     category: "Communication & Marketing",
     fields: [
       { name: "businessName", label: "Business name", type: "text", required: true, placeholder: "e.g., Bob's Plumbing" },
       { name: "role", label: "Role you're hiring for", type: "text", required: true, placeholder: "e.g., Service technician, dispatcher, salon receptionist" },
       { name: "experience", label: "Experience level", type: "select", options: ["Entry-level / will train", "1-3 years experience", "3-7 years experience", "Senior / 7+ years"], required: true },
-      { name: "what", label: "What will they actually do?", type: "textarea", required: true, placeholder: "Specific responsibilities. The more concrete the better — 'answer phones' vs 'manage scheduling for 12-tech team using ServiceTitan'." },
+      { name: "what", label: "What will they do?", type: "textarea", required: true, placeholder: "Specific responsibilities. The more concrete the better, for example 'answer phones' vs 'manage scheduling for 12-tech team using ServiceTitan'." },
       { name: "pay", label: "Pay range (optional)", type: "text", placeholder: "e.g., $20-25/hr or $60-75k DOE" },
       { name: "culture", label: "Culture hints (optional)", type: "text", placeholder: "e.g., Family-owned, no toxic positivity, owner is on every job site weekly" },
     ],
@@ -933,8 +933,8 @@ Quality bar:
   {
     slug: "customer-persona",
     name: "Customer Persona Builder",
-    tagline: "Three actual customer personas (not corporate fluff).",
-    description: "Tell us your business. Get back 3 distinct customer personas — name, age, life situation, what they actually want, what they secretly worry about, where to find them, what NOT to say.",
+    tagline: "Three customer personas based on your business.",
+    description: "Tell us your business. Get back 3 customer personas, each with a name, age, life situation, what they want, what worries them, where to find them and what not to say.",
     category: "AI-Powered",
     fields: [
       { name: "businessName", label: "Business name", type: "text", required: true, placeholder: "e.g., Bob's Plumbing" },
@@ -983,11 +983,11 @@ Quality bar:
   {
     slug: "pricing-audit",
     name: "Pricing Page Audit",
-    tagline: "Honest read on your pricing page or pricing-conversation script.",
-    description: "Paste your pricing page copy (or the way you talk about price). AI audits: is it confusing? Is anchoring wrong? Are you leaving money on the table? Are you too expensive for your audience?",
+    tagline: "Reviews your pricing page or pricing script.",
+    description: "Paste your pricing page copy (or the way you talk about price). AI checks whether it is confusing, whether the anchoring works, whether you are undercharging and whether you are priced above your audience.",
     category: "Communication & Marketing",
     fields: [
-      { name: "businessName", label: "Business name + what you sell", type: "text", required: true, placeholder: "e.g., Cherry Blossom Salon — haircuts + color + balayage" },
+      { name: "businessName", label: "Business name + what you sell", type: "text", required: true, placeholder: "e.g., Cherry Blossom Salon, haircuts, color and balayage" },
       { name: "pricing", label: "Your current pricing (paste it)", type: "textarea", required: true, placeholder: "Paste your pricing page text, or how you currently explain prices to clients. Include the actual numbers." },
       { name: "audience", label: "Who pays?", type: "text", placeholder: "e.g., 'middle-income women 25-50 in Marietta'" },
       { name: "competition", label: "Competitor pricing (if known)", type: "text", placeholder: "e.g., 'Most local salons charge $40-75 for women's cut'" },
@@ -1046,12 +1046,12 @@ Quality bar:
   {
     slug: "cold-email-audit",
     name: "Cold Email Audit",
-    tagline: "Paste your cold email. Get an honest grade + the rewrite.",
-    description: "Send us the cold outreach you've been sending. We grade it on subject line, hook, ask, and ethics — then rewrite it to be sharper and 30% shorter. Built by the same AI we use internally.",
+    tagline: "Paste your cold email. You get a grade and a rewrite.",
+    description: "Send us the cold outreach you've been sending. It grades the subject line, hook, ask and ethics, then rewrites it about 30% shorter. It uses the same AI we use for our own outreach.",
     category: "Communication & Marketing",
     fields: [
       { name: "subject", label: "Subject line", type: "text", required: true, placeholder: "e.g., Quick question about Cherry Blossom Salon" },
-      { name: "body", label: "Email body", type: "textarea", required: true, placeholder: "Paste the email you've been sending. Don't sanitize — the more authentic, the better the critique." },
+      { name: "body", label: "Email body", type: "textarea", required: true, placeholder: "Paste the email you've been sending. Paste it unedited so the critique fits what you send." },
       { name: "targetIndustry", label: "Who you're emailing (industry)", type: "text", placeholder: "e.g., Local salons in Atlanta" },
       { name: "yourBusiness", label: "What you're selling (1 sentence)", type: "text", placeholder: "e.g., Booking software for salons that cuts no-shows" },
     ],
@@ -1115,8 +1115,8 @@ Quality bar:
   {
     slug: "bio-writer",
     name: "AI Bio Writer",
-    tagline: "Generate professional bios in your voice. Multiple lengths + multiple platforms.",
-    description: "Paste a few facts about yourself or your business. AI returns three bios: short (140 chars for X/Twitter), medium (LinkedIn / About page, ~80 words), long (full About page, ~250 words). Same person, three voices.",
+    tagline: "Professional bios in your voice, in several lengths for several platforms.",
+    description: "Paste a few facts about yourself or your business. AI returns three bios: short (140 chars for X/Twitter), medium (LinkedIn / About page, ~80 words), long (full About page, ~250 words).",
     category: "Communication & Marketing",
     fields: [
       { name: "name", label: "Name (person or business)", type: "text", required: true, placeholder: "e.g., Elijah Purcell" },
@@ -1161,8 +1161,8 @@ Quality bar:
   {
     slug: "press-release",
     name: "AI Press Release Writer",
-    tagline: "Generate a press release in 60 seconds for a launch, hire, or milestone.",
-    description: "For when you need to announce something publicly and don't want to write a press release from scratch. AI generates a complete press release with headline, dateline, lead, body, boilerplate, and contact info.",
+    tagline: "Drafts a press release for a launch, hire or milestone.",
+    description: "For when you need to announce something publicly and don't want to write a press release from scratch. AI generates a complete press release with headline, dateline, lead, body, boilerplate and contact info.",
     category: "Communication & Marketing",
     fields: [
       { name: "announcement", label: "What are you announcing", type: "textarea", required: true, placeholder: "e.g., Launch of new AI consulting service / hiring of a new VP / $50k seed funding / new partnership with Local Bank" },
@@ -1222,8 +1222,8 @@ Quality bar:
   {
     slug: "review-request",
     name: "AI Customer Review Request",
-    tagline: "Generate a personalized review-request email or text. Polite, specific, hard to ignore.",
-    description: "After a positive customer interaction, send a request for a Google/Yelp/Facebook review. AI personalizes based on what they actually bought + a specific moment from the experience. Reads as written, not templated.",
+    tagline: "Drafts a polite, specific review request by email or text.",
+    description: "After a positive customer interaction, send a request for a Google/Yelp/Facebook review. AI personalizes it with what they bought and a specific moment from their visit.",
     category: "Communication & Marketing",
     fields: [
       { name: "customerName", label: "Customer's first name", type: "text", required: true, placeholder: "e.g., Sarah" },

@@ -46,7 +46,7 @@ export default function SiteFooter() {
           </div>
           <p style={{ margin: 0, maxWidth: "34ch" }}>
             Websites, software and AI tooling for small businesses. Founded 2025 in
-            Georgia. Operated from Tuscaloosa, Alabama.
+            Georgia. Elijah runs it from Tuscaloosa, Alabama.
           </p>
         </div>
 
@@ -97,7 +97,7 @@ export default function SiteFooter() {
           four separate profiles into one entity rather than four people with a name in
           common. */}
       <div style={{ maxWidth: "1100px", margin: "36px auto 0", paddingTop: "20px", borderTop: "1px solid rgba(212,175,55,0.10)", fontSize: "11.5px", color: "#6d6759" }}>
-        &copy; {year} Purcell Ventures LLC. Founded and operated by Elijah Purcell.
+        &copy; {year} Purcell Ventures LLC. Elijah Purcell founded and runs it.
       </div>
     </footer>
   );

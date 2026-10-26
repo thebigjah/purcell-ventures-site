@@ -20,8 +20,8 @@ const FAQS: QSection[] = [
     label: "Working with Elijah",
     qas: [
       {
-        q: "Who do I actually talk to?",
-        a: "Me. Elijah Purcell. There's no team, no account manager, no handoff. You deal with the owner from the first message to the final delivery.",
+        q: "Who will I talk to?",
+        a: "Me, Elijah Purcell. I handle your project myself from the first message to the final delivery.",
       },
       {
         q: "How fast do you respond?",
@@ -29,11 +29,11 @@ const FAQS: QSection[] = [
       },
       {
         q: "Where are you based?",
-        a: "Tuscaloosa, Alabama. Purcell Ventures LLC is registered in Acworth, Georgia, where it was formed in April 2025, and it is operated from Tuscaloosa, where I attend the University of Alabama. Local clients here can meet in person, which is the part that is hard to do remotely.",
+        a: "Tuscaloosa, Alabama. Purcell Ventures LLC is registered in Acworth, Georgia, where it was formed in April 2025, and I run it from Tuscaloosa, where I attend the University of Alabama. Local clients can meet me in person.",
       },
       {
         q: "Do you take clients outside Tuscaloosa?",
-        a: "For digital services, AI consulting, and software, yes, anywhere in the United States. For field work (gutter cleaning, pressure washing, lawn care), see Mantle Field Services, which is Metro Atlanta only.",
+        a: "For digital services, AI consulting and software, yes, anywhere in the United States. For field work (gutter cleaning, pressure washing, lawn care), see Mantle Field Services, which is Metro Atlanta only.",
       },
       // PRICING QUESTIONS. This page carried 26 questions and none of them contained the
       // words "cost", "price" or "how much", which is one of the most common query shapes
@@ -48,7 +48,7 @@ const FAQS: QSection[] = [
       },
       {
         q: "What's the best way to start?",
-        a: "Email elijah@purcell-ventures.com with a one-sentence description of what you are trying to do. Not what you think you need built, what you are trying to do. I'll tell you honestly if I can help and what it would look like.",
+        a: "Email elijah@purcell-ventures.com with a one-sentence description of what you are trying to do. Describe the goal rather than the thing you think needs building. I'll tell you whether I can help and what the work would look like.",
       },
     ],
   },
@@ -58,27 +58,27 @@ const FAQS: QSection[] = [
     qas: [
       {
         q: "Do I need tech experience to benefit from a session?",
-        a: "No. Most sessions are designed for people who've never used AI tools before. I meet you where you are and build from there.",
+        a: "No. Most sessions are designed for people who've never used AI tools before. I start from what you already know.",
       },
       {
         q: "What do participants need to bring?",
-        a: "A laptop or tablet and a willingness to try things. I'll handle everything else: setup, demos, exercises, and a takeaway guide.",
+        a: "A laptop or tablet and a willingness to try things. I bring the setup, demos, exercises and a takeaway guide.",
       },
       {
         q: "Can you come to our office?",
-        a: "Yes. I come to you. Your office, your team, your environment. That context makes the session more relevant and the examples more useful.",
+        a: "Yes. I come to your office, so the examples use your team's own work.",
       },
       {
         q: "What's the difference between this and just using ChatGPT on my own?",
-        a: "Most people use about 10% of what AI tools can do. I show you the other 90% — the prompting techniques, the integrations, the specific workflows that actually save time in your type of business.",
+        a: "I show you prompting techniques, integrations and workflows chosen for your type of business, and you practice them on your own tasks during the session.",
       },
       {
         q: "Will this lead to a sales pitch for your other services?",
-        a: "Only if it makes sense. Consulting is its own thing. If I see something in your business I could build for you, I'll mention it. No pressure, no upsell baked into the session.",
+        a: "Only if it fits. Consulting is a separate service. If I see something in your business I could build for you, I'll mention it once, outside the session.",
       },
       {
         q: "How far in advance do I need to book?",
-        a: "Typically 1–2 weeks for standard sessions. Custom trainings need more prep time. Reach out as early as you can.",
+        a: "Usually 1 to 2 weeks for standard sessions. Custom trainings need more prep time. Reach out as early as you can.",
       },
     ],
   },
@@ -88,19 +88,19 @@ const FAQS: QSection[] = [
     qas: [
       {
         q: "How does the subscription work?",
-        a: "Pick a tier — Starter ($99/mo + $400 setup), Growth ($179/mo + $700 setup), or Full Service ($279/mo + $1,000 setup). Flat monthly rate after setup. No contracts. Cancel anytime. All 25+ tools accessible from one dashboard.",
+        a: "Pick a tier: Starter ($99/mo + $400 setup), Growth ($179/mo + $700 setup) or Full Service ($279/mo + $1,000 setup). After setup you pay a flat monthly rate with no contract, and you can cancel at any time. You reach every tool from one dashboard.",
       },
       {
         q: "Can I mix and match tools from different tiers?",
-        a: "Yes. The tiers are common starting points but every account is custom. Tell me what you actually need and I'll build the right combination.",
+        a: "Yes. The tiers are common starting points but every account is custom. Tell me what you need and I'll build that combination.",
       },
       {
         q: "Will you migrate me off my existing tools?",
-        a: "Yes. Most clients are coming from a patchwork of Squarespace + Mailchimp + Google Forms + something. I'll move everything into one place during setup.",
+        a: "Yes. Most clients are coming from a mix of tools like Squarespace, Mailchimp and Google Forms. I'll move everything into one place during setup.",
       },
       {
         q: "What happens if I cancel?",
-        a: "Your data is yours. I export everything to you in standard formats. No data hostage, no exit fees.",
+        a: "Your data is yours. I export everything to you in standard formats, and there is no exit fee.",
       },
     ],
   },
@@ -110,15 +110,15 @@ const FAQS: QSection[] = [
     qas: [
       {
         q: "What kinds of projects do you take on?",
-        a: "Web apps, mobile apps, AI integrations, browser extensions, automation tools. Best fit: clear problem + a single decision-maker + budget between $1.5k and $15k. If your project is bigger, I'll tell you honestly and refer you out.",
+        a: "Web apps, mobile apps, AI integrations, browser extensions and automation tools. The best fit is a clear problem, one decision-maker and a budget between $1.5k and $15k. If your project is bigger, I'll say so and refer you to someone else.",
       },
       {
         q: "What's the timeline for a small project?",
-        a: "Most $1.5k–3.5k projects ship in 1–2 weeks from kickoff. Full apps run 3–8 weeks depending on scope.",
+        a: "Most $1.5k to $3.5k projects ship 1 to 2 weeks after kickoff. Full apps take 3 to 8 weeks, depending on scope.",
       },
       {
         q: "Do you write the code yourself?",
-        a: "Yes. I work with Claude (Anthropic's AI) as a pair-programming partner, but every line that ships is reviewed and shaped by me. I own the work.",
+        a: "Yes. I work with Claude (Anthropic's AI) as a pair-programming partner, and I review and edit every line before it ships.",
       },
       {
         q: "Can you maintain it after launch?",
@@ -132,15 +132,15 @@ const FAQS: QSection[] = [
     qas: [
       {
         q: "Are the courses live or self-paced?",
-        a: "Self-paced. Every lesson is a video + a written takeaway. You can work through a course in a weekend or stretch it over months.",
+        a: "Self-paced. Every lesson is a video with a written takeaway. You can work through a course in a weekend or stretch it over months.",
       },
       {
         q: "Do I get lifetime access?",
-        a: "Yes. One purchase, forever. Including any future updates to that course's lessons.",
+        a: "Yes. One purchase covers the course and any future updates to its lessons.",
       },
       {
         q: "Is there a refund policy?",
-        a: "30 days. If the course doesn't deliver for you, email me within 30 days for a full refund. No questions, no hard feelings.",
+        a: "30 days. If the course doesn't deliver for you, email me within 30 days for a full refund.",
       },
       {
         q: "Can I message you while taking a course?",
@@ -153,20 +153,20 @@ const FAQS: QSection[] = [
     label: "About this company",
     qas: [
       {
-        q: "Wait, you are nineteen?",
-        a: "Yes. I've been building production software for a year. The portfolio is real, the clients are real, and I'd rather earn your trust with the work than the age. The full record lives at /resume.",
+        q: "Are you really nineteen?",
+        a: "Yes. I've been building production software for a year. Every portfolio project links to a live site, and the full record is at /resume.",
       },
       {
         q: "What's the panopticon mark about?",
-        a: "It's an inversion of Bentham's prison design, instead of a hidden watcher surveilling visible prisoners, the mark places PV at the center as the visible accountable party, with the structure radiating outward as accountability arms. The full explanation lives on the /about page under 'The Mark.'",
+        a: "It inverts Bentham's prison design. In the original, a hidden watcher observes visible prisoners. The mark puts PV at the center as the visible party that answers for its work, with the structure radiating outward. The full explanation lives on the /about page under 'The Mark.'",
       },
       {
         q: "Why 'Ventures' and not 'agency' or 'studio'?",
-        a: "Because it's a set of ventures, not a single business. Digital services, consulting, software, and real estate are different things being built and tested. 'Ventures' is accurate to what this actually is.",
+        a: "Because the company runs several separate ventures: digital services, consulting, software and real estate. I build and test each one on its own.",
       },
       {
         q: "Who owns Mantle Field Services?",
-        a: "I do, it's a sister brand to Purcell Ventures, run under the same LLC umbrella but operated as its own service brand. Same owner, same standards, separate sales operations.",
+        a: "I do. It's a sister brand to Purcell Ventures under the same LLC, with its own sales operation.",
       },
     ],
   },
@@ -198,12 +198,12 @@ export default function FAQPage() {
 
         {/* Page head */}
         <header className="pv-page-head">
-          <div className="pv-mono-label">A Standing Reference · Last revised May 2026</div>
+          <div className="pv-mono-label">Reference page, revised May 2026</div>
           <h1>
             Common <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>questions.</em>
           </h1>
           <p className="deck">
-            Everything I get asked enough to put on paper. If your question isn&apos;t here, email me. I&apos;ll answer it, then add it to this page so the next person doesn&apos;t have to ask.
+            The questions clients ask me most often. If your question isn&apos;t here, email me. I&apos;ll answer it, then add it to this page so the next person doesn&apos;t have to ask.
           </p>
         </header>
 
@@ -287,13 +287,13 @@ export default function FAQPage() {
         }}>
           <div>
             <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "8px" }}>
-              Want this for your business?
+              For your business
             </div>
             <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 600, color: "var(--color-warm-text)", margin: "0 0 8px" }}>
-              Build your own FAQ in 30 seconds.
+              Build an FAQ with the AI FAQ Builder.
             </h3>
             <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: 0, lineHeight: 1.5, maxWidth: "560px" }}>
-              Tell us about your business. Our AI FAQ Builder generates 6-10 customer-quality questions and answers, ready to drop on your site. Free to use.
+              Tell us about your business. The AI FAQ Builder writes 6 to 10 questions and answers you can paste into your site. It is free.
             </p>
           </div>
           <a className="pv-btn-primary" href="/digital/tools/faq-builder">Try the tool</a>
@@ -320,7 +320,7 @@ export default function FAQPage() {
             Your question <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>not here?</em>
           </h2>
           <a className="pv-btn-primary" href="mailto:elijah@purcell-ventures.com">
-            Email me →
+            Email me
           </a>
         </section>
 
@@ -336,8 +336,8 @@ export default function FAQPage() {
         fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
         color: "var(--color-warm-text-light)",
       }}>
-        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
-        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← Home</a>
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC, Acworth, GA</span>
+        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>Home</a>
       </footer>
     </div>
   );

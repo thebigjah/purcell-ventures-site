@@ -127,18 +127,18 @@ export default function EstimatingPage() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
         <div className="no-print">
-          <Link href="/digital/tools" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All tools</Link>
+          <Link href="/digital/tools" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All tools</Link>
         </div>
 
         {!editing && (
           <>
             <header className="pv-page-head no-print">
-              <div className="pv-mono-label">Operations · Estimating</div>
+              <div className="pv-mono-label">Operations: Estimating</div>
               <h1>
                 Online <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>estimating</em>
               </h1>
               <p className="deck">
-                Build job quotes with line items, labor, materials. Print or save as PDF to send. Stays on this device.
+                Build job quotes from line items for labor and materials. Print them or save them as a PDF to send. Stays on this device.
               </p>
             </header>
 
@@ -160,7 +160,7 @@ export default function EstimatingPage() {
                           <span style={{ fontSize: "11px", color: "var(--color-warm-accent)", letterSpacing: "0.18em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 700 }}>{e.status}</span>
                         </div>
                         <div style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", marginTop: "4px" }}>
-                          {e.clientName || "No client"} · {e.jobName || "No job"} · {e.date}
+                          {e.clientName || "No client"}, {e.jobName || "No job"}, {e.date}
                         </div>
                       </div>
                       <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
@@ -179,7 +179,7 @@ export default function EstimatingPage() {
         {editing && (
           <div className="print-only-page">
             <div className="no-print" style={{ marginBottom: "16px", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "8px" }}>
-              <button onClick={() => setEditing(null)} style={btn("ghost")}>← Cancel</button>
+              <button onClick={() => setEditing(null)} style={btn("ghost")}>Cancel</button>
               <div style={{ display: "flex", gap: "8px" }}>
                 <select value={editing.status} onChange={(e) => setEditing({ ...editing, status: e.target.value as Estimate["status"] })} style={selectStyle}>
                   <option>Draft</option><option>Sent</option><option>Accepted</option><option>Declined</option>
@@ -197,8 +197,8 @@ export default function EstimatingPage() {
                 </div>
                 <div style={{ textAlign: "right" }}>
                   <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "16px", color: "var(--color-warm-text)" }}>Purcell Ventures LLC</div>
-                  <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", marginTop: "4px" }}>Acworth, GA · Cobb County</div>
-                  <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)" }}>(205) 462-7839 · elijah@purcell-ventures.com</div>
+                  <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", marginTop: "4px" }}>Acworth, Cobb County, GA</div>
+                  <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)" }}>(205) 462-7839, elijah@purcell-ventures.com</div>
                 </div>
               </div>
             </header>

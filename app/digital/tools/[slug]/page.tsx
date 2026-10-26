@@ -38,7 +38,7 @@ export default function ToolPage({ params }: { params: Promise<{ slug: string }>
     return (
       <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", gap: "16px", padding: "40px" }}>
         <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "32px" }}>Tool not found</h1>
-        <Link href="/digital/tools" style={{ color: "var(--color-warm-accent)" }}>← Back to tools</Link>
+        <Link href="/digital/tools" style={{ color: "var(--color-warm-accent)" }}>Back to tools</Link>
       </div>
     );
   }
@@ -81,7 +81,7 @@ export default function ToolPage({ params }: { params: Promise<{ slug: string }>
       <main style={{ position: "relative", zIndex: 5, maxWidth: "880px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
         <Link href="/digital/tools" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-          ← All tools
+          All tools
         </Link>
 
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
@@ -162,13 +162,13 @@ export default function ToolPage({ params }: { params: Promise<{ slug: string }>
           <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "24px", alignItems: "center", flexWrap: "wrap" }}>
             <div>
               <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "6px" }}>
-                Like this prompt? Get all 23 — $19
+                Get all 23 prompts for $19
               </div>
               <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", color: "var(--color-warm-text)", fontWeight: 600, margin: "0 0 6px" }}>
                 The PV AI Starter Kit
               </h3>
               <p style={{ margin: 0, fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.5 }}>
-                23 production AI prompts (including this one), 5 sales scripts, full rep handbook, 50+ cold-outreach templates, contractor agreement, CRM CSV. Editable. Yours forever. $19 one-time, instant download.
+                23 AI prompts (including this one), 5 sales scripts, the full rep handbook, 50+ cold-outreach templates, a contractor agreement and a CRM CSV. All files are editable. $19 one time, with an instant download.
               </p>
             </div>
             <span style={{
@@ -180,7 +180,7 @@ export default function ToolPage({ params }: { params: Promise<{ slug: string }>
               fontWeight: 700,
               whiteSpace: "nowrap",
             }}>
-              See the kit →
+              See the kit
             </span>
           </div>
         </Link>

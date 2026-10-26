@@ -15,18 +15,18 @@ const SECTIONS: { roman: string; label: string; items: LinkItem[] }[] = [
     roman: "I.",
     label: "Work With Me",
     items: [
-      { href: "/digital",        label: "Digital Services",  desc: "Websites, AI chatbots, booking, marketing. From $99/mo." },
+      { href: "/digital",        label: "Digital Services",  desc: "Websites, AI chatbots, booking and marketing. From $99/mo." },
       { href: "/consulting",     label: "AI Consulting",     desc: "Hands-on training for your team. From $125/person." },
-      { href: "/software",       label: "Custom Software",   desc: "Apps, platforms, AI tools. From $1,500." },
-      { href: "/consulting/book", label: "Book a Session →",  badge: "Direct booking" },
+      { href: "/software",       label: "Custom Software",   desc: "Apps, platforms and AI tools. From $1,500." },
+      { href: "/consulting/book", label: "Book a Session",  badge: "Direct booking" },
     ],
   },
   {
     roman: "I.5",
     label: "Free Tools",
     items: [
-      { href: "/ai-readiness",       label: "AI Readiness Test",  desc: "10 questions, 3 minutes. Score your team's AI maturity, get calibrated next steps. No email capture." },
-      { href: "/ai-cost-calculator", label: "AI Cost Calculator", desc: "Enter your team size and workload. See how fast an AI session pays back in dollars. Conservative math." },
+      { href: "/ai-readiness",       label: "AI Readiness Test",  desc: "10 questions, 3 minutes. Score how your team uses AI and get next steps. No email required." },
+      { href: "/ai-cost-calculator", label: "AI Cost Calculator", desc: "Enter your team size and workload. See how fast an AI session pays for itself. The assumptions are listed on the page." },
     ],
   },
   {
@@ -35,29 +35,29 @@ const SECTIONS: { roman: string; label: string; items: LinkItem[] }[] = [
     items: [
       { href: "/courses/college-apps",    label: "College Application Playbook",  desc: "34 acceptances. $530k scholarships. $297." },
       { href: "/courses/business-launch", label: "Business Launch Playbook",      desc: "From idea to LLC to first dollar. $397." },
-      { href: "/courses/ai-automation",   label: "Zero to Automated",             desc: "Build the AI tools you actually need. $397." },
+      { href: "/courses/ai-automation",   label: "Zero to Automated",             desc: "Build your own AI tools. $397." },
     ],
   },
   {
     roman: "III.",
     label: "Personal",
     items: [
-      { href: "/about",   label: "About",   desc: "Who I am, where I'm going, what the mark means." },
+      { href: "/about",   label: "About",   desc: "About me and the Purcell Ventures mark." },
       { href: "/now",     label: "/now",    desc: "What I'm focused on right now." },
-      { href: "/uses",    label: "/uses",   desc: "My working stack, every tool in active production." },
+      { href: "/uses",    label: "/uses",   desc: "The tools I use for my work." },
       { href: "/verses",  label: "Verses",  desc: "Five scriptures I come back to." },
       { href: "/writing", label: "Writing", desc: "Selected original prose." },
-      { href: "/resume",  label: "Résumé",  desc: "Full record, education, work, awards, scholarships." },
+      { href: "/resume",  label: "Résumé",  desc: "Education, work, awards and scholarships." },
     ],
   },
   {
     roman: "IV.",
     label: "Built By Me",
     items: [
-      { href: "https://ua-today.vercel.app", label: "UA Today", desc: "Campus events for the University of Alabama, six sources in one place. Free, no account, unaffiliated.", external: true },
+      { href: "https://ua-today.vercel.app", label: "UA Today", desc: "Campus events for the University of Alabama, six sources in one place. Free, no account, not affiliated with the university.", external: true },
       { href: "/tools",  label: "29 Free Tools", desc: "Small software, one problem each. All live on the open web." },
       { href: "/portfolio", label: "Portfolio", desc: "Client work and shipped products." },
-      { href: "https://mantle-field-site.vercel.app", label: "Mantle Field Services", desc: "Sister brand. Gutter cleaning, pressure washing, lawn care. Metro Atlanta only.", external: true },
+      { href: "https://mantle-field-site.vercel.app", label: "Mantle Field Services", desc: "Sister brand for gutter cleaning, pressure washing and lawn care. Metro Atlanta only.", external: true },
     ],
   },
   // THE PAGE IS CALLED "EVERYTHING FROM ELIJAH PURCELL" AND IT LISTED TWO EXTERNAL LINKS.
@@ -72,7 +72,7 @@ const SECTIONS: { roman: string; label: string; items: LinkItem[] }[] = [
     roman: "V.",
     label: "Elsewhere",
     items: [
-      { href: "https://github.com/thebigjah", label: "GitHub", desc: "The code. 29 tools and the projects behind them.", external: true },
+      { href: "https://github.com/thebigjah", label: "GitHub", desc: "Code for the 29 tools and other projects.", external: true },
       { href: "https://www.linkedin.com/in/theelijahpurcell", label: "LinkedIn", desc: "Professional record.", external: true },
       { href: "https://www.linkedin.com/company/138853899/", label: "Purcell Ventures on LinkedIn", desc: "The company page.", external: true },
       { href: "https://www.instagram.com/theelijahpurcell/", label: "Instagram", external: true },
@@ -103,7 +103,7 @@ export default function LinksPage() {
             letterSpacing: "0.42em", textTransform: "uppercase",
             color: "var(--color-warm-accent)", marginBottom: "20px",
           }}>
-            Purcell · Ventures
+            Purcell Ventures
           </div>
           <h1 style={{
             fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700,
@@ -118,8 +118,8 @@ export default function LinksPage() {
             fontSize: "17px", color: "var(--color-warm-text)", opacity: 0.85,
             lineHeight: 1.5, maxWidth: "440px", margin: "0 auto",
           }}>
-            Founder and CEO of Purcell Ventures LLC. Autonomous AI agent systems engineer,
-            software builder, and University of Alabama Honors College undergraduate in
+            Founder and CEO of Purcell Ventures LLC. I build software and AI agent systems,
+            and I am a University of Alabama Honors College student in
             Tuscaloosa, Alabama.
           </p>
         </header>
@@ -208,8 +208,8 @@ export default function LinksPage() {
           lineHeight: 1.8,
         }}>
           <div style={{ marginBottom: "8px", color: "var(--color-warm-accent)", opacity: 0.7 }}></div>
-          <div>EST · April · MMXXV · Acworth, GA</div>
-          <div style={{ marginTop: "6px" }}>Control № 25075361 · Domestic LLC</div>
+          <div>Established April 2025, Acworth, GA</div>
+          <div style={{ marginTop: "6px" }}>Control No. 25075361, domestic LLC</div>
         </footer>
 
       </main>

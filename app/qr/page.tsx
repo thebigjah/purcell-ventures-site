@@ -133,7 +133,7 @@ function QrCard({ name, data, desc }: { name: string; data: string; desc: string
           borderRadius: "4px", fontFamily: "Inter, sans-serif",
         }}
       >
-        {loading ? "Downloading..." : "↓ Download 1000×1000"}
+        {loading ? "Downloading..." : "Download 1000 by 1000"}
       </button>
     </div>
   );
@@ -148,19 +148,19 @@ export default function QrPage() {
       <div style={{ position: "relative", zIndex: 5, maxWidth: "1100px", margin: "0 auto" }}>
 
         <header className="pv-page-head" style={{ marginBottom: "48px" }}>
-          <div className="pv-mono-label">Internal · QR Code Hub</div>
+          <div className="pv-mono-label">Internal QR code hub</div>
           <h1 style={{ margin: 0 }}>
             QR <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Hub.</em>
           </h1>
           <p className="deck">
-            1000×1000 px downloads · Dark or light · Ready for stickers, cards, and print.
+            1000 by 1000 px downloads in dark or light, ready for stickers, cards and print.
           </p>
         </header>
 
         {CATEGORIES.map(cat => (
           <div key={cat.label} style={{ marginBottom: "56px" }}>
             <header className="pv-section-head" style={{ marginBottom: "24px", padding: "20px 0 14px" }}>
-              <span className="roman">§</span>
+              <span className="roman"></span>
               <h2>{cat.label}</h2>
             </header>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))", gap: "16px" }}>

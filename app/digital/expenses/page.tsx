@@ -74,15 +74,15 @@ export default function ExpensesPage() {
       ` }} />
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
-        <Link href="/digital/tools" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All tools</Link>
+        <Link href="/digital/tools" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All tools</Link>
 
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Operations · Expense Tracker</div>
+          <div className="pv-mono-label">Operations: Expense Tracker</div>
           <h1>
             Expense <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>tracker</em>
           </h1>
           <p className="deck">
-            Log expenses as they happen. Filter by month. Tax season is one CSV away. Stays on this device.
+            Log expenses as they happen, filter by month and export a CSV at tax time. Stays on this device.
           </p>
         </header>
 

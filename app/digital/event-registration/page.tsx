@@ -80,15 +80,15 @@ export default function EventRegistrationPage() {
     <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
-        <Link href="/digital/tools" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All tools</Link>
+        <Link href="/digital/tools" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All tools</Link>
 
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Booking · Event Registration</div>
+          <div className="pv-mono-label">Booking: Event Registration</div>
           <h1>
             Event <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>RSVPs</em>
           </h1>
           <p className="deck">
-            Create events. Collect RSVPs. Check people in at the door. Stays on this device.
+            Create an event, collect RSVPs and check guests in at the door. Stays on this device.
           </p>
         </header>
 
@@ -129,7 +129,7 @@ export default function EventRegistrationPage() {
                       <div>
                         <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", color: "var(--color-warm-text)", margin: "0 0 4px", fontWeight: 600 }}>{e.name}</h3>
                         <div style={{ fontSize: "13px", color: "var(--color-warm-text-muted)" }}>
-                          {e.date} {e.time && `at ${e.time}`} · {e.location || "TBD"} · {e.attendees.length}/{e.capacity} registered
+                          {e.date} {e.time && `at ${e.time}`}, {e.location || "TBD"}, {e.attendees.length}/{e.capacity} registered
                         </div>
                         {e.description && <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: "8px 0 0", lineHeight: 1.5 }}>{e.description}</p>}
                       </div>
@@ -144,12 +144,12 @@ export default function EventRegistrationPage() {
 
         {selected && (
           <>
-            <button onClick={() => setSelectedId(null)} style={{ marginBottom: "16px", background: "transparent", border: "none", color: "var(--color-warm-text-muted)", cursor: "pointer", fontSize: "12px", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif", padding: 0 }}>← All events</button>
+            <button onClick={() => setSelectedId(null)} style={{ marginBottom: "16px", background: "transparent", border: "none", color: "var(--color-warm-text-muted)", cursor: "pointer", fontSize: "12px", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif", padding: 0 }}>All events</button>
 
             <header className="pv-page-head">
               <div className="pv-mono-label">{selected.date} {selected.time}</div>
               <h1>{selected.name}</h1>
-              <p className="deck">{selected.location} · {selected.attendees.length} / {selected.capacity} registered · {selected.attendees.filter((a) => a.checkedIn).length} checked in</p>
+              <p className="deck">{selected.location}, {selected.attendees.length} of {selected.capacity} registered, {selected.attendees.filter((a) => a.checkedIn).length} checked in</p>
             </header>
 
             <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-accent)", padding: "24px", marginBottom: "24px" }}>
@@ -176,7 +176,7 @@ export default function EventRegistrationPage() {
                   <div key={a.id} style={{ padding: "12px 16px", background: "var(--color-warm-bg-alt)", border: `1px solid ${a.checkedIn ? "#7aaa6a" : "var(--color-warm-border)"}`, display: "flex", justifyContent: "space-between", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
                     <div>
                       <div style={{ fontFamily: "'Cinzel', Georgia, serif", color: "var(--color-warm-text)", fontWeight: 600, fontSize: "15px" }}>{a.name}</div>
-                      <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)" }}>{a.email} · {a.phone || "no phone"}</div>
+                      <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)" }}>{a.email}, {a.phone || "no phone"}</div>
                       {a.notes && <div style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", fontStyle: "italic", marginTop: "4px" }}>{a.notes}</div>}
                     </div>
                     <div style={{ display: "flex", gap: "6px" }}>

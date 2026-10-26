@@ -15,62 +15,62 @@ const TEMPLATES: Template[] = [
   {
     industry: "Salons & spas",
     subject: "Quick question about {{salonName}}",
-    body: `Hi {{firstName}},\n\nI checked out {{salonName}}'s booking flow online and noticed {{specificObservation}}. Most salons we work with say this was the #1 thing they wanted to fix.\n\nWe help salons fix this for $179/mo. Worth 15 min to see what we'd do for you?\n\nIf not, no worries, just delete this.\n\n— {{yourName}}`,
-    why: "Specific observation + relatable framing + low-commitment ask + permission to ignore.",
+    body: `Hi {{firstName}},\n\nI checked out {{salonName}}'s booking flow online and noticed {{specificObservation}}. Most salons we work with say this was the #1 thing they wanted to fix.\n\nWe help salons fix this for $179/mo. Worth 15 min to see what we'd do for you?\n\nIf not, no worries, just delete this.\n\n{{yourName}}`,
+    why: "A specific observation, a familiar problem, a small ask and permission to ignore it.",
   },
   {
     industry: "Plumbing / HVAC / trades",
     subject: "Saw a pattern in how {{businessType}}s are using AI",
-    body: `Hi {{firstName}},\n\nI help trades businesses with AI tools, particularly plumbers and HVAC. Most owners I work with were skeptical at first.\n\nThree things they had in common before:\n• Phone rang less than it used to\n• Losing leads to bigger shops with better websites\n• No time to figure out tech themselves\n\nSound like {{company}}?\n\n— {{yourName}}`,
-    why: "Pattern-recognition opener > pitch. Three specific items invite agreement. Question forces a yes/no.",
+    body: `Hi {{firstName}},\n\nI help trades businesses with AI tools, particularly plumbers and HVAC. Most owners I work with were skeptical at first.\n\nThree things they had in common before:\n• Phone rang less than it used to\n• Losing leads to bigger shops with better websites\n• No time to figure out tech themselves\n\nSound like {{company}}?\n\n{{yourName}}`,
+    why: "It opens with a pattern instead of a pitch. The three items are easy to agree with, and the question asks for a yes or no.",
   },
   {
     industry: "Dental / medical practice",
     subject: "Front-desk question about {{practiceName}}",
-    body: `Hi {{firstName}} (or {{officeManager}}),\n\nNoticed {{practiceName}} doesn't have {{specificThing}} on your booking page. Most practices we work with see {{specificOutcome}} after adding it.\n\n10 minutes for a walkthrough? If not, here's a free guide on {{relatedTopic}}: [link]\n\n— {{yourName}}`,
-    why: "Acknowledges the actual decision-maker may be office manager. Gives a free guide as fallback value.",
+    body: `Hi {{firstName}} (or {{officeManager}}),\n\nNoticed {{practiceName}} doesn't have {{specificThing}} on your booking page. Most practices we work with see {{specificOutcome}} after adding it.\n\n10 minutes for a walkthrough? If not, here's a free guide on {{relatedTopic}}: [link]\n\n{{yourName}}`,
+    why: "It allows for the office manager being the decision-maker and offers a free guide if they say no.",
   },
   {
     industry: "Real estate brokerage",
     subject: "Lead-routing question for {{brokerageName}}",
-    body: `Hi {{firstName}},\n\nMost brokerages still email leads manually to the next-up agent. We automate the routing AND the first-touch follow-up.\n\nBrokers who use it report {{specificMetric}}.\n\nWorth 15 minutes to compare to what {{brokerageName}} does now?\n\n— {{yourName}}`,
-    why: "Industry-specific problem they recognize. Comparison framing (not 'better' but 'compare to').",
+    body: `Hi {{firstName}},\n\nMost brokerages still email leads manually to the next-up agent. We automate the routing AND the first-touch follow-up.\n\nBrokers who use it report {{specificMetric}}.\n\nWorth 15 minutes to compare to what {{brokerageName}} does now?\n\n{{yourName}}`,
+    why: "It names a problem they will recognize and asks them to compare, without claiming to be better.",
   },
   {
     industry: "Law firm",
     subject: "Intake automation for {{firmName}}",
-    body: `Hi {{firstName}},\n\nMost law firms we work with were spending {{specificHours}} on intake, qualifying leads, scheduling consults, gathering docs. We automated that for under $200/mo.\n\nIf intake is a bottleneck, 15-min walkthrough, not a pitch, just the workflow.\n\n— {{yourName}}`,
-    why: "\"Not a pitch, just the workflow\" lowers the threshold. Pain-point first, price as a fact.",
+    body: `Hi {{firstName}},\n\nMost law firms we work with were spending {{specificHours}} on intake: qualifying leads, scheduling consults and gathering documents. We automated that for under $200/mo.\n\nIf intake is a bottleneck, I can show you the workflow in a 15-minute walkthrough.\n\n{{yourName}}`,
+    why: "Offering a walkthrough of the workflow is a small ask. It names the problem first and states the price plainly.",
   },
   {
     industry: "Marketing agency",
     subject: "White-label AI for {{agencyName}}?",
-    body: `Hi {{firstName}},\n\nI noticed {{agencyName}} {{specificObservation}}. Have you considered white-labeling AI tools for your clients?\n\nWe provide the AI infrastructure; you keep the client relationship.\n\nOpen to a quick chat?\n\n— {{yourName}}`,
-    why: "Plays to the agency's ego ('you keep the client relationship'). Partnership frame, not vendor frame.",
+    body: `Hi {{firstName}},\n\nI noticed {{agencyName}} {{specificObservation}}. Have you considered white-labeling AI tools for your clients?\n\nWe provide the AI infrastructure, and you keep the client relationship.\n\nOpen to a quick chat?\n\n{{yourName}}`,
+    why: "It tells the agency they keep the client relationship and positions you as a partner.",
   },
   {
     industry: "E-commerce brand",
     subject: "{{specificProductFeature}} on {{brandName}}'s site",
-    body: `Hi {{firstName}},\n\nQuick observation about {{brandName}}'s product page for {{specificProduct}} — {{specificImprovement}}.\n\nWe help brands implement {{specificThing}} for ~$179/mo.\n\nWorth a look?\n\n— {{yourName}}`,
-    why: "Hyper-specific observation = proof of homework. Short. Easy yes/no.",
+    body: `Hi {{firstName}},\n\nQuick observation about {{brandName}}'s product page for {{specificProduct}}: {{specificImprovement}}.\n\nWe help brands implement {{specificThing}} for ~$179/mo.\n\nWorth a look?\n\n{{yourName}}`,
+    why: "A specific observation shows you looked at their store. It is short and asks for a yes or no.",
   },
   {
     industry: "Wellness / fitness studio",
     subject: "Booking gap I noticed at {{studioName}}",
-    body: `Hi {{firstName}},\n\nLooked at {{studioName}}'s booking flow — {{specificGap}}. Studios that fix this see ~{{specificMetric}}.\n\nWe do this end-to-end for $179/mo (Mindbody integration included).\n\nWorth 15 minutes?\n\n— {{yourName}}`,
-    why: "Industry-specific tool mention (Mindbody) = credibility signal.",
+    body: `Hi {{firstName}},\n\nLooked at {{studioName}}'s booking flow and noticed {{specificGap}}. Studios that fix this see ~{{specificMetric}}.\n\nWe handle all of it for $179/mo (Mindbody integration included).\n\nWorth 15 minutes?\n\n{{yourName}}`,
+    why: "Naming Mindbody shows you know the tools studios use.",
   },
   {
     industry: "Veterinary practice",
     subject: "Question about new client onboarding at {{practiceName}}",
-    body: `Hi Dr. {{lastName}},\n\nI work with veterinary practices on intake + follow-up automation. Most practices we work with cut new-client onboarding from {{specificTime}} to {{betterTime}}.\n\nIf interesting for {{practiceName}}, 15 min this week. If not, no worries.\n\n— {{yourName}}`,
-    why: "Dr. salutation = respect. Specific time reduction is concrete.",
+    body: `Hi Dr. {{lastName}},\n\nI work with veterinary practices on intake and follow-up automation. Most practices we work with cut new-client onboarding from {{specificTime}} to {{betterTime}}.\n\nIf interesting for {{practiceName}}, 15 min this week. If not, no worries.\n\n{{yourName}}`,
+    why: "It uses the Dr. title, and the time saved is concrete.",
   },
   {
     industry: "Accounting / bookkeeping firm",
     subject: "Tax-season workflow for {{firmName}}",
-    body: `Hi {{firstName}},\n\nTax-season chaos is mostly a workflow problem, not a tax-knowledge problem. We help practices automate {{specificThing}} so the team can focus on actual work, not chasing docs.\n\nMost see {{specificImprovement}}.\n\nWorth 15 min after April closes?\n\n— {{yourName}}`,
-    why: "Reframes their pain (chaos → workflow). Timing acknowledgment (after April) shows industry awareness.",
+    body: `Hi {{firstName}},\n\nMost tax-season stress comes from workflow, such as chasing documents. We help practices automate {{specificThing}} so the team spends that time on client work.\n\nMost see {{specificImprovement}}.\n\nWorth 15 min after April closes?\n\n{{yourName}}`,
+    why: "It treats the problem as a workflow issue, and offering to talk after April shows you know their busy season.",
   },
 ];
 
@@ -119,7 +119,7 @@ export default function FreePage() {
               Here are the templates, <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>{firstName || "friend"}.</em>
             </h1>
             <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: "0 0 8px" }}>
-              You can copy any of these directly. Replace the {`{{tokens}}`} with your business + their business.
+              You can copy any of these directly. Replace the {`{{tokens}}`} with details about your business and theirs.
             </p>
             <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", fontStyle: "italic" }}>
               (We&apos;ll occasionally email more like this. Unsubscribe anytime.)
@@ -149,19 +149,19 @@ export default function FreePage() {
           {/* Upsell to full pack */}
           <div style={{ padding: "32px 36px", background: "linear-gradient(135deg, rgba(212,175,55,0.10), rgba(212,175,55,0.02))", border: "2px solid var(--color-warm-accent)", textAlign: "center", marginBottom: "32px" }}>
             <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "12px" }}>
-              Want 90 more templates + 80 subject lines + 30 reply scripts?
+              90 more templates, 80 subject lines and 30 reply scripts
             </div>
             <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "26px", color: "var(--color-warm-text)", margin: "0 0 12px", fontWeight: 700 }}>
-              The full <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Cold Email Mastery Pack — $29.</em>
+              The full <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Cold Email Mastery Pack, $29.</em>
             </h3>
             <p style={{ margin: "0 0 24px", fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, maxWidth: "560px", marginLeft: "auto", marginRight: "auto" }}>
-              You got 10 templates. The full pack has 100+. Plus AI scoring rubric, 4 sequencing cadences, reply-handling scripts for 30 scenarios, and the list-building playbook.
+              The full pack has 100+ templates, an AI scoring rubric, 4 sequencing cadences, reply scripts for 30 scenarios and the list-building playbook.
             </p>
-            <Link href="/shop/cold-email-pack" className="pv-btn-primary">See the full pack — $29 →</Link>
+            <Link href="/shop/cold-email-pack" className="pv-btn-primary">See the full pack, $29</Link>
           </div>
 
           <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", textAlign: "center", fontStyle: "italic" }}>
-            Or grab <Link href="/shop/starter-kit" style={{ color: "var(--color-warm-accent)" }}>the broader PV AI Starter Kit ($19)</Link> for 24 AI prompts + sales handbook + everything else.
+            Or grab <Link href="/shop/starter-kit" style={{ color: "var(--color-warm-accent)" }}>the broader PV AI Starter Kit ($19)</Link> for 24 AI prompts, the sales handbook and the rest of the kit.
           </p>
         </main>
       </div>
@@ -175,13 +175,13 @@ export default function FreePage() {
 
         <div style={{ textAlign: "center", marginBottom: "32px" }}>
           <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "16px" }}>
-            Free · No credit card · No upsell on this page
+            Free, no credit card needed
           </div>
           <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "44px", fontWeight: 700, color: "var(--color-warm-text)", margin: "0 0 16px", lineHeight: 1.15 }}>
-            10 cold outreach templates that <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>actually get replies.</em>
+            10 cold outreach templates, <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>one per industry.</em>
           </h1>
           <p style={{ fontSize: "17px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, maxWidth: "560px", margin: "0 auto" }}>
-            One template per industry (salons, plumbing, dental, real estate, law, marketing agencies, e-commerce, wellness, vets, accounting). Tested in production. Editable.
+            One template per industry (salons, plumbing, dental, real estate, law, marketing agencies, e-commerce, wellness, vets and accounting). You can edit every one.
           </p>
         </div>
 
@@ -201,12 +201,12 @@ export default function FreePage() {
             </button>
           </div>
           <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "16px", textAlign: "center", fontStyle: "italic" }}>
-            Templates shown immediately on the next page. We&apos;ll occasionally email more like this. Unsubscribe anytime.
+            The templates appear on the next page. We&apos;ll occasionally email more like this. Unsubscribe anytime.
           </p>
         </form>
 
         <div style={{ marginTop: "40px", padding: "20px 24px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>
-          <strong style={{ color: "var(--color-warm-accent)" }}>Why we give 10 away free:</strong> these templates work. We bundle 90 more + subject library + reply handling + cadences into the <Link href="/shop/cold-email-pack" style={{ color: "var(--color-warm-accent)" }}>full $29 pack</Link>. If the free 10 don&apos;t earn at least one reply, the paid version won&apos;t either, and we&apos;d rather you skip it.
+          <strong style={{ color: "var(--color-warm-accent)" }}>The paid version:</strong> the <Link href="/shop/cold-email-pack" style={{ color: "var(--color-warm-accent)" }}>full $29 pack</Link> adds 90 more templates, a subject-line library, reply handling and cadences.
         </div>
 
       </main>

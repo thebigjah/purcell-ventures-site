@@ -22,7 +22,7 @@ export default function NotFound() {
           lineHeight: 0.9, letterSpacing: "0.02em",
           color: "var(--color-warm-accent)", marginBottom: "20px",
         }}>
-          CDIV
+          404
         </div>
 
         <div style={{
@@ -31,7 +31,7 @@ export default function NotFound() {
           letterSpacing: "0.32em", textTransform: "uppercase",
           color: "var(--color-warm-text-light)", marginBottom: "20px",
         }}>
-          404, not found
+          Page not found
         </div>
 
         <h1 style={{
@@ -50,11 +50,11 @@ export default function NotFound() {
           color: "var(--color-warm-text)", opacity: 0.85,
           marginBottom: "40px",
         }}>
-          Either it never was, or it moved. Either way, let&apos;s get you back to something useful.
+          This page does not exist or has moved. Use the links below.
         </p>
 
         <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", justifyContent: "center" }}>
-          <Link href="/" className="pv-btn-primary">← Home</Link>
+          <Link href="/" className="pv-btn-primary">Home</Link>
           <Link href="/links" className="pv-btn-ghost">All links</Link>
           <a href="mailto:elijah@purcell-ventures.com" className="pv-btn-ghost">Email Elijah</a>
         </div>
@@ -66,7 +66,7 @@ export default function NotFound() {
           fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
           color: "var(--color-warm-text-light)",
         }}>
-          Purcell · Ventures · purcellventures.co
+          Purcell Ventures, purcellventures.co
         </div>
       </div>
     </div>
