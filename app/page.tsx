@@ -70,7 +70,7 @@ const DIVISIONS: Division[] = [
     span: "span-7",
     specs: [
       { label: "Status",      value: "Accepting" },
-      { label: "Tiers",       value: "Starter · Pro · Custom" },
+      { label: "Tiers",       value: "Starter, Pro, Custom" },
       { label: "Maintenance", value: "Three levels",   muted: true },
       { label: "Pricing",     value: "Discovery call", muted: true },
     ],
@@ -80,7 +80,7 @@ const DIVISIONS: Division[] = [
     roman: "II.",
     label: "Digital Add-Ons",
     tagline:
-      "A catalog of add-ons that layer onto your site. AI chatbots, booking, review automation, content generation, and more. Tier-gated by your maintenance level.",
+      "22 add-ons that plug into your site, including an AI chatbot, online booking, review requests and content writing. Your maintenance plan sets which ones you can add.",
     status: "live",
     href: "/digital",
     span: "span-5",
@@ -96,15 +96,15 @@ const DIVISIONS: Division[] = [
     roman: "III.",
     label: "AI Consulting",
     tagline:
-      "I come to your business and walk your team through the AI tools that will actually change how they work. Hands-on. Same-day results.",
+      "I come to your business and train your team on AI tools picked for the work they do every day. Each session ends with a written guide your team keeps.",
     status: "live",
     href: "/consulting",
     span: "span-6",
     specs: [
       { label: "Status",   value: "Accepting" },
-      { label: "From",     value: "$125 / person" },
-      { label: "Format",   value: "On-site / Virtual", muted: true },
-      { label: "Minimum",  value: "2 hr",              muted: true },
+      { label: "From",     value: "$125 per person" },
+      { label: "Format",   value: "On-site or virtual", muted: true },
+      { label: "Minimum",  value: "2 hours",              muted: true },
     ],
   },
   {
@@ -112,7 +112,7 @@ const DIVISIONS: Division[] = [
     roman: "IV.",
     label: "Custom Software",
     tagline:
-      "Apps, platforms, and automation tools scoped and built around your exact problem, from idea to launch.",
+      "Apps, web platforms and automation tools built for one business's problem, from the first scoping call to launch.",
     status: "live",
     href: "/software",
     span: "span-6",
@@ -120,23 +120,23 @@ const DIVISIONS: Division[] = [
       { label: "Status",    value: "Accepting" },
       { label: "Pricing",   value: "Discovery call" },
       { label: "Portfolio", value: "12 shipped",        muted: true },
-      { label: "Scope",     value: "Web / Mobile / AI", muted: true },
+      { label: "Scope",     value: "Web, mobile and AI", muted: true },
     ],
   },
   {
     slug: "steady",
     roman: "V.",
-    label: "Steady — Personal IT",
+    label: "Steady, personal IT",
     tagline:
-      "Personal tech help for individuals + households. For when you're the family tech person and need to hand the job off. AI coaching, phone setup, smart home, medication reminders.",
+      "Tech help for individuals and households, for the family member who usually gets every tech question. Covers phone setup, smart home devices, AI coaching and medication reminders.",
     status: "live",
     href: "/steady",
     span: "span-6",
     specs: [
       { label: "Status",    value: "Accepting" },
-      { label: "From",      value: "$79 / mo" },
-      { label: "One-off",   value: "$99 / session", muted: true },
-      { label: "Reach",     value: "Atlanta + remote", muted: true },
+      { label: "From",      value: "$79 a month" },
+      { label: "One-off",   value: "$99 a session", muted: true },
+      { label: "Reach",     value: "Atlanta and remote", muted: true },
     ],
   },
   {
@@ -405,9 +405,9 @@ export default function Home() {
           letterSpacing: "0.18em", textTransform: "uppercase",
         }}
       >
-        <MetaCell label="Founded" value="April · MMXXV" />
-        <MetaCell label="Divisions" value="05 active · 01 pending" gold />
-        <MetaCell label="Charter" value="Domestic LLC · Georgia" />
+        <MetaCell label="Founded" value="April 2025" />
+        <MetaCell label="Divisions" value="5 active, 1 pending" gold />
+        <MetaCell label="Charter" value="Georgia LLC" />
         <MetaCell label="Principal" value="Elijah Brent Purcell" last />
       </div>
 
@@ -432,13 +432,9 @@ export default function Home() {
             margin: 0,
           }}
         >
-          Built by{" "}
-          <span style={{ fontStyle: "normal", fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700, letterSpacing: 0 }}>
-            one
-          </span>{" "}
-          operator for the{" "}
+          Websites, AI training and software for{" "}
           <em style={{ color: "var(--color-warm-accent)" }}>small businesses</em>{" "}
-          who move first.
+          in Tuscaloosa and metro Atlanta.
         </p>
         <div
           style={{
@@ -455,7 +451,7 @@ export default function Home() {
           <strong style={{ color: "var(--color-warm-text)", display: "block", fontWeight: 500 }}>04.08.2025</strong>
           Filed Georgia SOS
           <strong style={{ color: "var(--color-warm-text)", display: "block", fontWeight: 500, marginTop: "6px" }}>Est. 2025</strong>
-          Acworth · Cobb Co.
+          Acworth, Cobb County
         </div>
       </section>
 
@@ -493,7 +489,7 @@ export default function Home() {
           color: "var(--color-warm-text-light)",
           textAlign: "right",
         }}>
-          05 active · 01 pending
+          5 active, 1 pending
         </span>
       </header>
 
@@ -563,16 +559,16 @@ export default function Home() {
             color: "var(--color-warm-text)", opacity: 0.92,
             marginBottom: "18px",
           }}>
-            I built Purcell Ventures because the small businesses I knew were being sold the same{" "}
-            <em style={{ color: "var(--color-warm-accent)" }}>generic AI solutions</em>{" "}
-            by firms that did not understand them.
+            I started Purcell Ventures because the small businesses I knew were paying for{" "}
+            <em style={{ color: "var(--color-warm-accent)" }}>AI tools</em>{" "}
+            that nobody had set up for the way they work.
           </p>
           <p className="pv-italic" style={{
             fontSize: "19px", lineHeight: 1.55,
             color: "var(--color-warm-text)", opacity: 0.92,
             margin: 0,
           }}>
-            One operator. Four divisions. Same person who answers the phone, builds the software, and walks into your storefront.
+            I answer the phone, build the software and come to your business in person.
           </p>
         </div>
         <div
@@ -587,13 +583,13 @@ export default function Home() {
           }}
         >
           Trust in the Lord with all your heart<br />
-          and lean not on your own understanding.
+          and do not lean on your own understanding.
           <em className="pv-italic" style={{
             fontWeight: 400, textTransform: "none", letterSpacing: 0,
             color: "var(--color-warm-text)", opacity: 0.7,
             fontSize: "15px", display: "block", marginTop: "6px",
           }}>
-            — Proverbs 3:5
+            Proverbs 3:5, NASB
           </em>
         </div>
       </section>
@@ -630,7 +626,7 @@ export default function Home() {
             fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase",
             color: "var(--color-warm-text-light)", textAlign: "right", textDecoration: "none",
           }}>
-            View all →
+            View all courses
           </Link>
         </div>
 
@@ -677,7 +673,7 @@ export default function Home() {
                   fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase",
                   color: "var(--color-warm-accent)",
                 }}>
-                  View course →
+                  View course
                 </span>
               </div>
             </Link>
@@ -701,7 +697,7 @@ export default function Home() {
             { href: "/uses",    label: "/uses",    desc: "My working stack, every tool in production." },
             { href: "/verses",  label: "Verses",   desc: "Five scriptures I come back to." },
             { href: "/writing", label: "Writing",  desc: "Selected original prose." },
-            { href: "/faq",     label: "FAQ",      desc: "Common questions, answered." },
+            { href: "/faq",     label: "FAQ",      desc: "What people ask before hiring me." },
           ].map(item => (
             <Link key={item.href} href={item.href} className="pv-card" style={{
               padding: "20px 22px 18px", display: "block",
@@ -736,7 +732,7 @@ export default function Home() {
         <div style={{ maxWidth: "1080px", margin: "0 auto" }}>
           <div style={{ display: "flex", alignItems: "baseline", gap: "16px", marginBottom: "8px", flexWrap: "wrap" }}>
             <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700 }}>Open Resources</span>
-            <span style={{ fontFamily: "Georgia, serif", fontSize: "11px", color: "var(--color-warm-text-light)", fontStyle: "italic" }}>Free. No email required.</span>
+            <span style={{ fontFamily: "Georgia, serif", fontSize: "11px", color: "var(--color-warm-text-light)", fontStyle: "italic" }}>Free to use, with no email signup.</span>
           </div>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "32px", fontWeight: 700, color: "var(--color-warm-text)", margin: "0 0 12px" }}>
             Use anything <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>now.</em>
@@ -747,13 +743,13 @@ export default function Home() {
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "12px" }}>
             <ResourceCard href="/digital/tools" label="17 free tools" body="AI FAQ Builder, content generator, palette tool, brand kit, logo concepts, review responder, estimate generator, and more, running with our Anthropic key." />
-            <ResourceCard href="/ai-readiness" label="AI Readiness Test" body="10 questions. Tier-scored. Concrete next steps for where your business actually is." />
-            <ResourceCard href="/ai-cost-calculator" label="Cost Calculator" body="Plug in team size + hourly rate + manual hours. Get a payback projection in 30 seconds." />
-            <ResourceCard href="/pricing-comparison" label="Pricing, compared" body="Our prices next to typical agency, freelancer, and DIY tools. No spin." />
+            <ResourceCard href="/ai-readiness" label="AI Readiness Test" body="10 questions that place your business in one of four tiers, each with next steps." />
+            <ResourceCard href="/ai-cost-calculator" label="Cost Calculator" body="Enter your team size, hourly rate and hours of manual work to see how long training takes to pay for itself." />
+            <ResourceCard href="/pricing-comparison" label="Pricing, compared" body="Our prices next to typical agency, freelancer and do-it-yourself prices." />
             <ResourceCard href="/how-we-work" label="How we work" body="5-stage process. 6 commitments. When we say no. Read this before signing anything." />
             <ResourceCard href="/portfolio" label="Portfolio" body="12 shipped projects. Web apps, mobile apps, AI tools, internal systems." />
             <ResourceCard href="/blog" label="Blog" body="Five workflows you can automate without code. Why most AI tools waste money." />
-            <ResourceCard href="/steady" label="Steady — Personal IT" body="Tech support for non-tech-savvy family. Comparison vs alternatives + what a Monthly Care month actually looks like." />
+            <ResourceCard href="/steady" label="Steady, personal IT" body="Tech support for non-tech-savvy family. Comparison vs alternatives + what a Monthly Care month actually looks like." />
           </div>
         </div>
       </section>
@@ -773,8 +769,8 @@ export default function Home() {
           <a className="pv-mono-link" href="tel:+12054627839">(205) 462-7839</a>
         </ContactBlock>
         <ContactBlock title="Service Area">
-          <p style={{ margin: 0 }}>Metro Atlanta · Cobb County</p>
-          <p style={{ margin: 0 }}>Kennesaw · Marietta · Acworth · Canton · Woodstock</p>
+          <p style={{ margin: 0 }}>Metro Atlanta and Cobb County</p>
+          <p style={{ margin: 0 }}>Kennesaw, Marietta, Acworth, Canton and Woodstock</p>
           <span style={{ color: "var(--color-warm-text-light)", fontSize: "13px" }}>Remote nationwide</span>
         </ContactBlock>
         <ContactBlock title="Sister">
@@ -785,7 +781,7 @@ export default function Home() {
         </ContactBlock>
         <ContactBlock title="Filings">
           <p className="pv-mono-link-text">Control № 25075361</p>
-          <p className="pv-mono-link-text">Domestic LLC · GA</p>
+          <p className="pv-mono-link-text">Georgia LLC</p>
           <span style={{ color: "var(--color-warm-text-light)", fontSize: "13px" }}>Established April 8, 2025</span>
         </ContactBlock>
       </section>
@@ -803,7 +799,7 @@ export default function Home() {
           color: "var(--color-warm-text-light)",
         }}
       >
-        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC, Acworth, Georgia</span>
         <div style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
           <a href="/about" style={footerLink}>About</a>
           <a href="/how-we-work" style={footerLink}>How we work</a>
@@ -834,7 +830,7 @@ function ResourceCard({ href, label, body }: { href: string; label: string; body
       transition: "border-color 0.15s",
       borderRadius: 0,
     }}>
-      <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "15px", color: "var(--color-warm-accent)", marginBottom: "6px", fontWeight: 600 }}>{label} →</div>
+      <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "15px", color: "var(--color-warm-accent)", marginBottom: "6px", fontWeight: 600 }}>{label}</div>
       <p style={{ margin: 0, fontSize: "12px", color: "var(--color-warm-text-muted)", lineHeight: 1.55 }}>{body}</p>
     </Link>
   );

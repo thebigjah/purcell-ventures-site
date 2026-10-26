@@ -79,7 +79,7 @@ export default function SiteNav() {
               color: CREAM, letterSpacing: "0.32em",
               paddingLeft: "0.32em",
             }}>
-              PURCELL · VENTURES
+              PURCELL VENTURES
             </span>
           </Link>
 
