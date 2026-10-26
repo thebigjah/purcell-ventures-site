@@ -99,18 +99,17 @@ export default function PostByline({ post }: { post: PostMeta }) {
             Written by
           </div>
           <p style={{ margin: 0 }}>
-            <strong style={{ color: "var(--color-warm-text)" }}>Elijah Purcell</strong> is the
-            founder of Purcell Ventures LLC, a Georgia software company building sites and
-            tools for local businesses, and a psychology and data science student at the
-            University of Alabama Honors College on a pre-med track toward psychiatry. He
-            builds and operates the autonomous AI agent systems that run the company.
+            <strong style={{ color: "var(--color-warm-text)" }}>Elijah Purcell</strong> founded
+            Purcell Ventures LLC, which builds websites and software for local businesses. He
+            studies psychology and data science in the University of Alabama Honors College and
+            built COSMIC, the set of AI agents that runs the company's outreach.
           </p>
           <p style={{ margin: "8px 0 0" }}>
             {/* The anchor text is the point. "More about him" tells a crawler nothing about
                 who "him" is, on nine pages that all carry his byline. */}
             <Link href="/who" style={{ color: "var(--color-warm-accent)" }}>More about Elijah Purcell</Link>
-            {" · "}
-            <Link href="/blog" style={{ color: "var(--color-warm-accent)" }}>All posts</Link>
+            {" or "}
+            <Link href="/blog" style={{ color: "var(--color-warm-accent)" }}>read all posts</Link>
           </p>
         </div>
       </aside>
