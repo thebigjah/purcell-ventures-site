@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { sendLead } from "@/lib/cosmic-lead";
 
 const SESSION_LABELS: Record<string, string> = {
   "ai-basics":        "AI Basics for Business (2 hrs)",
@@ -39,6 +40,14 @@ export async function POST(req: NextRequest) {
   if (!name || !phone) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
   }
+
+  // COSMIC gets the booking first, whether or not the Resend email below is configured.
+  await sendLead("booking", {
+    name, business, email, phone, groupSize, notes,
+    session: SESSION_LABELS[sessionType] ?? sessionType,
+    format: FORMAT_LABELS[format] ?? format,
+    date: datePreference, time: timePreference,
+  });
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
@@ -95,26 +104,6 @@ export async function POST(req: NextRequest) {
     console.error("Resend error:", await res.text());
   }
 
-  // ntfy fallback — never lose a booking even if Resend is missing/down
-  const ntfyTopic = process.env.NTFY_TOPIC;
-  if (ntfyTopic) {
-    try {
-      const ntfyBody = `${name} · ${phone}${email ? " · " + email : ""}\n${sessionLabel} (${formatLabel})${business ? "\nBusiness: " + business : ""}${groupSize ? "\nGroup: " + groupSize : ""}${datePreference ? "\nDate pref: " + datePreference : ""}${notes ? "\nNotes: " + notes : ""}`;
-      const safeTitle = `PV booking: ${name}`.replace(/[^\x20-\x7E]/g, " ").slice(0, 80);
-      await fetch(`https://ntfy.sh/${ntfyTopic}`, {
-        method: "POST",
-        headers: {
-          Title: safeTitle,
-          Priority: "high",
-          Tags: "moneybag,bell",
-          "Content-Type": "text/plain; charset=utf-8",
-        },
-        body: ntfyBody,
-      });
-    } catch (e) {
-      console.warn("ntfy fallback failed", e);
-    }
-  }
 
   return NextResponse.json({ ok: true, delivered: resendOk });
 }

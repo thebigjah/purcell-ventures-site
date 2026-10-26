@@ -4,11 +4,9 @@ import { useState } from "react";
 import s from "./digital.module.css";
 import { CONTACT } from "@/lib/contact";
 
-// The /digital contact form. Until 26 Oct 2026 its submit handler only called
-// preventDefault, so every enquiry typed into it was lost. The site has no endpoint that
-// delivers a lead to Elijah (/api/lead-capture logs and emails the visitor), so the form
-// now opens the visitor's email app with the message to Elijah already written. The page
-// says so under the button, and the email address is printed for anyone without a mail app.
+// The /digital contact form. It posts to /api/contact, which hands the lead to COSMIC
+// (lib/cosmic-lead.ts). If that request fails, the form falls back to opening the
+// visitor's email app with the message to Elijah written, so a lead is never dropped.
 
 const PLANS: Record<string, string> = {
   "": "Not sure, help me pick",
@@ -22,8 +20,9 @@ export default function ContactForm() {
   const [f, setF] = useState({ name: "", business: "", contact: "", need: "", plan: "" });
   const set = (k: keyof typeof f) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => setF({ ...f, [k]: e.target.value });
 
-  const send = (e: React.FormEvent) => {
-    e.preventDefault();
+  const [state, setState] = useState<"idle" | "sending" | "sent">("idle");
+
+  const mailto = () => {
     const subject = `Digital add-ons: ${f.business || f.name || "a question"}`;
     const body = [
       `Name: ${f.name}`,
@@ -35,6 +34,31 @@ export default function ContactForm() {
     ].join("\n");
     window.location.href = `mailto:${CONTACT.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
+
+  const send = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setState("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...f, plan: PLANS[f.plan], source: "digital" }),
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      setState("sent");
+    } catch {
+      setState("idle");
+      mailto();
+    }
+  };
+
+  if (state === "sent") {
+    return (
+      <p className="ui-note">
+        Thanks. I have your message and I reply within one business day. If it is urgent, call {CONTACT.phone}.
+      </p>
+    );
+  }
 
   return (
     <form className={s.form} onSubmit={send}>
@@ -62,9 +86,9 @@ export default function ContactForm() {
           {Object.entries(PLANS).map(([v, l]) => <option key={v} value={v}>{l}</option>)}
         </select>
       </div>
-      <button type="submit" className="ui-btn">Send message</button>
+      <button type="submit" className="ui-btn" disabled={state === "sending"}>{state === "sending" ? "Sending" : "Send message"}</button>
       <p className="ui-muted ui-small" style={{ margin: 0 }}>
-        This opens your email app with your message to me filled in. You can also write to {CONTACT.email} or call {CONTACT.phone}.
+        You can also write to {CONTACT.email} or call {CONTACT.phone}.
       </p>
     </form>
   );

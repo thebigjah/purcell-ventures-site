@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { sendEmail, isResendConfigured } from "@/lib/resend-client";
 import { leadMagnetWelcome } from "@/lib/email-templates";
+import { sendLead } from "@/lib/cosmic-lead";
 
 /**
  * Lead capture endpoint.
@@ -20,6 +21,7 @@ export async function POST(req: NextRequest) {
 
     // Log to console (Vercel function logs)
     console.log("[LEAD CAPTURE]", { email, firstName, source, intent, timestamp: new Date().toISOString() });
+    await sendLead("lead-magnet", { email, name: firstName, source, intent });
 
     // Send auto-responder email if Resend is configured
     let emailResult: { ok: boolean; id?: string; error?: string } = { ok: false };

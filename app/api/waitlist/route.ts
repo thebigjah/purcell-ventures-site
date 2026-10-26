@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { sendLead } from "@/lib/cosmic-lead";
 
 const COURSE_NAMES: Record<string, string> = {
   "college-apps":    "The College Application Playbook",
@@ -17,6 +18,9 @@ export async function POST(req: NextRequest) {
   if (!email || !course) {
     return NextResponse.json({ error: "Missing fields" }, { status: 400 });
   }
+
+  // COSMIC gets the signup first, whether or not the Resend email below is configured.
+  await sendLead("waitlist", { email, course: COURSE_NAMES[course] ?? course });
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
@@ -61,24 +65,6 @@ export async function POST(req: NextRequest) {
   const resendOk = res.ok;
   if (!resendOk) console.error("Resend error:", await res.text());
 
-  // ntfy fallback so course-waitlist signups never get lost
-  const ntfyTopic = process.env.NTFY_TOPIC;
-  if (ntfyTopic) {
-    try {
-      await fetch(`https://ntfy.sh/${ntfyTopic}`, {
-        method: "POST",
-        headers: {
-          Title: `Waitlist: ${courseName}`.replace(/[^\x20-\x7E]/g, " ").slice(0, 80),
-          Priority: "default",
-          Tags: "books,bell",
-          "Content-Type": "text/plain; charset=utf-8",
-        },
-        body: `${email}\nCourse: ${courseName}\n${timestamp} ET`,
-      });
-    } catch (e) {
-      console.warn("ntfy fallback failed", e);
-    }
-  }
 
   return NextResponse.json({ ok: true, delivered: resendOk });
 }

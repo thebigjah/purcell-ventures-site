@@ -123,7 +123,6 @@ const DEEPER = [
   { name: "Now", href: "/now", line: "What I am focused on this month." },
   { name: "Uses", href: "/uses", line: "My working stack, every tool in production." },
   { name: "Verses", href: "/verses", line: "Five scriptures I come back to." },
-  { name: "Writing", href: "/writing", line: "Essays and posts I have written." },
   { name: "Questions", href: "/faq", line: "What people ask before hiring me." },
 ];
 

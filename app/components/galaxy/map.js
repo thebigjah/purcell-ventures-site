@@ -37,7 +37,6 @@ export const MAP = {
         { name: "Now", href: "/now", children: 0, tex: "steady" },
         { name: "Uses", href: "/uses", children: 0, tex: "tools" },
         { name: "Verses", href: "/verses", children: 0, tex: "websites" },
-        { name: "Writing", href: "/writing", children: 0, tex: "courses" },
       ] },
     { id: "contact", name: "Start a project", href: "/about#contact", price: "", line: "A discovery call first. Reply within one business day.", star: true,
       planets: [

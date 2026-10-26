@@ -42,7 +42,6 @@ const SECTIONS: { label: string; items: Item[] }[] = [
       { href: "/now", name: "Now", line: "What I am working on this month." },
       { href: "/uses", name: "Uses", line: "The tools I use for my work." },
       { href: "/verses", name: "Verses", line: "Five scriptures I come back to." },
-      { href: "/writing", name: "Writing", line: "Prose I have written." },
       { href: "/resume", name: "Résumé", line: "Education, work, awards and scholarships." },
     ],
   },

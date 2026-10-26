@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // /writing came down 26 Oct 2026 at Elijah's request. Old links land on the blog.
+  async redirects() {
+    return [{ source: "/writing", destination: "/blog", permanent: true }];
+  },
   async rewrites() {
     // THE NFC CARD LIVES HERE NOW, AND THE REASON IS PHYSICAL.
     //
