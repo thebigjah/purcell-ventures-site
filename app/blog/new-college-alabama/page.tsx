@@ -5,7 +5,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/new-college-alabama" },
-  title: { absolute: "New College at Alabama, explained by someone in it | Elijah Purcell" },
+  title: { absolute: "New College at Alabama, explained by someone in it, by Elijah Purcell" },
   description:
     "How New College at the University of Alabama works: the self-designed degree, the depth study, the seminars, the Levitetz Leadership Program, and the case for and against choosing it.",
 };

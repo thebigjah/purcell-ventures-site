@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "how we work transparency", "small business AI process",
   ],
   openGraph: {
-    title: "How Elijah Purcell Works | Purcell Ventures",
+    title: "How Elijah Purcell works",
     description: "Our 5-stage process, 6 commitments and the work we turn down.",
     url: "https://purcellventures.co/how-we-work",
     type: "website",

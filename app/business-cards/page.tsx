@@ -13,7 +13,7 @@ const PAD = 40;
 
 const INFO = {
   name: "Elijah Purcell",
-  title: "Founder",
+  title: "Founder/CEO",
   phone: "(205) 462-7839",
   email: "elijah@purcell-ventures.com",
   web: "purcellventures.co",
@@ -94,7 +94,7 @@ function V1Front() {
       <Slashes />
       <div style={{ position: "absolute", inset: PAD, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
         <div>
-          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "10px", fontWeight: 700, color: "#d4af37", letterSpacing: "0.4em", marginBottom: "12px", opacity: 0.6 }}>P · V</div>
+          <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "10px", fontWeight: 700, color: "#d4af37", letterSpacing: "0.4em", marginBottom: "12px", opacity: 0.6 }}>PV</div>
           <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "40px", fontWeight: 700, color: "#d4af37", lineHeight: 1 }}>Purcell</div>
           <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", fontWeight: 400, color: "#d4af37", letterSpacing: "0.26em", marginTop: "2px", opacity: 0.8 }}>VENTURES</div>
           <div style={{ height: "1px", background: "#d4af3730", margin: "14px 0" }} />

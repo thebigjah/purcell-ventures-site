@@ -73,7 +73,7 @@ const POST: Data = {
 
 export const metadata = {
   alternates: { canonical: "/blog/not-secure-label-website-fix" },
-  title: { absolute: POST.title + " | Elijah Purcell" },
+  title: { absolute: POST.title + ", by Elijah Purcell" },
   description: POST.description,
 };
 

@@ -11,7 +11,7 @@ export default function Post() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
+        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
 
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },
@@ -41,7 +41,7 @@ export default function Post() {
 
           <h2 style={h2}>2. New customer onboarding emails</h2>
           <p>
-            Every time someone buys, you send roughly the same three emails: welcome, confirmation and next steps. Most owners write these from scratch every time. Write them once and schedule them.
+            Every time someone buys, you send the same three emails: welcome, confirmation and next steps. Most owners write these from scratch every time. Write them once and schedule them.
           </p>
           <p>
             ConvertKit, MailerLite, even Gmail&apos;s built-in templates all do this for free or close to it.
@@ -84,14 +84,14 @@ export default function Post() {
               Related reading
             </h2>
             <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: "15px", lineHeight: 1.8 }}>
-              <li style={{ marginBottom: "7px" }}><Link href="/blog/what-a-website-actually-costs" style={{ color: "var(--color-warm-accent)" }}>What a website actually costs, and when not to buy one</Link></li>
+              <li style={{ marginBottom: "7px" }}><Link href="/blog/what-a-website-actually-costs" style={{ color: "var(--color-warm-accent)" }}>What a small business website costs, and when not to buy one</Link></li>
               <li style={{ marginBottom: "7px" }}><Link href="/blog/claim-your-google-listing" style={{ color: "var(--color-warm-accent)" }}>Claiming the Google listing, which usually matters more</Link></li>
             </ul>
           </section>
 
           <PostByline post={{
             slug: "five-workflows-no-code",
-            title: "Five workflows you can automate this week without writing code | Elijah Purcell",
+            title: "Five workflows you can automate this week without writing code, by Elijah Purcell",
             description: "These five workflows take small business owners the most time. You can automate each one with off-the-shelf tools in under two hours.",
             published: "2026-05-24",
           }} />

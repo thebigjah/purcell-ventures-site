@@ -5,7 +5,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/llc-at-seventeen" },
-  title: { absolute: "What registering an LLC at seventeen involved | Elijah Purcell" },
+  title: { absolute: "What registering an LLC at seventeen involved, by Elijah Purcell" },
   description:
     "The steps I followed: the Georgia filing, the EIN, the bank account, the registered agent question, and renaming the company nine months later. A description of what I did and not legal advice.",
 };
@@ -23,7 +23,7 @@ export default function Post() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
+        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
 
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },

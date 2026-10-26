@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Custom Software Development | Mobile Apps, Web Apps & AI Integration",
+  title: "Custom software: mobile apps, web apps and AI integration",
   description:
     "Custom mobile apps, web platforms, automation tools and AI integrations, scoped on a discovery call and built through launch. Small projects $1,500 to $3,500, full apps $5,000 to $15,000 and up.",
   keywords: [

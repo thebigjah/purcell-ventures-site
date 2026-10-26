@@ -6,7 +6,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/six-sources-one-page" },
-  title: { absolute: "Six sources, one page: building a campus events site | Elijah Purcell" },
+  title: { absolute: "Six sources, one page: building a campus events site, by Elijah Purcell" },
   description:
     "How UA Today combines six separate feeds of University of Alabama events into one page, why the hard part is detecting a source that stops sending events without raising an error, and what a floor check is.",
 };
@@ -53,7 +53,7 @@ export default function Post() {
 
           <p>
             <a href="https://ua-today.vercel.app" style={link}>UA Today</a> checks them
-            instead, on a schedule, and shows the result on one page: 6 sources, roughly 700
+            instead, on a schedule, and shows the result on one page: 6 sources, around 700
             events at a time. The hard part was detecting a source that goes quiet.
           </p>
 

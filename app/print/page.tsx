@@ -490,7 +490,7 @@ const PRINTER_GUIDE = [
   { material: "Yard Signs",        printer: "PrintingForLess.com",        cost: "~$25 / ea",           finish: "Coroplast, no lam", notes: "Order 5 to 10 to start and leave one at every job" },
   { material: "EDDM Postcards",    printer: "USPS EDDM + PrintingForLess",cost: "~$200 / 1,000 all-in",finish: "Matte",             notes: "Mail a whole zip code for about $0.20 per house" },
   { material: "Rack Cards",        printer: "PrintingForLess.com",        cost: "~$30 / 100",          finish: "Matte",             notes: "Batch with other orders to save shipping" },
-  { material: "Vehicle Decal",     printer: "Local vinyl shop",           cost: "$50–150",             finish: "Vinyl (removable)", notes: "Can't print here. Take the design to the shop" },
+  { material: "Vehicle Decal",     printer: "Local vinyl shop",           cost: "$50 to $150",             finish: "Vinyl (removable)", notes: "Can't print here. Take the design to the shop" },
 ];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────

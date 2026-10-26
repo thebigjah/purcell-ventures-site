@@ -12,7 +12,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/what-a-website-actually-costs" },
-  title: { absolute: "What a small business website costs | Elijah Purcell" },
+  title: { absolute: "What a small business website costs, by Elijah Purcell" },
   description:
     "Price ranges and what drives them. Why one small business site gets quotes of $400 and $15,000, what a monthly subscription includes, the ongoing costs quotes leave out, and how to judge whether a quote is fair.",
 };
@@ -73,7 +73,7 @@ export default function Post() {
             was included.
           </p>
 
-          <h2 style={H2}>Roughly what each tier gets you</h2>
+          <h2 style={H2}>What each tier gets you</h2>
 
           <div style={{ overflowX: "auto", margin: "20px 0" }}>
             <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "15px" }}>
@@ -85,7 +85,7 @@ export default function Post() {
               </thead>
               <tbody>
                 <tr><td style={{ ...td, fontWeight: 700 }}>Free to $50/mo</td><td style={td}>You build it on a site builder. A workable option for many businesses, and your time is the cost.</td></tr>
-                <tr><td style={{ ...td, fontWeight: 700 }}>$400 to $1,500 once</td><td style={td}>A template configured for you. Somebody else does the work, the design is not original, and this is where most small business sites should probably land.</td></tr>
+                <tr><td style={{ ...td, fontWeight: 700 }}>$400 to $1,500 once</td><td style={td}>A template configured for you. Somebody else does the work, the design is not original, and this tier fits most small business sites.</td></tr>
                 <tr><td style={{ ...td, fontWeight: 700 }}>$1,500 to $5,000 once</td><td style={td}>Custom build. Original layout, your content structure, functionality beyond pages. My custom software work starts at $1,500 and a substantial build runs to $5,000.</td></tr>
                 <tr><td style={{ ...td, fontWeight: 700 }}>$99 to $279/mo</td><td style={td}>A subscription covers the site and somebody maintaining it. My digital tiers run $99, $179 and $279 a month. No large upfront number, and you are renting rather than owning the arrangement.</td></tr>
                 <tr><td style={{ ...td, fontWeight: 700 }}>$10,000 and up</td><td style={td}>Original design, multiple specialists, strategy, photography. Useful work, rarely needed by a barber shop.</td></tr>
@@ -101,7 +101,7 @@ export default function Post() {
           </p>
 
           <ul style={{ paddingLeft: "1.1rem" }}>
-            <li style={{ marginBottom: "9px" }}>A domain costs roughly $12 to $20 a year. Register it in your name.</li>
+            <li style={{ marginBottom: "9px" }}>A domain costs $12 to $20 a year. Register it in your name.</li>
             <li style={{ marginBottom: "9px" }}>Hosting runs from free to about $20 a month for a site this size. Free tiers exist and are adequate for small sites.</li>
             <li style={{ marginBottom: "9px" }}>Email at your domain costs a few dollars per user per month. It is worth paying for, because customers notice the address.</li>
             <li style={{ marginBottom: "9px" }}>Changes cause the most disputes. Every site needs edits, and if the price of edits is not agreed in writing it becomes an argument in month four.</li>

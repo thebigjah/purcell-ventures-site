@@ -111,7 +111,7 @@ const POSTS: Post[] = [
   },
   {
     slug: "audit-your-site-like-a-crawler",
-    title: "Audit your own site the way a crawler does",
+    title: "Auditing your own site the way a crawler does",
     excerpt: "Nine checks you can run from a terminal with curl and no account. I ran each one against my own site and found six problems. One had kept nine pages out of Google.",
     date: "August 20, 2026",
     readingTime: "9 min read",
@@ -119,7 +119,7 @@ const POSTS: Post[] = [
   },
   {
     slug: "claim-your-google-listing",
-    title: "Claim your Google listing yourself",
+    title: "Claiming your Google listing yourself",
     excerpt: "You can do this in about twenty minutes without hiring anyone, including me. What to put in every field, how to hide a home address, three things that get a listing suspended, and a five-minute monthly check.",
     date: "August 20, 2026",
     readingTime: "8 min read",

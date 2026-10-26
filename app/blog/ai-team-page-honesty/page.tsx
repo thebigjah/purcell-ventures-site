@@ -5,7 +5,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/ai-team-page-honesty" },
-  title: { absolute: "My team page lists fifteen people who do not exist | Elijah Purcell" },
+  title: { absolute: "My team page lists fifteen people who do not exist, by Elijah Purcell" },
   description:
     "Why a company running AI agents should name them, say they are software in the first sentence, and never let one sign an email as a human. The disclosure rules I enforce in code.",
 };
@@ -24,7 +24,7 @@ export default function Post() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
+        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
 
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },

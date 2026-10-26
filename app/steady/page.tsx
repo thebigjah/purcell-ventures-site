@@ -305,7 +305,7 @@ export default function SteadyPage() {
             Start with an intake form
           </h3>
           <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", margin: "0 0 24px", lineHeight: 1.6, maxWidth: "560px", marginLeft: "auto", marginRight: "auto" }}>
-            The form takes about 5 minutes. I reply within 24 hours with a recommended plan, or I tell you that you don&apos;t need me.
+            The form takes 5 minutes. I reply within 24 hours with a recommended plan, or I tell you that you don&apos;t need me.
           </p>
           <a className="pv-btn-primary" href="/steady/start">Fill out the intake</a>
         </div>

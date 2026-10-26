@@ -36,9 +36,9 @@ const DATED = [
 // no bibliography is a claim without evidence, and these links also push the strongest
 // name page's authority out across every post rather than letting it sit here.
 const WRITING: [string, string, string][] = [
-  ["claim-your-google-listing", "Claim your Google listing yourself, in about twenty minutes", "August 20, 2026"],
+  ["claim-your-google-listing", "Claiming your own Google listing: a twenty-minute job", "August 20, 2026"],
   ["cold-outreach-that-worked", "The cold email that got me a client, and the ones that did not", "August 20, 2026"],
-  ["llc-at-seventeen", "What registering an LLC at seventeen actually involved", "August 20, 2026"],
+  ["llc-at-seventeen", "What registering an LLC at seventeen involved", "August 20, 2026"],
   ["audit-every-business-in-your-town", "How to audit every business in your town in an afternoon", "August 20, 2026"],
   ["new-college-alabama", "New College at Alabama, explained by someone in it", "August 20, 2026"],
   ["what-the-agents-get-wrong", "Fifteen AI agents run my company. Here is what they get wrong", "August 20, 2026"],

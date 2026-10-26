@@ -265,7 +265,7 @@ export default function CollegeAppsPage() {
             6 modules. 17 lessons.<br />The whole process.
           </h2>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "48px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            Camera lessons, screen shares of my process, and written notes for every lesson. Planned length: about 3 hours of video.
+            Camera lessons, screen shares of my process, and written notes for every lesson. Planned length: 3 hours of video.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
             {MODULES.map((mod, i) => {

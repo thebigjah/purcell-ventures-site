@@ -7,9 +7,9 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/claim-your-google-listing" },
-  title: { absolute: "Claim your Google listing yourself, in about twenty minutes | Elijah Purcell" },
+  title: { absolute: "Claiming your own Google listing: a twenty-minute job, by Elijah Purcell" },
   description:
-    "A step-by-step guide to claiming and filling out a Google Business Profile, written so you do not need to hire anybody. Including what to put in every field, how to hide a home address, and the three things that get a listing suspended.",
+    "A step-by-step guide to claiming and filling out a Google Business Profile, written so you do not need to hire anybody. It covers what to put in every field, how to hide a home address, and the three things that get a listing suspended.",
 };
 
 const H2 = { fontFamily: "'Cinzel', Georgia, serif", fontSize: "25px", fontWeight: 600, lineHeight: 1.2, margin: "42px 0 10px" } as const;
@@ -26,17 +26,17 @@ export default function Post() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
+        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
 
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },
           { name: "Writing", href: "/blog" },
-          { name: "Claim your Google listing yourself, in about twenty minutes", href: "/blog/claim-your-google-listing" },
+          { name: "Claiming your own Google listing: a twenty-minute job", href: "/blog/claim-your-google-listing" },
         ]} />
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
           <div className="pv-mono-label">Guide, August 20, 2026, 8 min read</div>
           <h1>
-            Claim your Google listing{" "}
+            Claiming your Google listing{" "}
             <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>yourself</em>
           </h1>
         </header>
@@ -211,12 +211,12 @@ export default function Post() {
 
           <PostFaq qa={[
             ["How long does Google Business Profile verification take?",
-             "It depends on the method. Postcard verification takes roughly two weeks. Phone, email and video verification are faster. Video means recording a short walkthrough showing your signage, your equipment and your address, so have those visible before you start. Do not create a second listing while you are waiting for a postcard."],
+             "It depends on the method. Postcard verification takes up to two weeks. Phone, email and video verification are faster. Video means recording a short walkthrough showing your signage, your equipment and your address, so have those visible before you start. Do not create a second listing while you are waiting for a postcard."],
           ]} />
 
           <PostByline post={{
             slug: "claim-your-google-listing",
-            title: "Claim your Google listing yourself, in about twenty minutes",
+            title: "Claiming your own Google listing: a twenty-minute job",
             description: "A step-by-step guide to claiming and filling out a Google Business Profile, written so you do not need to hire anybody.",
             published: "2026-08-20",
           }} />

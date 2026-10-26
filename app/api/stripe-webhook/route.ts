@@ -132,7 +132,7 @@ async function fulfillWalletTrackerPremium(email: string | null | undefined): Pr
             <p>You're in. Click the link below to join the premium Telegram channel:</p>
             <p style="text-align: center; margin: 32px 0;">
               <a href="${inviteLink}" style="display: inline-block; padding: 14px 32px; background: #d4af37; color: #0c0a08; text-decoration: none; font-weight: 700;">
-                Join Premium Channel →
+                Join the Premium channel
               </a>
             </p>
             <p style="font-size: 13px; color: #a89889;">
@@ -142,12 +142,12 @@ async function fulfillWalletTrackerPremium(email: string | null | undefined): Pr
               You're now part of a small group getting real-time whale movement alerts across 6 chains, with risk-scored tokens and position sizing recommendations.
             </p>
             <p style="margin-top: 32px;">
-              — Elijah Purcell<br>
-              <span style="color: #a89889; font-size: 12px;">Purcell Ventures · elijah@purcell-ventures.com</span>
+              Elijah Purcell<br>
+              <span style="color: #a89889; font-size: 12px;">Purcell Ventures, elijah@purcell-ventures.com</span>
             </p>
           </div>
         `,
-        text: `Welcome to Premium Whale Alerts.\n\nJoin the channel: ${inviteLink}\n\nLink expires 24 hours from now and is single-use.\n\nIf you miss the window, reply to this email and I'll regenerate.\n\n— Elijah`,
+        text: `Welcome to Premium Whale Alerts.\n\nJoin the channel: ${inviteLink}\n\nLink expires 24 hours from now and is single-use.\n\nIf you miss the window, reply to this email and I'll send a new one.\n\nElijah`,
         replyTo: "elijah@purcell-ventures.com",
         tags: [
           { name: "product", value: "wallet-tracker-premium" },

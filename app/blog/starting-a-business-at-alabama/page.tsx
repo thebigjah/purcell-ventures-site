@@ -6,7 +6,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/starting-a-business-at-alabama" },
-  title: { absolute: "Starting a business as a University of Alabama student | Elijah Purcell" },
+  title: { absolute: "Starting a business as a University of Alabama student, by Elijah Purcell" },
   description:
     "What helps a student running a business at UA: the campus resources that apply, why your first customer should be a local business, and three mistakes that cost time.",
 };
@@ -109,7 +109,7 @@ export default function Post() {
 
           <p>
             The second is waiting for a term with more free time. The schedule you have this
-            semester is roughly the schedule you will have, and a plan that needs a quiet
+            semester is the schedule you will have, and a plan that needs a quiet
             fortnight will not happen.
           </p>
 

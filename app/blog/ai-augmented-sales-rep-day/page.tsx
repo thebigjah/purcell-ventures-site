@@ -5,7 +5,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/ai-augmented-sales-rep-day" },
-  title: { absolute: "What a day looks like for an AI-augmented sales rep | Elijah Purcell" },
+  title: { absolute: "What a day looks like for an AI-augmented sales rep, by Elijah Purcell" },
   description: "An example Tuesday for a sales rep using AI prospect research, next-step coaching and conversation summaries inside a CRM, hour by hour.",
 };
 
@@ -15,7 +15,7 @@ export default function Post() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
+        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
 
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },
@@ -99,7 +99,7 @@ export default function Post() {
           <p>He goes into the call with a brief in hand. The call goes well and he books a follow-up.</p>
 
           <h2 style={head}>11:45 AM: Luke logs the call</h2>
-          <p>Instead of typing notes by hand, Luke opens <strong>AI Call Recap</strong> and pastes his rough notes (&quot;Talked to Karen 30 min, big agency Pittsford area, current site is wix she hates, ~12 employees, decision-maker w/ her business partner, said pricing felt fair, wants proposal by Friday, asked about HIPAA compliance&quot;).</p>
+          <p>Instead of typing notes by hand, Luke opens <strong>AI Call Recap</strong> and pastes his rough notes (&quot;Talked to Karen 30 min, big agency Pittsford area, current site is wix she hates, 12 employees, decision-maker w/ her business partner, said pricing felt fair, wants proposal by Friday, asked about HIPAA compliance&quot;).</p>
 
           <p>The AI sorts it into:</p>
           <ul>

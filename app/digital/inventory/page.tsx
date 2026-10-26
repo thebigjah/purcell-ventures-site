@@ -113,7 +113,7 @@ export default function InventoryPage() {
         )}
 
         <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "12px", marginBottom: "20px" }}>
-          <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search by name, SKU, or category…" style={{ flex: 1, minWidth: "200px", padding: "10px 14px", background: "var(--color-warm-bg-alt)", color: "var(--color-warm-text)", border: "1px solid var(--color-warm-border)", borderRadius: 0, fontFamily: "var(--font-inter), sans-serif", fontSize: "14px" }} />
+          <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search by name, SKU or category" style={{ flex: 1, minWidth: "200px", padding: "10px 14px", background: "var(--color-warm-bg-alt)", color: "var(--color-warm-text)", border: "1px solid var(--color-warm-border)", borderRadius: 0, fontFamily: "var(--font-inter), sans-serif", fontSize: "14px" }} />
           {!adding && (
             <button onClick={() => setAdding(true)} className="pv-btn-primary" style={{ border: "none", cursor: "pointer" }}>+ Item</button>
           )}

@@ -1116,7 +1116,7 @@ Quality bar:
     slug: "bio-writer",
     name: "AI Bio Writer",
     tagline: "Professional bios in your voice, in several lengths for several platforms.",
-    description: "Paste a few facts about yourself or your business. AI returns three bios: short (140 chars for X/Twitter), medium (LinkedIn / About page, ~80 words), long (full About page, ~250 words).",
+    description: "Paste a few facts about yourself or your business. AI returns three bios: short (140 chars for X/Twitter), medium (LinkedIn or About page, 80 words), long (full About page, 250 words).",
     category: "Communication & Marketing",
     fields: [
       { name: "name", label: "Name (person or business)", type: "text", required: true, placeholder: "e.g., Elijah Purcell" },

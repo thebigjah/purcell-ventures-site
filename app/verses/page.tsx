@@ -6,32 +6,32 @@ const VERSES = [
   {
     roman: "I.",
     ref: "Romans 8:28",
-    text: "And we know that in all things God works for the good of those who love him, who have been called according to his purpose.",
-    why: "The verse I come back to when something has gone wrong. Not a denial that things hurt, a refusal to let them be meaningless.",
+    text: "And we know that God causes all things to work together for good to those who love God, to those who are called according to His purpose.",
+    why: "The verse I come back to when something has gone wrong. It admits that things hurt and refuses to let them be meaningless.",
   },
   {
     roman: "II.",
     ref: "Matthew 5:10",
-    text: "Blessed are those who are persecuted because of righteousness, for theirs is the kingdom of heaven.",
+    text: "Blessed are those who have been persecuted for the sake of righteousness, for theirs is the kingdom of heaven.",
     why: "For the moments where doing the right thing costs you something visible, public ridicule, lost friendships, lost ground. The kingdom is on the other side of those losses.",
   },
   {
     roman: "III.",
     ref: "Romans 1:16",
-    text: "For I am not ashamed of the gospel, because it is the power of God that brings salvation to everyone who believes.",
+    text: "For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes, to the Jew first and also to the Greek.",
     why: "The verse that makes it impossible to be cool. The gospel is either the most embarrassing thing I believe or the most powerful, there is no Christianity that hedges between.",
   },
   {
     roman: "IV.",
-    ref: "Proverbs 3:5–6",
-    text: "Trust in the LORD with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.",
+    ref: "Proverbs 3:5-6",
+    text: "Trust in the LORD with all your heart and do not lean on your own understanding. In all your ways acknowledge Him, and He will make your paths straight.",
     why: "The operating credo. I lean on my own understanding by default, analytical, planning, strategic. This verse is the daily handoff back to God.",
   },
   {
     roman: "V.",
     ref: "Psalm 139:13",
-    text: "For you created my inmost being; you knit me together in my mother's womb.",
-    why: "The reason I take psychology and psychiatry seriously. Every patient I'll eventually treat was knit together by God. The work has to honor that, not flatten it.",
+    text: "For You formed my inward parts; You wove me in my mother's womb.",
+    why: "The reason I take psychology and psychiatry seriously. Every patient I'll eventually treat was knit together by God. The work has to honor that.",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function VersesPage() {
             Verses I <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>come back to.</em>
           </h1>
           <p className="deck">
-            Five scriptures that have shaped me. Not a doctrinal statement, a lived-in set of verses I&apos;ve marked, memorized, and returned to when life pressured a position out of me. If you want the credo behind the work, it&apos;s here.
+            Five scriptures that have shaped me. I have marked them, memorized them and gone back to them when life got hard. If you want the credo behind the work, it&apos;s here.
           </p>
         </header>
 
@@ -69,7 +69,7 @@ export default function VersesPage() {
                     color: "var(--color-warm-accent)", textTransform: "uppercase",
                     marginBottom: "16px",
                   }}>
-                    {v.ref}
+                    {v.ref}, NASB
                   </div>
                   <blockquote className="pv-italic" style={{
                     fontSize: "20px", lineHeight: 1.5,
@@ -114,7 +114,7 @@ export default function VersesPage() {
             fontSize: "18px", color: "var(--color-warm-text)", opacity: 0.85,
             maxWidth: "560px", margin: "0 auto", lineHeight: 1.55,
           }}>
-            If you&apos;re here because you&apos;re wrestling with one of these, message me. I&apos;m not a pastor, but I&apos;ve done a lot of wrestling.
+            If you&apos;re here because you&apos;re wrestling with one of these, message me. I have no pastoral training, and I have spent years wrestling with them myself.
           </p>
           <div className="pv-mono-label" style={{ marginTop: "20px", color: "var(--color-warm-text-light)" }}>
             elijah@purcell-ventures.com

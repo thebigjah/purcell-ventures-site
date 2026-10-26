@@ -73,7 +73,7 @@ const POST: Data = {
 
 export const metadata = {
   alternates: { canonical: "/blog/keep-out-of-ai-chat-window" },
-  title: { absolute: POST.title + " | Elijah Purcell" },
+  title: { absolute: POST.title + ", by Elijah Purcell" },
   description: POST.description,
 };
 
@@ -86,7 +86,7 @@ export default function Post() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
+        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
 
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },

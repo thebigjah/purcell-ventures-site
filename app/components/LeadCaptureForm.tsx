@@ -94,7 +94,7 @@ export default function LeadCaptureForm({ title = "Get a Free Quote", subtitle =
           cursor: loading ? "not-allowed" : "pointer", opacity: loading ? 0.7 : 1,
           fontFamily: "Inter, sans-serif", letterSpacing: "0.02em",
         }}>
-          {loading ? "Sending..." : "Send Request →"}
+          {loading ? "Sending" : "Send request"}
         </button>
       </form>
     </div>

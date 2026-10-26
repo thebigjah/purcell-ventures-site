@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/digital" },
-  title: "Digital Services for Small Businesses | Websites, AI Tools, CRM & Booking",
+  title: "Digital services for small businesses: AI tools, CRM and booking",
   description:
     "Complete digital toolkit: website, AI chatbot, booking system, CRM, email marketing, social scheduling, and 20+ tools. One monthly subscription, Starter $99/mo, Growth $179/mo, Full $279/mo. Setup $400 to $1,000.",
   keywords: [

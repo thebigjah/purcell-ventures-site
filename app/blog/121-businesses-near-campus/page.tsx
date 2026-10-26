@@ -21,7 +21,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/121-businesses-near-campus" },
-  title: { absolute: "121 businesses near the University of Alabama, and what a phone can find | Elijah Purcell" },
+  title: { absolute: "121 businesses near the University of Alabama, and what a phone can find, by Elijah Purcell" },
   description:
     "An audit of every independent business within 2500 metres of the Quad: how many list a website a machine can reach, and what that means for a shop competing with a chain three miles away.",
 };
@@ -52,7 +52,7 @@ export default function Post() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
+        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
 
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },
@@ -133,7 +133,7 @@ export default function Post() {
           </p>
 
           <p>
-            For roughly eight in ten businesses within walking distance of campus, only
+            For eight in ten businesses within walking distance of campus, only
             someone standing at the door can tell whether they are open right now.
           </p>
 

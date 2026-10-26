@@ -187,7 +187,7 @@ export default function FinderPage() {
           <input
             value={search}
             onChange={e => setSearch(e.target.value)}
-            placeholder="Search businesses..."
+            placeholder="Search businesses"
             style={{ flex: 1, minWidth: "200px", padding: "9px 14px", background: "#141210", border: "1px solid #2e2820", borderRadius: "6px", color: "#f5f0e0", fontSize: "13px" }}
           />
           <select value={filterType} onChange={e => setFilterType(e.target.value)} style={{ padding: "9px 14px", background: "#141210", border: "1px solid #2e2820", borderRadius: "6px", color: "#f5f0e0", fontSize: "13px" }}>
@@ -206,7 +206,7 @@ export default function FinderPage() {
 
         {/* Score legend */}
         <div style={{ display: "flex", gap: "16px", marginBottom: "20px", flexWrap: "wrap" }}>
-          {[["Hot Lead","85+","#7aaa6a"],["Good Prospect","65–84","#d4af37"],["Possible","40–64","#e8a030"],["Low Priority","<40","#e05c5c"]].map(([l,r,c]) => (
+          {[["Hot Lead","85+","#7aaa6a"],["Good Prospect","65 to 84","#d4af37"],["Possible","40 to 64","#e8a030"],["Low Priority","<40","#e05c5c"]].map(([l,r,c]) => (
             <div key={l} style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "11px", color: "#8a8070" }}>
               <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: c }} />
               <span style={{ color: c as string, fontWeight: 600 }}>{l}</span>

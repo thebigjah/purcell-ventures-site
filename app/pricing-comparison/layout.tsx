@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Pricing comparison: PV vs Agencies vs Freelancers | Purcell Ventures",
+  title: "Pricing compared with agencies and freelancers",
   description:
     "Purcell Ventures prices next to typical agency, freelancer and DIY prices, with a link to the ROI calculator.",
   keywords: [

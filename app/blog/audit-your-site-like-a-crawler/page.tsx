@@ -6,7 +6,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/audit-your-site-like-a-crawler" },
-  title: { absolute: "Audit your own site the way a crawler does, with curl | Elijah Purcell" },
+  title: { absolute: "Auditing your own site the way a crawler does, with curl, by Elijah Purcell" },
   description:
     "Nine checks you can run against your live site from a terminal, no tools and no account: canonical tags pointing at the wrong page, duplicate titles, sitemap and robots contradictions, missing structured data, and pages that silently tell Google to skip them.",
 };
@@ -25,7 +25,7 @@ export default function Post() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
+        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
 
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },
@@ -36,7 +36,7 @@ export default function Post() {
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
           <div className="pv-mono-label">Engineering, August 20, 2026, 9 min read</div>
           <h1>
-            Audit your own site the way a{" "}
+            Auditing your own site the way a{" "}
             <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>crawler</em> does
           </h1>
         </header>
@@ -210,7 +210,7 @@ done < urls.txt`}</div>
 
           <PostByline post={{
             slug: "audit-your-site-like-a-crawler",
-            title: "Audit your own site the way a crawler does, with curl",
+            title: "Auditing your own site the way a crawler does, with curl",
             description: "Nine checks you can run against your live site from a terminal, no tools and no account.",
             published: "2026-08-20",
           }} />

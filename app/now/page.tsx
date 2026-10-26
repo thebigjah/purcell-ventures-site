@@ -8,9 +8,11 @@ const FOCUS = [
     roman: "I.",
     label: "Building",
     items: [
-      "Purcell Ventures. Four divisions are live, and the current problem is that several of them cannot take payments yet.",
-      "A fifteen-agent AI workforce that runs proposals, audits, compliance and outreach on a schedule. The roster is public on the team page.",
+      "Purcell Ventures. Rebuilding this site from the ground up, with a new mark and a new gold.",
+      "COSMIC, the set of AI agents that runs the company's outreach: finding local businesses, auditing their sites and emailing the ones that need help. The roster is public on the team page.",
+      "Three courses: The College Application Playbook, The Business Launch Playbook and Zero to Automated. None is finished. Ask me and I will send the material.",
       "UA Today. Campus events for the University of Alabama, pulled from six sources into one place, and used by students who are not me.",
+      "Search and AI visibility work for a flooring installer in Georgia, measured in booked jobs.",
       "The Tuscaloosa Storefront Project. Reporting on independent businesses near campus, one at a time.",
     ],
   },
@@ -28,7 +30,7 @@ const FOCUS = [
     roman: "III.",
     label: "Figuring out",
     items: [
-      "Which three clubs to join. One for the major, one for fun, one that makes me uncomfortable.",
+      "Spring classes. Seventeen hours across math, computer science, psychology and sociology.",
       "Whether the businesses I write about want a website, or whether most of them only need to claim their Google listing.",
       "Whether to keep the Storefront series weekly or let it run at the pace the interviews take.",
     ],
@@ -37,7 +39,7 @@ const FOCUS = [
     roman: "IV.",
     label: "Practicing",
     items: [
-      "Bass-baritone vocals, range C1 to F5. Worship-leading whenever there is a room that needs it.",
+      "Bass-baritone vocals, range C1 to F5.",
       "Strength and conditioning, scientific hypertrophy programming, a multi-year commitment rather than a season.",
       "Writing. Poetry nobody asked for, fiction drafts, this site, and my own infrastructure.",
     ],
@@ -46,8 +48,7 @@ const FOCUS = [
     roman: "V.",
     label: "Reading",
     items: [
-      "Lewis, Craig, McDowell, Tozer. Slow reads, marked margins.",
-      "The Bible, daily, no streak required.",
+      "The Bible, daily, no streak required. NASB for devotion, NRSVue for study.",
       "Annie Duke and the decision-making canon. Thinking in Bets is why I keep a calibration journal.",
     ],
   },
@@ -57,7 +58,7 @@ const FOCUS = [
     items: [
       "Free will and determinism. Firmly non-Calvinist, still exploring.",
       "The right cadence for school and business without either one taking the other's hours.",
-      "How honest to be on the public internet about the hard parts.",
+      "How much of the hard parts belongs on the public internet.",
     ],
   },
 ];
@@ -71,7 +72,7 @@ export default function NowPage() {
 
         {/* Page head */}
         <header className="pv-page-head">
-          <div className="pv-mono-label">A /now page, updated 20 August 2026</div>
+          <div className="pv-mono-label">A /now page, updated 26 October 2026</div>
           <h1>
             What I&apos;m <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>focused on</em> now.
           </h1>
@@ -105,7 +106,7 @@ export default function NowPage() {
                         color: "var(--color-warm-text)", opacity: 0.88,
                         display: "flex", gap: "14px",
                       }}>
-                        <span style={{ color: "var(--color-warm-accent)", flexShrink: 0, opacity: 0.7 }}>&middot;</span>
+                        <span aria-hidden="true" style={{ width: "8px", height: "1px", marginTop: "12px", background: "var(--color-warm-accent)", flexShrink: 0, opacity: 0.7 }} />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -135,7 +136,7 @@ export default function NowPage() {
             color: "var(--color-warm-text)", opacity: 0.92,
             maxWidth: "560px", margin: "0 auto",
           }}>
-            &ldquo;Whatever you do, work at it with all your heart, as working for the Lord, not for human masters.&rdquo;
+            &ldquo;Whatever you do, do your work heartily, as for the Lord rather than for men.&rdquo;
           </blockquote>
           <cite style={{
             display: "block", marginTop: "24px",
@@ -143,7 +144,7 @@ export default function NowPage() {
             fontSize: "12px", letterSpacing: "0.42em", textTransform: "uppercase",
             color: "var(--color-warm-accent)", fontStyle: "normal",
           }}>
-            — Colossians 3:23
+            Colossians 3:23, NASB
           </cite>
         </section>
 

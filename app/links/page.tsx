@@ -118,7 +118,7 @@ export default function LinksPage() {
             fontSize: "17px", color: "var(--color-warm-text)", opacity: 0.85,
             lineHeight: 1.5, maxWidth: "440px", margin: "0 auto",
           }}>
-            Founder and CEO of Purcell Ventures LLC. I build software and AI agent systems,
+            Founder/CEO of Purcell Ventures LLC. I build software and AI agent systems,
             and I am a University of Alabama Honors College student in
             Tuscaloosa, Alabama.
           </p>

@@ -6,7 +6,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/write-a-page-an-ai-will-quote" },
-  title: { absolute: "How to write a page an AI will quote | Elijah Purcell" },
+  title: { absolute: "How to write a page an AI will quote, by Elijah Purcell" },
   description:
     "Answer engine optimisation in plain terms: the sentence shape a model can lift, what FAQPage schema still does, what llms.txt is for, and why being indexed comes first.",
 };
@@ -111,7 +111,7 @@ export default function Post() {
 
           <p>
             <strong>Correction, added the same day this was published.</strong> An earlier
-            version of this paragraph called FAQPage the single highest-leverage item here.
+            version of this paragraph called FAQPage the single most valuable item here.
             That was true when it produced a rich result in Google. Google stopped showing FAQ
             rich results on 7 May 2026 and said it would remove the reporting and testing
             support in summer 2026. The schema type is still valid, and Bing and the retrieval

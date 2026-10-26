@@ -5,7 +5,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/shipped-is-not-activated" },
-  title: { absolute: "A shipped site can still fail to take a payment | Elijah Purcell" },
+  title: { absolute: "A shipped site can still fail to take a payment, by Elijah Purcell" },
   description:
     "A site can be live with every deploy check passing and still unable to accept a dollar. Usually one path is broken, and the owner never sees it because they already know where the checkout is.",
 };

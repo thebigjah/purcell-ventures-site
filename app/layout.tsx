@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   // own in app/page.tsx. Every other page declares its own.
   metadataBase: new URL("https://purcellventures.co"),
   title: {
-    default: "Purcell Ventures | Elijah Purcell, Founder | Software and AI for Small Business",
-    template: "%s | Purcell Ventures",
+    default: "Purcell Ventures: software and AI for small businesses, founded by Elijah Purcell",
+    template: "%s, Purcell Ventures",
   },
   description:
     "Built by one operator for the small businesses who move first. Digital services from $99/mo, hands-on AI consulting, custom software. Founded by Elijah Purcell, a University of Alabama student, and operated from Tuscaloosa.",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://purcellventures.co",
     siteName: "Purcell Ventures",
-    title: "Purcell Ventures | Elijah Purcell, Founder | Software and AI for Small Business",
+    title: "Purcell Ventures: software and AI for small businesses, founded by Elijah Purcell",
     description:
       "Built by one operator for the small businesses who move first. Digital services, AI consulting, and custom software.",
   
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Purcell Ventures | Elijah Purcell, Founder | Software and AI for Small Business",
+    title: "Purcell Ventures: software and AI for small businesses, founded by Elijah Purcell",
     description:
       "Built by one operator for the small businesses who move first. Digital services, AI consulting, and custom software.",
   },
@@ -166,7 +166,7 @@ const orgSchema = {
       // allows jobTitle to be a list, so the primary title leads and the engineering
       // title he wants surfaced for search sits beside it rather than replacing it.
       // hasOccupation below carries the full description of each.
-      "jobTitle": ["Founder & CEO", "Autonomous AI Agent Systems Engineer"],
+      "jobTitle": ["Founder/CEO", "Autonomous AI Agent Systems Engineer"],
       "description": "Founder of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama Honors College, Class of 2030, on a pre-med track toward psychiatry. Based in Tuscaloosa, Alabama. Builds and operates autonomous AI agent systems.",
       "worksFor": { "@id": "https://purcellventures.co/#organization" },
       "url": "https://purcellventures.co",

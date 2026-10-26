@@ -18,7 +18,7 @@ const MODULES = [
         duration: "12 min", format: "Camera",
         notes: `Every tool I have built started with a moment of annoyance. Not a strategic insight, annoyance. I was reading my email for the fourth time that day and nothing had changed since the third time. I was copying job postings from Craigslist into a spreadsheet and realizing I had done the exact same thing two weeks earlier. I was filling out scholarship applications and thinking: I already answered this question seventeen times. The moment I started paying attention to that annoyance was the moment automation became possible for me.
 
-The filter I use is what I call the "more than once" rule. If I do something more than once and it follows a pattern, meaning the steps are roughly the same each time, even if the specific data is different, it's a candidate for automation. That's it. The rule is not sophisticated. What makes it powerful is consistency: I apply it every single time I catch myself repeating work. I don't evaluate whether I'm capable of automating it yet. I just flag it and move on. The capability question comes later.
+The filter I use is what I call the "more than once" rule. If I do something more than once and it follows a pattern, meaning the steps are the same each time, even if the specific data is different, it's a candidate for automation. That's it. The rule is not sophisticated. What makes it powerful is consistency: I apply it every single time I catch myself repeating work. I don't evaluate whether I'm capable of automating it yet. I just flag it and move on. The capability question comes later.
 
 The distinction between "more than once" and "follows a pattern" is important. Manually ordering the exact same lunch every day is repetitive, but it doesn't follow a pattern that code can execute better than you. Reading your inbox and deciding which emails need a reply does follow a pattern, you're doing a classification task, and classification is something Claude is exceptionally good at. The question to ask is: if I wrote down the rules I use to make this decision, would they be specific enough for a computer to follow? If yes, you're looking at an automation candidate.
 
@@ -27,7 +27,7 @@ Walk through three real examples: the email bot, which replaced my habit of scan
 The practical exercise for this lesson is to open your last week of work and count repetitions. Not tasks, repetitions. How many times did you do essentially the same thing? How much of your inbox management is classification? How many of your recurring tasks have an identifiable trigger (new email, new day, someone fills out a form)? That count is your automation backlog. Most people, when they first do this honestly, find they have ten to fifteen hours of automatable work per week. That's not a small number.`,
         takeaways: [
           "The 'more than once' rule: if it happens more than once and follows a pattern, it's a candidate",
-          "Pattern = the steps are roughly the same even when the specific data is different",
+          "Pattern = the steps are the same even when the specific data is different",
           "Classification tasks (sorting, labeling, prioritizing) are strong automation candidates",
           "Annoyance is a reliable signal, your frustration is pointing at something worth automating",
           "Most people have 10 to 15 hours/week of automatable work once they start counting",
@@ -164,7 +164,7 @@ The most important architectural decision was batching. Instead of calling Claud
         takeaways: [
           "Five-file architecture: cli, gmail_client, ai_engine, db, coupon_engine, one responsibility each",
           "Data flow: fetch, analyze_batch, store, render, in that order",
-          "Batch 10 emails per API call to cut costs ~80% vs individual calls",
+          "Batch 10 emails per API call to cut costs by about 80% compared with one call per email",
           "rich library for terminal UI: colored output and numbered shortcuts",
           "Coupon normalization: standardize before deduplication to catch 'same deal, different words'",
         ],

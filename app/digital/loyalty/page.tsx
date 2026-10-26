@@ -107,7 +107,7 @@ export default function LoyaltyPage() {
           <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-accent)", padding: "24px", marginBottom: "24px" }}>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 100px", gap: "12px" }}>
               <Input label="Name" value={form.name} onChange={(v) => setForm({ ...form, name: v })} placeholder="e.g., Jane Doe" />
-              <Input label="Phone" value={form.phone} onChange={(v) => setForm({ ...form, phone: v })} placeholder="(770) 555-..." />
+              <Input label="Phone" value={form.phone} onChange={(v) => setForm({ ...form, phone: v })} placeholder="(770) 555-0100" />
               <Input label="Cap" value={String(form.cap)} onChange={(v) => setForm({ ...form, cap: Number(v) || defaultCap })} type="number" />
             </div>
             <div style={{ display: "flex", gap: "12px", marginTop: "16px" }}>

@@ -13,7 +13,7 @@ export default function ChatWidget() {
 
   useEffect(() => {
     if (open && messages.length === 0) {
-      setMessages([{ role: "assistant", content: "Hey — I'm the Purcell Ventures assistant. Ask me about our services, pricing, or how to get started." }]);
+      setMessages([{ role: "assistant", content: "Hi, I'm the Purcell Ventures assistant. Ask me about services, prices or how to start a project." }]);
     }
   }, [open, messages.length]);
 
@@ -85,14 +85,14 @@ export default function ChatWidget() {
             <div style={{ width: "8px", height: "8px", background: "#d4af37" }} />
             <div style={{ flex: 1 }}>
               <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "13px", fontWeight: 700, color: "#f5f0e0", letterSpacing: "0.18em", textTransform: "uppercase" }}>
-                Purcell · Ventures
+                Purcell Ventures
               </div>
               <div style={{
                 fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
                 fontSize: "9px", color: "#6a6458", marginTop: "3px",
                 letterSpacing: "0.24em", textTransform: "uppercase",
               }}>
-                Assistant · Replies instantly
+                Assistant, replies instantly
               </div>
             </div>
           </div>
@@ -146,7 +146,7 @@ export default function ChatWidget() {
                 fontFamily: "var(--font-dm-sans), system-ui, sans-serif", fontWeight: 700,
               }}
               aria-label="Send"
-            >→</button>
+            >Send</button>
           </div>
         </div>
       )}

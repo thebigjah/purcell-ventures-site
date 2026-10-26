@@ -22,7 +22,7 @@ import type { ReactNode } from "react";
 // professor could disprove, and it would cost more than the ranking is worth.
 
 export const metadata: Metadata = {
-  title: { absolute: "AI Consultant in Tuscaloosa, Alabama | Elijah Purcell, Purcell Ventures" },
+  title: { absolute: "AI consultant in Tuscaloosa, Alabama: Elijah Purcell of Purcell Ventures" },
   description:
     "Elijah Purcell is an AI consultant and software developer based in Tuscaloosa, Alabama. He builds websites, custom software, and AI automation for local businesses, with a reduced rate for University of Alabama students and student-run businesses.",
   keywords: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Consultant in Tuscaloosa, Alabama | Elijah Purcell",
+    title: "AI consultant in Tuscaloosa, Alabama: Elijah Purcell",
     description: "AI consulting, custom software and web development for Tuscaloosa businesses.",
   },
   alternates: { canonical: "https://purcellventures.co/ai-consultant-tuscaloosa" },

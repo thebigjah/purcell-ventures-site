@@ -125,7 +125,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "Audit your own site the way a crawler does",
+      "headline": "Auditing your own site the way a crawler does",
       "url": "https://purcellventures.co/blog/audit-your-site-like-a-crawler",
       "datePublished": "2026-08-20",
       "author": {
@@ -134,7 +134,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "Claim your Google listing yourself",
+      "headline": "Claiming your Google listing yourself",
       "url": "https://purcellventures.co/blog/claim-your-google-listing",
       "datePublished": "2026-08-20",
       "author": {

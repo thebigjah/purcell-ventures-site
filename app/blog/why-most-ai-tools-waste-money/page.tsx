@@ -86,7 +86,7 @@ export default function Post() {
 
           <PostByline post={{
             slug: "why-most-ai-tools-waste-money",
-            title: "Why some small business AI tools waste your money | Elijah Purcell",
+            title: "Why some small business AI tools waste your money, by Elijah Purcell",
             description: "Many AI tools sold to small businesses fail because the workflow they attach to was already broken. Three questions help you check yours before you buy.",
             published: "2026-05-24",
           }} />

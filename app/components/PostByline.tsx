@@ -56,7 +56,7 @@ export default function PostByline({ post }: { post: PostMeta }) {
       name: "Elijah Purcell",
       url: AUTHOR_URL,
       image: AUTHOR_IMG,
-      jobTitle: "Founder, Purcell Ventures LLC",
+      jobTitle: "Founder/CEO, Purcell Ventures LLC",
       affiliation: { "@type": "CollegeOrUniversity", name: "University of Alabama" },
       sameAs: [
         "https://github.com/thebigjah",

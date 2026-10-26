@@ -5,7 +5,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/psychology-and-software" },
-  title: { absolute: "What psychology has to do with the software I build | Elijah Purcell" },
+  title: { absolute: "What psychology has to do with the software I build, by Elijah Purcell" },
   description:
     "Within-subject design, base rates and construct validity are three ideas from a first-semester psychology methods course that changed a product I had already shipped.",
 };

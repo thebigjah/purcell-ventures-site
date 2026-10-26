@@ -54,7 +54,7 @@ const PROJECTS = [
     bullets: [
       "Command center over a 441-node knowledge graph: eight stations, command palette with voice, PWA install, and a 7:30 AM briefing email.",
       "Nightly job re-ingests the graph, scores its health, and writes a gaps file identifying what the knowledge base is missing.",
-      "Paired with a semantic recall layer serving ~200-token chunks so retrieval stays cheap at scale.",
+      "Paired with a semantic recall layer serving 200-token chunks so retrieval stays cheap at scale.",
     ],
   },
   {
@@ -326,7 +326,7 @@ export default function ResumePrint() {
         <div className="header">
           <h1>Elijah Purcell</h1>
           <div className="header-sub">
-            Founder, Purcell Ventures LLC. University of Alabama Honors College, Class of 2030. Tuscaloosa, AL
+            Founder/CEO, Purcell Ventures LLC. University of Alabama Honors College, Class of 2030. Tuscaloosa, AL
           </div>
           <div className="header-summary">
             I build and ship software end to end: marketplaces, autonomous data pipelines, AI-integrated
@@ -386,18 +386,18 @@ export default function ResumePrint() {
             <div className="section">
               <div className="section-title">Experience</div>
               {[
-                ["Founder & CEO, Purcell Ventures LLC", "Apr 2025–Present",
+                ["Founder/CEO, Purcell Ventures LLC", "Apr 2025 to Present",
                   "Georgia LLC across software, AI integration, digital marketing, field services, and wholesale real estate. Owns the full cycle: acquisition, scoping, pricing, build, deployment, support. Active revenue.",
                   "Filed as Zultar LLC 4/8/2025, renamed 1/27/2026. Control #25075361. EIN and business banking. Registered agent of record."],
-                ["Founder & Operator, Mantle Field Services", "2024–Present",
+                ["Founder & Operator, Mantle Field Services", "2024 to Present",
                   "Gutter cleaning, pressure washing, and lawn care across metro Atlanta. Client acquisition, quoting, scheduling, equipment maintenance, on-site delivery. Grew out of Mantle Field Services.", ""],
-                ["AI Data Trainer, Outlier AI", "Oct 2025–May 2026",
+                ["AI Data Trainer, Outlier AI", "Oct 2025 to May 2026",
                   "Two projects. Evaluated LLM outputs and authored a written rationale for every rating, on accuracy, reasoning quality, and instruction adherence. Wrote spoken-style human-assistant conversations against a fixed per-task tool-call budget, authoring the user turns and editing the model responses.", ""],
                 ["AI Response Evaluator, DataAnnotation", "Spring 2026",
                   "Rated AI responses against a Helpful, Honest, Harmless rubric ranking honesty and harmlessness above helpfulness. Flagged hallucinated facts, fabricated links, false premises accepted without correction, and incorrect reasoning.", ""],
                 ["Team Member, Chick-fil-A", "2023",
                   "Front-line customer service in a high-volume operation.", ""],
-                ["Peer Tutor, Mathematics & English", "2022–2026",
+                ["Peer Tutor, Mathematics & English", "2022 to 2026",
                   "One-on-one academic support through structured review sessions.", ""],
               ].map(([title, right, sub, note]) => (
                 <div className="row" key={title}>
@@ -421,7 +421,7 @@ export default function ResumePrint() {
                   <div className="row-sub">B.S. Psychology / Data Science, New College, Presidential Merit ($28,000/yr)</div>
                   <div className="row-note">Pre-med track toward psychiatry. Enrolled and attending since August 2026.</div>
                 </div>
-                <div className="row-right">2026–2030</div>
+                <div className="row-right">2026 to 2030</div>
               </div>
 
               <div className="row">
@@ -444,10 +444,10 @@ export default function ResumePrint() {
               <div className="row">
                 <div className="row-left">
                   <div className="row-title">Grove Christian School, Midlothian, VA</div>
-                  <div className="row-sub">9th–Mid 10th Grade, Beta Club, Honors coursework</div>
+                  <div className="row-sub">9th to Mid 10th Grade, Beta Club, Honors coursework</div>
                   <div className="row-note">Awards: Behold (9th), Steadfast (10th), Christian Character, Christ-like Leadership, Lead in Christmas Musical</div>
                 </div>
-                <div className="row-right">2022–2023</div>
+                <div className="row-right">2022 to 2023</div>
               </div>
             </div>
 
@@ -566,9 +566,9 @@ export default function ResumePrint() {
 
               <div className="subsection-title">School &amp; Church</div>
               {[
-                ["Member, Mighty Men (Men's Bible Study, CPA)", "11th–12th", "Active member of the school's men's discipleship group. Weekly 2-hr discussions on faith and spiritual formation."],
-                ["Head Chaplain", "9th–10th", "Organized chapel services, coordinated worship teams, led school-wide programming."],
-                ["Worship Team, Lead Vocalist", "9th–12th", "Lead bass-baritone vocalist at school and church. Range C1–F5. 2–3 rehearsals/week."],
+                ["Member, Mighty Men (Men's Bible Study, CPA)", "11th to 12th", "Active member of the school's men's discipleship group. Weekly 2-hr discussions on faith and spiritual formation."],
+                ["Head Chaplain", "9th to 10th", "Organized chapel services, coordinated worship teams, led school-wide programming."],
+                ["Worship Team, Lead Vocalist", "9th to 12th", "Lead bass-baritone vocalist at school and church. Range C1 to F5. 2 to 3 rehearsals/week."],
                 ["Youth Group Leader & Camp Counselor", "Ongoing", "Mentors younger students at church, leads group discussions, staffs summer camp."],
               ].map(([title, right, sub]) => (
                 <div className="row" key={title}>
@@ -616,9 +616,9 @@ export default function ResumePrint() {
             <div className="section">
               <div className="section-title">Arts &amp; Creative</div>
               {[
-                ["Vocalist, Bass-Baritone", "Ongoing", "Range C1–F5. Lead worship vocalist at school and church since 9th grade."],
+                ["Vocalist, Bass-Baritone", "Ongoing", "Range C1 to F5. Led worship vocals at school and church through 12th grade."],
                 ["Poetry & Creative Writing", "Ongoing", "Original poetry, fiction drafts, and personal essays across 8 distinct styles."],
-                ["Content Creation, YouTube", "2023–Present", "Scripts, films, and edits commentary on psychology, faith, and culture. 2,800+ subscribers."],
+                ["Content Creation, YouTube", "2023 to Present", "Scripts, films, and edits commentary on psychology, faith, and culture. 2,800+ subscribers."],
                 ["Design, Photography & Video", "Ongoing", "Brand identity, product photography, and video production for clients. Built a full color-grading toolchain from scratch."],
               ].map(([title, right, sub]) => (
                 <div className="row" key={title}>
@@ -645,7 +645,7 @@ export default function ResumePrint() {
             <div className="section">
               <div className="section-title">Athletics</div>
               {[
-                ["Cheerleader, Back / Base", "9th–10th", "Competitive stunt base. 6–7 hrs/week during season."],
+                ["Cheerleader, Back / Base", "9th to 10th", "Competitive stunt base. 6 to 7 hrs/week during season."],
                 ["Track & Field, Shot Put, Discus, 100m", "9th Grade", "Competed in field and sprint events."],
                 ["Weightlifting", "Ongoing", "Scientific hypertrophy-focused training."],
               ].map(([title, right, sub]) => (

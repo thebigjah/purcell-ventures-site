@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "AI Consulting & Team Training | Hands-On Workshops for Business Teams",
+  title: "AI consulting and hands-on team training",
   description:
     "Hands-on AI training for business teams in Metro Atlanta and beyond. 1-on-1 ($175/hr), small group ($125/person), or half-day workshop ($2,500 flat up to 20 people). I come to you. Every session includes a same-day takeaway guide.",
   keywords: [

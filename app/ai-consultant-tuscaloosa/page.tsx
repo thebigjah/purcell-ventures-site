@@ -91,7 +91,7 @@ export default function AiConsultantTuscaloosa() {
           <p>
             <a href="https://ua-today.vercel.app" style={link} target="_blank" rel="noopener noreferrer">UA Today</a>{" "}
             is a campus events site I built for students here. It pulls from six sources and
-            carries roughly a hundred events in any given week across official University
+            carries about a hundred events in a given week across official University
             events, student organizations, ministries and athletics. It is free, there is no
             account, and it is not affiliated with the University, which the masthead says
             plainly.

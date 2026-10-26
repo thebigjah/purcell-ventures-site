@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Purcell Ventures — Digital Services, AI Consulting & Custom Software";
+export const alt = "Purcell Ventures: digital services, AI consulting and custom software";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -82,8 +82,8 @@ export default function OgImage() {
           fontSize: "13px", color: "#524d45",
           letterSpacing: "5px", textTransform: "uppercase",
         }}>
-          <div style={{ display: "flex" }}>EST · APRIL · MMXXV · ACWORTH GA</div>
-          <div style={{ display: "flex", color: "#d4af37" }}>PURCELLVENTURES · CO</div>
+          <div style={{ display: "flex" }}>FOUNDED APRIL 2025 IN ACWORTH, GA</div>
+          <div style={{ display: "flex", color: "#d4af37" }}>PURCELLVENTURES.CO</div>
         </div>
       </div>
     ),

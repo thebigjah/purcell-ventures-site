@@ -100,10 +100,10 @@ export default function CRMPage() {
         {/* Header */}
         <div style={{ marginBottom: "48px" }}>
           <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d4af37", marginBottom: "10px" }}>
-            Purcell Ventures — Private
+            Purcell Ventures, private
           </div>
           <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "32px", fontWeight: 700, color: "#f5f0e0", marginBottom: "8px" }}>CRM</h1>
-          <p style={{ fontSize: "14px", color: "#524d45" }}>Leads · Bookings · Newsletter, all in one place</p>
+          <p style={{ fontSize: "14px", color: "#524d45" }}>Leads, bookings and the newsletter in one place</p>
         </div>
 
         {/* Stats row */}
@@ -146,7 +146,7 @@ export default function CRMPage() {
                     >
                       <div style={{ flex: 1 }}>
                         <span style={{ fontSize: "15px", fontWeight: 700, color: "#f5f0e0" }}>{lead.name}</span>
-                        {lead.business && <span style={{ fontSize: "13px", color: "#6a6458", marginLeft: "8px" }}>· {lead.business}</span>}
+                        {lead.business && <span style={{ fontSize: "13px", color: "#6a6458", marginLeft: "8px" }}>{lead.business}</span>}
                       </div>
                       <span style={{ fontSize: "11px", color: "#6a6458", flexShrink: 0 }}>{lead.service?.split("(")[0].trim()}</span>
                       <span style={{ fontSize: "10px", color: "#524d45", flexShrink: 0 }}>{fmt(lead.createdAt)}</span>
@@ -220,7 +220,7 @@ export default function CRMPage() {
                     >
                       <div style={{ flex: 1 }}>
                         <span style={{ fontSize: "15px", fontWeight: 700, color: "#f5f0e0" }}>{b.name}</span>
-                        {b.business && <span style={{ fontSize: "13px", color: "#6a6458", marginLeft: "8px" }}>· {b.business}</span>}
+                        {b.business && <span style={{ fontSize: "13px", color: "#6a6458", marginLeft: "8px" }}>{b.business}</span>}
                       </div>
                       <span style={{ fontSize: "11px", color: "#6a6458", flexShrink: 0 }}>{b.format}</span>
                       <span style={{ fontSize: "10px", color: "#524d45", flexShrink: 0 }}>{fmt(b.createdAt)}</span>
@@ -238,7 +238,7 @@ export default function CRMPage() {
                       <div style={{ borderTop: "1px solid #2e2820", padding: "16px 20px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
                         <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "12px", color: "#524d45" }}>
                           <div><span style={{ color: "#8a8070" }}>Session:</span> {b.sessionType}</div>
-                          <div><span style={{ color: "#8a8070" }}>Format:</span> {b.format}{b.groupSize ? ` · ${b.groupSize}` : ""}</div>
+                          <div><span style={{ color: "#8a8070" }}>Format:</span> {b.format}{b.groupSize ? `, ${b.groupSize}` : ""}</div>
                           <div><span style={{ color: "#8a8070" }}>Date pref:</span> {b.datePreference}</div>
                           {b.timePreference && <div><span style={{ color: "#8a8070" }}>Time pref:</span> {b.timePreference}</div>}
                           <div><span style={{ color: "#8a8070" }}>Phone:</span> {b.phone}</div>

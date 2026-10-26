@@ -62,11 +62,11 @@ export default function AICostCalculatorPage() {
       const months = Math.max(0, cost) / dollarsMonthly;
       if (months < 1) {
         const days = Math.round(months * 30);
-        payback = { text: `At those inputs, the session pays back in about ${days} days. After that, the savings continue each month.`, tier: "compounding" };
+        payback = { text: `At those inputs, the session pays back in ${days} days. After that, the savings continue each month.`, tier: "compounding" };
       } else if (months < 6) {
-        payback = { text: `At those inputs, the session pays back in about ${months.toFixed(1)} months. After that, the savings continue each month.`, tier: "fast" };
+        payback = { text: `At those inputs, the session pays back in ${months.toFixed(1)} months. After that, the savings continue each month.`, tier: "fast" };
       } else if (months < 24) {
-        payback = { text: `At those inputs, the session pays back in about ${months.toFixed(1)} months. That is slow, because the team is small or the manual hours are low. It may still be worth doing if the work wears your team down.`, tier: "slow" };
+        payback = { text: `At those inputs, the session pays back in ${months.toFixed(1)} months. That is slow, because the team is small or the manual hours are low. It may still be worth doing if the work wears your team down.`, tier: "slow" };
       } else {
         payback = { text: `At those inputs, the payback is about ${months.toFixed(1)} months, too slow to justify on time savings alone. A smaller $175/hr 1-on-1 session may fit better.`, tier: "too-slow" };
       }
@@ -261,7 +261,7 @@ export default function AICostCalculatorPage() {
             How the math works
           </h2>
           <p>
-            You enter team size, a loaded hourly rate, and roughly how many hours a week go
+            You enter team size, a loaded hourly rate, and how many hours a week go
             into the repetitive written work: drafting, replying, summarising, formatting.
             The calculator applies a conservative recovery rate to those hours and compares
             the result against the cost of a session, which gives you a payback period in

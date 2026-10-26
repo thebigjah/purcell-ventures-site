@@ -50,7 +50,7 @@ const KIT_CONTENTS = [
   {
     folder: "05-cold-outreach/",
     title: "50+ cold outreach email templates",
-    items: ["Industry-specific cold opens (salon, plumbing, dental, real estate, law, marketing, e-commerce, wellness, vet, accounting)", "5 referral-based openers", "5 LinkedIn DM scripts", "Subject line library (~40 tested options)", "Token-replacement guide"],
+    items: ["Industry-specific cold opens (salon, plumbing, dental, real estate, law, marketing, e-commerce, wellness, vet, accounting)", "5 referral-based openers", "5 LinkedIn DM scripts", "Subject line library, 40 tested options", "Token-replacement guide"],
     blurb: "Cold outreach templates that give the prospect a specific reason for the email.",
   },
 ];

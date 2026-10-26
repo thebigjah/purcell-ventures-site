@@ -6,7 +6,7 @@ import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/what-the-agents-get-wrong" },
-  title: { absolute: "Fifteen AI agents help run my company. Here is what they get wrong | Elijah Purcell" },
+  title: { absolute: "Fifteen AI agents help run my company. Here is what they get wrong, by Elijah Purcell" },
   description:
     "Five failures from running fifteen AI agents in production. A gate that always passed, twenty proposals with internal notes in them, eleven agents that were never called, findings that closed themselves, and an agent holding capabilities nobody granted it.",
 };
@@ -62,7 +62,7 @@ export default function Post() {
             human. One of those gates asked me whether a client had responded to a proposal.
           </p>
 
-          <p>The function guarding it looked roughly like this:</p>
+          <p>The function guarding it looked like this, simplified:</p>
 
           <div style={pre}>{`def can_leave_sent(deal):
     return True`}</div>

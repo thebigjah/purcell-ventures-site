@@ -12,7 +12,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/free-at-alabama" },
-  title: { absolute: "What is already free at the University of Alabama | Elijah Purcell" },
+  title: { absolute: "What is already free at the University of Alabama, by Elijah Purcell" },
   description:
     "Services a University of Alabama student has already paid for through tuition and fees, with the exact office names: University Recreation, the Writing Center, the Capstone Center for Student Success, the Career Center, CrimsonRide and more, checked against ua.edu.",
 };
@@ -43,7 +43,7 @@ export default function Post() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
+        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
 
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },

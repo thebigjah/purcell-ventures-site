@@ -1822,7 +1822,7 @@ export default function DigitalPage() {
               </div>
               <div>
                 <label style={{ display: "block", fontSize: "11px", fontWeight: 600, color: "var(--color-warm-text-muted)", marginBottom: "6px", letterSpacing: "0.06em", textTransform: "uppercase" }}>What do you need?</label>
-                <textarea rows={4} placeholder="Tell me about your business and what you're trying to solve..." style={{ width: "100%", padding: "10px 13px", resize: "none", background: "var(--color-warm-bg)", border: "1px solid var(--color-warm-border)", borderRadius: "6px", color: "var(--color-warm-text)", fontSize: "14px", outline: "none", fontFamily: "inherit" }} />
+                <textarea rows={4} placeholder="Tell me about your business and what you're trying to solve" style={{ width: "100%", padding: "10px 13px", resize: "none", background: "var(--color-warm-bg)", border: "1px solid var(--color-warm-border)", borderRadius: "6px", color: "var(--color-warm-text)", fontSize: "14px", outline: "none", fontFamily: "inherit" }} />
               </div>
               <div>
                 <label style={{ display: "block", fontSize: "11px", fontWeight: 600, color: "var(--color-warm-text-muted)", marginBottom: "6px", letterSpacing: "0.06em", textTransform: "uppercase" }}>Best fit?</label>

@@ -185,7 +185,7 @@ export default function ConsultingPage() {
         </p>
         <div className="pv-cs-who" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px", marginBottom: "64px" }}>
           {[
-            { who: "Small Business Owners",      desc: "You run a tight operation. An hour a day saved on admin is roughly 250 hours a year." },
+            { who: "Small Business Owners",      desc: "You run a tight operation. An hour a day saved on admin is 250 working hours a year." },
             { who: "Office & Operations Teams",  desc: "Your team does repetitive digital work. I show you which parts software can handle." },
             { who: "Marketing Departments",      desc: "Content takes hours to produce. In a session I show you how AI shortens drafting, and we time it on your own content." },
             { who: "Any Team Feeling Behind",    desc: "If your team has not used AI tools yet, the AI Basics session starts from zero." },
@@ -265,7 +265,7 @@ export default function ConsultingPage() {
                       <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                         {s.outcomes.map((o, i) => (
                           <div key={i} className="pv-italic" style={{ display: "flex", gap: "12px", fontSize: "15px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.55 }}>
-                            <span style={{ color: "var(--color-warm-accent)", flexShrink: 0 }}>—</span>
+                            <span aria-hidden="true" style={{ width: "10px", height: "1px", marginTop: "12px", background: "var(--color-warm-accent)", flexShrink: 0 }} />
                             {o}
                           </div>
                         ))}

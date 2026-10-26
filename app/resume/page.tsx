@@ -4,7 +4,7 @@ import { VignetteBackground } from "@/app/components/VignetteBackground";
 export const metadata: Metadata = {
   title: "Elijah Purcell: Resume & Achievements",
   description:
-    "Elijah Purcell | Founder, Purcell Ventures LLC | University of Alabama Honors College '30 | Software, AI systems, and shipped products. Full work, activities, awards, and scholarship record.",
+    "Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a University of Alabama Honors College student, class of 2030. Software, AI systems and shipped products, with the full work, activities, awards and scholarship record.",
 };
 
 // Dark Vignette palette, same as the rest of the site
@@ -320,7 +320,7 @@ export default function ResumePage() {
             Elijah Brent <em className="pv-italic" style={{ fontWeight: 400, color: C.accent }}>Purcell</em>
           </h1>
           <p className="pv-italic" style={{ marginTop: "16px", fontSize: "18px", color: C.text, opacity: 0.78, maxWidth: "660px", lineHeight: 1.5 }}>
-            Founder and CEO, Purcell Ventures LLC. Software and AI agent developer. University of Alabama Honors College, Class of 2030. Tuscaloosa, Alabama.
+            Founder/CEO, Purcell Ventures LLC. Software and AI agent developer. University of Alabama Honors College, Class of 2030. Tuscaloosa, Alabama.
           </p>
           <p className="pv-italic" style={{ marginTop: "10px", fontSize: "15.5px", color: C.text, opacity: 0.62, maxWidth: "660px", lineHeight: 1.55 }}>
             I build and ship software end to end: marketplaces, autonomous data pipelines, AI-integrated
@@ -446,7 +446,7 @@ export default function ResumePage() {
             bullets={[
               "Command center over a 441-node personal knowledge graph: eight stations, command palette with voice input, installable as a PWA, and a briefing emailed every morning at 7:30.",
               "Nightly job re-ingests the graph, computes a health score, and writes a gaps file identifying what the knowledge base is missing so it can be filled deliberately.",
-              "Paired with a semantic recall layer that serves roughly 200-token chunks across memory, notes, and graph nodes so retrieval stays cheap at scale.",
+              "Paired with a semantic recall layer that serves 200-token chunks across memory, notes, and graph nodes so retrieval stays cheap at scale.",
             ]}
           />
 
@@ -504,7 +504,7 @@ export default function ResumePage() {
             />
             <Row
               left="Purcell Ventures Digital Division, Small-business tooling"
-              right="2025 – Present"
+              right="2025 to Present"
               sub="Twenty reusable modules across websites, chatbots, booking, review capture, and lead generation, delivered on a setup-plus-subscription model to local service businesses."
             />
           </SubSection>
@@ -524,19 +524,19 @@ export default function ResumePage() {
         {/* ─── Experience ─── */}
         <Section roman="II." title="Experience">
           <Row
-            left="Founder & CEO, Purcell Ventures LLC"
-            right="April 2025 – Present"
+            left="Founder/CEO, Purcell Ventures LLC"
+            right="April 2025 to Present"
             sub="Georgia LLC operating across software development, AI integration, digital marketing, field services, and wholesale real estate. Owns the full cycle: client acquisition, scoping, pricing, build, deployment, and support. Generates active revenue."
             note="Filed as Zultar LLC 4/8/2025, renamed Purcell Ventures LLC 1/27/2026. Control #25075361. EIN and business banking established. Registered agent of record."
           />
           <Row
             left="Founder & Operator, Mantle Field Services"
-            right="2024 – Present"
+            right="2024 to Present"
             sub="Sister brand handling gutter cleaning, pressure washing, and lawn care across metro Atlanta. Runs client acquisition, quoting, scheduling, equipment maintenance, and on-site delivery. Grew out of the earlier Mantle Field Services operation."
           />
           <Row
             left="AI Data Trainer, Outlier AI"
-            right="Oct 2025 – May 2026"
+            right="Oct 2025 to May 2026"
             sub="Two projects. On the first, evaluated large language model outputs and authored a written rationale in support of every rating, assessing accuracy, reasoning quality, and instruction adherence rather than returning a bare score. On the second, wrote realistic spoken-style human-assistant conversations against a fixed per-task tool-call budget, authoring the user turns and editing the model responses, and rewriting prompts until the model stopped over-calling its tools."
           />
           <Row
@@ -551,7 +551,7 @@ export default function ResumePage() {
           />
           <Row
             left="Peer Tutor, Mathematics & English"
-            right="2022 – 2026"
+            right="2022 to 2026"
             sub="One-on-one academic support for classmates through structured review sessions."
           />
         </Section>
@@ -560,7 +560,7 @@ export default function ResumePage() {
         <Section roman="III." title="Education">
           <Row
             left="The University of Alabama, Honors College"
-            right="2026 – 2030"
+            right="2026 to 2030"
             sub="B.S. Psychology / Data Science, New College, Presidential Merit Scholarship ($28,000/yr)"
             note="Pre-med track toward psychiatry. Enrolled and attending since August 2026."
           />
@@ -577,13 +577,13 @@ export default function ResumePage() {
           />
           <Row
             left="Grove Christian School, Midlothian, VA"
-            right="2022 – 2023"
-            sub="9th Grade – Mid 10th Grade, Beta Club, Honors courses"
+            right="2022 to 2023"
+            sub="9th Grade to Mid 10th Grade, Beta Club, Honors courses"
             note="Awards: Behold (9th), Steadfast (10th), Christian Character Award, Christ-like Leadership Award, Highest Math Grade in Class (9th), Lead in Christmas Musical"
           />
           <Row
             left="Cornerstone Preparatory Academy, Acworth, GA"
-            right="K – 8th Grade"
+            right="K to 8th Grade"
             sub="Elementary and middle school (4th through 8th in person, K through 3rd homeschooled). I returned to this school and graduated from it."
           />
         </Section>
@@ -600,7 +600,7 @@ export default function ResumePage() {
               ["Engineering",     "Automated testing, adversarial code review, security auditing, technical writing"],
               ["Business",        "Client acquisition, pricing, contracts, invoicing, regulatory compliance"],
               ["Communication",   "Public speaking, formal debate, persuasive and analytical writing"],
-              ["Music",           "Vocal performance (bass-baritone, C1–F5), worship leading, stage presence"],
+              ["Music",           "Vocal performance (bass-baritone, C1 to F5), stage presence"],
               ["Languages (human)", "English (native), Spanish (3 yrs)"],
             ].map(([skill, desc]) => (
               <div key={skill} style={{
@@ -699,9 +699,9 @@ export default function ResumePage() {
         {/* ─── Leadership ─── */}
         <Section roman="VII." title="Leadership" em="and ministry">
           <SubSection title="School + Organizational Leadership">
-            <Row left="Member, Mighty Men (Men&apos;s Bible Study, Cornerstone Prep)" right="11th – 12th Grade" sub="Active member of the school&apos;s men&apos;s discipleship group. Weekly 2-hour discussions on faith, character, and spiritual formation." />
-            <Row left="Head Chaplain" right="9th Spring – 10th Fall" sub="Organized school chapel services, coordinated worship teams, and led school-wide spiritual programming. Weekly rehearsals and Friday performances." />
-            <Row left="Worship Team, Lead Vocalist" right="9th – 12th Grade" sub="Lead vocalist at school chapel and church services. Bass-baritone, range C1–F5. Rehearsals 2–3 times per week." />
+            <Row left="Member, Mighty Men (Men&apos;s Bible Study, Cornerstone Prep)" right="11th to 12th Grade" sub="Active member of the school&apos;s men&apos;s discipleship group. Weekly 2-hour discussions on faith, character, and spiritual formation." />
+            <Row left="Head Chaplain" right="9th Spring to 10th Fall" sub="Organized school chapel services, coordinated worship teams, and led school-wide spiritual programming. Weekly rehearsals and Friday performances." />
+            <Row left="Worship Team, Lead Vocalist" right="9th to 12th Grade" sub="Lead vocalist at school chapel and church services. Bass-baritone, range C1 to F5. Rehearsals 2 to 3 times per week." />
             <Row left="Youth Group Leader & Summer Camp Counselor" right="Ongoing" sub="Mentors younger students at church, leads group discussions, and staffs week-long summer camp annually." />
           </SubSection>
 
@@ -750,10 +750,10 @@ export default function ResumePage() {
 
         {/* ─── Arts & Creative ─── */}
         <Section roman="IX." title="Arts" em="media, creative work">
-          <Row left="Vocalist, Bass-Baritone" right="Ongoing" sub="Range C1–F5. Lead worship vocalist at school and church. Active in performance and rehearsal consistently since 9th grade." />
+          <Row left="Vocalist, Bass-Baritone" right="Ongoing" sub="Range C1 to F5. Led worship vocals at school and church through 12th grade. Active in performance and rehearsal since 9th grade." />
           <Row left="Lead Actor, Christmas Musical" right="Grove" sub="Selected for the lead role in the school&apos;s annual Christmas production. Combined vocal performance with acting and stage presence." />
           <Row left="Poetry & Creative Writing" right="Ongoing" sub='Original works include "The Husks the Swine Did Eat," "Injustice Scorned," "The Rebuking of Loki," fiction novel drafts, and personal essays. Writes across 8 distinct styles.' />
-          <Row left="Content Creation, YouTube & Social Media" right="2023 – Present" sub="Scripts, films, and edits commentary content on psychology, faith, and culture. YouTube channel with 2,800+ subscribers transitioning to intellectual commentary." />
+          <Row left="Content Creation, YouTube & Social Media" right="2023 to Present" sub="Scripts, films, and edits commentary content on psychology, faith, and culture. YouTube channel with 2,800+ subscribers transitioning to intellectual commentary." />
           <Row left="Design, Photography & Videography" right="Ongoing" sub="Brand identity, product photography, and video production for Purcell Ventures clients and personal projects. Built a full color-grading and posing toolchain from scratch." />
         </Section>
 
@@ -772,14 +772,14 @@ export default function ResumePage() {
               "Mighty Men (Member, CPA)",
             ].map(c => <AwardBadge key={c} text={c} />)}
           </div>
-          <Row left="Apologetics & Debate Team" right="9th – 12th Grade" sub="Engaged in formal and informal theological debate with teachers and peers. Contributed to school-wide theological discussion. 5–10 hrs/week." />
+          <Row left="Apologetics & Debate Team" right="9th to 12th Grade" sub="Engaged in formal and informal theological debate with teachers and peers. Contributed to school-wide theological discussion. 5 to 10 hrs/week." />
           <Row left="Creative Writing / Writer&apos;s Guild" right="11th Grade" sub="Workshop-style group focused on original fiction, poetry, and narrative craft. Produced original poetry, fiction drafts, and personal essays." />
           <Row left="Beta Club" right="Grove & Cornerstone" sub="National honor society recognizing academic achievement, character, leadership, and service." />
         </Section>
 
         {/* ─── Athletics ─── */}
         <Section roman="XI." title="Athletics">
-          <Row left="Cheerleader, Back / Base" right="9th – 10th Grade" sub="Competitive cheer support and stunt base. 6–7 hrs/week during season." />
+          <Row left="Cheerleader, Back / Base" right="9th to 10th Grade" sub="Competitive cheer support and stunt base. 6 to 7 hrs/week during season." />
           <Row left="Track & Field, Shot Put, Discus, 100m" right="9th Grade" sub="Competed in field and sprint events during 9th grade spring season." />
           <Row left="Weightlifting" right="Ongoing" sub="Scientific hypertrophy-focused training program. Consistent multi-year commitment." />
         </Section>

@@ -142,7 +142,7 @@ export default function SteadyStartPage() {
                 <FormInput label="Your name" required value={form.name} onChange={(v) => update("name", v)} placeholder="e.g., Jane Doe" />
                 <div style={twoCol}>
                   <FormInput label="Email" type="email" value={form.email} onChange={(v) => update("email", v)} placeholder="you@example.com" />
-                  <FormInput label="Phone" value={form.phone} onChange={(v) => update("phone", v)} placeholder="(770) 555-..." />
+                  <FormInput label="Phone" value={form.phone} onChange={(v) => update("phone", v)} placeholder="(770) 555-0100" />
                 </div>
                 <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", fontStyle: "italic", margin: "4px 0 0" }}>Pick whichever you prefer. At least one is required.</p>
               </section>

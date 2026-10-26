@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "About Elijah Purcell | Founder of Purcell Ventures LLC",
+  title: "About Elijah Purcell, founder",
   description:
     "Elijah Purcell is the founder of Purcell Ventures LLC, a Georgia software company building sites, software and AI tooling for local businesses, and a psychology and data science student at the University of Alabama Honors College in Tuscaloosa.",
   keywords: [
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Purcell Ventures LLC founder", "University of Alabama 2026", "Elijah Purcell bio",
   ],
   openGraph: {
-    title: "About Elijah Purcell: Founder of Purcell Ventures LLC",
+    title: "About Elijah Purcell, Founder/CEO of Purcell Ventures LLC",
     description:
       "Elijah Purcell is the founder of Purcell Ventures LLC, a Georgia software company building sites, software and AI tooling for local businesses, and a psychology and data science student at the University of Alabama Honors College in Tuscaloosa.",
     url: "https://purcellventures.co/about",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Elijah Purcell: Founder, Purcell Ventures LLC",
+    title: "About Elijah Purcell, Founder/CEO, Purcell Ventures LLC",
     description: "Entrepreneur, AI consultant, software developer. Tuscaloosa, Alabama. University of Alabama Honors College, Class of 2030.",
   },
   alternates: { canonical: "https://purcellventures.co/about" },
@@ -35,7 +35,7 @@ const schema = {
       "@id": "https://purcellventures.co/about",
       "url": "https://purcellventures.co/about",
       "name": "About Elijah Purcell",
-      "description": "Profile page for Elijah Purcell, Founder and CEO of Purcell Ventures LLC.",
+      "description": "Profile page for Elijah Purcell, Founder/CEO of Purcell Ventures LLC.",
       "mainEntity": { "@id": "https://purcellventures.co/#founder" },
       "about": { "@id": "https://purcellventures.co/#founder" },
       "publisher": { "@id": "https://purcellventures.co/#organization" },

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/courses" },
-  title: "Courses | Elijah Purcell",
+  title: "Courses by Elijah Purcell",
   description:
     "Three self-paced courses from Elijah Purcell: the college application playbook, the business launch playbook, and Zero to Automated.",
   // NO canonical here. This layout wraps every /courses child route and Next

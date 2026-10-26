@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 // so four pages shared one title, and a duplicate title is a reason for a crawler
 // to skip a page on a site it is already barely indexing.
 export const metadata: Metadata = {
-  title: "Zero to Automated: AI Automation for Small Business | Elijah Purcell",
+  title: "Zero to Automated: AI Automation for Small Business, by Elijah Purcell",
   description:
     "How to build automations for your own work: what to automate first, what to leave alone, and how to tell which is which.",
   alternates: { canonical: "/courses/ai-automation" },

@@ -11,7 +11,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/cold-outreach-that-worked" },
-  title: { absolute: "The cold email that got me a client, and the ones that did not | Elijah Purcell" },
+  title: { absolute: "The cold email that got me a client, and the ones that did not, by Elijah Purcell" },
   description:
     "What worked when a teenager cold-emailed small businesses: leading with a specific observation instead of a pitch, why attaching work beats describing it, and three sentences to cut.",
 };
@@ -29,7 +29,7 @@ export default function Post() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
+        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
 
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },

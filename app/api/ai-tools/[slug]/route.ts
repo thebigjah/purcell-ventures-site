@@ -5,6 +5,10 @@ import { getTool } from "@/lib/ai-tools";
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
+const WRITING_RULES = `
+
+WRITING RULES for all output: never use em dashes, en dashes, semicolons, middle dots, vertical bars or arrows. Never write "it's not X, it's Y" contrasts. Use active voice and specific facts from the input. No hype words, slogans or filler.`;
+
 export async function POST(req: NextRequest, { params }: { params: Promise<{ slug: string }> }) {
   const blocked = guard(req);
   if (blocked) return blocked;
@@ -30,7 +34,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ slu
     const response = await client.messages.create({
       model: "claude-haiku-4-5-20251001",
       max_tokens: tool.maxTokens || 1500,
-      system: tool.systemPrompt,
+      system: tool.systemPrompt + WRITING_RULES,
       messages: [{ role: "user", content: userMessage }],
     });
 

@@ -26,7 +26,7 @@ const PROJECTS: Project[] = [
     slug: "ua-today",
     title: "UA Today",
     subtitle: "University of Alabama events from six sources in one feed.",
-    description: "Aggregates six separate sources into a single feed of University of Alabama events, roughly seven hundred at a time, with a moderation console, a student pickup-games board, and org profiles. Unofficial, and it says so in the masthead.",
+    description: "Aggregates six separate sources into a single feed of University of Alabama events, around seven hundred at a time, with a moderation console, a student pickup-games board, and org profiles. Unofficial, and it says so in the masthead.",
     category: ["Web", "AI Tools"],
     techStack: ["Node.js", "Vercel", "Six upstream sources", "Automated health checks"],
     liveUrl: "https://ua-today.vercel.app",
