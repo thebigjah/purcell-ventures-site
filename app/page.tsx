@@ -210,7 +210,7 @@ export default function Home() {
           items={[
             ["Reach", <span key="r"><a className="ui-link" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a><br /><a className="ui-link" href={`tel:${CONTACT.phoneE164}`}>{CONTACT.phone}</a></span>],
             ["Service area", "Metro Atlanta and Cobb County: Kennesaw, Marietta, Acworth, Canton and Woodstock. Tuscaloosa. Remote nationwide."],
-            ["Sister company", "Mantle Field Services, metro Atlanta only"],
+            ["Sister company", <span key="m"><a className="ui-link" href="https://mantle-field-site.vercel.app" target="_blank" rel="noopener noreferrer">Mantle Field Services</a>, metro Atlanta only</span>],
             ["Filing", `Georgia LLC, control number ${CONTACT.llcControlNumber}, established April 8, 2025, Acworth, Georgia`],
           ]}
         />

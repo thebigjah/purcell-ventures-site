@@ -56,13 +56,13 @@ export default function ToolsPage() {
         title={`${count} free single-page tools.`}
         lede="I built these single-purpose tools. Each one is one file that runs in the browser, keeps what you enter on your own device and needs no account."
         meta="Until now the only links to them were on my GitHub profile."
+        crumbs={<Breadcrumbs trail={[
+          { name: "Home", href: "/" },
+          { name: "Free tools", href: "/tools" },
+        ]} />}
       />
 
       <Section stack>
-        <Breadcrumbs trail={[
-          { name: "Home", href: "/" },
-          { name: "Free tools", href: "/tools" },
-        ]} />
         <Rows
           items={TOOLS.map(([slug, name, desc]) => ({
             name,

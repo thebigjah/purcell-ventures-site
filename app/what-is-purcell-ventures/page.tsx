@@ -35,6 +35,10 @@ export default function CompanyPage() {
         title="What is Purcell Ventures?"
         lede={<><strong>Purcell Ventures LLC</strong> is a Georgia software company that builds websites, custom software and AI tools for small businesses. <Link className="ui-link" href="/who">Elijah Purcell</Link> founded it on 8 April 2025, and it is registered with the Georgia Secretary of State. One person runs it. He answers the phone, writes the code and signs the contract.</>}
         meta="Last reviewed 20 August 2026"
+        crumbs={<Breadcrumbs trail={[
+          { name: "Home", href: "/" },
+          { name: "What is Purcell Ventures", href: "/what-is-purcell-ventures" },
+        ]} />}
       />
 
       <Section title="At a glance">
@@ -77,13 +81,6 @@ export default function CompanyPage() {
         </Prose>
       </Section>
 
-      {/* PageHero has no breadcrumb slot and must stay first in <main>, so the trail sits here. */}
-      <div className="ui-wrap" style={{ paddingBottom: 40 }}>
-        <Breadcrumbs trail={[
-          { name: "Home", href: "/" },
-          { name: "What is Purcell Ventures", href: "/what-is-purcell-ventures" },
-        ]} />
-      </div>
     </main>
   );
 }

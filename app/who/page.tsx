@@ -68,6 +68,10 @@ export default function WhoPage() {
         title="Who is Elijah Purcell?"
         lede="Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company that builds websites and software for local businesses. He is also a psychology and data science student at the University of Alabama Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at seventeen and runs it from Tuscaloosa, Alabama."
         meta="Last reviewed 20 August 2026"
+        crumbs={<Breadcrumbs trail={[
+          { name: "Home", href: "/" },
+          { name: "Who is Elijah Purcell", href: "/who" },
+        ]} />}
       />
 
       <Section title="At a glance">
@@ -119,14 +123,6 @@ export default function WhoPage() {
         </Prose>
       </Section>
 
-      {/* PageHero has no breadcrumb slot and must stay the first child of <main> for the
-          hero padding rule, so the trail and its BreadcrumbList schema sit at the end. */}
-      <div className="ui-wrap" style={{ paddingBottom: 40 }}>
-        <Breadcrumbs trail={[
-          { name: "Home", href: "/" },
-          { name: "Who is Elijah Purcell", href: "/who" },
-        ]} />
-      </div>
     </main>
   );
 }
