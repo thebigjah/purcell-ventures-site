@@ -1,7 +1,7 @@
 import Link from "next/link";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
-import { PostLayout } from "@/app/components/ui";
+import { PostLayout, Note } from "@/app/components/ui";
 
 export const metadata = {
   alternates: { canonical: "/blog/what-one-operator-can-deliver" },
@@ -22,6 +22,9 @@ export default function Post() {
       title="What one operator can deliver"
       meta="20 August 2026, 7 minute read"
     >
+      <Note>
+        Since this post, the agents have grown into COSMIC: 57 agents in 17 rooms. The current roster is on <Link href="/team">the team page</Link>.
+      </Note>
       <p>
         Most solo shops&apos; websites promise personal service and direct access to the person
         doing the work. Those claims are true, and they leave out what a client needs to

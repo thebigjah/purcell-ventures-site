@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero, Section, Tiers, Rows, Button, ClosingCall, Prose } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 
@@ -112,7 +113,7 @@ export default function SitesPage() {
       <Section title="The Loom" intro="How some businesses first hear from me.">
         <Prose>
           <p>
-            The Loom is the system I use to find small businesses whose web presence could be doing more, research them, build a preview site, and reach out. If you came to this page from a preview of your own business that I built before we spoke, The Loom built it.
+            The Loom is the system I use to find small businesses whose web presence could be doing more, research them, build a preview site, and reach out. It is one of the 17 rooms in COSMIC, my station of 57 AI agents, and its seven agents each do one part of that work. You can meet them on <Link href="/team">the team page</Link>. If you came to this page from a preview of your own business that I built before we spoke, The Loom built it.
           </p>
         </Prose>
         <div className="ui-hero__actions"><Button href="https://the-loom-gold.vercel.app" ghost>See The Loom</Button></div>

@@ -14,7 +14,7 @@ const FACTS: [string, string][] = [
   ["Founder/CEO and sole member", "Elijah Purcell"],
   ["Operated from", "Tuscaloosa, Alabama"],
   ["Registered address", "Acworth, Georgia"],
-  ["People", "One, plus fifteen AI agents, which are software"],
+  ["People", "One, plus 57 AI agents in COSMIC, which are software"],
   ["Sister brand", "Mantle Field Services, metro Atlanta"],
 ];
 
@@ -53,7 +53,7 @@ export default function CompanyPage() {
         <Rows items={DIVISIONS} />
         <Prose>
           <p style={{ marginTop: 24 }}>
-            <Link href="/team">Fifteen AI agents</Link> run proposals, audits, compliance and outreach on a schedule. That page opens by saying every one of them is software.
+            COSMIC, a station of 57 AI agents in 17 rooms, does proposals, site audits, security checks, research and outreach for the company. Each agent is a Claude session with a narrow set of tools and a written charter. <Link href="/team">The team page</Link> lists the agents and opens by saying every one of them is software.
           </p>
         </Prose>
       </Section>

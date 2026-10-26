@@ -55,7 +55,7 @@ export const QA: [string, string][] = [
   ["How much does it cost?",
    "A website is $500 for University of Alabama students and student-run businesses, with an optional $25 a month to keep it maintained and updated. Custom software and AI automation are quoted per project after a free conversation about what you need."],
   ["Are you an agency?",
-   "No. Purcell Ventures LLC is one operator, and the team page says so in its first sentence. A fifteen-agent AI workforce handles proposals, audits, compliance and outreach on a schedule, and a human does the building and a human answers the phone."],
+   "No. Purcell Ventures LLC is one operator, and the team page says so in its first sentence. COSMIC, a station of 57 AI agents in 17 rooms that I built, does proposals, site audits, security checks, research and outreach. A human does the building and a human answers the phone."],
   ["Do you only work with businesses in Tuscaloosa?",
    "No. I deliver digital work nationwide. Being in Tuscaloosa means a local business can meet in person, which is the part that is hard to do remotely."],
 ];

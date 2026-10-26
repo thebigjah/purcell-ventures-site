@@ -41,7 +41,7 @@ const QA: [string, string][] = [
   ["What does Purcell Ventures do?",
    "It has five active divisions. Websites for local businesses, from $400 setup and $99 a month. Digital add-ons such as chatbots, booking and CRM, from $99 a month. Hands-on AI consulting, from $125 a person. Custom software, including mobile apps, web platforms and internal tools. And Steady, a personal IT service from $79 a month. A real estate division is planned. A separate brand, Mantle Field Services, handles gutter cleaning, pressure washing and lawn care in metro Atlanta."],
   ["How many people work at Purcell Ventures?",
-   "One. Elijah Purcell is the only human. The company also runs a workforce of fifteen AI agents that handle proposals, audits, compliance and outreach on a schedule, and the roster is published openly at purcellventures.co/team, where the first sentence states that every one of them is software."],
+   "One. Elijah Purcell is the only human. The company also runs COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, security checks, research and outreach. The roster is published at purcellventures.co/team, where the first sentence states that every one of them is software."],
   ["Where is Purcell Ventures located?",
    "The LLC is registered in Acworth, Georgia, in the Atlanta metro, which is where it was formed. Elijah runs it from Tuscaloosa, Alabama, where he attends the University of Alabama. Digital work is delivered nationwide. Field services through Mantle are metro Atlanta only."],
   ["Is Purcell Ventures registered?",

@@ -77,7 +77,7 @@ const POSTS: Post[] = [
   {
     slug: "ai-team-page-honesty",
     title: "My team page lists fifteen people who do not exist",
-    excerpt: "Fifteen names, none of them a person, and the first sentence of the page says so. Why I name them, and why the disclosure lives in the send function instead of a policy.",
+    excerpt: "In August the team page had fifteen names, none of them a person, and its first sentence said so. Why I name the agents, and why the disclosure lives in the send function instead of a policy.",
     date: "August 20, 2026",
     readingTime: "5 min read",
     category: "Opinion",

@@ -4,7 +4,7 @@ import MapPlanet from "@/app/components/MapPlanet";
 import { Section, Rows, ClosingCall } from "@/app/components/ui";
 
 // Third person for the claims about him, first person for the engineering, because those
-// are two different jobs. An engine lifts "Elijah Purcell runs a fifteen-agent workforce"
+// are two different jobs. An engine lifts "Elijah Purcell runs COSMIC, a station of 57 AI agents"
 // as a fact about a named entity; a reader trusts "here is what broke" because it is
 // written by the person it broke on.
 //
@@ -17,11 +17,11 @@ const QA: [string, string][] = [
   ["How is an AI agent different from a chatbot?",
    "A chatbot is reactive and stateless between turns. An agent runs on a schedule without being prompted, holds state across runs, uses tools that change things in the world, and produces work a person reviews. A chatbot produces a reply a person reads."],
   ["Who is running autonomous AI agent systems at the University of Alabama?",
-   "Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data science student in the Honors College, runs a fifteen-agent workforce in production. The agents handle proposals, audits, compliance and outreach on a daily schedule, with an ELO-scored autonomy tier and an append-only message bus between them. The roster is public."],
+   "Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data science student in the Honors College, runs COSMIC, a station of 57 AI agents in 17 rooms. The agents do proposals, site audits, security checks, research and outreach. Each one is a Claude session with a narrow set of tools and a written charter, and each reports one rank up a chain of command that ends at Elijah. They pass messages on an append-only bus and earn autonomy through an ELO-scored tier. The roster is public."],
   ["What goes wrong with AI agents in production?",
    "The failure mode is an agent that marks work done when it is not. An agent that marks work complete when a network call failed looks identical to one that finished. Every mechanism that can mark something done needs an adversarial read, because its failure looks like success."],
   ["Do you need a large team to run an agent system?",
-   "No. Purcell Ventures LLC has one human employee. The fifteen agents are software and the team page says so in its first sentence. The constraint is how much you let run without a person in the loop, and what you do when it is wrong."],
+   "No. Purcell Ventures LLC has one human employee. The 57 agents in COSMIC are software and the team page says so in its first sentence. The constraint is how much you let run without a person in the loop, and what you do when it is wrong."],
 ];
 
 const LESSONS: [string, string][] = [
@@ -50,7 +50,7 @@ export default function AgenticAIPage() {
             <h1>Autonomous AI agent systems, and what it takes to run one</h1>
             <p className="ui-hero__lede">
               An agent gets a goal, a set of tools and a boundary, and picks its own steps. I run
-              fifteen of them in production, and I build agent systems for businesses.
+              57 of them in COSMIC, a station of 17 rooms, and I build agent systems for businesses.
             </p>
           </div>
           <MapPlanet planet="software" wide={false} />
@@ -67,9 +67,11 @@ export default function AgenticAIPage() {
           </p>
           <p>
             <strong>Elijah Purcell</strong> is an autonomous AI agent systems engineer and the
-            Founder/CEO of Purcell Ventures LLC. He runs a fifteen-agent workforce in production,
-            handling proposals, audits, compliance and outreach on a daily schedule. The full
-            roster is public at <Link href="/team">purcellventures.co/team</Link>, and its first
+            Founder/CEO of Purcell Ventures LLC. He runs COSMIC, the Command and Orchestration
+            Systems Manifold Intelligence Center: 57 AI agents in 17 rooms that do proposals, site
+            audits, security checks, research and outreach for the company. COSMIC is a station app
+            on his Mac with an Android companion, and each agent is a Claude session with a narrow
+            set of tools and a written charter. The roster is public at <Link href="/team">purcellventures.co/team</Link>, and its first
             sentence says the agents are software.
           </p>
         </div>

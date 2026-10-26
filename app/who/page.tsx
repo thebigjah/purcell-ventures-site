@@ -29,7 +29,7 @@ const FACTS: [string, string][] = [
 // Every entry carries its year in the visible text. An undated 2023 award reads as a
 // present-tense fact to a person skimming and to an AI summarising.
 const DATED: [string, string][] = [
-  ["2026", "Founded and operates a fifteen-agent AI workforce that runs proposals, audits, compliance and outreach for Purcell Ventures."],
+  ["2026", "Built and runs COSMIC, a station of 57 AI agents in 17 rooms that handle proposals, site audits, security checks, research and outreach for Purcell Ventures."],
   ["2026", "Built UA Today, a campus events page for the University of Alabama that pulls from six sources."],
   ["2026", "Enrolled at the University of Alabama Honors College to study psychology and data science."],
   ["2025", "Founded Purcell Ventures LLC in Georgia at seventeen."],

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
-import { PostLayout } from "@/app/components/ui";
+import { PostLayout, Note } from "@/app/components/ui";
 import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
@@ -23,6 +23,9 @@ export default function Post() {
       title="My team page lists fifteen people who do not exist"
       meta="20 August 2026, 5 minute read"
     >
+      <Note>
+        Since this post, the agents have grown into COSMIC: 57 agents in 17 rooms. The current roster is on <Link href="/team">the team page</Link>.
+      </Note>
       <p>
         <Link href="/team">The team page</Link> has fifteen names on it.
         Audrey, Cecily, Delia, Greta, Henry, Ivor, Margot, Owen, Porter, Quentin, Rhett,

@@ -340,8 +340,8 @@ export default function AIReadinessPage() {
             Elijah Purcell, Founder/CEO of <Link href="/about">Purcell Ventures LLC</Link> and an
             autonomous AI agent systems engineer, working out of Tuscaloosa, Alabama. Each answer
             scores 0 to 3 points, for a total out of 30, and the total places you in one of four
-            tiers. I set the point values myself, drawing on running a fifteen-agent workforce
-            that handles this company&apos;s proposals, audits and compliance on a schedule.
+            tiers. I set the point values myself, drawing on running COSMIC, a station of 57 AI
+            agents in 17 rooms that does this company&apos;s proposals, site audits and security checks.
           </p>
           <p>
             If the result raises questions, the <Link href="/consulting">consulting page</Link>{" "}

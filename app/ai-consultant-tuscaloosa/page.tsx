@@ -66,8 +66,8 @@ export default function AiConsultantTuscaloosa() {
       </p>
 
       <p>
-        A fifteen-agent AI workforce I built handles proposals, audits, compliance and outreach
-        on a schedule. The agents are software, and the <Link href="/team">team page</Link> says
+        COSMIC, a station of 57 AI agents in 17 rooms that I built, does proposals, site
+        audits, security checks, research and outreach. The agents are software, and the <Link href="/team">team page</Link> says
         so in its first sentence. A human does the building and a human answers your email.
       </p>
 

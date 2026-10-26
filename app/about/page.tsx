@@ -76,6 +76,7 @@ export default function AboutPage() {
             ["University", "The University of Alabama, Class of 2030"],
             ["Program", "Honors College, psychology and data science"],
             ["Shipped", <><Link className="ui-link" href="/tools">29 free tools</Link> live, plus client sites and production apps, designed and coded by me</>],
+            ["AI agents", <>COSMIC, a station of 57 AI agents in 17 rooms that I built to run company work. <Link className="ui-link" href="/team">The roster</Link> is public.</>],
             ["Company", `Purcell Ventures LLC, formed April 2025, Georgia control number ${CONTACT.llcControlNumber}`],
             ["Registered in", "Acworth, Georgia"],
             ["Email", <a key="e" className="ui-link" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>],

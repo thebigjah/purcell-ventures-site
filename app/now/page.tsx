@@ -11,7 +11,7 @@ const FOCUS: { label: string; items: ReactNode[] }[] = [
     label: "Building",
     items: [
       "Purcell Ventures. Rebuilding this site with a new mark and a new gold.",
-      <>COSMIC, the set of AI agents that runs the company&apos;s outreach: finding local businesses, auditing their sites and emailing the ones that need help. The roster is public on <Link href="/team">the team page</Link>.</>,
+      <>COSMIC, a station of 57 AI agents in 17 rooms that runs on my Mac with an Android companion. The agents find local businesses, audit their sites, draft proposals and email the ones that need help, and a separate room scores every email against my writing rules first. The roster is public on <Link href="/team">the team page</Link>.</>,
       <>Three courses: The College Application Playbook, The Business Launch Playbook and Zero to Automated. None is finished, and the waitlist is open. Ask me and I will send the material I have so far.</>,
       "UA Today. Campus events for the University of Alabama, pulled from six sources into one place, and used by students other than me.",
       "Search and AI visibility work for a flooring installer in Georgia, measured in booked jobs.",

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
-import { PostLayout } from "@/app/components/ui";
+import { PostLayout, Note } from "@/app/components/ui";
 import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
@@ -23,6 +23,9 @@ export default function Post() {
       title="I built agents that cannot fix what they find"
       meta="17 August 2026, 4 minute read"
     >
+      <Note>
+        Since this post, the agents have grown into COSMIC: 57 agents in 17 rooms. The current roster is on <Link href="/team">the team page</Link>.
+      </Note>
       <p>One of my agents can read every repository I own. It cannot change a single line of any of them. The separation is deliberate. One design decision created it and caused a failure I did not expect.</p>
 
       <h2>Agents get text and no tools</h2>

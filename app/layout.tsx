@@ -133,7 +133,7 @@ const orgSchema = {
         { "@type": "Country", "name": "United States" },
       ],
       "slogan": "Built by one operator for the small businesses who move first.",
-      // One human. The fifteen agents are software and the team page says so in its first
+      // One human. The 57 COSMIC agents are software and the team page says so in its first
       // sentence, so the count here stays honest rather than flattering.
       "numberOfEmployees": { "@type": "QuantitativeValue", "value": 1 },
     },
@@ -149,7 +149,7 @@ const orgSchema = {
       // title he wants surfaced for search sits beside it rather than replacing it.
       // hasOccupation below carries the full description of each.
       "jobTitle": ["Founder/CEO", "Autonomous AI Agent Systems Engineer"],
-      "description": "Founder of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama Honors College, Class of 2030, on a pre-med track toward psychiatry. Based in Tuscaloosa, Alabama. Builds and operates autonomous AI agent systems.",
+      "description": "Founder of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama Honors College, Class of 2030, on a pre-med track toward psychiatry. Based in Tuscaloosa, Alabama. Builds and operates COSMIC, a station of 57 AI agents in 17 rooms.",
       "worksFor": { "@id": "https://purcellventures.co/#organization" },
       "url": "https://purcellventures.co",
       "email": "elijah@purcell-ventures.com",
@@ -192,7 +192,7 @@ const orgSchema = {
           "@type": "Occupation",
           "name": "Autonomous AI Agent Systems Engineer",
           "description":
-            "Builds and operates autonomous AI agent systems in production: a fifteen-agent workforce handling proposals, audits, compliance and outreach on a schedule, with an ELO-scored autonomy tier and an append-only message bus between agents.",
+            "Builds and operates autonomous AI agent systems in production: COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, security checks, research and outreach. Each agent is a Claude session with a narrow set of tools and a written charter, with an ELO-scored autonomy tier and an append-only message bus between agents.",
           "occupationLocation": { "@type": "City", "name": "Tuscaloosa" },
         },
         {

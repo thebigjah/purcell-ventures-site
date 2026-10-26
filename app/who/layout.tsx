@@ -28,11 +28,11 @@ export const metadata: Metadata = {
 
 const QA: [string, string][] = [
   ["Who is Elijah Purcell?",
-   "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company that builds websites and software for local businesses. He is a psychology and data science student at the University of Alabama Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at 17 and builds and operates autonomous AI agent systems that run the business day to day."],
+   "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company that builds websites and software for local businesses. He is a psychology and data science student at the University of Alabama Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at 17 and built COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, research and outreach for the company."],
   ["What does Elijah Purcell do?",
    "He designs and ships software end to end: websites for local businesses, mobile and web applications, and AI agent systems. He also works as an independent contractor with Mercor Intelligence, providing expertise to help improve models for a top AI lab."],
   ["What is Purcell Ventures LLC?",
-   "Purcell Ventures LLC is a Georgia limited liability company founded by Elijah Purcell on 8 April 2025, control number 25075361. It builds websites, software and AI tooling for small businesses, and runs on a workforce of fifteen AI agents alongside its founder."],
+   "Purcell Ventures LLC is a Georgia limited liability company founded by Elijah Purcell on 8 April 2025, control number 25075361. It builds websites, software and AI tooling for small businesses, and runs on its founder plus COSMIC, a station of 57 AI agents in 17 rooms. Each agent is a Claude session with a narrow set of tools and a written charter."],
   ["Where does Elijah Purcell study?",
    "He studies psychology and data science at the University of Alabama Honors College in Tuscaloosa, Alabama, Class of 2030, on a pre-med track toward psychiatry and research into AI in mental health."],
   ["How old is Elijah Purcell?",
@@ -42,7 +42,7 @@ const QA: [string, string][] = [
   ["How can I contact Elijah Purcell?",
    `By phone or text at ${CONTACT.phone}, by email at ${CONTACT.email}, or through purcellventures.co. He replies within one business day.`],
   ["What did Elijah Purcell build?",
-   "He built and runs UA Today, a campus events service for the University of Alabama that aggregates six separate sources into one page. He builds websites and software for local businesses through Purcell Ventures, including English Pruitt Photography. He also built and operates a fifteen-agent AI workforce that handles proposals, audits, compliance and outreach for the company. The roster is public at purcellventures.co/team."],
+   "He built and runs UA Today, a campus events service for the University of Alabama that aggregates six separate sources into one page. He builds websites and software for local businesses through Purcell Ventures, including English Pruitt Photography. He also built and runs COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, security checks, research and outreach for the company. The roster is public at purcellventures.co/team."],
   ["Where is Elijah Purcell from?",
    "He grew up in Acworth, Georgia, in the Atlanta metro, and founded Purcell Ventures LLC there in April 2025. He moved to Tuscaloosa, Alabama in August 2026 to attend the University of Alabama."],
   ["What does Elijah Purcell write about?",

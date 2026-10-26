@@ -87,7 +87,7 @@ export default function AiAtAlabama() {
       <h2>What the catalog leaves out</h2>
 
       <p>
-        I run production AI agent systems. Fifteen named agents handle proposals, audits, compliance and outreach for my company on a schedule. They were running before I had taken an AI course.
+        I run production AI agent systems. COSMIC, a station of 57 named agents in 17 rooms, does proposals, site audits, security checks, research and outreach for my company. The first of them were running before I had taken an AI course.
       </p>
 
       <p>

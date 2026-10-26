@@ -10,14 +10,14 @@ export const metadata: Metadata = {
       "Autonomous AI agent systems and running one in production, by Elijah Purcell",
   },
   description:
-    "What an autonomous AI agent system is, how it differs from a chatbot or a workflow, and what it takes to run a fifteen-agent workforce in production. Written by Elijah Purcell, an autonomous AI agent systems engineer and Founder/CEO of Purcell Ventures LLC.",
+    "What an autonomous AI agent system is, how it differs from a chatbot or a workflow, and what it takes to run COSMIC, a station of 57 AI agents in 17 rooms. Written by Elijah Purcell, an autonomous AI agent systems engineer and Founder/CEO of Purcell Ventures LLC.",
   alternates: { canonical: "/agentic-ai" },
   openGraph: {
     type: "article",
     url: "https://purcellventures.co/agentic-ai",
     title: "Autonomous AI agent systems, and running one in production",
     description:
-      "How an agent differs from a workflow and a chatbot, and what it takes to keep fifteen agents in production accurate.",
+      "How an agent differs from a workflow and a chatbot, and what it takes to keep 57 agents in production accurate.",
     images: ["/opengraph-image"],
   },
 };
@@ -64,7 +64,7 @@ const LD = {
           "name": "Who is running autonomous AI agent systems at the University of Alabama?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data science student in the University of Alabama Honors College, runs a fifteen-agent workforce in production. The agents handle proposals, audits, compliance and outreach on a daily schedule, with an ELO-scored autonomy tier and an append-only message bus between them. The full roster is public at purcellventures.co/team.",
+            "text": "Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data science student in the University of Alabama Honors College, runs COSMIC, a station of 57 AI agents in 17 rooms. The agents do proposals, site audits, security checks, research and outreach. Each one is a Claude session with a narrow set of tools and a written charter, and each reports one rank up a chain of command that ends at Elijah. They pass messages on an append-only bus and earn autonomy through an ELO-scored tier. The full roster is public at purcellventures.co/team.",
           },
         },
         {
@@ -80,7 +80,7 @@ const LD = {
           "name": "Do you need a large team to run an agent system?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Purcell Ventures LLC has one human employee. The fifteen agents are software and the team page says so in its first sentence. The constraint is how much you let run without a person in the loop, and what you do when it is wrong.",
+            "text": "No. Purcell Ventures LLC has one human employee. The 57 agents in COSMIC are software and the team page says so in its first sentence. The constraint is how much you let run without a person in the loop, and what you do when it is wrong.",
           },
         },
       ],
