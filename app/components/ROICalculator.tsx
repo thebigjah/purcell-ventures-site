@@ -35,9 +35,9 @@ export default function ROICalculator() {
     <section className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="max-w-2xl mb-10">
-          <h2 className="text-3xl font-bold mb-4">What&apos;s this actually worth to you?</h2>
+          <h2 className="text-3xl font-bold mb-4">Estimate your return</h2>
           <p className="text-[var(--color-warm-text-muted)] leading-relaxed">
-            Most clients recoup the monthly cost in the first week. See for yourself.
+            Enter your own numbers. The business-type presets are made-up starting values.
           </p>
         </div>
 
@@ -176,22 +176,22 @@ export default function ROICalculator() {
               </div>
               <div className="bg-[var(--color-warm-card)] rounded-xl p-5 border border-[var(--color-warm-border)] text-center">
                 <p className="text-3xl font-bold text-[var(--color-warm-accent)]">
-                  {paybackDays <= 30 ? `${paybackDays}d` : "—"}
+                  {paybackDays <= 30 ? `${paybackDays}d` : "Over 30d"}
                 </p>
                 <p className="text-xs text-[var(--color-warm-text-muted)] mt-1">payback period</p>
               </div>
             </div>
 
             <p className="text-xs text-[var(--color-warm-text-light)] leading-relaxed px-1">
-              Conservative estimate based on online booking capturing missed calls, chatbot converting
-              website visitors, and review manager improving local search ranking. Your actual results will vary.
+              This is arithmetic on the numbers above. It assumes online booking, the chatbot and review
+              requests bring in the extra bookings you entered. Your results will vary.
             </p>
 
             <a
               href="#contact"
               className="block text-center px-6 py-3.5 bg-[var(--color-warm-accent)] text-white font-semibold rounded-xl hover:bg-[var(--color-warm-accent-dark)] transition-colors"
             >
-              Let&apos;s talk about your numbers →
+              Talk to me about your numbers
             </a>
           </div>
         </div>

@@ -35,13 +35,13 @@ const MODULES: Module[] = [
             "Most people who want to start a business already have an idea. The problem isn't the idea, it's that they can't tell whether it's a real business or a thing they like doing. These are not the same thing, and confusing them is the most common reason people spend months building something nobody pays for.",
             "A business solves a problem someone else has and is willing to pay to fix. A hobby solves a problem you have and enjoy working on. The test is simple: would someone hand you money for this without you being their friend, their family member, or someone they feel obligated to support? If you have to imagine a sympathetic buyer, you have a hobby.",
             "There's also the lifestyle trap, people build a 'business' around something they love without ever asking whether the market values it. A passion for something is not evidence of demand. It's evidence that you would enjoy doing the work. Enjoyment and market demand occasionally overlap, but they're independent variables. Build around demand first, and find ways to enjoy the work second.",
-            "The good news: this distinction is testable before you spend a dime. In the next lesson, we'll build your customer profile. In Lesson 1-3, you'll validate whether people will actually pay. But you have to start by being honest with yourself here, if this is a hobby, that's fine. The course will still help you build systems around it. But don't call it a business until the market confirms it.",
+            "The good news: this distinction is testable before you spend a dime. In the next lesson, we'll build your customer profile. In Lesson 1-3, you'll validate whether people will pay. But you have to start by being honest with yourself here, if this is a hobby, that's fine. The course will still help you build systems around it. But don't call it a business until the market confirms it.",
           ],
           takeaways: [
             "A business solves someone else's problem at a price they'll pay, not just something you enjoy doing",
             "Demand and passion are independent variables, don't assume your enthusiasm signals a market",
-            "The real test: would a stranger, without obligation, hand you money for this?",
-            "Being honest at this stage saves months of building the wrong thing",
+            "The test: would a stranger, without obligation, hand you money for this?",
+            "A clear answer at this stage saves months of building the wrong thing",
             "If it's a hobby right now, that's fine, validation can turn it into a business if the market is there",
           ],
         },
@@ -51,14 +51,14 @@ const MODULES: Module[] = [
         notes: {
           intro: [
             "Most founders can describe their product in detail and their customer in vague generalities. 'Anyone who wants X' is not a customer profile, it's an avoidance of the question. The sharper your customer definition, the more effective every subsequent decision is: your messaging, your pricing, your outreach, your offer structure.",
-            "A real customer profile has three layers. First: demographics and situation, who they are, what they do, what stage of life or business they're in. Second: the problem they have, specifically, not abstractly. Not 'they want to grow their business' but 'they're spending 15 hours a week on a task they hate and know they should delegate but don't know how.' Third: their trigger, what's happening in their life right now that makes them willing to buy a solution today. People don't buy when they have a problem; they buy when the problem becomes urgent.",
+            "A real customer profile has three layers. First: demographics and situation, who they are, what they do, what stage of life or business they're in. Second: the problem they have, specifically, not abstractly. Not 'they want to grow their business' but 'they're spending 15 hours a week on a task they hate and know they should delegate but don't know how.' Third: their trigger, what's happening in their life right now that makes them willing to buy a solution today. People buy when the problem becomes urgent.",
             "The best market research is primary: actual conversations with people who fit your target profile. Five conversations will tell you more than 50 hours of reading industry reports. Ask them to describe the problem in their own words. Where do they look for solutions? What have they tried? What did it cost? What didn't work about it? You're not pitching yet, you're listening. The words they use to describe their problem become your marketing copy.",
             "The Customer Profile worksheet in your resource pack structures these conversations and organizes your findings into a single document you'll reference throughout the course. Fill it in after your first five conversations. It will be wrong in some ways, that's expected. You'll update it as you learn more.",
           ],
           takeaways: [
             "'Anyone who wants X' is not a customer profile, specificity is what makes everything else work",
             "Three layers: who they are, what problem they have (specifically), and what triggers them to buy today",
-            "Five real conversations beat 50 hours of desk research, go talk to people",
+            "Five conversations beat 50 hours of desk research, go talk to people",
             "The words your customers use to describe their problem are your marketing copy",
             "Use the Customer Profile worksheet to capture findings and update it as you learn",
             "People buy when the problem becomes urgent, not just when it exists",
@@ -79,7 +79,7 @@ const MODULES: Module[] = [
             "A pre-sale before you build is the clearest validation signal available",
             "Landing page click-through is a softer but real signal for offers that are harder to pre-sell",
             "For services: make the offer in a real conversation and watch what they do next",
-            "One paying client validates the model; ten validates that there's a real market",
+            "One paying client validates the model. Ten show there is a market",
             "If nobody will commit money before you build, take that seriously before investing more time",
           ],
         },
@@ -109,7 +109,7 @@ const MODULES: Module[] = [
     id: "module-2", num: "02", title: "Legal & Structure",
     lessons: [
       {
-        id: "2-1", moduleId: "module-2", title: "Sole prop vs LLC — when each makes sense", duration: "9 min", format: "Camera", videoUrl: null,
+        id: "2-1", moduleId: "module-2", title: "Sole prop vs LLC: when each makes sense", duration: "9 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
             "A sole proprietorship is the default, if you make money from anything, you're already operating as one. There's no registration, no paperwork, no cost. Your business income is your personal income. The problem: your business liability is also your personal liability. If something goes wrong, a client sues, a vendor dispute escalates, a contract is breached, your personal assets are on the table.",
@@ -122,25 +122,25 @@ const MODULES: Module[] = [
             "An LLC separates your business and personal liability, your personal assets are protected if properly maintained",
             "Form an LLC before signing real client contracts or taking on significant revenue",
             "Maintaining the separation (separate bank account, no personal/business mixing) is what makes the protection hold",
-            "Filing cost: $50–$500 depending on state, usually done online in an hour",
+            "Filing cost: $50 to $500 depending on state, usually done online in an hour",
           ],
         },
       },
       {
-        id: "2-2", moduleId: "module-2", title: "Filing your LLC — live walkthrough", duration: "14 min", format: "Screen share", videoUrl: null,
+        id: "2-2", moduleId: "module-2", title: "Filing your LLC: live walkthrough", duration: "14 min", format: "Screen share", videoUrl: null,
         notes: {
           intro: [
             "This lesson is a screen share of the actual LLC filing process. I walk through each step using a real state filing portal. The steps vary slightly by state, but the structure is the same everywhere: choose a name, file articles of organization, designate a registered agent, and pay the filing fee.",
-            "Your LLC name must be unique in your state and must include 'LLC' or 'Limited Liability Company' in the name. Check your state's business name search tool before committing, most states have this as a free online lookup. The name you file doesn't have to be your public-facing brand name; you can operate under a DBA (doing business as) once you're formed.",
-            "The registered agent is the official address that receives legal documents on behalf of your LLC. This needs to be a physical address in your state, not a PO box. You can be your own registered agent if you have a physical address in the state. If you're not in the state or don't want your home address on public record, registered agent services typically cost $50–$150/year.",
-            "The LLC Filing Checklist in your resource pack walks through every step with state-specific notes so you don't miss anything. Filing typically takes 1–7 business days for standard processing, or same-day for expedited (usually $25–$75 extra). Once filed, you'll move immediately to getting your EIN in the next lesson.",
+            "Your LLC name must be unique in your state and must include 'LLC' or 'Limited Liability Company' in the name. Check your state's business name search tool before committing, most states have this as a free online lookup. The name you file doesn't have to be your public-facing brand name. You can operate under a DBA (doing business as) once you're formed.",
+            "The registered agent is the official address that receives legal documents on behalf of your LLC. This needs to be a physical address in your state, not a PO box. You can be your own registered agent if you have a physical address in the state. If you're not in the state or don't want your home address on public record, registered agent services typically cost $50 to $150/year.",
+            "The LLC Filing Checklist in your resource pack walks through every step with state-specific notes so you don't miss anything. Filing typically takes 1 to 7 business days for standard processing, or same-day for expedited (usually $25 to $75 extra). Once filed, you'll move immediately to getting your EIN in the next lesson.",
           ],
           takeaways: [
             "File online through your state's Secretary of State website, it's the same process everywhere",
             "Check name availability before filing, use your state's free business name search tool",
             "You need a registered agent with a physical address in your state, you can serve as your own",
             "Use the LLC Filing Checklist from your resource pack to avoid missing steps",
-            "Expedited processing ($25–$75 extra) is worth it, standard processing can take days",
+            "Expedited processing ($25 to $75 extra) is worth it, standard processing can take days",
             "Your LLC name on file doesn't have to match your brand name, you can use a DBA",
           ],
         },
@@ -149,17 +149,17 @@ const MODULES: Module[] = [
         id: "2-3", moduleId: "module-2", title: "EIN, registered agent, and operating agreement", duration: "8 min", format: "Screen share", videoUrl: null,
         notes: {
           intro: [
-            "An EIN (Employer Identification Number) is your business's tax ID — the equivalent of a Social Security number for your LLC. You need it to open a business bank account, file taxes, hire employees, and in some states to obtain business licenses. Getting one is free and instant through the IRS website at irs.gov. Single-member LLCs can apply online and receive their EIN immediately.",
+            "An EIN (Employer Identification Number) is your business's tax ID, the equivalent of a Social Security number for your LLC. You need it to open a business bank account, file taxes, hire employees, and in some states to obtain business licenses. Getting one is free and instant through the IRS website at irs.gov. Single-member LLCs can apply online and receive their EIN immediately.",
             "The operating agreement is a document that defines how your LLC operates: who owns what percentage, how decisions are made, what happens if a member wants to leave, and how the business is dissolved. Even if you're the only member, most states recommend having one. Some banks require it to open a business account. Draft a simple one, templates are widely available and you don't need a lawyer for a single-member LLC with no outside investors.",
-            "Ongoing compliance after formation: most states require an annual report (usually $25–$100) and some require a franchise tax. Set a calendar reminder for your formation anniversary to check whether your state has an annual filing requirement. Missing it can result in penalties or administrative dissolution of your LLC.",
-            "One thing most people miss: after forming your LLC, you need to actually use it properly. Every contract you sign should be signed as 'Your Name, Member, [LLC Name]' — not your personal name alone. Every invoice should come from the LLC. Every payment should go into the LLC's bank account. The legal separation only holds if you behave like they're actually separate entities.",
+            "Ongoing compliance after formation: most states require an annual report (usually $25 to $100) and some require a franchise tax. Set a calendar reminder for your formation anniversary to check whether your state has an annual filing requirement. Missing it can result in penalties or administrative dissolution of your LLC.",
+            "One thing most people miss: after forming your LLC, you need to use it properly. Every contract you sign should be signed as 'Your Name, Member, [LLC Name]' instead of your personal name alone. Every invoice should come from the LLC. Every payment should go into the LLC's bank account. The legal separation only holds if you behave like they're separate entities.",
           ],
           takeaways: [
             "Get your EIN immediately after filing, it's free and instant at irs.gov",
             "An operating agreement is required in some states and recommended everywhere, even for single-member LLCs",
             "Check your state's annual report requirement and put it on your calendar",
-            "Sign contracts as 'Name, Member, LLC Name' — not your personal name",
-            "The liability protection only holds if you treat the business and personal finances as genuinely separate",
+            "Sign contracts as 'Name, Member, LLC Name' instead of your personal name",
+            "The liability protection only holds if you treat the business and personal finances as separate",
           ],
         },
       },
@@ -169,15 +169,15 @@ const MODULES: Module[] = [
           intro: [
             "Most early-stage business problems, scope creep, unpaid invoices, dispute escalations, could have been prevented with a clear contract signed before the work started. Contracts aren't about distrust. They're about alignment. A good contract forces both parties to think through the details before they become problems.",
             "Every client engagement needs at minimum: a description of exactly what you're delivering (scope), the price and payment terms (when and how you get paid), what happens if they want changes (revision policy), who owns the work product (IP assignment), and how disputes are handled (jurisdiction and process). These don't have to be long. A one-page document that covers all five points is better than a 10-page template nobody reads.",
-            "Payment terms matter more than most people realize. Net-30 (pay within 30 days) is standard in some industries and a trap in others, especially for new businesses with thin cash flow. For services, consider requiring a deposit (25–50%) upfront before work begins, with the remainder due on delivery. This filters out non-serious clients and protects you if they disappear.",
-            "When a client doesn't pay, you have options: a formal demand letter, collections, or small claims court (typically handles disputes up to $10,000–$15,000 without requiring an attorney). The most important thing is having a signed contract, without it, you're in 'he said, she said' territory. With it, you have documented evidence of what was agreed. I've been in this situation. The contract is what protects you.",
+            "Payment terms matter more than most people realize. Net-30 (pay within 30 days) is standard in some industries and a trap in others, especially for new businesses with thin cash flow. For services, consider requiring a deposit (25 to 50%) upfront before work begins, with the remainder due on delivery. This filters out non-serious clients and protects you if they disappear.",
+            "When a client doesn't pay, you have options: a formal demand letter, collections, or small claims court (typically handles disputes up to $10,000 to $15,000 without requiring an attorney). The most important thing is having a signed contract, without it, you're in 'he said, she said' territory. With it, you have documented evidence of what was agreed. I've been in this situation. The contract is what protects you.",
           ],
           takeaways: [
             "Use a written contract for every client engagement, even friends, even small projects",
             "A good contract covers: scope, payment terms, revision policy, IP ownership, and dispute process",
-            "Require a deposit (25–50%) before starting work, it filters bad clients and protects your cash flow",
+            "Require a deposit (25 to 50%) before starting work, it filters bad clients and protects your cash flow",
             "Net-30 is a trap for small businesses, negotiate payment terms that match your cash flow needs",
-            "Without a signed contract, disputes become your word against theirs; with one, you have documentation",
+            "Without a signed contract, disputes become your word against theirs. With one, you have documentation",
             "Small claims court handles most common freelance/service disputes without a lawyer",
           ],
         },
@@ -193,7 +193,7 @@ const MODULES: Module[] = [
           intro: [
             "A separate business bank account is not optional if you have an LLC. Mixing personal and business finances, paying business expenses from your personal account, depositing client payments into your personal account, is called 'piercing the corporate veil.' It undermines the legal separation your LLC is supposed to provide. If you're ever sued, a court can look at your finances and decide the LLC and you were never really separate, removing your liability protection.",
             "The practical case for separation: it makes bookkeeping infinitely easier, makes tax season less painful, and makes you look more professional to clients. When a client pays 'Purcell Ventures LLC' instead of 'Elijah Purcell,' it signals that you take the business seriously. Small things like this build trust.",
-            "Opening a business account typically requires: your LLC formation documents (articles of organization), your EIN, and a deposit (usually $25–$100 minimum). Most major banks offer business checking accounts. Online banks like Mercury, Relay, and Bluevine are popular for small businesses because they have low or no fees, good interfaces, and easy integrations with accounting software.",
+            "Opening a business account typically requires: your LLC formation documents (articles of organization), your EIN, and a deposit (usually $25 to $100 minimum). Most major banks offer business checking accounts. Online banks like Mercury, Relay, and Bluevine are popular for small businesses because they have low or no fees, good interfaces, and easy integrations with accounting software.",
             "For most new businesses, Mercury is where I'd start, no minimum balance, no monthly fees, excellent API/integration support, and built specifically for startups and small businesses. Whatever you choose, set it up the same week you form your LLC. Every dollar earned by the business should flow through this account from day one.",
           ],
           takeaways: [
@@ -210,9 +210,9 @@ const MODULES: Module[] = [
         notes: {
           intro: [
             "Most people price by asking 'what would I be comfortable charging?' That's the wrong question. It produces prices based on your insecurity, not on the value you deliver. The right questions are: what is this worth to the buyer? What does the alternative cost them? What are comparable solutions priced at? Your price is a claim about value, make sure the claim is honest and defensible.",
-            "For service businesses: start with cost-plus pricing to establish a floor (your cost of time × your minimum acceptable hourly rate), then check that floor against market rates. If the market pays more than your floor, move toward market rate. If the market pays significantly more than that, you have room to price on value, charge based on outcomes delivered, not hours spent. A contract lawyer doesn't charge you by how long it takes to draft a document; they charge by the value of the legal protection.",
-            "The Pricing Calculator in your resource pack handles the floor calculation and projects revenue at different rates and volumes. Use it before setting your first price. The psychological reality: most new founders underprice by 30–50% because they're afraid of rejection. A higher price reduces the number of clients you need, attracts more serious buyers, and gives you margin to over-deliver. Cheap pricing signals low confidence and attracts the clients most likely to cause problems.",
-            "Test your price by making an offer. If everyone says yes immediately, you're probably underpriced. If nobody engages at all, you may have a messaging problem or a real price mismatch. If some people say yes and some say no, you're in the right range. The goal isn't to be the cheapest option, it's to be the right option for the right client at a price that reflects what you actually deliver.",
+            "For service businesses: start with cost-plus pricing to establish a floor (your cost of time × your minimum acceptable hourly rate), then check that floor against market rates. If the market pays more than your floor, move toward market rate. If the market pays significantly more than that, you have room to price on value, charge based on outcomes delivered, not hours spent. A contract lawyer doesn't charge you by how long it takes to draft a document. They charge by the value of the legal protection.",
+            "The Pricing Calculator in your resource pack handles the floor calculation and projects revenue at different rates and volumes. Use it before setting your first price. The psychological reality: most new founders underprice by 30 to 50% because they're afraid of rejection. A higher price reduces the number of clients you need, attracts more serious buyers, and gives you margin to over-deliver. Cheap pricing signals low confidence and attracts the clients most likely to cause problems.",
+            "Test your price by making an offer. If everyone says yes immediately, you're probably underpriced. If nobody engages at all, you may have a messaging problem or a real price mismatch. If some people say yes and some say no, you're in the right range. The goal isn't to be the cheapest option, it's to be the right option for the right client at a price that reflects what you deliver.",
           ],
           takeaways: [
             "Price based on value delivered to the buyer, not on what you're comfortable charging",
@@ -220,7 +220,7 @@ const MODULES: Module[] = [
             "Underpricing is a confidence problem disguised as a competitive strategy, it backfires",
             "Use the Pricing Calculator from your resource pack to run the numbers before you commit",
             "A higher price signals confidence and filters for better clients",
-            "Test your price, universal yes means you're underpriced; no engagement means messaging or mismatch",
+            "Test your price. If everyone says yes you're underpriced. If nobody engages, check your messaging or your fit",
           ],
         },
       },
@@ -247,15 +247,15 @@ const MODULES: Module[] = [
         notes: {
           intro: [
             "Most first-time business owners get blindsided by taxes. As a sole proprietor or single-member LLC, your business income flows through to your personal taxes, but unlike a W-2 employee, nobody is withholding anything. You're responsible for setting aside money for taxes yourself, including self-employment tax (15.3% on net income), on top of income tax. The common mistake is spending all your revenue assuming it's profit. It isn't.",
-            "The rule of thumb for year one: set aside 25–30% of every dollar of profit for taxes. This isn't precise, it depends on your income level, deductions, and state tax rate, but it prevents the scenario where you owe $8,000 in April and have $400 in the account. Open a dedicated savings account for tax reserves and move that percentage every time you get paid.",
-            "Quarterly estimated taxes: if you expect to owe more than $1,000 in taxes for the year, the IRS requires you to pay in quarterly installments (April 15, June 15, September 15, January 15). Missing these payments results in underpayment penalties. Your first year, an accountant or CPA is worth the cost, typically $200–$500 for a simple business return, to make sure you set this up correctly.",
+            "The rule of thumb for year one: set aside 25 to 30% of every dollar of profit for taxes. This isn't precise, it depends on your income level, deductions, and state tax rate, but it prevents the scenario where you owe $8,000 in April and have $400 in the account. Open a dedicated savings account for tax reserves and move that percentage every time you get paid.",
+            "Quarterly estimated taxes: if you expect to owe more than $1,000 in taxes for the year, the IRS requires you to pay in quarterly installments (April 15, June 15, September 15, January 15). Missing these payments results in underpayment penalties. Your first year, an accountant or CPA is worth the cost, typically $200 to $500 for a simple business return, to make sure you set this up correctly.",
             "Basic bookkeeping is just tracking money in and money out. You need to know: total revenue, total expenses by category, net profit, and outstanding receivables. Wave is free and handles this well for small businesses. QuickBooks is more powerful but costs $30+/month. Connect your business bank account so transactions import automatically, categorize them consistently, and reconcile monthly. Doing this in real time throughout the year makes tax season a non-event instead of a crisis.",
           ],
           takeaways: [
-            "Set aside 25–30% of profit for taxes from every payment, don't spend it",
+            "Set aside 25 to 30% of profit for taxes from every payment, don't spend it",
             "Self-employment tax (15.3%) is in addition to income tax, budget for both",
             "Pay quarterly estimated taxes if you expect to owe more than $1,000, missing these triggers penalties",
-            "Hire a CPA for your first business tax return — $200–$500 is cheap insurance against expensive mistakes",
+            "Hire a CPA for your first business tax return. $200 to $500 costs less than a filing mistake",
             "Use Wave (free) or QuickBooks for bookkeeping, connect your bank account and categorize in real time",
             "Reconcile your books monthly, doing it continuously prevents a year-end nightmare",
           ],
@@ -267,7 +267,7 @@ const MODULES: Module[] = [
     id: "module-4", num: "04", title: "Brand & Presence",
     lessons: [
       {
-        id: "4-1", moduleId: "module-4", title: "Your brand, name, positioning, and what you actually stand for", duration: "13 min", format: "Camera", videoUrl: null,
+        id: "4-1", moduleId: "module-4", title: "Your brand: name, positioning and what you stand for", duration: "13 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
             "Brand is not your logo. Your logo is a small, visual part of your brand. Your brand is what people think and feel when they encounter your business, your reputation made visible. A business with a mediocre logo and a clear, consistently delivered promise is a strong brand. A business with a beautiful logo and inconsistent positioning is not.",
@@ -289,7 +289,7 @@ const MODULES: Module[] = [
         id: "4-2", moduleId: "module-4", title: "Your digital presence, website vs social vs both", duration: "12 min", format: "Camera + Screen", videoUrl: null,
         notes: {
           intro: [
-            "You don't need a website to start a business. You need clients. The mistake most new founders make is spending the first two weeks building a website instead of the first two weeks building pipeline. A website is a long-term asset; a client is immediate validation and revenue. Do the outreach first.",
+            "You don't need a website to start a business. You need clients. The mistake most new founders make is spending the first two weeks building a website instead of the first two weeks building pipeline. A website is a long-term asset. A client is immediate validation and revenue. Do the outreach first.",
             "That said, a basic web presence is necessary within your first month for credibility. When you reach out to potential clients, they will search for you. What they find, or don't find, affects whether they respond. A simple one-page site with your value proposition, what you do, who you've helped (even informally), and a contact method is better than nothing. It doesn't need to be beautiful. It needs to be real.",
             "Social media: the platform that matters depends entirely on where your target customers spend time. LinkedIn is the default for B2B service businesses. Instagram works for visual products and consumer-facing brands. TikTok works if your content format fits short video and your audience is there. Pick one and be consistent on it before adding more. One well-maintained platform is better than five neglected ones.",
             "The question isn't website or social, it's what combination builds the most trust with your specific customer the fastest. For most service businesses starting out: send an outreach message that links to a simple website and an active LinkedIn profile. That combination is enough to establish credibility and get first meetings. Build from there.",
@@ -297,7 +297,7 @@ const MODULES: Module[] = [
           takeaways: [
             "Do outreach before building a website, clients come first, infrastructure second",
             "A one-page site with your value prop and contact info is enough for early credibility",
-            "Choose your social platform based on where your customers actually are, not where you like to be",
+            "Choose your social platform based on where your customers are, not where you like to be",
             "One consistent platform beats five neglected ones",
             "LinkedIn for B2B services, Instagram for visual/consumer brands, pick based on your customer profile",
             "Website + one active social platform is the minimum credible digital presence for most businesses",
@@ -308,16 +308,16 @@ const MODULES: Module[] = [
         id: "4-3", moduleId: "module-4", title: "Your first piece of content that brings customers in", duration: "12 min", format: "Screen share", videoUrl: null,
         notes: {
           intro: [
-            "Content marketing is a long game that pays compounding returns. One piece of genuinely useful content, a video, an article, a guide, can bring inbound leads for months or years. But 'content' is a broad word that gets used to justify a lot of activity that produces no results. The question is not 'should I make content?' The question is 'what piece of content would make my target customer trust me enough to reach out?'",
+            "Content marketing is a long game that pays compounding returns. One piece of useful content, a video, an article, a guide, can bring inbound leads for months or years. But 'content' is a broad word that gets used to justify a lot of activity that produces no results. The question is not 'should I make content?' The question is 'what piece of content would make my target customer trust me enough to reach out?'",
             "The highest-value content answers a question your customer is already asking. Not a question you want to answer, but a question they're actively searching for, talking about, or struggling with. Your customer profile work from Lesson 1-2 tells you what those questions are. A single detailed, honest answer to one of those questions, published where your customers will find it, is more valuable than fifty generic posts.",
-            "For service businesses: a case study or before/after story about a problem you solved (even informally, before you had formal clients) is your most powerful first piece of content. It demonstrates competence, shows a real outcome, and is specific enough to attract the right audience. 'I helped my neighbor's restaurant reduce food waste by 30% with a simple inventory system' — if that's your niche, that story is your content.",
+            "For service businesses: a case study or before/after story about a problem you solved (even informally, before you had formal clients) is your most powerful first piece of content. It demonstrates competence, shows a real outcome, and is specific enough to attract the right audience. 'I helped my neighbor's restaurant reduce food waste by 30% with a simple inventory system.' If that's your niche, that story is your content.",
             "Format and platform: video performs well because it builds trust faster than text. Written content ranks in search if it's detailed and specific. Short-form social content builds awareness but rarely drives direct action. For a new business, I'd focus first on one piece of longer-form content (a detailed post, a case study, a short video explaining something specific) that demonstrates expertise rather than broadcasting. Show, don't just tell.",
           ],
           takeaways: [
             "Content that answers a question your customer is already asking is worth 10x generic content",
             "Your customer profile work tells you what those questions are, start there",
             "A case study or before/after story is the most credibility-building first piece of content for services",
-            "Video builds trust faster than text; long-form content ranks better in search than short posts",
+            "Video builds trust faster than text. Long-form content ranks better in search than short posts",
             "One excellent, specific piece of content beats ten vague ones",
             "The goal of early content is to make the right person trust you enough to reach out, not to go viral",
           ],
@@ -350,16 +350,16 @@ const MODULES: Module[] = [
         id: "5-2", moduleId: "module-5", title: "Your first deliverable, building it regardless of type", duration: "12 min", format: "Screen share", videoUrl: null,
         notes: {
           intro: [
-            "This lesson walks through how to actually build your first deliverable, whatever type of business you're running. The principles apply whether you're delivering a consulting report, a website, a physical product prototype, or a digital download.",
-            "Start with the minimum version that delivers the core value. Not the minimum you can get away with, the minimum that genuinely solves the customer's problem. Everything beyond that is a future version. The temptation to over-build before the first delivery is how projects take six months when they should take two weeks.",
+            "This lesson walks through how to build your first deliverable, whatever type of business you're running. The principles apply whether you're delivering a consulting report, a website, a physical product prototype, or a digital download.",
+            "Start with the minimum version that delivers the core value. Not the minimum you can get away with, the minimum that solves the customer's problem. Everything beyond that is a future version. The temptation to over-build before the first delivery is how projects take six months when they should take two weeks.",
             "For service deliverables: document your process as you work. Not for the client necessarily, for you. The notes you take on project one become the process documentation that makes project two twice as fast. By project five, you have a repeatable system. This is how a service business begins to scale without working more hours.",
             "For digital products: build the real first draft and get one person to consume it and give you feedback before you finalize anything. One person who goes through your course, uses your template, or reads your guide and tells you honestly what was confusing or missing is worth more than any amount of internal review. Build fast, get feedback, revise, ship.",
           ],
           takeaways: [
-            "Build the minimum version that genuinely solves the problem, not the minimum you can get away with",
-            "Resist over-building before delivery; everything beyond the core value is a future version",
+            "Build the minimum version that solves the problem, not the minimum you can get away with",
+            "Resist over-building before delivery. Everything beyond the core value is a future version",
             "Document your service process as you go, your notes become your repeatable system",
-            "For digital products: get one real person to consume the draft and give honest feedback before finalizing",
+            "For digital products: get one real person to consume the draft and give feedback before finalizing",
             "Speed of first delivery matters, shipping and learning beats perfecting in isolation",
           ],
         },
@@ -368,7 +368,7 @@ const MODULES: Module[] = [
         id: "5-3", moduleId: "module-5", title: "Overdelivering early, reputation as a growth engine", duration: "9 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
-            "Your first five clients are the most important people in your business. Not because of what they pay you, but because of what they tell other people. Word-of-mouth is the highest-converting, lowest-cost customer acquisition channel that exists. It's also the one you build in Lessons 1–3 with great work and then activate in Lesson 7-2 with a deliberate referral system.",
+            "Your first five clients are the most important people in your business. Not because of what they pay you, but because of what they tell other people. Word-of-mouth is the highest-converting, lowest-cost customer acquisition channel that exists. It's also the one you build in Lessons 1 to 3 with great work and then activate in Lesson 7-2 with a deliberate referral system.",
             "Overdelivering doesn't mean giving away more than you promised. It means doing a few specific things that create a memorable experience: responding faster than expected, including one element of value they didn't expect, being proactive about communicating status, and following up after delivery to check that the outcome landed. None of these cost significant time. All of them create clients who become advocates.",
             "The trap to avoid: over-delivering on scope instead of on experience. Scope creep, doing more than you agreed to because it felt like the right thing, devalues your work, trains clients to expect extras, and is unsustainable. Over-deliver on the experience of working with you, not on the quantity of what you deliver.",
             "Ask for reviews and referrals. Not awkwardly or with a template, directly and specifically. 'If you found this useful, I'd really appreciate a short review on [platform]' or 'Is there anyone you know who might benefit from this kind of help?' Most happy clients don't volunteer this without being asked. The ask is the difference between a satisfied client and a referral source.",
@@ -392,21 +392,21 @@ const MODULES: Module[] = [
         notes: {
           intro: [
             "Your first client is almost certainly someone you already know, or someone a degree of separation away. Not because warm outreach is a compromise, because it's the highest-probability path to a first engagement. Trust is the bottleneck in every sales process. Warm relationships already have trust. Cold outreach has to build it from scratch.",
-            "The warm outreach framework: make a list of 20–30 people in your existing network who could either use your service directly or know someone who does. These are former colleagues, classmates, mentors, community connections, family contacts, and former clients if you have them. Don't pre-filter heavily, the goal is a long list you then work through systematically.",
+            "The warm outreach framework: make a list of 20 to 30 people in your existing network who could either use your service directly or know someone who does. These are former colleagues, classmates, mentors, community connections, family contacts, and former clients if you have them. Don't pre-filter heavily, the goal is a long list you then work through systematically.",
             "The message: short, direct, and personal. Not a pitch, an opening. Tell them what you're building, ask if they know anyone who might benefit, and make it easy to say yes without obligation. 'I just launched [business name] and I'm specifically helping [customer type] with [problem]. Do you know anyone who might be dealing with this? Happy to have a quick call to see if I can help them.' This approach respects their time and gives them a low-friction way to help.",
             "Don't skip this step because you want to build something that 'doesn't depend on who you know.' That's a long-term goal, not a first-client strategy. Use your network to get momentum, then build the systems in Module 6 and Module 7 that generate inbound leads independently.",
           ],
           takeaways: [
             "Your first client is likely in your existing network, start there, not with strangers",
-            "Make a list of 20–30 contacts who could benefit or refer; don't pre-filter heavily",
+            "Make a list of 20 to 30 contacts who could benefit or refer. Don't pre-filter heavily",
             "Your message should open a conversation, not close a sale, short, direct, and personal",
             "Ask if they know someone, not if they want to buy, reduces pressure, increases response rate",
-            "Warm outreach gets your first momentum; the systems in later modules make you independent of it",
+            "Warm outreach gets your first clients. The systems in later modules make you independent of it",
           ],
         },
       },
       {
-        id: "6-2", moduleId: "module-6", title: "Cold outreach that actually works", duration: "14 min", format: "Camera + Screen", videoUrl: null,
+        id: "6-2", moduleId: "module-6", title: "Cold outreach scripts and follow-up", duration: "14 min", format: "Camera + Screen", videoUrl: null,
         notes: {
           intro: [
             "Cold outreach, reaching out to people who don't know you, is one of the most underused tools in early-stage businesses because people associate it with spam and rejection. Done badly, it is both. Done well, it's the fastest way to put your offer in front of exactly the right people without waiting for inbound leads to develop.",
@@ -429,7 +429,7 @@ const MODULES: Module[] = [
         notes: {
           intro: [
             "The goal of a sales conversation is not to pitch. It's to listen. The more you understand about the prospect's specific situation, what they're struggling with, what they've tried, what success looks like to them, the more precisely you can position what you offer as the solution to their specific problem. Listening is the first and most important sales skill.",
-            "Structure of an effective sales call: spend the first 10–15 minutes asking questions and genuinely understanding their situation. Then briefly present how you've helped similar people with the same problem. Then present your offer with pricing. Then stop talking and let them respond. Most salespeople who fail do so because they talk too much, especially after presenting price, and talk prospects out of deals they would have closed with silence.",
+            "Structure of an effective sales call: spend the first 10 to 15 minutes asking questions and understanding their situation. Then briefly present how you've helped similar people with the same problem. Then present your offer with pricing. Then stop talking and let them respond. Most salespeople who fail do so because they talk too much, especially after presenting price, and talk prospects out of deals they would have closed with silence.",
             "The questions that matter most: What are you currently doing about this problem? What's working and what isn't? What would a successful outcome look like in 6 months? What's the cost of not solving this? The last question is the most important. If the problem costs them $10,000/month in wasted time, your $2,000 service isn't expensive, it's a 5x ROI in the first month. Help them see that math.",
             "When they raise objections, price, timing, needing to think about it, treat them as questions, not rejections. 'The price feels high' often means 'I don't yet see the full value.' 'I need to think about it' often means 'I have a concern I haven't said yet.' Ask: 'What specifically would need to be true for this to feel like the right decision?' That question surfaces the real objection.",
           ],
@@ -438,7 +438,7 @@ const MODULES: Module[] = [
             "Ask: what are you currently doing, what's working, what would success look like, what does not solving this cost?",
             "Present your offer after understanding their situation, not as an opening",
             "After presenting price, stop talking and let them respond, silence is powerful",
-            "Objections are usually unresolved questions; ask 'what would need to be true for this to feel right?'",
+            "Objections are usually unresolved questions. Ask 'what would need to be true for this to feel right?'",
             "Help prospects see the ROI math, if the problem costs more than your solution, price is not the barrier",
           ],
         },
@@ -447,8 +447,8 @@ const MODULES: Module[] = [
         id: "6-4", moduleId: "module-6", title: "Closing without being pushy", duration: "11 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
-            "Closing is the natural end of a good sales process, not a separate technique you apply at the end. If you've listened well, understood the problem, and presented an offer that genuinely fits their situation, the close is almost a formality. If you feel like you're having to 'close hard,' something earlier in the conversation went wrong.",
-            "The simplest close: 'Does this feel like a good fit for what you're trying to accomplish?' Let them answer. If yes, 'Great — I can send over a contract and invoice today. Do you want to use card or bank transfer?' If they hesitate, 'What concerns do you have?' — then address those directly. There's no script that substitutes for genuine understanding of their situation.",
+            "Closing is the natural end of a good sales process, not a separate technique you apply at the end. If you've listened well, understood the problem, and presented an offer that fits their situation, the close is almost a formality. If you feel like you're having to 'close hard,' something earlier in the conversation went wrong.",
+            "The simplest close: 'Does this feel like a good fit for what you're trying to accomplish?' Let them answer. If yes, 'Great, I can send over a contract and invoice today. Do you want to use card or bank transfer?' If they hesitate, 'What concerns do you have?' Then address those directly. There's no script that substitutes for genuine understanding of their situation.",
             "Follow-up for uncommitted prospects: if someone says they'll think about it, set a specific follow-up time in the conversation. 'I'll check back in on Thursday, does that work?' A vague 'I'll follow up' turns into waiting. A committed follow-up time keeps the conversation alive. Send a brief follow-up email the same day summarizing what you discussed and what the next step is.",
             "Not every prospect is the right client. Trying to close someone who isn't a fit, wrong budget, wrong problem, wrong timeline, creates bad client relationships and takes time away from finding the right ones. Know when to disqualify and do it graciously. 'Based on what you've described, I don't think I'm the right fit right now, here's who I'd suggest instead.' That kind of honesty is memorable and often comes back as a referral.",
           ],
@@ -512,10 +512,10 @@ const MODULES: Module[] = [
             "At some point, the business produces more work than you can do alone. The question is: do you hire a person, or do you automate? The answer depends on what kind of work is piling up. Repetitive, rules-based tasks should be automated. Tasks requiring judgment, creativity, or relationship management usually require a person.",
             "Before hiring anyone, document the role you're trying to fill. What exactly would this person do, for how many hours per week, and what outcomes would define success? Hiring without clarity produces bad hires that cost more to fix than they would have cost to prevent. The documentation process often reveals that the work can be automated or systematized rather than hired for.",
             "Your first hire is usually a contractor, not an employee. Contractors are faster to hire, easier to adjust or part ways with, and don't require payroll infrastructure. Use platforms like Contra, Toptal, or Upwork to find specialized help for specific projects. Convert to a full-time role only when the work is consistent, the person is excellent, and the business can sustain the predictable overhead.",
-            "Automation options for common tasks: Zapier connects apps and automates workflows (client intake form → contract → calendar invite, all automatic). Make (formerly Integromat) handles more complex workflows. AI tools are increasingly capable of first drafts, data processing, and routine communication. Audit your week every quarter and identify the tasks you did most often that required the least judgment, those are automation candidates.",
+            "Automation options for common tasks: Zapier connects apps and automates workflows (client intake form, then contract, then calendar invite, all automatic). Make (formerly Integromat) handles more complex workflows. AI tools are increasingly capable of first drafts, data processing, and routine communication. Audit your week every quarter and identify the tasks you did most often that required the least judgment, those are automation candidates.",
           ],
           takeaways: [
-            "Automate repetitive, rules-based tasks; hire people for judgment, creativity, and relationships",
+            "Automate repetitive, rules-based tasks. Hire people for judgment, creativity and relationships",
             "Document the role before hiring, the process often reveals alternatives to hiring",
             "Start with contractors, not employees, faster to engage, easier to adjust",
             "Zapier and Make can automate multi-step workflows without code, review your intake and follow-up processes first",
@@ -528,10 +528,10 @@ const MODULES: Module[] = [
         id: "7-4", moduleId: "module-7", title: "The founder mindset, fear, imposter syndrome, and what keeps you going", duration: "11 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
-            "Everything in this course has been practical and tactical. This lesson is different. I want to talk about what it actually feels like to build something, because nobody tells you in advance, and it matters as much as anything else we've covered.",
+            "Everything in this course has been practical and tactical. This lesson is different. I want to talk about what it feels like to build something, because nobody tells you in advance, and it matters as much as anything else we've covered.",
             "Starting a business feels like confidence from the outside and mostly fear from the inside. Fear of being wrong about the idea. Fear of looking foolish in front of people who said it wouldn't work. Fear of the first conversation, the first contract, the first time something goes badly. This is normal. Everyone who has ever built anything felt this. The difference between people who start and people who don't isn't the absence of fear, it's the decision to move anyway.",
-            "Imposter syndrome, the feeling that you're not qualified to do this, that you're pretending, that someone will eventually discover you don't actually know what you're doing, is nearly universal among founders, especially young ones. The antidote isn't more credentials or more experience. It's action. You start to feel legitimate when you have legitimate clients, legitimate results, and a legitimate track record. That track record only comes from doing the work before you feel ready.",
-            "The things that keep founders going through the hard periods: a clear sense of why they're doing it that's bigger than money, a community of people who understand what this is like, and a realistic assessment of what's actually happening versus what they fear is happening. I am a Christian, and my faith is a genuine anchor for me in this, the conviction that what I'm building has a purpose beyond profit, and that the work itself is worth doing regardless of the outcome. Whatever your foundation, know what it is. You'll need it.",
+            "Imposter syndrome, the feeling that you're not qualified to do this, that you're pretending, that someone will eventually discover you don't know what you're doing, is nearly universal among founders, especially young ones. The antidote isn't more credentials or more experience. It's action. You start to feel legitimate when you have legitimate clients, legitimate results, and a legitimate track record. That track record only comes from doing the work before you feel ready.",
+            "The things that keep founders going through the hard periods: a clear sense of why they're doing it that's bigger than money, a community of people who understand what this is like, and a realistic assessment of what's happening versus what they fear is happening. I am a Christian, and my faith is a genuine anchor for me in this, the conviction that what I'm building has a purpose beyond profit, and that the work itself is worth doing regardless of the outcome. Whatever your foundation, know what it is. You'll need it.",
           ],
           takeaways: [
             "Fear is normal, the difference is moving anyway, not feeling differently",
@@ -539,7 +539,7 @@ const MODULES: Module[] = [
             "You start to feel legitimate when you have a legitimate track record, and that only comes from doing the work before you feel ready",
             "Know why you're doing this beyond money, that clarity is what sustains you when the money is slow",
             "Find people who understand what building something is like, the isolation of early-stage business is real and underestimated",
-            "Assess what's actually happening, not just what you fear is happening, they're usually very different",
+            "Assess what's happening, not just what you fear is happening, they're usually very different",
           ],
         },
       },
@@ -638,7 +638,7 @@ export default function BusinessLessonsPage() {
               border: "none", borderRadius: 6, cursor: "pointer",
               fontFamily: "var(--font-inter), sans-serif", letterSpacing: "0.06em",
             }}>
-              Enter →
+              Enter
             </button>
           </form>
           <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", marginTop: "20px", fontFamily: "var(--font-inter), sans-serif" }}>
@@ -669,7 +669,7 @@ export default function BusinessLessonsPage() {
             </svg>
           </button>
           <Link href="/courses" style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", textDecoration: "none", fontFamily: "var(--font-inter), sans-serif" }}>
-            ← Courses
+            Courses
           </Link>
           <span style={{ fontSize: "12px", color: "var(--color-warm-text-light)", fontFamily: "var(--font-inter), sans-serif" }}>Business Launch Playbook</span>
         </div>
@@ -699,7 +699,7 @@ export default function BusinessLessonsPage() {
           {MODULES.map(m => (
             <div key={m.id}>
               <div style={{ padding: "12px 16px 6px", fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", color: "var(--color-warm-text-light)", textTransform: "uppercase", fontFamily: "var(--font-inter), sans-serif" }}>
-                MODULE {m.num} · {m.title}
+                MODULE {m.num}: {m.title}
               </div>
               {m.lessons.map(l => {
                 const isActive = l.id === activeId;
@@ -735,8 +735,7 @@ export default function BusinessLessonsPage() {
           <div style={{ maxWidth: "760px" }}>
 
             <div style={{ display: "flex", gap: "8px", alignItems: "center", marginBottom: "24px", fontSize: "11px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>
-              <span>MODULE {mod.num}</span>
-              <span>·</span>
+              <span>MODULE {mod.num}:</span>
               <span style={{ color: "var(--color-warm-text)" }}>{lesson.title}</span>
             </div>
 
@@ -792,7 +791,7 @@ export default function BusinessLessonsPage() {
                 disabled={!prevLesson}
                 style={{ padding: "9px 18px", fontSize: "13px", fontWeight: 600, background: "none", border: "1px solid var(--color-warm-border)", borderRadius: 5, color: prevLesson ? "var(--color-warm-text-muted)" : "var(--color-warm-text-light)", cursor: prevLesson ? "pointer" : "not-allowed", fontFamily: "var(--font-inter), sans-serif" }}
               >
-                ← Previous
+                Previous
               </button>
 
               <button
@@ -815,7 +814,7 @@ export default function BusinessLessonsPage() {
                 disabled={!nextLesson}
                 style={{ padding: "9px 18px", fontSize: "13px", fontWeight: 600, background: "none", border: "1px solid var(--color-warm-border)", borderRadius: 5, color: nextLesson ? "var(--color-warm-text-muted)" : "var(--color-warm-text-light)", cursor: nextLesson ? "pointer" : "not-allowed", fontFamily: "var(--font-inter), sans-serif" }}
               >
-                Next Lesson →
+                Next lesson
               </button>
             </div>
           </div>

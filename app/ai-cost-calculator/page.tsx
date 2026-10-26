@@ -15,17 +15,17 @@ interface Preset {
 
 const PRESETS: Record<string, Preset> = {
   realestate: { team: 6, rate: 55, manual: 12, auto: 65, cost: 1500,
-    desc: "Real estate office, agents + admin. Listing descriptions, market reports, follow-ups, contract drafts." },
+    desc: "Real estate office, agents and admin. Listing descriptions, market reports, follow-ups, contract drafts." },
   dental:     { team: 8, rate: 45, manual: 10, auto: 55, cost: 1500,
-    desc: "Dental practice, front desk + clinical admin. Insurance pre-auth, scheduling reminders, treatment-plan summaries, patient comms." },
+    desc: "Dental practice, front desk and clinical admin. Insurance pre-auth, scheduling reminders, treatment-plan summaries, patient comms." },
   law:        { team: 5, rate: 95, manual: 14, auto: 60, cost: 2500,
-    desc: "Law firm, partners + paralegals. Document review, brief drafting, intake forms, case summaries." },
+    desc: "Law firm, partners and paralegals. Document review, brief drafting, intake forms, case summaries." },
   marketing:  { team: 4, rate: 75, manual: 18, auto: 70, cost: 1500,
-    desc: "Marketing agency, content + ops. Caption writing, ad copy, scheduling, reporting, client deliverables." },
+    desc: "Marketing agency, content and ops. Caption writing, ad copy, scheduling, reporting, client deliverables." },
   ecommerce:  { team: 3, rate: 60, manual: 15, auto: 70, cost: 1500,
-    desc: "Ecommerce brand, operator + customer service. Product descriptions, support emails, social posts, returns workflows." },
+    desc: "Ecommerce brand, operator and customer service. Product descriptions, support emails, social posts, returns workflows." },
   solo:       { team: 1, rate: 100, manual: 20, auto: 65, cost: 500,
-    desc: "Solo founder, you wear every hat. Outbound, content, admin, follow-ups. Lower session cost reflects 1-on-1 pricing." },
+    desc: "Solo founder doing every job. Outbound, content, admin, follow-ups. The lower session cost uses 1-on-1 pricing." },
 };
 
 const PRESET_LABELS: Record<string, string> = {
@@ -62,13 +62,13 @@ export default function AICostCalculatorPage() {
       const months = Math.max(0, cost) / dollarsMonthly;
       if (months < 1) {
         const days = Math.round(months * 30);
-        payback = { text: `At those inputs, the session pays back in ~${days} days. After that, the savings compound monthly.`, tier: "compounding" };
+        payback = { text: `At those inputs, the session pays back in about ${days} days. After that, the savings continue each month.`, tier: "compounding" };
       } else if (months < 6) {
-        payback = { text: `At those inputs, the session pays back in ~${months.toFixed(1)} months. After that, the savings compound monthly.`, tier: "fast" };
+        payback = { text: `At those inputs, the session pays back in about ${months.toFixed(1)} months. After that, the savings continue each month.`, tier: "fast" };
       } else if (months < 24) {
-        payback = { text: `At those inputs, the session pays back in ~${months.toFixed(1)} months, slower than typical because either the team is small or manual hours are low. Worth doing if the work itself drains morale.`, tier: "slow" };
+        payback = { text: `At those inputs, the session pays back in about ${months.toFixed(1)} months. That is slow, because the team is small or the manual hours are low. It may still be worth doing if the work wears your team down.`, tier: "slow" };
       } else {
-        payback = { text: `At those inputs, the payback is ~${months.toFixed(1)} months, too slow to justify on time-savings alone. Consider a smaller-scope $175/hr 1-on-1 instead.`, tier: "too-slow" };
+        payback = { text: `At those inputs, the payback is about ${months.toFixed(1)} months, too slow to justify on time savings alone. A smaller $175/hr 1-on-1 session may fit better.`, tier: "too-slow" };
       }
     }
 
@@ -102,12 +102,12 @@ export default function AICostCalculatorPage() {
 
         {/* Page head */}
         <header className="pv-page-head">
-          <div className="pv-mono-label">A Live Estimator · No login · No tracking</div>
+          <div className="pv-mono-label">Estimator. No login, no tracking.</div>
           <h1 style={{ margin: 0 }}>
             AI Cost <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Calculator.</em>
           </h1>
           <p className="deck">
-            Enter your team size, hourly cost, and manual workload. See how fast a focused AI consulting session pays back in dollars and hours. Conservative numbers, no smoke.
+            Enter your team size, hourly cost, and manual workload. See how fast an AI consulting session pays back in dollars and hours. The assumptions are listed below the results.
           </p>
         </header>
 
@@ -151,14 +151,14 @@ export default function AICostCalculatorPage() {
 
           <NumberField
             label="Average hourly cost per person"
-            context="Fully-loaded, salary + benefits + overhead. $40–85 for support, $60–110 for ops, $80–150 for managers."
+            context="Fully loaded: salary, benefits and overhead. Typical ranges are $40 to $85 for support, $60 to $110 for ops, and $80 to $150 for managers."
             value={rate} onChange={setRate} min={15} max={500} prefix="$" suffix="/ hr"
             inputStyle={inputStyle}
           />
 
           <NumberField
             label="Repeatable manual work per person, per week"
-            context="Email drafting, content writing, data entry, scheduling, basic research, formatting. The work that does NOT require human judgment."
+            context="Email drafting, content writing, data entry, scheduling, basic research, formatting. Work that needs no human judgment."
             value={manual} onChange={setManual} min={0} max={40} suffix="hrs / wk"
             inputStyle={inputStyle}
           />
@@ -166,10 +166,10 @@ export default function AICostCalculatorPage() {
           {/* Slider */}
           <div style={{ marginBottom: "20px" }}>
             <label style={{ display: "block", fontFamily: "'Cinzel', Georgia, serif", fontSize: "14px", fontWeight: 600, color: "var(--color-warm-text)", letterSpacing: "0.02em", marginBottom: "4px" }}>
-              Realistic % AI could automate
+              Share of that work AI could automate
             </label>
             <p className="pv-italic" style={{ fontSize: "13px", color: "var(--color-warm-text-light)", lineHeight: 1.5, marginBottom: "12px" }}>
-              Most teams see 50–70% reduction on the manual chunk after one focused session. Default to 60%.
+              Pick a share you believe for your team. The slider starts at 60%.
             </p>
             <input type="range" min={20} max={80} value={auto} step={5} onChange={e => setAuto(parseInt(e.target.value))} style={{ width: "100%", accentColor: "var(--color-warm-accent)" }} />
             <div style={{ display: "flex", justifyContent: "space-between", marginTop: "4px", fontFamily: "var(--font-dm-sans), system-ui, sans-serif", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-text-light)" }}>
@@ -181,7 +181,7 @@ export default function AICostCalculatorPage() {
 
           <NumberField
             label="Consulting session cost (the investment)"
-            context="PV sessions: $175/hr 1-on-1, $125/person small group, or flat $2,500 for a half-day team training. Default: $1,500 for a 4-hr team session."
+            context="My sessions: $175/hr 1-on-1, $125/person small group, or a flat $2,500 for a half-day team training. The default is $1,500 for a 4-hour team session."
             value={cost} onChange={setCost} min={100} max={20000} prefix="$"
             inputStyle={inputStyle}
           />
@@ -212,7 +212,7 @@ export default function AICostCalculatorPage() {
             fontSize: "11px", color: "var(--color-warm-text-light)",
             letterSpacing: "0.04em", lineHeight: 1.7, textAlign: "left",
           }}>
-            <strong style={{ color: "var(--color-warm-text)" }}>How this is calculated:</strong> manual hrs/wk × team size × automation % × 4.33 wks/mo = hours saved monthly. Multiply by hourly rate for dollar value. Payback = session cost ÷ monthly $ saved. Conservative, doesn&apos;t count quality improvements, error reduction, retention gains from less tedious work, or compounding from automations that build on each other.
+            <strong style={{ color: "var(--color-warm-text)" }}>How this is calculated:</strong> manual hrs/wk × team size × automation % × 4.33 wks/mo = hours saved monthly. Multiply by hourly rate for dollar value. Payback = session cost ÷ monthly $ saved. The estimate leaves out quality improvements, fewer errors and staff retention.
           </p>
         </div>
 
@@ -234,20 +234,20 @@ export default function AICostCalculatorPage() {
             color: "var(--color-warm-text)", textTransform: "uppercase",
             marginBottom: "16px", lineHeight: 1.15, margin: "0 0 16px",
           }}>
-            Numbers add <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>up?</em>
+            Book a <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>session</em>
           </h2>
           <p className="pv-italic" style={{
             fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.85,
             maxWidth: "560px", margin: "0 auto 24px", lineHeight: 1.55,
           }}>
-            Book a session. I&apos;ll come to your office, work with your actual workflows, and walk you out with at least one automation already running.
+            I&apos;ll come to your office, work from your own workflows, and build at least one automation with you during the session.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "10px", alignItems: "center" }}>
             <Link href="/consulting/book" className="pv-btn-primary">
-              Book a session →
+              Book a session
             </Link>
             <Link href="/ai-readiness" className="pv-btn-ghost">
-              Pair with the 3-min readiness test →
+              Take the 3-minute readiness test
             </Link>
           </div>
         </section>
@@ -265,23 +265,19 @@ export default function AICostCalculatorPage() {
             into the repetitive written work: drafting, replying, summarising, formatting.
             The calculator applies a conservative recovery rate to those hours and compares
             the result against the cost of a session, which gives you a payback period in
-            weeks rather than a vague promise of efficiency.
+            weeks.
           </p>
           <p>
-            Conservative is doing real work in that sentence. The assumed time recovery is
-            deliberately lower than most vendor calculators use, because the number that
-            matters is the one that survives contact with a normal week: interruptions,
-            revisions, and the tasks where a model produces something you have to rewrite
-            anyway.
+            The recovery rate is set low to allow for interruptions, revisions, and the tasks
+            where a model produces something you have to rewrite.
           </p>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "36px 0 14px", color: "var(--color-warm-text)" }}>
             When the answer is no
           </h2>
           <p>
-            If your team is small and the repetitive writing is genuinely a couple of hours a
-            week, the payback period will be long and the honest conclusion is to skip it.
-            The calculator will show you that rather than hiding it, which is the entire
-            reason to run the numbers before buying anything.
+            If your team is small and the repetitive writing is a couple of hours a week, the
+            payback period will be long and the sensible answer is to skip the session. The
+            calculator shows that result too.
           </p>
           <p>
             Built by Elijah Purcell, founder and CEO of{" "}
@@ -307,8 +303,8 @@ export default function AICostCalculatorPage() {
         fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
         color: "var(--color-warm-text-light)",
       }}>
-        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
-        <Link href="/consulting" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← Consulting</Link>
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC, Acworth, GA</span>
+        <Link href="/consulting" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>Consulting</Link>
       </footer>
     </div>
   );

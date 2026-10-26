@@ -10,14 +10,14 @@ const SESSIONS = [
     title: "AI Basics for Business",
     duration: "2 hrs",
     tag: "Intro",
-    desc: "What AI actually is, what it can do right now, and where it fits in your business. No tech background needed. Built for owners and managers who feel behind.",
+    desc: "What AI is, what it can do today, and where it fits in your business. No tech background needed. Built for owners and managers who feel behind.",
     outcomes: [
       "Understand what AI tools exist and which ones matter for your type of business",
-      "Leave with 3–5 tools you can use tomorrow",
+      "Leave with 3 to 5 tools you can use tomorrow",
       "Know what to automate and what to keep human",
     ],
     bestFor: "Business owners, managers, non-technical teams",
-    groupSize: "2–30 people",
+    groupSize: "2 to 30 people",
   },
   {
     id: "chatgpt-workflow",
@@ -25,14 +25,14 @@ const SESSIONS = [
     title: "ChatGPT in Your Workflow",
     duration: "3 hrs",
     tag: "Hands-on",
-    desc: "Practical, hands-on. We work through email drafting, customer responses, research, content creation, and scheduling, live, with your actual scenarios.",
+    desc: "Hands-on. We work through email drafting, customer responses, research, content and scheduling live, using your own scenarios.",
     outcomes: [
-      "Write better emails and responses in half the time",
+      "Draft emails and customer responses faster",
       "Generate content, proposals, and summaries on demand",
-      "Build a personal prompt library you'll actually use",
+      "Build a personal prompt library for your own work",
     ],
     bestFor: "Any team that communicates and creates content daily",
-    groupSize: "2–20 people",
+    groupSize: "2 to 20 people",
   },
   {
     id: "ai-marketing",
@@ -40,14 +40,14 @@ const SESSIONS = [
     title: "AI for Marketing & Social Media",
     duration: "2.5 hrs",
     tag: "Marketing",
-    desc: "Caption generation, ad copy, campaign planning, scheduling tools. Walk away with a repeatable content system that takes hours off your week.",
+    desc: "Caption generation, ad copy, campaign planning and scheduling tools. You leave with a repeatable content system.",
     outcomes: [
-      "Build a month of social content in under an hour",
+      "Plan a month of social content in one sitting",
       "Generate ad copy, captions, and email campaigns with AI",
       "Set up a scheduling and approval workflow",
     ],
     bestFor: "Marketing teams, social media managers, small business owners who post their own content",
-    groupSize: "2–25 people",
+    groupSize: "2 to 25 people",
   },
   {
     id: "automation",
@@ -55,14 +55,14 @@ const SESSIONS = [
     title: "Automating Your Business",
     duration: "4 hrs",
     tag: "Half-Day",
-    desc: "Connect your apps, eliminate manual work, and build systems that run while you sleep. Covers Zapier, Make, AI assistants, and business-specific automations.",
+    desc: "Connect your apps and automate manual work. Covers Zapier, Make, AI assistants and automations specific to your business.",
     outcomes: [
-      "Map your top 3 time-wasting manual processes and automate them",
+      "Map your top 3 manual processes and automate them",
       "Connect your tools (email, CRM, forms, calendar) without code",
-      "Walk out with at least one live automation running",
+      "Build at least one working automation during the session",
     ],
     bestFor: "Operations managers, founders, teams with repetitive digital workflows",
-    groupSize: "2–15 people",
+    groupSize: "2 to 15 people",
   },
   {
     id: "custom",
@@ -70,10 +70,10 @@ const SESSIONS = [
     title: "Custom Team Training",
     duration: "You choose",
     tag: "Custom",
-    desc: "I come in, learn your software stack and workflows, and build a session from scratch around your actual tools and problems. The most impactful option for established teams.",
+    desc: "I learn your software and workflows, then build a session around your tools and problems. Best for established teams.",
     outcomes: [
       "Training built around your exact tools and use cases",
-      "Hands-on with your actual software, not generic demos",
+      "Hands-on with your own software",
       "Takeaway guide specific to your team",
     ],
     bestFor: "Companies with existing software stacks, teams with specific bottlenecks",
@@ -82,9 +82,9 @@ const SESSIONS = [
 ];
 
 const PRICING = [
-  { label: "1-on-1",            rate: "$175",    unit: "/ hour",   desc: "You and me. We go deep on your specific situation, tools, and problems. Most flexible, agenda is entirely yours.", note: "2-hr minimum recommended",   highlight: false },
-  { label: "Small Group",       rate: "$125",    unit: "/ person", desc: "2–8 people. Collaborative, interactive, and tailored to the group. Better for teams that work closely together.",  note: "Per session · 2-hr minimum",  highlight: true  },
-  { label: "Workshop",          rate: "$2,500",  unit: "flat",     desc: "Up to 20 people. Structured session with Q&A and hands-on exercises. Great for all-hands training or company events.", note: "Half-day · up to 20 people",  highlight: false },
+  { label: "1-on-1",            rate: "$175",    unit: "/ hour",   desc: "One-on-one, on your situation, tools and problems. You set the agenda.", note: "2-hr minimum recommended",   highlight: false },
+  { label: "Small Group",       rate: "$125",    unit: "/ person", desc: "2 to 8 people. Interactive and built around the group. Best for teams that work closely together.",  note: "Per session, 2-hr minimum",  highlight: true  },
+  { label: "Workshop",          rate: "$2,500",  unit: "flat",     desc: "Up to 20 people. Structured session with Q&A and hands-on exercises. Suited to all-hands training or company events.", note: "Half-day, up to 20 people",  highlight: false },
   { label: "Corporate / Custom", rate: "Custom", unit: "quote",    desc: "Larger teams, multi-session programs, or fully custom curriculum. Includes prep time, materials, and follow-up resources.", note: "Contact for pricing",     highlight: false },
 ];
 
@@ -94,10 +94,10 @@ const FAQ = [
   { q: "Are you local? Where are you based?",                                        a: "Tuscaloosa, Alabama. The LLC is registered in Acworth, Georgia, where it was formed, and it is operated from Tuscaloosa, where I attend the University of Alabama. Local businesses can meet in person, which is the part that is hard to do remotely. There is a fuller page for local work at purcellventures.co/ai-consultant-tuscaloosa." },
   { q: "Do I need any tech experience to benefit from this?",                       a: "No. Most sessions are designed for people who've never used AI tools before. I meet you where you are and build from there." },
   { q: "What do participants need to bring?",                                       a: "A laptop or tablet and a willingness to try things. I'll handle everything else: setup, demos, exercises, and a takeaway guide." },
-  { q: "Can you come to our location?",                                             a: "Yes. I come to you. Your office, your team, your environment. That context makes the session more relevant and the examples more useful." },
-  { q: "What's the difference between this and just using ChatGPT on my own?",      a: "Most people use about 10% of what AI tools can do. I show you the other 90%: the prompting techniques, the integrations, the specific workflows that actually save time in your type of business." },
-  { q: "Will this lead to a sales pitch for your other services?",                  a: "Only if it makes sense. Consulting is its own thing. If I see something in your business that I could build for you, I'll mention it. No pressure, no upsell baked into the session." },
-  { q: "How far in advance do I need to book?",                                     a: "Typically 1–2 weeks for standard sessions. Custom trainings need more prep time. Reach out as early as you can." },
+  { q: "Can you come to our location?",                                             a: "Yes. I come to your office and train your team there. Examples from your own setting make the session more useful." },
+  { q: "What's the difference between this and just using ChatGPT on my own?",      a: "Most people use AI tools for one-off questions. I show you prompting techniques, integrations and workflows that save time in your type of business." },
+  { q: "Will this lead to a sales pitch for your other services?",                  a: "Only if it fits. Consulting stands on its own. If I see something in your business that I could build for you, I'll mention it once after the session." },
+  { q: "How far in advance do I need to book?",                                     a: "Usually 1 to 2 weeks for standard sessions. Custom trainings need more prep time. Reach out as early as you can." },
 ];
 
 export default function ConsultingPage() {
@@ -120,15 +120,15 @@ export default function ConsultingPage() {
 
         {/* Page head */}
         <header className="pv-page-head">
-          <div className="pv-mono-label">Division II · AI Consulting</div>
+          <div className="pv-mono-label">Division II, AI Consulting</div>
           <h1>
-            Twice the work <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>in half the time.</em>
+            Hands-on AI training <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>for your team.</em>
           </h1>
           <p className="deck">
-            I come to your business and teach your team how to actually use AI. Hands-on, practical, tailored to what you do. Not theory. Real tools, real results, same day.
+            I come to your business and teach your team to use AI. Each session is hands-on and built around your tools. Your team leaves with a takeaway guide the same day.
             Based in Tuscaloosa, Alabama, working nationwide.{" "}
             <a href="/ai-consultant-tuscaloosa" style={{ color: "var(--color-warm-accent)" }}>
-              Local work in Tuscaloosa →
+              Local work in Tuscaloosa
             </a>
           </p>
           <div style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
@@ -185,10 +185,10 @@ export default function ConsultingPage() {
         </p>
         <div className="pv-cs-who" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px", marginBottom: "64px" }}>
           {[
-            { who: "Small Business Owners",      desc: "You run a tight operation. An hour a day saved on admin, emails, and content is worth thousands of dollars a year." },
-            { who: "Office & Operations Teams",  desc: "Your team does repetitive digital work. There are tools that do most of it automatically. You just haven't learned them yet." },
-            { who: "Marketing Departments",      desc: "Content takes forever. AI cuts production time by 60–80% without cutting quality. Let me show you how." },
-            { who: "Any Team Feeling Behind",    desc: "The businesses that figure out AI now will be ahead for years. The ones that wait will spend years catching up." },
+            { who: "Small Business Owners",      desc: "You run a tight operation. An hour a day saved on admin is roughly 250 hours a year." },
+            { who: "Office & Operations Teams",  desc: "Your team does repetitive digital work. I show you which parts software can handle." },
+            { who: "Marketing Departments",      desc: "Content takes hours to produce. In a session I show you how AI shortens drafting, and we time it on your own content." },
+            { who: "Any Team Feeling Behind",    desc: "If your team has not used AI tools yet, the AI Basics session starts from zero." },
           ].map((item) => (
             <div key={item.who} className="pv-card" style={{ padding: "28px 28px 24px" }}>
               <span className="b3"></span><span className="b4"></span>
@@ -213,7 +213,7 @@ export default function ConsultingPage() {
           <h2>Sessions <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>five core</em></h2>
         </header>
         <p className="pv-italic" style={{ fontSize: "17px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.55, maxWidth: "640px", marginBottom: "28px" }}>
-          Pick a session. I customize it to your industry, your tools, and your team. You&apos;re not getting a generic slideshow.
+          Pick a session. I build it around your industry, your tools and your team.
         </p>
         <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "64px" }}>
           {SESSIONS.map((s) => {
@@ -289,7 +289,7 @@ export default function ConsultingPage() {
                         <div className="pv-italic" style={{ fontSize: "15px", color: "var(--color-warm-text)" }}>{s.groupSize}</div>
                       </div>
                       <a href="/consulting/book" className="pv-btn-primary" style={{ textAlign: "center" }}>
-                        Book this session →
+                        Book this session
                       </a>
                     </div>
                   </div>
@@ -301,7 +301,7 @@ export default function ConsultingPage() {
         {/* Pricing */}
         <header className="pv-section-head" id="pricing">
           <span className="roman">III.</span>
-          <h2>Pricing <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>no surprises</em></h2>
+          <h2>Pricing <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>by group size</em></h2>
         </header>
         <p className="pv-italic" style={{ fontSize: "17px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.55, maxWidth: "560px", marginBottom: "28px" }}>
           Rate is based on group size and session length. The more people, the lower the per-person cost. All sessions include a takeaway guide.
@@ -348,21 +348,21 @@ export default function ConsultingPage() {
           <span className="b3"></span><span className="b4"></span>
           <span style={{ fontFamily: "'Cinzel', Georgia, serif", color: "var(--color-warm-accent)", fontSize: "18px" }}>?</span>
           <p className="pv-italic" style={{ fontSize: "15px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.55, margin: 0 }}>
-            Not sure what you need? <a href="#contact" style={{ color: "var(--color-warm-accent)", textDecoration: "underline", textDecorationStyle: "dotted", fontWeight: 600 }}>Send me a message.</a> I&apos;ll ask a few questions and tell you exactly which session makes sense.
+            Not sure which session fits? <a href="#contact" style={{ color: "var(--color-warm-accent)", textDecoration: "underline", textDecorationStyle: "dotted", fontWeight: 600 }}>Send me a message</a> and I&apos;ll recommend one.
           </p>
         </div>
 
         {/* How it works */}
         <header className="pv-section-head">
           <span className="roman">IV.</span>
-          <h2>How it works <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>simple, no friction</em></h2>
+          <h2>How it works <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>in four steps</em></h2>
         </header>
         <div className="pv-cs-process" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px", marginBottom: "64px" }}>
           {[
             { step: "01", title: "Quick Call",         desc: "We talk for 15 minutes. You tell me about your business, your team, and your biggest time-wasters. I tell you which session fits and what I'll customize." },
-            { step: "02", title: "I Build Your Session", desc: "I take what I learned and build the presentation around your tools, your workflows, and your industry. You get a tailored session, not a template." },
-            { step: "03", title: "We Run It",            desc: "I come to you. Live demos, hands-on exercises, real questions. Every participant gets a takeaway guide they can use immediately after." },
-            { step: "04", title: "Follow-Up",            desc: "After the session I send a resource package: key tools, prompts, and next steps specific to what we covered. Plus I'm reachable if questions come up." },
+            { step: "02", title: "I Build Your Session", desc: "I build the presentation around your tools, workflows and industry. You get a session built for your team." },
+            { step: "03", title: "We Run It",            desc: "I come to you. Live demos and exercises on your own tools. Every participant gets a takeaway guide." },
+            { step: "04", title: "Follow-Up",            desc: "After the session I send a resource package: key tools, prompts, and next steps specific to what we covered. You can email me questions afterward." },
           ].map((item) => (
             <div key={item.step} className="pv-card" style={{ padding: "28px 24px 24px" }}>
               <span className="b3"></span><span className="b4"></span>
@@ -394,17 +394,17 @@ export default function ConsultingPage() {
           <h2>Why work <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>with me</em></h2>
         </header>
         <p className="pv-italic" style={{ fontSize: "20px", color: "var(--color-warm-text)", opacity: 0.92, lineHeight: 1.45, maxWidth: "640px", marginBottom: "20px" }}>
-          I&apos;m nineteen. That&apos;s a feature, not a bug.
+          I&apos;m nineteen and I have built these systems for a year.
         </p>
         <p className="pv-italic" style={{ fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.65, marginBottom: "32px", maxWidth: "720px" }}>
-          Most AI consultants are mid-career adults who came to this stack late. I came up inside it. I&apos;ve been building autonomous systems and shipping production tools for a year, full-time, while still in high school. The work I&apos;m offering is the same work I do in my own infrastructure every day.
+          I&apos;ve been building autonomous systems and shipping production tools for a year, full-time, while still in high school. The work I offer is the same work I do in my own business every day.
         </p>
         <div className="pv-cs-stats-band" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px", marginBottom: "32px" }}>
           {[
-            { num: "34",          label: "College acceptances",        desc: "Honors programs across the country evaluated my work. They didn't accept the bio, they accepted the portfolio." },
+            { num: "34",          label: "College acceptances",        desc: "Acceptances from colleges and honors programs across the country." },
             { num: "7",           label: "Security audits run",         desc: "Read-only audits of live production applications, each finding delivered with severity, a reproduction path, and a fix." },
-            { num: "Honors Coll.", label: "UA New College, Fall 2026", desc: "Self-designed Psychology + Data Science hybrid on a pre-med path. The track is the work." },
-            { num: "Live infra",  label: "purcellventures.co +",       desc: "Every tool I teach, I've already built into my own stack. I'm not demo-ing — I'm showing you what already works." },
+            { num: "Honors Coll.", label: "UA New College, Fall 2026", desc: "Self-designed Psychology and Data Science hybrid on a pre-med path." },
+            { num: "Live infra",  label: "purcellventures.co +",       desc: "Every tool I teach runs in my own business." },
           ].map((item) => (
             <div key={item.label} className="pv-card" style={{ padding: "26px 22px" }}>
               <span className="b3"></span><span className="b4"></span>
@@ -424,12 +424,12 @@ export default function ConsultingPage() {
         </div>
         <div className="pv-card" style={{ padding: "28px 32px", marginBottom: "64px" }}>
           <span className="b3"></span><span className="b4"></span>
-          <div className="pv-mono-label" style={{ marginBottom: "12px" }}>The honest trade-off</div>
+          <div className="pv-mono-label" style={{ marginBottom: "12px" }}>Early client terms</div>
           <p style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "17px", color: "var(--color-warm-text)", lineHeight: 1.5, marginBottom: "12px", letterSpacing: "0.01em" }}>
             I don&apos;t have a wall of corporate testimonials yet. I&apos;m at the start of my consulting business.
           </p>
           <p className="pv-italic" style={{ fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.6, margin: 0 }}>
-            That means: you get my undivided attention, my hunger to deliver work I can use as my own first proof, and lower rates than I&apos;ll charge in a year. If you&apos;re willing to be an early client, you get more of me than my later clients will.
+            Early clients get my full attention and lower rates than I&apos;ll charge in a year. I will also ask to publish the results as my first case studies.
           </p>
         </div>
 
@@ -495,7 +495,7 @@ export default function ConsultingPage() {
             color: "var(--color-warm-text)", textTransform: "uppercase",
             marginBottom: "16px", lineHeight: 1.15, margin: "0 0 16px",
           }}>
-            Ready to get your team <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>ahead?</em>
+            Email me <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>about your team</em>
           </h2>
           <p className="pv-italic" style={{
             fontSize: "18px", color: "var(--color-warm-text)", opacity: 0.85,
@@ -504,7 +504,7 @@ export default function ConsultingPage() {
             Tell me about your team and I&apos;ll come back with a specific session recommendation and a quote within 24 hours.
           </p>
           <a href="mailto:elijah@purcell-ventures.com?subject=Consulting Session Inquiry" className="pv-btn-primary">
-            Email Elijah →
+            Email Elijah
           </a>
           <div style={{
             marginTop: "20px",
@@ -512,7 +512,7 @@ export default function ConsultingPage() {
             fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase",
             color: "var(--color-warm-text-light)",
           }}>
-            elijah@purcell-ventures.com · (205) 462-7839 · 24-hr response
+            elijah@purcell-ventures.com, (205) 462-7839. I reply within 24 hours.
           </div>
         </section>
 
@@ -528,8 +528,8 @@ export default function ConsultingPage() {
         fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
         color: "var(--color-warm-text-light)",
       }}>
-        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
-        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← All divisions</a>
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC, Acworth, GA</span>
+        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>All divisions</a>
       </footer>
     </div>
   );

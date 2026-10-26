@@ -12,49 +12,49 @@ const LS_ONE   = "#waitlist";
 // ── Curriculum ────────────────────────────────────────────────────────────────
 const MODULES = [
   {
-    num: "01", title: "The Truth About Admissions", lessonCount: 2, totalMin: 20,
+    num: "01", title: "How Admissions Works", lessonCount: 2, totalMin: 20,
     lessons: [
-      { id: "1-1", title: "How the system actually works", duration: "12 min", format: "Camera" },
+      { id: "1-1", title: "How the admissions system works", duration: "12 min", format: "Camera" },
       { id: "1-2", title: "The timeline: 9th grade through senior fall", duration: "8 min", format: "Screen share" },
     ],
   },
   {
     num: "02", title: "Building Your School List", lessonCount: 3, totalMin: 35,
     lessons: [
-      { id: "2-1", title: "How I found 98 schools, live spreadsheet walkthrough", duration: "14 min", format: "Screen share" },
-      { id: "2-2", title: "Reach, match, safety, the real math", duration: "10 min", format: "Camera" },
+      { id: "2-1", title: "How I found 98 schools: live spreadsheet walkthrough", duration: "14 min", format: "Screen share" },
+      { id: "2-2", title: "Reach, match and safety schools by the numbers", duration: "10 min", format: "Camera" },
       { id: "2-3", title: "Scholarship hunting before you apply", duration: "11 min", format: "Camera + Screen" },
     ],
   },
   {
     num: "03", title: "Your Application Foundation", lessonCount: 3, totalMin: 24,
     lessons: [
-      { id: "3-1", title: "The activities list, making anything count", duration: "9 min", format: "Camera" },
-      { id: "3-2", title: "Honors, awards, and where to find more", duration: "8 min", format: "Camera" },
+      { id: "3-1", title: "Writing the activities list", duration: "9 min", format: "Camera" },
+      { id: "3-2", title: "Honors, awards and where to find more", duration: "8 min", format: "Camera" },
       { id: "3-3", title: "Letters of rec strategy", duration: "7 min", format: "Camera" },
     ],
   },
   {
     num: "04", title: "The Essays", lessonCount: 4, totalMin: 51,
     lessons: [
-      { id: "4-1", title: "What admissions actually wants from your personal statement", duration: "13 min", format: "Camera" },
+      { id: "4-1", title: "What admissions readers look for in a personal statement", duration: "13 min", format: "Camera" },
       { id: "4-2", title: "Writing your essay live", duration: "18 min", format: "Screen share" },
-      { id: "4-3", title: "Supplementals, efficiency at scale", duration: "12 min", format: "Camera + Screen" },
+      { id: "4-3", title: "Writing many supplementals efficiently", duration: "12 min", format: "Camera + Screen" },
       { id: "4-4", title: "Getting feedback and revising", duration: "8 min", format: "Camera" },
     ],
   },
   {
     num: "05", title: "Financial Aid & Scholarships", lessonCount: 3, totalMin: 41,
     lessons: [
-      { id: "5-1", title: "FAFSA + CSS Profile explained", duration: "15 min", format: "Screen share" },
-      { id: "5-2", title: "My exact scholarship hunting process", duration: "16 min", format: "Screen share" },
+      { id: "5-1", title: "FAFSA and CSS Profile explained", duration: "15 min", format: "Screen share" },
+      { id: "5-2", title: "My scholarship search process", duration: "16 min", format: "Screen share" },
       { id: "5-3", title: "Negotiating your award package", duration: "10 min", format: "Camera" },
     ],
   },
   {
     num: "06", title: "The Final Stretch", lessonCount: 2, totalMin: 20,
     lessons: [
-      { id: "6-1", title: "EA/ED strategy, when to commit early", duration: "11 min", format: "Camera" },
+      { id: "6-1", title: "EA and ED: when to commit early", duration: "11 min", format: "Camera" },
       { id: "6-2", title: "Comparing offers and making the decision", duration: "9 min", format: "Camera" },
     ],
   },
@@ -70,12 +70,12 @@ const TIERS = [
     lsFull: LS_FULL,
     lsPlan: LS_PLAN,
     features: [
-      "All 6 modules · 17 lessons",
-      "Camera, screen share & written content",
-      "My actual school list spreadsheet template",
+      "All 6 modules, 17 lessons",
+      "Camera, screen share and written content",
+      "My school list spreadsheet as a template",
       "Essay brainstorm worksheet",
       "Scholarship tracker template",
-      "Lifetime access + future updates",
+      "Lifetime access and future updates",
     ],
   },
   {
@@ -87,7 +87,7 @@ const TIERS = [
     lsPlan: LS_COACH,
     features: [
       "Everything in Self-Paced",
-      "Monthly group Q&A with Elijah — 3 sessions",
+      "3 monthly group Q&A sessions with Elijah",
       "Recorded session replays",
       "Priority essay feedback in group calls",
       "Access to cohort community",
@@ -103,7 +103,7 @@ const TIERS = [
     features: [
       "Everything in Coaching Track",
       "3 hours direct with Elijah",
-      "Personal statement review + feedback",
+      "Personal statement review and feedback",
       "School list strategy session",
       "Financial aid negotiation prep",
       "Direct email access during application season",
@@ -115,19 +115,19 @@ const TIERS = [
 const FAQS = [
   {
     q: "Is this for high schoolers or parents?",
-    a: "Both. The content is written so the student can follow it alone, but parents often go through it too and find the financial aid and scholarship modules especially useful. The $530k stat in the headline is for parents, they know what that means.",
+    a: "Both. The content is written so the student can follow it alone, but parents can use it too, especially the financial aid and scholarship modules.",
   },
   {
     q: "I'm already a junior or senior. Is it too late?",
-    a: "No. The essay modules, financial aid sections, and scholarship hunting process are immediately applicable regardless of where you are in the timeline. The earlier modules on building your list are still useful if you haven't finalized schools.",
+    a: "No. The essay modules, financial aid sections and scholarship process apply at any point in the timeline. The earlier modules on building your list are still useful if you haven't finalized schools.",
   },
   {
     q: "You are nineteen. Why should I take college advice from you?",
-    a: "Because I just did it. 34 acceptances. $530,384 in scholarships per year. I researched 98 schools and applied to dozens. I made real mistakes and real wins and I documented everything. A 50-year-old counselor has experience — I have current, specific, documented results.",
+    a: "I went through it recently. I researched 98 schools, got 34 acceptances and $530,384 per year in scholarship offers. I wrote down what worked and what didn't as I went. A counselor has more years of experience. I have a recent, documented process.",
   },
   {
     q: "Does this work for scholarships specifically, or just admissions?",
-    a: "Both, but scholarships is where this course is uniquely strong. Module 5 is entirely dedicated to FAFSA, CSS Profile, and the scholarship hunting process I used to identify and apply for the opportunities that added up to $530k/year.",
+    a: "Both. Module 5 covers FAFSA, the CSS Profile and the scholarship search process I used to find and apply for the offers that added up to $530,384 per year.",
   },
   {
     q: "What's an access code and how does it work?",
@@ -135,15 +135,15 @@ const FAQS = [
   },
   {
     q: "How long do I have access?",
-    a: "Lifetime. The course content lives on this site as long as Purcell Ventures exists. You'll also get any future updates I add, new lessons, updated templates, anything I add based on student feedback.",
+    a: "Lifetime. The course stays on this site as long as Purcell Ventures exists. You also get future updates: new lessons, updated templates and changes based on student feedback.",
   },
   {
     q: "What's the difference between the Coaching Track and 1:1 Intensive?",
-    a: "Coaching Track gets you into monthly group calls where you can ask questions directly. It's me, live, answering your specific situation, not just pre-recorded content. The 1:1 Intensive is private hours with me: we review your personal statement, build your school list strategy together, and prep your financial aid negotiation.",
+    a: "Coaching Track gets you into monthly group calls where I answer your questions live. The 1:1 Intensive is private hours with me: we review your personal statement, build your school list strategy together, and prep your financial aid negotiation.",
   },
   {
     q: "Can I upgrade later?",
-    a: "Yes. If you start with Self-Paced and want to add coaching, reach out directly, the price difference applies as a credit.",
+    a: "Yes. If you start with Self-Paced and want to add coaching, email me and I'll credit what you paid toward the upgrade.",
   },
 ];
 
@@ -186,20 +186,20 @@ export default function CollegeAppsPage() {
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
       <section style={{ position: "relative", zIndex: 5, padding: "72px 36px 60px", maxWidth: "1080px", margin: "0 auto" }}>
         <header className="pv-page-head" style={{ marginBottom: 0 }}>
-          <div className="pv-mono-label">Course · College Application Playbook</div>
+          <div className="pv-mono-label">Course: College Application Playbook</div>
           <h1 style={{ margin: 0 }}>
             <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>34 acceptances.</em>
             <br />
-            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>$530,384.</em>
+            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>$530,384 per year in offers.</em>
             <br />
-            I&apos;ll show you how.
+            How I applied to 98 schools.
           </h1>
           <p className="deck">
-            I&apos;m Elijah Purcell. I&apos;m 18. I just went through the college application process and came out with more acceptances and scholarship money than I knew what to do with. This course is everything I learned, documented, structured, and taught the way I wish someone had taught it to me.
+            I&apos;m Elijah Purcell. I&apos;m 19 and I went through the college application process recently. This course is what I learned, documented and taught in the order I would have wanted.
           </p>
           <div className="ca-hero-btns" style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
-            <a href="#curriculum" className="pv-btn-ghost">See what&apos;s inside ↓</a>
-            <a href="#waitlist" className="pv-btn-primary">Join the waitlist →</a>
+            <a href="#curriculum" className="pv-btn-ghost">See what&apos;s inside</a>
+            <a href="#waitlist" className="pv-btn-primary">Join the waitlist</a>
           </div>
           {/* Stats band */}
           <div style={{
@@ -212,7 +212,7 @@ export default function CollegeAppsPage() {
           }}>
             {[
               { num: "34",     label: "Acceptances" },
-              { num: "$530k", label: "Scholarships/yr" },
+              { num: "$530,384", label: "Scholarship offers per year" },
               { num: "98",     label: "Schools researched" },
               { num: "17",     label: "Lessons" },
             ].map((s, i) => (
@@ -242,10 +242,10 @@ export default function CollegeAppsPage() {
           </h2>
           <div className="ca-who-grid" style={{ background: "var(--color-warm-border)", borderRadius: 10, overflow: "hidden" }}>
             {[
-              { title: "High schoolers (9th–12th)", body: "You're in the middle of it. Whether you're just starting to think about college or finalizing your list senior year, this course meets you where you are." },
-              { title: "Parents of applicants", body: "Especially if you're trying to maximize scholarship money. The financial aid and scholarship modules alone cover strategies most families never hear about." },
-              { title: "First-generation students", body: "Nobody in your family has done this before. This course doesn't assume you already know how applications, financial aid, or college selection work, it starts from the beginning." },
-              { title: "Students who've been rejected", body: "Waitlisted, deferred, or didn't get into your top choice last cycle. This course covers what actually moves the needle, and it's not what most people focus on." },
+              { title: "High schoolers (9th to 12th grade)", body: "You're in the middle of it. Whether you're just starting to think about college or finalizing your list senior year, this course meets you where you are." },
+              { title: "Parents of applicants", body: "Especially if scholarship money is the goal. Two modules cover financial aid and scholarships." },
+              { title: "First-generation students", body: "Nobody in your family has done this before. The course starts from the beginning on applications, financial aid and choosing schools." },
+              { title: "Students who've been rejected", body: "Waitlisted, deferred or turned down by your top choice last cycle. The course covers what affects admissions decisions." },
             ].map(w => (
               <div key={w.title} style={{ background: "var(--color-warm-bg)", padding: "32px 28px" }}>
                 <div style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--color-warm-accent)", marginBottom: "16px" }} />
@@ -265,7 +265,7 @@ export default function CollegeAppsPage() {
             6 modules. 17 lessons.<br />The whole process.
           </h2>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "48px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            Camera lessons, screen shares of my actual process, and written notes for every lesson. Total: ~3.5 hours of video.
+            Camera lessons, screen shares of my process, and written notes for every lesson. Planned length: about 3 hours of video.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
             {MODULES.map((mod, i) => {
@@ -286,7 +286,7 @@ export default function CollegeAppsPage() {
                       <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "15px", fontWeight: 600, color: "var(--color-warm-text)" }}>{mod.title}</span>
                     </div>
                     <div style={{ display: "flex", alignItems: "center", gap: "16px", flexShrink: 0 }}>
-                      <span style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>{mod.lessonCount} lessons · {mod.totalMin} min</span>
+                      <span style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>{mod.lessonCount} lessons, {mod.totalMin} min</span>
                       <span style={{ fontSize: "20px", color: "var(--color-warm-accent)", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s", lineHeight: 1 }}>+</span>
                     </div>
                   </button>
@@ -327,21 +327,21 @@ export default function CollegeAppsPage() {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontFamily: "var(--font-inter), sans-serif" }}>Why This Course</div>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(24px, 3.5vw, 36px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "48px", lineHeight: 1.1 }}>
-            What makes it different.
+            What the course includes.
           </h2>
           <div className="ca-diff-grid">
             {[
               {
-                title: "Peer Perspective",
-                body: "I didn't study college admissions. I went through it. Every lesson is based on what I actually did, not what a textbook says works. The tactics are current, specific, and tested.",
+                title: "Recent Experience",
+                body: "I went through the admissions process recently. Every lesson is based on what I did.",
               },
               {
-                title: "Real Numbers",
-                body: "34 acceptances and $530k/year in scholarships aren't vague credentials. I'll show you the spreadsheet, the emails, the timelines. The data is the course.",
+                title: "My Numbers",
+                body: "34 acceptances and $530,384 per year in scholarship offers. I will show the spreadsheet, the emails and the timelines.",
               },
               {
-                title: "Process, Not Theory",
-                body: "Other courses tell you what matters. This one shows you exactly how to do it, screen shares of the actual tools, templates I built, and step-by-step walkthroughs of every major task.",
+                title: "Process",
+                body: "This course shows screen shares of the tools I used, the templates I built and step-by-step walkthroughs of each major task.",
               },
             ].map(d => (
               <div key={d.title} style={{ padding: "32px", border: "1px solid var(--color-warm-border)", borderRadius: 8 }}>
@@ -358,10 +358,10 @@ export default function CollegeAppsPage() {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontFamily: "var(--font-inter), sans-serif" }}>Pricing</div>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(24px, 3.5vw, 36px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "16px", lineHeight: 1.1 }}>
-            Pick your level of support.
+            Pricing
           </h2>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "40px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            Course opens when recording is complete. Join the waitlist to be first in and get the early-access price.
+            The course opens when recording is complete. Waitlist members get the early-access price.
           </p>
 
           {/* Payment mode toggle */}
@@ -407,14 +407,14 @@ export default function CollegeAppsPage() {
                   borderRadius: 6, textDecoration: "none", letterSpacing: "0.06em",
                   fontFamily: "var(--font-inter), sans-serif",
                 }}>
-                  Join Waitlist →
+                  Join the waitlist
                 </a>
               </div>
             ))}
           </div>
 
           <div style={{ marginTop: "16px", padding: "16px 20px", background: "var(--color-warm-card)", border: "1px solid var(--color-warm-border)", borderRadius: 6, fontSize: "12px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>
-            Prices in USD · Payments processed securely via Lemon Squeezy · Access code delivered by email within 5 minutes of purchase
+            Prices in USD. Lemon Squeezy processes payments. The access code arrives by email within 5 minutes of purchase.
           </div>
         </div>
       </section>
@@ -426,7 +426,7 @@ export default function CollegeAppsPage() {
             Waitlist
           </div>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "16px", lineHeight: 1.1 }}>
-            Be first in when it drops.
+            Join the waitlist.
           </h2>
           <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.75, marginBottom: "40px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
             Waitlist members get early access pricing and first notification when the course opens.
@@ -434,7 +434,7 @@ export default function CollegeAppsPage() {
           {waitlisted ? (
             <div style={{ padding: "24px 32px", background: "var(--color-warm-card)", border: "1px solid var(--color-warm-accent)", borderRadius: 8 }}>
               <div style={{ fontSize: "16px", fontWeight: 600, color: "var(--color-warm-accent)", fontFamily: "'Cinzel', Georgia, serif", marginBottom: "6px" }}>You're on the list.</div>
-              <div style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-dm-sans), sans-serif" }}>You'll hear from me before anyone else.</div>
+              <div style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-dm-sans), sans-serif" }}>I'll email you when enrollment opens.</div>
             </div>
           ) : (
             <form onSubmit={handleWaitlist} style={{ display: "flex", gap: "8px" }}>
@@ -457,7 +457,7 @@ export default function CollegeAppsPage() {
                 border: "none", borderRadius: 6, cursor: "pointer", letterSpacing: "0.06em",
                 fontFamily: "var(--font-inter), sans-serif", whiteSpace: "nowrap",
               }}>
-                Notify Me →
+                Notify me
               </button>
             </form>
           )}
@@ -500,7 +500,7 @@ export default function CollegeAppsPage() {
               Something not answered here?
             </p>
             <a href="mailto:elijah@purcell-ventures.com" style={{ fontSize: "13px", fontWeight: 600, color: "var(--color-warm-accent)", fontFamily: "var(--font-inter), sans-serif" }}>
-              elijah@purcell-ventures.com →
+              elijah@purcell-ventures.com
             </a>
           </div>
         </div>

@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "The Business Launch Playbook | Elijah Purcell",
   description:
-    "Filing the LLC, opening the bank account, finding the first customer, and the parts nobody warns you about. From someone who did it at seventeen.",
+    "Filing the LLC, opening the bank account and finding the first customer. I started Purcell Ventures at seventeen.",
   alternates: { canonical: "/courses/business-launch" },
 };
 

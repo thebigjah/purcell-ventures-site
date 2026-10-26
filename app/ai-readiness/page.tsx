@@ -28,12 +28,12 @@ const QUESTIONS: Question[] = [
       { label: "From scratch every time", points: 0 },
       { label: "From a small template library we maintain", points: 1 },
       { label: "We use ChatGPT or Claude as a draft starter, then edit", points: 2 },
-      { label: "We have prompt libraries + AI-edited outputs as default", points: 3 },
+      { label: "We keep prompt libraries and start from AI drafts by default", points: 3 },
     ],
   },
   {
-    text: "When was the last time your team adopted a new tool that genuinely saved you 5+ hours a week?",
-    context: "Not a new feature, a whole new tool that changed how someone works.",
+    text: "When did your team last adopt a new tool that saved 5 or more hours a week?",
+    context: "A whole new tool that changed how someone works, rather than a new feature.",
     options: [
       { label: "Can't think of one", points: 0 },
       { label: "A few years ago", points: 1 },
@@ -43,22 +43,22 @@ const QUESTIONS: Question[] = [
   },
   {
     text: "If a competitor automated 50% of your team's daily admin work tomorrow, how long would it take you to match them?",
-    context: "Not 'adopt a tool' — actually integrate it and run with it.",
+    context: "Count the time to integrate it into daily work, beyond signing up.",
     options: [
       { label: "We'd never catch up, we don't know what they'd be doing", points: 0 },
       { label: "6+ months of internal restructure", points: 1 },
-      { label: "1–3 months with help", points: 2 },
+      { label: "1 to 3 months with help", points: 2 },
       { label: "Already there or close", points: 3 },
     ],
   },
   {
     text: "Which describes your operations/admin workload best?",
-    context: "Be honest about repeat work.",
+    context: "Count the work your team repeats every week.",
     options: [
       { label: "80% manual, mostly the same tasks every week", points: 0 },
       { label: "50/50, some automation, lots of manual fallback", points: 1 },
       { label: "Mostly tooled, but humans review and approve everything", points: 2 },
-      { label: "Highly automated; humans handle the edge cases only", points: 3 },
+      { label: "Highly automated, and humans handle only the edge cases", points: 3 },
     ],
   },
   {
@@ -67,38 +67,38 @@ const QUESTIONS: Question[] = [
     options: [
       { label: "Shadow a senior person, ask questions, sink or swim", points: 0 },
       { label: "Written docs that are mostly out of date", points: 1 },
-      { label: "Living docs + maybe a video library", points: 2 },
-      { label: "AI-searchable knowledge base; new hires query like a coworker", points: 3 },
+      { label: "Docs we keep current, maybe with a video library", points: 2 },
+      { label: "An AI-searchable knowledge base that new hires can ask questions", points: 3 },
     ],
   },
   {
     text: "How does your team make decisions when data is involved?",
     context: "Customer trends, sales numbers, operational metrics.",
     options: [
-      { label: "Gut feel; we don't really pull numbers", points: 0 },
+      { label: "Gut feel. We rarely pull numbers", points: 0 },
       { label: "Someone runs reports manually when asked", points: 1 },
       { label: "We have a dashboard people check weekly", points: 2 },
-      { label: "Real-time dashboards + AI summaries of what changed and why", points: 3 },
+      { label: "Real-time dashboards with AI summaries of what changed and why", points: 3 },
     ],
   },
   {
-    text: "Marketing & content output: how is it produced?",
+    text: "How does your team produce marketing and content?",
     context: "Social posts, blog content, ads, email campaigns.",
     options: [
-      { label: "We don't really produce content", points: 1 },
+      { label: "We produce almost no content", points: 1 },
       { label: "Everything written by humans from scratch", points: 0 },
       { label: "AI-assisted drafts, human-edited and scheduled", points: 2 },
-      { label: "AI-generated + AI-scheduled + human-approved pipeline", points: 3 },
+      { label: "AI drafts and schedules it, and a person approves it", points: 3 },
     ],
   },
   {
     text: "What's your team's read on the next 18 months of AI?",
-    context: "Cultural temperature check.",
+    context: "How your team talks about AI.",
     options: [
       { label: "It's overhyped, we're not changing anything", points: 0 },
       { label: "We know we should learn it, haven't gotten to it", points: 1 },
-      { label: "We're actively testing tools; some are sticking", points: 2 },
-      { label: "AI is core to our planning; we map every quarter against it", points: 3 },
+      { label: "We're testing tools, and some are sticking", points: 2 },
+      { label: "AI is part of our planning every quarter", points: 3 },
     ],
   },
   {
@@ -107,18 +107,18 @@ const QUESTIONS: Question[] = [
     options: [
       { label: "Wouldn't know where to start", points: 0 },
       { label: "We'd post on Upwork or hire a generalist", points: 1 },
-      { label: "We have a developer/consultant we'd call", points: 2 },
-      { label: "Internal team can build a working v0 within the week", points: 3 },
+      { label: "We have a developer or consultant we'd call", points: 2 },
+      { label: "Our own team could build a working first version within the week", points: 3 },
     ],
   },
   {
-    text: "Final honesty check: if your job were automated tomorrow, how prepared are you personally?",
-    context: "No wrong answer here. Just the read.",
+    text: "Last question: if your job were automated tomorrow, how prepared are you personally?",
+    context: "Answer for yourself, not the team.",
     options: [
       { label: "Hadn't thought about it", points: 0 },
       { label: "I'd struggle but figure it out", points: 1 },
       { label: "I've been building skills that would carry over", points: 2 },
-      { label: "I'd see it as an opportunity — I'd be building the tool that did it", points: 3 },
+      { label: "I'd be the one building the tool that did it", points: 3 },
     ],
   },
 ];
@@ -128,53 +128,53 @@ const TIERS: Tier[] = [
     max: 9,
     label: "AT RISK",
     cls: "low",
-    verdict: "You're behind the curve, and the curve is moving faster every quarter.",
-    detail: "This isn't a judgment, it's a heads-up. Most people in this tier don't realize how much room there is to close the gap with one focused session.",
+    verdict: "Your team does most of its work by hand today.",
+    detail: "One focused session on one workflow is a reasonable place to start.",
     recs: [
-      "Pick ONE workflow your team does weekly that's pure manual work. Automate JUST that one in 2 hours.",
-      "Subscribe to one well-curated AI-for-business newsletter (Lenny's, AI Breakdown). 5 min/day, 90 days. Don't take action yet, just absorb vocabulary.",
-      "Book a 2-hour 'AI Basics for Business' session, designed for exactly this tier.",
+      "Pick one weekly workflow that is all manual work. Spend 2 hours automating only that one.",
+      "Subscribe to one AI-for-business newsletter (Lenny's, AI Breakdown) and read it 5 minutes a day for 90 days to learn the vocabulary.",
+      "Book a 2-hour 'AI Basics for Business' session, which I built for this tier.",
     ],
-    sessionCta: { label: "Book AI Basics for Business →", href: "/consulting/book" },
+    sessionCta: { label: "Book AI Basics for Business", href: "/consulting/book" },
   },
   {
     max: 17,
     label: "WAKING UP",
     cls: "mid",
-    verdict: "You see the shift coming. You haven't built around it yet.",
-    detail: "You're not behind, you're at a decision point. The next 6 months are when the gap between 'aware' and 'actively building' becomes hard to close.",
+    verdict: "Your team knows AI matters and has not built it into daily work yet.",
+    detail: "The next step is choosing one workflow and building around it.",
     recs: [
-      "Audit your team's top 5 time-wasting workflows. Rank by hours/week × repeatability. Highest-scoring is your first automation candidate.",
-      "Allocate 1 person 4 hours/week explicitly for 'AI tooling research and small pilots.' Make it official, not extra duty.",
-      "Pick a 3-hour hands-on session: ChatGPT in Your Workflow or AI for Marketing. Bring the team. Real scenarios.",
+      "List your team's 5 most time-consuming workflows. Rank them by hours per week times how often they repeat. The top one is your first automation candidate.",
+      "Give one person 4 hours a week, on the schedule, for AI tool research and small pilots.",
+      "Pick a 3-hour hands-on session, ChatGPT in Your Workflow or AI for Marketing, and bring the team and your own work examples.",
     ],
-    sessionCta: { label: "Book a Hands-On Session →", href: "/consulting/book" },
+    sessionCta: { label: "Book a Hands-On Session", href: "/consulting/book" },
   },
   {
     max: 24,
     label: "MOVING",
     cls: "high",
-    verdict: "You're actively building. The question is how much faster you could compound.",
-    detail: "You're past the 'should we' phase and into the 'how do we scale this' phase. The biggest unlock now is connecting individual AI wins into integrated workflows.",
+    verdict: "Your team already builds with AI.",
+    detail: "The next step is connecting the separate AI tools you use into one workflow.",
     recs: [
-      "Map your existing AI tools and look for the seams, where does an AI-generated output get manually re-entered into another system? That's your next automation.",
-      "Establish an internal monthly 'AI demo day' where anyone on the team shows a new tool or workflow. Cultural compounding.",
-      "Consider Custom Team Training, at this tier, generic sessions are below your level. You need a session built around your actual stack.",
+      "Map your AI tools and find where someone retypes an AI output into another system. Automate that step next.",
+      "Hold a monthly AI demo day where anyone on the team can show a new tool or workflow.",
+      "Consider Custom Team Training. At this tier a general session will repeat what you know, so the session should be built around your own tools.",
     ],
-    sessionCta: { label: "Book Custom Team Training →", href: "/consulting/book" },
+    sessionCta: { label: "Book Custom Team Training", href: "/consulting/book" },
   },
   {
     max: 30,
     label: "BUILDING THE FUTURE",
     cls: "high",
-    verdict: "You're not asking the AI-readiness question, you're answering it for other people.",
-    detail: "At this tier, the value isn't training; it's strategic sounding-boarding. The right next conversation is about positioning your AI capability as a market advantage or even a new revenue line.",
+    verdict: "Your team already runs much of its work through AI.",
+    detail: "Training will add little at this tier. A strategy conversation about selling or packaging what you have built is more useful.",
     recs: [
-      "Document your AI infrastructure as a sellable methodology, even internally. The patterns that work for you will work for adjacent businesses.",
-      "Consider whether your AI capability is a product line, a service offering, or a competitive moat. The three have very different strategies.",
-      "Talk to me about a strategic consult, not a training session. Different conversation, different cadence.",
+      "Write down how your AI setup works as a method someone else could follow. Businesses close to yours may be able to use it.",
+      "Decide whether your AI capability is something to sell as a product, sell as a service, or keep as an advantage. Each needs a different plan.",
+      "Email me about a strategy consult instead of a training session.",
     ],
-    sessionCta: { label: "Email Elijah for a Strategic Consult →", href: "mailto:elijah@purcell-ventures.com?subject=Strategic%20Consult%20Inquiry" },
+    sessionCta: { label: "Email Elijah for a Strategy Consult", href: "mailto:elijah@purcell-ventures.com?subject=Strategic%20Consult%20Inquiry" },
   },
 ];
 
@@ -225,12 +225,12 @@ export default function AIReadinessPage() {
 
         {/* Page head */}
         <header className="pv-page-head" style={{ marginBottom: "32px" }}>
-          <div className="pv-mono-label">A Diagnostic Instrument · 10 questions · 3 minutes</div>
+          <div className="pv-mono-label">Ten questions, three minutes</div>
           <h1 style={{ margin: 0 }}>
             AI Readiness <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Test.</em>
           </h1>
           <p className="deck">
-            Where does your role and your company actually stand in the AI-disruption window? No email capture. Honest answer.
+            How far along is your team with AI? No email required.
           </p>
         </header>
 
@@ -302,7 +302,7 @@ export default function AIReadinessPage() {
               <button onClick={back} disabled={current === 0} className={current === 0 ? "" : "pv-btn-ghost"}
                 style={current === 0 ? { opacity: 0.3, padding: "11px 22px", fontFamily: "var(--font-dm-sans), system-ui, sans-serif", fontSize: "11px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-text-light)", background: "none", border: "1.5px solid var(--color-warm-border)", borderRadius: 0, cursor: "not-allowed" } : {}}
               >
-                ← Back
+                Back
               </button>
               <span className="pv-mono-label" style={{ color: "var(--color-warm-text-light)" }}>
                 Tap to continue
@@ -316,7 +316,7 @@ export default function AIReadinessPage() {
             <div className="pv-card" style={{ padding: "40px 40px 32px", textAlign: "center", marginBottom: "24px" }}>
               <span className="b3"></span><span className="b4"></span>
               <div className="pv-mono-label" style={{ marginBottom: "12px", color: "var(--color-warm-text-light)" }}>
-                Your Score · {timestampString()}
+                Your score, {timestampString()}
               </div>
               <div style={{
                 fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700,
@@ -337,7 +337,7 @@ export default function AIReadinessPage() {
                 letterSpacing: "0.42em", textTransform: "uppercase",
                 color: TIER_COLOR[tier.cls],
               }}>
-                Tier · {tier.label}
+                Tier: {tier.label}
               </div>
             </div>
 
@@ -361,7 +361,7 @@ export default function AIReadinessPage() {
             {/* Recommendations */}
             <div className="pv-card" style={{ padding: "32px 36px 28px", marginBottom: "20px" }}>
               <span className="b3"></span><span className="b4"></span>
-              <div className="pv-mono-label" style={{ marginBottom: "16px" }}>Three calibrated next steps</div>
+              <div className="pv-mono-label" style={{ marginBottom: "16px" }}>Three next steps</div>
               <ol style={{ margin: 0, paddingLeft: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: "16px", counterReset: "rec-counter" }}>
                 {tier.recs.map((rec, i) => (
                   <li key={i} style={{
@@ -407,7 +407,7 @@ export default function AIReadinessPage() {
                 fontSize: "16px", color: "var(--color-warm-text)", opacity: 0.85,
                 maxWidth: "520px", margin: "0 auto 24px", lineHeight: 1.55,
               }}>
-                Based on your tier, this session is the right fit. No upsell, if I think you don&apos;t need it, I&apos;ll tell you straight up.
+                This session matches your tier. If I think you don&apos;t need it, I&apos;ll tell you.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: "10px", alignItems: "center" }}>
                 {tier.sessionCta.href.startsWith("mailto:") ? (
@@ -420,7 +420,7 @@ export default function AIReadinessPage() {
                   </Link>
                 )}
                 <Link href="/ai-cost-calculator" className="pv-btn-ghost">
-                  Quantify it: AI Cost Calculator →
+                  Estimate the savings with the AI Cost Calculator
                 </Link>
               </div>
             </section>
@@ -428,7 +428,7 @@ export default function AIReadinessPage() {
             {/* Restart */}
             <div style={{ textAlign: "center" }}>
               <button onClick={restart} className="pv-btn-ghost">
-                Take it again ↺
+                Take it again
               </button>
             </div>
           </div>
@@ -442,30 +442,25 @@ export default function AIReadinessPage() {
             to read. */}
         <section style={{ maxWidth: "720px", margin: "72px auto 0", padding: "0 8px", fontSize: "16px", lineHeight: 1.75 }}>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "0 0 14px", color: "var(--color-warm-text)" }}>
-            What this test actually measures
+            What the test measures
           </h2>
           <p>
-            Ten questions about how your team works right now, not about what you know
-            regarding AI. The difference matters. Most readiness assessments test vocabulary
-            and hand back a score that flatters whoever took it. This one asks what you
+            Ten questions about how your team works right now. They ask what you
             currently do when you draft a customer email, when you answer the same question
             for the twentieth time, when someone leaves and takes a process with them.
           </p>
           <p>
-            The questions cover drafting and written communication, repeated manual steps,
-            how knowledge is stored and found, customer response times, how work gets handed
-            off between people, and where your data actually lives. Those six areas are where
-            small teams either gain hours or lose them, and they are the areas where an
-            honest answer predicts whether AI will help you or waste your money.
+            The questions cover drafting and written communication, new tools, repeated
+            manual work, how knowledge is stored and found, how data informs decisions,
+            marketing content, and how your team and you personally think about AI. Your
+            answers show whether AI is likely to help.
           </p>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "36px 0 14px", color: "var(--color-warm-text)" }}>
             What you get back
           </h2>
           <p>
-            A position in the disruption window and a short list of what to do first, in
-            order. Some results say the useful next step is not an AI tool at all, and the
-            test will say so. There is no email capture, no gated report, and no follow-up
-            sequence. It runs in your browser and takes about three minutes.
+            A readiness level and a short list of what to do first, in order. It needs no
+            email and sends no follow-up. It runs in your browser and takes about three minutes.
           </p>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "36px 0 14px", color: "var(--color-warm-text)" }}>
             Who built it
@@ -474,17 +469,17 @@ export default function AIReadinessPage() {
             Elijah Purcell, founder and CEO of{" "}
             <Link href="/about" style={{ color: "var(--color-warm-accent)" }}>Purcell Ventures LLC</Link>{" "}
             and an autonomous AI agent systems engineer, working out of Tuscaloosa, Alabama.
-            The scoring reflects what actually moves for small teams in practice, including a
-            fifteen-agent workforce that runs this company&apos;s own proposals, audits and
-            compliance on a schedule.
+            Each answer scores 0 to 3 points, for a total out of 30, and the total places you
+            in one of four tiers. I set the point values myself, drawing on
+            running a fifteen-agent workforce that handles this company&apos;s proposals,
+            audits and compliance on a schedule.
           </p>
           <p>
             If the result raises questions, the{" "}
             <Link href="/consulting" style={{ color: "var(--color-warm-accent)" }}>consulting page</Link>{" "}
             explains how sessions work, and{" "}
             <Link href="/ai-consultant-tuscaloosa" style={{ color: "var(--color-warm-accent)" }}>local work in Tuscaloosa</Link>{" "}
-            covers in-person engagements. The first conversation is free and frequently ends
-            with me saying the problem is smaller than you thought.
+            covers in-person engagements. The first conversation is free.
           </p>
         </section>
 
@@ -500,8 +495,8 @@ export default function AIReadinessPage() {
         fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
         color: "var(--color-warm-text-light)",
       }}>
-        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
-        <Link href="/consulting" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← Consulting</Link>
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC, Acworth, GA</span>
+        <Link href="/consulting" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>Consulting</Link>
       </footer>
     </div>
   );

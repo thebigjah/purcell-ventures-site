@@ -7,11 +7,11 @@ const COURSES = [
     roman: "I.",
     href: "/courses/college-apps",
     title: "The College Application Playbook",
-    desc: "34 acceptances. $530,384 in scholarships. 98 schools researched. The exact process, building your list, writing essays, chasing scholarships, and maximizing your offer.",
+    desc: "I researched 98 schools, got 34 acceptances and $530,384 per year in scholarship offers. The course covers building a list, writing essays and applying for scholarships.",
     price: "$297",
     stats: [
       { v: "34",    l: "Acceptances" },
-      { v: "$530k", l: "Scholarships" },
+      { v: "$530,384", l: "Per year in offers" },
       { v: "17",    l: "Lessons" },
     ],
   },
@@ -19,19 +19,19 @@ const COURSES = [
     roman: "II.",
     href: "/courses/business-launch",
     title: "The Business Launch Playbook",
-    desc: "From idea to LLC to first dollar. 7 modules, 26 lessons, and a full resource pack, every tool, decision, and shortcut from building Purcell Ventures at seventeen.",
+    desc: "From idea to LLC to first customer. 7 modules, 26 lessons and a resource pack with the tools and decisions from starting Purcell Ventures at seventeen.",
     price: "$397",
     stats: [
       { v: "7",   l: "Modules" },
       { v: "26",  l: "Lessons" },
-      { v: "LLC", l: "→ Revenue" },
+      { v: "6", l: "Templates" },
     ],
   },
   {
     roman: "III.",
     href: "/courses/ai-automation",
     title: "Zero to Automated",
-    desc: "8 modules. 25 lessons. Build the AI tools you actually need, email bots, content pipelines, lead scrapers, and personal AI assistants. Every tool taught is a tool I run.",
+    desc: "8 modules and 25 lessons. Build email bots, content pipelines, lead scrapers and a personal AI assistant. I run every tool the course teaches.",
     price: "$397",
     stats: [
       { v: "8",   l: "Modules" },
@@ -72,19 +72,19 @@ export default function CoursesPage() {
 
         {/* Page head */}
         <header className="pv-page-head">
-          <div className="pv-mono-label">Purcell Ventures · Courses</div>
+          <div className="pv-mono-label">Purcell Ventures courses</div>
           <h1>
-            Learn from someone <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>who just did it.</em>
+            Courses on things <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>I did recently.</em>
           </h1>
           <p className="deck">
-            No theory. No credentials theater. Just the actual process, documented, structured, and taught by someone who&apos;s been through it recently enough to remember every step.
+            Each course documents a process I went through in the last two years, in the order I did it.
           </p>
         </header>
 
         {/* Courses grid */}
         <header className="pv-section-head">
           <span className="roman">I.</span>
-          <h2>Available <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>now</em></h2>
+          <h2>Waitlist <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>open</em></h2>
         </header>
         <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
           {COURSES.map((c) => (
@@ -102,7 +102,7 @@ export default function CoursesPage() {
               </span>
               <div>
                 <div className="pv-mono-label" style={{ marginBottom: "10px", color: "var(--color-warm-accent)" }}>
-                  Available now · Self-paced
+                  Waitlist open, self-paced
                 </div>
                 <h2 style={{
                   fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
@@ -146,7 +146,7 @@ export default function CoursesPage() {
                   color: "var(--color-warm-accent)",
                   marginTop: "12px",
                 }}>
-                  View course →
+                  View course
                 </span>
               </div>
             </Link>
@@ -158,47 +158,41 @@ export default function CoursesPage() {
             deciding whether to buy actually wants and the part an engine can quote. */}
         <section style={{ maxWidth: "720px", margin: "72px auto 0", padding: "0 8px", fontSize: "16px", lineHeight: 1.75 }}>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "0 0 14px", color: "var(--color-warm-text)" }}>
-            Why these three, and not a catalogue
+            Why three courses
           </h2>
           <p>
             I only teach things I finished recently enough to remember the parts that went
-            wrong. That rules out most of what could be sold here and leaves three: applying
-            to college, starting a business, and automating work with AI. Each one I did
-            inside the last two years, with the receipts still in a folder.
+            wrong. That leaves three: applying to college, starting a business and
+            automating work with AI. I did each one in the last two years.
           </p>
           <p>
-            The tradeoff is honest and worth stating. You are not getting twenty years of
-            perspective. You are getting the current process, including the steps that only
-            exist because of how things work right now, taught by someone who has not yet
-            forgotten how confusing they were the first time.
+            The tradeoff: I do not have twenty years of perspective. These courses cover the
+            current process, including steps that exist only because of how things work now.
           </p>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "36px 0 14px", color: "var(--color-warm-text)" }}>
             What a course here is
           </h2>
           <p>
-            Self-paced, lifetime access, and structured as a sequence of lessons you work
-            through rather than videos you watch. Every course includes the templates and
-            documents I actually used, not recreations. If a lesson tells you to send an
+            Self-paced, lifetime access, structured as lessons with exercises. Every course
+            includes the templates and documents I used. If a lesson tells you to send an
             email, the email is in there.
           </p>
           <p>
-            There is a refund policy and it is not a maze. If the material does not do what
-            the page said it would, ask and you get your money back. I would rather refund
-            you than have you tell someone the course was oversold.
+            Refunds: if the material does not match what the page says, ask and I will refund
+            you.
           </p>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", fontWeight: 600, margin: "36px 0 14px", color: "var(--color-warm-text)" }}>
             Who teaches them
           </h2>
           <p>
-            Elijah Purcell, founder and CEO of{" "}
+            I teach them. I am Elijah Purcell, founder and CEO of{" "}
             <Link href="/about" style={{ color: "var(--color-warm-accent)" }}>Purcell Ventures LLC</Link>,
-            an autonomous AI agent systems engineer, and a psychology and data science
-            student at the University of Alabama Honors College in Tuscaloosa. The{" "}
+            I build autonomous AI agent systems and study psychology and data science
+            in the University of Alabama Honors College in Tuscaloosa. The{" "}
             <Link href="/who" style={{ color: "var(--color-warm-accent)" }}>short factual version</Link>{" "}
-            has the record without the sales copy, and if what you need is help rather than a
-            course, the{" "}
-            <Link href="/consulting" style={{ color: "var(--color-warm-accent)" }}>consulting page</Link>{" "}
-            is the cheaper answer more often than not.
+            has the record without the sales copy. If you need help rather than a course, see
+            the{" "}
+            <Link href="/consulting" style={{ color: "var(--color-warm-accent)" }}>consulting page</Link>.
           </p>
         </section>
 
@@ -214,8 +208,8 @@ export default function CoursesPage() {
         fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
         color: "var(--color-warm-text-light)",
       }}>
-        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
-        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← Home</a>
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC, Acworth, GA</span>
+        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>Home</a>
       </footer>
     </div>
     </>

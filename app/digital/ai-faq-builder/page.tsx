@@ -71,12 +71,12 @@ export default function AIFaqBuilderPage() {
       <main style={{ position: "relative", zIndex: 5, maxWidth: "880px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
         <header className="pv-page-head">
-          <div className="pv-mono-label">Digital · AI FAQ Builder</div>
+          <div className="pv-mono-label">AI FAQ Builder</div>
           <h1>
-            FAQs <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>in a minute.</em>
+            Generate FAQs <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>for your business.</em>
           </h1>
           <p className="deck">
-            Tell us about your business. Get back 6-10 customer-quality FAQ pairs you can drop straight onto your site.
+            Tell me about your business. You get 6 to 10 question and answer pairs to paste onto your site.
           </p>
         </header>
 
@@ -169,13 +169,13 @@ export default function AIFaqBuilderPage() {
             </div>
 
             <div style={{ marginTop: "32px", padding: "16px 20px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>
-              <strong style={{ color: "var(--color-warm-text)" }}>Not quite right?</strong> Edit your description above and regenerate. The model uses your wording, give it more specifics about your customers&apos; common confusions and it sharpens up.
+              <strong style={{ color: "var(--color-warm-text)" }}>Not quite right?</strong> Edit your description above and generate again. The model works from your wording, so add the questions your customers ask most.
             </div>
           </div>
         )}
 
         <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", textAlign: "center", fontStyle: "italic", marginTop: "48px" }}>
-          AI FAQ Builder · part of Purcell Ventures Digital Services. Built using Claude Haiku 4.5.
+          AI FAQ Builder, part of Purcell Ventures Digital Services. Built using Claude Haiku 4.5.
         </p>
 
       </main>

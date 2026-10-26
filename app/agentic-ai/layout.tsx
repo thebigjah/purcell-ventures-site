@@ -10,14 +10,14 @@ export const metadata: Metadata = {
       "Autonomous AI Agent Systems: What They Are, and Running One in Production | Elijah Purcell",
   },
   description:
-    "What an autonomous AI agent system actually is, how it differs from a chatbot or a workflow, and what it takes to run a fifteen-agent workforce in production. Written by Elijah Purcell, Autonomous AI Agent Systems Engineer and founder of Purcell Ventures LLC.",
+    "What an autonomous AI agent system is, how it differs from a chatbot or a workflow, and what it takes to run a fifteen-agent workforce in production. Written by Elijah Purcell, Autonomous AI Agent Systems Engineer and founder of Purcell Ventures LLC.",
   alternates: { canonical: "/agentic-ai" },
   openGraph: {
     type: "article",
     url: "https://purcellventures.co/agentic-ai",
     title: "Autonomous AI Agent Systems, and Running One in Production",
     description:
-      "The difference between an agent, a workflow and a chatbot, and what fifteen agents in production actually cost to keep honest.",
+      "The difference between an agent, a workflow and a chatbot, and what it takes to keep fifteen agents in production accurate.",
     images: ["/opengraph-image"],
   },
 };
@@ -48,7 +48,7 @@ const LD = {
           "name": "What is an autonomous AI agent system?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A system where a model decides what to do next rather than being told. A workflow runs steps in a fixed order. A chatbot answers when spoken to. An agent is given a goal, a set of tools and a boundary, and chooses its own sequence, which is why the hard part is not the model but the constraints around it.",
+            "text": "An agent is given a goal, a set of tools and limits, and picks its own steps toward the goal. The hard part is the constraints around the model.",
           },
         },
         {
@@ -69,10 +69,10 @@ const LD = {
         },
         {
           "@type": "Question",
-          "name": "What actually goes wrong with AI agents in production?",
+          "name": "What goes wrong with AI agents in production?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The failure mode is not a wrong answer, it is a confident closure. An agent that marks work complete when a network call failed looks identical to one that finished. Every mechanism that can mark something done needs an adversarial read, because its failure looks like success.",
+            "text": "The failure mode is an agent that marks work done when it is not. An agent that marks work complete when a network call failed looks identical to one that finished. Every mechanism that can mark something done needs an adversarial read, because its failure looks like success.",
           },
         },
         {
@@ -80,7 +80,7 @@ const LD = {
           "name": "Do you need a large team to run an agent system?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Purcell Ventures LLC has one human employee. The fifteen agents are software and the team page says so in its first sentence. The constraint is not headcount, it is how much you are willing to let run without a person in the loop, and what you do when it is wrong.",
+            "text": "No. Purcell Ventures LLC has one human employee. The fifteen agents are software and the team page says so in its first sentence. The constraint is how much you let run without a person in the loop, and what you do when it is wrong.",
           },
         },
       ],

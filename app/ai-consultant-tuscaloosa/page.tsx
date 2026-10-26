@@ -40,29 +40,25 @@ export default function AiConsultantTuscaloosa() {
           <p>
             Most people who reach this page are asking one of two questions. Either they want
             something built and are trying to work out whether AI is involved, or somebody has
-            told them they need AI and they are trying to work out whether that is true. Both
-            are good questions. The second one gets an honest answer more often than the people
-            selling AI would like.
+            told them they need AI and they are trying to work out whether that is true.
           </p>
 
-          <h2 style={H2}>What I actually do</h2>
+          <h2 style={H2}>What I do</h2>
 
           <p>
-            Three kinds of work, in roughly the order people ask for them.
+            I do three kinds of work, listed in the order people usually ask for them.
           </p>
 
           <p>
             <strong>Websites.</strong> Built, hosted, and maintained. For University of Alabama
             students and student-run businesses the price is <strong>$500</strong>, with an
-            optional <strong>$25 a month</strong> to keep it current. That rate exists because
-            student businesses are the ones who most need a real site and least often have the
-            budget for one.
+            optional <strong>$25 a month</strong> to keep it current. I charge students less because their budgets are small.
           </p>
 
           <p>
             <strong>Custom software.</strong> Marketplaces, data pipelines, internal tools, and
-            the boring compliance and review systems that keep them honest. Quoted per project
-            after a conversation, which is free.
+            the compliance and review systems behind them. I quote per project after a free
+            conversation.
           </p>
 
           <p>
@@ -76,15 +72,12 @@ export default function AiConsultantTuscaloosa() {
           <p>
             You can hire an agency anywhere. The reason to hire someone in Tuscaloosa is that
             you can sit across a table from them, and that the person you meet is the person
-            who writes the code. Purcell Ventures is one operator. There is no account manager,
-            no handoff to a team you never meet, and no offshore subcontractor you were not
-            told about.
+            who writes the code. Purcell Ventures is one operator. One person does the work.
           </p>
 
           <p>
             The work is supported by a fifteen-agent AI workforce I built, which handles
-            proposals, audits, compliance and outreach on a schedule. That is software, not
-            staff, and the{" "}
+            proposals, audits, compliance and outreach on a schedule. The agents are software, and the{" "}
             <Link href="/team" style={link}>team page</Link> says so in its first sentence. A
             human does the building and a human answers your email.
           </p>
@@ -92,7 +85,7 @@ export default function AiConsultantTuscaloosa() {
           <h2 style={H2}>Work you can check right now</h2>
 
           <p>
-            Claims are cheap, so here are things you can open in another tab.
+            Examples you can open:
           </p>
 
           <p>
@@ -109,7 +102,7 @@ export default function AiConsultantTuscaloosa() {
             web, each one a small piece of software solving one problem. The{" "}
             <Link href="/portfolio" style={link}>portfolio</Link> has client work, and the{" "}
             <Link href="/case-studies" style={link}>case studies</Link> explain what was
-            actually hard about a few of them.
+            hard about a few of them.
           </p>
 
           <h2 style={H2}>What I am not</h2>
@@ -117,13 +110,12 @@ export default function AiConsultantTuscaloosa() {
           <p>
             I am nineteen and this is a one-person company. If you need a team of twelve, a
             signed enterprise MSA, and someone on call at three in the morning, I am the wrong
-            call and I will say so on the first phone call rather than the third invoice.
+            person for the job and I will say so on the first call.
           </p>
 
           <p>
-            I also will not tell you that a language model solves a problem it does not solve.
-            A lot of what gets sold as AI consulting is a wrapper around a chat box. If that is
-            what your problem needs, it is cheap and I will tell you how to do it yourself.
+            If a language model cannot solve your problem, I will say so. If a chat box is
+            all your problem needs, it is cheap and I will tell you how to do it yourself.
           </p>
 
           <h2 style={H2}>Common questions</h2>
@@ -140,9 +132,7 @@ export default function AiConsultantTuscaloosa() {
           <p>
             Email{" "}
             <a href="mailto:elijah@purcell-ventures.com" style={link}>elijah@purcell-ventures.com</a>{" "}
-            and tell me what you are trying to do. Not what you think you need built, what you
-            are trying to do. The first conversation is free and frequently ends with me saying
-            the problem is smaller than you thought.
+            and tell me what you are trying to do. The first conversation is free.
           </p>
 
           <p style={{ marginTop: "32px" }}>

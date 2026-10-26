@@ -19,7 +19,7 @@ const PALETTE = [
     hex: "#0c0a08",
     rgb: "12, 10, 8",
     role: "Primary background",
-    usage: "Default background for all brand materials. Near-black with a warm brown undertone, not pure black, which reads as cold and digital. Every surface starts here unless a specific rule says otherwise.",
+    usage: "Default background for all brand materials. Near-black with a warm brown undertone because pure black looks cold. Every surface starts here unless a specific rule says otherwise.",
     swatch: DARK,
     textColor: CREAM,
   },
@@ -28,7 +28,7 @@ const PALETTE = [
     hex: "#d4af37",
     rgb: "212, 175, 55",
     role: "Brand accent",
-    usage: "CTAs, highlights, the mark, active states, eyebrow labels, price tags. Never use as body text on dark, too vibrant for sustained reading. Never use as a background for text-heavy content. This is the accent, not the base.",
+    usage: "CTAs, highlights, the mark, active states, eyebrow labels, price tags. Never use as body text on dark because it is too bright for long reading. Never use as a background for text-heavy content. Use it as the accent.",
     swatch: GOLD,
     textColor: DARK,
   },
@@ -45,7 +45,7 @@ const PALETTE = [
     name: "Ember",
     hex: "#2e2820",
     rgb: "46, 40, 32",
-    role: "Borders · card backgrounds",
+    role: "Borders and card backgrounds",
     usage: "All borders, dividers, and card backgrounds. One step lighter than Purcell Dark, creates depth without introducing a new color. Never use as text color.",
     swatch: EMBER,
     textColor: CREAM,
@@ -54,8 +54,8 @@ const PALETTE = [
     name: "Ash",
     hex: "#524d45",
     rgb: "82, 77, 69",
-    role: "Secondary text · muted content",
-    usage: "Subheadings, descriptions, secondary body copy, anything that should recede behind primary cream text. The workhorse muted tone for long-form content.",
+    role: "Secondary text and muted content",
+    usage: "Subheadings, descriptions, secondary body copy, anything that should recede behind primary cream text. Muted tone for long-form content.",
     swatch: ASH,
     textColor: CREAM,
   },
@@ -63,7 +63,7 @@ const PALETTE = [
     name: "Char",
     hex: "#3a3530",
     rgb: "58, 53, 48",
-    role: "Tertiary text · labels",
+    role: "Tertiary text and labels",
     usage: "Category labels, fine print, metadata, timestamps, the most muted readable text. Below this level, content is invisible.",
     swatch: CHAR,
     textColor: CREAM,
@@ -73,7 +73,7 @@ const PALETTE = [
     hex: "#faf8f4",
     rgb: "250, 248, 244",
     role: "Forced-light background",
-    usage: "Use when printing on standard white paper or generating a PDF that will be viewed on a white background. Slightly warm tinted, avoids the clinical feel of pure white while staying light enough for print legibility. Text on this surface: Purcell Dark. Accent: Gold.",
+    usage: "Use when printing on standard white paper or generating a PDF that will be viewed on a white background. Warm tint of white for print, light enough to stay legible. Text on this surface: Purcell Dark. Accent: Gold.",
     swatch: WARM_WHITE,
     textColor: DARK,
   },
@@ -84,25 +84,25 @@ const COMBOS = [
     label: "Default, digital and dark-stock print",
     bg: DARK, text: CREAM, accent: GOLD, border: EMBER,
     rule: "This is the baseline. Every surface defaults here. Gold for accents and marks only.",
-    context: "Website · dark business cards · dark stationery · brand presentations",
+    context: "Website, dark business cards, dark stationery, brand presentations",
   },
   {
-    label: "Inverted accent, premium moments",
+    label: "Gold background pairing",
     bg: GOLD, text: DARK, accent: DARK, border: DARK,
     rule: "Gold as a background works only for short-form content, a card back, a section banner, a pull quote. Never for body text paragraphs.",
-    context: "Card accent elements · pull quotes · pricing highlights · CTA banners",
+    context: "Card accent elements, pull quotes, pricing highlights, CTA banners",
   },
   {
     label: "Cream surface, light-stock print",
     bg: CREAM, text: DARK, accent: GOLD, border: ASH,
-    rule: "Cream stock with dark text and gold accents. Feels premium on physical materials. Not for digital — Warm White is the forced-light digital equivalent.",
-    context: "Cream-stock stationery · letterhead · printed proposals · brand book pages",
+    rule: "Cream stock with dark text and gold accents. Use on cream stock. For digital, use Warm White.",
+    context: "Cream-stock stationery, letterhead, printed proposals, brand book pages",
   },
   {
     label: "Forced light, white paper and standard PDFs",
     bg: WARM_WHITE, text: DARK, accent: GOLD, border: CHAR,
     rule: "When you have no choice but a light background. Warm White instead of pure white keeps the brand temperature. Dark text, gold accents, Char for borders.",
-    context: "Standard PDFs · Google Docs · printed emails · white-stock invoices",
+    context: "Standard PDFs, Google Docs, printed emails, white-stock invoices",
   },
 ];
 
@@ -142,7 +142,7 @@ function ColorSection() {
 
       <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Approved Combinations</h2>
       <p style={{ fontSize: "13px", color: ASH, marginBottom: "32px", maxWidth: "560px", lineHeight: 1.65 }}>
-        Four approved pairings covering every context. Each is shown at scale with sample content so the combination is unambiguous.
+        Four approved pairings. Each is shown at scale with sample content.
       </p>
       <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "64px" }}>
         {COMBOS.map(combo => (
@@ -155,10 +155,10 @@ function ColorSection() {
                 Sample Heading Text
               </div>
               <p style={{ fontSize: "14px", color: combo.text, opacity: 0.72, lineHeight: 1.7, margin: "0 0 16px", maxWidth: "480px" }}>
-                Body copy demonstrating how text reads against this background. This is what a paragraph looks like in this combination, line length, weight, and color relationship.
+                Body copy demonstrating how text reads against this background. It shows line length, weight and color in this combination.
               </p>
               <div style={{ display: "inline-block", padding: "8px 18px", border: `1px solid ${combo.accent}`, color: combo.accent, fontSize: "12px", fontWeight: 700, letterSpacing: "0.08em", borderRadius: 4 }}>
-                Action →
+                Action
               </div>
             </div>
             <div style={{ padding: "14px 20px", background: MID, borderTop: `1px solid ${EMBER}` }}>
@@ -218,7 +218,7 @@ function TypographySection() {
         {[
           {
             name: "Cinzel",
-            role: "Display · Headings · Brand",
+            role: "Display, headings, brand",
             weights: ["400 Regular", "600 SemiBold", "700 Bold", "900 Black"],
             note: "Roman letterforms based on classical inscriptions. Use for everything that IS the brand, the mark, headings, section titles, the logo. Never for body copy or UI.",
             sample: "PURCELL VENTURES",
@@ -227,7 +227,7 @@ function TypographySection() {
           },
           {
             name: "DM Sans",
-            role: "Body · Prose · Descriptions",
+            role: "Body, prose, descriptions",
             weights: ["300 Light", "400 Regular", "500 Medium", "600 SemiBold", "700 Bold"],
             note: "Designed specifically for readability in digital prose. Warmer and more distinctive than Inter. Use for all paragraph text, card descriptions, long-form content.",
             sample: "Built for the people who work hardest.",
@@ -236,10 +236,10 @@ function TypographySection() {
           },
           {
             name: "Inter",
-            role: "UI · Labels · Micro-copy",
+            role: "UI, labels, micro-copy",
             weights: ["400 Regular", "500 Medium", "600 SemiBold", "700 Bold"],
             note: "Purpose-built for screen UI elements. Use for buttons, navigation links, form labels, eyebrow labels in all-caps, and any text that's a functional UI element rather than content.",
-            sample: "GET IN TOUCH →",
+            sample: "GET IN TOUCH",
             sampleFont: "var(--font-inter), sans-serif",
             sampleSize: "13px",
           },
@@ -282,7 +282,7 @@ function TypographySection() {
             <div>
               <div style={{ fontSize: "11px", fontWeight: 700, color: GOLD, letterSpacing: "0.08em", marginBottom: "2px" }}>{t.name}</div>
               <div style={{ fontSize: "10px", color: CHAR, letterSpacing: "0.04em" }}>
-                {t.font === "cinzel" ? "Cinzel" : t.font === "dm" ? "DM Sans" : "Inter"} · {t.weight}
+                {t.font === "cinzel" ? "Cinzel" : t.font === "dm" ? "DM Sans" : "Inter"}, {t.weight}
               </div>
             </div>
             <div style={{
@@ -304,7 +304,7 @@ function TypographySection() {
             </div>
             <div style={{ textAlign: "right" }}>
               <div style={{ fontSize: "11px", color: ASH, marginBottom: "2px" }}>{t.size}</div>
-              <div style={{ fontSize: "10px", color: CHAR }}>ls {t.ls} · lh {t.lh}</div>
+              <div style={{ fontSize: "10px", color: CHAR }}>ls {t.ls}, lh {t.lh}</div>
             </div>
           </div>
         ))}
@@ -312,7 +312,7 @@ function TypographySection() {
 
       <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, margin: "56px 0 8px" }}>In Use</h2>
       <p style={{ fontSize: "13px", color: ASH, marginBottom: "24px", maxWidth: "560px", lineHeight: 1.65 }}>
-        The scale applied to a realistic content block, how the fonts actually work together.
+        The scale applied to a sample content block, showing how the fonts work together.
       </p>
       <div style={{ border: `1px solid ${EMBER}`, borderRadius: 8, padding: "40px 48px", background: DARK, maxWidth: "680px" }}>
         <p style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: GOLD, marginBottom: "16px", fontFamily: "var(--font-inter), sans-serif" }}>
@@ -322,13 +322,13 @@ function TypographySection() {
           Everything your business needs to operate online.
         </h2>
         <p style={{ fontSize: "18px", fontFamily: "var(--font-dm-sans), sans-serif", color: CREAM, opacity: 0.8, lineHeight: 1.75, marginBottom: "16px" }}>
-          A complete digital toolkit, website, AI chatbot, booking system, CRM, and 20+ tools. Fully managed. One subscription.
+          Website, AI chatbot, booking system, CRM and more, on one managed subscription.
         </p>
         <p style={{ fontSize: "15px", fontFamily: "var(--font-dm-sans), sans-serif", color: ASH, lineHeight: 1.8, marginBottom: "28px" }}>
-          Most small businesses are running on tools designed for enterprises and pricing designed for startups that raised money. Neither fits. This does.
+          Most small business software is priced for larger companies. These tools are priced for a small business.
         </p>
         <div style={{ display: "inline-block", padding: "10px 22px", border: `1px solid ${GOLD}`, color: GOLD, fontSize: "13px", fontWeight: 600, letterSpacing: "0.06em", borderRadius: 4, fontFamily: "var(--font-inter), sans-serif" }}>
-          See Plans →
+          See Plans
         </div>
       </div>
     </div>
@@ -358,14 +358,14 @@ const ICONS: IconDef[] = [
     key: "neural",
     name: "Neural",
     category: "brand",
-    description: "AI consulting, intelligence as a network, not a black box.",
+    description: "AI consulting, drawn as a network of connected nodes.",
     svgContent: `<line x1="12" y1="12" x2="12" y2="5"/><line x1="12" y1="12" x2="18.7" y2="9.8"/><line x1="12" y1="12" x2="16.1" y2="17.7"/><line x1="12" y1="12" x2="7.9" y2="17.7"/><line x1="12" y1="12" x2="5.3" y2="9.8"/><polyline points="12,5 18.7,9.8 16.1,17.7 7.9,17.7 5.3,9.8 12,5"/><circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none"/><circle cx="18.7" cy="9.8" r="1.5" fill="currentColor" stroke="none"/><circle cx="16.1" cy="17.7" r="1.5" fill="currentColor" stroke="none"/><circle cx="7.9" cy="17.7" r="1.5" fill="currentColor" stroke="none"/><circle cx="5.3" cy="9.8" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>`,
   },
   {
     key: "terminal",
     name: "Terminal",
     category: "brand",
-    description: "Custom software, built from source, not assembled from templates.",
+    description: "Custom software, built from source.",
     svgContent: `<polyline points="8 7 3 12 8 17"/><polyline points="16 7 21 12 16 17"/><line x1="14.5" y1="5" x2="9.5" y2="19"/>`,
   },
   {
@@ -577,7 +577,7 @@ function IconsSection() {
         Custom Icon Set
       </h2>
       <p style={{ fontSize: "13px", color: ASH, marginBottom: "28px", maxWidth: "600px", lineHeight: 1.65 }}>
-        19 icons drawn on a 24×24 grid. All stroke-based, 1.5px weight, round joins and caps. Six brand icons tied to the company's divisions and philosophy; 13 UI icons for navigation and interface. Consistent geometric language with the Lampstand mark.
+        19 icons drawn on a 24×24 grid. All stroke-based, 1.5px weight, round joins and caps. Six brand icons tied to the company's divisions and 13 UI icons for navigation and interface. Consistent geometric language with the Lampstand mark.
       </p>
 
       {/* Controls bar */}
@@ -647,7 +647,7 @@ function IconsSection() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "16px" }}>
           {[
             ["Stroke only", "Never fill icons. The 1.5px stroke is the identity. Filled versions look wrong against the mark."],
-            ["Color discipline", "Default is Cream on Dark. Gold stroke only for highlighted/active states, not decoration. Never render icons in Ash or Char."],
+            ["Color discipline", "Default is Cream on Dark. Gold stroke only for highlighted or active states. Never render icons in Ash or Char."],
             ["Minimum size", "16px minimum on screen. Below that, simplify the icon or replace it with a label. The neural and eye icons are especially sensitive to size."],
             ["Spacing", "Icons need at least 4px breathing room from adjacent text. At 24px, pair with 14px+ type. Don't crowd them."],
           ].map(([title, body]) => (
@@ -673,7 +673,7 @@ const GRADING = [
   { param: "Whites",       value: "−20",  note: "Pull back. Prevents clinical white from entering the frame." },
   { param: "Blacks",       value: "+5",   note: "Never crush to pure black. Match Purcell Dark (#0c0a08)." },
   { param: "Clarity",      value: "+10",  note: "Subtle micro-contrast. More on tools/texture. Less on faces." },
-  { param: "Vibrance",     value: "−15",  note: "Muted, not desaturated. Earthy tones should stay present." },
+  { param: "Vibrance",     value: "−15",  note: "Mute colors without removing them. Earthy tones should stay present." },
   { param: "Saturation",   value: "−10",  note: "Second pass muting. Prevents any color from dominating." },
 ];
 
@@ -682,15 +682,15 @@ const SUBJECTS = [
     category: "People / Portraits",
     icon: "eye",
     do: [
-      "Direct eye contact or purposeful gaze, confidence, not performance",
+      "Direct eye contact or purposeful gaze",
       "Natural or soft window light. Hard shadows are fine on one side.",
       "Candid over posed, mid-movement, mid-conversation, working",
-      "Real environments: a desk, a truck cab, a job site",
+      "Working environments: a desk, a truck cab, a job site",
     ],
     avoid: [
       "Stock-photo smiles, teeth, staged handshakes, \"team building\" body language",
       "Pure white or seamless studio backgrounds",
-      "Over-retouched skin, should look like a real person",
+      "Over-retouched skin",
       "Overly formal attire unless the context demands it",
     ],
   },
@@ -704,7 +704,7 @@ const SUBJECTS = [
       "Golden hour light where possible, flatters everything outdoors",
     ],
     avoid: [
-      "Cluttered staging, safety gear everywhere for the photo, not the job",
+      "Cluttered staging, or safety gear added for the photo",
       "Flat overcast light with no direction",
       "Posed \"look at the camera\" shots mid-job",
       "Editing that makes the job site look glamorous, authenticity matters more",
@@ -714,7 +714,7 @@ const SUBJECTS = [
     category: "Technology / Workspace",
     icon: "terminal",
     do: [
-      "Screens with actual content, interfaces, data, real work",
+      "Screens showing interfaces, data and work in progress",
       "Intentional shallow depth of field. Bokeh is fine when purposeful.",
       "Warm ambient light: desk lamp, window light at dusk",
       "Context over equipment, what's being built matters more than the gear",
@@ -759,7 +759,7 @@ const OVERLAYS = [
     bg: "linear-gradient(135deg, #4a3520 0%, #0c0a08 100%)",
     overlay: "rgba(12,10,8,0.85)",
     heading: "Custom Software",
-    sub: "Built for your workflow, not the other way around.",
+    sub: "Built around your workflow.",
   },
   {
     label: "Gradient fade, bottom-anchored text",
@@ -767,7 +767,7 @@ const OVERLAYS = [
     bg: "linear-gradient(160deg, #5a3a1a 0%, #2e1c0a 100%)",
     overlay: "linear-gradient(to top, rgba(12,10,8,0.95) 0%, rgba(12,10,8,0.4) 50%, transparent 100%)",
     heading: "Acworth, Georgia",
-    sub: "Owner-operated. No middlemen.",
+    sub: "Owner-operated.",
   },
 ];
 
@@ -808,7 +808,7 @@ function PhotoSection() {
       {/* Grading parameters */}
       <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Color Grading</h2>
       <p style={{ fontSize: "13px", color: ASH, marginBottom: "24px", maxWidth: "600px", lineHeight: 1.65 }}>
-        Starting point for any photo entering brand materials. Use Lightroom, Capture One, or equivalent. These are relative adjustments from the photo's neutral edit, not absolute values.
+        Starting point for any photo entering brand materials. Use Lightroom, Capture One, or equivalent. These are relative adjustments from the photo's neutral edit.
       </p>
       <div style={{ border: `1px solid ${EMBER}`, borderRadius: 8, overflow: "hidden", marginBottom: "56px" }}>
         {GRADING.map((g, i) => (
@@ -909,13 +909,13 @@ function PhotoSection() {
 
       {/* Hard rules */}
       <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", fontWeight: 600, color: CREAM, marginBottom: "8px" }}>Hard Rules</h2>
-      <p style={{ fontSize: "13px", color: ASH, marginBottom: "20px" }}>These kill the brand on contact.</p>
+      <p style={{ fontSize: "13px", color: ASH, marginBottom: "20px" }}>Do not break these.</p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "10px" }}>
         {[
           "No pure white or cool-gray backgrounds anywhere in brand photography.",
           "No photos with blue-tinted shadows. Shadows must read warm.",
           "No stock photo people. Every face in brand materials must be real and known.",
-          "No filters with names — Instagram presets, VSCO packs, Lightroom influencer presets. Derive from the grading table.",
+          "No named filters such as Instagram presets, VSCO packs or Lightroom influencer presets. Derive from the grading table.",
           "No photography that would look at home on a Fortune 500 corporate site.",
           "No mixing photo styles in the same layout, match grading before publishing.",
         ].map(rule => (
@@ -947,7 +947,7 @@ export default function BrandPage() {
 
       <div style={{ maxWidth: "1100px", margin: "0 auto 48px" }}>
         <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: GOLD, marginBottom: "10px" }}>
-          Purcell Ventures — Brand Identity
+          Purcell Ventures brand identity
         </div>
         <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "36px", fontWeight: 700, color: CREAM, marginBottom: "12px" }}>
           Brand System
@@ -980,8 +980,8 @@ export default function BrandPage() {
       </div>
 
       <div style={{ maxWidth: "1100px", margin: "64px auto 0", display: "flex", gap: "24px" }}>
-        <a href="/logos"    style={{ fontSize: "13px", color: CHAR, textDecoration: "none" }}>← Logos</a>
-        <a href="/patterns" style={{ fontSize: "13px", color: CHAR, textDecoration: "none" }}>← Patterns</a>
+        <a href="/logos"    style={{ fontSize: "13px", color: CHAR, textDecoration: "none" }}>Logos</a>
+        <a href="/patterns" style={{ fontSize: "13px", color: CHAR, textDecoration: "none" }}>Patterns</a>
       </div>
       </div>
     </div>

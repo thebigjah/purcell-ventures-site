@@ -8,8 +8,8 @@ const MODULES = [
   {
     category: "Website & Presence",
     items: [
-      { name: "Business Website", desc: "Multi-page site — Home, About, Services, Contact. Mobile-friendly and SEO-ready." },
-      { name: "Landing Page", desc: "Single-page, conversion-focused with a lead capture form and strong call-to-action." },
+      { name: "Business Website", desc: "Multi-page site with Home, About, Services and Contact pages. Works on phones and is set up for search." },
+      { name: "Landing Page", desc: "Single page with a lead capture form and one clear call to action." },
       { name: "Portfolio / Gallery", desc: "Image grid showcase for photographers, artists, and food businesses." },
     ],
   },
@@ -43,24 +43,24 @@ const MODULES = [
       { name: "AI Chatbot Widget", desc: "A chatbot on your website, trained on your business, answers questions 24/7." },
       { name: "AI Content Generator", desc: "Blog posts, product descriptions, and bios written on demand." },
       { name: "AI Caption Generator", desc: "Upload a photo, get five ready-to-post social media captions." },
-      { name: "AI FAQ Builder", desc: "Answer a few questions, get a complete FAQ page built automatically." },
+      { name: "AI FAQ Builder", desc: "Answer a few questions and get a draft FAQ page." },
     ],
   },
   {
     category: "Branding & Identity",
     items: [
-      { name: "Logo Designer", desc: "AI-assisted logo creation, pick your style, icon, and colors. Get a professional mark in minutes." },
-      { name: "Brand Kit", desc: "Complete brand guide: primary and accent colors, font pairings, logo variations, and usage rules, all in one export." },
-      { name: "Color Palette Tool", desc: "Describe your business vibe in plain English. Get a curated color palette with hex codes and usage guidance." },
+      { name: "Logo Designer", desc: "AI-assisted logo drafts. Pick a style, icon and colors." },
+      { name: "Brand Kit", desc: "Brand guide: primary and accent colors, font pairings, logo variations, and usage rules, all in one export." },
+      { name: "Color Palette Tool", desc: "Describe your business in a sentence and get a color palette with hex codes and usage notes." },
       { name: "Business Card Designer", desc: "Front-and-back business card design with your branding. Print-ready PDF and digital version included." },
-      { name: "Social Media Templates", desc: "A set of branded post, story, and cover templates built around your colors and logo. Consistent and professional." },
+      { name: "Social Media Templates", desc: "Post, story and cover templates in your colors with your logo." },
     ],
   },
   {
     category: "Operations & Finance",
     items: [
       { name: "Online Estimating", desc: "Build job quotes with line items, labor, materials, and send them as shareable links." },
-      { name: "Online Invoicing", desc: "Create invoices and send payment links. Get paid faster via Stripe." },
+      { name: "Online Invoicing", desc: "Create invoices and send payment links. Clients pay through Stripe." },
       { name: "Expense Tracker", desc: "Log expenses by category with monthly summaries and tax-ready reports." },
       { name: "Inventory Tracker", desc: "Product list, stock levels, and low-stock alerts." },
       { name: "Staff Scheduler", desc: "Shift management, availability tracking, and a simple rota view." },
@@ -73,7 +73,7 @@ const PRICING = [
     name: "Site Care",
     price: "Tier I",
     setup: "",
-    tagline: "Lightweight set-and-forget tools available to every client. Quick wins, configured in a day or two.",
+    tagline: "Light tools available to every client. I set them up in one to two days.",
     features: [
       "Color Palette Tool",
       "Brand Kit Builder",
@@ -91,7 +91,7 @@ const PRICING = [
     name: "Site Care + Lead Ops",
     price: "Tier II",
     setup: "",
-    tagline: "Utilities that integrate with your site or send messages on your behalf. Everything in Site Care, plus active utilities.",
+    tagline: "Tools that connect to your site or send messages for you. Includes everything in Site Care.",
     features: [
       "Everything in Site Care",
       "Review Request Automation",
@@ -110,7 +110,7 @@ const PRICING = [
     name: "Marketing Partner",
     price: "Tier III",
     setup: "",
-    tagline: "Marketing-team-grade add-ons that need ongoing tuning. Everything in Site Care + Lead Ops, plus the heavy lifts.",
+    tagline: "Marketing add-ons that need ongoing tuning. Includes everything in Site Care + Lead Ops.",
     features: [
       "Everything in Site Care + Lead Ops",
       "AI Chatbot trained on your business",
@@ -125,12 +125,12 @@ const PRICING = [
 ];
 
 const FAQ = [
-  { q: "How is this different from Wix or Squarespace?", a: "Those are tools you manage yourself. I build it, maintain it, update it, and add AI capabilities those platforms don't offer, like a chatbot trained on your business, AI-generated social posts, and automated review responses. You focus on your business, I handle the tech." },
-  { q: "Why is it cheaper than a typical agency?", a: "Because I build modular, reusable systems, not one-off custom builds from scratch. I use AI tools throughout my workflow, which cuts hours without cutting quality. You get professional-grade work at a fraction of typical agency rates." },
-  { q: "Do I own the website?", a: "Yes. The site, content, and domain are yours. If you ever want to leave, I hand over everything, full source code, all assets. No hostage-taking." },
-  { q: "What if I need something that's not on the list?", a: "Ask. If it's in scope, I'll add it. If it's a bigger custom build, I'll quote it separately. Either way, you'll have a clear answer before any work starts." },
-  { q: "What does the setup fee cover?", a: "The initial build, getting your branding, colors, content, and settings configured. After that, the monthly retainer covers maintenance, updates, and support." },
-  { q: "Can I start small and add more later?", a: "Absolutely. Start with a website and chatbot. Add booking when you're ready. Scale at your own pace." },
+  { q: "How is this different from Wix or Squarespace?", a: "You manage Wix and Squarespace yourself. I build and maintain the site and add AI tools such as a chatbot trained on your business, AI-drafted social posts and automated review responses." },
+  { q: "Why is it cheaper than a typical agency?", a: "I reuse the same modules across clients instead of building each site from scratch, and I use AI tools to write and test code. Both cut my hours, so I can charge less." },
+  { q: "Do I own the website?", a: "Yes. The site, content and domain are yours. If you leave, I hand over the full source code and all assets." },
+  { q: "What if I need something that's not on the list?", a: "Ask. If it is in scope, I will add it. If it is a bigger custom build, I will quote it separately before any work starts." },
+  { q: "What does the setup fee cover?", a: "The initial build: setting up your branding, colors, content and settings. After that, the monthly retainer covers maintenance, updates, and support." },
+  { q: "Can I start small and add more later?", a: "Yes. Start with a website and chatbot and add booking or other tools when you want them." },
 ];
 
 // ── TEAM BUILDER DATA ──────────────────────────────────────────────────────────
@@ -148,7 +148,7 @@ const TEAM_MEMBERS = [
     id: "marketing",
     title: "Marketing Manager",
     salary: 4500,
-    tagline: "Gets your brand seen by the right people, consistently.",
+    tagline: "Runs your social posts, email newsletter and reviews.",
     tools: ["Social Media Scheduler", "Email Newsletter", "AI Caption Generator", "Review Manager"],
     color: "#c9a87c",
   },
@@ -156,7 +156,7 @@ const TEAM_MEMBERS = [
     id: "booking",
     title: "Booking Coordinator",
     salary: 3500,
-    tagline: "Fills your calendar and keeps customers coming back.",
+    tagline: "Handles bookings, events and repeat-customer rewards.",
     tools: ["Appointment Booking", "Event Registration", "Loyalty Program", "SMS Campaigns"],
     color: "#b8956a",
   },
@@ -164,7 +164,7 @@ const TEAM_MEMBERS = [
     id: "crm",
     title: "Customer Success Rep",
     salary: 4000,
-    tagline: "Captures leads and keeps customers happy 24/7.",
+    tagline: "Answers customer questions and tracks leads.",
     tools: ["AI Chatbot Widget", "Simple CRM", "Lead Capture Pipeline", "AI FAQ Builder"],
     color: "#a07850",
   },
@@ -172,7 +172,7 @@ const TEAM_MEMBERS = [
     id: "finance",
     title: "Finance & Ops",
     salary: 4500,
-    tagline: "Keeps your finances clear and your operations on track.",
+    tagline: "Handles estimates, invoices, expenses and inventory.",
     tools: ["Online Invoicing", "Online Estimating", "Expense Tracker", "Inventory Tracker"],
     color: "#8a6040",
   },
@@ -180,7 +180,7 @@ const TEAM_MEMBERS = [
     id: "brand",
     title: "Brand Designer",
     salary: 4500,
-    tagline: "Makes your business look like it belongs at the top.",
+    tagline: "Designs your logo, colors and printed materials.",
     tools: ["Logo Designer", "Brand Kit", "Color Palette Tool", "Business Card Designer", "Social Media Templates"],
     color: "#9b7fd4",
   },
@@ -230,10 +230,10 @@ function TeamBuilder() {
           Build Your Team
         </p>
         <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", letterSpacing: "0.03em", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, marginBottom: "16px", lineHeight: 1.1 }}>
-          One subscription.<br />Your whole team.
+          One subscription<br />covers the tools for seven roles.
         </h2>
         <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", marginBottom: "52px", maxWidth: "600px", lineHeight: 1.75 }}>
-          Each role below is a real job you&#39;d have to hire for. Hover to see what they handle, and what that would cost you to hire. Then see what it costs with me instead.
+          Each role below is a job you would otherwise hire for. Hover over or tap a role to see the tools that cover it and the average monthly salary for that job. Add roles to compare that total with my subscription.
         </p>
 
         {/* V-Formation figure row */}
@@ -310,7 +310,7 @@ function TeamBuilder() {
                   ))}
                 </div>
                 <div style={{ fontSize: "11px", color: "var(--color-warm-text-muted)", padding: "8px 12px", background: "var(--color-warm-bg)", border: "1px solid var(--color-warm-border)", borderRadius: "6px", lineHeight: 1.6 }}>
-                  Don&#39;t need everything they do? Just pick the tools you actually want.
+                  You can pick single tools instead of a whole role.
                 </div>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "10px", paddingTop: "4px" }}>
@@ -321,7 +321,7 @@ function TeamBuilder() {
                   border: `1.5px solid ${hovered.color}`,
                   borderRadius: "7px", fontSize: "14px", fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap",
                 }}>
-                  {hiredTeam.includes(hovered.id) ? "On Team ✓" : "Add to Team →"}
+                  {hiredTeam.includes(hovered.id) ? "On team" : "Add to team"}
                 </button>
                 {hiredTeam.includes(hovered.id) && (
                   <button onClick={() => toggleHire(hovered.id)} style={{ background: "none", border: "none", cursor: "pointer", fontSize: "12px", color: "var(--color-warm-text-muted)", padding: 0, textDecoration: "underline" }}>
@@ -342,12 +342,12 @@ function TeamBuilder() {
           <div style={{ marginTop: "24px", background: "var(--color-warm-card)", border: "2px solid var(--color-warm-accent)", borderRadius: "12px", padding: "28px 32px", display: "flex", flexWrap: "wrap", gap: "24px", alignItems: "center", justifyContent: "space-between" }}>
             <div>
               <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-text-muted)", marginBottom: "4px" }}>Selected roles</div>
-              <div style={{ fontSize: "22px", fontWeight: 700, color: "var(--color-warm-text)" }}>{hiredTeam.length} of 6</div>
+              <div style={{ fontSize: "22px", fontWeight: 700, color: "var(--color-warm-text)" }}>{hiredTeam.length} of {TEAM_MEMBERS.length}</div>
             </div>
             <div style={{ textAlign: "center" }}>
               <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-text-muted)", marginBottom: "4px" }}>Hiring would cost you</div>
               <div style={{ fontSize: "22px", fontWeight: 700, color: "var(--color-warm-text)" }}>${totalSalary.toLocaleString()}/mo</div>
-              <div style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "2px" }}>avg salary · before benefits</div>
+              <div style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "2px" }}>average salary, before benefits</div>
             </div>
             <div style={{ textAlign: "center" }}>
               <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-text-muted)", marginBottom: "4px" }}>My subscription instead</div>
@@ -356,9 +356,9 @@ function TeamBuilder() {
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "8px", alignItems: "flex-start" }}>
               <a href="#contact" style={{ padding: "13px 28px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "14px", fontWeight: 700, borderRadius: "7px", textDecoration: "none", whiteSpace: "nowrap" }}>
-                Get These Tools →
+                Get these tools
               </a>
-              <span style={{ fontSize: "11px", color: "var(--color-warm-text-muted)", width: "100%", textAlign: "center" }}>You guide it · You approve it · You own it</span>
+              <span style={{ fontSize: "11px", color: "var(--color-warm-text-muted)", width: "100%", textAlign: "center" }}>You own everything I build for you</span>
             </div>
           </div>
         )}
@@ -436,7 +436,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
   ),
   "Landing Page": (
     <div style={{ display: "flex", flexDirection: "column", borderRadius: "10px", overflow: "hidden", border: "1px solid #2e2820" }}>
-      {appChrome("Landing Page · Smith Salon")}
+      {appChrome("Landing Page, Smith Salon")}
       <div style={{ background: "linear-gradient(160deg, #0c0a08 60%, #1e1814 100%)", padding: "32px 28px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "14px" }}>
         <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d4af37" }}>Limited Time Offer</div>
         <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "26px", fontWeight: 700, color: "#f5f0e0", lineHeight: 1.2 }}>Get 20% Off Your<br/>First Appointment</div>
@@ -445,7 +445,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
           <input readOnly placeholder="Your name" style={{ ...mockInput, flex: 1 }} />
           <input readOnly placeholder="Email address" style={{ ...mockInput, flex: 2 }} />
         </div>
-        <button style={{ ...mockBtn, width: "100%", maxWidth: "360px", padding: "11px", fontSize: "13px" }}>Claim My 20% Off →</button>
+        <button style={{ ...mockBtn, width: "100%", maxWidth: "360px", padding: "11px", fontSize: "13px" }}>Claim My 20% Off</button>
         <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "11px", color: "#524d45" }}>
           <div style={{ display: "flex" }}>{["#d4af37","#c9a87c","#b8956a"].map((c,i) => <div key={i} style={{ width: "20px", height: "20px", borderRadius: "50%", background: c, border: "1.5px solid #0c0a08", marginLeft: i > 0 ? "-6px" : 0 }} />)}</div>
           127 clients claimed this week</div>
@@ -455,7 +455,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
   ),
   "Portfolio / Gallery": (
     <div style={{ display: "flex", flexDirection: "column", borderRadius: "10px", overflow: "hidden", border: "1px solid #2e2820" }}>
-      {appChrome("Gallery · Smith Salon Photography", <div style={{ display: "flex", gap: "8px" }}><span style={{ fontSize: "11px", color: "#d4af37", fontWeight: 600 }}>All</span>{["Portraits","Events","Products"].map(c => <span key={c} style={{ fontSize: "11px", color: "#524d45" }}>{c}</span>)}</div>)}
+      {appChrome("Gallery, Smith Salon Photography", <div style={{ display: "flex", gap: "8px" }}><span style={{ fontSize: "11px", color: "#d4af37", fontWeight: 600 }}>All</span>{["Portraits","Events","Products"].map(c => <span key={c} style={{ fontSize: "11px", color: "#524d45" }}>{c}</span>)}</div>)}
       <div style={{ background: "#0c0a08", padding: "16px", display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gridTemplateRows: "120px 80px", gap: "6px" }}>
         <div style={{ gridRow: "span 2", background: "linear-gradient(135deg, #3a2e1e, #2a1e0e)", borderRadius: "6px", display: "flex", alignItems: "flex-end", padding: "10px" }}>
           <span style={{ fontSize: "10px", color: "#d4af37", fontWeight: 600 }}>Featured ★</span>
@@ -464,12 +464,12 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
           <div key={i} style={{ background: `linear-gradient(135deg, ${c}, ${c}bb)`, borderRadius: "6px" }} />
         ))}
       </div>
-      <div style={{ fontSize: "12px", color: "#8a8070" }}>6 categories · 48 images · Lightbox enabled</div>
+      <div style={{ fontSize: "12px", color: "#8a8070" }}>6 categories, 48 images, Lightbox enabled</div>
     </div>
   ),
   "Appointment Booking": (
     <div style={{ display: "flex", flexDirection: "column", borderRadius: "10px", overflow: "hidden", border: "1px solid #2e2820" }}>
-      {appChrome("Book an Appointment · Smith Salon")}
+      {appChrome("Book an Appointment, Smith Salon")}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", background: "#0c0a08" }}>
         {/* Calendar */}
         <div style={{ padding: "16px", borderRight: "1px solid #2e2820" }}>
@@ -493,7 +493,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
         </div>
         {/* Time slots */}
         <div style={{ padding: "16px" }}>
-          <div style={{ fontSize: "11px", fontWeight: 700, color: "#d4af37", marginBottom: "10px" }}>March 12 · Available</div>
+          <div style={{ fontSize: "11px", fontWeight: 700, color: "#d4af37", marginBottom: "10px" }}>March 12, Available</div>
           {[["9:00 AM","Cut & Style","booked"],["10:30 AM","Highlights","open"],["12:00 PM","Color","open"],["2:00 PM","Blowout","booked"],["3:30 PM","Cut","open"]].map(([t,s,st]) => (
             <div key={t} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "7px 8px", marginBottom: "4px", background: st === "open" ? "#d4af3710" : "#0c0a08", border: `1px solid ${st === "open" ? "#d4af3740" : "#1e1c18"}`, borderRadius: "6px" }}>
               <div>
@@ -509,7 +509,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
       <div style={{ background: "#0c0a08", borderTop: "1px solid #2e2820", padding: "12px 16px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <div>
           <div style={{ fontSize: "10px", color: "#524d45", marginBottom: "2px" }}>SELECTED SERVICE</div>
-          <div style={{ fontSize: "13px", fontWeight: 600, color: "#f5f0e0" }}>Highlights · 90 min · <span style={{ color: "#d4af37" }}>$120</span></div>
+          <div style={{ fontSize: "13px", fontWeight: 600, color: "#f5f0e0" }}>Highlights, 90 min, <span style={{ color: "#d4af37" }}>$120</span></div>
         </div>
         <div style={{ padding: "8px 18px", background: "#d4af37", borderRadius: "6px", fontSize: "12px", fontWeight: 700, color: "#0c0a08" }}>Confirm Booking</div>
       </div>
@@ -521,7 +521,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
       <div style={{ background: "linear-gradient(135deg, #1e1814, #2a2018)", padding: "20px 20px 16px", borderBottom: "1px solid #2e2820" }}>
         <div style={{ fontSize: "10px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#d4af37", marginBottom: "8px" }}>Upcoming Event</div>
         <div style={{ fontSize: "20px", fontWeight: 700, color: "#f5f0e0", marginBottom: "4px", fontFamily: "'Cinzel', Georgia, serif" }}>Spring Color Workshop</div>
-        <div style={{ fontSize: "12px", color: "#8a8070", marginBottom: "16px" }}>April 12, 2026 · 1:00 PM – 5:00 PM · Smith Salon</div>
+        <div style={{ fontSize: "12px", color: "#8a8070", marginBottom: "16px" }}>April 12, 2026, 1:00 PM - 5:00 PM, Smith Salon</div>
         <div style={{ display: "flex", gap: "6px", marginBottom: "16px" }}>
           <div style={{ flex: 1, background: "rgba(0,0,0,0.3)", borderRadius: "6px", padding: "8px", textAlign: "center" }}>
             <div style={{ fontSize: "22px", fontWeight: 800, color: "#d4af37" }}>34</div>
@@ -567,11 +567,11 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
           </div>
         ))}
       </div>
-      {[{name:"Spring Deals ",date:"Thu Mar 12 · 9:00 AM",status:"Scheduled",open:"—",badge:"#e8a030"},{name:"February Love Special",date:"Feb 14",status:"Sent",open:"71%",badge:"#7aaa6a"},{name:"New Year Refresh",date:"Jan 2",status:"Sent",open:"64%",badge:"#7aaa6a"}].map((c,i) => (
+      {[{name:"Spring Deals ",date:"Thu Mar 12, 9:00 AM",status:"Scheduled",open:"—",badge:"#e8a030"},{name:"February Love Special",date:"Feb 14",status:"Sent",open:"71%",badge:"#7aaa6a"},{name:"New Year Refresh",date:"Jan 2",status:"Sent",open:"64%",badge:"#7aaa6a"}].map((c,i) => (
         <div key={i} style={{ display: "flex", alignItems: "center", gap: "12px", padding: "10px 16px", background: "#0c0a08", borderBottom: "1px solid #1a1714" }}>
           <div style={{ flex: 1 }}>
             <div style={{ fontSize: "13px", fontWeight: 600, color: "#f5f0e0" }}>{c.name}</div>
-            <div style={{ fontSize: "11px", color: "#524d45", marginTop: "2px" }}>AI-drafted · {c.date}</div>
+            <div style={{ fontSize: "11px", color: "#524d45", marginTop: "2px" }}>AI-drafted, {c.date}</div>
           </div>
           <div style={{ textAlign: "right" }}>
             <div>{pill(c.status, c.status === "Scheduled" ? "#e8a030" : "#7aaa6a")}</div>
@@ -594,7 +594,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
       </div>
       <div style={{ background: "#0c0a08", padding: "14px 16px", borderBottom: "1px solid #2e2820" }}>
         <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#8a8070", marginBottom: "8px" }}>New Broadcast</div>
-        <textarea readOnly rows={3} defaultValue={"Hey {name}! We have a cancellation open tomorrow at 10:30 AM. Reply YES to grab it, first come first served! 🙌"} style={{ ...mockInput, resize: "none", fontFamily: "inherit", lineHeight: 1.6 }} />
+        <textarea readOnly rows={3} defaultValue={"Hey {name}! We have a cancellation open tomorrow at 10:30 AM. Reply YES to grab it, first come, first served."} style={{ ...mockInput, resize: "none", fontFamily: "inherit", lineHeight: 1.6 }} />
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "8px" }}>
           <div>
             <span style={{ fontSize: "11px", color: "#524d45" }}>To: </span>
@@ -607,7 +607,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
           </div>
         </div>
       </div>
-      <div style={{ background: "#0c0a08", padding: "10px 16px" }}>{pill("Reply rate 34% · Last campaign: 3d ago","#7aaa6a")}</div>
+      <div style={{ background: "#0c0a08", padding: "10px 16px" }}>{pill("Reply rate 34%, Last campaign: 3d ago","#7aaa6a")}</div>
     </div>
   ),
   "Social Media Scheduler": (
@@ -617,14 +617,14 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
         {/* Composer */}
         <div style={{ padding: "16px", borderRight: "1px solid #2e2820" }}>
           <div style={{ fontSize: "11px", fontWeight: 700, color: "#8a8070", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "8px" }}>Compose Post</div>
-          <textarea readOnly rows={4} defaultValue={"Walk-ins welcome today! Stop in and treat yourself, link in bio for booking 🌿 #smithsalon #kennesaw"} style={{ ...mockInput, resize: "none", fontFamily: "inherit", lineHeight: 1.65 }} />
+          <textarea readOnly rows={4} defaultValue={"Walk-ins welcome today! Stop in and book from the link in our bio. #smithsalon #kennesaw"} style={{ ...mockInput, resize: "none", fontFamily: "inherit", lineHeight: 1.65 }} />
           <div style={{ marginTop: "8px", display: "flex", gap: "6px" }}>
             {[["IG","#d4af37"],["FB","#3d3530"]].map(([p,c]) => (
               <div key={p} style={{ display: "flex", alignItems: "center", gap: "4px", padding: "4px 10px", background: c + "20", border: `1px solid ${c}50`, borderRadius: "4px", fontSize: "11px", color: c, fontWeight: 700 }}>{p}</div>
             ))}
           </div>
           <div style={{ marginTop: "8px", display: "flex", gap: "6px", alignItems: "center" }}>
-            <input readOnly placeholder="Thu Mar 13 · 9:00 AM" style={{ ...mockInput, flex: 1, fontSize: "11px" }} />
+            <input readOnly placeholder="Thu Mar 13, 9:00 AM" style={{ ...mockInput, flex: 1, fontSize: "11px" }} />
             <div style={{ ...mockBtn, padding: "7px 12px", fontSize: "11px", cursor: "default", flexShrink: 0 }}>Schedule</div>
           </div>
           <div style={{ marginTop: "6px" }}>
@@ -679,7 +679,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
         </div>
       </div>
       {/* Reviews */}
-      {[{name:"Ashley T.",stars:5,text:"Best salon in town. My highlights turned out perfect — Sarah really listened.",platform:"Google",ai:true},{name:"Mark R.",stars:4,text:"Great experience overall. Parking was tight but absolutely coming back.",platform:"Yelp",ai:true}].map((r,i) => (
+      {[{name:"Example review",stars:5,text:"My highlights turned out the way I asked. Sarah listened.",platform:"Google",ai:true},{name:"Example review",stars:4,text:"Great experience overall. Parking was tight but absolutely coming back.",platform:"Yelp",ai:true}].map((r,i) => (
         <div key={i} style={{ padding: "12px 16px", background: "#0c0a08", borderBottom: "1px solid #1a1714" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "6px" }}>
             <div>
@@ -699,14 +699,14 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
   ),
   "Simple CRM": (
     <div style={{ display: "flex", flexDirection: "column", borderRadius: "10px", overflow: "hidden", border: "1px solid #2e2820" }}>
-      {appChrome("CRM · Contacts", <div style={{ display: "flex", gap: "8px", alignItems: "center" }}><input readOnly placeholder="Search contacts..." style={{ ...mockInput, width: "140px", padding: "4px 10px", fontSize: "11px" }} /><div style={mockBtn}>+ Add</div></div>)}
+      {appChrome("CRM, Contacts", <div style={{ display: "flex", gap: "8px", alignItems: "center" }}><input readOnly placeholder="Search contacts..." style={{ ...mockInput, width: "140px", padding: "4px 10px", fontSize: "11px" }} /><div style={mockBtn}>+ Add</div></div>)}
       <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", background: "#141210", padding: "7px 14px", borderBottom: "1px solid #2e2820" }}>
         {["Name","Last Service","Total Spent","Status"].map(h => <span key={h} style={{ fontSize: "10px", fontWeight: 700, color: "#524d45", letterSpacing: "0.06em", textTransform: "uppercase" }}>{h}</span>)}
       </div>
       {[
         {n:"Sarah Mitchell",init:"SM",service:"Highlights",spent:"$840",status:"Active",c:"#7aaa6a"},
-        {n:"James Cooper",init:"JC",service:"Color · Due today",spent:"$320",status:"Follow-up",c:"#d4af37"},
-        {n:"Lynn Park",init:"LP",service:"Chatbot inquiry",spent:"—",status:"New Lead",c:"#8a8070"},
+        {n:"James Cooper",init:"JC",service:"Color, Due today",spent:"$320",status:"Follow-up",c:"#d4af37"},
+        {n:"Lynn Park",init:"LP",service:"Chatbot inquiry",spent:"$0",status:"New Lead",c:"#8a8070"},
         {n:"Tom Rivera",init:"TR",service:"Blowout",spent:"$210",status:"Active",c:"#7aaa6a"},
       ].map(row => (
         <div key={row.n} style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", padding: "9px 14px", background: "#0c0a08", borderBottom: "1px solid #141210", alignItems: "center" }}>
@@ -742,7 +742,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
                 <div style={{ fontSize: "10px", color: "#524d45", marginTop: "2px" }}>{l.s}</div>
                 <div style={{ display: "flex", justifyContent: "space-between", marginTop: "4px" }}>
                   <span style={{ fontSize: "11px", color: col.color, fontWeight: 600 }}>{l.v}</span>
-                  {l.won && <span style={{ fontSize: "10px", color: "#7aaa6a" }}>Won ✓</span>}
+                  {l.won && <span style={{ fontSize: "10px", color: "#7aaa6a" }}>Won</span>}
                 </div>
               </div>
             ))}
@@ -753,7 +753,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
   ),
   "Loyalty Program": (
     <div style={{ display: "flex", flexDirection: "column", borderRadius: "10px", overflow: "hidden", border: "1px solid #2e2820" }}>
-      {appChrome("Loyalty Dashboard · Smith Salon", <div style={{ display: "flex", gap: "6px" }}>{pill("248 members","#7aaa6a")}<div style={{ padding: "4px 10px", background: "#d4af3718", border: "1px solid #d4af3740", borderRadius: "4px", fontSize: "11px", color: "#d4af37", cursor: "default" }}>Export</div></div>)}
+      {appChrome("Loyalty Dashboard, Smith Salon", <div style={{ display: "flex", gap: "6px" }}>{pill("248 members","#7aaa6a")}<div style={{ padding: "4px 10px", background: "#d4af3718", border: "1px solid #d4af3740", borderRadius: "4px", fontSize: "11px", color: "#d4af37", cursor: "default" }}>Export</div></div>)}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1.3fr", background: "#0c0a08" }}>
         <div style={{ padding: "16px", borderRight: "1px solid #2e2820" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "14px" }}>
@@ -777,7 +777,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
             ))}
           </div>
           <div style={{ padding: "10px", background: "#141210", borderRadius: "6px", textAlign: "center" }}>
-            <div style={{ fontSize: "10px", color: "#524d45", marginBottom: "6px" }}>Your QR Code — Scan at Checkout</div>
+            <div style={{ fontSize: "10px", color: "#524d45", marginBottom: "6px" }}>Your QR code. Scan at checkout.</div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", gap: "2px", width: "56px", margin: "0 auto" }}>
               {[1,0,1,1,0,1,0, 0,1,0,0,1,0,1, 1,1,0,1,0,0,1, 0,0,1,0,1,1,0, 1,0,0,1,0,1,1, 0,1,1,0,0,0,1, 1,0,1,0,1,0,0].map((v,i) => (
                 <div key={i} style={{ aspectRatio: "1", background: v ? "#d4af37" : "transparent", borderRadius: "1px" }} />
@@ -796,7 +796,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
             <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "8px 0", borderBottom: "1px solid #141210" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                 <div style={{ width: "24px", height: "24px", borderRadius: "50%", background: `${v.tier}20`, border: `1.5px solid ${v.tier}60`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "10px", fontWeight: 700, color: v.tier }}>{v.name[0]}</div>
-                <div><div style={{ fontSize: "12px", color: "#f5f0e0", fontWeight: 600 }}>{v.name}</div><div style={{ fontSize: "10px", color: "#524d45" }}>{v.service} · {v.date}</div></div>
+                <div><div style={{ fontSize: "12px", color: "#f5f0e0", fontWeight: 600 }}>{v.name}</div><div style={{ fontSize: "10px", color: "#524d45" }}>{v.service}, {v.date}</div></div>
               </div>
               <span style={{ fontSize: "12px", color: "#7aaa6a", fontWeight: 700 }}>+1</span>
             </div>
@@ -835,7 +835,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
           {side:"user",text:"Do you have any Saturday openings this week?"},
           {side:"bot",text:"Yes! We have 10:00 AM and 2:30 PM open this Saturday. Both include a free consultation. Which works?"},
           {side:"user",text:"2:30, can I book highlights?"},
-          {side:"bot",text:"Done! Booked for Saturday 2:30 PM — Highlights with Sarah · $120. Confirmation sent ✓"},
+          {side:"bot",text:"Done. Booked for Saturday 2:30 PM, highlights with Sarah, $120. I sent a confirmation."},
         ] as {side:string;text:string}[]).map((msg,i) => (
           <div key={i} style={{ display: "flex", justifyContent: msg.side === "user" ? "flex-end" : "flex-start" }}>
             <div style={{ maxWidth: "80%", background: msg.side === "user" ? "#d4af37" : "#1a1714", color: msg.side === "user" ? "#0c0a08" : "#c8c0b0", borderRadius: msg.side === "user" ? "12px 12px 2px 12px" : "12px 12px 12px 2px", padding: "8px 11px", fontSize: "11px", lineHeight: 1.6 }}>{msg.text}</div>
@@ -873,12 +873,12 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
               ))}
             </div>
           </div>
-          <div style={{ ...mockBtn, textAlign: "center", cursor: "default" }}>Generate →</div>
+          <div style={{ ...mockBtn, textAlign: "center", cursor: "default" }}>Generate</div>
         </div>
         <div style={{ padding: "16px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "10px" }}>
             <div style={{ fontSize: "10px", fontWeight: 700, color: "#7aaa6a", letterSpacing: "0.08em", textTransform: "uppercase" }}>Generated</div>
-            {pill("847 words · SEO ready","#7aaa6a")}
+            {pill("847 words, SEO ready","#7aaa6a")}
           </div>
           <div style={{ fontSize: "14px", fontWeight: 700, color: "#f5f0e0", marginBottom: "8px", lineHeight: 1.3 }}>Spring Into Color: 2026&#39;s Hottest Hair Trends</div>
           <div style={{ fontSize: "11px", color: "#8a8070", lineHeight: 1.75 }}>As the weather warms, clients are swapping winter&#39;s muted tones for something bolder. This spring, we&#39;re seeing a surge in warm copper balayage, lived-in highlights, and rich auburn hues that complement every skin tone...</div>
@@ -899,18 +899,18 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
           </div>
           <div>
             <div style={{ fontSize: "12px", fontWeight: 600, color: "#f5f0e0", marginBottom: "4px" }}>color-transformation.jpg</div>
-            <div style={{ fontSize: "11px", color: "#524d45" }}>Before & after highlights · Uploaded</div>
+            <div style={{ fontSize: "11px", color: "#524d45" }}>Before & after highlights, Uploaded</div>
             <div style={{ marginTop: "8px" }}>{pill("5 captions ready","#7aaa6a")}</div>
           </div>
         </div>
       </div>
       <div style={{ background: "#0c0a08", padding: "8px 16px", display: "flex", flexDirection: "column", gap: "6px" }}>
         {[
-          {text:"Walk-ins welcome today, stop in and treat yourself ✨",sel:true},
+          {text:"Walk-ins welcome today. Stop in and book from the link in our bio.",sel:true},
           {text:"From dull to radiant in one appointment. Book the link in bio.",sel:false},
-          {text:"She said 'surprise me' and we delivered. 🌿 #colortransformation",sel:false},
+          {text:"She said 'surprise me' and we went copper. #colortransformation",sel:false},
           {text:"Your hair, your story. Let us help you write the next chapter.",sel:false},
-          {text:"Highlights that hit different. Book now before the week fills up 🔥",sel:false},
+          {text:"Highlights open Thursday and Friday. Book from the link in our bio.",sel:false},
         ].map((c,i) => (
           <div key={i} style={{ display: "flex", gap: "8px", alignItems: "center", padding: "8px 10px", background: c.sel ? "#d4af3715" : "#141210", border: `1px solid ${c.sel ? "#d4af3740" : "#2e2820"}`, borderRadius: "6px" }}>
             <div style={{ width: "14px", height: "14px", borderRadius: "3px", background: c.sel ? "#d4af37" : "#2e2820", border: `1px solid ${c.sel ? "#d4af37" : "#3d3628"}`, flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -921,7 +921,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
           </div>
         ))}
         <div style={{ marginTop: "4px", display: "flex", justifyContent: "flex-end" }}>
-          <div style={{ ...mockBtn, cursor: "default", fontSize: "11px", padding: "7px 14px" }}>Schedule to Instagram →</div>
+          <div style={{ ...mockBtn, cursor: "default", fontSize: "11px", padding: "7px 14px" }}>Schedule to Instagram</div>
         </div>
       </div>
     </div>
@@ -932,13 +932,13 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", background: "#0c0a08" }}>
         <div style={{ padding: "14px 16px", borderRight: "1px solid #2e2820" }}>
           <div style={{ fontSize: "11px", fontWeight: 700, color: "#8a8070", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Business Info</div>
-          {[["Services offered","Hair coloring, highlights, cuts, blowouts"],["Hours","Mon–Sat 9am–7pm, Sun 10am–4pm"],["Walk-ins","Yes, based on availability"]].map(([q,a]) => (
+          {[["Services offered","Hair coloring, highlights, cuts, blowouts"],["Hours","Mon-Sat 9am-7pm, Sun 10am-4pm"],["Walk-ins","Yes, based on availability"]].map(([q,a]) => (
             <div key={q as string} style={{ marginBottom: "8px" }}>
               <div style={{ fontSize: "10px", color: "#524d45", marginBottom: "3px" }}>{q as string}</div>
               <div style={{ ...mockInput, fontSize: "11px", padding: "6px 10px", color: "#c8c0b0" }}>{a as string}</div>
             </div>
           ))}
-          <div style={{ ...mockBtn, textAlign: "center", cursor: "default", marginTop: "4px" }}>Generate FAQs →</div>
+          <div style={{ ...mockBtn, textAlign: "center", cursor: "default", marginTop: "4px" }}>Generate FAQs</div>
         </div>
         <div style={{ padding: "14px 16px" }}>
           <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "10px" }}>
@@ -1005,7 +1005,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
   ),
   "Brand Kit": (
     <div style={{ display: "flex", flexDirection: "column", borderRadius: "10px", overflow: "hidden", border: "1px solid #2e2820" }}>
-      {appChrome("Brand Kit · Smith Salon", <div style={{ display: "flex", gap: "6px" }}>{pill("Complete","#7aaa6a")}<div style={{ ...mockBtn, fontSize: "10px", padding: "4px 12px", cursor: "default" }}>Download PDF</div></div>)}
+      {appChrome("Brand Kit, Smith Salon", <div style={{ display: "flex", gap: "6px" }}>{pill("Complete","#7aaa6a")}<div style={{ ...mockBtn, fontSize: "10px", padding: "4px 12px", cursor: "default" }}>Download PDF</div></div>)}
       <div style={{ background: "#0c0a08", padding: "16px" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", marginBottom: "12px" }}>
           <div style={{ background: "#141210", borderRadius: "8px", padding: "14px", border: "1px solid #2e2820" }}>
@@ -1015,7 +1015,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
                 <div style={{ width: "28px", height: "28px", borderRadius: "5px", background: hex as string, flexShrink: 0 }} />
                 <div>
                   <div style={{ fontSize: "11px", fontWeight: 600, color: "#f5f0e0" }}>{name as string}</div>
-                  <div style={{ fontSize: "10px", color: "#524d45", fontFamily: "monospace" }}>{hex as string} · {label as string}</div>
+                  <div style={{ fontSize: "10px", color: "#524d45", fontFamily: "monospace" }}>{hex as string}, {label as string}</div>
                 </div>
               </div>
             ))}
@@ -1025,12 +1025,12 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
             <div style={{ marginBottom: "12px" }}>
               <div style={{ fontSize: "10px", color: "#524d45", marginBottom: "4px" }}>HEADINGS</div>
               <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", color: "#f5f0e0", fontWeight: 700 }}>Cinzel</div>
-              <div style={{ fontSize: "10px", color: "#524d45" }}>Aa Bb Cc — 400 600 700</div>
+              <div style={{ fontSize: "10px", color: "#524d45" }}>Aa Bb Cc: 400 600 700</div>
             </div>
             <div style={{ marginBottom: "12px" }}>
               <div style={{ fontSize: "10px", color: "#524d45", marginBottom: "4px" }}>BODY</div>
               <div style={{ fontSize: "15px", color: "#c8c0b0" }}>Inter</div>
-              <div style={{ fontSize: "10px", color: "#524d45" }}>Aa Bb Cc — Regular / Medium</div>
+              <div style={{ fontSize: "10px", color: "#524d45" }}>Aa Bb Cc: Regular / Medium</div>
             </div>
             <div style={{ padding: "8px 10px", background: "#0c0a08", borderRadius: "5px", border: "1px solid #2e2820" }}>
               <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "13px", color: "#f5f0e0", marginBottom: "2px" }}>Smith Salon</div>
@@ -1065,7 +1065,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
               <div key={ind} style={{ padding: "4px 9px", borderRadius: "4px", fontSize: "11px", background: i === 0 ? "#9b7fd420" : "#141210", border: `1px solid ${i === 0 ? "#9b7fd460" : "#2e2820"}`, color: i === 0 ? "#9b7fd4" : "#524d45" }}>{ind}</div>
             ))}
           </div>
-          <div style={{ ...mockBtn, textAlign: "center", cursor: "default", fontSize: "12px" }}>Generate Palette →</div>
+          <div style={{ ...mockBtn, textAlign: "center", cursor: "default", fontSize: "12px" }}>Generate Palette</div>
         </div>
         <div style={{ padding: "14px 16px" }}>
           <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "10px" }}>
@@ -1086,7 +1086,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
                   <span style={{ fontSize: "12px", fontWeight: 600, color: "#f5f0e0" }}>{c.name}</span>
                   <span style={{ fontSize: "10px", padding: "2px 6px", background: "#9b7fd415", border: "1px solid #9b7fd430", borderRadius: "3px", color: "#9b7fd4" }}>{c.role}</span>
                 </div>
-                <div style={{ fontSize: "10px", color: "#524d45", fontFamily: "monospace" }}>{c.hex} · {c.usage}</div>
+                <div style={{ fontSize: "10px", color: "#524d45", fontFamily: "monospace" }}>{c.hex}, {c.usage}</div>
               </div>
             </div>
           ))}
@@ -1141,7 +1141,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
   ),
   "Social Media Templates": (
     <div style={{ display: "flex", flexDirection: "column", borderRadius: "10px", overflow: "hidden", border: "1px solid #2e2820" }}>
-      {appChrome("Social Media Templates · Smith Salon", <div style={{ display: "flex", gap: "6px" }}>{pill("12 templates","#7aaa6a")}<div style={{ ...mockBtn, fontSize: "10px", padding: "4px 12px", cursor: "default" }}>Export All</div></div>)}
+      {appChrome("Social Media Templates, Smith Salon", <div style={{ display: "flex", gap: "6px" }}>{pill("12 templates","#7aaa6a")}<div style={{ ...mockBtn, fontSize: "10px", padding: "4px 12px", cursor: "default" }}>Export All</div></div>)}
       <div style={{ background: "#0c0a08", padding: "14px 16px" }}>
         <div style={{ display: "flex", gap: "8px", marginBottom: "12px" }}>
           {["All","Posts","Stories","Covers","Promos"].map((t,i) => (
@@ -1155,7 +1155,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
             { label: "Story CTA", bg: "linear-gradient(160deg, #9b7fd4, #d4af37)", aspect: "0.56", icon: "📲", text: "Book Now" },
             { label: "Cover Photo", bg: "linear-gradient(90deg, #1a1714, #4a2c6e)", aspect: "2.6", icon: "💫", text: "Smith Salon" },
             { label: "Quote Post", bg: "linear-gradient(135deg, #c9a84c, #d4af37)", aspect: "1", icon: "❝", text: "Client Love" },
-            { label: "New Service", bg: "linear-gradient(135deg, #2a1e28, #4a2c6e)", aspect: "1", icon: "✨", text: "Now Offering" },
+            { label: "New Service", bg: "linear-gradient(135deg, #2a1e28, #4a2c6e)", aspect: "1", icon: "+", text: "Now Offering" },
             { label: "Holiday", bg: "linear-gradient(135deg, #1a3a2a, #2a5a3a)", aspect: "1", icon: "🎄", text: "Happy Holidays" },
             { label: "Team Intro", bg: "linear-gradient(135deg, #3a2a1e, #6a4a2e)", aspect: "1", icon: "👤", text: "Meet the Team" },
           ].map((t) => (
@@ -1168,7 +1168,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
         </div>
         <div style={{ marginTop: "10px", padding: "8px 12px", background: "#141210", borderRadius: "6px", fontSize: "11px", color: "#8a8070", display: "flex", justifyContent: "space-between" }}>
           <span>All templates use your brand colors & logo</span>
-          <span style={{ color: "#9b7fd4", fontWeight: 600 }}>Edit in Canva or Figma →</span>
+          <span style={{ color: "#9b7fd4", fontWeight: 600 }}>Edit in Canva or Figma</span>
         </div>
       </div>
     </div>
@@ -1184,7 +1184,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
         <div style={{ display: "grid", gridTemplateColumns: "3fr 1fr 1fr 1fr", padding: "7px 14px", background: "#141210", borderBottom: "1px solid #2e2820" }}>
           {["Description","Qty","Unit Price","Total"].map(h => <span key={h} style={{ fontSize: "10px", fontWeight: 700, color: "#524d45", letterSpacing: "0.06em", textTransform: "uppercase" }}>{h}</span>)}
         </div>
-        {[["Gutter Cleaning — 200 lin ft","200","$1.40","$280.00"],["Downspout Flush","4","$20.00","$80.00"],["Travel Fee","1","$25.00","$25.00"]].map((row,i) => (
+        {[["Gutter Cleaning, 200 lin ft","200","$1.40","$280.00"],["Downspout Flush","4","$20.00","$80.00"],["Travel Fee","1","$25.00","$25.00"]].map((row,i) => (
           <div key={i} style={{ display: "grid", gridTemplateColumns: "3fr 1fr 1fr 1fr", padding: "9px 14px", borderBottom: "1px solid #141210" }}>
             <span style={{ fontSize: "12px", color: "#c8c0b0" }}>{row[0]}</span>
             <span style={{ fontSize: "12px", color: "#8a8070" }}>{row[1]}</span>
@@ -1207,10 +1207,10 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
         <div>
           <div style={{ fontSize: "10px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#524d45", marginBottom: "6px" }}>Bill To</div>
           <div style={{ fontSize: "14px", fontWeight: 700, color: "#f5f0e0" }}>Mark Rivera</div>
-          <div style={{ fontSize: "11px", color: "#524d45" }}>Rivera Properties · mark@riveraprops.com</div>
+          <div style={{ fontSize: "11px", color: "#524d45" }}>Rivera Properties, mark@riveraprops.com</div>
         </div>
         <div style={{ textAlign: "right" }}>
-          <div style={{ fontSize: "10px", color: "#524d45", marginBottom: "4px" }}>Issued Mar 3 · Due Mar 17</div>
+          <div style={{ fontSize: "10px", color: "#524d45", marginBottom: "4px" }}>Issued Mar 3, Due Mar 17</div>
           <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "32px", fontWeight: 900, color: "#d4af37", lineHeight: 1 }}>$450</div>
           <div style={{ fontSize: "11px", color: "#8a8070" }}>due in 14 days</div>
         </div>
@@ -1228,13 +1228,13 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
         </div>
       </div>
       <div style={{ background: "#0c0a08", padding: "12px 16px", borderTop: "1px solid #2e2820", display: "flex", justifyContent: "center" }}>
-        <div style={{ ...mockBtn, padding: "10px 32px", fontSize: "13px", cursor: "default" }}>Pay with Stripe →</div>
+        <div style={{ ...mockBtn, padding: "10px 32px", fontSize: "13px", cursor: "default" }}>Pay with Stripe</div>
       </div>
     </div>
   ),
   "Expense Tracker": (
     <div style={{ display: "flex", flexDirection: "column", borderRadius: "10px", overflow: "hidden", border: "1px solid #2e2820" }}>
-      {appChrome("Expense Tracker · March 2026", <div style={{ display: "flex", gap: "6px" }}>{pill("$1,847 this month","#e8a030")}<div style={{ padding: "4px 10px", background: "#7aaa6a18", border: "1px solid #7aaa6a40", borderRadius: "4px", fontSize: "11px", color: "#7aaa6a", cursor: "default" }}>Export CSV</div></div>)}
+      {appChrome("Expense Tracker, March 2026", <div style={{ display: "flex", gap: "6px" }}>{pill("$1,847 this month","#e8a030")}<div style={{ padding: "4px 10px", background: "#7aaa6a18", border: "1px solid #7aaa6a40", borderRadius: "4px", fontSize: "11px", color: "#7aaa6a", cursor: "default" }}>Export CSV</div></div>)}
       <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", background: "#0c0a08" }}>
         <div style={{ borderRight: "1px solid #2e2820" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr 1fr 1fr", padding: "7px 14px", background: "#141210", borderBottom: "1px solid #2e2820" }}>
@@ -1242,10 +1242,10 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
           </div>
           {[
             ["Mar 3","Gutter Supplies","Supplies","$342","#e8a030"],
-            ["Mar 2","Fuel — BP Station","Fuel","$87","#8a8070"],
+            ["Mar 2","Fuel, BP Station","Fuel","$87","#8a8070"],
             ["Mar 1","Claude AI Sub","Software","$20","#8a8070"],
             ["Feb 28","Pressure Washer Parts","Equipment","$215","#e8a030"],
-            ["Feb 27","Fuel — Shell","Fuel","$64","#8a8070"],
+            ["Feb 27","Fuel, Shell","Fuel","$64","#8a8070"],
             ["Feb 26","Business Cards","Marketing","$38","#8a8070"],
           ].map((row, i) => (
             <div key={i} style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr 1fr 1fr", padding: "8px 14px", borderBottom: "1px solid #141210", alignItems: "center" }}>
@@ -1279,7 +1279,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
           <div style={{ marginTop: "10px", padding: "10px 12px", background: "#141210", borderRadius: "6px", borderTop: "2px solid #d4af3740" }}>
             <div style={{ fontSize: "10px", color: "#524d45", marginBottom: "2px", letterSpacing: "0.06em" }}>TOTAL THIS MONTH</div>
             <div style={{ fontSize: "24px", fontWeight: 800, color: "#d4af37" }}>$1,847</div>
-            <div style={{ fontSize: "10px", color: "#7aaa6a", marginTop: "4px" }}>↓ 12% vs last month · Tax-ready export</div>
+            <div style={{ fontSize: "10px", color: "#7aaa6a", marginTop: "4px" }}>Down 12% from last month, Tax-ready export</div>
           </div>
         </div>
       </div>
@@ -1287,7 +1287,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
   ),
   "Inventory Tracker": (
     <div style={{ display: "flex", flexDirection: "column", borderRadius: "10px", overflow: "hidden", border: "1px solid #2e2820" }}>
-      {appChrome("Inventory Tracker · Smith Salon", <div style={{ display: "flex", gap: "6px" }}>{pill("2 low stock","#e05c5c")}<div style={{ padding: "4px 10px", background: "#d4af3718", border: "1px solid #d4af3740", borderRadius: "4px", fontSize: "11px", color: "#d4af37", cursor: "default" }}>+ Add Item</div></div>)}
+      {appChrome("Inventory Tracker, Smith Salon", <div style={{ display: "flex", gap: "6px" }}>{pill("2 low stock","#e05c5c")}<div style={{ padding: "4px 10px", background: "#d4af3718", border: "1px solid #d4af3740", borderRadius: "4px", fontSize: "11px", color: "#d4af37", cursor: "default" }}>+ Add Item</div></div>)}
       <div style={{ background: "#0c0a08" }}>
         <div style={{ margin: "12px 14px", padding: "10px 14px", background: "#e05c5c12", border: "1px solid #e05c5c40", borderRadius: "6px", display: "flex", alignItems: "center", gap: "8px" }}>
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#e05c5c" strokeWidth="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
@@ -1301,7 +1301,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
           { name: "Bleach Powder 500g",  sku: "BP-003", stock: 3,  reorder: 8,  low: true  },
           { name: "Developer 20vol",     sku: "DV-020", stock: 22, reorder: 10, low: false },
           { name: "Foils (500ct Box)",   sku: "FO-500", stock: 2,  reorder: 5,  low: true  },
-          { name: "Color — Ash Blonde",  sku: "HC-AB7", stock: 18, reorder: 10, low: false },
+          { name: "Color, Ash Blonde",  sku: "HC-AB7", stock: 18, reorder: 10, low: false },
           { name: "Gloves (100ct Box)",  sku: "GL-100", stock: 47, reorder: 20, low: false },
         ].map((item, i) => (
           <div key={i} style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr 80px", padding: "9px 14px", borderBottom: "1px solid #141210", alignItems: "center", background: item.low ? "#e05c5c08" : "transparent" }}>
@@ -1316,7 +1316,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
           </div>
         ))}
         <div style={{ padding: "10px 14px", display: "flex", justifyContent: "space-between", alignItems: "center", background: "#141210" }}>
-          <span style={{ fontSize: "11px", color: "#524d45" }}>6 products · Last updated 2 min ago</span>
+          <span style={{ fontSize: "11px", color: "#524d45" }}>6 products, Last updated 2 min ago</span>
           <div style={{ padding: "5px 12px", border: "1px solid #2e2820", borderRadius: "4px", fontSize: "11px", color: "#8a8070", cursor: "default" }}>Export CSV</div>
         </div>
       </div>
@@ -1324,7 +1324,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
   ),
   "Staff Scheduler": (
     <div style={{ display: "flex", flexDirection: "column", borderRadius: "10px", overflow: "hidden", border: "1px solid #2e2820" }}>
-      {appChrome("Staff Scheduler · Week of Mar 10–14", <div style={{ display: "flex", gap: "6px" }}><div style={{ padding: "4px 10px", background: "#1a1714", border: "1px solid #2e2820", borderRadius: "4px", fontSize: "11px", color: "#8a8070", cursor: "default" }}>‹ Prev</div><div style={{ padding: "4px 10px", background: "#d4af37", borderRadius: "4px", fontSize: "11px", fontWeight: 700, color: "#0c0a08", cursor: "default" }}>Publish</div></div>)}
+      {appChrome("Staff Scheduler, Week of Mar 10-14", <div style={{ display: "flex", gap: "6px" }}><div style={{ padding: "4px 10px", background: "#1a1714", border: "1px solid #2e2820", borderRadius: "4px", fontSize: "11px", color: "#8a8070", cursor: "default" }}>‹ Prev</div><div style={{ padding: "4px 10px", background: "#d4af37", borderRadius: "4px", fontSize: "11px", fontWeight: 700, color: "#0c0a08", cursor: "default" }}>Publish</div></div>)}
       <div style={{ background: "#0c0a08" }}>
         <div style={{ display: "grid", gridTemplateColumns: "90px repeat(5, 1fr) 52px", background: "#141210", borderBottom: "1px solid #2e2820" }}>
           <div style={{ padding: "8px 10px" }} />
@@ -1337,10 +1337,10 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
           <div style={{ padding: "8px 6px", textAlign: "center", fontSize: "10px", fontWeight: 700, color: "#524d45", letterSpacing: "0.05em", display: "flex", alignItems: "center", justifyContent: "center" }}>HRS</div>
         </div>
         {[
-          { name: "Jessica", avatar: "J", color: "#d4af37", hrs: 32, shifts: [["9–5","m"],["9–5","m"],["OFF","o"],["10–6","e"],["9–3","m"]] },
-          { name: "Maria",   avatar: "M", color: "#c9a87c", hrs: 32, shifts: [["10–6","e"],["OFF","o"],["9–5","m"],["9–5","m"],["10–6","e"]] },
-          { name: "Tyler",   avatar: "T", color: "#b8956a", hrs: 24, shifts: [["OFF","o"],["10–7","e"],["10–7","e"],["OFF","o"],["9–5","m"]] },
-          { name: "Priya",   avatar: "P", color: "#7aaa6a", hrs: 16, shifts: [["9–1","m"],["9–1","m"],["9–1","m"],["9–1","m"],["OFF","o"]] },
+          { name: "Jessica", avatar: "J", color: "#d4af37", hrs: 32, shifts: [["9-5","m"],["9-5","m"],["OFF","o"],["10-6","e"],["9-3","m"]] },
+          { name: "Maria",   avatar: "M", color: "#c9a87c", hrs: 32, shifts: [["10-6","e"],["OFF","o"],["9-5","m"],["9-5","m"],["10-6","e"]] },
+          { name: "Tyler",   avatar: "T", color: "#b8956a", hrs: 24, shifts: [["OFF","o"],["10-7","e"],["10-7","e"],["OFF","o"],["9-5","m"]] },
+          { name: "Priya",   avatar: "P", color: "#7aaa6a", hrs: 16, shifts: [["9-1","m"],["9-1","m"],["9-1","m"],["9-1","m"],["OFF","o"]] },
         ].map((staff) => (
           <div key={staff.name} style={{ display: "grid", gridTemplateColumns: "90px repeat(5, 1fr) 52px", borderBottom: "1px solid #141210" }}>
             <div style={{ padding: "10px", display: "flex", alignItems: "center", gap: "7px" }}>
@@ -1362,7 +1362,7 @@ const TOOL_PREVIEWS: Record<string, React.ReactNode> = {
           </div>
         ))}
         <div style={{ padding: "10px 14px", display: "flex", justifyContent: "space-between", alignItems: "center", background: "#141210" }}>
-          <span style={{ fontSize: "11px", color: "#524d45" }}>4 staff · 17 shifts scheduled</span>
+          <span style={{ fontSize: "11px", color: "#524d45" }}>4 staff, 17 shifts scheduled</span>
           <div style={{ display: "flex", gap: "10px" }}>
             {[["morning","#d4af37"],["evening","#7aaa6a"]].map(([l,c]) => (
               <div key={l} style={{ display: "flex", alignItems: "center", gap: "4px", fontSize: "10px", color: "#524d45" }}>
@@ -1424,9 +1424,9 @@ function ToolPreviewModal({ tool, onClose }: { tool: string | null; onClose: () 
           )}
         </div>
         <div style={{ padding: "16px 24px", borderTop: "1px solid var(--color-warm-border)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <span style={{ fontSize: "12px", color: "var(--color-warm-text-muted)" }}>This is a simplified mockup of the real tool.</span>
+          <span style={{ fontSize: "12px", color: "var(--color-warm-text-muted)" }}>This is a simplified mockup of the tool.</span>
           <a href="#contact" onClick={onClose} style={{ padding: "9px 20px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "13px", fontWeight: 700, borderRadius: "6px", textDecoration: "none" }}>
-            Get This Tool →
+            Get this tool
           </a>
         </div>
       </div>
@@ -1466,10 +1466,10 @@ function DashboardGraphic() {
       {/* Booking card, top left */}
       <div style={{ ...card, top: "30px", left: "0px", transform: "rotate(-2deg)", boxShadow: "0 20px 60px rgba(0,0,0,0.5)" }}>
         <div style={label}>New Booking</div>
-        <div style={value}>Sarah M. — Highlights</div>
-        <div style={sub}>Tomorrow at 10:30am · $120</div>
+        <div style={value}>Sarah M., highlights</div>
+        <div style={sub}>Tomorrow at 10:30am, $120</div>
         <div style={{ marginTop: "10px", padding: "6px 10px", background: "#d4af3720", border: "1px solid #d4af3740", borderRadius: "5px", fontSize: "12px", color: "#d4af37", display: "inline-block" }}>
-          Confirmed ✓
+          Confirmed
         </div>
       </div>
 
@@ -1477,7 +1477,7 @@ function DashboardGraphic() {
       <div style={{ ...card, top: "110px", right: "0px", transform: "rotate(1.5deg)", boxShadow: "0 20px 60px rgba(0,0,0,0.5)" }}>
         <div style={label}>Payment Received</div>
         <div style={{ fontSize: "28px", fontWeight: 800, color: "#d4af37", letterSpacing: "-0.02em" }}>$450.00</div>
-        <div style={sub}>Mark Rivera · Gutter cleaning</div>
+        <div style={sub}>Mark Rivera, gutter cleaning</div>
         <div style={{ marginTop: "8px", display: "flex", gap: "6px", alignItems: "center" }}>
           <span style={dot("#7aaa6a")} />
           <span style={{ fontSize: "12px", color: "#7aaa6a" }}>Paid via Stripe</span>
@@ -1492,14 +1492,14 @@ function DashboardGraphic() {
             <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="#d4af37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           ))}
         </div>
-        <div style={{ fontSize: "13px", color: "#f5f0e0", fontStyle: "italic", lineHeight: 1.5 }}>"Best salon I've been to. Absolutely love my highlights."</div>
-        <div style={{ fontSize: "11px", color: "#8a8070", marginTop: "6px" }}>— Ashley T.</div>
+        <div style={{ fontSize: "13px", color: "#f5f0e0", fontStyle: "italic", lineHeight: 1.5 }}>"Love my highlights. Booking online took a minute."</div>
+        <div style={{ fontSize: "11px", color: "#8a8070", marginTop: "6px" }}>Example review</div>
       </div>
 
       {/* AI caption card, floats above container top-right */}
       <div style={{ ...card, top: "-70px", right: "0px", transform: "rotate(2deg)", padding: "12px 16px", minWidth: "180px", boxShadow: "0 16px 48px rgba(0,0,0,0.4)" }}>
         <div style={label}>AI Caption Ready</div>
-        <div style={{ fontSize: "12px", color: "#f5f0e0", lineHeight: 1.5 }}>"Walk-ins welcome today, stop in and treat yourself ✨"</div>
+        <div style={{ fontSize: "12px", color: "#f5f0e0", lineHeight: 1.5 }}>"Walk-ins welcome today. Stop in and book from the link in our bio."</div>
         <div style={{ fontSize: "11px", color: "#d4af37", marginTop: "6px", fontWeight: 600 }}>5 options generated</div>
       </div>
 
@@ -1523,15 +1523,15 @@ export default function DigitalPage() {
       {/* ── HERO (page-head + dashboard graphic) ───────────────────── */}
       <section style={{ position: "relative", zIndex: 5, padding: "72px 36px 60px", maxWidth: "1080px", margin: "0 auto" }}>
         <header className="pv-page-head" style={{ marginBottom: "0" }}>
-          <div className="pv-mono-label">Division I · Digital Services</div>
+          <div className="pv-mono-label">Digital Services</div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center" }} className="grid-responsive">
             <div>
               <h1 style={{ margin: 0 }}>
-                Your entire online presence.<br />
-                <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Built with you.</em>
+                Websites and business tools<br />
+                <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>for small businesses.</em>
               </h1>
               <p className="deck">
-                Websites, booking, CRM, chatbots, and more, built around your business, your input, your approval. Starting at $99/month.
+                Websites, booking, CRM and chatbots, built around your business. Starting at $99/month.
               </p>
               <div style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
                 <a href="#contact" className="pv-btn-primary">Book a free demo</a>
@@ -1547,7 +1547,7 @@ export default function DigitalPage() {
                 border: "1px solid var(--color-warm-border)",
                 background: "var(--color-warm-bg-alt)",
               }}>
-                {[{ n: "$99", label: "starting/mo" }, { n: "25+", label: "tools" }, { n: "AI", label: "in every tool" }, { n: "24-hr", label: "response" }].map(({ n, label }, i) => (
+                {[{ n: "$99", label: "starting/mo" }, { n: "25+", label: "tools" }, { n: "You", label: "own the code" }, { n: "24-hr", label: "response" }].map(({ n, label }, i) => (
                   <div key={label} style={{
                     padding: "16px 12px",
                     textAlign: "center",
@@ -1586,7 +1586,7 @@ export default function DigitalPage() {
             <h2>
               25 tools, one partner.{" "}
               <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>
-                Mix and match.
+                Pick the ones you need.
               </em>
             </h2>
           </header>
@@ -1617,7 +1617,7 @@ export default function DigitalPage() {
                       <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.65 }}>{item.desc}</p>
                       {hoveredTool === item.name && (
                         <div style={{ fontSize: "11px", fontWeight: 600, color: "var(--color-warm-accent)", marginTop: "10px", letterSpacing: "0.04em" }}>
-                          Preview →
+                          Preview
                         </div>
                       )}
                     </div>
@@ -1645,7 +1645,7 @@ export default function DigitalPage() {
             </h2>
           </header>
           <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", marginBottom: "52px" }}>
-            Every add-on has a setup fee. Tier III gives you access to all of it. Tier II adds the active utilities. Tier I keeps things light. No contracts. Cancel anytime.
+            Every add-on has a setup fee. Tier I covers the light tools, Tier II adds the active ones and Tier III includes everything. There is no contract and you can cancel anytime.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", border: "1px solid var(--color-warm-border)" }}>
             {PRICING.map((plan) => (
@@ -1655,11 +1655,6 @@ export default function DigitalPage() {
                 boxShadow: "inset -1px -1px 0 rgba(0,0,0,0.15)",
                 display: "flex", flexDirection: "column",
               }}>
-                {plan.highlight && (
-                  <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-warm-bg)", background: "rgba(0,0,0,0.15)", display: "inline-block", padding: "3px 10px", borderRadius: "4px", marginBottom: "20px", alignSelf: "flex-start" }}>
-                    Most Popular
-                  </div>
-                )}
                 <p style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: plan.highlight ? "rgba(12,10,8,0.6)" : "var(--color-warm-accent)", marginBottom: "12px" }}>
                   {plan.name}
                 </p>
@@ -1709,21 +1704,21 @@ export default function DigitalPage() {
                 color: "var(--color-warm-text)", textTransform: "uppercase",
                 lineHeight: 1.15, marginBottom: "16px",
               }}>
-                Don&apos;t fit in a box?{" "}
+                Need a custom set of tools?{" "}
                 <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>
-                  Good. Neither do most.
+                  I will build the bundle.
                 </em>
               </h3>
               <p className="pv-italic" style={{ fontSize: "16.5px", color: "var(--color-warm-text)", opacity: 0.88, lineHeight: 1.55, maxWidth: "520px" }}>
-                Pick exactly what you need, two tools or twelve. I&apos;ll build the bundle, quote you a flat monthly price, and we&apos;ll get started. No upsells, no surprises.
+                Pick the tools you need, two or twelve. I will build the bundle and quote you a flat monthly price.
               </p>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "12px", alignItems: "flex-start" }}>
               <a href="#contact" className="pv-btn-primary" style={{ whiteSpace: "nowrap" }}>
-                Build my bundle →
+                Build my bundle
               </a>
               <span className="pv-mono-label" style={{ width: "100%", textAlign: "center", color: "var(--color-warm-text-light)" }}>
-                You guide · You approve · You own
+                You own everything I build for you
               </span>
             </div>
           </div>
@@ -1739,14 +1734,14 @@ export default function DigitalPage() {
               <h2>Why <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>me</em></h2>
             </header>
             <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", letterSpacing: "0.03em", fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 600, marginBottom: "32px", lineHeight: 1.2, color: "var(--color-warm-text)" }}>
-              A local partner beats a national agency every time.
+              I build it, I support it, and you can reach me directly.
             </h3>
             <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
               {[
-                { title: "You talk to the person who built it", desc: "No support tickets, no account managers, no runaround. You text or call me directly." },
-                { title: "AI built in from day one", desc: "A chatbot that knows your business, captions that sound like you, content that doesn't take hours to write." },
-                { title: "Cheaper than any agency. Better than DIY.", desc: "Agencies charge $2,000+/month. Wix can't do half of what I offer. You get professional tools at a price that makes sense." },
-                { title: "Everything is yours", desc: "The code, the domain, the content, all of it. You're not locked in. I hand it over the moment you ask." },
+                { title: "You talk to the person who built it", desc: "You text or call me directly." },
+                { title: "AI built in from day one", desc: "A chatbot trained on your business, plus AI drafts of your captions and posts." },
+                { title: "Priced below agency rates", desc: "Agencies charge $2,000 or more per month. My plans start at $99." },
+                { title: "Everything is yours", desc: "You own the code, the domain and the content. I hand it over when you ask." },
               ].map((point) => (
                 <div key={point.title} style={{ paddingLeft: "20px", borderLeft: "2px solid var(--color-warm-border-light)" }}>
                   <h4 style={{ fontSize: "15px", fontWeight: 600, marginBottom: "5px" }}>{point.title}</h4>
@@ -1758,13 +1753,13 @@ export default function DigitalPage() {
           <div style={{ background: "var(--color-warm-card)", border: "1px solid var(--color-warm-border)", borderRadius: "10px", padding: "40px" }}>
             <p style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "24px" }}>About Me</p>
             <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.85, marginBottom: "20px" }}>
-              I'm Elijah Purcell — 19 years old, founded Purcell Ventures LLC, and studying at the University of Alabama in fall 2026.
+              I'm Elijah Purcell. I'm 19, I founded Purcell Ventures LLC, and I study at the University of Alabama.
             </p>
             <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.85, marginBottom: "20px" }}>
-              I started this business running gutters, pressure washing, and lawn care, so I understand what small businesses actually need. Not buzzwords. Real tools that save time, bring in customers, and make the operation run smoother.
+              I started this business doing gutters, pressure washing and lawn care, so I know what a small service business needs from its tools: less time on admin and more customers.
             </p>
             <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.85 }}>
-              I use the same AI development tools that engineers at top tech companies use, which means you get professional-grade work, fast, at a price that makes sense for a small business.
+              I build with AI coding tools such as Claude Code. They cut my build time, which keeps my prices low.
             </p>
           </div>
         </div>
@@ -1800,16 +1795,16 @@ export default function DigitalPage() {
           <div>
             <header className="pv-section-head" style={{ marginBottom: "20px" }}>
               <span className="roman">V.</span>
-              <h2>Ready to <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>talk?</em></h2>
+              <h2>Get in <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>touch</em></h2>
             </header>
             <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.8, marginBottom: "40px" }}>
-              Tell me about your business. I'll get back to you within 24 hours with a recommendation and a quote. No pressure, no pitch deck.
+              Tell me about your business. I'll get back to you within 24 hours with a recommendation and a quote.
             </p>
             <a href="mailto:elijah@purcell-ventures.com" style={{ display: "flex", alignItems: "center", gap: "10px", color: "var(--color-warm-text-muted)", textDecoration: "none", fontSize: "14px", marginBottom: "12px" }}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-warm-accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               elijah@purcell-ventures.com
             </a>
-            <span style={{ fontSize: "13px", color: "var(--color-warm-text-muted)" }}>Based in Georgia · responds within 24 hours</span>
+            <span style={{ fontSize: "13px", color: "var(--color-warm-text-muted)" }}>Based in Tuscaloosa, Alabama. I reply within 24 hours.</span>
           </div>
           <div style={{ background: "var(--color-warm-card)", border: "1px solid var(--color-warm-border)", borderRadius: "10px", padding: "40px" }}>
             <form style={{ display: "flex", flexDirection: "column", gap: "18px" }} onSubmit={(e) => e.preventDefault()}>
@@ -1833,10 +1828,10 @@ export default function DigitalPage() {
                 <label style={{ display: "block", fontSize: "11px", fontWeight: 600, color: "var(--color-warm-text-muted)", marginBottom: "6px", letterSpacing: "0.06em", textTransform: "uppercase" }}>Best fit?</label>
                 <select style={{ width: "100%", padding: "10px 13px", background: "var(--color-warm-bg)", border: "1px solid var(--color-warm-border)", borderRadius: "6px", color: "var(--color-warm-text-muted)", fontSize: "14px", outline: "none" }}>
                   <option value="">Not sure, help me pick</option>
-                  <option value="starter">Starter ($99/mo) — Website + Chatbot</option>
-                  <option value="growth">Growth ($179/mo) — + Booking + Marketing</option>
-                  <option value="full">Full Service ($279/mo) — Everything</option>
-                  <option value="custom">Custom — I'll tell you what I need</option>
+                  <option value="starter">Starter ($99/mo): website and chatbot</option>
+                  <option value="growth">Growth ($179/mo): adds booking and marketing</option>
+                  <option value="full">Full Service ($279/mo): everything</option>
+                  <option value="custom">Custom: I'll tell you what I need</option>
                 </select>
               </div>
               <button type="submit" style={{ padding: "13px 28px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", fontSize: "14px", fontWeight: 700, border: "none", borderRadius: "6px", cursor: "pointer", alignSelf: "flex-start" }}>
@@ -1850,7 +1845,7 @@ export default function DigitalPage() {
       {/* Footer */}
       <footer style={{ padding: "24px", borderTop: "1px solid var(--color-warm-border)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
-          <span style={{ fontSize: "13px", color: "var(--color-warm-text-muted)" }}><strong style={{ color: "var(--color-warm-text)" }}>Purcell Ventures LLC</strong> · Georgia · {new Date().getFullYear()}</span>
+          <span style={{ fontSize: "13px", color: "var(--color-warm-text-muted)" }}><strong style={{ color: "var(--color-warm-text)" }}>Purcell Ventures LLC</strong>, registered in Georgia, {new Date().getFullYear()}</span>
           <span style={{ fontSize: "12px", color: "var(--color-warm-text-light)" }}>purcellventures.co/digital</span>
         </div>
       </footer>

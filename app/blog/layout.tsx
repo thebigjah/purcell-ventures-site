@@ -53,7 +53,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "What you should own at the end of a website project",
+      "headline": "What you should own at the end of a project",
       "url": "https://purcellventures.co/blog/what-you-should-own",
       "datePublished": "2026-08-20",
       "author": {
@@ -71,7 +71,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "How to write a page an AI will actually quote",
+      "headline": "How to write a page an AI will quote",
       "url": "https://purcellventures.co/blog/write-a-page-an-ai-will-quote",
       "datePublished": "2026-08-20",
       "author": {
@@ -80,7 +80,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "Can an AI find your business? A test you can run in five minutes",
+      "headline": "Can an AI find your business?",
       "url": "https://purcellventures.co/blog/can-ai-find-your-business",
       "datePublished": "2026-08-20",
       "author": {
@@ -107,7 +107,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "What a small business website actually costs",
+      "headline": "What a small business website costs",
       "url": "https://purcellventures.co/blog/what-a-website-actually-costs",
       "datePublished": "2026-08-20",
       "author": {
@@ -116,7 +116,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "What one operator can actually deliver",
+      "headline": "What one operator can deliver",
       "url": "https://purcellventures.co/blog/what-one-operator-can-deliver",
       "datePublished": "2026-08-20",
       "author": {
@@ -125,7 +125,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "Audit your own site the way a crawler does, with curl",
+      "headline": "Audit your own site the way a crawler does",
       "url": "https://purcellventures.co/blog/audit-your-site-like-a-crawler",
       "datePublished": "2026-08-20",
       "author": {
@@ -134,7 +134,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "Claim your Google listing yourself, in about twenty minutes",
+      "headline": "Claim your Google listing yourself",
       "url": "https://purcellventures.co/blog/claim-your-google-listing",
       "datePublished": "2026-08-20",
       "author": {
@@ -152,7 +152,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "What registering an LLC at seventeen actually involved",
+      "headline": "What registering an LLC at seventeen involved",
       "url": "https://purcellventures.co/blog/llc-at-seventeen",
       "datePublished": "2026-08-20",
       "author": {
@@ -179,7 +179,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "Fifteen AI agents run my company. Here is what they get wrong",
+      "headline": "Fifteen agents help run my company. Here is what they get wrong",
       "url": "https://purcellventures.co/blog/what-the-agents-get-wrong",
       "datePublished": "2026-08-20",
       "author": {
@@ -197,7 +197,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "Is your business invisible online? A ten-minute self-check",
+      "headline": "Is your business invisible online?",
       "url": "https://purcellventures.co/blog/is-your-business-invisible",
       "datePublished": "2026-08-20",
       "author": {
@@ -260,7 +260,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "Shipping is not the same as being able to take a payment",
+      "headline": "A shipped site can still fail to take a payment",
       "url": "https://purcellventures.co/blog/shipped-is-not-activated",
       "datePublished": "2026-08-17",
       "author": {
@@ -278,7 +278,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "Why I built a CRM from scratch instead of paying $1,200/yr for HubSpot",
+      "headline": "Why I built a CRM from scratch instead of paying for HubSpot",
       "url": "https://purcellventures.co/blog/why-i-built-crm-from-scratch",
       "datePublished": "2026-05-25",
       "author": {
@@ -287,7 +287,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "The case for charging $19 for what others sell at $497",
+      "headline": "Why I charge $19 for the AI Starter Kit",
       "url": "https://purcellventures.co/blog/case-for-charging-19",
       "datePublished": "2026-05-25",
       "author": {
@@ -305,7 +305,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "Why most small business AI tools waste your money",
+      "headline": "Why some small business AI tools waste your money",
       "url": "https://purcellventures.co/blog/why-most-ai-tools-waste-money",
       "datePublished": "2026-05-24",
       "author": {

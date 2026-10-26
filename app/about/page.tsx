@@ -15,28 +15,28 @@ const DIVISIONS = [
   {
     roman: "I.",
     label: "Digital Services",
-    desc: "Complete digital toolkit for small businesses: website, AI chatbot, booking system, CRM, email marketing, and 20+ tools. Fully managed. One subscription.",
+    desc: "Complete digital toolkit for small businesses: website, AI chatbot, booking system, CRM, email marketing, and 20+ tools. I manage it on one subscription.",
     href: "/digital",
     price: "From $99/mo",
   },
   {
     roman: "II.",
     label: "AI Consulting",
-    desc: "Hands-on AI training for business teams. ChatGPT workflows, marketing automation, and custom sessions. I come to your office. Same-day results.",
+    desc: "Hands-on AI training for business teams. ChatGPT workflows, marketing automation, and custom sessions. I come to your office.",
     href: "/consulting",
     price: "From $125/person",
   },
   {
     roman: "III.",
     label: "Custom Software",
-    desc: "Mobile apps, web apps, and AI integrations scoped and built around your exact problem. From idea to launch.",
+    desc: "Mobile apps, web apps, and AI integrations scoped and built around your problem, from idea to launch.",
     href: "/software",
     price: "From $1,500",
   },
   {
     roman: "IV.",
     label: "Mantle Field Services (sister brand)",
-    desc: "Owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta, run under its own brand. Same owner, same standards.",
+    desc: "Owner-operated gutter cleaning, pressure washing, and lawn care in Metro Atlanta, run under its own brand by the same owner.",
     href: "https://mantle-field-site.vercel.app",
     price: "From $50",
   },
@@ -131,13 +131,13 @@ function StoryTab() {
         }}
       />
       <p className="pv-italic" style={{ ...prose, fontSize: "22px", maxWidth: "640px" }}>
-        I&apos;m 19 years old. I have a company with four active divisions, software in production, and a clear sense of what I&apos;m building toward. I&apos;m not in a hurry to seem older than I am. I&apos;m in a hurry because the work matters. <a href="/who" style={{ color: "var(--color-warm-accent)" }}>The short factual version of who Elijah Purcell is</a> lives on its own page.
+        I&apos;m 19 years old. I run a company with four divisions and software in production. I&apos;m in a hurry because the work matters. <a href="/who" style={{ color: "var(--color-warm-accent)" }}>The short factual version of who Elijah Purcell is</a> lives on its own page.
       </p>
       <p style={prose}>
-        I started Purcell Ventures out of a simple observation: the tools that change how businesses operate, meaning AI automation, custom software and real digital infrastructure, were being engineered for enterprises and trickling down to small businesses as afterthoughts, if at all. The HVAC contractor, the barber, the florist: they work harder than most people I&apos;ve ever met and operate with a fraction of the support. That bothered me enough to do something about it.
+        I started Purcell Ventures out of a simple observation: the tools that change how businesses operate, meaning AI automation, custom software and digital infrastructure, get built for enterprises first and reach small businesses late, if at all. The HVAC contractor, the barber and the florist work long hours and have little technical support. So I started building tools for them.
       </p>
 
-      <SectionHead roman="§" title="Background" em="at a glance" />
+      <SectionHead roman="" title="Background" />
 
       <div className="pv-stat-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "48px" }}>
         {[
@@ -160,7 +160,7 @@ function StoryTab() {
         ))}
       </div>
 
-      <SectionHead roman="§" title="Outside the work" />
+      <SectionHead roman="" title="Outside the work" />
       <p style={prose}>
         I&apos;m a bass-baritone vocalist, range C1 to F5, and I lead worship at church most Sundays. I write poetry nobody asked for. I&apos;m 6&apos;3&quot; and from Georgia, which means I&apos;ve never met a stranger in my life. I&apos;ve done mission trips to North Carolina, the Bahamas, Hawaii, and Alaska. I was a member of my school&apos;s men&apos;s Bible study, competed in apologetics and debate for four years, and earned a 3.92 GPA without once finding it particularly interesting to coast.
       </p>
@@ -174,18 +174,18 @@ function StoryTab() {
 function CompanyTab() {
   return (
     <div>
-      <SectionHead roman="§" title="Where this is going" />
+      <SectionHead roman="" title="Where this is going" />
       <p style={prose}>
         I&apos;m at the University of Alabama&apos;s Honors College to study psychology and data science. The endgame is psychiatry, specifically the intersection of AI-driven research and clinical mental health care. I believe the next generation of mental health treatment will be built on behavioral data, and I believe it needs to be built by people who understand both the science and the human being underneath it.
       </p>
       <p style={prose}>
-        Purcell Ventures isn&apos;t separate from that goal. It&apos;s the foundation. Every system I build for a local business, every AI workflow I teach a team, every line of code I ship is practice in the same discipline: making technology work for people rather than against them.
+        Purcell Ventures is part of that goal. The systems I build for local businesses and the AI workflows I teach teams are practice in the same work: making technology useful to the people who depend on it.
       </p>
       <p style={{ ...prose, marginBottom: "48px" }}>
         My faith is the thread through all of it. I&apos;m a Christian, and I believe people are made in the image of God, which means every business I advise, every tool I build, and every patient I eventually treat deserves infrastructure and care that reflects that. That&apos;s not a tagline. It&apos;s the reason I do this at all.
       </p>
 
-      <SectionHead roman="§" title="What we build" em="four divisions, one operator" />
+      <SectionHead roman="" title="What I build" em="four divisions, one operator" />
       <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
         {DIVISIONS.map((d) => (
           <a key={d.label} href={d.href} className="pv-card" style={{ display: "block", paddingTop: "32px" }}>
@@ -222,7 +222,7 @@ function CompanyTab() {
 function MarkTab() {
   return (
     <div>
-      <SectionHead roman="§" title="The Mark" em="an inverse panopticon" />
+      <SectionHead roman="" title="The Mark" em="an inverse panopticon" />
 
       {/* The actual mark, rendered large */}
       <div style={{
@@ -251,25 +251,25 @@ function MarkTab() {
         color: "var(--color-warm-text-light)",
         marginBottom: "40px",
       }}>
-        Fig. I · The Purcell mark · Lampstand cfg
+        Fig. I, the Purcell mark
       </div>
 
       <p style={prose}>
-        The Purcell Ventures mark is built on a deliberate inversion of Jeremy Bentham&apos;s panopticon, a prison design from 1791 where a single guard in a central tower could surveil every prisoner without them knowing when they were being watched. The uncertainty alone produced compliance. Michel Foucault later argued it wasn&apos;t just a prison design. It was the operating model of modern power: institutions exert control through the possibility of observation. You regulate yourself because you might be watched. The watcher stays hidden. The watched stays exposed.
+        The Purcell Ventures mark is built on a deliberate inversion of Jeremy Bentham&apos;s panopticon, a prison design from 1791 where a single guard in a central tower could surveil every prisoner without them knowing when they were being watched. The uncertainty alone produced compliance. Michel Foucault later argued that the same design describes modern power in general: institutions exert control through the possibility of observation. You regulate yourself because you might be watched. The watcher stays hidden. The watched stays exposed.
       </p>
       <p style={prose}>
-        The inverse of that isn&apos;t chaos. It&apos;s the principle most free societies claim to believe in and rarely practice: the powerful should be transparent and accountable, and ordinary people should have their privacy and freedom. The asymmetry should run upward, not downward. That&apos;s what the mark means. PV sits at the center: visible, declared, not hidden in a tower. The structure radiates outward as accountability arms, not inward as surveillance. The space beyond the rings belongs to the people we work with. We&apos;re the ones who are observable.
+        The inverse is a principle most free societies claim and rarely practice: the powerful should be transparent and accountable, and ordinary people should keep their privacy and freedom. The mark puts that idea in a drawing. PV sits at the center, in plain view. The rings radiate outward, toward the people I work with, and the space beyond them belongs to those people. I am the one who is observable.
       </p>
       <p style={{ ...prose, marginBottom: "32px" }}>
-        In 2026, that position is rarer than it should be. The systems most people depend on, the platforms and the algorithms and the AI models making decisions about their credit and their feed and their hiring, are deliberately opaque. The asymmetry Bentham designed for prisoners is now the default assumption of the economy. The mark is a refusal of that. My name is on the business. You deal with me directly. That&apos;s not a branding choice. It&apos;s a position.
+        In 2026, that position is rarer than it should be. The systems most people depend on, the platforms and the algorithms and the AI models making decisions about their credit and their feed and their hiring, are deliberately opaque. The asymmetry Bentham designed for prisoners is now the default assumption of the economy. The mark is my answer to that. My name is on the business, and you deal with me directly.
       </p>
 
-      <SectionHead roman="§" title="The Name" />
+      <SectionHead roman="" title="The Name" />
       <p style={prose}>
-        Purcell Ventures is named after my family. Not a founder persona, not a brand construct. My actual last name. That&apos;s a choice that comes with accountability baked in. When something ships under this name, I shipped it. When a client has a problem, I answer for it. There&apos;s no layer of corporate abstraction between my reputation and the work.
+        Purcell Ventures carries my last name. When something ships under this name, I shipped it. When a client has a problem, I answer for it.
       </p>
       <p style={{ ...prose, marginBottom: 0 }}>
-        Ventures because that&apos;s what this is. Not a consultancy, not an agency, not a firm. A set of ventures: things being built, tested, and grown. The word carries risk and intention both. That&apos;s accurate.
+        Ventures because the company is a set of separate projects that I build, test and grow, and some of them carry risk.
       </p>
     </div>
   );
@@ -278,7 +278,7 @@ function MarkTab() {
 function ContactTab() {
   return (
     <div>
-      <SectionHead roman="§" title="Get in touch" em="email is best" />
+      <SectionHead roman="" title="Get in touch" em="email is best" />
       <p style={prose}>
         Same-day response. If you need an answer urgently, call or text.
       </p>
@@ -287,7 +287,7 @@ function ContactTab() {
           { href: "mailto:elijah@purcell-ventures.com", label: "elijah@purcell-ventures.com", primary: true },
           { href: "tel:+12054627839",                   label: "(205) 462-7839" },
           { href: "https://www.linkedin.com/in/theelijahpurcell", label: "LinkedIn",  ext: true },
-          { href: "/resume",                            label: "Resume →" },
+          { href: "/resume",                            label: "Resume" },
         ].map(({ href, label, primary, ext }) => (
           <a key={href} href={href} target={ext ? "_blank" : undefined} rel={ext ? "noopener noreferrer" : undefined}
             style={{
@@ -306,13 +306,13 @@ function ContactTab() {
         ))}
       </div>
 
-      <SectionHead roman="§" title="What to expect" />
+      <SectionHead roman="" title="What to expect" />
       <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
         {[
-          { q: "Who do I actually talk to?", a: "Me. Elijah Purcell. There's no team, no account manager, no handoff. You deal with the owner from first message to final delivery." },
+          { q: "Who will I talk to?", a: "Me, Elijah Purcell. I handle every project myself, from the first message to delivery." },
           { q: "How fast do you respond?", a: "Same day on email, usually within a few hours. If you need an answer urgently, call or text." },
-          { q: "Do you take on clients outside Atlanta?", a: "For digital services, consulting, and software, yes, anywhere. For field work (gutter cleaning, pressure washing, lawn care), see our sister brand Mantle Field Services, Metro Atlanta only." },
-          { q: "What's the best way to start?", a: "Email with a one-sentence description of what you need. I'll tell you honestly if I can help and what it would look like." },
+          { q: "Do you take on clients outside Atlanta?", a: "For digital services, consulting and software, yes. For gutter cleaning, pressure washing and lawn care, see the sister brand Mantle Field Services, Metro Atlanta only." },
+          { q: "What's the best way to start?", a: "Email with a one-sentence description of what you need. I'll tell you whether I can help and what the work would involve." },
         ].map(({ q, a }) => (
           <div key={q} className="pv-card">
             <span className="b3"></span><span className="b4"></span>
@@ -346,7 +346,7 @@ export default function AboutPage() {
             fontSize: "10px", fontWeight: 700, letterSpacing: "0.32em", textTransform: "uppercase",
             color: "var(--color-warm-accent)", marginBottom: "10px",
           }}>
-            About · Purcell Ventures
+            About
           </div>
           <h1 style={{
             fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700,
@@ -415,8 +415,8 @@ export default function AboutPage() {
         fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
         color: "var(--color-warm-text-light)",
       }}>
-        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
-        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← Home</a>
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC, Acworth, GA</span>
+        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>Home</a>
       </footer>
 
       {/* /about is one of only seven pages Google currently has indexed, which makes it one
@@ -428,9 +428,9 @@ export default function AboutPage() {
         </h2>
         <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: "15px", lineHeight: 1.9 }}>
           <li><a href="/blog/can-ai-find-your-business" style={{ color: "var(--color-warm-accent)" }}>Can an AI find your business?</a></li>
-          <li><a href="/blog/what-a-website-actually-costs" style={{ color: "var(--color-warm-accent)" }}>What a small business website actually costs</a></li>
+          <li><a href="/blog/what-a-website-actually-costs" style={{ color: "var(--color-warm-accent)" }}>What a small business website costs</a></li>
           <li><a href="/blog/121-businesses-near-campus" style={{ color: "var(--color-warm-accent)" }}>121 businesses near campus, and what a phone can find</a></li>
-          <li><a href="/blog/what-the-agents-get-wrong" style={{ color: "var(--color-warm-accent)" }}>Fifteen AI agents run my company. Here is what they get wrong</a></li>
+          <li><a href="/blog/what-the-agents-get-wrong" style={{ color: "var(--color-warm-accent)" }}>Fifteen agents help run my company. Here is what they get wrong</a></li>
           <li><a href="/ai-at-alabama" style={{ color: "var(--color-warm-accent)" }}>Studying AI at the University of Alabama</a></li>
           <li><a href="/ai-consultant-tuscaloosa" style={{ color: "var(--color-warm-accent)" }}>AI consultant in Tuscaloosa, Alabama</a></li>
           <li><a href="/blog" style={{ color: "var(--color-warm-accent)" }}>Everything else</a></li>

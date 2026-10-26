@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/digital" },
   title: "Digital Services for Small Businesses | Websites, AI Tools, CRM & Booking",
   description:
-    "Complete digital toolkit: website, AI chatbot, booking system, CRM, email marketing, social scheduling, and 20+ tools. One monthly subscription, Starter $99/mo, Growth $179/mo, Full $279/mo. Setup $400–1,000.",
+    "Complete digital toolkit: website, AI chatbot, booking system, CRM, email marketing, social scheduling, and 20+ tools. One monthly subscription, Starter $99/mo, Growth $179/mo, Full $279/mo. Setup $400 to $1,000.",
   keywords: [
     "digital services small business", "AI chatbot for website", "business website management",
     "CRM for small business", "email marketing automation", "booking system",
@@ -37,7 +37,7 @@ const schema = {
       "@id": "https://purcellventures.co/digital#service",
       "name": "Digital Services for Small Businesses",
       "description":
-        "Complete digital toolkit: website, AI chatbot, booking system, CRM, email marketing, social scheduling, and 20+ tools. Fully managed. One monthly subscription.",
+        "Complete digital toolkit: website, AI chatbot, booking system, CRM, email marketing, social scheduling, and 20+ tools. I manage it. One monthly subscription.",
       "provider": { "@id": "https://purcellventures.co/#organization" },
       "url": "https://purcellventures.co/digital",
       "serviceType": "Digital Business Services",
@@ -63,7 +63,7 @@ const schema = {
           "name": "How is this different from Wix or Squarespace?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Those are tools you manage yourself. I build it, maintain it, update it, and add AI capabilities those platforms don't offer, like a chatbot trained on your business, AI-generated social posts, and automated review responses. You focus on your business, I handle the tech.",
+            "text": "You manage Wix and Squarespace yourself. I build and maintain the site and add AI tools such as a chatbot trained on your business, AI-drafted social posts and automated review responses.",
           },
         },
         {
@@ -71,7 +71,7 @@ const schema = {
           "name": "How much does a digital services subscription cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Plans start at $99/mo (Starter), $179/mo (Growth), or $279/mo (Full Suite). There is a one-time setup fee of $400–1,000.",
+            "text": "Plans start at $99/mo (Starter), $179/mo (Growth), or $279/mo (Full Suite). There is a one-time setup fee of $400 to $1,000.",
           },
         },
         {
@@ -79,7 +79,7 @@ const schema = {
           "name": "Do I own my website?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. The site, content, and domain are yours. If you ever want to leave, I hand over everything, full source code, all assets. No hostage-taking.",
+            "text": "Yes. The site, content, and domain are yours. If you ever want to leave, I hand over the full source code and all assets.",
           },
         },
         {
@@ -87,7 +87,7 @@ const schema = {
           "name": "Can I start small and add more tools later?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Absolutely. Start with a website and chatbot. Add booking when you're ready. Scale at your own pace.",
+            "text": "Yes. Start with a website and chatbot and add booking or other tools when you want them.",
           },
         },
         {
@@ -95,7 +95,7 @@ const schema = {
           "name": "Why is it cheaper than a typical agency?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Because I build modular, reusable systems, not one-off custom builds from scratch. I use AI tools throughout my workflow, which cuts hours without cutting quality. You get professional-grade work at a fraction of typical agency rates.",
+            "text": "I reuse the same modules across clients instead of building each site from scratch, and I use AI tools to write and test code. Both cut my hours, so I can charge less.",
           },
         },
       ],

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/courses" },
-  title: "Courses: Learn From Someone Who Just Did It",
+  title: "Courses | Elijah Purcell",
   description:
     "Three self-paced courses from Elijah Purcell: the college application playbook, the business launch playbook, and Zero to Automated.",
   // NO canonical here. This layout wraps every /courses child route and Next
@@ -23,7 +23,7 @@ const FAQ_LD = {
       "name": "What courses does Elijah Purcell offer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Three self-paced courses: the college application playbook, the business launch playbook, and Zero to Automated, which covers practical AI for small business."
+        "text": "Three self-paced courses: the college application playbook, the business launch playbook, and Zero to Automated, which covers building AI tools for small business work."
       }
     }
   ]

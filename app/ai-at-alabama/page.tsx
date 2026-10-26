@@ -13,7 +13,7 @@ export default function AiAtAlabama() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
+        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
 
       <Breadcrumbs trail={[
         { name: "Home", href: "/" },
@@ -21,7 +21,7 @@ export default function AiAtAlabama() {
         { name: "Studying AI at Alabama", href: "/ai-at-alabama" },
       ]} />
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Guide · August 20, 2026 · Verified against catalog.ua.edu</div>
+          <div className="pv-mono-label">Guide, August 20, 2026. Checked against catalog.ua.edu.</div>
           <h1>
             Studying AI at the University of <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Alabama</em>
           </h1>
@@ -36,12 +36,12 @@ export default function AiAtAlabama() {
             This is the page I wanted in July and could not find.
           </p>
 
-          <h2 style={H2}>The degree exists, and here is exactly what it is</h2>
+          <h2 style={H2}>What the AI degree requires</h2>
 
           <p>
             The <strong>Bachelor of Science in Artificial Intelligence</strong> runs through
-            the College of Engineering, in the Department of Computer Science. 121 credit
-            hours: 52 in the major, 47 in ancillary mathematics, statistics and science.
+            the College of Engineering, in the Department of Computer Science. It is 121 credit
+            hours, with 52 in the major and 47 in ancillary mathematics, statistics and science.
           </p>
 
           <p>The AI core, by course code:</p>
@@ -74,14 +74,14 @@ export default function AiAtAlabama() {
           </div>
 
           <p>
-            The mathematics is not optional and it is the part that surprises people:
+            The degree requires this mathematics:
             Calculus I through III, MATH 237 Linear Algebra, MATH 301 Discrete Mathematics,
             MATH 355 Theory of Probability, and GES 255 Engineering Statistics I. Plus eight
             hours of natural science and three of cognitive or neuroscience.
           </p>
 
           <p>
-            One rule worth knowing before you plan anything: <strong>an AI major cannot
+            Know one rule before you plan anything. <strong>an AI major cannot
             also major in Computer Science.</strong> The catalog says so outright. The two
             overlap too heavily to count twice.
           </p>
@@ -89,13 +89,11 @@ export default function AiAtAlabama() {
           <h2 style={H2}>What if you are not in engineering</h2>
 
           <p>
-            This is where the catalog stops helping, and it is the situation most students
-            asking the question are actually in.
+            The catalog does not cover this case, and most students asking the question are in it.
           </p>
 
           <p>
-            There is no clean second path, and anyone who tells you otherwise is selling
-            something. What there is:
+            There is no clean second path. These are the options:
           </p>
 
           <ul style={{ paddingLeft: "1.1rem" }}>
@@ -116,27 +114,25 @@ export default function AiAtAlabama() {
             </li>
           </ul>
 
-          <h2 style={H2}>The part nobody puts in a catalog</h2>
+          <h2 style={H2}>What the catalog leaves out</h2>
 
           <p>
-            I run production AI agent systems. Fifteen named agents that handle proposals,
-            audits, compliance and outreach for my company on a schedule, and they were
-            running before I had taken a single AI course.
+            I run production AI agent systems. Fifteen named agents handle proposals,
+            audits, compliance and outreach for my company on a schedule. They were
+            running before I had taken an AI course.
           </p>
 
           <p>
-            I am not saying the degree does not matter. It gives you the mathematics, the
-            formal grounding and the credential, and I would not trade the probability
-            sequence for anything. What it does not give you is the experience of running
+            The degree gives you the mathematics, the formal grounding and the credential,
+            and I would not trade the probability sequence for anything. It does not give you is the experience of running
             something other people depend on, and finding out which of your assumptions was
             wrong at seven in the morning when it breaks.
           </p>
 
           <p>
-            That half is available to any student here right now, for free, and almost
-            nobody does it. If you build one thing that a real person uses, you will learn
-            more about machine learning in production than a semester will teach you, and
-            the semester will make more sense afterwards.
+            Any student here can get that experience now, for free. If you build one thing
+            that another person uses, you will learn things about running machine learning
+            that a semester does not cover.
           </p>
 
           <h2 style={H2}>Common questions</h2>

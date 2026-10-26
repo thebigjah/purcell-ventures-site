@@ -483,14 +483,14 @@ function CardSection({ title, subtitle, Front, Back, filenamePrefix }: {
         <div>
           <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "8px" }}>Front</div>
           <div ref={frontRef} style={{ display: "inline-block" }}><Front /></div>
-          <button style={btnPdfStyle} onClick={() => downloadPrintAssetPDF(frontRef, `${filenamePrefix}-Front`)}>↓ Download Front PDF</button>
-          <button style={btnStyle} onClick={() => downloadPrintAsset(frontRef, `${filenamePrefix}-Front`)}>↓ Download Front PNG</button>
+          <button style={btnPdfStyle} onClick={() => downloadPrintAssetPDF(frontRef, `${filenamePrefix}-Front`)}>Download Front PDF</button>
+          <button style={btnStyle} onClick={() => downloadPrintAsset(frontRef, `${filenamePrefix}-Front`)}>Download Front PNG</button>
         </div>
         <div>
           <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3a3530", marginBottom: "8px" }}>Back</div>
           <div ref={backRef} style={{ display: "inline-block" }}><Back /></div>
-          <button style={btnPdfStyle} onClick={() => downloadPrintAssetPDF(backRef, `${filenamePrefix}-Back`)}>↓ Download Back PDF</button>
-          <button style={btnStyle} onClick={() => downloadPrintAsset(backRef, `${filenamePrefix}-Back`)}>↓ Download Back PNG</button>
+          <button style={btnPdfStyle} onClick={() => downloadPrintAssetPDF(backRef, `${filenamePrefix}-Back`)}>Download Back PDF</button>
+          <button style={btnStyle} onClick={() => downloadPrintAsset(backRef, `${filenamePrefix}-Back`)}>Download Back PNG</button>
         </div>
       </div>
     </div>
@@ -502,12 +502,12 @@ function CardSection({ title, subtitle, Front, Back, filenamePrefix }: {
 const DESIGNS = [
   {
     name: "The Slash / Classic",
-    subtitle: "Refined original, subtle diagonals, small PV mark above wordmark",
+    subtitle: "The original with thin diagonals and a small PV mark above the wordmark",
     Front: V1Front, Back: V1Back,
   },
   {
     name: "The Slash / Ghost PV",
-    subtitle: "Massive faded PV watermark fills the card behind the slashes",
+    subtitle: "Large faded PV watermark behind the slashes",
     Front: V2Front, Back: V2Back,
   },
   {
@@ -532,12 +532,12 @@ const DESIGNS = [
   },
   {
     name: "The Slash / Rake",
-    subtitle: "9 parallel lines as a luxury fabric texture, content sits on top",
+    subtitle: "Nine parallel lines as a texture behind the text",
     Front: V5Front, Back: V5Back,
   },
   {
     name: "The Slash / Inverted",
-    subtitle: "Gold background with dark slashes, most striking card in any stack",
+    subtitle: "Gold background with dark slashes",
     Front: V6Front, Back: V6Back,
   },
 ];
@@ -552,13 +552,13 @@ export default function BusinessCardsPage() {
 
       <div style={{ maxWidth: "1400px", margin: "0 auto 64px" }}>
         <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d4af37", marginBottom: "10px" }}>
-          Purcell Ventures — Private
+          Purcell Ventures private
         </div>
         <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "36px", fontWeight: 700, color: "#f5f0e0", marginBottom: "8px" }}>
-          The Slash — 8 Variations
+          The Slash, 8 variations
         </h1>
         <p style={{ fontSize: "14px", color: "#524d45" }}>
-          All built around the diagonal gold slash · PV luxury logo treatment · 3.5" × 2" print format
+          Eight cards built around the diagonal gold slash. 3.5 by 2 inches.
         </p>
       </div>
 
@@ -570,14 +570,14 @@ export default function BusinessCardsPage() {
         <div style={{ display: "flex", flexDirection: "column", gap: "64px" }}>
           <CardSection
             title="Purcell Ventures"
-            subtitle="The Slash / Ghost PV — your committed PV card"
+            subtitle="The Slash / Ghost PV, the chosen PV card"
             Front={V2Front}
             Back={V2Back}
             filenamePrefix="PV-Ghost-PV"
           />
           <CardSection
             title="Purcell Works"
-            subtitle="The Slash / Ghost PW — field services card"
+            subtitle="The Slash / Ghost PW, field services card"
             Front={WorksV2Front}
             Back={WorksV2Back}
             filenamePrefix="PW-Ghost-PW"
@@ -616,12 +616,12 @@ export default function BusinessCardsPage() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "24px" }}>
           {[
             { step: "1", title: "Pick a design", desc: "Screenshot the front and back of your chosen card at full size on this page." },
-            { step: "2", title: "Vistaprint", desc: "vistaprint.com → Business Cards → Upload full design. 100 cards ~$20." },
+            { step: "2", title: "Vistaprint", desc: "On vistaprint.com choose Business Cards, then upload the full design. 100 cards cost about $20." },
             { step: "3", title: "Or use Canva", desc: "Recreate in Canva's 3.5×2\" business card template. Export as PDF Print." },
-            { step: "4", title: "Finish tip", desc: "Soft-touch matte on dark cards. Standard matte on the gold (Inverted). Never gloss on gold, it washes out." },
+            { step: "4", title: "Finish tip", desc: "Soft-touch matte on dark cards. Standard matte on the gold (Inverted). Do not use gloss on gold. It washes out." },
           ].map(item => (
             <div key={item.step}>
-              <div style={{ fontSize: "11px", fontWeight: 700, color: "#d4af37", marginBottom: "6px" }}>Step {item.step} — {item.title}</div>
+              <div style={{ fontSize: "11px", fontWeight: 700, color: "#d4af37", marginBottom: "6px" }}>Step {item.step}: {item.title}</div>
               <div style={{ fontSize: "12px", color: "#8a8070", lineHeight: 1.65 }}>{item.desc}</div>
             </div>
           ))}

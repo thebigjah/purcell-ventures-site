@@ -40,9 +40,9 @@ const QA: [string, string][] = [
   ["Can you double major in AI and Computer Science at Alabama?",
    "No. The catalog states directly that Artificial Intelligence majors cannot complete an additional major in Computer Science. The two degrees overlap too heavily to be counted twice."],
   ["How do you study AI at Alabama if you are not in the College of Engineering?",
-   "There is no single answer, which is the honest thing to say about it. New College lets a student design a self-directed degree, so a psychology and data science combination that reaches AI from the behavioral side is possible without entering engineering. Individual CS courses can be taken as electives subject to prerequisites, and CS 265 Intro to AI and Data Science is the usual entry point. The Informatics minor in Communication and Information Sciences is a separate route that touches data work without the engineering mathematics sequence."],
+   "There is no single answer. New College lets a student design a self-directed degree, so a psychology and data science combination that reaches AI from the behavioral side is possible without entering engineering. Individual CS courses can be taken as electives subject to prerequisites, and CS 265 Intro to AI and Data Science is the usual entry point. The Informatics minor in Communication and Information Sciences is a separate route that touches data work without the engineering mathematics sequence."],
   ["Is a degree required to build AI systems?",
-   "No, and pretending otherwise would be dishonest coming from someone whose own production agent systems were built before taking a single AI course. What the degree gives you is the mathematics, the formal grounding, and the credential. What it does not give you is the experience of running something that other people depend on, and that part is available to any student willing to ship."],
+   "No. I built production agent systems before taking an AI course. The degree gives you the mathematics, the formal grounding and the credential."],
 ];
 
 export default function AiAtAlabamaLayout({ children }: { children: React.ReactNode }) {

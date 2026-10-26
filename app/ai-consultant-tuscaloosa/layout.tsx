@@ -50,10 +50,10 @@ export const metadata: Metadata = {
 export const QA: [string, string][] = [
   ["Who is the AI consultant in Tuscaloosa, Alabama?",
    "Elijah Purcell, founder and CEO of Purcell Ventures LLC, works as an AI consultant and software developer out of Tuscaloosa, Alabama. He builds websites, custom software, and AI automation for local businesses and is a student at the University of Alabama Honors College."],
-  ["What does an AI consultant in Tuscaloosa actually do for a small business?",
-   "Three things, most often. Replacing a manual repeated task with an automation that runs on a schedule. Adding an AI feature to something that already exists, such as intake, drafting, or triage. And telling you honestly when AI is the wrong tool, which is more often than most vendors will say."],
+  ["What does an AI consultant in Tuscaloosa do for a small business?",
+   "Most often, three things: replacing a repeated manual task with an automation that runs on a schedule, adding an AI feature to something that already exists, such as intake, drafting or triage, and telling you when AI is the wrong tool."],
   ["How much does it cost?",
-   "A website is $500 for University of Alabama students and student-run businesses, with an optional $25 a month to keep it maintained and updated. Custom software and AI automation are quoted per project after a free conversation about what you actually need."],
+   "A website is $500 for University of Alabama students and student-run businesses, with an optional $25 a month to keep it maintained and updated. Custom software and AI automation are quoted per project after a free conversation about what you need."],
   ["Are you an agency?",
    "No. Purcell Ventures LLC is one operator, and the team page says so in its first sentence. The work is supported by a fifteen-agent AI workforce that handles proposals, audits, compliance and outreach on a schedule, but a human does the building and a human answers the phone."],
   ["Do you only work with businesses in Tuscaloosa?",

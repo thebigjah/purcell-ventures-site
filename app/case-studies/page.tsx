@@ -45,7 +45,7 @@ export default function CaseStudiesPage() {
             fontSize: "10px", fontWeight: 700, letterSpacing: "0.32em", textTransform: "uppercase",
             color: "var(--color-warm-accent)", marginBottom: "12px",
           }}>
-            Field Reports · Volume I
+            Case studies
           </div>
           <h1 style={{
             fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700,
@@ -56,7 +56,7 @@ export default function CaseStudiesPage() {
             Case <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Studies</em>
           </h1>
           <p className="pv-italic" style={{ marginTop: "18px", fontSize: "20px", color: "var(--color-warm-text)", opacity: 0.85, maxWidth: "640px", lineHeight: 1.5 }}>
-            Real teams, real workflows, real hours saved. Each case study below is published with the client&apos;s explicit permission.
+            Case studies will appear here once clients approve them.
           </p>
         </div>
 
@@ -77,20 +77,20 @@ export default function CaseStudiesPage() {
               color: "var(--color-warm-text)", textTransform: "uppercase",
               marginBottom: "20px", lineHeight: 1.1,
             }}>
-              Building the <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>first round.</em>
+              First clients <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>wanted.</em>
             </h2>
             <p className="pv-italic" style={{
               fontSize: "19px", color: "var(--color-warm-text)", opacity: 0.85,
               maxWidth: "560px", margin: "0 auto 24px", lineHeight: 1.55,
             }}>
-              Consulting work is starting intentionally, choosing the first clients carefully, doing each session with full attention, then asking permission to publish the result. First case studies land within ~60 days of starting client work.
+              I am taking a small number of first clients and will ask each for permission to publish the results. I plan to publish the first case studies within about 60 days of starting client work.
             </p>
             <p style={{
               fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
               fontSize: "14px", color: "var(--color-warm-text-muted)",
               maxWidth: "560px", margin: "0 auto 36px", lineHeight: 1.65,
             }}>
-              If you&apos;d like to be the early client whose story anchors this page, discounted rate, more of my attention, and the case study itself becomes a marketing asset for your business if you want it to.
+              Early clients get a discounted rate and more of my attention. If you want, you can use the case study in your own marketing.
             </p>
             <Link href="/consulting/book" style={{
               display: "inline-block",
@@ -120,7 +120,7 @@ export default function CaseStudiesPage() {
                       fontSize: "10px", fontWeight: 700, letterSpacing: "0.28em", textTransform: "uppercase",
                       color: "var(--color-warm-accent)", marginBottom: "10px",
                     }}>
-                      № {String(i + 1).padStart(2, "0")} · {cs.industry} · {cs.timeframe}
+                      № {String(i + 1).padStart(2, "0")}, {cs.industry}, {cs.timeframe}
                     </div>
                     <h2 style={{
                       fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
@@ -186,7 +186,7 @@ export default function CaseStudiesPage() {
                     fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase",
                     color: "var(--color-warm-text-light)",
                   }}>
-                    — {cs.quoteAttribution}
+                    {cs.quoteAttribution}
                   </p>
                 </blockquote>
               </article>
@@ -212,13 +212,13 @@ export default function CaseStudiesPage() {
             color: "var(--color-warm-text)", textTransform: "uppercase",
             marginBottom: "16px", lineHeight: 1.15,
           }}>
-            Could your team be the <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>next?</em>
+            Book a <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>session.</em>
           </h2>
           <p className="pv-italic" style={{
             fontSize: "18px", color: "var(--color-warm-text)", opacity: 0.85,
             maxWidth: "560px", margin: "0 auto 32px", lineHeight: 1.55,
           }}>
-            Same Elijah, same delivery, your team&apos;s actual workflows. Reach out and we&apos;ll figure out which session fits.
+            I will work from your team&apos;s own workflows. Send me a message and I will recommend a session.
           </p>
           <Link href="/consulting" style={{
             display: "inline-block",
@@ -228,7 +228,7 @@ export default function CaseStudiesPage() {
             fontSize: "11px", fontWeight: 700, letterSpacing: "0.28em", textTransform: "uppercase",
             textDecoration: "none",
           }}>
-            See consulting sessions →
+            See consulting sessions
           </Link>
         </section>
 
@@ -244,8 +244,8 @@ export default function CaseStudiesPage() {
         fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
         color: "var(--color-warm-text-light)",
       }}>
-        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
-        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← Home</a>
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC, Acworth, GA</span>
+        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>Home</a>
       </footer>
     </div>
   );

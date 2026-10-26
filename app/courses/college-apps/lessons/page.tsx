@@ -29,17 +29,17 @@ const MODULES: Module[] = [
     id: "module-1", num: "01", title: "The Truth About Admissions",
     lessons: [
       {
-        id: "1-1", moduleId: "module-1", title: "How the system actually works", duration: "12 min", format: "Camera", videoUrl: null,
+        id: "1-1", moduleId: "module-1", title: "How the admissions system works", duration: "12 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
-            "Most students approach college admissions like a job application, they try to look as impressive as possible and hope for the best. That's not how it works. Colleges aren't hiring; they're building a class. Every acceptance is a decision about who they want in the room with everyone else.",
-            "Admissions officers read thousands of applications. At most schools, your file gets 8–12 minutes of attention total. The question isn't 'is this student qualified?' — it's 'does this student make our class more interesting?' That distinction changes everything about how you should present yourself.",
+            "Most students approach college admissions like a job application, they try to look as impressive as possible and hope for the best. That's not how it works. Colleges are building a class. Every acceptance is a decision about who they want in the room with everyone else.",
+            "Admissions officers read thousands of applications. At most schools, your file gets 8 to 12 minutes of attention total. The question they ask is 'does this student make our class more interesting?' That distinction changes everything about how you should present yourself.",
             "Selective admissions is partly a numbers game and partly not. The numbers (GPA, test scores) get you past the first filter. After that, it's about story, fit, and what you add to the school's needs that cycle. A school short on bassoonists, first-generation students, or students from Wyoming might accept someone they'd otherwise waitlist. Understanding this removes some of the mystery, and a lot of the self-blame.",
             "Financial considerations also shape acceptance decisions in ways schools don't advertise. Need-blind admissions is real at a handful of schools. At most schools, whether your family can pay full freight, or whether you'd qualify for institutional aid the school has budgeted, is factored in. This isn't a reason to avoid schools. It's a reason to understand which ones want you.",
           ],
           takeaways: [
             "Colleges are building a class, not hiring individuals, your story matters more than your stats above the filter threshold",
-            "An application gets 8–12 minutes of total attention; first impressions in the first page are everything",
+            "An application gets 8 to 12 minutes of total attention, so the first page carries the most weight",
             "Fit, class composition, and financial considerations all affect decisions independently of merit",
             "Understanding why schools admit who they admit removes mystery and helps you position yourself accurately",
           ],
@@ -50,13 +50,13 @@ const MODULES: Module[] = [
         notes: {
           intro: [
             "The students who get the best outcomes don't suddenly get serious senior year. They've been building a story since 9th grade, not because they were planning everything perfectly, but because they were doing things they cared about consistently. That record is what applications are made of.",
-            "9th and 10th grade: this is when you explore. Try things. Some will stick, some won't. The goal isn't to look impressive, it's to find the 2–3 things you're genuinely interested in enough to keep doing for three years. Depth in a few areas beats breadth in many.",
+            "9th and 10th grade: this is when you explore. Try things. Some will stick, some won't. The goal isn't to look impressive, it's to find the 2 to 3 things you're interested in enough to keep doing for three years. Depth in a few areas beats breadth in many.",
             "11th grade: this is the most important year of high school for college applications. Junior year GPA is the most scrutinized. PSAT/SAT/ACT testing, AP coursework, and the beginning of your activities list all take shape. This is also when you should start researching schools seriously and visiting if possible.",
             "Summer before senior year: write your personal statement. Not in September, in June or July, when you have time to think and revise. Students who write their essays under deadline pressure produce work that reads like it was written under deadline pressure.",
-            "Senior fall: submit Early Action or Early Decision applications in November. Regular Decision deadlines are January 1 or January 15 for most schools. Managing 15–30 applications means having a submission system from day one.",
+            "Senior fall: submit Early Action or Early Decision applications in November. Regular Decision deadlines are January 1 or January 15 for most schools. Managing 15 to 30 applications means having a submission system from day one.",
           ],
           takeaways: [
-            "Consistent depth in 2–3 areas across four years is far stronger than breadth across many",
+            "Consistent depth in 2 to 3 areas across four years is far stronger than breadth across many",
             "Junior year GPA is weighted most heavily, protect it above everything",
             "Write your personal statement the summer before senior year, not the week it's due",
             "Early Action is almost always the right move, more time, more options, same or better acceptance rates",
@@ -73,7 +73,7 @@ const MODULES: Module[] = [
         id: "2-1", moduleId: "module-2", title: "How I found 98 schools, live spreadsheet walkthrough", duration: "14 min", format: "Screen share", videoUrl: null,
         notes: {
           intro: [
-            "Most students apply to 8–12 schools. I applied to more. The reason isn't that I wanted to collect acceptances, it's that a larger list, built methodically, dramatically increases your expected scholarship offers. With the right list, you can engineer a situation where multiple schools compete for you.",
+            "Most students apply to 8 to 12 schools. I applied to more. The reason isn't that I wanted to collect acceptances, it's that a larger list, built methodically, dramatically increases your expected scholarship offers. With the right list, you can engineer a situation where multiple schools compete for you.",
             "My process started with Niche, College Board's BigFuture, and College Confidential, not for their rankings, but for their filter tools. I filtered by: size, location preference, acceptance rate range, known merit scholarship programs, and specific majors I was considering. That initial pull gave me ~150 schools, which I narrowed to 98 based on deeper research.",
             "For each school, I tracked: acceptance rate, average merit scholarship offered (not just available, average offered to students with my profile), known scholarship programs with specific dollar amounts, cost of attendance, net price calculator result, application requirements, and deadline. This spreadsheet became my operating system for the entire application season.",
             "The list wasn't random. It was built in tiers, schools where my stats put me in the top 25% of admitted students (high scholarship likelihood), schools where I was solidly mid-range (match), and schools where I was a stretch. The top-25% schools are where the money is.",
@@ -81,24 +81,24 @@ const MODULES: Module[] = [
           takeaways: [
             "A larger, methodically built list with a scholarship lens produces more money than a small prestige-focused list",
             "Track average merit offered, not just maximum available, those are very different numbers",
-            "Build your tracking spreadsheet in a tool you'll actually use (Google Sheets works fine)",
+            "Build your tracking spreadsheet in a tool you'll use (Google Sheets works fine)",
             "Filter for schools where your stats put you in the top 25% of admitted students, that's where merit aid concentrates",
             "Use net price calculators at every school before finalizing your list",
           ],
         },
       },
       {
-        id: "2-2", moduleId: "module-2", title: "Reach, match, safety, the real math", duration: "10 min", format: "Camera", videoUrl: null,
+        id: "2-2", moduleId: "module-2", title: "Reach, match and safety schools by the numbers", duration: "10 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
             "Reach, match, and safety aren't fixed categories, they're relative to your stats. A school that's a reach for a 3.5 GPA student is a match for a 4.0 student. The categories only mean something in context of your actual profile.",
             "A true safety is a school you'd be happy attending, where you're certain of acceptance, and where you'd receive significant merit aid. If the only schools on your safety tier are ones you'd be miserable at, they're not functioning as safeties. A school that demoralizes you is not a fallback, it's a trap.",
-            "The common advice is '3–4 safety, 3–4 match, 3–4 reach.' That's fine for a traditional application strategy. If you're optimizing for scholarship money, weight your list toward schools where you're in the top 25% of their admitted class. That's where you get leveraged offers. Reaches are exciting but rarely the schools that give you the most money.",
+            "The common advice is '3 to 4 safety, 3 to 4 match, 3 to 4 reach.' That's fine for a traditional application strategy. If you're optimizing for scholarship money, weight your list toward schools where you're in the top 25% of their admitted class. That's where you get leveraged offers. Reaches are exciting but rarely the schools that give you the most money.",
             "Acceptance rate is a rough proxy for selectivity, not a perfect measure. A 40% acceptance rate school can be harder to get into than a 15% school if your profile is unusual. Look at where your test scores and GPA sit relative to the middle 50% of admitted students, that's a more accurate signal.",
           ],
           takeaways: [
             "Reach/match/safety only make sense relative to your specific stats, build your own assessment",
-            "A safety school should be one you'd genuinely attend, not just a backup you'd be miserable at",
+            "A safety school should be one you'd attend, not just a backup you'd be miserable at",
             "Top-25% placement in admitted class statistics predicts merit aid better than acceptance rate",
             "Weight your list toward match/upper-match schools if scholarship maximization is the goal",
             "Middle 50% test score and GPA ranges are more useful than acceptance rate for predicting your odds",
@@ -111,7 +111,7 @@ const MODULES: Module[] = [
           intro: [
             "There are two kinds of scholarships: institutional (given by the college itself) and external (given by foundations, companies, and organizations). Most students know about both but focus only on one at a time. The strategy is to run both tracks simultaneously.",
             "Institutional merit scholarships, the ones built into financial aid packages, are the highest-value target. A $20,000/year scholarship from the university is worth $80,000 over four years and renews automatically if you meet GPA requirements. These are the numbers that make $530k possible. The key is applying to enough schools that compete for students like you.",
-            "External scholarships ($500–$50,000 one-time or annual) are worth pursuing but require volume. Most $1,000 scholarships take 2–4 hours of work. That's $250–$500 per hour, not bad, but not your primary strategy. Use external scholarships to build early momentum and add small but real dollar amounts.",
+            "External scholarships ($500 to $50,000 one-time or annual) are worth pursuing but require volume. Most $1,000 scholarships take 2 to 4 hours of work. That's $250 to $500 per hour, not bad, but not your primary strategy. Use external scholarships to build early momentum and add small but real dollar amounts.",
             "Before you apply to any school, look for: named merit scholarships (these often require a separate application or are automatically considered), honors college scholarships (often the most generous per-school offers), and departmental scholarships for your intended major. These require research but aren't well-publicized.",
           ],
           takeaways: [
@@ -134,7 +134,7 @@ const MODULES: Module[] = [
           intro: [
             "The Common App activities section gives you 10 slots and 150 characters per description. It's the most underused, undertreated part of most applications, students list what they did without explaining what it meant or what they built.",
             "Order matters. List your most significant activities first. Significance means: time invested, leadership demonstrated, impact created, or uniqueness. A summer job you worked 20 hours a week for two years is more significant than a club you attended biweekly.",
-            "150 characters is tight. Every word has to work. Lead with a verb. Cut articles (a, the) where possible. Quantify where you can — 'managed social media: grew following 340% in 6 months' says more than 'managed social media accounts.' Numbers are specificity; specificity is credibility.",
+            "150 characters is tight. Every word has to work. Lead with a verb. Cut articles (a, the) where possible. Quantify where you can. 'Managed social media: grew following 340% in 6 months' says more than 'managed social media accounts.' Numbers make a claim specific and easier to believe.",
             "Non-traditional activities count. Work, caregiving, religious leadership, self-directed projects, these belong on the list. A student who worked 25 hours per week to help their family has demonstrated character that clubs don't. Don't undersell your real life.",
           ],
           takeaways: [
@@ -152,7 +152,7 @@ const MODULES: Module[] = [
           intro: [
             "The honors section of the Common App is limited to 5 entries. Most students leave it half-empty because they don't think of themselves as 'award winners.' The section is broader than it sounds.",
             "What counts as an honor or award: academic recognition (honor roll, dean's list, department awards), competition placements (not just first, semifinalist, regional qualifier, top 10% all count), scholarships you've already received, recognition from organizations you're involved in, and significant external recognition of any kind.",
-            "If your list is thin, there are legitimate ways to add to it before your applications are due. Academic competitions — AMC math, Science Olympiad, debate tournaments, speech competitions, writing contests, are open to anyone, often free, and produce credentials within weeks. Apply, compete, and list the result whatever it is.",
+            "If your list is thin, there are legitimate ways to add to it before your applications are due. Academic competitions (AMC math, Science Olympiad, debate tournaments, speech competitions, writing contests) are open to anyone, often free, and produce credentials within weeks. Apply, compete, and list the result whatever it is.",
             "Recognitions from community organizations, religious institutions, and employers also count. If your employer gave you employee-of-the-month or a performance commendation, that's an honor. If your church recognized your leadership, that's an honor. Think broadly.",
           ],
           takeaways: [
@@ -170,7 +170,7 @@ const MODULES: Module[] = [
           intro: [
             "Letters of recommendation don't make applications, but weak ones can break them. The goal is to get letters that add specific, personal evidence about who you are that your transcript and activities list can't show.",
             "Choose recommenders who know you well over recommenders who are impressive. A letter from a teacher who watched you struggle with and eventually master something specific is worth more than a letter from a principal who vaguely remembers you. Specificity signals authenticity.",
-            "Give your recommenders a 'brag sheet' — a one-page document with your activities, achievements, and 2–3 specific moments in their class or context that you'd want them to highlight. Most teachers write dozens of recommendations; the ones who get good letters are the ones who make it easy for the teacher to write something real.",
+            "Give your recommenders a 'brag sheet,' a one-page document with your activities, achievements, and 2 to 3 specific moments in their class or context that you'd want them to highlight. Most teachers write dozens of recommendations. The ones who get good letters are the ones who make it easy for the teacher to write something real.",
             "Ask early, ideally in the spring of junior year or the first week of senior year. Teachers who agree to write letters have a queue. Get in it before it fills up. If a teacher hesitates or seems unenthusiastic, find someone else. A willing letter is better than a reluctant one.",
           ],
           takeaways: [
@@ -188,7 +188,7 @@ const MODULES: Module[] = [
     id: "module-4", num: "04", title: "The Essays",
     lessons: [
       {
-        id: "4-1", moduleId: "module-4", title: "What admissions actually wants from your personal statement", duration: "13 min", format: "Camera", videoUrl: null,
+        id: "4-1", moduleId: "module-4", title: "What admissions readers look for in a personal statement", duration: "13 min", format: "Camera", videoUrl: null,
         notes: {
           intro: [
             "The personal statement is not a resume in prose form. It is not a list of your accomplishments. It is not proof that you are impressive. It is evidence of who you are, how you think, what you notice, what you care about. Admissions officers already have your transcript and activities list. The essay is the one place they get to hear your voice.",
@@ -201,7 +201,7 @@ const MODULES: Module[] = [
             "Focus on your response to events, not the events themselves",
             "The topic matters far less than the execution and authenticity",
             "Your first paragraph is your only guaranteed chance to create interest, use it",
-            "Write the way you actually talk when you're thinking hard about something",
+            "Write the way you talk when you're thinking hard about something",
           ],
         },
       },
@@ -227,17 +227,17 @@ const MODULES: Module[] = [
         id: "4-3", moduleId: "module-4", title: "Supplementals, efficiency at scale", duration: "12 min", format: "Camera + Screen", videoUrl: null,
         notes: {
           intro: [
-            "Supplemental essays are shorter (50–400 words typically) and school-specific. They ask things like: Why this school? What will you contribute to our community? Describe a challenge you've overcome. Some schools have 1–2 supplements; others have 5–7.",
-            "The efficiency principle: most supplemental prompts cluster into 4–5 categories. The 'Why this school?' essay can be adapted with 15 minutes of research per school. The 'Describe a challenge' essay can be a refined version of your personal statement material. Build master responses for each category, then customize.",
+            "Supplemental essays are shorter (50 to 400 words typically) and school-specific. They ask things like: Why this school? What will you contribute to our community? Describe a challenge you've overcome. Some schools have 1 to 2 supplements. Others have 5 to 7.",
+            "The efficiency principle: most supplemental prompts cluster into 4 to 5 categories. The 'Why this school?' essay can be adapted with 15 minutes of research per school. The 'Describe a challenge' essay can be a refined version of your personal statement material. Build master responses for each category, then customize.",
             "The 'Why this school?' essay is the most important supplemental you'll write. It needs to be specific, not 'your beautiful campus and strong academics' (that's every school). Specific means: a professor's research you looked up, a specific program or course, a tradition or community element you found compelling. Admissions officers know if you've done your homework.",
-            "Don't treat supplements as an afterthought. A strong supplement can elevate a borderline application. A weak one, especially a generic 'Why us?' — signals that you're not genuinely interested. Demonstrated interest is real and schools track it.",
+            "Don't treat supplements as an afterthought. A strong supplement can elevate a borderline application. A weak one, especially a generic 'Why us?', signals low interest. Demonstrated interest is real and schools track it.",
           ],
           takeaways: [
             "Build master essays for each supplement category (Why Us, challenge, community contribution, etc.) then customize",
             "The 'Why this school?' essay must be specific, generic praise is transparent and hurts",
             "Research one professor's work, one course, one specific program per school before writing their supplement",
             "Demonstrated interest is tracked, a tailored supplement signals genuine interest",
-            "Budget 15–30 minutes per school for supplement customization when using master drafts",
+            "Budget 15 to 30 minutes per school for supplement customization when using master drafts",
           ],
         },
       },
@@ -247,12 +247,12 @@ const MODULES: Module[] = [
           intro: [
             "Getting feedback on your essays is valuable, but the wrong feedback can make your essay worse. People who haven't read thousands of college essays often give advice that pushes students toward safer, blander writing. Know whose feedback to weight.",
             "The best feedback comes from: people who've read your work before and know your voice, people who've worked in admissions or read applications professionally, and people who are simply good readers (they notice when something feels false or when something resonates).",
-            "What to ask for: 'Tell me what you think I'm saying about myself in this essay' and 'Tell me what you found most interesting.' If their answer doesn't match your intention, you have revision work to do. Don't ask 'Is this good?' — that's not useful feedback.",
+            "What to ask for: 'Tell me what you think I'm saying about myself in this essay' and 'Tell me what you found most interesting.' If their answer doesn't match your intention, you have revision work to do. Don't ask 'Is this good?' It doesn't produce useful feedback.",
             "Revise toward clarity and specificity, not toward impressiveness. If a revision makes the essay sound smarter but less like you, undo it. The essay is supposed to sound like an 18-year-old who thinks carefully, not like a college admissions essay.",
           ],
           takeaways: [
             "Get feedback from good readers, not necessarily the most experienced adults in your life",
-            "Ask 'what do you think I'm saying about myself?' — the answer reveals what the essay is actually communicating",
+            "Ask 'what do you think I'm saying about myself?' The answer shows what the essay communicates",
             "Revise toward clarity and authenticity, not toward impressiveness",
             "If a revision makes the essay less like you, undo it",
             "Stop revising when further changes would make the essay worse, not when it feels perfect",
@@ -270,7 +270,7 @@ const MODULES: Module[] = [
           intro: [
             "The FAFSA (Free Application for Federal Student Aid) opens October 1 each year and should be submitted as early as possible, many schools use it to determine institutional grants on a first-come basis. Waiting until spring to file costs money.",
             "The FAFSA calculates your Student Aid Index (SAI, formerly Expected Family Contribution). This number determines your eligibility for federal grants, loans, and work-study. It also triggers institutional need-based aid at many schools. The lower your SAI, the more need-based aid you qualify for.",
-            "The CSS Profile is a separate, more detailed financial form required by about 400 mostly private colleges. It digs deeper than the FAFSA — asking about home equity, non-custodial parent income, and business assets. Schools that require it often give more institutional grant aid as a result. The application fee is $25 for the first school and $16 for each additional (fee waivers available).",
+            "The CSS Profile is a separate, more detailed financial form required by about 400 mostly private colleges. It digs deeper than the FAFSA, asking about home equity, non-custodial parent income, and business assets. Schools that require it often give more institutional grant aid as a result. The application fee is $25 for the first school and $16 for each additional (fee waivers available).",
             "Dependency status, divorced parent situations, and unusual financial circumstances all have specific rules in FAFSA and CSS. If your situation is non-standard, look up the specific rule rather than guessing, getting it wrong costs money or flags your application for review.",
           ],
           takeaways: [
@@ -288,7 +288,7 @@ const MODULES: Module[] = [
           intro: [
             "This lesson is a screen share of my actual scholarship research process, the sites I used, how I filtered, what I tracked, and how I prioritized which ones to apply for.",
             "The sites I used most: Scholarship America, Fastweb, Bold.org, Going Merry, and Scholarships.com. Each has a different database and different filters. Don't rely on one. The overlap between them is smaller than you'd expect.",
-            "Filtering for fit: I filtered by eligibility criteria I actually met, state, intended major, test score range, extracurricular activities. Generic scholarships open to everyone get thousands of applications. Niche scholarships for students matching specific criteria get dozens. Apply where you're competitive.",
+            "Filtering for fit: I filtered by eligibility criteria I met, state, intended major, test score range, extracurricular activities. Generic scholarships open to everyone get thousands of applications. Niche scholarships for students matching specific criteria get dozens. Apply where you're competitive.",
             "Volume is part of the strategy for external scholarships. A $1,000 scholarship that takes 90 minutes of work is $667/hour. A $500 scholarship that takes 20 minutes of work (because it reuses your personal statement) is $1,500/hour. Prioritize by dollars-per-hour, not dollar amount.",
             "The scholarships that added the largest numbers to my total came from institutional merit awards, not external scholarships. External scholarships are real money but they're supplemental. Build your school list around schools with strong institutional merit aid first.",
           ],
@@ -330,13 +330,13 @@ const MODULES: Module[] = [
           intro: [
             "Early Action (EA) and Early Decision (ED) both have earlier deadlines (typically November 1 or November 15) but work very differently. EA is non-binding, you apply early, hear back earlier, and make your decision by May 1 like everyone else. ED is binding, if accepted, you commit to attending and withdraw all other applications.",
             "EA is almost always the right call if a school offers it. Acceptance rates are higher in the EA round at most schools. You reduce application stress by knowing outcomes earlier. And financial aid is unaffected. Apply EA to as many schools as you can, it costs nothing extra.",
-            "ED is a more complex decision. It makes sense when: a school is your clear first choice, you've done the math on financial aid and it's workable, and your application is at its strongest in November. ED artificially raises your odds at schools where you're on the edge, some research suggests 10–20% bump at selective schools. But committing before you see other offers means you can't compare aid packages.",
+            "ED is a more complex decision. It makes sense when: a school is your clear first choice, you've done the math on financial aid and it's workable, and your application is at its strongest in November. ED artificially raises your odds at schools where you're on the edge, some research suggests 10 to 20% bump at selective schools. But committing before you see other offers means you can't compare aid packages.",
             "ED II (January deadline, binding) is worth considering for schools that dropped to your second or third choice after first-choice results. If you didn't get into your ED I school and a school you loved is still open for ED II, it's a real option.",
           ],
           takeaways: [
             "Apply Early Action everywhere it's offered, acceptance rates are higher and there's no downside",
             "ED is only the right call when a school is your clear first choice and you've confirmed the financial aid picture",
-            "ED can provide a 10–20% acceptance rate boost at selective schools, real but not magic",
+            "ED can provide a 10 to 20% acceptance rate boost at selective schools, real but not magic",
             "ED II is a legitimate second-round option if your situation changes after November decisions",
             "Never apply ED to a school you haven't fully researched the financial aid situation at",
           ],
@@ -356,7 +356,7 @@ const MODULES: Module[] = [
             "Department/program quality in your specific major matters more than overall school rankings",
             "City and region are part of the decision, you're living there for four years",
             "Gut reactions during campus visits are legitimate data",
-            "If you're genuinely torn between two schools after all analysis, visit both again before the May 1 deadline",
+            "If you're torn between two schools after all analysis, visit both again before the May 1 deadline",
           ],
         },
       },
@@ -457,7 +457,7 @@ export default function LessonsPage() {
               border: "none", borderRadius: 6, cursor: "pointer",
               fontFamily: "var(--font-inter), sans-serif", letterSpacing: "0.06em",
             }}>
-              Enter →
+              Enter
             </button>
           </form>
           <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", marginTop: "20px", fontFamily: "var(--font-inter), sans-serif" }}>
@@ -489,7 +489,7 @@ export default function LessonsPage() {
             </svg>
           </button>
           <Link href="/courses" style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", textDecoration: "none", fontFamily: "var(--font-inter), sans-serif" }}>
-            ← Courses
+            Courses
           </Link>
           <span style={{ fontSize: "12px", color: "var(--color-warm-text-light)", fontFamily: "var(--font-inter), sans-serif" }}>College Application Playbook</span>
         </div>
@@ -522,7 +522,7 @@ export default function LessonsPage() {
           {MODULES.map(m => (
             <div key={m.id}>
               <div style={{ padding: "12px 16px 6px", fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", color: "var(--color-warm-text-light)", textTransform: "uppercase", fontFamily: "var(--font-inter), sans-serif" }}>
-                MODULE {m.num} · {m.title}
+                MODULE {m.num}: {m.title}
               </div>
               {m.lessons.map(l => {
                 const isActive = l.id === activeId;
@@ -559,8 +559,7 @@ export default function LessonsPage() {
 
             {/* Breadcrumb */}
             <div style={{ display: "flex", gap: "8px", alignItems: "center", marginBottom: "24px", fontSize: "11px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>
-              <span>MODULE {mod.num}</span>
-              <span>·</span>
+              <span>MODULE {mod.num}:</span>
               <span style={{ color: "var(--color-warm-text)" }}>{lesson.title}</span>
             </div>
 
@@ -620,7 +619,7 @@ export default function LessonsPage() {
                 disabled={!prevLesson}
                 style={{ padding: "9px 18px", fontSize: "13px", fontWeight: 600, background: "none", border: "1px solid var(--color-warm-border)", borderRadius: 5, color: prevLesson ? "var(--color-warm-text-muted)" : "var(--color-warm-text-light)", cursor: prevLesson ? "pointer" : "not-allowed", fontFamily: "var(--font-inter), sans-serif" }}
               >
-                ← Previous
+                Previous
               </button>
 
               <button
@@ -643,7 +642,7 @@ export default function LessonsPage() {
                 disabled={!nextLesson}
                 style={{ padding: "9px 18px", fontSize: "13px", fontWeight: 600, background: "none", border: "1px solid var(--color-warm-border)", borderRadius: 5, color: nextLesson ? "var(--color-warm-text-muted)" : "var(--color-warm-text-light)", cursor: nextLesson ? "pointer" : "not-allowed", fontFamily: "var(--font-inter), sans-serif" }}
               >
-                Next Lesson →
+                Next lesson
               </button>
             </div>
           </div>

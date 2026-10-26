@@ -15,61 +15,61 @@ const MODULES = [
     num: "01", title: "From Idea to Validated Concept", lessonCount: 4, totalMin: 46,
     lessons: [
       { id: "1-1", title: "Is your idea a business or a hobby?", duration: "11 min", format: "Camera" },
-      { id: "1-2", title: "Who exactly is your customer, market research done simply", duration: "13 min", format: "Camera + Screen" },
+      { id: "1-2", title: "Who your customer is: simple market research", duration: "13 min", format: "Camera + Screen" },
       { id: "1-3", title: "Validating before you spend a dollar", duration: "12 min", format: "Camera + Screen" },
-      { id: "1-4", title: "Choosing your model, service, product, digital, or hybrid", duration: "10 min", format: "Camera" },
+      { id: "1-4", title: "Choosing your model: service, product, digital or hybrid", duration: "10 min", format: "Camera" },
     ],
   },
   {
     num: "02", title: "Legal & Structure", lessonCount: 4, totalMin: 42,
     lessons: [
-      { id: "2-1", title: "Sole prop vs LLC — when each makes sense", duration: "9 min", format: "Camera" },
-      { id: "2-2", title: "Filing your LLC — live walkthrough", duration: "14 min", format: "Screen share" },
+      { id: "2-1", title: "Sole prop vs LLC: when each makes sense", duration: "9 min", format: "Camera" },
+      { id: "2-2", title: "Filing your LLC: live walkthrough", duration: "14 min", format: "Screen share" },
       { id: "2-3", title: "EIN, registered agent, and operating agreement", duration: "8 min", format: "Screen share" },
-      { id: "2-4", title: "Contracts and protecting yourself, scope, payment, disputes", duration: "11 min", format: "Camera" },
+      { id: "2-4", title: "Contracts that cover scope, payment and disputes", duration: "11 min", format: "Camera" },
     ],
   },
   {
     num: "03", title: "Money, Pricing & Banking", lessonCount: 4, totalMin: 47,
     lessons: [
-      { id: "3-1", title: "Opening a business bank account, why and how", duration: "10 min", format: "Screen share" },
-      { id: "3-2", title: "Pricing your offer, the math and the psychology", duration: "13 min", format: "Camera" },
-      { id: "3-3", title: "Invoicing, Stripe, and collecting actual money", duration: "11 min", format: "Screen share" },
-      { id: "3-4", title: "Taxes, bookkeeping, and cash flow, year one survival guide", duration: "13 min", format: "Screen share" },
+      { id: "3-1", title: "Opening a business bank account", duration: "10 min", format: "Screen share" },
+      { id: "3-2", title: "Pricing your offer: the math and the psychology", duration: "13 min", format: "Camera" },
+      { id: "3-3", title: "Invoicing, Stripe and collecting payment", duration: "11 min", format: "Screen share" },
+      { id: "3-4", title: "Taxes, bookkeeping and cash flow in year one", duration: "13 min", format: "Screen share" },
     ],
   },
   {
     num: "04", title: "Brand & Presence", lessonCount: 3, totalMin: 37,
     lessons: [
-      { id: "4-1", title: "Your brand, name, positioning, and what you actually stand for", duration: "13 min", format: "Camera" },
-      { id: "4-2", title: "Your digital presence, website vs social vs both", duration: "12 min", format: "Camera + Screen" },
+      { id: "4-1", title: "Your brand: name, positioning and what you stand for", duration: "13 min", format: "Camera" },
+      { id: "4-2", title: "Your digital presence: website, social or both", duration: "12 min", format: "Camera + Screen" },
       { id: "4-3", title: "Your first piece of content that brings customers in", duration: "12 min", format: "Screen share" },
     ],
   },
   {
     num: "05", title: "Building & Delivering the Offer", lessonCount: 3, totalMin: 31,
     lessons: [
-      { id: "5-1", title: "Defining exactly what you sell and how you deliver it", duration: "10 min", format: "Camera" },
-      { id: "5-2", title: "Your first deliverable, building it regardless of type", duration: "12 min", format: "Screen share" },
-      { id: "5-3", title: "Overdelivering early, reputation as a growth engine", duration: "9 min", format: "Camera" },
+      { id: "5-1", title: "Defining what you sell and how you deliver it", duration: "10 min", format: "Camera" },
+      { id: "5-2", title: "Building your first deliverable", duration: "12 min", format: "Screen share" },
+      { id: "5-3", title: "Overdelivering early to build a reputation", duration: "9 min", format: "Camera" },
     ],
   },
   {
     num: "06", title: "Getting Your First Customer", lessonCount: 4, totalMin: 48,
     lessons: [
-      { id: "6-1", title: "Warm outreach, using who you already know", duration: "11 min", format: "Camera" },
-      { id: "6-2", title: "Cold outreach that actually works", duration: "14 min", format: "Camera + Screen" },
-      { id: "6-3", title: "The first sales conversation, what to say and when", duration: "12 min", format: "Camera" },
+      { id: "6-1", title: "Warm outreach to people you already know", duration: "11 min", format: "Camera" },
+      { id: "6-2", title: "Cold outreach scripts and follow-up", duration: "14 min", format: "Camera + Screen" },
+      { id: "6-3", title: "The first sales conversation: what to say and when", duration: "12 min", format: "Camera" },
       { id: "6-4", title: "Closing without being pushy", duration: "11 min", format: "Camera" },
     ],
   },
   {
     num: "07", title: "Running It, Growing & The Mental Side", lessonCount: 4, totalMin: 47,
     lessons: [
-      { id: "7-1", title: "The exact tool stack I run Purcell Ventures with", duration: "14 min", format: "Screen share" },
+      { id: "7-1", title: "The tool stack I run Purcell Ventures with", duration: "14 min", format: "Screen share" },
       { id: "7-2", title: "Building a referral system from your first clients", duration: "11 min", format: "Camera" },
       { id: "7-3", title: "Your first hire vs your first automation", duration: "11 min", format: "Camera" },
-      { id: "7-4", title: "The founder mindset, fear, imposter syndrome, and what keeps you going", duration: "11 min", format: "Camera" },
+      { id: "7-4", title: "Fear, imposter syndrome and what keeps you going", duration: "11 min", format: "Camera" },
     ],
   },
 ];
@@ -84,12 +84,12 @@ const TIERS = [
     lsFull: LS_FULL,
     lsPlan: LS_PLAN,
     features: [
-      "All 7 modules · 26 lessons",
-      "Camera, screen share & written content",
-      "Full resource pack — 6 templates & worksheets",
+      "All 7 modules, 26 lessons",
+      "Camera, screen share and written content",
+      "Full resource pack: 6 templates and worksheets",
       "Business model one-pager template",
-      "Pricing calculator + cold outreach scripts",
-      "Lifetime access + future updates",
+      "Pricing calculator and cold outreach scripts",
+      "Lifetime access and future updates",
     ],
   },
   {
@@ -117,7 +117,7 @@ const TIERS = [
     features: [
       "Everything in Coaching Track",
       "3 hours direct with Elijah",
-      "Business plan + offer review",
+      "Business plan and offer review",
       "Sales strategy and pitch prep",
       "Direct email access for 90 days",
     ],
@@ -128,35 +128,35 @@ const TIERS = [
 const FAQS = [
   {
     q: "What kind of business is this for?",
-    a: "Any. The course is built around principles that apply whether you're starting a service business, selling a physical product, building a digital product, or some hybrid. The examples I use come from my experience with Purcell Ventures, which runs multiple different business models. Where the execution differs by type, I call it out.",
+    a: "Any. The course applies to a service business, a physical product, a digital product or a mix. My examples come from Purcell Ventures, which runs consulting, software, digital products and courses. Where the execution differs by type, I call it out.",
   },
   {
     q: "I have no experience. Is this too advanced?",
-    a: "No. This course assumes you start with nothing except an idea. The legal setup, banking, pricing, outreach, everything is walked through from scratch. If anything, this course was designed specifically for people who've never done this before and don't have a mentor who has.",
+    a: "No. This course assumes you start with nothing except an idea. The course walks through legal setup, banking, pricing and outreach from scratch. I wrote it for people who have never done this and don't have a mentor who has.",
   },
   {
     q: "You are nineteen. Why should I take business advice from you?",
-    a: "Because I actually did it. I founded Purcell Ventures at 17, built multiple revenue streams, and documented every tool, decision, and mistake along the way. I'm not teaching theory — I'm teaching the exact process I used, while it's still fresh. The tools I recommend are the ones I actively use. The mistakes I warn about are ones I made.",
+    a: "I founded Purcell Ventures at 17 and wrote down the tools, decisions and mistakes as I went. The course teaches the process I used, while it is recent. I use the tools I recommend, and I made the mistakes I warn about.",
   },
   {
     q: "What's the resource pack?",
-    a: "Six templates and worksheets tied to specific lessons, a business model one-pager, customer profile worksheet, LLC filing checklist, pricing calculator, brand positioning worksheet, and cold outreach script templates. These are working documents, not filler. They're mentioned inline in the relevant lessons and available to all tiers.",
+    a: "Six templates and worksheets tied to specific lessons, a business model one-pager, customer profile worksheet, LLC filing checklist, pricing calculator, brand positioning worksheet, and cold outreach script templates. The lessons that use them link to them, and every tier gets them.",
   },
   {
     q: "What if I already have a business started?",
-    a: "You'll still get value, especially from the financial, legal, branding, and sales modules. Most people who've already started skip the foundation steps and end up fixing them later. This course will help you identify what you've built correctly and what needs shoring up. You can move through earlier modules quickly.",
+    a: "The financial, legal, branding and sales modules still apply. People who started fast often skip the foundation steps and fix them later. The course helps you check what you set up correctly and what needs work. You can move through earlier modules quickly.",
   },
   {
     q: "What's the difference between Coaching Track and 1:1 Intensive?",
-    a: "Coaching Track gets you into live group calls where you can ask questions and get feedback on your specific situation. It's me, not pre-recorded content, responding to what you're working on. The 1:1 Intensive is private hours, we review your business plan and offer directly, work through your pitch, and build your sales strategy together.",
+    a: "Coaching Track gets you into live group calls where you can ask questions and get feedback on your specific situation. I answer live on those calls. The 1:1 Intensive is private hours: we review your business plan and offer, work through your pitch and build your sales strategy together.",
   },
   {
     q: "Still in high school and starting something?",
-    a: "You might also want the College Application Playbook, building a business while in high school is exceptional material for applications, essays, and scholarship interviews. Both courses are designed to work together.",
+    a: "You might also want the College Application Playbook. A business you started in high school gives you material for applications, essays and scholarship interviews.",
   },
   {
     q: "Can I upgrade later?",
-    a: "Yes. If you start with Self-Paced and want to add coaching, reach out directly, the price difference applies as a credit.",
+    a: "Yes. If you start with Self-Paced and want to add coaching, email me and I'll credit what you paid toward the upgrade.",
   },
 ];
 
@@ -198,18 +198,18 @@ export default function BusinessLaunchPage() {
 
       <section style={{ position: "relative", zIndex: 5, padding: "72px 36px 60px", maxWidth: "1080px", margin: "0 auto" }}>
         <header className="pv-page-head" style={{ marginBottom: 0 }}>
-          <div className="pv-mono-label">Course · Business Launch Playbook</div>
+          <div className="pv-mono-label">Course: Business Launch Playbook</div>
           <h1 style={{ margin: 0 }}>
             <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>I started a company at 17.</em>
             <br />
-            Here&apos;s everything I wish I knew first.
+            This course covers how.
           </h1>
           <p className="deck">
-            I&apos;m Elijah Purcell. I founded Purcell Ventures at 17, consulting, software, digital products, courses. This course is the complete playbook: idea to legal entity to first dollar to operating business, with every tool, decision, and shortcut I actually used.
+            I&apos;m Elijah Purcell. I founded Purcell Ventures at 17. It runs consulting, software, digital products and courses. This course walks through starting a business: idea, legal entity and first customer, with the tools and decisions I used.
           </p>
           <div className="bl-hero-btns" style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
-            <a href="#curriculum" className="pv-btn-ghost">See what&apos;s inside ↓</a>
-            <a href="#waitlist" className="pv-btn-primary">Join the waitlist →</a>
+            <a href="#curriculum" className="pv-btn-ghost">See what&apos;s inside</a>
+            <a href="#waitlist" className="pv-btn-primary">Join the waitlist</a>
           </div>
           <div style={{
             marginTop: "32px",
@@ -221,8 +221,8 @@ export default function BusinessLaunchPage() {
           }}>
             {[
               { num: "17",  label: "Age when I founded" },
-              { num: "5+",  label: "Revenue streams" },
-              { num: "50+", label: "Tools tested" },
+              { num: "7",   label: "Modules" },
+              { num: "6",   label: "Templates" },
               { num: "26",  label: "Lessons" },
             ].map((s, i) => (
               <div key={s.label} style={{
@@ -251,10 +251,10 @@ export default function BusinessLaunchPage() {
           </h2>
           <div className="bl-who-grid" style={{ background: "var(--color-warm-border)", borderRadius: 10, overflow: "hidden" }}>
             {[
-              { title: "People with an idea but no roadmap", body: "You know what you want to build but not how to actually start. This course gives you the step-by-step process from zero, validation, legal, pricing, first customer, operations. No assumed knowledge." },
-              { title: "Side hustlers ready to make it official", body: "You've been doing something informally and want to turn it into a real business, legal structure, proper banking, contracts, systems. This course closes the gap between 'I do this for money' and 'I run a business.'" },
-              { title: "Students starting something before they graduate", body: "Building something in high school or college is real experience, and it shows up in applications, interviews, and your bank account. This course helps you build it right from the start." },
-              { title: "People leaving a job to go independent", body: "You have skills and want to sell them directly. Service businesses, consulting, freelancing, this course covers the entire setup, from LLC to first invoice, and gives you the outreach system to land clients from day one." },
+              { title: "People with an idea but no roadmap", body: "You know what you want to build but not how to start. The course goes step by step from zero: validation, legal, pricing, first customer and operations. It assumes no prior knowledge." },
+              { title: "Side hustlers ready to make it official", body: "You've been doing paid work informally and want to make it official. The course covers LLC formation, banking and contracts." },
+              { title: "Students starting something before they graduate", body: "A business you build in school shows on applications and in interviews. The course helps you set it up correctly from the start." },
+              { title: "People leaving a job to go independent", body: "You have skills and want to sell them directly. For service businesses, consulting and freelancing, the course covers setup from LLC to first invoice and includes outreach scripts." },
             ].map(w => (
               <div key={w.title} style={{ background: "var(--color-warm-bg)", padding: "32px 28px" }}>
                 <div style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--color-warm-accent)", marginBottom: "16px" }} />
@@ -274,7 +274,7 @@ export default function BusinessLaunchPage() {
             7 modules. 26 lessons.<br />Idea to operating business.
           </h2>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "48px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            Camera lessons, screen shares of my actual tools and process, and written notes for every lesson. Total: ~4.5 hours of video.
+            Camera lessons, screen shares of my tools and process, and written notes for every lesson. Planned length: about 5 hours of video.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
             {MODULES.map((mod, i) => {
@@ -295,7 +295,7 @@ export default function BusinessLaunchPage() {
                       <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "15px", fontWeight: 600, color: "var(--color-warm-text)" }}>{mod.title}</span>
                     </div>
                     <div style={{ display: "flex", alignItems: "center", gap: "16px", flexShrink: 0 }}>
-                      <span style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>{mod.lessonCount} lessons · {mod.totalMin} min</span>
+                      <span style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>{mod.lessonCount} lessons, {mod.totalMin} min</span>
                       <span style={{ fontSize: "20px", color: "var(--color-warm-accent)", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s", lineHeight: 1 }}>+</span>
                     </div>
                   </button>
@@ -332,19 +332,19 @@ export default function BusinessLaunchPage() {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontFamily: "var(--font-inter), sans-serif" }}>Resource Pack</div>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(24px, 3.5vw, 36px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "16px", lineHeight: 1.1 }}>
-            Templates and tools, not filler.
+            Six templates and worksheets.
           </h2>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "48px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            Every tier includes the full resource pack, six working documents referenced inline throughout the course.
+            Every tier includes the full resource pack. The lessons that use each document link to it.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1px", background: "var(--color-warm-border)", borderRadius: 10, overflow: "hidden" }}>
             {[
               { title: "Business Model One-Pager", desc: "One page to define what you're building, who it's for, how you make money, and what makes you different. Used in Module 1.", tag: "Module 01" },
               { title: "Customer Profile Worksheet", desc: "Structured questions to define your target customer, pain points, triggers, objections, and where to find them. Used in Lesson 1-2.", tag: "Lesson 1-2" },
-              { title: "LLC Filing Checklist", desc: "State-agnostic step-by-step checklist for forming your LLC — articles, EIN, registered agent, operating agreement, and bank account. Used in Module 2.", tag: "Module 02" },
+              { title: "LLC Filing Checklist", desc: "State-agnostic checklist for forming an LLC: articles, EIN, registered agent, operating agreement and bank account. Used in Module 2.", tag: "Module 02" },
               { title: "Pricing Calculator", desc: "A spreadsheet to calculate your cost baseline, set floor pricing, test different rates, and see projected revenue at different volume. Used in Lesson 3-2.", tag: "Lesson 3-2" },
-              { title: "Brand Positioning Worksheet", desc: "Questions that force you to articulate your name, positioning, tone, and what you stand for in one sitting. Used in Lesson 4-1.", tag: "Lesson 4-1" },
-              { title: "Cold Outreach Script Templates", desc: "Three tested outreach scripts, service business, product business, and general inquiry, with subject lines and follow-up sequences. Used in Lesson 6-2.", tag: "Lesson 6-2" },
+              { title: "Brand Positioning Worksheet", desc: "Questions to settle your name, positioning, tone and what you stand for in one sitting. Used in Lesson 4-1.", tag: "Lesson 4-1" },
+              { title: "Cold Outreach Script Templates", desc: "Three outreach scripts (service business, product business and general inquiry) with subject lines and follow-up emails. Used in Lesson 6-2.", tag: "Lesson 6-2" },
             ].map(r => (
               <div key={r.title} style={{ background: "var(--color-warm-bg)", padding: "28px" }}>
                 <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.1em", color: "var(--color-warm-accent)", marginBottom: "10px", fontFamily: "var(--font-inter), sans-serif" }}>{r.tag}</div>
@@ -361,21 +361,21 @@ export default function BusinessLaunchPage() {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontFamily: "var(--font-inter), sans-serif" }}>Why This Course</div>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(24px, 3.5vw, 36px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "48px", lineHeight: 1.1 }}>
-            What makes it different.
+            What the course includes.
           </h2>
           <div className="bl-diff-grid">
             {[
               {
-                title: "Built from a Real Business",
-                body: "I didn't study entrepreneurship. I built a company. Purcell Ventures runs consulting, software, digital products, and courses simultaneously. Every lesson is based on what I actually did, the tools I actually use, the mistakes I actually made.",
+                title: "Built From My Business",
+                body: "I built a company. Purcell Ventures runs consulting, software, digital products and courses. Every lesson is based on what I did, the tools I use and the mistakes I made.",
               },
               {
                 title: "Every Decision Documented",
-                body: "Most business courses tell you what to do. This one shows you exactly how, screen shares of the actual tools, templates I built and use, and the reasoning behind every decision. The data is the course.",
+                body: "This course shows screen shares of the tools I use, the templates I built and the reasoning behind each decision.",
               },
               {
                 title: "Resources That Work",
-                body: "The resource pack isn't an afterthought. It's six working documents, templates, calculators, scripts, that do the heavy lifting so you spend less time building infrastructure and more time building the actual business.",
+                body: "The resource pack is six working documents: templates, a pricing calculator and outreach scripts. You fill them in instead of building them from scratch.",
               },
             ].map(d => (
               <div key={d.title} style={{ padding: "32px", border: "1px solid var(--color-warm-border)", borderRadius: 8 }}>
@@ -392,10 +392,10 @@ export default function BusinessLaunchPage() {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontFamily: "var(--font-inter), sans-serif" }}>Pricing</div>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(24px, 3.5vw, 36px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "16px", lineHeight: 1.1 }}>
-            Pick your level of support.
+            Pricing
           </h2>
           <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "40px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            Course opens when recording is complete. Join the waitlist to be first in and get the early-access price.
+            The course opens when recording is complete. Waitlist members get the early-access price.
           </p>
 
           {/* Payment mode toggle */}
@@ -441,14 +441,14 @@ export default function BusinessLaunchPage() {
                   borderRadius: 6, textDecoration: "none", letterSpacing: "0.06em",
                   fontFamily: "var(--font-inter), sans-serif",
                 }}>
-                  Join Waitlist →
+                  Join the waitlist
                 </a>
               </div>
             ))}
           </div>
 
           <div style={{ marginTop: "16px", padding: "16px 20px", background: "var(--color-warm-card)", border: "1px solid var(--color-warm-border)", borderRadius: 6, fontSize: "12px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>
-            Prices in USD · Payments processed securely via Lemon Squeezy · Access code delivered by email within 5 minutes of purchase
+            Prices in USD. Lemon Squeezy processes payments. The access code arrives by email within 5 minutes of purchase.
           </div>
         </div>
       </section>
@@ -457,10 +457,10 @@ export default function BusinessLaunchPage() {
       <section style={{ padding: "64px 24px", borderBottom: "1px solid var(--color-warm-border)", background: "var(--color-warm-card)" }}>
         <div style={{ maxWidth: "760px", margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "32px", flexWrap: "wrap" }}>
           <div>
-            <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "10px", fontFamily: "var(--font-inter), sans-serif" }}>Need More Hands-On Help?</div>
-            <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "8px" }}>Work with Elijah directly.</h3>
+            <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "10px", fontFamily: "var(--font-inter), sans-serif" }}>One-on-one help</div>
+            <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "8px" }}>Consulting is available for one-on-one help.</h3>
             <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.7, maxWidth: "460px", fontFamily: "var(--font-dm-sans), sans-serif", margin: 0 }}>
-              If you want someone to look at your specific situation, your idea, your offer, your pitch — Purcell Ventures consulting is available for one-on-one sessions.
+              If you want me to look at your idea, your offer or your pitch, book a consulting session.
             </p>
           </div>
           <Link href="/consulting" style={{
@@ -469,7 +469,7 @@ export default function BusinessLaunchPage() {
             borderRadius: 6, textDecoration: "none", letterSpacing: "0.06em",
             fontFamily: "var(--font-inter), sans-serif", whiteSpace: "nowrap", flexShrink: 0,
           }}>
-            View Consulting →
+            View consulting
           </Link>
         </div>
       </section>
@@ -481,7 +481,7 @@ export default function BusinessLaunchPage() {
             Waitlist
           </div>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "16px", lineHeight: 1.1 }}>
-            Be first in when it drops.
+            Join the waitlist.
           </h2>
           <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.75, marginBottom: "40px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
             Waitlist members get early access pricing and first notification when the course opens.
@@ -489,7 +489,7 @@ export default function BusinessLaunchPage() {
           {waitlisted ? (
             <div style={{ padding: "24px 32px", background: "var(--color-warm-card)", border: "1px solid var(--color-warm-accent)", borderRadius: 8 }}>
               <div style={{ fontSize: "16px", fontWeight: 600, color: "var(--color-warm-accent)", fontFamily: "'Cinzel', Georgia, serif", marginBottom: "6px" }}>You're on the list.</div>
-              <div style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-dm-sans), sans-serif" }}>You'll hear from me before anyone else.</div>
+              <div style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-dm-sans), sans-serif" }}>I'll email you when enrollment opens.</div>
             </div>
           ) : (
             <form onSubmit={handleWaitlist} style={{ display: "flex", gap: "8px" }}>
@@ -512,7 +512,7 @@ export default function BusinessLaunchPage() {
                 border: "none", borderRadius: 6, cursor: "pointer", letterSpacing: "0.06em",
                 fontFamily: "var(--font-inter), sans-serif", whiteSpace: "nowrap",
               }}>
-                Notify Me →
+                Notify me
               </button>
             </form>
           )}
@@ -555,7 +555,7 @@ export default function BusinessLaunchPage() {
               Something not answered here?
             </p>
             <a href="mailto:elijah@purcell-ventures.com" style={{ fontSize: "13px", fontWeight: 600, color: "var(--color-warm-accent)", fontFamily: "var(--font-inter), sans-serif" }}>
-              elijah@purcell-ventures.com →
+              elijah@purcell-ventures.com
             </a>
           </div>
         </div>

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Case Studies: Software Elijah Purcell Has Shipped",
   description:
-    "Real teams. Real workflows. Real hours saved. Case studies from Elijah Purcell's AI consulting work, published with each client's explicit permission.",
+    "Case studies from Elijah Purcell's AI consulting work. None are published yet. Each will go up only with the client's permission.",
   alternates: { canonical: "/case-studies" },
 };
 
@@ -35,7 +35,7 @@ const FAQ_LD = {
       "name": "Are the Purcell Ventures case studies real?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Each one is published with the client's explicit permission and describes a real team, a real workflow and the hours it saved."
+        "text": "None are published yet. Each one will go up only with the client's permission and will describe the team, the workflow and the hours it saved."
       }
     }
   ]

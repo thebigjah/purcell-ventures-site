@@ -114,7 +114,7 @@ export default function BookPage() {
 
         {/* Editorial page-head */}
         <header className="pv-page-head" style={{ marginBottom: "40px" }}>
-          <div className="pv-mono-label">Consulting · Booking</div>
+          <div className="pv-mono-label">Booking</div>
           <h1 style={{ margin: 0 }}>
             Book a <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>session.</em>
           </h1>
@@ -158,14 +158,14 @@ export default function BookPage() {
               Elijah will reach out within 24 hours to confirm and lock in the details.
             </p>
             <div className="pv-mono-label" style={{ marginBottom: "24px", color: "var(--color-warm-text-light)" }}>
-              elijah@purcell-ventures.com · (205) 462-7839
+              elijah@purcell-ventures.com, (205) 462-7839
             </div>
-            <a href="/consulting" className="pv-btn-ghost">← Back to consulting</a>
+            <a href="/consulting" className="pv-btn-ghost">Back to consulting</a>
           </div>
         ) : step === 1 ? (
           <div>
-            <h1 style={stepHeaderStyle}>Pick a <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>session.</em></h1>
-            <p style={stepDeckStyle}>Every session is customized to your business, this just tells me where to start.</p>
+            <h1 style={stepHeaderStyle}>Choose a <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>session.</em></h1>
+            <p style={stepDeckStyle}>Pick the closest session. I will adjust it to your business.</p>
             <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "32px" }}>
               {SESSION_TYPES.map(s => {
                 const isActive = sessionType === s.id;
@@ -210,13 +210,13 @@ export default function BookPage() {
                 letterSpacing: "0.28em", textTransform: "uppercase",
               }}
             >
-              Next: Logistics →
+              Next: Logistics
             </button>
           </div>
         ) : step === 2 ? (
           <div>
             <h1 style={stepHeaderStyle}>Logistics.</h1>
-            <p style={stepDeckStyle}>Format, size, and when works for you.</p>
+            <p style={stepDeckStyle}>Format, group size and timing.</p>
 
             <div style={{ marginBottom: "28px" }}>
               <div style={labelStyle}>Format</div>
@@ -261,7 +261,7 @@ export default function BookPage() {
             </div>
 
             <div style={{ display: "flex", gap: "10px" }}>
-              <button onClick={() => setStep(1)} className="pv-btn-ghost">← Back</button>
+              <button onClick={() => setStep(1)} className="pv-btn-ghost">Back</button>
               <button onClick={() => setStep(3)} disabled={!step2Done}
                 className={step2Done ? "pv-btn-primary" : ""}
                 style={step2Done ? {} : {
@@ -272,7 +272,7 @@ export default function BookPage() {
                   letterSpacing: "0.28em", textTransform: "uppercase",
                 }}
               >
-                Next: Contact →
+                Next: Contact
               </button>
             </div>
           </div>
@@ -289,7 +289,7 @@ export default function BookPage() {
                 <input required style={inputStyle} placeholder="Phone number *" value={phone} onChange={e => setPhone(e.target.value)} />
                 <input style={inputStyle} placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
               </div>
-              <textarea style={{ ...inputStyle, resize: "vertical", minHeight: "96px" }} placeholder="Anything else I should know? (tools you use, specific pain points, etc.)" value={notes} onChange={e => setNotes(e.target.value)} />
+              <textarea style={{ ...inputStyle, resize: "vertical", minHeight: "96px" }} placeholder="Anything else I should know? (tools you use, specific problems)" value={notes} onChange={e => setNotes(e.target.value)} />
             </div>
 
             {/* Summary card with brass corners */}
@@ -298,14 +298,14 @@ export default function BookPage() {
               <div className="pv-mono-label" style={{ marginBottom: "8px" }}>Your booking</div>
               <div className="pv-italic" style={{ fontSize: "15px", color: "var(--color-warm-text)", opacity: 0.92, lineHeight: 1.6 }}>
                 <strong style={{ fontFamily: "'Cinzel', Georgia, serif", fontStyle: "normal", color: "var(--color-warm-accent)" }}>{SESSION_TYPES.find(s => s.id === sessionType)?.label}</strong>
-                {" · "}{FORMAT.find(f => f.id === format)?.label}
-                {groupSize && <> · {groupSize}</>}
-                {" · "}{datePreference}
+                {", "}{FORMAT.find(f => f.id === format)?.label}
+                {groupSize && <>, {groupSize}</>}
+                {", "}{datePreference}
               </div>
             </div>
 
             <div style={{ display: "flex", gap: "10px" }}>
-              <button onClick={() => setStep(2)} className="pv-btn-ghost">← Back</button>
+              <button onClick={() => setStep(2)} className="pv-btn-ghost">Back</button>
               <button onClick={handleSubmit} disabled={!step3Done}
                 className={step3Done ? "pv-btn-primary" : ""}
                 style={step3Done ? { flex: 1 } : {
@@ -316,7 +316,7 @@ export default function BookPage() {
                   letterSpacing: "0.28em", textTransform: "uppercase",
                 }}
               >
-                Request booking →
+                Request booking
               </button>
             </div>
           </div>

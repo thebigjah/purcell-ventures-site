@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "AI Consulting & Team Training | Hands-On Workshops for Business Teams",
   description:
-    "Hands-on AI training for business teams in Metro Atlanta and beyond. 1-on-1 ($175/hr), small group ($125/person), or half-day workshop ($2,500 flat up to 20 people). I come to you. Real tools, same-day results.",
+    "Hands-on AI training for business teams in Metro Atlanta and beyond. 1-on-1 ($175/hr), small group ($125/person), or half-day workshop ($2,500 flat up to 20 people). I come to you. Every session includes a same-day takeaway guide.",
   keywords: [
     "AI consulting for business", "AI training workshop", "ChatGPT for business training",
     "AI consulting Atlanta Georgia", "hands-on AI training", "business AI workshop",
@@ -70,7 +70,7 @@ const schema = {
           "name": "What's the difference between AI consulting and just using ChatGPT on my own?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most people use about 10% of what AI tools can do. I show you the other 90%: the prompting techniques, the integrations, the specific workflows that actually save time in your type of business.",
+            "text": "Most people use AI tools for one-off questions. I show you prompting techniques, integrations and workflows that save time in your type of business.",
           },
         },
         {
@@ -78,7 +78,7 @@ const schema = {
           "name": "Can you come to our office for AI training?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. I come to you. Your office, your team, your environment. That context makes the session more relevant and the examples more useful.",
+            "text": "Yes. I come to your office and train your team there. Examples from your own setting make the session more useful.",
           },
         },
         {
@@ -86,7 +86,7 @@ const schema = {
           "name": "How much does AI consulting cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "1-on-1 sessions are $175/hr (2-hr minimum recommended). Small group sessions are $125/person (2-8 people, 2-hr minimum). Workshops are $2,500 flat for up to 20 people, half-day. Corporate / multi-session engagements are quoted custom. Five session types available: AI Basics, ChatGPT Workflow, AI for Marketing, Automation, and Custom.",
+            "text": "1-on-1 sessions are $175/hr (2-hr minimum recommended). Small group sessions are $125/person (2 to 8 people, 2-hr minimum). Workshops are $2,500 flat for up to 20 people, half-day. I quote corporate and multi-session work separately. There are five session types: AI Basics, ChatGPT Workflow, AI for Marketing, Automation, and Custom.",
           },
         },
         {
@@ -94,7 +94,7 @@ const schema = {
           "name": "How far in advance do I need to book an AI training session?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Typically 1–2 weeks for standard sessions. Custom trainings need more prep time. Reach out as early as you can.",
+            "text": "Usually 1 to 2 weeks for standard sessions. Custom trainings need more prep time. Reach out as early as you can.",
           },
         },
       ],
