@@ -14,6 +14,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "keep-out-of-ai-chat-window",
+    title: "What to keep out of an AI chat window when you run a business",
+    excerpt: "An AI chat tool can draft a customer reply or fix a spreadsheet formula without ever seeing your passwords or your customers' records. Here is what to keep out and how to use placeholders in its place.",
+    date: "October 26, 2026",
+    readingTime: "3 min read",
+    category: "Guide",
+  },
+  {
     slug: "start-using-ai-this-week-three-safe-first-tasks",
     title: "How to start using AI in your business this week: three safe first tasks",
     excerpt: "You can start using AI in your business this week with one free account and three small writing tasks. Here is how to set it up safely and check every answer before you use it.",
