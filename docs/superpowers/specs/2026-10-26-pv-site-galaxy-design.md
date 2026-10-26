@@ -20,7 +20,7 @@ The one thing the site is about: getting a small business to start a project. "S
 
 ## Goals
 
-1. A homepage galaxy that a visitor remembers: a slowly turning spiral of gold stars with the bent 6° mark at the core, solar systems for the divisions, planets for their pages, moons and asteroids for tools and posts.
+1. A homepage nebula that a visitor remembers: a slowly drifting field of coloured gas and stars, where everything that belongs to Purcell Ventures is gold. The bent 6° mark sits at the core, solar systems for the divisions, planets for their pages, moons and asteroids for tools and posts.
 2. Everything moves very slowly. Targets hold still enough to click, and the change is visible over a minute.
 3. Every visual is interactive and optional. A complete, conventional site of cards, prices, buttons and forms sits beneath it.
 4. Every piece of information on the current site survives: every route, fact, price, link, form and tool.
@@ -36,7 +36,7 @@ The one thing the site is about: getting a small business to start a project. "S
 ## Anti-goals: it fails even if it works when
 
 - The galaxy hides the phone number, the prices or the "Start a project" button on a phone.
-- It reads as a space template: purple nebulae, neon, lens flares, radial orbs, a dot-grid starfield.
+- It reads as a space template: neon, lens flares, radial orbs, a dot-grid starfield, or a nebula so bright the gold bodies stop standing out.
 - A planet, label or number states something untrue. Planet size, orbit and label must each mean something real.
 - It loads slowly, drains a phone battery, or makes someone motion sick.
 - "Out of their league" turns into "too expensive for me" or "not for someone like me." The invitation beat and the plain layer must make him approachable: real prices, a phone number, a person who offers to take them along.
@@ -47,7 +47,7 @@ The one thing the site is about: getting a small business to start a project. "S
 | Rule | Source | How the plan meets it |
 |---|---|---|
 | No em dashes, semicolons, dots, bars or arrows. No "not X, Y", passive voice, imperative titles, slogans, hedging | his taxonomy, 26 Oct | Copy sweep to zero on the rendered site, gated by `scan.py`. Applies to UI labels and alt text too |
-| AI design tells (harsh gradients, lucide icons, pure white, drop shadows, three cards in a row, Inter, coloured left stripe, bento, checkmark bullets, three pricing tiers shown as cards, soft corner radius, purple and black, radial orbs, dot grids, sparkle icons, animated arrows, hover animations, neon) | design-framework Part 2 | Galaxy stays gold, cream and warm white on black, with no purple or blue nebula. Remove Inter, VignetteBackground dot grid, roman numerals, corner brackets. No card rows of three. Square corners. Hover changes colour only |
+| AI design tells (harsh gradients, lucide icons, pure white, drop shadows, three cards in a row, Inter, coloured left stripe, bento, checkmark bullets, three pricing tiers shown as cards, soft corner radius, purple and black, radial orbs, dot grids, sparkle icons, animated arrows, hover animations, neon) | design-framework Part 2 | The nebula is the only colour and stays dim behind the gold bodies. Remove Inter, VignetteBackground dot grid, roman numerals, corner brackets. No card rows of three. Square corners. Hover changes colour only |
 | Type from the reel roster. House default Clash Display + Satoshi | design-framework Part 2 | Clash Display headings, Satoshi body, both self-hosted. Cinzel stays only inside the logo lockup |
 | No cream default | feedback-no-cream-default | Dark site. Cream appears only as text colour and in print assets |
 | Previews keep all content | design-framework Part 2 | A content ledger, below, diffed before any preview goes to him |
@@ -111,6 +111,7 @@ Every body is a real route. Sizes and positions encode real things.
 
 ## Design system
 
+- **Nebula (his call, 26 Oct):** "the galaxy should be a nebula with our things being gold." My call for its colours: deep blue, teal and rust gas at low brightness, with purple kept to a trace since purple and black is on the tell list. Gold appears only on Purcell Ventures bodies: the mark, systems, planets, moons, the comet stream and their labels. He reacts to the prototype and the colours move from there.
 - **Colour:** ground #0c0a08. Foil gradient (#7a5a22 to #c0913a to #8c6a27) for the mark and display headings only. Ochre #b8862b for buttons and links. Text cream #efe8d8. Secondary text at least 4.5 to 1 against the ground. No pure white.
 - **Type:** Clash Display for display and headings. Satoshi for body and UI. Cinzel only in the logo lockup. Scale 14, 16, 18, 22, 28, 40, 64, 120 px.
 - **Shape:** square corners, hairline rules between columns, no boxes around content, no shadows.
@@ -140,7 +141,7 @@ Every body is a real route. Sizes and positions encode real things.
 
 ## Decisions that are his, with my default for each
 
-He can answer "defaults" to take all of them.
+He answered "defaults are all good" on 26 Oct, so every default below is decided.
 
 | Decision | Criterion | My default |
 |---|---|---|
