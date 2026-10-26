@@ -17,8 +17,8 @@ import { CONTACT } from "@/lib/contact";
 //   planned, with Mantle Field Services shown as the sister brand it is.
 
 const DIVISIONS = [
-  { name: "Websites", line: "Custom websites for local businesses, with hosting and updates after launch.", fig: "From $400 setup and $99 a month", href: "/sites" },
-  { name: "Digital add-ons", line: "AI chatbot, booking, CRM, email marketing and 20 more tools for a small business, managed by me on one subscription.", fig: "From $99 a month", href: "/digital" },
+  { name: "Websites", line: "Custom websites for local businesses, with hosting and updates after launch.", fig: "From $650 setup and $99 a month", href: "/sites" },
+  { name: "Digital add-ons", line: "26 add-ons for a small business, including an AI chatbot, booking, a CRM and email marketing, managed by me on one subscription.", fig: "From $99 a month", href: "/digital" },
   { name: "AI consulting", line: "Hands-on AI training for business teams at your office: ChatGPT workflows, marketing automation and custom sessions.", fig: "From $125 a person", href: "/consulting" },
   { name: "Custom software", line: "Mobile apps, web apps and AI integrations, scoped and built around your problem from idea to launch.", fig: "From $1,500", href: "/software" },
   { name: "Steady", line: "Personal tech help for individuals and households: AI coaching, phone setup, password managers, medication reminders, smart home and family care plans. For the family tech person who needs to hand the job off.", fig: "From $79 a month", href: "/steady" },
@@ -75,7 +75,7 @@ export default function AboutPage() {
             ["Location", "Tuscaloosa, Alabama"],
             ["University", "The University of Alabama, Class of 2030"],
             ["Program", "Honors College, psychology and data science"],
-            ["Shipped", <><Link className="ui-link" href="/tools">29 free tools</Link> live, plus client sites and production apps, designed and coded by me</>],
+            ["Shipped", <><Link className="ui-link" href="/digital/tools">26 free AI tools</Link> for small businesses and <Link className="ui-link" href="/tools">26 free single-file tools</Link> live, plus client sites and production apps, designed and coded by me</>],
             ["AI agents", <>COSMIC, a station of 57 AI agents in 17 rooms that I built to run company work. <Link className="ui-link" href="/team">The roster</Link> is public.</>],
             ["Company", `Purcell Ventures LLC, formed April 2025, Georgia control number ${CONTACT.llcControlNumber}`],
             ["Registered in", "Acworth, Georgia"],
@@ -87,7 +87,7 @@ export default function AboutPage() {
       <Section title="Outside the work">
         <Prose>
           <p>
-            I sing bass-baritone, with a range of C1 to F5. I competed in apologetics and debate for four years, was a member of my school&apos;s men&apos;s Bible study, and went on mission trips to North Carolina, the Bahamas, Hawaii and Alaska. I graduated high school with a 3.92 GPA.
+            I sing bass-baritone, with a range of C1 to F5. I competed in apologetics and debate for four years, was a member of my school&apos;s men&apos;s Bible study, and went on mission trips to North Carolina, the Bahamas and Hawaii. I graduated high school with a 3.92 weighted GPA.
           </p>
         </Prose>
       </Section>

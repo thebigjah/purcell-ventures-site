@@ -10,7 +10,7 @@ export default function ThanksPage() {
       <PageHero
         kicker="Purchase complete"
         title="Your download link is on its way."
-        lede="Stripe will email you one ZIP with 61 files in three folders."
+        lede="Stripe will email you one ZIP with all three products in three folders."
       />
       <Section title="First steps">
         <Prose>

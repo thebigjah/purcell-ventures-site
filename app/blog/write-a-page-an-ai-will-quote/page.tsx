@@ -140,7 +140,7 @@ export default function Post() {
       </p>
 
       <p>
-        Three other people share mine. My answer page names them and says I am none of them,
+        Four other people share mine. My answer page names them and says I am none of them,
         so an assistant does not have to guess.
       </p>
 

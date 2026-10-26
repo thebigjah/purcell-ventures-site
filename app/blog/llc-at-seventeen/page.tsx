@@ -31,8 +31,9 @@ export default function Post() {
       </Note>
 
       <p>
-        I filed Purcell Ventures with the Georgia Secretary of State on 8 April 2025.
-        The control number is 25075361 and the filing is public, so everything below is
+        I filed the LLC as Zultar LLC with the Georgia Secretary of State on 8 April 2025,
+        and renamed it Purcell Ventures LLC on 27 January 2026. The control number is
+        25075361 and the filing is public, so everything below is
         checkable.
       </p>
 

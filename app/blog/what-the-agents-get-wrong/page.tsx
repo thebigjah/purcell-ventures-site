@@ -26,7 +26,7 @@ export default function Post() {
         Since this post, the agents have grown into COSMIC: 57 agents in 17 rooms. The current roster is on <Link href="/team">the team page</Link>.
       </Note>
       <p>
-        Purcell Ventures has 1 employee and 15 AI agents. They are software, the roster is
+        Purcell Ventures is one person, me, working with 15 AI agents. They are software, the roster is
         public, and <Link href="/team">the team page</Link> says so in its first sentence.
         They draft proposals, audit the live properties, chase invoices, check for exposed
         secrets, and write case studies.
@@ -93,12 +93,12 @@ export default function Post() {
       <h2>Eleven of the fifteen were never being called</h2>
 
       <p>
-        For weeks the daily run reported success. The agents were fine. The runner script
-        called 4 of the 15.
+        For weeks the daily run reported success. The agents were fine. Eleven of the fifteen
+        agents were never called.
       </p>
 
       <p>
-        The other eleven existed, were tested, and were never invoked. Because the script
+        Those eleven existed, were tested, and were never invoked. Because the script
         exited zero, the morning report said the workforce ran.
       </p>
 

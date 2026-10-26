@@ -49,7 +49,7 @@ export default function AICostCalculatorPage() {
   const [rate, setRate] = useState(65);
   const [manual, setManual] = useState(8);
   const [auto, setAuto] = useState(60);
-  const [cost, setCost] = useState(1500);
+  const [cost, setCost] = useState(700);
   const [presetNote, setPresetNote] = useState<string | null>(null);
 
   const computed = useMemo(() => {
@@ -149,7 +149,7 @@ export default function AICostCalculatorPage() {
           <NumberField
             id="calc-cost"
             label="Consulting session cost, the investment"
-            context="My sessions: $175 an hour for 1-on-1, $125 a person for a small group, or a flat $2,500 for a half-day team training. The default is $1,500 for a 4-hour team session."
+            context="My sessions: $175 an hour for 1-on-1, $125 a person for a small group, or a flat $2,500 for a half-day team training. The default is $700 for a 4-hour 1-on-1 session at $175 an hour."
             value={cost} onChange={setCost} min={100} max={20000} prefix="$"
           />
         </div>

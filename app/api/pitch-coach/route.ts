@@ -16,7 +16,7 @@ const SYSTEM = `You are a sales coach. A rep pasted their pitch script for a spe
 PV ethics: honesty over closing. Reject any pitch element that uses pressure tactics, false urgency, fake scarcity, or guilt. Call those out.
 
 PV pricing for context if pitch references it:
-- Digital Starter $99/mo + $400 setup
+- Digital Starter $99/mo + $650 setup
 - Digital Growth $179/mo + $700 setup
 - Digital Full $279/mo + $1,000 setup
 - Consulting 1-on-1 $175/hr, Workshop $2,500 flat

@@ -16,7 +16,7 @@ const PRODUCTS = [
     href: "/shop/bundle",
     name: "The Complete Pack, all three bundled",
     fig: "$39",
-    line: "The Starter Kit, the Cold Email Mastery Pack and the Subject Line Library: 61 files in one ZIP, in 3 folders, with one Stripe checkout. It costs $18 less than buying the three separately. For buyers who want all three.",
+    line: "The Starter Kit, the Cold Email Mastery Pack and the Subject Line Library in one ZIP, in 3 folders, with one Stripe checkout. It costs $18 less than buying the three separately. For buyers who want all three.",
   },
   {
     href: "/shop/subject-lines",
@@ -28,7 +28,7 @@ const PRODUCTS = [
     href: "/shop/starter-kit",
     name: "PV AI Starter Kit",
     fig: "$19",
-    line: "The 24 AI prompts I use in production, 5 sales scripts, the full rep handbook, more than 50 cold outreach templates, a contractor agreement and a CRM CSV. 42 files in a ZIP, in markdown and PDF. For small business owners, freelancers and consultants who want AI tools without paying agency prices.",
+    line: "The 24 AI prompts I use in production, 5 sales scripts, the full rep handbook, more than 50 cold outreach templates, a contractor agreement and a CRM CSV. 49 files in a ZIP, in markdown and PDF. For small business owners, freelancers and consultants who want AI tools without paying agency prices.",
   },
   {
     href: "/shop/cold-email-pack",

@@ -181,7 +181,7 @@ export default function ZeroToAutomatedPage() {
             [`${TOTAL_LESSONS}`, "Lessons"],
             [`${TOTAL_HOURS} hours`, "Of video"],
             ["7", "Code templates"],
-            ["5", "Tools in production"],
+            ["6", "Tools in production"],
           ]}
         />
       </Section>

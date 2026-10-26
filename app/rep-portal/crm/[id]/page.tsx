@@ -110,7 +110,7 @@ export default function ContactDetailPage({ params }: { params: Promise<{ id: st
       repName: ownerName || "Elijah",
       // Stub pricing, rep fills in manually
       tier: contact.service?.includes("Starter") ? "Starter" : contact.service?.includes("Growth") ? "Growth" : contact.service?.includes("Full") ? "Full" : "[tier]",
-      standardPrice: contact.service?.includes("Starter") ? "$400 setup + $99/mo" : contact.service?.includes("Growth") ? "$700 setup + $179/mo" : contact.service?.includes("Full") ? "$1,000 setup + $279/mo" : "[standard]",
+      standardPrice: contact.service?.includes("Starter") ? "$650 setup + $99/mo" : contact.service?.includes("Growth") ? "$700 setup + $179/mo" : contact.service?.includes("Full") ? "$1,000 setup + $279/mo" : "[standard]",
       pilotPrice: contact.service?.includes("Starter") ? "$280 setup + $69/mo locked 6mo" : contact.service?.includes("Growth") ? "$490 setup + $125/mo locked 6mo" : contact.service?.includes("Full") ? "$700 setup + $195/mo locked 6mo" : "[pilot]",
     };
     let subject = template.subject;

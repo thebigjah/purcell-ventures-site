@@ -29,7 +29,7 @@ const DATA: Encyclopedia = {
   "digital-starter": {
     name: "Digital Starter",
     division: "Digital Services",
-    price: "$99/mo + $400 setup",
+    price: "$99/mo + $650 setup",
     whoBuys: [
       "Solo operators or 1–3 employee SMBs with no real online presence",
       "Plumbers, electricians, contractors who get leads by phone and lose half of them",
@@ -39,9 +39,9 @@ const DATA: Encyclopedia = {
     whatItDoes:
       "Builds them a clean, mobile-responsive website + adds an AI chatbot that answers common questions 24/7 + a lead capture form that texts/emails them when someone fills it out. Hosted, maintained, updated for them, they don't touch the code.",
     whyWeSell:
-      "Lowest-friction entry product. $99/mo recurring is a real income line once you stack a few. Setup of $400 covers our build time + first month. Most clients stay 12+ months because switching back to nothing is worse than keeping the $99/mo subscription. Easy upsell to Growth when they realize they need booking or email marketing.",
+      "Lowest-friction entry product. $99/mo recurring is a real income line once you stack a few. Setup of $650 covers our build time + first month. Most clients stay 12+ months because switching back to nothing is worse than keeping the $99/mo subscription. Easy upsell to Growth when they realize they need booking or email marketing.",
     pricing:
-      "Standard: $400 setup + $99/mo. Pilot Partner: $280 setup + $69/mo locked 6 months, then $99/mo standard. Pilot Partner clients give: testimonial at month 2, case study rights, one referral intro within 6mo. Your commission: $100 flat per close (Closer+ only).",
+      "Standard: $650 setup + $99/mo. Pilot Partner: $280 setup + $69/mo locked 6 months, then $99/mo standard. Pilot Partner clients give: testimonial at month 2, case study rights, one referral intro within 6mo. Your commission: $100 flat per close (Closer+ only).",
     customization:
       "Domain transfer if they have one. AI chatbot trained on their FAQ + business hours + service list (~30 min config). Color palette matched to their existing brand if any. Lead form fields customized to their intake (gutter cleaning vs salon booking).",
     objections: [
@@ -70,7 +70,7 @@ const DATA: Encyclopedia = {
     notThis: [
       "'It'll make you rich' — overpromise. Stay specific.",
       "'It'll rank on Google' — SEO is a separate conversation; don't promise it as part of Starter.",
-      "'I'll have it ready tomorrow' — setup is 5-7 business days. Set expectations honestly.",
+      "'I'll have it ready tomorrow' — a Starter site goes live in 7 to 10 business days, a Pro site in 14 to 21. Set expectations honestly.",
     ],
   },
 
@@ -160,7 +160,7 @@ const DATA: Encyclopedia = {
       },
       {
         obj: "What if it breaks?",
-        resp: "'Priority support, direct text to Elijah, same-day response. Most fixes are under 30 minutes. If something's down longer than 4 hours during business hours, I credit your next month.'",
+        resp: "'Priority support, direct text to Elijah, and a reply within one business day. Most fixes are under 30 minutes. If something's down longer than 4 hours during business hours, I credit your next month.'",
       },
       {
         obj: "We're already overwhelmed, adding another tool sounds bad",
@@ -169,7 +169,7 @@ const DATA: Encyclopedia = {
     ],
     sayThis: [
       "'$279 replaces $750-2000+ in scattered subscriptions.'",
-      "'Priority support means direct text to Elijah, same-day.'",
+      "'Priority support means direct text to Elijah and a reply within one business day.'",
       "'Setup is 2-3 weeks of configuration to YOUR workflow, not generic.'",
     ],
     notThis: [

@@ -12,7 +12,7 @@ const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const SYSTEM = `You are a sales coach for Purcell Ventures reps. A prospect just raised an objection. Give the rep 3 distinct response strategies they can use RIGHT NOW.
 
 PV pricing context (for reference if the objection is about price):
-- Digital Starter $99/mo + $400 setup
+- Digital Starter $99/mo + $650 setup
 - Digital Growth $179/mo + $700 setup
 - Digital Full $279/mo + $1,000 setup
 - Pilot Partner: 30% off setup + 30% off first 6 months

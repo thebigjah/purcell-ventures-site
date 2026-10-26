@@ -69,10 +69,10 @@ export function steadyIntakeConfirmation(firstName: string, intakeSummary: strin
     <p style="font-size:16px;margin:0 0 16px;">Hi ${firstName},</p>
     <p style="font-size:15px;margin:0 0 16px;">Got your Steady intake. Here&apos;s what you told us:</p>
     <div style="padding:16px 20px;background:${BG};border-left:3px solid ${ACCENT};margin:16px 0;font-size:13px;color:${TEXT_MUTED};white-space:pre-wrap;">${intakeSummary}</div>
-    <p style="font-size:15px;margin:16px 0;">I&apos;ll personally read this within 24 hours and reply with a recommended plan — or an honest &quot;you don&apos;t need me.&quot; No automated tier-pushing.</p>
+    <p style="font-size:15px;margin:16px 0;">I&apos;ll read this myself and reply within one business day with a recommended plan, or I&apos;ll tell you that you don&apos;t need me. No automated tier-pushing.</p>
     <p style="font-size:15px;margin:0;">— Elijah Purcell</p>
   `, { subject });
-  const text = `Hi ${firstName},\n\nGot your Steady intake. I'll reply within 24 hours with a recommended plan.\n\n— Elijah`;
+  const text = `Hi ${firstName},\n\nGot your Steady intake. I'll reply within one business day with a recommended plan.\n\n— Elijah`;
   return { subject, html, text };
 }
 

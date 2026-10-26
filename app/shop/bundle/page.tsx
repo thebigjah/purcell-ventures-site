@@ -19,7 +19,7 @@ export default function BundlePage() {
       <PageHero
         kicker="Shop: the Complete Pack"
         title="All three products in one ZIP for $39."
-        lede="The three kits cost $57 separately and $39 together, a saving of $18. One checkout, one ZIP of 61 files, and a 30-day refund."
+        lede="The three kits cost $57 separately and $39 together, a saving of $18. One checkout, one ZIP in 3 folders, and a 30-day refund."
         actions={<BuyButton paymentLink={PAYMENT_LINK} product="bundle" price="$39" size="large" />}
       />
 
@@ -29,7 +29,7 @@ export default function BundlePage() {
             {
               name: "PV AI Starter Kit",
               fig: "$19 on its own",
-              line: "24 AI tool prompts, 5 sales scripts, the full rep handbook, more than 50 cold outreach templates, a 1099 contractor agreement and a CRM CSV. 42 files of prompts, scripts and templates Purcell Ventures uses.",
+              line: "24 AI tool prompts, 5 sales scripts, the full rep handbook, more than 50 cold outreach templates, a 1099 contractor agreement and a CRM CSV. 49 files of prompts, scripts and templates Purcell Ventures uses.",
             },
             {
               name: "Cold Email Mastery Pack",
@@ -55,7 +55,7 @@ export default function BundlePage() {
         />
       </Section>
 
-      <Section title="All three for $39, paid once" intro="61 files in all. Stripe emails the download link after checkout.">
+      <Section title="All three for $39, paid once" intro="All three products in 3 folders. Stripe emails the download link after checkout.">
         <div className="ui-hero__actions" style={{ marginTop: 0 }}>
           <BuyButton paymentLink={PAYMENT_LINK} product="bundle" price="$39" size="small" />
         </div>

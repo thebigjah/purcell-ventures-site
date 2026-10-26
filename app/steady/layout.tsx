@@ -36,6 +36,7 @@ const schema = {
   "url": "https://purcellventures.co/steady",
   "serviceType": "Personal Technology Coaching",
   "areaServed": [
+    { "@type": "Place", "name": "Tuscaloosa, Alabama (in-person)" },
     { "@type": "Place", "name": "Metro Atlanta, Georgia (in-person)" },
     { "@type": "Place", "name": "United States (remote)" },
   ],
@@ -96,7 +97,7 @@ const FAQ_LD = {
       "name": "Is this remote or in person?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Both. Elijah Purcell visits in person in metro Atlanta and helps remotely by video anywhere in the US, through monthly plans and one-off packages. The fastest route is to email him at elijah@purcell-ventures.com."
+        "text": "Both. Elijah Purcell visits in person in Tuscaloosa or metro Atlanta and helps remotely by video anywhere in the US, through monthly plans and one-off packages. The fastest route is to email him at elijah@purcell-ventures.com."
       }
     }
   ]

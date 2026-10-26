@@ -11,9 +11,9 @@ const SECTIONS = [
     title: "Who we are",
     body: (
       <>
-        <p><strong>Purcell Ventures LLC</strong> is a Georgia-based company founded by Elijah Purcell. Four divisions plus a sister brand:</p>
+        <p><strong>Purcell Ventures LLC</strong> is a Georgia LLC founded by Elijah Purcell and run from Tuscaloosa, Alabama. It has five active divisions (websites, digital add-ons, AI consulting, custom software and Steady), a planned real estate division and a sister brand:</p>
         <ul>
-          <li><strong>Digital Services</strong> — managed websites + AI tools + 25+ modules</li>
+          <li><strong>Digital Services</strong> — managed websites + AI tools + 26 add-ons</li>
           <li><strong>AI Consulting</strong> — hands-on team training</li>
           <li><strong>Custom Software</strong> — apps, web platforms, automation</li>
           <li><strong>Steady — Personal IT</strong> — household / individual tech help</li>

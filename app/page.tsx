@@ -53,14 +53,14 @@ const SERVICES = [
   {
     name: "Websites",
     href: "/sites",
-    fig: "$400 setup, $99 a month",
+    fig: "$650 setup, $99 a month",
     line: "Custom websites for local businesses, with maintenance after launch. Three build tiers (Starter, Pro and Custom) and three maintenance plans. I scope each one on a discovery call.",
   },
   {
     name: "Digital add-ons",
     href: "/digital",
     fig: "from $99 a month",
-    line: "22 add-ons that plug into your site, including an AI chatbot, online booking, review requests and content writing. Your maintenance plan sets which ones you can add. Available nationwide.",
+    line: "26 add-ons that plug into your site, including an AI chatbot, online booking, review requests and content writing. Your maintenance plan sets which ones you can add. Available nationwide.",
   },
   {
     name: "AI consulting",
@@ -78,7 +78,7 @@ const SERVICES = [
     name: "Steady, personal IT",
     href: "/steady",
     fig: "from $79 a month",
-    line: "Tech help for individuals and households: phone setup, smart home devices, AI coaching and medication reminders. One-off sessions cost $99. Metro Atlanta and remote.",
+    line: "Tech help for individuals and households: phone setup, smart home devices, AI coaching and medication reminders. One-off sessions cost $99. Tuscaloosa, Metro Atlanta and remote.",
   },
   {
     name: "Real estate",

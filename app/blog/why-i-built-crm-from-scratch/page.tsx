@@ -67,7 +67,7 @@ export default function Post() {
       <ol>
         <li><strong>I control feature scope.</strong> When HubSpot adds features I don&apos;t need, its interface gets more complex. When I add a feature, the interface grows by that one feature.</li>
         <li><strong>I push fixes myself.</strong> If my CRM has a bug, I fix it the same day. If HubSpot has a bug in my workflow, I file a ticket and wait.</li>
-        <li><strong>Integrations are small jobs.</strong> The Steady intake form and the /sales-rep form both create a CRM contact automatically. With HubSpot, that is either a paid feature at $50 a month or a Zapier connection at $30 a month plus API setup time.</li>
+        <li><strong>Integrations are small jobs.</strong> The /sales-rep form creates a CRM contact. The Steady intake form opens an email to me. With HubSpot, that is either a paid feature at $50 a month or a Zapier connection at $30 a month plus API setup time.</li>
         <li><strong>AI features cost extra on third-party CRMs.</strong> HubSpot&apos;s AI features (Breeze) are tied to a $720 a month plan. Mine run on Claude Haiku at $0.001 per call.</li>
       </ol>
 

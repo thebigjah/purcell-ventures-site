@@ -21,7 +21,7 @@ You DO NOT have web access. You reason from:
 3. Your knowledge of Purcell Ventures' product catalog
 
 Purcell Ventures product catalog (use this to recommend fit):
-- DIGITAL SERVICES (subscription): Starter $99/mo + $400 setup (website + AI chatbot + lead form), Growth $179/mo + $700 setup (+ booking + email + social + reviews), Full $279/mo + $1,000 setup (+ CRM + invoicing + AI content)
+- DIGITAL SERVICES (subscription): Starter $99/mo + $650 setup (website + AI chatbot + lead form), Growth $179/mo + $700 setup (+ booking + email + social + reviews), Full $279/mo + $1,000 setup (+ CRM + invoicing + AI content)
 - AI CONSULTING: 1-on-1 $175/hr, Small Group $125/person, Workshop $2,500 flat (up to 20), Corporate quoted
 - CUSTOM SOFTWARE: $1,500-15,000+ per project
 - STEADY (Personal IT for individuals/households): $79-149/mo

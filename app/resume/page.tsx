@@ -10,7 +10,8 @@ import { CONTACT } from "@/lib/contact";
 // - "Generates active revenue" and the Loom's pipeline dollar figure are gone: résumé
 //   figures stay only when there is a source for them.
 // - The scholarship total is not printed. His rule (20 Aug 2026) keeps that number on the
-//   college-application course page only. The per-school offers stay, since they are the record.
+//   college-application course page only. Fact pass 26 Oct 2026: the per-school offers keep
+//   the school and award names, and the dollar amounts are off the public page.
 
 type Entry = { title: ReactNode; org?: ReactNode; when?: ReactNode; body?: ReactNode; stack?: string; href?: string };
 
@@ -47,7 +48,7 @@ const WORK: Entry[] = [
     title: "The Loom", org: "A lead-generation engine that runs itself", when: "2026", href: "the-loom-gold.vercel.app",
     body: <ul>
       <li>A daily crawler finds local businesses with little or no web presence, researches and scores each one, and emails a ranked packet at 7:15 every morning.</li>
-      <li>Tracks 97 actionable leads and takes down expired previews on its own.</li>
+      <li>Takes down expired previews on its own.</li>
       <li>Five production website templates, each with its own type and colour system, so a prospect sees a site built for their industry.</li>
     </ul>,
     stack: "Python, Google Places API, Supabase, GitHub Actions, Next.js, Resend",
@@ -107,7 +108,7 @@ const WORK: Entry[] = [
 
 const CLIENT: Entry[] = [
   { title: "English Pruitt Photography", org: "Website", when: "2026", body: <p>Found through cold outreach, then scoped and built: a hand-coded editorial portfolio with a true masonry gallery, film-grain texture and scroll-reveal motion, written in the client&apos;s own voice.</p> },
-  { title: "Purcell Ventures digital division", org: "Tools for small businesses", when: "2025 to present", body: <p>Twenty reusable modules across websites, chatbots, booking, review capture and lead generation, sold to local service businesses as a setup fee plus a subscription.</p> },
+  { title: "Purcell Ventures digital division", org: "Tools for small businesses", when: "2025 to present", body: <p>26 add-ons across websites, chatbots, booking, review capture and lead generation, sold to local service businesses as a setup fee plus a subscription.</p> },
 ];
 
 const PRACTICE: Entry[] = [
@@ -119,11 +120,11 @@ const EXPERIENCE: Entry[] = [
   {
     title: "Founder/CEO", org: "Purcell Ventures LLC", when: "April 2025 to present",
     body: <>
-      <p>A Georgia LLC that builds software, AI integrations and websites, runs digital marketing, and holds the field-services and real-estate channels. I own the whole cycle: finding clients, scoping, pricing, building, deploying and support.</p>
+      <p>A Georgia LLC with five active divisions: websites, digital add-ons, AI consulting, custom software and Steady. Real estate is planned. I also own Mantle Field Services. I own the whole cycle: finding clients, scoping, pricing, building, deploying and support.</p>
       <p>Filed as Zultar LLC on 8 April 2025 and renamed Purcell Ventures LLC on 27 January 2026. Control number {CONTACT.llcControlNumber}. EIN and business banking in place. Registered agent of record.</p>
     </>,
   },
-  { title: "Founder and operator", org: "Mantle Field Services", when: "2024 to present", body: <p>The sister brand for gutter cleaning, pressure washing and lawn care across metro Atlanta. I find clients, quote, schedule, maintain the equipment and do the work on site.</p> },
+  { title: "Founder and owner", org: "Mantle Field Services", when: "2024 to present", body: <p>The sister brand for gutter cleaning, pressure washing and lawn care across metro Atlanta. I find clients, quote, schedule and maintain the equipment. A crew runs the jobs day to day.</p> },
   { title: "Independent contractor", org: "Mercor Intelligence", when: "2026", body: <p>Provides expertise to help improve models for a top AI lab.</p> },
   { title: "AI data trainer", org: "Outlier AI", when: "October 2025 to May 2026", body: <p>Two projects. On the first I rated large language model outputs for accuracy, reasoning and instruction-following and wrote the reasoning behind every rating. On the second I wrote spoken-style conversations between a user and an assistant under a fixed budget of tool calls per task, writing the user turns, editing the model&apos;s replies, and rewriting prompts until the model stopped over-calling its tools.</p> },
   { title: "AI response evaluator", org: "DataAnnotation", when: "Spring 2026", body: <p>Rated AI responses against a Helpful, Honest, Harmless rubric that ranks honesty and harmlessness above helpfulness. Flagged invented facts, fabricated links, false premises the model accepted, and faulty reasoning, along with length, repetition and whether the model answered the question the user meant.</p> },
@@ -132,11 +133,11 @@ const EXPERIENCE: Entry[] = [
 ];
 
 const EDUCATION: Entry[] = [
-  { title: "The University of Alabama, Honors College", org: "B.S. Psychology and Data Science, New College. Presidential Merit Scholarship, $28,000 a year.", when: "2026 to 2030", body: <p>Pre-med track toward psychiatry. Enrolled and attending since August 2026.</p> },
+  { title: "The University of Alabama, Honors College", org: "B.S. Psychology and Data Science, New College. Presidential Merit Scholarship.", when: "2026 to 2030", body: <p>Pre-med track toward psychiatry. Enrolled and attending since August 2026.</p> },
   { title: "Cornerstone Preparatory Academy, Acworth, Georgia", org: "GPA 3.92 weighted, SAT 1440, Beta Club", when: "Graduated May 2026", body: <p>Three years of Spanish, AP-level coursework, and College-Level Worldview and Apologetics.</p> },
   { title: "Lee University, Summer Honors Program", org: "Cryptography and Social Media, 6 college credit hours", when: "Summer 2025" },
-  { title: "Grove Christian School, Midlothian, Virginia", org: "9th grade to the middle of 10th, Beta Club, honors courses", when: "2022 to 2023", body: <p>Awards: Behold (9th), Steadfast (10th), the Christian Character Award, the Christ-like Leadership Award, the highest math grade in the class (9th), and the lead in the Christmas musical.</p> },
-  { title: "Cornerstone Preparatory Academy, Acworth, Georgia", org: "Kindergarten to 8th grade", when: "Kindergarten to 8th", body: <p>Homeschooled from kindergarten through 3rd grade, then in person from 4th through 8th. I returned to Cornerstone for high school and graduated there.</p> },
+  { title: "Grove Christian School, Midlothian, Virginia", org: "Middle of 8th grade to the middle of 10th, Beta Club, honors courses", when: "December 2021 to December 2023", body: <p>Awards: Behold (9th), Steadfast (10th), the Christian Character Award, the Christ-like Leadership Award, the highest math grade in the class (9th), and the lead in the Christmas musical.</p> },
+  { title: "Cornerstone Preparatory Academy, Acworth, Georgia", org: "Kindergarten to the middle of 8th grade", when: "Kindergarten to mid 8th", body: <p>Homeschooled from kindergarten through 3rd grade, then in person from 4th grade to the middle of 8th. I returned to Cornerstone for high school and graduated there.</p> },
 ];
 
 const SKILLS: [string, string][] = [
@@ -164,30 +165,30 @@ const AWARDS: Entry[] = [
   { title: "Youth Leadership Summit", org: "Family Foundation and the Colson Center", when: "Summer 2023, Richmond, Virginia", body: <p>An invitation-only summit with an advanced seminar on worldview, cultural analysis and Christian civic leadership.</p> },
 ];
 
-const OFFERS: [string, string, string][] = [
-  ["Kalamazoo College", "Lux Esto Scholarship", "$48,000 a year"],
-  ["Susquehanna University", "Merit Scholarship", "$48,000 a year"],
-  ["Drake University", "Merit Scholarship", "$31,000 a year"],
-  ["Hood College", "Presidential Scholarship", "$31,000 a year"],
-  ["Transylvania University", "Merit Scholarship", "$30,000 a year"],
-  ["The University of Alabama", "Presidential Merit, enrolled", "$28,000 a year"],
-  ["Bradley University", "Presidential Scholarship", "$28,000 a year"],
-  ["Presbyterian College", "Highlander Scholarship", "$28,000 a year"],
-  ["Valparaiso University", "Merit Scholarship", "$28,000 a year"],
-  ["Lenoir-Rhyne University", "Niche Direct Merit", "$26,000 a year"],
-  ["Nazareth University", "Presidential Scholarship", "$25,000 a year"],
-  ["Oral Roberts University", "Merit Scholarship", "$24,000 a year"],
-  ["Cedarville University", "Merit Scholarship", "$22,000 a year"],
-  ["George Fox University", "Merit Scholarship", "$22,000 a year"],
-  ["Berry College", "Merit Scholarship, renewable", "$20,000 a year"],
-  ["Palm Beach Atlantic University", "Merit Scholarship", "$18,000 a year"],
-  ["Union University", "Merit Scholarship", "$17,000 a year"],
-  ["Charleston Southern University", "Merit Scholarship", "$17,000 a year"],
-  ["Mississippi College", "Academic Merit Scholarship", "$14,500 a year"],
-  ["Francis Marion University", "Niche Direct Merit", "$10,884 a year"],
-  ["Hartwick College", "Flight Path Scholarship", "$10,000 a year"],
-  ["Rider University", "Merit Scholarship", "$3,000 a year"],
-  ["Georgia State University", "Merit and Honors College", "$1,000 a year"],
+const OFFERS: [string, string][] = [
+  ["Kalamazoo College", "Lux Esto Scholarship"],
+  ["Susquehanna University", "Merit Scholarship"],
+  ["Drake University", "Merit Scholarship"],
+  ["Hood College", "Presidential Scholarship"],
+  ["Transylvania University", "Merit Scholarship"],
+  ["The University of Alabama", "Presidential Merit, enrolled"],
+  ["Bradley University", "Presidential Scholarship"],
+  ["Presbyterian College", "Highlander Scholarship"],
+  ["Valparaiso University", "Merit Scholarship"],
+  ["Lenoir-Rhyne University", "Niche Direct Merit"],
+  ["Nazareth University", "Presidential Scholarship"],
+  ["Oral Roberts University", "Merit Scholarship"],
+  ["Cedarville University", "Merit Scholarship"],
+  ["George Fox University", "Merit Scholarship"],
+  ["Berry College", "Merit Scholarship, renewable"],
+  ["Palm Beach Atlantic University", "Merit Scholarship"],
+  ["Union University", "Merit Scholarship"],
+  ["Charleston Southern University", "Merit Scholarship"],
+  ["Mississippi College", "Academic Merit Scholarship"],
+  ["Francis Marion University", "Niche Direct Merit"],
+  ["Hartwick College", "Flight Path Scholarship"],
+  ["Rider University", "Merit Scholarship"],
+  ["Georgia State University", "Merit and Honors College"],
 ];
 
 const LEADERSHIP: Entry[] = [
@@ -252,7 +253,7 @@ export default function ResumePage() {
       />
 
       <Section title="At a glance">
-        <Figures items={[["15+", "products shipped"], ["8", "live properties"], ["29", "free tools published"], ["3.92", "weighted high school GPA"], ["1440", "SAT"]]} />
+        <Figures items={[["15+", "products shipped"], ["8", "live properties"], ["52", "free tools published"], ["3.92", "weighted high school GPA"], ["1440", "SAT"]]} />
         <div style={{ marginTop: 36 }}>
           <Facts items={[
             ["Email", <a key="e" className="ui-link" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>],
@@ -276,10 +277,10 @@ export default function ResumePage() {
       <Section title="Scholarship offers" intro="Merit offers from the schools that admitted me: 34 acceptances. I enrolled at the University of Alabama.">
         <div className="ui-prose" style={{ maxWidth: "none" }}>
           <table>
-            <thead><tr><th>School</th><th>Award</th><th>Per year</th></tr></thead>
+            <thead><tr><th>School</th><th>Award</th></tr></thead>
             <tbody>
-              {OFFERS.map(([school, award, amt]) => (
-                <tr key={school}><td>{school}</td><td>{award}</td><td style={{ whiteSpace: "nowrap" }}>{amt.replace(" a year", "")}</td></tr>
+              {OFFERS.map(([school, award]) => (
+                <tr key={school}><td>{school}</td><td>{award}</td></tr>
               ))}
             </tbody>
           </table>

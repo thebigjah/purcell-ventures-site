@@ -52,7 +52,7 @@ const STAGES = [
   {
     title: "Ongoing relationship",
     when: "Year one to year three",
-    body: "Digital services clients get monthly updates and a quarterly review of what is working. Custom software clients can choose a maintenance retainer or pay per fix. I reply to client email within one business day, and Full Service ($279 a month) subscribers get a reply the same day. For something urgent, call or text the business line.",
+    body: "Digital services clients get monthly updates and a quarterly review of what is working. Custom software clients can choose a maintenance retainer or pay per fix. I reply to client email within one business day. For something urgent, call or text the business line.",
     bullets: [
       "A monthly check-in for digital services clients",
       "A quarterly review of the numbers, with your input on what comes next",
@@ -66,7 +66,7 @@ const COMMITMENTS = [
   { name: "No surprise invoices", line: "Every dollar I charge is in the written proposal. If something changes the scope, you sign off before any work happens." },
   { name: "No vendor lock-in", line: "You own your code, IP, domain and data. If you leave, you take all of it with no exit fee." },
   { name: "I say when a product does not fit", line: "When my product is the wrong fit, I tell you. I have turned down deals for that reason." },
-  { name: "Response times", line: "I reply within one business day. Full Service subscriptions get a reply within 4 hours during business hours. If I am going to miss, I tell you first." },
+  { name: "Response times", line: "I reply within one business day. If I am going to miss, I tell you first." },
   { name: "Code you can read", line: "Every custom software project ships with documentation in plain language. A developer who has never worked with me can maintain it later." },
   { name: "Christian ethics", line: "I do not evangelize to clients. My work follows Christian ethics: honesty over closing a sale, and respect over pressure. These standards apply to every client, whether or not you share the faith." },
 ];

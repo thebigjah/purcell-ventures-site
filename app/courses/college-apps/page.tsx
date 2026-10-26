@@ -125,10 +125,6 @@ const FAQS: { q: ReactNode; a: ReactNode }[] = [
     a: "Both. Module 5 covers the FAFSA, the CSS Profile and the scholarship search I used to find and apply for the offers that added up to $530,384 a year.",
   },
   {
-    q: "How does the access code work?",
-    a: "After you buy, Lemon Squeezy emails you a confirmation with a unique access code. You enter it once on the course page and your browser remembers it. You need no login or account.",
-  },
-  {
     q: "How long do I have access?",
     a: "For life. The course stays on this site as long as Purcell Ventures exists, and you get every update: new lessons, revised templates and changes based on student feedback.",
   },
@@ -219,7 +215,7 @@ export default function CollegeAppsPage() {
       >
         <Tiers tiers={TIERS} />
         <div style={{ marginTop: 28 }}>
-          <Note>Prices are in US dollars. Lemon Squeezy processes payments, and the access code arrives by email within 5 minutes of purchase.</Note>
+          <Note>Prices are in US dollars.</Note>
         </div>
       </Section>
 

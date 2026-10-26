@@ -3,8 +3,9 @@ import { PageHero, Section, Rows, Prose } from "@/app/components/ui";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 // Rebuilt on the page kit 26 Oct 2026. The count in the heading is computed from TOOLS.
-// The Milestone description no longer says it carries his own dates: public pages stay
-// professional.
+// Fact pass 26 Oct 2026: three entries came off the list, the "Tools" index (not a tool),
+// "project prowess" (a puzzle door) and Milestone (preloaded with his personal dates).
+// The site states 26 single-file tools here.
 //
 // TWENTY-NINE LIVE TOOLS THAT NOTHING LINKED TO.
 //
@@ -34,15 +35,12 @@ const TOOLS: [string, string, string][] = [
   ["friendship-map", "Friendship Map", "A small CRM for the 20 to 30 people closest to you. Track last contact, see who has gone too long without hearing from you, and tier people by closeness."],
   ["future-self", "Future Self", "Write a letter to your future self. The app keeps it sealed until the release date you set, and you can read it on or after that date."],
   ["hangout", "Steal My Hangout", "A list of hangout ideas other people have tried. Browse them and submit your own."],
-  ["milestone", "Milestone", "A visual countdown to your upcoming milestones. Add your own and sort them by date."],
   ["momentum", "Momentum", "One intention a day that your friends can see. At the end of the day, mark it done or not done."],
   ["prayer-journal", "Prayer Journal", "A daily prayer journal with rotating scripture, prompts in the ACTS framework and a log of answered prayers."],
-  ["project-prowess", "project prowess", "If you found this, you found a door."],
   ["reading-log", "Reading Log", "A personal reading log with stats. Log books, ratings and notes, and get a year-end summary of what you read."],
   ["rival", "Rival", "Track any metric. It compares you only to your own past data."],
   ["sermon-notes", "Sermon Notes", "Sermon notes for Sunday: date, preacher, passage, key points, application and follow-up questions. It keeps the history across years, searches your notes and shows which books of the Bible come up most."],
   ["solomon", "Solomon", "A chosen quote each day from Proverbs, the Christian tradition, classical philosophy and modern writers. Save favorites and write a reflection."],
-  ["tools", "Tools", "An index of the single-purpose tools I have shipped. Each one is one HTML file that runs in your browser and stores data on your device."],
   ["verse-vault", "Verse Vault", "A spaced-recall tool for memorizing scripture. Add the verses you want to know by heart, and the tool hides more words at each review until you can say the whole verse from memory."],
   ["weekly-skill", "Weekly Skill", "A new skill each week, chosen by you or at random: card flourishes, knots, juggling, spinning, beatbox and magic. Track what you have mastered."],
   ["wisdom-prep", "Wisdom Conversation Prep", "Five minutes of preparation for a conversation with someone wiser than you. Pick the mentor and the topic to get custom questions, notes for before the call and a reflection template for after it."],

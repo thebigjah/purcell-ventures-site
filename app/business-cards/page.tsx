@@ -341,13 +341,13 @@ function V6Back() {
 
 const INFO_MANTLE: Info = {
   name: "Elijah Purcell",
-  title: "Founder and operator",
+  title: "Owner",
   phone: CONTACT.phone,
   email: CONTACT.email,
-  web: "works.purcellventures.co",
+  web: "mantle-field-site.vercel.app",
 };
 
-const QR_MANTLE = `https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://works.purcellventures.co&bgcolor=07060a&color=e3bd6a`;
+const QR_MANTLE = `https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://mantle-field-site.vercel.app&bgcolor=07060a&color=e3bd6a`;
 
 function MantleFront() {
   return (
@@ -372,7 +372,7 @@ function MantleBack() {
       <Slashes o1={0.2} o2={0.12} />
       <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "14px" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={QR_MANTLE} width={110} height={110} alt="QR code for works.purcellventures.co" style={{ display: "block" }} />
+        <img src={QR_MANTLE} width={110} height={110} alt="QR code for mantle-field-site.vercel.app" style={{ display: "block" }} />
         <div style={{ fontSize: "12px", color: "var(--gold-text)", fontFamily: BODY }}>{INFO_MANTLE.web}</div>
       </div>
     </CardShell>

@@ -31,7 +31,7 @@ export default function Post() {
 
       <p>
         <a href="https://ua-today.vercel.app">UA Today</a> checks them on a schedule and shows
-        the result on one page: 6 sources, with several hundred events listed at any time. The hard part was
+        the result on one page. It pulls events from 6 sources. The hard part was
         detecting a source that goes quiet.
       </p>
 

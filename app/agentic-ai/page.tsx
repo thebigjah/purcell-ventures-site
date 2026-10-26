@@ -21,7 +21,7 @@ const QA: [string, string][] = [
   ["What goes wrong with AI agents in production?",
    "The failure mode is an agent that marks work done when it is not. An agent that marks work complete when a network call failed looks identical to one that finished. Every mechanism that can mark something done needs an adversarial read, because its failure looks like success."],
   ["Do you need a large team to run an agent system?",
-   "No. Purcell Ventures LLC has one human employee. The 57 agents in COSMIC are software and the team page says so in its first sentence. The constraint is how much you let run without a person in the loop, and what you do when it is wrong."],
+   "No. Purcell Ventures LLC is one person, Elijah, working with 57 AI agents in COSMIC. The agents are software and the team page says so in its first sentence. The constraint is how much you let run without a person in the loop, and what you do when it is wrong."],
 ];
 
 const LESSONS: [string, string][] = [

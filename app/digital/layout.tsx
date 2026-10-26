@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/digital" },
   title: "Digital services for small businesses: AI tools, CRM and booking",
   description:
-    "26 add-ons for small businesses, from booking and a CRM to an AI chatbot and email marketing, built and maintained by one person. Starter $99, Growth $179 and Full Service $279 a month. Setup $400 to $1,000.",
+    "26 add-ons for small businesses, from booking and a CRM to an AI chatbot and email marketing, built and maintained by one person. Starter $99, Growth $179 and Full Service $279 a month. Setup $650 to $1,000.",
   keywords: [
     "digital services small business", "AI chatbot for website", "business website management",
     "CRM for small business", "email marketing automation", "booking system",
@@ -71,7 +71,7 @@ const schema = {
           "name": "How much does a digital services subscription cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Starter is $99 a month, Growth $179 a month and Full Service $279 a month. There is a one-time setup fee of $400 to $1,000.",
+            "text": "Starter is $99 a month, Growth $179 a month and Full Service $279 a month. There is a one-time setup fee of $650 to $1,000.",
           },
         },
         {

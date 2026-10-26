@@ -15,8 +15,8 @@ const PILOT_REMAINING = { starter: 3, growth: 3, full: 3 }; // TODO: wire to a r
 const DIGITAL = [
   {
     name: "Starter",
-    standard: { setup: 400, monthly: 99 },
-    pilot:    { setup: 280, monthly: 69 },
+    standard: { setup: 650, monthly: 99 },
+    pilot:    { setup: 455, monthly: 69 },
     includes: "Site + AI chatbot + lead form",
     commission: "$100 flat (Closer+)",
   },

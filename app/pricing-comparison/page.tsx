@@ -16,14 +16,14 @@ interface Row {
 }
 
 const DIGITAL_ROWS: Row[] = [
-  { category: "Website build, multi-page and modern", pv: "$400 setup and $99 a month", agency: "$5,000 to $15,000, plus $200 to $500 a month for hosting", freelancer: "$1,500 to $4,000 one time", diy: "$0 to $29 a month (Wix or Squarespace)" },
+  { category: "Website build, multi-page and modern", pv: "$650 setup and $99 a month", agency: "$10,000 and up", freelancer: "$1,500 to $5,000 for a custom build", diy: "Free to $50 a month on a builder such as Wix or Squarespace, or $400 to $1,500 once for a template set up for you" },
   { category: "AI chatbot trained on your business", pv: "Included from Starter up", agency: "$2,000 to $5,000 to build, plus $50 to $150 a month", freelancer: "$500 to $2,000, and you maintain it", diy: "Free with limits, or $20 a month for premium" },
   { category: "Online booking system", pv: "Included from Growth up", agency: "$3,000 to build, with Calendly at $12 a month on top", freelancer: "$800 to $2,000 custom", diy: "$12 to $15 a month (Calendly or Acuity)" },
   { category: "Email marketing platform", pv: "Included from Growth up", agency: "No platform fee, plus $500 to $1,500 a month for management", freelancer: "$300 to $800 a month retainer", diy: "$10 to $100 a month (Mailchimp or ConvertKit)" },
   { category: "CRM with pipeline tracking", pv: "Included in Full Service", agency: "$5,000 HubSpot setup, plus $150 to $1,800 a month", freelancer: "$1,000 setup, then you run it", diy: "$0 to $50 a user a month (HubSpot free or Pipedrive)" },
   { category: "Social media scheduling", pv: "Included from Growth up", agency: "$1,500 to $3,000 a month for full management", freelancer: "$500 to $1,500 a month for content and posting", diy: "$15 to $99 a month (Buffer or Later)" },
   { category: "Review management and responses", pv: "Included from Growth up", agency: "$300 to $800 a month", freelancer: "Charged per response", diy: "Manual, or $30 to $100 a month in tools" },
-  { category: "Time from setup to live", pv: "7 to 21 business days, by tier", agency: "8 to 16 weeks", freelancer: "2 to 6 weeks", diy: "Hours to weeks, depending on you" },
+  { category: "Time from setup to live", pv: "7 to 10 business days for Starter, 14 to 21 for Pro", agency: "8 to 16 weeks", freelancer: "2 to 6 weeks", diy: "Hours to weeks, depending on you" },
   { category: "Maintenance and updates", pv: "Included", agency: "$150 to $300 an hour", freelancer: "$50 to $150 an hour", diy: "Your time" },
   { category: "Direct access to the owner", pv: "Yes. I reply within one business day", agency: "Usually through an account manager", freelancer: "Yes, one person", diy: "Not applicable" },
 ];
@@ -86,7 +86,7 @@ export default function PricingComparisonPage() {
         kicker="Pricing"
         title="My prices next to agency, freelancer and DIY prices."
         lede="I publish my prices here beside typical prices from agencies, freelancers and do-it-yourself tools. The competitor figures are typical 2026 ranges for each category."
-        meta="Websites from $400 setup and $99 a month. Consulting from $125 a person. Custom software from $1,500."
+        meta="Websites from $650 setup and $99 a month. Consulting from $125 a person. Custom software from $1,500."
       />
 
       <Section stack title="Digital services" intro="Subscription tools that plug into your site.">
@@ -113,11 +113,11 @@ export default function PricingComparisonPage() {
       <Section title="Why I can charge less">
         <Rows
           items={[
-            { name: "Low overhead", line: "I do the work myself, with a few sales reps paid on commission. No office and no middle management." },
+            { name: "Low overhead", line: "I do the work myself, and I am recruiting commissioned sales reps. No office and no middle management." },
             { name: "Reusable systems", line: "I start digital services sites from templates I adapt to each client, instead of building from scratch." },
             { name: "AI in my workflow", line: "I use AI for first drafts of code, content and structure, and I review every output." },
             { name: "Long-term clients", line: "A $99 a month subscriber who stays 3 years pays $3,564 over that time." },
-            { name: "The owner on the call", line: "Most agencies pay a sales team 15 to 25% commission, an account manager and a project manager, plus margin. I pay my sales reps a commission, and I am on every important call." },
+            { name: "The owner on the call", line: "Most agencies pay a sales team 15 to 25% commission, an account manager and a project manager, plus margin. I am recruiting commissioned sales reps, and I am on every important call." },
           ]}
         />
       </Section>
@@ -127,7 +127,6 @@ export default function PricingComparisonPage() {
           items={[
             { name: "A platform for 50 or more people with enterprise compliance, such as SOC 2 or HIPAA", line: "Hire a big agency (Accenture, Deloitte Digital) or a firm that specializes in your industry. I cannot take on that much compliance work." },
             { name: "A $200 to $500 monthly budget and a need for a website only", line: "Squarespace or Wix with a built-in template. You do not need me if you do not need AI tools, booking, a CRM or ongoing maintenance." },
-            { name: "A one-time build with no ongoing relationship", line: "A freelancer through Upwork or Toptal may suit you better. I build sites with maintenance after launch, and I take one-off software projects on /software." },
             { name: "A retail point-of-sale system, or inventory at scale", line: "Shopify POS or Square. Those tools do this better than I do." },
             { name: "No idea where to start", line: <>Take the free <Link className="ui-link" href="/ai-readiness">AI readiness test</Link> first. If you score in the bottom tier, save your money and read for 6 months before you buy anything from anyone.</> },
           ]}

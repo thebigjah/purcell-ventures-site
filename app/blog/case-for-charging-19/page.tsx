@@ -32,10 +32,10 @@ export default function Post() {
 
       <p>The $19 price earns less per visit than a $497 price would. I expect repeat customers to close some of that gap, and I do not have the sales data yet to say how much.</p>
 
-      <h2>Some $19 buyers may buy the $179 service</h2>
+      <h2>Some $19 buyers may buy a digital services plan</h2>
       <p>Someone who has paid $19 has already bought from Purcell Ventures once. The second purchase is a smaller decision than the first.</p>
 
-      <p>When they need the done-for-you version of one of my products (Digital Services $179 a month, Consulting $175 an hour, Custom Software $1,500+), they already know how I work and what I deliver.</p>
+      <p>When they need the done-for-you version of one of my products (Digital Services from $99 a month, Consulting $175 an hour, Custom Software from $1,500), they already know how I work and what I deliver.</p>
 
       <h2>Unit economics</h2>
       <p>The content in the $19 kit took 40 hours of work. If I sell 100 copies, that is $1,900, or $47.50 for each hour of build time. If I sell 1,000 copies, that is $19,000, or $475 an hour, which is above my $175 hourly consulting rate.</p>

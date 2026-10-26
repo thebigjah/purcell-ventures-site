@@ -15,7 +15,7 @@ const PROJECTS: Project[] = [
     title: "UA Today",
     subtitle: "University of Alabama events from six sources in one feed.",
     description:
-      "Pulls six separate sources into one feed of University of Alabama events, several hundred at any time, with a moderation console, a board for student pickup games and profiles for student organizations. The masthead says it is unofficial.",
+      "Pulls University of Alabama events from six sources into one feed, with a moderation console, a board for student pickup games and profiles for student organizations. The masthead says it is unofficial.",
     category: ["Web", "AI tools"],
     techStack: ["Node.js", "Vercel", "Six upstream sources", "Automated health checks"],
     liveUrl: "https://ua-today.vercel.app",
@@ -75,7 +75,7 @@ const PROJECTS: Project[] = [
     slug: "pv-site",
     title: "Purcell Ventures",
     subtitle: "This website.",
-    description: "A Next.js 16 site with 31 free tools, a portal for sales reps and a CRM.",
+    description: "A Next.js 16 site with 26 free AI tools, a portal for sales reps and a CRM.",
     category: ["Web", "AI tools"],
     techStack: ["Next.js 16", "React 19", "TypeScript", "Anthropic Claude", "Vercel"],
     liveUrl: "https://purcellventures.co",

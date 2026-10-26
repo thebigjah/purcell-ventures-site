@@ -19,7 +19,7 @@ const FACTS: [string, string][] = [
 ];
 
 const DIVISIONS = [
-  { name: "Websites", line: "Custom websites for local businesses, with hosting and updates after launch.", fig: "From $400 setup and $99 a month", href: "/sites" },
+  { name: "Websites", line: "Custom websites for local businesses, with hosting and updates after launch.", fig: "From $650 setup and $99 a month", href: "/sites" },
   { name: "Digital", line: "Add-ons and ongoing service for local businesses: chatbots, booking, CRM and more.", fig: "From $99 a month", href: "/digital" },
   { name: "Consulting", line: "Hands-on AI work: workshops and implementation.", fig: "From $125 a person", href: "/consulting" },
   { name: "Software", line: "Custom builds: mobile apps, web platforms and internal tools.", href: "/software" },

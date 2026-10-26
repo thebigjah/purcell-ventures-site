@@ -121,7 +121,7 @@ export default function Post() {
           </p>
 
           <p>
-            I am one semester in, so this describes a plan with no results yet. So far the transfer
+            I am in my first semester, so this describes a plan with no results yet. So far the transfer
             has gone in the direction I did not expect. Psychology found a defect in software I
             had already shipped.
           </p>

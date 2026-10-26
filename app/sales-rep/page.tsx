@@ -19,7 +19,7 @@ const SERVICES: { division: string; blurb: string; tiers: [string, string][] }[]
     division: "Digital Services",
     blurb: "Managed websites and AI tools for small businesses, billed monthly in three tiers.",
     tiers: [
-      ["Starter", "$99 a month plus $400 setup. Site, AI chatbot and lead form."],
+      ["Starter", "$99 a month plus $650 setup. Site, AI chatbot and lead form."],
       ["Growth", "$179 a month plus $700 setup. Starter plus booking, email, social and reviews."],
       ["Full Service", "$279 a month plus $1,000 setup. Growth plus CRM, invoicing and AI content."],
     ],
@@ -83,7 +83,7 @@ export default function SalesRepPage() {
       <PageHero
         kicker="Sales representative"
         title="A commission sales role at Purcell Ventures"
-        lede="Commission only, as a 1099 contractor, on your own schedule. You sell digital services, AI consulting, custom software and courses for a Georgia company small enough that you talk to the owner every week."
+        lede="Commission only, as a 1099 contractor, on your own schedule. You sell digital services, AI consulting, custom software and courses for Purcell Ventures, a Georgia LLC run from Tuscaloosa, Alabama. The company is small enough that you talk to the owner every week."
         actions={<>
           <Button href={FORM_URL}>Take the application</Button>
           <Button href="#what" ghost>What you would sell</Button>
@@ -116,7 +116,7 @@ export default function SalesRepPage() {
         </div>
         <Prose>
           <p style={{ marginTop: 32 }}>
-            <strong>Also, at low priority for reps:</strong> Mantle Field Services, the sister brand. Gutter cleaning from $100, pressure washing from $75 and lawn care from $50. Reps rarely close Mantle jobs.
+            <strong>Also, at low priority for reps:</strong> Mantle Field Services, the sister brand. Gutter cleaning from $100, pressure washing from $75 and lawn care from $50. Elijah owns it and a crew runs the jobs day to day. Reps rarely close Mantle jobs.
           </p>
         </Prose>
       </Section>

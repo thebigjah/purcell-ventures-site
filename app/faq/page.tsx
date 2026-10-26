@@ -22,7 +22,7 @@ const FAQS: { label: string; qas: QA[] }[] = [
       { q: "Where are you based?", a: "Tuscaloosa, Alabama. Purcell Ventures LLC is registered in Acworth, Georgia, where I formed it in April 2025, and I run it from Tuscaloosa, where I attend the University of Alabama. Local clients can meet me in person." },
       { q: "Do you take clients outside Tuscaloosa?", a: "For websites, digital services, AI consulting and software, yes, anywhere in the United States. For field work (gutter cleaning, pressure washing, lawn care), see Mantle Field Services, which serves metro Atlanta only." },
       // PRICING QUESTIONS. An answer engine cannot quote a number that is not written down.
-      { q: "How much does a website cost?", a: "Websites start at $400 setup and $99 a month, which covers the site plus the tooling around it. For University of Alabama students and student-run businesses, a site is $500, with an optional $25 a month to keep it maintained and updated. Custom builds start at $1,500." },
+      { q: "How much does a website cost?", a: "Websites start at $650 setup and $99 a month, which covers the site plus the tooling around it. For University of Alabama students and student-run businesses, a site is $500, with an optional $25 a month to keep it maintained and updated. Custom builds start at $1,500." },
       { q: "How much does AI consulting cost?", a: "Group sessions start at $125 a person. One-on-one sessions are $175 an hour. A workshop for up to 20 people is $2,500 flat. The first conversation is free and often ends with me telling you the problem is smaller than you thought, or that AI is the wrong tool for it." },
       { q: "What is the best way to start?", a: `Email ${CONTACT.email} with one sentence about what you are trying to do. Describe the goal rather than the thing you think needs building. I will tell you whether I can help and what the work would look like.` },
     ],
@@ -41,7 +41,7 @@ const FAQS: { label: string; qas: QA[] }[] = [
   {
     label: "Digital services",
     qas: [
-      { q: "How does the subscription work?", a: "You pick a tier: Starter ($99 a month plus $400 setup), Growth ($179 a month plus $700 setup) or Full Service ($279 a month plus $1,000 setup). After setup you pay a flat monthly rate with no contract, and you can cancel at any time. You reach every tool from one dashboard." },
+      { q: "How does the subscription work?", a: "You pick a tier: Starter ($99 a month plus $650 setup), Growth ($179 a month plus $700 setup) or Full Service ($279 a month plus $1,000 setup). After setup you pay a flat monthly rate with no contract, and you can cancel at any time. You reach every tool from one dashboard." },
       { q: "Can I mix and match tools from different tiers?", a: "Yes. The tiers are common starting points, and every account is custom. Tell me what you need and I will build that combination." },
       { q: "Will you migrate me off my existing tools?", a: "Yes. Most clients come from a mix of tools like Squarespace, Mailchimp and Google Forms. I move everything into one place during setup." },
       { q: "What happens if I cancel?", a: "Your data is yours. I export everything to you in standard formats, and there is no exit fee." },
@@ -72,7 +72,7 @@ const FAQS: { label: string; qas: QA[] }[] = [
       { q: "Are you nineteen?", a: "Yes. I have been building production software for a year. Every portfolio project links to a live site, and the full record is at /resume." },
       { q: "What is the panopticon mark about?", a: "It inverts Bentham's prison design. In the original, a hidden watcher observes visible prisoners. The mark puts PV at the center as the visible party that answers for its work, with the structure radiating outward. The full explanation is on the /about page under The mark." },
       { q: "Why is it called Ventures?", a: "The company runs several separate ventures: websites, digital services, consulting, software, Steady, and real estate as a planned division. I build and test each one on its own." },
-      { q: "Who owns Mantle Field Services?", a: "I do. It is a sister brand to Purcell Ventures under the same LLC, with its own sales operation." },
+      { q: "Who owns Mantle Field Services?", a: "I do. It is a sister brand to Purcell Ventures, with its own sales operation." },
     ],
   },
 ];

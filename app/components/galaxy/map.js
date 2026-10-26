@@ -6,7 +6,7 @@ export const MAP = {
   systems: [
     { id: "services", name: "Services", href: "/sites", price: "from $79 a month", line: "Five services, one person answering the phone. Prices are the real ones.",
       planets: [
-        { name: "Websites", href: "/sites", children: 0, tex: "websites", price: "$400 setup, $99 a month" },
+        { name: "Websites", href: "/sites", children: 0, tex: "websites", price: "$650 setup, $99 a month" },
         { name: "Digital add-ons", href: "/digital", children: 8, tex: "digital", price: "from $99 a month" },
         { name: "AI consulting", href: "/consulting", children: 1, tex: "consulting", price: "from $125 a person" },
         { name: "Custom software", href: "/software", children: 0, tex: "software", price: "scoped on a discovery call" },
@@ -21,7 +21,7 @@ export const MAP = {
         { name: "Pricing, compared", href: "/pricing-comparison", children: 0, tex: "pricing" },
         { name: "AI readiness test", href: "/ai-readiness", children: 0, tex: "book" },
       ] },
-    { id: "learn", name: "Learn", href: "/courses", price: "$297 to $397", line: "Three courses, five digital products, and the blog.",
+    { id: "learn", name: "Learn", href: "/courses", price: "$297 to $397", line: "Three courses, four digital products, and the blog.",
       planets: [
         { name: "The College Application Playbook", href: "/courses/college-apps", children: 1, tex: "courses" },
         { name: "The Business Launch Playbook", href: "/courses/business-launch", children: 1, tex: "pricing" },

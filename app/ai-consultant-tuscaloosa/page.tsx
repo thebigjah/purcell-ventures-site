@@ -75,14 +75,14 @@ export default function AiConsultantTuscaloosa() {
 
       <p>
         <a href="https://ua-today.vercel.app" target="_blank" rel="noopener noreferrer">UA Today</a>{" "}
-        is a campus events site I built for students here. It pulls from six sources and
-        carries a hundred events in a typical week, across official University events, student
-        organizations, ministries and athletics. It is free and needs no account. The
+        is a campus events site I built for students here. It pulls events from six sources:
+        official University events, student organizations, ministries and athletics. It is free and needs no account. The
         University has no part in it, and the masthead says so.
       </p>
 
       <p>
-        <Link href="/tools">Twenty-nine free tools</Link> are live on the open web, each one
+        <Link href="/digital/tools">26 free AI tools for small businesses</Link> and{" "}
+        <Link href="/tools">26 free single-file tools</Link> are live on the open web, each one
         built for a single problem. The <Link href="/portfolio">portfolio</Link> has client
         work, and the <Link href="/case-studies">case studies</Link> explain what was hard
         about a few of them.

@@ -80,7 +80,7 @@ const LD = {
           "name": "Do you need a large team to run an agent system?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Purcell Ventures LLC has one human employee. The 57 agents in COSMIC are software and the team page says so in its first sentence. The constraint is how much you let run without a person in the loop, and what you do when it is wrong.",
+            "text": "No. Purcell Ventures LLC is one person, Elijah, working with 57 AI agents in COSMIC. The agents are software and the team page says so in its first sentence. The constraint is how much you let run without a person in the loop, and what you do when it is wrong.",
           },
         },
       ],

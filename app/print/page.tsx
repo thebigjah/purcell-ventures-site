@@ -25,10 +25,10 @@ const RC_W = 270, RC_H = 612;
 
 // ─── Contact Info ─────────────────────────────────────────────────────────────
 const PHONE = CONTACT.phone;
-const WORKS_WEB = "works.purcellventures.co";
+const WORKS_WEB = "mantle-field-site.vercel.app";
 const PV_WEB = "purcellventures.co";
 
-const QR_WORKS = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://works.purcellventures.co&bgcolor=07060a&color=e3bd6a`;
+const QR_WORKS = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://mantle-field-site.vercel.app&bgcolor=07060a&color=e3bd6a`;
 const QR_PV_DIGITAL = `https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://purcellventures.co/digital&bgcolor=07060a&color=e3bd6a`;
 const QR_PV_BACK = `https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=https://purcellventures.co&bgcolor=07060a&color=e3bd6a`;
 

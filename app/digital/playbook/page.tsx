@@ -157,13 +157,13 @@ const FOLLOW_UPS = [
 // Helpers
 
 // The add-on prices below are rep estimates per service. The published prices win: a digital
-// plan starts at $99 a month and setup runs $400 to $1,000, so the estimate is held inside those.
+// plan starts at $99 a month and setup runs $650 to $1,000, so the estimate is held inside those.
 function monthlyFor(services: string[]): number {
   const sum = services.reduce((total, svc) => total + (SERVICE_PRICES[svc] ?? 20), 0);
   return Math.max(99, sum);
 }
 function setupFor(monthly: number): number {
-  return Math.min(1000, Math.max(400, Math.round(monthly * 4)));
+  return Math.min(1000, Math.max(650, Math.round(monthly * 4)));
 }
 
 function generateProposal(v: Visit): string {

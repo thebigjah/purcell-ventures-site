@@ -119,7 +119,7 @@ export default function Post() {
       <p>
         <strong>4. If you share a name, say so outright.</strong> One sentence naming the
         confusion and distinguishing yourself helps assistants tell you apart. I have
-        that sentence on my own site because three other people share my name, and it is
+        that sentence on my own site because four other people share my name, and it is
         the sentence that separates us.
       </p>
 

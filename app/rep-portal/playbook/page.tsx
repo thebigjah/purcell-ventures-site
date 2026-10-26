@@ -88,7 +88,7 @@ export default function PlaybookPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr style={tr}><td style={td}><strong>Digital Starter</strong></td><td style={td}>$99/mo + $400 setup</td><td style={td}>$69/mo + $280 setup (6mo locked)</td><td style={td}>$40 + 10% recurring</td></tr>
+                  <tr style={tr}><td style={td}><strong>Digital Starter</strong></td><td style={td}>$99/mo + $650 setup</td><td style={td}>$69/mo + $280 setup (6mo locked)</td><td style={td}>$40 + 10% recurring</td></tr>
                   <tr style={tr}><td style={td}><strong>Digital Growth</strong></td><td style={td}>$179/mo + $700 setup</td><td style={td}>$125/mo + $490 setup (6mo locked)</td><td style={td}>$70 + 10% recurring</td></tr>
                   <tr style={tr}><td style={td}><strong>Digital Full</strong></td><td style={td}>$279/mo + $1,000 setup</td><td style={td}>$195/mo + $700 setup (6mo locked)</td><td style={td}>$100 + 10% recurring</td></tr>
                   <tr style={tr}><td style={td}><strong>Consulting 1-on-1</strong></td><td style={td}>$175/hr (2hr min)</td><td style={td}>—</td><td style={td}>15% of total</td></tr>

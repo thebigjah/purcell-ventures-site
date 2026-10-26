@@ -130,7 +130,7 @@ const TIERS = [
 const FAQS: { q: ReactNode; a: ReactNode }[] = [
   {
     q: "What kind of business is this for?",
-    a: "Any kind. The course applies to a service business, a physical product, a digital product or a mix. My examples come from Purcell Ventures, which runs consulting, software, digital products and courses. Where the steps differ by type of business, I say so.",
+    a: "Any kind. The course applies to a service business, a physical product, a digital product or a mix. My examples come from Purcell Ventures, which runs websites, digital add-ons, AI consulting, custom software and Steady, plus digital products and courses. Where the steps differ by type of business, I say so.",
   },
   {
     q: "I have no experience. Is this too advanced?",
@@ -173,7 +173,7 @@ export default function BusinessLaunchPage() {
         planet="pricing"
         kicker="Course: The Business Launch Playbook"
         title="I started a company at 17. This course covers how."
-        lede="I am Elijah Purcell. I founded Purcell Ventures at 17, and it now runs consulting, software, digital products and courses. The course walks through starting a business, from the idea to the legal entity to the first customer, with the tools and decisions I used."
+        lede="I am Elijah Purcell. I founded Purcell Ventures at 17, and it now runs websites, digital add-ons, AI consulting, custom software and Steady, plus digital products and courses. The course walks through starting a business, from the idea to the legal entity to the first customer, with the tools and decisions I used."
         meta="Waitlist open. I am still recording the course."
         actions={<>
           <Button href="#waitlist">Join the waitlist</Button>
@@ -233,7 +233,7 @@ export default function BusinessLaunchPage() {
       <Section title="What the course includes">
         <Rows
           items={[
-            { name: "Built from my business", line: "Purcell Ventures runs consulting, software, digital products and courses. Every lesson is based on what I did, the tools I use and the mistakes I made." },
+            { name: "Built from my business", line: "Purcell Ventures runs websites, digital add-ons, AI consulting, custom software and Steady, plus digital products and courses. Every lesson is based on what I did, the tools I use and the mistakes I made." },
             { name: "Every decision documented", line: "Screen shares of the tools I use, the templates I built and the reasoning behind each decision." },
             { name: "Six documents to fill in", line: "The resource pack is six working documents: templates, a pricing calculator and outreach scripts. You fill them in and skip building them yourself." },
           ]}
@@ -247,7 +247,7 @@ export default function BusinessLaunchPage() {
       >
         <Tiers tiers={TIERS} />
         <div style={{ marginTop: 28 }}>
-          <Note>Prices are in US dollars. Lemon Squeezy processes payments, and the access code arrives by email within 5 minutes of purchase.</Note>
+          <Note>Prices are in US dollars.</Note>
         </div>
       </Section>
 

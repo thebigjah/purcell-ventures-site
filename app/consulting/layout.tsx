@@ -39,6 +39,7 @@ const schema = {
       "url": "https://purcellventures.co/consulting",
       "serviceType": "AI Business Consulting",
       "areaServed": [
+        { "@type": "Place", "name": "Tuscaloosa, Alabama" },
         { "@type": "Place", "name": "Metro Atlanta, Georgia" },
         { "@type": "Place", "name": "United States" },
       ],

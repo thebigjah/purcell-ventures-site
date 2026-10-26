@@ -206,7 +206,7 @@ export default function SteadyStartPage() {
 
             <fieldset style={fieldset}>
               <legend style={legend}>Where you are</legend>
-              <Select id="st-where" label="Your location" value={form.location} onChange={(v) => update("location", v)} options={["Metro Atlanta (in-person OK)", "Georgia (remote)", "Elsewhere US (remote)", "Other"]} />
+              <Select id="st-where" label="Your location" value={form.location} onChange={(v) => update("location", v)} options={["Metro Atlanta (in-person OK)", "Tuscaloosa (in-person OK)", "Georgia (remote)", "Elsewhere US (remote)", "Other"]} />
             </fieldset>
 
             <fieldset style={fieldset}>
@@ -239,7 +239,7 @@ export default function SteadyStartPage() {
               <ol>
                 <li>I read your intake, often within a few hours.</li>
                 <li>I reply within one business day with a recommended plan, or I tell you that you do not need me.</li>
-                <li>If Steady fits, we schedule the first session, in person in metro Atlanta or over video.</li>
+                <li>If Steady fits, we schedule the first session, in person in Tuscaloosa or metro Atlanta, or over video.</li>
                 <li>If it does not, I point you to something that does.</li>
               </ol>
             </div>

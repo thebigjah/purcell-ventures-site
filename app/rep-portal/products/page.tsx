@@ -9,7 +9,7 @@ const ENTRIES = [
     slug: "digital-starter",
     name: "Digital Starter",
     division: "Digital Services",
-    price: "$99/mo + $400 setup",
+    price: "$99/mo + $650 setup",
     blurb: "Website + AI chatbot + lead form. The entry product. Solo operators with no real online presence.",
     status: "stub",
   },

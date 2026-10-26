@@ -33,8 +33,7 @@ const DATED: [string, string][] = [
   ["2026", "Built UA Today, a campus events page for the University of Alabama that pulls from six sources."],
   ["2026", "Enrolled at the University of Alabama Honors College to study psychology and data science."],
   ["2025", "Founded Purcell Ventures LLC in Georgia at seventeen."],
-  ["2024", "Christian Character Award, Grove Christian School."],
-  ["2023", "Steadfast Award, Grove Christian School."],
+  ["High school", "Christian Character Award and the Steadfast Award (10th grade), Grove Christian School."],
 ];
 
 // Everything he has written, listed on the page that answers for him.
@@ -55,8 +54,8 @@ const WRITING: [string, string, string][] = [
   ["agents-that-cannot-fix-what-they-find", "We built agents that cannot fix what they find", "17 August 2026"],
   ["shipped-is-not-activated", "Shipping is not the same as being able to take a payment", "17 August 2026"],
   ["ai-augmented-sales-rep-day", "What a day looks like for an AI-augmented sales rep", "25 May 2026"],
-  ["why-i-built-crm-from-scratch", "Why I built a CRM from scratch instead of paying $1,200 a year for HubSpot", "25 May 2026"],
-  ["case-for-charging-19", "The case for charging $19 for what others sell at $497", "25 May 2026"],
+  ["why-i-built-crm-from-scratch", "Why I built a CRM from scratch instead of paying for HubSpot", "25 May 2026"],
+  ["case-for-charging-19", "Why I charge $19 for the AI Starter Kit", "25 May 2026"],
   ["five-workflows-no-code", "Five workflows you can automate this week without writing code", "24 May 2026"],
   ["why-most-ai-tools-waste-money", "Why most small business AI tools waste your money", "24 May 2026"],
 ];
@@ -98,7 +97,7 @@ export default function WhoPage() {
         </div>
       </Section>
 
-      <Section title="Everything he has written">
+      <Section title="What he has written" intro="The blog has 33 posts dated May to October 2026. These are the ones listed here, and the rest are on the blog.">
         <Rows items={WRITING.map(([slug, title, date]) => ({
           name: title,
           line: date,

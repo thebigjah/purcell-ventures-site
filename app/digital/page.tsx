@@ -177,7 +177,7 @@ export default function DigitalPage() {
         kicker="Digital add-ons"
         title="Websites and business tools for small businesses"
         lede="I build booking, a CRM, a chatbot and the other tools a small business runs on around your website, and I maintain them for you. Plans start at $99 a month."
-        meta="Setup $400 to $1,000. No contract. I reply within one business day."
+        meta="Setup $650 to $1,000. No contract. I reply within one business day."
         actions={<>
           <Button href={CONTACT_HREF}>Book a free demo</Button>
           <Button href="/digital/tools" ghost>Try the tools free</Button>
@@ -221,7 +221,7 @@ export default function DigitalPage() {
       <Section
         id="pricing"
         title="Three plans"
-        intro="Each plan includes the tools in the one before it. Every add-on has a setup fee, and setup runs $400 to $1,000. There is no contract and you can cancel at any time."
+        intro="Each plan includes the tools in the one before it. Every add-on has a setup fee, and setup runs $650 to $1,000. There is no contract and you can cancel at any time."
       >
         <Tiers tiers={PLANS} />
       </Section>
@@ -281,7 +281,7 @@ export default function DigitalPage() {
         <div className={s.reach}>
           <p><a className="ui-link" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
           <p className="ui-muted ui-small">
-            Based in Tuscaloosa, Alabama. Purcell Ventures LLC is registered in Georgia.
+            Based in Tuscaloosa, Alabama. Purcell Ventures LLC, registered in Georgia in April 2025.
           </p>
         </div>
       </Section>

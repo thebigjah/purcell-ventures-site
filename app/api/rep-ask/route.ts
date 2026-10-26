@@ -17,7 +17,7 @@ const SYSTEM = `You are the Purcell Ventures REP ASSISTANT. Internal-only — on
 PRICING — what reps quote to prospects:
 
 DIGITAL SERVICES (subscription):
-- Starter: $400 setup + $99/mo — site + AI chatbot + lead form
+- Starter: $650 setup + $99/mo — site + AI chatbot + lead form
 - Growth: $700 setup + $179/mo — adds booking, email, social, reviews, leads
 - Full: $1,000 setup + $279/mo — adds CRM, invoicing, AI content, SMS, loyalty
 

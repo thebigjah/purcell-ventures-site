@@ -20,7 +20,7 @@ const SESSIONS = [
       "What to automate and what to keep with a person",
     ],
     bestFor: "Business owners, managers and non-technical teams",
-    groupSize: "2 to 30 people",
+    groupSize: "2 to 20 people",
   },
   {
     id: "chatgpt-workflow",
@@ -48,7 +48,7 @@ const SESSIONS = [
       "A scheduling and approval workflow set up",
     ],
     bestFor: "Marketing teams, social media managers, and owners who post their own content",
-    groupSize: "2 to 25 people",
+    groupSize: "2 to 20 people",
   },
   {
     id: "automation",
@@ -140,7 +140,7 @@ export default function ConsultingPage() {
         <Figures
           items={[
             ["5", "core sessions"],
-            ["1 to 30", "people, from 1-on-1 to a full team"],
+            ["1 to 20", "people, from 1-on-1 to a workshop"],
             ["$125", "a person, the lowest rate"],
             ["Same day", "takeaway guide for every participant"],
           ]}

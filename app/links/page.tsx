@@ -13,7 +13,7 @@ const SECTIONS: { label: string; items: Item[] }[] = [
   {
     label: "Work with me",
     items: [
-      { href: "/sites", name: "Websites", line: "Custom websites for local businesses.", fig: "From $400 setup and $99 a month" },
+      { href: "/sites", name: "Websites", line: "Custom websites for local businesses.", fig: "From $650 setup and $99 a month" },
       { href: "/digital", name: "Digital services", line: "Websites, AI chatbots, booking and marketing.", fig: "From $99 a month" },
       { href: "/consulting", name: "AI consulting", line: "Hands-on training for your team.", fig: "From $125 a person" },
       { href: "/software", name: "Custom software", line: "Apps, platforms and AI tools.", fig: "From $1,500" },
@@ -50,7 +50,7 @@ const SECTIONS: { label: string; items: Item[] }[] = [
     label: "Built by me",
     items: [
       { href: "https://ua-today.vercel.app", name: "UA Today", line: "Campus events for the University of Alabama, six sources in one place. Free, no account, not affiliated with the university." },
-      { href: "/tools", name: "29 free tools", line: "Small programs that each solve one problem, all live on the open web." },
+      { href: "/tools", name: "26 free single-file tools", line: "Small programs that each solve one problem, all live on the open web." },
       { href: "/portfolio", name: "Portfolio", line: "Client work and shipped products." },
       { href: "https://mantle-field-site.vercel.app", name: "Mantle Field Services", line: "The sister brand for gutter cleaning, pressure washing and lawn care. Metro Atlanta only." },
     ],
@@ -60,7 +60,7 @@ const SECTIONS: { label: string; items: Item[] }[] = [
   {
     label: "Elsewhere",
     items: [
-      { href: "https://github.com/thebigjah", name: "GitHub", line: "Code for the 29 tools and other projects.", me: true },
+      { href: "https://github.com/thebigjah", name: "GitHub", line: "Code for the 26 single-file tools and other projects.", me: true },
       { href: "https://www.linkedin.com/in/theelijahpurcell", name: "LinkedIn", line: "My professional record.", me: true },
       { href: "https://www.linkedin.com/company/138853899/", name: "Purcell Ventures on LinkedIn", line: "The company page." },
       { href: "https://www.instagram.com/theelijahpurcell/", name: "Instagram", me: true },
