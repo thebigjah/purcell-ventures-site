@@ -1,11 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+import { PageHero, Section, Rows, Prose, Note } from "@/app/components/ui";
 import { RefTracker } from "../starter-kit/RefTracker";
 import { BuyButton } from "../starter-kit/BuyButton";
 
-export const metadata = {
-  title: "The Cold Email Subject Line Library: $9, Purcell Ventures",
-  description: "80 cold email subject lines in 8 categories, as a PDF and markdown files. $9 one-time.",
+export const metadata: Metadata = {
+  title: "The Cold Email Subject Line Library, $9",
+  description: "80 cold email subject lines in 8 categories, as a PDF and markdown files. $9 once.",
 };
 
 const PAYMENT_LINK = process.env.SUBJECT_LINES_PAYMENT_LINK || "#configure-stripe";
@@ -22,107 +23,55 @@ const CATEGORIES = [
 ];
 
 export default function SubjectLinesPage() {
-
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <VignetteBackground />
+    <main>
       <RefTracker product="subject-lines" />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "880px", margin: "0 auto", padding: "72px 36px 96px" }}>
+      <PageHero
+        kicker="Shop: the Subject Line Library"
+        title="80 cold email subject lines in 8 categories."
+        lede="Each category has 10 subject lines. The download is an editable PDF with markdown files, and it arrives by email right after checkout."
+        meta="$9 once. Checkout through Stripe, delivery by email, 30-day refund."
+        actions={<BuyButton paymentLink={PAYMENT_LINK} product="subject-lines" price="$9" size="large" />}
+      />
 
+      <Section title="The 8 categories" intro="One sample from each. The full library has 10 in every category.">
+        <Rows
+          items={CATEGORIES.map((c) => ({
+            name: c.name,
+            line: <>&ldquo;{c.sample}&rdquo;</>,
+            fig: `${c.count} lines`,
+          }))}
+        />
+      </Section>
 
-        {/* Hero */}
-        <header style={{ textAlign: "center", marginBottom: "48px" }}>
-          <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "16px" }}>
-            $9, instant download, editable PDF and markdown
-          </div>
-          <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "40px", fontWeight: 700, color: "var(--color-warm-text)", margin: "0 0 16px", lineHeight: 1.15 }}>
-            80 cold email subject lines <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>in 8 categories.</em>
-          </h1>
-          <p style={{ fontSize: "16px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, maxWidth: "560px", margin: "0 auto 28px" }}>
-            Each category has 10 subject lines.
-          </p>
-          <BuyButton paymentLink={PAYMENT_LINK} product="subject-lines" price="$9" size="large" />
-          <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "10px", fontStyle: "italic" }}>
-            Checkout through Stripe, delivery by email, 30-day refund
-          </p>
-        </header>
-
-        {/* Categories preview */}
-        <section style={{ marginBottom: "40px" }}>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", color: "var(--color-warm-text)", fontWeight: 600, marginBottom: "12px" }}>
-            The <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>8 categories.</em>
-          </h2>
-          <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", marginBottom: "24px", fontStyle: "italic" }}>
-            One sample from each. The full pack has 10 per category.
-          </p>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
-            {CATEGORIES.map((c) => (
-              <div key={c.name} style={{ padding: "16px 20px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "8px" }}>
-                  <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "16px", color: "var(--color-warm-text)", margin: 0, fontWeight: 600 }}>{c.name}</h3>
-                  <span style={{ fontSize: "11px", color: "var(--color-warm-accent)", letterSpacing: "0.18em", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 700 }}>{c.count} lines</span>
-                </div>
-                <p style={{ margin: 0, fontSize: "13px", color: "var(--color-warm-text-muted)", fontStyle: "italic" }}>&ldquo;{c.sample}&rdquo;</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* What's also included */}
-        <section style={{ marginBottom: "40px", padding: "24px 28px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)" }}>
-          <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", color: "var(--color-warm-text)", fontWeight: 600, margin: "0 0 12px" }}>
-            Also in the pack
-          </h3>
-          <ul style={{ paddingLeft: "20px", margin: 0, fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.8 }}>
-            <li><strong>20 subject lines to avoid</strong>, with the reason each fails</li>
-            <li><strong>Token replacement guide</strong> for filling in {`{{firstName}}, {{company}}, {{specificThing}}`}</li>
-            <li><strong>A/B testing matrix</strong> that pairs subject lines to test against each other in different niches</li>
-            <li><strong>Mobile preview cheat sheet</strong> showing how subject lines render in iPhone Mail, Gmail mobile and Outlook</li>
+      <Section title="Also in the library">
+        <Prose>
+          <ul>
+            <li><strong>20 subject lines to avoid</strong>, with the reason each one fails</li>
+            <li><strong>A token replacement guide</strong> for filling in {`{{firstName}}, {{company}}, {{specificThing}}`}</li>
+            <li><strong>An A/B testing matrix</strong> that pairs subject lines to test against each other in different niches</li>
+            <li><strong>A mobile preview cheat sheet</strong> showing how subject lines look in iPhone Mail, Gmail on a phone and Outlook</li>
           </ul>
-        </section>
-
-        {/* Upsell */}
-        <div style={{ marginBottom: "40px", padding: "24px 28px", background: "linear-gradient(135deg, rgba(212,175,55,0.10), rgba(212,175,55,0.02))", border: "2px dashed var(--color-warm-accent)" }}>
-          <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "8px" }}>
-            Want the full playbook?
-          </div>
-          <p style={{ margin: 0, fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.6 }}>
-            Subject lines are part of our larger <Link href="/shop/cold-email-pack" style={{ color: "var(--color-warm-accent)", textDecoration: "underline" }}>Cold Email Mastery Pack ($29)</Link>, which adds 100+ industry templates, reply-handling scripts, an AI scoring rubric and sequencing cadences. If you want all of that, buy the Pack instead of this one.
-          </p>
+        </Prose>
+        <div style={{ marginTop: 28 }}>
+          <Note>
+            The subject lines are also part of the larger <Link className="ui-link" href="/shop/cold-email-pack">Cold Email Mastery Pack ($29)</Link>, which adds more than 100 industry templates, reply-handling scripts, an AI scoring rubric and send schedules. If you want all of that, buy the pack and skip this one.
+          </Note>
         </div>
+      </Section>
 
-        {/* Who it's for */}
-        <section style={{ marginBottom: "40px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-          <div style={{ padding: "20px 24px", background: "rgba(122, 170, 106, 0.08)", border: "1px solid #7aaa6a" }}>
-            <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", color: "#7aaa6a", fontWeight: 600, margin: "0 0 8px" }}>Get this if</h3>
-            <ul style={{ paddingLeft: "20px", margin: 0, fontSize: "13px", color: "var(--color-warm-text)", lineHeight: 1.7 }}>
-              <li>You write cold emails and your subject lines are getting ignored</li>
-              <li>You don&apos;t need a full template pack, just better hooks</li>
-              <li>You want to A/B test subject lines against each other</li>
-            </ul>
-          </div>
-          <div style={{ padding: "20px 24px", background: "rgba(229, 74, 40, 0.05)", border: "1px solid #e54a28" }}>
-            <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", color: "#e54a28", fontWeight: 600, margin: "0 0 8px" }}>Skip this if</h3>
-            <ul style={{ paddingLeft: "20px", margin: 0, fontSize: "13px", color: "var(--color-warm-text)", lineHeight: 1.7 }}>
-              <li>You want the full Cold Email Pack ($29), which includes this</li>
-              <li>You don&apos;t send cold emails</li>
-              <li>You want a done-for-you outreach service</li>
-            </ul>
-          </div>
-        </section>
+      <Section title="Who it fits">
+        <Rows
+          items={[
+            { name: "A good fit if", line: "You write cold emails and your subject lines get ignored. You want better opening lines and do not need a full template pack. You want to A/B test subject lines against each other." },
+            { name: "Skip it if", line: "You want the full Cold Email Mastery Pack ($29), which includes this library. You do not send cold email. You want someone to run your outreach for you." },
+          ]}
+        />
+      </Section>
 
-        {/* CTA repeat */}
-        <div style={{ textAlign: "center", padding: "32px", background: "var(--color-warm-bg-alt)", border: "2px solid var(--color-warm-accent)" }}>
-          <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", color: "var(--color-warm-text)", fontWeight: 700, margin: "0 0 12px" }}>
-            80 subject lines in one PDF for <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>$9</em>
-          </h3>
-          <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: "0 0 20px" }}>
-            Stripe sends the PDF to your email within 60 seconds.
-          </p>
-          <BuyButton paymentLink={PAYMENT_LINK} product="subject-lines" price="$9" size="small" />
-        </div>
-
-      </main>
-    </div>
+      <Section title="80 subject lines in one PDF for $9" intro="Stripe sends the PDF to your email within 60 seconds.">
+        <BuyButton paymentLink={PAYMENT_LINK} product="subject-lines" price="$9" size="small" />
+      </Section>
+    </main>
   );
 }

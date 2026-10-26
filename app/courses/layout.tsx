@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  alternates: { canonical: "/courses" },
   title: "Courses by Elijah Purcell",
   description:
     "Three self-paced courses from Elijah Purcell: the college application playbook, the business launch playbook, and Zero to Automated.",
   // NO canonical here. This layout wraps every /courses child route and Next
   // inherits it, so each child was declaring itself a duplicate of /courses.
-  // A page with no canonical self-canonicalises, which is what these want.
+  // The /courses canonical lives in app/courses/page.tsx instead.
 };
 
 

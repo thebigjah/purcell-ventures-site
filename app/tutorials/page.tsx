@@ -1,9 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+import { PageHero, Section, Rows, ClosingCall } from "@/app/components/ui";
 
-export const metadata = {
-  title: "Tutorials: Purcell Ventures",
-  description: "Short how-to guides for each Purcell Ventures AI tool, with example output. No login required.",
+export const metadata: Metadata = {
+  title: "Tutorials for the Purcell Ventures tools",
+  description: "Short how-to guides for each Purcell Ventures AI tool, with example output. Reading them needs no login.",
 };
 
 interface Tutorial {
@@ -20,7 +21,7 @@ const TUTORIALS: Tutorial[] = [
     slug: "ai-faq-builder",
     category: "AI",
     title: "How to generate an FAQ page with the AI FAQ Builder",
-    blurb: "Walkthrough of the AI FAQ Builder tool. Includes example output for a salon, a plumbing company, and a dental practice.",
+    blurb: "A walkthrough of the AI FAQ Builder, with example output for a salon, a plumbing company and a dental practice.",
     toolLink: "/digital/tools/faq-builder",
     readTime: "3 min read",
   },
@@ -28,7 +29,7 @@ const TUTORIALS: Tutorial[] = [
     slug: "ai-content-generator",
     category: "AI",
     title: "How to edit AI blog drafts",
-    blurb: "How to use the AI Content Generator to get usable first drafts. Three rules for editing AI drafts.",
+    blurb: "How to use the AI Content Generator to get usable first drafts, and three rules for editing them.",
     toolLink: "/digital/tools/ai-content-generator",
     readTime: "5 min read",
   },
@@ -84,7 +85,7 @@ const TUTORIALS: Tutorial[] = [
     slug: "ai-call-recap",
     category: "Sales",
     title: "Turning 90 seconds of notes into a structured call recap",
-    blurb: "Paste your post-call notes. The tool sorts them into outcome, key points, what they committed to, what we committed to, next action and a tone read.",
+    blurb: "Paste your post-call notes. The tool sorts them into outcome, key points, what they committed to, what you committed to, next action and a tone read.",
     toolLink: "/rep-portal",
     readTime: "3 min read",
   },
@@ -100,7 +101,7 @@ const TUTORIALS: Tutorial[] = [
     slug: "operations-loyalty",
     category: "Operations",
     title: "How to set up a simple customer loyalty system",
-    blurb: "How to use the loyalty tool to track punch cards and repeat customers. No barcode scanner needed.",
+    blurb: "How to use the loyalty tool to track punch cards and repeat customers. It needs no barcode scanner.",
     toolLink: "/digital/loyalty",
     readTime: "4 min read",
   },
@@ -122,61 +123,32 @@ export default function TutorialsPage() {
   }, {} as Record<string, Tutorial[]>);
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <VignetteBackground />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "920px", margin: "0 auto", padding: "72px 36px 96px" }}>
+    <main>
+      <PageHero
+        kicker="How-to guides"
+        title="Tutorials for the free tools."
+        lede="Short how-to guides for my tools. Each one covers setup, the steps, an example output and common variations. Reading them needs no login."
+      />
 
-        <header className="pv-page-head">
-          <div className="pv-mono-label">How-to guides</div>
-          <h1>
-            Tutorials <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>and walkthroughs.</em>
-          </h1>
-          <p className="deck">
-            Short how-to guides for our tools. Each one covers setup, the steps, an example output and common variations. No login required to read.
-          </p>
-        </header>
+      {Object.entries(byCategory).map(([category, items]) => (
+        <Section key={category} title={category}>
+          <Rows
+            items={items.map((t) => ({
+              name: t.title,
+              line: t.blurb,
+              fig: t.readTime,
+              href: t.toolLink,
+            }))}
+          />
+        </Section>
+      ))}
 
-        {Object.entries(byCategory).map(([category, items]) => (
-          <section key={category} style={{ marginBottom: "48px" }}>
-            <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", color: "var(--color-warm-accent)", marginBottom: "20px", fontWeight: 600 }}>
-              {category}
-            </h2>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "16px" }}>
-              {items.map((t) => (
-                <Link key={t.slug} href={t.toolLink} style={{ textDecoration: "none" }}>
-                  <article className="pv-card" style={{ padding: "24px 28px", height: "100%", display: "flex", flexDirection: "column" }}>
-                    <span className="b3"></span><span className="b4"></span>
-                    <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-text-muted)", fontWeight: 700, marginBottom: "8px" }}>
-                      {t.readTime}
-                    </div>
-                    <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "17px", color: "var(--color-warm-text)", margin: "0 0 10px", fontWeight: 600, lineHeight: 1.3 }}>
-                      {t.title}
-                    </h3>
-                    <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, margin: 0, flex: 1 }}>
-                      {t.blurb}
-                    </p>
-                    <div style={{ marginTop: "16px", fontSize: "11px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 700 }}>
-                      Open tool
-                    </div>
-                  </article>
-                </Link>
-              ))}
-            </div>
-          </section>
-        ))}
-
-        <div style={{ marginTop: "48px", padding: "32px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", textAlign: "center" }}>
-          <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", color: "var(--color-warm-text)", margin: "0 0 12px", fontWeight: 600 }}>
-            We can do the work <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>for you.</em>
-          </h3>
-          <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: "0 0 20px", maxWidth: "520px", marginLeft: "auto", marginRight: "auto", lineHeight: 1.6 }}>
-            These tutorials cover our free customer tools. For AI workflows we set up and run for you, see the Digital Services tiers.
-          </p>
-          <Link href="/digital" className="pv-btn-primary" style={{ marginRight: "8px" }}>See Digital Services</Link>
-          <Link href="/shop" style={{ color: "var(--color-warm-accent)", textDecoration: "underline", fontSize: "14px" }}>Browse shop</Link>
-        </div>
-
-      </main>
-    </div>
+      <ClosingCall
+        title="I can do the work for you"
+        line={<>These tutorials cover my free tools for customers. For AI workflows I set up and run for you, see the digital services tiers, or <Link className="ui-link" href="/shop">browse the shop</Link>. I reply within one business day.</>}
+        button="See digital services"
+        href="/digital"
+      />
+    </main>
   );
 }

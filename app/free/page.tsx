@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+import { PageHero, Section, Note } from "@/app/components/ui";
 
 interface Template {
   industry: string;
@@ -13,19 +13,19 @@ interface Template {
 
 const TEMPLATES: Template[] = [
   {
-    industry: "Salons & spas",
+    industry: "Salons and spas",
     subject: "Quick question about {{salonName}}",
     body: `Hi {{firstName}},\n\nI checked out {{salonName}}'s booking flow online and noticed {{specificObservation}}. Most salons we work with say this was the #1 thing they wanted to fix.\n\nWe help salons fix this for $179/mo. Worth 15 min to see what we'd do for you?\n\nIf not, no worries, just delete this.\n\n{{yourName}}`,
     why: "A specific observation, a familiar problem, a small ask and permission to ignore it.",
   },
   {
-    industry: "Plumbing / HVAC / trades",
+    industry: "Plumbing, HVAC and other trades",
     subject: "Saw a pattern in how {{businessType}}s are using AI",
     body: `Hi {{firstName}},\n\nI help trades businesses with AI tools, particularly plumbers and HVAC. Most owners I work with were skeptical at first.\n\nThree things they had in common before:\n• Phone rang less than it used to\n• Losing leads to bigger shops with better websites\n• No time to figure out tech themselves\n\nSound like {{company}}?\n\n{{yourName}}`,
-    why: "It opens with a pattern instead of a pitch. The three items are easy to agree with, and the question asks for a yes or no.",
+    why: "It opens with a pattern the owner will recognize before any pitch. The three items are easy to agree with, and the question asks for a yes or no.",
   },
   {
-    industry: "Dental / medical practice",
+    industry: "Dental and medical practices",
     subject: "Front-desk question about {{practiceName}}",
     body: `Hi {{firstName}} (or {{officeManager}}),\n\nNoticed {{practiceName}} doesn't have {{specificThing}} on your booking page. Most practices we work with see {{specificOutcome}} after adding it.\n\n10 minutes for a walkthrough? If not, here's a free guide on {{relatedTopic}}: [link]\n\n{{yourName}}`,
     why: "It allows for the office manager being the decision-maker and offers a free guide if they say no.",
@@ -34,7 +34,7 @@ const TEMPLATES: Template[] = [
     industry: "Real estate brokerage",
     subject: "Lead-routing question for {{brokerageName}}",
     body: `Hi {{firstName}},\n\nMost brokerages still email leads manually to the next-up agent. We automate the routing AND the first-touch follow-up.\n\nBrokers who use it report {{specificMetric}}.\n\nWorth 15 minutes to compare to what {{brokerageName}} does now?\n\n{{yourName}}`,
-    why: "It names a problem they will recognize and asks them to compare, without claiming to be better.",
+    why: "It names a problem they will recognize and asks them to compare. It makes no claim to be better.",
   },
   {
     industry: "Law firm",
@@ -55,7 +55,7 @@ const TEMPLATES: Template[] = [
     why: "A specific observation shows you looked at their store. It is short and asks for a yes or no.",
   },
   {
-    industry: "Wellness / fitness studio",
+    industry: "Wellness and fitness studios",
     subject: "Booking gap I noticed at {{studioName}}",
     body: `Hi {{firstName}},\n\nLooked at {{studioName}}'s booking flow and noticed {{specificGap}}. Studios that fix this see ~{{specificMetric}}.\n\nWe handle all of it for $179/mo (Mindbody integration included).\n\nWorth 15 minutes?\n\n{{yourName}}`,
     why: "Naming Mindbody shows you know the tools studios use.",
@@ -67,7 +67,7 @@ const TEMPLATES: Template[] = [
     why: "It uses the Dr. title, and the time saved is concrete.",
   },
   {
-    industry: "Accounting / bookkeeping firm",
+    industry: "Accounting and bookkeeping firms",
     subject: "Tax-season workflow for {{firmName}}",
     body: `Hi {{firstName}},\n\nMost tax-season stress comes from workflow, such as chasing documents. We help practices automate {{specificThing}} so the team spends that time on client work.\n\nMost see {{specificImprovement}}.\n\nWorth 15 min after April closes?\n\n{{yourName}}`,
     why: "It treats the problem as a workflow issue, and offering to talk after April shows you know their busy season.",
@@ -83,7 +83,7 @@ export default function FreePage() {
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
-    if (!email.includes("@")) { setError("Enter a valid email."); return; }
+    if (!email.includes("@")) { setError("Enter a valid email address."); return; }
     setSubmitting(true);
     setError(null);
     try {
@@ -110,109 +110,91 @@ export default function FreePage() {
 
   if (submitted) {
     return (
-      <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-        <VignetteBackground />
-        <main style={{ position: "relative", zIndex: 5, maxWidth: "880px", margin: "0 auto", padding: "72px 36px" }}>
-          <div style={{ textAlign: "center", marginBottom: "32px" }}>
-            <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "80px", color: "var(--color-warm-accent)", lineHeight: 1, marginBottom: "12px" }}>✓</div>
-            <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "36px", color: "var(--color-warm-text)", margin: "0 0 12px", fontWeight: 700 }}>
-              Here are the templates, <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>{firstName || "friend"}.</em>
-            </h1>
-            <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: "0 0 8px" }}>
-              You can copy any of these directly. Replace the {`{{tokens}}`} with details about your business and theirs.
-            </p>
-            <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", fontStyle: "italic" }}>
-              (We&apos;ll occasionally email more like this. Unsubscribe anytime.)
-            </p>
-          </div>
+      <main>
+        <PageHero
+          kicker="Free templates"
+          title={firstName ? `Here are the templates, ${firstName}.` : "Here are the templates."}
+          lede={<>Copy any of them as they are. Replace the {`{{tokens}}`} with details about your business and theirs.</>}
+          meta="I will email more like this now and then. You can unsubscribe at any time."
+        />
 
-          {/* Templates */}
-          <div style={{ display: "grid", gap: "20px", marginBottom: "48px" }}>
-            {TEMPLATES.map((t, i) => (
-              <article key={i} className="pv-card" style={{ padding: "24px 28px" }}>
-                <span className="b3"></span><span className="b4"></span>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "12px", flexWrap: "wrap", gap: "8px" }}>
-                  <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", color: "var(--color-warm-text)", margin: 0, fontWeight: 600 }}>{i + 1}. {t.industry}</h2>
-                  <button onClick={() => { navigator.clipboard.writeText(`Subject: ${t.subject}\n\n${t.body}`); }} style={{ padding: "6px 12px", background: "transparent", color: "var(--color-warm-accent)", border: "1px solid var(--color-warm-accent)", fontSize: "10px", letterSpacing: "0.18em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif", cursor: "pointer", fontWeight: 700, borderRadius: 0 }}>Copy</button>
+        <Section title="10 templates, one per industry">
+          <div className="ui-entries">
+            {TEMPLATES.map((t) => (
+              <article className="ui-entry" key={t.industry}>
+                <div>
+                  <h3>{t.industry}</h3>
+                  <p className="ui-entry__org">Subject: {t.subject}</p>
                 </div>
-                <div style={{ marginBottom: "10px", fontSize: "13px", color: "var(--color-warm-text-muted)" }}>
-                  <strong style={{ color: "var(--color-warm-accent)" }}>Subject:</strong> {t.subject}
-                </div>
-                <pre style={{ fontSize: "13px", color: "var(--color-warm-text)", lineHeight: 1.6, fontFamily: "var(--font-inter), sans-serif", whiteSpace: "pre-wrap", wordBreak: "break-word", margin: 0, padding: "14px 16px", background: "var(--color-warm-bg)", border: "1px solid var(--color-warm-border)" }}>{t.body}</pre>
-                <div style={{ marginTop: "10px", fontSize: "11px", color: "var(--color-warm-text-light)", fontStyle: "italic" }}>
-                  <strong style={{ color: "var(--color-warm-accent)", fontStyle: "normal" }}>Why this works:</strong> {t.why}
+                <span className="ui-entry__when">
+                  <button
+                    type="button"
+                    className="ui-btn ui-btn--ghost"
+                    style={{ minHeight: 44 }}
+                    onClick={() => { navigator.clipboard.writeText(`Subject: ${t.subject}\n\n${t.body}`); }}
+                  >
+                    Copy
+                  </button>
+                </span>
+                <div className="ui-entry__body ui-prose">
+                  <pre style={{ whiteSpace: "pre-wrap", wordBreak: "break-word", fontFamily: "var(--font-body)" }}>{t.body}</pre>
+                  <p className="ui-small"><strong>Why it works:</strong> {t.why}</p>
                 </div>
               </article>
             ))}
           </div>
+        </Section>
 
-          {/* Upsell to full pack */}
-          <div style={{ padding: "32px 36px", background: "linear-gradient(135deg, rgba(212,175,55,0.10), rgba(212,175,55,0.02))", border: "2px solid var(--color-warm-accent)", textAlign: "center", marginBottom: "32px" }}>
-            <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "12px" }}>
-              90 more templates, 80 subject lines and 30 reply scripts
-            </div>
-            <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "26px", color: "var(--color-warm-text)", margin: "0 0 12px", fontWeight: 700 }}>
-              The full <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Cold Email Mastery Pack, $29.</em>
-            </h3>
-            <p style={{ margin: "0 0 24px", fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, maxWidth: "560px", marginLeft: "auto", marginRight: "auto" }}>
-              The full pack has 100+ templates, an AI scoring rubric, 4 sequencing cadences, reply scripts for 30 scenarios and the list-building playbook.
-            </p>
-            <Link href="/shop/cold-email-pack" className="pv-btn-primary">See the full pack, $29</Link>
-          </div>
-
-          <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", textAlign: "center", fontStyle: "italic" }}>
-            Or grab <Link href="/shop/starter-kit" style={{ color: "var(--color-warm-accent)" }}>the broader PV AI Starter Kit ($19)</Link> for 24 AI prompts, the sales handbook and the rest of the kit.
+        <Section
+          title="The full Cold Email Mastery Pack, $29"
+          intro="90 more templates, 80 subject lines and reply scripts for 30 scenarios."
+        >
+          <p className="ui-muted" style={{ marginTop: 0 }}>
+            The full pack has more than 100 templates, an AI scoring rubric, 4 email sequences, reply scripts for 30 scenarios and the list-building playbook.
           </p>
-        </main>
-      </div>
+          <div className="ui-hero__actions">
+            <Link className="ui-btn" href="/shop/cold-email-pack">See the full pack, $29</Link>
+          </div>
+          <p className="ui-muted ui-small" style={{ marginTop: 24 }}>
+            The <Link className="ui-link" href="/shop/starter-kit">PV AI Starter Kit ($19)</Link> covers more ground: 24 AI prompts, the sales handbook and the rest of the kit.
+          </p>
+        </Section>
+      </main>
     );
   }
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <VignetteBackground />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "96px 36px" }}>
+    <main>
+      <PageHero
+        kicker="Free, no credit card needed"
+        title="10 cold outreach templates, one per industry."
+        lede="Salons, plumbing, dental, real estate, law, marketing agencies, e-commerce, wellness, veterinary practices and accounting each get a template. You can edit every one."
+      />
 
-        <div style={{ textAlign: "center", marginBottom: "32px" }}>
-          <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "16px" }}>
-            Free, no credit card needed
+      <Section title="Get the templates" intro="The templates appear on the next page.">
+        <form onSubmit={submit} style={{ display: "grid", gap: 16, maxWidth: 520 }}>
+          <div className="ui-field">
+            <label htmlFor="free-first-name">First name (optional)</label>
+            <input id="free-first-name" type="text" autoComplete="given-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="What should I call you?" style={{ minHeight: 48 }} />
           </div>
-          <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "44px", fontWeight: 700, color: "var(--color-warm-text)", margin: "0 0 16px", lineHeight: 1.15 }}>
-            10 cold outreach templates, <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>one per industry.</em>
-          </h1>
-          <p style={{ fontSize: "17px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, maxWidth: "560px", margin: "0 auto" }}>
-            Salons, plumbing, dental, real estate, law, marketing agencies, e-commerce, wellness, vets and accounting each get a template. You can edit every one.
-          </p>
-        </div>
-
-        <form onSubmit={submit} style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-accent)", padding: "32px" }}>
-          <div style={{ display: "grid", gap: "14px" }}>
-            <div>
-              <label style={inputLabel}>First name (optional)</label>
-              <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="What should we call you?" style={fieldStyle} />
-            </div>
-            <div>
-              <label style={inputLabel}>Email *</label>
-              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required style={fieldStyle} placeholder="you@yourbusiness.com" />
-            </div>
-            {error && <div style={{ background: "rgba(229, 74, 40, 0.1)", border: "1px solid #e54a28", padding: "8px 12px", color: "#e54a28", fontSize: "13px" }}>{error}</div>}
-            <button type="submit" disabled={submitting} className="pv-btn-primary" style={{ border: "none", cursor: submitting ? "wait" : "pointer", opacity: submitting ? 0.6 : 1, padding: "16px", fontSize: "16px" }}>
-              {submitting ? "Sending…" : "Send me the 10 templates"}
+          <div className="ui-field">
+            <label htmlFor="free-email">Email address (required)</label>
+            <input id="free-email" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="you@yourbusiness.com" style={{ minHeight: 48 }} />
+          </div>
+          {error && <Note tone="warn">{error}</Note>}
+          <div>
+            <button type="submit" disabled={submitting} className="ui-btn" style={{ minHeight: 48, cursor: submitting ? "wait" : "pointer", opacity: submitting ? 0.6 : 1 }}>
+              {submitting ? "Sending" : "Send me the 10 templates"}
             </button>
           </div>
-          <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "16px", textAlign: "center", fontStyle: "italic" }}>
-            The templates appear on the next page. We&apos;ll occasionally email more like this. Unsubscribe anytime.
+          <p className="ui-muted ui-small" style={{ margin: 0 }}>
+            I will email more like this now and then. You can unsubscribe at any time.
           </p>
         </form>
-
-        <div style={{ marginTop: "40px", padding: "20px 24px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>
-          <strong style={{ color: "var(--color-warm-accent)" }}>The paid version:</strong> the <Link href="/shop/cold-email-pack" style={{ color: "var(--color-warm-accent)" }}>full $29 pack</Link> adds 90 more templates, a subject-line library, reply handling and cadences.
-        </div>
-
-      </main>
-    </div>
+        <p className="ui-muted" style={{ marginTop: 32 }}>
+          The paid version: the <Link className="ui-link" href="/shop/cold-email-pack">full $29 pack</Link> adds 90 more templates, a subject line library, reply handling and email sequences.
+        </p>
+      </Section>
+    </main>
   );
 }
-
-const inputLabel: React.CSSProperties = { display: "block", fontSize: "10px", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "4px", fontFamily: "var(--font-dm-sans), sans-serif" };
-const fieldStyle: React.CSSProperties = { width: "100%", padding: "12px 14px", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", border: "1px solid var(--color-warm-border)", borderRadius: 0, fontSize: "15px", fontFamily: "var(--font-inter), sans-serif" };

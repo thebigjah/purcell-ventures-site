@@ -1,122 +1,70 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+import { PageHero, Section, Rows, Facts, Prose } from "@/app/components/ui";
 import { RefTracker } from "../starter-kit/RefTracker";
 import { BuyButton } from "../starter-kit/BuyButton";
 
-export const metadata = {
-  title: "The Complete Pack: All 3 products bundled, $39, Purcell Ventures",
-  description: "All 3 PV products in one purchase: AI Starter Kit, Cold Email Mastery Pack and Subject Line Library. $39 once, $18 less than buying them separately.",
+export const metadata: Metadata = {
+  title: "The Complete Pack, all three products for $39",
+  description:
+    "All three PV products in one purchase: the AI Starter Kit, the Cold Email Mastery Pack and the Subject Line Library. $39 once, $18 less than buying them separately.",
 };
 
 const PAYMENT_LINK = process.env.BUNDLE_PAYMENT_LINK || "#configure-stripe";
 
 export default function BundlePage() {
-
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <VignetteBackground />
+    <main>
       <RefTracker product="bundle" />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "880px", margin: "0 auto", padding: "72px 36px 96px" }}>
+      <PageHero
+        kicker="Shop: the Complete Pack"
+        title="All three products in one ZIP for $39."
+        lede="The three kits cost $57 separately and $39 together, a saving of $18. One checkout, one ZIP of 61 files, and a 30-day refund."
+        actions={<BuyButton paymentLink={PAYMENT_LINK} product="bundle" price="$39" size="large" />}
+      />
 
+      <Section title="What is inside">
+        <Rows
+          items={[
+            {
+              name: "PV AI Starter Kit",
+              fig: "$19 on its own",
+              line: "24 AI tool prompts, 5 sales scripts, the full rep handbook, more than 50 cold outreach templates, a 1099 contractor agreement and a CRM CSV. 42 files of prompts, scripts and templates Purcell Ventures uses.",
+            },
+            {
+              name: "Cold Email Mastery Pack",
+              fig: "$29 on its own",
+              line: "100 cold email templates for 10 industries, 80 subject lines, 30 reply-handling scripts, an AI scoring rubric, 4 email sequences and a list-building playbook.",
+            },
+            {
+              name: "Subject Line Library",
+              fig: "$9 on its own",
+              line: "80 cold email subject lines in 8 categories, 20 lines to avoid, an A/B testing matrix and a cheat sheet for how subject lines look on a phone.",
+            },
+          ]}
+        />
+      </Section>
 
-        {/* Hero */}
-        <header style={{ textAlign: "center", marginBottom: "48px" }}>
-          <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "16px" }}>
-            Save $18, 61 files
-          </div>
-          <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "44px", fontWeight: 700, color: "var(--color-warm-text)", margin: "0 0 16px", lineHeight: 1.15 }}>
-            The <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Complete Pack.</em>
-          </h1>
-          <p style={{ fontSize: "16px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, maxWidth: "560px", margin: "0 auto 8px" }}>
-            All 3 PV products in a single ZIP.
-          </p>
-          <p style={{ fontSize: "13px", color: "var(--color-warm-text-light)", margin: "0 0 28px", fontStyle: "italic" }}>
-            The three kits cost $57 separately and $39 together.
-          </p>
-          <BuyButton paymentLink={PAYMENT_LINK} product="bundle" price="$39" size="large" />
-          <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "10px", fontStyle: "italic" }}>
-            One checkout, one ZIP, 30-day refund
-          </p>
-        </header>
+      <Section title="The math">
+        <Facts
+          items={[
+            ["Bought separately", "$19 + $29 + $9 = $57"],
+            ["The Complete Pack", <strong key="b" className="ui-gold">$39 for all three</strong>],
+            ["What changes", "The bundle costs $18 less and holds the same files, with the same 30-day refund."],
+          ]}
+        />
+      </Section>
 
-        {/* What's inside */}
-        <section style={{ marginBottom: "40px", display: "grid", gap: "20px" }}>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", color: "var(--color-warm-text)", fontWeight: 600, textAlign: "center", margin: 0 }}>
-            What&apos;s <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>inside</em>
-          </h2>
-
-          <article className="pv-card" style={{ padding: "28px 32px" }}>
-            <span className="b3"></span><span className="b4"></span>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "12px", flexWrap: "wrap", gap: "10px" }}>
-              <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", color: "var(--color-warm-text)", margin: 0, fontWeight: 600 }}>PV AI Starter Kit</h3>
-              <span style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", letterSpacing: "0.18em" }}>$19 standalone</span>
-            </div>
-            <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.7, margin: 0 }}>
-              24 AI tool prompts, 5 sales scripts, the full rep handbook, 50+ cold outreach templates, a 1099 contractor agreement and a CRM CSV. 42 files of prompts, scripts and templates Purcell Ventures uses.
-            </p>
-          </article>
-
-          <article className="pv-card" style={{ padding: "28px 32px" }}>
-            <span className="b3"></span><span className="b4"></span>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "12px", flexWrap: "wrap", gap: "10px" }}>
-              <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", color: "var(--color-warm-text)", margin: 0, fontWeight: 600 }}>Cold Email Mastery Pack</h3>
-              <span style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", letterSpacing: "0.18em" }}>$29 standalone</span>
-            </div>
-            <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.7, margin: 0 }}>
-              100 cold email templates for 10 industries, 80 subject lines, 30 reply-handling scripts, an AI scoring rubric, 4 email sequences and a list-building playbook.
-            </p>
-          </article>
-
-          <article className="pv-card" style={{ padding: "28px 32px" }}>
-            <span className="b3"></span><span className="b4"></span>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "12px", flexWrap: "wrap", gap: "10px" }}>
-              <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", color: "var(--color-warm-text)", margin: 0, fontWeight: 600 }}>Subject Line Library</h3>
-              <span style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", letterSpacing: "0.18em" }}>$9 standalone</span>
-            </div>
-            <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.7, margin: 0 }}>
-              80 cold email subject lines in 8 categories, 20 lines to avoid, an A/B testing matrix and a mobile preview cheat sheet.
-            </p>
-          </article>
-        </section>
-
-        {/* Math block */}
-        <section style={{ marginBottom: "40px", padding: "28px 32px", background: "linear-gradient(135deg, rgba(212,175,55,0.10), rgba(212,175,55,0.02))", border: "2px solid var(--color-warm-accent)", textAlign: "center" }}>
-          <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "16px" }}>
-            The math
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr auto 1fr auto 1fr", gap: "8px", alignItems: "center", fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", color: "var(--color-warm-text)" }}>
-            <div>$19</div>
-            <div style={{ color: "var(--color-warm-text-muted)" }}>+</div>
-            <div>$29</div>
-            <div style={{ color: "var(--color-warm-text-muted)" }}>+</div>
-            <div>$9</div>
-            <div style={{ color: "var(--color-warm-text-muted)" }}>=</div>
-            <div style={{ color: "var(--color-warm-text-muted)", textDecoration: "line-through" }}>$57</div>
-          </div>
-          <div style={{ marginTop: "12px", fontFamily: "'Cinzel', Georgia, serif", fontSize: "32px", color: "var(--color-warm-accent)", fontWeight: 700 }}>
-            $39 for all three
-          </div>
-          <p style={{ marginTop: "8px", fontSize: "12px", color: "var(--color-warm-text-muted)", fontStyle: "italic" }}>
-            The bundle costs $18 less and contains the same files, with the same 30-day refund.
-          </p>
-        </section>
-
-        {/* Final CTA */}
-        <div style={{ textAlign: "center", padding: "32px", background: "var(--color-warm-bg-alt)", border: "2px solid var(--color-warm-accent)" }}>
-          <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", color: "var(--color-warm-text)", fontWeight: 700, margin: "0 0 12px" }}>
-            All 3 products for <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>$39, paid once</em>
-          </h3>
-          <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: "0 0 20px" }}>
-            61 files total. Stripe emails the download link after checkout.
-          </p>
+      <Section title="All three for $39, paid once" intro="61 files in all. Stripe emails the download link after checkout.">
+        <div className="ui-hero__actions" style={{ marginTop: 0 }}>
           <BuyButton paymentLink={PAYMENT_LINK} product="bundle" price="$39" size="small" />
         </div>
-
-        <p style={{ marginTop: "32px", textAlign: "center", fontSize: "12px", color: "var(--color-warm-text-light)" }}>
-          To buy them one at a time, <Link href="/shop" style={{ color: "var(--color-warm-accent)" }}>see all 3 separately</Link>.
-        </p>
-
-      </main>
-    </div>
+        <Prose>
+          <p style={{ marginTop: 24 }}>
+            To buy them one at a time, <Link href="/shop">see all three separately</Link>.
+          </p>
+        </Prose>
+      </Section>
+    </main>
   );
 }

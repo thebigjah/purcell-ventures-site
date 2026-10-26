@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Elijah Purcell's Portfolio: Shipped Software and AI Projects",
+  title: "Portfolio of shipped software and AI projects",
   description:
-    "17 projects: web apps in Next.js and React, a mobile app in Expo, AI tools and internal automation in Python.",
+    "17 projects Elijah Purcell built and maintains: web apps in Next.js and React, a mobile app in Expo, AI tools and internal automation in Python.",
   keywords: [
     "purcell ventures portfolio", "shipped projects", "next.js web apps",
     "expo mobile apps", "ai tools built", "Atlanta software developer",
   ],
   openGraph: {
-    title: "Portfolio: what we've built at Purcell Ventures",
+    title: "Portfolio of shipped software and AI projects",
     description: "17 projects: web apps, a mobile app, AI tools and internal systems.",
     url: "https://purcellventures.co/portfolio",
     type: "website",
@@ -48,7 +48,7 @@ const FAQ_LD = {
       "name": "What has Elijah Purcell built?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Live, working products including UA Today, a campus events service for the University of Alabama aggregating six sources; English Pruitt Photography, paid client work sourced through cold outreach; The Loom, an autonomous lead-generation crawler; and Boyfriend Camera, which runs computer vision on the device. Every entry on the portfolio page links to something that loads."
+        "text": "Working products including UA Today, a University of Alabama events feed built from six sources, English Pruitt Photography, a paid client site found through cold outreach, The Loom, a lead-generation crawler that runs on a schedule, and Boyfriend Camera, which runs computer vision on the phone. The portfolio lists 17 projects, and every live entry links to the working product."
       }
     }
   ]

@@ -19,23 +19,11 @@ export function BuyButton({ paymentLink, product, price, size = "large" }: { pay
     logClick(product, "buy-button");
   }
 
+  // Restyled on the page kit 26 Oct 2026. The link, the referral capture and the click
+  // log are unchanged.
   if (size === "small") {
     return (
-      <a
-        href={href}
-        onClick={handleClick}
-        style={{
-          display: "inline-block",
-          padding: "12px 24px",
-          background: "var(--color-warm-accent)",
-          color: "var(--color-warm-bg)",
-          fontFamily: "'Cinzel', Georgia, serif",
-          fontSize: "14px",
-          fontWeight: 700,
-          textDecoration: "none",
-          letterSpacing: "0.04em",
-        }}
-      >
+      <a href={href} onClick={handleClick} className="ui-btn" style={{ minHeight: 48 }}>
         Buy now
       </a>
     );
@@ -43,28 +31,12 @@ export function BuyButton({ paymentLink, product, price, size = "large" }: { pay
 
   return (
     <>
-      <a
-        href={href}
-        onClick={handleClick}
-        style={{
-          display: "inline-block",
-          padding: "16px 40px",
-          background: "var(--color-warm-accent)",
-          color: "var(--color-warm-bg)",
-          fontFamily: "'Cinzel', Georgia, serif",
-          fontSize: "18px",
-          fontWeight: 700,
-          textDecoration: "none",
-          border: "none",
-          letterSpacing: "0.04em",
-          cursor: "pointer",
-        }}
-      >
+      <a href={href} onClick={handleClick} className="ui-btn" style={{ minHeight: 52, fontSize: 17, padding: "16px 28px" }}>
         Buy now for {price}
       </a>
       {ref && (
-        <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "8px", fontStyle: "italic" }}>
-          Referred by <strong>{ref}</strong>, who gets credit if you buy
+        <p className="ui-muted ui-small" style={{ margin: 0, flexBasis: "100%" }}>
+          Referred by <strong>{ref}</strong>, who gets credit if you buy.
         </p>
       )}
     </>

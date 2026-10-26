@@ -1,508 +1,247 @@
-"use client";
-import { useState } from "react";
-import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+import type { ReactNode } from "react";
+import { PageHero, Section, Figures, Rows, Tiers, Faq, Button, Note, Prose } from "@/app/components/ui";
+import { CONTACT } from "@/lib/contact";
+import WaitlistForm from "../WaitlistForm";
 
-// ── Lemon Squeezy URLs, swap these when account is live ──────────────────────
-const LS_FULL  = "#waitlist";
-const LS_PLAN  = "#waitlist";
-const LS_COACH = "#waitlist";
-const LS_ONE   = "#waitlist";
+// THE COLLEGE APPLICATION PLAYBOOK, rebuilt on the page kit 26 Oct 2026.
+//
+// - This is the one page on the site allowed to print the scholarship total ($530,384).
+// - The pay-in-full / payment-plan toggle is gone: each tier now shows both prices at
+//   once, which is one less tap on a phone and hides nothing.
+// - Every enroll button pointed at #waitlist while the Lemon Squeezy account is not live.
+//   When it is, swap the tier buttons to the checkout links.
 
-// ── Curriculum ────────────────────────────────────────────────────────────────
-const MODULES = [
+type Lesson = { title: string; duration: string; format: string };
+type Module = { title: string; totalMin: number; lessons: Lesson[] };
+
+const MODULES: Module[] = [
   {
-    num: "01", title: "How Admissions Works", lessonCount: 2, totalMin: 20,
+    title: "How admissions works", totalMin: 20,
     lessons: [
-      { id: "1-1", title: "How the admissions system works", duration: "12 min", format: "Camera" },
-      { id: "1-2", title: "The timeline: 9th grade through senior fall", duration: "8 min", format: "Screen share" },
+      { title: "How the admissions system works", duration: "12 min", format: "Camera" },
+      { title: "The timeline from 9th grade to senior fall", duration: "8 min", format: "Screen share" },
     ],
   },
   {
-    num: "02", title: "Building Your School List", lessonCount: 3, totalMin: 35,
+    title: "Building your school list", totalMin: 35,
     lessons: [
-      { id: "2-1", title: "How I found 98 schools: live spreadsheet walkthrough", duration: "14 min", format: "Screen share" },
-      { id: "2-2", title: "Reach, match and safety schools by the numbers", duration: "10 min", format: "Camera" },
-      { id: "2-3", title: "Scholarship hunting before you apply", duration: "11 min", format: "Camera + Screen" },
+      { title: "How I found 98 schools: a live spreadsheet walkthrough", duration: "14 min", format: "Screen share" },
+      { title: "Reach, match and safety schools by the numbers", duration: "10 min", format: "Camera" },
+      { title: "Hunting for scholarships before you apply", duration: "11 min", format: "Camera and screen" },
     ],
   },
   {
-    num: "03", title: "Your Application Foundation", lessonCount: 3, totalMin: 24,
+    title: "Your application foundation", totalMin: 24,
     lessons: [
-      { id: "3-1", title: "Writing the activities list", duration: "9 min", format: "Camera" },
-      { id: "3-2", title: "Honors, awards and where to find more", duration: "8 min", format: "Camera" },
-      { id: "3-3", title: "Letters of rec strategy", duration: "7 min", format: "Camera" },
+      { title: "Writing the activities list", duration: "9 min", format: "Camera" },
+      { title: "Honors, awards and where to find more", duration: "8 min", format: "Camera" },
+      { title: "A strategy for recommendation letters", duration: "7 min", format: "Camera" },
     ],
   },
   {
-    num: "04", title: "The Essays", lessonCount: 4, totalMin: 51,
+    title: "The essays", totalMin: 51,
     lessons: [
-      { id: "4-1", title: "What admissions readers look for in a personal statement", duration: "13 min", format: "Camera" },
-      { id: "4-2", title: "Writing your essay live", duration: "18 min", format: "Screen share" },
-      { id: "4-3", title: "Writing many supplementals efficiently", duration: "12 min", format: "Camera + Screen" },
-      { id: "4-4", title: "Getting feedback and revising", duration: "8 min", format: "Camera" },
+      { title: "What admissions readers look for in a personal statement", duration: "13 min", format: "Camera" },
+      { title: "Writing your essay live", duration: "18 min", format: "Screen share" },
+      { title: "Writing many supplemental essays efficiently", duration: "12 min", format: "Camera and screen" },
+      { title: "Getting feedback and revising", duration: "8 min", format: "Camera" },
     ],
   },
   {
-    num: "05", title: "Financial Aid & Scholarships", lessonCount: 3, totalMin: 41,
+    title: "Financial aid and scholarships", totalMin: 41,
     lessons: [
-      { id: "5-1", title: "FAFSA and CSS Profile explained", duration: "15 min", format: "Screen share" },
-      { id: "5-2", title: "My scholarship search process", duration: "16 min", format: "Screen share" },
-      { id: "5-3", title: "Negotiating your award package", duration: "10 min", format: "Camera" },
+      { title: "The FAFSA and the CSS Profile explained", duration: "15 min", format: "Screen share" },
+      { title: "My scholarship search process", duration: "16 min", format: "Screen share" },
+      { title: "Negotiating your award package", duration: "10 min", format: "Camera" },
     ],
   },
   {
-    num: "06", title: "The Final Stretch", lessonCount: 2, totalMin: 20,
+    title: "The final stretch", totalMin: 20,
     lessons: [
-      { id: "6-1", title: "EA and ED: when to commit early", duration: "11 min", format: "Camera" },
-      { id: "6-2", title: "Comparing offers and making the decision", duration: "9 min", format: "Camera" },
+      { title: "Early action and early decision: when to commit early", duration: "11 min", format: "Camera" },
+      { title: "Comparing offers and making the decision", duration: "9 min", format: "Camera" },
     ],
   },
 ];
 
-// ── Pricing ───────────────────────────────────────────────────────────────────
+const JOIN = <p style={{ marginTop: 18 }}><Button href="#waitlist" ghost>Join the waitlist</Button></p>;
+
 const TIERS = [
   {
-    name: "Self-Paced",
-    price: "$297",
-    plan: "or 3 payments of $109",
-    highlight: false,
-    lsFull: LS_FULL,
-    lsPlan: LS_PLAN,
-    features: [
-      "All 6 modules, 17 lessons",
-      "Camera, screen share and written content",
+    name: "Self-paced",
+    price: "$297, or 3 payments of $109",
+    items: [
+      "All 6 modules and 17 lessons",
+      "Camera lessons, screen shares and written notes",
       "My school list spreadsheet as a template",
-      "Essay brainstorm worksheet",
-      "Scholarship tracker template",
-      "Lifetime access and future updates",
+      "An essay brainstorm worksheet",
+      "A scholarship tracker template",
+      "Every lesson as it is released, and access for life",
     ],
+    children: JOIN,
   },
   {
-    name: "Coaching Track",
-    price: "$997",
-    plan: "or 3 payments of $349",
-    highlight: true,
-    lsFull: LS_COACH,
-    lsPlan: LS_COACH,
-    features: [
-      "Everything in Self-Paced",
-      "3 monthly group Q&A sessions with Elijah",
-      "Recorded session replays",
-      "Priority essay feedback in group calls",
-      "Access to cohort community",
+    name: "Coaching track",
+    price: "$997, or 3 payments of $349",
+    items: [
+      "Everything in Self-paced",
+      "Three monthly group Q&A sessions with me",
+      "Recordings of every session",
+      "Priority essay feedback in the group calls",
+      "Access to the cohort community",
     ],
+    children: JOIN,
   },
   {
-    name: "1:1 Intensive",
-    price: "$2,500",
-    plan: "payment plans available",
-    highlight: false,
-    lsFull: LS_ONE,
-    lsPlan: LS_ONE,
-    features: [
-      "Everything in Coaching Track",
-      "3 hours direct with Elijah",
-      "Personal statement review and feedback",
-      "School list strategy session",
-      "Financial aid negotiation prep",
-      "Direct email access during application season",
+    name: "One-on-one intensive",
+    price: "$2,500, with payment plans available",
+    items: [
+      "Everything in the Coaching track",
+      "Three hours one-on-one with me",
+      "A review of your personal statement, with feedback",
+      "A school list strategy session",
+      "Preparation for your financial aid negotiation",
+      "Email me directly during application season",
     ],
+    children: JOIN,
   },
 ];
 
-// ── FAQ ────────────────────────────────────────────────────────────────────────
-const FAQS = [
+const FAQS: { q: ReactNode; a: ReactNode }[] = [
   {
-    q: "Is this for high schoolers or parents?",
-    a: "Both. I wrote the content so the student can follow it alone, but parents can use it too, especially the financial aid and scholarship modules.",
+    q: "Is this for high school students or parents?",
+    a: "Both. I wrote it so a student can follow it alone, and parents can use it too, especially the financial aid and scholarship modules.",
   },
   {
-    q: "I'm already a junior or senior. Is it too late?",
-    a: "No. The essay modules, financial aid sections and scholarship process apply at any point in the timeline. The earlier modules on building your list are still useful if you haven't finalized schools.",
+    q: "I am already a junior or senior. Is it too late?",
+    a: "No. The essay, financial aid and scholarship modules apply at any point in the timeline. The modules on building a list still help if you have not finalized your schools.",
   },
   {
-    q: "You are nineteen. Why should I take college advice from you?",
-    a: "I went through it recently. I researched 98 schools, got 34 acceptances and $530,384 per year in scholarship offers. I wrote down what worked and what didn't as I went. A counselor has more years of experience. I have a recent, documented process.",
+    q: "You are nineteen. Why take college advice from you?",
+    a: "I went through it in the last two years. I researched 98 schools and got 34 acceptances and $530,384 a year in scholarship offers, and I wrote down what worked and what failed as I went. A counselor has more years of experience. I have a recent, documented process.",
   },
   {
-    q: "Does this work for scholarships specifically, or just admissions?",
-    a: "Both. Module 5 covers FAFSA, the CSS Profile and the scholarship search process I used to find and apply for the offers that added up to $530,384 per year.",
+    q: "Does it cover scholarships, or only admissions?",
+    a: "Both. Module 5 covers the FAFSA, the CSS Profile and the scholarship search I used to find and apply for the offers that added up to $530,384 a year.",
   },
   {
-    q: "What's an access code and how does it work?",
-    a: "After you purchase, Lemon Squeezy sends you a confirmation email with a unique access code. You enter it once on the course page and your browser remembers it, no login or account needed.",
+    q: "How does the access code work?",
+    a: "After you buy, Lemon Squeezy emails you a confirmation with a unique access code. You enter it once on the course page and your browser remembers it. You need no login or account.",
   },
   {
     q: "How long do I have access?",
-    a: "Lifetime. The course stays on this site as long as Purcell Ventures exists. You also get future updates: new lessons, updated templates and changes based on student feedback.",
+    a: "For life. The course stays on this site as long as Purcell Ventures exists, and you get every update: new lessons, revised templates and changes based on student feedback.",
   },
   {
-    q: "What's the difference between the Coaching Track and 1:1 Intensive?",
-    a: "Coaching Track gets you into monthly group calls where I answer your questions live. The 1:1 Intensive is private hours with me: we review your personal statement, build your school list strategy together, and prep your financial aid negotiation.",
+    q: "How do the Coaching track and the one-on-one intensive differ?",
+    a: "The Coaching track puts you in monthly group calls where I answer your questions live. The one-on-one intensive is private hours with me: we review your personal statement, build your school list strategy together and prepare your financial aid negotiation.",
   },
   {
     q: "Can I upgrade later?",
-    a: "Yes. If you start with Self-Paced and want to add coaching, email me and I'll credit what you paid toward the upgrade.",
+    a: "Yes. If you start with Self-paced and want coaching, email me and I will credit what you paid toward the upgrade.",
   },
 ];
 
-// ─────────────────────────────────────────────────────────────────────────────
-
 export default function CollegeAppsPage() {
-  const [openModule, setOpenModule] = useState<number | null>(null);
-  const [openFaq,    setOpenFaq]    = useState<number | null>(null);
-  const [payMode,    setPayMode]    = useState<"full" | "plan">("full");
-  const [email,      setEmail]      = useState("");
-  const [waitlisted, setWaitlisted] = useState(false);
-
-  async function handleWaitlist(e: React.FormEvent) {
-    e.preventDefault();
-    if (!email.trim()) return;
-    try {
-      await fetch("/api/waitlist", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email.trim(), course: "college-apps" }),
-      });
-    } catch {}
-    setWaitlisted(true);
-  }
-
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative", overflowX: "hidden" }}>
-      <VignetteBackground />
-      <style>{`
-        .ca-stat-bar { display: flex; gap: 48px; flex-wrap: wrap; }
-        .ca-diff-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
-        .ca-who-grid  { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 1px; }
-        @media (max-width: 767px) {
-          .ca-stat-bar { gap: 28px; }
-          .ca-diff-grid { grid-template-columns: 1fr; }
-          .ca-hero-btns { flex-direction: column; }
-        }
-      `}</style>
+    <main>
+      <PageHero
+        planet="courses"
+        kicker="Course: The College Application Playbook"
+        title="34 acceptances from 98 schools, and $530,384 a year in scholarship offers."
+        lede="I am Elijah Purcell. I am 19 and went through college applications in the last two years. This course teaches what I learned, in the order I would have wanted it."
+        meta="Waitlist open. I am still recording the course."
+        actions={<>
+          <Button href="#waitlist">Join the waitlist</Button>
+          <Button href="#curriculum" ghost>See what is inside</Button>
+        </>}
+      />
 
-      {/* ── Hero ─────────────────────────────────────────────────────────────── */}
-      <section style={{ position: "relative", zIndex: 5, padding: "72px 36px 60px", maxWidth: "1080px", margin: "0 auto" }}>
-        <header className="pv-page-head" style={{ marginBottom: 0 }}>
-          <div className="pv-mono-label">Course: College Application Playbook</div>
-          <h1 style={{ margin: 0 }}>
-            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>34 acceptances</em> from 98 schools,
-            <br />
-            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>$530,384 per year</em> in offers.
-          </h1>
-          <p className="deck">
-            I&apos;m Elijah Purcell. I&apos;m 19 and I went through the college application process recently. This course is what I learned, documented and taught in the order I would have wanted.
-          </p>
-          <div className="ca-hero-btns" style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
-            <a href="#curriculum" className="pv-btn-ghost">See what&apos;s inside</a>
-            <a href="#waitlist" className="pv-btn-primary">Join the waitlist</a>
-          </div>
-          {/* Stats band */}
-          <div style={{
-            marginTop: "32px",
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: 0,
-            border: "1px solid var(--color-warm-border)",
-            background: "var(--color-warm-bg-alt)",
-          }}>
-            {[
-              { num: "34",     label: "Acceptances" },
-              { num: "$530,384", label: "Scholarship offers per year" },
-              { num: "98",     label: "Schools researched" },
-              { num: "17",     label: "Lessons" },
-            ].map((s, i) => (
-              <div key={s.label} style={{
-                padding: "20px 12px",
-                textAlign: "center",
-                borderRight: i < 3 ? "1px solid var(--color-warm-border)" : "none",
-              }}>
-                <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 700, color: "var(--color-warm-accent)", letterSpacing: "-0.01em" }}>
-                  {s.num}
-                </div>
-                <div className="pv-mono-label" style={{ marginTop: "6px", color: "var(--color-warm-text-light)" }}>
-                  {s.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </header>
-      </section>
+      <Section title="The numbers behind it">
+        <Figures
+          items={[
+            ["34", "Acceptances"],
+            ["$530,384", "Scholarship offers a year"],
+            ["98", "Schools researched"],
+            ["17", "Lessons"],
+          ]}
+        />
+      </Section>
 
-      {/* ── Who this is for ───────────────────────────────────────────────────── */}
-      <section style={{ padding: "80px 24px", borderBottom: "1px solid var(--color-warm-border)" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontFamily: "var(--font-inter), sans-serif" }}>Who This Is For</div>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(24px, 3.5vw, 36px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "48px", lineHeight: 1.1 }}>
-            Four groups get the most<br />from this course.
-          </h2>
-          <div className="ca-who-grid" style={{ background: "var(--color-warm-border)", borderRadius: 10, overflow: "hidden" }}>
-            {[
-              { title: "High schoolers (9th to 12th grade)", body: "You're in the middle of it. Whether you're just starting to think about college or finalizing your list senior year, the course covers your stage." },
-              { title: "Parents of applicants", body: "Especially if scholarship money is the goal. Two modules cover financial aid and scholarships." },
-              { title: "First-generation students", body: "Nobody in your family has done this before. The course starts from the beginning on applications, financial aid and choosing schools." },
-              { title: "Students who've been rejected", body: "Waitlisted, deferred or turned down by your top choice last cycle. The course covers what affects admissions decisions." },
-            ].map(w => (
-              <div key={w.title} style={{ background: "var(--color-warm-bg)", padding: "32px 28px" }}>
-                <div style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--color-warm-accent)", marginBottom: "16px" }} />
-                <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "15px", fontWeight: 600, color: "var(--color-warm-text)", marginBottom: "10px" }}>{w.title}</div>
-                <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>{w.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Section title="Who it is for" intro="Four groups get the most from this course.">
+        <Rows
+          items={[
+            { name: "High school students, 9th to 12th grade", line: "Whether you are starting to think about college or finalizing your list in senior year, the course covers your stage." },
+            { name: "Parents of applicants", line: "Especially when scholarship money is the goal. Two modules cover financial aid and scholarships." },
+            { name: "First-generation students", line: "No one in your family has applied to college before. The course starts at the beginning: applications, financial aid and choosing schools." },
+            { name: "Students who were turned down", line: "Waitlisted, deferred or rejected by your top choice last cycle. The course covers what affects admissions decisions." },
+          ]}
+        />
+      </Section>
 
-      {/* ── Curriculum ────────────────────────────────────────────────────────── */}
-      <section id="curriculum" style={{ padding: "80px 24px", borderBottom: "1px solid var(--color-warm-border)" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontFamily: "var(--font-inter), sans-serif" }}>Curriculum</div>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(24px, 3.5vw, 36px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "8px", lineHeight: 1.1 }}>
-            6 modules and 17 lessons<br />from list to decision.
-          </h2>
-          <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "48px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            Camera lessons, screen shares of my process, and written notes for every lesson. Planned length: 3 hours of video.
-          </p>
-          <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
-            {MODULES.map((mod, i) => {
-              const open = openModule === i;
-              return (
-                <div key={mod.num} style={{ border: "1px solid var(--color-warm-border)", borderRadius: 6, overflow: "hidden", background: open ? "var(--color-warm-card)" : "transparent" }}>
-                  <button
-                    onClick={() => setOpenModule(open ? null : i)}
-                    style={{
-                      width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between",
-                      padding: "20px 24px", background: "none", border: "none", cursor: "pointer", textAlign: "left",
-                    }}
-                  >
-                    <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-                      <span style={{ fontSize: "11px", fontWeight: 700, color: "var(--color-warm-accent)", letterSpacing: "0.1em", fontFamily: "var(--font-inter), sans-serif", minWidth: 72 }}>
-                        MODULE {mod.num}
-                      </span>
-                      <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "15px", fontWeight: 600, color: "var(--color-warm-text)" }}>{mod.title}</span>
-                    </div>
-                    <div style={{ display: "flex", alignItems: "center", gap: "16px", flexShrink: 0 }}>
-                      <span style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>{mod.lessonCount} lessons, {mod.totalMin} min</span>
-                      <span style={{ fontSize: "20px", color: "var(--color-warm-accent)", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s", lineHeight: 1 }}>+</span>
-                    </div>
-                  </button>
-                  {/* In the DOM whether or not it is open. Conditional rendering meant a closed
-    panel was never sent, so a crawler saw the headings and none of the prose. */}
-<div hidden={!open} style={{ padding: "0 24px 24px" }}>
-                      {mod.lessons.map((l, li) => (
-                        <div key={l.id} style={{
-                          display: "flex", alignItems: "center", justifyContent: "space-between",
-                          padding: "12px 0",
-                          borderTop: li === 0 ? "1px solid var(--color-warm-border)" : "none",
-                          borderBottom: "1px solid var(--color-warm-border)",
-                        }}>
-                          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                            <span style={{ fontSize: "11px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif", minWidth: 20 }}>
-                              {li + 1}.
-                            </span>
-                            <span style={{ fontSize: "14px", color: "var(--color-warm-text)", fontFamily: "var(--font-dm-sans), sans-serif" }}>{l.title}</span>
-                          </div>
-                          <div style={{ display: "flex", gap: "8px", flexShrink: 0 }}>
-                            <span style={{ fontSize: "10px", padding: "2px 8px", border: "1px solid var(--color-warm-border)", borderRadius: 20, color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>
-                              {l.format}
-                            </span>
-                            <span style={{ fontSize: "11px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>{l.duration}</span>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── What makes this different ─────────────────────────────────────────── */}
-      <section style={{ padding: "80px 24px", borderBottom: "1px solid var(--color-warm-border)" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontFamily: "var(--font-inter), sans-serif" }}>Why This Course</div>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(24px, 3.5vw, 36px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "48px", lineHeight: 1.1 }}>
-            What the course includes.
-          </h2>
-          <div className="ca-diff-grid">
-            {[
-              {
-                title: "Recent Experience",
-                body: "I went through the admissions process recently. Every lesson is based on what I did.",
-              },
-              {
-                title: "My Numbers",
-                body: "34 acceptances and $530,384 per year in scholarship offers. I will show the spreadsheet, the emails and the timelines.",
-              },
-              {
-                title: "Process",
-                body: "This course shows screen shares of the tools I used, the templates I built and step-by-step walkthroughs of each major task.",
-              },
-            ].map(d => (
-              <div key={d.title} style={{ padding: "32px", border: "1px solid var(--color-warm-border)", borderRadius: 8 }}>
-                <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "16px", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "12px" }}>{d.title}</div>
-                <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.75, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>{d.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Pricing ───────────────────────────────────────────────────────────── */}
-      <section id="pricing" style={{ padding: "80px 24px", borderBottom: "1px solid var(--color-warm-border)" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontFamily: "var(--font-inter), sans-serif" }}>Pricing</div>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(24px, 3.5vw, 36px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "16px", lineHeight: 1.1 }}>
-            Three ways to enroll
-          </h2>
-          <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "40px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            The course opens when recording is complete. Waitlist members get the early-access price.
-          </p>
-
-          {/* Payment mode toggle */}
-          <div style={{ display: "flex", gap: "6px", marginBottom: "32px" }}>
-            {(["full", "plan"] as const).map(m => (
-              <button key={m} onClick={() => setPayMode(m)} style={{
-                padding: "6px 16px", fontSize: "12px", fontWeight: 600,
-                background: payMode === m ? "var(--color-warm-accent)" : "none",
-                color: payMode === m ? "var(--color-warm-bg)" : "var(--color-warm-text-muted)",
-                border: "1px solid " + (payMode === m ? "var(--color-warm-accent)" : "var(--color-warm-border)"),
-                borderRadius: 4, cursor: "pointer", fontFamily: "var(--font-inter), sans-serif",
-              }}>
-                {m === "full" ? "Pay in Full" : "Payment Plan"}
-              </button>
-            ))}
-          </div>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1px", background: "var(--color-warm-border)", borderRadius: 10, overflow: "hidden" }}>
-            {TIERS.map(tier => (
-              <div key={tier.name} style={{ background: tier.highlight ? "var(--color-warm-accent)" : "var(--color-warm-bg)", padding: "40px 32px", display: "flex", flexDirection: "column" }}>
-                <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: tier.highlight ? "rgba(12,10,8,0.6)" : "var(--color-warm-accent)", marginBottom: "8px", fontFamily: "var(--font-inter), sans-serif" }}>
-                  {tier.name}
-                </div>
-                <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "44px", fontWeight: 900, letterSpacing: "-0.03em", color: tier.highlight ? "var(--color-warm-bg)" : "var(--color-warm-text)", lineHeight: 1, marginBottom: "4px" }}>
-                  {tier.price}
-                </div>
-                <div style={{ fontSize: "12px", color: tier.highlight ? "rgba(12,10,8,0.55)" : "var(--color-warm-text-muted)", marginBottom: "32px", fontFamily: "var(--font-inter), sans-serif" }}>
-                  {payMode === "plan" ? tier.plan : "one-time payment"}
-                </div>
-                <ul style={{ margin: "0 0 32px", paddingLeft: "0", listStyle: "none", flex: 1 }}>
-                  {tier.features.map(f => (
-                    <li key={f} style={{ display: "flex", gap: "10px", alignItems: "flex-start", marginBottom: "10px" }}>
-                      <span style={{ color: tier.highlight ? "var(--color-warm-bg)" : "var(--color-warm-accent)", fontSize: "14px", lineHeight: 1.5, flexShrink: 0 }}>✓</span>
-                      <span style={{ fontSize: "13px", color: tier.highlight ? "rgba(12,10,8,0.8)" : "var(--color-warm-text-muted)", lineHeight: 1.55, fontFamily: "var(--font-dm-sans), sans-serif" }}>{f}</span>
+      <Section
+        id="curriculum"
+        title="Six modules, 17 lessons"
+        intro="Camera lessons, screen shares of my process and written notes for every lesson. Planned length: 3 hours of video."
+      >
+        <Faq
+          items={MODULES.map((m, i) => ({
+            q: `Module ${i + 1}: ${m.title}, ${m.lessons.length} lessons, ${m.totalMin} min`,
+            a: (
+              <Prose>
+                <ol>
+                  {m.lessons.map((l) => (
+                    <li key={l.title}>
+                      {l.title} <span className="ui-muted ui-small">({l.format}, {l.duration})</span>
                     </li>
                   ))}
-                </ul>
-                <a href="#waitlist" style={{
-                  display: "block", textAlign: "center",
-                  padding: "13px 20px", fontSize: "13px", fontWeight: 700,
-                  color: tier.highlight ? "var(--color-warm-bg)" : "var(--color-warm-accent)",
-                  border: "2px solid " + (tier.highlight ? "var(--color-warm-bg)" : "var(--color-warm-accent)"),
-                  borderRadius: 6, textDecoration: "none", letterSpacing: "0.06em",
-                  fontFamily: "var(--font-inter), sans-serif",
-                }}>
-                  Join the waitlist
-                </a>
-              </div>
-            ))}
-          </div>
+                </ol>
+              </Prose>
+            ),
+          }))}
+        />
+      </Section>
 
-          <div style={{ marginTop: "16px", padding: "16px 20px", background: "var(--color-warm-card)", border: "1px solid var(--color-warm-border)", borderRadius: 6, fontSize: "12px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-inter), sans-serif" }}>
-            Prices in USD. Lemon Squeezy processes payments. The access code arrives by email within 5 minutes of purchase.
-          </div>
-        </div>
-      </section>
+      <Section title="What the course includes">
+        <Rows
+          items={[
+            { name: "Recent experience", line: "I went through admissions in the last two years. Every lesson is based on what I did." },
+            { name: "My numbers", line: "34 acceptances and $530,384 a year in scholarship offers. The course shows the spreadsheet, the emails and the timelines." },
+            { name: "The process on screen", line: "Screen shares of the tools I used, the templates I built and step-by-step walkthroughs of each major task." },
+          ]}
+        />
+      </Section>
 
-      {/* ── Waitlist ──────────────────────────────────────────────────────────── */}
-      <section id="waitlist" style={{ padding: "100px 24px", borderBottom: "1px solid var(--color-warm-border)" }}>
-        <div style={{ maxWidth: "560px", margin: "0 auto", textAlign: "center" }}>
-          <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "16px", fontFamily: "var(--font-inter), sans-serif" }}>
-            Waitlist
-          </div>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "16px", lineHeight: 1.1 }}>
-            The waitlist
-          </h2>
-          <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", lineHeight: 1.75, marginBottom: "40px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            Waitlist members get early access pricing and first notification when the course opens.
-          </p>
-          {waitlisted ? (
-            <div style={{ padding: "24px 32px", background: "var(--color-warm-card)", border: "1px solid var(--color-warm-accent)", borderRadius: 8 }}>
-              <div style={{ fontSize: "16px", fontWeight: 600, color: "var(--color-warm-accent)", fontFamily: "'Cinzel', Georgia, serif", marginBottom: "6px" }}>You're on the list.</div>
-              <div style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", fontFamily: "var(--font-dm-sans), sans-serif" }}>I'll email you when enrollment opens.</div>
-            </div>
-          ) : (
-            <form onSubmit={handleWaitlist} style={{ display: "flex", gap: "8px" }}>
-              <input
-                type="email"
-                required
-                placeholder="your@email.com"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                style={{
-                  flex: 1, padding: "13px 16px", fontSize: "14px",
-                  background: "var(--color-warm-card)", border: "1px solid var(--color-warm-border)",
-                  borderRadius: 6, color: "var(--color-warm-text)", outline: "none",
-                  fontFamily: "var(--font-inter), sans-serif",
-                }}
-              />
-              <button type="submit" style={{
-                padding: "13px 24px", fontSize: "13px", fontWeight: 700,
-                background: "var(--color-warm-accent)", color: "var(--color-warm-bg)",
-                border: "none", borderRadius: 6, cursor: "pointer", letterSpacing: "0.06em",
-                fontFamily: "var(--font-inter), sans-serif", whiteSpace: "nowrap",
-              }}>
-                Notify me
-              </button>
-            </form>
-          )}
-          <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "14px", fontFamily: "var(--font-inter), sans-serif" }}>
-            I send one email when enrollment opens.
-          </p>
+      <Section
+        id="pricing"
+        title="Three ways to enroll"
+        intro="The course opens when recording is complete. Waitlist members get the early-access price."
+      >
+        <Tiers tiers={TIERS} />
+        <div style={{ marginTop: 28 }}>
+          <Note>Prices are in US dollars. Lemon Squeezy processes payments, and the access code arrives by email within 5 minutes of purchase.</Note>
         </div>
-      </section>
+      </Section>
 
-      {/* ── FAQ ───────────────────────────────────────────────────────────────── */}
-      <section style={{ padding: "80px 24px 120px" }}>
-        <div style={{ maxWidth: "760px", margin: "0 auto" }}>
-          <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontFamily: "var(--font-inter), sans-serif" }}>FAQ</div>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "clamp(24px, 3.5vw, 36px)", fontWeight: 700, color: "var(--color-warm-text)", marginBottom: "40px" }}>
-            Common questions.
-          </h2>
-          <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
-            {FAQS.map((faq, i) => {
-              const open = openFaq === i;
-              return (
-                <div key={i} style={{ border: "1px solid var(--color-warm-border)", borderRadius: 6, background: open ? "var(--color-warm-card)" : "transparent" }}>
-                  <button
-                    onClick={() => setOpenFaq(open ? null : i)}
-                    style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", padding: "18px 20px", background: "none", border: "none", cursor: "pointer", textAlign: "left", gap: "16px" }}
-                  >
-                    <span style={{ fontSize: "14px", fontWeight: 600, color: "var(--color-warm-text)", fontFamily: "var(--font-dm-sans), sans-serif" }}>{faq.q}</span>
-                    <span style={{ fontSize: "20px", color: "var(--color-warm-accent)", flexShrink: 0, transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s", lineHeight: 1 }}>+</span>
-                  </button>
-                  {/* In the DOM whether or not it is open. Conditional rendering meant a closed
-    panel was never sent, so a crawler saw the headings and none of the prose. */}
-<div hidden={!open} style={{ padding: "0 20px 20px" }}>
-                      <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.75, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>{faq.a}</p>
-                    </div>
-                </div>
-              );
-            })}
-          </div>
-          <div style={{ marginTop: "56px", textAlign: "center" }}>
-            <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "20px", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-              Something not answered here?
-            </p>
-            <a href="mailto:elijah@purcell-ventures.com" style={{ fontSize: "13px", fontWeight: 600, color: "var(--color-warm-accent)", fontFamily: "var(--font-inter), sans-serif" }}>
-              elijah@purcell-ventures.com
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
+      <Section
+        id="waitlist"
+        title="The waitlist"
+        intro="Waitlist members get the early-access price and hear first when the course opens. I send one email when enrollment opens."
+      >
+        <WaitlistForm course="college-apps" />
+        <p className="ui-muted" style={{ marginTop: 20 }}>
+          The course is not finished. Ask me and I will send the material I have so far:{" "}
+          <a className="ui-link" href={`mailto:${CONTACT.email}?subject=College%20Application%20Playbook`}>{CONTACT.email}</a>.
+        </p>
+      </Section>
+
+      <Section title="Questions">
+        <Faq items={FAQS} />
+        <p className="ui-muted" style={{ marginTop: 28 }}>
+          Questions this page does not answer go to{" "}
+          <a className="ui-link" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>. I reply within one business day.
+        </p>
+      </Section>
+    </main>
   );
 }

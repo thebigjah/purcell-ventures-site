@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+import { PageHero, Section, Rows, Note } from "@/app/components/ui";
 
-export const metadata = {
-  title: "Cold Email Mastery Pack: $29, Purcell Ventures",
-  description: "100 cold email templates for 10 industries, reply-handling scripts, an AI scoring rubric and a subject line library. $29 once.",
+// /shop/cold-email-pack, rebuilt on the page kit 26 Oct 2026.
+// The buy buttons are plain links to the Stripe payment link, with no referral tracking,
+// as they were before the rebuild.
+
+export const metadata: Metadata = {
+  title: "Cold Email Mastery Pack, $29",
+  description:
+    "100 cold email templates for 10 industries, reply-handling scripts, an AI scoring rubric and a subject line library. $29 once.",
 };
 
 const PAYMENT_LINK = process.env.COLD_EMAIL_PACK_PAYMENT_LINK || "#configure-stripe";
@@ -12,182 +18,105 @@ const PACK_CONTENTS = [
   {
     folder: "01-templates-by-industry/",
     title: "100 cold email templates for 10 industries",
-    blurb: "Salon/spa, plumbing/HVAC, dental, real estate, law, marketing agency, e-commerce, wellness/fitness, vet, accounting. 10 templates per industry, each labeled by goal: intro, problem call-out, value-first, referral claim, decision-maker bypass and others.",
+    blurb: "Salons and spas, plumbing and HVAC, dental, real estate, law, marketing agencies, e-commerce, wellness and fitness, veterinary, and accounting. 10 templates per industry, each labeled by goal: an introduction, a problem call-out, value first, a referral claim, reaching the decision-maker directly and others.",
     count: "100 templates",
   },
   {
     folder: "02-subject-lines/",
-    title: "Subject line library: 80 options in 8 styles",
-    blurb: "Direct, question, referral, observation, local, value-first, curiosity, time-bound. Each labeled with open-rate context. Includes 20 subject lines to avoid and why.",
+    title: "A subject line library: 80 options in 8 styles",
+    blurb: "Direct, question, referral, observation, local, value-first, curiosity and time-bound, each labeled with open-rate context. It includes 20 subject lines to avoid and the reason for each.",
     count: "80 subject lines",
   },
   {
     folder: "03-reply-handling/",
-    title: "Reply-handling scripts: 30 scenarios",
-    blurb: "What to do when they say 'too expensive', 'I'm interested but', 'send me more info', 'we use a competitor', 'we don't need this'. Each scenario has 2 to 3 response strategies and when to use each.",
+    title: "Reply-handling scripts for 30 scenarios",
+    blurb: "What to do when a prospect says \"too expensive\", \"I'm interested but\", \"send me more info\", \"we use a competitor\" or \"we don't need this\". Each scenario has 2 to 3 responses and when to use each.",
     count: "30 scenarios",
   },
   {
     folder: "04-ai-scoring-rubric/",
-    title: "AI email scoring rubric and Claude/GPT prompt",
-    blurb: "A system prompt for Claude or ChatGPT that scores your draft emails on a 0-100 rubric (specificity, ethics, ask-clarity, subject-line strength, anticipation of objections). Includes the rubric criteria as a standalone reference doc.",
-    count: "1 system prompt, 1 rubric doc",
+    title: "An AI email scoring rubric with a Claude or ChatGPT prompt",
+    blurb: "A system prompt for Claude or ChatGPT that scores your draft emails from 0 to 100 on specificity, ethics, a clear ask, subject-line strength and how well the email answers objections in advance. The rubric criteria also come as a separate reference document.",
+    count: "1 system prompt, 1 rubric document",
   },
   {
     folder: "05-sequencing-cadences/",
-    title: "Sequencing cadences: when to send what",
-    blurb: "Cold sequence: 5 emails over 21 days. Warm sequence: 5 emails over 21 days. A sequence for leads who got a quote and went silent, and one for re-engaging after 90 days. Each sequence lists the emails, the timing and when to stop if nobody replies.",
+    title: "Email sequences: when to send what",
+    blurb: "A cold sequence of 5 emails over 21 days and a warm sequence of 5 emails over 21 days. A sequence for leads who got a quote and went silent, and one for re-engaging after 90 days. Each sequence lists the emails, the timing and when to stop if nobody replies.",
     count: "4 sequences",
   },
   {
     folder: "06-list-building/",
-    title: "List-building playbook: how to find prospects without buying lists",
-    blurb: "10 free and 5 paid sources for prospect lists, how to enrich them, how to comply with CAN-SPAM and how to track them in a CRM. It also includes the Google query templates we use to find small business prospects in a city.",
-    count: "1 playbook, Google query library",
+    title: "A list-building playbook for finding prospects without buying lists",
+    blurb: "10 free and 5 paid sources for prospect lists, how to enrich them, how to comply with CAN-SPAM and how to track them in a CRM. It also includes the Google search templates I use to find small business prospects in a city.",
+    count: "1 playbook and a Google search library",
   },
 ];
 
 export default function ColdEmailPackPage() {
-
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <VignetteBackground />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "1080px", margin: "0 auto", padding: "72px 36px 96px" }}>
+    <main>
+      <PageHero
+        kicker="Shop: the Cold Email Mastery Pack"
+        title="Cold email templates for 10 industries."
+        lede="100 industry-specific templates, 80 subject lines, 30 reply-handling scripts, an AI scoring rubric and 4 email sequences. Purcell Ventures sales reps work from these templates."
+        meta="One-time download, $29. Checkout through Stripe, download by email, 30-day refund."
+        actions={<a className="ui-btn" href={PAYMENT_LINK} style={{ minHeight: 52, fontSize: 17, padding: "16px 28px" }}>Buy now for $29</a>}
+      />
 
-
-        {/* Hero */}
-        <header style={{ textAlign: "center", marginBottom: "56px" }}>
-          <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "16px" }}>
-            One-time download, $29
-          </div>
-          <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "44px", fontWeight: 700, color: "var(--color-warm-text)", margin: "0 0 16px", lineHeight: 1.15 }}>
-            Cold email templates <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>for 10 industries</em>
-          </h1>
-          <p style={{ fontSize: "17px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, maxWidth: "640px", margin: "0 auto 32px" }}>
-            100 industry-specific templates, 80 subject lines, 30 reply-handling scripts, an AI scoring rubric and 4 email sequences. These are the templates our sales reps work from.
-          </p>
-          <a
-            href={PAYMENT_LINK}
-            style={{
-              display: "inline-block",
-              padding: "16px 40px",
-              background: "var(--color-warm-accent)",
-              color: "var(--color-warm-bg)",
-              fontFamily: "'Cinzel', Georgia, serif",
-              fontSize: "18px",
-              fontWeight: 700,
-              textDecoration: "none",
-              letterSpacing: "0.04em",
-            }}
-          >
-            Buy now for $29
-          </a>
-          <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "10px", fontStyle: "italic" }}>
-            Checkout through Stripe, download by email, 30-day refund
-          </p>
-        </header>
-
-        {/* Or buy the bundle */}
-        <div style={{ background: "linear-gradient(135deg, rgba(212,175,55,0.10), rgba(212,175,55,0.02))", border: "2px dashed var(--color-warm-accent)", padding: "24px 28px", marginBottom: "48px", textAlign: "center" }}>
-          <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "8px" }}>
-            Or save $9 with the bundle
-          </div>
-          <p style={{ margin: "0 0 12px", fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.6 }}>
-            <Link href="/shop" style={{ color: "var(--color-warm-accent)", textDecoration: "underline" }}>Bundle this with the PV AI Starter Kit ($19)</Link> for <strong>$39 total instead of $48</strong>. The Starter Kit adds AI tool prompts to this pack.
-          </p>
+      <Section title="What is inside" intro="One ZIP with 6 folders of editable markdown files, more than 200 pieces of content in all.">
+        <div className="ui-entries">
+          {PACK_CONTENTS.map((s) => (
+            <article className="ui-entry" key={s.folder}>
+              <div>
+                <h3>{s.title}</h3>
+                <p className="ui-entry__org"><code>{s.folder}</code></p>
+              </div>
+              <span className="ui-entry__when">{s.count}</span>
+              <div className="ui-entry__body"><p>{s.blurb}</p></div>
+            </article>
+          ))}
         </div>
-
-        {/* What's inside */}
-        <section style={{ marginBottom: "56px" }}>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "32px", color: "var(--color-warm-text)", margin: "0 0 8px", fontWeight: 600, textAlign: "center" }}>
-            What&apos;s <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>inside</em>
-          </h2>
-          <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", textAlign: "center", marginBottom: "32px", fontStyle: "italic" }}>
-            One ZIP with 6 folders of editable markdown files, 200+ pieces of content in all.
-          </p>
-          <div style={{ display: "grid", gap: "16px" }}>
-            {PACK_CONTENTS.map((s) => (
-              <article key={s.folder} className="pv-card" style={{ padding: 0, overflow: "hidden" }}>
-                <span className="b3"></span><span className="b4"></span>
-                <div style={{ padding: "20px 28px" }}>
-                  <div style={{ display: "flex", gap: "12px", alignItems: "baseline", flexWrap: "wrap", marginBottom: "8px" }}>
-                    <code style={{ fontFamily: "var(--font-dm-sans), monospace", fontSize: "12px", color: "var(--color-warm-accent)", padding: "3px 8px", background: "var(--color-warm-bg-alt)" }}>{s.folder}</code>
-                    <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", color: "var(--color-warm-text)", margin: 0, fontWeight: 600 }}>{s.title}</h3>
-                    <span style={{ fontSize: "10px", color: "var(--color-warm-text-light)", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 700, marginLeft: "auto" }}>{s.count}</span>
-                  </div>
-                  <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: 0, lineHeight: 1.6 }}>{s.blurb}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        {/* Who it's for */}
-        <section style={{ marginBottom: "56px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-          <div style={{ padding: "24px 28px", background: "rgba(122, 170, 106, 0.08)", border: "1px solid #7aaa6a" }}>
-            <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", color: "#7aaa6a", fontWeight: 600, margin: "0 0 12px" }}>This pack is for you if</h3>
-            <ul style={{ paddingLeft: "20px", margin: 0, fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.8 }}>
-              <li>You send cold outreach (or want to start)</li>
-              <li>You&apos;ve tried writing emails from scratch and they get ignored</li>
-              <li>You&apos;re a freelancer or consultant who needs more prospects</li>
-              <li>You manage a sales team and want a template library to standardize on</li>
-              <li>You pay for a tool like Apollo or Lemlist and want templates to go with it, or instead of it</li>
-            </ul>
-          </div>
-          <div style={{ padding: "24px 28px", background: "rgba(229, 74, 40, 0.05)", border: "1px solid #e54a28" }}>
-            <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", color: "#e54a28", fontWeight: 600, margin: "0 0 12px" }}>Skip this if</h3>
-            <ul style={{ paddingLeft: "20px", margin: 0, fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.8 }}>
-              <li>You only do inbound marketing</li>
-              <li>You don&apos;t want to email people you don&apos;t know</li>
-              <li>You want a done-for-you cold outreach service (we offer that under <Link href="/consulting" style={{ color: "var(--color-warm-accent)" }}>Consulting</Link>)</li>
-              <li>You&apos;ve never opened a CRM and don&apos;t want to start (you need somewhere to send these from)</li>
-            </ul>
-          </div>
-        </section>
-
-        {/* Pricing comparison */}
-        <section style={{ marginBottom: "56px", padding: "32px 36px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)" }}>
-          <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", color: "var(--color-warm-text)", margin: "0 0 16px", fontWeight: 600 }}>
-            How the price <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>compares</em>
-          </h2>
-          <p style={{ fontSize: "15px", color: "var(--color-warm-text)", lineHeight: 1.7, marginBottom: "16px" }}>
-            $29 once, compared with the alternatives:
-          </p>
-          <ul style={{ fontSize: "14px", color: "var(--color-warm-text)", lineHeight: 1.9, paddingLeft: "24px", margin: "0 0 16px" }}>
-            <li><strong>Apollo.io / Lemlist:</strong> $99 to $179/month subscription, or $1,200 to $2,100 a year. They sell sending software. This pack is templates.</li>
-            <li><strong>Sales copywriter:</strong> $300 to $2,000 to write 10 to 20 emails. This pack has 100 templates plus the scripts, rubric and sequences above.</li>
-            <li><strong>Cold outreach course:</strong> $497 to $1,500 for video lessons. This pack has templates you can send.</li>
-            <li><strong>Lifetime cost:</strong> You pay $29 once and keep the files. <strong style={{ color: "var(--color-warm-accent)" }}>Refunds within 30 days, processed through Stripe.</strong></li>
-          </ul>
-        </section>
-
-        {/* CTA repeat */}
-        <div style={{ textAlign: "center", padding: "40px 32px", background: "var(--color-warm-bg-alt)", border: "2px solid var(--color-warm-accent)" }}>
-          <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", color: "var(--color-warm-text)", fontWeight: 700, margin: "0 0 12px" }}>
-            Cold Email Mastery Pack, <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>$29</em>
-          </h3>
-          <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: "0 0 24px", lineHeight: 1.6 }}>
-            Stripe emails the download within 60 seconds of checkout. Refunds within 30 days.
-          </p>
-          <a
-            href={PAYMENT_LINK}
-            style={{
-              display: "inline-block",
-              padding: "16px 40px",
-              background: "var(--color-warm-accent)",
-              color: "var(--color-warm-bg)",
-              fontFamily: "'Cinzel', Georgia, serif",
-              fontSize: "18px",
-              fontWeight: 700,
-              textDecoration: "none",
-              letterSpacing: "0.04em",
-            }}
-          >
-            Buy the pack for $29
-          </a>
+        <div style={{ marginTop: 32 }}>
+          <Note>
+            The <Link className="ui-link" href="/shop/bundle">Complete Pack</Link> has this pack, the PV AI Starter Kit and the Subject Line Library for $39, $18 less than buying all three. The Starter Kit adds AI tool prompts and the rep handbook to this pack.
+          </Note>
         </div>
+      </Section>
 
-      </main>
-    </div>
+      <Section title="Who it fits">
+        <Rows
+          items={[
+            {
+              name: "A good fit if",
+              line: "You send cold outreach or want to start. Emails you wrote from scratch get ignored. You are a freelancer or consultant who needs more prospects. You manage a sales team and want one template library for everyone. You pay for a tool like Apollo or Lemlist and want templates to use with it or in place of it.",
+            },
+            {
+              name: "Skip it if",
+              line: (
+                <>
+                  You only do inbound marketing. You do not want to email people you do not know. You want someone to run cold outreach for you, which I offer under <Link className="ui-link" href="/consulting">Consulting</Link>. You have never opened a CRM and do not want to start, since you need somewhere to send these from.
+                </>
+              ),
+            },
+          ]}
+        />
+      </Section>
+
+      <Section title="How the price compares" intro="$29 once, against the alternatives.">
+        <Rows
+          items={[
+            { name: "Apollo.io or Lemlist", fig: "$99 to $179 a month", line: "A subscription of $1,200 to $2,100 a year. They sell sending software. This pack is templates." },
+            { name: "A sales copywriter", fig: "$300 to $2,000", line: "To write 10 to 20 emails. This pack has 100 templates plus the scripts, rubric and sequences above." },
+            { name: "A cold outreach course", fig: "$497 to $1,500", line: "For video lessons. This pack has templates you can send." },
+            { name: "This pack", fig: "$29 once", line: "You pay once and keep the files. Refunds within 30 days, processed through Stripe." },
+          ]}
+        />
+      </Section>
+
+      <Section title="Cold Email Mastery Pack, $29" intro="Stripe emails the download within 60 seconds of checkout. Refunds within 30 days.">
+        <a className="ui-btn" href={PAYMENT_LINK} style={{ minHeight: 48 }}>Buy the pack for $29</a>
+      </Section>
+    </main>
   );
 }

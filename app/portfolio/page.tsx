@@ -1,498 +1,315 @@
-"use client";
+import { PageHero, Section, ClosingCall } from "@/app/components/ui";
+import ProjectList, { type Project } from "./ProjectList";
 
-import { useState } from "react";
-import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
-
-type Category = "All" | "Web" | "AI Tools" | "Mobile" | "Internal" | "Open Source";
-
-interface Project {
-  slug: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  category: Category | Category[];
-  techStack: string[];
-  liveUrl?: string;
-  status: "Live" | "In Development" | "Published" | "Internal";
-  highlight?: boolean;
-  visualSymbol: string; // emoji or symbol representing the project
-  visualColor: string;  // accent color for the card
-  detailLines: string[]; // bulleted detail points
-}
+// THE PORTFOLIO, rebuilt on the page kit 26 Oct 2026. 17 projects.
+//
+// Content decisions made in the rebuild, so nobody restores them by accident:
+// - The scholarship dollar total is gone from Scholarship Sniper. His rule keeps that
+//   number on the college-application course page only.
+// - Gran's Supplements no longer names his grandparents. Public pages carry the business,
+//   not his family.
 
 const PROJECTS: Project[] = [
   {
     slug: "ua-today",
     title: "UA Today",
     subtitle: "University of Alabama events from six sources in one feed.",
-    description: "Aggregates six separate sources into a single feed of University of Alabama events, around seven hundred at a time, with a moderation console, a student pickup-games board, and org profiles. Unofficial, and it says so in the masthead.",
-    category: ["Web", "AI Tools"],
+    description:
+      "Pulls six separate sources into one feed of University of Alabama events, several hundred at any time, with a moderation console, a board for student pickup games and profiles for student organizations. The masthead says it is unofficial.",
+    category: ["Web", "AI tools"],
     techStack: ["Node.js", "Vercel", "Six upstream sources", "Automated health checks"],
     liveUrl: "https://ua-today.vercel.app",
     status: "Live",
-    highlight: true,
-    visualSymbol: "UA",
-    visualColor: "#9E1B32",
     detailLines: [
-      "Six sources reconciled into one feed, checked automatically every morning",
-      "Moderation queue so a submitted event reaches a human before it appears",
-      "Used by University of Alabama students who are not me",
+      "Six sources reconciled into one feed and checked automatically every morning",
+      "A moderation queue: a person reviews each submitted event before it appears",
+      "Other University of Alabama students use it",
     ],
   },
   {
     slug: "english-pruitt",
     title: "English Pruitt Photography",
     subtitle: "A client I found through cold outreach.",
-    description: "A full photography site for a North Georgia photographer: portfolio galleries, service and pricing pages, and an enquiry path. I scoped, built and delivered it.",
+    description:
+      "A full photography site for a North Georgia photographer, with portfolio galleries, service and pricing pages, and an enquiry form. I scoped, built and delivered it.",
     category: ["Web"],
     techStack: ["Next.js", "TypeScript", "Vercel"],
     liveUrl: "https://english-pruitt.vercel.app",
     status: "Live",
-    visualSymbol: "EP",
-    visualColor: "#8A7B5E",
     detailLines: [
-      "Found through cold outreach, quoted and built to brief",
-      "Galleries, services, pricing and an enquiry path",
+      "Found through cold outreach, quoted and built to the client's brief",
+      "Galleries, services, pricing and an enquiry form",
     ],
   },
   {
     slug: "the-loom",
     title: "The Loom",
-    subtitle: "Autonomous lead-generation engine.",
-    description: "A daily crawler that finds local businesses with little or no web presence, researches each one, scores it and delivers a ranked packet by email at 7:15 in the morning. Five production website templates so a prospect sees a site built for their industry.",
-    category: ["AI Tools", "Internal"],
+    subtitle: "A lead-generation engine that runs itself.",
+    description:
+      "A daily crawler finds local businesses with little or no web presence, researches and scores each one, and emails a ranked packet at 7:15 every morning. Five production website templates let a prospect see a site built for their industry.",
+    category: ["AI tools", "Internal"],
     techStack: ["Python", "Google Places API", "Supabase", "GitHub Actions", "Resend"],
     liveUrl: "https://the-loom-gold.vercel.app",
     status: "Live",
-    visualSymbol: "LM",
-    visualColor: "#4A5D4E",
     detailLines: [
-      "Runs on a schedule without supervision and mails the result",
-      "Automatic takedown of expired previews",
+      "Runs on a schedule with no one watching and emails the result",
+      "Takes down expired previews on its own",
     ],
   },
   {
     slug: "boyfriend-camera",
     title: "Boyfriend Camera",
     subtitle: "On-device scene analysis in the browser.",
-    description: "A WebGL computer-vision camera application that reads the scene on the device and coaches the shot, built for people who keep being handed a phone and asked to take the picture.",
-    category: ["Web", "AI Tools"],
+    description:
+      "A WebGL camera app that reads the scene on the phone and coaches the shot. I built it for the person who keeps getting handed a phone and asked to take the picture.",
+    category: ["Web", "AI tools"],
     techStack: ["JavaScript", "WebGL", "MediaPipe", "Vercel"],
     liveUrl: "https://boyfriend-camera.vercel.app",
     status: "Live",
-    visualSymbol: "BC",
-    visualColor: "#6B5B7B",
     detailLines: [
-      "Analysis runs on the device rather than on a server",
-      "No account, no upload, nothing leaves the phone",
+      "Scene analysis runs on the phone",
+      "It needs no account, and photos never leave the phone",
     ],
   },
   {
     slug: "pv-site",
     title: "Purcell Ventures",
-    subtitle: "This site.",
-    description: "A Next.js 16 site with 31 free tools, a rep portal and a CRM.",
-    category: ["Web", "AI Tools"],
+    subtitle: "This website.",
+    description: "A Next.js 16 site with 31 free tools, a portal for sales reps and a CRM.",
+    category: ["Web", "AI tools"],
     techStack: ["Next.js 16", "React 19", "TypeScript", "Anthropic Claude", "Vercel"],
     liveUrl: "https://purcellventures.co",
     status: "Live",
-    highlight: true,
-    visualSymbol: "PV",
-    visualColor: "#d4af37",
     detailLines: [
-      "26 AI tools, including an FAQ builder, content generator, palette tool, brand kit and logo concepts",
+      "26 AI tools, including an FAQ builder, a content generator, a palette tool, a brand kit and logo concepts",
       "5 tools that save data: loyalty, expenses, inventory, estimating and event registration",
-      "Rep portal with password login, a kanban CRM, AI prospect research and a leaderboard",
-      "Prices kept the same on every page that lists them",
+      "A rep portal with password login, a kanban CRM, AI prospect research and a leaderboard",
+      "Each price matches on every page that lists it",
     ],
   },
   {
     slug: "elijahbot",
     title: "ElijahBot",
-    subtitle: "Personal AI infrastructure.",
-    description: "An autonomous task system with a dashboard server and a global kill switch. It runs background work, sends updates to my phone and manages my daily tasks.",
-    category: ["AI Tools", "Internal"],
+    subtitle: "My personal AI infrastructure.",
+    description:
+      "A task system with a dashboard server and a global kill switch. It runs background work, sends updates to my phone and manages my daily tasks.",
+    category: ["AI tools", "Internal"],
     techStack: ["Python", "FastAPI", "ntfy", "Anthropic Claude"],
     status: "Internal",
-    visualSymbol: "EB",
-    visualColor: "#9b7fd4",
     detailLines: [
-      "Hooks for session tracking and automatic memory",
-      "Phone commands and a dispatcher",
-      "Wisdom log and decision journal",
-      "Status dashboard accessible from phone",
+      "Hooks that track sessions and save memory automatically",
+      "Commands sent from my phone, and a dispatcher that routes them",
+      "A wisdom log and a decision journal",
+      "A status dashboard I check from my phone",
     ],
   },
   {
     slug: "elijahbot-refresh",
     title: "ElijahBot Refresh",
-    subtitle: "Habit tracker and accountability chatbot.",
-    description: "Multi-tenant Next.js app, habit tracking, daily journal, week heatmap and a Claude chatbot that follows up when you miss a habit. Friends sign up under their own Google account.",
-    category: ["Web", "AI Tools"],
+    subtitle: "A habit tracker with an accountability chatbot.",
+    description:
+      "A multi-tenant Next.js app with habit tracking, a daily journal, a week heatmap and a Claude chatbot that follows up when you miss a habit. Friends sign up with their own Google accounts.",
+    category: ["Web", "AI tools"],
     techStack: ["Next.js 16", "Auth.js v5", "Firestore", "Claude Haiku", "Vercel"],
     liveUrl: "https://elijahbot-refresh.vercel.app",
     status: "Live",
-    visualSymbol: "RF",
-    visualColor: "#7aaa6a",
     detailLines: [
-      "13-habit default template",
-      "Daily AM briefing via Vercel Cron",
-      "Conversation summarization at 15 turns",
-      "Recharts charts and achievements",
+      "A default template of 13 habits",
+      "A morning briefing each day through Vercel Cron",
+      "Conversations summarized every 15 turns",
+      "Charts in Recharts, and achievements",
     ],
   },
   {
     slug: "tools-hub",
     title: "ElijahBot Tools Hub",
-    subtitle: "Editorial-design personal tool collection.",
-    description: "A static, password-protected hub with 22 standalone tools that installs as a PWA and tracks affiliate redirects. I built it for my own daily use.",
-    category: ["Web", "AI Tools"],
-    techStack: ["Vanilla JS", "Fraunces + JetBrains Mono", "Vercel", "PWA"],
+    subtitle: "My own collection of personal tools.",
+    description:
+      "A static, password-protected hub of 22 standalone tools. It installs as a web app and tracks affiliate redirects. I built it for my own daily use.",
+    category: ["Web", "AI tools"],
+    techStack: ["Vanilla JavaScript", "Fraunces and JetBrains Mono", "Vercel", "Installable web app"],
     liveUrl: "https://elijahbot-tools-hub.vercel.app",
     status: "Live",
-    visualSymbol: "TH",
-    visualColor: "#e8b968",
     detailLines: [
-      "Stage Fright voice analyzer",
-      "Longitude sealed-letter tool",
-      "Park Waits queue tracker",
-      "Personal OS state router",
-      "Magic Closet outfit picker",
+      "Stage Fright, a voice analyzer",
+      "Longitude, a sealed-letter tool",
+      "Park Waits, a queue tracker",
+      "Personal OS, a state router",
+      "Magic Closet, an outfit picker",
     ],
   },
   {
     slug: "prayer-walk",
     title: "Prayer Walk Mobile",
-    subtitle: "See which parts of your city have been prayed over.",
-    description: "Expo mobile app that tracks walking routes, attaches prayers to locations on the map, and builds 'coverage' over time. Production AAB built, Play Store launch pending.",
+    subtitle: "A map of which parts of a city have been prayed over.",
+    description:
+      "An Expo mobile app that tracks walking routes, pins prayers to places on the map and builds a coverage map over time. The production Android build is done and the Play Store launch is pending.",
     category: ["Mobile"],
     techStack: ["Expo", "React Native", "Supabase", "MapLibre"],
     liveUrl: "https://coverage-bice.vercel.app",
     status: "Live",
-    visualSymbol: "PW",
-    visualColor: "#7aaa6a",
     detailLines: [
-      "GPS-tracked walking routes",
-      "Pinned prayers per location",
-      "Coverage heatmap over time",
-      "Privacy policy + production build ready",
+      "Walking routes tracked by GPS",
+      "Prayers pinned to each location",
+      "A coverage heatmap that fills in over time",
+      "Privacy policy and production build ready",
     ],
   },
   {
     slug: "wallet-tracker",
     title: "Wallet Tracker",
-    subtitle: "Crypto wallet alerts.",
-    description: "Watches Ethereum and Solana wallets, scores tokens by risk and sends an alert through ntfy, Discord or Telegram when a watched wallet makes a large move. Backtested, with a parameter sweep.",
-    category: ["AI Tools", "Internal"],
+    subtitle: "Alerts on crypto wallet activity.",
+    description:
+      "Watches Ethereum and Solana wallets, scores tokens by risk and sends an alert through ntfy, Discord or Telegram when a watched wallet makes a large move. I backtested it and swept its parameters.",
+    category: ["AI tools", "Internal"],
     techStack: ["Python", "Etherscan API", "Helius API", "ntfy"],
     status: "Internal",
-    visualSymbol: "WT",
-    visualColor: "#4a9a6a",
     detailLines: [
-      "Backtest framework (90d replay)",
-      "Parameter sweep for the alert threshold and time window",
-      "Risk scoring per token (0-10)",
-      "Multi-channel alert fanout",
+      "A backtest framework that replays 90 days",
+      "A parameter sweep for the alert threshold and time window",
+      "A risk score from 0 to 10 for each token",
+      "Each alert goes to several channels at once",
     ],
   },
   {
     slug: "yt-pipeline",
     title: "YouTube Pipeline",
-    subtitle: "Automated video pipeline for faceless channels.",
-    description: "A pipeline that writes the script, records the voice, builds the video and schedules it. It grades each hook and regenerates weak ones, and each channel has a dashboard.",
-    category: ["AI Tools", "Internal"],
+    subtitle: "An automated video pipeline for faceless channels.",
+    description:
+      "The pipeline writes the script, records the voice, builds the video and schedules it. It grades each opening hook and rewrites the weak ones, and each channel has its own dashboard.",
+    category: ["AI tools", "Internal"],
     techStack: ["Python", "OpenAI", "FFmpeg", "YouTube API"],
     status: "Internal",
-    visualSymbol: "YT",
-    visualColor: "#e54a28",
     detailLines: [
-      "Hook grader (auto-regen if score < threshold)",
+      "A hook grader that regenerates any hook scoring under the threshold",
       "Scheduler retries and health monitoring",
-      "Calendar preview and per-channel dashboard",
-      "Amazon Associates affiliate hooks",
+      "A calendar preview and a dashboard for each channel",
+      "Amazon Associates affiliate links built in",
     ],
   },
   {
     slug: "scholarship-sniper",
     title: "Scholarship Sniper",
-    subtitle: "College application and scholarship tracker.",
-    description: "Tracked 98 schools through one application cycle and drafted decline emails and appeal letters. The 34 acceptances it tracked came with $530,384 a year in scholarship offers.",
-    category: ["AI Tools", "Internal"],
+    subtitle: "A college application and scholarship tracker.",
+    description:
+      "Tracked 98 schools through one application cycle, logged 34 acceptances and the scholarship offers that came with them, and drafted decline emails and appeal letters.",
+    category: ["AI tools", "Internal"],
     techStack: ["Python", "Gmail API", "Anthropic Claude"],
     status: "Internal",
-    visualSymbol: "SS",
-    visualColor: "#9b7fd4",
     detailLines: [
       "34 college acceptances tracked",
-      "$530,384 a year in scholarship offers tracked",
+      "Scholarship offers logged with each acceptance",
       "31 decline emails drafted automatically",
-      "Alabama appeal letter framework",
+      "A framework for appeal letters to Alabama",
     ],
   },
   {
     slug: "hesed",
     title: "Hesed",
-    subtitle: "Free supplement tracker for family caregivers.",
-    description: "Multi-tenant daily ledger for the people who run a parent's or grandparent's supplement regimen. It compares affiliate prices from iHerb, Amazon and Vitacost and ranks them by delivered cost per serving. It has an AI chat for caregiving questions and push and email reorder alerts. Generalised from a private pilot built for one family.",
-    category: ["Web", "AI Tools"],
+    subtitle: "A free supplement tracker for family caregivers.",
+    description:
+      "A multi-tenant daily ledger for people who manage a parent's or grandparent's supplements. It compares affiliate prices from iHerb, Amazon and Vitacost and ranks them by delivered cost per serving. It has an AI chat for caregiving questions and sends reorder alerts by push and email. I generalized it from a private pilot built for one family.",
+    category: ["Web", "AI tools"],
     techStack: ["Next.js 16", "Supabase", "Tailwind 4", "Anthropic Claude", "Resend", "Web Push API"],
     liveUrl: "https://hesed-zeta.vercel.app",
     status: "Live",
-    highlight: true,
-    visualSymbol: "ח",
-    visualColor: "#A8804B",
     detailLines: [
-      "Multi-channel affiliate stack with best-price-per-serving ranking",
-      "Prices refresh at 3 AM ET and reorder alerts go out at 9 AM ET",
-      "Web push and email reorder reminders, with the frequency set by the caregiver",
-      "FTC-disclosed affiliate links. Free, with no ads and no data sales",
+      "Affiliate prices from several stores, ranked by best price per serving",
+      "Prices refresh at 3 a.m. Eastern and reorder alerts go out at 9 a.m. Eastern",
+      "Reorder reminders by web push and email, at a frequency the caregiver sets",
+      "Affiliate links carry the FTC disclosure. The app is free, shows no ads and sells no data",
     ],
   },
   {
     slug: "returns-void",
     title: "Returns Void",
-    subtitle: "Daily prayer ledger.",
-    description: "Hand-bound prayer journal as software. Rotation queue surfaces 2 people per notification (longest-since-prayed-for first), records voice prayers cloud-synced via Supabase, Isaiah 55:11 framing. Built as a daily prayer journal rather than a productivity app.",
+    subtitle: "A daily prayer ledger.",
+    description:
+      "A daily prayer journal. Each notification names two people, starting with whoever has gone longest without prayer. It records voice prayers and syncs them through Supabase, and its framing comes from Isaiah 55:11.",
     category: ["Web"],
     techStack: ["Next.js 14", "Supabase Storage", "Tailwind"],
     liveUrl: "https://returns-void.vercel.app",
     status: "Live",
-    visualSymbol: "55",
-    visualColor: "#1A2332",
     detailLines: [
-      "Rotation queue with longest-since-prayed-for prioritization",
-      "Voice prayer recording with cloud-synced .mp3 storage",
-      "Ledger-style design in Fraunces on a cream background",
-      "Push notifications via service worker",
+      "A rotation queue that puts the longest-since-prayed-for first",
+      "Voice prayers recorded and stored as .mp3 files in the cloud",
+      "A ledger-style design set in Fraunces on a cream background",
+      "Push notifications through a service worker",
     ],
   },
   {
     slug: "folio",
     title: "Folio",
-    subtitle: "Social reading with lists in place of star ratings.",
-    description: "A social reading app built around curated lists. Phase A: profiles, list CRUD, share cards. Phase B: follows, trending, comments, realtime status, sessions, Bookshop affiliate links to support indie bookstores.",
+    subtitle: "Social reading built on curated book lists.",
+    description:
+      "A social reading app built around lists in place of star ratings. Phase A added profiles, list editing and share cards. Phase B added follows, trending lists, comments, live reading status, reading sessions and Bookshop.org affiliate links that support independent bookstores.",
     category: ["Web"],
     techStack: ["Next.js 16", "Supabase", "Tailwind 4", "Open Library API"],
     liveUrl: "https://folio-now.vercel.app",
     status: "Live",
-    visualSymbol: "FO",
-    visualColor: "#7B2D26",
     detailLines: [
-      "Bookshop.org affiliate links, which support indie bookstores",
-      "OG share cards generated server-side via @vercel/og",
-      "Realtime reading-status presence",
-      "Trending lists refreshed daily via cron",
+      "Bookshop.org affiliate links, which support independent bookstores",
+      "Share cards generated on the server with @vercel/og",
+      "Live reading status for each reader",
+      "Trending lists refreshed daily by a scheduled job",
     ],
   },
   {
     slug: "grans-supplements",
     title: "Gran's Supplements",
-    subtitle: "Pilot version for grandma + grandpa.",
-    description: "Single-family supplement tracker built before Hesed generalized the model. 25 numbered bottles, dose checklists, reorder alerts, AI chat. I kept this first version as it was. It led to Hesed.",
+    subtitle: "The single-family pilot that led to Hesed.",
+    description:
+      "A supplement tracker for one household, built before Hesed generalized the model: 25 numbered bottles, dose checklists, reorder alerts and an AI chat. I kept this first version as it was.",
     category: ["Web"],
     techStack: ["Next.js", "Supabase"],
     liveUrl: "https://grans-supplements.vercel.app",
     status: "Live",
-    visualSymbol: "GS",
-    visualColor: "#56627A",
     detailLines: [
       "25 numbered bottles with dose schedules",
-      "Reorder alerts based on remaining doses",
+      "Reorder alerts based on the doses left",
       "Supabase sync across devices",
-      "Direct lineage to Hesed (caregivers everywhere)",
+      "The model Hesed grew from",
     ],
   },
   {
     slug: "pv-social",
     title: "PV Social",
-    subtitle: "Internal Instagram ops console.",
-    description: "A scheduler, AI composer, reply review, audit log, kill switch, sentinel filter and privacy blocklist for the @purcellventures and @elijahbot Instagram accounts. Instagram posting is not connected yet.",
-    category: ["AI Tools", "Internal"],
+    subtitle: "An internal console for Instagram.",
+    description:
+      "A scheduler, AI composer, reply review queue, audit log, kill switch, personal-information filter and privacy blocklist for the @purcellventures and @elijahbot Instagram accounts. Posting to Instagram is not connected yet.",
+    category: ["AI tools", "Internal"],
     techStack: ["Next.js 16", "Supabase", "Anthropic Claude", "Meta Graph API"],
     liveUrl: "https://pv-social.vercel.app",
     status: "Internal",
-    visualSymbol: "PS",
-    visualColor: "#9b7fd4",
     detailLines: [
-      "AI composer with brand-voice grounding",
-      "Reply queue with manual approval gate",
-      "Sentinel filter blocks personal-info leaks",
-      "Daily briefing email with verse + app health",
+      "An AI composer grounded in the brand voice",
+      "A reply queue that waits for my approval",
+      "A filter that blocks personal information from going out",
+      "A daily briefing email with a Bible verse and app health",
     ],
   },
 ];
 
-const CATEGORIES: Category[] = ["All", "Web", "AI Tools", "Mobile", "Internal"];
-
 export default function PortfolioPage() {
-  const [activeCategory, setActiveCategory] = useState<Category>("All");
-  const [openProject, setOpenProject] = useState<string | null>(null);
-
-  const visible = activeCategory === "All"
-    ? PROJECTS
-    : PROJECTS.filter((p) => {
-        const cats = Array.isArray(p.category) ? p.category : [p.category];
-        return cats.includes(activeCategory);
-      });
-
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <style dangerouslySetInnerHTML={{ __html: `
-        @media (max-width: 900px) {
-          .portfolio-grid { grid-template-columns: 1fr !important; }
-          .portfolio-grid .portfolio-card.highlight { grid-column: span 1 !important; }
-        }
-      ` }} />
-      <VignetteBackground />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "1200px", margin: "0 auto", padding: "72px 36px 96px" }}>
+    <main>
+      <PageHero
+        planet="portfolio"
+        kicker="Portfolio"
+        title="Seventeen projects I built and still maintain."
+        lede="Live products, client sites and internal systems. Open any entry for the build details and the stack."
+      />
 
-        <header className="pv-page-head">
-          <div className="pv-mono-label">Portfolio of shipped work</div>
-          <h1>
-            What I&apos;ve <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>built.</em>
-          </h1>
-          <p className="deck">
-            Live products, client sites and internal systems, all maintained by me. Click any tile to see the build details.
-          </p>
-        </header>
+      <Section stack>
+        <ProjectList projects={PROJECTS} />
+      </Section>
 
-        {/* Category filters */}
-        <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "32px" }}>
-          {CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              style={{
-                padding: "8px 16px",
-                background: activeCategory === cat ? "var(--color-warm-accent)" : "transparent",
-                color: activeCategory === cat ? "var(--color-warm-bg)" : "var(--color-warm-text-muted)",
-                border: `1px solid ${activeCategory === cat ? "var(--color-warm-accent)" : "var(--color-warm-border)"}`,
-                fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase",
-                fontFamily: "var(--font-dm-sans), sans-serif", cursor: "pointer", fontWeight: 700, borderRadius: 0,
-              }}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
-        {/* Grid */}
-        <div className="portfolio-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}>
-          {visible.map((p) => {
-            const isOpen = openProject === p.slug;
-            return (
-              <article
-                key={p.slug}
-                className={`portfolio-card ${p.highlight ? "highlight" : ""}`}
-                style={{
-                  gridColumn: p.highlight ? "span 2" : undefined,
-                  background: "var(--color-warm-bg-alt)",
-                  border: `1px solid ${isOpen ? p.visualColor : "var(--color-warm-border)"}`,
-                  padding: 0,
-                  cursor: "pointer",
-                  transition: "border-color 0.2s, transform 0.15s",
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-                onClick={() => setOpenProject(isOpen ? null : p.slug)}
-              >
-                {/* Visual hero block */}
-                <div style={{
-                  height: "140px",
-                  background: `linear-gradient(135deg, ${p.visualColor}25, ${p.visualColor}05)`,
-                  borderBottom: `2px solid ${p.visualColor}`,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  position: "relative",
-                }}>
-                  <div style={{
-                    fontFamily: "'Cinzel', Georgia, serif",
-                    fontSize: p.visualSymbol.length <= 2 ? "64px" : "48px",
-                    fontWeight: 700,
-                    color: p.visualColor,
-                    lineHeight: 1,
-                    letterSpacing: "0.04em",
-                  }}>
-                    {p.visualSymbol}
-                  </div>
-                  {/* Status badge */}
-                  <div style={{
-                    position: "absolute",
-                    top: "12px",
-                    right: "12px",
-                    padding: "3px 8px",
-                    fontSize: "9px",
-                    letterSpacing: "0.18em",
-                    textTransform: "uppercase",
-                    fontFamily: "var(--font-dm-sans), sans-serif",
-                    fontWeight: 700,
-                    background: p.status === "Live" ? "#7aaa6a" : p.status === "In Development" ? "#e8b968" : p.status === "Published" ? "#9b7fd4" : "var(--color-warm-text-light)",
-                    color: "var(--color-warm-bg)",
-                  }}>
-                    {p.status}
-                  </div>
-                </div>
-
-                {/* Body */}
-                <div style={{ padding: "20px", flex: 1, display: "flex", flexDirection: "column" }}>
-                  <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", fontWeight: 700, color: "var(--color-warm-text)", margin: "0 0 4px", lineHeight: 1.2 }}>{p.title}</h2>
-                  <p style={{ fontSize: "13px", color: "var(--color-warm-accent)", margin: "0 0 12px", fontStyle: "italic" }}>{p.subtitle}</p>
-                  <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6, margin: "0 0 12px" }}>{p.description}</p>
-
-                  {/* In the DOM whether or not it is open. A fragment cannot carry the hidden
-                        attribute, so the panel gets a div that can. Conditional rendering meant
-                        every portfolio detail was withheld from a crawler. */}
-                    <div hidden={!isOpen}>
-                      <div style={{ borderTop: "1px solid var(--color-warm-border)", paddingTop: "12px", marginTop: "8px" }}>
-                        <h4 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-warm-accent)", margin: "0 0 8px", fontWeight: 700 }}>What&apos;s built</h4>
-                        <ul style={{ margin: 0, paddingLeft: "18px", fontSize: "12px", color: "var(--color-warm-text)", lineHeight: 1.7 }}>
-                          {p.detailLines.map((d, i) => <li key={i}>{d}</li>)}
-                        </ul>
-                      </div>
-                      <div style={{ borderTop: "1px solid var(--color-warm-border)", paddingTop: "12px", marginTop: "12px" }}>
-                        <h4 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-warm-accent)", margin: "0 0 8px", fontWeight: 700 }}>Tech</h4>
-                        <div style={{ display: "flex", gap: "4px", flexWrap: "wrap" }}>
-                          {p.techStack.map((t) => (
-                            <span key={t} style={{ fontSize: "10px", padding: "3px 8px", background: "var(--color-warm-bg)", color: "var(--color-warm-text-muted)", border: "1px solid var(--color-warm-border)", letterSpacing: "0.05em" }}>{t}</span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-
-                  <div style={{ marginTop: "auto", paddingTop: "12px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                    <span style={{ fontSize: "10px", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-warm-text-light)", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-                      {isOpen ? "Click to collapse" : "Click for details"}
-                    </span>
-                    {p.liveUrl && (
-                      <a
-                        href={p.liveUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        style={{ fontSize: "11px", color: p.visualColor, textDecoration: "none", letterSpacing: "0.1em", fontWeight: 700 }}
-                      >
-                        Visit
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </article>
-            );
-          })}
-        </div>
-
-        {/* CTA */}
-        <div style={{ marginTop: "64px", padding: "40px 32px", textAlign: "center", background: "var(--color-warm-bg-alt)", border: "2px solid var(--color-warm-accent)" }}>
-          <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", color: "var(--color-warm-text)", margin: "0 0 12px", fontWeight: 700 }}>Custom software from $1,500</h3>
-          <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", margin: "0 0 24px", maxWidth: "560px", marginLeft: "auto", marginRight: "auto", lineHeight: 1.6 }}>
-            Apps, web platforms, internal tools and AI integrations. I build and maintain them myself.
-          </p>
-          <Link href="/software" className="pv-btn-primary">See custom software pricing</Link>
-        </div>
-
-      </main>
-    </div>
+      <ClosingCall
+        title="Custom software from $1,500"
+        line="Apps, web platforms, internal tools and AI integrations. I build and maintain them myself."
+        button="See custom software pricing"
+        href="/software"
+      />
+    </main>
   );
 }
