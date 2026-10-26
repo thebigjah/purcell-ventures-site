@@ -1,104 +1,118 @@
 "use client";
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CONTACT } from "@/lib/contact";
+import { HIDE_CHROME_ON } from "./SiteNav";
 
-// WHY A FOOTER EXISTS NOW.
-//
-// The site had seventy-three pages and four of them named him. That is the whole
-// internal-linking problem in one sentence: a search engine crawling this domain saw a
-// company, and had almost nothing tying the company to a person. The three pages that do
-// answer for the person, /who, /team and /resume, were reachable from nearly nowhere.
-//
-// One footer on every page fixes it, and it costs a reader nothing because it is at the
-// bottom, which is where somebody who has finished reading goes looking for exactly these
-// things: who is this, how do I reach them.
+// The footer is where most internal links to the person live: /who, /team and /resume
+// were reachable from almost nowhere before it existed. rel="me" on the profiles is the
+// machine-readable half of the sameAs claim in the root layout's JSON-LD.
 
-// Mirror SiteNav exactly. Every path on that list is a standalone surface with its
-// own design, a print target, or a logged-in tool, and a marketing footer under any
-// of them is a mistake in the same way a nav bar there would be.
-const HIDE_ON = ["/logos", "/patterns", "/brand", "/resume", "/print", "/qr", "/business-cards", "/crm", "/invoicing", "/newsletter", "/links", "/digital/playbook", "/digital/finder", "/sales-rep", "/rep-portal", "/courses/college-apps/lessons", "/courses/business-launch/lessons", "/courses/ai-automation/lessons", "/shop", "/free"];
+const COLS: { title: string; links: { href: string; label: string; rel?: string }[] }[] = [
+  {
+    title: "Services",
+    links: [
+      { href: "/sites", label: "Websites" },
+      { href: "/digital", label: "Digital add-ons" },
+      { href: "/consulting", label: "AI consulting" },
+      { href: "/software", label: "Custom software" },
+      { href: "/steady", label: "Steady, personal IT" },
+      { href: "/pricing-comparison", label: "Pricing, compared" },
+    ],
+  },
+  {
+    title: "Proof and learning",
+    links: [
+      { href: "/portfolio", label: "Portfolio" },
+      { href: "/case-studies", label: "Case studies" },
+      { href: "/agentic-ai", label: "Autonomous AI agents" },
+      { href: "/courses", label: "Courses" },
+      { href: "/shop", label: "Shop" },
+      { href: "/tools", label: "Free tools" },
+      { href: "/blog", label: "Blog" },
+    ],
+  },
+  {
+    title: "The company",
+    links: [
+      { href: "/who", label: "Who is Elijah Purcell" },
+      { href: "/what-is-purcell-ventures", label: "What is Purcell Ventures" },
+      { href: "/about", label: "About" },
+      { href: "/how-we-work", label: "How we work" },
+      { href: "/team", label: "The team" },
+      { href: "/resume", label: "Founder résumé" },
+      { href: "/faq", label: "Questions" },
+      { href: "/ai-at-alabama", label: "AI at Alabama" },
+    ],
+  },
+  {
+    title: "Elsewhere",
+    links: [
+      { href: "https://www.linkedin.com/in/theelijahpurcell", label: "LinkedIn", rel: "me" },
+      { href: "https://github.com/thebigjah", label: "GitHub", rel: "me" },
+      { href: "https://www.instagram.com/theelijahpurcell/", label: "Instagram", rel: "me" },
+      { href: "https://ua-today.vercel.app", label: "UA Today" },
+    ],
+  },
+];
 
 export default function SiteFooter() {
   const pathname = usePathname() || "/";
-  if (HIDE_ON.some((p) => pathname.startsWith(p))) return null;
-
-  const year = 2026;
-
+  if (HIDE_CHROME_ON.some((p) => pathname.startsWith(p))) return null;
   return (
-    <footer
-      style={{
-        borderTop: "1px solid rgba(212,175,55,0.18)",
-        background: "#0f0e0c",
-        color: "#8b8578",
-        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-        fontSize: "13px",
-        lineHeight: 1.7,
-        padding: "48px 24px 40px",
-      }}
-    >
-      <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gap: "32px", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))" }}>
-
-        <div>
-          <div style={{ fontSize: "10px", letterSpacing: "0.24em", textTransform: "uppercase", color: "#d4af37", fontWeight: 700, marginBottom: "12px" }}>
-            Purcell Ventures LLC
-          </div>
-          <p style={{ margin: 0, maxWidth: "34ch" }}>
-            Websites, software and AI tooling for small businesses. Founded 2025 in
-            Georgia. Elijah runs it from Tuscaloosa, Alabama.
+    <footer className="foot">
+      <style dangerouslySetInnerHTML={{ __html: FOOT_CSS }} />
+      <div className="ui-wrap foot__top">
+        <div className="foot__brand">
+          <Link href="/" className="foot__lock" aria-label="Purcell Ventures, home">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/mark-foil.svg" alt="" width={40} height={40} />
+            <b>Purcell Ventures</b>
+          </Link>
+          <p>Websites, software and AI training for small businesses. Founded in Georgia in 2025 and run by Elijah Purcell from Tuscaloosa, Alabama.</p>
+          <p className="foot__reach">
+            <a href={`tel:${CONTACT.phoneE164}`}>{CONTACT.phone}</a>
+            <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
           </p>
+          <Link href="/about#contact" className="ui-btn">Start a project</Link>
         </div>
-
-        <div>
-          <div style={{ fontSize: "10px", letterSpacing: "0.24em", textTransform: "uppercase", color: "#d4af37", fontWeight: 700, marginBottom: "12px" }}>
-            The company
+        {COLS.map((c) => (
+          <div key={c.title}>
+            <p className="foot__h">{c.title}</p>
+            <ul>
+              {c.links.map((l) => (
+                <li key={l.href}>
+                  {l.href.startsWith("http") ? (
+                    <a href={l.href} rel={l.rel}>{l.label}</a>
+                  ) : (
+                    <Link href={l.href}>{l.label}</Link>
+                  )}
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
-            <li><Link href="/who" style={{ color: "#c9c3b4", textDecoration: "none" }}>Who is Elijah Purcell</Link></li>
-            <li><Link href="/what-is-purcell-ventures" style={{ color: "#8b8578", textDecoration: "none" }}>What is Purcell Ventures</Link></li>
-            <li><Link href="/team" style={{ color: "#8b8578", textDecoration: "none" }}>The team</Link></li>
-            <li><Link href="/resume" style={{ color: "#8b8578", textDecoration: "none" }}>Founder resume</Link></li>
-            <li><Link href="/portfolio" style={{ color: "#8b8578", textDecoration: "none" }}>Portfolio</Link></li>
-            <li><Link href="/tools" style={{ color: "#8b8578", textDecoration: "none" }}>Free tools</Link></li>
-            <li><Link href="/blog" style={{ color: "#8b8578", textDecoration: "none" }}>Writing</Link></li>
-            <li><Link href="/ai-at-alabama" style={{ color: "#8b8578", textDecoration: "none" }}>AI at Alabama</Link></li>
-            <li><Link href="/agentic-ai" style={{ color: "#8b8578", textDecoration: "none" }}>Autonomous AI agent systems</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <div style={{ fontSize: "10px", letterSpacing: "0.24em", textTransform: "uppercase", color: "#d4af37", fontWeight: 700, marginBottom: "12px" }}>
-            Reach us
-          </div>
-          <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
-            <li><a href={`tel:${CONTACT.phoneE164}`} style={{ color: "#8b8578", textDecoration: "none" }}>{CONTACT.phone}</a></li>
-            <li><a href={`mailto:${CONTACT.email}`} style={{ color: "#8b8578", textDecoration: "none" }}>{CONTACT.email}</a></li>
-            <li><Link href="/about#contact" style={{ color: "#8b8578", textDecoration: "none" }}>Start a project</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <div style={{ fontSize: "10px", letterSpacing: "0.24em", textTransform: "uppercase", color: "#d4af37", fontWeight: 700, marginBottom: "12px" }}>
-            Elsewhere
-          </div>
-          <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
-            <li><a href="https://www.linkedin.com/in/theelijahpurcell" rel="me" style={{ color: "#8b8578", textDecoration: "none" }}>LinkedIn</a></li>
-            <li><a href="https://github.com/thebigjah" rel="me" style={{ color: "#8b8578", textDecoration: "none" }}>GitHub</a></li>
-            <li><a href="https://www.instagram.com/theelijahpurcell/" rel="me" style={{ color: "#8b8578", textDecoration: "none" }}>Instagram</a></li>
-            <li><a href="https://ua-today.vercel.app" style={{ color: "#8b8578", textDecoration: "none" }}>UA Today</a></li>
-          </ul>
-        </div>
-
+        ))}
       </div>
-
-      {/* rel="me" above is not decoration. It is the machine-readable half of the same
-          claim the sameAs array makes in JSON-LD, and having both agree is what turns
-          four separate profiles into one entity rather than four people with a name in
-          common. */}
-      <div style={{ maxWidth: "1100px", margin: "36px auto 0", paddingTop: "20px", borderTop: "1px solid rgba(212,175,55,0.10)", fontSize: "11.5px", color: "#6d6759" }}>
-        &copy; {year} Purcell Ventures LLC. Elijah Purcell founded and runs it.
+      <div className="ui-wrap foot__base">
+        <span>&copy; 2026 Purcell Ventures LLC, Georgia control number {CONTACT.llcControlNumber}.</span>
+        <span>Elijah Purcell, Founder/CEO</span>
       </div>
     </footer>
   );
 }
+
+const FOOT_CSS = `
+.foot{border-top:1px solid var(--line);background:var(--bg);color:var(--muted);font-size:15px;padding-block:56px 32px}
+.foot__top{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(4,minmax(0,1fr));gap:32px}
+.foot__lock{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--fg);margin-bottom:14px}
+.foot__lock b{font:600 20px/1 var(--font-display);letter-spacing:.04em}
+.foot__brand p{margin:0 0 14px;max-width:36ch}
+.foot__reach{display:flex;flex-direction:column;gap:2px}
+.foot__reach a{color:var(--fg);text-decoration:none}
+.foot__h{color:var(--fg);font-weight:700;margin:0 0 10px}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot li a{display:inline-block;padding:4px 0;color:var(--muted);text-decoration:none}
+.foot li a:hover,.foot__reach a:hover{color:#f0d79a}
+.foot__base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--subtle)}
+@media (max-width:980px){.foot__top{grid-template-columns:repeat(2,minmax(0,1fr))}.foot__brand{grid-column:1/-1}}
+@media (max-width:520px){.foot__top{grid-template-columns:minmax(0,1fr)}}`;

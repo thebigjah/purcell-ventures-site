@@ -30,25 +30,11 @@ export default function Breadcrumbs({ trail }: { trail: Crumb[] }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <nav
-        aria-label="Breadcrumb"
-        style={{
-          fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-          fontSize: "11px", letterSpacing: "0.16em", textTransform: "uppercase",
-          color: "var(--color-warm-text-muted)", marginBottom: "4px",
-        }}
-      >
-        {trail.map((c, i) => (
-          <span key={c.href}>
-            {i > 0 && <span style={{ opacity: 0.5, padding: "0 7px" }}>/</span>}
-            {i === trail.length - 1 ? (
-              <span aria-current="page">{c.name}</span>
-            ) : (
-              <Link href={c.href} style={{ color: "inherit", textDecoration: "none" }}>{c.name}</Link>
-            )}
-          </span>
-        ))}
-      </nav>
+      {trail.length > 1 && (
+        <nav aria-label="Breadcrumb" className="ui-crumb">
+          <Link href={trail[trail.length - 2].href}>{trail[trail.length - 2].name}</Link>
+        </nav>
+      )}
     </>
   );
 }

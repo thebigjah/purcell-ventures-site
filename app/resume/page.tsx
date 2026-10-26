@@ -1,825 +1,306 @@
-import type { Metadata } from "next";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
+import type { ReactNode } from "react";
+import Link from "next/link";
+import { PageHero, Section, Facts, Figures, Button } from "@/app/components/ui";
+import { CONTACT } from "@/lib/contact";
 
-export const metadata: Metadata = {
-  title: "Elijah Purcell: Resume & Achievements",
-  description:
-    "Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a University of Alabama Honors College student, class of 2030. Software, AI systems and shipped products, with the full work, activities, awards and scholarship record.",
-};
+// THE FULL RÉSUMÉ, rebuilt on the page kit 26 Oct 2026.
+//
+// Content decisions made in the rebuild, so nobody restores them by accident:
+// - The public email is the business address. His personal Gmail stays off the site.
+// - "Generates active revenue" and the Loom's pipeline dollar figure are gone: résumé
+//   figures stay only when there is a source for them.
+// - The scholarship total is not printed. His rule (20 Aug 2026) keeps that number on the
+//   college-application course page only. The per-school offers stay, since they are the record.
 
-// Dark Vignette palette, same as the rest of the site
-const C = {
-  bg: "#0c0a08",
-  bgAlt: "#141210",
-  card: "#1a1714",
-  border: "#2e2820",
-  accent: "#d4af37",
-  accentLight: "#e8c96a",
-  text: "#f5f0e0",
-  textMuted: "#a89c87",
-  textLight: "#7a6a52",
-  green: "#7aaa6a",
-};
+type Entry = { title: ReactNode; org?: ReactNode; when?: ReactNode; body?: ReactNode; stack?: string; href?: string };
 
-function Section({ roman, title, em, children }: { roman: string; title: string; em?: string; children: React.ReactNode }) {
+function Entries({ items }: { items: Entry[] }) {
   return (
-    <section style={{ marginBottom: "56px" }}>
-      <header style={{
-        padding: "32px 0 18px",
-        display: "grid", gridTemplateColumns: "auto 1fr",
-        gap: "20px", alignItems: "baseline",
-        borderBottom: `1px solid ${C.border}`,
-        marginBottom: "28px",
-      }}>
-        <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontWeight: 400, fontSize: "36px", lineHeight: 1, color: C.accent }}>
-          {roman}
-        </span>
-        <h2 style={{
-          fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600,
-          fontSize: "22px", letterSpacing: "0.04em",
-          color: C.text, textTransform: "uppercase",
-          margin: 0,
-        }}>
-          {title}
-          {em && (
-            <em className="pv-italic" style={{ fontWeight: 400, textTransform: "none", letterSpacing: 0, color: C.accent, marginLeft: "10px" }}>
-              {em}
-            </em>
-          )}
-        </h2>
-      </header>
-      {children}
-    </section>
-  );
-}
-
-function SubSection({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <div style={{ marginBottom: "24px" }}>
-      <div style={{
-        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-        fontSize: "10px", fontWeight: 700,
-        letterSpacing: "0.28em", textTransform: "uppercase",
-        color: C.accent,
-        marginBottom: "16px", paddingBottom: "6px",
-        borderBottom: `1px solid ${C.border}`,
-      }}>
-        {title}
-      </div>
-      {children}
-    </div>
-  );
-}
-
-function Row({ left, right, sub, note }: { left: string; right?: string; sub?: string; note?: string }) {
-  return (
-    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "18px", gap: "16px" }}>
-      <div style={{ flex: 1 }}>
-        <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600, color: C.text, fontSize: "15px", lineHeight: 1.3, letterSpacing: "0.01em" }}>
-          {left}
-        </div>
-        {sub && (
-          <div className="pv-italic" style={{ color: C.text, opacity: 0.85, fontSize: "15px", marginTop: "6px", lineHeight: 1.5 }}>
-            {sub}
+    <div className="ui-entries">
+      {items.map((e, i) => (
+        <article className="ui-entry" key={i}>
+          <div>
+            <h3>{e.title}</h3>
+            {e.org && <p className="ui-entry__org">{e.org}</p>}
           </div>
-        )}
-        {note && (
-          <div style={{ color: C.textLight, fontSize: "12.5px", marginTop: "6px", fontStyle: "italic", lineHeight: 1.5 }}>
-            {note}
-          </div>
-        )}
-      </div>
-      {right && (
-        <div style={{
-          fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-          fontSize: "10px", fontWeight: 700,
-          letterSpacing: "0.22em", textTransform: "uppercase",
-          color: C.accent, whiteSpace: "nowrap", paddingTop: "4px",
-          textAlign: "right", maxWidth: "180px",
-        }}>
-          {right}
-        </div>
-      )}
+          {e.when && <span className="ui-entry__when">{e.when}</span>}
+          {e.body && <div className="ui-entry__body">{e.body}</div>}
+          {e.href && <p className="ui-entry__stack"><a className="ui-link" href={`https://${e.href}`} target="_blank" rel="noopener noreferrer">{e.href}</a></p>}
+          {e.stack && <p className="ui-entry__stack">{e.stack}</p>}
+        </article>
+      ))}
     </div>
   );
 }
 
-function AwardBadge({ text }: { text: string }) {
-  return (
-    <span style={{
-      display: "inline-block",
-      border: `1.5px solid ${C.border}`,
-      padding: "5px 12px",
-      fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-      fontSize: "10px", fontWeight: 600,
-      letterSpacing: "0.18em", textTransform: "uppercase",
-      color: C.textMuted,
-      marginRight: "8px",
-      marginBottom: "8px",
-    }}>
-      {text}
-    </span>
-  );
-}
+const WORK: Entry[] = [
+  {
+    title: "Middleman", org: "A two-sided sales marketplace", when: "2026", href: "middleman-lime.vercel.app",
+    body: <ul>
+      <li>Designed and shipped a marketplace that connects companies with independent field and phone sales reps. The platform acts as paying agent and holds commissions in escrow through Stripe.</li>
+      <li>Built the compliance layer: safeguards on independent-contractor classification, per-state geo-gating, e-signed platform agreements, and commission terms frozen at signature so a later edit to an offer cannot change what a rep is owed.</li>
+      <li>14 database migrations with row-level security. 92 automated tests, including 20 adversarial cases an independent reviewer wrote to break the payment handling.</li>
+    </ul>,
+    stack: "Next.js 16, TypeScript, Supabase and PostgreSQL, Stripe, Vercel",
+  },
+  {
+    title: "The Loom", org: "A lead-generation engine that runs itself", when: "2026", href: "the-loom-gold.vercel.app",
+    body: <ul>
+      <li>A daily crawler finds local businesses with little or no web presence, researches and scores each one, and emails a ranked packet at 7:15 every morning.</li>
+      <li>Tracks 97 actionable leads and takes down expired previews on its own.</li>
+      <li>Five production website templates, each with its own type and colour system, so a prospect sees a site built for their industry.</li>
+    </ul>,
+    stack: "Python, Google Places API, Supabase, GitHub Actions, Next.js, Resend",
+  },
+  {
+    title: "Blast Studio", org: "A game platform with creator tools", when: "2026",
+    body: <ul>
+      <li>Turned a single browser game into a platform where anyone builds their own version: self-hosted subject cutout, a brush editor for fixing masks, a content editor, leaderboards for each version, a public marketplace and an admin review queue.</li>
+      <li>Delivered the iOS build to App Store Connect without a physical test device, by archiving unsigned and signing at export with an Admin-scoped API key.</li>
+      <li>Shipped the full store package: icons, feature graphic, screenshots, listing copy and a likeness release for the featured subject.</li>
+    </ul>,
+    stack: "JavaScript, MediaPipe, Vercel Blob, Capacitor for iOS and Android",
+  },
+  {
+    title: "ElijahBot OS", org: "A personal knowledge and operations command center", when: "2026", href: "elijahbot-os.vercel.app",
+    body: <ul>
+      <li>A command center over a 441-node personal knowledge graph: eight stations, a command palette with voice input, installable as a web app, and a briefing emailed every morning at 7:30.</li>
+      <li>A nightly job re-reads the graph, scores its health and writes a list of what the knowledge base is missing, so the gaps get filled on purpose.</li>
+      <li>A semantic recall layer serves 200-token chunks across memory, notes and graph nodes so retrieval stays cheap as it grows.</li>
+    </ul>,
+    stack: "Next.js, TypeScript, a Node ingest pipeline, Vercel Cron, Claude API",
+  },
+  {
+    title: "Boyfriend Camera", org: "A computer-vision photography app", when: "2026", href: "boyfriend-camera.vercel.app",
+    body: <ul>
+      <li>The live viewfinder runs through a WebGL colour-grading shader, so the photographer composes each shot with its final look already applied.</li>
+      <li>On-device scene analysis reads luminance, colour cast and edge orientation to suggest a pose, and three.js renders lit 3D mannequins in frame as posing guides.</li>
+      <li>A full non-destructive editor: curves, eight-channel HSL, three-way colour wheels, radial and linear masks, video grading with audio re-encode, and a local library.</li>
+    </ul>,
+    stack: "WebGL and GLSL, three.js, MediaPipe, IndexedDB, installable web app",
+  },
+  {
+    title: "Wholesale Engine", org: "A real-estate acquisition pipeline", when: "2026",
+    body: <ul>
+      <li>Parses county tax-delinquent PDFs by word coordinates, checks each parcel against a 279,000-record assessor GIS layer, prices deals by maximum allowable offer, matches them to a buyer list and emails a daily packet.</li>
+      <li>The ethics are in the code: it refuses sources whose terms prohibit scraping, and estate-owned parcels go to a person for review and are never contacted automatically.</li>
+    </ul>,
+    stack: "Python, SQLite and Supabase, ArcGIS, pytest, Windows Task Scheduler",
+  },
+  {
+    title: "Outreach Engine", org: "Outreach automation with compliance gates", when: "2026",
+    body: <ul>
+      <li>A multi-campaign outreach system built around a four-tier risk classifier. Only the lowest tiers send on their own, sensitive tiers become drafts for a person to review, and the highest tier is never drafted.</li>
+      <li>Hard gates on CAN-SPAM requirements, an append-only suppression list, a blocklist that fails closed, and an automatic stop when bounce rates spike. A 22-check safety suite runs before every send.</li>
+    </ul>,
+    stack: "Python, Gmail API, a JSON policy layer, pytest",
+  },
+  {
+    title: "Fellowship of the Round", org: "A 3D multiplayer arena game", when: "2026",
+    body: <ul>
+      <li>A round-based arena game with seven playable species and their own ability kits, a 131-card stacking upgrade pool, encounters against the game with taming and climbing, and online play for twelve.</li>
+      <li>Three maps, movement tuned for each species, and builds for Windows, macOS and Linux.</li>
+    </ul>,
+    stack: "Godot 4.7, GDScript, Steam networking",
+  },
+];
 
-function ScholarCard({ school, amount, note }: { school: string; amount: string; note?: string }) {
-  return (
-    <div style={{
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      padding: "12px 18px",
-      background: C.bgAlt,
-      border: `1px solid ${C.border}`,
-      marginBottom: "8px",
-      gap: "12px",
-    }}>
-      <div>
-        <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600, fontSize: "14px", color: C.text }}>
-          {school}
-        </span>
-        {note && (
-          <span className="pv-italic" style={{ fontSize: "13px", color: C.textMuted, marginLeft: "12px" }}>
-            {note}
-          </span>
-        )}
-      </div>
-      <span style={{
-        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-        fontWeight: 700, fontSize: "13px", letterSpacing: "0.06em",
-        color: C.accent, whiteSpace: "nowrap",
-      }}>
-        {amount}
-      </span>
-    </div>
-  );
-}
+const CLIENT: Entry[] = [
+  { title: "English Pruitt Photography", org: "Website", when: "2026", body: <p>Found through cold outreach, then scoped and built: a hand-coded editorial portfolio with a true masonry gallery, film-grain texture and scroll-reveal motion, written in the client&apos;s own voice.</p> },
+  { title: "Purcell Ventures digital division", org: "Tools for small businesses", when: "2025 to present", body: <p>Twenty reusable modules across websites, chatbots, booking, review capture and lead generation, sold to local service businesses as a setup fee plus a subscription.</p> },
+];
 
-function ImpactCard({ year, location, org, bullets }: { year: string; location: string; org: string; bullets: string[] }) {
-  return (
-    <div className="pv-card" style={{ padding: "24px 28px 20px", marginBottom: "12px" }}>
-      <span className="b3"></span><span className="b4"></span>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px", gap: "12px" }}>
-        <div>
-          <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600, fontSize: "15px", color: C.text, letterSpacing: "0.02em" }}>
-            {location}
-          </span>
-          <span className="pv-italic" style={{ fontSize: "13px", color: C.textMuted, marginLeft: "10px" }}>
-            {org}
-          </span>
-        </div>
-        <span style={{
-          fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-          fontSize: "10px", fontWeight: 700,
-          letterSpacing: "0.24em", textTransform: "uppercase",
-          color: C.accent, whiteSpace: "nowrap",
-        }}>
-          {year}
-        </span>
-      </div>
-      <ul style={{ margin: 0, paddingLeft: "18px" }}>
-        {bullets.map((b, i) => (
-          <li key={i} className="pv-italic" style={{ fontSize: "14px", color: C.text, opacity: 0.85, lineHeight: 1.55, marginBottom: "4px" }}>
-            {b}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+const PRACTICE: Entry[] = [
+  { title: "Adversarial review before release", body: <p>An independent reviewer tests every significant build for failures before it ships. The review has caught defects the builder&apos;s own checks missed, including user data lost when the phone closed a tab and tests that were claimed but never written.</p> },
+  { title: "Security audits", body: <p>Read-only security audits of seven live applications, documenting row-level-security gaps, paid API routes with no authentication, stored cross-site scripting, vote forgery through exposed identifiers and server-side request forgery, each with a remediation list ranked by severity.</p> },
+];
 
-function ProjectCard({ name, kind, year, live, stack, bullets }: {
-  name: string; kind: string; year: string; live?: string; stack: string; bullets: string[];
-}) {
-  return (
-    <div className="pv-card" style={{ padding: "24px 28px 20px", marginBottom: "14px" }}>
-      <span className="b3"></span><span className="b4"></span>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "6px", gap: "12px" }}>
-        <div style={{ flex: 1 }}>
-          <span style={{ fontFamily: "'Cinzel', Georgia, serif", fontWeight: 600, fontSize: "16px", color: C.text, letterSpacing: "0.02em" }}>
-            {name}
-          </span>
-          <span className="pv-italic" style={{ fontSize: "13.5px", color: C.textMuted, marginLeft: "10px" }}>
-            {kind}
-          </span>
-        </div>
-        <span style={{
-          fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-          fontSize: "10px", fontWeight: 700,
-          letterSpacing: "0.24em", textTransform: "uppercase",
-          color: C.accent, whiteSpace: "nowrap",
-        }}>
-          {year}
-        </span>
-      </div>
+const EXPERIENCE: Entry[] = [
+  {
+    title: "Founder/CEO", org: "Purcell Ventures LLC", when: "April 2025 to present",
+    body: <>
+      <p>A Georgia LLC that builds software, AI integrations and websites, runs digital marketing, and holds the field-services and real-estate channels. I own the whole cycle: finding clients, scoping, pricing, building, deploying and support.</p>
+      <p>Filed as Zultar LLC on 8 April 2025 and renamed Purcell Ventures LLC on 27 January 2026. Control number {CONTACT.llcControlNumber}. EIN and business banking in place. Registered agent of record.</p>
+    </>,
+  },
+  { title: "Founder and operator", org: "Mantle Field Services", when: "2024 to present", body: <p>The sister brand for gutter cleaning, pressure washing and lawn care across metro Atlanta. I find clients, quote, schedule, maintain the equipment and do the work on site.</p> },
+  { title: "AI data trainer", org: "Outlier AI", when: "October 2025 to May 2026", body: <p>Two projects. On the first I rated large language model outputs for accuracy, reasoning and instruction-following and wrote the reasoning behind every rating. On the second I wrote spoken-style conversations between a user and an assistant under a fixed budget of tool calls per task, writing the user turns, editing the model&apos;s replies, and rewriting prompts until the model stopped over-calling its tools.</p> },
+  { title: "AI response evaluator", org: "DataAnnotation", when: "Spring 2026", body: <p>Rated AI responses against a Helpful, Honest, Harmless rubric that ranks honesty and harmlessness above helpfulness. Flagged invented facts, fabricated links, false premises the model accepted, and faulty reasoning, along with length, repetition and whether the model answered the question the user meant.</p> },
+  { title: "Team member", org: "Chick-fil-A", when: "2023", body: <p>Front-line customer service in a high-volume restaurant.</p> },
+  { title: "Peer tutor", org: "Mathematics and English", when: "2022 to 2026", body: <p>One-on-one review sessions with classmates.</p> },
+];
 
-      {live && (
-        <div style={{ marginBottom: "10px" }}>
-          <a
-            href={`https://${live}`}
-            style={{
-              fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-              fontSize: "11px", letterSpacing: "0.08em",
-              color: C.accentLight, textDecoration: "none",
-              borderBottom: `1px solid ${C.border}`,
-            }}
-          >
-            {live}
-          </a>
-        </div>
-      )}
+const EDUCATION: Entry[] = [
+  { title: "The University of Alabama, Honors College", org: "B.S. Psychology and Data Science, New College. Presidential Merit Scholarship, $28,000 a year.", when: "2026 to 2030", body: <p>Pre-med track toward psychiatry. Enrolled and attending since August 2026.</p> },
+  { title: "Cornerstone Preparatory Academy, Acworth, Georgia", org: "GPA 3.92 weighted, SAT 1440, Beta Club", when: "Graduated May 2026", body: <p>Three years of Spanish, AP-level coursework, and College-Level Worldview and Apologetics.</p> },
+  { title: "Lee University, Summer Honors Program", org: "Cryptography and Social Media, 6 college credit hours", when: "Summer 2025" },
+  { title: "Grove Christian School, Midlothian, Virginia", org: "9th grade to the middle of 10th, Beta Club, honors courses", when: "2022 to 2023", body: <p>Awards: Behold (9th), Steadfast (10th), the Christian Character Award, the Christ-like Leadership Award, the highest math grade in the class (9th), and the lead in the Christmas musical.</p> },
+  { title: "Cornerstone Preparatory Academy, Acworth, Georgia", org: "Kindergarten to 8th grade", when: "Kindergarten to 8th", body: <p>Homeschooled from kindergarten through 3rd grade, then in person from 4th through 8th. I returned to Cornerstone for high school and graduated there.</p> },
+];
 
-      <ul style={{ margin: "0 0 12px", paddingLeft: "18px" }}>
-        {bullets.map((b, i) => (
-          <li key={i} className="pv-italic" style={{ fontSize: "14px", color: C.text, opacity: 0.85, lineHeight: 1.55, marginBottom: "5px" }}>
-            {b}
-          </li>
-        ))}
-      </ul>
+const SKILLS: [string, string][] = [
+  ["Languages", "TypeScript, JavaScript, Python, SQL, GDScript, GLSL, HTML and CSS"],
+  ["Frameworks", "Next.js, React, React Native and Expo, Node.js, Express, Capacitor, Godot"],
+  ["Data and infrastructure", "Supabase and PostgreSQL with row-level security and migrations, SQLite, Vercel, GitHub Actions, scheduled jobs"],
+  ["AI and machine learning", "Claude and OpenAI APIs, tool-using agent loops, semantic retrieval, MediaPipe, model output evaluation"],
+  ["Graphics", "WebGL and GLSL shaders, three.js, Canvas, real-time image processing"],
+  ["Engineering", "Automated testing, adversarial code review, security auditing, technical writing"],
+  ["Business", "Finding clients, pricing, contracts, invoicing, regulatory compliance"],
+  ["Communication", "Public speaking, formal debate, persuasive and analytical writing"],
+  ["Music", "Vocal performance, bass-baritone, range C1 to F5"],
+  ["Spoken languages", "English (native), Spanish (three years)"],
+];
 
-      <div style={{
-        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-        fontSize: "10px", letterSpacing: "0.16em", textTransform: "uppercase",
-        color: C.textLight, borderTop: `1px solid ${C.border}`, paddingTop: "10px",
-      }}>
-        {stack}
-      </div>
-    </div>
-  );
-}
+const AWARDS: Entry[] = [
+  { title: "Honors College admission", org: "The University of Alabama", when: "2026" },
+  { title: "Honors College admission", org: "Georgia State University", when: "2026" },
+  { title: "Behold Award", org: "Grove Christian School", when: "9th grade", body: <p>Given to selected students for moral integrity and spiritual maturity.</p> },
+  { title: "Steadfast Award", org: "Grove Christian School", when: "10th grade", body: <p>For perseverance, faithfulness and character under pressure.</p> },
+  { title: "Christian Character Award", org: "Grove Christian School", body: <p>One of two students chosen school-wide, one male and one female, for integrity and leadership.</p> },
+  { title: "Christ-like Leadership Award", org: "Grove Christian School, end-of-year ceremony", body: <p>For servant leadership across the school year.</p> },
+  { title: "Lead role, Christmas musical", org: "Grove Christian School", body: <p>The lead acting and singing role in the school&apos;s annual Christmas production.</p> },
+  { title: "Highest math grade in the class", org: "Grove Christian School", when: "9th grade", body: <p>100% in both semesters.</p> },
+  { title: "Youth Leadership Summit", org: "Family Foundation and the Colson Center", when: "Summer 2023, Richmond, Virginia", body: <p>An invitation-only summit with an advanced seminar on worldview, cultural analysis and Christian civic leadership.</p> },
+];
+
+const OFFERS: [string, string, string][] = [
+  ["Kalamazoo College", "Lux Esto Scholarship", "$48,000 a year"],
+  ["Susquehanna University", "Merit Scholarship", "$48,000 a year"],
+  ["Drake University", "Merit Scholarship", "$31,000 a year"],
+  ["Hood College", "Presidential Scholarship", "$31,000 a year"],
+  ["Transylvania University", "Merit Scholarship", "$30,000 a year"],
+  ["The University of Alabama", "Presidential Merit, enrolled", "$28,000 a year"],
+  ["Bradley University", "Presidential Scholarship", "$28,000 a year"],
+  ["Presbyterian College", "Highlander Scholarship", "$28,000 a year"],
+  ["Valparaiso University", "Merit Scholarship", "$28,000 a year"],
+  ["Lenoir-Rhyne University", "Niche Direct Merit", "$26,000 a year"],
+  ["Nazareth University", "Presidential Scholarship", "$25,000 a year"],
+  ["Oral Roberts University", "Merit Scholarship", "$24,000 a year"],
+  ["Cedarville University", "Merit Scholarship", "$22,000 a year"],
+  ["George Fox University", "Merit Scholarship", "$22,000 a year"],
+  ["Berry College", "Merit Scholarship, renewable", "$20,000 a year"],
+  ["Palm Beach Atlantic University", "Merit Scholarship", "$18,000 a year"],
+  ["Union University", "Merit Scholarship", "$17,000 a year"],
+  ["Charleston Southern University", "Merit Scholarship", "$17,000 a year"],
+  ["Mississippi College", "Academic Merit Scholarship", "$14,500 a year"],
+  ["Francis Marion University", "Niche Direct Merit", "$10,884 a year"],
+  ["Hartwick College", "Flight Path Scholarship", "$10,000 a year"],
+  ["Rider University", "Merit Scholarship", "$3,000 a year"],
+  ["Georgia State University", "Merit and Honors College", "$1,000 a year"],
+];
+
+const LEADERSHIP: Entry[] = [
+  { title: "Member, Mighty Men", org: "The men's Bible study at Cornerstone Prep", when: "11th to 12th grade", body: <p>Weekly two-hour discussions on faith, character and spiritual formation.</p> },
+  { title: "Head chaplain", org: "Grove Christian School", when: "Spring of 9th to fall of 10th", body: <p>Organized chapel services, coordinated the worship teams and led school-wide programming, with weekly rehearsals and Friday services.</p> },
+  { title: "Worship team, lead vocalist", org: "School chapel and church", when: "9th to 12th grade", body: <p>Bass-baritone, range C1 to F5. Rehearsals two to three times a week.</p> },
+  { title: "Youth group leader and summer camp counselor", org: "Church", body: <p>Mentored younger students, led group discussions and staffed a week-long summer camp each year.</p> },
+];
+
+const TRIPS: Entry[] = [
+  { title: "North Carolina", org: "Praying Pelican Missions", when: "10th grade", body: <ul><li>Organized and worked a regional food drive.</li><li>Built a full floor and an ADA-compliant ramp for an elderly couple&apos;s home after the husband became disabled.</li><li>Led prayer and worship through the week.</li></ul> },
+  { title: "The Bahamas", org: "Christian Education Relief", when: "11th grade", body: <ul><li>Helped rebuild a Christian education camp that was looted and destroyed during the COVID-19 pandemic.</li><li>Coordinated moving heavy materials and equipment across the campus.</li><li>Co-led turning a retired bus into a mobile classroom for the camp.</li></ul> },
+  { title: "Hawaii", org: "Disaster relief", when: "March 2026", body: <ul><li>Deployed after the severe flooding that hit Hawaii in early 2026.</li><li>Worked in construction support and community aid, and led worship and prayer.</li></ul> },
+];
+
+const SERVICE: Entry[] = [
+  { title: "MUST Ministries", org: "Food collection", body: <p>Organized and worked food drives for MUST Ministries, a nonprofit that provides hunger relief, shelter and support to families across greater Atlanta.</p> },
+  { title: "Children's ministry", org: "Stonebridge Church, Marietta", body: <p>Taught, mentored and led activities for elementary-age children.</p> },
+  { title: "Community cleanup", org: "Parks and neighborhoods", body: <p>Volunteer cleanup of local parks and neighborhoods.</p> },
+];
+
+const ARTS: Entry[] = [
+  { title: "Vocalist, bass-baritone", body: <p>Range C1 to F5. Led worship vocals at school and church through 12th grade.</p> },
+  { title: "Lead actor, Christmas musical", org: "Grove Christian School", body: <p>The lead role in the annual Christmas production, singing and acting.</p> },
+  { title: "Poetry and creative writing", body: <p>Original work including &ldquo;The Husks the Swine Did Eat,&rdquo; &ldquo;Injustice Scorned&rdquo; and &ldquo;The Rebuking of Loki,&rdquo; drafts of a novel, and personal essays, across eight distinct styles.</p> },
+  { title: "Video and social media", when: "2023 to present", body: <p>Writes, films and edits commentary on psychology, faith and culture. A YouTube channel with more than 2,800 subscribers, moving toward intellectual commentary.</p> },
+  { title: "Design, photography and video", body: <p>Brand identity, product photography and video for Purcell Ventures clients and my own projects, including a colour-grading and posing toolchain I built from scratch.</p> },
+];
+
+const CLUBS = ["Beta Club, at Grove and Cornerstone", "Apologetics and Debate Team", "Spanish Club, three years", "Club Med", "Creative Writing and the Writer's Guild", "Curious Conversations", "Animal Ambassadors", "Senior Devotional", "Mighty Men"];
+
+const CLUB_DETAIL: Entry[] = [
+  { title: "Apologetics and Debate Team", when: "9th to 12th grade", body: <p>Formal and informal theological debate with teachers and classmates, five to ten hours a week.</p> },
+  { title: "Creative Writing and the Writer's Guild", when: "11th grade", body: <p>A workshop for original fiction, poetry and narrative craft.</p> },
+  { title: "Beta Club", org: "Grove and Cornerstone", body: <p>The national honor society for academic achievement, character, leadership and service.</p> },
+];
+
+const ATHLETICS: Entry[] = [
+  { title: "Cheerleading, back and base", when: "9th to 10th grade", body: <p>Competitive cheer, stunt base. Six to seven hours a week in season.</p> },
+  { title: "Track and field", org: "Shot put, discus and the 100 meters", when: "Spring of 9th grade" },
+  { title: "Weightlifting", body: <p>A hypertrophy program built on the research, kept up over several years.</p> },
+];
+
+const FAITH: Entry[] = [
+  { title: "Church", org: "Stonebridge Church, Marietta, and Kennesaw First Baptist", body: <p>Stonebridge for Sunday services, Kennesaw First Baptist for Wednesday youth and retreats.</p> },
+  { title: "Apologetics and theology", body: <p>Reading William Lane Craig, Sean McDowell, C.S. Lewis and A.W. Tozer, with hermeneutics and philosophy of religion.</p> },
+];
 
 export default function ResumePage() {
   return (
-    <div style={{ background: C.bg, color: C.text, minHeight: "100vh", position: "relative", overflowX: "hidden" }}>
-      <VignetteBackground />
+    <main>
+      <PageHero
+        planet="portfolio"
+        kicker="Résumé, updated October 2026"
+        title="Elijah Brent Purcell"
+        lede="Founder/CEO of Purcell Ventures LLC. I build and ship software end to end: marketplaces, data pipelines that run on their own, applications with AI built in, and the compliance and review systems around them. I study psychology and data science in the University of Alabama Honors College, class of 2030, on a pre-med track toward psychiatry."
+        meta="Tuscaloosa, Alabama"
+        actions={<>
+          <Button href="/resume/print">Print or save as PDF</Button>
+          <Link className="ui-link" href="/who">Who is Elijah Purcell</Link>
+        </>}
+      />
 
-      {/* Mini nav. SiteNav and SiteFooter are both hidden on /resume per HIDE_ON, so
-          the link to /who has to be placed by hand here. It matters more on this page
-          than on any other: a name search on 20 Aug 2026 returned exactly one result
-          that was him, and it was this one. */}
-      <nav style={{
-        position: "relative", zIndex: 5,
-        padding: "16px 36px",
-        borderBottom: `1px solid ${C.border}`,
-        display: "flex", justifyContent: "space-between", alignItems: "center",
-        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-        fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase",
-      }}>
-        <a href="/" style={{ color: C.textMuted, textDecoration: "none" }}>Purcell Ventures</a>
-        <span style={{ display: "flex", gap: "22px" }}>
-          <a href="/who" style={{ color: C.textMuted, textDecoration: "none" }}>Who is Elijah Purcell</a>
-          <a href="/blog" style={{ color: C.textMuted, textDecoration: "none" }}>Writing</a>
-          <a href="/resume/print" style={{ color: C.accent, textDecoration: "none" }}>Print version</a>
-        </span>
-      </nav>
-
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "880px", margin: "0 auto", padding: "56px 36px 80px" }}>
-
-        {/* Editorial page header with stats band */}
-        <header style={{
-          borderTop: `3px solid ${C.text}`,
-          borderBottom: `1px solid ${C.text}`,
-          padding: "18px 0 32px",
-          position: "relative",
-          marginBottom: "40px",
-        }}>
-          <div style={{
-            fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-            fontSize: "10px", fontWeight: 700,
-            letterSpacing: "0.32em", textTransform: "uppercase",
-            color: C.accent, marginBottom: "12px",
-          }}>
-            Résumé, updated August 2026
-          </div>
-          {/* A page about a person with no picture of the person. Fifty-odd pages on this
-              site name him and not one showed his face, which is a gap for a founder whose
-              own name is what people search. Floated so the text wraps rather than being
-              pushed down, and squared off to match the editorial rules above and below. */}
-          <img
-            src="/brand/elijah.jpg"
-            alt="Elijah Purcell, founder of Purcell Ventures LLC and University of Alabama student"
-            width={132}
-            height={132}
-            style={{
-              float: "right",
-              width: "132px",
-              height: "132px",
-              objectFit: "cover",
-              objectPosition: "50% 20%",
-              marginLeft: "28px",
-              marginBottom: "12px",
-              border: `1px solid ${C.text}`,
-            }}
-          />
-          <h1 style={{
-            fontFamily: "'Cinzel', Georgia, serif", fontWeight: 700,
-            fontSize: "clamp(40px, 7vw, 84px)",
-            lineHeight: 0.98, letterSpacing: "0.005em",
-            color: C.text, margin: 0,
-          }}>
-            Elijah Brent <em className="pv-italic" style={{ fontWeight: 400, color: C.accent }}>Purcell</em>
-          </h1>
-          <p className="pv-italic" style={{ marginTop: "16px", fontSize: "18px", color: C.text, opacity: 0.78, maxWidth: "660px", lineHeight: 1.5 }}>
-            Founder/CEO, Purcell Ventures LLC. Software and AI agent developer. University of Alabama Honors College, Class of 2030. Tuscaloosa, Alabama.
-          </p>
-          <p className="pv-italic" style={{ marginTop: "10px", fontSize: "15.5px", color: C.text, opacity: 0.62, maxWidth: "660px", lineHeight: 1.55 }}>
-            I build and ship software end to end: marketplaces, autonomous data pipelines, AI-integrated
-            applications, and the compliance and review systems around them. Twenty-nine free
-            tools are live on the open web, alongside client sites, internal systems and fifteen
-            scheduled AI agents that handle proposals, audits, compliance and outreach. Studying psychology and data
-            science on a pre-med track toward psychiatry.
-          </p>
-
-          {/* Contact line */}
-          <div style={{
-            marginTop: "24px",
-            display: "flex", flexWrap: "wrap", gap: "24px",
-            fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-            fontSize: "12px", letterSpacing: "0.04em",
-            color: C.textMuted,
-          }}>
-            {[
-              { label: "Email",       val: "elijahpurcell@gmail.com",        href: "mailto:elijahpurcell@gmail.com" },
-              { label: "Business",    val: "purcellventures.co",             href: "https://purcellventures.co" },
-              { label: "GitHub",      val: "github.com/thebigjah",           href: "https://github.com/thebigjah" },
-              { label: "Print PDF",   val: "purcellventures.co/resume/print", href: "/resume/print" },
-            ].map(({ label, val, href }) => (
-              <span key={label}>
-                <span style={{ color: C.textLight, marginRight: "6px", letterSpacing: "0.22em", textTransform: "uppercase", fontSize: "10px" }}>
-                  {label}
-                </span>
-                <a href={href} style={{ color: C.accent, textDecoration: "none" }}>{val}</a>
-              </span>
-            ))}
-          </div>
-
-          {/* Stats band */}
-          <div style={{
-            marginTop: "32px",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))",
-            gap: "0",
-            border: `1px solid ${C.border}`,
-            background: C.bgAlt,
-          }}>
-            {[
-              { val: "15+",        label: "Products shipped" },
-              { val: "8",          label: "Live properties" },
-              { val: "29",         label: "Free tools published" },
-              { val: "3.92",       label: "GPA (weighted)" },
-              { val: "1440",       label: "SAT score" },
-            ].map(({ val, label }, i, arr) => (
-              <div key={label} style={{
-                padding: "20px 12px",
-                textAlign: "center",
-                borderRight: i < arr.length - 1 ? `1px solid ${C.border}` : "none",
-              }}>
-                <div style={{
-                  fontFamily: "'Cinzel', serif", fontSize: "24px", fontWeight: 700,
-                  color: C.accent, letterSpacing: "-0.01em",
-                }}>
-                  {val}
-                </div>
-                <div style={{
-                  fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-                  fontSize: "9px", letterSpacing: "0.24em", textTransform: "uppercase",
-                  color: C.textLight, marginTop: "6px",
-                }}>
-                  {label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </header>
-
-        {/* ─── Selected Work ─── */}
-        <Section roman="I." title="Selected work" em="shipped products">
-          <p className="pv-italic" style={{ fontSize: "15px", color: C.text, opacity: 0.78, marginBottom: "24px", lineHeight: 1.55 }}>
-            Everything below is deployed. I built it solo
-            unless noted.
-          </p>
-
-          <ProjectCard
-            name="Middleman"
-            kind="Two-sided sales marketplace"
-            year="2026"
-            live="middleman-lime.vercel.app"
-            stack="Next.js 16, TypeScript, Supabase / PostgreSQL, Stripe, Vercel"
-            bullets={[
-              "Architected and shipped a marketplace connecting companies with independent field and phone sales reps, where the platform acts as paying agent and escrows commissions through Stripe.",
-              "Built the compliance layer: independent-contractor classification safeguards, per-state geo-gating, e-signed platform agreements, and commission terms frozen at signature so a later offer edit cannot change what a rep is owed.",
-              "14 database migrations with row-level security. 92 automated tests, including 20 adversarial cases written by an independent reviewer to test payment handling.",
-            ]}
-          />
-
-          <ProjectCard
-            name="The Loom"
-            kind="Autonomous lead-generation engine"
-            year="2026"
-            live="the-loom-gold.vercel.app"
-            stack="Python, Google Places API, Supabase, GitHub Actions, Next.js, Resend"
-            bullets={[
-              "Daily crawler that finds local businesses with little or no web presence, researches each one, scores it and delivers a ranked packet by email at 7:15 AM.",
-              "Currently tracking 97 actionable leads against a $529,675 pipeline, with automatic takedown of expired previews.",
-              "Five production website templates, each with its own typographic and color system, so a prospect sees a site built for their industry.",
-            ]}
-          />
-
-          <ProjectCard
-            name="Blast Studio"
-            kind="Game platform and creator tools"
-            year="2026"
-            stack="JavaScript, MediaPipe, Vercel Blob, Capacitor (iOS + Android)"
-            bullets={[
-              "Turned a single browser game into a platform where anyone builds their own version: self-hosted subject cutout, a manual brush editor for fixing masks, a content editor, per-version leaderboards, a public marketplace, and an admin review queue.",
-              "Delivered the iOS build to App Store Connect with no physical test device, which required archiving unsigned and signing at export with an Admin-scoped API key.",
-              "Shipped the full store package: icons, feature graphic, screenshots, listing copy, and a likeness release for the featured subject.",
-            ]}
-          />
-
-          <ProjectCard
-            name="ElijahBot OS"
-            kind="Personal knowledge and operations command center"
-            year="2026"
-            live="elijahbot-os.vercel.app"
-            stack="Next.js, TypeScript, Node ingest pipeline, Vercel Cron, Claude API"
-            bullets={[
-              "Command center over a 441-node personal knowledge graph: eight stations, command palette with voice input, installable as a PWA, and a briefing emailed every morning at 7:30.",
-              "Nightly job re-ingests the graph, computes a health score, and writes a gaps file identifying what the knowledge base is missing so it can be filled deliberately.",
-              "Paired with a semantic recall layer that serves 200-token chunks across memory, notes, and graph nodes so retrieval stays cheap at scale.",
-            ]}
-          />
-
-          <ProjectCard
-            name="Boyfriend Camera"
-            kind="Computer-vision photography application"
-            year="2026"
-            live="boyfriend-camera.vercel.app"
-            stack="WebGL / GLSL, three.js, MediaPipe, IndexedDB, PWA"
-            bullets={[
-              "Camera app whose live viewfinder runs through a WebGL color-grading shader, so the photographer composes each photo with its final look already applied.",
-              "On-device scene analysis reads luminance, color cast, and edge orientation to suggest and place a pose. three.js renders lit 3D mannequin figures in-frame as posing guides.",
-              "Full non-destructive editor: curves, eight-channel HSL, three-way color wheels, radial and linear masks, video grading with audio re-encode, and a local library.",
-            ]}
-          />
-
-          <ProjectCard
-            name="Wholesale Engine"
-            kind="Real-estate acquisition pipeline"
-            year="2026"
-            stack="Python, SQLite / Supabase, ArcGIS, pytest, Windows Task Scheduler"
-            bullets={[
-              "Parses county tax-delinquent PDFs by word coordinates, enriches each parcel against a 279,000-record assessor GIS layer, prices deals by maximum allowable offer, matches against a buyer CRM, and emails a daily packet.",
-              "Encoded ethical exclusions directly into the pipeline: the pipeline refuses sources whose terms prohibit scraping, and estate-owned parcels go to human review and are never auto-contacted.",
-            ]}
-          />
-
-          <ProjectCard
-            name="Outreach Engine"
-            kind="Compliance-gated outreach automation"
-            year="2026"
-            stack="Python, Gmail API, JSON policy layer, pytest"
-            bullets={[
-              "Multi-campaign outreach system built around a four-tier risk classifier: only the lowest tiers send automatically, sensitive tiers draft for human review, and the highest tier is never drafted at all.",
-              "Hard gates on CAN-SPAM requirements, an append-only suppression list, a fail-closed blocklist, and an automatic sticky hard-stop when bounce rates spike. 22-check safety suite.",
-            ]}
-          />
-
-          <ProjectCard
-            name="Fellowship of the Round"
-            kind="3D multiplayer arena game"
-            year="2026"
-            stack="Godot 4.7, GDScript, Steam networking"
-            bullets={[
-              "Round-based arena game with seven playable species carrying distinct ability kits, a 131-card stacking upgrade pool, PvE encounters with taming and climbing, and twelve-player online multiplayer.",
-              "Three maps, movement archetypes tuned per species, and cross-platform builds for Windows, macOS, and Linux.",
-            ]}
-          />
-
-          <SubSection title="Client work">
-            <Row
-              left="English Pruitt Photography, Website"
-              right="2026"
-              sub="Sourced through cold outreach, scoped, and built: a hand-coded editorial portfolio site with a true masonry gallery, film-grain texture, and scroll-reveal motion, with copy written in the client's own voice."
-            />
-            <Row
-              left="Purcell Ventures Digital Division, Small-business tooling"
-              right="2025 to Present"
-              sub="Twenty reusable modules across websites, chatbots, booking, review capture, and lead generation, delivered on a setup-plus-subscription model to local service businesses."
-            />
-          </SubSection>
-
-          <SubSection title="Engineering practice">
-            <Row
-              left="Adversarial review gates"
-              sub="Every significant build passes through an independent reviewer who tests it for failures before release. This gate has caught disqualifying defects that the builder's own verification missed, including unsaved user data lost to an OS tab kill and tests that were claimed but never written."
-            />
-            <Row
-              left="Security auditing"
-              sub="Ran read-only security audits across seven live applications, documenting row-level-security gaps, unauthenticated paid-API routes, stored cross-site scripting, vote forgery through exposed identifiers, and server-side request forgery, each with a severity-ranked remediation list."
-            />
-          </SubSection>
-        </Section>
-
-        {/* ─── Experience ─── */}
-        <Section roman="II." title="Experience">
-          <Row
-            left="Founder/CEO, Purcell Ventures LLC"
-            right="April 2025 to Present"
-            sub="Georgia LLC operating across software development, AI integration, digital marketing, field services, and wholesale real estate. Owns the full cycle: client acquisition, scoping, pricing, build, deployment, and support. Generates active revenue."
-            note="Filed as Zultar LLC 4/8/2025, renamed Purcell Ventures LLC 1/27/2026. Control #25075361. EIN and business banking established. Registered agent of record."
-          />
-          <Row
-            left="Founder & Operator, Mantle Field Services"
-            right="2024 to Present"
-            sub="Sister brand handling gutter cleaning, pressure washing, and lawn care across metro Atlanta. Runs client acquisition, quoting, scheduling, equipment maintenance, and on-site delivery. Grew out of the earlier Mantle Field Services operation."
-          />
-          <Row
-            left="AI Data Trainer, Outlier AI"
-            right="Oct 2025 to May 2026"
-            sub="Two projects. On the first, evaluated large language model outputs and authored a written rationale in support of every rating, assessing accuracy, reasoning quality, and instruction adherence. On the second, wrote realistic spoken-style human-assistant conversations against a fixed per-task tool-call budget, authoring the user turns and editing the model responses, and rewriting prompts until the model stopped over-calling its tools."
-          />
-          <Row
-            left="AI Response Evaluator, DataAnnotation"
-            right="Spring 2026"
-            sub="Rated AI responses against a Helpful, Honest, Harmless rubric that ranks honesty and harmlessness above helpfulness. Flagged hallucinated facts, fabricated links, false premises accepted without correction, and incorrect reasoning, alongside assessment of length, repetition, and whether the model answered the question the user meant."
-          />
-          <Row
-            left="Team Member, Chick-fil-A"
-            right="2023"
-            sub="Front-line customer service in a high-volume restaurant."
-          />
-          <Row
-            left="Peer Tutor, Mathematics & English"
-            right="2022 to 2026"
-            sub="One-on-one academic support for classmates through structured review sessions."
-          />
-        </Section>
-
-        {/* ─── Education ─── */}
-        <Section roman="III." title="Education">
-          <Row
-            left="The University of Alabama, Honors College"
-            right="2026 to 2030"
-            sub="B.S. Psychology / Data Science, New College, Presidential Merit Scholarship ($28,000/yr)"
-            note="Pre-med track toward psychiatry. Enrolled and attending since August 2026."
-          />
-          <Row
-            left="Cornerstone Preparatory Academy, Acworth, GA"
-            right="Graduated May 2026"
-            sub="GPA 3.92 (weighted), SAT 1440, Beta Club"
-            note="Course highlights: 3 years Spanish, AP-level coursework, College-Level Worldview & Apologetics"
-          />
-          <Row
-            left="Lee University, Summer Honors Program"
-            right="Summer 2025"
-            sub="Cryptography & Social Media, 6 college credit hours earned"
-          />
-          <Row
-            left="Grove Christian School, Midlothian, VA"
-            right="2022 to 2023"
-            sub="9th Grade to Mid 10th Grade, Beta Club, Honors courses"
-            note="Awards: Behold (9th), Steadfast (10th), Christian Character Award, Christ-like Leadership Award, Highest Math Grade in Class (9th), Lead in Christmas Musical"
-          />
-          <Row
-            left="Cornerstone Preparatory Academy, Acworth, GA"
-            right="K to 8th Grade"
-            sub="Elementary and middle school (4th through 8th in person, K through 3rd homeschooled). I returned to this school and graduated from it."
-          />
-        </Section>
-
-        {/* ─── Skills ─── */}
-        <Section roman="IV." title="Technical skills">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
-            {[
-              ["Languages",       "TypeScript, JavaScript, Python, SQL, GDScript, GLSL, HTML/CSS"],
-              ["Frameworks",      "Next.js, React, React Native / Expo, Node.js, Express, Capacitor, Godot"],
-              ["Data & Infra",    "Supabase / PostgreSQL (RLS, migrations), SQLite, Vercel, GitHub Actions, cron scheduling"],
-              ["AI & ML",         "Claude and OpenAI APIs, tool-use agent loops, semantic retrieval, MediaPipe, model output evaluation"],
-              ["Graphics",        "WebGL and GLSL shaders, three.js, Canvas, real-time image processing"],
-              ["Engineering",     "Automated testing, adversarial code review, security auditing, technical writing"],
-              ["Business",        "Client acquisition, pricing, contracts, invoicing, regulatory compliance"],
-              ["Communication",   "Public speaking, formal debate, persuasive and analytical writing"],
-              ["Music",           "Vocal performance (bass-baritone, C1 to F5), stage presence"],
-              ["Languages (human)", "English (native), Spanish (3 yrs)"],
-            ].map(([skill, desc]) => (
-              <div key={skill} style={{
-                padding: "14px 18px",
-                background: C.bgAlt,
-                border: `1px solid ${C.border}`,
-              }}>
-                <div style={{
-                  fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-                  fontSize: "10px", fontWeight: 700,
-                  letterSpacing: "0.28em", textTransform: "uppercase",
-                  color: C.accent, marginBottom: "6px",
-                }}>
-                  {skill}
-                </div>
-                <div className="pv-italic" style={{ fontSize: "14px", color: C.text, opacity: 0.85, lineHeight: 1.5 }}>
-                  {desc}
-                </div>
-              </div>
-            ))}
-          </div>
-        </Section>
-
-        {/* ─── Awards & Honors ─── */}
-        <Section roman="V." title="Awards" em="and honors">
-          <Row left="University of Alabama, Honors College Admission" right="2026" />
-          <Row left="Georgia State University, Honors College Admission" right="2026" />
-          <Row left="Behold Award" right="9th Grade, Grove" sub="The school gives this recognition to select students for demonstrated moral integrity and spiritual maturity." />
-          <Row left="Steadfast Award" right="10th Grade, Grove" sub="Recognition for consistent perseverance, faithfulness, and character under pressure." />
-          <Row left="Christian Character Award" right="Grove" sub="Selected as one of two students school-wide (one male, one female) for moral excellence, integrity, and leadership." />
-          <Row left="Christ-like Leadership Award" right="Grove, End-of-Year Awards" sub="The school gave this award at the end-of-year ceremony for embodying servant leadership and Christian character throughout the school year." />
-          <Row left="Lead Role, Christmas Musical" right="Grove" sub="Cast in the lead acting and vocal role in the school&apos;s annual Christmas production." />
-          <Row left="Highest Math Grade in Class" right="9th Grade" sub="Earned 100% both semesters, top math average in the class." />
-          <Row
-            left="Family Foundation & Colson Center, Youth Leadership Summit"
-            right="Summer 2023, Richmond, VA"
-            sub="Competitive invitation-only summit. Advanced seminar on worldview, cultural analysis, and Christian civic leadership."
-          />
-        </Section>
-
-        {/* ─── Scholarship Record ─── */}
-        <Section roman="VI." title="Scholarship record" em="college offers">
-          <p className="pv-italic" style={{ fontSize: "15px", color: C.text, opacity: 0.78, marginBottom: "20px", lineHeight: 1.5 }}>
-            Merit scholarship offers from the schools that admitted me.
-          </p>
-          {[
-            { school: "Kalamazoo College",              amount: "$48,000/yr", note: "Lux Esto Scholarship" },
-            { school: "Susquehanna University",         amount: "$48,000/yr", note: "Merit Scholarship" },
-            { school: "Drake University",               amount: "$31,000/yr", note: "Merit Scholarship" },
-            { school: "Hood College",                   amount: "$31,000/yr", note: "Presidential Scholarship" },
-            { school: "Transylvania University",        amount: "$30,000/yr", note: "Merit Scholarship" },
-            { school: "The University of Alabama",      amount: "$28,000/yr", note: "Presidential Merit (enrolled)" },
-            { school: "Bradley University",             amount: "$28,000/yr", note: "Presidential Scholarship" },
-            { school: "Presbyterian College",           amount: "$28,000/yr", note: "Highlander Scholarship" },
-            { school: "Valparaiso University",          amount: "$28,000/yr", note: "Merit Scholarship" },
-            { school: "Lenoir-Rhyne University",        amount: "$26,000/yr", note: "Niche Direct Merit" },
-            { school: "Nazareth University",            amount: "$25,000/yr", note: "Presidential Scholarship" },
-            { school: "Oral Roberts University",        amount: "$24,000/yr", note: "Merit Scholarship" },
-            { school: "Cedarville University",          amount: "$22,000/yr", note: "Merit Scholarship" },
-            { school: "George Fox University",          amount: "$22,000/yr", note: "Merit Scholarship" },
-            { school: "Berry College",                  amount: "$20,000/yr", note: "Merit Scholarship, renewable" },
-            { school: "Palm Beach Atlantic University", amount: "$18,000/yr", note: "Merit Scholarship" },
-            { school: "Union University",               amount: "$17,000/yr", note: "Merit Scholarship" },
-            { school: "Charleston Southern University", amount: "$17,000/yr", note: "Merit Scholarship" },
-            { school: "Mississippi College",            amount: "$14,500/yr", note: "Academic Merit Scholarship" },
-            { school: "Francis Marion University",      amount: "$10,884/yr", note: "Niche Direct Merit" },
-            { school: "Hartwick College",               amount: "$10,000/yr", note: "Flight Path Scholarship" },
-            { school: "Rider University",               amount: "$3,000/yr",  note: "Merit Scholarship" },
-            { school: "Georgia State University",       amount: "$1,000/yr",  note: "Merit + Honors College" },
-          ].map(s => <ScholarCard key={s.school} {...s} />)}
-          <div style={{
-            display: "flex", justifyContent: "space-between", alignItems: "center",
-            padding: "16px 22px", marginTop: "12px",
-            background: C.text, color: C.bg,
-          }}>
-            <span style={{
-              fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-              fontWeight: 700, fontSize: "11px",
-              letterSpacing: "0.32em", textTransform: "uppercase",
-            }}>
-              Total confirmed offers
-            </span>
-            <span style={{
-              fontFamily: "'Cinzel', Georgia, serif",
-              fontWeight: 700, fontSize: "20px",
-              color: C.accent, letterSpacing: "-0.01em",
-            }}>
-              $530,384 / yr
-            </span>
-          </div>
-          <p className="pv-italic" style={{ fontSize: "13px", color: C.textLight, marginTop: "10px" }}>
-            34 acceptances. Enrolled at the University of Alabama.
-          </p>
-        </Section>
-
-        {/* ─── Leadership ─── */}
-        <Section roman="VII." title="Leadership" em="and ministry">
-          <SubSection title="School + Organizational Leadership">
-            <Row left="Member, Mighty Men (Men&apos;s Bible Study, Cornerstone Prep)" right="11th to 12th Grade" sub="Active member of the school&apos;s men&apos;s discipleship group. Weekly 2-hour discussions on faith, character, and spiritual formation." />
-            <Row left="Head Chaplain" right="9th Spring to 10th Fall" sub="Organized school chapel services, coordinated worship teams, and led school-wide spiritual programming. Weekly rehearsals and Friday performances." />
-            <Row left="Worship Team, Lead Vocalist" right="9th to 12th Grade" sub="Lead vocalist at school chapel and church services. Bass-baritone, range C1 to F5. Rehearsals 2 to 3 times per week." />
-            <Row left="Youth Group Leader & Summer Camp Counselor" right="Ongoing" sub="Mentors younger students at church, leads group discussions, and staffs week-long summer camp annually." />
-          </SubSection>
-
-          <SubSection title="IMPACT Mission Trips">
-            <ImpactCard
-              year="Sophomore Year"
-              location="North Carolina"
-              org="Praying Pelican Missions"
-              bullets={[
-                "Organized and participated in a regional food drive serving underserved communities.",
-                "Constructed a full floor and ADA-compliant accessibility ramp for an elderly couple's home after the husband became disabled.",
-                "Led prayer and worship sessions throughout the week-long trip.",
-              ]}
-            />
-            <ImpactCard
-              year="Junior Year"
-              location="Bahamas"
-              org="Christian Education Relief"
-              bullets={[
-                "Helped rebuild a Christian education camp looted and destroyed during the COVID-19 pandemic.",
-                "Coordinated the movement and organization of heavy materials and equipment across the campus.",
-                "Co-led the renovation of a decommissioned bus into a mobile walking classroom for the camp.",
-              ]}
-            />
-            <ImpactCard
-              year="Senior Year, March 2026"
-              location="Hawaii"
-              org="Disaster Relief"
-              bullets={[
-                "Deployed for disaster relief following the severe flooding that struck Hawaii in early 2026.",
-                "Served in construction support, community aid, and worship and prayer leadership.",
-              ]}
-            />
-          </SubSection>
-        </Section>
-
-        {/* ─── Community Service ─── */}
-        <Section roman="VIII." title="Community service" em="and volunteer work">
-          <Row left="MUST Ministries, Food Collection" sub="Organized and participated in food drives benefiting MUST Ministries, a nonprofit providing hunger relief, shelter, and support services to families in need across greater Atlanta." />
-          <Row left="Children&apos;s Ministry, Church Volunteer" sub="Serves regularly in the kids ministry program at Stonebridge Church (Marietta), teaching, mentoring, and leading activities for elementary-age children." />
-          <Row left="Community Cleanup, Environmental Service" sub="Volunteer park and neighborhood cleanup efforts. Ongoing participation in local environmental stewardship." />
-          <p className="pv-italic" style={{ fontSize: "13px", color: C.textLight, marginTop: "8px" }}>
-            200+ cumulative volunteer hours across ministry, mission, and community service.
-          </p>
-        </Section>
-
-        {/* ─── Arts & Creative ─── */}
-        <Section roman="IX." title="Arts" em="media, creative work">
-          <Row left="Vocalist, Bass-Baritone" right="Ongoing" sub="Range C1 to F5. Led worship vocals at school and church through 12th grade. Active in performance and rehearsal since 9th grade." />
-          <Row left="Lead Actor, Christmas Musical" right="Grove" sub="Cast in the lead role in the school&apos;s annual Christmas production. Combined vocal performance with acting and stage presence." />
-          <Row left="Poetry & Creative Writing" right="Ongoing" sub='Original works include "The Husks the Swine Did Eat," "Injustice Scorned," "The Rebuking of Loki," fiction novel drafts, and personal essays. Writes across 8 distinct styles.' />
-          <Row left="Content Creation, YouTube & Social Media" right="2023 to Present" sub="Scripts, films, and edits commentary content on psychology, faith, and culture. YouTube channel with 2,800+ subscribers transitioning to intellectual commentary." />
-          <Row left="Design, Photography & Videography" right="Ongoing" sub="Brand identity, product photography, and video production for Purcell Ventures clients and personal projects. Built a full color-grading and posing toolchain from scratch." />
-        </Section>
-
-        {/* ─── Clubs ─── */}
-        <Section roman="X." title="Clubs" em="and organizations">
-          <div style={{ display: "flex", flexWrap: "wrap", marginBottom: "20px" }}>
-            {[
-              "Beta Club (Grove & CPA)",
-              "Apologetics & Debate Team",
-              "Spanish Club (3 yrs)",
-              "Club Med",
-              "Creative Writing / Writer's Guild",
-              "Curious Conversations",
-              "Animal Ambassadors",
-              "Senior Devotional",
-              "Mighty Men (Member, CPA)",
-            ].map(c => <AwardBadge key={c} text={c} />)}
-          </div>
-          <Row left="Apologetics & Debate Team" right="9th to 12th Grade" sub="Engaged in formal and informal theological debate with teachers and peers. Contributed to school-wide theological discussion. 5 to 10 hrs/week." />
-          <Row left="Creative Writing / Writer&apos;s Guild" right="11th Grade" sub="Workshop-style group focused on original fiction, poetry, and narrative craft. Produced original poetry, fiction drafts, and personal essays." />
-          <Row left="Beta Club" right="Grove & Cornerstone" sub="National honor society recognizing academic achievement, character, leadership, and service." />
-        </Section>
-
-        {/* ─── Athletics ─── */}
-        <Section roman="XI." title="Athletics">
-          <Row left="Cheerleader, Back / Base" right="9th to 10th Grade" sub="Competitive cheer support and stunt base. 6 to 7 hrs/week during season." />
-          <Row left="Track & Field, Shot Put, Discus, 100m" right="9th Grade" sub="Competed in field and sprint events during 9th grade spring season." />
-          <Row left="Weightlifting" right="Ongoing" sub="Scientific hypertrophy-focused training program. Consistent multi-year commitment." />
-        </Section>
-
-        {/* ─── Faith & Service ─── */}
-        <Section roman="XII." title="Faith" em="and community life">
-          <Row left="Church Involvement, Stonebridge (Marietta) + Kennesaw First Baptist" right="Ongoing" sub="Stonebridge Church (Marietta), Sunday service, longstanding home church, baptized here at 15. Kennesaw First Baptist, Wednesday youth and retreats." />
-          <Row left="Apologetics & Theology Study" right="Ongoing" sub="Independently studying William Lane Craig, Sean McDowell, C.S. Lewis, A.W. Tozer, hermeneutics, and philosophy of religion." />
-        </Section>
-
-        {/* ─── Goals ─── */}
-        <Section roman="XIII." title="Career goals" em="and vision">
-          <p className="pv-italic" style={{ fontSize: "18px", color: C.text, opacity: 0.92, lineHeight: 1.55, maxWidth: "640px" }}>
-            I plan to pursue an MD in Psychiatry, integrating clinical mental health care with AI-driven
-            research and faith-based counseling. My goal is to develop accessible, data-informed
-            interventions for mental health, bridging neuroscience, technology, and human dignity.
-            Alongside medicine, I&apos;m building several businesses through Purcell
-            Ventures and a personal content brand centered on the intersection of psychology, faith, and
-            intellectual discourse.
-          </p>
-        </Section>
-
-        {/* Bottom strip */}
-        <div style={{
-          borderTop: `1px solid ${C.border}`, paddingTop: "24px",
-          display: "flex", justifyContent: "space-between", alignItems: "center",
-          flexWrap: "wrap", gap: "12px",
-          fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-          fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase",
-          color: C.textLight,
-        }}>
-          <div>Elijah Purcell, elijahpurcell@gmail.com, Tuscaloosa, AL</div>
-          <div>
-            <a href="https://purcellventures.co" style={{ color: C.accent, textDecoration: "none", letterSpacing: "0.32em" }}>purcellventures.co</a>
-            <span style={{ margin: "0 8px" }}></span>
-            <span style={{ color: C.textLight }}>Updated August 2026</span>
-          </div>
+      <Section title="At a glance">
+        <Figures items={[["15+", "products shipped"], ["8", "live properties"], ["29", "free tools published"], ["3.92", "weighted high school GPA"], ["1440", "SAT"]]} />
+        <div style={{ marginTop: 36 }}>
+          <Facts items={[
+            ["Email", <a key="e" className="ui-link" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>],
+            ["Business", <a key="b" className="ui-link" href="https://purcellventures.co">purcellventures.co</a>],
+            ["GitHub", <a key="g" className="ui-link" href="https://github.com/thebigjah" rel="me">github.com/thebigjah</a>],
+            ["Print version", <Link key="p" className="ui-link" href="/resume/print">purcellventures.co/resume/print</Link>],
+          ]} />
         </div>
+      </Section>
 
-      </main>
-    </div>
+      <Section title="Selected work" intro="Everything here is deployed. I built each one alone unless noted.">
+        <Entries items={WORK} />
+      </Section>
+      <Section title="Client work"><Entries items={CLIENT} /></Section>
+      <Section title="How I work"><Entries items={PRACTICE} /></Section>
+      <Section title="Experience"><Entries items={EXPERIENCE} /></Section>
+      <Section title="Education"><Entries items={EDUCATION} /></Section>
+      <Section title="Technical skills"><Facts items={SKILLS} /></Section>
+      <Section title="Awards and honors"><Entries items={AWARDS} /></Section>
+
+      <Section title="Scholarship offers" intro="Merit offers from the schools that admitted me: 34 acceptances. I enrolled at the University of Alabama.">
+        <div className="ui-prose" style={{ maxWidth: "none" }}>
+          <table>
+            <thead><tr><th>School</th><th>Award</th><th>Per year</th></tr></thead>
+            <tbody>
+              {OFFERS.map(([school, award, amt]) => (
+                <tr key={school}><td>{school}</td><td>{award}</td><td style={{ whiteSpace: "nowrap" }}>{amt.replace(" a year", "")}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </Section>
+
+      <Section title="Leadership and ministry"><Entries items={LEADERSHIP} /></Section>
+      <Section title="Mission trips"><Entries items={TRIPS} /></Section>
+      <Section title="Community service" intro="More than 200 volunteer hours across ministry, missions and community service."><Entries items={SERVICE} /></Section>
+      <Section title="Arts and media"><Entries items={ARTS} /></Section>
+      <Section title="Clubs">
+        <ul className="ui-tags">{CLUBS.map((c) => <li key={c}>{c}</li>)}</ul>
+        <div style={{ marginTop: 28 }}><Entries items={CLUB_DETAIL} /></div>
+      </Section>
+      <Section title="Athletics"><Entries items={ATHLETICS} /></Section>
+      <Section title="Faith"><Entries items={FAITH} /></Section>
+
+      <Section title="Where I am headed">
+        <div className="ui-prose">
+          <p>I plan to earn an MD and practise psychiatry, combining clinical care with research into how AI can make mental health care easier to reach, and with faith-based counseling. Alongside medicine I am building businesses through Purcell Ventures and writing and making video about psychology, faith and ideas.</p>
+        </div>
+      </Section>
+    </main>
   );
 }

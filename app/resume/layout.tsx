@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Elijah Purcell: Resume & Scholarship Record",
+  title: "Elijah Purcell, résumé",
   keywords: [
     "Elijah Purcell", "Elijah Purcell resume", "Purcell Ventures founder",
     "University of Alabama 2026", "scholarship recipient", "high school entrepreneur",
   ],
   openGraph: {
-    title: "Elijah Purcell: Resume & Scholarship Record",
+    title: "Elijah Purcell, résumé",
     description:
       "Elijah Purcell is the founder of Purcell Ventures LLC and a psychology and data science student at the University of Alabama Honors College. Full record of shipped software, AI agent systems, client work, education and awards.",
     url: "https://purcellventures.co/resume",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     images: ["/opengraph-image"],
   },
   twitter: {
-    title: "Elijah Purcell: Resume & Scholarship Record",
+    title: "Elijah Purcell, résumé",
     description:
       "Elijah Purcell is the founder of Purcell Ventures LLC and a psychology and data science student at the University of Alabama Honors College. Full record of shipped software, AI agent systems, client work, education and awards.",
   },

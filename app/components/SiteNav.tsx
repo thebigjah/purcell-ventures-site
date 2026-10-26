@@ -1,192 +1,116 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { PanopticonMark } from "./PanopticonMark";
 
-const DARK  = "#0c0a08";
-const GOLD  = "#d4af37";
-const CREAM = "#f5f0e0";
-const EMBER = "#2e2820";
-const ASH   = "#524d45";
-const CHAR  = "#3a3530";
+// Pages that are internal tools, print targets or standalone storefronts. They carry
+// their own chrome, so the site nav stays off them. Mirrors SiteFooter.
+export const HIDE_CHROME_ON = ["/logos", "/patterns", "/brand", "/print", "/qr", "/business-cards", "/crm", "/invoicing", "/newsletter", "/digital/playbook", "/digital/finder", "/sales-rep", "/rep-portal", "/courses/college-apps/lessons", "/courses/business-launch/lessons", "/courses/ai-automation/lessons", "/resume/print"];
 
-// Pages that are internal tools or off-brand storefront, no public nav needed
-const HIDE_ON = ["/logos", "/patterns", "/brand", "/resume", "/print", "/qr", "/business-cards", "/crm", "/invoicing", "/newsletter", "/links", "/digital/playbook", "/digital/finder", "/sales-rep", "/rep-portal", "/courses/college-apps/lessons", "/courses/business-launch/lessons", "/courses/ai-automation/lessons", "/shop", "/free"];
-
-const LAMPSTAND = {
-  cellStyle: "outlined" as const,
-  pvSize: 70, pvClearR: 58,
-  ringStart: 70, ringEnd: 116,
-  numRings: 7, ringFadeToCenter: true,
-};
-
+// Grouped the way the homepage map is: what I do, the proof, what you can learn,
+// who I am. The same five groups a visitor meets in the galaxy.
+const SERVICES = [
+  { href: "/sites", label: "Websites" },
+  { href: "/digital", label: "Digital add-ons" },
+  { href: "/consulting", label: "AI consulting" },
+  { href: "/software", label: "Custom software" },
+  { href: "/steady", label: "Steady, personal IT" },
+];
 const LINKS = [
-  { href: "/digital",    label: "Digital" },
-  { href: "/consulting", label: "Consulting" },
-  { href: "/software",   label: "Software" },
-  { href: "/steady",     label: "Steady" },
-  { href: "/courses",    label: "Courses" },
-  { href: "/portfolio",  label: "Portfolio" },
-  { href: "/blog",       label: "Blog" },
-  { href: "/about",      label: "About" },
+  { href: "/portfolio", label: "Proof" },
+  { href: "/courses", label: "Learn" },
+  { href: "/blog", label: "Blog" },
+  { href: "/about", label: "About" },
 ];
 
 export default function SiteNav() {
-  const pathname = usePathname();
+  const pathname = usePathname() || "/";
   const [open, setOpen] = useState(false);
+  const [menu, setMenu] = useState(false);
+  const [solid, setSolid] = useState(false);
 
-  if (HIDE_ON.some(p => pathname.startsWith(p))) return null;
+  useEffect(() => {
+    const on = () => setSolid(window.scrollY > 40);
+    on();
+    window.addEventListener("scroll", on, { passive: true });
+    return () => window.removeEventListener("scroll", on);
+  }, []);
+  useEffect(() => { setOpen(false); setMenu(false); }, [pathname]);
 
-  const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
+  if (HIDE_CHROME_ON.some((p) => pathname.startsWith(p))) return null;
+  const active = (href: string) => pathname === href || pathname.startsWith(href + "/");
+  const inServices = SERVICES.some((s) => active(s.href));
 
   return (
-    <>
-      <style dangerouslySetInnerHTML={{ __html: `
-        .pv-nav-links { display: flex; }
-        .pv-nav-contact { display: flex; }
-        .pv-nav-hamburger { display: none; }
-        .pv-nav-link { transition: color 0.15s; }
-        .pv-nav-link:hover { color: ${CREAM} !important; }
-        @media (max-width: 767px) {
-          .pv-nav-links { display: none; }
-          .pv-nav-contact { display: none; }
-          .pv-nav-hamburger { display: flex; }
-        }
-      ` }} />
+    <header className={`nav${solid || open ? " nav--solid" : ""}`}>
+      <style dangerouslySetInnerHTML={{ __html: NAV_CSS }} />
+      <div className="nav__in">
+        <Link href="/" className="nav__lock" aria-label="Purcell Ventures, home">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/mark-foil.svg" alt="" width={44} height={44} />
+          <b>Purcell Ventures</b>
+        </Link>
 
-      <header style={{
-        position: "sticky", top: 0, zIndex: 100,
-        background: "rgba(12, 10, 8, 0.92)",
-        backdropFilter: "blur(12px)",
-        WebkitBackdropFilter: "blur(12px)",
-        borderBottom: `1px solid ${EMBER}`,
-      }}>
-        {/* Brass hairline rule */}
-        <div style={{ height: "1px", background: GOLD, opacity: 0.35 }} />
-
-        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", height: "62px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-
-          {/* Wordmark — Cinzel with proper letter-spacing */}
-          <Link href="/" onClick={() => setOpen(false)} style={{
-            display: "flex", alignItems: "center", gap: "12px",
-            textDecoration: "none", flexShrink: 0,
-          }}>
-            <PanopticonMark size={32} color={GOLD} bg="transparent" cfg={LAMPSTAND} />
-            <span style={{
-              fontFamily: "'Cinzel', Georgia, serif",
-              fontSize: "13px", fontWeight: 700,
-              color: CREAM, letterSpacing: "0.32em",
-              paddingLeft: "0.32em",
-            }}>
-              PURCELL VENTURES
-            </span>
-          </Link>
-
-          {/* Desktop links, mono small-caps */}
-          <nav className="pv-nav-links" style={{ alignItems: "center", gap: "4px" }}>
-            {LINKS.map(link => (
-              <Link key={link.href} href={link.href} className="pv-nav-link" style={{
-                padding: "7px 14px",
-                fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-                fontSize: "10.5px",
-                fontWeight: isActive(link.href) ? 700 : 500,
-                color: isActive(link.href) ? GOLD : ASH,
-                textDecoration: "none",
-                letterSpacing: "0.24em",
-                textTransform: "uppercase",
-                borderRadius: 0,
-                position: "relative",
-              }}>
-                {link.label}
-                {isActive(link.href) && (
-                  <span style={{
-                    position: "absolute", left: "14px", right: "14px", bottom: "-2px",
-                    height: "1px", background: GOLD,
-                  }} />
-                )}
-              </Link>
-            ))}
-          </nav>
-
-          {/* Desktop CTA — pv-btn-ghost style */}
-          <div className="pv-nav-contact" style={{ alignItems: "center" }}>
-            <Link href="/about#contact" style={{
-              padding: "8px 16px",
-              fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-              fontSize: "10.5px", fontWeight: 700,
-              color: GOLD,
-              border: `1.5px solid ${GOLD}`,
-              borderRadius: 0,
-              textDecoration: "none",
-              letterSpacing: "0.24em",
-              textTransform: "uppercase",
-              transition: "background 0.12s, color 0.12s",
-            }}
-              onMouseEnter={e => { e.currentTarget.style.background = GOLD; e.currentTarget.style.color = DARK; }}
-              onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = GOLD; }}
-            >
-              Contact
-            </Link>
-          </div>
-
-          {/* Mobile hamburger */}
-          <button
-            className="pv-nav-hamburger"
-            onClick={() => setOpen(o => !o)}
-            style={{ background: "none", border: "none", cursor: "pointer", padding: "8px", color: CREAM, alignItems: "center", justifyContent: "center" }}
-            aria-label={open ? "Close menu" : "Open menu"}
-          >
-            {open ? (
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-              </svg>
-            ) : (
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-                <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-              </svg>
+        <nav className="nav__links" aria-label="Main">
+          <div className="nav__menu" onMouseLeave={() => setMenu(false)}>
+            <button type="button" aria-expanded={menu} onClick={() => setMenu((m) => !m)} onMouseEnter={() => setMenu(true)} className={inServices ? "is-on" : ""}>
+              Services
+            </button>
+            {menu && (
+              <ul className="nav__drop">
+                {SERVICES.map((s) => (
+                  <li key={s.href}><Link href={s.href} className={active(s.href) ? "is-on" : ""}>{s.label}</Link></li>
+                ))}
+              </ul>
             )}
-          </button>
-        </div>
-
-        {/* Mobile menu */}
-        {open && (
-          <div style={{ borderTop: `1px solid ${EMBER}`, background: DARK, padding: "16px 0 24px" }}>
-            {LINKS.map(link => (
-              <Link key={link.href} href={link.href} onClick={() => setOpen(false)} style={{
-                display: "block",
-                padding: "14px 28px",
-                fontFamily: "'Cinzel', Georgia, serif",
-                fontSize: "14px",
-                fontWeight: isActive(link.href) ? 700 : 500,
-                color: isActive(link.href) ? GOLD : CREAM,
-                textDecoration: "none",
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-                borderLeft: isActive(link.href) ? `3px solid ${GOLD}` : "3px solid transparent",
-              }}>
-                {link.label}
-              </Link>
-            ))}
-            <div style={{ padding: "20px 28px 0" }}>
-              <Link href="/about#contact" onClick={() => setOpen(false)} style={{
-                display: "inline-block",
-                padding: "10px 22px",
-                fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-                fontSize: "10.5px", fontWeight: 700,
-                color: GOLD,
-                border: `1.5px solid ${GOLD}`,
-                borderRadius: 0,
-                textDecoration: "none",
-                letterSpacing: "0.24em",
-                textTransform: "uppercase",
-              }}>
-                Contact
-              </Link>
-            </div>
           </div>
-        )}
-      </header>
-    </>
+          {LINKS.map((l) => (
+            <Link key={l.href} href={l.href} className={active(l.href) ? "is-on" : ""}>{l.label}</Link>
+          ))}
+        </nav>
+
+        <Link href="/about#contact" className="ui-btn nav__cta">Start a project</Link>
+        <button type="button" className="nav__burger" aria-expanded={open} aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen((o) => !o)}>
+          <span /><span />
+        </button>
+      </div>
+
+      {open && (
+        <div className="nav__sheet">
+          <p className="nav__group">Services</p>
+          {SERVICES.map((s) => <Link key={s.href} href={s.href}>{s.label}</Link>)}
+          <p className="nav__group">More</p>
+          {LINKS.map((l) => <Link key={l.href} href={l.href}>{l.label === "Proof" ? "Portfolio" : l.label === "Learn" ? "Courses" : l.label}</Link>)}
+          <Link href="/about#contact" className="ui-btn" style={{ marginTop: 20, alignSelf: "flex-start" }}>Start a project</Link>
+        </div>
+      )}
+    </header>
   );
 }
+
+const NAV_CSS = `
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,border-color .3s;border-bottom:1px solid transparent;background:linear-gradient(rgba(7,6,10,.7),rgba(7,6,10,0))}
+.nav--solid{background:rgba(7,6,10,.94);border-bottom-color:var(--line);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.nav__in{max-width:1240px;margin:0 auto;padding:14px var(--gutter-r) 14px var(--gutter);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px 28px}
+.nav__lock{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--fg)}
+.nav__lock img{width:44px;height:44px}
+.nav__lock b{font:600 21px/1 var(--font-display);letter-spacing:.04em;white-space:nowrap}
+.nav__links{display:flex;gap:28px;justify-self:end;align-items:center}
+.nav__links a,.nav__menu>button{color:var(--fg-2);text-decoration:none;font:500 16px/1 var(--font-body);background:none;border:0;padding:8px 0;cursor:pointer}
+.nav__links a:hover,.nav__menu>button:hover,.nav__links .is-on{color:#f0d79a}
+.nav__menu{position:relative}
+.nav__drop{position:absolute;top:100%;left:-18px;list-style:none;margin:0;padding:10px 18px;min-width:220px;background:rgba(7,6,10,.97);border:1px solid var(--line)}
+.nav__drop li a{display:block;padding:9px 0;font-size:15px}
+.nav__cta{padding:12px 16px;font-size:14px}
+.nav__burger{display:none;width:44px;height:44px;background:none;border:0;cursor:pointer;flex-direction:column;justify-content:center;gap:7px;align-items:flex-end}
+.nav__burger span{display:block;width:24px;height:2px;background:var(--fg)}
+.nav__sheet{display:flex;flex-direction:column;padding:8px var(--gutter-r) 28px var(--gutter);max-height:calc(100dvh - 72px);overflow:auto}
+.nav__sheet a{color:var(--fg);text-decoration:none;font:600 22px/1.2 var(--font-display);padding:9px 0}
+.nav__group{color:var(--muted);font-size:14px;margin:18px 0 4px}
+@media (max-width:900px){
+  .nav__links,.nav__cta{display:none}
+  .nav__burger{display:flex}
+  .nav__in{grid-template-columns:auto auto;justify-content:space-between}
+  .nav__lock img{width:36px;height:36px}
+  .nav__lock b{font-size:18px}
+}`;

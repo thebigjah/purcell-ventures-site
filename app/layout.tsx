@@ -1,31 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Cinzel, DM_Sans } from "next/font/google";
 import "./globals.css";
 import ChatWidget from "./components/ChatWidget";
 import SiteNav from "./components/SiteNav";
 import SiteFooter from "./components/SiteFooter";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const cinzel = Cinzel({
-  variable: "--font-cinzel",
-  subsets: ["latin"],
-  weight: ["400", "600", "700", "900"],
-});
-
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0c0a08",
+  themeColor: "#07060a",
 };
 
 export const metadata: Metadata = {
@@ -268,13 +250,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${cinzel.variable} ${dmSans.variable} font-sans antialiased`}>
+      <body className="antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
         <SiteNav />
-        {children}
+        <div className="page">{children}</div>
         <SiteFooter />
         <ChatWidget />
       </body>

@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
 import PostFaq from "@/app/components/PostFaq";
 import PostHowTo from "@/app/components/PostHowTo";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import { PostLayout, Note } from "@/app/components/ui";
 
 export const metadata = {
   alternates: { canonical: "/blog/claim-your-google-listing" },
@@ -12,38 +12,20 @@ export const metadata = {
     "A step-by-step guide to claiming and filling out a Google Business Profile, written so you do not need to hire anybody. It covers what to put in every field, how to hide a home address, and the three things that get a listing suspended.",
 };
 
-const H2 = { fontFamily: "'Cinzel', Georgia, serif", fontSize: "25px", fontWeight: 600, lineHeight: 1.2, margin: "42px 0 10px" } as const;
-const H3 = { fontSize: "17px", fontWeight: 700, margin: "26px 0 6px" } as const;
-const link = { color: "var(--color-warm-accent)", textDecoration: "underline" };
-const warn: React.CSSProperties = {
-  background: "rgba(0,0,0,0.24)", borderTop: "2px solid rgba(193,85,58,0.7)",
-  padding: "16px 18px", margin: "18px 0", fontSize: "15px",
-};
-
 export default function Post() {
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
-      <VignetteBackground />
-      <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
+    <PostLayout
+      crumbs={<Breadcrumbs trail={[
+        { name: "Home", href: "/" },
+        { name: "Writing", href: "/blog" },
+        { name: "Claiming your own Google listing: a twenty-minute job", href: "/blog/claim-your-google-listing" },
+      ]} />}
+      kicker="Guide"
+      title="Claiming your own Google listing"
+      meta="20 August 2026, 8 minute read"
+    >
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
-
-        <Breadcrumbs trail={[
-          { name: "Home", href: "/" },
-          { name: "Writing", href: "/blog" },
-          { name: "Claiming your own Google listing: a twenty-minute job", href: "/blog/claim-your-google-listing" },
-        ]} />
-        <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Guide, August 20, 2026, 8 min read</div>
-          <h1>
-            Claiming your Google listing{" "}
-            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>yourself</em>
-          </h1>
-        </header>
-
-        <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
-
-          <p style={{ fontSize: "18px" }}>
+          <p>
             Agencies write most guides to this and want to manage it for you. I
             wrote this one so you can do it yourself. It takes twenty minutes and it is
             free.
@@ -53,11 +35,11 @@ export default function Post() {
             In my audit, this mattered more than a website for many of the businesses. I audited 121 independent businesses near the University of Alabama. Of those, 27 had a website
             that answered and 23 had opening hours recorded anywhere a machine could read
             them.{" "}
-            <Link href="/blog/121-businesses-near-campus" style={link}>The other 98 had no
+            <Link href="/blog/121-businesses-near-campus">The other 98 had no
             hours a machine could read</Link>.
           </p>
 
-          <h2 style={H2}>What it is</h2>
+          <h2>What it is</h2>
 
           <p>
             A Google Business Profile is the panel that appears beside search results with
@@ -70,9 +52,9 @@ export default function Post() {
             the profile before you create one.
           </p>
 
-          <h2 style={H2}>Step by step</h2>
+          <h2>Step by step</h2>
 
-          <h3 style={H3}>1. Existing listings</h3>
+          <h3>1. Existing listings</h3>
           <p>
             If a panel appears, look for "Own this business?" or "Claim this business."
             Start there. Creating a second profile for a business that already has one is
@@ -80,14 +62,14 @@ export default function Post() {
             duplicates.
           </p>
 
-          <h3 style={H3}>2. The login at business.google.com</h3>
+          <h3>2. The login at business.google.com</h3>
           <p>
             Use an email address you will still control in five years. Avoid an employee's
             personal account or an address at a domain you may drop. This login is the key
             to the listing, and getting it back after losing it is slow and hard.
           </p>
 
-          <h3 style={H3}>3. Category is the field that matters most</h3>
+          <h3>3. Category is the field that matters most</h3>
           <p>
             Your primary category does more to determine which searches you appear in than
             anything else on the form. Be specific. "Barber shop" beats "hair salon" if you
@@ -95,7 +77,7 @@ export default function Post() {
             the primary one matters most.
           </p>
 
-          <h3 style={H3}>4. Address, and how to hide it</h3>
+          <h3>4. Address, and how to hide it</h3>
           <p>
             If customers come to you, enter the address and show it.
           </p>
@@ -106,18 +88,18 @@ export default function Post() {
             goes on a public map, so decide on purpose whether to show it.
           </p>
 
-          <h3 style={H3}>5. Hours, including the ones you forget</h3>
+          <h3>5. Hours, including the ones you forget</h3>
           <p>
             Enter regular hours, then special hours for holidays. Wrong hours send customers
             to a closed business. Put a reminder in your calendar for the week before every
             holiday.
           </p>
 
-          <h3 style={H3}>6. Verification</h3>
+          <h3>6. Verification</h3>
           <p>
             Google will verify by postcard, phone, email or video depending on your business
             type, and{" "}
-            <a href="https://support.google.com/business/answer/7107242" style={link} rel="noopener">Google decides which method you get</a>. Video verification means recording a short walkthrough
+            <a href="https://support.google.com/business/answer/7107242" rel="noopener">Google decides which method you get</a>. Video verification means recording a short walkthrough
             showing your signage, your equipment and your address. Have those visible before
             you start recording.
           </p>
@@ -125,20 +107,20 @@ export default function Post() {
             A postcard takes up to two weeks. Do not create a second listing while you wait.
           </p>
 
-          <h3 style={H3}>7. Photos</h3>
+          <h3>7. Photos</h3>
           <p>
             Add the exterior including your sign, so people recognise the building, then the
             interior and the work itself. Phone photos are fine.
           </p>
 
-          <h3 style={H3}>8. The description</h3>
+          <h3>8. The description</h3>
           <p>
             Say what you do, where, and for whom, in plain sentences. No keyword stuffing:
             Google does not rank on it, and readers who see a keyword-stuffed paragraph
             judge the business by it.
           </p>
 
-          <h2 style={H2}>Reviews</h2>
+          <h2>Reviews</h2>
 
           <p>
             A listing with recent reviews gives a searcher more to go on than one with none.
@@ -146,25 +128,25 @@ export default function Post() {
 
           <p>Ask out loud when a customer says the work was good.</p>
 
-          <div style={warn}>
+          <Note tone="warn">
             <strong>Three things that get a listing suspended.</strong> Paying for reviews or
             offering a discount for one. Writing them yourself or having staff and family do
             it. Keyword-stuffing the business name field, so "Joe's Barbers" becomes "Joe's
             Barbers Best Haircut Tuscaloosa."
-          </div>
+          </Note>
 
           <p>
             Reply to every review in a sentence or two. A complaint with no reply reads as
             agreement. A calm reply gives readers your side.
           </p>
 
-          <h2 style={H2}>Once a month, five minutes</h2>
+          <h2>Once a month, five minutes</h2>
 
-          <ul style={{ paddingLeft: "1.1rem" }}>
-            <li style={{ marginBottom: "8px" }}>Are the hours still right, including next month's holiday?</li>
-            <li style={{ marginBottom: "8px" }}>Any reviews to reply to?</li>
-            <li style={{ marginBottom: "8px" }}>Add one photo.</li>
-            <li style={{ marginBottom: "8px" }}>Check the "suggested edits" section. Anybody can suggest a change to your listing, including a competitor, and Google sometimes applies them.</li>
+          <ul>
+            <li>Are the hours still right, including next month's holiday?</li>
+            <li>Any reviews to reply to?</li>
+            <li>Add one photo.</li>
+            <li>Check the "suggested edits" section. Anybody can suggest a change to your listing, including a competitor, and Google sometimes applies them.</li>
           </ul>
 
           <p>
@@ -172,7 +154,7 @@ export default function Post() {
             monthly check is how you find out someone marked you permanently closed.
           </p>
 
-          <h2 style={H2}>When to get help</h2>
+          <h2>When to get help</h2>
 
           <p>
             Most owners do not need help.
@@ -183,12 +165,12 @@ export default function Post() {
             cannot merge, a suspension you do not understand, or multiple locations. If you
             are near the University of Alabama and stuck on one of those, ask me and I will
             tell you what I would do:{" "}
-            <a href="mailto:elijah@purcell-ventures.com" style={link}>elijah@purcell-ventures.com</a>.
+            <a href="mailto:elijah@purcell-ventures.com">elijah@purcell-ventures.com</a>.
           </p>
 
           <p>
             The rest of the self-check is in{" "}
-            <Link href="/blog/is-your-business-invisible" style={link}>Is your business invisible?</Link>.
+            <Link href="/blog/is-your-business-invisible">Is your business invisible?</Link>.
           </p>
 
           <PostHowTo
@@ -220,8 +202,6 @@ export default function Post() {
             published: "2026-08-20",
           }} />
 
-        </article>
-      </main>
-    </div>
+    </PostLayout>
   );
 }
