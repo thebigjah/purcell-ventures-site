@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Sales Representative: Join Purcell Ventures",
   description:
-    "Commission-based sales role for Purcell Ventures + Mantle Field Services. 15–20% on closed deals, flat bonuses on subscriptions, 1099 contractor. Quiz-prep + application info inside.",
+    "Commission-based sales role for Purcell Ventures and Mantle Field Services. 15 to 20% on closed deals, flat bonuses on subscriptions, 1099 contractor. Quiz prep and application details.",
   keywords: [
     "sales rep commission", "1099 sales role Georgia", "Purcell Ventures hiring",
     "commission sales representative", "Acworth Atlanta sales",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sales Representative: Purcell Ventures",
     description:
-      "Commission-based sales role. 15–20% on closed deals, flat bonuses on subscriptions. Apply via 25-min quiz + interview.",
+      "Commission-based sales role. 15 to 20% on closed deals, flat bonuses on subscriptions. Apply with a quiz and a phone interview.",
     url: "https://purcellventures.co/sales-rep",
     type: "website",
   
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "Sales Representative: Purcell Ventures",
     description:
-      "Commission-based sales role. Apply via 25-min quiz + interview.",
+      "Commission-based sales role. Apply with a quiz and a phone interview.",
   },
   alternates: { canonical: "/sales-rep" },
   robots: {

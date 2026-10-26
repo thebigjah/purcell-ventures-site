@@ -7,9 +7,9 @@ const STACK = [
     roman: "I.",
     category: "The Editor",
     items: [
-      { name: "Claude Code",  desc: "The terminal-resident AI partner that wrote 80% of the code on this site. Subscription, daily driver." },
-      { name: "VS Code",      desc: "When the AI hands off, type-checking, debugging, design previews." },
-      { name: "Terminal",     desc: "PowerShell on Windows, iTerm2/zsh on Mac. Every workflow ends up scripted." },
+      { name: "Claude Code",  desc: "The terminal AI assistant that wrote most of the code on this site. I pay for a subscription and use it every day." },
+      { name: "VS Code",      desc: "For type-checking, debugging and design previews after the AI hands off." },
+      { name: "Terminal",     desc: "PowerShell on Windows, iTerm2 and zsh on Mac." },
     ],
   },
   {
@@ -17,18 +17,18 @@ const STACK = [
     category: "Languages",
     items: [
       { name: "TypeScript",   desc: "Default for anything that ships to a browser or a phone." },
-      { name: "Python",       desc: "Default for anything that scrapes, automates, calls an AI, or talks to a server." },
-      { name: "Bash + PS",    desc: "Bash on Mac, PowerShell on Windows. Every workflow eventually gets a script." },
+      { name: "Python",       desc: "Default for scraping, automation, AI calls and server code." },
+      { name: "Bash and PowerShell",    desc: "Bash on Mac, PowerShell on Windows. Every workflow eventually gets a script." },
     ],
   },
   {
     roman: "III.",
     category: "Frameworks",
     items: [
-      { name: "Next.js",      desc: "purcellventures.co, elijahbot-refresh, every web tool I ship." },
-      { name: "React Native + Expo", desc: "Mobile apps. Persona AI, prayer-walk app, anything that needs to be on a phone." },
-      { name: "Electron",     desc: "Desktop apps — ElijahBot Overlay runs as one." },
-      { name: "Tailwind CSS", desc: "When I'm not writing custom inline styles, this." },
+      { name: "Next.js",      desc: "purcellventures.co, elijahbot-refresh and every web tool I ship." },
+      { name: "React Native and Expo", desc: "Mobile apps, including Persona AI and a prayer-walk app." },
+      { name: "Electron",     desc: "Desktop apps. ElijahBot Overlay is one." },
+      { name: "Tailwind CSS", desc: "For styling when I am not writing inline styles." },
     ],
   },
   {
@@ -36,9 +36,9 @@ const STACK = [
     category: "AI Stack",
     items: [
       { name: "Claude API",   desc: "Anthropic's API. Default LLM for everything I build." },
-      { name: "OpenAI API",   desc: "Backup + voice transcription. Whisper still hard to beat." },
+      { name: "OpenAI API",   desc: "Backup model and voice transcription with Whisper." },
       { name: "ElevenLabs",   desc: "TTS for the overlay's voice output." },
-      { name: "Embedding APIs", desc: "Semantic search across notes, memory, and content libraries." },
+      { name: "Embedding APIs", desc: "Semantic search across notes, memory and content libraries." },
     ],
   },
   {
@@ -49,7 +49,7 @@ const STACK = [
       { name: "Cloudflare Tunnel", desc: "For exposing localhost so the phone can reach the desktop dashboard." },
       { name: "ntfy.sh",      desc: "Push notifications without an app. Powers ElijahBot's phone-tap approvals." },
       { name: "Resend",       desc: "Transactional email, booking confirmations, lead notifications." },
-      { name: "Supabase / Firebase", desc: "Whichever fits the app. Supabase for SQL, Firebase for realtime + auth." },
+      { name: "Supabase / Firebase", desc: "Whichever fits the app. Supabase for SQL, Firebase for realtime data and auth." },
     ],
   },
   {
@@ -66,19 +66,19 @@ const STACK = [
     roman: "VII.",
     category: "Hardware",
     items: [
-      { name: "Windows desktop", desc: "Where the long-running automations live. The workshop." },
-      { name: "MacBook",         desc: "Travel + on-the-go. Same memory directory, synced via iCloud." },
+      { name: "Windows desktop", desc: "Runs the long-running automations." },
+      { name: "MacBook",         desc: "For travel. Shares the same memory directory, synced through iCloud." },
       { name: "Android phone",   desc: "ntfy on the home screen for one-tap approvals from anywhere." },
-      { name: "Condenser mic",   desc: "Worship, course recording, anything voiced. Already paid for." },
+      { name: "Condenser mic",   desc: "For worship, course recording and voiceover." },
     ],
   },
   {
     roman: "VIII.",
     category: "Tools I refuse",
     items: [
-      { name: "Subscription bloat", desc: "If I don't open it weekly, I cancel it. Stripe Bill Pay is my friend." },
-      { name: "No-code platforms", desc: "Used them. The exit cost is too high. Custom code lasts longer." },
-      { name: "Generic AI 'productivity' tools", desc: "I'd rather write the workflow than rent it from someone else." },
+      { name: "Subscription bloat", desc: "If I don't open a subscription weekly, I cancel it." },
+      { name: "No-code platforms", desc: "I used them and stopped because moving off them is hard. I write custom code instead." },
+      { name: "Generic AI 'productivity' tools", desc: "I write my own workflows." },
     ],
   },
 ];
@@ -92,12 +92,12 @@ export default function UsesPage() {
 
         {/* Page head */}
         <header className="pv-page-head">
-          <div className="pv-mono-label">/uses · Updated May 2026</div>
+          <div className="pv-mono-label">Updated May 2026</div>
           <h1>
-            What I <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>actually use.</em>
+            What I <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>use</em>
           </h1>
           <p className="deck">
-            The full stack, editor, languages, frameworks, AI, infrastructure, automation, hardware. Every tool here is in active production use, not on a shelf. If I&apos;ve dropped something I once used, it&apos;s because something earned its place better.
+            My stack: editor, languages, frameworks, AI, infrastructure, automation and hardware. I use every tool here in production work.
           </p>
         </header>
 
@@ -151,7 +151,7 @@ export default function UsesPage() {
           fontSize: "14px", color: "var(--color-warm-text-light)",
           textAlign: "center", lineHeight: 1.7,
         }}>
-          This page updates when the stack actually changes. Inspired by{" "}
+          I update this page when the stack changes. Inspired by{" "}
           <a href="https://uses.tech" target="_blank" rel="noopener noreferrer" style={{ color: "var(--color-warm-accent)", textDecoration: "underline", textDecorationStyle: "dotted" }}>uses.tech</a>.
         </p>
 
@@ -167,8 +167,8 @@ export default function UsesPage() {
         fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
         color: "var(--color-warm-text-light)",
       }}>
-        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
-        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← Home</a>
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC, Acworth, GA</span>
+        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>Home</a>
       </footer>
     </div>
   );

@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Custom Software Development | Mobile Apps, Web Apps & AI Integration",
   description:
-    "Custom-built mobile apps, web platforms, automation tools, and AI integrations scoped around your exact problem, from idea to launch. Small projects $1,500–3,500, full apps $5,000–15,000+.",
+    "Custom mobile apps, web platforms, automation tools and AI integrations, scoped on a discovery call and built through launch. Small projects $1,500 to $3,500, full apps $5,000 to $15,000 and up.",
   keywords: [
     "custom software development", "mobile app development", "web app development",
     "AI integration for business", "custom business software", "app development Georgia",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Custom Software Development: Purcell Ventures",
     description:
-      "Mobile apps, web platforms, and AI tools built around your exact problem. Small projects $1,500–3,500, full apps $5,000–15,000+.",
+      "Mobile apps, web platforms and AI tools for your business. Small projects $1,500 to $3,500, full apps $5,000 to $15,000 and up.",
     url: "https://purcellventures.co/software",
     type: "website",
   

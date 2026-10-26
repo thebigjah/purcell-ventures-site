@@ -11,16 +11,16 @@ const TIERS = [
     name: "One-Off Help",
     price: "$99",
     unit: "flat",
-    desc: "One 90-minute session, in-person (Metro Atlanta) or over video. Bring one problem, leave with it solved.",
-    fits: "Best for a specific need, new iPhone, ChatGPT crash course, smart speaker setup, password manager migration.",
+    desc: "One 90-minute session, in-person (Metro Atlanta) or over video. You bring one problem and we solve it in that session.",
+    fits: "Best for a single need, such as a new iPhone, a ChatGPT lesson, a smart speaker setup or a password manager move.",
     highlight: false,
   },
   {
     name: "Monthly Care",
     price: "$79",
     unit: "/ month",
-    desc: "Unlimited texts during business hours + a 30-min video check-in every month + 1 in-person visit (Metro Atlanta).",
-    fits: "Best for ongoing help, when your tech needs change weekly and you want someone on call.",
+    desc: "Unlimited texts during business hours, a 30-minute video check-in every month and 1 in-person visit (Metro Atlanta).",
+    fits: "Best for ongoing help, when you have tech questions most weeks and want someone to text.",
     highlight: true,
   },
   {
@@ -28,49 +28,49 @@ const TIERS = [
     price: "$149",
     unit: "/ month",
     desc: "Everything in Monthly Care, covering up to 4 family members under one plan. Designed for adult children managing parents' or grandparents' tech.",
-    fits: "Best for taking the tech-support job off your own shoulders. Your mom calls me instead of you.",
+    fits: "Best for adult children who support their parents' devices. Your mom calls me instead of you.",
     highlight: false,
   },
 ];
 
 const PACKAGES = [
-  { name: "New phone setup", price: "$79", desc: "Out-of-box iPhone or Android: contacts, email, photos, apps, password manager, 2FA, accessibility settings, the right apps deleted." },
-  { name: "ChatGPT crash course", price: "$129", desc: "90-min hands-on. By the end you can use ChatGPT or Claude for research, writing, planning, and decision support. Custom to your actual use cases." },
-  { name: "Password manager migration", price: "$99", desc: "Set up 1Password or Bitwarden. Migrate every saved password from browsers. Set up family sharing. You stop reusing passwords forever." },
-  { name: "Medication reminder setup", price: "$99", desc: "For an elderly parent or grandparent. Smart speaker + phone reminders + visual cue system. Includes 30-min training session with them." },
-  { name: "Smart home starter", price: "$199", desc: "One Echo or Google Home + 4 smart bulbs + 2 plugs + routines configured (morning, evening, away). Includes 60-min walkthrough." },
-  { name: "Digital legacy plan", price: "$149", desc: "Document every account, password, subscription, and digital asset so your family can access it if something happens to you. Written + secured + tested." },
+  { name: "New phone setup", price: "$79", desc: "Out-of-box iPhone or Android: contacts, email, photos, apps, password manager, 2FA, accessibility settings, and unused apps removed." },
+  { name: "ChatGPT crash course", price: "$129", desc: "A 90-minute hands-on lesson. By the end you can use ChatGPT or Claude for research, writing, planning and decisions. I build it around the things you want to use it for." },
+  { name: "Password manager migration", price: "$99", desc: "Set up 1Password or Bitwarden. I move every saved password out of your browsers and set up family sharing. You stop reusing passwords." },
+  { name: "Medication reminder setup", price: "$99", desc: "For an elderly parent or grandparent. Smart speaker reminders, phone reminders and a visual cue system. Includes a 30-minute training session with them." },
+  { name: "Smart home starter", price: "$199", desc: "One Echo or Google Home, 4 smart bulbs, 2 plugs and three routines set up (morning, evening, away). Includes a 60-minute walkthrough." },
+  { name: "Digital legacy plan", price: "$149", desc: "I document every account, password, subscription and digital asset so your family can access them if something happens to you. The plan is written down, stored securely and tested." },
 ];
 
 const PROBLEMS = [
-  { icon: "📱", title: "\"My phone is a mess\"", body: "Apps you don't use, notifications you ignore, photos you can't find. I sort it. Once." },
-  { icon: "🤖", title: "\"Everyone says use AI\"", body: "ChatGPT, Claude, Gemini, same energy. I'll show you what actually saves you time vs. what's hype." },
-  { icon: "🔒", title: "\"My passwords are everywhere\"", body: "Sticky notes. Same password on 14 sites. One breach away from a problem. Real password manager, real solution." },
-  { icon: "💊", title: "\"My mom can't track her meds\"", body: "Phone reminders, smart speakers, visual cues. I set it up and teach her, patiently, until it sticks." },
-  { icon: "🏠", title: "\"I bought an Echo and it's still in the box\"", body: "Smart home gear is intimidating because nobody walks you through it. I do." },
-  { icon: "📂", title: "\"My digital life is chaos\"", body: "iCloud full. Google Drive a junk drawer. Subscriptions you forgot. Cleanup + a system you'll actually maintain." },
+  { title: "\"My phone is a mess\"", body: "I sort your apps, notifications and photos in one session." },
+  { title: "\"Everyone says use AI\"", body: "I show you which AI tools, such as ChatGPT, Claude or Gemini, save you time on the things you do." },
+  { title: "\"My passwords are everywhere\"", body: "If you reuse passwords or keep them on sticky notes, one breach exposes every account. I set up a password manager." },
+  { title: "\"My mom can't track her meds\"", body: "I set up phone reminders, a smart speaker and visual cues, then teach her to use them." },
+  { title: "\"I bought an Echo and it's still in the box\"", body: "I set up the smart home gear and walk you through it." },
+  { title: "\"My digital life is chaos\"", body: "I clean up iCloud, Google Drive and forgotten subscriptions, then set up a system you can keep up with." },
 ];
 
 const FAQ = [
   {
     q: "How is this different from your AI Consulting?",
-    a: "Consulting is for business teams, training your staff to use AI in their workflow. Steady is for you, your household, your parents. Personal stakes, not professional ones.",
+    a: "Consulting is for business teams. I train your staff to use AI in their work. Steady is for you, your household and your parents.",
   },
   {
     q: "Are you only available in Atlanta?",
-    a: "In-person visits are Metro Atlanta. Remote help (video + screen share) is anywhere in the US. Most Monthly Care work happens remotely, the in-person visit is for setup or family training.",
+    a: "In-person visits are Metro Atlanta. Remote help (video and screen share) covers anywhere in the US. Most Monthly Care work happens remotely. I use the in-person visit for setup or family training.",
   },
   {
     q: "Can you help my elderly parent who's not tech-savvy?",
-    a: "Yes, this is exactly who Family Care is designed for. I'm patient, I'll repeat things, I'll write down steps, I'll come back if something breaks. No condescension, no jargon.",
+    a: "Yes. Family Care is built for that. I repeat things, write down steps, come back if something breaks, and explain things in plain words.",
   },
   {
     q: "Do you fix broken devices?",
-    a: "No — I'm not a repair shop. I help you use what's working. If your laptop is dead, take it to Apple or Best Buy first; I'll help you set up the new one.",
+    a: "No. I'm not a repair shop. I help you use devices that work. If your laptop is dead, take it to Apple or Best Buy first, and I'll help you set up the new one.",
   },
   {
     q: "What happens after Monthly Care month 1?",
-    a: "It auto-renews monthly. Cancel any time with a text, no contracts. Most clients stay 6+ months because tech keeps changing and a coach on call is cheaper than figuring it out alone.",
+    a: "It renews monthly. You can cancel any time with a text. There is no contract.",
   },
 ];
 
@@ -88,12 +88,12 @@ export default function SteadyPage() {
 
         {/* Page head */}
         <header className="pv-page-head">
-          <div className="pv-mono-label">Division V · Personal IT</div>
+          <div className="pv-mono-label">Personal IT</div>
           <h1>
-            Your tech, <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>finally steady.</em>
+            Personal IT help <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>for families.</em>
           </h1>
           <p className="deck">
-            Personal IT help for the people in your life who never asked to manage all this. Your mom, your dad, your grandparents, you. Patient setup. Real teaching. Someone to call when something breaks.
+            For your mom, your dad, your grandparents and you. I set up your devices, teach you to use them, and answer when something breaks.
           </p>
           <div style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
             <a className="pv-btn-primary" href="#tiers">See plans</a>
@@ -104,20 +104,19 @@ export default function SteadyPage() {
 
         {/* Who this is for */}
         <p className="pv-italic" style={{ fontSize: "22px", color: "var(--color-warm-text)", opacity: 0.9, lineHeight: 1.5, maxWidth: "780px", marginBottom: "48px" }}>
-          You&apos;re the family tech person. You&apos;ve been answering your mom&apos;s questions about her phone for years. You taught your dad how to use ChatGPT. You set up your grandmother&apos;s tablet last Christmas and have been fielding texts about it ever since. <span style={{ color: "var(--color-warm-accent)", fontStyle: "normal", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "16px", letterSpacing: "0.04em", textTransform: "uppercase", fontWeight: 700, marginLeft: "8px" }}>Pass that job to me.</span>
+          Steady is for the family tech person, the one who answers mom&apos;s phone questions, taught dad to use ChatGPT, and still gets texts about grandma&apos;s tablet. <span style={{ color: "var(--color-warm-accent)", fontStyle: "normal", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "16px", letterSpacing: "0.04em", textTransform: "uppercase", fontWeight: 700, marginLeft: "8px" }}>I can take that job.</span>
         </p>
 
         {/* Problems we solve */}
         <header className="pv-section-head">
           <span className="roman">I.</span>
-          <h2>What we <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>solve</em></h2>
+          <h2>What I <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>help with</em></h2>
         </header>
 
         <div className="st-problems" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", marginBottom: "56px" }}>
           {PROBLEMS.map((p, i) => (
             <div key={i} className="pv-card">
               <span className="b3"></span><span className="b4"></span>
-              <div style={{ fontSize: "28px", marginBottom: "12px" }}>{p.icon}</div>
               <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "17px", fontWeight: 600, color: "var(--color-warm-text)", margin: "0 0 8px", lineHeight: 1.3 }}>
                 {p.title}
               </h3>
@@ -144,7 +143,7 @@ export default function SteadyPage() {
             }}>
               {t.highlight && (
                 <div style={{ position: "absolute", top: "-12px", left: "20px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", padding: "4px 10px", fontSize: "9px", letterSpacing: "0.22em", textTransform: "uppercase", fontWeight: 700, fontFamily: "var(--font-dm-sans), sans-serif" }}>
-                  Most popular
+                  Recommended
                 </div>
               )}
               <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "22px", color: "var(--color-warm-text)", margin: "0 0 12px", fontWeight: 600 }}>{t.name}</h3>
@@ -165,7 +164,7 @@ export default function SteadyPage() {
         </header>
 
         <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "24px", maxWidth: "680px", lineHeight: 1.6 }}>
-          Flat-fee outcomes. Pick what you need. Each package includes the setup + a short training so you (or whoever the gift is for) actually uses it after.
+          Each package has a flat fee and includes the setup and a short training session, so you or the person you bought it for can use it afterward.
         </p>
 
         <div className="st-packages" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px", marginBottom: "56px" }}>
@@ -187,7 +186,7 @@ export default function SteadyPage() {
         </header>
 
         <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "20px", lineHeight: 1.6, maxWidth: "680px" }}>
-          There are other ways to handle the &quot;my mom can&apos;t figure out her phone&quot; problem. Here&apos;s the honest comparison.
+          There are other ways to handle the &quot;my mom can&apos;t figure out her phone&quot; problem. Here is how they compare.
         </p>
 
         <div style={{ overflowX: "auto", marginBottom: "48px" }}>
@@ -204,52 +203,45 @@ export default function SteadyPage() {
             <tbody>
               <tr style={{ borderBottom: "1px solid var(--color-warm-border)" }}>
                 <td style={compareTd}><strong style={{ color: "var(--color-warm-text)" }}>Patience with non-techies</strong></td>
-                <td style={compareCheck}>✓ Designed for it</td>
+                <td style={compareCheck}>The service is built for it</td>
                 <td style={compareTd}>Hit or miss by tech</td>
                 <td style={compareTd}>Often frustrated</td>
-                <td style={compareTd}>—</td>
+                <td style={compareTd}>No one to ask</td>
               </tr>
               <tr style={{ borderBottom: "1px solid var(--color-warm-border)" }}>
-                <td style={compareTd}><strong style={{ color: "var(--color-warm-text)" }}>Teaches you (vs. just fixing)</strong></td>
-                <td style={compareCheck}>✓ Always</td>
+                <td style={compareTd}><strong style={{ color: "var(--color-warm-text)" }}>Teaches you to do it yourself</strong></td>
+                <td style={compareCheck}>Every session</td>
                 <td style={compareTd}>Rarely</td>
                 <td style={compareTd}>Rarely (they just do it for you)</td>
                 <td style={compareTd}>You teach yourself</td>
               </tr>
               <tr style={{ borderBottom: "1px solid var(--color-warm-border)" }}>
                 <td style={compareTd}><strong style={{ color: "var(--color-warm-text)" }}>Available between visits</strong></td>
-                <td style={compareCheck}>✓ Unlimited texts (Monthly+)</td>
+                <td style={compareCheck}>Unlimited texts on Monthly and Family Care</td>
                 <td style={compareTd}>Pay per visit</td>
                 <td style={compareTd}>Yes but they&apos;re busy</td>
-                <td style={compareTd}>—</td>
+                <td style={compareTd}>No one to ask</td>
               </tr>
               <tr style={{ borderBottom: "1px solid var(--color-warm-border)" }}>
                 <td style={compareTd}><strong style={{ color: "var(--color-warm-text)" }}>Cost (typical month)</strong></td>
-                <td style={compareCheck}>$79–149/mo</td>
-                <td style={compareTd}>$200+/visit, $300/yr plans</td>
+                <td style={compareCheck}>$79 to $149 a month</td>
+                <td style={compareTd}>Per-visit fees</td>
                 <td style={compareTd}>$0 (and their patience)</td>
                 <td style={compareTd}>$0 (and your time)</td>
               </tr>
               <tr style={{ borderBottom: "1px solid var(--color-warm-border)" }}>
                 <td style={compareTd}><strong style={{ color: "var(--color-warm-text)" }}>Knows AI tools well</strong></td>
-                <td style={compareCheck}>✓ Specialty</td>
+                <td style={compareCheck}>My main focus</td>
                 <td style={compareTd}>Generally no</td>
                 <td style={compareTd}>Depends on the kid</td>
                 <td style={compareTd}>YouTube tutorials</td>
               </tr>
               <tr style={{ borderBottom: "1px solid var(--color-warm-border)" }}>
                 <td style={compareTd}><strong style={{ color: "var(--color-warm-text)" }}>Handles family members</strong></td>
-                <td style={compareCheck}>✓ Family Care plan</td>
+                <td style={compareCheck}>Family Care covers up to 4 people</td>
                 <td style={compareTd}>Each pays separately</td>
                 <td style={compareTd}>You become the support desk</td>
                 <td style={compareTd}>Everyone alone</td>
-              </tr>
-              <tr style={{ borderBottom: "1px solid var(--color-warm-border)" }}>
-                <td style={compareTd}><strong style={{ color: "var(--color-warm-text)" }}>Will return your call</strong></td>
-                <td style={compareCheck}>✓ Same day</td>
-                <td style={compareTd}>Maybe</td>
-                <td style={compareTd}>Eventually</td>
-                <td style={compareTd}>—</td>
               </tr>
             </tbody>
           </table>
@@ -258,19 +250,19 @@ export default function SteadyPage() {
         {/* What a month looks like */}
         <header className="pv-section-head">
           <span className="roman">V.</span>
-          <h2>What a Monthly Care month <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>actually looks like</em></h2>
+          <h2>A sample Monthly Care <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>month</em></h2>
         </header>
 
         <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", marginBottom: "24px", lineHeight: 1.6, maxWidth: "680px" }}>
-          So you don&apos;t have to wonder what you&apos;re paying for. Here&apos;s a real example of what a typical Monthly Care month with a client looks like.
+          This is a sample month to show what the plan covers.
         </p>
 
         <div style={{ display: "grid", gap: "12px", marginBottom: "48px" }}>
           {[
-            { week: "Week 1", events: [{ day: "Mon", text: "Onboarding video call — 30 min. We get on Zoom, you tell me what's broken, I take notes." }, { day: "Wed", text: "Text exchange: 'My mom can't print from her phone' → I send her a 3-step walkthrough with screenshots." }] },
-            { week: "Week 2", events: [{ day: "Tue", text: "In-person visit (Metro Atlanta only) — 1 hour. We set up her smart speaker + medication reminders + create a 'who to call' card on her fridge." }, { day: "Fri", text: "Quick text: she figured out how to call her sister with voice command. Win." }] },
-            { week: "Week 3", events: [{ day: "Mon", text: "You text me: 'Dad got a new MacBook for Father's Day, totally lost.' I do a 45-min screen share with him that evening." }, { day: "Thu", text: "ChatGPT crash course session for your spouse — 30 min over video. They've been wanting to use it but didn't know where to start." }] },
-            { week: "Week 4", events: [{ day: "Tue", text: "Monthly check-in: I send a summary of what we covered + 2 things to try this month. You forward to the family group chat." }, { day: "Fri", text: "Quick fix: your mom's iPad updated overnight, app moved, she couldn't find it. 5-min text resolution." }] },
+            { week: "Week 1", events: [{ day: "Mon", text: "Onboarding video call, 30 minutes. We get on Zoom, you tell me what's broken, and I take notes." }, { day: "Wed", text: "You text: 'My mom can't print from her phone.' I send her a 3-step walkthrough with screenshots." }] },
+            { week: "Week 2", events: [{ day: "Tue", text: "In-person visit (Metro Atlanta only), 1 hour. We set up her smart speaker and medication reminders and make a 'who to call' card for her fridge." }, { day: "Fri", text: "Quick text: she figured out how to call her sister with a voice command." }] },
+            { week: "Week 3", events: [{ day: "Mon", text: "You text me: 'Dad got a new MacBook for Father's Day, totally lost.' I do a 45-min screen share with him that evening." }, { day: "Thu", text: "ChatGPT lesson for your spouse, 30 minutes over video. They wanted to use it but didn't know where to start." }] },
+            { week: "Week 4", events: [{ day: "Tue", text: "Monthly check-in: I send a summary of what we covered and 2 things to try this month. You forward to the family group chat." }, { day: "Fri", text: "Quick fix: your mom's iPad updated overnight, app moved, she couldn't find it. 5-min text resolution." }] },
           ].map((week) => (
             <div key={week.week} style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", padding: "20px 24px" }}>
               <h4 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-warm-accent)", marginBottom: "12px", fontWeight: 700, marginTop: 0 }}>{week.week}</h4>
@@ -287,7 +279,7 @@ export default function SteadyPage() {
         </div>
 
         <div style={{ marginBottom: "48px", padding: "20px 24px", background: "rgba(122, 170, 106, 0.06)", border: "1px solid #7aaa6a", fontSize: "13px", color: "var(--color-warm-text)", lineHeight: 1.7 }}>
-          <strong style={{ color: "#7aaa6a", fontFamily: "var(--font-dm-sans), sans-serif", letterSpacing: "0.18em", textTransform: "uppercase", fontSize: "10px" }}>Average Monthly Care month:</strong> 1 in-person visit, 4-6 video/screen-share sessions, 15-25 text exchanges, 1 monthly summary email. All for $79/mo. Family Care covers up to 4 people for $149/mo.
+          <strong style={{ color: "#7aaa6a", fontFamily: "var(--font-dm-sans), sans-serif", letterSpacing: "0.18em", textTransform: "uppercase", fontSize: "10px" }}>Monthly Care includes:</strong> unlimited texts during business hours, a 30-minute video check-in and 1 in-person visit, for $79/mo. Family Care covers up to 4 people for $149/mo.
         </div>
 
         {/* FAQ */}
@@ -310,16 +302,16 @@ export default function SteadyPage() {
         {/* Final CTA */}
         <div style={{ textAlign: "center", padding: "48px 24px", background: "var(--color-warm-bg-alt)", border: "2px solid var(--color-warm-accent)" }}>
           <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", fontWeight: 700, color: "var(--color-warm-text)", margin: "0 0 16px" }}>
-            Tell me what&apos;s broken.
+            Start with an intake form
           </h3>
           <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", margin: "0 0 24px", lineHeight: 1.6, maxWidth: "560px", marginLeft: "auto", marginRight: "auto" }}>
-            5-minute intake form. I&apos;ll reply within 24 hours with a recommended plan, or an honest &quot;you don&apos;t need me.&quot;
+            The form takes about 5 minutes. I reply within 24 hours with a recommended plan, or I tell you that you don&apos;t need me.
           </p>
-          <a className="pv-btn-primary" href="/steady/start">Start with an intake →</a>
+          <a className="pv-btn-primary" href="/steady/start">Fill out the intake</a>
         </div>
 
         <p style={{ marginTop: "32px", fontSize: "12px", color: "var(--color-warm-text-light)", textAlign: "center", fontStyle: "italic" }}>
-          Steady is a service of Purcell Ventures LLC. Run by Elijah Purcell directly.
+          Steady is a service of Purcell Ventures LLC. I run it myself.
         </p>
       </main>
     </div>

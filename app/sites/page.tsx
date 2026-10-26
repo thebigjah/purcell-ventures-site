@@ -6,10 +6,10 @@ const BUILD_TIERS = [
     roman: "i.",
     name: "Starter",
     tagline: "Single-page presence.",
-    who: "Solo service providers. Caregivers, sole-prop doctors, single-truck trades. Bottleneck is your time, not lead flow.",
+    who: "Solo service providers. Caregivers, sole-prop doctors, single-truck trades. Businesses where your time, more than lead flow, limits growth.",
     what: [
       "One-page custom site with your branding",
-      "Mobile-first, loads safely on phones",
+      "Built mobile-first",
       "Google Business profile claimed and managed",
       "SSL with automatic renewal",
       "Contact form routed to your email",
@@ -50,8 +50,8 @@ const MAINTENANCE_TIERS = [
   {
     roman: "i.",
     name: "Site Care",
-    tagline: "We host it and keep it alive.",
-    who: "If you mostly need someone to make sure the lights stay on.",
+    tagline: "We host it and monitor uptime.",
+    who: "If you mostly need hosting and someone watching for downtime.",
     what: [
       "Hosting, SSL, certificate auto-renewal",
       "Uptime monitoring",
@@ -62,8 +62,8 @@ const MAINTENANCE_TIERS = [
   {
     roman: "ii.",
     name: "Site Care plus Lead Ops",
-    tagline: "We keep your site working and we feed it leads.",
-    who: "The sweet spot for trades and service businesses that want hands-on but not hand-holding.",
+    tagline: "We maintain your site and route leads to you.",
+    who: "Trades and service businesses that want monthly reports and updates without daily contact.",
     what: [
       "Everything in Site Care",
       "Lead form routed to SMS plus email within 60 seconds",
@@ -76,8 +76,8 @@ const MAINTENANCE_TIERS = [
   {
     roman: "iii.",
     name: "Marketing Partner",
-    tagline: "We are your marketing team part-time.",
-    who: "For businesses where each new lead is worth real money and you do not have time to handle marketing yourself.",
+    tagline: "Part-time marketing on top of site care.",
+    who: "Businesses where each new lead is worth a lot and the owner has no time to handle marketing.",
     what: [
       "Everything in Site Care plus Lead Ops",
       "Four Instagram posts per month scheduled through PV Social",
@@ -85,7 +85,7 @@ const MAINTENANCE_TIERS = [
       "One AI-drafted blog post per month for search",
       "One to two Higgsfield-generated marketing visuals per month",
       "Quarterly fifteen-minute business health call",
-      "Unlimited small content updates capped at one hour per month",
+      "Small content updates, up to one hour per month",
       "Full access to the Digital catalog of add-ons",
     ],
   },
@@ -93,27 +93,27 @@ const MAINTENANCE_TIERS = [
 
 const LOOM_CALLOUT = {
   title: "The Loom",
-  desc: "Most of our clients meet us because we built their site before they ever called us. The Loom is the system we use to find a small business that would benefit from better web presence, research them, build them a preview, and reach out. If you are reading this from a site we built for your business and we have not spoken yet, that is the system at work.",
+  desc: "Most of our clients meet us because we built their site before they ever called us. The Loom is the system we use to find a small business that would benefit from better web presence, research them, build them a preview, and reach out. If you found this page from a preview site we built for your business before we spoke, The Loom built it.",
   href: "https://the-loom-gold.vercel.app",
   cta: "See The Loom",
 };
 
 const WHY = [
   {
-    title: "Local.",
-    desc: "Acworth, Georgia. We work with businesses across metro Atlanta and remote across the country, but the company is one operator with a desk and a phone.",
+    title: "Registered in Georgia",
+    desc: "Purcell Ventures LLC is registered in Acworth, Georgia. We work with businesses in metro Atlanta and remotely across the country. One person runs the company.",
   },
   {
-    title: "One person picks up.",
-    desc: "When something breaks at nine on a Tuesday, you call Elijah. Not a ticket queue. Not an account manager. The same person who built your site.",
+    title: "One contact",
+    desc: "When something breaks at nine on a Tuesday, you call Elijah, who built your site.",
   },
   {
-    title: "Your site loads safely on phones.",
-    desc: "If your existing site is throwing security warnings on mobile, you are losing leads you never see. The maintenance tiers include automatic SSL renewal so this never happens to you.",
+    title: "SSL renews automatically",
+    desc: "A site with an expired SSL certificate shows visitors a browser security warning. The maintenance tiers renew the certificate automatically.",
   },
   {
-    title: "No hostage taking.",
-    desc: "You own the site, the content, and the domain. If you ever want to leave, we hand over everything. Full source code, all assets, no penalties.",
+    title: "You own the site",
+    desc: "You own the site, the content, and the domain. If you leave, we hand over the full source code and all assets with no penalty.",
   },
 ];
 
@@ -132,12 +132,12 @@ export default function SitesPage() {
 
         {/* Editorial page head */}
         <header className="pv-page-head">
-          <div className="pv-mono-label">Division I · Sites</div>
+          <div className="pv-mono-label">Sites</div>
           <h1>
             Custom websites and ongoing partnership for <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>local businesses.</em>
           </h1>
           <p className="deck">
-            We build the site, we hand-craft the strategy, and we stay involved after it ships. Maintenance is not just hosting. It is an operations partnership with the business that built your site.
+            We build the site, write the plan for it, and keep working on it after launch. Maintenance covers hosting plus lead handling, monthly reports and updates, done by the people who built the site.
           </p>
           <div style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
             <a className="pv-btn-primary" href="mailto:elijah@purcell-ventures.com?subject=Sites%20%E2%80%94%20Discovery%20Call">
@@ -153,7 +153,7 @@ export default function SitesPage() {
           <h2>What we <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>build</em></h2>
         </header>
         <p className="pv-italic" style={{ fontSize: "15.5px", color: "var(--color-warm-text)", opacity: 0.82, lineHeight: 1.6, marginBottom: "28px", maxWidth: "720px" }}>
-          Three build tiers. Each one ends with a real, living website. Pricing is discussed on the discovery call, not posted here, because the right tier depends on what your business is trying to do, not just what you are willing to spend.
+          Three build tiers. Each one ends with a published website. I quote prices on the discovery call because the right tier depends on what your business needs.
         </p>
         <div className="pv-sites-tiers" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", marginBottom: "64px" }}>
           {BUILD_TIERS.map((t) => (
@@ -174,10 +174,9 @@ export default function SitesPage() {
               </p>
               <div style={{ marginBottom: "16px" }}>
                 <div style={{ fontWeight: 600, color: "var(--color-warm-text)", marginBottom: "8px", fontSize: "10.5px", letterSpacing: "0.18em", textTransform: "uppercase" }}>What is included</div>
-                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                <ul style={{ listStyle: "disc", padding: "0 0 0 18px", margin: 0 }}>
                   {t.what.map((item) => (
-                    <li key={item} style={{ fontSize: "13.5px", color: "var(--color-warm-text)", opacity: 0.88, lineHeight: 1.55, paddingLeft: "14px", position: "relative", marginBottom: "6px" }}>
-                      <span style={{ position: "absolute", left: 0, color: "var(--color-warm-accent)" }}>·</span>
+                    <li key={item} style={{ fontSize: "13.5px", color: "var(--color-warm-text)", opacity: 0.88, lineHeight: 1.55, position: "relative", marginBottom: "6px" }}>
                       {item}
                     </li>
                   ))}
@@ -196,7 +195,7 @@ export default function SitesPage() {
           <h2>How we stay <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>involved</em></h2>
         </header>
         <p className="pv-italic" style={{ fontSize: "15.5px", color: "var(--color-warm-text)", opacity: 0.82, lineHeight: 1.6, marginBottom: "28px", maxWidth: "720px" }}>
-          The site ships and then it has to stay alive. Three maintenance tiers, each tied to how active a relationship you want. You can move between them as your business grows.
+          Hosting and updates continue after launch. Three maintenance tiers, each tied to how involved you want us to be. You can move between them as your business grows.
         </p>
         <div className="pv-sites-maint" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", marginBottom: "64px" }}>
           {MAINTENANCE_TIERS.map((t) => (
@@ -217,10 +216,9 @@ export default function SitesPage() {
               </p>
               <div>
                 <div style={{ fontWeight: 600, color: "var(--color-warm-text)", marginBottom: "8px", fontSize: "10.5px", letterSpacing: "0.18em", textTransform: "uppercase" }}>What is included</div>
-                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                <ul style={{ listStyle: "disc", padding: "0 0 0 18px", margin: 0 }}>
                   {t.what.map((item) => (
-                    <li key={item} style={{ fontSize: "13.5px", color: "var(--color-warm-text)", opacity: 0.88, lineHeight: 1.55, paddingLeft: "14px", position: "relative", marginBottom: "6px" }}>
-                      <span style={{ position: "absolute", left: 0, color: "var(--color-warm-accent)" }}>·</span>
+                    <li key={item} style={{ fontSize: "13.5px", color: "var(--color-warm-text)", opacity: 0.88, lineHeight: 1.55, position: "relative", marginBottom: "6px" }}>
                       {item}
                     </li>
                   ))}
@@ -259,7 +257,7 @@ export default function SitesPage() {
           </div>
           <div style={{ textAlign: "right" }}>
             <a href={LOOM_CALLOUT.href} className="pv-btn-primary" style={{ display: "inline-block" }} target="_blank" rel="noopener noreferrer">
-              {LOOM_CALLOUT.cta} →
+              {LOOM_CALLOUT.cta}
             </a>
           </div>
         </div>
@@ -306,16 +304,16 @@ export default function SitesPage() {
             color: "var(--color-warm-text)", textTransform: "uppercase",
             marginBottom: "16px", lineHeight: 1.15,
           }}>
-            Let us talk about your <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>site.</em>
+            Talk to Elijah about your <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>site.</em>
           </h2>
           <p className="pv-italic" style={{
             fontSize: "18px", color: "var(--color-warm-text)", opacity: 0.85,
             maxWidth: "620px", margin: "0 auto 32px", lineHeight: 1.55,
           }}>
-            Fifteen minutes. You tell me what your business does and what you wish your web presence did for you. I tell you honestly which tier is right, what it would cost, and how long it would take.
+            Fifteen minutes. You tell me what your business does and what you wish your web presence did for you. I tell you which tier fits, what it would cost, and how long it would take.
           </p>
           <a className="pv-btn-primary" href="mailto:elijah@purcell-ventures.com?subject=Sites%20%E2%80%94%20Discovery%20Call">
-            Book a 15-minute call →
+            Book a 15-minute call
           </a>
           <p className="pv-italic" style={{
             fontSize: "13.5px", color: "var(--color-warm-text-light)",
@@ -337,8 +335,8 @@ export default function SitesPage() {
         fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
         color: "var(--color-warm-text-light)",
       }}>
-        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
-        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← All divisions</a>
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC, Acworth, GA</span>
+        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>All divisions</a>
       </footer>
     </div>
   );

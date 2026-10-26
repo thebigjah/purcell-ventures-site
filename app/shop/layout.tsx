@@ -10,7 +10,7 @@ import type { ReactNode } from "react";
 // Treatment: PV-owned legally, brand-invisible publicly.
 export const metadata: Metadata = {
   title: "Shop: Purcell Ventures",
-  description: "Self-serve digital products. Instant download via Stripe. 30-day refund.",
+  description: "Self-serve digital products. Stripe emails the download after checkout. 30-day refund.",
   robots: {
     index: false,
     follow: false,

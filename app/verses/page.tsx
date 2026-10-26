@@ -44,7 +44,7 @@ export default function VersesPage() {
 
         {/* Page head */}
         <header className="pv-page-head">
-          <div className="pv-mono-label">A Personal Lectionary · Updated May 2026</div>
+          <div className="pv-mono-label">Updated May 2026</div>
           <h1>
             Verses I <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>come back to.</em>
           </h1>
@@ -133,8 +133,8 @@ export default function VersesPage() {
         fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
         color: "var(--color-warm-text-light)",
       }}>
-        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
-        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← Home</a>
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC, Acworth, GA</span>
+        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>Home</a>
       </footer>
     </div>
   );

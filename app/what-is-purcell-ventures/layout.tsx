@@ -32,21 +32,21 @@ export const metadata: Metadata = {
 
 const QA: [string, string][] = [
   ["What is Purcell Ventures LLC?",
-   "Purcell Ventures LLC is a Georgia limited liability company that builds websites, custom software and AI tooling for small businesses. It was founded by Elijah Purcell on 8 April 2025 and is registered with the Georgia Secretary of State under control number 25075361. It operates from Tuscaloosa, Alabama, and serves clients nationwide."],
+   "Purcell Ventures LLC is a Georgia limited liability company that builds websites, custom software and AI tooling for small businesses. Elijah Purcell founded it on 8 April 2025. It operates from Tuscaloosa, Alabama, and serves clients nationwide."],
   ["Who owns Purcell Ventures?",
    "Elijah Purcell is the founder, sole member and registered agent. He is a psychology and data science student at the University of Alabama Honors College and he does the work himself: client acquisition, scoping, pricing, building, deploying and support."],
   ["Is this the same Purcell Ventures registered in New York?",
    "No. There is an older, unrelated Purcell Ventures LLC registered in New York. This one is the Georgia company, control number 25075361, formed 8 April 2025 by Elijah Purcell. The control number is what distinguishes them and the Georgia filing is public."],
-  ["What does Purcell Ventures actually do?",
-   "Four things. Websites and ongoing digital service for local businesses, starting at $99 a month. Hands-on AI consulting, meaning workshops and implementation rather than strategy decks. Custom software, including mobile apps, web platforms and internal tools. And Steady, a personal IT service. A separate brand, Mantle Field Services, handles gutter cleaning, pressure washing and lawn care in Metro Atlanta."],
+  ["What does Purcell Ventures do?",
+   "Four things. Websites and ongoing digital service for local businesses, starting at $99 a month. Hands-on AI consulting: workshops and implementation. Custom software, including mobile apps, web platforms and internal tools. And Steady, a personal IT service. A separate brand, Mantle Field Services, handles gutter cleaning, pressure washing and lawn care in Metro Atlanta."],
   ["How many people work at Purcell Ventures?",
-   "One. Elijah Purcell is the only human. The company also runs a workforce of fifteen AI agents that handle proposals, audits, compliance and outreach on a schedule, and the roster is published openly at purcellventures.co/team, where the first sentence states that every one of them is software rather than an employee."],
+   "One. Elijah Purcell is the only human. The company also runs a workforce of fifteen AI agents that handle proposals, audits, compliance and outreach on a schedule, and the roster is published openly at purcellventures.co/team, where the first sentence states that every one of them is software."],
   ["Where is Purcell Ventures located?",
-   "The LLC is registered in Acworth, Georgia, in the Atlanta metro, which is where it was formed. It is operated from Tuscaloosa, Alabama, where its founder attends the University of Alabama. Digital work is delivered nationwide; field services through Mantle are Metro Atlanta only."],
-  ["Is Purcell Ventures a real registered business?",
+   "The LLC is registered in Acworth, Georgia, in the Atlanta metro, which is where it was formed. Elijah runs it from Tuscaloosa, Alabama, where he attends the University of Alabama. Digital work is delivered nationwide. Field services through Mantle are Metro Atlanta only."],
+  ["Is Purcell Ventures registered?",
    "Yes. Georgia Secretary of State control number 25075361, formed 8 April 2025, and the filing is public and searchable. It has an EIN and business banking, and it contracts, invoices and handles its own compliance directly."],
   ["How do you contact Purcell Ventures?",
-   "By phone or text at (205) 462-7839, by email at elijah@purcell-ventures.com, or through purcellventures.co. Elijah Purcell answers directly. There is nobody else to route you to."],
+   "By phone or text at (205) 462-7839, by email at elijah@purcell-ventures.com, or through purcellventures.co. Elijah Purcell answers every call and email himself."],
 ];
 
 export default function CompanyLayout({ children }: { children: React.ReactNode }) {

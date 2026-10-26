@@ -5,55 +5,55 @@ import { VignetteBackground } from "@/app/components/VignetteBackground";
 const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScsnKqYgNWbJe3wD9ju3jRkToOf7Eiu4ecjCV-b99XemX59gQ/viewform";
 
 const COMMISSION = [
-  { tier: "Apprentice", sells: "Courses + Mantle Field Services", earn: "15% on every close", path: "5 Course closes + 80% on quiz → Closer" },
-  { tier: "Closer", sells: "+ Digital Services subscriptions", earn: "20% + flat $100 / $150 / $200 per Digital tier", path: "5 Digital closes + co-pitch with Elijah → Senior" },
-  { tier: "Senior", sells: "+ AI Consulting + Custom Software", earn: "20% on Consulting, 15% on Custom Software", path: "Final tier" },
+  { tier: "Apprentice", sells: "Courses and Mantle Field Services", earn: "15% on every close", path: "Promoted to Closer after 5 course closes and 80% on the quiz" },
+  { tier: "Closer", sells: "Adds Digital Services subscriptions", earn: "20%, plus a flat $100, $150 or $200 per Digital tier", path: "Promoted to Senior after 5 Digital closes and a co-pitch with Elijah" },
+  { tier: "Senior", sells: "Adds AI Consulting and Custom Software", earn: "20% on Consulting, 15% on Custom Software", path: "Final tier" },
 ];
 
 const SERVICES = [
   {
     division: "Digital Services",
-    blurb: "Managed websites + AI tools for small businesses on a subscription. Three tiers, recurring revenue.",
+    blurb: "Managed websites and AI tools for small businesses, billed monthly in three tiers.",
     tiers: [
-      { name: "Starter", setup: "$400 setup", price: "$99/mo", note: "Site + AI chatbot + lead form" },
-      { name: "Growth",  setup: "$700 setup", price: "$179/mo", note: "+ Booking, email, social, reviews" },
-      { name: "Full",    setup: "$1,000 setup", price: "$279/mo", note: "Everything + CRM, invoicing, AI content" },
+      { name: "Starter", setup: "$400 setup", price: "$99/mo", note: "Site, AI chatbot and lead form" },
+      { name: "Growth",  setup: "$700 setup", price: "$179/mo", note: "Starter plus booking, email, social and reviews" },
+      { name: "Full",    setup: "$1,000 setup", price: "$279/mo", note: "Growth plus CRM, invoicing and AI content" },
     ],
   },
   {
     division: "AI Consulting",
-    blurb: "Hands-on AI training for business teams. We come to them.",
+    blurb: "AI training for business teams, held at their office.",
     tiers: [
       { name: "1-on-1",      setup: "", price: "$175/hr", note: "2-hr minimum recommended" },
-      { name: "Small Group", setup: "", price: "$125/person", note: "2–8 people, 2-hr minimum" },
+      { name: "Small Group", setup: "", price: "$125/person", note: "2 to 8 people, 2-hr minimum" },
       { name: "Workshop",    setup: "", price: "$2,500 flat", note: "Up to 20 people, half-day" },
       { name: "Corporate",   setup: "", price: "Custom quote", note: "Larger teams, multi-session" },
     ],
   },
   {
     division: "Custom Software",
-    blurb: "Apps, web platforms, automation built per-deal. Senior reps only — Elijah scopes, rep closes.",
+    blurb: "Apps, web platforms and automation, priced per deal. Senior reps only. Elijah scopes the project and the rep closes.",
     tiers: [
-      { name: "Small project", setup: "", price: "$1,500–3,500", note: "Scripts, simple tools" },
-      { name: "Full app",      setup: "", price: "$5,000–15,000", note: "Mobile/web applications" },
+      { name: "Small project", setup: "", price: "$1,500 to $3,500", note: "Scripts, simple tools" },
+      { name: "Full app",      setup: "", price: "$5,000 to $15,000", note: "Mobile/web applications" },
       { name: "Retainer",      setup: "", price: "Custom", note: "Ongoing engagement" },
     ],
   },
   {
     division: "Courses",
-    blurb: "Pre-built on-demand video courses. Lower ticket, faster close.",
+    blurb: "Pre-recorded video courses. They cost less than the services and take less time to close.",
     tiers: [
       { name: "College Apps",       setup: "", price: "$297",   note: "17 lessons" },
       { name: "Business Launch",    setup: "", price: "$397",   note: "26 lessons" },
-      { name: "Zero to Automated",  setup: "", price: "$397 self / $1,297 coaching / $2,997 1:1", note: "25 lessons, 8 modules" },
+      { name: "Zero to Automated",  setup: "", price: "$397 self-paced, $1,297 with coaching, $2,997 1:1", note: "25 lessons, 8 modules" },
     ],
   },
 ];
 
 const ETHICS = [
-  { rule: "Honesty over closing", detail: "If a prospect doesn't need our product, we tell them. The sale is never worth lying." },
-  { rule: "Respect over urgency", detail: "We don't manufacture FOMO, fear-sell, or fabricate scarcity." },
-  { rule: "The work is the witness", detail: "A great client outcome speaks louder than any pitch. Sell only what we can deliver." },
+  { rule: "Tell them when they don't need it", detail: "If a prospect doesn't need our product, we tell them. We do not lie to close a sale." },
+  { rule: "No fake urgency", detail: "We don't invent deadlines, sell on fear, or claim limited spots we don't have." },
+  { rule: "Sell only what we can deliver", detail: "If we can't build it or can't build it on time, you don't promise it." },
 ];
 
 const AUTO_REJECTS = [
@@ -65,9 +65,9 @@ const AUTO_REJECTS = [
 ];
 
 const PROCESS = [
-  { step: "1", label: "Take the application + quiz", detail: "20–30 minutes. Honest test of product knowledge + ethics + judgment." },
+  { step: "1", label: "Take the application + quiz", detail: "20 to 30 minutes. The quiz covers product knowledge, ethics and judgment." },
   { step: "2", label: "Elijah reviews within 7 days", detail: "You get an email either way, interview invite or polite no." },
-  { step: "3", label: "20-minute phone interview", detail: "Conversation, not interrogation. We figure out if it's a fit." },
+  { step: "3", label: "20-minute phone interview", detail: "A conversation about whether the role fits you." },
   { step: "4", label: "Contractor agreement + handbook", detail: "1099 contractor relationship. Standard terms. Parent co-signs if you're under 18." },
   { step: "5", label: "30-minute onboarding call + materials drop", detail: "You get access to the rep portal: product encyclopedia, pricing, scripts, CRM." },
   { step: "6", label: "Start selling", detail: "Work on your own schedule. Commission paid on the 1st of each month, after the 30-day clawback window." },
@@ -95,7 +95,7 @@ export default function SalesRepPage() {
 
         {/* Page head */}
         <header className="pv-page-head">
-          <div className="pv-mono-label">Sales Representative · Apply</div>
+          <div className="pv-mono-label">Sales representative</div>
           <h1>
             We're hiring{" "}
             <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>
@@ -143,7 +143,7 @@ export default function SalesRepPage() {
         <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", padding: "20px 24px", marginBottom: "48px", fontSize: "14px", lineHeight: 1.6 }}>
           <strong style={{ color: "var(--color-warm-accent)", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", letterSpacing: "0.18em", textTransform: "uppercase" }}>What it can earn you</strong>
           <p style={{ margin: "10px 0 0" }}>
-            A rep working 10 hours a week could clear <strong>$300–500/mo at Apprentice</strong>, <strong>$1,000–1,500 at Closer</strong>, <strong>$2,000+ at Senior</strong>. Real money, not minimum-wage equivalent. Commission paid the 1st of each month, after a 30-day clawback window clears.
+            A rep working 10 hours a week could earn about <strong>$300 to $500/mo at Apprentice</strong>, <strong>$1,000 to $1,500 at Closer</strong> and <strong>$2,000+ at Senior</strong>. These are projections from the commission rates above, not payouts a rep has received yet. Commission paid the 1st of each month, after a 30-day clawback window clears.
           </p>
         </div>
 
@@ -183,7 +183,7 @@ export default function SalesRepPage() {
 
         <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", padding: "20px 24px", marginBottom: "48px", fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>
           <strong style={{ color: "var(--color-warm-text)", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", letterSpacing: "0.18em", textTransform: "uppercase" }}>Also (low priority for reps):</strong>{" "}
-          <strong>Mantle Field Services</strong> — gutter cleaning ($100+), pressure washing ($75+), lawn care ($50+). Sister brand. Most of these are run directly by the family, reps occasionally close them but it&apos;s not the focus.
+          <strong>Mantle Field Services</strong>, our sister brand: gutter cleaning from $100, pressure washing from $75, lawn care from $50. The family runs most Mantle jobs. Reps rarely close them.
         </div>
 
         {/* Ethics */}
@@ -193,7 +193,7 @@ export default function SalesRepPage() {
         </header>
 
         <p className="pv-italic" style={{ fontSize: "20px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.5, maxWidth: "640px", marginBottom: "28px" }}>
-          We&apos;re a Christian-rooted business. That doesn&apos;t mean we evangelize. It means we sell a specific way:
+          We&apos;re a Christian business. Reps follow three selling rules:
         </p>
 
         <div className="sr-ethics" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", marginBottom: "48px" }}>
@@ -221,7 +221,7 @@ export default function SalesRepPage() {
         </header>
 
         <p style={{ fontSize: "16px", color: "var(--color-warm-text)", marginBottom: "20px", lineHeight: 1.6 }}>
-          The application has a 20-minute quiz. It&apos;s not a trick. It tests product knowledge + ethics + customer-fit judgment. You can pass it cold if you&apos;ve read this page.
+          The application has a 20-minute quiz on product knowledge, ethics and customer fit. You can pass it without studying if you&apos;ve read this page.
         </p>
 
         <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", padding: "24px", marginBottom: "24px" }}>
@@ -229,13 +229,13 @@ export default function SalesRepPage() {
             What the quiz tests
           </h4>
           <ul style={{ margin: 0, paddingLeft: "20px", fontSize: "14px", lineHeight: 1.8, color: "var(--color-warm-text)" }}>
-            <li><strong>Section A — Service knowledge (5 × 1 pt)</strong>: do you know what we sell and what it costs?</li>
-            <li><strong>Section B — Ethics scenarios (5 × 2 pt)</strong>: would you handle high-pressure or shady situations the right way?</li>
-            <li><strong>Section C — Demographics (3 × 1 pt)</strong>: can you match the right service to the right customer?</li>
-            <li><strong>Section D — Open response</strong>: 200 words on why you&apos;d represent Purcell Ventures specifically.</li>
+            <li><strong>Section A: Service knowledge (5 × 1 pt)</strong>: do you know what we sell and what it costs?</li>
+            <li><strong>Section B: Ethics scenarios (5 × 2 pt)</strong>: would you handle high-pressure or shady situations the right way?</li>
+            <li><strong>Section C: Demographics (3 × 1 pt)</strong>: can you match the right service to the right customer?</li>
+            <li><strong>Section D: Open response</strong>: 200 words on why you&apos;d represent Purcell Ventures specifically.</li>
           </ul>
           <div style={{ marginTop: "16px", paddingTop: "16px", borderTop: "1px solid var(--color-warm-border)", fontSize: "13px", color: "var(--color-warm-text-muted)" }}>
-            <strong style={{ color: "var(--color-warm-text)" }}>Pass:</strong> 14/18 on objective questions + 6/10 minimum on Section B (ethics floor) + a thumbs-up on Section D.
+            <strong style={{ color: "var(--color-warm-text)" }}>Pass:</strong> 14/18 on objective questions, at least 6/10 on Section B (ethics), and Elijah&apos;s approval of Section D.
           </div>
         </div>
 
@@ -278,17 +278,17 @@ export default function SalesRepPage() {
         <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", padding: "20px 24px", marginBottom: "48px", fontSize: "14px", lineHeight: 1.7 }}>
           <strong style={{ color: "var(--color-warm-accent)", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", letterSpacing: "0.18em", textTransform: "uppercase" }}>If you&apos;re under 18</strong>
           <p style={{ margin: "10px 0 0" }}>
-            You can absolutely represent Purcell Ventures, but one of your parents or legal guardians has to co-sign the contractor agreement. Compensation routes through their account or a joint custodial account. Same handbook, same commission structure, same scrutiny. Email Elijah directly before submitting so we can walk through it together: <a href="mailto:elijah@purcell-ventures.com" style={{ color: "var(--color-warm-accent)" }}>elijah@purcell-ventures.com</a>.
+            You can represent Purcell Ventures, but one of your parents or legal guardians has to co-sign the contractor agreement. Compensation routes through their account or a joint custodial account. You get the same handbook and commission structure as adult reps. Email Elijah directly before submitting so we can walk through it together: <a href="mailto:elijah@purcell-ventures.com" style={{ color: "var(--color-warm-accent)" }}>elijah@purcell-ventures.com</a>.
           </p>
         </div>
 
         {/* Final CTA */}
         <div style={{ textAlign: "center", padding: "48px 24px", background: "var(--color-warm-bg-alt)", border: "2px solid var(--color-warm-accent)" }}>
           <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "28px", fontWeight: 700, color: "var(--color-warm-text)", margin: "0 0 16px" }}>
-            Ready?
+            Apply
           </h3>
           <p style={{ fontSize: "15px", color: "var(--color-warm-text-muted)", margin: "0 0 24px", lineHeight: 1.6, maxWidth: "560px", marginLeft: "auto", marginRight: "auto" }}>
-            20–30 minutes for the full application + quiz. You hear back within 7 days, either way.
+            The application and quiz take 20 to 30 minutes.
           </p>
           <a className="pv-btn-primary" href={FORM_URL} target="_blank" rel="noreferrer">Take the application</a>
         </div>
@@ -298,8 +298,7 @@ export default function SalesRepPage() {
           Questions before applying? Email{" "}
           <a href="mailto:elijah@purcell-ventures.com" style={{ color: "var(--color-warm-text-muted)" }}>
             elijah@purcell-ventures.com
-          </a>{" "}
-          — no obligation, no pitch back.
+          </a>.
         </p>
       </main>
     </div>

@@ -29,7 +29,7 @@ export default function CompanyPage() {
         { name: "What is Purcell Ventures", href: "/what-is-purcell-ventures" },
       ]} />
         <header className="pv-page-head">
-          <div className="pv-mono-label">Company record · Last reviewed 20 August 2026</div>
+          <div className="pv-mono-label">Last reviewed 20 August 2026</div>
           <h1>
             What is <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Purcell Ventures</em>?
           </h1>
@@ -41,12 +41,12 @@ export default function CompanyPage() {
             <strong>Purcell Ventures LLC</strong> is a Georgia software company that builds
             websites, custom software and AI tooling for small businesses. It was founded
             by <Link href="/who" style={link}>Elijah Purcell</Link> on 8 April 2025 and is
-            registered with the Georgia Secretary of State under control number 25075361.
+            registered with the Georgia Secretary of State.
           </p>
 
           <p>
             One person runs it. He answers the phone, writes the code, and signs the
-            contract, and there is nobody to route you to.
+            contract.
           </p>
 
           <h2 style={H2}>At a glance</h2>
@@ -66,24 +66,20 @@ export default function CompanyPage() {
           <h2 style={H2}>Which Purcell Ventures this is</h2>
           <p>
             There is an older, unrelated <strong>Purcell Ventures LLC registered in New
-            York</strong>. This is not that company. This one is the Georgia filing, control
+            York</strong>. This one is the Georgia filing, control
             number 25075361, formed 8 April 2025 by Elijah Purcell, and the record is public
             and searchable.
           </p>
-          <p>
-            Saying so plainly is cheaper than letting a search engine or an assistant hedge
-            about it, which is what they currently do.
-          </p>
 
-          <h2 style={H2}>What it actually does</h2>
+          <h2 style={H2}>What it does</h2>
           <ul style={{ paddingLeft: "1.1rem" }}>
             <li style={{ marginBottom: "9px" }}>
               <Link href="/digital" style={link}>Digital</Link>. Websites and ongoing service
               for local businesses, from $99 a month.
             </li>
             <li style={{ marginBottom: "9px" }}>
-              <Link href="/consulting" style={link}>Consulting</Link>. Hands-on AI work,
-              meaning workshops and implementation rather than a strategy deck.
+              <Link href="/consulting" style={link}>Consulting</Link>. Hands-on AI work:
+              workshops and implementation.
             </li>
             <li style={{ marginBottom: "9px" }}>
               <Link href="/software" style={link}>Software</Link>. Custom builds: mobile
@@ -97,8 +93,7 @@ export default function CompanyPage() {
           <p>
             <Link href="/team" style={link}>Fifteen AI agents</Link> run proposals, audits,
             compliance and outreach on a schedule. That page opens by saying every one of
-            them is software rather than an employee, because a roster of invented
-            colleagues would be the fastest way to lose a reader.
+            them is software.
           </p>
 
           <h2 style={H2}>Common questions</h2>

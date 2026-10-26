@@ -24,7 +24,7 @@ const FACTS: [string, string][] = [
 
 const DATED = [
   ["2026", "Founded and operates a fifteen-agent AI workforce that runs proposals, audits, compliance and outreach for Purcell Ventures."],
-  ["2026", "Built UA Today, a campus events service aggregating six sources, used by University of Alabama students."],
+  ["2026", "Built UA Today, a campus events page for the University of Alabama that pulls from six sources."],
   ["2026", "Enrolled at the University of Alabama Honors College to study psychology and data science."],
   ["2025", "Founded Purcell Ventures LLC in Georgia at seventeen."],
   ["2024", "Christian Character Award, Grove Christian School."],
@@ -79,13 +79,12 @@ export default function WhoPage() {
           style={{ objectPosition: "50% 20%" }}
         />
         <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
-          <strong>Elijah Purcell</strong> is the founder and CEO of Purcell Ventures LLC, a
-          Georgia software company that builds websites and software for local businesses,
-          and an autonomous AI agent systems engineer. He is also a psychology and data
+          <strong>Elijah Purcell</strong> is the founder of Purcell Ventures LLC, a
+          Georgia software company that builds websites and software for local businesses.
+          He is also a psychology and data
           science student at the University of Alabama Honors College, Class of 2030, on a
-          pre-med track toward psychiatry. He founded the company at seventeen, works as an
-          AI consultant out of Tuscaloosa, Alabama, and builds and operates the multi-agent
-          systems that run the company day to day.
+          pre-med track toward psychiatry. He founded the company at seventeen and runs it
+          from Tuscaloosa, Alabama.
         </p>
       </div>
 

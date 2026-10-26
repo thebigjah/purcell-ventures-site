@@ -13,7 +13,7 @@ const PROJECTS = [
   {
     name: "Purcell Ventures",
     type: "Web Platform",
-    desc: "This site, a full multi-division business platform with AI tools, a business finder powered by the Google Places API, and a private sales system.",
+    desc: "This site. It has several business divisions, AI tools, a business finder that uses the Google Places API, and a private sales system.",
     tags: ["Next.js", "TypeScript", "Vercel", "Google Places API"],
     status: "live" as const,
     label: "Live Site",
@@ -29,7 +29,7 @@ const PROJECTS = [
   {
     name: "ElijahBot Overlay",
     type: "Desktop App",
-    desc: "AI-powered desktop overlay with voice input, screen vision, TTS output, and a custom neural net visualizer. Built with Electron + Claude API.",
+    desc: "Desktop overlay that takes voice input, reads the screen, talks back with text-to-speech, and shows a custom neural net visualizer. Built with Electron and the Claude API.",
     tags: ["Electron", "Claude API", "ElevenLabs", "Web Speech API"],
     status: "live" as const,
     label: "Desktop",
@@ -37,7 +37,7 @@ const PROJECTS = [
   {
     name: "Persona AI",
     type: "Mobile App",
-    desc: "Hyper-personalized AI companion, an AI that actually knows you. Tracks your goals, habits, fitness, and adapts to how you think.",
+    desc: "AI companion chat app, still in development. It is planned to track goals, habits and fitness.",
     tags: ["Expo", "React Native", "Claude API", "Express"],
     status: "building" as const,
     label: "In Development",
@@ -48,34 +48,34 @@ const SERVICES = [
   {
     roman: "i.",
     title: "Mobile Apps",
-    desc: "iOS and Android apps built with React Native or Expo. From idea to app store, design, development, and deployment.",
+    desc: "iOS and Android apps built with React Native or Expo. I design them, build them and publish them to the app stores.",
     examples: ["Social apps", "Business tools", "Games", "AI-powered apps"],
   },
   {
     roman: "ii.",
     title: "Web Applications",
-    desc: "Full-stack web apps built with Next.js. Fast, modern, and ready to scale. Landing pages to full SaaS platforms.",
+    desc: "Full-stack web apps built with Next.js, from landing pages to full SaaS platforms.",
     examples: ["Business platforms", "Dashboards", "E-commerce", "APIs"],
   },
   {
     roman: "iii.",
     title: "AI Integration",
-    desc: "Bring AI into your product, chatbots, content generation, voice interfaces, recommendation engines, and automation.",
+    desc: "I add AI to your product, such as chatbots, content generation, voice interfaces, recommendations or automation.",
     examples: ["AI chatbots", "Content pipelines", "Voice tools", "Smart automation"],
   },
   {
     roman: "iv.",
     title: "Automation & Tools",
-    desc: "Custom tools, scripts, and pipelines that save time and cut manual work. Chrome extensions, schedulers, data processors.",
+    desc: "Custom tools, scripts and pipelines that take over manual work, such as Chrome extensions, schedulers and data processors.",
     examples: ["Chrome extensions", "Batch processors", "Scrapers", "Schedulers"],
   },
 ];
 
 const PROCESS = [
-  { step: "01", title: "Discovery Call",   desc: "30 minutes. You explain the problem. I ask questions and tell you honestly what it takes to build." },
-  { step: "02", title: "Scoped Proposal",  desc: "I send a written breakdown, what gets built, what it costs, what the timeline looks like. No surprises." },
-  { step: "03", title: "Build",            desc: "You get updates throughout. I use Claude to move fast without cutting corners on quality." },
-  { step: "04", title: "Launch + Support", desc: "Deploy, test, ship. I stay available for fixes and follow-on work after launch." },
+  { step: "01", title: "Discovery Call",   desc: "30 minutes. You explain the problem. I ask questions and tell you what it takes to build." },
+  { step: "02", title: "Scoped Proposal",  desc: "I send a written breakdown of what gets built, what it costs and the timeline." },
+  { step: "03", title: "Build",            desc: "You get updates throughout. I use Claude Code to write drafts and I review every change." },
+  { step: "04", title: "Launch + Support", desc: "I test and deploy, then stay available for fixes and follow-on work after launch." },
 ];
 
 export default function SoftwarePage() {
@@ -92,12 +92,12 @@ export default function SoftwarePage() {
 
         {/* Editorial page head */}
         <header className="pv-page-head">
-          <div className="pv-mono-label">Division III · Custom Software</div>
+          <div className="pv-mono-label">Custom software</div>
           <h1>
-            Software built for <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>your actual problem.</em>
+            Custom software for <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>your business.</em>
           </h1>
           <p className="deck">
-            Mobile apps, web platforms, and AI-powered tools. Fast turnaround, scoped on a discovery call, and I stay involved after launch.
+            I build mobile apps, web platforms and AI tools. We scope each project on a discovery call, and I stay involved after launch.
           </p>
           <div style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
             <a className="pv-btn-primary" href="mailto:elijah@purcell-ventures.com?subject=Software Project Inquiry">
@@ -242,9 +242,9 @@ export default function SoftwarePage() {
         </header>
         <div className="pv-sw-pricing" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }}>
           {[
-            { tier: "Small projects", price: "Discovery call", desc: "Landing pages, Chrome extensions, small tools, automation scripts." },
-            { tier: "Full apps",      price: "Discovery call", desc: "Mobile apps, web platforms, AI-powered tools, full-stack applications." },
-            { tier: "Ongoing",        price: "Discovery call", desc: "Retainer-based work, long-term projects, feature development over time." },
+            { tier: "Small projects", price: "Discovery call", desc: "Landing pages, Chrome extensions, small tools and automation scripts." },
+            { tier: "Full apps",      price: "Discovery call", desc: "Mobile apps, web platforms, AI tools and full-stack applications." },
+            { tier: "Ongoing",        price: "Discovery call", desc: "Retainer work, long-term projects and feature development over time." },
           ].map(t => (
             <div key={t.tier} className="pv-card" style={{ padding: "32px 28px" }}>
               <span className="b3"></span><span className="b4"></span>
@@ -263,7 +263,7 @@ export default function SoftwarePage() {
           ))}
         </div>
         <p className="pv-italic" style={{ fontSize: "14px", color: "var(--color-warm-text-light)", marginTop: "20px", textAlign: "center" }}>
-          All projects start with a free 30-minute discovery call. Scope and pricing on the call, never before.
+          All projects start with a free 30-minute discovery call. I set scope and pricing on the call.
         </p>
 
         {/* CTA */}
@@ -284,7 +284,7 @@ export default function SoftwarePage() {
             color: "var(--color-warm-text)", textTransform: "uppercase",
             marginBottom: "16px", lineHeight: 1.15,
           }}>
-            Have a project <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>in mind?</em>
+            Start <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>a project</em>
           </h2>
           <p className="pv-italic" style={{
             fontSize: "18px", color: "var(--color-warm-text)", opacity: 0.85,
@@ -293,7 +293,7 @@ export default function SoftwarePage() {
             Tell me what you&apos;re trying to build. I&apos;ll tell you if I can help and what it takes.
           </p>
           <a className="pv-btn-primary" href="mailto:elijah@purcell-ventures.com?subject=Software Project Inquiry">
-            Email Elijah →
+            Email Elijah
           </a>
         </section>
 
@@ -309,8 +309,8 @@ export default function SoftwarePage() {
         fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
         color: "var(--color-warm-text-light)",
       }}>
-        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
-        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← All divisions</a>
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC, Acworth, GA</span>
+        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>All divisions</a>
       </footer>
     </div>
   );

@@ -31,19 +31,19 @@ type Agent = {
 const TEAM: Agent[] = [
   { key: "margot", name: "Margot Merrick", role: "Chief of Staff",
     does: "Collects what every other agent found and ranks it, so the most urgent thing is first rather than whichever finished last.",
-    wont: "Decide anything. She reports; Elijah decides." },
+    wont: "Decide anything. She reports and Elijah decides." },
   { key: "quentin", name: "Quentin Quill", role: "Proposals", facing: true,
     does: "Writes the proposal, prices every line off the rate card, and states the assumptions out loud so scope cannot creep quietly.",
-    wont: "Invent a price. A quote is a commitment, and a scope with no rate on the card is refused rather than estimated." },
+    wont: "Invent a price. If a scope has no rate on the card, it refuses to quote it." },
   { key: "ivor", name: "Ivor Ingram", role: "Invoice Chaser", facing: true,
     does: "Finds delivered work that was never billed and drafts the invoice.",
-    wont: "Invoice an amount nobody agreed to. A guessed figure on an invoice is a claim about what someone owes." },
+    wont: "Invoice an amount the client did not agree to." },
   { key: "owen", name: "Owen Oakes", role: "Client Onboarding", facing: true,
-    does: "Turns a signed scope into a checklist, built only from what was actually agreed.",
+    does: "Turns a signed scope into a checklist, built only from what the client agreed to.",
     wont: "Start onboarding before the invoice goes out." },
   { key: "audrey", name: "Audrey Ashford", role: "Activation Auditor",
-    does: "Visits every live property as a stranger would and reports whether a visitor could actually buy or get in touch.",
-    wont: "Trust a page that merely loads. A price with no way to pay it is a finding, not a feature." },
+    does: "Visits every live property as a stranger would and reports whether a visitor can buy or get in touch.",
+    wont: "Pass a page just because it loads. A price with no way to pay it gets logged as a finding." },
   { key: "cecily", name: "Cecily Cross", role: "Compliance and Secrets",
     does: "Scans every repository for credentials that should not be in it, and re-checks the ones already flagged.",
     wont: "Close a finding because a scan failed to reach the thing it was checking." },
@@ -51,22 +51,22 @@ const TEAM: Agent[] = [
     does: "Qualifies local businesses that need a website and hands them to the pipeline.",
     wont: "Contact anyone on the do-not-contact list, or qualify a national chain as a local business." },
   { key: "delia", name: "Delia Dunmore", role: "Prospector, Real Estate",
-    does: "Matches property inventory against real buyer criteria.",
+    does: "Matches property inventory against buyers' stated criteria.",
     wont: "Invent a buyer's criteria. An empty buy-box is reported as empty." },
   { key: "rhett", name: "Rhett Ramsey", role: "Deal Sourcing",
     does: "Assembles deal packets from public records, facts only.",
     wont: "Contact a homeowner, or draw a conclusion about anybody's circumstances." },
   { key: "greta", name: "Greta Glennon", role: "Grants and Scholarships",
-    does: "Tracks what is actually winnable and when it closes.",
-    wont: "Count an award from a school Elijah does not attend. That is a compliment, not money." },
+    does: "Tracks which awards the company is eligible for and when each one closes.",
+    wont: "Count an award from a school Elijah does not attend." },
   { key: "tobias", name: "Tobias Thorne", role: "Tax and Ledger",
     does: "Keeps the books and flags anything that looks commingled.",
-    wont: "Categorise a transaction it cannot read. Unclear stays unclear." },
+    wont: "Categorise a transaction it cannot read. It leaves those uncategorised." },
   { key: "silas", name: "Silas Sutton", role: "Case Studies",
-    does: "Writes up finished work, using only claims that can be evidenced.",
-    wont: "Fill in a result nobody measured. Blank stays blank." },
+    does: "Writes up finished work, using only claims backed by evidence.",
+    wont: "Fill in a result nobody measured. It leaves those fields blank." },
   { key: "wren", name: "Wren Waverly", role: "Content, Purcell Ventures",
-    does: "Drafts what the company can honestly say this week.",
+    does: "Drafts posts about what the company did this week.",
     wont: "Write about client work that is confidential, or claim a result that has not happened." },
   { key: "henry", name: "Henry Haroldson", role: "Content, personal channel",
     does: "Keeps the personal channel separate from the company one.",
@@ -111,22 +111,20 @@ export default function TeamPage() {
         Purcell Ventures LLC
       </p>
       <h1 className="mt-3 text-4xl font-semibold leading-tight sm:text-5xl">
-        One person. Fifteen agents.
+        One person and fifteen AI agents
       </h1>
 
       <div className="mt-6 max-w-2xl space-y-4 text-neutral-600 dark:text-neutral-300">
         <p>
-          <strong>Everyone below is an AI agent, not an employee.</strong> They have names
+          <strong>Everyone below is an AI agent.</strong> They have names
           and faces because it is easier to ask what Quentin is doing than to ask what the
           proposal subsystem is doing, and because an agent that signs its own name can be
           held to what it said.
         </p>
         <p>
           Each one runs on a schedule, does a narrow job, and writes down what it found.
-          The interesting column is the second one. Every agent here is defined as much by
-          what it is forbidden to do as by what it does, because an agent that can invent a
-          price, close its own findings, or send mail as a person is not a colleague, it is
-          a liability.
+          Each agent also has a list of things it may not do. I set those limits so no agent
+          can invent a price, close its own findings, or send mail as a person.
         </p>
         <p className="text-sm">
           Anything one of them sends you says so in the signature, and a person reads the
@@ -159,7 +157,7 @@ export default function TeamPage() {
               <p className="font-semibold leading-tight">{a.name}</p>
               <p className="text-sm text-neutral-500">
                 {a.role}
-                {a.facing ? " · talks to clients" : ""}
+                {a.facing ? ", talks to clients" : ""}
               </p>
               <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
                 {a.does}

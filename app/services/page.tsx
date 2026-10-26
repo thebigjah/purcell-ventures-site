@@ -4,7 +4,7 @@ import { VignetteBackground } from "@/app/components/VignetteBackground";
 export const metadata: Metadata = {
   title: "Field Services have moved to Mantle",
   description:
-    "Our gutter cleaning, pressure washing, and lawn care services are now run under Mantle Field Services. Same owner, same standards, new home.",
+    "Our gutter cleaning, pressure washing, and lawn care services now run under Mantle Field Services, which Purcell Ventures still owns.",
 };
 
 const MANTLE_URL = "https://mantle-field-site.vercel.app";
@@ -27,11 +27,11 @@ export default function ServicesMovedPage() {
           Now <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Mantle Field Services.</em>
         </h1>
         <p className="pv-italic" style={{ fontSize: "19px", color: "var(--color-warm-text)", opacity: 0.85, lineHeight: 1.55, marginBottom: "36px" }}>
-          Our gutter cleaning, pressure washing, and lawn care work has spun off into its own brand. Same owner, same standards. Find us at the new home.
+          Our gutter cleaning, pressure washing, and lawn care work now runs under its own brand, Mantle Field Services. Purcell Ventures still owns it.
         </p>
         <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", justifyContent: "center", marginBottom: "32px" }}>
           <a href={MANTLE_URL} className="pv-btn-primary">
-            Visit Mantle Field →
+            Visit Mantle Field Services
           </a>
           <a href="tel:+12054627839" className="pv-btn-ghost">(205) 462-7839</a>
         </div>
@@ -40,7 +40,7 @@ export default function ServicesMovedPage() {
           fontSize: "10px", letterSpacing: "0.32em", textTransform: "uppercase",
           color: "var(--color-warm-text-light)",
         }}>
-          A Purcell Ventures company · Acworth, GA
+          A Purcell Ventures company in Acworth, GA
         </p>
       </div>
     </div>

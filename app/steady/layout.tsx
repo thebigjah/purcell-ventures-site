@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Steady: Personal IT for Everyday Life",
   description:
-    "Personal tech help for people who feel overwhelmed by modern tools. AI coaching, phone setup, password managers, medication reminders, smart home setup. One-off help from $99, monthly care from $79.",
+    "Personal tech help for people who feel overwhelmed by modern tools. AI coaching, phone setup, password managers, medication reminders and smart home setup. One-off help from $99, monthly care from $79.",
   keywords: [
     "personal IT help", "tech help for parents", "AI coaching personal",
     "tech help seniors", "household tech support", "personal tech coach",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Steady — Personal IT",
+  "name": "Steady: Personal IT",
   "description":
     "Personal tech help for individuals and households. AI coaching, phone setup, smart home, password managers, medication reminders, family tech care plans.",
   "provider": { "@id": "https://purcellventures.co/#organization" },

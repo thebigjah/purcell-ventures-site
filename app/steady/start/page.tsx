@@ -91,7 +91,7 @@ export default function SteadyStartPage() {
       console.error("CRM auto-create failed:", err);
     }
 
-    const subject = `Steady intake — ${form.name}`;
+    const subject = `Steady intake: ${form.name}`;
     const body = [
       `Name: ${form.name}`,
       `Email: ${form.email || "(none)"}`,
@@ -122,17 +122,17 @@ export default function SteadyStartPage() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/steady" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← Back to Steady</Link>
+        <Link href="/steady" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>Back to Steady</Link>
 
         {!submitted ? (
           <>
             <header className="pv-page-head" style={{ marginTop: "16px" }}>
-              <div className="pv-mono-label">Steady · Start</div>
+              <div className="pv-mono-label">Steady intake</div>
               <h1>
-                Tell me <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>what&apos;s broken.</em>
+                Start with an <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>intake form</em>
               </h1>
               <p className="deck">
-                Five minutes of form-filling. I read every one of these personally and reply within 24 hours with a recommended plan, or an honest &quot;you don&apos;t need me.&quot;
+                The form takes about five minutes. I read each one and reply within 24 hours with a recommended plan, or I tell you that you don&apos;t need me.
               </p>
             </header>
 
@@ -206,11 +206,11 @@ export default function SteadyStartPage() {
               </section>
 
               <button type="submit" className="pv-btn-primary" style={{ border: "none", cursor: "pointer", padding: "16px 32px", fontSize: "12px" }}>
-                Send my intake →
+                Send my intake
               </button>
 
               <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", textAlign: "center", fontStyle: "italic" }}>
-                Your form opens an email to me when you hit submit. If your email client doesn&apos;t open automatically, you&apos;ll get a fallback button to copy the address.
+                Your form opens an email to me when you hit submit. If your email app doesn&apos;t open, the next screen shows my address and a button to try again.
               </p>
             </form>
           </>
@@ -243,7 +243,7 @@ export default function SteadyStartPage() {
               </h3>
               <ol style={{ paddingLeft: "20px", margin: 0, lineHeight: 1.8, fontSize: "14px", color: "var(--color-warm-text)" }}>
                 <li>I read your intake (usually within a few hours)</li>
-                <li>I reply within 24 hours with a recommended plan, or an honest &quot;you don&apos;t need me&quot;</li>
+                <li>I reply within 24 hours with a recommended plan, or I tell you that you don&apos;t need me</li>
                 <li>If we&apos;re a fit, we schedule the first session (in-person Atlanta or remote video)</li>
                 <li>If we&apos;re not, I&apos;ll point you to something that is</li>
               </ol>

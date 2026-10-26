@@ -67,12 +67,12 @@ export default function WritingPage() {
 
         {/* Page head */}
         <header className="pv-page-head">
-          <div className="pv-mono-label">A Literary Index · Selected Pieces</div>
+          <div className="pv-mono-label">Selected writing</div>
           <h1>
             Things I&apos;ve <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>written.</em>
           </h1>
           <p className="deck">
-            Original poetry, prose, and reflections. I write nobody asks for. These pieces stay rough on purpose, the polished writing lives on the courses and the consulting decks; the raw stuff lives here.
+            Prose and reflections, written for nobody in particular. These pieces are rough on purpose. My polished writing is in the courses and consulting decks.
           </p>
         </header>
 
@@ -97,7 +97,7 @@ export default function WritingPage() {
                       {piece.title}
                     </h2>
                     <div className="pv-mono-label" style={{ color: "var(--color-warm-text-light)" }}>
-                      {piece.category} · {piece.date}
+                      {piece.category}, {piece.date}
                     </div>
                   </div>
                   <button
@@ -116,7 +116,7 @@ export default function WritingPage() {
                     onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--color-warm-accent)"; e.currentTarget.style.color = "var(--color-warm-accent)"; }}
                     onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--color-warm-border)"; e.currentTarget.style.color = "var(--color-warm-text-muted)"; }}
                   >
-                    {isOpen ? "Close ↑" : "Read →"}
+                    {isOpen ? "Close" : "Read"}
                   </button>
                 </div>
                 <blockquote className="pv-italic" style={{
@@ -166,8 +166,8 @@ export default function WritingPage() {
         fontSize: "9.5px", letterSpacing: "0.32em", textTransform: "uppercase",
         color: "var(--color-warm-text-light)",
       }}>
-        <span>© {new Date().getFullYear()} Purcell Ventures LLC · Acworth, GA</span>
-        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>← Home</a>
+        <span>© {new Date().getFullYear()} Purcell Ventures LLC, Acworth, GA</span>
+        <a href="/" style={{ color: "var(--color-warm-text-light)", textDecoration: "none", letterSpacing: "0.32em" }}>Home</a>
       </footer>
     </div>
   );
