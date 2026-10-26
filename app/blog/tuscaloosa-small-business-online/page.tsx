@@ -23,9 +23,9 @@ import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/tuscaloosa-small-business-online" },
-  title: { absolute: "The Tuscaloosa Storefront Project | Elijah Purcell | Elijah Purcell" },
+  title: { absolute: "The Tuscaloosa Storefront Project | Elijah Purcell" },
   description:
-    "A reporting series by Elijah Purcell on independent businesses around the University of Alabama: who they are, how students find them, and what happens when a business has no website.",
+    "A reporting series by Elijah Purcell on independent businesses around the University of Alabama. Each piece covers who runs the business, how students find it, and what happens when it has no website.",
 };
 
 const linkStyle = { color: "var(--color-warm-accent)", textDecoration: "underline" };
@@ -36,15 +36,15 @@ export default function Post() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
+        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
 
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },
           { name: "Writing", href: "/blog" },
-          { name: "The Tuscaloosa Storefront Project: small businesses near cam", href: "/blog/tuscaloosa-small-business-online" },
+          { name: "The Tuscaloosa Storefront Project", href: "/blog/tuscaloosa-small-business-online" },
         ]} />
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Reporting · August 20, 2026 · Series introduction</div>
+          <div className="pv-mono-label">Reporting, August 20, 2026, series introduction</div>
           <h1>
             The Tuscaloosa <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>Storefront</em> Project
           </h1>
@@ -59,7 +59,8 @@ export default function Post() {
           </p>
 
           <p>
-            This is a series about the businesses that come back second, or not at all.
+            This series covers local businesses that rank low in that phone search, or do
+            not show up in it.
           </p>
 
           <h2>What this is</h2>
@@ -68,20 +69,18 @@ export default function Post() {
             I am a student at the University of Alabama and I build websites for small
             businesses, which means I spend a lot of time looking at how independent shops
             appear online. The pattern near campus is consistent enough to be worth
-            writing down: a business that has been here for fifteen years, that everyone
-            over thirty knows by name, is functionally invisible to a freshman with a
-            phone.
+            writing down: a business that has been here for fifteen years, that locals know
+            well, often does not show up when a freshman searches on a phone.
           </p>
 
           <p>
-            Not because it is bad. Because it has a Facebook page from 2019, a Google
-            listing nobody claimed, and no website, and those three facts together mean it
-            loses to a chain three miles further away.
+            The usual cause: it has a Facebook page from 2019, an unclaimed Google listing
+            and no website. Together those put it below a chain three miles further away.
           </p>
 
           <p>
             Each piece in this series covers one business: who runs it, how long it has
-            been here, what it actually does well, and what a student trying to find it
+            been here, what it does well, and what a student trying to find it
             runs into. I am not selling anything in these pieces, and a business does not
             have to be a client to be in one. Several will not be.
           </p>
@@ -89,21 +88,20 @@ export default function Post() {
           <h2>Why I am writing it rather than just noticing it</h2>
 
           <p>
-            Two honest reasons.
+            I have two reasons.
           </p>
 
           <p>
             The first is that this is the thing I am studying. I am a psychology and data
             science student on a pre-med track, and the part of data science I keep coming
-            back to is how people actually search for things versus how businesses assume
-            they do. A storefront is a small, legible version of that problem.
+            back to is how people search versus how businesses assume they search. A
+            local shop is a small case of that question that I can study in person.
           </p>
 
           <p>
             The second is that I run a company that builds websites, so I have an obvious
-            interest here and it would be dishonest to pretend otherwise. What I can
-            promise is that the reporting comes first: if a business is doing fine without
-            a website, that is what the piece will say.
+            interest here. I will report what I find, including when a business does fine
+            without a website.
           </p>
 
           <h2>If you run a business near campus</h2>
@@ -124,7 +122,7 @@ export default function Post() {
           <h2>What is coming</h2>
 
           <p>
-            The first pieces are being reported now. If you want to follow along, the rest
+            I am reporting the first pieces now. If you want to follow along, the rest
             of the series will appear on{" "}
             <Link href="/blog" style={linkStyle}>this blog</Link>, and campus events and
             openings show up on{" "}
@@ -134,17 +132,11 @@ export default function Post() {
 
         
 
-          <PostFaq qa={[
-            ["What is the Tuscaloosa Storefront Project?",
-             "A reporting series by Elijah Purcell on independent businesses around the University of Alabama: who runs each one, how long it has been there, what it does well, and what a student trying to find it on a phone runs into. A business does not have to be a client to be featured and several will not be."],
-            ["How can a business near the University of Alabama be featured?",
-             "By getting in touch. It takes about twenty minutes, in person, at the business, with no obligation to buy anything and a written piece either way. Contact is (205) 462-7839 or elijah@purcell-ventures.com."],
-          ]} />
 
           <PostByline post={{
             slug: "tuscaloosa-small-business-online",
             title: "The Tuscaloosa Storefront Project",
-            description: "A reporting series on independent businesses around the University of Alabama: who runs them, how students actually find them, and what happens to a fifteen-year-old shop that has no website.",
+            description: "A reporting series on independent businesses around the University of Alabama. It covers who runs them, how students find them, and what happens to a fifteen-year-old shop that has no website.",
             published: "2026-08-20",
           }} />
 

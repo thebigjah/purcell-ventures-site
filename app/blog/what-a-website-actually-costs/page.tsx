@@ -12,9 +12,9 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/what-a-website-actually-costs" },
-  title: { absolute: "What a small business website actually costs | Elijah Purcell" },
+  title: { absolute: "What a small business website costs | Elijah Purcell" },
   description:
-    "Real numbers and what drives them: why the same site is quoted at $400 and at $15,000, what a monthly subscription does and does not include, the ongoing costs nobody mentions, and how to tell an expensive quote from an overpriced one.",
+    "Price ranges and what drives them. Why one small business site gets quotes of $400 and $15,000, what a monthly subscription includes, the ongoing costs quotes leave out, and how to judge whether a quote is fair.",
 };
 
 const H2 = { fontFamily: "'Cinzel', Georgia, serif", fontSize: "25px", fontWeight: 600, lineHeight: 1.2, margin: "40px 0 10px" } as const;
@@ -28,19 +28,19 @@ export default function Post() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
+        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
 
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },
           { name: "Writing", href: "/blog" },
-          { name: "What a website actually costs", href: "/blog/what-a-website-actually-costs" },
+          { name: "What a website costs", href: "/blog/what-a-website-actually-costs" },
         ]} />
 
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Business · August 20, 2026 · 8 min read</div>
+          <div className="pv-mono-label">Business, August 20, 2026, 8 min read</div>
           <h1>
             What a small business website{" "}
-            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>actually</em> costs
+            <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>costs</em>
           </h1>
         </header>
 
@@ -48,29 +48,28 @@ export default function Post() {
 
           <p style={{ fontSize: "18px" }}>
             Ask three providers what a website costs and you will get $400, $4,000 and
-            $15,000, all for something a customer could not tell apart from the outside.
-            Here is what actually drives that spread, with my own numbers on the page so you
+            $15,000, for sites that can look alike to a customer. Here is what drives
+            that spread, with my own numbers on the page so you
             can see where I sit.
           </p>
 
-          <h2 style={H2}>The three things you are actually buying</h2>
+          <h2 style={H2}>The three things you buy</h2>
 
           <p>
-            <strong>Design.</strong> Somebody deciding what it looks like. This ranges from
-            picking a template to originating a visual identity, and it is the single
-            largest driver of the spread.
+            The first is design, meaning somebody decides what the site looks like. This
+            ranges from picking a template to creating a visual identity, and it drives
+            much of the spread.
           </p>
 
           <p>
-            <strong>Build.</strong> Turning that into a working site. A five-page brochure
-            site and a site with bookings, payments and accounts are not the same job by an
-            order of magnitude.
+            The second is the build, which turns that design into a working site. A site
+            with bookings, payments and accounts takes about ten times the work of a
+            five-page brochure site.
           </p>
 
           <p>
-            <strong>Content.</strong> Words and photographs. This is the one everybody
-            forgets when comparing quotes, and the one that most often stalls a project for
-            months, because the provider is waiting on the client and the client thought it
+            The third is content, meaning the words and photographs. Quotes often leave
+            this out, and it is the item that most often stalls a project for months, because the provider is waiting on the client and the client thought it
             was included.
           </p>
 
@@ -85,54 +84,54 @@ export default function Post() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td style={{ ...td, fontWeight: 700 }}>Free to $50/mo</td><td style={td}>You build it on a site builder. Real option, genuinely fine for a lot of businesses, and your time is the cost.</td></tr>
+                <tr><td style={{ ...td, fontWeight: 700 }}>Free to $50/mo</td><td style={td}>You build it on a site builder. A workable option for many businesses, and your time is the cost.</td></tr>
                 <tr><td style={{ ...td, fontWeight: 700 }}>$400 to $1,500 once</td><td style={td}>A template configured for you. Somebody else does the work, the design is not original, and this is where most small business sites should probably land.</td></tr>
                 <tr><td style={{ ...td, fontWeight: 700 }}>$1,500 to $5,000 once</td><td style={td}>Custom build. Original layout, your content structure, functionality beyond pages. My custom software work starts at $1,500 and a substantial build runs to $5,000.</td></tr>
-                <tr><td style={{ ...td, fontWeight: 700 }}>$99 to $279/mo</td><td style={td}>Subscription: the site plus somebody maintaining it. My digital tiers run $99, $179 and $279 a month. No large upfront number, and you are renting rather than owning the arrangement.</td></tr>
-                <tr><td style={{ ...td, fontWeight: 700 }}>$10,000 and up</td><td style={td}>Original design, multiple specialists, strategy, photography. Real work, and rarely what a barber shop needs.</td></tr>
+                <tr><td style={{ ...td, fontWeight: 700 }}>$99 to $279/mo</td><td style={td}>A subscription covers the site and somebody maintaining it. My digital tiers run $99, $179 and $279 a month. No large upfront number, and you are renting rather than owning the arrangement.</td></tr>
+                <tr><td style={{ ...td, fontWeight: 700 }}>$10,000 and up</td><td style={td}>Original design, multiple specialists, strategy, photography. Useful work, rarely needed by a barber shop.</td></tr>
               </tbody>
             </table>
           </div>
 
-          <h2 style={H2}>The costs nobody puts in the quote</h2>
+          <h2 style={H2}>The costs quotes leave out</h2>
 
           <p>
-            These continue after the invoice is paid, and a quote that omits them is not
-            cheaper, it is less complete.
+            These continue after the invoice is paid. A quote that omits them is less
+            complete, and the costs still arrive.
           </p>
 
           <ul style={{ paddingLeft: "1.1rem" }}>
-            <li style={{ marginBottom: "9px" }}><strong>Domain.</strong> Roughly $12 to $20 a year. Yours, in your name, always.</li>
-            <li style={{ marginBottom: "9px" }}><strong>Hosting.</strong> Free to about $20 a month for a site this size. Genuinely free tiers exist and are adequate.</li>
-            <li style={{ marginBottom: "9px" }}><strong>Email at your domain.</strong> A few dollars per user per month, and worth it. An address at your own domain reads differently to a customer.</li>
-            <li style={{ marginBottom: "9px" }}><strong>Changes.</strong> The real one. Every site needs edits, and if that is not agreed in writing it becomes an argument in month four.</li>
-            <li style={{ marginBottom: "9px" }}><strong>Your time.</strong> Photographs, copy, decisions, feedback. Always more than anyone expects.</li>
+            <li style={{ marginBottom: "9px" }}>A domain costs roughly $12 to $20 a year. Register it in your name.</li>
+            <li style={{ marginBottom: "9px" }}>Hosting runs from free to about $20 a month for a site this size. Free tiers exist and are adequate for small sites.</li>
+            <li style={{ marginBottom: "9px" }}>Email at your domain costs a few dollars per user per month. It is worth paying for, because customers notice the address.</li>
+            <li style={{ marginBottom: "9px" }}>Changes cause the most disputes. Every site needs edits, and if the price of edits is not agreed in writing it becomes an argument in month four.</li>
+            <li style={{ marginBottom: "9px" }}>Your own time goes to photographs, copy, decisions and feedback, and it is more than most clients expect.</li>
           </ul>
 
-          <h2 style={H2}>Expensive is not the same as overpriced</h2>
+          <h2 style={H2}>How to judge whether a quote is fair</h2>
 
           <p>
-            A $10,000 site can be good value and a $500 site can be a waste. The question is
-            not the number, it is what the number is attached to.
+            A $10,000 site can be good value and a $500 site can be a waste. Judge a quote
+            by what it includes.
           </p>
 
           <p>
-            <strong>Signs a quote is expensive and fair:</strong> it is itemised. It says
+            A fair quote, even an expensive one, is itemised. It says
             what happens after launch. It states who owns the domain, the hosting and the
             code. It has a date. It says what is not included.
           </p>
 
           <p>
-            <strong>Signs a quote is overpriced:</strong> one number and no breakdown.
-            Monthly fees with no defined scope. The provider holds the domain. No mention of
-            what a change costs. Pressure to decide this week.
+            An overpriced quote gives one number with no breakdown, charges monthly fees with
+            no defined scope, leaves the domain with the provider, does not say what a change
+            costs, and pushes you to decide this week.
           </p>
 
-          <h2 style={H2}>The question that matters more than any of this</h2>
+          <h2 style={H2}>What is a customer worth to you?</h2>
 
           <p>
-            What is a customer worth to you, and how many extra ones would make the site pay
-            for itself?
+            Work out what one customer is worth, and how many extra customers would make the
+            site pay for itself.
           </p>
 
           <p>
@@ -146,28 +145,16 @@ export default function Post() {
 
           <p>
             I audited 121 independent businesses near the University of Alabama, and for most
-            of them the honest recommendation is the free one first.{" "}
+            of them my recommendation is the free option first.{" "}
             <Link href="/blog/is-your-business-invisible" style={link}>The self-check is
             here</Link>.
           </p>
 
-          <PostFaq qa={[
-            ["How much does a small business website cost?",
-             "Realistically, a configured template runs $400 to $1,500 once, a custom build runs $1,500 to $5,000, and a monthly subscription that includes maintenance runs roughly $99 to $279 a month. Above $10,000 you are paying for original design work and multiple specialists, which is real but rarely what a small local business needs. Building it yourself on a site builder is free to about $50 a month and is a legitimate option."],
-            ["What ongoing costs does a website have?",
-             "A domain at roughly $12 to $20 a year, hosting from free to about $20 a month for a small site, email at your own domain at a few dollars per user per month, and the cost of changes. The last one is the one that causes arguments, because it is usually not agreed in writing before launch."],
-            ["Why do website quotes vary so much?",
-             "Three components move independently: design, ranging from picking a template to originating a visual identity; build, where a five-page brochure site and a site with bookings and payments differ by an order of magnitude; and content, meaning words and photographs, which is the item most often left out of a comparison and the one that most often stalls a project."],
-            ["How do I know if a website quote is fair?",
-             "Fair quotes are itemised, state what happens after launch, say who owns the domain, hosting and code, carry a date, and say what is not included. Warning signs are a single number with no breakdown, a monthly fee with no defined scope, the provider holding your domain, no stated price for changes, and pressure to decide within the week."],
-            ["Does my business actually need a website?",
-             "Work out what one customer is worth and how many extra the site would need to find to pay for itself. If a customer is worth $2,000 the maths is easy. If your average sale is small and your customers are the same regulars every week, claiming your Google Business Profile and fixing your hours will do more for you than a website at any price."],
-          ]} />
 
           <PostByline post={{
             slug: "what-a-website-actually-costs",
-            title: "What a small business website actually costs",
-            description: "Real numbers and what drives them, the ongoing costs nobody mentions, and how to tell an expensive quote from an overpriced one.",
+            title: "What a small business website costs",
+            description: "Price ranges and what drives them, the ongoing costs quotes leave out, and how to judge whether a quote is fair.",
             published: "2026-08-20",
           }} />
 

@@ -8,7 +8,7 @@ export const metadata = {
   alternates: { canonical: "/blog/what-you-should-own" },
   title: { absolute: "What you should own at the end of a website project | Elijah Purcell" },
   description:
-    "The seven accounts and assets that should be in your name when a web project finishes, why a provider holding your domain is the single worst arrangement, and the two questions to ask before you sign anything.",
+    "The seven accounts and assets that should be in your name when a web project finishes, why the domain matters most, and the two questions to ask before you sign anything.",
 };
 
 const H2 = { fontFamily: "'Cinzel', Georgia, serif", fontSize: "25px", fontWeight: 600, lineHeight: 1.2, margin: "40px 0 10px" } as const;
@@ -22,7 +22,7 @@ export default function Post() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
+        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
 
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },
@@ -31,7 +31,7 @@ export default function Post() {
         ]} />
 
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Business · August 20, 2026 · 6 min read</div>
+          <div className="pv-mono-label">Business, August 20, 2026, 6 min read</div>
           <h1>
             What you should{" "}
             <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>own</em> at the end of a project
@@ -41,14 +41,13 @@ export default function Post() {
         <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
 
           <p style={{ fontSize: "18px" }}>
-            The question that decides whether a web project was a purchase or a lease is not
-            in the proposal. It is: when this is finished, whose name is on everything?
+            Before you sign for a website, ask who will own each account and asset when the
+            project ends. Most proposals do not say.
           </p>
 
           <p>
-            I build websites, so this article is against my own interest in the narrow sense
-            and entirely in it in the long one. A client who owns their assets is a client
-            who stays because they want to.
+            I build websites, and I want my clients to own all of it. A client who can leave
+            easily and stays anyway is the kind I want to keep.
           </p>
 
           <h2 style={H2}>The seven things</h2>
@@ -59,36 +58,33 @@ export default function Post() {
                 <tr><th style={{ ...th, width: "32%" }}>Asset</th><th style={th}>Why it matters</th></tr>
               </thead>
               <tbody>
-                <tr><td style={{ ...td, fontWeight: 700 }}>The domain</td><td style={td}>Registered to you, in an account you can log into. This is the one that matters most and the one most often held by somebody else.</td></tr>
-                <tr><td style={{ ...td, fontWeight: 700 }}>Hosting</td><td style={td}>An account in your name, with your billing on it. Being a sub-account inside a provider's reseller plan is not the same thing.</td></tr>
+                <tr><td style={{ ...td, fontWeight: 700 }}>The domain</td><td style={td}>Registered to you, in an account you can log into. Providers often register it in their own name.</td></tr>
+                <tr><td style={{ ...td, fontWeight: 700 }}>Hosting</td><td style={td}>An account in your name, with your billing on it. A sub-account inside a provider's reseller plan leaves them in control of it.</td></tr>
                 <tr><td style={{ ...td, fontWeight: 700 }}>The code</td><td style={td}>A repository you have access to, or at minimum a copy of the files delivered to you at launch.</td></tr>
-                <tr><td style={{ ...td, fontWeight: 700 }}>The content management login</td><td style={td}>An administrator account, not an editor account. There is a difference and it shows up when you want to leave.</td></tr>
-                <tr><td style={{ ...td, fontWeight: 700 }}>Google Business Profile</td><td style={td}>Yours, in your own Google account. Never a provider's.</td></tr>
+                <tr><td style={{ ...td, fontWeight: 700 }}>The content management login</td><td style={td}>An administrator account. An editor account cannot export the site or add users.</td></tr>
+                <tr><td style={{ ...td, fontWeight: 700 }}>Google Business Profile</td><td style={td}>Yours, in your own Google account.</td></tr>
                 <tr><td style={{ ...td, fontWeight: 700 }}>Analytics</td><td style={td}>Your property, with the provider added as a user. The reverse arrangement means your traffic history leaves with them.</td></tr>
                 <tr><td style={{ ...td, fontWeight: 700 }}>Email at the domain</td><td style={td}>Under your control, because losing it means losing password resets for everything else on this list.</td></tr>
               </tbody>
             </table>
           </div>
 
-          <h2 style={H2}>Why the domain is the one that matters</h2>
+          <h2 style={H2}>Why the domain comes first</h2>
 
           <p>
             Everything else is replaceable, inconveniently. The code can be rebuilt. Hosting
-            can be moved in a day. Analytics history is a loss but not a catastrophe.
+            can be moved in a day. Losing analytics history hurts, and you recover from it.
           </p>
 
           <p>
-            The domain is your identity. It is where your email lives, what is printed on
-            your van, and what people type. If somebody else holds it, they hold your ability
-            to leave, and every conversation you have with them afterwards happens under that
-            fact whether or not either of you mentions it.
+            Your email, your printed materials and the address customers type all depend on
+            the domain. If your provider holds it, you cannot leave without their cooperation.
           </p>
 
           <p>
-            It is also not usually malice. It is usually convenience: the provider registered
-            it during setup because it was faster than walking a client through it, and then
-            years passed. Which means asking early is not an accusation, and a good provider
-            will simply transfer it.
+            Providers usually register it for convenience, because it was faster during setup
+            than walking a client through it, and then years passed. Ask early, and a good
+            provider will transfer it.
           </p>
 
           <h2 style={H2}>Two questions before you sign</h2>
@@ -108,18 +104,17 @@ export default function Post() {
           <h2 style={H2}>What is reasonable for a provider to keep</h2>
 
           <p>
-            Not everything is a red flag, and pretending otherwise would be dishonest.
+            Providers can reasonably keep some things.
           </p>
 
           <p>
             Their own internal tooling, their project management system, and any
             general-purpose components they built before you and will use again after you.
-            That last one is normal and it is how anybody builds anything at a sensible
-            price.
+            Reusing components is normal, and it keeps prices down.
           </p>
 
           <p>
-            What is not reasonable is your domain, your listing, your analytics history, or a
+            They should not keep your domain, your listing, your analytics history, or a
             content management system you cannot administer. The test is whether the thing is
             <em> about you</em>. If it is, it should be yours.
           </p>
@@ -127,8 +122,8 @@ export default function Post() {
           <h2 style={H2}>If you are already in this situation</h2>
 
           <p>
-            Ask for the transfer, plainly and without accusation. Most providers will do it,
-            and a surprising number never realised the client wanted it.
+            Ask for the transfer plainly. Most providers will do it, and some never realised
+            the client wanted it.
           </p>
 
           <p>
@@ -142,21 +137,10 @@ export default function Post() {
             Related, on choosing between a solo operator and an agency and what to ask
             either:{" "}
             <Link href="/blog/what-one-operator-can-deliver" style={link}>what one operator
-            can actually deliver</Link>, and{" "}
+            can deliver</Link>, and{" "}
             <Link href="/blog/what-a-website-actually-costs" style={link}>what a website
-            actually costs</Link>.
+            costs</Link>.
           </p>
-
-          <PostFaq qa={[
-            ["Who should own the domain name for a business website?",
-             "The business, registered in its own name, in an account it can log into. A provider holding the domain holds the client's ability to leave, which changes every subsequent conversation whether either party mentions it. It is usually convenience rather than malice, which means asking for a transfer is not an accusation and a good provider will simply do it."],
-            ["What should I get at the end of a website project?",
-             "Seven things in your name: the domain, the hosting account, the code or at minimum a copy of the files, an administrator login to the content management system, your Google Business Profile in your own Google account, the analytics property with the provider added as a user rather than the reverse, and email at your domain."],
-            ["What questions should I ask a web designer before signing?",
-             "Two. Which of these assets will be in my name when we finish, asked about a specific list and answered in writing. And, if I wanted to move to another provider next year, what would that involve. The second answer should describe a process. Reassurance that you would not want to leave is the wrong answer."],
-            ["Is it normal for a web agency to keep some things after a project?",
-             "Yes. Their internal tooling, their project management system, and general-purpose components built before you and reused after you are all normal and are part of why work can be priced sensibly. The test is whether the asset is about you. Your domain, your listing, your analytics history and administrative access to your own site are not theirs to keep."],
-          ]} />
 
           <PostByline post={{
             slug: "what-you-should-own",

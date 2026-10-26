@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { VignetteBackground } from "@/app/components/VignetteBackground";
 import PostByline from "@/app/components/PostByline";
-import PostFaq from "@/app/components/PostFaq";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 // Written by the daily blog engine (~/blog-engine), held overnight for Elijah's veto.
@@ -9,7 +8,6 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 interface Data {
   title: string; slug: string; description: string; category: string;
   lede: string; sections: { heading: string; paragraphs: string[] }[];
-  faq: [string, string][];
 }
 
 const POST: Data = {
@@ -17,12 +15,12 @@ const POST: Data = {
   "slug": "not-secure-label-website-fix",
   "description": "Why Chrome shows \"Not secure\" next to your business web address, and the steps to fix it on a typical small business host this week.",
   "category": "Guide",
-  "lede": "Open your business website in Google Chrome and look at the left edge of the address bar. If you see the words \"Not secure,\" every customer who visits sees them too. I build and fix websites for local businesses around Tuscaloosa, and this label comes up often. The fix usually fits inside an afternoon. This post explains what the label means, why browsers show it, and how to clear it on the kind of hosting most small businesses use.",
+  "lede": "Open your business website in Google Chrome and look at the left edge of the address bar. If you see the words \"Not secure,\" every Chrome visitor sees them too. I build and fix websites for local businesses around Tuscaloosa. The fix usually fits inside an afternoon on the kind of hosting most small businesses use.",
   "sections": [
     {
       "heading": "What the label tells your visitors",
       "paragraphs": [
-        "Every website address starts with either http or https. The s at the end stands for secure. When a site uses https, the browser and your web server scramble the information that passes between them. Someone on the same coffee shop Wi-Fi cannot read it.",
+        "Every website address starts with either http or https. The s at the end stands for secure. When a site uses https, the browser and your web server encrypt the information that passes between them. Someone on the same coffee shop Wi-Fi cannot read it.",
         "When a site uses plain http, that information travels as readable text. Chrome puts \"Not secure\" next to the address to warn the visitor. Safari, Firefox and Edge show their own warnings, and they show stronger ones on pages with a form.",
         "Click the label in Chrome and a small panel opens. It tells the visitor to avoid entering passwords or credit card numbers on the page. That message sits one click away from anyone who wonders whether your site is safe."
       ]
@@ -70,24 +68,6 @@ const POST: Data = {
         "Put a reminder on your calendar to check again in a few months. Free certificates renew on their own, but renewal can fail if someone changes your domain settings."
       ]
     }
-  ],
-  "faq": [
-    [
-      "What does \"Not secure\" mean next to my website address?",
-      "It means your site loads over plain http instead of https. Information that visitors type into your site travels as readable text, so Chrome warns them. Adding an SSL certificate and redirecting to https removes the label."
-    ],
-    [
-      "Do I need to pay for an SSL certificate?",
-      "Most small business sites can use a free certificate from Let's Encrypt. Many hosts that use cPanel install one through the AutoSSL button under SSL/TLS Status. Ask your host about a free option before buying one."
-    ],
-    [
-      "I installed a certificate but still see a warning. What now?",
-      "Check two things. First, turn on Force HTTPS Redirect so visitors who type http land on https. Second, open Chrome's Inspect tool, click Console, and look for Mixed Content lines that point to images or scripts still loading over http."
-    ],
-    [
-      "Does my site need https if it does not sell anything?",
-      "Yes. Contact forms, booking requests and newsletter signups collect names, phone numbers and email addresses. Browsers show the warning on any http page regardless of what the site sells, and customers see it before they decide to reach out."
-    ]
   ]
 };
 
@@ -106,7 +86,7 @@ export default function Post() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
+        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
 
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },
@@ -115,7 +95,7 @@ export default function Post() {
         ]} />
 
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">{POST.category} · October 24, 2026 · 5 min read</div>
+          <div className="pv-mono-label">{POST.category}, October 24, 2026, 5 min read</div>
           <h1>{POST.title}</h1>
         </header>
 
@@ -133,8 +113,6 @@ export default function Post() {
             I check small business websites around Tuscaloosa for problems like these. If you
             want me to look at yours, <Link href="/contact" style={link}>send me the address</Link>.
           </p>
-
-          <PostFaq qa={POST.faq} />
 
           <PostByline post={{
             slug: "not-secure-label-website-fix",

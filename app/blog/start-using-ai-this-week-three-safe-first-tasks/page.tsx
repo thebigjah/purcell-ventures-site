@@ -17,7 +17,7 @@ const POST: Data = {
   "slug": "start-using-ai-this-week-three-safe-first-tasks",
   "description": "Three low-risk ways a small business owner can start using AI this week, plus the checks to run on every answer before a customer sees it.",
   "category": "Guide",
-  "lede": "You can start using AI in your business this week with one free account. The safest way to begin is with small writing jobs where you already know what a good answer looks like. I completed 12 courses through Anthropic Academy, including AI Fluency: Framework & Foundations and AI Capabilities & Limitations, and this post draws on Anthropic's AI Fluency framework. Below are three first tasks and the checks I run on every result.",
+  "lede": "You can start using AI in your business this week with one free account. The safest way to begin is with small writing jobs where you already know what a good answer looks like. I completed 12 Anthropic Academy courses, including AI Fluency: Framework & Foundations, and this post draws on that framework.",
   "sections": [
     {
       "heading": "Set up your account before you type anything",
@@ -30,7 +30,7 @@ const POST: Data = {
     {
       "heading": "Choose tasks you can check yourself",
       "paragraphs": [
-        "AI Fluency calls this first decision Delegation, which means deciding whether, when and how AI should take part in a task. For a first week, I pick tasks that pass three tests. You can spot a wrong answer quickly. A mistake costs little to fix. The task takes time you would rather spend with customers.",
+        "First decide whether AI should do the task at all. For a first week, I pick tasks that pass three tests. You can spot a wrong answer quickly. A mistake costs little to fix. The task takes time you would rather spend with customers.",
         "Short writing drafts pass all three tests. Bookkeeping, legal questions and anything involving a customer's private records fail them, so leave those alone for now."
       ]
     },
@@ -38,14 +38,14 @@ const POST: Data = {
       "heading": "Task one: draft replies to your Google reviews",
       "paragraphs": [
         "Open your Google Business Profile, go to Reviews, and copy the text of one review. Paste it into the AI tool with a prompt like this: \"Write a short, friendly reply to this review for my barbecue restaurant in Tuscaloosa. Thank the customer, mention the dish they named, and keep it under four sentences. Do not offer discounts or refunds.\"",
-        "AI Fluency calls this kind of work automation, where the AI carries out instructions you define. Read the draft side by side with the review. Delete anything the customer never said, and remove any promise you did not make. Then paste your edited version into the Reply box in Google Business Profile and post it."
+        "Here the AI follows instructions you wrote. Read the draft side by side with the review. Delete anything the customer never said, and remove any promise you did not make. Then paste your edited version into the Reply box in Google Business Profile and post it."
       ]
     },
     {
       "heading": "Task two: rewrite one page of your website",
       "paragraphs": [
-        "Pick the page you like least, often the services page or the about page, and copy its text into the tool. This task works best as augmentation, which AI Fluency describes as a person and AI thinking together.",
-        "AI Fluency calls the skill of giving clear instructions Description. Good output depends on context, so tell the tool four things: who reads the page, what a good result looks like, an example you like, and your limits. For example: \"This page is for first-time customers looking for a tattoo shop in Tuscaloosa. A good result explains our booking process in one read. Here is a paragraph from our FAQ page whose tone I like. Keep every price and policy exactly as written. Before you rewrite, ask me three questions about anything unclear.\"",
+        "Pick the page you like least, often the services page or the about page, and copy its text into the tool. This task works best as a back-and-forth where you and the tool work on the page together.",
+        "Good output depends on clear instructions and context, so tell the tool four things: who reads the page, what a good result looks like, an example you like, and your limits. For example: \"This page is for first-time customers looking for a tattoo shop in Tuscaloosa. A good result explains our booking process in one read. Here is a paragraph from our FAQ page whose tone I like. Keep every price and policy exactly as written. Before you rewrite, ask me three questions about anything unclear.\"",
         "Answer its questions, read the rewrite, and keep only the parts that sound like you."
       ]
     },
@@ -59,31 +59,14 @@ const POST: Data = {
     {
       "heading": "How to check every result before you use it",
       "paragraphs": [
-        "AI Fluency calls this step Discernment, which means judging how useful an output actually is. Models can state wrong things with full confidence, so I check every fact, name, number and quote against a source before I use it.",
+        "Next, judge how useful the output is. Models can state wrong things with full confidence, so I check every fact, name, number and quote against a source before I use it.",
         "Compare every date, time, price and phone number with your own records, such as your booking calendar, your price list or the hours on your Google Business Profile. Delete claims you cannot back up, such as \"best in town\" or \"fastest service.\" Read the draft out loud and change any sentence you would never say to a customer.",
-        "The last practice, Diligence, means you own how you use AI and what you do with its output. Your business name goes on every reply and post, so you approve each one yourself. When a prompt works well, save it in a note on your phone. Once you trust a few saved prompts, you can try agency, the third way of working that AI Fluency describes. You set up a Project in Claude or ChatGPT with your instructions so it can handle similar tasks for you later.",
+        "You are responsible for how you use AI and what you do with its output. Your business name goes on every reply and post, so you approve each one yourself. When a prompt works well, save it in a note on your phone. Once you trust a few saved prompts, you can set up a Project in Claude or ChatGPT with saved instructions so it can handle similar tasks for you later.",
         "Your first step this week: open Google Business Profile, copy your most recent review, and draft a reply with the prompt above."
       ]
     }
   ],
-  "faq": [
-    [
-      "Which AI tool should a small business start with?",
-      "ChatGPT, Claude and Gemini all offer free plans that can draft review replies, website page rewrites and customer updates. Pick one, sign up with your business email, and check its privacy settings before you type anything."
-    ],
-    [
-      "Is it safe to put customer information into an AI tool?",
-      "Keep customer names, phone numbers, card details, health information and passwords out of your prompts unless you have approved the tool and its settings for that kind of data. In ChatGPT, review Settings, then Data Controls. In Claude, review Settings, then Privacy."
-    ],
-    [
-      "How do I check whether an AI answer is correct?",
-      "Compare every date, time, price, name and phone number in the draft with your own records, such as your booking calendar or the hours on your Google Business Profile. Delete claims you cannot back up, and read the draft out loud before you use it."
-    ],
-    [
-      "Why does AI get my hours or prices wrong?",
-      "A model knows only its training data up to a cutoff date plus what you give it in the prompt. Paste your current hours, prices and dates into the prompt, then check the draft against your own records before you post it."
-    ]
-  ]
+  "faq": []
 };
 
 export const metadata = {
@@ -101,7 +84,7 @@ export default function Post() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
+        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
 
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },
@@ -110,7 +93,7 @@ export default function Post() {
         ]} />
 
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">{POST.category} · October 25, 2026 · 5 min read</div>
+          <div className="pv-mono-label">{POST.category}, October 25, 2026, 5 min read</div>
           <h1>{POST.title}</h1>
         </header>
 
@@ -128,8 +111,6 @@ export default function Post() {
             I check small business websites around Tuscaloosa for problems like these. If you
             want me to look at yours, <Link href="/contact" style={link}>send me the address</Link>.
           </p>
-
-          <PostFaq qa={POST.faq} />
 
           <PostByline post={{
             slug: "start-using-ai-this-week-three-safe-first-tasks",

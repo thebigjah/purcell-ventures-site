@@ -6,9 +6,9 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/blog/write-a-page-an-ai-will-quote" },
-  title: { absolute: "How to write a page an AI will actually quote | Elijah Purcell" },
+  title: { absolute: "How to write a page an AI will quote | Elijah Purcell" },
   description:
-    "Answer engine optimisation without the jargon: the sentence shape a model can lift, why FAQPage schema works, what llms.txt is for, and the one thing that matters more than all of it.",
+    "Answer engine optimisation in plain terms: the sentence shape a model can lift, what FAQPage schema still does, what llms.txt is for, and why being indexed comes first.",
 };
 
 const H2 = { fontFamily: "'Cinzel', Georgia, serif", fontSize: "25px", fontWeight: 600, lineHeight: 1.2, margin: "40px 0 10px" } as const;
@@ -25,7 +25,7 @@ export default function Post() {
       <VignetteBackground />
       <main style={{ position: "relative", zIndex: 5, maxWidth: "720px", margin: "0 auto", padding: "72px 36px 96px" }}>
 
-        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>← All posts</Link>
+        <Link href="/blog" style={{ color: "var(--color-warm-text-muted)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.15em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans), sans-serif" }}>All posts</Link>
 
         <Breadcrumbs trail={[
           { name: "Home", href: "/" },
@@ -34,9 +34,9 @@ export default function Post() {
         ]} />
 
         <header className="pv-page-head" style={{ marginTop: "16px" }}>
-          <div className="pv-mono-label">Engineering · August 20, 2026 · 8 min read</div>
+          <div className="pv-mono-label">Engineering, August 20, 2026, 8 min read</div>
           <h1>
-            How to write a page an AI will actually{" "}
+            How to write a page an AI will{" "}
             <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>quote</em>
           </h1>
         </header>
@@ -44,12 +44,12 @@ export default function Post() {
         <article style={{ fontSize: "16px", lineHeight: 1.75 }}>
 
           <p style={{ fontSize: "18px" }}>
-            There is a lot of noise about answer engine optimisation and most of it is search
-            advice from 2015 with a new label. Here is what actually differs, from someone
-            who spent a day doing it and measuring the result.
+            Much of the advice about answer engine optimisation repeats older search advice.
+            Here is what differs, based on one day of applying it to this site and measuring
+            the result.
           </p>
 
-          <h2 style={H2}>The core difference in one sentence</h2>
+          <h2 style={H2}>How the two jobs differ</h2>
 
           <p>
             A search engine ranks pages. An answer engine <em>extracts sentences</em>. Those
@@ -83,9 +83,8 @@ export default function Post() {
           </p>
 
           <p>
-            The second is worse prose and better extraction, and the fix is not to write the
-            whole page like that. It is to make sure the load-bearing facts appear once each
-            in that shape, usually near the top, and then write normally.
+            The second is worse prose and better extraction. State each load-bearing fact
+            once in that shape, usually near the top, and write the rest normally.
           </p>
 
           <h2 style={H2}>Third person for facts about a person</h2>
@@ -113,24 +112,22 @@ export default function Post() {
           <p>
             <strong>Correction, added the same day this was published.</strong> An earlier
             version of this paragraph called FAQPage the single highest-leverage item here.
-            That was true when it produced a rich result in Google, and it is not true now:
-            Google stopped showing FAQ rich results on 7 May 2026 and is removing the
-            reporting and testing support this summer. The schema type is still valid, and it
-            is still read by Bing and by the retrieval crawlers behind the assistants, which
-            is what this article is about. So it keeps its value for answer engines and has
-            none left for Google results, and saying otherwise would be selling you something
-            that stopped existing three months ago.
+            That was true when it produced a rich result in Google. Google stopped showing FAQ
+            rich results on 7 May 2026 and said it would remove the reporting and testing
+            support in summer 2026. The schema type is still valid, and Bing and the retrieval
+            crawlers behind the assistants still read it. So it still helps with answer
+            engines and no longer does anything for Google results.
           </p>
 
           <p>
-            The discipline: every answer must be genuinely answered in the visible body of
-            the page. Schema promising an answer the page does not contain is the structured
-            data equivalent of a misleading headline, and it is treated as one.
+            The rule: the visible body of the page must contain every answer in the schema.
+            Schema that promises an answer the page does not contain works like a misleading
+            headline, and search engines can treat it as spam.
           </p>
 
           <p>
-            Write the answers as though they will be read alone, because they will be. No
-            "as mentioned above." No "our." Name the thing every time.
+            Write each answer so it makes sense read alone. Avoid "as mentioned above" and
+            "our," and name the thing each time.
           </p>
 
           <h2 style={H2}>One identity, stated the same way everywhere</h2>
@@ -160,18 +157,18 @@ export default function Post() {
           <h2 style={H2}>Say the disambiguation out loud</h2>
 
           <p>
-            If somebody shares your name, do not hope. schema.org has{" "}
+            If somebody shares your name, say which one you are. schema.org has{" "}
             <a href="https://schema.org/disambiguatingDescription" style={link} rel="noopener"><code>disambiguatingDescription</code></a>{" "}
             for exactly this, and the plain-prose
             version belongs on the page too.
           </p>
 
           <p>
-            Three other people share mine. My answer page names them and says which one I am
-            not, because a sentence is cheaper than letting an assistant hedge.
+            Three other people share mine. My answer page names them and says I am none of
+            them, so an assistant does not have to guess.
           </p>
 
-          <h2 style={H2}>llms.txt, briefly and honestly</h2>
+          <h2 style={H2}>llms.txt</h2>
 
           <p>
             A{" "}
@@ -181,47 +178,39 @@ export default function Post() {
           </p>
 
           <p>
-            It costs twenty minutes and it forces a genuinely useful exercise: writing down
-            what each of your pages is actually for, in a sentence, without marketing. Half
-            the value is that most sites cannot do it.
+            It takes twenty minutes and makes you write down what each of your pages is for,
+            in one sentence, without marketing language. That exercise is useful by itself.
           </p>
 
-          <h2 style={H2}>The one with the largest measured effect</h2>
+          <h2 style={H2}>Cite sources inline</h2>
 
           <p>
-            Cite external sources inline, and link them.
+            Cite external sources in the text, and link them.
           </p>
 
           <p>
-            This is the technique with the strongest reported result in the generative
-            engine optimisation literature, and the effect is largest for sites that are not
-            already ranking well: a{" "}
+            A{" "}
             <a href="https://arxiv.org/html/2607.14035v1" style={link} rel="noopener">
               2026 survey of the field
             </a>{" "}
-            reports substantial citation gains for pages that cite authoritative sources
-            inline, with the biggest lifts going to lower-ranked sites. The same body of work
-            finds statistics, definitions, prices, dates and quotations improve citation by
-            roughly a quarter, and that keyword stuffing measurably reduces it.
+            of generative engine optimisation research reports citation gains for pages that
+            cite authoritative sources inline, with the biggest gains going to lower-ranked
+            sites. The same survey reports that statistics, definitions, prices, dates and
+            quotations improve citation, and that keyword stuffing reduces it.
           </p>
 
           <p>
-            The uncomfortable corollary, and the reason I am putting it here rather than
-            burying it: that survey found <em>no established evidence</em> that content
-            volume, publishing velocity or structured data are primary optimisation vectors.
-            Most of what is sold as answer engine optimisation is those three things.
+            That survey also found <em>no established evidence</em> that content volume,
+            publishing speed or structured data are primary ways to improve citation. Much of
+            the answer engine advice I read while doing this focused on those three things.
           </p>
 
-          <h2 style={H2}>What matters more than all of it</h2>
+          <h2 style={H2}>Being indexed matters more than all of it</h2>
 
           <p>
-            Being indexed at all.
-          </p>
-
-          <p>
-            I did every technique above and then checked how many of my pages Google actually
-            had. Seven, out of twenty-eight submitted. Every clever piece of structured data
-            was sitting on pages nothing could see, and the cause turned out to be{" "}
+            I did every technique above and then checked how many of my pages Google had
+            indexed. It had seven of the twenty-eight I submitted. The structured data sat on
+            pages Google had not indexed, and the cause was{" "}
             <Link href="/blog/canonical-tag-noindex" style={link}>one line of inherited
             metadata telling Google to skip them</Link>.
           </p>
@@ -229,27 +218,18 @@ export default function Post() {
           <p>
             So before optimising for extraction, verify you are in the index.{" "}
             <Link href="/blog/audit-your-site-like-a-crawler" style={link}>The nine checks
-            are here</Link>. Structured data on an unindexed page is a very tidy way of
-            achieving nothing.
+            are here</Link>. Structured data on an unindexed page has no effect.
           </p>
 
           <PostFaq qa={[
             ["What is answer engine optimisation?",
-             "Optimising a page so that an AI assistant can extract a correct answer from it, as distinct from ranking the page in a list of results. A search engine ranks pages; an answer engine extracts sentences. A page can be good at the first and useless for the second."],
-            ["How do I get an AI to quote my website?",
-             "Write the load-bearing facts as self-contained sentences that still mean something when removed from the page. Use third person for facts about a person, since a model cannot attach an I to anything. Add FAQPage structured data where every answer is genuinely answered in the visible body. Use one identifier for your entity across every structured data node, and one identical bio sentence across every profile."],
-            ["Does llms.txt actually work?",
-             "Adoption is not universal and nobody should promise results from it. It costs about twenty minutes and it forces a useful exercise, which is writing down what each page on your site is actually for in one sentence without marketing language. Most sites cannot do that, and finding out is worth the time on its own."],
-            ["What is the most common reason AI does not mention my site?",
-             "Usually that the pages are not indexed rather than that they are badly written. Verify how many of your pages are actually in the index before optimising anything about their content. Structured data on an unindexed page achieves nothing."],
-            ["Should I write a separate page in third person about myself?",
-             "If you want facts about you to be quotable, yes. A first-person About page is how a human wants to read it, and a third-person answer page is the shape an engine can lift and attach to a named entity. Keep both, link them to each other, and make clear which is which."],
+             "Optimising a page so that an AI assistant can extract a correct answer from it. Search engine optimisation is about ranking the page in a list of results."],
           ]} />
 
           <PostByline post={{
             slug: "write-a-page-an-ai-will-quote",
-            title: "How to write a page an AI will actually quote",
-            description: "Answer engine optimisation without the jargon: the sentence shape a model can lift, why FAQPage schema works, and the one thing that matters more.",
+            title: "How to write a page an AI will quote",
+            description: "Answer engine optimisation in plain terms: the sentence shape a model can lift, what FAQPage schema still does, and why being indexed comes first.",
             published: "2026-08-20",
           }} />
 
