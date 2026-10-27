@@ -17,7 +17,7 @@ export default function ResumePage() {
     <main className="rw">
       <style dangerouslySetInnerHTML={{ __html: RESUME_CSS + WEB_CSS }} />
       <div className="rw-bar">
-        <h1>Résumé</h1>
+        <p className="rw-bar__title">Résumé</p>
         <div className="rw-bar__actions">
           <PrintButton />
         </div>
@@ -32,7 +32,7 @@ export default function ResumePage() {
 const WEB_CSS = `
 .rw { padding-block: 40px 96px; padding-left: var(--gutter); padding-right: var(--gutter-r); background: radial-gradient(ellipse at 50% 0%, rgba(184,134,43,.08), rgba(7,6,10,0) 55%), var(--bg); }
 .rw-bar { max-width: 8.5in; margin: 0 auto 20px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-.rw-bar h1 { font: 600 clamp(28px, 4vw, 40px)/1.05 var(--font-display); margin: 0; }
+.rw-bar__title { font: 600 clamp(28px, 4vw, 40px)/1.05 var(--font-display); margin: 0; }
 .rw-bar button { font: 600 15px/1 var(--font-body); min-height: 44px; padding: 0 20px; background: var(--gold); color: #111; border: 0; cursor: pointer; }
 .rw-bar button:hover { background: var(--gold-text); }
 .rw-sheet { max-width: 8.5in; margin: 0 auto; min-height: 0; border: 1px solid rgba(239,232,216,.14); }
