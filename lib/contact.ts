@@ -23,4 +23,9 @@ export const CONTACT = {
   llcControlNumber: "25075361",
 
   serviceArea: "Metro Atlanta and Tuscaloosa",
+
+  // Stripe Payment Link for the $325 website deposit (half of the $650 one-page site). Empty
+  // until Elijah creates it in Stripe. Only a buy.stripe.com link goes here. /contact shows a
+  // "Pay the deposit" button only when this is set.
+  depositLink: "",
 } as const;

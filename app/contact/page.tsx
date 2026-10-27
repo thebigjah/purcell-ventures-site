@@ -49,6 +49,9 @@ export default function ContactCard() {
         </ul>
 
         <a className="ui-btn cc__save" href="/contact/vcard">Save to contacts</a>
+        {CONTACT.depositLink.startsWith("https://buy.stripe.com/") && (
+          <a className="ui-btn ui-btn--ghost cc__save" href={CONTACT.depositLink}>Pay the $325 website deposit</a>
+        )}
 
         <dl className="cc__details">
           {DETAILS.map((d) => (
