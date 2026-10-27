@@ -15,7 +15,7 @@ export default function Post() {
     <PostLayout
       crumbs={<Breadcrumbs trail={[
         { name: "Home", href: "/" },
-        { name: "Writing", href: "/blog" },
+        { name: "Blog", href: "/blog" },
         { name: "A shipped site can still fail to take a payment", href: "/blog/shipped-is-not-activated" },
       ]} />}
       kicker="Opinion"

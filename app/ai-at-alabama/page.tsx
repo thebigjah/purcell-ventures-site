@@ -25,7 +25,7 @@ export default function AiAtAlabama() {
     <PostLayout
       crumbs={<Breadcrumbs trail={[
         { name: "Home", href: "/" },
-        { name: "Writing", href: "/blog" },
+        { name: "Blog", href: "/blog" },
         { name: "Studying AI at Alabama", href: "/ai-at-alabama" },
       ]} />}
       kicker="Guide"

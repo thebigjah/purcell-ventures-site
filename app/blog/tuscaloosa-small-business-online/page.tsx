@@ -33,7 +33,7 @@ export default function Post() {
     <PostLayout
       crumbs={<Breadcrumbs trail={[
         { name: "Home", href: "/" },
-        { name: "Writing", href: "/blog" },
+        { name: "Blog", href: "/blog" },
         { name: "The Tuscaloosa Storefront Project", href: "/blog/tuscaloosa-small-business-online" },
       ]} />}
       kicker="Reporting"
