@@ -170,8 +170,8 @@ a { color: inherit; }
 /* Running text. */
 .ui-prose { max-width: var(--measure); color: var(--fg-2); }
 .ui-prose > * + * { margin-top: 1em; }
-.ui-prose h2 { font-size: clamp(24px, 2.6vw, 32px); color: var(--fg); margin-top: 1.8em; }
-.ui-prose h3 { font-size: 21px; color: var(--fg); margin-top: 1.6em; }
+.ui-prose h2 { font-size: clamp(24px, 2.6vw, 32px); line-height: 1.2; color: var(--fg); margin-top: 1.8em; }
+.ui-prose h3 { font-size: 21px; line-height: 1.25; color: var(--fg); margin-top: 1.6em; }
 .ui-prose a { color: var(--gold-text); text-underline-offset: 3px; }
 .ui-prose ul, .ui-prose ol { padding-left: 1.3em; }
 .ui-prose ul { list-style: disc; }
