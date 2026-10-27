@@ -11,6 +11,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "quick-phone-test-business-website",
+    title: "A quick phone test for your business website",
+    excerpt: "Five quick checks on your own phone show whether customers can read your site and reach you from it. A pen and your phone are all you need for the first pass.",
+    date: "October 27, 2026",
+    readingTime: "3 min read",
+    category: "Guide",
+  },
+  {
     slug: "keep-out-of-ai-chat-window",
     title: "What to keep out of an AI chat window when you run a business",
     excerpt: "An AI chat tool can draft a customer reply or fix a spreadsheet formula without ever seeing your passwords or your customers' records. What to keep out, and how to use placeholders instead.",
