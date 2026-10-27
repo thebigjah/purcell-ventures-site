@@ -5,7 +5,7 @@ import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
   alternates: { canonical: "/blog/ai-team-page-honesty" },
-  title: { absolute: "My team page lists fifteen people who do not exist, by Elijah Purcell" },
+  title: { absolute: "My team page lists fifteen people who do not exist" },
   description:
     "Why a company running AI agents should name them, say they are software in the first sentence, and never let one sign an email as a human, with the disclosure rules I enforce in code.",
 };

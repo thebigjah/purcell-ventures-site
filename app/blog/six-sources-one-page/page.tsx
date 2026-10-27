@@ -5,7 +5,7 @@ import { PostLayout } from "@/app/components/ui";
 
 export const metadata = {
   alternates: { canonical: "/blog/six-sources-one-page" },
-  title: { absolute: "Building a campus events site from six sources, by Elijah Purcell" },
+  title: { absolute: "Building a campus events site from six sources" },
   description:
     "How UA Today combines six separate feeds of University of Alabama events into one page, why the hard part is detecting a source that stops sending events without raising an error, and what a floor check is.",
 };

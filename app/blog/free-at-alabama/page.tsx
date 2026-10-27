@@ -12,7 +12,7 @@ import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
   alternates: { canonical: "/blog/free-at-alabama" },
-  title: { absolute: "What is already free at the University of Alabama, by Elijah Purcell" },
+  title: { absolute: "What is already free at the University of Alabama" },
   description:
     "Services a University of Alabama student has already paid for through tuition and fees, with the exact office names: University Recreation, the Writing Center, the Capstone Center for Student Success, the Career Center, CrimsonRide and more, checked against ua.edu.",
 };

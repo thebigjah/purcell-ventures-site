@@ -73,7 +73,7 @@ const POST: Data = {
 
 export const metadata = {
   alternates: { canonical: "/blog/keep-out-of-ai-chat-window" },
-  title: { absolute: POST.title + ", by Elijah Purcell" },
+  title: { absolute: POST.title },
   description: POST.description,
 };
 

@@ -5,7 +5,7 @@ import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
   alternates: { canonical: "/blog/agents-that-cannot-fix-what-they-find" },
-  title: { absolute: "I built agents that cannot fix what they find, by Elijah Purcell" },
+  title: { absolute: "I built agents that cannot fix what they find" },
   description:
     "I split the agent that finds problems from the one that fixes them. That kept agents out of files they should not read, and it left every finding open until I built a way to close them.",
 };

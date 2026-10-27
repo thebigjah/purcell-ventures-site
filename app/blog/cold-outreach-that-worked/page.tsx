@@ -11,7 +11,7 @@ import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
   alternates: { canonical: "/blog/cold-outreach-that-worked" },
-  title: { absolute: "The cold email that got me a client, and the ones that did not, by Elijah Purcell" },
+  title: { absolute: "The cold email that got me a client, and the ones that did not" },
   description:
     "What worked when a teenager cold-emailed small businesses: leading with a specific observation instead of a pitch, why sending a built page works better than describing one, and three sentences to cut.",
 };

@@ -6,7 +6,7 @@ import { PostLayout, Note } from "@/app/components/ui";
 
 export const metadata = {
   alternates: { canonical: "/blog/write-a-page-an-ai-will-quote" },
-  title: { absolute: "How to write a page an AI will quote, by Elijah Purcell" },
+  title: { absolute: "How to write a page an AI will quote" },
   description:
     "Answer engine optimisation in plain terms: the sentence shape a model can lift, what FAQPage schema still does, what llms.txt is for, and why being indexed comes first.",
 };

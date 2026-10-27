@@ -5,7 +5,7 @@ import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
   alternates: { canonical: "/blog/case-for-charging-19" },
-  title: { absolute: "Why I charge $19 for the AI Starter Kit, by Elijah Purcell" },
+  title: { absolute: "Why I charge $19 for the AI Starter Kit" },
   description: "Why I priced the PV AI Starter Kit at $19, what it does to how people buy, and what 200 sales would add up to.",
 };
 

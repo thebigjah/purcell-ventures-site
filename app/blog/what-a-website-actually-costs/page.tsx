@@ -11,7 +11,7 @@ import { PostLayout } from "@/app/components/ui";
 
 export const metadata = {
   alternates: { canonical: "/blog/what-a-website-actually-costs" },
-  title: { absolute: "What a small business website costs, by Elijah Purcell" },
+  title: { absolute: "What a small business website costs" },
   description:
     "Price ranges and what drives them. Why one small business site gets quotes of $400 and $15,000, what a monthly subscription includes, the ongoing costs quotes leave out, and how to judge whether a quote is fair.",
 };

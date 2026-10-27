@@ -12,7 +12,7 @@ import { PostLayout } from "@/app/components/ui";
 
 export const metadata = {
   alternates: { canonical: "/blog/small-app-security-checklist" },
-  title: { absolute: "Five security holes I keep finding in small production apps, by Elijah Purcell" },
+  title: { absolute: "Five security holes I keep finding in small production apps" },
   description:
     "What turns up when you audit small production applications: row-level security with policies that let everyone in, paid API routes with no authentication, auth cookies anyone can forge, and two more. Written from seven read-only audits.",
 };

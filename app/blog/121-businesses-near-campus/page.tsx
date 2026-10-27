@@ -22,7 +22,7 @@ import { CONTACT } from "@/lib/contact";
 
 export const metadata = {
   alternates: { canonical: "/blog/121-businesses-near-campus" },
-  title: { absolute: "121 businesses near the University of Alabama, and what a phone can find, by Elijah Purcell" },
+  title: { absolute: "121 businesses near the University of Alabama, and what a phone can find" },
   description:
     "An audit of every independent business within 2500 metres of the Quad, and how many of them list a website a machine can reach.",
 };

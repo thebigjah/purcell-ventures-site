@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Writing by Elijah Purcell",
+  title: "Blog by Elijah Purcell",
   description:
     "Essays and guides by Elijah Purcell on AI tools for small businesses, websites and software, based on the systems he runs himself.",
   keywords: [
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "AI tools writing", "purcell ventures blog",
   ],
   openGraph: {
-    title: "Writing by Elijah Purcell",
+    title: "Blog by Elijah Purcell",
     description: "Essays and guides by Elijah Purcell on AI tools for small businesses, based on the systems he runs himself.",
     url: "https://purcellventures.co/blog",
     type: "website",
@@ -31,7 +31,7 @@ const BLOG_LD = {
   "@context": "https://schema.org",
   "@type": "Blog",
   "@id": "https://purcellventures.co/blog#blog",
-  "name": "Writing by Elijah Purcell",
+  "name": "Blog by Elijah Purcell",
   "url": "https://purcellventures.co/blog",
   "description": "Essays and reporting by Elijah Purcell on building software as a solo operator, autonomous AI agent systems, small businesses around the University of Alabama, and search and answer engines.",
   "inLanguage": "en-US",

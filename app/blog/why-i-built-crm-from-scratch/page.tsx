@@ -5,7 +5,7 @@ import { PostLayout, Note } from "@/app/components/ui";
 
 export const metadata = {
   alternates: { canonical: "/blog/why-i-built-crm-from-scratch" },
-  title: { absolute: "Why I built a CRM from scratch instead of paying HubSpot, by Elijah Purcell" },
+  title: { absolute: "Why I built a CRM from scratch instead of paying HubSpot" },
   description: "HubSpot starts at $50 a month, and the features I needed put it at $200 to $400 a month. I built my own CRM in a week instead. The costs, what I gave up, and when you should not do this.",
 };
 

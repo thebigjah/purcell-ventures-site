@@ -8,7 +8,7 @@ import PostHowTo from "@/app/components/PostHowTo";
 
 export const metadata = {
   alternates: { canonical: "/blog/is-your-business-invisible" },
-  title: { absolute: "Is your business invisible online? A ten-minute self-check, by Elijah Purcell" },
+  title: { absolute: "Is your business invisible online? A ten-minute self-check" },
   description:
     "Seven checks a small business owner can run on their own business in ten minutes, with no tools and no account, to find out what a customer with a phone sees, based on an audit of 121 businesses near the University of Alabama.",
 };

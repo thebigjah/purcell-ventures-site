@@ -5,7 +5,7 @@ import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
   alternates: { canonical: "/blog/new-college-alabama" },
-  title: { absolute: "New College at Alabama, explained by someone in it, by Elijah Purcell" },
+  title: { absolute: "New College at Alabama, explained by someone in it" },
   description:
     "How New College at the University of Alabama works: the self-designed degree, the depth study, the seminars, the Levitetz Leadership Program, and the case for and against choosing it.",
 };

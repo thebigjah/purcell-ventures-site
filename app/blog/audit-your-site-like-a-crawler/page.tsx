@@ -6,7 +6,7 @@ import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/audit-your-site-like-a-crawler" },
-  title: { absolute: "Auditing your own site the way a crawler does, with curl, by Elijah Purcell" },
+  title: { absolute: "Auditing your own site the way a crawler does, with curl" },
   description:
     "Nine checks you can run against your live site from a terminal with curl and no account: canonical tags pointing at the wrong page, duplicate titles, sitemap and robots contradictions, missing structured data, and pages that silently tell Google to skip them.",
 };

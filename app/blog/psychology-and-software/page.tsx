@@ -5,7 +5,7 @@ import { PostLayout } from "@/app/components/ui";
 
 export const metadata = {
   alternates: { canonical: "/blog/psychology-and-software" },
-  title: { absolute: "What psychology has to do with the software I build, by Elijah Purcell" },
+  title: { absolute: "What psychology has to do with the software I build" },
   description:
     "Within-subject design, base rates and construct validity are three ideas from a first-semester psychology methods course that changed a product I had already shipped.",
 };

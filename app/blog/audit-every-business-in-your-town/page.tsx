@@ -5,7 +5,7 @@ import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
   alternates: { canonical: "/blog/audit-every-business-in-your-town" },
-  title: { absolute: "How to audit every business in your town in an afternoon, by Elijah Purcell" },
+  title: { absolute: "How to audit every business in your town in an afternoon" },
   description:
     "The method behind auditing 121 independent businesses near the University of Alabama: one free Overpass query against OpenStreetMap, an HTTP request per site, and the two mistakes that will make your numbers wrong.",
 };

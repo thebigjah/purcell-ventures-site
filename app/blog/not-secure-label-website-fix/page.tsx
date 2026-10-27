@@ -10,7 +10,7 @@ const DESCRIPTION = "Why Chrome shows \"Not secure\" next to your business web a
 
 export const metadata = {
   alternates: { canonical: "/blog/not-secure-label-website-fix" },
-  title: { absolute: TITLE + ", by Elijah Purcell" },
+  title: { absolute: TITLE },
   description: DESCRIPTION,
 };
 

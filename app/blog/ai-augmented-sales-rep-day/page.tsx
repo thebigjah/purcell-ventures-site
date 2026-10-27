@@ -5,7 +5,7 @@ import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
   alternates: { canonical: "/blog/ai-augmented-sales-rep-day" },
-  title: { absolute: "What a day looks like for an AI-augmented sales rep, by Elijah Purcell" },
+  title: { absolute: "What a day looks like for an AI-augmented sales rep" },
   description: "An example Tuesday for a sales rep using AI prospect research, next-step coaching and conversation summaries inside a CRM, hour by hour.",
 };
 

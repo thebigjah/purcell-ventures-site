@@ -23,7 +23,7 @@ import { CONTACT } from "@/lib/contact";
 
 export const metadata = {
   alternates: { canonical: "/blog/tuscaloosa-small-business-online" },
-  title: { absolute: "The Tuscaloosa Storefront Project, by Elijah Purcell" },
+  title: { absolute: "The Tuscaloosa Storefront Project" },
   description:
     "A reporting series by Elijah Purcell on independent businesses around the University of Alabama. Each piece covers who runs the business, how students find it, and what happens when it has no website.",
 };

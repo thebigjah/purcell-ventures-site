@@ -5,7 +5,7 @@ import { PostLayout, Note } from "@/app/components/ui";
 
 export const metadata = {
   alternates: { canonical: "/blog/what-one-operator-can-deliver" },
-  title: { absolute: "What one operator can deliver, by Elijah Purcell" },
+  title: { absolute: "What one operator can deliver" },
   description:
     "How much work a one-person software company can carry, what happens when two clients want the same fortnight, what an agency does better, and three warning signs you are being oversold.",
 };

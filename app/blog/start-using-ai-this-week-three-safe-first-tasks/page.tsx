@@ -10,7 +10,7 @@ const DESCRIPTION = "Three low-risk ways a small business owner can start using 
 
 export const metadata = {
   alternates: { canonical: "/blog/start-using-ai-this-week-three-safe-first-tasks" },
-  title: { absolute: TITLE + ", by Elijah Purcell" },
+  title: { absolute: TITLE },
   description: DESCRIPTION,
 };
 

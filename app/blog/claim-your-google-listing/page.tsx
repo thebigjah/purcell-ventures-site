@@ -7,7 +7,7 @@ import { PostLayout, Note } from "@/app/components/ui";
 
 export const metadata = {
   alternates: { canonical: "/blog/claim-your-google-listing" },
-  title: { absolute: "Claiming your own Google listing: a twenty-minute job, by Elijah Purcell" },
+  title: { absolute: "Claiming your own Google listing: a twenty-minute job" },
   description:
     "A step-by-step guide to claiming and filling out a Google Business Profile, written so you do not need to hire anybody. It covers what to put in every field, how to hide a home address, and the three things that get a listing suspended.",
 };
