@@ -205,6 +205,7 @@ const GX_CSS = `
 .gx-loader.is-out{opacity:0;pointer-events:none;transition-delay:.15s}
 .gx-loader.is-out svg{opacity:0}
 @media (max-width:760px){
+  .gx-top{height:max(600px,74dvh);min-height:0}
   .gx-hero{width:100%;justify-content:flex-end;gap:12px;padding-bottom:72px;background:linear-gradient(0deg,rgba(7,6,10,.94) 50%,rgba(7,6,10,0))}
   .gx-hero h1{font-size:clamp(30px,8.6vw,38px)}
   .gx-hero p{font-size:16px}
