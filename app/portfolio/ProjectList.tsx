@@ -28,7 +28,7 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
 
   return (
     <>
-      <div role="group" aria-label="Filter projects" style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 36 }}>
+      <div role="group" aria-label="Filter projects" className="pf-chips" style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 36 }}>
         {CATEGORIES.map((cat) => (
           <button
             key={cat}

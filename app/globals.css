@@ -273,7 +273,7 @@ body[data-chrome="off"] .page { padding-top: 0; }
   .ui-hero { padding-block: 108px 40px; }
   .ui-hero__planet { position: relative; right: auto; top: auto; translate: none; display: block; width: min(200px, 52vw); margin: 0 0 12px -8px; }
   .ui-hero__grid { display: flex; flex-direction: column-reverse; }
-  .ui-section { padding-block: 48px; }
+  .ui-section { padding-block: 40px; }
   .ui-section__grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .ui-section__head { position: static; }
   .ui-section__aside img { max-width: 160px; }
@@ -284,6 +284,19 @@ body[data-chrome="off"] .page { padding-top: 0; }
   .ui-facts dt { padding-bottom: 0; }
   .ui-facts dd { border-top: 0; padding-top: 4px; }
   .ui-tier { grid-template-columns: minmax(0, 1fr); padding: 22px 0; }
+}
+/* Phones: the comparison table becomes one card per row, each price labelled. */
+.pc-table table { min-width: 820px; }
+@media (max-width: 700px) {
+  .pc-table table, .pc-table tbody, .pc-table tr, .pc-table th, .pc-table td { display: block; min-width: 0; width: auto; }
+  .pc-table table { min-width: 0 !important; }
+  .pc-table thead { display: none; }
+  .pc-table tr { padding: 18px 0; border-top: 1px solid var(--line); }
+  .pc-table th[scope="row"] { padding: 0 0 8px; border: 0; font-size: 18px; }
+  .pc-table td { display: grid; grid-template-columns: 9.5em minmax(0, 1fr); gap: 12px; padding: 5px 0; border: 0; }
+  .pc-table td::before { content: attr(data-label); color: var(--muted); }
+  .pf-chips { flex-wrap: nowrap !important; overflow-x: auto; margin-left: calc(-1 * var(--gutter)); margin-right: calc(-1 * var(--gutter-r)); padding-left: var(--gutter); padding-right: var(--gutter-r); scrollbar-width: none; }
+  .pf-chips > * { flex: none; }
 }
 @media (prefers-reduced-motion: reduce) { .ui-hero__planet { animation: none; opacity: 1; } }
 @media (min-width: 861px) { .ui-hero__grid:has(.ui-hero__planet) > div { max-width: min(760px, 60%); } }

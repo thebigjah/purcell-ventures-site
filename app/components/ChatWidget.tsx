@@ -85,7 +85,7 @@ export default function ChatWidget() {
 const CONTACT_PHONE = "(205) 462-7839";
 
 const CHAT_CSS = `
-.chat-btn{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:max(18px,env(safe-area-inset-bottom,0px));z-index:1000;width:46px;height:46px;display:flex;align-items:center;justify-content:center;background:rgba(16,14,12,.92);color:var(--gold-text);border:1px solid #4a4236;cursor:pointer;transition:border-color .15s}
+.chat-btn{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:max(18px,env(safe-area-inset-bottom,0px));z-index:1000;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#1c1813;color:var(--gold-text);border:1px solid #6b5a3a;box-shadow:0 6px 22px rgba(0,0,0,.6);cursor:pointer;transition:border-color .15s}
 .chat-btn:hover{border-color:var(--gold)}
 .chat-panel{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:76px;z-index:999;width:min(380px,calc(100vw - 36px));height:min(500px,calc(100dvh - 120px));background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden;font-family:var(--font-body)}
 .chat-head{padding:16px 18px;border-bottom:1px solid var(--line)}

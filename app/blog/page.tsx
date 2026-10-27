@@ -280,7 +280,7 @@ export default function BlogPage() {
   return (
     <main>
       <PageHero
-        title="Writing"
+        title="Blog"
         lede="Posts about AI, small business and software. I draft some of them with AI tools, and I edit every post before it goes up."
       />
       <Section stack>

@@ -47,8 +47,8 @@ const CUSTOM_SOFTWARE_ROWS: Row[] = [
 
 function ComparisonTable({ rows }: { rows: Row[] }) {
   return (
-    <div className="ui-prose" style={{ maxWidth: "none", overflowX: "auto" }}>
-      <table style={{ minWidth: 820, display: "table" }}>
+    <div className="ui-prose pc-table" style={{ maxWidth: "none", overflowX: "auto" }}>
+      <table style={{ display: "table" }}>
         <thead>
           <tr>
             <th scope="col">What you need</th>
@@ -62,10 +62,10 @@ function ComparisonTable({ rows }: { rows: Row[] }) {
           {rows.map((r) => (
             <tr key={r.category}>
               <th scope="row">{r.category}</th>
-              <td className="ui-gold">{r.pv}</td>
-              <td>{r.agency}</td>
-              <td>{r.freelancer}</td>
-              <td>{r.diy}</td>
+              <td className="ui-gold" data-label="Purcell Ventures">{r.pv}</td>
+              <td data-label="Typical agency">{r.agency}</td>
+              <td data-label="Freelancer">{r.freelancer}</td>
+              <td data-label="Do it yourself">{r.diy}</td>
             </tr>
           ))}
         </tbody>

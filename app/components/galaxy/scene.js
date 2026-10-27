@@ -306,7 +306,7 @@ export function createGalaxy(container, opts = {}) {
     labels.forEach((L) => {
       tmpV.setFromMatrixPosition(L.obj.matrixWorld); tmpV.y += L.off; tmpV.project(camera);
       let x = (tmpV.x * 0.5 + 0.5) * w, y = (-tmpV.y * 0.5 + 0.5) * h + (L.dy || 0);
-      if (phone && L.kind !== "planet") { const half = (L.el.offsetWidth || 60) / 2 + 8; x = Math.min(Math.max(x, half), w - half); }
+      if (phone && L.kind !== "planet") { const half = (L.el.offsetWidth || 60) / 2 + 18; x = Math.min(Math.max(x, half), w - half); }
       const vis = tmpV.z < 1 && x > -40 && x < w + 40 && y > 72 && y < h + 20;
       L.el.style.transform = `translate(-50%,-50%) translate(${x.toFixed(1)}px,${y.toFixed(1)}px)`; L.el.style.opacity = vis ? "" : "0";
       const hot = hovered && (hovered.userData.group === L.obj || hovered === L.obj || (hovered.userData.mesh && hovered.userData.mesh === L.obj)); L.el.classList.toggle("gx-hot", !!hot);
