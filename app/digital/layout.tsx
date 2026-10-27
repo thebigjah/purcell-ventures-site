@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Digital services for small businesses: AI tools, CRM and booking",
+  title: "Booking, CRM and AI tools for small businesses",
   description:
     "26 add-ons for small businesses, from booking and a CRM to an AI chatbot and email marketing, built and maintained by one person. Starter $99, Growth $179 and Full Service $279 a month. Setup $650 to $1,000.",
   keywords: [

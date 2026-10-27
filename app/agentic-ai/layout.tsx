@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Autonomous AI agent systems and running one in production, by Elijah Purcell",
+      "Autonomous AI agent systems, by Elijah Purcell",
   },
   description:
     "What an autonomous AI agent system is, how it differs from a chatbot or a workflow, and what it takes to run COSMIC, a station of 57 AI agents in 17 rooms. Written by Elijah Purcell, an autonomous AI agent systems engineer and Founder/CEO of Purcell Ventures LLC.",
