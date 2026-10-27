@@ -1,5 +1,8 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { alternates: { canonical: "/digital" } };
 import { PageHero, Section, Prose, Button, Rows, Figures, Tiers, Faq } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import ROICalculator from "../components/ROICalculator";

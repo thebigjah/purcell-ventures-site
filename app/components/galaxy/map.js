@@ -46,7 +46,7 @@ export const MAP = {
   ],
   moons: {
     "/about": ["/who", "/what-is-purcell-ventures", "/faq", "/links", "/ai-consultant-tuscaloosa"],
-    "/digital": ["/digital/ai-faq-builder", "/digital/estimating", "/digital/event-registration", "/digital/expenses", "/digital/finder", "/digital/inventory", "/digital/loyalty", "/digital/playbook"],
+    "/digital": ["/digital/ai-faq-builder", "/digital/estimating", "/digital/event-registration", "/digital/expenses", "/digital/inventory", "/digital/loyalty"],
   },
   blog: { name: "Blog", href: "/blog", count: 33, through: "learn" },
 };

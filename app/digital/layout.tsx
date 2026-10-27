@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  alternates: { canonical: "/digital" },
   title: "Digital services for small businesses: AI tools, CRM and booking",
   description:
     "26 add-ons for small businesses, from booking and a CRM to an AI chatbot and email marketing, built and maintained by one person. Starter $99, Growth $179 and Full Service $279 a month. Setup $650 to $1,000.",
@@ -24,9 +23,9 @@ export const metadata: Metadata = {
     title: "Digital add-ons, Purcell Ventures",
     description: "Booking, a CRM, an AI chatbot and 23 more add-ons for small businesses. Plans from $99 a month.",
   },
-  // NO canonical here. This layout wraps every /digital child route and Next
-  // inherits it, so each child was declaring itself a duplicate of /digital.
-  // A page with no canonical self-canonicalises, which is what these want.
+  // No canonical here. This layout wraps every /digital child route and Next
+  // inherits it, so until 27 Oct 2026 all eight demos told Google they were
+  // copies of /digital. /digital sets its own in page.tsx, each demo in its layout.
 };
 
 const schema = {

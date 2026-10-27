@@ -39,6 +39,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/consulting`,  lastModified: aug22, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/software`,    lastModified: now, changeFrequency: "monthly", priority: 0.9 },
 
+    // The six free /digital demos, each with its own canonical since 27 Oct 2026
+    { url: `${BASE}/digital/ai-faq-builder`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/digital/estimating`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/digital/event-registration`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/digital/expenses`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/digital/inventory`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/digital/loyalty`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+
     // Booking and case studies, conversion paths
     { url: `${BASE}/ai-readiness`,        lastModified: aug22, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/ai-cost-calculator`,  lastModified: now, changeFrequency: "monthly", priority: 0.7 },
