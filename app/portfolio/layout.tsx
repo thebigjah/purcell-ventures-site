@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Portfolio of shipped software and AI projects",
+  title: "Elijah Purcell, portfolio",
   description:
-    "17 projects Elijah Purcell built and maintains: web apps in Next.js and React, a mobile app in Expo, AI tools and internal automation in Python.",
+    "Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a University of Alabama Honors College student: Rufus on the App Store, honors, AI work, faith and service, and everything else he has built.",
   keywords: [
     "purcell ventures portfolio", "shipped projects", "next.js web apps",
     "expo mobile apps", "ai tools built", "Tuscaloosa software developer",
   ],
   openGraph: {
-    title: "Portfolio of shipped software and AI projects",
-    description: "17 projects: web apps, a mobile app, AI tools and internal systems.",
+    title: "Elijah Purcell, portfolio",
+    description: "Rufus on the App Store, honors and recognition, AI work, and everything else Elijah Purcell has built.",
     url: "https://purcellventures.co/portfolio",
     type: "website",
   
@@ -48,7 +48,7 @@ const FAQ_LD = {
       "name": "What has Elijah Purcell built?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "I have built 17 projects. They include UA Today, a University of Alabama events feed built from six sources, English Pruitt Photography, a paid client site I found through cold outreach, The Loom, a lead-generation crawler that runs on a schedule, and Boyfriend Camera, which runs computer vision on the phone. Each live project has a link to the working product."
+        "text": "My lead project is Rufus Rideshare, an iPhone app a Georgia College & State University student commissioned, which Apple approved for the App Store in October 2026. I also built UA Today, an unofficial University of Alabama events page, Returns Void, a prayer ledger, and more than forty free tools and games, and I am founding Yellowhammer Society: Innovators in AI at The University of Alabama."
       }
     }
   ]

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="Rufus">
+  <title>Rufus</title>
+  <!--
+    Rufus mark.
+    One object, two readings: a steering wheel, and a bobcat's face.
+    The wheel's three-spoke pattern is the muzzle; the rim is the head;
+    the ears are cut from the rim silhouette, not stuck on top of it.
+
+    THE FLAT BOTTOM IS DELIBERATE. Do not round it off.
+
+    The head is bottom-heavy on purpose: narrower across the top, wider
+    across the bottom, terminating in a flat edge. The head circle sits at
+    centre (48,57.95) r=41 while the knockout stays at (48,54) r=26, and
+    that 4-unit offset is what thins the crown and thickens the chin.
+
+    History, so nobody "corrects" this back: the shape originally got its
+    flat bottom by accident. The ear junctions sat well inside the circle
+    they named, SVG re-derived the arc centre ~4 units low, and the chin
+    ran to y~99 and was clipped by the 96-unit viewBox. The clip was the
+    look. It is now drawn explicitly — the circle meets y=96 at x=32.73 and
+    x=63.27, and those two points are joined by a straight line — so the
+    silhouette no longer depends on viewport clipping to look right.
+
+    THE WHEEL IS UNTOUCHED:
+      knockout centre (48,54)  r=26
+      hub      centre (48,54)  r=10.5
+      spoke weight 11, held constant
+      bottom spoke stops short of the rim so it reads muzzle, not spoke
+
+    EARS, computed onto the head circle so they join it cleanly:
+      208 deg -> (11.80, 38.70)   left outer
+      260 deg -> (40.88, 17.57)   left inner
+      280 deg -> (55.12, 17.57)   right inner
+      332 deg -> (84.20, 38.70)   right outer
+    Tips stay sharp because the control points either side of each tip are
+    non-collinear. Make them collinear and the ear rounds off into a bear.
+
+      rendered bounds: x 7..89, y 4..96
+  -->
+  <g fill="currentColor" color="#245C4F">
+    <!-- head + ears, flat chin, inner circle knocked out -->
+    <path fill-rule="evenodd" d="
+      M 11.80 38.70
+      C 8 26, 13 9, 20 4
+      C 27 9, 35 12, 40.88 17.57
+      A 41 41 0 0 1 55.12 17.57
+      C 61 12, 69 9, 76 4
+      C 83 9, 88 26, 84.20 38.70
+      A 41 41 0 0 1 63.27 96
+      L 32.73 96
+      A 41 41 0 0 1 11.80 38.70
+      Z
+      M 48 54 m -26 0 a 26 26 0 1 0 52 0 a 26 26 0 1 0 -52 0 Z"/>
+    <!-- hub + spokes = the muzzle. Unchanged. -->
+    <path d="
+      M 48 43.5 a 10.5 10.5 0 1 1 0 21 a 10.5 10.5 0 1 1 0 -21 Z
+      M 22 48.5 h 52 v 11 h -52 Z
+      M 42.5 54 h 11 v 21 h -11 Z"/>
+  </g>
+</svg>

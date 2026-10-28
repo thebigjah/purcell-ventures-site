@@ -42,7 +42,7 @@ const QA: [string, string][] = [
   ["How can I contact Elijah Purcell?",
    `By phone or text at ${CONTACT.phone}, by email at ${CONTACT.email}, or through purcellventures.co. He replies within one business day.`],
   ["What did Elijah Purcell build?",
-   "He built and runs UA Today, a campus events service for the University of Alabama that pulls six sources into one page. He builds websites and software for local businesses through Purcell Ventures, including English Pruitt Photography. He also built and runs COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, security checks, research and outreach for the company. The roster is public at purcellventures.co/team."],
+   "He built and runs UA Today, a campus events service for the University of Alabama that pulls six sources into one page. He builds websites, apps and AI systems for clients through Purcell Ventures, including Rufus Rideshare, an iPhone app on the App Store. He also built and runs COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, security checks, research and outreach for the company. The roster is public at purcellventures.co/team."],
   ["Where is Elijah Purcell from?",
    "He grew up in metro Atlanta and founded Purcell Ventures LLC in Georgia in April 2025. He moved to Tuscaloosa, Alabama in August 2026 to attend the University of Alabama."],
   ["What does Elijah Purcell write about?",

@@ -295,8 +295,6 @@ body[data-chrome="off"] .page { padding-top: 0; }
   .pc-table th[scope="row"] { padding: 0 0 8px; border: 0; font-size: 18px; }
   .pc-table td { display: grid; grid-template-columns: 9.5em minmax(0, 1fr); gap: 12px; padding: 5px 0; border: 0; }
   .pc-table td::before { content: attr(data-label); color: var(--muted); }
-  .pf-chips { flex-wrap: nowrap !important; overflow-x: auto; margin-left: calc(-1 * var(--gutter)); margin-right: calc(-1 * var(--gutter-r)); padding-left: var(--gutter); padding-right: var(--gutter-r); scrollbar-width: none; }
-  .pf-chips > * { flex: none; }
 }
 @media (prefers-reduced-motion: reduce) { .ui-hero__planet { animation: none; opacity: 1; } }
 @media (min-width: 861px) { .ui-hero__grid:has(.ui-hero__planet) > div { max-width: min(760px, 60%); } }

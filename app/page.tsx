@@ -114,7 +114,7 @@ const FREE = [
   { name: "AI cost calculator", href: "/ai-cost-calculator", line: "Enter your team size, hourly rate and hours of manual work to see how long training takes to pay for itself." },
   { name: "Pricing, compared", href: "/pricing-comparison", line: "My prices next to typical agency, freelancer and do-it-yourself prices." },
   { name: "How I work", href: "/how-we-work", line: "The five stages of a project, six commitments and the work I turn down." },
-  { name: "Portfolio", href: "/portfolio", line: "17 projects: web apps, a mobile app, AI tools and internal systems." },
+  { name: "Portfolio", href: "/portfolio", line: "Rufus on the App Store, honors, and everything else I have built." },
   { name: "Blog", href: "/blog", line: "Posts on search, AI and running a small business online, including five workflows you can automate without code." },
   { name: "Steady, compared", href: "/steady", line: "Tech support for family members who are not comfortable with tech, compared with the alternatives, and what a month of Monthly Care covers." },
 ];
