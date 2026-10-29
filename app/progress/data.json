@@ -103,7 +103,7 @@
    "vision": "not recorded",
    "last": "2026-05-17",
    "commits": "5",
-   "tests": "",
+   "tests": "lead route test (fetch mocked)",
    "url": "https://mantle-field-site.vercel.app"
   },
   {
@@ -583,7 +583,7 @@
    "vision": "not recorded",
    "last": "2026-06/08",
    "commits": "",
-   "tests": "",
+   "tests": "link and layout check",
    "url": "https://aitool-deals.vercel.app"
   },
   {
@@ -613,7 +613,7 @@
    "vision": "not recorded",
    "last": "2026-06/08",
    "commits": "",
-   "tests": "",
+   "tests": "link and layout check",
    "url": "https://christian-apps.vercel.app"
   },
   {
@@ -793,7 +793,7 @@
    "vision": "falls short",
    "last": "2026-07",
    "commits": "7",
-   "tests": "",
+   "tests": "engine tests + live calibration e2e",
    "url": "https://grain-cyan.vercel.app"
   },
   {
@@ -838,7 +838,7 @@
    "vision": "falls short",
    "last": "2026-06/08",
    "commits": "",
-   "tests": "",
+   "tests": "link and layout check",
    "url": "https://indie-stack-zeta.vercel.app"
   },
   {
@@ -1018,7 +1018,7 @@
    "vision": "not recorded",
    "last": "2026-06/08",
    "commits": "",
-   "tests": "",
+   "tests": "link and layout check",
    "url": "https://park-planner-zeta.vercel.app"
   },
   {
@@ -1138,7 +1138,7 @@
    "vision": "not recorded",
    "last": "2026-06/08",
    "commits": "",
-   "tests": "",
+   "tests": "link and layout check",
    "url": "https://scholarship-hub-tau.vercel.app"
   },
   {
@@ -1243,7 +1243,7 @@
    "vision": "not recorded",
    "last": "2026-10-27",
    "commits": "67",
-   "tests": "",
+   "tests": "45 pass against production",
    "url": "https://ua-today.vercel.app"
   },
   {
@@ -1363,7 +1363,7 @@
    "vision": "meets",
    "last": "2026-10-27",
    "commits": "154",
-   "tests": "",
+   "tests": "728 pass",
    "url": "https://apps.apple.com/us/app/rufus-rideshare/id6813645816"
   },
   {
@@ -2323,7 +2323,7 @@
    "vision": "not recorded",
    "last": "2026-08-21",
    "commits": "20",
-   "tests": "",
+   "tests": "chain solved end to end from live pages",
    "url": "https://thebigjah.github.io/project-prowess/"
   },
   {
