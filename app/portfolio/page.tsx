@@ -196,6 +196,22 @@ export default function PortfolioPage() {
 
           <article className="pf-work pf-work--shot">
             <div className="pf-work__text">
+              <h3>COSMIC</h3>
+              <p className="pf-when">The system that runs Purcell Ventures</p>
+              <p>
+                A team of 57 AI agents, each with a name, one job and limited access, coordinated from a command app I built
+                for Mac and Android. They find local businesses, build preview sites, draft outreach and score every draft for
+                clear writing, and the sensitive steps wait for my approval.
+              </p>
+              <p className="pf-fine">Screens shown with sample data.</p>
+            </div>
+            <div className="pf-shot">
+              <Image src="/portfolio/cosmic-map.jpg" alt="The COSMIC station map, with agents working in each room" width={1600} height={1000} sizes="(max-width: 800px) 92vw, 560px" />
+            </div>
+          </article>
+
+          <article className="pf-work pf-work--shot">
+            <div className="pf-work__text">
               <h3>Yellowhammer Society: Innovators in AI</h3>
               <p className="pf-when">Founding now at The University of Alabama, with an Honors College faculty advisor</p>
               <p>
