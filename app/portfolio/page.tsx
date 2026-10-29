@@ -65,6 +65,8 @@ const INDEX: { group: string; items: IndexItem[] }[] = [
     group: "Small apps",
     items: [
       { name: "Echo", line: "A guided interview that turns an older relative's stories into a printable keepsake", href: "https://thebigjah.github.io/echo/" },
+      { name: "Longitude", line: "Letters sealed inside a link until a date you pick", href: "https://longitude-woad.vercel.app" },
+      { name: "Park Waits", line: "Live ride wait times for theme parks, on one phone screen", href: "https://park-waits.vercel.app" },
       { name: "Era", line: "Step into one of twelve years in history and decide without hindsight", href: "https://thebigjah.github.io/era/" },
       { name: "Rival", line: "Compete against your own last week on anything you track", href: "https://thebigjah.github.io/rival/" },
       { name: "Momentum", line: "One intention a day, checked off in front of a friend", href: "https://thebigjah.github.io/momentum/" },
