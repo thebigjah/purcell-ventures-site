@@ -11,6 +11,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "google-business-profile-before-website",
+    title: "Fix your Google Business Profile before you pay for website work",
+    excerpt: "When someone searches for your business by name, Google can show your Business Profile on the results page. Here are the fields to check, and how to correct them for free.",
+    date: "October 29, 2026",
+    readingTime: "3 min read",
+    category: "Guide",
+  },
+  {
     slug: "quick-phone-test-business-website",
     title: "A quick phone test for your business website",
     excerpt: "Five quick checks on your own phone show whether customers can read your site and reach you from it. A pen and your phone are all you need for the first pass.",
