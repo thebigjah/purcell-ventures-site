@@ -1303,7 +1303,7 @@
    "vision": "falls short",
    "last": "2026-10-29",
    "commits": "6",
-   "tests": "",
+   "tests": "4 recall tests, tsc clean",
    "url": ""
   },
   {
