@@ -2193,7 +2193,7 @@
   },
   {
    "name": "Bestagon",
-   "what": "Hexagon puzzle game with Android and iOS builds",
+   "what": "Two-player arena shooter with a card draft between rounds, built in Godot for Android, iOS and Mac",
    "category": "game",
    "pass1": "Working",
    "blind": "Working",
