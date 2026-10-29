@@ -808,7 +808,7 @@
    "vision": "not recorded",
    "last": "2026-10-12",
    "commits": "43",
-   "tests": "",
+   "tests": "125 pass, 8 skipped",
    "url": "https://hesed-zeta.vercel.app"
   },
   {
@@ -913,7 +913,7 @@
    "vision": "falls short",
    "last": "2026-06/08",
    "commits": "",
-   "tests": "",
+   "tests": "quiz-to-lead test",
    "url": "https://local-scorecard.vercel.app"
   },
   {
@@ -928,7 +928,7 @@
    "vision": "not recorded",
    "last": "2026-05",
    "commits": "",
-   "tests": "",
+   "tests": "8 end-to-end checks",
    "url": "https://longitude-woad.vercel.app"
   },
   {
@@ -943,7 +943,7 @@
    "vision": "not recorded",
    "last": "2026-05",
    "commits": "",
-   "tests": "",
+   "tests": "headless picks test",
    "url": "https://elijahbot-tools-hub.vercel.app/magic-closet/"
   },
   {
@@ -1003,7 +1003,7 @@
    "vision": "not recorded",
    "last": "2026-06/08",
    "commits": "",
-   "tests": "",
+   "tests": "layouts test",
    "url": "https://og-image-blue.vercel.app"
   },
   {
@@ -1198,7 +1198,7 @@
    "vision": "not recorded",
    "last": "2026-05",
    "commits": "",
-   "tests": "",
+   "tests": "headless tone test",
    "url": "https://elijahbot-tools-hub.vercel.app/stage-fright/"
   },
   {
@@ -1258,7 +1258,7 @@
    "vision": "not recorded",
    "last": "2026-10-17",
    "commits": "8",
-   "tests": "",
+   "tests": "10 unit + 3 spoken end-to-end",
    "url": ""
   },
   {
@@ -2443,7 +2443,7 @@
    "vision": "not recorded",
    "last": "2026-04-09",
    "commits": "2",
-   "tests": "",
+   "tests": "web smoke test",
    "url": ""
   },
   {
