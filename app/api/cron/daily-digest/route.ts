@@ -9,8 +9,8 @@ import { adminDailyDigest } from "@/lib/email-templates";
  *   { "crons": [{ "path": "/api/cron/daily-digest", "schedule": "0 13 * * *" }] }
  * That schedule = 8 AM ET (13 UTC) daily.
  *
- * Security: Vercel Cron requests carry a CRON_SECRET header (if you set the
- * CRON_SECRET env var). We verify here to prevent external triggers.
+ * Security: Vercel Cron requests carry a CRON_SECRET header once the CRON_SECRET
+ * env var is set. Without it the route refuses everyone.
  *
  * Data limitation: this currently sends a SAMPLE digest because the CRM is
  * localStorage-backed. Once Firestore is wired, this pulls real data.
@@ -19,13 +19,12 @@ import { adminDailyDigest } from "@/lib/email-templates";
 export const dynamic = "force-dynamic";
 
 export async function GET(req: NextRequest) {
-  // Verify cron secret if set (security against external invocation)
+  // Fail closed: without CRON_SECRET nobody may trigger the digest. Vercel Cron
+  // sends this header itself once the env var is set.
   const cronSecret = process.env.CRON_SECRET;
-  if (cronSecret) {
-    const auth = req.headers.get("authorization");
-    if (auth !== `Bearer ${cronSecret}`) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
+  const auth = req.headers.get("authorization");
+  if (!cronSecret || auth !== `Bearer ${cronSecret}`) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   if (!isResendConfigured()) {
