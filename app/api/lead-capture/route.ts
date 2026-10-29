@@ -23,9 +23,10 @@ export async function POST(req: NextRequest) {
     console.log("[LEAD CAPTURE]", { email, firstName, source, intent, timestamp: new Date().toISOString() });
     await sendLead("lead-magnet", { email, name: firstName, source, intent });
 
-    // Send auto-responder email if Resend is configured
+    // The welcome email delivers the free cold-email templates, so only the /free page's leads get it.
+    // Other sources (the Local Marketing Scorecard, for one) reach COSMIC through sendLead above.
     let emailResult: { ok: boolean; id?: string; error?: string } = { ok: false };
-    if (isResendConfigured()) {
+    if (isResendConfigured() && source === "free-cold-email-pack") {
       const tmpl = leadMagnetWelcome(firstName);
       emailResult = await sendEmail({
         to: email,
