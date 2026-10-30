@@ -11,6 +11,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "check-ai-answer-before-using",
+    title: "How to check an AI answer before you use it",
+    excerpt: "Models can state a wrong date or an invented quote in a confident tone. A highlighter and a list of sources catch those errors before you publish.",
+    date: "October 30, 2026",
+    readingTime: "3 min read",
+    category: "Guide",
+  },
+  {
     slug: "google-business-profile-before-website",
     title: "Fix your Google Business Profile before you pay for website work",
     excerpt: "When someone searches for your business by name, Google can show your Business Profile on the results page. Here are the fields to check, and how to correct them for free.",
