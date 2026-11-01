@@ -143,12 +143,12 @@ async function fulfillWalletTrackerPremium(email: string | null | undefined): Pr
             </p>
             <p style="margin-top: 32px;">
               Elijah Purcell<br>
-              <span style="color: #a89889; font-size: 12px;">Purcell Ventures, elijah@purcell-ventures.com</span>
+              <span style="color: #a89889; font-size: 12px;">Purcell Ventures, elijah@purcellventures.co</span>
             </p>
           </div>
         `,
         text: `Welcome to Premium Whale Alerts.\n\nJoin the channel: ${inviteLink}\n\nLink expires 24 hours from now and is single-use.\n\nIf you miss the window, reply to this email and I'll send a new one.\n\nElijah`,
-        replyTo: "elijah@purcell-ventures.com",
+        replyTo: "elijah@purcellventures.co",
         tags: [
           { name: "product", value: "wallet-tracker-premium" },
           { name: "type", value: "fulfillment" },

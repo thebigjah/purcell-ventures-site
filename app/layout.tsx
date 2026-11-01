@@ -101,7 +101,7 @@ const orgSchema = {
         "@type": "Place",
         "name": "Acworth, Georgia, USA",
       },
-      "email": "elijah@purcell-ventures.com",
+      "email": "elijah@purcellventures.co",
       "telephone": "+12054627839",
       "address": {
         "@type": "PostalAddress",
@@ -152,7 +152,7 @@ const orgSchema = {
       "description": "Founder of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama Honors College, Class of 2030, on a pre-med track toward psychiatry. Based in Tuscaloosa, Alabama. Builds and operates COSMIC, a station of 57 AI agents in 17 rooms.",
       "worksFor": { "@id": "https://purcellventures.co/#organization" },
       "url": "https://purcellventures.co",
-      "email": "elijah@purcell-ventures.com",
+      "email": "elijah@purcellventures.co",
       "telephone": "+12054627839",
       "address": {
         "@type": "PostalAddress",

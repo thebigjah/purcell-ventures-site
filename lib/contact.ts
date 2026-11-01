@@ -11,7 +11,7 @@
 export const CONTACT = {
   phone: "(205) 462-7839",
   phoneE164: "+12054627839",
-  email: "elijah@purcell-ventures.com",
+  email: "elijah@purcellventures.co",
 
   // The person
   personCity: "Tuscaloosa",

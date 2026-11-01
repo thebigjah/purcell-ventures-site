@@ -51,7 +51,7 @@ Keep every fact, price, number, name, link, form field and button on the page. Y
 - Divisions: five active (websites, digital add-ons, AI consulting, custom software, Steady) and real estate shown as planned, with no date.
 - Field services brand: Mantle Field Services (never "Purcell Works").
 - His title: Founder/CEO.
-- The public email is elijah@purcell-ventures.com. His personal Gmail and personal phone details do not appear on public pages. Use `CONTACT` from `@/lib/contact` for the phone and email.
+- The public email is elijah@purcellventures.co. His personal Gmail and personal phone details do not appear on public pages. Use `CONTACT` from `@/lib/contact` for the phone and email.
 - Public pages carry only what he would say introducing himself professionally: the business, the industry, college. Never his money, his family or his private life. If a page carries something private, remove it and list it in your report.
 - The scholarship dollar total ($530,384) appears only on the college-application course page.
 - He is not currently leading worship. Past tense only.

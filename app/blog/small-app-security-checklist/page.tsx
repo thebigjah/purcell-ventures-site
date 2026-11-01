@@ -181,7 +181,7 @@ FIX        the specific change, not "add validation"`}</code></pre>
       <p>
         If you run a small app with users and want someone else to look at it, I will do it
         for free:{" "}
-        <a href="mailto:elijah@purcell-ventures.com">elijah@purcell-ventures.com</a>.
+        <a href="mailto:elijah@purcellventures.co">elijah@purcellventures.co</a>.
       </p>
 
       <PostByline post={{

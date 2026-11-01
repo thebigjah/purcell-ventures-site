@@ -178,7 +178,7 @@ const TIERS: Tier[] = [
       "Decide whether your AI capability is something to sell as a product, sell as a service, or keep as an advantage. Each needs a different plan.",
       "Email me about a strategy consult instead of a training session.",
     ],
-    sessionCta: { label: "Email Elijah about a strategy consult", href: "mailto:elijah@purcell-ventures.com?subject=Strategic%20Consult%20Inquiry" },
+    sessionCta: { label: "Email Elijah about a strategy consult", href: "mailto:elijah@purcellventures.co?subject=Strategic%20Consult%20Inquiry" },
   },
 ];
 

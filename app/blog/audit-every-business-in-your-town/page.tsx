@@ -170,7 +170,7 @@ return last`}</code></pre>
         <Link href="/blog/tuscaloosa-small-business-online">independent
         businesses near campus</Link>, one at a time. If you run it on your town and find
         something surprising,{" "}
-        <a href="mailto:elijah@purcell-ventures.com">I would like to hear
+        <a href="mailto:elijah@purcellventures.co">I would like to hear
         it</a>.
       </p>
 

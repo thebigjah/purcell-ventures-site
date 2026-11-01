@@ -35,7 +35,7 @@ export async function GET(req: NextRequest) {
     });
   }
 
-  const adminEmail = process.env.ADMIN_DIGEST_EMAIL || "elijah@purcell-ventures.com";
+  const adminEmail = process.env.ADMIN_DIGEST_EMAIL || "elijah@purcellventures.co";
 
   // Sample digest data — once Firestore lands, replace with real CRM queries
   // For now: hardcoded values to verify the email pipeline works

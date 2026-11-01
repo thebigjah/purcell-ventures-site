@@ -110,7 +110,7 @@ export default function SteadyStartPage() {
       `Situation:`,
       form.situation,
     ].join("\n");
-    const mailto = `mailto:elijah@purcell-ventures.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailto = `mailto:elijah@purcellventures.co?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setMailtoLink(mailto);
     setSubmitted(true);
 

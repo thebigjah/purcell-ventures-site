@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
         subject: tmpl.subject,
         html: tmpl.html,
         text: tmpl.text,
-        replyTo: "elijah@purcell-ventures.com",
+        replyTo: "elijah@purcellventures.co",
         tags: [
           { name: "source", value: source || "unknown" },
           { name: "intent", value: intent || "unknown" },

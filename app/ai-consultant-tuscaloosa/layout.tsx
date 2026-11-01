@@ -84,7 +84,7 @@ const schema = {
         "addressRegion": "AL",
         "addressCountry": "US",
       },
-      "email": "elijah@purcell-ventures.com",
+      "email": "elijah@purcellventures.co",
       "knowsAbout": [
         "AI consulting", "Autonomous AI agent systems", "Business process automation",
         "Custom software development", "Web development for small business",

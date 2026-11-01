@@ -92,7 +92,7 @@ export async function POST(req: NextRequest) {
     },
     body: JSON.stringify({
       from: "Purcell Ventures Bookings <onboarding@resend.dev>",
-      to:   ["elijah@purcell-ventures.com"],
+      to:   ["elijah@purcellventures.co"],
       reply_to: email || undefined,
       subject: `Booking: ${name}${business ? ` (${business})` : ""} - ${sessionLabel}`,
       html,

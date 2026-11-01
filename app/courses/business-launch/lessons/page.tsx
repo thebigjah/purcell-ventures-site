@@ -684,7 +684,7 @@ export default function BusinessLessonsPage() {
             {codeError && <p className="lp-error" role="alert">That code is wrong. Check your confirmation email.</p>}
             <button type="submit" className="lp-btn lp-btn--primary">Enter</button>
           </form>
-          <p className="lp-help">No code? Email <a className="lp-link" href="mailto:elijah@purcell-ventures.com">elijah@purcell-ventures.com</a></p>
+          <p className="lp-help">No code? Email <a className="lp-link" href="mailto:elijah@purcellventures.co">elijah@purcellventures.co</a></p>
         </div>
       </div>
     );

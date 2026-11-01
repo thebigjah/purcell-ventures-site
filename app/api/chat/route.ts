@@ -18,7 +18,7 @@ Purcell Ventures LLC is registered in Georgia and run by Elijah Purcell from Tus
 
 SISTER BRAND, MANTLE FIELD SERVICES: gutter cleaning ($100+), pressure washing ($75+), lawn care ($50+). Owner-operated, Metro Atlanta only. Run separately from Purcell Ventures core divisions. Site: mantle-field-site.vercel.app (custom domain coming).
 
-Contact: elijah@purcell-ventures.com or (205) 462-7839
+Contact: elijah@purcellventures.co or (205) 462-7839
 Book consulting: purcellventures.co/consulting/book
 Field services / quotes: mantle-field-site.vercel.app
 Digital services: purcellventures.co/digital

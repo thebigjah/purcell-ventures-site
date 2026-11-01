@@ -161,7 +161,7 @@ export default function Post() {
             cannot merge, a suspension you do not understand, or several locations. If you
             are near the University of Alabama and stuck on one of those, ask me and I will
             tell you what I would do:{" "}
-            <a href="mailto:elijah@purcell-ventures.com">elijah@purcell-ventures.com</a>.
+            <a href="mailto:elijah@purcellventures.co">elijah@purcellventures.co</a>.
           </p>
 
           <p>

@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
     },
     body: JSON.stringify({
       from: "Purcell Ventures <onboarding@resend.dev>",
-      to:   ["elijah@purcell-ventures.com"],
+      to:   ["elijah@purcellventures.co"],
       subject: `Waitlist: ${courseName}`,
       html: `
         <div style="font-family:Inter,system-ui,sans-serif;max-width:560px;background:#faf8f4;padding:32px;border:1px solid #e0d8c4">

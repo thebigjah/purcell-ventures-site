@@ -139,7 +139,7 @@ export default function Post() {
       <p>
         I will update this at the end of the year, once I know whether I chose well.
         If you are a New College student and I have got something wrong here,{" "}
-        <a href="mailto:elijah@purcell-ventures.com">tell me</a> and I will
+        <a href="mailto:elijah@purcellventures.co">tell me</a> and I will
         correct it and say who corrected it.
       </p>
 

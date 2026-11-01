@@ -98,7 +98,7 @@ Here's everything you need to start:
 Looking forward to working with you.
 
 — Elijah
-elijah@purcell-ventures.com
+elijah@purcellventures.co
 (205) 462-7839`;
 
   const mailtoLink = email ? `mailto:${email}?subject=${encodeURIComponent(`Welcome to Purcell Ventures sales — ${name}`)}&body=${encodeURIComponent(welcomeBody)}` : "";

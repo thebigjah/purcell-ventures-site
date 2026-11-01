@@ -1089,7 +1089,7 @@ Output in markdown:
 - [Specific change 3]
 
 ## Want a custom version that runs on YOUR site?
-Purcell Ventures builds AI-powered email tools for businesses — automated outreach scoring, template libraries, follow-up sequences. Starting at $179/mo bundled with our Digital Growth tier. Email elijah@purcell-ventures.com.
+Purcell Ventures builds AI-powered email tools for businesses — automated outreach scoring, template libraries, follow-up sequences. Starting at $179/mo bundled with our Digital Growth tier. Email elijah@purcellventures.co.
 
 Quality bar:
 - Be honest with the grade. A "C" is fine. Don't grade-inflate.
@@ -1170,7 +1170,7 @@ Quality bar:
       { name: "city", label: "City and state (for the dateline)", type: "text", required: true, placeholder: "e.g., Acworth, GA" },
       { name: "founderName", label: "Quotable spokesperson", type: "text", required: true, placeholder: "e.g., Elijah Purcell, Founder" },
       { name: "businessOneLiner", label: "Business one-liner (for boilerplate)", type: "text", required: true, placeholder: "e.g., AI consulting and custom software for small businesses" },
-      { name: "contactEmail", label: "Contact email", type: "text", required: true, placeholder: "e.g., elijah@purcell-ventures.com" },
+      { name: "contactEmail", label: "Contact email", type: "text", required: true, placeholder: "e.g., elijah@purcellventures.co" },
     ],
     systemPrompt: `You write press releases. The user provides facts about an announcement. You return a complete, AP-style press release.
 

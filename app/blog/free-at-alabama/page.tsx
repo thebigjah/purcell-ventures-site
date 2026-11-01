@@ -100,7 +100,7 @@ export default function Post() {
 
       <p>
         If you know the current answer for any of them and can point at the page,{" "}
-        <a href="mailto:elijah@purcell-ventures.com">tell me</a> and I will
+        <a href="mailto:elijah@purcellventures.co">tell me</a> and I will
         add it with a link and say who corrected it.
       </p>
 
