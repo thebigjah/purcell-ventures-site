@@ -256,7 +256,7 @@ export function createGalaxy(container, opts = {}) {
         vec2 d = vUv - center; d.x *= aspect; float r = max(length(d), 1e-5);
         /* the hole's edge stays put; past it the pull grows to 0.6 of the hole's radius, which stretches the disk's inner glow outward */
         float s = r > rh ? r - strength * 0.6 * rh * rh * (1.0 / rh - 1.0 / r) : r;
-        float turn = strength * smoothstep(rh, 1.3 * rh, r) * 1.0 * rh * rh / (r * r + rh * rh);
+        float turn = -strength * smoothstep(rh, 1.3 * rh, r) * 1.0 * rh * rh / (r * r + rh * rh);
         vec2 dir = d / r; float c = cos(turn), sn = sin(turn); dir = vec2(c * dir.x - sn * dir.y, sn * dir.x + c * dir.y);
         vec2 q = dir * s; q.x /= aspect;
         gl_FragColor = texture2D(tDiffuse, center + q);
