@@ -137,13 +137,27 @@ export function createGalaxy(container, opts = {}) {
   /* ---------- the core: the mark, live star ---------- */
   const coreCanvas = document.createElement("canvas"); coreCanvas.width = coreCanvas.height = phone ? 768 : 1024;
   const cctx = coreCanvas.getContext("2d"); const coreTex = new THREE.CanvasTexture(coreCanvas); coreTex.colorSpace = THREE.SRGBColorSpace; coreTex.anisotropy = 8;
-  const bhTex = loadTex(A.blackhole);
+  const bhTex = loadTex(phone && A.blackholePhone ? A.blackholePhone : A.blackhole);
+  const bhShadowUrl = phone && A.blackholePhoneShadow ? A.blackholePhoneShadow : A.blackholeShadow;
+  const bhShadowTex = bhShadowUrl ? loader.load(bhShadowUrl) : null;
+  /* the hole plus the disk's own body: the disk is opaque, so nothing behind it shows through (2 Nov 2026) */
+  const bhOccUrl = phone && A.blackholePhoneOccluder ? A.blackholePhoneOccluder : A.blackholeOccluder;
+  const bhOccTex = bhOccUrl ? loader.load(bhOccUrl) : bhShadowTex;
   const coreMat = new THREE.SpriteMaterial({ map: bhTex || coreTex, transparent: true, depthWrite: false, opacity: 1, blending: bhTex ? THREE.AdditiveBlending : THREE.NormalBlending });
   const coreMesh = new THREE.Sprite(coreMat); coreMesh.scale.set(bhTex ? 13 : 7.2, bhTex ? 13 : 7.2, 1); coreMesh.position.y = 0.4; scene.add(coreMesh);
   /* the shadow of the hole: a black disc so the backdrop does not show through the centre */
-  const shadow = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTexture(128, 0.9), color: new THREE.Color("#000000"), transparent: true, opacity: 1, depthWrite: false })); shadow.scale.set(bhTex ? 3.0 : 0.01, bhTex ? 3.0 : 0.01, 1); shadow.position.y = 0.4; scene.add(shadow);
+  /* the traced shadow shape when there is one, drawn first so the disk adds light over it */
+  const shadow = new THREE.Sprite(new THREE.SpriteMaterial(bhShadowTex
+    ? { alphaMap: bhOccTex, color: new THREE.Color("#000000"), transparent: true, opacity: 1, depthWrite: false }
+    : { map: glowTexture(128, 0.9), color: new THREE.Color("#000000"), transparent: true, opacity: 1, depthWrite: false }));
+  const shS = bhShadowTex ? 13 : bhTex ? 3.0 : 0.01; shadow.scale.set(shS, shS, 1); shadow.position.y = 0.4; shadow.renderOrder = 1; coreMesh.renderOrder = 2; scene.add(shadow);
   const coreHalo = new THREE.Sprite(new THREE.SpriteMaterial({ map: haloTex, color: new THREE.Color("#ffb85c"), transparent: true, opacity: 0.10, blending: THREE.AdditiveBlending, depthWrite: false })); coreHalo.scale.set(30, 30, 1); scene.add(coreHalo);
   const coreHalo2 = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex, color: new THREE.Color("#ffd99a"), transparent: true, opacity: 0.14, blending: THREE.AdditiveBlending, depthWrite: false })); coreHalo2.scale.set(12, 12, 1); scene.add(coreHalo2);
+  /* glows first, then the shadow over them, then the disk's light: the hole stays black (2 Nov 2026) */
+  coreHalo.renderOrder = 0; coreHalo2.renderOrder = 0;
+  const holeScene = bhShadowTex ? new THREE.Scene() : null;
+  const holeMat = new THREE.SpriteMaterial({ alphaMap: bhShadowTex, color: new THREE.Color("#000000"), transparent: true, depthTest: false, depthWrite: false });
+  if (holeScene) { const hole = new THREE.Sprite(holeMat); hole.scale.copy(shadow.scale); hole.position.copy(shadow.position); holeScene.add(hole); }
   const HEX = (() => { const p = new Path2D(); const pts = [[400, 40], [88.231, 220], [88.231, 580], [400, 760], [711.769, 580], [711.769, 220]]; p.moveTo(pts[0][0], pts[0][1]); pts.slice(1).forEach(([x, y]) => p.lineTo(x, y)); p.closePath(); return p; })();
   let corePhi = 0;
   function drawCore() {
@@ -166,11 +180,13 @@ export function createGalaxy(container, opts = {}) {
       const id = c.getImageData(0, 0, S, S), d = id.data, cx = S / 2, cy = S / 2;
       const found = []; for (const base of [90, 270]) for (let off = -35; off <= 35; off += 5) { const ang = (base + off) * Math.PI / 180, ca = Math.cos(ang), sa = Math.sin(ang); for (let rr = S * 0.49; rr > S * 0.15; rr -= 2) { const x = Math.round(cx + ca * rr), y = Math.round(cy + sa * rr); const k = (y * S + x) * 4; if (Math.max(d[k], d[k + 1], d[k + 2]) > 45) { found.push(rr); break; } } }
       found.sort((p, q) => p - q); let body = found.length ? found[Math.floor(found.length / 2)] : S * 0.4; body = round ? Math.min(body, S * 0.47) : 0;
+      /* which side the render is lit from, so the planet can be turned to face its sun */
+      let lumL = 0, lumR = 0; for (let y = S * 0.3; y < S * 0.7; y += 4) for (let x = S * 0.15; x < S * 0.85; x += 4) { const k = (Math.round(y) * S + Math.round(x)) * 4; const l = d[k] + d[k + 1] + d[k + 2]; if (x < cx) lumL += l; else lumR += l; }
       /* inside the body nothing is touched (dark sides stay); outside it, black fades to transparent so rings and tails survive */
       for (let y = 0; y < S; y++) for (let x = 0; x < S; x++) { const dx = x - cx, dy = y - cy, rr = Math.sqrt(dx * dx + dy * dy); if (rr <= body - 2) continue; const k = (y * S + x) * 4; const lum = Math.max(d[k], d[k + 1], d[k + 2]); const al = lum < 5 ? 0 : lum < 30 ? (lum - 5) / 25 : 1; d[k + 3] = Math.round(255 * al); }
       c.putImageData(id, 0, 0);
       c.globalCompositeOperation = "destination-in"; const gr = c.createRadialGradient(cx, cy, S * 0.44, cx, cy, S * 0.5); gr.addColorStop(0, "rgba(0,0,0,1)"); gr.addColorStop(1, "rgba(0,0,0,0)"); c.fillStyle = gr; c.fillRect(0, 0, S, S);
-      const tx = new THREE.CanvasTexture(cv); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8; tx.userData = { body: body ? body / S : 0.44 }; entry.tex = tx; entry.cbs.forEach((f) => f(tx)); entry.cbs = []; };
+      const tx = new THREE.CanvasTexture(cv); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8; tx.userData = { body: body ? body / S : 0.44, litLeft: lumL >= lumR }; entry.tex = tx; entry.cbs.forEach((f) => f(tx)); entry.cbs = []; };
     img.src = url; }
   if (A.planet) loadPlanet(A.planet, true, (tx) => { planetTex = tx; planetSprites.forEach((sp) => { if (!sp.material.map) { sp.material.map = tx; sp.material.needsUpdate = true; } }); });
   const planetSprites = [];
@@ -196,7 +212,7 @@ export function createGalaxy(container, opts = {}) {
       const r = 0.2 + 0.1 * Math.sqrt(p.children || 0);
       const m = new THREE.Mesh(new THREE.SphereGeometry(r, phone ? 24 : 40, phone ? 16 : 28), planetMat()); m.material.visible = false;
       const dot = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex, color: new THREE.Color("#ffd98a"), transparent: true, opacity: 0.9, blending: THREE.AdditiveBlending, depthWrite: false })); dot.scale.set(r * 2.2 + 0.25, r * 2.2 + 0.25, 1); dot.userData = { dot: true }; m.add(dot);
-      const sp = new THREE.Sprite(new THREE.SpriteMaterial({ transparent: true, depthWrite: true, alphaTest: 0.4, opacity: 0 })); sp.scale.set(r * 2.5, r * 2.5, 1); sp.renderOrder = 1; sp.userData = { rim: true, r }; m.add(sp); planetSprites.push(sp);
+      const sp = new THREE.Sprite(new THREE.SpriteMaterial({ transparent: true, depthWrite: true, alphaTest: 0.4, opacity: 0 })); sp.scale.set(r * 2.5, r * 2.5, 1); sp.renderOrder = 1; sp.userData = { rim: true, r, ringed: p.tex === "portfolio" || p.tex === "pricing" }; m.add(sp); planetSprites.push(sp);
       const shade = new THREE.Sprite(new THREE.SpriteMaterial({ map: shadeTex, transparent: true, depthWrite: false, opacity: 0 })); shade.renderOrder = 2; shade.userData = { shade: true, r }; m.add(shade);
       const own = p.tex && A.planets && A.planets[p.tex]; if (own) loadPlanet(own, p.tex !== "blog", (tx) => { sp.material.map = tx; sp.material.needsUpdate = true; });
       m.userData = { kind: "planet", planet: p, system: sys, orbit: 1.15 + j * (total > 5 ? 0.32 : 0.42), speed: (2 * Math.PI) / (45 + j * 14), a0: (j / total) * Math.PI * 2, group: g };
@@ -271,7 +287,12 @@ export function createGalaxy(container, opts = {}) {
           c.children.forEach((ch) => { const mine = c === focusedPlanet; if (ch.userData.dot) ch.material.opacity += ((open || pf ? 0 : 0.9) - ch.material.opacity) * k; if (ch.userData.rim) { ch.material.opacity += ((open && ch.material.map && (!pf || mine) ? 1 : 0) - ch.material.opacity) * k; }
             if (ch.userData.rim || ch.userData.shade) { tmpN.copy(camera.position).sub(tmpW.setFromMatrixPosition(c.matrixWorld)).normalize().multiplyScalar(ch.userData.r * (ch.userData.shade ? 1.04 : 1)); ch.position.copy(tmpN); }
             if (ch.userData.shade) { const rim = c.children.find((x) => x.userData.rim); const body = rim && rim.material.map && rim.material.map.userData ? rim.material.map.userData.body : 0.44; const s = rim ? rim.scale.x * body * 2 : 0; ch.scale.set(s, s, 1); ch.material.opacity = rim ? rim.material.opacity : 0;
-              tmpS.setFromMatrixPosition(g.matrixWorld).project(camera); tmpW.setFromMatrixPosition(c.matrixWorld).project(camera); ch.material.rotation = Math.atan2(tmpW.y - tmpS.y, (tmpW.x - tmpS.x) * camera.aspect); } }); }
+              tmpS.setFromMatrixPosition(g.matrixWorld).project(camera); tmpW.setFromMatrixPosition(c.matrixWorld).project(camera); ch.material.rotation = Math.atan2(tmpW.y - tmpS.y, (tmpW.x - tmpS.x) * camera.aspect);
+              /* the renders carry their own light, so turn the lit side to face the sun; a ringed planet
+                 is mirrored instead so its ring stays level (2 Nov 2026) */
+              const mp = rim && rim.material.map; if (mp && mp.userData) { const away = ch.material.rotation, flip = mp.userData.litLeft ? 0 : Math.PI;
+                if (rim.userData.ringed) { const mirror = (Math.cos(away + flip) < 0); mp.repeat.x = mirror ? -1 : 1; mp.offset.x = mirror ? 1 : 0; rim.material.rotation = 0; }
+                else rim.material.rotation = away + flip; } } }); }
         if (d.ring) c.material.opacity += ((open && !pf ? 0.16 : 0) - c.material.opacity) * k;
         if (d.belt) c.material = starMat;
         if (d.belt) c.rotation.y = t * 0.02; }); });
@@ -297,11 +318,14 @@ export function createGalaxy(container, opts = {}) {
     { const ap = cg.attributes.position.array, asz = cg.attributes.size.array; for (let k = 0; k < BN; k++) { let age = cometAge[k] + dt / 3.2; if (age >= 1) { age -= 1; cometSeed[k] = rnd() * 6.28; } cometAge[k] = age; const back = ((cu - age * 0.05) % 1 + 1) % 1; const q = cometCurve.getPointAt(back); const sd = cometSeed[k]; ap[k * 3] = q.x + Math.cos(sd) * age * 0.9; ap[k * 3 + 1] = q.y + Math.sin(sd * 1.3) * age * 0.5; ap[k * 3 + 2] = q.z + Math.sin(sd) * age * 0.9; asz[k] = (1 - age) * 1.8 + 0.2; } cg.attributes.position.needsUpdate = true; cg.attributes.size.needsUpdate = true; }
     meteors.forEach((m) => { if (t - m.t0 > m.next) { m.t0 = t; m.next = 6 + rnd() * 10; const a = rnd() * 6.28, r = 40 + rnd() * 60; m.from.set(Math.cos(a) * r, 10 + rnd() * 30, Math.sin(a) * r); m.to.copy(m.from).add(new THREE.Vector3((rnd() - 0.5) * 30, -6 - rnd() * 8, (rnd() - 0.5) * 30)); }
       const u = (t - m.t0) / 1.1; if (u < 1) { m.s.position.lerpVectors(m.from, m.to, u); m.s.material.opacity = Math.sin(u * Math.PI) * 0.9; } else m.s.material.opacity = 0; });
-    if (bhTex) { coreMesh.material.rotation = rm ? 0 : -t * (2 * Math.PI) / 150; } else { corePhi = -(t / 60) * 360; coreTick += dt; if (coreTick > 1 / 30) { coreTick = 0; drawCore(); } }
+    /* the ray-traced disk is drawn at the camera's tilt, so spinning the sprite would tip it out of the galaxy's plane */
+    if (bhTex) { coreMesh.material.rotation = rm || bhShadowTex ? 0 : -t * (2 * Math.PI) / 150; } else { corePhi = -(t / 60) * 360; coreTick += dt; if (coreTick > 1 / 30) { coreTick = 0; drawCore(); } }
     if (loaded && !ready.done) { ready.done = true; resolveReady(); }
     starMat.uniforms.t.value = t;
     const o = pick(); if (o !== hovered) { hovered = o; el.style.cursor = o ? "pointer" : "default"; }
     composer.render();
+    /* the hole again, after bloom, so the disk's glow cannot tint it (2 Nov 2026) */
+    if (holeScene) { holeMat.opacity = shadow.material.opacity; renderer.autoClear = false; renderer.render(holeScene, camera); renderer.autoClear = true; }
     const w = container.clientWidth, h = container.clientHeight;
     labels.forEach((L) => {
       tmpV.setFromMatrixPosition(L.obj.matrixWorld); tmpV.y += L.off; tmpV.project(camera);
