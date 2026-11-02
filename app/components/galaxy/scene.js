@@ -318,8 +318,7 @@ export function createGalaxy(container, opts = {}) {
     { const ap = cg.attributes.position.array, asz = cg.attributes.size.array; for (let k = 0; k < BN; k++) { let age = cometAge[k] + dt / 3.2; if (age >= 1) { age -= 1; cometSeed[k] = rnd() * 6.28; } cometAge[k] = age; const back = ((cu - age * 0.05) % 1 + 1) % 1; const q = cometCurve.getPointAt(back); const sd = cometSeed[k]; ap[k * 3] = q.x + Math.cos(sd) * age * 0.9; ap[k * 3 + 1] = q.y + Math.sin(sd * 1.3) * age * 0.5; ap[k * 3 + 2] = q.z + Math.sin(sd) * age * 0.9; asz[k] = (1 - age) * 1.8 + 0.2; } cg.attributes.position.needsUpdate = true; cg.attributes.size.needsUpdate = true; }
     meteors.forEach((m) => { if (t - m.t0 > m.next) { m.t0 = t; m.next = 6 + rnd() * 10; const a = rnd() * 6.28, r = 40 + rnd() * 60; m.from.set(Math.cos(a) * r, 10 + rnd() * 30, Math.sin(a) * r); m.to.copy(m.from).add(new THREE.Vector3((rnd() - 0.5) * 30, -6 - rnd() * 8, (rnd() - 0.5) * 30)); }
       const u = (t - m.t0) / 1.1; if (u < 1) { m.s.position.lerpVectors(m.from, m.to, u); m.s.material.opacity = Math.sin(u * Math.PI) * 0.9; } else m.s.material.opacity = 0; });
-    /* the ray-traced disk is drawn at the camera's tilt, so spinning the sprite would tip it out of the galaxy's plane */
-    if (bhTex) { coreMesh.material.rotation = rm || bhShadowTex ? 0 : -t * (2 * Math.PI) / 150; } else { corePhi = -(t / 60) * 360; coreTick += dt; if (coreTick > 1 / 30) { coreTick = 0; drawCore(); } }
+    if (bhTex) { coreMesh.material.rotation = rm ? 0 : -t * (2 * Math.PI) / 150; } else { corePhi = -(t / 60) * 360; coreTick += dt; if (coreTick > 1 / 30) { coreTick = 0; drawCore(); } }
     if (loaded && !ready.done) { ready.done = true; resolveReady(); }
     starMat.uniforms.t.value = t;
     const o = pick(); if (o !== hovered) { hovered = o; el.style.cursor = o ? "pointer" : "default"; }

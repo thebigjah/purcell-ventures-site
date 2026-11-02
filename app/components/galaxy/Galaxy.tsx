@@ -28,12 +28,8 @@ const ASSETS = {
   // Ray-traced (Schwarzschild lensing, Doppler-beamed thin disk) at the camera's own elevation: 41 degrees on
   // desktop, 60 on phones, so the disk lies in the galaxy's plane (2 Nov 2026). The shadow masks keep the
   // hole black over the backdrop.
-  blackhole: "/galaxy/blackhole-desk.jpg",
-  blackholePhone: "/galaxy/blackhole-phone.jpg",
-  blackholeShadow: "/galaxy/blackhole-desk-shadow.png",
-  blackholePhoneShadow: "/galaxy/blackhole-phone-shadow.png",
-  blackholeOccluder: "/galaxy/blackhole-desk-occluder.png",
-  blackholePhoneOccluder: "/galaxy/blackhole-phone-occluder.png",
+  blackhole: "/galaxy/blackhole.jpg",
+  blackholeShadow: "/galaxy/blackhole-shadow.png",
   star: "/galaxy/star-gold.jpg",
   planets: Object.fromEntries(
     ["websites", "pricing", "portfolio", "casestudies", "digital", "tools", "consulting", "book", "software", "steady", "courses", "company", "blog"].map((k) => [k, `/galaxy/planets/${k}.jpg`]),
