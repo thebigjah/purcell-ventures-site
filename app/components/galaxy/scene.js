@@ -145,13 +145,13 @@ export function createGalaxy(container, opts = {}) {
   const bhOccUrl = phone && A.blackholePhoneOccluder ? A.blackholePhoneOccluder : A.blackholeOccluder;
   const bhOccTex = bhOccUrl ? loader.load(bhOccUrl) : bhShadowTex;
   const coreMat = new THREE.SpriteMaterial({ map: bhTex || coreTex, transparent: true, depthWrite: false, opacity: 1, blending: bhTex ? THREE.AdditiveBlending : THREE.NormalBlending });
-  const coreMesh = new THREE.Sprite(coreMat); coreMesh.scale.set(bhTex ? 13 : 7.2, bhTex ? 13 : 7.2, 1); coreMesh.position.y = 0.4; scene.add(coreMesh);
+  const BH_S = A.blackholeTraced ? 24 : 13; const coreMesh = new THREE.Sprite(coreMat); coreMesh.scale.set(bhTex ? BH_S : 7.2, bhTex ? BH_S : 7.2, 1); coreMesh.position.y = 0.4; scene.add(coreMesh);
   /* the shadow of the hole: a black disc so the backdrop does not show through the centre */
   /* the traced shadow shape when there is one, drawn first so the disk adds light over it */
   const shadow = new THREE.Sprite(new THREE.SpriteMaterial(bhShadowTex
     ? { alphaMap: bhOccTex, color: new THREE.Color("#000000"), transparent: true, opacity: 1, depthWrite: false }
     : { map: glowTexture(128, 0.9), color: new THREE.Color("#000000"), transparent: true, opacity: 1, depthWrite: false }));
-  const shS = bhShadowTex ? 13 : bhTex ? 3.0 : 0.01; shadow.scale.set(shS, shS, 1); shadow.position.y = 0.4; shadow.renderOrder = 1; coreMesh.renderOrder = 2; scene.add(shadow);
+  const shS = bhShadowTex ? BH_S : bhTex ? 3.0 : 0.01; shadow.scale.set(shS, shS, 1); shadow.position.y = 0.4; shadow.renderOrder = 1; coreMesh.renderOrder = 2; scene.add(shadow);
   const coreHalo = new THREE.Sprite(new THREE.SpriteMaterial({ map: haloTex, color: new THREE.Color("#ffb85c"), transparent: true, opacity: 0.10, blending: THREE.AdditiveBlending, depthWrite: false })); coreHalo.scale.set(30, 30, 1); scene.add(coreHalo);
   const coreHalo2 = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex, color: new THREE.Color("#ffd99a"), transparent: true, opacity: 0.14, blending: THREE.AdditiveBlending, depthWrite: false })); coreHalo2.scale.set(12, 12, 1); scene.add(coreHalo2);
   /* glows first, then the shadow over them, then the disk's light: the hole stays black (2 Nov 2026) */
@@ -216,7 +216,7 @@ export function createGalaxy(container, opts = {}) {
       const sp = new THREE.Sprite(new THREE.SpriteMaterial({ transparent: true, depthWrite: true, alphaTest: 0.4, opacity: 0 })); sp.scale.set(r * 2.5, r * 2.5, 1); sp.renderOrder = 1; sp.userData = { rim: true, r, ringed: p.tex === "portfolio" || p.tex === "pricing" }; m.add(sp); planetSprites.push(sp);
       const shade = new THREE.Sprite(new THREE.SpriteMaterial({ map: shadeTex, transparent: true, depthWrite: false, opacity: 0 })); shade.renderOrder = 2; shade.userData = { shade: true, r }; m.add(shade);
       const own = p.tex && A.planets && A.planets[p.tex]; if (own) loadPlanet(own, p.tex !== "blog", (tx) => { sp.material.map = tx; sp.material.needsUpdate = true; });
-      m.userData = { kind: "planet", planet: p, system: sys, orbit: 1.15 + j * (total > 5 ? 0.32 : 0.42), speed: (2 * Math.PI) / (45 + j * 14), a0: (j / total) * Math.PI * 2, group: g };
+      m.userData = { kind: "planet", planet: p, system: sys, orbit: 1.15 + j * (total > 5 ? 0.32 : 0.42), speed: (2 * Math.PI) / (120 + j * 36), a0: (j / total) * Math.PI * 2, group: g };
       g.add(m);
       const pick = new THREE.Mesh(new THREE.SphereGeometry(r * 2.2 + 0.35, 10, 8), new THREE.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false })); pick.userData = m.userData; m.add(pick); pickables.push(pick); m.userData.mesh = m;
       const ring = new THREE.Mesh(new THREE.RingGeometry(m.userData.orbit - 0.01, m.userData.orbit + 0.01, 128), new THREE.MeshBasicMaterial({ color: 0xd9a24a, transparent: true, opacity: 0, side: THREE.DoubleSide, depthWrite: false })); ring.rotation.x = -Math.PI / 2; ring.renderOrder = 3; ring.userData = { ring: true }; g.add(ring);
@@ -245,25 +245,25 @@ export function createGalaxy(container, opts = {}) {
 
   /* ---------- post: bloom ---------- */
   const composer = new EffectComposer(renderer); composer.addPass(new RenderPass(scene, camera));
-  /* Lensing: light passing the hole bends toward it. Outside the disk each pixel samples the scene from
-     closer to the hole and turned around it, so stars and gas there stretch into arcs. The hole and the
-     disk are left as drawn. The pull and the turn scale with the hole's size on screen (2 Nov 2026). */
+  /* Lensing: light passing the hole bends toward it. Each pixel past the hole's edge samples the scene from
+     closer to the hole and turned around it, so the disk, the stars and the gas all curve the same way.
+     The hole itself is left as drawn. The pull and the turn scale with the hole's size on screen (2 Nov 2026). */
   const lens = new ShaderPass({
     uniforms: { tDiffuse: { value: null }, center: { value: new THREE.Vector2(0.5, 0.5) }, rh: { value: 0.05 }, aspect: { value: 1 }, strength: { value: 1 } },
     vertexShader: "varying vec2 vUv; void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }",
     fragmentShader: `uniform sampler2D tDiffuse; uniform vec2 center; uniform float rh, aspect, strength; varying vec2 vUv;
       void main() {
         vec2 d = vUv - center; d.x *= aspect; float r = max(length(d), 1e-5);
-        float w = strength * smoothstep(2.4 * rh, 4.0 * rh, r);
-        float pull = w * 1.2 * rh * rh / r;
-        float turn = w * 5.0 * rh * rh / (r * r + rh * rh);
-        float s = max(r - pull, 0.0);
+        /* the hole's edge stays put; past it the pull grows to 0.6 of the hole's radius, which stretches the disk's inner glow outward */
+        float s = r > rh ? r - strength * 0.6 * rh * rh * (1.0 / rh - 1.0 / r) : r;
+        float turn = strength * smoothstep(rh, 1.3 * rh, r) * 1.0 * rh * rh / (r * r + rh * rh);
         vec2 dir = d / r; float c = cos(turn), sn = sin(turn); dir = vec2(c * dir.x - sn * dir.y, sn * dir.x + c * dir.y);
         vec2 q = dir * s; q.x /= aspect;
         gl_FragColor = texture2D(tDiffuse, center + q);
       }`,
   });
   composer.addPass(lens);
+  let lensK = 1;
   const bloom = new UnrealBloomPass(new THREE.Vector2(2, 2), phone ? 0.4 : 0.5, 0.5, 0.82); composer.addPass(bloom); composer.addPass(new OutputPass());
 
   /* ---------- interaction ---------- */
@@ -338,12 +338,15 @@ export function createGalaxy(container, opts = {}) {
     { const ap = cg.attributes.position.array, asz = cg.attributes.size.array; for (let k = 0; k < BN; k++) { let age = cometAge[k] + dt / 3.2; if (age >= 1) { age -= 1; cometSeed[k] = rnd() * 6.28; } cometAge[k] = age; const back = ((cu - age * 0.05) % 1 + 1) % 1; const q = cometCurve.getPointAt(back); const sd = cometSeed[k]; ap[k * 3] = q.x + Math.cos(sd) * age * 0.9; ap[k * 3 + 1] = q.y + Math.sin(sd * 1.3) * age * 0.5; ap[k * 3 + 2] = q.z + Math.sin(sd) * age * 0.9; asz[k] = (1 - age) * 1.8 + 0.2; } cg.attributes.position.needsUpdate = true; cg.attributes.size.needsUpdate = true; }
     meteors.forEach((m) => { if (t - m.t0 > m.next) { m.t0 = t; m.next = 6 + rnd() * 10; const a = rnd() * 6.28, r = 40 + rnd() * 60; m.from.set(Math.cos(a) * r, 10 + rnd() * 30, Math.sin(a) * r); m.to.copy(m.from).add(new THREE.Vector3((rnd() - 0.5) * 30, -6 - rnd() * 8, (rnd() - 0.5) * 30)); }
       const u = (t - m.t0) / 1.1; if (u < 1) { m.s.position.lerpVectors(m.from, m.to, u); m.s.material.opacity = Math.sin(u * Math.PI) * 0.9; } else m.s.material.opacity = 0; });
-    if (bhTex) { coreMesh.material.rotation = rm ? 0 : -t * (2 * Math.PI) / 150; } else { corePhi = -(t / 60) * 360; coreTick += dt; if (coreTick > 1 / 30) { coreTick = 0; drawCore(); } }
+    /* a traced image already shows the light bending and is drawn edge-on, so it neither spins nor gets the lens pass */
+    if (bhTex) { coreMesh.material.rotation = rm || A.blackholeTraced ? 0 : -t * (2 * Math.PI) / 150; } else { corePhi = -(t / 60) * 360; coreTick += dt; if (coreTick > 1 / 30) { coreTick = 0; drawCore(); } }
     if (loaded && !ready.done) { ready.done = true; resolveReady(); }
     starMat.uniforms.t.value = t;
     const o = pick(); if (o !== hovered) { hovered = o; el.style.cursor = o ? "pointer" : "default"; }
     { tmpV.setFromMatrixPosition(coreMesh.matrixWorld); tmpN.copy(tmpV).addScaledVector(tmpW.setFromMatrixColumn(camera.matrixWorld, 0), 13 * 0.118); tmpV.project(camera); tmpN.project(camera);
-      const u = lens.uniforms; u.center.value.set(tmpV.x * 0.5 + 0.5, tmpV.y * 0.5 + 0.5); u.aspect.value = camera.aspect; u.rh.value = Math.abs(tmpN.x - tmpV.x) * 0.5 * camera.aspect; u.strength.value = tmpV.z < 1 ? coreMat.opacity : 0; }
+      const u = lens.uniforms; u.center.value.set(tmpV.x * 0.5 + 0.5, tmpV.y * 0.5 + 0.5); u.aspect.value = camera.aspect; u.rh.value = Math.abs(tmpN.x - tmpV.x) * 0.5 * camera.aspect; lensK += ((focused || focusedPlanet ? 0 : 1) - lensK) * Math.min(1, dt * 3);
+      /* the bend is for the map view only: inside an open system it would warp the planets and their orbits */
+      u.strength.value = tmpV.z < 1 && !A.blackholeTraced ? coreMat.opacity * lensK : 0; }
     composer.render();
     /* the hole again, after bloom, so the disk's glow cannot tint it (2 Nov 2026) */
     if (holeScene) { holeMat.opacity = shadow.material.opacity; renderer.autoClear = false; renderer.render(holeScene, camera); renderer.autoClear = true; }
