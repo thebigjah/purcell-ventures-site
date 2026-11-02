@@ -11,6 +11,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "ai-social-media-posts-what-to-hand-off",
+    title: "Using AI for your social media posts: what to hand off and what to write yourself",
+    excerpt: "An AI tool can turn your notes into a draft caption in a minute. Here is which posts to hand off, which to write yourself, and the checks to run before you publish.",
+    date: "November 2, 2026",
+    readingTime: "4 min read",
+    category: "Guide",
+  },
+  {
     slug: "check-ai-answer-before-using",
     title: "How to check an AI answer before you use it",
     excerpt: "Models can state a wrong date or an invented quote in a confident tone. A highlighter and a list of sources catch those errors before you publish.",
