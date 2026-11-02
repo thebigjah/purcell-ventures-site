@@ -149,7 +149,7 @@ const orgSchema = {
       // title he wants surfaced for search sits beside it rather than replacing it.
       // hasOccupation below carries the full description of each.
       "jobTitle": ["Founder/CEO", "Autonomous AI Agent Systems Engineer"],
-      "description": "Founder of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama Honors College, Class of 2030, on a pre-med track toward psychiatry. Based in Tuscaloosa, Alabama. Builds and operates COSMIC, a station of 57 AI agents in 17 rooms.",
+      "description": "Founder of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama, in New College and the Honors College, Class of 2030, on a pre-med track toward psychiatry. Based in Tuscaloosa, Alabama. Builds and operates COSMIC, a station of 57 AI agents in 17 rooms.",
       "worksFor": { "@id": "https://purcellventures.co/#organization" },
       "url": "https://purcellventures.co",
       "email": "elijah@purcellventures.co",
@@ -181,11 +181,10 @@ const orgSchema = {
         "name": "University of Alabama",
         "url": "https://www.ua.edu",
       },
-      "affiliation": {
-        "@type": "CollegeOrUniversity",
-        "name": "University of Alabama Honors College",
-        "url": "https://honors.ua.edu",
-      },
+      "affiliation": [
+        { "@type": "CollegeOrUniversity", "name": "University of Alabama New College", "url": "https://newcollege.ua.edu" },
+        { "@type": "CollegeOrUniversity", "name": "University of Alabama Honors College", "url": "https://honors.ua.edu" },
+      ],
       "homeLocation": { "@type": "Place", "name": "Tuscaloosa, Alabama" },
       "hasOccupation": [
         {

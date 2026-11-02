@@ -20,7 +20,7 @@ const FACTS: [string, string][] = [
   ["Born", "August 2007"],
   ["Role", "Founder/CEO, Purcell Ventures LLC"],
   ["Company", `Purcell Ventures LLC, Georgia, control number ${CONTACT.llcControlNumber}, formed 8 April 2025`],
-  ["University", "University of Alabama Honors College, Tuscaloosa, Class of 2030"],
+  ["University", "University of Alabama, New College and Honors College, Tuscaloosa, Class of 2030"],
   ["Studying", "Psychology and data science, pre-med track toward psychiatry"],
   ["Also", "Independent contractor with Mercor Intelligence"],
   ["Based", "Tuscaloosa, Alabama"],
@@ -31,7 +31,7 @@ const FACTS: [string, string][] = [
 const DATED: [string, string][] = [
   ["2026", "Built and runs COSMIC, a station of 57 AI agents in 17 rooms that handle proposals, site audits, security checks, research and outreach for Purcell Ventures."],
   ["2026", "Built UA Today, a campus events page for the University of Alabama that pulls from six sources."],
-  ["2026", "Enrolled at the University of Alabama Honors College to study psychology and data science."],
+  ["2026", "Enrolled at the University of Alabama, in New College and the Honors College to study psychology and data science."],
   ["2025", "Founded Purcell Ventures LLC in Georgia at seventeen."],
   ["High school", "Christian Character Award and the Steadfast Award (10th grade), Grove Christian School."],
 ];
@@ -66,7 +66,7 @@ export default function WhoPage() {
       <PageHero
         kicker="Elijah Purcell"
         title="Who is Elijah Purcell?"
-        lede="Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company that builds websites and software for local businesses. He is also a psychology and data science student at the University of Alabama Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at seventeen and runs it from Tuscaloosa, Alabama."
+        lede="Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company that builds websites and software for local businesses. He is also a psychology and data science student at the University of Alabama, in New College and the Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at seventeen and runs it from Tuscaloosa, Alabama."
         meta="Last reviewed 20 August 2026"
         crumbs={<Breadcrumbs trail={[
           { name: "Home", href: "/" },

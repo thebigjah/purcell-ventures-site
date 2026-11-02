@@ -103,7 +103,7 @@ export default function PortfolioPage() {
           <div className="pf-hero__text">
             <h1>Elijah Purcell</h1>
             <p className="pf-hero__role">Founder/CEO of Purcell Ventures LLC</p>
-            <p className="pf-hero__role">The University of Alabama Honors College, Psychology and Data Science, Class of 2030</p>
+            <p className="pf-hero__role">The University of Alabama, New College and Honors College, Psychology and Data Science, Class of 2030</p>
             <p className="pf-hero__lede">
               What fills me with purpose is serving others. I feel called to help people through counseling, and I am working toward psychiatry,
               with research into how AI can make mental health care easier to reach. I want to work for myself, so I started Purcell Ventures,
@@ -154,7 +154,7 @@ export default function PortfolioPage() {
           <h2 id="honors">Honors and recognition</h2>
           <div className="pf-honors">
             <article>
-              <h3>The University of Alabama Honors College</h3>
+              <h3>The University of Alabama, New College and Honors College</h3>
               <p>Admitted to the Honors College, studying psychology and data science through New College on a Presidential Scholarship.</p>
             </article>
             <article>

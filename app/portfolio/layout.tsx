@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Elijah Purcell, portfolio",
   description:
-    "Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a University of Alabama Honors College student: Rufus on the App Store, honors, AI work, faith and service, and everything else he has built.",
+    "Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a University of Alabama New College and Honors College student: Rufus on the App Store, honors, AI work, faith and service, and everything else he has built.",
   keywords: [
     "purcell ventures portfolio", "shipped projects", "next.js web apps",
     "expo mobile apps", "ai tools built", "Tuscaloosa software developer",

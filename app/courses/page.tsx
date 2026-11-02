@@ -85,7 +85,7 @@ export default function CoursesPage() {
       <Section title="Who teaches them">
         <Prose>
           <p>
-            I am Elijah Purcell, Founder/CEO of <Link href="/about">Purcell Ventures LLC</Link>. I build AI agent systems and study psychology and data science in the University of Alabama Honors College in Tuscaloosa. More background: <Link href="/who">Who is Elijah Purcell</Link>. If you need direct help more than a course, I also do <Link href="/consulting">consulting</Link>.
+            I am Elijah Purcell, Founder/CEO of <Link href="/about">Purcell Ventures LLC</Link>. I build AI agent systems and study psychology and data science in New College and the Honors College at the University of Alabama in Tuscaloosa. More background: <Link href="/who">Who is Elijah Purcell</Link>. If you need direct help more than a course, I also do <Link href="/consulting">consulting</Link>.
           </p>
         </Prose>
       </Section>

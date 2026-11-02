@@ -35,7 +35,7 @@ const QA: [string, string][] = [
   ["What is Purcell Ventures LLC?",
    "Purcell Ventures LLC is a Georgia limited liability company that builds websites, custom software and AI tooling for small businesses. Elijah Purcell founded it on 8 April 2025. It operates from Tuscaloosa, Alabama, and serves clients nationwide."],
   ["Who owns Purcell Ventures?",
-   "Elijah Purcell is the Founder/CEO, sole member and registered agent. He is a psychology and data science student at the University of Alabama Honors College and he does the work himself: client acquisition, scoping, pricing, building, deploying and support."],
+   "Elijah Purcell is the Founder/CEO, sole member and registered agent. He is a psychology and data science student at the University of Alabama, in New College and the Honors College and he does the work himself: client acquisition, scoping, pricing, building, deploying and support."],
   ["Is this the same Purcell Ventures registered in New York?",
    "No. There is an older, unrelated Purcell Ventures LLC registered in New York. This one is the Georgia company, control number 25075361, formed 8 April 2025 by Elijah Purcell. The Georgia filing is public, and the control number tells the two apart."],
   ["What does Purcell Ventures do?",

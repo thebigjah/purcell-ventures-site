@@ -14,7 +14,7 @@ import { CONTACT } from "@/lib/contact";
 export const metadata: Metadata = {
   title: { absolute: "Who is Elijah Purcell, Founder/CEO of Purcell Ventures LLC" },
   description:
-    "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company formed in April 2025, and a psychology and data science student at the University of Alabama Honors College on a pre-med track toward psychiatry.",
+    "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company formed in April 2025, and a psychology and data science student at the University of Alabama, in New College and the Honors College on a pre-med track toward psychiatry.",
   alternates: { canonical: "https://purcellventures.co/who" },
   openGraph: {
     title: "Who Is Elijah Purcell?",
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
 
 const QA: [string, string][] = [
   ["Who is Elijah Purcell?",
-   "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company that builds websites and software for local businesses. He is a psychology and data science student at the University of Alabama Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at 17 and built COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, research and outreach for the company."],
+   "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company that builds websites and software for local businesses. He is a psychology and data science student at the University of Alabama, in New College and the Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at 17 and built COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, research and outreach for the company."],
   ["What does Elijah Purcell do?",
    "He designs and ships software end to end: websites for local businesses, mobile and web applications, and AI agent systems. He also works as an independent contractor with Mercor Intelligence on AI model training projects."],
   ["What is Purcell Ventures LLC?",
    "Purcell Ventures LLC is a Georgia limited liability company founded by Elijah Purcell on 8 April 2025, control number 25075361. It builds websites, software and AI tooling for small businesses, and runs on its founder plus COSMIC, a station of 57 AI agents in 17 rooms. Each agent is a Claude session with a narrow set of tools and a written charter."],
   ["Where does Elijah Purcell study?",
-   "He studies psychology and data science at the University of Alabama Honors College in Tuscaloosa, Alabama, Class of 2030, on a pre-med track toward psychiatry and research into AI in mental health."],
+   "He studies psychology and data science at the University of Alabama, in New College and the Honors College in Tuscaloosa, Alabama, Class of 2030, on a pre-med track toward psychiatry and research into AI in mental health."],
   ["How old is Elijah Purcell?",
    "He was born in August 2007 and turned 19 in August 2026. He founded Purcell Ventures LLC in April 2025, at 17."],
   ["Which Elijah Purcell is this? There seem to be several.",

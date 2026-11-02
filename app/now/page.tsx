@@ -23,7 +23,7 @@ const FOCUS: { label: string; items: ReactNode[] }[] = [
   {
     label: "Studying",
     items: [
-      "My first semester at the University of Alabama Honors College. I moved in on 14 August 2026 and started classes on the 19th.",
+      "My first semester at the University of Alabama, in New College and the Honors College. I moved in on 14 August 2026 and started classes on the 19th.",
       "Psychology and data science, on a pre-med track toward psychiatry.",
       "How AI can take administrative work off mental health clinicians, which is why I chose this degree combination.",
     ],

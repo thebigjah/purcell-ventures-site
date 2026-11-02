@@ -27,7 +27,7 @@ const FAQ_SCHEMA = {
       name: "Who founded Purcell Ventures?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Elijah Purcell founded Purcell Ventures LLC in April 2025 and is its Founder/CEO. He studies psychology and data science in the University of Alabama Honors College and lives in Tuscaloosa, Alabama. The company is registered in Georgia.",
+        text: "Elijah Purcell founded Purcell Ventures LLC in April 2025 and is its Founder/CEO. He studies psychology and data science in New College and the Honors College at the University of Alabama and lives in Tuscaloosa, Alabama. The company is registered in Georgia.",
       },
     },
     {
@@ -183,7 +183,7 @@ export default function Home() {
       <Section title="Elijah Brent Purcell" intro="Founder/CEO">
         <div className="ui-prose">
           <p>
-            I founded Purcell Ventures LLC in Acworth, Georgia, in April 2025, when I was 17. I now study psychology and data science in the University of Alabama Honors College in Tuscaloosa, on a pre-med track toward psychiatry.
+            I founded Purcell Ventures LLC in Acworth, Georgia, in April 2025, when I was 17. I now study psychology and data science in New College and the Honors College at the University of Alabama in Tuscaloosa, on a pre-med track toward psychiatry.
           </p>
           <p>
             I started the company because the small businesses I knew were paying for AI tools that nobody had set up for the way they work. I build the software and answer the phone myself, and I can meet you at your business.

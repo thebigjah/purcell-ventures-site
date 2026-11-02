@@ -23,7 +23,7 @@ export default function AiConsultantTuscaloosa() {
     >
       <p>
         I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data
-        science student in the University of Alabama Honors College. From Tuscaloosa, I build
+        science student in New College and the Honors College at the University of Alabama. From Tuscaloosa, I build
         websites, custom software, AI automation and autonomous AI agent systems for
         businesses here.
       </p>

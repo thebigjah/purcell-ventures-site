@@ -8,7 +8,7 @@ import { ResumeDocument, RESUME_CSS } from "./ResumeDocument";
 export const metadata: Metadata = {
   title: "Elijah Purcell, résumé",
   description:
-    "Résumé of Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data science student at the University of Alabama Honors College: shipped software, AI agent systems, client work, education and awards.",
+    "Résumé of Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data science student at the University of Alabama, in New College and the Honors College: shipped software, AI agent systems, client work, education and awards.",
   alternates: { canonical: "/resume" },
 };
 

@@ -72,7 +72,7 @@ export default function LinksPage() {
       <PageHero
         kicker="Purcell Ventures"
         title="Elijah Brent Purcell"
-        lede="Founder/CEO of Purcell Ventures LLC. I build software and AI agent systems, and I am a University of Alabama Honors College student in Tuscaloosa, Alabama."
+        lede="Founder/CEO of Purcell Ventures LLC. I build software and AI agent systems, and I am a University of Alabama New College and Honors College student in Tuscaloosa, Alabama."
       />
 
       {SECTIONS.map((section) => (

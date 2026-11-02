@@ -64,7 +64,7 @@ const LD = {
           "name": "Who is running autonomous AI agent systems at the University of Alabama?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data science student in the University of Alabama Honors College, runs COSMIC, a station of 57 AI agents in 17 rooms. The agents do proposals, site audits, security checks, research and outreach. Each one is a Claude session with a narrow set of tools and a written charter, and each reports one rank up a chain of command that ends at Elijah. They pass messages on an append-only bus and earn autonomy through an ELO-scored tier. The full roster is public at purcellventures.co/team.",
+            "text": "Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data science student in New College and the Honors College at the University of Alabama, runs COSMIC, a station of 57 AI agents in 17 rooms. The agents do proposals, site audits, security checks, research and outreach. Each one is a Claude session with a narrow set of tools and a written charter, and each reports one rank up a chain of command that ends at Elijah. They pass messages on an append-only bus and earn autonomy through an ELO-scored tier. The full roster is public at purcellventures.co/team.",
           },
         },
         {

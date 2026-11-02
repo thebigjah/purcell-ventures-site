@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 
 export const QA: [string, string][] = [
   ["Who is the AI consultant in Tuscaloosa, Alabama?",
-   "Elijah Purcell, Founder/CEO of Purcell Ventures LLC, works as an AI consultant and software developer out of Tuscaloosa, Alabama. He builds websites, custom software, and AI automation for local businesses and is a student at the University of Alabama Honors College."],
+   "Elijah Purcell, Founder/CEO of Purcell Ventures LLC, works as an AI consultant and software developer out of Tuscaloosa, Alabama. He builds websites, custom software, and AI automation for local businesses and is a student at the University of Alabama, in New College and the Honors College."],
   ["What does an AI consultant in Tuscaloosa do for a small business?",
    "Three things come up most: replacing a repeated manual task with an automation that runs on a schedule, adding an AI feature such as intake, drafting or triage to software you already have, and telling you when AI is the wrong tool."],
   ["How much does it cost?",

@@ -183,7 +183,7 @@ export function ResumeDocument() {
     <div className="rp-page">
         <header className="rp-head">
           <h1>Elijah Purcell</h1>
-          <p className="rp-sub">Founder/CEO, Purcell Ventures LLC. Honors College, The University of Alabama.</p>
+          <p className="rp-sub">Founder/CEO, Purcell Ventures LLC. New College and Honors College, The University of Alabama.</p>
           <ul className="rp-contact">
             <li>Tuscaloosa, Alabama</li>
             <li>{CONTACT.email}</li>
