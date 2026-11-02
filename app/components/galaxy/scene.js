@@ -7,6 +7,7 @@ import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
 import { OutputPass } from "three/examples/jsm/postprocessing/OutputPass.js";
+import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 
 const BG = new THREE.Color("#07060a");
@@ -244,6 +245,25 @@ export function createGalaxy(container, opts = {}) {
 
   /* ---------- post: bloom ---------- */
   const composer = new EffectComposer(renderer); composer.addPass(new RenderPass(scene, camera));
+  /* Lensing: light passing the hole bends toward it. Outside the disk each pixel samples the scene from
+     closer to the hole and turned around it, so stars and gas there stretch into arcs. The hole and the
+     disk are left as drawn. The pull and the turn scale with the hole's size on screen (2 Nov 2026). */
+  const lens = new ShaderPass({
+    uniforms: { tDiffuse: { value: null }, center: { value: new THREE.Vector2(0.5, 0.5) }, rh: { value: 0.05 }, aspect: { value: 1 }, strength: { value: 1 } },
+    vertexShader: "varying vec2 vUv; void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }",
+    fragmentShader: `uniform sampler2D tDiffuse; uniform vec2 center; uniform float rh, aspect, strength; varying vec2 vUv;
+      void main() {
+        vec2 d = vUv - center; d.x *= aspect; float r = max(length(d), 1e-5);
+        float w = strength * smoothstep(2.4 * rh, 4.0 * rh, r);
+        float pull = w * 1.2 * rh * rh / r;
+        float turn = w * 5.0 * rh * rh / (r * r + rh * rh);
+        float s = max(r - pull, 0.0);
+        vec2 dir = d / r; float c = cos(turn), sn = sin(turn); dir = vec2(c * dir.x - sn * dir.y, sn * dir.x + c * dir.y);
+        vec2 q = dir * s; q.x /= aspect;
+        gl_FragColor = texture2D(tDiffuse, center + q);
+      }`,
+  });
+  composer.addPass(lens);
   const bloom = new UnrealBloomPass(new THREE.Vector2(2, 2), phone ? 0.4 : 0.5, 0.5, 0.82); composer.addPass(bloom); composer.addPass(new OutputPass());
 
   /* ---------- interaction ---------- */
@@ -322,6 +342,8 @@ export function createGalaxy(container, opts = {}) {
     if (loaded && !ready.done) { ready.done = true; resolveReady(); }
     starMat.uniforms.t.value = t;
     const o = pick(); if (o !== hovered) { hovered = o; el.style.cursor = o ? "pointer" : "default"; }
+    { tmpV.setFromMatrixPosition(coreMesh.matrixWorld); tmpN.copy(tmpV).addScaledVector(tmpW.setFromMatrixColumn(camera.matrixWorld, 0), 13 * 0.118); tmpV.project(camera); tmpN.project(camera);
+      const u = lens.uniforms; u.center.value.set(tmpV.x * 0.5 + 0.5, tmpV.y * 0.5 + 0.5); u.aspect.value = camera.aspect; u.rh.value = Math.abs(tmpN.x - tmpV.x) * 0.5 * camera.aspect; u.strength.value = tmpV.z < 1 ? coreMat.opacity : 0; }
     composer.render();
     /* the hole again, after bloom, so the disk's glow cannot tint it (2 Nov 2026) */
     if (holeScene) { holeMat.opacity = shadow.material.opacity; renderer.autoClear = false; renderer.render(holeScene, camera); renderer.autoClear = true; }
