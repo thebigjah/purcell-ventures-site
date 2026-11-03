@@ -79,7 +79,7 @@ export default function EmailPolishPage() {
                 <textarea
                   value={draft}
                   onChange={(e) => setDraft(e.target.value)}
-                  placeholder="Paste your rough draft. Include subject line if you have one. Don't sanitize, write how you'd write."
+                  placeholder="Paste your rough draft. Include subject line if you have one. Don't clean it up. Paste it the way you wrote it."
                   style={{ ...fieldStyle, minHeight: "240px", resize: "vertical", fontFamily: "var(--font-inter), sans-serif" }}
                 />
               </div>

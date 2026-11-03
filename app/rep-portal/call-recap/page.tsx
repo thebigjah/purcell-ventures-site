@@ -137,7 +137,7 @@ export default function CallRecapPage() {
               <div>
                 <label style={inputLabel}>Which contact did you just call? (optional but recommended)</label>
                 <select value={contactId} onChange={(e) => setContactId(e.target.value)} style={fieldStyle}>
-                  <option value="">— Not yet (just structure the notes) —</option>
+                  <option value="">Not yet (just structure the notes)</option>
                   {contacts.map((c) => (
                     <option key={c.id} value={c.id}>
                       {[c.firstName, c.lastName].filter(Boolean).join(" ") || "(unnamed)"} {c.company && `· ${c.company}`} · {c.stage}
@@ -150,7 +150,7 @@ export default function CallRecapPage() {
                 <textarea
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
-                  placeholder="Type or paste, abbreviations, fragments, scribbles all fine. AI will structure. Example: 'Sarah called back, ok w/ $179/mo but wants to skip setup fee. Mentioned a competitor — Greenleaf? Said decision by Friday. Sounded enthusiastic.'"
+                  placeholder="Type or paste, abbreviations, fragments, scribbles all fine. AI will structure. Example: 'Sarah called back, ok w/ $179/mo but wants to skip setup fee. Mentioned a competitor, Greenleaf? Said decision by Friday. Sounded enthusiastic.'"
                   style={{ ...fieldStyle, minHeight: "180px", resize: "vertical", fontFamily: "var(--font-inter), sans-serif" }}
                 />
               </div>

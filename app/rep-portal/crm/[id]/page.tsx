@@ -145,7 +145,7 @@ export default function ContactDetailPage({ params }: { params: Promise<{ id: st
           <PortalNav />
           <main style={{ maxWidth: "600px", margin: "0 auto", padding: "80px 24px", textAlign: "center" }}>
             <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", color: "var(--color-warm-text)" }}>Contact not found</h1>
-            <p style={{ color: "var(--color-warm-text-muted)" }}>This contact may have been deleted or was never created on this device.</p>
+            <p style={{ color: "var(--color-warm-text-muted)" }}>You may have deleted this contact, or it doesn&apos;t exist on this device.</p>
             <Link href="/rep-portal/crm" style={{ color: "var(--color-warm-accent)" }}>← Back to CRM</Link>
           </main>
         </div>
@@ -325,7 +325,7 @@ export default function ContactDetailPage({ params }: { params: Promise<{ id: st
     upsertContact({ ...contact, notes: newNotes });
     setNotesDraft(newNotes);
     refresh();
-    alert("Research saved to notes.");
+    alert("Saved the research to notes.");
   }
 
   const fullName = [contact.firstName, contact.lastName].filter(Boolean).join(" ") || "(unnamed)";
@@ -383,7 +383,7 @@ export default function ContactDetailPage({ params }: { params: Promise<{ id: st
               <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
                 {templates.length > 0 && contact.email && (
                   <select onChange={(e) => { if (e.target.value) { useTemplate(e.target.value); e.target.value = ""; } }} defaultValue="" style={{ ...fieldStyle, fontSize: "12px", maxWidth: "180px" }}>
-                    <option value="">📧 Use email template…</option>
+                    <option value="">Use email template…</option>
                     {templates.map((t) => <option key={t.id} value={t.id}>{t.name}</option>)}
                   </select>
                 )}
@@ -420,8 +420,8 @@ export default function ContactDetailPage({ params }: { params: Promise<{ id: st
                 <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "18px", color: "var(--color-warm-text)", margin: "0 0 4px", fontWeight: 600 }}>Where are we with this contact?</h3>
                 <p style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", margin: 0, lineHeight: 1.5 }}>
                   {summaryDate
-                    ? `Last summarized ${new Date(summaryDate).toLocaleDateString()} at ${new Date(summaryDate).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}. Re-run if there&apos;s been activity since.`
-                    : "Returning to this contact after a break? Get a 5-line catch-up summary so you don&apos;t have to scroll the timeline."}
+                    ? `Last summarized ${new Date(summaryDate).toLocaleDateString()} at ${new Date(summaryDate).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}. Re-run if there's been activity since.`
+                    : "Returning to this contact after a break? Get a 5-line catch-up summary so you don't have to scroll the timeline."}
                 </p>
               </div>
               <button onClick={runSummary} disabled={summaryBusy} style={{ ...ghostBtn, opacity: summaryBusy ? 0.6 : 1 }}>
@@ -522,7 +522,7 @@ export default function ContactDetailPage({ params }: { params: Promise<{ id: st
               <div>
                 <h3 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "20px", color: "var(--color-warm-accent)", margin: "0 0 4px", fontWeight: 600 }}>AI Prospect Research</h3>
                 <p style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", margin: 0, lineHeight: 1.5 }}>
-                  Pre-call brief generated from this contact&apos;s data. Does NOT browse the web, reasons from the inputs + industry knowledge + PV&apos;s product catalog.
+                  Builds a pre-call brief from this contact&apos;s data. It does NOT browse the web. It reasons from the inputs + industry knowledge + PV&apos;s product catalog.
                 </p>
               </div>
               <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
@@ -541,7 +541,7 @@ export default function ContactDetailPage({ params }: { params: Promise<{ id: st
 
             {!research && !researchBusy && (
               <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: 0, fontStyle: "italic", textAlign: "center", padding: "20px" }}>
-                Click &quot;Research with AI&quot; for a structured pre-call brief, likely pain points, service fit, opening line, discovery questions, red flags.
+                Click &quot;Research with AI&quot; for a structured pre-call brief: likely pain points, service fit, opening line, discovery questions and red flags.
               </p>
             )}
 

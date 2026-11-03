@@ -491,7 +491,7 @@ const PATTERNS: PatternEntry[] = [
   {
     name: "Broadcast Field",
     subtitle: "Radial ring clusters, derived from the mark",
-    concept: "The mark tiled across a surface. Together the tiles form a distributed field: a network of visible actors.",
+    concept: "The mark tiled across a surface.",
     application: "Business card back, website section backgrounds, document headers, envelope interior",
     primary: <BroadcastField />,
     variants: [
@@ -536,7 +536,7 @@ const PATTERNS: PatternEntry[] = [
   {
     name: "Interference",
     subtitle: "Wave superposition, constructive and destructive overlap",
-    concept: "Two or more point sources radiating outward. Where their waves meet, they either reinforce (constructive) or cancel (destructive). It is a physical model for how distinct forces interact: technology and humanity, power and accountability, faith and reason. Several independent centers, each one visible.",
+    concept: "Two or more point sources radiating outward. Where their waves meet, they either reinforce (constructive) or cancel (destructive). Several independent centers, each one visible.",
     application: "Hero section backgrounds, presentation title slides, large-format prints",
     primary: <Interference />,
     variants: [
@@ -551,7 +551,7 @@ const PATTERNS: PatternEntry[] = [
   {
     name: "Honeycomb",
     subtitle: "Regular hexagonal tessellation, honeycomb conjecture, Hales 1999",
-    concept: "The most efficient partition of the plane, mathematically proved by Thomas Hales in 1999. Bees discovered it without calculus. Each cell is independent and bounded. Each cell shares its walls with its neighbors. This maps to the privacy principle: each person or business has its own domain, held together by shared structure.",
+    concept: "The most efficient partition of the plane. Thomas Hales proved it mathematically in 1999. Bees discovered it without calculus. Each cell is independent and bounded. Each cell shares its walls with its neighbors. This maps to the privacy principle: each person or business has its own cell, and neighboring cells share walls.",
     application: "Business card back, dense surface texture, physical materials (embossing, debossing), merchandise",
     primary: <Honeycomb />,
     variants: [
@@ -611,7 +611,7 @@ const PATTERNS: PatternEntry[] = [
   {
     name: "Chevron Field",
     subtitle: "V-shapes in staggered rows, PV letterform, forward motion",
-    concept: "The V in PV is the typographic backbone of the mark. A chevron is a V. Stacked in rows, chevrons appear on military rank insignia and athletic patches. This pattern tiles the letter itself as texture. Dense at small scale, bold at large scale.",
+    concept: "The V in PV is the main letterform in the mark. A chevron is a V. Stacked in rows, chevrons appear on military rank insignia and athletic patches. This pattern tiles the letter itself as texture. Dense at small scale, bold at large scale.",
     application: "Business card back, garment/merchandise embroidery, athletic/apparel contexts, brand presentations",
     primary: <ChevronField />,
     variants: [

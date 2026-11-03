@@ -76,7 +76,7 @@ const QUESTIONS: Question[] = [
     ],
   },
   {
-    text: "How does your team make decisions when data is involved?",
+    text: "How does your team make decisions that involve data?",
     context: "Customer trends, sales numbers, operational metrics.",
     options: [
       { label: "Gut feel. We rarely pull numbers", points: 0 },
@@ -116,7 +116,7 @@ const QUESTIONS: Question[] = [
     ],
   },
   {
-    text: "Last question: if your job were automated tomorrow, how prepared are you personally?",
+    text: "Last question: if AI automated your job tomorrow, how prepared are you personally?",
     context: "Answer for yourself, not the team.",
     options: [
       { label: "I have not thought about it", points: 0 },

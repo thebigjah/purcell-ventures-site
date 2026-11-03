@@ -70,7 +70,7 @@ export default function PricingReferencePage() {
         <main style={{ maxWidth: "1080px", margin: "0 auto", padding: "60px 36px 96px" }}>
 
           <header className="pv-page-head">
-            <div className="pv-mono-label">Pricing · Source of Truth</div>
+            <div className="pv-mono-label">Pricing · Source of truth</div>
             <h1>
               Pricing <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>reference</em>
             </h1>
@@ -92,7 +92,7 @@ export default function PricingReferencePage() {
               </div>
             </div>
             <p style={{ margin: 0, fontSize: "14px", lineHeight: 1.6, color: "var(--color-warm-text)" }}>
-              <strong>30% off setup, 30% off first 6 months.</strong> Lock period: 6 months at Pilot pricing, then standard pricing after. In return, client gives: written testimonial at month 2, case-study rights (anonymous if requested), one referral intro within 6 months. <strong>3 spots left across all tiers.</strong> Don&apos;t mass-advertise, deploy verbally per the handbook&apos;s pitch script.
+              <strong>30% off setup, 30% off first 6 months.</strong> Lock period: 6 months at Pilot pricing, then standard pricing after. In return, client gives: written testimonial at month 2, case-study rights (anonymous if requested), one referral intro within 6 months. <strong>3 spots left across all tiers.</strong> Don&apos;t mass-advertise. Offer it in conversation, per the handbook&apos;s pitch script.
             </p>
           </div>
 
@@ -184,7 +184,7 @@ export default function PricingReferencePage() {
             </tbody>
           </table>
           <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", padding: "14px 18px", marginBottom: "48px", marginTop: "-32px", fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>
-            <strong style={{ color: "var(--color-warm-text)" }}>Hard rule:</strong> all Custom Software deals require Elijah on the call before any commitment. Senior reps only. You scope the conversation, Elijah scopes the work.
+            <strong style={{ color: "var(--color-warm-text)" }}>Hard rule:</strong> all Custom Software deals require Elijah on the call before any commitment. Senior reps only. You run the conversation and Elijah scopes the work.
           </div>
 
           {/* Courses */}
@@ -244,7 +244,7 @@ export default function PricingReferencePage() {
           {/* Footer note */}
           <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", textAlign: "center", fontStyle: "italic", marginTop: "40px" }}>
             Prices last reconciled across the rep system + live site on 2026-05-24.
-            When anything changes, this page changes first.
+            When a price changes, Elijah updates it here first.
           </p>
 
         </main>

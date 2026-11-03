@@ -167,7 +167,7 @@ export default function CalendarPage() {
             </h1>
             <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: "8px 0 0", lineHeight: 1.6 }}>
               {totalItems > 0
-                ? `${totalItems} item${totalItems !== 1 ? "s" : ""} across the next 30 days. ${overdueCount > 0 ? `${overdueCount} overdue, handle those first.` : "Nothing overdue. Keep moving."}`
+                ? `${totalItems} item${totalItems !== 1 ? "s" : ""} across the next 30 days. ${overdueCount > 0 ? `${overdueCount} overdue, handle those first.` : "Nothing overdue."}`
                 : "Calendar's empty. Open a contact in the CRM and set a next follow-up date or add a task to populate this view."}
             </p>
           </header>
@@ -175,7 +175,7 @@ export default function CalendarPage() {
           {totalItems === 0 ? (
             <div style={{ padding: "60px 40px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", textAlign: "center" }}>
               <p style={{ fontSize: "14px", color: "var(--color-warm-text-muted)", lineHeight: 1.7, maxWidth: "480px", margin: "0 auto" }}>
-                Set <strong style={{ color: "var(--color-warm-accent)" }}>next follow-up dates</strong> on contacts in the CRM, or add <strong style={{ color: "var(--color-warm-accent)" }}>tasks</strong> linked to contacts. This calendar surfaces both in one place so you always know what&apos;s next.
+                Set <span style={{ color: "var(--color-warm-accent)" }}>next follow-up dates</span> on contacts in the CRM, or add <span style={{ color: "var(--color-warm-accent)" }}>tasks</span> linked to contacts. The calendar lists both by date.
               </p>
               <Link href="/rep-portal/crm" className="pv-btn-primary" style={{ marginTop: "20px", display: "inline-block" }}>Go to CRM</Link>
             </div>

@@ -25,7 +25,7 @@ const QUICK_LINKS = [
   {
     href: "/rep-portal/crm",
     title: "CRM",
-    desc: "Contacts, pipeline, activity timeline, tasks, reports. Where every deal lives. Commission gets paid on what's logged here.",
+    desc: "Contacts, pipeline, activity timeline, tasks, reports. Log every deal here. Commission pays out on what you log in the CRM.",
   },
   {
     href: "/rep-portal/ask",
@@ -40,7 +40,7 @@ const QUICK_LINKS = [
   {
     href: "/rep-portal/products",
     title: "Product encyclopedia",
-    desc: "Per-product deep dives: what it is, who buys, common objections, what to say.",
+    desc: "Per-product breakdowns: what it is, who buys, common objections, what to say.",
   },
   {
     href: "/rep-portal/scripts",
@@ -157,7 +157,7 @@ export default function RepPortalDashboard() {
               </em>
             </h1>
             <p className="deck">
-              Everything you need to sell is on this site. Bookmark it. When you have a question mid-pitch, this is where you look first.
+              Pricing, scripts, product notes and the CRM are all in this portal. Bookmark it and check it first when a question comes up mid-pitch.
             </p>
           </header>
 

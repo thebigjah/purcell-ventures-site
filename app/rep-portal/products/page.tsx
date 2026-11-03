@@ -31,7 +31,7 @@ const ENTRIES = [
   },
   {
     slug: "consulting-1on1",
-    name: "AI Consulting — 1-on-1",
+    name: "AI Consulting: 1-on-1",
     division: "AI Consulting",
     price: "$175/hr",
     blurb: "Deep, flexible session. Founder / solo or executive working through specific AI problem.",
@@ -39,7 +39,7 @@ const ENTRIES = [
   },
   {
     slug: "consulting-workshop",
-    name: "AI Consulting — Workshop",
+    name: "AI Consulting: Workshop",
     division: "AI Consulting",
     price: "$2,500 flat (up to 20)",
     blurb: "Half-day team training. Entry deal for 10-50 employee professional services teams.",
@@ -50,7 +50,7 @@ const ENTRIES = [
     name: "Custom Software",
     division: "Custom Software",
     price: "$1,500–$15,000+",
-    blurb: "Apps, automations, scripts. Senior reps only — Elijah scopes.",
+    blurb: "Apps, automations, scripts. Senior reps only. Elijah scopes.",
     status: "stub",
   },
   {
@@ -77,14 +77,14 @@ export default function ProductsIndexPage() {
               Know <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>what you sell.</em>
             </h1>
             <p className="deck">
-              Per-product deep dives. What it is, who buys it, what it does, common objections + scripted responses, what to say, what NOT to say.
+              One page per product: what it is, who buys it, what it does, common objections + scripted responses, what to say and what NOT to say.
             </p>
           </header>
 
           <div style={{ background: "rgba(229, 74, 40, 0.08)", border: "1px solid #e54a28", padding: "16px 20px", marginBottom: "32px", fontSize: "13px", color: "var(--color-warm-text)", lineHeight: 1.6 }}>
             <strong style={{ color: "#e54a28", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "11px", letterSpacing: "0.18em", textTransform: "uppercase" }}>Heads up</strong>
             <p style={{ margin: "8px 0 0" }}>
-              Encyclopedia content is being built. Right now you see stub pages with the basics. For full content (objections, scripts, gotchas) check the <Link href="/rep-portal/scripts" style={{ color: "var(--color-warm-accent)" }}>scripts page</Link> or ping Elijah.
+              The encyclopedia is still in progress. Right now you see stub pages with the basics. For full content (objections, scripts, gotchas) check the <Link href="/rep-portal/scripts" style={{ color: "var(--color-warm-accent)" }}>scripts page</Link> or ping Elijah.
             </p>
           </div>
 

@@ -75,12 +75,12 @@ export default function SettingsPage() {
         <main style={{ maxWidth: "720px", margin: "0 auto", padding: "40px 24px 96px" }}>
 
           <header className="pv-page-head">
-            <div className="pv-mono-label">Rep Portal · Your Settings</div>
+            <div className="pv-mono-label">Rep Portal · Your settings</div>
             <h1>
               Your <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>preferences.</em>
             </h1>
             <p className="deck">
-              Stored locally on this browser. When the CRM moves to a shared backend, these sync across your devices.
+              This browser stores your settings. When the CRM moves to a shared backend, these sync across your devices.
             </p>
           </header>
 
@@ -95,7 +95,7 @@ export default function SettingsPage() {
           {/* New-contact defaults */}
           <section style={section}>
             <h3 style={sectionHead}>New-contact defaults</h3>
-            <p style={hint}>When you add a new contact, these are pre-filled. Override per-contact as needed.</p>
+            <p style={hint}>When you add a new contact, the CRM pre-fills these. Override per-contact as needed.</p>
             <Field label="Default stage">
               <select value={settings.defaultStage} onChange={(e) => update("defaultStage", e.target.value as Stage)} style={fieldStyle}>
                 {STAGES.map((s) => <option key={s} value={s}>{s}</option>)}
@@ -134,7 +134,7 @@ export default function SettingsPage() {
             <h3 style={sectionHead}>Notifications</h3>
             <Toggle
               label="Notify on overdue tasks"
-              hint="Future: when push notifications + email are wired (Phase 2), get pinged when tasks go overdue. Currently just toggles a preference, no actual notifications yet."
+              hint="Future: once Phase 2 adds push notifications + email, you'll get pinged when tasks go overdue. For now this only toggles a preference and sends no notifications."
               checked={settings.notifyOverdue}
               onChange={(v) => update("notifyOverdue", v)}
             />
@@ -147,7 +147,7 @@ export default function SettingsPage() {
               <textarea
                 value={settings.defaultEmailSig}
                 onChange={(e) => update("defaultEmailSig", e.target.value)}
-                placeholder={`e.g.,\n— {{repName}}\nPurcell Ventures Sales Rep\n(205) 462-7839`}
+                placeholder={`e.g.,\n{{repName}}\nPurcell Ventures Sales Rep\n(205) 462-7839`}
                 style={{ ...fieldStyle, minHeight: "100px", resize: "vertical", fontFamily: "var(--font-inter), sans-serif" }}
               />
             </Field>

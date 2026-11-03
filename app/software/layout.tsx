@@ -30,12 +30,12 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://purcellventures.co/software#service",
-  "name": "Custom Software Development",
+  "name": "Custom software development",
   "description":
     "Custom mobile apps, web platforms, automation tools and AI integrations. I scope and build each one around a single business problem, from idea to launch.",
   "provider": { "@id": "https://purcellventures.co/#organization" },
   "url": "https://purcellventures.co/software",
-  "serviceType": "Custom Software Development",
+  "serviceType": "Custom software development",
   "areaServed": "Worldwide",
   "offers": {
     "@type": "AggregateOffer",
@@ -43,8 +43,8 @@ const schema = {
     "lowPrice": "1500",
     "highPrice": "15000",
     "offers": [
-      { "@type": "Offer", "name": "Small Project", "price": "1500", "priceCurrency": "USD", "description": "Scripts, tools, automations, simple web apps" },
-      { "@type": "Offer", "name": "Full Application", "price": "5000", "priceCurrency": "USD", "description": "Mobile apps, web platforms, full AI integrations" },
+      { "@type": "Offer", "name": "Small project", "price": "1500", "priceCurrency": "USD", "description": "Scripts, tools, automations, simple web apps" },
+      { "@type": "Offer", "name": "Full application", "price": "5000", "priceCurrency": "USD", "description": "Mobile apps, web platforms, full AI integrations" },
     ],
   },
 };

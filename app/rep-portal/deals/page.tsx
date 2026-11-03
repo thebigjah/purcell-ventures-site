@@ -104,12 +104,12 @@ export default function DealsPage() {
         <main style={{ maxWidth: "1080px", margin: "0 auto", padding: "60px 36px 96px" }}>
 
           <header className="pv-page-head">
-            <div className="pv-mono-label">Your Deals · CRM v0.1</div>
+            <div className="pv-mono-label">Your deals · CRM v0.1</div>
             <h1>
               Your <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>pipeline.</em>
             </h1>
             <p className="deck">
-              Track every prospect, every conversation, every close. Commission paid on what&apos;s logged here. Screenshot your Closed Won list at month-end to verify with Elijah.
+              Track each prospect from first conversation to close. Elijah pays commission on what you log here. Screenshot your Closed Won list at month-end to verify with Elijah.
             </p>
           </header>
 

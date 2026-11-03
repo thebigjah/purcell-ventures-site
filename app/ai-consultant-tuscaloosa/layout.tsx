@@ -53,7 +53,7 @@ export const QA: [string, string][] = [
   ["What does an AI consultant in Tuscaloosa do for a small business?",
    "Three things come up most: replacing a repeated manual task with an automation that runs on a schedule, adding an AI feature such as intake, drafting or triage to software you already have, and telling you when AI is the wrong tool."],
   ["How much does it cost?",
-   "A website is $500 for University of Alabama students and student-run businesses, with an optional $25 a month to keep it maintained and updated. Custom software and AI automation are quoted per project after a free conversation about what you need."],
+   "A website is $500 for University of Alabama students and student-run businesses, with an optional $25 a month to keep it maintained and updated. I quote custom software and AI automation per project after a free conversation about what you need."],
   ["Are you an agency?",
    "No. Purcell Ventures LLC is one person, me. COSMIC, a station of 57 AI agents in 17 rooms that I built, handles proposals, site audits, security checks, research and outreach. I do the building and I answer the phone myself."],
   ["Do you only work with businesses in Tuscaloosa?",
@@ -66,7 +66,7 @@ const schema = {
     {
       "@type": "ProfessionalService",
       "@id": "https://purcellventures.co/ai-consultant-tuscaloosa#service",
-      "name": "AI Consulting and Software Development in Tuscaloosa, Alabama",
+      "name": "AI consulting and software development in Tuscaloosa, Alabama",
       "url": "https://purcellventures.co/ai-consultant-tuscaloosa",
       "description":
         "AI consulting, custom software development, and web development for businesses in Tuscaloosa, Alabama, delivered by Elijah Purcell of Purcell Ventures LLC.",
@@ -113,7 +113,7 @@ const schema = {
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://purcellventures.co" },
         { "@type": "ListItem", "position": 2, "name": "Consulting", "item": "https://purcellventures.co/consulting" },
-        { "@type": "ListItem", "position": 3, "name": "AI Consultant in Tuscaloosa", "item": "https://purcellventures.co/ai-consultant-tuscaloosa" },
+        { "@type": "ListItem", "position": 3, "name": "AI consultant in Tuscaloosa", "item": "https://purcellventures.co/ai-consultant-tuscaloosa" },
       ],
     },
   ],

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company formed in April 2025, and a psychology and data science student at the University of Alabama, in New College and the Honors College on a pre-med track toward psychiatry.",
   alternates: { canonical: "https://purcellventures.co/who" },
   openGraph: {
-    title: "Who Is Elijah Purcell?",
+    title: "Who is Elijah Purcell?",
     description:
       "Teen founder of Purcell Ventures LLC. Psychology and data science at the University of Alabama, pre-med toward psychiatry. Builds autonomous AI agent systems.",
     url: "https://purcellventures.co/who",
@@ -48,7 +48,7 @@ const QA: [string, string][] = [
   ["What does Elijah Purcell write about?",
    "He writes about building software as a solo operator, about what AI agent systems do and where they fail, and about independent businesses near the University of Alabama in a reporting series called the Tuscaloosa Storefront Project. The blog has 33 posts dated May to October 2026, at purcellventures.co/blog."],
   ["Does Elijah Purcell own Purcell Ventures?",
-   "Yes. Purcell Ventures LLC is registered with the Georgia Secretary of State, control number 25075361, formed 8 April 2025, and the filing is public. He is the sole member."],
+   "Yes. He registered Purcell Ventures LLC with the Georgia Secretary of State on 8 April 2025, control number 25075361, and the filing is public. He is the sole member."],
   ["What is Elijah Purcell studying, and why that combination?",
    "Psychology and data science, on a pre-med track toward psychiatry. He chose the pair because he wants to use AI to cut the paperwork mental health clinicians carry, and that takes both the clinical side and the modelling side."],
   ["What faith does Elijah Purcell hold?",
@@ -76,7 +76,7 @@ export default function WhoLayout({ children }: { children: React.ReactNode }) {
     mainEntity: { "@id": "https://purcellventures.co/#founder" },
     about: { "@id": "https://purcellventures.co/#founder" },
     url: "https://purcellventures.co/who",
-    name: "Who Is Elijah Purcell?",
+    name: "Who is Elijah Purcell?",
   };
   return (
     <>

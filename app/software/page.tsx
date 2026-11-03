@@ -125,7 +125,7 @@ export default function SoftwarePage() {
         <Rows
           items={[
             { name: "Discovery call", line: "30 minutes. You explain the problem. I ask questions and tell you what it takes to build." },
-            { name: "Scoped proposal", line: "I send a written breakdown of what gets built, what it costs and the timeline." },
+            { name: "Scoped proposal", line: "I send a written breakdown of what I will build, what it costs and the timeline." },
             { name: "Build", line: "I send you updates as I build. Claude Code writes first drafts of the code, and I review every change." },
             { name: "Launch and support", line: "I test and deploy, then stay available for fixes and follow-on work after launch." },
           ]}

@@ -36,7 +36,7 @@ function saveLead(lead: Omit<Lead, "id" | "status" | "notes" | "followUp" | "cre
   localStorage.setItem("pv_leads", JSON.stringify(existing));
 }
 
-export default function LeadCaptureForm({ title = "Get a Free Quote", subtitle = "I reply within one business day." }: {
+export default function LeadCaptureForm({ title = "Get a free quote", subtitle = "I reply within one business day." }: {
   title?: string;
   subtitle?: string;
 }) {

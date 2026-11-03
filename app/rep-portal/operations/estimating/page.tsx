@@ -171,11 +171,11 @@ export default function PVEstimatingPage() {
             <h3 style={sectionHead}>Notes + Exclusions</h3>
             <div style={{ marginBottom: "12px" }}>
               <label style={inputLabel}>Notes (will appear on estimate)</label>
-              <textarea value={editing.notes} onChange={(e) => setEditing({ ...editing, notes: e.target.value })} style={{ ...fieldStyle, minHeight: "60px", resize: "vertical", fontFamily: "var(--font-inter), sans-serif" }} placeholder="e.g., 50% deposit due to start; payment terms net 14" />
+              <textarea value={editing.notes} onChange={(e) => setEditing({ ...editing, notes: e.target.value })} style={{ ...fieldStyle, minHeight: "60px", resize: "vertical", fontFamily: "var(--font-inter), sans-serif" }} placeholder="e.g., 50% deposit due to start, payment terms net 14" />
             </div>
             <div style={{ marginBottom: "16px" }}>
               <label style={inputLabel}>Exclusions (NOT included, protects against scope creep)</label>
-              <textarea value={editing.exclusions} onChange={(e) => setEditing({ ...editing, exclusions: e.target.value })} style={{ ...fieldStyle, minHeight: "60px", resize: "vertical", fontFamily: "var(--font-inter), sans-serif" }} placeholder="e.g., Third-party software costs not included; custom integrations billed separately" />
+              <textarea value={editing.exclusions} onChange={(e) => setEditing({ ...editing, exclusions: e.target.value })} style={{ ...fieldStyle, minHeight: "60px", resize: "vertical", fontFamily: "var(--font-inter), sans-serif" }} placeholder="e.g., Third-party software costs not included. Custom integrations billed separately" />
             </div>
 
             <Select label="Status" value={editing.status} options={["Draft", "Sent", "Approved", "Rejected", "Expired"]} onChange={(v) => setEditing({ ...editing, status: v as Estimate["status"] })} />

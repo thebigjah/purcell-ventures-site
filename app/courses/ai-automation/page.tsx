@@ -107,7 +107,7 @@ const TIERS = [
   {
     name: "Self-paced",
     price: "$397, or 3 payments of $139",
-    items: ["All 25 lessons as they are released", "7 starter code templates", "The full resource pack", "Access for life"],
+    items: ["All 25 lessons as I release them", "7 starter code templates", "The full resource pack", "Access for life"],
     children: <p style={{ marginTop: 18 }}><Button href="#waitlist" ghost>Join the waitlist</Button></p>,
   },
   {
@@ -201,7 +201,7 @@ export default function ZeroToAutomatedPage() {
         />
       </Section>
 
-      <Section id="curriculum" title={`Eight modules, ${TOTAL_LESSONS} lessons`} intro="All the code is included.">
+      <Section id="curriculum" title={`Eight modules, ${TOTAL_LESSONS} lessons`} intro="The course includes all the code.">
         <Faq
           items={MODULES.map((m, i) => ({
             q: `Module ${i + 1}: ${m.title}, ${m.lessons.length} lessons, ${m.totalMin} min`,

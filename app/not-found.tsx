@@ -8,7 +8,7 @@ export default function NotFound() {
       <PageHero
         kicker="404"
         title="This page does not exist"
-        lede="The address may be mistyped, or the page has moved. The links below cover the rest of the site."
+        lede="You may have mistyped the address, or the page has moved. The links below cover the rest of the site."
         actions={<>
           <Button href="/">Home</Button>
           <Button href="/links" ghost>All links</Button>

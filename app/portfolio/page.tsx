@@ -107,7 +107,7 @@ export default function PortfolioPage() {
             <p className="pf-hero__lede">
               What fills me with purpose is serving others. I feel called to help people through counseling, and I am working toward psychiatry,
               with research into how AI can make mental health care easier to reach. I want to work for myself, so I started Purcell Ventures,
-              which builds software and AI systems for clients.
+              where we build software and AI systems for clients.
             </p>
             <div className="pf-hero__links">
               <Link className="ui-btn" href="/resume">Résumé</Link>
@@ -187,7 +187,7 @@ export default function PortfolioPage() {
               <h3>Purcell Ventures LLC</h3>
               <p className="pf-when">Founded April 2025</p>
               <p>
-                My company. It builds websites, apps and AI systems for clients, and Rufus is its first App Store release. I find the work, price it,
+                My company. We build websites, apps and AI systems for clients, and Rufus is our first App Store release. We find the work, price it,
                 build it and support it.
               </p>
               <Link href="/" className="pf-link">purcellventures.co</Link>

@@ -34,12 +34,12 @@ const schema = {
     {
       "@type": "Service",
       "@id": "https://purcellventures.co/digital#service",
-      "name": "Digital Services for Small Businesses",
+      "name": "Digital services for small businesses",
       "description":
         "26 add-ons for small businesses, including a website, an AI chatbot, booking, a CRM, email marketing and social scheduling. I build and maintain them for one monthly subscription.",
       "provider": { "@id": "https://purcellventures.co/#organization" },
       "url": "https://purcellventures.co/digital",
-      "serviceType": "Digital Business Services",
+      "serviceType": "Digital business services",
       "areaServed": "Worldwide",
       "offers": {
         "@type": "AggregateOffer",
@@ -48,9 +48,9 @@ const schema = {
         "highPrice": "279",
         "offerCount": 3,
         "offers": [
-          { "@type": "Offer", "name": "Starter Plan", "price": "99", "priceCurrency": "USD" },
-          { "@type": "Offer", "name": "Growth Plan", "price": "179", "priceCurrency": "USD" },
-          { "@type": "Offer", "name": "Full Service Plan", "price": "279", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Starter plan", "price": "99", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Growth plan", "price": "179", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Full Service plan", "price": "279", "priceCurrency": "USD" },
         ],
       },
     },

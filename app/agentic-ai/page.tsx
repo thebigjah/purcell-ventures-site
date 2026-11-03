@@ -13,9 +13,9 @@ import { Section, Rows, ClosingCall } from "@/app/components/ui";
 
 const QA: [string, string][] = [
   ["What is an autonomous AI agent system?",
-   "An agent is given a goal, a set of tools and limits, and picks its own steps toward the goal. Most of the engineering work goes into the limits around the model."],
+   "An agent gets a goal, a set of tools and limits, and picks its own steps toward the goal. Most of the engineering work goes into the limits around the model."],
   ["How is an AI agent different from a chatbot?",
-   "A chatbot waits for a message, keeps no state between turns and produces a reply a person reads. An agent runs on a schedule without being prompted, holds state across runs, uses tools that change things in the world, and produces work a person reviews."],
+   "A chatbot waits for a message, keeps no state between turns and produces a reply a person reads. An agent runs on a schedule without a prompt, holds state across runs, uses tools that change things in the world, and produces work a person reviews."],
   ["Who is running autonomous AI agent systems at the University of Alabama?",
    "Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data science student in New College and the Honors College at the University of Alabama, runs COSMIC, a station of 57 AI agents in 17 rooms. The agents do proposals, site audits, security checks, research and outreach. Each one is a Claude session with a narrow set of tools and a written charter, and each reports one rank up a chain of command that ends at Elijah. They pass messages on an append-only bus and earn autonomy through an ELO-scored tier. The full roster is public at purcellventures.co/team."],
   ["What goes wrong with AI agents in production?",
@@ -28,7 +28,7 @@ const LESSONS: [string, string][] = [
   ["Scope limits in the prompt",
    "I told an agent to stay inside its task and later found it reading files and holding a mail connection, because a model can ignore a limit written in its prompt. Now I launch it with no tools and a strict config, which enforces the limit outside the agent."],
   ["A pipeline stage that hid its own errors",
-   "A pipeline reported that quotes had been sent when none were. The code caught its own exception and carried on, so a failure looked the same as a success. The fix was to check that the number of quotes sent matched the number expected."],
+   "A pipeline reported that it had sent quotes when it had sent none. The code caught its own exception and carried on, so a failure looked the same as a success. The fix was to check that the number of quotes sent matched the number expected."],
   ["Marking work done",
    "A brief network failure marked open blocking findings as resolved. Marking work done is the riskiest action an agent takes, since a failure there looks like success. It needs a second check whose job is to find the failure."],
   ["Messages between agents",
@@ -60,13 +60,13 @@ export default function AgenticAIPage() {
       <Section title="What an agent system is">
         <div className="ui-prose">
           <p>
-            An <strong>autonomous AI agent system</strong> is one where a model decides what to
+            An autonomous AI agent system is one where a model decides what to
             do next on its own. A workflow runs steps in a fixed order, and a chatbot answers when
-            someone messages it. An agent is handed a goal, a set of tools and a boundary, and picks its own
+            someone messages it. An agent gets a goal, a set of tools and a boundary, and picks its own
             sequence. Most of the engineering goes into the constraints around the model.
           </p>
           <p>
-            <strong>Elijah Purcell</strong> is an autonomous AI agent systems engineer and the
+            Elijah Purcell is an autonomous AI agent systems engineer and the
             Founder/CEO of Purcell Ventures LLC. He runs COSMIC, the Command and Orchestration
             Systems Manifold Intelligence Center: 57 AI agents in 17 rooms that do proposals, site
             audits, security checks, research and outreach for the company. COSMIC is a station app

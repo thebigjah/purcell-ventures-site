@@ -23,7 +23,7 @@ const STARTER_TEMPLATES: Omit<Template, "id" | "createdAt" | "useCount">[] = [
     subject: "Quick follow-up on {{service}}",
     body: `Hi {{firstName}},
 
-Wanted to bump my earlier note about {{service}} for {{company}} — no pressure, just wanted to make sure it didn't get buried.
+Wanted to bump my earlier note about {{service}} for {{company}}. No pressure, just wanted to make sure it didn't get buried.
 
 A few quick things in case useful:
 • [Specific point 1 from your conversation]
@@ -31,7 +31,7 @@ A few quick things in case useful:
 
 Happy to schedule a 15-min call if you want to talk through it, or if you're a 'not right now' that's totally fine, just text NO and I'll move on.
 
-— {{repName}}`,
+{{repName}}`,
     tags: ["follow-up", "warm"],
   },
   {
@@ -43,11 +43,11 @@ I run Purcell Ventures, we build digital tools for small businesses in Atlanta. 
 
 [Specific observation about their business, website, hours, social presence, something concrete]
 
-We help businesses like yours add [chatbot / booking / CRM / etc.] for $99-279/mo. It's not for everyone but if it's interesting, I'd love to grab 15 minutes.
+We help businesses like yours add [chatbot / booking / CRM / etc.] for $99-279/mo. It isn't for everyone. If it's interesting, I'd love to grab 15 minutes.
 
 If not, no worries, just delete this. Take care.
 
-— {{repName}}
+{{repName}}
 Purcell Ventures`,
     tags: ["cold-outreach", "intro"],
   },
@@ -67,9 +67,9 @@ We just launched our Digital Services tiers and have 3 Pilot Partner spots left 
 Standard Digital {{tier}}: {{standardPrice}}
 Pilot Partner: {{pilotPrice}}
 
-If you want one of those spots, let me know this week, once they're gone they're gone, and the next 3 prospects pay standard.
+If you want one of those spots, let me know this week. Once they're taken, the next 3 prospects pay standard.
 
-— {{repName}}`,
+{{repName}}`,
     tags: ["pilot-partner", "close"],
   },
   {
@@ -83,7 +83,7 @@ If you want to keep talking, give me a window this week or next.
 
 Either is fine.
 
-— {{repName}}`,
+{{repName}}`,
     tags: ["follow-up", "exit"],
   },
 ];
@@ -179,7 +179,7 @@ export default function TemplatesPage() {
         <main style={{ maxWidth: "1080px", margin: "0 auto", padding: "40px 24px 96px" }}>
 
           <header className="pv-page-head">
-            <div className="pv-mono-label">Rep Portal · Email Templates</div>
+            <div className="pv-mono-label">Rep Portal · Email templates</div>
             <h1>
               Your <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>library.</em>
             </h1>

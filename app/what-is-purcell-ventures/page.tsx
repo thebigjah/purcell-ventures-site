@@ -33,7 +33,7 @@ export default function CompanyPage() {
       <PageHero
         kicker="The company"
         title="What is Purcell Ventures?"
-        lede={<><strong>Purcell Ventures LLC</strong> is a Georgia software company that builds websites, custom software and AI tools for small businesses. <Link className="ui-link" href="/who">Elijah Purcell</Link> founded it on 8 April 2025, and it is registered with the Georgia Secretary of State. It is a one-person company, and Elijah does the client calls and the building himself.</>}
+        lede={<>Purcell Ventures LLC is a Georgia software company that builds websites, custom software and AI tools for small businesses. <Link className="ui-link" href="/who">Elijah Purcell</Link> founded it on 8 April 2025 and registered it with the Georgia Secretary of State. It is a one-person company, and Elijah does the client calls and the building himself.</>}
         meta="Last reviewed 20 August 2026"
         crumbs={<Breadcrumbs trail={[
           { name: "Home", href: "/" },
@@ -48,7 +48,7 @@ export default function CompanyPage() {
       <Section title="Which Purcell Ventures this is">
         <Prose>
           <p>
-            An older, unrelated <strong>Purcell Ventures LLC is registered in New York</strong>. This one is the Georgia filing, control number {CONTACT.llcControlNumber}, formed 8 April 2025 by Elijah Purcell, and the record is public and searchable.
+            An older, unrelated Purcell Ventures LLC holds a New York registration. This one is the Georgia filing, control number {CONTACT.llcControlNumber}, formed 8 April 2025 by Elijah Purcell, and the record is public and searchable.
           </p>
         </Prose>
       </Section>

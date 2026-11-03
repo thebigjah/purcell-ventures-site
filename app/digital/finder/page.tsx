@@ -90,7 +90,7 @@ export default function FinderPage() {
     setLoading(true);
     navigator.geolocation.getCurrentPosition(
       (pos) => fetchNearby(pos.coords.latitude, pos.coords.longitude),
-      () => { setError("Location access was denied."); setLoading(false); },
+      () => { setError("The browser blocked location access."); setLoading(false); },
     );
   }
 

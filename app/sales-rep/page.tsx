@@ -28,7 +28,7 @@ const SERVICES: { division: string; blurb: string; tiers: [string, string][] }[]
     division: "AI Consulting",
     blurb: "AI training for business teams, held at their office.",
     tiers: [
-      ["1-on-1", "$175 an hour. A 2-hour minimum is recommended."],
+      ["1-on-1", "$175 an hour. Elijah recommends a 2-hour minimum."],
       ["Small group", "$125 a person. 2 to 8 people, 2-hour minimum."],
       ["Workshop", "$2,500 flat. Up to 20 people, half a day."],
       ["Corporate", "Custom quote. Larger teams, several sessions."],
@@ -45,7 +45,7 @@ const SERVICES: { division: string; blurb: string; tiers: [string, string][] }[]
   },
   {
     division: "Courses",
-    blurb: "Pre-recorded video courses. They cost less than the services and take less time to close. None is finished yet, and the waitlist is open.",
+    blurb: "Pre-recorded video courses. They cost less than the services and take less time to close. Elijah has not finished any yet, and the waitlist is open.",
     tiers: [
       ["College Apps", "$297. 17 lessons."],
       ["Business Launch", "$397. 26 lessons."],
@@ -57,7 +57,7 @@ const SERVICES: { division: string; blurb: string; tiers: [string, string][] }[]
 const ETHICS = [
   { name: "Tell them when they do not need it", line: "If a prospect does not need the product, the rep says so. Nobody lies to close a sale." },
   { name: "No fake urgency", line: "No invented deadlines, no selling on fear, and no claims of limited spots that do not exist." },
-  { name: "Sell only what can be delivered", line: "If Purcell Ventures cannot build it, or cannot build it on time, you do not promise it." },
+  { name: "Sell only what Purcell Ventures can deliver", line: "If Purcell Ventures cannot build it, or cannot build it on time, you do not promise it." },
 ];
 
 const AUTO_REJECTS = [
@@ -65,7 +65,7 @@ const AUTO_REJECTS = [
   "Picking the answer that closes the sale when the prospect does not need it (B5)",
   "Scoring below 6 of 10 on the ethics section, whatever the total",
   "A free response under 50 words",
-  "A free response that is plagiarized or plainly written by AI",
+  "A free response you plagiarized or plainly had AI write",
 ];
 
 const PROCESS = [

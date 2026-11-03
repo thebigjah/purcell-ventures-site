@@ -39,7 +39,7 @@ export default function AiAtAlabama() {
       <h2>What the AI degree requires</h2>
 
       <p>
-        The <strong>Bachelor of Science in Artificial Intelligence</strong> runs through the College of Engineering, in the Department of Computer Science. It is 121 credit hours, with 52 in the major and 47 in ancillary mathematics, statistics and science.
+        The Bachelor of Science in Artificial Intelligence runs through the College of Engineering, in the Department of Computer Science. It is 121 credit hours, with 52 in the major and 47 in ancillary mathematics, statistics and science.
       </p>
 
       <p>The AI core, by course code:</p>
@@ -63,7 +63,7 @@ export default function AiAtAlabama() {
       </p>
 
       <p>
-        One rule limits your plan: <strong>an AI major cannot also major in Computer Science.</strong> The catalog states this directly, since the two degrees overlap too heavily to count twice.
+        One rule limits your plan: an AI major cannot also major in Computer Science. The catalog states this directly, since the two degrees overlap too heavily to count twice.
       </p>
 
       <h2>Students outside engineering</h2>
@@ -123,7 +123,7 @@ export default function AiAtAlabama() {
       <PostByline post={{
         slug: "/ai-at-alabama",
         title: "Studying AI at the University of Alabama",
-        description: "The new AI BS, its exact requirements, why the CS double major is blocked, and the routes for students who are not in engineering.",
+        description: "The new AI BS, its exact requirements, why AI majors cannot double major in CS, and the routes for students who are not in engineering.",
         published: "2026-08-20",
       }} />
     </PostLayout>

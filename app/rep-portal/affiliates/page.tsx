@@ -86,12 +86,12 @@ export default function AffiliatesPage() {
         <main style={{ maxWidth: "1080px", margin: "0 auto", padding: "40px 24px 96px" }}>
 
           <header className="pv-page-head">
-            <div className="pv-mono-label">Admin · Affiliate Links</div>
+            <div className="pv-mono-label">Admin · Affiliate links</div>
             <h1>
               Share links + <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>track clicks.</em>
             </h1>
             <p className="deck">
-              Build a share-able URL per rep + product. Stripe records the <code>client_reference_id</code> on each purchase so you can attribute commissions. Click counts are per-browser until Firestore lands.
+              Build a share-able URL per rep + product. Stripe records the <code>client_reference_id</code> on each purchase so you can attribute commissions. Click counts stay per-browser until the move to Firestore.
             </p>
           </header>
 
@@ -117,7 +117,7 @@ export default function AffiliatesPage() {
               <button onClick={copyURL} className="pv-btn-primary" style={{ border: "none", cursor: "pointer" }}>{copied ? "✓ Copied" : "Copy"}</button>
             </div>
             <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "12px", fontStyle: "italic", lineHeight: 1.6 }}>
-              The rep shares this URL. When someone visits + buys, Stripe records the <code>client_reference_id</code> as their name. You see attribution in the Stripe dashboard. Commission paid manually based on tier (per <Link href="/rep-portal/pricing" style={{ color: "var(--color-warm-accent)" }}>Pricing reference</Link>).
+              The rep shares this URL. When someone visits + buys, Stripe records the <code>client_reference_id</code> as their name. You see attribution in the Stripe dashboard. Elijah pays commission manually based on tier (per <Link href="/rep-portal/pricing" style={{ color: "var(--color-warm-accent)" }}>Pricing reference</Link>).
             </p>
           </section>
 

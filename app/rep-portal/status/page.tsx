@@ -85,7 +85,7 @@ export default function StatusPage() {
         <main style={{ maxWidth: "1080px", margin: "0 auto", padding: "40px 24px 96px" }}>
 
           <header className="pv-page-head">
-            <div className="pv-mono-label">Admin · System Status</div>
+            <div className="pv-mono-label">Admin · System status</div>
             <h1>
               System <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>health.</em>
             </h1>
@@ -125,7 +125,7 @@ export default function StatusPage() {
             <p style={hint}>Stripe Payment Link env vars enable the buy buttons. Without them, buttons fall back to a placeholder.</p>
             <div style={{ display: "grid", gap: "10px" }}>
               <CheckRow
-                label="PV AI Starter Kit ($19) — Stripe"
+                label="Stripe: PV AI Starter Kit ($19)"
                 ok={stripeStatus.starterKit}
                 warning={!stripeStatus.starterKit}
                 fixHref="https://vercel.com/dashboard"
@@ -137,7 +137,7 @@ export default function StatusPage() {
                 onManualCheckChange={(v) => setStripeStatus((s) => ({ ...s, starterKit: v }))}
               />
               <CheckRow
-                label="Cold Email Mastery Pack ($29) — Stripe"
+                label="Stripe: Cold Email Mastery Pack ($29)"
                 ok={stripeStatus.coldEmailPack}
                 warning={!stripeStatus.coldEmailPack}
                 fixHref="https://vercel.com/dashboard"

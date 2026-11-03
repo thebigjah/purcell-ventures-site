@@ -64,7 +64,7 @@ export default function AboutPage() {
             I started Purcell Ventures in April 2025, when I was 17. Most of my clients are local service businesses, like contractors, salons and clinics, with nobody on staff to run their website or set up AI tools. Large companies have had that help for years. I build it for the small ones, and I keep supporting it after launch.
           </p>
           <p>
-            Today the company has five active divisions and software running in production. I write the code, answer the phone and sign the contracts myself, and the company carries my last name, so the work I ship is work I answer for.
+            Today the company has five active divisions and software running in production. I write the code, answer the phone and sign the contracts myself, and the company carries my last name, so I answer for the work I ship.
           </p>
           <p>
             <Link className="ui-link" href="/who">Who is Elijah Purcell</Link>

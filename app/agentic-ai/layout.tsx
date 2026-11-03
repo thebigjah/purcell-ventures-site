@@ -48,7 +48,7 @@ const LD = {
           "name": "What is an autonomous AI agent system?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "An agent is given a goal, a set of tools and limits, and picks its own steps toward the goal. Most of the engineering work goes into the limits around the model.",
+            "text": "An agent gets a goal, a set of tools and limits, and picks its own steps toward the goal. Most of the engineering work goes into the limits around the model.",
           },
         },
         {
@@ -56,7 +56,7 @@ const LD = {
           "name": "How is an AI agent different from a chatbot?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A chatbot waits for a message, keeps no state between turns and produces a reply a person reads. An agent runs on a schedule without being prompted, holds state across runs, uses tools that change things in the world, and produces work a person reviews.",
+            "text": "A chatbot waits for a message, keeps no state between turns and produces a reply a person reads. An agent runs on a schedule without a prompt, holds state across runs, uses tools that change things in the world, and produces work a person reviews.",
           },
         },
         {

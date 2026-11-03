@@ -234,21 +234,21 @@ export default function CRMPage() {
    */
   function handleSeedSample() {
     if (contacts.length > 0) {
-      if (!confirm("You already have contacts. Add sample data on top? (Sample contacts will be tagged 'sample' so you can bulk-delete them later.)")) return;
+      if (!confirm("You already have contacts. Add sample data on top? (The sample contacts get the tag 'sample' so you can bulk-delete them later.)")) return;
     }
     const now = Date.now();
     const day = 24 * 60 * 60 * 1000;
     const samples: Array<Partial<Contact> & { firstName: string; stage: Stage }> = [
       { firstName: "Sarah", lastName: "Chen", company: "Cherry Blossom Salon", email: "sarah@cherryblossomsalon.com", phone: "(770) 555-0142", stage: "Lead", estimatedValue: 99, service: "Digital Starter", source: "Web form", tags: ["sample", "salon"], notes: "Filled out the contact form at 2 AM, slept on it. Probably needs a 'how's your week going?' opener.", nextFollowUp: new Date(now + 2 * day).toISOString().slice(0, 10) },
-      { firstName: "Mike", lastName: "Patterson", company: "Patterson Plumbing", email: "mike@pattersonplumb.com", phone: "(770) 555-0118", stage: "Contacted", estimatedValue: 179, service: "Digital Growth", source: "Referral — Bob's Plumbing", tags: ["sample", "trades"], notes: "Bob said Mike's been losing leads. Called Tuesday, left voicemail. He texted back asking 'what's this about'.", nextFollowUp: new Date(now + 1 * day).toISOString().slice(0, 10) },
+      { firstName: "Mike", lastName: "Patterson", company: "Patterson Plumbing", email: "mike@pattersonplumb.com", phone: "(770) 555-0118", stage: "Contacted", estimatedValue: 179, service: "Digital Growth", source: "Referral from Bob's Plumbing", tags: ["sample", "trades"], notes: "Bob said Mike's been losing leads. Called Tuesday, left voicemail. He texted back asking 'what's this about'.", nextFollowUp: new Date(now + 1 * day).toISOString().slice(0, 10) },
       { firstName: "Linda", lastName: "Garcia", company: "Linda's Tax & Accounting", email: "linda@lindastax.com", phone: "(404) 555-0273", stage: "Qualified", estimatedValue: 2500, service: "AI Consulting Workshop", source: "LinkedIn outreach", tags: ["sample", "accounting", "hot"], notes: "Has 12-person team. Tax season just ended. Said 'we know we need AI but nobody on the team knows where to start.' Workshop $2,500 perfectly priced for them.", nextFollowUp: new Date(now + 3 * day).toISOString().slice(0, 10) },
       { firstName: "James", lastName: "Walker", company: "Walker Real Estate Group", email: "james@walkergroup.com", phone: "(770) 555-0411", stage: "Quoted", estimatedValue: 279, service: "Digital Full", source: "Cold outreach", tags: ["sample", "real-estate"], notes: "Toured their office Thursday. 8 agents, no consistent CRM, scattered tools. Quoted Full tier $279/mo + $1,000 setup. Asked for 'a couple days to think.'", nextFollowUp: new Date(now + 5 * day).toISOString().slice(0, 10) },
-      { firstName: "Aisha", lastName: "Williams", company: "Bright Smile Pediatric Dental", email: "aisha@brightsmilepediatric.com", phone: "(770) 555-0856", stage: "Negotiation", estimatedValue: 179, service: "Digital Growth (Pilot Partner)", source: "Web form", tags: ["sample", "dental", "pilot"], notes: "Wants Pilot Partner pricing. Has 6 staff, current website 'from 2018, never updated.' Offered $490 setup + $125/mo locked 6mo. She asked if I could do $80/mo. Said no — Pilot is firm. Awaiting response.", nextFollowUp: new Date(now + 1 * day).toISOString().slice(0, 10) },
+      { firstName: "Aisha", lastName: "Williams", company: "Bright Smile Pediatric Dental", email: "aisha@brightsmilepediatric.com", phone: "(770) 555-0856", stage: "Negotiation", estimatedValue: 179, service: "Digital Growth (Pilot Partner)", source: "Web form", tags: ["sample", "dental", "pilot"], notes: "Wants Pilot Partner pricing. Has 6 staff, current website 'from 2018, never updated.' Offered $490 setup + $125/mo locked 6mo. She asked if I could do $80/mo. Said no. Pilot is firm. Awaiting response.", nextFollowUp: new Date(now + 1 * day).toISOString().slice(0, 10) },
       { firstName: "Tom", lastName: "Brewer", company: "Brewer's Auto Detailing", email: "tom@brewersdetail.com", phone: "(770) 555-0289", stage: "Closed Won", estimatedValue: 99, service: "Digital Starter", source: "Word of mouth", tags: ["sample", "auto"], notes: "First close! Standard Starter. Setup starts this week. Promised website live in 5 business days.", closedAt: new Date(now - 4 * day).toISOString() },
       { firstName: "Rachel", lastName: "Foster", company: "Foster Family Law", email: "rachel@fosterlaw.com", phone: "(404) 555-0521", stage: "Closed Lost", estimatedValue: 279, service: "Digital Full", source: "Cold outreach", tags: ["sample", "law"], notes: "Pitched Full tier. They went with a competitor agency at $800/mo. Said 'we needed more white-glove handholding than your model provides.' Fair feedback, file for 90-day re-pitch.", closedAt: new Date(now - 12 * day).toISOString() },
       { firstName: "Marcus", lastName: "Hall", company: "Hall's Custom Carpentry", email: "marcus@hallscustom.com", phone: "(770) 555-0734", stage: "Contacted", estimatedValue: 0, service: "Mantle Field Services", source: "Yard sign", tags: ["sample", "trades", "mantle-only"], notes: "Saw the Mantle yard sign at a neighbor's. Wants gutter cleaning. Mantle-only, defer to David + Dad.", nextFollowUp: new Date(now - 1 * day).toISOString().slice(0, 10) }, // overdue
       { firstName: "Priya", lastName: "Sharma", company: "Sharma Wellness Studio", email: "priya@sharmawellness.com", phone: "(770) 555-0967", stage: "Lead", estimatedValue: 297, service: "College Apps course", source: "Course inquiry, for daughter", tags: ["sample", "course"], notes: "Inquired about College Apps course for her daughter. Probably easier close than the business products. $297, one-time.", nextFollowUp: new Date(now + 4 * day).toISOString().slice(0, 10) },
-      { firstName: "Greg", lastName: "Olsen", company: "Olsen Construction Co.", email: "greg@olsenconst.com", phone: "(770) 555-0322", stage: "Quoted", estimatedValue: 7500, service: "Custom Software, project mgmt tool", source: "Referral", tags: ["sample", "construction", "custom-software", "escalate-elijah"], notes: "Wants custom project management tool. Discovery call w/ Elijah was Wed. Quoted $7,500. Awaiting decision. SENIOR REP — Elijah needs to close.", nextFollowUp: new Date(now + 6 * day).toISOString().slice(0, 10) },
+      { firstName: "Greg", lastName: "Olsen", company: "Olsen Construction Co.", email: "greg@olsenconst.com", phone: "(770) 555-0322", stage: "Quoted", estimatedValue: 7500, service: "Custom Software, project mgmt tool", source: "Referral", tags: ["sample", "construction", "custom-software", "escalate-elijah"], notes: "Wants custom project management tool. Discovery call w/ Elijah was Wed. Quoted $7,500. Awaiting decision. SENIOR REP: Elijah needs to close.", nextFollowUp: new Date(now + 6 * day).toISOString().slice(0, 10) },
     ];
 
     const newContacts: Contact[] = samples.map((s) => {
@@ -470,8 +470,8 @@ export default function CRMPage() {
         lastName: rest.join(" "),
         email: s.email,
         phone: s.phone,
-        service: `Steady — ${s.helpFor || ""}`,
-        source: "Legacy /crm — Steady intake",
+        service: `Steady: ${s.helpFor || ""}`,
+        source: "Legacy /crm: Steady intake",
         notes: `Help for: ${s.helpFor}\nUrgency: ${s.urgency}\nContact pref: ${s.contactPreference}\nLocation: ${s.location}\n\nSituation:\n${s.situation || ""}`,
         tags: ["legacy", "steady"],
         createdAt: s.submittedAt,
@@ -659,7 +659,7 @@ function ListView({ contacts, onEdit, onDelete, onStageChange, refresh }: { cont
     const all = loadContacts();
 
     if (bulkAction === "delete") {
-      if (!confirm(`Delete ${ids.length} contact(s)? Their tasks will also be deleted.`)) return;
+      if (!confirm(`Delete ${ids.length} contact(s)? This also deletes their tasks.`)) return;
       ids.forEach((id) => deleteContact(id));
     } else if (bulkAction === "stage" && bulkValue) {
       ids.forEach((id) => {
@@ -718,7 +718,7 @@ function ListView({ contacts, onEdit, onDelete, onStageChange, refresh }: { cont
       const secondaries = merging.slice(1);
 
       const primaryDisplay = `${[primary.firstName, primary.lastName].filter(Boolean).join(" ") || "(unnamed)"} (${primary.company || "no company"})`;
-      if (!confirm(`Merge ${secondaries.length} contact(s) INTO "${primaryDisplay}"?\n\nThis combines all activities, tasks, notes, and tags. Estimated value uses the highest. Stage uses the most-advanced. The other contacts are deleted afterward.\n\nThis cannot be undone.`)) {
+      if (!confirm(`Merge ${secondaries.length} contact(s) INTO "${primaryDisplay}"?\n\nThis combines all activities, tasks, notes, and tags. Estimated value uses the highest. Stage uses the most-advanced. Afterward, it deletes the other contacts.\n\nThis cannot be undone.`)) {
         return;
       }
 
@@ -794,7 +794,7 @@ function ListView({ contacts, onEdit, onDelete, onStageChange, refresh }: { cont
         <div style={{ display: "flex", gap: "8px", alignItems: "center", padding: "12px 16px", background: "var(--color-warm-accent)", color: "var(--color-warm-bg)", marginBottom: "12px", flexWrap: "wrap" }}>
           <strong style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "13px" }}>{selected.size} selected</strong>
           <select value={bulkAction} onChange={(e) => { setBulkAction(e.target.value); setBulkValue(""); }} style={{ ...fieldStyle, padding: "6px 10px", fontSize: "12px", maxWidth: "180px" }}>
-            <option value="">— Bulk action —</option>
+            <option value="">Bulk action…</option>
             <option value="stage">Move to stage</option>
             <option value="addTag">Add tag</option>
             <option value="removeTag">Remove tag</option>
@@ -804,7 +804,7 @@ function ListView({ contacts, onEdit, onDelete, onStageChange, refresh }: { cont
           </select>
           {bulkAction === "stage" && (
             <select value={bulkValue} onChange={(e) => setBulkValue(e.target.value)} style={{ ...fieldStyle, padding: "6px 10px", fontSize: "12px", maxWidth: "180px" }}>
-              <option value="">— Pick stage —</option>
+              <option value="">Pick stage…</option>
               {STAGES.map((s) => <option key={s} value={s}>{s}</option>)}
             </select>
           )}
@@ -917,7 +917,7 @@ function KanbanView({ contacts, onEdit, onStageChange }: { contacts: Contact[]; 
                   onDragStart={(e) => e.dataTransfer.setData("contactId", c.id)}
                   onClick={() => onEdit(c)}
                   style={{ background: "var(--color-warm-bg)", border: "1px solid var(--color-warm-border-light)", borderLeft: `3px solid ${health.color}`, padding: "10px 12px", cursor: "grab", borderRadius: 0 }}
-                  title={`Health: ${health.label} (${health.score}) — ${health.reasoning.join(" · ")}`}
+                  title={`Health: ${health.label} (${health.score}). ${health.reasoning.join(" · ")}`}
                 >
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "6px" }}>
                     <div style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "13px", color: "var(--color-warm-text)", fontWeight: 600, flex: 1 }}>
@@ -991,7 +991,7 @@ function TasksView({ tasks, contacts, refresh, ownerName }: { tasks: Task[]; con
         <div style={{ background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-accent)", padding: "20px", marginBottom: "20px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "2fr 2fr 1fr", gap: "12px" }}>
             <select value={form.contactId} onChange={(e) => setForm({ ...form, contactId: e.target.value })} style={fieldStyle}>
-              <option value="">— Pick contact —</option>
+              <option value="">Pick contact…</option>
               {contacts.map((c) => <option key={c.id} value={c.id}>{contactDisplayName(c)}</option>)}
             </select>
             <input type="text" value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} placeholder="What's the task?" style={fieldStyle} />
@@ -1084,7 +1084,7 @@ function StatsView({ contacts, tasks }: { contacts: Contact[]; tasks: Task[] }) 
       <section style={{ marginBottom: "32px" }}>
         <h3 style={statsHeader}>Conversion funnel</h3>
         <p style={{ fontSize: "12px", color: "var(--color-warm-text-muted)", margin: "-8px 0 16px", fontStyle: "italic" }}>
-          Each bar shows how many contacts ever reached that stage. Percentage = step conversion rate from the prior stage. Closed Lost is treated as a side-exit (not counted in funnel progression).
+          Each bar shows how many contacts ever reached that stage. Percentage = step conversion rate from the prior stage. The funnel treats Closed Lost as a side-exit and leaves it out of funnel progression.
         </p>
         <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
           {funnelData.map((step, i) => (
@@ -1182,7 +1182,7 @@ function StatsView({ contacts, tasks }: { contacts: Contact[]; tasks: Task[] }) 
       <section style={{ marginBottom: "32px" }}>
         <h3 style={statsHeader}>By source</h3>
         {stats.bySource.length === 0 ? (
-          <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", fontStyle: "italic" }}>No source data yet, fill the &quot;source&quot; field on contacts to populate.</p>
+          <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", fontStyle: "italic" }}>No source data yet. Fill the &quot;source&quot; field on contacts to populate this chart.</p>
         ) : (
           <div>
             {stats.bySource.map((s) => {
@@ -1349,7 +1349,7 @@ function CoachView({ contacts }: { contacts: Contact[] }) {
         <div>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", color: "var(--color-warm-text)", fontWeight: 600, margin: 0 }}>AI Deal Coach</h2>
           <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: "4px 0 0", maxWidth: "640px", lineHeight: 1.6 }}>
-            Looks at your whole pipeline ({openCount} open contacts) and tells you which 3-5 deals need attention now + why + exactly what to do. The opposite of scrolling through contacts hoping to find what&apos;s hot.
+            Looks at your whole pipeline ({openCount} open contacts) and tells you which 3-5 deals need attention now + why + exactly what to do.
           </p>
         </div>
         <button onClick={run} disabled={busy} className="pv-btn-primary" style={{ border: "none", cursor: busy ? "wait" : "pointer", opacity: busy ? 0.6 : 1 }}>
@@ -1359,7 +1359,7 @@ function CoachView({ contacts }: { contacts: Contact[] }) {
 
       {lastRunAt && (
         <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", fontStyle: "italic", marginBottom: "16px" }}>
-          Last run: {new Date(lastRunAt).toLocaleTimeString()} — re-run after any major change to your pipeline.
+          Last run: {new Date(lastRunAt).toLocaleTimeString()}. Re-run after any major change to your pipeline.
         </p>
       )}
 
@@ -1490,7 +1490,7 @@ function RepsView({ contacts }: { contacts: Contact[] }) {
         <div>
           <h2 style={{ fontFamily: "'Cinzel', Georgia, serif", fontSize: "24px", color: "var(--color-warm-text)", fontWeight: 600, margin: 0 }}>Leaderboard</h2>
           <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: "4px 0 0" }}>
-            Rep performance ranking — {periodLabel.toLowerCase()}. Ranked by Closed Won dollars.
+            Rep performance ranking for {periodLabel.toLowerCase()}, by Closed Won dollars.
           </p>
         </div>
         <div style={{ display: "flex", gap: "6px" }}>

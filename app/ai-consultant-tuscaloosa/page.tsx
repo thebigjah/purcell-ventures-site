@@ -14,7 +14,7 @@ export default function AiConsultantTuscaloosa() {
       crumbs={<Breadcrumbs trail={[
         { name: "Home", href: "/" },
         { name: "Consulting", href: "/consulting" },
-        { name: "AI Consultant in Tuscaloosa", href: "/ai-consultant-tuscaloosa" },
+        { name: "AI consultant in Tuscaloosa", href: "/ai-consultant-tuscaloosa" },
       ]} />}
       kicker="Tuscaloosa, Alabama"
       title="AI consultant in Tuscaloosa"
@@ -38,8 +38,8 @@ export default function AiConsultantTuscaloosa() {
 
       <p>
         <strong>Websites.</strong> Built, hosted and maintained. For University of Alabama
-        students and student-run businesses the price is <strong>$500</strong>, with an
-        optional <strong>$25 a month</strong> to keep it updated.
+        students and student-run businesses the price is $500, with an
+        optional $25 a month to keep it updated.
       </p>
 
       <p>

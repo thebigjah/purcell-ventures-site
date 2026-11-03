@@ -97,7 +97,7 @@ const TIERS = [
       "The full resource pack: 6 templates and worksheets",
       "The business model one-pager template",
       "The pricing calculator and cold outreach scripts",
-      "Every lesson as it is released, and access for life",
+      "Every lesson as I release it, and access for life",
     ],
     children: JOIN,
   },

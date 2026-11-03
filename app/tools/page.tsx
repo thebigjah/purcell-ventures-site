@@ -35,7 +35,7 @@ const TOOLS: [string, string, string][] = [
   ["friendship-map", "Friendship Map", "A small CRM for the 20 to 30 people closest to you. Track last contact, see who has gone too long without hearing from you, and tier people by closeness."],
   ["future-self", "Future Self", "Write a letter to your future self. The app keeps it sealed until the release date you set, and you can read it on or after that date."],
   ["hangout", "Steal My Hangout", "A list of hangout ideas other people have tried. Browse them and submit your own."],
-  ["momentum", "Momentum", "One intention a day that your friends can see. At the end of the day, mark it done or not done."],
+  ["momentum", "Momentum", "One intention a day that your friends can see. Each evening, mark it done or not done."],
   ["prayer-journal", "Prayer Journal", "A daily prayer journal with rotating scripture, prompts in the ACTS framework and a log of answered prayers."],
   ["reading-log", "Reading Log", "A personal reading log with stats. Log books, ratings and notes, and get a year-end summary of what you read."],
   ["rival", "Rival", "Track any metric. It compares you only to your own past data."],

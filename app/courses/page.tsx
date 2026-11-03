@@ -74,7 +74,7 @@ export default function CoursesPage() {
       <Section title="What each course includes">
         <Prose>
           <p>
-            Each course is self-paced, with exercises in every lesson and access for life. I add each lesson as I finish it. The templates and documents I used come with every course, so if a lesson tells you to send an email, the email is included.
+            Each course is self-paced, with exercises in every lesson and access for life. I add each lesson as I finish it. The templates and documents I used come with every course, so if a lesson tells you to send an email, the course includes that email.
           </p>
           <p>
             Each course has its own refund terms. If the material does not match its description, ask and I will refund you.

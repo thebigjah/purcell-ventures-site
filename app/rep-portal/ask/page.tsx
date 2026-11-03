@@ -135,7 +135,7 @@ export default function RepAskPage() {
           </form>
 
           <p style={{ fontSize: "11px", color: "var(--color-warm-text-light)", marginTop: "16px", textAlign: "center", fontStyle: "italic" }}>
-            Conversations aren&apos;t saved, refresh to clear. If you hit a question the bot can&apos;t answer, text Elijah and we&apos;ll add the answer to its training.
+            The assistant doesn&apos;t save conversations. Refresh to clear. If you hit a question the bot can&apos;t answer, text Elijah and we&apos;ll add the answer to its training.
           </p>
         </main>
       </div>

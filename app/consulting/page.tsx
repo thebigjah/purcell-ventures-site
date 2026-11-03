@@ -108,7 +108,7 @@ const FAQ = [
   // internal link into /ai-consultant-tuscaloosa, which was reachable from /about only.
   {
     q: "Where are you based?",
-    a: <>Tuscaloosa, Alabama. I formed the LLC in Acworth, Georgia, where it is registered, and I run it from Tuscaloosa while I attend the University of Alabama. Businesses near Tuscaloosa can meet with me in person. More on <Link className="ui-link" href="/ai-consultant-tuscaloosa">AI consulting in Tuscaloosa</Link>.</>,
+    a: <>Tuscaloosa, Alabama. I formed and registered the LLC in Acworth, Georgia, and I run it from Tuscaloosa while I attend the University of Alabama. Businesses near Tuscaloosa can meet with me in person. More on <Link className="ui-link" href="/ai-consultant-tuscaloosa">AI consulting in Tuscaloosa</Link>.</>,
   },
   { q: "Does my team need any tech experience?", a: "No. I design most sessions for people who have never used AI tools, and I go at your team's pace." },
   { q: "What do participants bring?", a: "A laptop or tablet and a willingness to try things. I handle the setup, demos, exercises and the takeaway guide." },

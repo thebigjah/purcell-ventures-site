@@ -113,7 +113,7 @@ const PLANS = [
   {
     name: "Starter",
     price: "$99 a month",
-    for: "Light tools, open to every client. I set them up in one to two days. On the website plans, this level is called Site Care.",
+    for: "Light tools, open to every client. I set them up in one to two days. On the website plans, I call this level Site Care.",
     items: [
       "Color Palette Tool",
       "Brand Kit Builder",
@@ -128,7 +128,7 @@ const PLANS = [
   {
     name: "Growth",
     price: "$179 a month",
-    for: "Tools that connect to your site or send messages for you. On the website plans, this level is called Site Care plus Lead Ops.",
+    for: "Tools that connect to your site or send messages for you. On the website plans, I call this level Site Care plus Lead Ops.",
     items: [
       "Everything in Starter",
       "Review Request Automation",
@@ -144,7 +144,7 @@ const PLANS = [
   {
     name: "Full Service",
     price: "$279 a month",
-    for: "Marketing add-ons that I adjust every month. On the website plans, this level is called Marketing Partner.",
+    for: "Marketing add-ons that I adjust every month. On the website plans, I call this level Marketing Partner.",
     items: [
       "Everything in Growth",
       "AI Chatbot trained on your business",
@@ -232,7 +232,7 @@ export default function DigitalPage() {
       <Section
         id="roi"
         title="Estimated return"
-        intro="Enter your own numbers. The business-type presets are made-up starting values."
+        intro="Enter your own numbers. I made up the business-type presets as starting values."
       >
         <ROICalculator />
       </Section>

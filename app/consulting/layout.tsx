@@ -37,7 +37,7 @@ const schema = {
         "Hands-on AI training sessions for business teams, covering ChatGPT workflows, AI for marketing, automation and custom use cases. I deliver sessions in person at your location.",
       "provider": { "@id": "https://purcellventures.co/#organization" },
       "url": "https://purcellventures.co/consulting",
-      "serviceType": "AI Business Consulting",
+      "serviceType": "AI business consulting",
       "areaServed": [
         { "@type": "Place", "name": "Tuscaloosa, Alabama" },
         { "@type": "Place", "name": "Metro Atlanta, Georgia" },
@@ -49,8 +49,8 @@ const schema = {
         "lowPrice": "125",
         "highPrice": "2500",
         "offers": [
-          { "@type": "Offer", "name": "1-on-1 Session", "price": "175", "priceCurrency": "USD", "unitText": "per hour" },
-          { "@type": "Offer", "name": "Small Group Session", "price": "125", "priceCurrency": "USD", "unitText": "per person" },
+          { "@type": "Offer", "name": "1-on-1 session", "price": "175", "priceCurrency": "USD", "unitText": "per hour" },
+          { "@type": "Offer", "name": "Small group session", "price": "125", "priceCurrency": "USD", "unitText": "per person" },
           { "@type": "Offer", "name": "Workshop", "price": "2500", "priceCurrency": "USD", "unitText": "half-day flat (up to 20 people)" },
         ],
       },

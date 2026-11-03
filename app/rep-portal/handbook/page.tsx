@@ -13,18 +13,18 @@ const SECTIONS = [
       <>
         <p><strong>Purcell Ventures LLC</strong> is a Georgia LLC founded by Elijah Purcell and run from Tuscaloosa, Alabama. It has five active divisions (websites, digital add-ons, AI consulting, custom software and Steady), a planned real estate division and a sister brand:</p>
         <ul>
-          <li><strong>Digital Services</strong> — managed websites + AI tools + 26 add-ons</li>
-          <li><strong>AI Consulting</strong> — hands-on team training</li>
-          <li><strong>Custom Software</strong> — apps, web platforms, automation</li>
-          <li><strong>Steady — Personal IT</strong> — household / individual tech help</li>
-          <li><strong>Mantle Field Services (sister brand)</strong> — gutter, pressure washing, lawn care in Metro Atlanta</li>
+          <li><strong>Digital Services</strong>: managed websites + AI tools + 26 add-ons</li>
+          <li><strong>AI Consulting</strong>: hands-on team training</li>
+          <li><strong>Custom Software</strong>: apps, web platforms, automation</li>
+          <li><strong>Steady (personal IT)</strong>: household / individual tech help</li>
+          <li><strong>Mantle Field Services (sister brand)</strong>: gutter, pressure washing, lawn care in Metro Atlanta</li>
         </ul>
-        <p>We&apos;re not an agency. We&apos;re not a freelancer. We&apos;re a real company with infrastructure, processes, and standards. Clients deal directly with the owner. That&apos;s a feature, not a limitation.</p>
+        <p>We run as a company with our own infrastructure, processes and standards, and clients deal directly with the owner.</p>
         <p><strong>What we believe (the part that shapes how you sell):</strong></p>
         <ul>
           <li><strong>Honesty over closing.</strong> If a client doesn&apos;t need our product, we tell them.</li>
           <li><strong>Respect over urgency.</strong> No manufactured FOMO, no fear-selling.</li>
-          <li><strong>The work is the witness.</strong> A great client outcome speaks louder than any pitch.</li>
+          <li><strong>Results over pitch.</strong> A client who got what we promised sends us more business than any pitch does.</li>
         </ul>
       </>
     ),
@@ -53,7 +53,7 @@ const SECTIONS = [
     title: "Pricing reference",
     body: (
       <>
-        <p>For current pricing across all divisions, including Pilot Partner offer terms and your commission per close, see the <Link href="/rep-portal/pricing" style={{ color: "var(--color-warm-accent)" }}>Pricing Reference page</Link>. That&apos;s the single source of truth, when prices change, that page changes first.</p>
+        <p>For current pricing across all divisions, including Pilot Partner offer terms and your commission per close, see the <Link href="/rep-portal/pricing" style={{ color: "var(--color-warm-accent)" }}>Pricing Reference page</Link>. That page is the source of truth. When prices change, it changes first.</p>
       </>
     ),
   },
@@ -66,13 +66,13 @@ const SECTIONS = [
         <p>The setup: we&apos;re filling our first 3 Pilot Partner spots per Digital tier. Once they&apos;re gone, prices go to standard for everyone after.</p>
         <p><strong>Verbal pitch (memorize the rhythm):</strong></p>
         <blockquote style={{ borderLeft: "3px solid var(--color-warm-accent)", paddingLeft: "16px", fontStyle: "italic" }}>
-          &ldquo;Here&apos;s the deal. We just launched these tiers, and right now I have <strong>3 Pilot Partner spots left across all of them.</strong> I want to fill them with the right businesses, not just the first three to say yes. If you&apos;re a fit, here&apos;s what that means for you: <strong>30% off the setup, 30% off your first 6 months.</strong> After that you transition to standard pricing, but you&apos;ll be paying what&apos;s still well under most agencies. What I need from you: at the 60-day mark, a short testimonial — 2 to 3 sentences. Right to use your business as a case study, anonymous if you prefer. And one introduction within 6 months to another business owner you respect. Doesn&apos;t have to result in a sale. Just an intro. That&apos;s the trade.&rdquo;
+          &ldquo;Here&apos;s the deal. We just launched these tiers, and right now I have <strong>3 Pilot Partner spots left across all of them.</strong> I want to fill them with the right businesses, not just the first three to say yes. If you&apos;re a fit, here&apos;s what that means for you: <strong>30% off the setup, 30% off your first 6 months.</strong> After that you transition to standard pricing, but you&apos;ll be paying what&apos;s still well under most agencies. What I need from you: at the 60-day mark, a short testimonial of 2 to 3 sentences. Right to use your business as a case study, anonymous if you prefer. And one introduction within 6 months to another business owner you respect. Doesn&apos;t have to result in a sale. Just an intro. That&apos;s the trade.&rdquo;
         </blockquote>
         <p><strong>What the pitch is NOT:</strong></p>
         <ul>
           <li>NOT &ldquo;limited time only, sign today!&rdquo; (manufactured urgency)</li>
-          <li>NOT &ldquo;the price will go up tomorrow&rdquo; — it&apos;s &ldquo;the price will go up after 3 closes&rdquo;</li>
-          <li>NOT bait-and-switch — Pilot price is real, lock period is real, standard price after IS standard</li>
+          <li>NOT &ldquo;the price will go up tomorrow.&rdquo; The true line is &ldquo;the price will go up after 3 closes.&rdquo;</li>
+          <li>NOT bait-and-switch. The Pilot price is real, lock period is real, standard price after IS standard</li>
         </ul>
       </>
     ),
@@ -83,17 +83,17 @@ const SECTIONS = [
     title: "Hard rules (auto-firing offenses)",
     body: (
       <>
-        <p>A rep is dismissed immediately for any of these:</p>
+        <p>We dismiss a rep immediately for any of these:</p>
         <ol>
           <li><strong>Lying to a prospect</strong> about pricing, deliverables, timelines, or PV&apos;s history</li>
-          <li><strong>Promising work that hasn&apos;t been approved</strong> by Elijah (especially Custom Software)</li>
+          <li><strong>Promising work Elijah hasn&apos;t approved</strong> (especially Custom Software)</li>
           <li><strong>Accepting cash, gifts, or side payments</strong> from prospects in exchange for discounts or favors</li>
           <li><strong>Using high-pressure tactics:</strong> false urgency, guilt-trips, fear-selling, bait-and-switch</li>
           <li><strong>Misrepresenting yourself</strong> as PV staff vs commissioned salesperson when asked</li>
           <li><strong>Sharing pricing publicly</strong> outside of pitches (Pilot Partner rates not for social/email blasts)</li>
           <li><strong>Bypassing the CRM</strong> to keep deals off the books</li>
         </ol>
-        <p>We trust reps. Trust is verified by behavior, not assumed.</p>
+        <p>We trust reps, and we check that trust against how you behave.</p>
       </>
     ),
   },
@@ -105,15 +105,15 @@ const SECTIONS = [
       <>
         <p><strong>Loop Elijah immediately:</strong></p>
         <ul>
-          <li>Custom Software inquiry of any size — Senior reps only, Elijah on call before commitment</li>
+          <li>Custom Software inquiry of any size (Senior reps only, Elijah on call before commitment)</li>
           <li>Any deal where the prospect wants to negotiate below Pilot Partner rates</li>
           <li>Any Consulting deal over $2,000</li>
-          <li>Any prospect claiming existing PV history (past customer, referral, etc.), verify</li>
-          <li>Any prospect from a competitor&apos;s customer base, judgment call, ask first</li>
+          <li>Any prospect claiming existing PV history (past customer, referral, etc.): verify</li>
+          <li>Any prospect from a competitor&apos;s customer base: judgment call, ask first</li>
         </ul>
         <p><strong>How to escalate:</strong></p>
         <p>Text Elijah at <strong>(205) 462-7839</strong>: &ldquo;Got a [SERVICE] prospect, [BUDGET], decision timeline [X]. Need 5 min before I quote.&rdquo;</p>
-        <p>Don&apos;t escalate via email, too slow. Don&apos;t escalate in front of the prospect. Don&apos;t use the chatbot (<Link href="/rep-portal/ask" style={{ color: "var(--color-warm-accent)" }}>Ask</Link>) as a substitute for escalation on high-value deals.</p>
+        <p>Don&apos;t escalate via email. It&apos;s too slow. Don&apos;t escalate in front of the prospect. Don&apos;t use the chatbot (<Link href="/rep-portal/ask" style={{ color: "var(--color-warm-accent)" }}>Ask</Link>) as a substitute for escalation on high-value deals.</p>
       </>
     ),
   },
@@ -123,13 +123,13 @@ const SECTIONS = [
     title: "Commission + payouts",
     body: (
       <>
-        <p>Commission paid the <strong>1st of each month</strong> via Zelle, PayPal, or direct deposit. Pays for closes from the prior month, after the 30-day clawback window has cleared.</p>
-        <p><strong>1099 issued at year-end</strong> if total commission exceeds $600.</p>
+        <p>We pay commission on the <strong>1st of each month</strong> via Zelle, PayPal, or direct deposit. Each payout covers closes from the prior month, after the 30-day clawback window has cleared.</p>
+        <p><strong>We issue a 1099 at year-end</strong> if total commission exceeds $600.</p>
         <p><strong>Clawback rules:</strong></p>
         <ul>
-          <li>Client cancels in first 30 days: commission fully reversed</li>
-          <li>Pilot Partner cancels before month 6: 30% of commission clawed back (split risk with rep)</li>
-          <li>Terminated for cause (any Hard Rule violation): all unpaid commission forfeited</li>
+          <li>Client cancels in first 30 days: we reverse the full commission</li>
+          <li>Pilot Partner cancels before month 6: we claw back 30% of the commission (PV and the rep split the risk)</li>
+          <li>We end your contract for cause (any Hard Rule violation): you forfeit all unpaid commission</li>
         </ul>
       </>
     ),
@@ -141,14 +141,14 @@ const SECTIONS = [
     body: (
       <>
         <ul>
-          <li><strong>Shared Airtable CRM</strong> — track every prospect and conversation (Elijah provides login)</li>
-          <li><strong>Your own <Link href="/rep-portal/deals" style={{ color: "var(--color-warm-accent)" }}>Deals page</Link></strong> in the rep portal, log every prospect + close. Commission paid on what&apos;s logged.</li>
-          <li><strong>PV site + Mantle site</strong> — show prospects what they&apos;d be getting</li>
-          <li><strong><Link href="/digital/tools" style={{ color: "var(--color-warm-accent)" }}>Live demo tools</Link></strong> — show prospects the working version of what you&apos;re pitching (FAQ Builder, Color Palette, Content Generator, etc.)</li>
-          <li><strong>Sales materials Drive folder</strong> — pitch decks, brochures, contracts (Elijah provides)</li>
-          <li><strong><Link href="/rep-portal/ask" style={{ color: "var(--color-warm-accent)" }}>Ask AI</Link></strong> — mid-pitch question? Drop it in. Knows pricing, scripts, escalation rules.</li>
+          <li><strong>Shared Airtable CRM</strong>: track every prospect and conversation (Elijah provides login)</li>
+          <li><strong>Your own <Link href="/rep-portal/deals" style={{ color: "var(--color-warm-accent)" }}>Deals page</Link></strong> in the rep portal: log every prospect + close. We pay commission on what you log here.</li>
+          <li><strong>PV site + Mantle site</strong>: show prospects what they&apos;d be getting</li>
+          <li><strong><Link href="/digital/tools" style={{ color: "var(--color-warm-accent)" }}>Live demo tools</Link></strong>: show prospects the working version of what you&apos;re pitching (FAQ Builder, Color Palette, Content Generator, etc.)</li>
+          <li><strong>Sales materials Drive folder</strong>: pitch decks, brochures, contracts (Elijah provides)</li>
+          <li><strong><Link href="/rep-portal/ask" style={{ color: "var(--color-warm-accent)" }}>Ask AI</Link></strong>: mid-pitch question? Drop it in. Knows pricing, scripts, escalation rules.</li>
         </ul>
-        <p>You&apos;re 1099, phone bill and gas costs are your own, but deductible. We&apos;ll send a year-end summary of closed deals to make tax season easier.</p>
+        <p>You&apos;re a 1099 contractor, so phone bill and gas costs are your own, but deductible. We&apos;ll send a year-end summary of closed deals to make tax season easier.</p>
       </>
     ),
   },
@@ -237,7 +237,7 @@ export default function HandbookPage() {
           </div>
 
           <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", textAlign: "center", fontStyle: "italic", marginTop: "48px" }}>
-            Handbook v1.0, last updated May 2026. Notify Elijah if anything here contradicts what you&apos;ve been told elsewhere.
+            Handbook v1.0, last updated May 2026. Tell Elijah if anything here contradicts what someone told you elsewhere.
           </p>
         </main>
       </div>

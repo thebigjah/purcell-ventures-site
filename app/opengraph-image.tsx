@@ -72,7 +72,7 @@ export default function OgImage() {
           lineHeight: 1.55, fontFamily: "serif", fontStyle: "italic",
           textAlign: "center", display: "flex", justifyContent: "center",
         }}>
-          Built by one operator for the small businesses who move first.
+          Built by one person for small businesses.
         </div>
 
         {/* Meta strip, bottom */}

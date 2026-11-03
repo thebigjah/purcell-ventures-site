@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Case studies from AI consulting work",
   description:
-    "Case studies from Elijah Purcell's AI consulting work. None are published yet, and each one goes up only with the client's permission.",
+    "Case studies from Elijah Purcell's AI consulting work. He has published none yet, and each one goes up only with the client's permission.",
   alternates: { canonical: "/case-studies" },
 };
 

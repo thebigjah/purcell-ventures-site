@@ -27,7 +27,7 @@ const FAQ_SCHEMA = {
       name: "Who founded Purcell Ventures?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Elijah Purcell founded Purcell Ventures LLC in April 2025 and is its Founder/CEO. He studies psychology and data science in New College and the Honors College at the University of Alabama and lives in Tuscaloosa, Alabama. The company is registered in Georgia.",
+        text: "Elijah Purcell founded Purcell Ventures LLC in April 2025 and is its Founder/CEO. He studies psychology and data science in New College and the Honors College at the University of Alabama and lives in Tuscaloosa, Alabama. He registered the company in Georgia.",
       },
     },
     {
@@ -35,7 +35,7 @@ const FAQ_SCHEMA = {
       name: "Where is Purcell Ventures based?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The LLC is registered in Acworth, Georgia, where Elijah formed it, and he runs it from Tuscaloosa, Alabama. Websites, digital add-ons and AI consulting are available nationwide. Mantle Field Services serves metro Atlanta: Kennesaw, Marietta, Acworth, Canton and Woodstock.",
+        text: "Elijah formed and registered the LLC in Acworth, Georgia, and he runs it from Tuscaloosa, Alabama. Websites, digital add-ons and AI consulting are available nationwide. Mantle Field Services serves metro Atlanta: Kennesaw, Marietta, Acworth, Canton and Woodstock.",
       },
     },
     {

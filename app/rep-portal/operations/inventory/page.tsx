@@ -107,7 +107,7 @@ export default function PVInventoryPage() {
                 <Input label="Unit cost ($)" type="number" value={String(form.unitCost)} onChange={(v) => setForm({ ...form, unitCost: Number(v) || 0 })} />
                 <Input label="Supplier" value={form.supplier} onChange={(v) => setForm({ ...form, supplier: v })} placeholder="e.g., VistaPrint" />
               </div>
-              <Input label="Notes (optional)" value={form.notes} onChange={(v) => setForm({ ...form, notes: v })} placeholder="e.g., 30 day delivery; use for new clients" />
+              <Input label="Notes (optional)" value={form.notes} onChange={(v) => setForm({ ...form, notes: v })} placeholder="e.g., 30 day delivery, use for new clients" />
               <div style={{ display: "flex", gap: "12px", marginTop: "16px" }}>
                 <button onClick={add} className="pv-btn-primary" style={{ border: "none", cursor: "pointer" }}>Add</button>
                 <button onClick={() => setAdding(false)} style={ghostBtn}>Cancel</button>

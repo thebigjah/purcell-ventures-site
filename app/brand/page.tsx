@@ -222,7 +222,7 @@ function TypographySection() {
 
       <div className="br-block">
         <h2>Type scale</h2>
-        <Intro>Ten levels. Every size on the site maps to one of these, so intermediate sizes are not invented.</Intro>
+        <Intro>Ten levels. Every size on the site maps to one of these, so nobody invents a size in between.</Intro>
         <div className="br-type">
           {TYPE_SCALE.map(t => (
             <div key={t.name} className="br-type__row">
@@ -256,7 +256,7 @@ function TypographySection() {
             A website, an AI chatbot, a booking system, a CRM and more, on one managed subscription.
           </p>
           <p style={{ fontSize: 15, color: "var(--muted)", lineHeight: 1.8, marginBottom: 28 }}>
-            Most small business software is priced for larger companies. These tools are priced for a small business.
+            Most small business software costs what a larger company can pay. These tools cost what a small business can pay.
           </p>
           <span className="br-btn" style={{ borderColor: "var(--gold-text)", color: "var(--gold-text)" }}>See plans</span>
         </div>
@@ -538,7 +538,7 @@ const SUBJECTS = [
     ],
     avoid: [
       "Stock-photo smiles, teeth, staged handshakes and team-building body language",
-      "Pure white or seamless studio backgrounds",
+      "Pure white or paper-sweep studio backgrounds",
       "Over-retouched skin",
       "Formal attire unless the context calls for it",
     ],
@@ -564,7 +564,7 @@ const SUBJECTS = [
       "Screens showing interfaces, data and work in progress",
       "Shallow depth of field, used on purpose",
       "Warm ambient light: a desk lamp, window light at dusk",
-      "Context over equipment. What is being built matters more than the gear.",
+      "Context over equipment. The work in progress matters more than the gear.",
     ],
     avoid: [
       "Generic laptop-on-a-table stock photos",

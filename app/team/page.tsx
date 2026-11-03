@@ -128,12 +128,12 @@ const ROOMS: Room[] = [
         does: "Answers questions from every room with sources, and qualifies prospects and deals on facts." },
       { key: "delia", name: "Delia Dunmore", role: "Real estate prospector",
         does: "Matches property listings to buyers' stated criteria without contacting anyone.",
-        wont: "Invent a buyer's criteria. An empty buy box is reported as empty." },
+        wont: "Invent a buyer's criteria. She reports an empty buy box as empty." },
       { key: "rhett", name: "Rhett Ramsey", role: "Deal sourcing",
         does: "Assembles a daily packet of real estate deals from public records, facts only, for review.",
         wont: "Contact a homeowner, or draw a conclusion about anybody's circumstances." },
       { key: "deed", name: "Deed", role: "Microbot, reports to Rhett",
-        does: "Finds where county records and cash buyer lists are published." },
+        does: "Finds the sources that publish county records and cash buyer lists." },
       { key: "quarry", name: "Quarry", role: "Microbot, reports to Wren",
         does: "Finds sourced facts behind posts the company can make." },
       { key: "survey", name: "Survey", role: "Microbot, reports to Zane",
@@ -148,12 +148,12 @@ const ROOMS: Room[] = [
         does: "Makes sure every property can take a payment and a message, and that no credential sits where it can leak." },
       { key: "audrey", name: "Audrey Ashford", role: "Activation auditor",
         does: "Visits every live property as a stranger would and reports the ones with no working way to pay or get in touch.",
-        wont: "Pass a page because it loads. A price with no way to pay it gets logged as a finding." },
+        wont: "Pass a page because it loads. She logs a price with no way to pay it as a finding." },
       { key: "cecily", name: "Cecily Cross", role: "Compliance and secrets",
         does: "Scans every repository for leaked keys and secrets. She reports what she finds and never edits a repository.",
         wont: "Close a finding because a scan failed to reach the thing it was checking." },
       { key: "recheck", name: "Recheck", role: "Microbot, reports to Audrey",
-        does: "Re-audits the properties that cannot take a payment and tells Audrey when one is fixed or breaks again." },
+        does: "Re-audits the properties that cannot take a payment and tells Audrey when one can take a payment again or breaks again." },
     ],
   },
   {
@@ -161,7 +161,7 @@ const ROOMS: Room[] = [
     about: "Invoices, collections and the company ledger.",
     agents: [
       { key: "trent", name: "Trent Talbot", role: "Room manager",
-        does: "Makes sure every dollar the company earns is invoiced, collected and classified." },
+        does: "Makes sure the company invoices, collects and classifies every dollar it earns." },
       { key: "ivor", name: "Ivor Ingram", role: "Invoice chaser",
         does: "Reviews unpaid invoices and drafts follow-ups that need a second sign-off before they go out.",
         wont: "Invoice an amount the client did not agree to." },
@@ -193,7 +193,7 @@ const ROOMS: Room[] = [
       { key: "etta", name: "Etta Easton", role: "Room manager",
         does: "Owns the store's listings, sales and shipping." },
       { key: "esme", name: "Esme Ellery", role: "Etsy store lead",
-        does: "Picks digital downloads and print-on-demand products from what research shows sells, and runs the listings." },
+        does: "Picks digital downloads and print-on-demand products that her sales research says sell, and runs the listings." },
     ],
   },
   {
@@ -211,7 +211,7 @@ const ROOMS: Room[] = [
     about: "New businesses and new rooms.",
     agents: [
       { key: "xavier", name: "Xavier Exley", role: "Room manager",
-        does: "Keeps a list of the station's next ways to earn, each backed by evidence, and tracks whether each step of the plan gets done." },
+        does: "Keeps a list of the station's next ways to earn, each backed by evidence, and tracks whether the station finishes each step of the plan." },
       { key: "zane", name: "Zane Zeller", role: "Expansionists lead",
         does: "Proposes new businesses and new rooms, each with the first step, the cost and how it pays back. Elijah decides which get built." },
     ],
@@ -221,7 +221,7 @@ const ROOMS: Room[] = [
     about: "Everything the station knows.",
     agents: [
       { key: "blair", name: "Blair Bennett", role: "Room manager",
-        does: "Makes sure everything the station learns is saved with its source and can be found again." },
+        does: "Makes sure the station saves everything it learns with its source, so any agent can find it again." },
       { key: "minerva", name: "Minerva Marsh", role: "Memory lead",
         does: "Keeps everything the station knows findable, so no agent researches the same thing twice." },
     ],
@@ -315,7 +315,7 @@ export default function TeamPage() {
           planet="consulting"
           kicker="Purcell Ventures LLC"
           title="One person and COSMIC, 57 AI agents in 17 rooms"
-          lede={<><strong>Every agent named here is software.</strong> Elijah Purcell is the only person in the company. The agents have names because asking what Quentin is doing is easier than asking what the proposal subsystem is doing, and an agent that signs its name can be held to what it said.</>}
+          lede={<>Every agent named here is software. Elijah Purcell is the only person in the company. The agents have names because asking what Quentin is doing is easier than asking what the proposal subsystem is doing, and Elijah can hold an agent that signs its name to what it said.</>}
         />
 
         <Section title="How COSMIC works">
@@ -360,7 +360,7 @@ export default function TeamPage() {
         <Section title="Elijah Purcell">
           <Prose>
             <p>
-              <strong>Elijah Purcell</strong> is the Founder/CEO. He builds the software and makes the decisions the agents are not allowed to make: prices, what gets sent to a client, and how money is spent.
+              Elijah Purcell is the Founder/CEO. He builds the software and makes the decisions the agents are not allowed to make: prices, what the company sends to a client, and how money is spent.
             </p>
           </Prose>
         </Section>

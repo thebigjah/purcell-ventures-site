@@ -33,7 +33,7 @@ export default function CaseStudiesPage() {
         planet="casestudies"
         kicker="Case studies"
         title="Case studies from client work"
-        lede="None are published yet. I publish one only when the client says yes, and each will describe the team, the workflow I changed and the hours it saved."
+        lede="I have published none yet. I publish one only when the client says yes, and each will describe the team, the workflow I changed and the hours it saved."
       />
 
       {liveStudies.length === 0 ? (

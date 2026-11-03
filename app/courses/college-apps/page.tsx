@@ -76,7 +76,7 @@ const TIERS = [
       "My school list spreadsheet as a template",
       "An essay brainstorm worksheet",
       "A scholarship tracker template",
-      "Every lesson as it is released, and access for life",
+      "Every lesson as I release it, and access for life",
     ],
     children: JOIN,
   },
@@ -170,7 +170,7 @@ export default function CollegeAppsPage() {
             { name: "High school students, 9th to 12th grade", line: "It covers every stage, from first thinking about college to finalizing your list in senior year." },
             { name: "Parents of applicants", line: "Two modules cover financial aid and scholarships, written so a parent can follow them." },
             { name: "First-generation students", line: "No one in your family has applied to college before. The course starts at the beginning: applications, financial aid and choosing schools." },
-            { name: "Students who were turned down", line: "Waitlisted, deferred or rejected by your top choice last cycle. The course covers what affects admissions decisions." },
+            { name: "Students whose top choice said no", line: "Waitlisted, deferred or rejected by your top choice last cycle. The course covers what affects admissions decisions." },
           ]}
         />
       </Section>

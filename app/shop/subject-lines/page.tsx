@@ -63,7 +63,7 @@ export default function SubjectLinesPage() {
       <Section title="Who it fits">
         <Rows
           items={[
-            { name: "A good fit if", line: "You write cold emails and your subject lines get ignored. You want better opening lines and do not need a full template pack. You want to A/B test subject lines against each other." },
+            { name: "A good fit if", line: "You write cold emails and people ignore your subject lines. You want better opening lines and do not need a full template pack. You want to A/B test subject lines against each other." },
             { name: "Skip it if", line: "You want the full Cold Email Mastery Pack ($29), which includes this library. You do not send cold email. You want someone to run your outreach for you." },
           ]}
         />

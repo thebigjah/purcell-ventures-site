@@ -80,7 +80,7 @@ const TOOLS: DemoTool[] = [
     slug: "business-card-copy",
     href: "/digital/tools/business-card-copy",
     name: "Business Card Copy",
-    pitch: "Front + back card copy with a tagline that earns callbacks.",
+    pitch: "Front + back card copy with a tagline.",
     bestFor: "Anyone whose card needs a refresh. Quick close.",
     exampleInput: "Business: Bob's Plumbing · I fix gutters and clean siding for North Metro Atlanta homeowners",
     category: "Branding",
@@ -116,7 +116,7 @@ const TOOLS: DemoTool[] = [
     slug: "sms-composer",
     href: "/digital/tools/sms-composer",
     name: "SMS Composer",
-    pitch: "Booking reminder, promo, follow-up — 3 variants under 160 chars.",
+    pitch: "Booking reminder, promo, follow-up: 3 variants under 160 chars.",
     bestFor: "Anyone with booking/appointment workflow.",
     exampleInput: "Booking reminder: 10 AM tomorrow gutter cleaning at 123 Oak St",
     category: "Customer",
@@ -153,7 +153,7 @@ const TOOLS: DemoTool[] = [
     slug: "inventory",
     href: "/digital/inventory",
     name: "Inventory Tracker",
-    pitch: "SKU list + stock levels + low-stock alerts, never run out of materials again.",
+    pitch: "SKU list + stock levels + low-stock alerts before materials run out.",
     bestFor: "Contractors, retail, anyone with physical inventory.",
     exampleInput: "Premium drill bits 1/4in · qty 12 · reorder at 5 · $4.50 each",
     category: "Operations",
@@ -162,7 +162,7 @@ const TOOLS: DemoTool[] = [
     slug: "estimating",
     href: "/digital/estimating",
     name: "Online Estimating",
-    pitch: "Build full estimates with line items + tax + print-to-PDF — send via link.",
+    pitch: "Build full estimates with line items + tax + print-to-PDF, then send via link.",
     bestFor: "Any service business that quotes jobs of varying scope.",
     exampleInput: "Client + job + scope + line items → printable estimate",
     category: "Operations",
@@ -199,7 +199,7 @@ export default function DemoToolsPage() {
               In-pitch tool <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>launcher.</em>
             </h1>
             <p className="deck">
-              17 working tools, ranked for in-call demos. Each card shows the pitch, the ideal prospect, and a sample input, open in a new tab, paste the prospect&apos;s industry, demo the magic.
+              17 working tools, ranked for in-call demos. Each card shows the pitch, the ideal prospect, and a sample input. Open it in a new tab, paste the prospect&apos;s industry and run it.
             </p>
           </header>
 
@@ -260,7 +260,7 @@ export default function DemoToolsPage() {
 
           <div style={{ marginTop: "48px", padding: "20px 24px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", fontSize: "12px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>
             <strong style={{ color: "var(--color-warm-accent)", fontFamily: "var(--font-dm-sans), sans-serif", letterSpacing: "0.18em", textTransform: "uppercase", fontSize: "10px" }}>Pro move · </strong>
-            Don&apos;t pre-demo. Wait for the prospect to describe their pain, THEN pull up the matching tool and demo with their actual context. The magic moment is when they see the tool work on THEIR business, not on a generic example.
+            Don&apos;t pre-demo. Wait for the prospect to describe their pain, THEN pull up the matching tool and demo with their actual context. Prospects pay attention when they see the tool run on THEIR business instead of a generic example.
           </div>
           <p style={{ marginTop: "20px", fontSize: "12px", color: "var(--color-warm-text-light)", textAlign: "center", fontStyle: "italic" }}>
             All of these are also viewable as your prospects would see them at <Link href="/digital/tools" style={{ color: "var(--color-warm-accent)" }}>/digital/tools</Link>.

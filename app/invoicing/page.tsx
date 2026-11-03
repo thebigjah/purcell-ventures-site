@@ -184,7 +184,7 @@ export default function InvoicingPage() {
         <div className="inv-top">
           <div>
             <h1>Invoicing</h1>
-            <p className="tool__sub">Create and track invoices. Stored in this browser.</p>
+            <p className="tool__sub">Create and track invoices. They stay in this browser.</p>
           </div>
           {view !== "create" && <button onClick={() => setView("create")} className="inv-btn inv-btn--go">New invoice</button>}
         </div>

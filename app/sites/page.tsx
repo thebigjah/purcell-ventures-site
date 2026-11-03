@@ -125,7 +125,7 @@ export default function SitesPage() {
             { name: "One person to call", line: "When something on your site breaks, you call me directly and I fix it." },
             { name: "You own it", line: "You own the site, the content and the domain. If you leave, I hand over the full source code and every asset, with no penalty." },
             { name: "SSL that renews itself", line: "A site with an expired SSL certificate shows visitors a browser security warning. Every maintenance plan renews the certificate automatically." },
-            { name: "A registered business", line: "Purcell Ventures LLC is registered in Acworth, Georgia. I work with businesses in metro Atlanta and Tuscaloosa, and remotely across the country." },
+            { name: "A registered business", line: "I registered Purcell Ventures LLC in Acworth, Georgia. I work with businesses in metro Atlanta and Tuscaloosa, and remotely across the country." },
           ]}
         />
       </Section>

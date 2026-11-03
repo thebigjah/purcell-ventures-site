@@ -69,7 +69,7 @@ const SIGHT_AUDIT = [
   { category: "Quick website check", checks: [
     { item: "Does their site load fast on mobile?", signal: "A slow site hurts their search ranking, and you can show a faster one" },
     { item: "Is there online booking or a contact form?", signal: "No booking means they lose customers who will not call" },
-    { item: "When was the last update, blog post or event?", signal: "2019 or older means the site is abandoned, which is a good pitch" },
+    { item: "When was the last update, blog post or event?", signal: "2019 or older means nobody maintains the site, which is a good pitch" },
     { item: "Is it an unedited Wix or Squarespace template?", signal: "A default template means they built it themselves" },
   ]},
 ];
@@ -118,7 +118,7 @@ const CLOSES = [
   { type: "Soft close (try this one first)", script: "Here's what I'd suggest. Let me put together a quick overview of what I'd build for you, with pricing, and we can look at it together. No commitment. Would that be useful?", note: "This gives them an easy 'yes' and gives you a reason to follow up." },
   { type: "Demo close", script: "Can I show you something quickly? [Pull up purcellventures.co/digital on your phone] This is what a full setup looks like for a business like yours. Starting at $99 a month.", note: "Always have the site up and ready on your phone." },
   { type: "Urgency close (warm prospects only)", script: "I only take on a few new clients at a time so I can give each one attention. I've got a slot opening up this month. Want to get on a call this week?", note: "Use this only with a prospect who has shown clear interest." },
-  { type: "Leave-Behind", script: "Here's my card. My site is purcellventures.co, where you can see pricing and the tools. I'll follow up in a day or two if that's okay.", note: "Always get permission to follow up. Always follow up." },
+  { type: "Leave-Behind", script: "Here's my card. My site is purcellventures.co, where you can see pricing and the tools. I'll follow up in a day or two if that's okay.", note: "Ask permission to follow up, then follow up." },
 ];
 
 const OBJECTIONS = [
@@ -150,7 +150,7 @@ const WORD_OF_MOUTH = [
 const FOLLOW_UPS = [
   { label: "Day 1: text or email after a walk-in", script: `Hey [Name], it's Elijah. I stopped by [Business] earlier today. Here's what I mentioned: purcellventures.co/digital\n\nBased on what you told me, I think [specific tool] would make the biggest difference for you. I'm happy to put together a short overview with pricing if you want to take a look. No pressure either way.\n\nElijah Purcell, Purcell Ventures`, note: "Keep it short. Mention something specific from the conversation. Link straight to the digital page." },
   { label: "Day 3: if they have not replied", script: `Hey [Name], circling back. I know you're busy. I wanted to leave the door open if you had any questions about what I mentioned.\n\nIf the timing's wrong, I understand. If you want me to put together a custom quote for [Business], I'm happy to do that. It takes me 10 minutes.\n\nElijah`, note: "One more touch. If they don't reply after this, let them go. Don't spam." },
-  { label: "Day 7: final follow-up", script: `Hey [Name], last message, I promise. If you ever want to revisit the online presence work for [Business], I'm at ${CONTACT.email}.\n\nI do good work and I'm local. Whenever the time is right.\n\nElijah`, note: "Leave it warm. Saying 'last message' tells them the truth, and it gets replies." },
+  { label: "Day 7: final follow-up", script: `Hey [Name], last message, I promise. If you ever want to revisit the online presence work for [Business], I'm at ${CONTACT.email}.\n\nI do good work and I'm local. Whenever the time is right.\n\nElijah`, note: "End on a friendly note. Saying 'last message' tells them the truth, and it gets replies." },
   { label: "Warm lead: custom proposal email", script: `Hey [Name],\n\nGood talking to you. Based on what you shared, here's what I'd recommend for [Business]:\n\n- [Tool 1]: [one line on why it fits them]\n- [Tool 2]: [one line on why it fits them]\n- [Tool 3]: [one line on why it fits them]\n\nTotal: $[X] setup and $[Y] a month after that.\n\nThat includes me building it, maintaining it, and being reachable when you need something. Full pricing is at purcellventures.co/digital.\n\nWant to hop on a 15-minute call to go over it?\n\nElijah Purcell, Purcell Ventures LLC\n${CONTACT.email}`, note: "Send a written proposal to every warm lead. It looks professional and gives them something to share with a spouse or partner." },
 ];
 

@@ -16,8 +16,8 @@ const SCRIPTS = [
   },
   {
     name: "Pilot Partner Pitch (Digital tiers only)",
-    script: "Here's the deal. We just launched these tiers, and right now I have 3 Pilot Partner spots left across all of them. I want to fill them with the right businesses, not just the first three to say yes. If you're a fit, here's what that means for you: 30% off the setup, 30% off your first 6 months. After that you transition to standard pricing, but you'll be paying what's still well under most agencies. What I need from you: at the 60-day mark, a short testimonial — 2 to 3 sentences. Right to use your business as a case study, anonymous if you prefer. And one introduction within 6 months to another business owner you respect. Doesn't have to result in a sale. Just an intro. That's the trade.",
-    note: "Memorize the rhythm. Don't manufacture urgency past 'spots are limited' — they actually are.",
+    script: "Here's the deal. We just launched these tiers, and right now I have 3 Pilot Partner spots left across all of them. I want to fill them with the right businesses, not just the first three to say yes. If you're a fit, here's what that means for you: 30% off the setup, 30% off your first 6 months. After that you transition to standard pricing, but you'll be paying what's still well under most agencies. What I need from you: at the 60-day mark, a short testimonial, 2 to 3 sentences. Right to use your business as a case study, anonymous if you prefer. And one introduction within 6 months to another business owner you respect. Doesn't have to result in a sale. Just an intro. That's the trade.",
+    note: "Memorize the rhythm. Don't manufacture urgency past 'spots are limited'. They actually are.",
   },
   {
     name: "Urgency Close (only when they're warm)",
@@ -32,9 +32,9 @@ const SCRIPTS = [
 ];
 
 const FOLLOW_UPS = [
-  { trigger: "Quoted but no answer", days: "Day 3", script: "Hey [name] — just bumping this up. Want to get on the calendar this week or should I follow up next week?" },
-  { trigger: "Ghosted after follow-up #1", days: "Day 8", script: "Hey [name] — last bump on this one. Let me know if it's a 'not now' so I can stop pestering. Either way, no hard feelings." },
-  { trigger: "Said 'not now'", days: "+90 days", script: "Hey [name] — about 90 days ago we talked about [service]. Anything changed on your end? No pressure either way." },
+  { trigger: "Quoted but no answer", days: "Day 3", script: "Hey [name], just bumping this up. Want to get on the calendar this week or should I follow up next week?" },
+  { trigger: "Ghosted after follow-up #1", days: "Day 8", script: "Hey [name], last bump on this one. Let me know if it's a 'not now' so I can stop pestering. Either way, no hard feelings." },
+  { trigger: "Said 'not now'", days: "+90 days", script: "Hey [name], about 90 days ago we talked about [service]. Anything changed on your end? No pressure either way." },
 ];
 
 export default function ScriptsPage() {
@@ -46,7 +46,7 @@ export default function ScriptsPage() {
         <main style={{ maxWidth: "880px", margin: "0 auto", padding: "60px 36px 96px" }}>
 
           <header className="pv-page-head">
-            <div className="pv-mono-label">Pitch Scripts</div>
+            <div className="pv-mono-label">Pitch scripts</div>
             <h1>
               What to <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>say.</em>
             </h1>
@@ -95,7 +95,7 @@ export default function ScriptsPage() {
           ))}
 
           <p style={{ fontSize: "12px", color: "var(--color-warm-text-light)", textAlign: "center", fontStyle: "italic", marginTop: "40px" }}>
-            More scripts (objection handlers, escalation language, demo walkthroughs) get added as we hit them in real deals.
+            We add more scripts (objection handlers, escalation language, demo walkthroughs) as we hit them in real deals.
           </p>
 
         </main>

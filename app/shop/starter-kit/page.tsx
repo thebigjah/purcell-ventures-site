@@ -117,7 +117,7 @@ export default function StarterKitPage() {
 
       <Section title="Refunds">
         <Prose>
-          <p><strong>A 30-day money-back guarantee.</strong> Refunds go through Stripe.</p>
+          <p><strong>A 30-day money-back window.</strong> Refunds go through Stripe.</p>
         </Prose>
       </Section>
 

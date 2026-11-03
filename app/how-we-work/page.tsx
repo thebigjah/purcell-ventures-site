@@ -108,7 +108,7 @@ export default function HowWeWorkPage() {
           <ul>
             <li>Your business model relies on practices I will not support: adult content, gambling, predatory finance or MLM.</li>
             <li>You want me to build something that misleads your customers, such as fake reviews, deceptive countdown timers or dark patterns.</li>
-            <li>You need it faster than I can deliver it well. I would rather refer you elsewhere than ship something I would be embarrassed by.</li>
+            <li>You need it faster than I can deliver it well. I would rather refer you elsewhere than ship work that embarrasses me.</li>
             <li>Either of us finds on the first call that we do not work well together.</li>
             <li>An off-the-shelf tool solves your problem better. I will tell you which one to use.</li>
           </ul>

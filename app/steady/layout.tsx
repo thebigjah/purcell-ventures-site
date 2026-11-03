@@ -34,7 +34,7 @@ const schema = {
     "Personal tech help for individuals and households: AI coaching, phone setup, smart home, password managers, medication reminders and family care plans.",
   "provider": { "@id": "https://purcellventures.co/#organization" },
   "url": "https://purcellventures.co/steady",
-  "serviceType": "Personal Technology Coaching",
+  "serviceType": "Personal technology coaching",
   "areaServed": [
     { "@type": "Place", "name": "Tuscaloosa, Alabama (in-person)" },
     { "@type": "Place", "name": "Metro Atlanta, Georgia (in-person)" },
@@ -46,9 +46,9 @@ const schema = {
     "lowPrice": "79",
     "highPrice": "149",
     "offers": [
-      { "@type": "Offer", "name": "One-Off Help", "price": "99", "priceCurrency": "USD", "unitText": "per 90-min session" },
-      { "@type": "Offer", "name": "Monthly Care", "price": "79", "priceCurrency": "USD", "unitText": "per month" },
-      { "@type": "Offer", "name": "Family Care", "price": "149", "priceCurrency": "USD", "unitText": "per month" },
+      { "@type": "Offer", "name": "One-off help", "price": "99", "priceCurrency": "USD", "unitText": "per 90-min session" },
+      { "@type": "Offer", "name": "Monthly care", "price": "79", "priceCurrency": "USD", "unitText": "per month" },
+      { "@type": "Offer", "name": "Family care", "price": "149", "priceCurrency": "USD", "unitText": "per month" },
     ],
   },
 };

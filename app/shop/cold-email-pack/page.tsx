@@ -89,7 +89,7 @@ export default function ColdEmailPackPage() {
           items={[
             {
               name: "A good fit if",
-              line: "You send cold outreach or want to start. Emails you wrote from scratch get ignored. You are a freelancer or consultant who needs more prospects. You manage a sales team and want one template library for everyone. You pay for a tool like Apollo or Lemlist and want templates to use with it or in place of it.",
+              line: "You send cold outreach or want to start. Prospects ignore the emails you write from scratch. You are a freelancer or consultant who needs more prospects. You manage a sales team and want one template library for everyone. You pay for a tool like Apollo or Lemlist and want templates to use with it or in place of it.",
             },
             {
               name: "Skip it if",

@@ -19,7 +19,7 @@ const FAQS: { label: string; qas: QA[] }[] = [
     qas: [
       { q: "Who will I talk to?", a: "Me, Elijah Purcell. I handle your project myself from the first message to the final delivery." },
       { q: "How fast do you respond?", a: `I reply within one business day. If you need an answer sooner, call or text ${CONTACT.phone}.` },
-      { q: "Where are you based?", a: "Tuscaloosa, Alabama. Purcell Ventures LLC is registered in Acworth, Georgia, where I formed it in April 2025, and I run it from Tuscaloosa, where I attend the University of Alabama. Local clients can meet me in person." },
+      { q: "Where are you based?", a: "Tuscaloosa, Alabama. I formed and registered Purcell Ventures LLC in Acworth, Georgia, in April 2025, and I run it from Tuscaloosa, where I attend the University of Alabama. Local clients can meet me in person." },
       { q: "Do you take clients outside Tuscaloosa?", a: "For websites, digital services, AI consulting and software, yes, anywhere in the United States. For field work (gutter cleaning, pressure washing, lawn care), see Mantle Field Services, which serves metro Atlanta only." },
       // PRICING QUESTIONS. An answer engine cannot quote a number that is not written down.
       { q: "How much does a website cost?", a: "Websites start at $650 setup and $99 a month, which covers the site plus the tooling around it. For University of Alabama students and student-run businesses, a site is $500, with an optional $25 a month to keep it maintained and updated. Custom builds start at $1,500." },
@@ -30,7 +30,7 @@ const FAQS: { label: string; qas: QA[] }[] = [
   {
     label: "AI consulting",
     qas: [
-      { q: "Do I need tech experience to benefit from a session?", a: "No. I design most sessions for people who have never used AI tools, and I start from what you already know." },
+      { q: "Do I need tech experience to benefit from a session?", a: "No. I design most sessions for people who have never used AI tools, and I begin with what you already know." },
       { q: "What do participants need to bring?", a: "A laptop or tablet. I bring the setup, the demos, the exercises and a written guide you keep." },
       { q: "Can you come to our office?", a: "Yes. I come to your office, so the examples use your team's own work." },
       { q: "How is this different from using ChatGPT on my own?", a: "I show you prompting techniques, integrations and workflows chosen for your type of business, and you practice them on your own tasks during the session." },
@@ -59,10 +59,10 @@ const FAQS: { label: string; qas: QA[] }[] = [
   {
     label: "Courses",
     qas: [
-      { q: "Are the courses available?", a: "Not yet. There are three courses, the waitlist is open, and none is finished. Ask me and I will send the material I have so far." },
-      { q: "Will they be live or self-paced?", a: "Self-paced. Every lesson is planned as a video with a written takeaway, so you can work through a course in a weekend or over months." },
+      { q: "Are the courses available?", a: "Not yet. There are three courses, the waitlist is open, and I have not finished any of them. Ask me and I will send the material I have so far." },
+      { q: "Will they be live or self-paced?", a: "Self-paced. I am planning every lesson as a video with a written takeaway, so you can work through a course in a weekend or over months." },
       { q: "Do I get lifetime access?", a: "Yes. One purchase covers the course and any future updates to its lessons." },
-      { q: "Is there a refund policy?", a: "30 days. If the course does not deliver for you, email me within 30 days for a full refund." },
+      { q: "Is there a refund policy?", a: "30 days. If the course does not help you, email me within 30 days for a full refund." },
       { q: "Can I message you while taking a course?", a: "Yes. Email me any time and I will reply within one business day." },
     ],
   },
@@ -70,7 +70,7 @@ const FAQS: { label: string; qas: QA[] }[] = [
     label: "The company",
     qas: [
       { q: "Are you nineteen?", a: "Yes. I have been building production software for a year. Every portfolio project links to a live site, and the full record is at /resume." },
-      { q: "What is the logo based on?", a: "Bentham's panopticon, turned around. In Bentham's prison design, a hidden guard watches prisoners who can always be seen. In the logo, PV sits at the center in plain view, because the company is the one that answers for its work." },
+      { q: "What is the logo based on?", a: "Bentham's panopticon, turned around. In Bentham's prison design, a hidden guard can see every prisoner at all times. In the logo, PV sits at the center in plain view, because the company is the one that answers for its work." },
       { q: "Why is it called Ventures?", a: "The company runs several separate ventures: websites, digital services, consulting, software, Steady, and real estate as a planned division. I build and test each one on its own." },
       { q: "Who owns Mantle Field Services?", a: "I do. It is a sister brand to Purcell Ventures, with its own sales operation." },
     ],

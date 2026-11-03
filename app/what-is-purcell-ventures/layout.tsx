@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "Purcell Ventures LLC is a Georgia software company founded by Elijah Purcell in April 2025, control number 25075361. It builds websites, custom software and AI tools for small businesses. Divisions, prices and contact details.",
   alternates: { canonical: "/what-is-purcell-ventures" },
   openGraph: {
-    title: "What Is Purcell Ventures LLC?",
+    title: "What is Purcell Ventures LLC?",
     description:
       "A Georgia software company founded by Elijah Purcell in April 2025. Websites, custom software and AI tooling for small businesses.",
     url: "https://purcellventures.co/what-is-purcell-ventures",
@@ -39,11 +39,11 @@ const QA: [string, string][] = [
   ["Is this the same Purcell Ventures registered in New York?",
    "No. There is an older, unrelated Purcell Ventures LLC registered in New York. This one is the Georgia company, control number 25075361, formed 8 April 2025 by Elijah Purcell. The Georgia filing is public, and the control number tells the two apart."],
   ["What does Purcell Ventures do?",
-   "It has five active divisions. Websites for local businesses, from $650 setup and $99 a month. Digital add-ons such as chatbots, booking and CRM, from $99 a month. Hands-on AI consulting, from $125 a person. Custom software, including mobile apps, web platforms and internal tools. Steady, a personal IT service, from $79 a month. A real estate division is planned. A separate brand, Mantle Field Services, handles gutter cleaning, pressure washing and lawn care in metro Atlanta."],
+   "It has five active divisions. Websites for local businesses, from $650 setup and $99 a month. Digital add-ons such as chatbots, booking and CRM, from $99 a month. Hands-on AI consulting, from $125 a person. Custom software, including mobile apps, web platforms and internal tools. Steady, a personal IT service, from $79 a month. Elijah plans to add a real estate division. A separate brand, Mantle Field Services, handles gutter cleaning, pressure washing and lawn care in metro Atlanta."],
   ["How many people work at Purcell Ventures?",
-   "One. Elijah Purcell is the only person. The company also runs COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, security checks, research and outreach. The roster is published at purcellventures.co/team, and it states that every agent is software."],
+   "One. Elijah Purcell is the only person. The company also runs COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, security checks, research and outreach. Elijah publishes the roster at purcellventures.co/team, and it states that every agent is software."],
   ["Where is Purcell Ventures located?",
-   "The LLC is registered in Acworth, Georgia, in the Atlanta metro, which is where it was formed. Elijah runs it from Tuscaloosa, Alabama, where he attends the University of Alabama. Digital work is delivered nationwide. Field services through Mantle are metro Atlanta only."],
+   "Elijah formed and registered the LLC in Acworth, Georgia, in the Atlanta metro. Elijah runs it from Tuscaloosa, Alabama, where he attends the University of Alabama. The company delivers digital work nationwide. Field services through Mantle are metro Atlanta only."],
   ["Is Purcell Ventures registered?",
    "Yes. Georgia Secretary of State control number 25075361, formed 8 April 2025, and the filing is public and searchable. It has an EIN and business banking, and it contracts, invoices and handles its own compliance directly."],
   ["How do you contact Purcell Ventures?",
@@ -66,7 +66,7 @@ export default function CompanyLayout({ children }: { children: React.ReactNode 
   const about = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    name: "What Is Purcell Ventures LLC?",
+    name: "What is Purcell Ventures LLC?",
     url: "https://purcellventures.co/what-is-purcell-ventures",
     dateModified: "2026-08-20",
     mainEntity: { "@id": "https://purcellventures.co/#organization" },

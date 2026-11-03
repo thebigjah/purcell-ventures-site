@@ -54,7 +54,7 @@ export default function OnboardPage() {
           <PortalNav />
           <main style={{ maxWidth: "600px", margin: "0 auto", padding: "80px 24px", textAlign: "center" }}>
             <h1 style={{ fontFamily: "'Cinzel', Georgia, serif", color: "var(--color-warm-text)" }}>Admin only</h1>
-            <p style={{ color: "var(--color-warm-text-muted)" }}>This page is for admin onboarding new reps. If you should have access, ask Elijah.</p>
+            <p style={{ color: "var(--color-warm-text-muted)" }}>Only admins can onboard new reps. If you should have access, ask Elijah.</p>
             <Link href="/rep-portal" style={{ color: "var(--color-warm-accent)" }}>← Back to dashboard</Link>
           </main>
         </div>
@@ -68,40 +68,40 @@ export default function OnboardPage() {
 
 You're officially on the Purcell Ventures sales team. Welcome.
 
-Here's everything you need to start:
+Here's what you need to start:
 
-🔐 REP PORTAL LOGIN
+REP PORTAL LOGIN
   URL:      https://purcellventures.co/rep-portal/login
   Password: ${password || "(set above)"}
   (Your name is auto-detected from the password, no need to type it.)
 
-📋 CONTRACTOR AGREEMENT
+CONTRACTOR AGREEMENT
   Before your first sale, please sign and return:
   https://purcellventures.co/sales-rep
   (Look for the contractor agreement PDF link.)
 
-📚 ESSENTIAL READING (10 min total)
+REQUIRED READING (10 min total)
   • Handbook:    https://purcellventures.co/rep-portal/handbook
   • Pricing:     https://purcellventures.co/rep-portal/pricing
   • Products:    https://purcellventures.co/rep-portal/products
   • Scripts:     https://purcellventures.co/rep-portal/scripts
 
-🤖 WHEN YOU'RE STUCK MID-PITCH
+WHEN YOU'RE STUCK MID-PITCH
   /rep-portal/ask, the AI assistant. Knows pricing, scripts, escalation rules. Type a question, get a tactical answer.
 
-🎯 YOUR TIER: ${tier}
-  ${tier === "Apprentice" ? "Start with Courses + Mantle (commission paid but doesn't count toward promotion). 5 course closes + 80% on the Closer quiz → Closer tier." : ""}${tier === "Closer" ? "You can sell Digital Services subscriptions. 5 Digital closes + co-pitch with me on a Custom Software deal → Senior tier." : ""}${tier === "Senior" ? "Full catalog access — Consulting + Custom Software included. You're at the top of the tier ladder." : ""}
+YOUR TIER: ${tier}
+  ${tier === "Apprentice" ? "Start with Courses + Mantle (commission paid but doesn't count toward promotion). 5 course closes + 80% on the Closer quiz → Closer tier." : ""}${tier === "Closer" ? "You can sell Digital Services subscriptions. 5 Digital closes + co-pitch with me on a Custom Software deal → Senior tier." : ""}${tier === "Senior" ? "Full catalog access, Consulting + Custom Software included. You're at the top of the tier ladder." : ""}
 
-📞 ONBOARDING CALL
+ONBOARDING CALL
   Let's do a 30-min call this week to walk through everything. Reply with 3 time windows that work.
 
 Looking forward to working with you.
 
-— Elijah
+Elijah
 elijah@purcellventures.co
 (205) 462-7839`;
 
-  const mailtoLink = email ? `mailto:${email}?subject=${encodeURIComponent(`Welcome to Purcell Ventures sales — ${name}`)}&body=${encodeURIComponent(welcomeBody)}` : "";
+  const mailtoLink = email ? `mailto:${email}?subject=${encodeURIComponent(`Welcome to Purcell Ventures sales, ${name}`)}&body=${encodeURIComponent(welcomeBody)}` : "";
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--color-warm-bg)", color: "var(--color-warm-text)", position: "relative" }}>
@@ -111,7 +111,7 @@ elijah@purcellventures.co
         <main style={{ maxWidth: "1080px", margin: "0 auto", padding: "40px 24px 96px" }}>
 
           <header className="pv-page-head">
-            <div className="pv-mono-label">Admin · Rep Onboarding</div>
+            <div className="pv-mono-label">Admin · Rep onboarding</div>
             <h1>
               Onboard a <em className="pv-italic" style={{ fontWeight: 400, color: "var(--color-warm-accent)" }}>new rep.</em>
             </h1>
@@ -192,7 +192,7 @@ elijah@purcellventures.co
 
           <div style={{ marginTop: "48px", padding: "20px 24px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)", fontSize: "13px", color: "var(--color-warm-text-muted)", lineHeight: 1.6 }}>
             <strong style={{ color: "var(--color-warm-accent)", fontFamily: "var(--font-dm-sans), sans-serif", letterSpacing: "0.18em", textTransform: "uppercase", fontSize: "10px" }}>Heads up · </strong>
-            This tool helps you prep an onboarding, it does NOT auto-write to your Vercel env var (that requires the Vercel API). You still have to paste the env-var line manually. Future: integrate with Vercel API for one-click activation.
+            This tool helps you prep an onboarding. It does NOT auto-write to your Vercel env var (that requires the Vercel API). You still have to paste the env-var line manually. Future: integrate with Vercel API for one-click activation.
           </div>
 
         </main>

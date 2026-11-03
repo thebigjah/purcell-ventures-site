@@ -12,20 +12,20 @@ type GateState = "loading" | "locked" | "unlocked";
 // ── Curriculum ────────────────────────────────────────────────────────────────
 const MODULES = [
   {
-    num: "01", title: "The Automation Mindset",
+    num: "01", title: "The automation mindset",
     lessons: [
       {
         id: "1-1", title: "The 'more than once' rule, how I decide what to automate",
         duration: "12 min", format: "Camera",
-        notes: `Every tool I have built started with a moment of annoyance. Not a strategic insight, annoyance. I was reading my email for the fourth time that day and nothing had changed since the third time. I was copying job postings from Craigslist into a spreadsheet and realizing I had done the exact same thing two weeks earlier. I was filling out scholarship applications and thinking: I already answered this question seventeen times. The moment I started paying attention to that annoyance was the moment automation became possible for me.
+        notes: `Every tool I have built started with a moment of annoyance. I was reading my email for the fourth time that day and nothing had changed since the third time. I was copying job postings from Craigslist into a spreadsheet and realizing I had done the exact same thing two weeks earlier. I was filling out scholarship applications and thinking: I already answered this question seventeen times. The moment I started paying attention to that annoyance was the moment automation became possible for me.
 
-The filter I use is what I call the "more than once" rule. If I do something more than once and it follows a pattern, meaning the steps are the same each time, even if the specific data is different, it's a candidate for automation. That's it. The rule is not sophisticated. What makes it powerful is consistency: I apply it every single time I catch myself repeating work. I don't evaluate whether I'm capable of automating it yet. I just flag it and move on. The capability question comes later.
+The filter I use is what I call the "more than once" rule. If I do something more than once and it follows a pattern, meaning the steps are the same each time, even if the specific data is different, it's a candidate for automation. The rule is simple, and I apply it every single time I catch myself repeating work. I don't evaluate whether I'm capable of automating it yet. I just flag it and move on. The capability question comes later.
 
 The distinction between "more than once" and "follows a pattern" is important. Manually ordering the exact same lunch every day is repetitive, but it doesn't follow a pattern that code can execute better than you. Reading your inbox and deciding which emails need a reply does follow a pattern, you're doing a classification task, and classification is something Claude is exceptionally good at. The question to ask is: if I wrote down the rules I use to make this decision, would they be specific enough for a computer to follow? If yes, you're looking at an automation candidate.
 
 Walk through three real examples: the email bot, which replaced my habit of scanning my inbox every hour, a listing monitor, which replaced my weekly manual search for job leads, and an inbox harvester that turned what would have been two weeks of reading emails into a 20-minute automated run. In each case, the pattern was there long before I automated it. I just wasn't looking for it. The "more than once" rule trains you to start looking.
 
-The practical exercise for this lesson is to open your last week of work and count repetitions. Not tasks, repetitions. How many times did you do essentially the same thing? How much of your inbox management is classification? How many of your recurring tasks have an identifiable trigger (new email, new day, someone fills out a form)? That count is your automation backlog. Most people, when they first do this count, find they have ten to fifteen hours of automatable work per week. That's not a small number.`,
+The practical exercise for this lesson is to open your last week of work and count repetitions. How many times did you do the same thing? How much of your inbox management is classification? How many of your recurring tasks have an identifiable trigger (new email, new day, someone fills out a form)? That count is your automation backlog. Most people, when they first do this count, find they have ten to fifteen hours of automatable work per week.`,
         takeaways: [
           "The 'more than once' rule: if it happens more than once and follows a pattern, it's a candidate",
           "Pattern = the steps are the same even when the specific data is different",
@@ -37,15 +37,15 @@ The practical exercise for this lesson is to open your last week of work and cou
       {
         id: "1-2", title: "The stack audit, mapping your daily repetitive tasks",
         duration: "13 min", format: "Camera + Screen",
-        notes: `The stack audit is a structured exercise for finding the pattern work you've been ignoring. It's not a brainstorm, brainstorming is too open-ended and you'll end up listing things that feel automatable but aren't. The audit is more like an inventory: you go through every place where your work happens and count repetitions.
+        notes: `The stack audit is a structured exercise for finding the pattern work you've been ignoring. Brainstorming is too open-ended, and you'll end up listing things that feel automatable but aren't. The audit is more like an inventory: you go through every place where your work happens and count repetitions.
 
 Open four things: your email inbox, your calendar for the last two weeks, your browser history, and if you use one, a task manager like Notion or Todoist. These four surfaces contain almost everything you do. Go through each one and ask: what do I do here repeatedly? In your inbox, look for response patterns, emails that get the same type of reply. Look for things you check regularly without acting on. In your calendar, look for recurring meetings that produce recurring outputs. In your browser history, look for sites you visit on a schedule or for a specific purpose.
 
-For each repetitive task you find, score it on three axes: frequency (how many times per week), time cost (how many minutes each time), and annoyance (1 to 5, how much it bothers you). Multiply the three together. That gives you a priority score. The tasks at the top of the ranked list are where you start, not the most technically interesting ones, and not the ones that seem most impressive to automate. The highest-score tasks are the ones where you'll feel the automation immediately.
+For each repetitive task you find, score it on three axes: frequency (how many times per week), time cost (how many minutes each time), and annoyance (1 to 5, how much it bothers you). Multiply the three together. That gives you a priority score. The tasks at the top of the ranked list are where you start, even if they aren't interesting or impressive to automate. The highest-score tasks are the ones where you'll feel the automation immediately.
 
-When I did this exercise, the top three items were: reading and triaging my inbox (7 times per week × 20 min × annoyance 5 = 700), searching job boards for relevant leads (3 times per week × 25 min × annoyance 4 = 300), and processing a bulk batch of emails that would have taken a full day, an automated extractor cut that to 20 minutes. Your list will be different, but I'll almost guarantee that something involving email is near the top. Email is the most repetitive, most time-consuming, and most pattern-driven workflow most people have.
+When I did this exercise, the top three items were: reading and triaging my inbox (7 times per week × 20 min × annoyance 5 = 700), searching job boards for relevant leads (3 times per week × 25 min × annoyance 4 = 300), and processing a bulk batch of emails that would have taken a full day, an automated extractor cut that to 20 minutes. Your list will be different, but I'd bet that something involving email is near the top. Email is the most repetitive and pattern-driven workflow most people have.
 
-The output of this exercise is a ranked list. Keep it somewhere permanent. Add to it every time you notice a new repetition. The list is never "done." As you automate items off the top, new ones surface. After six months of doing this, you'll have a fundamentally different relationship with your time: instead of managing your work, you'll be managing a system that manages your work.`,
+The output of this exercise is a ranked list. Keep it somewhere permanent. Add to it every time you notice a new repetition. The list is never "done." As you automate items off the top, new ones surface. After six months of doing this, you'll spend less time doing the work by hand and more time running the system that does it.`,
         takeaways: [
           "Audit four surfaces: inbox, calendar, browser history, task manager",
           "Scoring formula: frequency × time cost × annoyance = priority score",
@@ -57,19 +57,19 @@ The output of this exercise is a ranked list. Keep it somewhere permanent. Add t
       {
         id: "1-3", title: "Picking your first build, scope, effort, and impact",
         duration: "10 min", format: "Camera",
-        notes: `The most common mistake people make with their first automation is picking something too ambitious. They see the email bot or the YouTube pipeline and they want to build something at that scale immediately. Those tools took real time to develop. The email bot went through four rewrites before it was reliable enough to trust daily. The YouTube pipeline has a dozen edge cases that took weeks of real-world failures to discover and handle. Your first automation should not have edge cases at all, it should be so simple that there is only one path.
+        notes: `The most common mistake people make with their first automation is picking something too ambitious. They see the email bot or the YouTube pipeline and they want to build something at that scale immediately. Those tools took real time to develop. The email bot went through four rewrites before it was reliable enough to trust daily. The YouTube pipeline has a dozen edge cases that took weeks of real-world failures to discover and handle. Your first automation should be so simple that it has only one path.
 
 Good first builds share three characteristics: a clear trigger, a single transformation, and a useful output. The trigger is what starts the automation (a new file in a folder, a time of day, a webhook). The transformation is what the automation does (calls an API, moves data, generates text). The output is what you get (a file, an email draft, a row in a spreadsheet). If you can describe your first build in one sentence using those three elements, it's scoped correctly. "When a new email arrives from a specific sender, extract the relevant information and add it to a spreadsheet" is a good first build. "Build an AI that manages my entire business communication" is not.
 
-The other failure mode is too much setup before the first run. If you're spending more than two hours getting your environment ready, stop and simplify. Your goal for the first session is to have something running, even if it's wrong, even if it only works on one input. A script that runs and produces bad output is infinitely more valuable than a plan that produces perfect output in theory. The feedback loop of running code is the only thing that teaches you to build.
+The other failure mode is too much setup before the first run. If you're spending more than two hours getting your environment ready, stop and simplify. Your goal for the first session is to have something running, even if it's wrong, even if it only works on one input. A script that runs and produces bad output is worth more than a plan that produces perfect output in theory. The feedback loop of running code is the only thing that teaches you to build.
 
-For most people coming from the stack audit, the right first build is a simple email parser. Pick one type of email you get regularly, receipts, newsletter summaries, job alerts, whatever, and write a script that reads it and extracts the key information. Don't send anything, don't automate anything, don't store anything yet. Just read, extract, print. Get that working in an afternoon, then add one piece at a time. This is the pattern that every tool in this course was built with: start with the smallest possible thing that proves the core concept, then extend.
+For most people coming from the stack audit, the right first build is a simple email parser. Pick one type of email you get regularly, receipts, newsletter summaries, job alerts, whatever, and write a script that reads it and extracts the key information. Don't send anything, don't automate anything, don't store anything yet. Just read, extract, print. Get that working in an afternoon, then add one piece at a time. I built every tool in this course with this pattern: start with the smallest possible thing that proves the core concept, then extend.
 
-Time to finish is the most important metric for your first build. Pick something you can finish in one sitting or one weekend. Not because fast is always better, but because finishing is what builds the skill. Every builder I know who has a library of running tools got there by finishing lots of small things, not by planning one large thing for months. The YouTube pipeline is big, but it was built in modules that each ran independently before they were connected.`,
+Time to finish is the most important metric for your first build. Pick something you can finish in one sitting or one weekend. Finishing is what builds the skill. Every builder I know who has a library of running tools got there by finishing lots of small things. The YouTube pipeline is big, but I built it in modules that each ran on their own before I connected them.`,
         takeaways: [
           "First automation formula: one trigger + one transformation + one useful output",
           "If you can't describe it in one sentence, it's too ambitious",
-          "Get something running before optimizing, running and wrong beats planned and perfect",
+          "Get something running before optimizing, even if the first output is wrong",
           "Simple email parser is the ideal first build for most people",
           "Time to finish is the most important metric for your first project",
         ],
@@ -77,7 +77,7 @@ Time to finish is the most important metric for your first build. Pick something
     ],
   },
   {
-    num: "02", title: "Your AI Foundation",
+    num: "02", title: "Your AI foundation",
     lessons: [
       {
         id: "2-1", title: "Setting up your environment: Python, APIs, keys, .env files",
@@ -114,7 +114,7 @@ The difference between a vague prompt and a specific one is enormous. "Categoriz
 
 Cover temperature and max_tokens briefly. Temperature controls randomness, for structured output like JSON, use temperature=0 or 0.1 to get consistent, predictable responses. For creative tasks like writing commentary, use 0.7 to 0.9. Max tokens limits response length, for a short classification task, 500 tokens is plenty. For a full essay draft, 2000+. Setting max_tokens too low will truncate the response mid-sentence, which breaks JSON parsing. When in doubt, set it higher than you think you need and optimize later.
 
-Error handling: API calls fail. Rate limits get hit, the network drops, the response comes back malformed. Wrap every API call in a try/except block and decide what to do when it fails, log it, retry it, skip it. The email bot retries twice with a 5-second sleep between attempts before giving up on a batch. The YouTube pipeline logs failures and continues with the next item. Neither behavior is "correct." It depends on whether the failure is tolerable. What's never correct is letting an unhandled exception crash your entire script.`,
+Error handling: API calls fail. You hit rate limits, the network drops, the response comes back malformed. Wrap every API call in a try/except block and decide what to do when it fails, log it, retry it, skip it. The email bot retries twice with a 5-second sleep between attempts before giving up on a batch. The YouTube pipeline logs failures and continues with the next item. Neither behavior is "correct." It depends on whether the failure is tolerable. What's never correct is letting an unhandled exception crash your entire script.`,
         takeaways: [
           "System prompt is the most important part of any AI call, don't skip it",
           "Force JSON output by specifying exact schema in the system prompt",
@@ -132,11 +132,11 @@ The ai_engine.py pattern: create a single file that contains all your AI call lo
 
 Here's what the function signatures look like in practice. A simple call: def call_claude(system_prompt: str, user_message: str, max_tokens: int = 1024, temperature: float = 0) -> str. Returns the response text. A batch call: def analyze_batch(items: list[dict], prompt_template: str, max_tokens: int = 4096) -> list[dict]. Takes a list of items, a template prompt, and returns a list of processed results. This is the exact pattern used in the email bot's analyze_batch() function, which processes 10 emails at a time and returns a JSON array with one result per email.
 
-Config-driven prompts are the other important pattern. Instead of hardcoding prompts as strings inside your functions, store them in a separate config structure, a dictionary, a YAML file, or a dataclass. This lets you tune prompts without touching the function logic, and it makes it easier to see all your prompts in one place. The email bot has a PROMPTS dictionary at the top of ai_engine.py with keys like "email_triage", "draft_reply", "coupon_extract". To change how the triage works, you edit the prompt, not the function.
+Config-driven prompts are the other important pattern. Instead of hardcoding prompts as strings inside your functions, store them in a separate config structure, a dictionary, a YAML file, or a dataclass. This lets you tune prompts without touching the function logic, and it makes it easier to see all your prompts in one place. The email bot has a PROMPTS dictionary at the top of ai_engine.py with keys like "email_triage", "draft_reply", "coupon_extract". To change how the triage works, you edit the prompt and leave the function alone.
 
 Show a complete ai_engine.py that's general enough to use across different projects but specific enough to be useful: client initialization, a simple call function, a batch function, a JSON-forcing wrapper that retries on parse failure, and a prompts config section. This module is one of the templates in the resource pack, you'll start every new project by copying it in and customizing the prompts section.
 
-The deeper principle here is: every time you build something for the second time, stop and build it as a module. Every time you write a function that does something general (makes an API call, reads from a database, formats data), ask whether this belongs in a shared utility file. This habit is what separates a collection of scripts from a codebase. By module 7, your projects will have clean separations between data access, AI logic, and orchestration, not because the course forces it, but because building the module habit early makes it the natural way to work.`,
+The deeper principle here is: every time you build something for the second time, stop and build it as a module. Every time you write a function that does something general (makes an API call, reads from a database, formats data), ask whether this belongs in a shared utility file. This habit is what separates a collection of scripts from a codebase. By module 7, your projects will have clean separations between data access, AI logic, and orchestration, because building the module habit early makes it the natural way to work.`,
         takeaways: [
           "Build ai_engine.py once and import it into every project, never copy-paste API calls",
           "analyze_batch() pattern: list of items in, list of results out, one AI call per batch",
@@ -148,7 +148,7 @@ The deeper principle here is: every time you build something for the second time
     ],
   },
   {
-    num: "03", title: "Email Automation",
+    num: "03", title: "Email automation",
     lessons: [
       {
         id: "3-1", title: "How I built my email bot, architecture walkthrough",
@@ -159,7 +159,7 @@ The architecture is five files: cli.py (the entry point, handles the terminal UI
 
 The data flow is: cli.py calls gmail_client.py to fetch unread emails, passes them to ai_engine.analyze_batch(), stores results via db.py and renders them in the terminal UI. When you reply to an email, cli.py passes the reply text to gmail_client.reply(), which sets the correct headers and sends. When a promotional email contains a coupon, the coupon_engine extracts it, normalizes it (so "20% off" and "20 percent off" match as the same deal), and stores it with deduplication logic so you don't see the same deal twice.
 
-The terminal UI uses the rich library, colored panels, tables, and progress bars in the terminal. This is not strictly necessary for the bot to function, but it makes it pleasant to use. The category colors map to urgency: red for urgent, yellow for reply_needed, blue for receipt, gray for newsletter/junk. You can see at a glance what needs attention before reading a single email. The numbered shortcuts let you type a number to act on an email without moving your hands to a mouse.
+The terminal UI uses the rich library, colored panels, tables, and progress bars in the terminal. The bot would work without it, but the colors make it pleasant to use. The category colors map to urgency: red for urgent, yellow for reply_needed, blue for receipt, gray for newsletter/junk. You can see at a glance what needs attention before reading a single email. The numbered shortcuts let you type a number to act on an email without moving your hands to a mouse.
 
 The most important architectural decision was batching. Instead of calling Claude once per email, the bot sends up to 10 emails per API call. Claude's context window is large enough to analyze 10 emails simultaneously and return a JSON array with one result per email. This cuts API costs by roughly 80% compared to individual calls and makes the whole process faster. The analyze_batch() function in ai_engine.py constructs a single prompt that includes all 10 emails and instructs Claude to return an array with id, category, priority, summary, and draft fields for each one.`,
         takeaways: [
@@ -173,9 +173,9 @@ The most important architectural decision was batching. Instead of calling Claud
       {
         id: "3-2", title: "Connecting to Gmail: OAuth setup, IMAP, reading emails with Python",
         duration: "14 min", format: "Screen share",
-        notes: `Connecting to Gmail is the part everyone dreads and then realizes isn't that bad. There are two approaches: Gmail API with OAuth2, and IMAP with an app password. The email bot uses IMAP because it's simpler for a personal tool where you're the only user. OAuth2 is the right choice if you're building something multi-user. For your own tools, IMAP with an app password is faster to set up and easier to maintain.
+        notes: `Most people dread connecting to Gmail, and it turns out to be easy. There are two approaches: Gmail API with OAuth2, and IMAP with an app password. The email bot uses IMAP because it's simpler for a personal tool where you're the only user. OAuth2 is the right choice if you're building something multi-user. For your own tools, IMAP with an app password is faster to set up and easier to maintain.
 
-To get an app password: go to your Google Account settings, search for "App passwords" (it's under Security, then 2-Step Verification, then App passwords at the bottom), create one for "Mail" on "Windows Computer" (or whatever device), and save the 16-character password. This password goes in your config.yaml or .env file. You never use your main Gmail password in code, if the script ever gets compromised, you revoke just this app password and your account is fine.
+To get an app password: go to your Google Account settings, search for "App passwords" (it's under Security, then 2-Step Verification, then App passwords at the bottom), create one for "Mail" on "Windows Computer" (or whatever device), and save the 16-character password. This password goes in your config.yaml or .env file. You never use your main Gmail password in code, if someone ever steals the script's credentials, you revoke just this app password and your account is fine.
 
 The IMAP connection in gmail_client.py: import imaplib, connect to imap.gmail.com on port 993 with SSL, log in with your email and app password, select the INBOX folder. The fetch_unread() function searches for UNSEEN messages since a given date, the "since" parameter defaults to today, but the function has a fallback that searches the last 24 hours if no messages are found today. This handles edge cases like running the bot at 11:58 PM and having most of the day's messages be technically from "yesterday."
 
@@ -183,7 +183,7 @@ Email parsing is where it gets messy. Raw emails are MIME-encoded, meaning the b
 
 The reply() function sets the In-Reply-To and References headers correctly so the reply threads properly in Gmail. This is the detail that most tutorials miss, if you just send an email with the same subject line but without these headers, it shows up as a new thread instead of a reply. One line each: msg["In-Reply-To"] = original_message_id and msg["References"] = original_message_id. Get them from the original email's Message-ID header.
 
-Threading, encoding, and unicode are the hidden complexity in email. Python's email library handles most of it, but you'll hit cases where subject lines are encoded in base64 or quoted-printable, or where the body is in a non-UTF8 encoding. The gmail_client.py handles these with decode_header() and a try/except around the decode step with a fallback to latin-1. These are not interesting problems, they're just things you have to handle.`,
+Threading, encoding, and unicode are the hidden complexity in email. Python's email library handles most of it, but you'll hit cases where a subject line arrives in base64 or quoted-printable, or where the body is in a non-UTF8 encoding. The gmail_client.py handles these with decode_header() and a try/except around the decode step with a fallback to latin-1. These problems are dull, and you still have to handle them.`,
         takeaways: [
           "Use IMAP and an app password for personal tools, OAuth2 for multi-user apps",
           "App passwords are in Google Account, Security, 2-Step Verification, App passwords",
@@ -197,100 +197,100 @@ Threading, encoding, and unicode are the hidden complexity in email. Python's em
         duration: "12 min", format: "Screen share",
         notes: `The triage layer is the core value of the email bot. Everything else, the UI, the database, the coupon extraction, is scaffolding around this single function: take a batch of raw emails, pass them through Claude, get back structured data about each one. Building this well means understanding how to write prompts that produce consistent, parseable output at scale.
 
-The analyze_batch() function in ai_engine.py constructs a prompt that includes all emails in the batch, each labeled with an index. The system prompt tells Claude to act as an email classifier and return a JSON array where each element has id (matching the email's index), category, priority, summary, and draft. The category options are defined in the prompt: urgent (needs response today), reply_needed (needs response but not today), receipt (order confirmation, shipping notification), newsletter (marketing content), junk (spam or completely irrelevant). These categories match my actual use case, your first customization will probably be adjusting them to match yours.
+The analyze_batch() function in ai_engine.py constructs a prompt that includes all emails in the batch, each labeled with an index. The system prompt tells Claude to act as an email classifier and return a JSON array where each element has id (matching the email's index), category, priority, summary, and draft. The prompt defines the category options: urgent (needs response today), reply_needed (needs response but not today), receipt (order confirmation, shipping notification), newsletter (marketing content), junk (spam or completely irrelevant). These categories match my actual use case, your first customization will probably be adjusting them to match yours.
 
 The priority score from 1 to 5 is separate from category because they don't always correlate. A newsletter can technically have priority 5 if it's announcing something time-sensitive. An email that's reply_needed might only be priority 2 if the deadline is two weeks away. Storing both lets you sort by priority × category instead of just one or the other.
 
-The summary field is one sentence. Claude enforces this because the prompt says "one sentence." This forces it to extract the single most important piece of information from the email. For a newsletter, it's the main topic. For a reply_needed email, it's the specific question being asked. Having a one-sentence summary for every email means you can review 40 messages in 30 seconds by reading 40 sentences, instead of opening each one.
+The summary field is one sentence. Claude enforces this because the prompt says "one sentence." This forces it to extract the single most important piece of information from the email. For a newsletter, it's the main topic. For a reply_needed email, it's the specific question the sender asks. Having a one-sentence summary for every email means you can review 40 messages in 30 seconds by reading 40 sentences, instead of opening each one.
 
-The draft field is a suggested reply. The prompt instructs Claude to generate a reply only if the email is in the urgent or reply_needed categories, and to return null for all others. The draft is not sent automatically, it goes to a review queue where you can accept it as-is, edit it, or write your own. This is the correct default for email automation: AI drafts, human approves. Full auto-send is possible, and the code supports it, but the risk of sending something wrong outweighs the time saved by not reviewing.
+The draft field is a suggested reply. The prompt instructs Claude to generate a reply only if the email is in the urgent or reply_needed categories, and to return null for all others. The bot doesn't send the draft automatically. It goes to a review queue where you can accept it as-is, edit it, or write your own. This is the correct default for email automation: AI drafts, human approves. Full auto-send is possible, and the code supports it, but the risk of sending something wrong outweighs the time saved by not reviewing.
 
-SQLite storage: after analyze_batch() returns, each result gets written to the processed_emails table with the email ID, category, priority, summary, draft text, timestamp, and a sent boolean. This lets you query your email history ("show me all urgent emails from last month," "what's my average response rate on reply_needed emails") and makes the bot stateful across sessions so it doesn't re-process emails it's already seen.`,
+SQLite storage: after analyze_batch() returns, the bot writes each result to the processed_emails table with the email ID, category, priority, summary, draft text, timestamp, and a sent boolean. This lets you query your email history ("show me all urgent emails from last month," "what's my average response rate on reply_needed emails") and makes the bot stateful across sessions so it doesn't re-process emails it's already seen.`,
         takeaways: [
           "One batch call for 10 emails: include index labels so Claude can return per-email results",
           "Category + priority are separate fields, they don't always correlate",
           "Force one-sentence summaries in the prompt, it forces better extraction",
           "Draft field returns null for non-actionable categories, don't draft what doesn't need a reply",
-          "SQLite makes the bot stateful: track what's been processed, enable historical queries",
+          "SQLite makes the bot stateful: track what it has processed, enable historical queries",
         ],
       },
       {
         id: "3-4", title: "Auto-drafting responses you can send",
         duration: "11 min", format: "Camera + Screen",
-        notes: `Generating a draft is easy. Generating a draft that sounds like you, matches your tone, and doesn't need to be rewritten is the hard part. The difference is entirely in how you write the drafting prompt. This lesson is about the craft of prompting for output that you'll use, not output that you have to fix before using.
+        notes: `Generating a draft is easy. Generating a draft that sounds like you, matches your tone, and doesn't need to be rewritten is the hard part. The difference is entirely in how you write the drafting prompt.
 
-The drafting prompt has three sections: identity (who you are and how you communicate), context (the email being replied to, plus any relevant background), and constraints (length, format, what to include or exclude). The identity section is where most people underinvest. "Write a professional reply" produces generic corporate language. "Write a reply in the voice of a 19-year-old founder, direct, friendly, no fluff, no corporate phrases, maximum three sentences unless the question requires more" produces something that sounds like me.
+The drafting prompt has three sections: identity (who you are and how you communicate), context (the email you're replying to, plus any relevant background), and constraints (length, format, what to include or exclude). The identity section is where most people underinvest. "Write a professional reply" produces generic corporate language. "Write a reply in the voice of a 19-year-old founder, direct, friendly, no fluff, no corporate phrases, maximum three sentences unless the question requires more" produces something that sounds like me.
 
-Context matters because Claude has no memory of your history with this person. If you've been trading emails with someone for a month, the draft shouldn't read like a cold introduction. The fix is to include a brief context note in the prompt: "This is an ongoing project conversation. The prior context is: [brief summary]." For most emails, no additional context is needed, the email itself has enough. For anything more nuanced, spending ten seconds adding context to the prompt saves you several minutes of rewriting the draft.
+Context matters because Claude has no memory of your history with this person. If you've been trading emails with someone for a month, the draft shouldn't read like a cold introduction. The fix is to include a brief context note in the prompt: "This is an ongoing project conversation. The prior context is: [brief summary]." For most emails, you need no additional context, since the email itself has enough. For anything more nuanced, spending ten seconds adding context to the prompt saves you several minutes of rewriting the draft.
 
 The coupon extraction feature in the email bot is a domain-specific extension of the drafting pattern. Instead of drafting a reply, the coupon_engine.py asks Claude to extract structured coupon data from promotional emails: store name, discount type, discount value, code, expiration date. The system prompt includes examples of the output format to make the extraction more reliable. The results go through a normalization function that converts "20% off" and "20 percent off" and "twenty percent discount" to the same canonical form before storing, so get_best_deals_by_store() can deduplicate correctly.
 
-The review interface in cli.py deserves mention here. When you're shown a draft, your options are: accept it (sends immediately), edit it (opens the draft in an edit mode where you type and end with a period on its own line), skip it (moves to the next email), or write your own. The numbered shortcuts mean the entire inbox review flow, read, triage, draft, send, can be done without a mouse. This is a design choice that makes the tool faster to use in practice, not just more functional in theory.`,
+The review interface in cli.py deserves mention here. When the bot shows you a draft, your options are: accept it (sends immediately), edit it (opens the draft in an edit mode where you type and end with a period on its own line), skip it (moves to the next email), or write your own. The numbered shortcuts mean the entire inbox review flow, read, triage, draft, send, works without a mouse. I chose this design because it makes the tool faster to use.`,
         takeaways: [
           "Identity + context + constraints in every drafting prompt",
           "Be specific about voice: 'direct, friendly, max three sentences' beats 'professional'",
           "Add brief context notes for ongoing conversations. Claude has no memory by default",
           "Coupon extraction uses the same pattern: structured prompt, JSON output, normalize, store",
-          "Design for speed of review, not just automation, keyboard shortcuts beat mouse",
+          "Design for speed of review: keyboard shortcuts beat the mouse",
         ],
       },
     ],
   },
   {
-    num: "04", title: "Content Automation Pipelines",
+    num: "04", title: "Content automation pipelines",
     lessons: [
       {
         id: "4-1", title: "My YouTube pipeline, how it runs without me",
         duration: "14 min", format: "Camera + Screen",
         notes: `The YouTube pipeline is the most complex tool in this course and the one that makes the strongest case for what automation can do. It runs three times per day, every day, without any manual input. Each run produces a complete YouTube video: downloaded from a source, processed into clips, given AI commentary and a title, assembled with captions and a thumbnail, and uploaded to a channel. The channel earns AdSense revenue. I haven't manually edited a video for this channel since the pipeline launched.
 
-The architecture is a five-step orchestrator: download, commentary, captions, assemble, upload. Each step is a separate function. The orchestrator in main.py runs them in sequence, checks the result of each step before proceeding, and handles failures by logging them and skipping to the next item in the queue rather than crashing. The pipeline is designed to be interruptible and resumable: if it crashes halfway through step 3, the next run picks up where it left off because it checks the clips/ready/ and clips/pending/ directories to determine what work has already been done.
+The architecture is a five-step orchestrator: download, commentary, captions, assemble, upload. Each step is a separate function. The orchestrator in main.py runs them in sequence, checks the result of each step before proceeding, and handles failures by logging them and skipping to the next item in the queue rather than crashing. I designed the pipeline to be interruptible and resumable: if it crashes halfway through step 3, the next run picks up where it left off because it checks the clips/ready/ and clips/pending/ directories to determine what work it has already finished.
 
 Config is in a YAML file: source channels to pull from, number of clips per run, target channel credentials, commentary style and voice settings, thumbnail template parameters. Each channel I run has its own config file. Adding a new channel is a matter of copying the config template, filling in the credentials and style settings, and pointing the pipeline at the new config. The code itself doesn't change.
 
 Scheduling on Windows uses Task Scheduler. The pipeline runs at 7 AM, 1 PM, and 7 PM via three scheduled tasks pointing at the same entry script. Each run is independent, it doesn't know or care what the other runs did. If the 7 AM run fails completely, the 1 PM run still runs. This is a design choice: stateless runs are more reliable than stateful ones because there's less to go wrong.
 
-The revenue reality: a content automation channel like this earns based on view count and RPM, which varies by niche. The pipeline itself doesn't guarantee views, it handles production volume. The skill is in picking a niche with decent RPM and setting up the commentary style to be watchable. The automation handles the ceiling of what's manually possible (you can only produce so many videos per day yourself). Your judgment determines the floor of quality. Both matter.`,
+The revenue reality: a content automation channel like this earns based on view count and RPM, which varies by niche. The pipeline doesn't promise views. It handles production volume. The skill is in picking a niche with decent RPM and setting up the commentary style to be watchable. The automation raises how many videos you can produce, since you can only make so many per day by hand. Your judgment sets the minimum quality.`,
         takeaways: [
           "Five-step orchestrator: download, commentary, captions, assemble, upload",
           "Interruptible design: check output directories at startup to resume from where you stopped",
           "YAML config per channel: content, style, credentials, code never changes between channels",
           "Stateless runs: each scheduled run is independent, failures don't cascade",
-          "Automation raises the production ceiling and your judgment sets the quality floor",
+          "Automation raises how much you can produce and your judgment sets the minimum quality",
         ],
       },
       {
         id: "4-2", title: "Downloading, transcribing, and clipping, yt-dlp + Whisper",
         duration: "13 min", format: "Screen share",
-        notes: `yt-dlp is the backbone of the download step. It handles YouTube, Vimeo, Twitter, and dozens of other platforms, manages rate limiting, handles age-gated content with proper cookies, and supports downloading specific quality levels. For the pipeline, we want 1080p video with the best available audio, and we want them downloaded into the clips/pending/ directory with predictable filenames.
+        notes: `yt-dlp runs the download step. It handles YouTube, Vimeo, Twitter, and dozens of other platforms, manages rate limiting, handles age-gated content with proper cookies, and supports downloading specific quality levels. For the pipeline, we want 1080p video with the best available audio, and we want them downloaded into the clips/pending/ directory with predictable filenames.
 
-Install yt-dlp with pip. The key parameters for pipeline use: --format "bestvideo[height<=1080]+bestaudio/best[height<=1080]" for quality, --output for the destination filename pattern, --no-playlist to prevent accidentally downloading entire playlists when you just want one video, and --cookies-from-browser chrome if you need to access content that requires being logged in. The cookies option reads your browser's saved cookies, which handles age gates and region restrictions without needing to manage session files manually.
+Install yt-dlp with pip. The key parameters for pipeline use: --format "bestvideo[height<=1080]+bestaudio/best[height<=1080]" for quality, --output for the destination filename pattern, --no-playlist to prevent accidentally downloading entire playlists when you just want one video, and --cookies-from-browser chrome if you need to access content that requires a login. The cookies option reads your browser's saved cookies, which handles age gates and region restrictions without needing to manage session files manually.
 
-Whisper is OpenAI's speech recognition model. The local version (via the whisper Python package) is free, runs on CPU, and is accurate enough for most content. For faster transcription, use whisper-large on a GPU if you have one. For the pipeline, whisper-base is usually sufficient, the transcription is used to generate commentary prompts and chapter markers, not for captioning (that step comes later with a different approach). Run: import whisper; model = whisper.load_model("base"); result = model.transcribe("audio.mp3"). The result includes segments with timestamps, which is what you need for clip selection.
+Whisper is OpenAI's speech recognition model. The local version (via the whisper Python package) is free, runs on CPU, and is accurate enough for most content. For faster transcription, use whisper-large on a GPU if you have one. For the pipeline, whisper-base is usually sufficient. The pipeline uses the transcription for commentary prompts and chapter markers. Captioning comes later with a different approach. Run: import whisper; model = whisper.load_model("base"); result = model.transcribe("audio.mp3"). The result includes segments with timestamps, which is what you need for clip selection.
 
 Clip selection logic: take the transcript segments, group them into candidate clips of target length (30 to 90 seconds works well for YouTube), and score each candidate based on energy signals in the transcript, question marks, exclamation points, quotations, named entities, and high word density per second indicate more interesting content. The scoring is heuristic and imperfect, but "imperfect automated selection" is still faster than manual selection at scale.
 
-The clips/ready/ and clips/pending/ directories are the handoff between the download step and the commentary step. A clip in clips/pending/ has been selected and extracted but not yet processed. A clip in clips/ready/ has commentary and is waiting for assembly. This directory-based state management is crude but sturdy: you can inspect it with a file browser, manually move files between states, and the pipeline handles whatever state it finds on startup.`,
+The clips/ready/ and clips/pending/ directories are the handoff between the download step and the commentary step. The pipeline has selected and extracted a clip in clips/pending/ but hasn't processed it yet. A clip in clips/ready/ has commentary and is waiting for assembly. This directory-based state management is crude but sturdy: you can inspect it with a file browser, manually move files between states, and the pipeline handles whatever state it finds on startup.`,
         takeaways: [
           "yt-dlp: --format for quality, --no-playlist to avoid accidental full downloads, --cookies-from-browser for gated content",
           "Whisper-base is sufficient for commentary generation. Save whisper-large for caption accuracy",
           "Transcript segments with timestamps are the raw material for clip selection",
           "Score clips by engagement signals: question marks, exclamations, dense word rate",
-          "Directory-based state (pending/ready) is crude but inspectable and robust",
+          "Directory-based state (pending/ready) is crude but inspectable and sturdy",
         ],
       },
       {
         id: "4-3", title: "AI commentary and titling, adding your voice at scale",
         duration: "13 min", format: "Screen share",
-        notes: `This is the step that determines whether a content automation channel is watchable or garbage. The commentary prompt defines the entire persona of the channel, and because you're generating hundreds of pieces of content with it, every weakness in the prompt gets amplified. Getting this prompt right is worth spending an hour on before you run the pipeline for the first time.
+        notes: `This is the step that determines whether a content automation channel is watchable or garbage. The commentary prompt defines the entire persona of the channel, and because you're generating hundreds of pieces of content with it, every weakness in the prompt repeats hundreds of times. Getting this prompt right is worth spending an hour on before you run the pipeline for the first time.
 
 A well-written commentary prompt has four components: persona (who is delivering the commentary and what is their perspective), style (how they speak, formal/casual, short/verbose, opinionated/neutral), topic instructions (what to focus on, what to avoid, how to handle specific types of content), and format instructions (length, structure, whether to include a hook, how to end). For a commentary channel, the persona might be "a sharp, opinionated observer who cuts through hype and gives the real take in plain language." For a recap channel, it might be "a knowledgeable friend who's already seen everything and is catching you up efficiently."
 
-The title generation prompt is separate from the commentary prompt because they optimize for different things. Commentary is optimized for engagement and retention. Titles are optimized for click-through rate, which means different vocabulary, different length, and sometimes a different tone. Write title generation as its own function that takes the transcript and the generated commentary as inputs, and produces five candidate titles with a recommended one. Let the pipeline pick the recommended one automatically, but keep the alternatives for A/B testing if you want to run it.
+The title generation prompt is separate from the commentary prompt because they optimize for different things. Commentary aims at engagement and retention. Titles aim at click-through rate, which means different vocabulary, different length, and sometimes a different tone. Write title generation as its own function that takes the transcript and the generated commentary as inputs, and produces five candidate titles with a recommended one. Let the pipeline pick the recommended one automatically, but keep the alternatives for A/B testing if you want to run it.
 
 Maintaining a consistent tone across 100 AI-generated scripts is harder than it sounds. The naive approach, same system prompt every time, drifts over time as different source content pulls the commentary in different directions. The fix is a tone calibration document: 3 to 5 examples of commentary in the exact voice you want, stored in your config, injected into every prompt as examples. Claude's few-shot learning is reliable enough that three good examples will hold the tone through most content types.
 
-The description and tags generation follows the same pattern as titles. One prompt, three outputs. Keep them all in the same API call by asking Claude to return a JSON object with commentary, title, description, and tags fields. One call per video, not four. The cost difference is minimal, but the organizational simplicity is worth it: everything about a video comes from one place and one function call.`,
+The description and tags generation follows the same pattern as titles. One prompt, three outputs. Keep them all in the same API call by asking Claude to return a JSON object with commentary, title, description, and tags fields. That's one call per video instead of four. The cost difference is minimal, but the organizational simplicity is worth it: everything about a video comes from one place and one function call.`,
         takeaways: [
           "Commentary prompt = persona + style + topic instructions + format instructions",
           "Title and commentary prompts are separate, they optimize for different things",
@@ -302,9 +302,9 @@ The description and tags generation follows the same pattern as titles. One prom
       {
         id: "4-4", title: "Video assembly, thumbnails and uploading with MoviePy and the YouTube API",
         duration: "13 min", format: "Screen share",
-        notes: `MoviePy is the Python library that assembles the final video. It handles concatenation, audio mixing, subtitle overlays, and basic compositing. It's not as fast as FFmpeg directly, but it's significantly easier to script and debug. For the pipeline, MoviePy handles the video construction. FFmpeg is available as a fallback for operations MoviePy doesn't support well.
+        notes: `MoviePy is the Python library that assembles the final video. It handles concatenation, audio mixing, subtitle overlays, and basic compositing. FFmpeg is faster, but MoviePy is much easier to script and debug. For the pipeline, MoviePy handles the video construction. FFmpeg is available as a fallback for operations MoviePy doesn't support well.
 
-The assembly step takes the selected clips, the generated commentary as a voiceover script (if using text-to-speech), and the SRT captions file. The SRT file is generated from Whisper's timestamped output using a simple formatter that converts Whisper's segment format to the SRT timestamp format. MoviePy's SubtitlesClip takes the SRT file and overlays it on the video. Styling the subtitles, font, size, position, color, outline, is done through MoviePy's TextClip parameters.
+The assembly step takes the selected clips, the generated commentary as a voiceover script (if using text-to-speech), and the SRT captions file. A simple formatter builds the SRT file from Whisper's timestamped output by converting Whisper's segment format to the SRT timestamp format. MoviePy's SubtitlesClip takes the SRT file and overlays it on the video. You style the subtitles (font, size, position, color, outline) through MoviePy's TextClip parameters.
 
 Thumbnail generation uses Pillow. The pipeline has a thumbnail template: a background image (usually a frame from the video selected by the highest motion moment), a text overlay with the title, and a logo or branding element. Pillow draws text with ImageDraw.text(), handles font loading via ImageFont.truetype(), and composites layers with Image.paste() using an alpha mask for the logo. The template parameters come from the channel config: brand color, font file path, text position, and logo path. One template covers all videos on a channel, and changing the look of a channel is a matter of updating the template config.
 
@@ -322,7 +322,7 @@ Putting the full pipeline together: the main.py orchestrator calls each step in 
     ],
   },
   {
-    num: "05", title: "Scraping & Lead Generation",
+    num: "05", title: "Scraping and lead generation",
     lessons: [
       {
         id: "5-1", title: "Web scraping fundamentals: Craigslist, Nextdoor and public data",
@@ -331,13 +331,13 @@ Putting the full pipeline together: the main.py orchestrator calls each step in 
 
 Craigslist is anti-scraping but predictable. The search results page for a given zip code and category loads as HTML. Each result is a div with the class cl-search-result. The title, price, and posting link are all inside that div. Selenium with WebDriverWait is the most reliable approach: load the page, wait for the cl-search-result elements to appear (5-second timeout), then extract. Requests + BeautifulSoup works sometimes, but Craigslist aggressively blocks requests without proper browser headers and cookies. Selenium handles this by running an actual browser.
 
-The spam filter is a list of 35 phrases that appear in low-quality or off-topic postings. Things like "no experience needed," "work from home," "hiring immediately," "MLM," "commission only." Any posting that contains one of these phrases in the title or description gets filtered out before it reaches the export. This filter reduces the volume of leads by about 60% while retaining almost all the genuine ones. Your spam filter will be different, build it by looking at the noise in your actual results and adding phrases you see repeatedly.
+The spam filter is a list of 35 phrases that appear in low-quality or off-topic postings. Things like "no experience needed," "work from home," "hiring immediately," "MLM," "commission only." The scraper drops any posting that contains one of these phrases in the title or description before it reaches the export. This filter reduces the volume of leads by about 60% while retaining almost all the genuine ones. Your spam filter will be different, build it by looking at the noise in your actual results and adding phrases you see repeatedly.
 
-SHA256 job IDs: each posting gets a unique ID generated from a hash of the posting URL and the posting date. This lets the scraper check whether a posting has already been seen without storing the full URL or querying Craigslist again. The deduplication check is a simple set lookup against a SQLite table of seen IDs. A new run only exports postings whose SHA256 ID is not in the seen set, then adds all new IDs to the seen set.
+SHA256 job IDs: each posting gets a unique ID generated from a hash of the posting URL and the posting date. This lets the scraper check whether it has already seen a posting without storing the full URL or querying Craigslist again. The deduplication check is a simple set lookup against a SQLite table of seen IDs. A new run only exports postings whose SHA256 ID is not in the seen set, then adds all new IDs to the seen set.
 
 gspread for Google Sheets export: authenticate with a service account (a separate Google Cloud credential that can write to specific sheets without your personal Google account), get the target spreadsheet by ID, append rows to the first sheet. The row format is: date found, title, price, location, link, category, keyword matched. The sheet becomes a CRM for leads, you work it manually, add notes columns, color-code statuses. The automation handles finding and deduplicating. You handle deciding which leads to pursue.`,
         takeaways: [
-          "Selenium + WebDriverWait for Craigslist, requests gets blocked without proper browser context",
+          "Selenium + WebDriverWait for Craigslist, since Craigslist blocks requests without proper browser context",
           "Wait for div.cl-search-result elements with a 5-second timeout",
           "Spam filter: 35 phrases reduces noise by 60% without losing real leads",
           "SHA256 job IDs: hash(url + date) for deduplication without storing full URLs",
@@ -361,7 +361,7 @@ The Places API costs $17 per 1,000 requests with a $200 monthly free credit. Run
           "Opportunity scoring: no website (+3), no phone (+2), zero reviews (+3), no hours (+2)",
           "Sort by opportunity score, top 20 are your best leads",
           "Specific gaps in the export make every sales call more targeted",
-          "Places API: $200/month free credit, local targeting is essentially free",
+          "Places API: $200/month free credit, local targeting costs almost nothing",
         ],
       },
       {
@@ -371,11 +371,11 @@ The Places API costs $17 per 1,000 requests with a $200 monthly free credit. Run
 
 The pattern is the same as email triage: pass a batch of raw results to Claude, ask it to score or filter or extract structured data, get back a cleaned list. For Craigslist leads, the prompt asks Claude to rate each posting's genuine likelihood of being a real job (not spam, not already filled, not a recurring ad from a large company). For Places leads, it asks Claude to identify businesses that seem to have an existing digital agency or obvious disinterest in getting online, so you're not cold-calling a franchise or a business that has clearly chosen not to have a website.
 
-Prompt engineering for filtering is different from prompt engineering for generation. You're asking for judgment, not creation. The best structure: give Claude the criteria for a good lead versus a bad lead (explicit, with examples), pass the batch as a numbered list, and ask it to return a JSON array with each item's original index and a quality score from 1 to 5 with a one-sentence reason. The reason field is important, it tells you why Claude rated something low, which lets you validate the filter and tune the criteria over time.
+Prompt engineering for filtering is different from prompt engineering for generation, because you're asking Claude for judgment. The best structure: give Claude the criteria for a good lead versus a bad lead (explicit, with examples), pass the batch as a numbered list, and ask it to return a JSON array with each item's original index and a quality score from 1 to 5 with a one-sentence reason. The reason field is important, it tells you why Claude rated something low, which lets you validate the filter and tune the criteria over time.
 
-Rate limiting and anti-bot detection are the practical concerns that most tutorials ignore. Craigslist will temporarily block your IP if you make requests too fast. The fix: add random sleep intervals between page loads (2 to 5 seconds, random), rotate your User-Agent string between requests, and if you're running searches across multiple zip codes, add a longer pause (10 to 15 seconds) between city-level searches. These aren't ways to be sneaky, they're ways to be a respectful automated visitor that doesn't hammer the server.
+Rate limiting and anti-bot detection are the practical concerns that most tutorials ignore. Craigslist will temporarily block your IP if you make requests too fast. The fix: add random sleep intervals between page loads (2 to 5 seconds, random), rotate your User-Agent string between requests, and if you're running searches across multiple zip codes, add a longer pause (10 to 15 seconds) between city-level searches. The goal is to behave like a polite automated visitor that doesn't overload the server.
 
-Export formats matter for how usable the output is. SQLite is the right storage for deduplication and history. CSV is the right export for one-time analysis or sharing with someone else. Google Sheets is right for a living document you'll work from every week. The Google Places script exports to Sheets because it's meant to be a working prospect list. The Craigslist scraper uses SQLite because the deduplication logic requires querying history. Neither is universally better, pick the format based on what you do with the data after.`,
+Export formats matter for how usable the output is. SQLite is the right storage for deduplication and history. CSV is the right export for one-time analysis or sharing with someone else. Google Sheets is right for a living document you'll work from every week. The Google Places script exports to Sheets because it's meant to be a working prospect list. The Craigslist scraper uses SQLite because the deduplication logic requires querying history. Pick the format based on what you do with the data after.`,
         takeaways: [
           "AI filtering pass: batch results, ask for quality scores + reasons, not just pass/fail",
           "One-sentence reason per filtered item lets you validate and tune the filter over time",
@@ -387,25 +387,25 @@ Export formats matter for how usable the output is. SQLite is the right storage 
     ],
   },
   {
-    num: "06", title: "Personal AI Assistants",
+    num: "06", title: "Personal AI assistants",
     lessons: [
       {
         id: "6-1", title: "Building a personal AI assistant, memory, voice, and screen vision",
         duration: "14 min", format: "Camera + Screen",
-        notes: `A personal AI assistant is the most personal tool in this course, built specifically to match how you think and how you work. It's an Electron app that sits on the desktop as an overlay: always visible, always listening, always ready to help without context-switching. You can ask it about what's on your screen, give it a slash command to do something specific, or just have a conversation while working. Done well, it replaces a handful of browser tabs, apps, and manual lookups you do every day.
+        notes: `A personal AI assistant is the most personal tool in this course, built specifically to match how you think and how you work. It's an Electron app that sits on the desktop as an overlay: always visible and listening, so you can get help without context-switching. You can ask it about what's on your screen, give it a slash command to do something specific, or just have a conversation while working. Done well, it replaces a handful of browser tabs, apps, and manual lookups you do every day.
 
 The architecture: Electron handles the desktop overlay, HTML/CSS/JS handles the UI, Web Speech API handles voice input (browser-native, no external service), ElevenLabs handles voice output (text-to-speech with a natural-sounding voice), Claude API handles all reasoning and responses, and a local JSON file handles conversation history and memory. The screen capture feature uses Electron's desktopCapturer API, which takes a screenshot and converts it to base64 for passing to Claude's vision capabilities.
 
 The slash commands system is what makes it feel like a purpose-built tool rather than a generic chatbot. /summarize takes the clipboard contents and returns a concise summary. /email drafts an email based on a prompt. /todo extracts action items from a paste of text. /research does a quick background synthesis on a topic. Each slash command is a different system prompt and sometimes a different Claude model, quick summarization uses haiku, deeper research uses sonnet. The architecture makes it easy to add new commands by adding a new entry to the commands config.
 
-The particle effects HUD is not functional, it's purely aesthetic. The personal AI has an animated particle overlay that reacts to voice input and AI processing states. Particles move faster when voice is detected, cluster when Claude is thinking, and disperse on response. This sounds frivolous, but it makes the tool feel more alive and easier to use. The UI isn't just a text box. When you're working with a tool for hours every day, whether it feels pleasant matters.
+The particle effects HUD is purely aesthetic. The personal AI has an animated particle overlay that reacts to voice input and AI processing states. Particles move faster when the app hears your voice, cluster when Claude is thinking, and disperse on response. This sounds frivolous, but it makes the tool feel more alive and easier to use. When you're working with a tool for hours every day, whether it feels pleasant matters.
 
-The deeper point about personal AI tools: the best ones are deeply specific to the person who built them. A general-purpose AI assistant is less useful than one calibrated to your exact voice, your exact workflow, your exact slash commands. The investment in building something this personal pays back every day you use it. The tool took about two weeks to build and has already saved more than that in time. The willingness to build the personalized version instead of settling for the generic one is what separates people who get value from AI from people who just use it occasionally.`,
+The deeper point about personal AI tools: the best ones are deeply specific to the person who built them. A general-purpose AI assistant is less useful than one calibrated to your exact voice, workflow and slash commands. The investment in building something this personal pays back every day you use it. The tool took about two weeks to build and has already saved more than that in time.`,
         takeaways: [
           "Electron overlay: always visible, no context-switch, Electron desktopCapturer for screen vision",
           "Web Speech API for voice input (browser-native, free), ElevenLabs for voice output",
           "Slash commands: different system prompt per command, different model for speed vs quality tradeoffs",
-          "Particle HUD is aesthetic, not functional, but daily tools need to feel good to use",
+          "Particle HUD is purely aesthetic, and daily tools need to feel good to use",
           "Deep personalization is the multiplier, a generic assistant is less valuable than a calibrated one",
         ],
       },
@@ -414,7 +414,7 @@ The deeper point about personal AI tools: the best ones are deeply specific to t
         duration: "13 min", format: "Screen share",
         notes: `The core limitation of all current AI APIs is statelessness. Every conversation starts fresh. Claude doesn't remember that you prefer direct answers, or that you're building a tool in Python, or that you asked about the same topic yesterday. For a one-off task, this is fine. For a daily AI tool you work with for hours, it's a constant friction, you're re-explaining yourself every session.
 
-Three approaches to persistent memory, ordered by complexity. The simplest: a structured context file that gets prepended to every prompt. This is a plain text or JSON file that contains persistent facts about you, your preferences, your active projects, your communication style, your frequently-used tools. Before every Claude call, you prepend this context to the system prompt. Simple, reliable, fully under your control. The personal AI assistant uses this approach. The context file is about 800 tokens and updates when you explicitly tell the bot to remember something.
+Three approaches to persistent memory, ordered by complexity. The simplest: a structured context file that you prepend to every prompt. This is a plain text or JSON file that contains persistent facts about you, your preferences, your active projects, your communication style, your frequently-used tools. Before every Claude call, you prepend this context to the system prompt. Simple, reliable, fully under your control. The personal AI assistant uses this approach. The context file is about 800 tokens and updates when you explicitly tell the bot to remember something.
 
 The second approach: conversation history injection. Keep a local log of your past N conversations (N = 20 is usually enough without blowing up the context window), and inject the most relevant ones at the start of each new session. "Relevant" can be as simple as time-based (most recent conversations first) or more sophisticated (vector similarity to the current topic). This gives the bot access to what you were discussing recently without requiring you to manually update a context file.
 
@@ -434,34 +434,34 @@ The memory write pattern: when you want to save something explicitly, tell the b
       {
         id: "6-3", title: "Voice input and output with ElevenLabs and Web Speech",
         duration: "11 min", format: "Screen share",
-        notes: `Voice makes a tool fundamentally different from a text interface. When you can speak to your AI assistant and hear it respond, you can use it without breaking your visual focus. You can use it while your hands are doing something else. The latency of the interaction drops because speaking and listening are faster than typing and reading for many tasks. Voice is not just a feature addition, it changes the usage pattern of the tool entirely.
+        notes: `Voice makes a tool fundamentally different from a text interface. When you can speak to your AI assistant and hear it respond, you can use it without breaking your visual focus. You can use it while your hands are doing something else. The latency of the interaction drops because speaking and listening are faster than typing and reading for many tasks. Voice changes how you use the tool.
 
-Web Speech API handles voice input. It's built into Chrome (and Electron, which runs Chromium). No external service, no API key, no cost. The pattern is simple: create a SpeechRecognition instance, set continuous to false (you want individual utterances, not a continuous stream), set interimResults to true if you want real-time display of what it's hearing, and listen for the result event. The result event fires when speech is detected and a transcription is ready. The final transcription is in event.results[0][0].transcript. This is the text that gets passed to Claude.
+Web Speech API handles voice input. It's built into Chrome (and Electron, which runs Chromium). No external service, no API key, no cost. The pattern is simple: create a SpeechRecognition instance, set continuous to false (you want individual utterances, not a continuous stream), set interimResults to true if you want real-time display of what it's hearing, and listen for the result event. The result event fires when the browser hears speech and has a transcription ready. The final transcription is in event.results[0][0].transcript. The app passes this text to Claude.
 
 ElevenLabs handles voice output. The free tier gives you 10,000 characters per month, enough for light daily use but not for a pipeline that reads everything aloud. Voice selection matters for usability: pick a voice that feels natural for the type of interaction. ElevenLabs has voices optimized for conversational use (lower latency, slightly less natural) and voices optimized for quality (higher latency, more expressive). For an AI assistant that responds in real-time, latency is more important than expressiveness, pick the fastest voice that sounds acceptable.
 
 The voice loop: you speak, the Web Speech API transcribes, Claude gets the text and returns a reply, ElevenLabs converts it to audio, and the audio plays. The latency in this loop is mostly Claude's inference time (1 to 3 seconds) plus ElevenLabs' synthesis time (0.5 to 1 second). Web Speech transcription is near-instant. For most queries, you're waiting about 2 to 4 seconds from end of speech to start of response, acceptable for conversational use, but not fast enough for rapid back-and-forth.
 
-When voice makes sense: when your hands are occupied, when the query is naturally expressed in speech (questions, commands, dictation), when the response is short enough to absorb by listening. When text makes sense: when you need to reference the response later, when the response has structure that benefits from visual formatting (code, lists, tables), when you need to copy-paste something from the response. Voice is a complement to text interfaces, not a replacement. The personal assistant supports both simultaneously, you can speak a command and read the response, or type a command and hear the response.`,
+When voice makes sense: when your hands are busy, when you'd naturally say the query out loud (questions, commands, dictation), when the response is short enough to absorb by listening. When text makes sense: when you need to reference the response later, when the response has structure that benefits from visual formatting (code, lists, tables), when you need to copy-paste something from the response. Voice complements text interfaces. The personal assistant supports both simultaneously, you can speak a command and read the response, or type a command and hear the response.`,
         takeaways: [
           "Web Speech API: built into Chromium/Electron, no API key, no cost, listen for the result event",
           "ElevenLabs: pick fastest acceptable voice for AI assistant use, latency beats expressiveness",
           "Voice loop latency: ~2 to 4 seconds total (Claude 1 to 3s + ElevenLabs 0.5 to 1s)",
           "Voice is for hands-occupied use and short queries. Text is better for structured output you need to refer back to",
-          "Support both simultaneously, modality selection should be user's choice, not tool's constraint",
+          "Support both simultaneously and let the user pick the mode",
         ],
       },
     ],
   },
   {
-    num: "07", title: "Scheduling, Monitoring & Reliability",
+    num: "07", title: "Scheduling, monitoring and reliability",
     lessons: [
       {
         id: "7-1", title: "Running on schedule: Task Scheduler, cron and the Python schedule library",
         duration: "13 min", format: "Screen share",
-        notes: `An automation that only runs when you remember to run it is not really an automation, it's a fancy script. The whole point is that it runs without you. This lesson covers three approaches to scheduling, all of which I use for different tools, and the criteria for choosing between them.
+        notes: `An automation that only runs when you remember to run it is a script. The point is that it runs without you. I use three approaches to scheduling for different tools, and below are the criteria I use to choose between them.
 
-Windows Task Scheduler is the right choice for tools that should run on a fixed schedule on your Windows machine. The YouTube pipeline runs three times per day via Task Scheduler tasks. Setup: open Task Scheduler, create a new Basic Task, set the trigger (daily at 7 AM, or on startup, or on a specific event), set the action (start a program, the Python executable from your virtual environment, with the script path as the argument, and the project directory as the start-in directory). The start-in directory is the detail most tutorials miss, without it, your script can't find its config files and .env because they're referenced by relative path.
+Windows Task Scheduler is the right choice for tools that should run on a fixed schedule on your Windows machine. The YouTube pipeline runs three times per day via Task Scheduler tasks. Setup: open Task Scheduler, create a new Basic Task, set the trigger (daily at 7 AM, or on startup, or on a specific event), set the action (start a program, the Python executable from your virtual environment, with the script path as the argument, and the project directory as the start-in directory). The start-in directory is the detail most tutorials miss, without it, your script can't find its config files and .env because the script references them by relative path.
 
 The Python schedule library is better for scripts that run continuously rather than on a fixed trigger. If you have a script that should check for new emails every 10 minutes, running it via Task Scheduler means starting a new Python process every 10 minutes (startup overhead, multiple processes if one run takes longer than 10 minutes). Using schedule inside a continuously-running script means one process, no startup overhead, and clean handling of overlapping runs. The pattern is a while True loop with schedule.run_pending() and time.sleep(1). Add schedules with schedule.every(10).minutes.do(your_function).
 
@@ -479,17 +479,17 @@ The practical question when choosing: is this tool desktop-dependent (needs your
       {
         id: "7-2", title: "Error handling and monitoring, so things don't silently fail",
         duration: "12 min", format: "Screen share",
-        notes: `The most dangerous failure mode in automation is not a crash, it's a silent failure. Your script runs, produces no errors, but also produces no useful output because something upstream changed. The Craigslist layout changed and the scraper is extracting empty strings. The YouTube API returned a quota error that got swallowed in a broad except clause. The email bot has been marking everything as junk for three days because a prompt update broke the JSON parsing. You don't find out until you notice the downstream effects.
+        notes: `The most dangerous failure mode in automation is a silent failure. Your script runs, produces no errors, but also produces no useful output because something upstream changed. The Craigslist layout changed and the scraper is extracting empty strings. The YouTube API returned a quota error that a broad except clause swallowed. The email bot has been marking everything as junk for three days because a prompt update broke the JSON parsing. You don't find out until you notice the downstream effects.
 
-Defensive parsing is the first line of defense. When you parse JSON from an API response, don't just json.loads() and trust the result. Check that the expected keys exist, that lists have the expected length, that values are in the expected range. When Claude returns a JSON array with one result per email, check that the array length matches the number of emails you sent. When a field that should be an integer comes back as a string, catch it and normalize it rather than letting it propagate.
+Defensive parsing is the first safeguard. When you parse JSON from an API response, don't just json.loads() and trust the result. Check that the expected keys exist, that lists have the expected length, that values are in the expected range. When Claude returns a JSON array with one result per email, check that the array length matches the number of emails you sent. When a field that should be an integer comes back as a string, catch it and normalize it rather than letting it propagate.
 
-Logging is the second line. Every tool should write to a log file: what it did, when, what it found, what it skipped, and any errors it encountered. Python's logging module handles this with almost no setup. Add this to every project's main.py: import logging; logging.basicConfig(filename='logs/pipeline.log', level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s'). Then log with logging.info("Processed 12 emails, 3 flagged urgent") and logging.error("Batch failed: {e}"). The log file is what you read when something goes wrong, or when you want to know what the tool has been doing.
+Logging is the second. Every tool should write to a log file: what it did, when, what it found, what it skipped, and any errors it encountered. Python's logging module handles this with almost no setup. Add this to every project's main.py: import logging; logging.basicConfig(filename='logs/pipeline.log', level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s'). Then log with logging.info("Processed 12 emails, 3 flagged urgent") and logging.error("Batch failed: {e}"). The log file is what you read when something goes wrong, or when you want to know what the tool has been doing.
 
-Telegram bot alerts are the third line and the one most people skip. A Telegram bot can send you a message when something breaks. The setup takes 10 minutes: create a bot via BotFather in Telegram, get the bot token, get your chat ID, and write a send_alert() function that posts to the Telegram Bot API. Call this function in your except clauses: send_alert(f"Email bot failed: {e}"). I've had the YouTube pipeline alert me at 7 AM that it failed to authenticate to the YouTube API because the OAuth token expired. Without the alert, I would have gone three days without uploads before noticing.
+Telegram bot alerts are the third, and the one most people skip. A Telegram bot can send you a message when something breaks. The setup takes 10 minutes: create a bot via BotFather in Telegram, get the bot token, get your chat ID, and write a send_alert() function that posts to the Telegram Bot API. Call this function in your except clauses: send_alert(f"Email bot failed: {e}"). I've had the YouTube pipeline alert me at 7 AM that it failed to authenticate to the YouTube API because the OAuth token expired. Without the alert, I would have gone three days without uploads before noticing.
 
-Retry logic for transient failures: API calls fail for reasons that have nothing to do with your code, rate limits, network hiccups, brief service outages. These should be retried, not treated as permanent failures. The pattern is exponential backoff: try once, wait 1 second, try again, wait 2 seconds, try again, wait 4 seconds, give up. Python's tenacity library handles this with a decorator: @retry(wait=wait_exponential(multiplier=1, min=1, max=10), stop=stop_after_attempt(3)). For API calls that have retry-after headers (many rate-limit responses include how long to wait), read that header and sleep exactly that long before retrying.`,
+Retry logic for transient failures: API calls fail for reasons that have nothing to do with your code, rate limits, network hiccups, brief service outages. Retry these instead of treating them as permanent failures. The pattern is exponential backoff: try once, wait 1 second, try again, wait 2 seconds, try again, wait 4 seconds, give up. Python's tenacity library handles this with a decorator: @retry(wait=wait_exponential(multiplier=1, min=1, max=10), stop=stop_after_attempt(3)). For API calls that have retry-after headers (many rate-limit responses include how long to wait), read that header and sleep exactly that long before retrying.`,
         takeaways: [
-          "Silent failures are more dangerous than crashes, check output integrity, not just absence of exceptions",
+          "Silent failures are more dangerous than crashes, so check that the output is correct, even when no exception fires",
           "Defensive parsing: verify array lengths, key existence, and value types before trusting API responses",
           "logging module: every tool gets a log file, it's the debugging record and the audit trail",
           "Telegram bot alerts: 10-minute setup, sends you a message when something breaks",
@@ -499,9 +499,9 @@ Retry logic for transient failures: API calls fail for reasons that have nothing
       {
         id: "7-3", title: "Config-driven systems, tools you can reuse and share",
         duration: "12 min", format: "Screen share",
-        notes: `The difference between a script you ran once and a tool you run every day is config-driven design. When the logic and the configuration are mixed together in the same file, every change requires editing code. When they're separated, changing the behavior of a tool is a matter of editing a text file, no Python required. This makes tools more maintainable, more shareable, and easier to adapt to slightly different use cases.
+        notes: `The difference between a script you ran once and a tool you run every day is config-driven design. When you mix the logic and the configuration together in the same file, every change requires editing code. When they're separated, changing the behavior of a tool is a matter of editing a text file, no Python required. This makes tools easier to maintain, share and adapt to slightly different use cases.
 
-YAML is the right format for config files. It's more readable than JSON (comments are supported, you don't need quotes around most strings), more structured than INI, and has solid Python support via the PyYAML library. A YAML config file for the YouTube pipeline looks like this: source_channels (list of YouTube channel IDs to pull from), clips_per_run (integer), commentary_style (string describing the voice and tone), voice_id (ElevenLabs voice ID), upload_target (YouTube channel credentials path). These parameters completely define the behavior of the pipeline without touching the Python code.
+YAML is the right format for config files. It's more readable than JSON (it supports comments, and you don't need quotes around most strings), more structured than INI, and has solid Python support via the PyYAML library. A YAML config file for the YouTube pipeline looks like this: source_channels (list of YouTube channel IDs to pull from), clips_per_run (integer), commentary_style (string describing the voice and tone), voice_id (ElevenLabs voice ID), upload_target (YouTube channel credentials path). These parameters completely define the behavior of the pipeline without touching the Python code.
 
 The config-loading pattern in Python: at the top of every entry script, load the config file (yaml.safe_load(open("config.yaml"))) and pass the config object to every function that needs it. Never import config values directly into utility functions, pass them as parameters. This makes functions testable in isolation and keeps the dependency direction clean: utility functions don't know about config, only the entry script does.
 
@@ -510,7 +510,7 @@ A CLI that reads config enables multiple use cases from the same codebase. The A
 The project starter template in the resource pack applies this pattern: a root directory with main.py (entry point, loads config, orchestrates), config.yaml (all parameters), utils/ (shared utility functions), ai_engine.py (the AI wrapper from Module 2), logs/ (log output), .env (API keys), .gitignore, and requirements.txt. Fork this template for every new project. After a few months of building, you'll have a set of utility functions and patterns that work across all your tools, but only if you keep the architecture consistent.`,
         takeaways: [
           "Config-driven design: separate what a tool does (code) from how it's configured (YAML)",
-          "YAML over JSON for config files: comments are supported, more readable",
+          "YAML over JSON for config files: it supports comments and reads more easily",
           "Pass config as a parameter, don't import it directly into utility functions",
           "--config flag pattern enables multi-environment or multi-instance use of the same codebase",
           "Project starter template: main.py + config.yaml + utils/ + ai_engine.py + logs/ + .env",
@@ -519,12 +519,12 @@ The project starter template in the resource pack applies this pattern: a root d
     ],
   },
   {
-    num: "08", title: "Stack, Scale & What's Next",
+    num: "08", title: "Stack, scale and what's next",
     lessons: [
       {
         id: "8-1", title: "Your complete AI stack, assembling the pieces",
         duration: "13 min", format: "Camera + Screen",
-        notes: `After seven modules, you have a set of tools and a set of patterns. This lesson is about how they fit together into a coherent personal AI stack, not a collection of scripts but a system that covers your most important automated workflows. The stack I run covers five domains: communication (email bot), content (content pipeline), lead generation (listing monitor + opportunity scorer), intelligence (personal AI assistant), and data extraction (inbox harvester). Each tool is independent, but they share infrastructure: the same ai_engine.py pattern, the same config structure, the same logging approach.
+        notes: `After seven modules, you have a set of tools and a set of patterns. Here's how they fit together into one personal AI stack that covers your most important automated workflows. The stack I run covers five domains: communication (email bot), content (content pipeline), lead generation (listing monitor + opportunity scorer), intelligence (personal AI assistant), and data extraction (inbox harvester). Each tool is independent, but they share infrastructure: the same ai_engine.py pattern, the same config structure, the same logging approach.
 
 The "human hours saved" calculation: take each tool and estimate the hours per week it saves. Email bot: 8 hours per week (previously reviewing and drafting manually). Content pipeline: 5 hours per week (previously editing manually). Listing monitor: 3 hours per week (previously searching manually). Opportunity scorer: 2 hours per week (previously researching manually). Total: 18 hours per week. At a conservative $50/hour opportunity cost, that's $900/week of value. The stack took about three weeks to build. It paid for itself in time in under a month.
 
@@ -532,7 +532,7 @@ How to prioritize what to build next: go back to the stack audit from Module 1, 
 
 Architecture diagram for the full stack: each tool runs independently with its own schedule and its own config, but they share three things. First, the ai_engine.py module, maintained once, imported everywhere. Second, a shared logs/ directory on the machine, so you can tail all tool logs in one place. Third, Google Sheets as the common output format for anything lead-related, the email bot, the AutoBlade scraper, the Places lead gen all write to different sheets in the same Google Sheets file. This makes reviewing leads a single-tab operation.
 
-The meta-skill this course builds is the ability to look at any repetitive workflow and see the automation inside it. That skill compounds. Every tool you build makes the next one faster to build because you have more patterns, more code, and more intuition about where the complexity is. Six months from now, you'll be building things in an afternoon that would have taken you weeks when you started. The stack is never done. That's the point.`,
+The meta-skill this course builds is the ability to look at any repetitive workflow and see the automation inside it. That skill compounds. Every tool you build makes the next one faster to build because you have more patterns, more code, and more intuition about where the complexity is. Six months from now, you'll be building things in an afternoon that would have taken you weeks when you started. The stack is never done.`,
         takeaways: [
           "Coherent stack = tools that share infrastructure: same ai_engine, config structure, logging approach",
           "Multiply hours saved by the value of your time to measure what the stack is worth",
@@ -552,13 +552,13 @@ The config-driven skeleton pattern is the key to serving multiple clients from o
 
 The transition from personal tool to product requires documentation that you didn't need for yourself. When you built it, the config schema lived in your head. For a product, it lives in a README and an onboarding flow. The "minimum viable documentation" for a product built from a personal tool: what problem it solves (one paragraph), how to configure it (the config schema with explanations), what the expected inputs and outputs are, and what to do when something goes wrong (common errors and fixes). That's it. Ship it with that documentation and improve it based on what clients ask about.
 
-The decision of which tools to productize should be economic, not technical. The question is not "is this technical enough to sell?" (almost everything in this course is), it's "is there a market that will pay for this outcome and do I want to serve that market?" The Places lead gen tool serves local service businesses. The email bot serves anyone who processes high email volume. The YouTube pipeline serves content creators. Pick the market you want to work with, build for their specific use case, and sell the outcome.`,
+The decision of which tools to productize should be economic. Almost everything in this course is technical enough to sell, so the question is "is there a market that will pay for this outcome and do I want to serve that market?" The Places lead gen tool serves local service businesses. The email bot serves anyone who processes high email volume. The YouTube pipeline serves content creators. Pick the market you want to work with, build for their specific use case, and sell the outcome.`,
         takeaways: [
-          "Three paths to product: sell access (SaaS), sell knowledge (course), sell outcome (service + leverage)",
+          "Three paths to product: sell access (SaaS), sell knowledge (course), sell outcome (service + tool)",
           "Productizable = solves shared problem + separable config + explainable inputs/outputs",
           "Config-driven skeleton: one codebase, per-client config, add auth + storage for multi-client",
           "Minimum viable docs: one-paragraph problem statement + config schema + error guide",
-          "Productization decision is economic, not technical: pick the market you want to serve",
+          "Productization decision is economic: pick the market you want to serve",
         ],
       },
     ],

@@ -47,12 +47,12 @@ function scoreAndNotes(p: Record<string, unknown>, hasWebsite: boolean, reviews:
   if (!hasWebsite) { score += 40; parts.push("No website"); }
   if (reviews === 0) { score += 25; parts.push("Zero Google reviews"); }
   else if (reviews < 10) { score += 15; parts.push(`Only ${reviews} reviews`); }
-  else if (reviews < 25) { score += 8; parts.push(`${reviews} reviews — room to grow`); }
+  else if (reviews < 25) { score += 8; parts.push(`${reviews} reviews, room to grow`); }
   if (rating > 0 && rating < 4.0) { score += 10; parts.push(`${rating}★ rating could improve`); }
   if (!hasHours) { score += 12; parts.push("No hours on Google"); }
   if (!p.nationalPhoneNumber) { score += 8; parts.push("No phone listed"); }
 
-  if (parts.length === 0) parts.push("Solid online presence — lower priority");
+  if (parts.length === 0) parts.push("Solid online presence, lower priority");
 
   return { score: Math.min(score, 100), notes: parts.join(". ") + "." };
 }

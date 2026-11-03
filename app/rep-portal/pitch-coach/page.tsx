@@ -103,7 +103,7 @@ export default function PitchCoachPage() {
                 <textarea
                   value={pitch}
                   onChange={(e) => setPitch(e.target.value)}
-                  placeholder="Paste exactly what you plan to say. Don't sanitize it, the more authentic the input, the more useful the critique."
+                  placeholder="Paste exactly what you plan to say. Don't clean it up. The critique is more useful when it sees what you'd actually say."
                   style={{ ...fieldStyle, minHeight: "220px", resize: "vertical", fontFamily: "var(--font-inter), sans-serif" }}
                 />
               </div>
@@ -127,7 +127,7 @@ export default function PitchCoachPage() {
                 </div>
                 <div>
                   <p style={{ fontSize: "13px", color: "var(--color-warm-text-muted)", margin: 0, lineHeight: 1.6 }}>
-                    Grade reflects: clarity, specificity, ethical posture, ask-and-listen balance, anticipation of objections, fit between your service and the scenario. <strong style={{ color: "var(--color-warm-text)" }}>C is average, most first-draft pitches grade C-D. Iteration is the point.</strong>
+                    Grade reflects: clarity, specificity, ethical posture, ask-and-listen balance, anticipation of objections, fit between your service and the scenario. <strong style={{ color: "var(--color-warm-text)" }}>C is average, most first-draft pitches grade C-D. Rewrite it and run it again.</strong>
                   </p>
                 </div>
               </div>
@@ -173,7 +173,7 @@ export default function PitchCoachPage() {
               {/* Delivery notes */}
               {coaching.delivery_notes.length > 0 && (
                 <div style={{ padding: "16px 20px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)" }}>
-                  <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "10px", marginTop: 0 }}>Delivery notes — HOW to say it</h3>
+                  <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "10px", marginTop: 0 }}>Delivery notes: HOW to say it</h3>
                   <ul style={{ margin: 0, paddingLeft: "20px", fontSize: "13px", color: "var(--color-warm-text)", lineHeight: 1.7 }}>
                     {coaching.delivery_notes.map((n, i) => <li key={i} style={{ marginBottom: "6px" }}>{n}</li>)}
                   </ul>
@@ -183,7 +183,7 @@ export default function PitchCoachPage() {
               {/* Anticipated objections */}
               {coaching.anticipated_objections.length > 0 && (
                 <div style={{ padding: "16px 20px", background: "var(--color-warm-bg-alt)", border: "1px solid var(--color-warm-border)" }}>
-                  <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "10px", marginTop: 0 }}>If this lands, expect these objections</h3>
+                  <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "10px", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-warm-accent)", fontWeight: 700, marginBottom: "10px", marginTop: 0 }}>If you use this pitch, expect these objections</h3>
                   <ul style={{ margin: 0, paddingLeft: "20px", fontSize: "13px", color: "var(--color-warm-text)", lineHeight: 1.7 }}>
                     {coaching.anticipated_objections.map((o, i) => <li key={i} style={{ marginBottom: "6px" }}>{o}</li>)}
                   </ul>

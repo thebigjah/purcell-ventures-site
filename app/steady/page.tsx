@@ -68,7 +68,7 @@ const MONTH = [
   ] },
   { week: "Week 4", events: [
     ["Tuesday", "Monthly check-in. I send a summary of what we covered and 2 things to try this month. You forward it to the family group chat."],
-    ["Friday", "A quick fix: your mom's iPad updated overnight, an app moved, and she could not find it. Solved by text in 5 minutes."],
+    ["Friday", "A quick fix: your mom's iPad updated overnight, an app moved, and she could not find it. I solved it by text in 5 minutes."],
   ] },
 ] as const;
 
