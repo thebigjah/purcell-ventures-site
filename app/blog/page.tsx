@@ -11,6 +11,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "contact-page-that-reaches-you",
+    title: "What a contact page needs so customers reach you on the first try",
+    excerpt: "A contact page has one job: put a customer in touch with you. Here are the four parts it needs and a five minute test you can run from your phone.",
+    date: "November 3, 2026",
+    readingTime: "4 min read",
+    category: "Guide",
+  },
+  {
     slug: "ai-social-media-posts-what-to-hand-off",
     title: "Using AI for your social media posts: what to hand off and what to write yourself",
     excerpt: "An AI tool can turn your notes into a draft caption in a minute. Here is which posts to hand off, which to write yourself, and the checks to run before you publish.",
