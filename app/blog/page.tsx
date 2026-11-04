@@ -11,6 +11,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "automation-augmentation-agency-explained",
+    title: "Three ways to work with AI: automation, augmentation and agency",
+    excerpt: "A salon formatting a price list, a restaurant wording a notice and an outreach system that runs on its own each show a different way to split work with AI. This guide explains all three.",
+    date: "November 4, 2026",
+    readingTime: "4 min read",
+    category: "Guide",
+  },
+  {
     slug: "contact-page-that-reaches-you",
     title: "What a contact page needs so customers reach you on the first try",
     excerpt: "A contact page has one job: put a customer in touch with you. Here are the four parts it needs and a five minute test you can run from your phone.",
