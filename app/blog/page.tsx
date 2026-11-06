@@ -11,6 +11,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "tell-ai-about-your-business",
+    title: "Why an AI tool needs your business facts before it writes about you",
+    excerpt: "Prices, hours and refund rules change faster than any model's training data. A one-page brief pasted into the chat puts your current facts in front of the tool.",
+    date: "November 6, 2026",
+    readingTime: "3 min read",
+    category: "Guide",
+  },
+  {
     slug: "automation-augmentation-agency-explained",
     title: "Three ways to work with AI: automation, augmentation and agency",
     excerpt: "A salon formatting a price list, a restaurant wording a notice and an outreach system that runs on its own each show a different way to split work with AI. This guide explains all three.",
