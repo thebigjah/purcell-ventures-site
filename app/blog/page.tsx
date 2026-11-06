@@ -11,6 +11,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "slow-site-on-phone-causes-free-tests",
+    title: "Why your business site loads slowly on a phone, and how to test it for free",
+    excerpt: "Here is how to measure your site's speed on a phone with free tools. It also covers what to do about the three usual causes: photos, plugins and hosting.",
+    date: "November 6, 2026",
+    readingTime: "4 min read",
+    category: "Guide",
+  },
+  {
     slug: "tell-ai-about-your-business",
     title: "Why an AI tool needs your business facts before it writes about you",
     excerpt: "Prices, hours and refund rules change faster than any model's training data. A one-page brief pasted into the chat puts your current facts in front of the tool.",
