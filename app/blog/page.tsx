@@ -11,6 +11,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "who-controls-your-domain-hosting-and-login",
+    title: "How to find out who controls your domain, hosting and website login",
+    excerpt: "Three accounts decide who controls your website: the domain, the hosting and the site login. Here is how to find who holds each one and how to put them in your name.",
+    date: "November 7, 2026",
+    readingTime: "4 min read",
+    category: "Business",
+  },
+  {
     slug: "slow-site-on-phone-causes-free-tests",
     title: "Why your business site loads slowly on a phone, and how to test it for free",
     excerpt: "Here is how to measure your site's speed on a phone with free tools. It also covers what to do about the three usual causes: photos, plugins and hosting.",
