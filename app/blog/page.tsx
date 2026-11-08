@@ -11,6 +11,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "prompt-usable-answer-first-time",
+    title: "Four parts of a prompt that gets a usable answer",
+    excerpt: "Each part of a prompt answers a question the AI would otherwise guess at. A salon closure email shows all four parts at work.",
+    date: "November 8, 2026",
+    readingTime: "3 min read",
+    category: "Guide",
+  },
+  {
     slug: "who-controls-your-domain-hosting-and-login",
     title: "How to find out who controls your domain, hosting and website login",
     excerpt: "Three accounts decide who controls your website: the domain, the hosting and the site login. Here is how to find who holds each one and how to put them in your name.",
