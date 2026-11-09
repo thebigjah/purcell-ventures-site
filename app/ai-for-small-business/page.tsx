@@ -210,6 +210,17 @@ export default function AiForSmallBusiness() {
         from plumbers and roofers to restaurants, salons and auto repair shops.
       </p>
 
+      <h2>Where can I look up AI terms and survey numbers?</h2>
+
+      <p>
+        The <Link href="/ai-glossary">AI glossary for small business owners</Link> defines 57
+        terms, from token and context window to AEO and GPTBot, each with an example from a
+        small business. <Link href="/ai-small-business-statistics">AI in small business
+        statistics</Link> gathers survey figures on adoption, uses, barriers and AI search, each
+        with its source and date. In fall 2025, for example, the Federal Reserve&apos;s Small
+        Business Credit Survey found 46% of small employer firms using AI.
+      </p>
+
       <h2>Common questions</h2>
 
       {QA.map(([q, a]) => (
@@ -234,7 +245,8 @@ export default function AiForSmallBusiness() {
         <Link href="/ai-integration">AI integration for small business software</Link>,{" "}
         <Link href="/ai-websites">AI websites for small businesses</Link> and{" "}
         <Link href="/ai-design">AI in design for small businesses</Link>.{" "}
-        <Link href="/ai-for">By trade</Link>: guides for twelve kinds of small business.
+        <Link href="/ai-for">By trade</Link>: guides for twelve kinds of small business. The <Link href="/ai-glossary">AI glossary</Link> defines the terms, and{" "}
+        <Link href="/ai-small-business-statistics">AI small business statistics</Link> lists the numbers with sources.
       </p>
     </PostLayout>
   );
