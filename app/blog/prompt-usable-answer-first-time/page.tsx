@@ -17,12 +17,12 @@ const POST: Data = {
   "slug": "prompt-usable-answer-first-time",
   "description": "The reader, the goal, an example and the limits: a four part prompt for local business writing, with a full example for a salon.",
   "category": "Guide",
-  "lede": "Anthropic's AI Fluency framework names a skill called Description: stating your goal clearly enough that the AI can produce useful output. Courses in Anthropic Academy teach that better output comes from context, meaning who the work is for, what good looks like, an example and the constraints. A local business owner can use those four parts for posts, emails and signs.",
+  "lede": "A prompt that gets a usable answer has four parts: who the work is for, what good looks like, an example and the constraints. Courses in Anthropic Academy teach that better output comes from this context. A local business owner can use the four parts for posts, emails and signs.",
   "sections": [
     {
       "heading": "Name who the work is for",
       "paragraphs": [
-        "An AI tool knows nothing about your customers unless you describe them. Ask it for a post about your bakery's new hours and it has to guess who will read it.",
+        "Anthropic's AI Fluency framework names a skill called Description: stating your goal clearly enough that the AI can produce useful output. An AI tool knows nothing about your customers unless you describe them. Ask it for a post about your bakery's new hours and it has to guess who will read it.",
         "Give it the reader in one sentence: \"The readers are regular customers who live near the shop and follow us on Facebook.\" That sentence tells the AI how formal to sound and what the reader already knows about you."
       ]
     },

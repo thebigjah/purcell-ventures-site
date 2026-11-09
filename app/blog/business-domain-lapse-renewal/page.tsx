@@ -17,12 +17,12 @@ const POST: Data = {
   "slug": "business-domain-lapse-renewal",
   "description": "When a domain registration expires, your site and email stop working and the name can go back on sale. Here is how to keep yours renewed.",
   "category": "Guide",
-  "lede": "I build and fix websites for local businesses around Tuscaloosa through my company, Purcell Ventures. Every one of those sites depends on a domain name, the address customers type to reach it. A business never owns a domain outright. It registers the name through a company called a registrar for one year or more at a time, and the business has to renew it before it expires. When the renewal fails, the website and every email address on that domain stop working.",
+  "lede": "When a business domain lapses, the website and every email address on that domain stop working. A business never owns a domain outright. It registers the name through a company called a registrar for one year or more at a time, and it has to renew before the registration expires.",
   "sections": [
     {
       "heading": "What happens on the expiration date",
       "paragraphs": [
-        "When a registration expires, the registrar usually points the domain to a parking page, so customers who type your address see an ad page or a notice in place of your site. Email sent to addresses on that domain stops arriving.",
+        "I build and fix websites for local businesses around Tuscaloosa through my company, Purcell Ventures. Every one of those sites depends on a domain name, the address customers type to reach it. When a registration expires, the registrar usually points the domain to a parking page, so customers who type your address see an ad page or a notice in place of your site. Email sent to addresses on that domain stops arriving.",
         "Most registrars then hold the domain for a period during which the original owner can still renew it. After that, many registrars move the domain into a redemption period, when recovery is still possible but usually costs an extra fee. The length of each period and the fees vary by registrar and by the ending of the domain, such as .com or .net. Your registrar's renewal terms list the exact numbers."
       ]
     },

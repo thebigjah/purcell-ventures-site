@@ -17,12 +17,12 @@ const POST: Data = {
   "slug": "who-controls-your-domain-hosting-and-login",
   "description": "How a local business owner can find out who holds the domain, hosting and site login today, and how to move all three into the owner's own name.",
   "category": "Business",
-  "lede": "Three accounts decide who controls a business website: the domain registration, the hosting and the login for the site itself. Whoever holds those accounts can renew, change or take down your site. Owners often find out who holds them only when a designer moves away or a renewal email goes to an old address. I build and fix websites for local businesses around Tuscaloosa, and here is how to find out who holds each account today and how to move all three into your own name.",
+  "lede": "Three accounts decide who controls a business website: the domain registration, the hosting and the login for the site itself. Whoever holds those accounts can renew, change or take down your site. Here is how to find out who holds each one today and how to move all three into your own name.",
   "sections": [
     {
       "heading": "Find your domain registrar",
       "paragraphs": [
-        "Your domain is the address customers type, such as yourshop.com. You rent it from a company called a registrar, such as GoDaddy, Namecheap, Squarespace or Cloudflare.",
+        "Owners often find out who holds these accounts only when a designer moves away or a renewal email goes to an old address. I build and fix websites for local businesses around Tuscaloosa. Your domain is the address customers type, such as yourshop.com. You rent it from a company called a registrar, such as GoDaddy, Namecheap, Squarespace or Cloudflare.",
         "Go to lookup.icann.org, the free lookup tool from ICANN, the organization that coordinates domain names. Type in your domain. The result lists the registrar, the date the registration expires and the name servers. The owner's name and email often show as redacted for privacy, which is normal.",
         "Write down the registrar and the expiration date. Then log in to that registrar with the account you think holds the domain. If you cannot find the domain in any account you control, someone else holds it."
       ]

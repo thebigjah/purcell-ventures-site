@@ -17,12 +17,12 @@ const POST: Data = {
   "slug": "check-ai-answer-before-using",
   "description": "A routine for checking the names, numbers, quotes and dates in an AI answer against a source before they reach customers.",
   "category": "Guide",
-  "lede": "Anthropic's AI Fluency course names a skill called Discernment: judging how useful an AI output is before you rely on it. Models can state wrong things in the same confident tone they use for right things, so Discernment needs a routine. Before an AI answer goes into a customer email, a social post or your website, check its names, numbers, quotes and dates against a source you trust.",
+  "lede": "Check an AI answer's names, numbers, quotes and dates against a source you trust before it goes into a customer email, a social post or your website. Models can state wrong things in the same confident tone they use for right things, so the check needs to be a routine.",
   "sections": [
     {
       "heading": "Why a confident answer can still be wrong",
       "paragraphs": [
-        "A language model writes the words most likely to come next, based on its training data. That process produces fluent sentences, and fluency says nothing about accuracy. A model can give you a wrong phone number for a supplier in the same tone it uses to give you a correct one.",
+        "Anthropic's AI Fluency course names this skill Discernment: judging how useful an AI output is before you rely on it. A language model writes the words most likely to come next, based on its training data. That process produces fluent sentences, and fluency says nothing about accuracy. A model can give you a wrong phone number for a supplier in the same tone it uses to give you a correct one.",
         "A model also knows only its training data up to a cutoff date, plus whatever you paste into the chat. Ask about a law that changed last month or a vendor's current price and it may answer from older information without telling you."
       ]
     },

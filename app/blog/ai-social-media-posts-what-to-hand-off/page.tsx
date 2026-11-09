@@ -17,12 +17,12 @@ const POST: Data = {
   "slug": "ai-social-media-posts-what-to-hand-off",
   "description": "Which social media jobs a small business can give to an AI tool, which posts the owner should write, and how to check every draft before it goes up.",
   "category": "Guide",
-  "lede": "A chat tool such as Claude or ChatGPT can turn a few lines of notes into a draft caption for Instagram or Facebook. That saves time for an owner who posts between customers. It also makes it easy to publish a wrong price or a promotion that ended last week. I completed 12 Anthropic Academy courses, including AI Fluency: Framework & Foundations, and this post uses that framework to sort social media work into the jobs AI can draft and the posts you should write yourself.",
+  "lede": "A chat tool such as Claude or ChatGPT can turn a few lines of notes into a draft caption for Instagram or Facebook. Hand it jobs that start from facts you already wrote down, write the posts that need facts or feelings only you can supply, and check every draft before it goes up.",
   "sections": [
     {
       "heading": "Decide which jobs AI should draft",
       "paragraphs": [
-        "AI Fluency starts with Delegation, which means deciding whether, when and how AI should take part in a task. For social media, I sort the work with one question: does this post need facts or feelings that only you can supply?",
+        "Drafting saves time for an owner who posts between customers. It also makes it easy to publish a wrong price or a promotion that ended last week. I completed 12 Anthropic Academy courses, including AI Fluency: Framework & Foundations, and this post uses that framework to sort social media work into the jobs AI can draft and the posts you should write yourself. AI Fluency starts with Delegation, which means deciding whether, when and how AI should take part in a task. For social media, I sort the work with one question: does this post need facts or feelings that only you can supply?",
         "These jobs suit an AI draft: turning your notes about an event into a caption, writing a short version for Instagram and a longer one for Facebook, listing post ideas from your calendar for the month, and giving you three wordings of one announcement so you can pick the best.",
         "Each of those jobs starts from information you already wrote down. The tool reshapes it, and you decide what goes up."
       ]

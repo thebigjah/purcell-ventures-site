@@ -17,12 +17,12 @@ const POST: Data = {
   "slug": "google-business-profile-before-website",
   "description": "Your Google Business Profile can show your hours, phone and address right on the search page. Here are the fields to check first, at no cost.",
   "category": "Guide",
-  "lede": "I build and fix websites for local businesses around Tuscaloosa through my company, Purcell Ventures. Before you spend money on a new site, open your Google Business Profile. When someone searches for a local business by name or looks it up on Google Maps, the profile panel can show the hours, phone number, address and reviews right on the results page. A customer can call you or get directions from that panel without opening your website. Editing the profile is free.",
+  "lede": "Open your Google Business Profile before you pay for website work. The profile panel can show your hours, phone number, address and reviews right on the search results page, so a customer can call you or get directions without opening your website. Editing the profile is free.",
   "sections": [
     {
       "heading": "Find and claim your profile",
       "paragraphs": [
-        "Search for your business name and city on Google. If a panel for your business appears, look for a link that says Own this business or Claim this business. If you already manage it, sign in at business.google.com with the Google account you used to claim it.",
+        "I build and fix websites for local businesses around Tuscaloosa through my company, Purcell Ventures. The panel appears when someone searches for a local business by name or looks it up on Google Maps. Search for your business name and city on Google. If a panel for your business appears, look for a link that says Own this business or Claim this business. If you already manage it, sign in at business.google.com with the Google account you used to claim it.",
         "Google asks you to verify ownership before you can edit. The options depend on the business and can include a phone call, a text, an email, a video of your storefront or a postcard. Some of these finish in minutes and the postcard can take days, so start this step first."
       ]
     },
