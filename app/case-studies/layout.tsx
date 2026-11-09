@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Case studies from AI consulting work",
+  title: "Case studies: client app, AI system, town audit",
   description:
-    "Case studies from Elijah Purcell's AI consulting work. He has published none yet, and each one goes up only with the client's permission.",
+    "Rufus Rideshare on the App Store, the 57-agent COSMIC system that runs Purcell Ventures, and an audit of 121 businesses near the University of Alabama.",
   alternates: { canonical: "/case-studies" },
 };
 
@@ -32,10 +32,10 @@ const FAQ_LD = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Has Purcell Ventures published any case studies?",
+      "name": "What work can I check from Purcell Ventures?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not yet. I publish a case study only with the client's permission. Each one will describe the team, the workflow I changed and the hours it saved."
+        "text": "Rufus Rideshare, an iPhone app built for a Georgia College student and approved for the App Store on 8 October 2026. COSMIC, the system of 57 AI agents that runs the company. And an audit of 121 businesses near the University of Alabama. Client case studies with results go up only with the client's permission."
       }
     }
   ]
