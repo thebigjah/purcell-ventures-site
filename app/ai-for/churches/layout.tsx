@@ -9,7 +9,7 @@ const SLUG = "churches";
 
 export const metadata = tradeMetadata(
   SLUG,
-  "AI for churches: sermon clips and summaries, volunteer scheduling and the weekly newsletter, what stays with the pastor and staff, and our setup role.",
+  "AI for churches: sermon clips and summaries, volunteer scheduling and the weekly newsletter, what stays with the pastor and staff, and what we set up.",
   ["AI for churches", "church sermon clips AI", "church volunteer scheduling", "church newsletter AI", "AI for ministry"],
 );
 
