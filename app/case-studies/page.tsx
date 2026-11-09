@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { PageHero, Section, Prose, Button, ClosingCall } from "@/app/components/ui";
+import { UpdatedLine } from "@/app/components/PageDates";
 import PageDates from "@/app/components/PageDates";
 
 // CASE STUDIES, rebuilt on the page kit 26 Oct 2026.
@@ -33,12 +35,63 @@ export default function CaseStudiesPage() {
       <PageHero
         planet="casestudies"
         kicker="Case studies"
-        title="Case studies from client work"
-        lede="I have published none yet. I publish one only when the client says yes, and each will describe the team, the workflow I changed and the hours it saved."
+        title="Case studies: an App Store app, a 57-agent system and a town audit"
+        lede="Three pieces of work anyone can check today: an iPhone app built for a client, the AI system that runs this company, and an audit of every business near the University of Alabama. Client case studies with results go up only when the client says yes."
       />
 
+      <Section title="Rufus Rideshare: a client app on the App Store" intro="Client work, September to October 2026. Design, build and App Store release.">
+        <Prose>
+          <h3>The request</h3>
+          <p>
+            John White, a student at Georgia College &amp; State University, asked in September 2026 for a way to help students get rides from other students they can see and choose.
+          </p>
+          <h3>What I built</h3>
+          <p>
+            Rufus is an iPhone app. Everyone signs in with a school email, so riders only see other students. Before saying yes, a rider sees the driver, the car and the last four digits of the plate. One tap shares the ride with a friend or parent, who needs no app or account to follow it. Rufus takes no money. Drivers suggest a gas share and riders settle it between themselves.
+          </p>
+          <h3>The result</h3>
+          <p>
+            Apple approved Rufus for the App Store on 8 October 2026, about a month after the first conversation. You can <a href="https://apps.apple.com/us/app/rufus-rideshare/id6813645816">see it on the App Store</a> or read more on the <Link href="/portfolio">portfolio page</Link>. Rufus is an independent app and is not affiliated with or endorsed by Georgia College &amp; State University.
+          </p>
+        </Prose>
+      </Section>
+
+      <Section title="COSMIC: the AI system that runs Purcell Ventures" intro="In-house system that runs the company every day.">
+        <Prose>
+          <h3>The problem</h3>
+          <p>
+            One founder who is also a full-time student cannot find leads, build previews, write outreach and publish every day by hand.
+          </p>
+          <h3>What I built</h3>
+          <p>
+            COSMIC is a team of 57 AI agents in 17 rooms. Each agent has a name, one job and limited access, and a command app I built for Mac and Android coordinates them. They find local businesses, build preview sites, draft outreach and score every draft for clear writing. The sensitive steps wait for my approval.
+          </p>
+          <h3>What it shows a client</h3>
+          <p>
+            The same pattern works at a smaller size for a small business: one agent for one job, narrow access and a person who approves the risky step. The <Link href="/ai-automation">AI automation guide</Link> covers what to hand off first, and the <Link href="/team">team page</Link> lists the agents.
+          </p>
+        </Prose>
+      </Section>
+
+      <Section title="121 businesses near campus: an audit anyone can repeat" intro="Research, published on the Purcell Ventures blog.">
+        <Prose>
+          <h3>The question</h3>
+          <p>
+            How many independent businesses within walking distance of the University of Alabama Quad can a phone search, a map app or an AI assistant actually find?
+          </p>
+          <h3>The method</h3>
+          <p>
+            I pulled every independent business within 2,500 meters of the Quad from OpenStreetMap with a free query, then checked each one for a website a machine can reach and for opening hours recorded online.
+          </p>
+          <h3>The finding</h3>
+          <p>
+            Of 121 businesses, 27 had a website a machine could reach and 23 had opening hours recorded anywhere. The <Link href="/blog/121-businesses-near-campus">full write-up</Link> has the numbers, and the <Link href="/blog/audit-every-business-in-your-town">method post</Link> shows how to run the same audit on any town.
+          </p>
+        </Prose>
+      </Section>
+
       {liveStudies.length === 0 ? (
-        <Section title="Taking first clients">
+        <Section title="Client case studies with results">
           <Prose>
             <p>
               I am taking a small number of first clients, and I will ask each one for permission to publish the results. I plan to publish the first case studies within 60 days of starting client work.
@@ -76,6 +129,7 @@ export default function CaseStudiesPage() {
         button="See consulting sessions"
         href="/consulting"
       />
+      <UpdatedLine path="/case-studies" />
       <PageDates path="/case-studies" />
     </main>
   );
