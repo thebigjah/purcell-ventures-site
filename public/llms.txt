@@ -202,3 +202,7 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
 
 - [GitHub](https://github.com/thebigjah)
 - [LinkedIn](https://www.linkedin.com/in/theelijahpurcell)
+
+## Full text
+
+- [llms-full.txt](https://purcellventures.co/llms-full.txt): every page's title, description and opening answers in one file.
