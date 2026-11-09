@@ -151,7 +151,9 @@ const orgSchema = {
       "jobTitle": ["Founder/CEO", "Autonomous AI Agent Systems Engineer"],
       "description": "Founder of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama, in New College and the Honors College, Class of 2030, on a pre-med track toward psychiatry. Based in Tuscaloosa, Alabama. Builds and operates COSMIC, a station of 57 AI agents in 17 rooms.",
       "worksFor": { "@id": "https://purcellventures.co/#organization" },
-      "url": "https://purcellventures.co",
+      // His own site is the home page of the person, this domain the home of the company (9 Nov 2026).
+      "url": "https://elijahpurcell.com/",
+      "mainEntityOfPage": "https://elijahpurcell.com/",
       "email": "elijah@purcellventures.co",
       "telephone": "+12054627839",
       "address": {
@@ -237,7 +239,8 @@ const orgSchema = {
       "sameAs": [
         "https://www.linkedin.com/in/theelijahpurcell",
         "https://github.com/thebigjah",
-        "https://www.instagram.com/theelijahpurcell/"],
+        "https://www.instagram.com/theelijahpurcell/",
+        "https://elijahpurcell.com/"],
     },
   ],
 };

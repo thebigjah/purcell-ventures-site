@@ -47,6 +47,7 @@ const COLS: { title: string; links: { href: string; label: string; rel?: string 
   {
     title: "Elsewhere",
     links: [
+      { href: "https://elijahpurcell.com/", label: "elijahpurcell.com", rel: "me" },
       { href: "https://www.linkedin.com/in/theelijahpurcell", label: "LinkedIn", rel: "me" },
       { href: "https://github.com/thebigjah", label: "GitHub", rel: "me" },
       { href: "https://www.instagram.com/theelijahpurcell/", label: "Instagram", rel: "me" },
