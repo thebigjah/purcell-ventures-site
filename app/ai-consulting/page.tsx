@@ -228,9 +228,16 @@ export default function AiConsultingAlabama() {
       </p>
 
       <p>
-        Related: <Link href="/consulting">AI training sessions and prices</Link>,{" "}
-        <Link href="/ai-design">AI in design for small businesses</Link> and{" "}
+        Related: <Link href="/consulting">AI training sessions and prices</Link> and{" "}
         <Link href="/who">Who is Elijah Purcell</Link>.
+      </p>
+
+      <p>
+        Related guides: <Link href="/ai-automation">AI automation for small businesses</Link>,{" "}
+        <Link href="/ai-integration">AI integration for small business software</Link>,{" "}
+        <Link href="/ai-for-small-business">AI for small business</Link>,{" "}
+        <Link href="/ai-websites">AI websites for small businesses</Link> and{" "}
+        <Link href="/ai-design">AI in design for small businesses</Link>.
       </p>
     </PostLayout>
   );

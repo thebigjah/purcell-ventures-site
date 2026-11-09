@@ -218,6 +218,14 @@ export default function AiDesign() {
         <Link href="/digital/tools">free AI tools for small businesses</Link> and{" "}
         <Link href="/portfolio">portfolio</Link>.
       </p>
+
+      <p>
+        Related guides: <Link href="/ai-consulting">AI consulting in Alabama</Link>,{" "}
+        <Link href="/ai-automation">AI automation for small businesses</Link>,{" "}
+        <Link href="/ai-integration">AI integration for small business software</Link>,{" "}
+        <Link href="/ai-for-small-business">AI for small business</Link> and{" "}
+        <Link href="/ai-websites">AI websites for small businesses</Link>.
+      </p>
     </PostLayout>
   );
 }

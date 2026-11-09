@@ -51,11 +51,24 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
   same services for businesses in Tuscaloosa, with in-person meetings.
 - [Software](https://purcellventures.co/software): custom builds. Small projects $1,500 to
   $3,500, full applications $5,000 to $15,000 and up.
+- [AI automation for small businesses](https://purcellventures.co/ai-automation): which
+  task to automate first, AI phone answering and booking, lead and invoice follow-up,
+  review requests, what to keep with a person, and how COSMIC's 57 agents handle the
+  company's own proposals, audits and outreach. Custom automation is quoted per project.
+- [AI integration for small business software](https://purcellventures.co/ai-integration):
+  connecting AI to Google Workspace, QuickBooks, a CRM, a website and phone or text,
+  off-the-shelf versus custom, data safety and upkeep.
+- [AI for small business](https://purcellventures.co/ai-for-small-business): safe first
+  tasks, checking AI answers, a staff AI use policy, telling customers about AI, and where
+  AI wastes a small business's money.
 - [Digital](https://purcellventures.co/digital): AI chatbots, booking, CRM and marketing
   add-ons for an existing website, maintained monthly. Plans from $99 a month.
 - [AI in design for small businesses](https://purcellventures.co/ai-design): what AI
   design tools do well and badly for logos, brand identity, websites and social graphics,
   and when a small business should hire a designer.
+- [AI websites for small businesses](https://purcellventures.co/ai-websites): how a
+  business gets found in ChatGPT and Google AI answers, schema markup, llms.txt, AI
+  crawlers, and AI website builders versus a custom site.
 - [Websites](https://purcellventures.co/sites): custom websites for local businesses.
 - [Portfolio](https://purcellventures.co/portfolio): shipped work.
 
