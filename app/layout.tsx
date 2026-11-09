@@ -246,7 +246,9 @@ const orgSchema = {
         "https://orcid.org/0009-0000-7829-9258",
         "https://www.producthunt.com/@elijahpurcell",
         "https://www.kaggle.com/elijahpurcell",
-        "https://medium.com/@elijahpurcell"],
+        "https://medium.com/@elijahpurcell",
+        "https://devpost.com/elijahpurcell",
+        "https://wellfound.com/u/elijah-purcell"],
     },
   ],
 };
