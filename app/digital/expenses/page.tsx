@@ -1,9 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect, useMemo } from "react";
 import { PageHero, Figures } from "@/app/components/ui";
 import s from "../_demo/demo.module.css";
-import { Field, ToolsKicker } from "../_demo/parts";
+import { Field, ToolsKicker, AboutTool } from "../_demo/parts";
 
 interface Expense {
   id: string;
@@ -16,6 +17,35 @@ interface Expense {
 
 const CATEGORIES = ["Materials", "Tools", "Vehicle and fuel", "Subscriptions", "Marketing", "Office", "Meals", "Travel", "Insurance", "Other"];
 const KEY = "pv_expenses_v1";
+
+const ABOUT = [
+  {
+    h: "Who the expense tracker is for",
+    p: [
+      "Owners and sole proprietors who pay for supplies, fuel, software and meals out of the business and need the totals at tax time. Each expense gets a date, an amount, a category, a description and a box for whether it is tax deductible.",
+      "The categories are Materials, Tools, Vehicle and fuel, Subscriptions, Marketing, Office, Meals, Travel, Insurance and Other.",
+    ],
+  },
+  {
+    h: "What it replaces",
+    p: [
+      "A shoebox of receipts, a notebook in the truck, or a spreadsheet filled in once a year. Pick a month and the tracker shows the total, the tax-deductible share, the number of expenses and a breakdown by category with each category's percentage.",
+      "Export CSV writes the month on screen to a file with the date, category, description, amount and deductible flag. It opens in Excel or Google Sheets and can go straight to whoever does your taxes. Whether an expense is deductible is a question for that person.",
+    ],
+  },
+  {
+    h: "How setup works",
+    p: [
+      "There is nothing to install and no account. Expenses are stored in this browser on this device only. They do not sync to another computer or phone, and clearing the browser's site data deletes them, so export each month's CSV as a backup.",
+    ],
+  },
+  {
+    h: "The version on your own website",
+    p: [
+      <>Expense Tracker is one of the 26 add-ons in the catalog, with monthly summaries and tax-ready reports. Plans run from $99 to $279 a month with a one-time setup fee of $650 to $1,000, and I set up and maintain the tools. Ask me which plan covers it. <Link href="/digital#pricing">Compare the plans</Link>.</>,
+    ],
+  },
+];
 
 export default function ExpensesPage() {
   const [expenses, setExpenses] = useState<Expense[]>([]);
@@ -188,6 +218,7 @@ export default function ExpensesPage() {
           </div>
         )}
       </div>
+      <AboutTool sections={ABOUT} />
     </main>
   );
 }

@@ -1,9 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { PageHero } from "@/app/components/ui";
 import s from "../_demo/demo.module.css";
-import { Field, ToolsKicker } from "../_demo/parts";
+import { Field, ToolsKicker, AboutTool } from "../_demo/parts";
 
 interface Attendee {
   id: string;
@@ -27,6 +28,35 @@ interface Event {
 }
 
 const KEY = "pv_events_v1";
+
+const ABOUT = [
+  {
+    h: "Who event registration is for",
+    p: [
+      "Shops, studios and service businesses that run workshops, classes or open houses and need a head count. You create an event with a name, date, time, location, capacity and description, then collect RSVPs against it.",
+      "Each RSVP records a name and an email address, with an optional phone number and a notes field for dietary or accessibility needs. Capacity starts at 25, and registration closes when the list reaches the number you set.",
+    ],
+  },
+  {
+    h: "What it replaces",
+    p: [
+      "A paper sign-up sheet, an RSVP thread spread across texts and email, or a spreadsheet updated by hand. At the door you tap Check in next to each name, and the event shows how many people registered and how many arrived.",
+    ],
+  },
+  {
+    h: "How setup works",
+    p: [
+      "There is nothing to install and no account. Create the event and start adding RSVPs. Everything is stored in this browser on this device, so RSVPs are entered on the same device that holds the event. That suits a sign-up table, or logging RSVPs that come in by phone or email.",
+      "Events do not sync to another computer or phone, and clearing the browser's site data deletes them.",
+    ],
+  },
+  {
+    h: "The version on your own website",
+    p: [
+      <>Event Registration is in the Growth plan, $179 a month, with a one-time setup fee of $650 to $1,000. On that plan it runs on your own site with RSVPs, an attendee list and automatic reminder emails, and I set it up and maintain it. <Link href="/digital#pricing">Compare the plans</Link>.</>,
+    ],
+  },
+];
 
 export default function EventRegistrationPage() {
   const [events, setEvents] = useState<Event[]>([]);
@@ -195,6 +225,7 @@ export default function EventRegistrationPage() {
           </>
         )}
       </div>
+      <AboutTool sections={ABOUT} />
     </main>
   );
 }

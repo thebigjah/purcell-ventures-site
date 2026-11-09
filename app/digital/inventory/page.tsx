@@ -1,9 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { PageHero, Figures, Note } from "@/app/components/ui";
 import s from "../_demo/demo.module.css";
-import { Field, ToolsKicker } from "../_demo/parts";
+import { Field, ToolsKicker, AboutTool } from "../_demo/parts";
 
 interface Item {
   id: string;
@@ -17,6 +18,35 @@ interface Item {
 }
 
 const KEY = "pv_inventory_v1";
+
+const ABOUT = [
+  {
+    h: "Who the inventory tracker is for",
+    p: [
+      "Small shops, food businesses and trades that keep stock on shelves or in a van and need to know when to reorder. Each item has a SKU, a name, a category, a quantity, a reorder point and a unit cost, plus notes for a supplier contact or batch number.",
+    ],
+  },
+  {
+    h: "What it replaces",
+    p: [
+      "A clipboard count, a whiteboard in the back room, or a spreadsheet that drifts away from what is on the shelf. Adjust a quantity as you sell or restock, and any item at or below its reorder point shows in a Reorder soon list.",
+      "The tracker also totals inventory value from quantity times unit cost, and it searches by name, SKU or category.",
+    ],
+  },
+  {
+    h: "How setup works",
+    p: [
+      "There is nothing to install and no account. Add items one at a time. The reorder point starts at 5 and can be changed for each item.",
+      "Inventory is stored in this browser on this device only. It does not appear on another computer or phone, and clearing the browser's site data deletes it.",
+    ],
+  },
+  {
+    h: "The version on your own website",
+    p: [
+      <>Inventory Tracker is in the Growth plan, $179 a month, with a one-time setup fee of $650 to $1,000. On that plan you get a product list with stock levels and low-stock alerts, and I set it up for your business and maintain it. <Link href="/digital#pricing">Compare the plans</Link>.</>,
+    ],
+  },
+];
 
 export default function InventoryPage() {
   const [items, setItems] = useState<Item[]>([]);
@@ -176,6 +206,7 @@ export default function InventoryPage() {
           </div>
         )}
       </div>
+      <AboutTool sections={ABOUT} />
     </main>
   );
 }

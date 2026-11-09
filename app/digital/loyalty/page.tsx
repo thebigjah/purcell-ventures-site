@@ -1,9 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { PageHero, Figures } from "@/app/components/ui";
 import s from "../_demo/demo.module.css";
-import { Field, ToolsKicker } from "../_demo/parts";
+import { Field, ToolsKicker, AboutTool } from "../_demo/parts";
 
 interface Customer {
   id: string;
@@ -16,6 +17,34 @@ interface Customer {
 }
 
 const KEY = "pv_loyalty_v1";
+
+const ABOUT = [
+  {
+    h: "Who the loyalty card is for",
+    p: [
+      "Coffee shops, barbers, salons, car washes and other businesses where the same customers come back often. Add a customer by name and phone number, tap to add a punch at each visit, and redeem the reward when the card fills.",
+      "Each card holds 10 punches by default. You can change the default or set a different number for one customer. Redeeming resets that card to zero and adds one to the rewards count.",
+    ],
+  },
+  {
+    h: "What it replaces",
+    p: [
+      "Paper punch cards that get lost, forgotten at home or copied, and a stamp that lives in a drawer. The tracker keeps every card in one list and shows the number of customers, total punches and rewards redeemed.",
+    ],
+  },
+  {
+    h: "How setup works",
+    p: [
+      "There is nothing to install and no account. The cards are stored in this browser on this device, so keep it on the device at your register. They do not sync to another device, and clearing the browser's site data deletes them.",
+    ],
+  },
+  {
+    h: "The version on your own website",
+    p: [
+      <>The Loyalty Punch Card with QR check-ins is in the Growth plan, $179 a month, with a one-time setup fee of $650 to $1,000. Customers check in by scanning a QR code, and I set it up for your business and maintain it. <Link href="/digital#pricing">Compare the plans</Link>.</>,
+    ],
+  },
+];
 
 export default function LoyaltyPage() {
   const [customers, setCustomers] = useState<Customer[]>([]);
@@ -142,6 +171,7 @@ export default function LoyaltyPage() {
           </div>
         )}
       </div>
+      <AboutTool sections={ABOUT} />
     </main>
   );
 }

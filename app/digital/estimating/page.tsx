@@ -1,10 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { PageHero } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import s from "../_demo/demo.module.css";
-import { Field, ToolsKicker } from "../_demo/parts";
+import { Field, ToolsKicker, AboutTool } from "../_demo/parts";
 
 interface LineItem {
   id: string;
@@ -52,6 +53,35 @@ function emptyEstimate(): Estimate {
     createdAt: new Date().toISOString(),
   };
 }
+
+const ABOUT = [
+  {
+    h: "Who the estimate builder is for",
+    p: [
+      "Contractors, repair services and other trades that price a job before they start it. You list labor and materials as line items with a quantity and a rate, add a tax rate, and the builder totals the estimate as you type.",
+      "Each estimate gets a number, a client, a job name and location, a date and a valid-until date that starts 30 days out. A notes field holds scope, exclusions, payment terms and warranty details.",
+    ],
+  },
+  {
+    h: "What it replaces",
+    p: [
+      "A paper quote pad, a word processor template, or a spreadsheet copied for every job. The arithmetic is done for you, and every saved estimate sits in one list with its status: Draft, Sent, Accepted or Declined.",
+    ],
+  },
+  {
+    h: "How setup works",
+    p: [
+      "There is nothing to set up and no account. Start an estimate, fill it in and choose Print or save as PDF. The printed header in the free version shows Purcell Ventures LLC.",
+      "Estimates are stored in this browser on this device and nowhere else. They do not appear on another computer or phone, and clearing the browser's site data deletes them.",
+    ],
+  },
+  {
+    h: "The version on your own website",
+    p: [
+      <>Online Estimating is one of the add-ons in the Growth plan, $179 a month, with a one-time setup fee of $650 to $1,000. On that plan I set it up for your business and maintain it, and estimates go out as shareable links. The Full Service plan, $279 a month, adds an AI estimate generator that turns a photo into a quote. <Link href="/digital#pricing">Compare the plans</Link>.</>,
+    ],
+  },
+];
 
 export default function EstimatingPage() {
   const [estimates, setEstimates] = useState<Estimate[]>([]);
@@ -295,6 +325,7 @@ export default function EstimatingPage() {
           .print-only-page input, .print-only-page textarea { border-color: gray !important; background: white !important; }
         }
       ` }} />
+      <AboutTool sections={ABOUT} />
     </main>
   );
 }

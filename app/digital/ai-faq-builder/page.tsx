@@ -1,14 +1,43 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { PageHero, Note } from "@/app/components/ui";
 import s from "../_demo/demo.module.css";
-import { ToolsKicker } from "../_demo/parts";
+import { ToolsKicker, AboutTool } from "../_demo/parts";
 
 interface FAQ {
   question: string;
   answer: string;
 }
+
+const ABOUT = [
+  {
+    h: "Who the FAQ builder is for",
+    p: [
+      "Business owners who answer the same customer questions on the phone every week and have never written them down. Give it the business name, two to four sentences on what you do, and optional topic hints such as warranty or payment methods.",
+      "It writes 6 to 10 questions phrased the way customers ask them, each with an answer of one to three sentences. The set covers cost, how the work happens, why a customer can trust you, what sets you apart, and the edge cases people ask about.",
+    ],
+  },
+  {
+    h: "What it replaces",
+    p: [
+      "Writing an FAQ page from a blank document, or copying a generic one that does not fit your business. The answers are drafts written from your description. Read each one and fix anything it gets wrong before it goes on your site, especially prices and promises.",
+    ],
+  },
+  {
+    h: "How setup works",
+    p: [
+      "There is no account. Fill in the form and choose Write the FAQs. Your description is sent to an AI model to write the answers, so leave out anything private. Copy the result as Markdown, HTML or JSON and paste it into your website builder.",
+    ],
+  },
+  {
+    h: "The version on your own website",
+    p: [
+      <>The AI FAQ Builder, running on your site, is in the Growth plan, $179 a month, with a one-time setup fee of $650 to $1,000. The Full Service plan, $279 a month, adds an AI chatbot trained on your business that answers questions 24 hours a day. <Link href="/digital#pricing">Compare the plans</Link>.</>,
+    ],
+  },
+];
 
 export default function AIFaqBuilderPage() {
   const [businessName, setBusinessName] = useState("");
@@ -148,6 +177,7 @@ export default function AIFaqBuilderPage() {
           The FAQ builder is part of the Purcell Ventures digital add-ons. It runs on Claude Haiku 4.5.
         </p>
       </div>
+      <AboutTool sections={ABOUT} />
     </main>
   );
 }
