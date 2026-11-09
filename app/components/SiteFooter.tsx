@@ -50,6 +50,8 @@ const COLS: { title: string; links: { href: string; label: string; rel?: string 
       { href: "https://elijahpurcell.com/", label: "elijahpurcell.com", rel: "me" },
       { href: "https://www.linkedin.com/in/theelijahpurcell", label: "LinkedIn", rel: "me" },
       { href: "https://github.com/thebigjah", label: "GitHub", rel: "me" },
+      { href: "https://orcid.org/0009-0000-7829-9258", label: "ORCID", rel: "me" },
+      { href: "https://www.producthunt.com/@elijahpurcell", label: "Product Hunt", rel: "me" },
       { href: "https://www.instagram.com/theelijahpurcell/", label: "Instagram", rel: "me" },
       { href: "https://ua-today.vercel.app", label: "UA Today" },
     ],

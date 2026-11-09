@@ -118,6 +118,7 @@ const orgSchema = {
       // and purcellventures.co/who are both his, so neither corroborated anything.
       "sameAs": [
         "https://www.linkedin.com/company/138853899/",
+        "https://www.crunchbase.com/organization/purcell-ventures",
         "https://github.com/thebigjah"],
       "founder": { "@id": "https://purcellventures.co/#founder" },
       "employee": { "@id": "https://purcellventures.co/#founder" },
@@ -240,7 +241,12 @@ const orgSchema = {
         "https://www.linkedin.com/in/theelijahpurcell",
         "https://github.com/thebigjah",
         "https://www.instagram.com/theelijahpurcell/",
-        "https://elijahpurcell.com/"],
+        "https://elijahpurcell.com/",
+        "https://www.crunchbase.com/person/elijah-purcell-b4eb",
+        "https://orcid.org/0009-0000-7829-9258",
+        "https://www.producthunt.com/@elijahpurcell",
+        "https://www.kaggle.com/elijahpurcell",
+        "https://medium.com/@elijahpurcell"],
     },
   ],
 };
