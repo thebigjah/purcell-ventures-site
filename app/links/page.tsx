@@ -13,10 +13,10 @@ const SECTIONS: { label: string; items: Item[] }[] = [
   {
     label: "Work with me",
     items: [
-      { href: "/sites", name: "Websites", line: "Custom websites for local businesses.", fig: "From $650 setup and $99 a month" },
-      { href: "/digital", name: "Digital services", line: "Websites, AI chatbots, booking and marketing.", fig: "From $99 a month" },
       { href: "/consulting", name: "AI consulting", line: "Hands-on training for your team.", fig: "From $125 a person" },
       { href: "/software", name: "Custom software", line: "Apps, platforms and AI tools.", fig: "From $1,500" },
+      { href: "/digital", name: "Digital services", line: "AI chatbots, booking, marketing and other add-ons.", fig: "From $99 a month" },
+      { href: "/sites", name: "Websites", line: "Custom websites for local businesses.", fig: "From $650 setup and $99 a month" },
       { href: "/consulting/book", name: "Book a session", line: "Direct booking for a consulting session." },
     ],
   },

@@ -19,11 +19,11 @@ import { CONTACT } from "@/lib/contact";
 //   planned, with Mantle Field Services shown as the sister brand it is.
 
 const DIVISIONS = [
-  { name: "Websites", line: "Custom websites for local businesses, with hosting and updates after launch.", fig: "From $650 setup and $99 a month", href: "/sites" },
-  { name: "Digital add-ons", line: "26 add-ons for a small business, including an AI chatbot, booking, a CRM and email marketing, managed by me on one subscription.", fig: "From $99 a month", href: "/digital" },
   { name: "AI consulting", line: "Hands-on AI training for business teams at your office: ChatGPT workflows, marketing automation and custom sessions.", fig: "From $125 a person", href: "/consulting" },
   { name: "Custom software", line: "Mobile apps, web apps and AI integrations, scoped and built around your problem from idea to launch.", fig: "From $1,500", href: "/software" },
+  { name: "Digital add-ons", line: "26 add-ons for a small business, including an AI chatbot, booking, a CRM and email marketing, managed by me on one subscription.", fig: "From $99 a month", href: "/digital" },
   { name: "Steady", line: "Personal tech help for individuals and households: AI coaching, phone setup, password managers, medication reminders, smart home and family care plans. For the family tech person who needs to hand the job off.", fig: "From $79 a month", href: "/steady" },
+  { name: "Websites", line: "Custom websites for local businesses, with hosting and updates after launch.", fig: "From $650 setup and $99 a month", href: "/sites" },
   { name: "Real estate", line: "A planned division. It is not taking clients yet." },
   { name: "Mantle Field Services", line: "The sister brand. Gutter cleaning, pressure washing and lawn care in metro Atlanta, run under its own name by the same owner.", fig: "From $50", href: "https://mantle-field-site.vercel.app" },
 ];
