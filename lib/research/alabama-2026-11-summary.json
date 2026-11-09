@@ -1,0 +1,1024 @@
+{
+ "data_file": "alabama-2026-11.csv",
+ "checks_started_utc": "2026-11-09T22:32:47Z",
+ "checks_finished_utc": "2026-11-09T22:41:15Z",
+ "overpass_fetched_utc": {
+  "statewide": "2026-11-09T22:05:57+00:00",
+  "tuscaloosa": "2026-11-09T22:19:59+00:00",
+  "birmingham": "2026-11-09T22:21:08+00:00",
+  "huntsville": "2026-11-09T22:28:31+00:00",
+  "montgomery": "2026-11-09T22:29:53+00:00",
+  "mobile": "2026-11-09T22:31:14+00:00"
+ },
+ "frame": {
+  "rest_of_state": 1415,
+  "birmingham": 218,
+  "tuscaloosa": 60,
+  "huntsville": 279,
+  "mobile": 86,
+  "montgomery": 44,
+  "total": 2102
+ },
+ "excluded": {
+  "no_or_bad_url": 1,
+  "social_page_elements": 89,
+  "brand_tagged_elements": 5049,
+  "nonbusiness_elements": 154,
+  "chain_domains_dropped": 575
+ },
+ "social_page_urls": {
+  "huntsville": 43,
+  "rest_of_state": 40,
+  "montgomery": 1,
+  "birmingham": 2,
+  "tuscaloosa": 3,
+  "total": 89
+ },
+ "frames": {
+  "statewide": {
+   "domains_checked": 700,
+   "reachable_200": {
+    "n": 592,
+    "pct_of_checked": 84.6
+   },
+   "not_reachable": {
+    "n": 108,
+    "pct_of_checked": 15.4,
+    "by_reason": {
+     "dns_failed": 57,
+     "http_404": 19,
+     "http_403": 9,
+     "tls_cert_verify_failed": 6,
+     "timeout": 5,
+     "http_503": 2,
+     "http_429": 2,
+     "http_401": 2,
+     "http_500": 1,
+     "http_301": 1,
+     "http_504": 1,
+     "http_409": 1,
+     "http_402": 1,
+     "tls_error": 1
+    }
+   },
+   "redirect_to_other_domain": {
+    "n": 40,
+    "pct_of_reachable": 6.8
+   },
+   "own_domain_pages": 552,
+   "https_final": {
+    "n": 503,
+    "pct_of_own_domain_pages": 91.1
+   },
+   "viewport": {
+    "n": 521,
+    "pct_of_own_domain_pages": 94.4
+   },
+   "title": {
+    "n": 526,
+    "pct_of_own_domain_pages": 95.3
+   },
+   "meta_description": {
+    "n": 405,
+    "pct_of_own_domain_pages": 73.4
+   },
+   "jsonld_any": {
+    "n": 340,
+    "pct_of_own_domain_pages": 61.6
+   },
+   "jsonld_org_or_localbusiness": {
+    "n": 268,
+    "pct_of_own_domain_pages": 48.6
+   },
+   "robots_txt_found": {
+    "n": 510,
+    "pct_of_own_domain_pages": 92.4
+   },
+   "llms_txt": {
+    "n": 139,
+    "pct_of_own_domain_pages": 25.2
+   },
+   "no_https": {
+    "n": 49,
+    "pct_of_own_domain_pages": 8.9
+   },
+   "no_viewport": {
+    "n": 31,
+    "pct_of_own_domain_pages": 5.6
+   },
+   "robots_blocks_GPTBot": {
+    "n": 17,
+    "pct_of_own_domain_pages": 3.1,
+    "named_in_robots_n": 67
+   },
+   "robots_blocks_ClaudeBot": {
+    "n": 17,
+    "pct_of_own_domain_pages": 3.1,
+    "named_in_robots_n": 67
+   },
+   "robots_blocks_PerplexityBot": {
+    "n": 6,
+    "pct_of_own_domain_pages": 1.1,
+    "named_in_robots_n": 13
+   },
+   "robots_blocks_Google-Extended": {
+    "n": 17,
+    "pct_of_own_domain_pages": 3.1,
+    "named_in_robots_n": 68
+   },
+   "robots_blocks_CCBot": {
+    "n": 20,
+    "pct_of_own_domain_pages": 3.6,
+    "named_in_robots_n": 65
+   },
+   "robots_blocks_any_ai_bot": {
+    "n": 21,
+    "pct_of_own_domain_pages": 3.8
+   },
+   "robots_blocks_an_ai_bot_by_name": {
+    "n": 18,
+    "pct_of_own_domain_pages": 3.3
+   },
+   "robots_blocks_all_five": {
+    "n": 4,
+    "pct_of_own_domain_pages": 0.7
+   },
+   "all_three_ai_signals": {
+    "n": 92,
+    "pct_of_own_domain_pages": 16.7,
+    "definition": "business JSON-LD present, llms.txt present, none of five AI bots blocked"
+   },
+   "passes_all_four_basics": {
+    "n": 379,
+    "pct_of_own_domain_pages": 68.7,
+    "definition": "https, viewport, title, meta description"
+   },
+   "ttfb_ms": {
+    "median": 617,
+    "p75": 828,
+    "p90": 1473,
+    "over_800ms_n": 147,
+    "over_800ms_pct": 26.6
+   },
+   "html_download_ms": {
+    "median": 738,
+    "p75": 998,
+    "p90": 1689,
+    "over_2000ms_n": 45,
+    "over_2000ms_pct": 8.2
+   },
+   "html_bytes": {
+    "median": 140310,
+    "p75": 271121,
+    "p90": 550668
+   },
+   "osm_opening_hours": {
+    "n": 400,
+    "pct_of_checked": 57.1
+   },
+   "osm_phone": {
+    "n": 568,
+    "pct_of_checked": 81.1
+   }
+  },
+  "tuscaloosa": {
+   "domains_checked": 60,
+   "reachable_200": {
+    "n": 51,
+    "pct_of_checked": 85.0
+   },
+   "not_reachable": {
+    "n": 9,
+    "pct_of_checked": 15.0,
+    "by_reason": {
+     "http_404": 4,
+     "dns_failed": 2,
+     "tls_cert_verify_failed": 1,
+     "http_401": 1,
+     "http_429": 1
+    }
+   },
+   "redirect_to_other_domain": {
+    "n": 4,
+    "pct_of_reachable": 7.8
+   },
+   "own_domain_pages": 47,
+   "https_final": {
+    "n": 44,
+    "pct_of_own_domain_pages": 93.6
+   },
+   "viewport": {
+    "n": 44,
+    "pct_of_own_domain_pages": 93.6
+   },
+   "title": {
+    "n": 44,
+    "pct_of_own_domain_pages": 93.6
+   },
+   "meta_description": {
+    "n": 34,
+    "pct_of_own_domain_pages": 72.3
+   },
+   "jsonld_any": {
+    "n": 28,
+    "pct_of_own_domain_pages": 59.6
+   },
+   "jsonld_org_or_localbusiness": {
+    "n": 21,
+    "pct_of_own_domain_pages": 44.7
+   },
+   "robots_txt_found": {
+    "n": 45,
+    "pct_of_own_domain_pages": 95.7
+   },
+   "llms_txt": {
+    "n": 9,
+    "pct_of_own_domain_pages": 19.1
+   },
+   "no_https": {
+    "n": 3,
+    "pct_of_own_domain_pages": 6.4
+   },
+   "no_viewport": {
+    "n": 3,
+    "pct_of_own_domain_pages": 6.4
+   },
+   "robots_blocks_GPTBot": {
+    "n": 6,
+    "pct_of_own_domain_pages": 12.8,
+    "named_in_robots_n": 8
+   },
+   "robots_blocks_ClaudeBot": {
+    "n": 7,
+    "pct_of_own_domain_pages": 14.9,
+    "named_in_robots_n": 9
+   },
+   "robots_blocks_PerplexityBot": {
+    "n": 2,
+    "pct_of_own_domain_pages": 4.3,
+    "named_in_robots_n": 2
+   },
+   "robots_blocks_Google-Extended": {
+    "n": 4,
+    "pct_of_own_domain_pages": 8.5,
+    "named_in_robots_n": 8
+   },
+   "robots_blocks_CCBot": {
+    "n": 6,
+    "pct_of_own_domain_pages": 12.8,
+    "named_in_robots_n": 8
+   },
+   "robots_blocks_any_ai_bot": {
+    "n": 7,
+    "pct_of_own_domain_pages": 14.9
+   },
+   "robots_blocks_an_ai_bot_by_name": {
+    "n": 6,
+    "pct_of_own_domain_pages": 12.8
+   },
+   "robots_blocks_all_five": {
+    "n": 1,
+    "pct_of_own_domain_pages": 2.1
+   },
+   "all_three_ai_signals": {
+    "n": 6,
+    "pct_of_own_domain_pages": 12.8,
+    "definition": "business JSON-LD present, llms.txt present, none of five AI bots blocked"
+   },
+   "passes_all_four_basics": {
+    "n": 31,
+    "pct_of_own_domain_pages": 66.0,
+    "definition": "https, viewport, title, meta description"
+   },
+   "ttfb_ms": {
+    "median": 614,
+    "p75": 972,
+    "p90": 1620,
+    "over_800ms_n": 16,
+    "over_800ms_pct": 34.0
+   },
+   "html_download_ms": {
+    "median": 734,
+    "p75": 1028,
+    "p90": 1969,
+    "over_2000ms_n": 4,
+    "over_2000ms_pct": 8.5
+   },
+   "html_bytes": {
+    "median": 141286,
+    "p75": 288780,
+    "p90": 594712
+   },
+   "osm_opening_hours": {
+    "n": 36,
+    "pct_of_checked": 60.0
+   },
+   "osm_phone": {
+    "n": 44,
+    "pct_of_checked": 73.3
+   }
+  },
+  "birmingham": {
+   "domains_checked": 218,
+   "reachable_200": {
+    "n": 199,
+    "pct_of_checked": 91.3
+   },
+   "not_reachable": {
+    "n": 19,
+    "pct_of_checked": 8.7,
+    "by_reason": {
+     "dns_failed": 8,
+     "http_404": 6,
+     "http_403": 2,
+     "http_503": 1,
+     "tls_cert_verify_failed": 1,
+     "http_429": 1
+    }
+   },
+   "redirect_to_other_domain": {
+    "n": 12,
+    "pct_of_reachable": 6.0
+   },
+   "own_domain_pages": 187,
+   "https_final": {
+    "n": 169,
+    "pct_of_own_domain_pages": 90.4
+   },
+   "viewport": {
+    "n": 176,
+    "pct_of_own_domain_pages": 94.1
+   },
+   "title": {
+    "n": 176,
+    "pct_of_own_domain_pages": 94.1
+   },
+   "meta_description": {
+    "n": 131,
+    "pct_of_own_domain_pages": 70.1
+   },
+   "jsonld_any": {
+    "n": 128,
+    "pct_of_own_domain_pages": 68.4
+   },
+   "jsonld_org_or_localbusiness": {
+    "n": 95,
+    "pct_of_own_domain_pages": 50.8
+   },
+   "robots_txt_found": {
+    "n": 174,
+    "pct_of_own_domain_pages": 93.0
+   },
+   "llms_txt": {
+    "n": 47,
+    "pct_of_own_domain_pages": 25.1
+   },
+   "no_https": {
+    "n": 18,
+    "pct_of_own_domain_pages": 9.6
+   },
+   "no_viewport": {
+    "n": 11,
+    "pct_of_own_domain_pages": 5.9
+   },
+   "robots_blocks_GPTBot": {
+    "n": 8,
+    "pct_of_own_domain_pages": 4.3,
+    "named_in_robots_n": 34
+   },
+   "robots_blocks_ClaudeBot": {
+    "n": 8,
+    "pct_of_own_domain_pages": 4.3,
+    "named_in_robots_n": 34
+   },
+   "robots_blocks_PerplexityBot": {
+    "n": 2,
+    "pct_of_own_domain_pages": 1.1,
+    "named_in_robots_n": 5
+   },
+   "robots_blocks_Google-Extended": {
+    "n": 7,
+    "pct_of_own_domain_pages": 3.7,
+    "named_in_robots_n": 33
+   },
+   "robots_blocks_CCBot": {
+    "n": 9,
+    "pct_of_own_domain_pages": 4.8,
+    "named_in_robots_n": 34
+   },
+   "robots_blocks_any_ai_bot": {
+    "n": 10,
+    "pct_of_own_domain_pages": 5.3
+   },
+   "robots_blocks_an_ai_bot_by_name": {
+    "n": 8,
+    "pct_of_own_domain_pages": 4.3
+   },
+   "robots_blocks_all_five": {
+    "n": 2,
+    "pct_of_own_domain_pages": 1.1
+   },
+   "all_three_ai_signals": {
+    "n": 33,
+    "pct_of_own_domain_pages": 17.6,
+    "definition": "business JSON-LD present, llms.txt present, none of five AI bots blocked"
+   },
+   "passes_all_four_basics": {
+    "n": 123,
+    "pct_of_own_domain_pages": 65.8,
+    "definition": "https, viewport, title, meta description"
+   },
+   "ttfb_ms": {
+    "median": 561,
+    "p75": 726,
+    "p90": 1148,
+    "over_800ms_n": 38,
+    "over_800ms_pct": 20.3
+   },
+   "html_download_ms": {
+    "median": 670,
+    "p75": 901,
+    "p90": 1252,
+    "over_2000ms_n": 8,
+    "over_2000ms_pct": 4.3
+   },
+   "html_bytes": {
+    "median": 154154,
+    "p75": 287122,
+    "p90": 542567
+   },
+   "osm_opening_hours": {
+    "n": 114,
+    "pct_of_checked": 52.3
+   },
+   "osm_phone": {
+    "n": 134,
+    "pct_of_checked": 61.5
+   }
+  },
+  "huntsville": {
+   "domains_checked": 279,
+   "reachable_200": {
+    "n": 251,
+    "pct_of_checked": 90.0
+   },
+   "not_reachable": {
+    "n": 28,
+    "pct_of_checked": 10.0,
+    "by_reason": {
+     "dns_failed": 8,
+     "http_404": 7,
+     "tls_cert_verify_failed": 5,
+     "http_403": 4,
+     "timeout": 2,
+     "http_429": 1,
+     "http_503": 1
+    }
+   },
+   "redirect_to_other_domain": {
+    "n": 11,
+    "pct_of_reachable": 4.4
+   },
+   "own_domain_pages": 240,
+   "https_final": {
+    "n": 220,
+    "pct_of_own_domain_pages": 91.7
+   },
+   "viewport": {
+    "n": 226,
+    "pct_of_own_domain_pages": 94.2
+   },
+   "title": {
+    "n": 231,
+    "pct_of_own_domain_pages": 96.2
+   },
+   "meta_description": {
+    "n": 165,
+    "pct_of_own_domain_pages": 68.8
+   },
+   "jsonld_any": {
+    "n": 146,
+    "pct_of_own_domain_pages": 60.8
+   },
+   "jsonld_org_or_localbusiness": {
+    "n": 110,
+    "pct_of_own_domain_pages": 45.8
+   },
+   "robots_txt_found": {
+    "n": 215,
+    "pct_of_own_domain_pages": 89.6
+   },
+   "llms_txt": {
+    "n": 52,
+    "pct_of_own_domain_pages": 21.7
+   },
+   "no_https": {
+    "n": 20,
+    "pct_of_own_domain_pages": 8.3
+   },
+   "no_viewport": {
+    "n": 14,
+    "pct_of_own_domain_pages": 5.8
+   },
+   "robots_blocks_GPTBot": {
+    "n": 9,
+    "pct_of_own_domain_pages": 3.8,
+    "named_in_robots_n": 29
+   },
+   "robots_blocks_ClaudeBot": {
+    "n": 7,
+    "pct_of_own_domain_pages": 2.9,
+    "named_in_robots_n": 26
+   },
+   "robots_blocks_PerplexityBot": {
+    "n": 1,
+    "pct_of_own_domain_pages": 0.4,
+    "named_in_robots_n": 4
+   },
+   "robots_blocks_Google-Extended": {
+    "n": 6,
+    "pct_of_own_domain_pages": 2.5,
+    "named_in_robots_n": 25
+   },
+   "robots_blocks_CCBot": {
+    "n": 6,
+    "pct_of_own_domain_pages": 2.5,
+    "named_in_robots_n": 24
+   },
+   "robots_blocks_any_ai_bot": {
+    "n": 10,
+    "pct_of_own_domain_pages": 4.2
+   },
+   "robots_blocks_an_ai_bot_by_name": {
+    "n": 10,
+    "pct_of_own_domain_pages": 4.2
+   },
+   "robots_blocks_all_five": {
+    "n": 0,
+    "pct_of_own_domain_pages": 0.0
+   },
+   "all_three_ai_signals": {
+    "n": 35,
+    "pct_of_own_domain_pages": 14.6,
+    "definition": "business JSON-LD present, llms.txt present, none of five AI bots blocked"
+   },
+   "passes_all_four_basics": {
+    "n": 154,
+    "pct_of_own_domain_pages": 64.2,
+    "definition": "https, viewport, title, meta description"
+   },
+   "ttfb_ms": {
+    "median": 622,
+    "p75": 875,
+    "p90": 1453,
+    "over_800ms_n": 75,
+    "over_800ms_pct": 31.2
+   },
+   "html_download_ms": {
+    "median": 760,
+    "p75": 1054,
+    "p90": 1684,
+    "over_2000ms_n": 20,
+    "over_2000ms_pct": 8.3
+   },
+   "html_bytes": {
+    "median": 133136,
+    "p75": 236006,
+    "p90": 488839
+   },
+   "osm_opening_hours": {
+    "n": 183,
+    "pct_of_checked": 65.6
+   },
+   "osm_phone": {
+    "n": 242,
+    "pct_of_checked": 86.7
+   }
+  },
+  "montgomery": {
+   "domains_checked": 44,
+   "reachable_200": {
+    "n": 33,
+    "pct_of_checked": 75.0
+   },
+   "not_reachable": {
+    "n": 11,
+    "pct_of_checked": 25.0,
+    "by_reason": {
+     "dns_failed": 3,
+     "http_500": 2,
+     "http_404": 1,
+     "http_403": 1,
+     "http_400": 1,
+     "tls_cert_verify_failed": 1,
+     "http_526": 1,
+     "timeout": 1
+    }
+   },
+   "redirect_to_other_domain": {
+    "n": 2,
+    "pct_of_reachable": 6.1
+   },
+   "own_domain_pages": 31,
+   "https_final": {
+    "n": 31,
+    "pct_of_own_domain_pages": 100.0
+   },
+   "viewport": {
+    "n": 30,
+    "pct_of_own_domain_pages": 96.8
+   },
+   "title": {
+    "n": 30,
+    "pct_of_own_domain_pages": 96.8
+   },
+   "meta_description": {
+    "n": 26,
+    "pct_of_own_domain_pages": 83.9
+   },
+   "jsonld_any": {
+    "n": 19,
+    "pct_of_own_domain_pages": 61.3
+   },
+   "jsonld_org_or_localbusiness": {
+    "n": 13,
+    "pct_of_own_domain_pages": 41.9
+   },
+   "robots_txt_found": {
+    "n": 29,
+    "pct_of_own_domain_pages": 93.5
+   },
+   "llms_txt": {
+    "n": 6,
+    "pct_of_own_domain_pages": 19.4
+   },
+   "no_https": {
+    "n": 0,
+    "pct_of_own_domain_pages": 0.0
+   },
+   "no_viewport": {
+    "n": 1,
+    "pct_of_own_domain_pages": 3.2
+   },
+   "robots_blocks_GPTBot": {
+    "n": 0,
+    "pct_of_own_domain_pages": 0.0,
+    "named_in_robots_n": 3
+   },
+   "robots_blocks_ClaudeBot": {
+    "n": 0,
+    "pct_of_own_domain_pages": 0.0,
+    "named_in_robots_n": 2
+   },
+   "robots_blocks_PerplexityBot": {
+    "n": 0,
+    "pct_of_own_domain_pages": 0.0,
+    "named_in_robots_n": 0
+   },
+   "robots_blocks_Google-Extended": {
+    "n": 0,
+    "pct_of_own_domain_pages": 0.0,
+    "named_in_robots_n": 2
+   },
+   "robots_blocks_CCBot": {
+    "n": 0,
+    "pct_of_own_domain_pages": 0.0,
+    "named_in_robots_n": 2
+   },
+   "robots_blocks_any_ai_bot": {
+    "n": 0,
+    "pct_of_own_domain_pages": 0.0
+   },
+   "robots_blocks_an_ai_bot_by_name": {
+    "n": 0,
+    "pct_of_own_domain_pages": 0.0
+   },
+   "robots_blocks_all_five": {
+    "n": 0,
+    "pct_of_own_domain_pages": 0.0
+   },
+   "all_three_ai_signals": {
+    "n": 3,
+    "pct_of_own_domain_pages": 9.7,
+    "definition": "business JSON-LD present, llms.txt present, none of five AI bots blocked"
+   },
+   "passes_all_four_basics": {
+    "n": 26,
+    "pct_of_own_domain_pages": 83.9,
+    "definition": "https, viewport, title, meta description"
+   },
+   "ttfb_ms": {
+    "median": 534,
+    "p75": 710,
+    "p90": 1125,
+    "over_800ms_n": 4,
+    "over_800ms_pct": 12.9
+   },
+   "html_download_ms": {
+    "median": 735,
+    "p75": 932,
+    "p90": 1622,
+    "over_2000ms_n": 2,
+    "over_2000ms_pct": 6.5
+   },
+   "html_bytes": {
+    "median": 134934,
+    "p75": 246486,
+    "p90": 593396
+   },
+   "osm_opening_hours": {
+    "n": 27,
+    "pct_of_checked": 61.4
+   },
+   "osm_phone": {
+    "n": 38,
+    "pct_of_checked": 86.4
+   }
+  },
+  "mobile": {
+   "domains_checked": 86,
+   "reachable_200": {
+    "n": 73,
+    "pct_of_checked": 84.9
+   },
+   "not_reachable": {
+    "n": 13,
+    "pct_of_checked": 15.1,
+    "by_reason": {
+     "dns_failed": 9,
+     "http_301": 1,
+     "http_400": 1,
+     "timeout": 1,
+     "http_404": 1
+    }
+   },
+   "redirect_to_other_domain": {
+    "n": 8,
+    "pct_of_reachable": 11.0
+   },
+   "own_domain_pages": 65,
+   "https_final": {
+    "n": 62,
+    "pct_of_own_domain_pages": 95.4
+   },
+   "viewport": {
+    "n": 61,
+    "pct_of_own_domain_pages": 93.8
+   },
+   "title": {
+    "n": 65,
+    "pct_of_own_domain_pages": 100.0
+   },
+   "meta_description": {
+    "n": 58,
+    "pct_of_own_domain_pages": 89.2
+   },
+   "jsonld_any": {
+    "n": 48,
+    "pct_of_own_domain_pages": 73.8
+   },
+   "jsonld_org_or_localbusiness": {
+    "n": 40,
+    "pct_of_own_domain_pages": 61.5
+   },
+   "robots_txt_found": {
+    "n": 63,
+    "pct_of_own_domain_pages": 96.9
+   },
+   "llms_txt": {
+    "n": 17,
+    "pct_of_own_domain_pages": 26.2
+   },
+   "no_https": {
+    "n": 3,
+    "pct_of_own_domain_pages": 4.6
+   },
+   "no_viewport": {
+    "n": 4,
+    "pct_of_own_domain_pages": 6.2
+   },
+   "robots_blocks_GPTBot": {
+    "n": 2,
+    "pct_of_own_domain_pages": 3.1,
+    "named_in_robots_n": 8
+   },
+   "robots_blocks_ClaudeBot": {
+    "n": 2,
+    "pct_of_own_domain_pages": 3.1,
+    "named_in_robots_n": 7
+   },
+   "robots_blocks_PerplexityBot": {
+    "n": 0,
+    "pct_of_own_domain_pages": 0.0,
+    "named_in_robots_n": 1
+   },
+   "robots_blocks_Google-Extended": {
+    "n": 2,
+    "pct_of_own_domain_pages": 3.1,
+    "named_in_robots_n": 7
+   },
+   "robots_blocks_CCBot": {
+    "n": 3,
+    "pct_of_own_domain_pages": 4.6,
+    "named_in_robots_n": 7
+   },
+   "robots_blocks_any_ai_bot": {
+    "n": 3,
+    "pct_of_own_domain_pages": 4.6
+   },
+   "robots_blocks_an_ai_bot_by_name": {
+    "n": 3,
+    "pct_of_own_domain_pages": 4.6
+   },
+   "robots_blocks_all_five": {
+    "n": 0,
+    "pct_of_own_domain_pages": 0.0
+   },
+   "all_three_ai_signals": {
+    "n": 12,
+    "pct_of_own_domain_pages": 18.5,
+    "definition": "business JSON-LD present, llms.txt present, none of five AI bots blocked"
+   },
+   "passes_all_four_basics": {
+    "n": 54,
+    "pct_of_own_domain_pages": 83.1,
+    "definition": "https, viewport, title, meta description"
+   },
+   "ttfb_ms": {
+    "median": 619,
+    "p75": 989,
+    "p90": 1645,
+    "over_800ms_n": 24,
+    "over_800ms_pct": 36.9
+   },
+   "html_download_ms": {
+    "median": 796,
+    "p75": 1105,
+    "p90": 1933,
+    "over_2000ms_n": 7,
+    "over_2000ms_pct": 10.8
+   },
+   "html_bytes": {
+    "median": 137803,
+    "p75": 236394,
+    "p90": 397635
+   },
+   "osm_opening_hours": {
+    "n": 46,
+    "pct_of_checked": 53.5
+   },
+   "osm_phone": {
+    "n": 72,
+    "pct_of_checked": 83.7
+   }
+  },
+  "all_checked_domains": {
+   "domains_checked": 1176,
+   "reachable_200": {
+    "n": 1013,
+    "pct_of_checked": 86.1
+   },
+   "not_reachable": {
+    "n": 163,
+    "pct_of_checked": 13.9,
+    "by_reason": {
+     "dns_failed": 79,
+     "http_404": 33,
+     "http_403": 14,
+     "tls_cert_verify_failed": 11,
+     "timeout": 8,
+     "http_429": 3,
+     "http_503": 2,
+     "http_301": 2,
+     "http_400": 2,
+     "http_500": 2,
+     "http_401": 2,
+     "http_526": 1,
+     "http_504": 1,
+     "http_409": 1,
+     "http_402": 1,
+     "tls_error": 1
+    }
+   },
+   "redirect_to_other_domain": {
+    "n": 64,
+    "pct_of_reachable": 6.3
+   },
+   "own_domain_pages": 949,
+   "https_final": {
+    "n": 869,
+    "pct_of_own_domain_pages": 91.6
+   },
+   "viewport": {
+    "n": 895,
+    "pct_of_own_domain_pages": 94.3
+   },
+   "title": {
+    "n": 908,
+    "pct_of_own_domain_pages": 95.7
+   },
+   "meta_description": {
+    "n": 699,
+    "pct_of_own_domain_pages": 73.7
+   },
+   "jsonld_any": {
+    "n": 605,
+    "pct_of_own_domain_pages": 63.8
+   },
+   "jsonld_org_or_localbusiness": {
+    "n": 470,
+    "pct_of_own_domain_pages": 49.5
+   },
+   "robots_txt_found": {
+    "n": 875,
+    "pct_of_own_domain_pages": 92.2
+   },
+   "llms_txt": {
+    "n": 226,
+    "pct_of_own_domain_pages": 23.8
+   },
+   "no_https": {
+    "n": 80,
+    "pct_of_own_domain_pages": 8.4
+   },
+   "no_viewport": {
+    "n": 54,
+    "pct_of_own_domain_pages": 5.7
+   },
+   "robots_blocks_GPTBot": {
+    "n": 36,
+    "pct_of_own_domain_pages": 3.8,
+    "named_in_robots_n": 125
+   },
+   "robots_blocks_ClaudeBot": {
+    "n": 36,
+    "pct_of_own_domain_pages": 3.8,
+    "named_in_robots_n": 122
+   },
+   "robots_blocks_PerplexityBot": {
+    "n": 8,
+    "pct_of_own_domain_pages": 0.8,
+    "named_in_robots_n": 20
+   },
+   "robots_blocks_Google-Extended": {
+    "n": 31,
+    "pct_of_own_domain_pages": 3.3,
+    "named_in_robots_n": 118
+   },
+   "robots_blocks_CCBot": {
+    "n": 37,
+    "pct_of_own_domain_pages": 3.9,
+    "named_in_robots_n": 116
+   },
+   "robots_blocks_any_ai_bot": {
+    "n": 43,
+    "pct_of_own_domain_pages": 4.5
+   },
+   "robots_blocks_an_ai_bot_by_name": {
+    "n": 38,
+    "pct_of_own_domain_pages": 4.0
+   },
+   "robots_blocks_all_five": {
+    "n": 6,
+    "pct_of_own_domain_pages": 0.6
+   },
+   "all_three_ai_signals": {
+    "n": 151,
+    "pct_of_own_domain_pages": 15.9,
+    "definition": "business JSON-LD present, llms.txt present, none of five AI bots blocked"
+   },
+   "passes_all_four_basics": {
+    "n": 655,
+    "pct_of_own_domain_pages": 69.0,
+    "definition": "https, viewport, title, meta description"
+   },
+   "ttfb_ms": {
+    "median": 603,
+    "p75": 847,
+    "p90": 1476,
+    "over_800ms_n": 261,
+    "over_800ms_pct": 27.5
+   },
+   "html_download_ms": {
+    "median": 717,
+    "p75": 1021,
+    "p90": 1695,
+    "over_2000ms_n": 74,
+    "over_2000ms_pct": 7.8
+   },
+   "html_bytes": {
+    "median": 138293,
+    "p75": 259954,
+    "p90": 538393
+   },
+   "osm_opening_hours": {
+    "n": 675,
+    "pct_of_checked": 57.4
+   },
+   "osm_phone": {
+    "n": 931,
+    "pct_of_checked": 79.2
+   }
+  }
+ }
+}

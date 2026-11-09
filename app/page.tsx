@@ -115,6 +115,7 @@ const FREE = [
   { name: "AI readiness test", href: "/ai-readiness", line: "Ten questions that place your business in one of four tiers, each with next steps." },
   { name: "AI cost calculator", href: "/ai-cost-calculator", line: "Enter your team size, hourly rate and hours of manual work to see how long training takes to pay for itself." },
   { name: "AI visibility check", href: "/ai-visibility-check", line: "Enter your website to see whether AI crawlers can read it, and what to fix." },
+  { name: "Research", href: "/research", line: "Measured checks of Alabama small business websites by city, with the method and the data." },
   { name: "Pricing, compared", href: "/pricing-comparison", line: "My prices next to typical agency, freelancer and do-it-yourself prices." },
   { name: "Comparisons", href: "/compare", line: "A custom AI agent or Zapier, a website builder or a custom site, ChatGPT or Claude." },
   { name: "How I work", href: "/how-we-work", line: "The five stages of a project, six commitments and the work I turn down." },
