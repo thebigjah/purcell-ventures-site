@@ -1,0 +1,125 @@
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
+
+// STATEWIDE PILLAR FOR THE AI CONSULTING CLUSTER (9 Nov 2026).
+//
+// /ai-consultant-tuscaloosa answers the city query. This page answers the state one and is
+// the hub the blog engine links each ai-consulting post up to (~/blog-engine cluster_map.json).
+// City pages for Birmingham, Huntsville, Montgomery, Mobile and Auburn hang off it later.
+//
+// Every price below was read off /consulting and /software on 9 Nov 2026. No client
+// results, counts or percentages, because the site has none it can show.
+
+export const metadata: Metadata = {
+  title: { absolute: "AI consulting in Alabama, Purcell Ventures" },
+  description:
+    "AI consulting, AI automation and custom software for Alabama businesses from Elijah Purcell of Purcell Ventures in Tuscaloosa. Prices, what each service fits, and when AI is the wrong purchase.",
+  keywords: [
+    "AI consulting Alabama", "AI consultant Alabama", "AI consulting Birmingham",
+    "AI consulting Huntsville", "AI consulting Montgomery", "AI consulting Mobile",
+    "AI consulting Auburn", "AI training for small business Alabama",
+  ],
+  openGraph: {
+    title: "AI consulting in Alabama",
+    description:
+      "AI consulting, AI automation and custom software for Alabama businesses, with prices, from Elijah Purcell in Tuscaloosa.",
+    url: "https://purcellventures.co/ai-consulting",
+    type: "website",
+    images: ["/opengraph-image"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI consulting in Alabama: Purcell Ventures",
+    description: "AI consulting, AI automation and custom software for Alabama businesses.",
+  },
+  alternates: { canonical: "https://purcellventures.co/ai-consulting" },
+};
+
+export const QA: [string, string][] = [
+  ["Who offers AI consulting in Alabama?",
+   "Purcell Ventures LLC, run by Elijah Purcell in Tuscaloosa, offers AI consulting, AI automation and custom software to businesses across Alabama. Elijah is a student at the University of Alabama, in New College and the Honors College, and builds the systems himself."],
+  ["How much does AI consulting cost in Alabama?",
+   "At Purcell Ventures, 1-on-1 AI consulting costs $175 an hour, small group training costs $125 a person for 2 to 8 people, and a half-day workshop costs $2,500 flat for up to 20 people. Small software projects run $1,500 to $3,500, and Elijah quotes automation per project after a free conversation."],
+  ["Does my team need technical experience?",
+   "No. Elijah designs most sessions for people who have never used AI tools, and they go at your team's pace."],
+  ["Can the training happen at our office?",
+   "Yes. Training sessions run at your location, with examples taken from your own business."],
+  ["What is the difference between AI consulting and AI automation?",
+   "AI consulting decides where AI fits in your business and trains your team to use it. AI automation builds a system that runs a repeated task without a person doing it each time. Many projects start with consulting and end with an automation."],
+  ["Is it safe to put customer data into AI tools?",
+   "It depends on the tool and the plan. Consumer and business plans of the same AI product can handle your data differently, so check the data and training settings before you paste in customer information. Deciding what stays out of the chat window is part of every consulting session."],
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://purcellventures.co/ai-consulting#service",
+      "name": "AI consulting in Alabama",
+      "url": "https://purcellventures.co/ai-consulting",
+      "description":
+        "AI consulting, team training, AI automation and custom software for businesses in Alabama, delivered by Elijah Purcell of Purcell Ventures LLC from Tuscaloosa.",
+      "provider": { "@id": "https://purcellventures.co/#organization" },
+      "founder": { "@id": "https://purcellventures.co/#founder" },
+      "employee": { "@id": "https://purcellventures.co/#founder" },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Alabama" },
+        ...["Tuscaloosa", "Birmingham", "Huntsville", "Montgomery", "Mobile", "Auburn"].map((name) => ({
+          "@type": "City", name, "containedInPlace": { "@type": "AdministrativeArea", "name": "Alabama" },
+        })),
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tuscaloosa",
+        "addressRegion": "AL",
+        "addressCountry": "US",
+      },
+      "email": "elijah@purcellventures.co",
+      "knowsAbout": [
+        "AI consulting", "AI training for teams", "Business process automation",
+        "Autonomous AI agent systems", "Custom software development",
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI consulting services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "1-on-1 AI consulting" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "175", "priceCurrency": "USD", "unitCode": "HUR" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small group AI training, 2 to 8 people" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "125", "priceCurrency": "USD", "unitText": "per person" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half-day AI workshop for up to 20 people" }, "price": "2500", "priceCurrency": "USD" },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small custom software project" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500", "maxPrice": "3500", "priceCurrency": "USD" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI automation, quoted per project" } },
+        ],
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://purcellventures.co/ai-consulting#faq",
+      "mainEntity": QA.map(([q, a]) => ({
+        "@type": "Question",
+        "name": q,
+        "acceptedAnswer": { "@type": "Answer", "text": a },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://purcellventures.co" },
+        { "@type": "ListItem", "position": 2, "name": "Consulting", "item": "https://purcellventures.co/consulting" },
+        { "@type": "ListItem", "position": 3, "name": "AI consulting in Alabama", "item": "https://purcellventures.co/ai-consulting" },
+      ],
+    },
+  ],
+};
+
+export default function Layout({ children }: { children: ReactNode }) {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      {children}
+    </>
+  );
+}

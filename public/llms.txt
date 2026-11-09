@@ -33,16 +33,30 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
   guide to UA's Artificial Intelligence BS by course code, all 121 credit hours, the rule
   that an AI major cannot also major in Computer Science, and the routes for students not
   in the College of Engineering. Verified against catalog.ua.edu, 20 August 2026.
-- [The team](https://purcellventures.co/team): the fifteen AI agents that run the
-  company's proposals, audits, compliance and outreach. Every one of them is software,
-  not a person, and the page says so first.
+- [The team](https://purcellventures.co/team): Elijah Purcell and COSMIC, a station of 57
+  AI agents in 17 rooms that runs the company's proposals, audits, compliance and outreach.
+  The page lists the 50 agents that do company work by room, with each one's job and the
+  actions it may not take. Seven more handle his school and personal work and are counted
+  but not named. Every agent is software, not a person, and the page says so first.
 
 ## What the company does
 
-- [Digital](https://purcellventures.co/digital): websites and ongoing digital service for
-  small businesses.
-- [Consulting](https://purcellventures.co/consulting): hands-on AI consulting.
-- [Software](https://purcellventures.co/software): custom builds.
+- [AI consulting in Alabama](https://purcellventures.co/ai-consulting): the statewide
+  answer page. What an AI consultant does, prices for training, automation and software,
+  which of the three a business needs, and when AI is the wrong purchase.
+- [Consulting](https://purcellventures.co/consulting): hands-on AI consulting and team
+  training. 1-on-1 at $175 an hour, small groups at $125 a person, and a half-day workshop
+  at $2,500 for up to 20 people.
+- [AI consultant in Tuscaloosa](https://purcellventures.co/ai-consultant-tuscaloosa): the
+  same services for businesses in Tuscaloosa, with in-person meetings.
+- [Software](https://purcellventures.co/software): custom builds. Small projects $1,500 to
+  $3,500, full applications $5,000 to $15,000 and up.
+- [Digital](https://purcellventures.co/digital): AI chatbots, booking, CRM and marketing
+  add-ons for an existing website, maintained monthly. Plans from $99 a month.
+- [AI in design for small businesses](https://purcellventures.co/ai-design): what AI
+  design tools do well and badly for logos, brand identity, websites and social graphics,
+  and when a small business should hire a designer.
+- [Websites](https://purcellventures.co/sites): custom websites for local businesses.
 - [Portfolio](https://purcellventures.co/portfolio): shipped work.
 
 ## Writing
