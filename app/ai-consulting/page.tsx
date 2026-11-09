@@ -2,7 +2,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
-import { QA } from "./layout";
+import { QA, schema } from "./layout";
 
 // Statewide pillar for the AI consulting cluster, built on the same single-column
 // PostLayout as /ai-consultant-tuscaloosa. Each H2 is a question a business owner asks,
@@ -22,6 +22,10 @@ export default function AiConsultingAlabama() {
       lede="AI consulting, automation and custom software for Alabama businesses, from Elijah Purcell of Purcell Ventures in Tuscaloosa. The first conversation is free."
       meta={<>Updated <time dateTime="2026-11-09">9 November 2026</time>. 1-on-1 sessions $175 an hour. Team workshops $2,500 for up to 20 people.</>}
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <p>
         I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data
         science student at the University of Alabama. I work from Tuscaloosa with owners and
@@ -178,6 +182,17 @@ export default function AiConsultingAlabama() {
         <Link href="/ai-consultant-tuscaloosa">AI consultant in Tuscaloosa</Link> page covers
         local work.
       </p>
+
+      <h2>AI consulting by city</h2>
+
+      <ul>
+        <li><Link href="/ai-consultant-tuscaloosa">Tuscaloosa</Link>: local businesses near the University of Alabama, with in-person meetings.</li>
+        <li><Link href="/ai-consulting/birmingham-al">Birmingham</Link>: medical practices, law and accounting firms, banks and engineering offices.</li>
+        <li><Link href="/ai-consulting/huntsville-al">Huntsville</Link>: defense contractors, proposal teams, staffing firms and engineering companies.</li>
+        <li><Link href="/ai-consulting/montgomery-al">Montgomery</Link>: firms that work with state government, automotive suppliers and businesses near Maxwell.</li>
+        <li><Link href="/ai-consulting/mobile-al">Mobile</Link>: freight forwarders, logistics and marine firms, and Gulf Coast hospitality.</li>
+        <li><Link href="/ai-consulting/auburn-al">Auburn</Link>: restaurants, shops, student housing and young founders.</li>
+      </ul>
 
       <h2>When is AI consulting the wrong purchase?</h2>
 
