@@ -89,6 +89,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ai-at-alabama`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/ai-consultant-tuscaloosa`, lastModified: aug22, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/agentic-ai`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    // Cluster pillars, written 9 Nov 2026. Each blog post in a cluster links up to one.
+    { url: `${BASE}/ai-consulting`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/ai-design`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/ai-automation`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/ai-integration`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/ai-for-small-business`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/ai-websites`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
 
     { url: `${BASE}/blog/canonical-tag-noindex`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
