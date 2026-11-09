@@ -49,6 +49,10 @@ export default function ToolsIndexPage() {
         </Section>
       ))}
 
+      <Section title="Website checks" intro="Free, no account. The check stores nothing.">
+        <Rows items={[{ name: "AI visibility check", line: "Enter your website to see whether ChatGPT, Claude, Perplexity and Google's AI crawlers can read it, and what to fix.", href: "/ai-visibility-check" }]} />
+      </Section>
+
       <Section title="Add-on demos" intro="Working versions of add-ons I install on client sites. They run in your browser and save only to your device.">
         <Rows items={DEMOS.map((d) => ({ name: d.name, line: `${d.tagline} ${d.category}.`, href: `/digital/${d.slug}` }))} />
       </Section>

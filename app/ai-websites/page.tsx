@@ -72,6 +72,12 @@ export default function AiWebsites() {
         <Link href="/blog/can-ai-find-your-business">can an AI find your business</Link>.
       </p>
 
+      <p>
+        To see what an AI crawler reads on your own site, run the free{" "}
+        <Link href="/ai-visibility-check">AI visibility check</Link>. It reads your robots.txt,
+        llms.txt and home page and lists what to fix.
+      </p>
+
       <h2>What is the difference between SEO and generative engine optimization?</h2>
 
       <p>
@@ -180,7 +186,9 @@ export default function AiWebsites() {
 
       <p>
         Before you commit to a builder, confirm that you can edit page titles and
-        descriptions, connect your own domain and export your content.
+        descriptions, connect your own domain and export your content. The full{" "}
+        <Link href="/compare/ai-website-builder-vs-custom-site">AI website builder vs custom
+        site</Link> comparison covers cost over three years and what you own if you leave.
       </p>
 
       <h2>Is a chatbot on my website worth it?</h2>

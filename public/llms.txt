@@ -72,6 +72,34 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
 - [Websites](https://purcellventures.co/sites): custom websites for local businesses.
 - [Portfolio](https://purcellventures.co/portfolio): shipped work.
 
+## Comparisons
+
+- [Comparisons](https://purcellventures.co/compare): the index of buyer comparisons.
+- [Custom AI agent vs Zapier](https://purcellventures.co/compare/custom-ai-agent-vs-zapier):
+  when a Zapier workflow is enough, when a custom agent pays for itself, how each charges,
+  and Purcell Ventures software prices.
+- [AI website builder vs a custom site](https://purcellventures.co/compare/ai-website-builder-vs-custom-site):
+  when a builder is enough, when a custom site is worth the build fee, AI crawler
+  readability, and what you own if you leave.
+- [ChatGPT vs Claude for a small business](https://purcellventures.co/compare/chatgpt-vs-claude-for-small-business):
+  plan structure, team data controls, the features that differ, and a test to run on your
+  own work. Purcell Ventures runs on Claude and the page says so.
+
+## Free tools
+
+- [AI visibility check](https://purcellventures.co/ai-visibility-check): enter a business
+  website and it reports whether robots.txt blocks GPTBot, OAI-SearchBot, ClaudeBot,
+  PerplexityBot or Google-Extended, whether the site has an llms.txt, and whether the home
+  page has a title, a meta description, LocalBusiness or Organization structured data, a
+  phone number, an address and opening hours in the text, readable text without
+  JavaScript, and https. Free, no account, stores nothing.
+- [AI readiness test](https://purcellventures.co/ai-readiness): ten questions that score a
+  team's use of AI out of 30, with three next steps.
+- [AI cost calculator](https://purcellventures.co/ai-cost-calculator): team size, hourly
+  cost and manual workload in, payback time for an AI consulting session out.
+- [Free AI tools for small businesses](https://purcellventures.co/digital/tools): writing,
+  branding and operations tools, free.
+
 ## Writing
 
 - [Blog](https://purcellventures.co/blog)
