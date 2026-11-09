@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { TRADES } from "./ai-for/trades";
 
 const BASE = "https://purcellventures.co";
 
@@ -96,6 +97,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ai-integration`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/ai-for-small-business`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/ai-websites`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
+    // "AI for [trade]" set under the AI for small business pillar, written 9 Nov 2026.
+    { url: `${BASE}/ai-for`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 },
+    ...TRADES.map((t) => ({ url: `${BASE}/ai-for/${t.slug}`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly" as const, priority: 0.7 })),
 
     { url: `${BASE}/blog/canonical-tag-noindex`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 

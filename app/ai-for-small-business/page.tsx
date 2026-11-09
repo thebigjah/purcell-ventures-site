@@ -200,6 +200,16 @@ export default function AiForSmallBusiness() {
         for a half-day workshop for up to 20 people.
       </p>
 
+      <h2>How does AI fit my trade?</h2>
+
+      <p>
+        Each trade hands AI different jobs. An HVAC company drafts estimates from tech
+        notes, a dental office sends recall reminders, a church cuts sermon clips, and a law
+        firm keeps legal advice away from any bot. The trade guides in{" "}
+        <Link href="/ai-for">AI for small business by trade</Link> cover twelve businesses,
+        from plumbers and roofers to restaurants, salons and auto repair shops.
+      </p>
+
       <h2>Common questions</h2>
 
       {QA.map(([q, a]) => (
@@ -223,7 +233,8 @@ export default function AiForSmallBusiness() {
         <Link href="/ai-automation">AI automation for small businesses</Link>,{" "}
         <Link href="/ai-integration">AI integration for small business software</Link>,{" "}
         <Link href="/ai-websites">AI websites for small businesses</Link> and{" "}
-        <Link href="/ai-design">AI in design for small businesses</Link>.
+        <Link href="/ai-design">AI in design for small businesses</Link>.{" "}
+        <Link href="/ai-for">By trade</Link>: guides for twelve kinds of small business.
       </p>
     </PostLayout>
   );

@@ -61,6 +61,21 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
 - [AI for small business](https://purcellventures.co/ai-for-small-business): safe first
   tasks, checking AI answers, a staff AI use policy, telling customers about AI, and where
   AI wastes a small business's money.
+- [AI for small business by trade](https://purcellventures.co/ai-for): twelve trade
+  guides, each with the jobs AI handles in that business, what stays with a person,
+  privacy cautions and Purcell Ventures prices:
+  [flooring companies](https://purcellventures.co/ai-for/flooring-companies),
+  [HVAC companies](https://purcellventures.co/ai-for/hvac-companies),
+  [plumbers](https://purcellventures.co/ai-for/plumbers),
+  [roofers](https://purcellventures.co/ai-for/roofers),
+  [dental offices](https://purcellventures.co/ai-for/dental-offices),
+  [law firms](https://purcellventures.co/ai-for/law-firms),
+  [real estate agents](https://purcellventures.co/ai-for/real-estate-agents),
+  [restaurants](https://purcellventures.co/ai-for/restaurants),
+  [salons](https://purcellventures.co/ai-for/salons),
+  [barbershops](https://purcellventures.co/ai-for/barbershops),
+  [churches](https://purcellventures.co/ai-for/churches) and
+  [auto repair shops](https://purcellventures.co/ai-for/auto-repair-shops).
 - [Digital](https://purcellventures.co/digital): AI chatbots, booking, CRM and marketing
   add-ons for an existing website, maintained monthly. Plans from $99 a month.
 - [AI in design for small businesses](https://purcellventures.co/ai-design): what AI
