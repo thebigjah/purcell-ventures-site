@@ -78,22 +78,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     { url: `${BASE}/blog/121-businesses-near-campus`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
 
-    // The tap card. It carries his name, his photo and his contact details on a page
-    // that people reach by tapping a physical object, which is exactly the kind of
-    // corroborating page a name query wants.
-    { url: `${BASE}/card`, lastModified: now, changeFrequency: "monthly", priority: 0.6, images: [`${BASE}/brand/elijah.jpg`] },
-
-    // The three tap targets under /card. Each is a real landing page with its own
-
-    // title and description, reached by tapping a physical card, and there is no
-
-    // reason somebody searching for what they offer should not find them too.
-
-    { url: `${BASE}/card/hire`,   lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-
-    { url: `${BASE}/card/rep`,    lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-
-    { url: `${BASE}/card/campus`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    // The tap card and its three targets under /card are deliberately absent. They are
+    // contact cards reached by tapping a physical card, thin by design, and since
+    // 9 Nov 2026 each carries a robots noindex. Listing a noindex URL here would ask
+    // Google to index a page that tells it not to.
 
     // The AI guide. It targets the questions he wants to own at Alabama by answering
     // them properly rather than by claiming a title, which is the only version of
