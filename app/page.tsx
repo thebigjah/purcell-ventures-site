@@ -4,6 +4,7 @@ import Galaxy from "./components/galaxy/Galaxy";
 import { Section, Rows, Figures, Facts, ClosingCall, Button } from "./components/ui";
 import { CONTACT } from "@/lib/contact";
 import PageDates from "@/app/components/PageDates";
+import ServiceSchema from "@/app/components/ServiceSchema";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -219,6 +220,7 @@ export default function Home() {
       </Section>
 
       <ClosingCall />
+      <ServiceSchema />
       <PageDates path="/" />
     </main>
   );
