@@ -35,8 +35,8 @@ export default function CaseStudiesPage() {
       <PageHero
         planet="casestudies"
         kicker="Case studies"
-        title="Case studies: an App Store app, a 57-agent system and a town audit"
-        lede="Three pieces of work anyone can check today: an iPhone app built for a client, the AI system that runs this company, and an audit of every business near the University of Alabama. Client case studies with results go up only when the client says yes."
+        title="Case studies: an App Store app, a stall tracker, a 57-agent system and a town audit"
+        lede="Four pieces of work anyone can check today: an iPhone app built for a client, a stall tracker for a ramen stand, the AI system that runs this company, and an audit of every business near the University of Alabama. Client case studies with results go up only when the client says yes."
       />
 
       <Section title="Rufus Rideshare: a client app on the App Store" intro="Client work, September to October 2026. Design, build and App Store release.">
@@ -69,6 +69,23 @@ export default function CaseStudiesPage() {
           <h3>What it shows a client</h3>
           <p>
             The same pattern works at a smaller size for a small business: one agent for one job, narrow access and a person who approves the risky step. The <Link href="/ai-automation">AI automation guide</Link> covers what to hand off first, and the <Link href="/team">team page</Link> lists the agents.
+          </p>
+        </Prose>
+      </Section>
+
+      <Section title="Kristian's Ramen: a site and stall tracker" intro="Client work for a friend's ramen stand.">
+        <Prose>
+          <h3>The request</h3>
+          <p>
+            A friend runs a ramen stand and kept the menu, the day's sales and the stock count in separate places.
+          </p>
+          <h3>What I built</h3>
+          <p>
+            One web app holds the menu, sales and inventory, so the stand checks what sold and what is left in one place. You can <a href="https://kristian-ramen.vercel.app">open it here</a>.
+          </p>
+          <h3>What it shows a client</h3>
+          <p>
+            A small food business rarely needs a large system. It needs the three numbers it checks every day in one place. The <Link href="/ai-for/restaurants">AI for restaurants guide</Link> covers what to add after that.
           </p>
         </Prose>
       </Section>
