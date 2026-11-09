@@ -97,6 +97,19 @@ export default function AiConsultantTuscaloosa() {
         enough, I will show you how to set it up yourself, since that costs you less.
       </p>
 
+      <h2>Do you work outside Tuscaloosa?</h2>
+      <p>
+        Yes. <Link href="/ai-consulting">AI consulting across Alabama</Link> covers how the work runs in
+        other cities, with guides for <Link href="/ai-consulting/birmingham-al">Birmingham</Link>,{" "}
+        <Link href="/ai-consulting/huntsville-al">Huntsville</Link>,{" "}
+        <Link href="/ai-consulting/montgomery-al">Montgomery</Link>,{" "}
+        <Link href="/ai-consulting/mobile-al">Mobile</Link> and{" "}
+        <Link href="/ai-consulting/auburn-al">Auburn</Link>. The{" "}
+        <Link href="/ai-for">trade guides</Link> cover what AI handles in twenty kinds of business, and the{" "}
+        <Link href="/research/alabama-small-business-websites-2026">Alabama website study</Link> shows how
+        1,176 business sites across the state hold up with Google and AI search.
+      </p>
+
       <h2>Common questions</h2>
 
       {QA.map(([q, a]) => (
