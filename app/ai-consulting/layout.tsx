@@ -5,7 +5,8 @@ import type { ReactNode } from "react";
 //
 // /ai-consultant-tuscaloosa answers the city query. This page answers the state one and is
 // the hub the blog engine links each ai-consulting post up to (~/blog-engine cluster_map.json).
-// City pages for Birmingham, Huntsville, Montgomery, Mobile and Auburn hang off it later.
+// City pages for Birmingham, Huntsville, Montgomery, Mobile and Auburn sit under it at
+// /ai-consulting/<city>-al.
 //
 // Every price below was read off /consulting and /software on 9 Nov 2026. No client
 // results, counts or percentages, because the site has none it can show.
@@ -50,7 +51,7 @@ export const QA: [string, string][] = [
    "It depends on the tool and the plan. Consumer and business plans of the same AI product can handle your data differently, so check the data and training settings before you paste in customer information. Deciding what stays out of the chat window is part of every consulting session."],
 ];
 
-const schema = {
+export const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -112,14 +113,8 @@ const schema = {
   ],
 };
 
+// Rendered by page.tsx, not here. A layout wraps every route under it, so the city pages
+// at /ai-consulting/<city>-al would inherit this page's FAQPage and BreadcrumbList.
 export default function Layout({ children }: { children: ReactNode }) {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }

@@ -44,6 +44,19 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
 - [AI consulting in Alabama](https://purcellventures.co/ai-consulting): the statewide
   answer page. What an AI consultant does, prices for training, automation and software,
   which of the three a business needs, and when AI is the wrong purchase.
+- [AI consulting in Birmingham](https://purcellventures.co/ai-consulting/birmingham-al):
+  AI work for medical practices, law and accounting firms, banks and engineering offices,
+  and where patient and client data has to stay out of AI tools.
+- [AI consulting in Huntsville](https://purcellventures.co/ai-consulting/huntsville-al):
+  AI work for defense contractors, proposal teams and staffing firms, and how contract
+  data rules limit it.
+- [AI consulting in Montgomery](https://purcellventures.co/ai-consulting/montgomery-al):
+  AI work for firms around state government, automotive suppliers and businesses near
+  Maxwell Air Force Base.
+- [AI consulting in Mobile](https://purcellventures.co/ai-consulting/mobile-al): AI work
+  for freight forwarders, customs brokers, marine contractors and Gulf Coast hospitality.
+- [AI consulting in Auburn](https://purcellventures.co/ai-consulting/auburn-al): AI work
+  for restaurants, shops, student housing and young founders around Auburn University.
 - [Consulting](https://purcellventures.co/consulting): hands-on AI consulting and team
   training. 1-on-1 at $175 an hour, small groups at $125 a person, and a half-day workshop
   at $2,500 for up to 20 people.
