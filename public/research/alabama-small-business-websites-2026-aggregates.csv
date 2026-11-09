@@ -1,0 +1,193 @@
+measure,description,area,count,base,percent,unit
+home_page_works,Working home page (status 200),statewide,592,700,84.6,count
+home_page_works,Working home page (status 200),tuscaloosa,51,60,85.0,count
+home_page_works,Working home page (status 200),birmingham,199,218,91.3,count
+home_page_works,Working home page (status 200),huntsville,251,279,90.0,count
+home_page_works,Working home page (status 200),montgomery,33,44,75.0,count
+home_page_works,Working home page (status 200),mobile,73,86,84.9,count
+no_working_home_page,No working home page,statewide,108,700,15.4,count
+no_working_home_page,No working home page,tuscaloosa,9,60,15.0,count
+no_working_home_page,No working home page,birmingham,19,218,8.7,count
+no_working_home_page,No working home page,huntsville,28,279,10.0,count
+no_working_home_page,No working home page,montgomery,11,44,25.0,count
+no_working_home_page,No working home page,mobile,13,86,15.1,count
+address_does_not_resolve,Web address no longer resolves,statewide,57,700,8.1,count
+address_does_not_resolve,Web address no longer resolves,tuscaloosa,2,60,3.3,count
+address_does_not_resolve,Web address no longer resolves,birmingham,8,218,3.7,count
+address_does_not_resolve,Web address no longer resolves,huntsville,8,279,2.9,count
+address_does_not_resolve,Web address no longer resolves,montgomery,3,44,6.8,count
+address_does_not_resolve,Web address no longer resolves,mobile,9,86,10.5,count
+moves_to_other_domain,Working page ends on a different domain,statewide,40,592,6.8,count
+moves_to_other_domain,Working page ends on a different domain,tuscaloosa,4,51,7.8,count
+moves_to_other_domain,Working page ends on a different domain,birmingham,12,199,6.0,count
+moves_to_other_domain,Working page ends on a different domain,huntsville,11,251,4.4,count
+moves_to_other_domain,Working page ends on a different domain,montgomery,2,33,6.1,count
+moves_to_other_domain,Working page ends on a different domain,mobile,8,73,11.0,count
+https,Ends on https,statewide,503,552,91.1,count
+https,Ends on https,tuscaloosa,44,47,93.6,count
+https,Ends on https,birmingham,169,187,90.4,count
+https,Ends on https,huntsville,220,240,91.7,count
+https,Ends on https,montgomery,31,31,100.0,count
+https,Ends on https,mobile,62,65,95.4,count
+no_https,"Plain http only, never https",statewide,49,552,8.9,count
+no_https,"Plain http only, never https",tuscaloosa,3,47,6.4,count
+no_https,"Plain http only, never https",birmingham,18,187,9.6,count
+no_https,"Plain http only, never https",huntsville,20,240,8.3,count
+no_https,"Plain http only, never https",montgomery,0,31,0.0,count
+no_https,"Plain http only, never https",mobile,3,65,4.6,count
+viewport,Viewport tag for phones,statewide,521,552,94.4,count
+viewport,Viewport tag for phones,tuscaloosa,44,47,93.6,count
+viewport,Viewport tag for phones,birmingham,176,187,94.1,count
+viewport,Viewport tag for phones,huntsville,226,240,94.2,count
+viewport,Viewport tag for phones,montgomery,30,31,96.8,count
+viewport,Viewport tag for phones,mobile,61,65,93.8,count
+title,Page title,statewide,526,552,95.3,count
+title,Page title,tuscaloosa,44,47,93.6,count
+title,Page title,birmingham,176,187,94.1,count
+title,Page title,huntsville,231,240,96.3,count
+title,Page title,montgomery,30,31,96.8,count
+title,Page title,mobile,65,65,100.0,count
+meta_description,Meta description,statewide,405,552,73.4,count
+meta_description,Meta description,tuscaloosa,34,47,72.3,count
+meta_description,Meta description,birmingham,131,187,70.1,count
+meta_description,Meta description,huntsville,165,240,68.8,count
+meta_description,Meta description,montgomery,26,31,83.9,count
+meta_description,Meta description,mobile,58,65,89.2,count
+no_meta_description,No meta description,statewide,147,552,26.6,count
+no_meta_description,No meta description,tuscaloosa,13,47,27.7,count
+no_meta_description,No meta description,birmingham,56,187,29.9,count
+no_meta_description,No meta description,huntsville,75,240,31.3,count
+no_meta_description,No meta description,montgomery,5,31,16.1,count
+no_meta_description,No meta description,mobile,7,65,10.8,count
+all_four_basics,"All four: https, viewport, title, meta description",statewide,379,552,68.7,count
+all_four_basics,"All four: https, viewport, title, meta description",tuscaloosa,31,47,66.0,count
+all_four_basics,"All four: https, viewport, title, meta description",birmingham,123,187,65.8,count
+all_four_basics,"All four: https, viewport, title, meta description",huntsville,154,240,64.2,count
+all_four_basics,"All four: https, viewport, title, meta description",montgomery,26,31,83.9,count
+all_four_basics,"All four: https, viewport, title, meta description",mobile,54,65,83.1,count
+jsonld_any,Any JSON-LD,statewide,340,552,61.6,count
+jsonld_any,Any JSON-LD,tuscaloosa,28,47,59.6,count
+jsonld_any,Any JSON-LD,birmingham,128,187,68.4,count
+jsonld_any,Any JSON-LD,huntsville,146,240,60.8,count
+jsonld_any,Any JSON-LD,montgomery,19,31,61.3,count
+jsonld_any,Any JSON-LD,mobile,48,65,73.8,count
+jsonld_business,Organization or LocalBusiness JSON-LD,statewide,268,552,48.6,count
+jsonld_business,Organization or LocalBusiness JSON-LD,tuscaloosa,21,47,44.7,count
+jsonld_business,Organization or LocalBusiness JSON-LD,birmingham,95,187,50.8,count
+jsonld_business,Organization or LocalBusiness JSON-LD,huntsville,110,240,45.8,count
+jsonld_business,Organization or LocalBusiness JSON-LD,montgomery,13,31,41.9,count
+jsonld_business,Organization or LocalBusiness JSON-LD,mobile,40,65,61.5,count
+robots_txt,robots.txt present,statewide,510,552,92.4,count
+robots_txt,robots.txt present,tuscaloosa,45,47,95.7,count
+robots_txt,robots.txt present,birmingham,174,187,93.0,count
+robots_txt,robots.txt present,huntsville,215,240,89.6,count
+robots_txt,robots.txt present,montgomery,29,31,93.5,count
+robots_txt,robots.txt present,mobile,63,65,96.9,count
+blocks_any_ai_crawler,Blocks at least one of the five AI crawlers,statewide,21,552,3.8,count
+blocks_any_ai_crawler,Blocks at least one of the five AI crawlers,tuscaloosa,7,47,14.9,count
+blocks_any_ai_crawler,Blocks at least one of the five AI crawlers,birmingham,10,187,5.3,count
+blocks_any_ai_crawler,Blocks at least one of the five AI crawlers,huntsville,10,240,4.2,count
+blocks_any_ai_crawler,Blocks at least one of the five AI crawlers,montgomery,0,31,0.0,count
+blocks_any_ai_crawler,Blocks at least one of the five AI crawlers,mobile,3,65,4.6,count
+blocks_all_five,Blocks all five,statewide,4,552,0.7,count
+blocks_all_five,Blocks all five,tuscaloosa,1,47,2.1,count
+blocks_all_five,Blocks all five,birmingham,2,187,1.1,count
+blocks_all_five,Blocks all five,huntsville,0,240,0.0,count
+blocks_all_five,Blocks all five,montgomery,0,31,0.0,count
+blocks_all_five,Blocks all five,mobile,0,65,0.0,count
+blocks_gptbot,Blocks GPTBot,statewide,17,552,3.1,count
+blocks_gptbot,Blocks GPTBot,tuscaloosa,6,47,12.8,count
+blocks_gptbot,Blocks GPTBot,birmingham,8,187,4.3,count
+blocks_gptbot,Blocks GPTBot,huntsville,9,240,3.8,count
+blocks_gptbot,Blocks GPTBot,montgomery,0,31,0.0,count
+blocks_gptbot,Blocks GPTBot,mobile,2,65,3.1,count
+blocks_claudebot,Blocks ClaudeBot,statewide,17,552,3.1,count
+blocks_claudebot,Blocks ClaudeBot,tuscaloosa,7,47,14.9,count
+blocks_claudebot,Blocks ClaudeBot,birmingham,8,187,4.3,count
+blocks_claudebot,Blocks ClaudeBot,huntsville,7,240,2.9,count
+blocks_claudebot,Blocks ClaudeBot,montgomery,0,31,0.0,count
+blocks_claudebot,Blocks ClaudeBot,mobile,2,65,3.1,count
+blocks_perplexitybot,Blocks PerplexityBot,statewide,6,552,1.1,count
+blocks_perplexitybot,Blocks PerplexityBot,tuscaloosa,2,47,4.3,count
+blocks_perplexitybot,Blocks PerplexityBot,birmingham,2,187,1.1,count
+blocks_perplexitybot,Blocks PerplexityBot,huntsville,1,240,0.4,count
+blocks_perplexitybot,Blocks PerplexityBot,montgomery,0,31,0.0,count
+blocks_perplexitybot,Blocks PerplexityBot,mobile,0,65,0.0,count
+blocks_google_extended,Blocks Google-Extended,statewide,17,552,3.1,count
+blocks_google_extended,Blocks Google-Extended,tuscaloosa,4,47,8.5,count
+blocks_google_extended,Blocks Google-Extended,birmingham,7,187,3.7,count
+blocks_google_extended,Blocks Google-Extended,huntsville,6,240,2.5,count
+blocks_google_extended,Blocks Google-Extended,montgomery,0,31,0.0,count
+blocks_google_extended,Blocks Google-Extended,mobile,2,65,3.1,count
+blocks_ccbot,Blocks CCBot,statewide,20,552,3.6,count
+blocks_ccbot,Blocks CCBot,tuscaloosa,6,47,12.8,count
+blocks_ccbot,Blocks CCBot,birmingham,9,187,4.8,count
+blocks_ccbot,Blocks CCBot,huntsville,6,240,2.5,count
+blocks_ccbot,Blocks CCBot,montgomery,0,31,0.0,count
+blocks_ccbot,Blocks CCBot,mobile,3,65,4.6,count
+llms_txt,llms.txt file,statewide,139,552,25.2,count
+llms_txt,llms.txt file,tuscaloosa,9,47,19.1,count
+llms_txt,llms.txt file,birmingham,47,187,25.1,count
+llms_txt,llms.txt file,huntsville,52,240,21.7,count
+llms_txt,llms.txt file,montgomery,6,31,19.4,count
+llms_txt,llms.txt file,mobile,17,65,26.2,count
+all_three_ai_signals,"All three: business JSON-LD, llms.txt, no AI crawler blocked",statewide,92,552,16.7,count
+all_three_ai_signals,"All three: business JSON-LD, llms.txt, no AI crawler blocked",tuscaloosa,6,47,12.8,count
+all_three_ai_signals,"All three: business JSON-LD, llms.txt, no AI crawler blocked",birmingham,33,187,17.6,count
+all_three_ai_signals,"All three: business JSON-LD, llms.txt, no AI crawler blocked",huntsville,35,240,14.6,count
+all_three_ai_signals,"All three: business JSON-LD, llms.txt, no AI crawler blocked",montgomery,3,31,9.7,count
+all_three_ai_signals,"All three: business JSON-LD, llms.txt, no AI crawler blocked",mobile,12,65,18.5,count
+ttfb_over_800ms,First byte took over 800 ms,statewide,147,552,26.6,count
+ttfb_over_800ms,First byte took over 800 ms,tuscaloosa,16,47,34.0,count
+ttfb_over_800ms,First byte took over 800 ms,birmingham,38,187,20.3,count
+ttfb_over_800ms,First byte took over 800 ms,huntsville,75,240,31.3,count
+ttfb_over_800ms,First byte took over 800 ms,montgomery,4,31,12.9,count
+ttfb_over_800ms,First byte took over 800 ms,mobile,24,65,36.9,count
+html_over_2s,HTML download took over 2 seconds,statewide,45,552,8.2,count
+html_over_2s,HTML download took over 2 seconds,tuscaloosa,4,47,8.5,count
+html_over_2s,HTML download took over 2 seconds,birmingham,8,187,4.3,count
+html_over_2s,HTML download took over 2 seconds,huntsville,20,240,8.3,count
+html_over_2s,HTML download took over 2 seconds,montgomery,2,31,6.5,count
+html_over_2s,HTML download took over 2 seconds,mobile,7,65,10.8,count
+osm_opening_hours,Listing has opening hours,statewide,400,700,57.1,count
+osm_opening_hours,Listing has opening hours,tuscaloosa,36,60,60.0,count
+osm_opening_hours,Listing has opening hours,birmingham,114,218,52.3,count
+osm_opening_hours,Listing has opening hours,huntsville,183,279,65.6,count
+osm_opening_hours,Listing has opening hours,montgomery,27,44,61.4,count
+osm_opening_hours,Listing has opening hours,mobile,46,86,53.5,count
+osm_phone,Listing has a phone number,statewide,568,700,81.1,count
+osm_phone,Listing has a phone number,tuscaloosa,44,60,73.3,count
+osm_phone,Listing has a phone number,birmingham,134,218,61.5,count
+osm_phone,Listing has a phone number,huntsville,242,279,86.7,count
+osm_phone,Listing has a phone number,montgomery,38,44,86.4,count
+osm_phone,Listing has a phone number,mobile,72,86,83.7,count
+social_page_instead_of_website,"Listed web address is a Facebook, Instagram or Linktree page",statewide,89,2191,4.1,count
+social_page_instead_of_website,"Listed web address is a Facebook, Instagram or Linktree page",tuscaloosa,3,63,4.8,count
+social_page_instead_of_website,"Listed web address is a Facebook, Instagram or Linktree page",birmingham,2,220,0.9,count
+social_page_instead_of_website,"Listed web address is a Facebook, Instagram or Linktree page",huntsville,43,322,13.4,count
+social_page_instead_of_website,"Listed web address is a Facebook, Instagram or Linktree page",montgomery,1,45,2.2,count
+social_page_instead_of_website,"Listed web address is a Facebook, Instagram or Linktree page",mobile,0,86,0.0,count
+ttfb_median_ms,Median time to first byte,statewide,617,552,,ms
+ttfb_median_ms,Median time to first byte,tuscaloosa,614,47,,ms
+ttfb_median_ms,Median time to first byte,birmingham,561,187,,ms
+ttfb_median_ms,Median time to first byte,huntsville,622,240,,ms
+ttfb_median_ms,Median time to first byte,montgomery,534,31,,ms
+ttfb_median_ms,Median time to first byte,mobile,619,65,,ms
+ttfb_p75_ms,75th percentile time to first byte,statewide,828,552,,ms
+ttfb_p75_ms,75th percentile time to first byte,tuscaloosa,972,47,,ms
+ttfb_p75_ms,75th percentile time to first byte,birmingham,726,187,,ms
+ttfb_p75_ms,75th percentile time to first byte,huntsville,875,240,,ms
+ttfb_p75_ms,75th percentile time to first byte,montgomery,710,31,,ms
+ttfb_p75_ms,75th percentile time to first byte,mobile,989,65,,ms
+html_download_median_ms,Median HTML download,statewide,738,552,,ms
+html_download_median_ms,Median HTML download,tuscaloosa,734,47,,ms
+html_download_median_ms,Median HTML download,birmingham,670,187,,ms
+html_download_median_ms,Median HTML download,huntsville,760,240,,ms
+html_download_median_ms,Median HTML download,montgomery,735,31,,ms
+html_download_median_ms,Median HTML download,mobile,796,65,,ms
+html_size_median_kb,Median HTML size,statewide,140,552,,KB
+html_size_median_kb,Median HTML size,tuscaloosa,141,47,,KB
+html_size_median_kb,Median HTML size,birmingham,154,187,,KB
+html_size_median_kb,Median HTML size,huntsville,133,240,,KB
+html_size_median_kb,Median HTML size,montgomery,135,31,,KB
+html_size_median_kb,Median HTML size,mobile,138,65,,KB

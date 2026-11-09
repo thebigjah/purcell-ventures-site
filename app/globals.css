@@ -188,6 +188,22 @@ a { color: inherit; }
 .ui-prose table { width: 100%; border-collapse: collapse; font-size: 15px; display: block; overflow-x: auto; }
 .ui-prose th, .ui-prose td { text-align: left; padding: 10px 14px 10px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
 .ui-prose th { color: var(--fg); font-weight: 700; }
+.ui-prose caption { caption-side: top; display: block; position: sticky; left: 0; width: min(100%, calc(100vw - 48px)); text-align: left; color: var(--muted); font-size: 15px; padding: 0 0 8px; }
+
+/* Research bar charts: one series per chart, value printed beside every bar, the full
+   figures in the tables below. Square ends, like everything else on the site. */
+.rs-chart { margin: 32px 0; }
+.rs-chart figcaption { margin: 0 0 12px; }
+.rs-chart__title { display: block; color: var(--fg); font-weight: 700; font-size: 17px; }
+.rs-chart__note { display: block; color: var(--muted); font-size: 15px; }
+.ui-prose .rs-bars { list-style: none; margin: 0; padding: 0; }
+.ui-prose .rs-bar { display: grid; grid-template-columns: minmax(0, 8.5em) minmax(0, 1fr) 4.6em; gap: 12px; align-items: center; margin: 0; padding: 5px 0; font-size: 15px; line-height: 1.3; }
+.rs-bar__label { color: var(--fg); }
+.rs-bar__n { display: block; color: var(--muted); font-size: 13px; }
+.rs-bar__track { display: block; height: 14px; background: var(--surface-2); }
+.rs-bar__fill { display: block; height: 100%; background: var(--gold); }
+.rs-bar--ref .rs-bar__fill { background: var(--subtle); }
+.rs-bar__val { text-align: right; color: var(--fg); font-variant-numeric: tabular-nums; }
 
 /* Rows: a list of things with a name, a line and an optional figure on the right. */
 .ui-rows { display: flex; flex-direction: column; }

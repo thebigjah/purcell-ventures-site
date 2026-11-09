@@ -78,6 +78,12 @@ export default function AiWebsites() {
         llms.txt and home page and lists what to fix.
       </p>
 
+      <p>
+        For how Alabama small businesses do on these checks, by city, read the{" "}
+        <Link href="/research/alabama-small-business-websites-2026">Alabama small business
+        websites research</Link>.
+      </p>
+
       <h2>What is the difference between SEO and generative engine optimization?</h2>
 
       <p>

@@ -113,6 +113,18 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
   plan structure, team data controls, the features that differ, and a test to run on your
   own work. Purcell Ventures runs on Claude and the page says so.
 
+## Research
+
+- [Research](https://purcellventures.co/research): index of Purcell Ventures studies of
+  small business websites. Aggregate figures only, with method, limits and data.
+- [Alabama small business websites, November 2026](https://purcellventures.co/research/alabama-small-business-websites-2026):
+  a random sample of Alabama small business websites drawn from OpenStreetMap, plus every
+  listed business site in Tuscaloosa, Birmingham, Huntsville, Montgomery and Mobile. Checks
+  for a working home page, https, viewport, title, meta description, Organization or
+  LocalBusiness JSON-LD, AI crawler rules in robots.txt, llms.txt and time to first byte.
+  Tables by city, the Overpass query, limits, and a CSV of the aggregates under CC BY 4.0.
+  No business is named.
+
 ## Free tools
 
 - [AI visibility check](https://purcellventures.co/ai-visibility-check): enter a business
