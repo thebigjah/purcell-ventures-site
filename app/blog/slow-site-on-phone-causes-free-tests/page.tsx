@@ -17,12 +17,12 @@ const POST: Data = {
   "slug": "slow-site-on-phone-causes-free-tests",
   "description": "The three usual reasons a small business site loads slowly on a phone, oversized photos, extra plugins and slow hosting, and the free tools that measure it.",
   "category": "Guide",
-  "lede": "A customer who looks you up on a phone often has a weak signal, a small screen and one free hand. A site that feels fine on your office computer can take much longer to load for that person. I build and fix websites for local businesses around Tuscaloosa, and the usual causes of a slow site fall into three groups: oversized photos, too many plugins and slow hosting. Here is how to measure your own site with free tools and what each cause looks like.",
+  "lede": "A business site loads slowly on a phone for three usual reasons: oversized photos, too many plugins and slow hosting. You can measure your own site with free tools, starting with Google's PageSpeed Insights, and each cause leaves a different sign in the report.",
   "sections": [
     {
       "heading": "Measure your site with PageSpeed Insights",
       "paragraphs": [
-        "Google offers a free tool called PageSpeed Insights at pagespeed.web.dev. Paste in your home page address and press Analyze. The report opens on the Mobile tab, which is the one that matters for customers on phones.",
+        "A customer who looks you up on a phone often has a weak signal, a small screen and one free hand. A site that feels fine on your office computer can take much longer to load for that person. I build and fix websites for local businesses around Tuscaloosa. Google offers a free tool called PageSpeed Insights at pagespeed.web.dev. Paste in your home page address and press Analyze. The report opens on the Mobile tab, which is the one that matters for customers on phones.",
         "Look at Largest Contentful Paint first. It measures how long the biggest piece of the page, usually a photo or a headline, takes to appear. Google rates 2.5 seconds or less as good. If your site has enough visitors, the top of the report also shows data from real Chrome users. Below that, a lab test lists specific problems under headings such as Diagnostics.",
         "Run the test on your home page and on your busiest inner page, such as the menu or the services page. Write down the Largest Contentful Paint for each so you can compare after any fix."
       ]

@@ -66,7 +66,7 @@ export default function WhoPage() {
       <PageHero
         kicker="Elijah Purcell"
         title="Who is Elijah Purcell?"
-        lede="Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company that builds AI systems and software for local businesses. He is also a psychology and data science student at the University of Alabama, in New College and the Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at seventeen and runs it from Tuscaloosa, Alabama."
+        lede="Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia company that builds AI systems and software for local businesses. He founded it at seventeen and runs it from Tuscaloosa, Alabama. He studies psychology and data science at the University of Alabama (New College, Honors College, Class of 2030), pre-med toward psychiatry."
         meta="Last reviewed 20 August 2026"
         crumbs={<Breadcrumbs trail={[
           { name: "Home", href: "/" },

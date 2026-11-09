@@ -17,12 +17,12 @@ const POST: Data = {
   "slug": "contact-page-that-reaches-you",
   "description": "The four parts of a local business contact page that let customers reach you on the first try, and how to test each one from your own phone.",
   "category": "Guide",
-  "lede": "A customer who opens your contact page wants to call you, find you or send you a question. Every part of the page should make one of those three things quick. I build and fix websites for local businesses around Tuscaloosa, and this is the list I would use to check a contact page: a phone number you can tap, hours written as text, a full address with a map link, and one form that lands in an inbox someone reads.",
+  "lede": "A contact page that reaches customers on the first try needs four parts: a phone number you can tap, hours written as text, a full address with a map link, and one form that lands in an inbox someone reads. Each part makes calling, finding or asking quick.",
   "sections": [
     {
       "heading": "Make the phone number a tap-to-call link",
       "paragraphs": [
-        "On a phone, a tap-to-call link opens the dialer with your number already filled in. The customer taps once and the call starts. Without the link, they have to memorize the number or copy it by hand.",
+        "A customer who opens your contact page wants to call you, find you or send you a question. I build and fix websites for local businesses around Tuscaloosa, and this is the list I would use to check a contact page. On a phone, a tap-to-call link opens the dialer with your number already filled in. The customer taps once and the call starts. Without the link, they have to memorize the number or copy it by hand.",
         "The link is one line of code. Your web person wraps the number in a tel: link that includes the country code, such as tel:+12055550123 for a number in the 205 area code. Most site builders, including Squarespace, Wix and WordPress, let you add it as a regular link with tel: in place of a web address.",
         "To test it, open your contact page on your own phone and tap the number. If the dialer opens, it works. If the phone only highlights the text, the number is plain text. If you cannot highlight it at all, the number is part of an image, and a phone cannot read or dial a number inside a picture."
       ]
