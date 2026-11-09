@@ -224,7 +224,8 @@ export default function AiDesign() {
         <Link href="/ai-automation">AI automation for small businesses</Link>,{" "}
         <Link href="/ai-integration">AI integration for small business software</Link>,{" "}
         <Link href="/ai-for-small-business">AI for small business</Link> and{" "}
-        <Link href="/ai-websites">AI websites for small businesses</Link>.
+        <Link href="/ai-websites">AI websites for small businesses</Link>. The <Link href="/ai-glossary">AI glossary</Link> defines the terms, and{" "}
+        <Link href="/ai-small-business-statistics">AI small business statistics</Link> lists the numbers with sources.
       </p>
     </PostLayout>
   );

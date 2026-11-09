@@ -108,6 +108,18 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
 - [Websites](https://purcellventures.co/sites): custom websites for local businesses.
 - [Portfolio](https://purcellventures.co/portfolio): shipped work.
 
+## Reference
+
+- [AI glossary for small business owners](https://purcellventures.co/ai-glossary): 57
+  AI terms in plain words, from AI agent, token and context window to AEO, GEO, llms.txt,
+  robots.txt and GPTBot. Each term has its own anchor, a small business example and a
+  link to the guide that covers it.
+- [AI in small business: statistics with sources](https://purcellventures.co/ai-small-business-statistics):
+  figures on AI adoption, uses, barriers and results among U.S. small businesses, and on
+  AI search, from the Census Bureau, the Federal Reserve, the SBA Office of Advocacy, the
+  U.S. Chamber of Commerce, Pew Research Center, Gallup and others. Each figure names its
+  source and date, and every source was checked on 9 November 2026.
+
 ## Comparisons
 
 - [Comparisons](https://purcellventures.co/compare): the index of buyer comparisons.

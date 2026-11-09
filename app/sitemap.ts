@@ -108,6 +108,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // "AI for [trade]" set under the AI for small business pillar, written 9 Nov 2026.
     { url: `${BASE}/ai-for`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 },
     ...TRADES.map((t) => ({ url: `${BASE}/ai-for/${t.slug}`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly" as const, priority: 0.7 })),
+    // Reference pages under the AI for small business pillar, written 9 Nov 2026.
+    { url: `${BASE}/ai-glossary`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/ai-small-business-statistics`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 },
     // Buyer comparisons, written 9 Nov 2026.
     { url: `${BASE}/compare`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/compare/custom-ai-agent-vs-zapier`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
