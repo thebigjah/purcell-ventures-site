@@ -12,6 +12,13 @@ export const metadata = {
   alternates: { canonical: "/blog/start-using-ai-this-week-three-safe-first-tasks" },
   title: { absolute: TITLE },
   description: DESCRIPTION,
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "/blog/start-using-ai-this-week-three-safe-first-tasks",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

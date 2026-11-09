@@ -8,6 +8,13 @@ export const metadata = {
   title: { absolute: "What one operator can deliver" },
   description:
     "How much work a one-person software company can carry, what happens when two clients want the same fortnight, what an agency does better, and three warning signs you are being oversold.",
+  openGraph: {
+    title: "What one operator can deliver",
+    description: "How much work a one-person software company can carry, what happens when two clients want the same fortnight, what an agency does better, and three warning signs you are being oversold.",
+    url: "/blog/what-one-operator-can-deliver",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

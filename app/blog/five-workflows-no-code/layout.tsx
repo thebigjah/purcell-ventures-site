@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   description:
     "Five automations a small business can set up without writing code, and the tools I would use for each one.",
   alternates: { canonical: "/blog/five-workflows-no-code" },
+  openGraph: {
+    title: "Five workflows any small business can automate without code",
+    description: "Five automations a small business can set up without writing code, and the tools I would use for each one.",
+    url: "/blog/five-workflows-no-code",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function PostLayout({ children }: { children: React.ReactNode }) {

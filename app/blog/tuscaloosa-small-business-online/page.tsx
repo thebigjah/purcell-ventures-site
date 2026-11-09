@@ -26,6 +26,13 @@ export const metadata = {
   title: { absolute: "The Tuscaloosa Storefront Project" },
   description:
     "A reporting series by Elijah Purcell on independent businesses around the University of Alabama. Each piece covers who runs the business, how students find it, and what happens when it has no website.",
+  openGraph: {
+    title: "The Tuscaloosa Storefront Project",
+    description: "A reporting series by Elijah Purcell on independent businesses around the University of Alabama. Each piece covers who runs the business, how students find it, and what happens when it has no website.",
+    url: "/blog/tuscaloosa-small-business-online",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

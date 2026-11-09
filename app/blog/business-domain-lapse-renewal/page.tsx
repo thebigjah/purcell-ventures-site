@@ -80,6 +80,13 @@ export const metadata = {
   alternates: { canonical: "/blog/business-domain-lapse-renewal" },
   title: { absolute: POST.title },
   description: POST.description,
+  openGraph: {
+    title: POST.title,
+    description: POST.description,
+    url: "/blog/business-domain-lapse-renewal",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

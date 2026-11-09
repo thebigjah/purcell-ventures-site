@@ -8,6 +8,13 @@ export const metadata = {
   title: { absolute: "What registering an LLC at seventeen involved" },
   description:
     "The steps I followed: the Georgia filing, the EIN, the bank account, the registered agent question, and renaming the company nine months later. It describes what I did and is not legal advice.",
+  openGraph: {
+    title: "What registering an LLC at seventeen involved",
+    description: "The steps I followed: the Georgia filing, the EIN, the bank account, the registered agent question, and renaming the company nine months later. It describes what I did and is not legal advice.",
+    url: "/blog/llc-at-seventeen",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 

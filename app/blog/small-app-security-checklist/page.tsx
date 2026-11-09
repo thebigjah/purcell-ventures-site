@@ -15,6 +15,13 @@ export const metadata = {
   title: { absolute: "Five security holes I keep finding in small production apps" },
   description:
     "What turns up when you audit small production applications: row-level security with policies that let everyone in, paid API routes with no authentication, auth cookies anyone can forge, and two more. Written from seven read-only audits.",
+  openGraph: {
+    title: "Five security holes I keep finding in small production apps",
+    description: "What turns up when you audit small production applications: row-level security with policies that let everyone in, paid API routes with no authentication, auth cookies anyone can forge, and two more. Written from seven read-only audits.",
+    url: "/blog/small-app-security-checklist",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

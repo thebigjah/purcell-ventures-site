@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   description:
     "Many small business AI tools fail because the workflow they attach to was already broken. Three questions to check yours before you buy.",
   alternates: { canonical: "/blog/why-most-ai-tools-waste-money" },
+  openGraph: {
+    title: "Why some AI tools waste money",
+    description: "Many small business AI tools fail because the workflow they attach to was already broken. Three questions to check yours before you buy.",
+    url: "/blog/why-most-ai-tools-waste-money",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function PostLayout({ children }: { children: React.ReactNode }) {

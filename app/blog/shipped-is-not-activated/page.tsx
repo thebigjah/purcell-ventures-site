@@ -8,6 +8,13 @@ export const metadata = {
   title: { absolute: "A shipped site can still fail to take a payment" },
   description:
     "A site can be live with every deploy check passing and still unable to accept a dollar. Usually one path is broken, and the owner never sees it because they already know where the checkout is.",
+  openGraph: {
+    title: "A shipped site can still fail to take a payment",
+    description: "A site can be live with every deploy check passing and still unable to accept a dollar. Usually one path is broken, and the owner never sees it because they already know where the checkout is.",
+    url: "/blog/shipped-is-not-activated",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

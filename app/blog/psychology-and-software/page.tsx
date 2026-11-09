@@ -8,6 +8,13 @@ export const metadata = {
   title: { absolute: "What psychology has to do with the software I build" },
   description:
     "Within-subject design, base rates and construct validity are three ideas from a first-semester psychology methods course that changed a product I had already shipped.",
+  openGraph: {
+    title: "What psychology has to do with the software I build",
+    description: "Within-subject design, base rates and construct validity are three ideas from a first-semester psychology methods course that changed a product I had already shipped.",
+    url: "/blog/psychology-and-software",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

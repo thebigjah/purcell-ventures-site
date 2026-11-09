@@ -8,6 +8,13 @@ export const metadata = {
   title: { absolute: "My team page lists fifteen people who do not exist" },
   description:
     "Why a company running AI agents should name them, say they are software in the first sentence, and never let one sign an email as a human, with the disclosure rules I enforce in code.",
+  openGraph: {
+    title: "My team page lists fifteen people who do not exist",
+    description: "Why a company running AI agents should name them, say they are software in the first sentence, and never let one sign an email as a human, with the disclosure rules I enforce in code.",
+    url: "/blog/ai-team-page-honesty",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 

@@ -81,6 +81,13 @@ export const metadata = {
   alternates: { canonical: "/blog/google-business-profile-before-website" },
   title: { absolute: POST.title },
   description: POST.description,
+  openGraph: {
+    title: POST.title,
+    description: POST.description,
+    url: "/blog/google-business-profile-before-website",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

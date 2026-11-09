@@ -8,6 +8,13 @@ export const metadata = {
   title: { absolute: "What you should own at the end of a website project" },
   description:
     "The seven accounts and assets that should be in your name when a web project finishes, why the domain matters most, and the two questions to ask before you sign anything.",
+  openGraph: {
+    title: "What you should own at the end of a website project",
+    description: "The seven accounts and assets that should be in your name when a web project finishes, why the domain matters most, and the two questions to ask before you sign anything.",
+    url: "/blog/what-you-should-own",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

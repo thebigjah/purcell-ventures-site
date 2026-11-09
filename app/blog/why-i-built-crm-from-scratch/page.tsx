@@ -7,6 +7,13 @@ export const metadata = {
   alternates: { canonical: "/blog/why-i-built-crm-from-scratch" },
   title: { absolute: "Why I built a CRM from scratch instead of paying HubSpot" },
   description: "HubSpot starts at $50 a month, and the features I needed put it at $200 to $400 a month. I built my own CRM in a week instead. The costs, what I gave up, and when you should not do this.",
+  openGraph: {
+    title: "Why I built a CRM from scratch instead of paying HubSpot",
+    description: "HubSpot starts at $50 a month, and the features I needed put it at $200 to $400 a month. I built my own CRM in a week instead. The costs, what I gave up, and when you should not do this.",
+    url: "/blog/why-i-built-crm-from-scratch",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

@@ -14,6 +14,13 @@ export const metadata = {
   title: { absolute: "What a small business website costs" },
   description:
     "Price ranges and what drives them. Why one small business site gets quotes of $400 and $15,000, what a monthly subscription includes, the ongoing costs quotes leave out, and how to judge whether a quote is fair.",
+  openGraph: {
+    title: "What a small business website costs",
+    description: "Price ranges and what drives them. Why one small business site gets quotes of $400 and $15,000, what a monthly subscription includes, the ongoing costs quotes leave out, and how to judge whether a quote is fair.",
+    url: "/blog/what-a-website-actually-costs",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

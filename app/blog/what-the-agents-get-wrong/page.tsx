@@ -8,6 +8,13 @@ export const metadata = {
   title: { absolute: "Five failures from running fifteen AI agents" },
   description:
     "Five failures from running fifteen AI agents in production. A gate that always passed, twenty proposals with internal notes in them, eleven agents that were never called, findings that closed themselves, and an agent holding capabilities nobody granted it.",
+  openGraph: {
+    title: "Five failures from running fifteen AI agents",
+    description: "Five failures from running fifteen AI agents in production. A gate that always passed, twenty proposals with internal notes in them, eleven agents that were never called, findings that closed themselves, and an agent holding capabilities nobody granted it.",
+    url: "/blog/what-the-agents-get-wrong",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

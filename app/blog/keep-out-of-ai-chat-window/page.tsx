@@ -75,6 +75,13 @@ export const metadata = {
   alternates: { canonical: "/blog/keep-out-of-ai-chat-window" },
   title: { absolute: POST.title },
   description: POST.description,
+  openGraph: {
+    title: POST.title,
+    description: POST.description,
+    url: "/blog/keep-out-of-ai-chat-window",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

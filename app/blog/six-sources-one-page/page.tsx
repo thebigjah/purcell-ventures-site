@@ -8,6 +8,13 @@ export const metadata = {
   title: { absolute: "Building a campus events site from six sources" },
   description:
     "How UA Today combines six separate feeds of University of Alabama events into one page, why the hard part is detecting a source that stops sending events without raising an error, and what a floor check is.",
+  openGraph: {
+    title: "Building a campus events site from six sources",
+    description: "How UA Today combines six separate feeds of University of Alabama events into one page, why the hard part is detecting a source that stops sending events without raising an error, and what a floor check is.",
+    url: "/blog/six-sources-one-page",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

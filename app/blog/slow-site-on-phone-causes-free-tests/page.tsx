@@ -83,6 +83,13 @@ export const metadata = {
   alternates: { canonical: "/blog/slow-site-on-phone-causes-free-tests" },
   title: { absolute: POST.title },
   description: POST.description,
+  openGraph: {
+    title: POST.title,
+    description: POST.description,
+    url: "/blog/slow-site-on-phone-causes-free-tests",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

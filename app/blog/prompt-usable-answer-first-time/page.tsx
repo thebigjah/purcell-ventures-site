@@ -85,6 +85,13 @@ export const metadata = {
   alternates: { canonical: "/blog/prompt-usable-answer-first-time" },
   title: { absolute: POST.title },
   description: POST.description,
+  openGraph: {
+    title: POST.title,
+    description: POST.description,
+    url: "/blog/prompt-usable-answer-first-time",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

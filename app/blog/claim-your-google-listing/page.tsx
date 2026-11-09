@@ -10,6 +10,13 @@ export const metadata = {
   title: { absolute: "Claiming your own Google listing: a twenty-minute job" },
   description:
     "A step-by-step guide to claiming and filling out a Google Business Profile, written so you do not need to hire anybody. It covers what to put in every field, how to hide a home address, and the three things that get a listing suspended.",
+  openGraph: {
+    title: "Claiming your own Google listing: a twenty-minute job",
+    description: "A step-by-step guide to claiming and filling out a Google Business Profile, written so you do not need to hire anybody. It covers what to put in every field, how to hide a home address, and the three things that get a listing suspended.",
+    url: "/blog/claim-your-google-listing",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

@@ -8,6 +8,13 @@ export const metadata = {
   title: { absolute: "New College at Alabama, explained by someone in it" },
   description:
     "How New College at the University of Alabama works: the self-designed degree, the depth study, the seminars, the Levitetz Leadership Program, and the case for and against choosing it.",
+  openGraph: {
+    title: "New College at Alabama, explained by someone in it",
+    description: "How New College at the University of Alabama works: the self-designed degree, the depth study, the seminars, the Levitetz Leadership Program, and the case for and against choosing it.",
+    url: "/blog/new-college-alabama",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 

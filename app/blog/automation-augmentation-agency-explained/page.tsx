@@ -79,6 +79,13 @@ export const metadata = {
   alternates: { canonical: "/blog/automation-augmentation-agency-explained" },
   title: { absolute: POST.title },
   description: POST.description,
+  openGraph: {
+    title: POST.title,
+    description: POST.description,
+    url: "/blog/automation-augmentation-agency-explained",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

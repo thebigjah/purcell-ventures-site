@@ -25,6 +25,13 @@ export const metadata = {
   title: { absolute: "121 businesses near the University of Alabama, and what a phone can find" },
   description:
     "An audit of every independent business within 2500 metres of the Quad, and how many of them list a website a machine can reach.",
+  openGraph: {
+    title: "121 businesses near the University of Alabama, and what a phone can find",
+    description: "An audit of every independent business within 2500 metres of the Quad, and how many of them list a website a machine can reach.",
+    url: "/blog/121-businesses-near-campus",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 const ROWS: [string, number, number][] = [

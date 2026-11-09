@@ -77,6 +77,13 @@ export const metadata = {
   alternates: { canonical: "/blog/tell-ai-about-your-business" },
   title: { absolute: POST.title },
   description: POST.description,
+  openGraph: {
+    title: POST.title,
+    description: POST.description,
+    url: "/blog/tell-ai-about-your-business",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

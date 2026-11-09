@@ -9,6 +9,13 @@ export const metadata = {
   title: { absolute: "How to write a page an AI will quote" },
   description:
     "Answer engine optimisation in plain terms: the sentence shape a model can lift, what FAQPage schema still does, what llms.txt is for, and why being indexed comes first.",
+  openGraph: {
+    title: "How to write a page an AI will quote",
+    description: "Answer engine optimisation in plain terms: the sentence shape a model can lift, what FAQPage schema still does, what llms.txt is for, and why being indexed comes first.",
+    url: "/blog/write-a-page-an-ai-will-quote",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

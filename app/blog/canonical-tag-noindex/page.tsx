@@ -8,6 +8,13 @@ export const metadata = {
   title: { absolute: "Every post on my blog was telling Google not to index it" },
   description:
     "One line in a Next.js layout gave nine blog posts a canonical tag pointing at the index page, which tells Google each post is a duplicate to skip. How it happens, how to check your own site in two minutes, and how to fix it.",
+  openGraph: {
+    title: "Every post on my blog was telling Google not to index it",
+    description: "One line in a Next.js layout gave nine blog posts a canonical tag pointing at the index page, which tells Google each post is a duplicate to skip. How it happens, how to check your own site in two minutes, and how to fix it.",
+    url: "/blog/canonical-tag-noindex",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 

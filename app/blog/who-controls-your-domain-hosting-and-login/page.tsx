@@ -81,6 +81,13 @@ export const metadata = {
   alternates: { canonical: "/blog/who-controls-your-domain-hosting-and-login" },
   title: { absolute: POST.title },
   description: POST.description,
+  openGraph: {
+    title: POST.title,
+    description: POST.description,
+    url: "/blog/who-controls-your-domain-hosting-and-login",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

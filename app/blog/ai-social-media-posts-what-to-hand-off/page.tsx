@@ -79,6 +79,13 @@ export const metadata = {
   alternates: { canonical: "/blog/ai-social-media-posts-what-to-hand-off" },
   title: { absolute: POST.title },
   description: POST.description,
+  openGraph: {
+    title: POST.title,
+    description: POST.description,
+    url: "/blog/ai-social-media-posts-what-to-hand-off",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

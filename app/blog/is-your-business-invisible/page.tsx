@@ -11,6 +11,13 @@ export const metadata = {
   title: { absolute: "Is your business invisible online? A ten-minute self-check" },
   description:
     "Seven checks a small business owner can run on their own business in ten minutes, with no tools and no account, to find out what a customer with a phone sees, based on an audit of 121 businesses near the University of Alabama.",
+  openGraph: {
+    title: "Is your business invisible online? A ten-minute self-check",
+    description: "Seven checks a small business owner can run on their own business in ten minutes, with no tools and no account, to find out what a customer with a phone sees, based on an audit of 121 businesses near the University of Alabama.",
+    url: "/blog/is-your-business-invisible",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 

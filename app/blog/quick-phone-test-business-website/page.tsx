@@ -78,6 +78,13 @@ export const metadata = {
   alternates: { canonical: "/blog/quick-phone-test-business-website" },
   title: { absolute: POST.title },
   description: POST.description,
+  openGraph: {
+    title: POST.title,
+    description: POST.description,
+    url: "/blog/quick-phone-test-business-website",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

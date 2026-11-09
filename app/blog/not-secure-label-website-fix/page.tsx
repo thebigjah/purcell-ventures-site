@@ -12,6 +12,13 @@ export const metadata = {
   alternates: { canonical: "/blog/not-secure-label-website-fix" },
   title: { absolute: TITLE },
   description: DESCRIPTION,
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "/blog/not-secure-label-website-fix",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

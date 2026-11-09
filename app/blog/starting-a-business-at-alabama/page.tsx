@@ -8,6 +8,13 @@ export const metadata = {
   title: { absolute: "Starting a business as a University of Alabama student" },
   description:
     "What helps a student running a business at UA: the campus resources that apply, why your first customer should be a local business, and three mistakes that cost time.",
+  openGraph: {
+    title: "Starting a business as a University of Alabama student",
+    description: "What helps a student running a business at UA: the campus resources that apply, why your first customer should be a local business, and three mistakes that cost time.",
+    url: "/blog/starting-a-business-at-alabama",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {

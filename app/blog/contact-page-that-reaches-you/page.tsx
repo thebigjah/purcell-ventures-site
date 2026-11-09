@@ -82,6 +82,13 @@ export const metadata = {
   alternates: { canonical: "/blog/contact-page-that-reaches-you" },
   title: { absolute: POST.title },
   description: POST.description,
+  openGraph: {
+    title: POST.title,
+    description: POST.description,
+    url: "/blog/contact-page-that-reaches-you",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Post() {
