@@ -15,7 +15,7 @@ const PATH = "/compare/custom-ai-agent-vs-zapier";
 const URL = `https://purcellventures.co${PATH}`;
 
 export const metadata: Metadata = {
-  title: { absolute: "Custom AI agent vs Zapier for a small business, Purcell Ventures" },
+  title: { absolute: "Custom AI agent vs Zapier for a small business" },
   description:
     "Custom AI agent vs Zapier for a small business: when a Zapier workflow is enough and when an agent pays off, plus how each charges and who maintains it.",
   alternates: { canonical: URL },
