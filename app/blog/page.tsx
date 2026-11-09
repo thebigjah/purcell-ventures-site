@@ -11,6 +11,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "business-domain-lapse-renewal",
+    title: "What happens when your business domain lapses, and how to keep it renewed",
+    excerpt: "Your web address is a registration you rent one year or more at a time. Here is what happens when it expires, who can buy it next and the settings that keep it renewed.",
+    date: "November 9, 2026",
+    readingTime: "3 min read",
+    category: "Guide",
+  },
+  {
     slug: "prompt-usable-answer-first-time",
     title: "Four parts of a prompt that gets a usable answer",
     excerpt: "Each part of a prompt answers a question the AI would otherwise guess at. A salon closure email shows all four parts at work.",
