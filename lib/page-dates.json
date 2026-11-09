@@ -15,17 +15,41 @@
     "published": "2026-08-20",
     "modified": "2026-11-03"
   },
+  "/ai-automation": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
   "/ai-consultant-tuscaloosa": {
     "published": "2026-08-22",
+    "modified": "2026-11-09"
+  },
+  "/ai-consulting": {
+    "published": "2026-11-09",
     "modified": "2026-11-09"
   },
   "/ai-cost-calculator": {
     "published": "2026-05-21",
     "modified": "2026-10-26"
   },
+  "/ai-design": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
+  "/ai-for-small-business": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
+  "/ai-integration": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
   "/ai-readiness": {
     "published": "2026-05-21",
     "modified": "2026-11-03"
+  },
+  "/ai-websites": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
   },
   "/blog": {
     "published": "2026-05-25",
