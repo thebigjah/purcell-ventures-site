@@ -53,7 +53,7 @@ const EXPERIENCE: Entry[] = [
   {
     title: "Founder/CEO", org: "Purcell Ventures LLC", when: "April 2025 to present",
     body: <ul>
-      <li>Founded a Georgia LLC that builds websites, apps and AI systems for clients. I find the work, price it, build it and support it.</li>
+      <li>Founded a Georgia LLC that builds AI systems, apps and websites for clients. I find the work, price it, build it and support it.</li>
       <li>Shipped the company&apos;s first App Store release, Rufus Rideshare, for a commissioning client in October 2026.</li>
       <li>Quoted in The Crimson White on bringing AI software to local small businesses, September 2026.</li>
     </ul>,

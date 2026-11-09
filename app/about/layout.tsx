@@ -5,7 +5,7 @@ import { CONTACT } from "@/lib/contact";
 export const metadata: Metadata = {
   title: "About Elijah Purcell, founder",
   description:
-    "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia company formed in April 2025 that builds websites, software and AI tools for local businesses, and a psychology and data science student at the University of Alabama, in New College and the Honors College in Tuscaloosa.",
+    "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia company formed in April 2025 that builds AI systems and software for local businesses, and a psychology and data science student at the University of Alabama, in New College and the Honors College in Tuscaloosa.",
   keywords: [
     "Elijah Purcell", "Elijah Purcell founder", "Purcell Ventures founder",
     "AI consultant Georgia", "entrepreneur Tuscaloosa Alabama", "Elijah Purcell entrepreneur",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Elijah Purcell, Founder/CEO of Purcell Ventures LLC",
     description:
-      "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia company formed in April 2025 that builds websites, software and AI tools for local businesses, and a psychology and data science student at the University of Alabama, in New College and the Honors College in Tuscaloosa.",
+      "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia company formed in April 2025 that builds AI systems and software for local businesses, and a psychology and data science student at the University of Alabama, in New College and the Honors College in Tuscaloosa.",
     url: "https://purcellventures.co/about",
     type: "profile",
   

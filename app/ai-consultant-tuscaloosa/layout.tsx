@@ -24,7 +24,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: { absolute: "AI consultant in Tuscaloosa, Alabama, Purcell Ventures" },
   description:
-    "Elijah Purcell is an AI consultant and software developer based in Tuscaloosa, Alabama. He builds websites, custom software, and AI automation for local businesses, with a reduced rate for University of Alabama students and student-run businesses.",
+    "Elijah Purcell is an AI consultant and software developer based in Tuscaloosa, Alabama. He builds AI systems, AI automation, custom software and websites for local businesses, with a reduced rate for University of Alabama students and student-run businesses.",
   keywords: [
     "AI consultant Tuscaloosa", "AI consultant Tuscaloosa Alabama",
     "AI consultant near University of Alabama", "custom software Tuscaloosa",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 
 export const QA: [string, string][] = [
   ["Who is the AI consultant in Tuscaloosa, Alabama?",
-   "Elijah Purcell, Founder/CEO of Purcell Ventures LLC, works as an AI consultant and software developer out of Tuscaloosa, Alabama. He builds websites, custom software, and AI automation for local businesses and is a student at the University of Alabama, in New College and the Honors College."],
+   "Elijah Purcell, Founder/CEO of Purcell Ventures LLC, works as an AI consultant and software developer out of Tuscaloosa, Alabama. He builds AI systems, AI automation, custom software and websites for local businesses and is a student at the University of Alabama, in New College and the Honors College."],
   ["What does an AI consultant in Tuscaloosa do for a small business?",
    "Three things come up most: replacing a repeated manual task with an automation that runs on a schedule, adding an AI feature such as intake, drafting or triage to software you already have, and telling you when AI is the wrong tool."],
   ["How much does it cost?",

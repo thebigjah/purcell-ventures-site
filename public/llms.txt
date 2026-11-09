@@ -1,6 +1,6 @@
 # Purcell Ventures LLC
 
-> A Georgia software company that builds websites, software and AI tooling for small
+> A Georgia software company that builds AI systems and custom software for small
 > businesses. Founded April 2025 by Elijah Purcell, and operated from Tuscaloosa,
 > Alabama.
 

@@ -12,10 +12,10 @@ const COLS: { title: string; links: { href: string; label: string; rel?: string 
   {
     title: "Services",
     links: [
-      { href: "/sites", label: "Websites" },
-      { href: "/digital", label: "Digital add-ons" },
       { href: "/consulting", label: "AI consulting" },
       { href: "/software", label: "Custom software" },
+      { href: "/digital", label: "Digital add-ons" },
+      { href: "/sites", label: "Websites" },
       { href: "/steady", label: "Steady, personal IT" },
       { href: "/pricing-comparison", label: "Price comparison" },
     ],
@@ -69,7 +69,7 @@ export default function SiteFooter() {
             <img src="/mark-foil.svg" alt="" width={40} height={40} />
             <b>Purcell Ventures</b>
           </Link>
-          <p>Websites, software and AI training for small businesses. Founded in Georgia in 2025 and run by Elijah Purcell from Tuscaloosa, Alabama.</p>
+          <p>AI systems, custom software and business consulting for small businesses. Founded in Georgia in 2025 and run by Elijah Purcell from Tuscaloosa, Alabama.</p>
           <p className="foot__reach">
             <a href={`tel:${CONTACT.phoneE164}`}>{CONTACT.phone}</a>
             <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>

@@ -45,7 +45,7 @@ export default function AboutPage() {
         planet="company"
         kicker="About"
         title="Elijah Brent Purcell"
-        lede="Founder/CEO of Purcell Ventures LLC. I build websites, software and AI agent systems for small businesses, and I study at the University of Alabama."
+        lede="Founder/CEO of Purcell Ventures LLC. I build AI agent systems and software for small businesses, and I study at the University of Alabama."
         actions={<>
           <Button href="#contact">Start a project</Button>
           <Button href="/resume" ghost>Résumé</Button>

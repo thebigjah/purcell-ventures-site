@@ -33,7 +33,7 @@ export default function CompanyPage() {
       <PageHero
         kicker="The company"
         title="What is Purcell Ventures?"
-        lede={<>Purcell Ventures LLC is a Georgia software company that builds websites, custom software and AI tools for small businesses. <Link className="ui-link" href="/who">Elijah Purcell</Link> founded it on 8 April 2025 and registered it with the Georgia Secretary of State. It is a one-person company, and Elijah does the client calls and the building himself.</>}
+        lede={<>Purcell Ventures LLC is a Georgia software company that builds AI systems and custom software for small businesses and advises owners on using them. <Link className="ui-link" href="/who">Elijah Purcell</Link> founded it on 8 April 2025 and registered it with the Georgia Secretary of State. It is a one-person company, and Elijah does the client calls and the building himself.</>}
         meta="Last reviewed 20 August 2026"
         crumbs={<Breadcrumbs trail={[
           { name: "Home", href: "/" },

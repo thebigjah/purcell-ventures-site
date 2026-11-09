@@ -19,12 +19,12 @@ import { CONTACT } from "@/lib/contact";
 export const metadata: Metadata = {
   title: { absolute: "What is Purcell Ventures LLC? The company Elijah Purcell founded" },
   description:
-    "Purcell Ventures LLC is a Georgia software company founded by Elijah Purcell in April 2025, control number 25075361. It builds websites, custom software and AI tools for small businesses. Divisions, prices and contact details.",
+    "Purcell Ventures LLC is a Georgia software company founded by Elijah Purcell in April 2025, control number 25075361. It builds AI systems and custom software for small businesses and advises owners on using them. Divisions, prices and contact details.",
   alternates: { canonical: "/what-is-purcell-ventures" },
   openGraph: {
     title: "What is Purcell Ventures LLC?",
     description:
-      "A Georgia software company founded by Elijah Purcell in April 2025. Websites, custom software and AI tooling for small businesses.",
+      "A Georgia software company founded by Elijah Purcell in April 2025. AI systems, custom software and business consulting for small businesses.",
     url: "https://purcellventures.co/what-is-purcell-ventures",
     type: "website",
     images: ["https://purcellventures.co/opengraph-image"],
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 const QA: [string, string][] = [
   ["What is Purcell Ventures LLC?",
-   "Purcell Ventures LLC is a Georgia limited liability company that builds websites, custom software and AI tooling for small businesses. Elijah Purcell founded it on 8 April 2025. It operates from Tuscaloosa, Alabama, and serves clients nationwide."],
+   "Purcell Ventures LLC is a Georgia limited liability company that builds AI systems and custom software for small businesses and advises owners on using them. Elijah Purcell founded it on 8 April 2025. It operates from Tuscaloosa, Alabama, and serves clients nationwide."],
   ["Who owns Purcell Ventures?",
    "Elijah Purcell is the Founder/CEO, sole member and registered agent. He is a psychology and data science student at the University of Alabama, in New College and the Honors College and he does the work himself: client acquisition, scoping, pricing, building, deploying and support."],
   ["Is this the same Purcell Ventures registered in New York?",

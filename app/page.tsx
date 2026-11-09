@@ -51,18 +51,6 @@ const FAQ_SCHEMA = {
 
 const SERVICES = [
   {
-    name: "Websites",
-    href: "/sites",
-    fig: "$650 setup, $99 a month",
-    line: "Custom websites for local businesses, with maintenance after launch. Three build tiers (Starter, Pro and Custom) and three maintenance plans. I scope each one on a discovery call.",
-  },
-  {
-    name: "Digital add-ons",
-    href: "/digital",
-    fig: "from $99 a month",
-    line: "26 add-ons that plug into your site, including an AI chatbot, online booking, review requests and content writing. Your maintenance plan sets which ones you can add. Available nationwide.",
-  },
-  {
     name: "AI consulting",
     href: "/consulting",
     fig: "from $125 a person",
@@ -73,6 +61,18 @@ const SERVICES = [
     href: "/software",
     fig: "scoped on a discovery call",
     line: "Apps, web platforms and automation built for one business's problem, from the first scoping call to launch. Web, mobile and AI.",
+  },
+  {
+    name: "Digital add-ons",
+    href: "/digital",
+    fig: "from $99 a month",
+    line: "26 add-ons that plug into your site, including an AI chatbot, online booking, review requests and content writing. Your maintenance plan sets which ones you can add. Available nationwide.",
+  },
+  {
+    name: "Websites",
+    href: "/sites",
+    fig: "$650 setup, $99 a month",
+    line: "Custom websites for local businesses, with maintenance after launch. Three build tiers (Starter, Pro and Custom) and three maintenance plans. I scope each one on a discovery call.",
   },
   {
     name: "Steady, personal IT",
@@ -132,7 +132,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
 
       <Galaxy>
-        <h1>Websites, software and AI for small businesses.</h1>
+        <h1>AI systems, software and consulting for small businesses.</h1>
         <p>I build them for local businesses in Tuscaloosa and metro Atlanta, and I keep supporting them after launch.</p>
         <div className="ui-hero__actions" style={{ marginTop: 6 }}>
           <Button href="/about#contact">Start a project</Button>

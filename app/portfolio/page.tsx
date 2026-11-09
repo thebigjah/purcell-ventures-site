@@ -187,7 +187,7 @@ export default function PortfolioPage() {
               <h3>Purcell Ventures LLC</h3>
               <p className="pf-when">Founded April 2025</p>
               <p>
-                My company. We build websites, apps and AI systems for clients, and Rufus is our first App Store release. We find the work, price it,
+                My company. We build AI systems, apps and websites for clients, and Rufus is our first App Store release. We find the work, price it,
                 build it and support it.
               </p>
               <Link href="/" className="pf-link">purcellventures.co</Link>

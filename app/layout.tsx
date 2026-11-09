@@ -132,7 +132,7 @@ const orgSchema = {
         { "@type": "AdministrativeArea", "name": "Metro Atlanta" },
         { "@type": "Country", "name": "United States" },
       ],
-      "slogan": "Websites, software and AI training for small businesses.",
+      "slogan": "AI systems, custom software and business consulting for small businesses.",
       // One human. The 57 COSMIC agents are software and the team page says so in its first
       // sentence, so the count here stays honest rather than flattering.
       "numberOfEmployees": { "@type": "QuantitativeValue", "value": 1 },

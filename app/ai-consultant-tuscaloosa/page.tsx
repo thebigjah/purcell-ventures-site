@@ -18,13 +18,13 @@ export default function AiConsultantTuscaloosa() {
       ]} />}
       kicker="Tuscaloosa, Alabama"
       title="AI consultant in Tuscaloosa"
-      lede="Websites, custom software and AI automation for Tuscaloosa businesses, built by one person who lives here. The first conversation is free."
+      lede="AI systems, custom software and automation for Tuscaloosa businesses, built by one person who lives here. The first conversation is free."
       meta="Student websites $500, with optional upkeep at $25 a month. Software and automation quoted per project."
     >
       <p>
         I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data
         science student in New College and the Honors College at the University of Alabama. From Tuscaloosa, I build
-        websites, custom software, AI automation and autonomous AI agent systems for
+        autonomous AI agent systems, AI automation, custom software and websites for
         businesses here.
       </p>
 
