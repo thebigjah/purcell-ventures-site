@@ -74,7 +74,7 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
 - [AI for small business](https://purcellventures.co/ai-for-small-business): safe first
   tasks, checking AI answers, a staff AI use policy, telling customers about AI, and where
   AI wastes a small business's money.
-- [AI for small business by trade](https://purcellventures.co/ai-for): twelve trade
+- [AI for small business by trade](https://purcellventures.co/ai-for): twenty trade
   guides, each with the jobs AI handles in that business, what stays with a person,
   privacy cautions and Purcell Ventures prices:
   [flooring companies](https://purcellventures.co/ai-for/flooring-companies),
@@ -87,8 +87,16 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
   [restaurants](https://purcellventures.co/ai-for/restaurants),
   [salons](https://purcellventures.co/ai-for/salons),
   [barbershops](https://purcellventures.co/ai-for/barbershops),
-  [churches](https://purcellventures.co/ai-for/churches) and
-  [auto repair shops](https://purcellventures.co/ai-for/auto-repair-shops).
+  [churches](https://purcellventures.co/ai-for/churches),
+  [auto repair shops](https://purcellventures.co/ai-for/auto-repair-shops),
+  [accountants](https://purcellventures.co/ai-for/accountants),
+  [insurance agents](https://purcellventures.co/ai-for/insurance-agents),
+  [gyms](https://purcellventures.co/ai-for/gyms),
+  [landscapers](https://purcellventures.co/ai-for/landscapers),
+  [cleaning companies](https://purcellventures.co/ai-for/cleaning-companies),
+  [med spas](https://purcellventures.co/ai-for/med-spas),
+  [veterinary clinics](https://purcellventures.co/ai-for/veterinary-clinics) and
+  [photographers](https://purcellventures.co/ai-for/photographers).
 - [Digital](https://purcellventures.co/digital): AI chatbots, booking, CRM and marketing
   add-ons for an existing website, maintained monthly. Plans from $99 a month.
 - [AI in design for small businesses](https://purcellventures.co/ai-design): what AI
