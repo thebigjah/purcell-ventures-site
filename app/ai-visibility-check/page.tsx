@@ -107,10 +107,10 @@ export default function AIVisibilityCheckPage() {
           <div className="ui-prose" style={{ marginTop: 32 }} aria-live="polite">
             {sorted.map((f) => (
               <div key={f.id} style={{ marginBottom: 28 }}>
-                <h3 style={{ marginBottom: 4 }}>
-                  {f.label}
-                  <span className="ui-muted" style={{ fontWeight: 400, fontSize: "0.8em" }}> {STATUS_LABEL[f.status]}</span>
-                </h3>
+                <p className="ui-small" style={{ margin: "0 0 2px", color: f.status === "pass" ? "var(--muted)" : "var(--gold-text)" }}>
+                  {STATUS_LABEL[f.status]}
+                </p>
+                <h3 style={{ margin: "0 0 4px" }}>{f.label}</h3>
                 <p style={{ margin: "0 0 6px" }}><strong>{f.found}</strong></p>
                 {f.items && (
                   <ul style={{ margin: "0 0 6px" }}>
