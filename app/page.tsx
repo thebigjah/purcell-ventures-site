@@ -3,6 +3,7 @@ import Link from "next/link";
 import Galaxy from "./components/galaxy/Galaxy";
 import { Section, Rows, Figures, Facts, ClosingCall, Button } from "./components/ui";
 import { CONTACT } from "@/lib/contact";
+import PageDates from "@/app/components/PageDates";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -216,6 +217,7 @@ export default function Home() {
       </Section>
 
       <ClosingCall />
+      <PageDates path="/" />
     </main>
   );
 }

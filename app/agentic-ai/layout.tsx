@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageDates } from "@/lib/page-dates";
 
 // The answer page for agentic AI. /team shows the roster and /ai-at-alabama covers the
 // degree; neither answers "what is an autonomous agent system and who is actually running
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
       "Autonomous AI agent systems, by Elijah Purcell",
   },
   description:
-    "What an autonomous AI agent system is, how it differs from a chatbot or a workflow, and what it takes to run COSMIC, a station of 57 AI agents in 17 rooms. Written by Elijah Purcell, an autonomous AI agent systems engineer and Founder/CEO of Purcell Ventures LLC.",
+    "What an autonomous AI agent system is, how it differs from a chatbot or a workflow, and what it takes to run COSMIC, 57 AI agents in 17 rooms, in production.",
   alternates: { canonical: "/agentic-ai" },
   openGraph: {
     type: "article",
@@ -31,7 +32,7 @@ const LD = {
         "Autonomous AI agent systems: what they are, and what it takes to run one in production",
       "url": "https://purcellventures.co/agentic-ai",
       "datePublished": "2026-08-21",
-      "dateModified": "2026-08-21",
+      "dateModified": pageDates("/agentic-ai", "2026-08-21")?.modified,
       "author": { "@id": "https://purcellventures.co/#founder" },
       "publisher": { "@id": "https://purcellventures.co/#organization" },
       "about": [

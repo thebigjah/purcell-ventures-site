@@ -3,6 +3,8 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
+import PageDates, { UpdatedLine } from "@/app/components/PageDates";
+import ServiceSchema from "@/app/components/ServiceSchema";
 
 // Rebuilt on the page kit 26 Oct 2026 as a single readable column (PostLayout), since
 // the page is one long answer to one question. The what-it-costs paragraphs now come
@@ -117,6 +119,9 @@ export default function AiConsultantTuscaloosa() {
         <Link href="/about">About Purcell Ventures</Link> and{" "}
         <Link href="/who">Who is Elijah Purcell</Link>.
       </p>
+      <UpdatedLine path="/ai-consultant-tuscaloosa" bare />
+      <ServiceSchema />
+      <PageDates path="/ai-consultant-tuscaloosa" />
     </PostLayout>
   );
 }

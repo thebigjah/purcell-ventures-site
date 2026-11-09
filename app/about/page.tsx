@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PageHero, Section, Prose, Facts, Rows, Faq, Button } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
+import PageDates from "@/app/components/PageDates";
 
 // THE ABOUT PAGE, rebuilt on the page kit 26 Oct 2026.
 //
@@ -147,6 +148,7 @@ export default function AboutPage() {
       <Section title="Recent writing">
         <Rows items={WRITING} />
       </Section>
+      <PageDates path="/about" />
     </main>
   );
 }

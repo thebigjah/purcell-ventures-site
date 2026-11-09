@@ -1,0 +1,578 @@
+{
+  "/": {
+    "published": "2026-02-07",
+    "modified": "2026-11-09"
+  },
+  "/about": {
+    "published": "2026-04-23",
+    "modified": "2026-11-09"
+  },
+  "/agentic-ai": {
+    "published": "2026-08-21",
+    "modified": "2026-11-03"
+  },
+  "/ai-at-alabama": {
+    "published": "2026-08-20",
+    "modified": "2026-11-03"
+  },
+  "/ai-consultant-tuscaloosa": {
+    "published": "2026-08-22",
+    "modified": "2026-11-09"
+  },
+  "/ai-cost-calculator": {
+    "published": "2026-05-21",
+    "modified": "2026-10-26"
+  },
+  "/ai-readiness": {
+    "published": "2026-05-21",
+    "modified": "2026-11-03"
+  },
+  "/blog": {
+    "published": "2026-05-25",
+    "modified": "2026-11-09"
+  },
+  "/blog/121-businesses-near-campus": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/agents-that-cannot-fix-what-they-find": {
+    "published": "2026-08-17",
+    "modified": "2026-11-09"
+  },
+  "/blog/ai-augmented-sales-rep-day": {
+    "published": "2026-05-25",
+    "modified": "2026-11-09"
+  },
+  "/blog/ai-social-media-posts-what-to-hand-off": {
+    "published": "2026-11-02",
+    "modified": "2026-11-09"
+  },
+  "/blog/ai-team-page-honesty": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/audit-every-business-in-your-town": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/audit-your-site-like-a-crawler": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/automation-augmentation-agency-explained": {
+    "published": "2026-11-04",
+    "modified": "2026-11-09"
+  },
+  "/blog/business-domain-lapse-renewal": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
+  "/blog/can-ai-find-your-business": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/canonical-tag-noindex": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/case-for-charging-19": {
+    "published": "2026-05-25",
+    "modified": "2026-11-09"
+  },
+  "/blog/check-ai-answer-before-using": {
+    "published": "2026-10-30",
+    "modified": "2026-11-09"
+  },
+  "/blog/claim-your-google-listing": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/cold-outreach-that-worked": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/contact-page-that-reaches-you": {
+    "published": "2026-11-03",
+    "modified": "2026-11-09"
+  },
+  "/blog/five-workflows-no-code": {
+    "published": "2026-05-25",
+    "modified": "2026-11-09"
+  },
+  "/blog/free-at-alabama": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/google-business-profile-before-website": {
+    "published": "2026-10-29",
+    "modified": "2026-11-09"
+  },
+  "/blog/is-your-business-invisible": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/keep-out-of-ai-chat-window": {
+    "published": "2026-10-26",
+    "modified": "2026-11-09"
+  },
+  "/blog/llc-at-seventeen": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/new-college-alabama": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/not-secure-label-website-fix": {
+    "published": "2026-10-24",
+    "modified": "2026-11-09"
+  },
+  "/blog/prompt-usable-answer-first-time": {
+    "published": "2026-11-08",
+    "modified": "2026-11-09"
+  },
+  "/blog/psychology-and-software": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/quick-phone-test-business-website": {
+    "published": "2026-10-27",
+    "modified": "2026-11-09"
+  },
+  "/blog/shipped-is-not-activated": {
+    "published": "2026-08-17",
+    "modified": "2026-11-09"
+  },
+  "/blog/six-sources-one-page": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/slow-site-on-phone-causes-free-tests": {
+    "published": "2026-11-06",
+    "modified": "2026-11-09"
+  },
+  "/blog/small-app-security-checklist": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/start-using-ai-this-week-three-safe-first-tasks": {
+    "published": "2026-10-25",
+    "modified": "2026-11-09"
+  },
+  "/blog/starting-a-business-at-alabama": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/tell-ai-about-your-business": {
+    "published": "2026-11-06",
+    "modified": "2026-11-09"
+  },
+  "/blog/tuscaloosa-small-business-online": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/what-a-website-actually-costs": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/what-one-operator-can-deliver": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/what-the-agents-get-wrong": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/what-you-should-own": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/blog/who-controls-your-domain-hosting-and-login": {
+    "published": "2026-11-07",
+    "modified": "2026-11-09"
+  },
+  "/blog/why-i-built-crm-from-scratch": {
+    "published": "2026-05-25",
+    "modified": "2026-11-09"
+  },
+  "/blog/why-most-ai-tools-waste-money": {
+    "published": "2026-05-25",
+    "modified": "2026-11-09"
+  },
+  "/blog/write-a-page-an-ai-will-quote": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/brand": {
+    "published": "2026-04-24",
+    "modified": "2026-11-03"
+  },
+  "/business-cards": {
+    "published": "2026-03-05",
+    "modified": "2026-10-26"
+  },
+  "/case-studies": {
+    "published": "2026-05-16",
+    "modified": "2026-11-03"
+  },
+  "/consulting": {
+    "published": "2026-03-05",
+    "modified": "2026-11-03"
+  },
+  "/consulting/book": {
+    "published": "2026-04-23",
+    "modified": "2026-10-26"
+  },
+  "/contact": {
+    "published": "2026-08-22",
+    "modified": "2026-10-27"
+  },
+  "/courses": {
+    "published": "2026-04-27",
+    "modified": "2026-11-03"
+  },
+  "/courses/ai-automation": {
+    "published": "2026-04-28",
+    "modified": "2026-11-03"
+  },
+  "/courses/ai-automation/lessons": {
+    "published": "2026-04-28",
+    "modified": "2026-11-03"
+  },
+  "/courses/business-launch": {
+    "published": "2026-04-28",
+    "modified": "2026-11-03"
+  },
+  "/courses/business-launch/lessons": {
+    "published": "2026-04-28",
+    "modified": "2026-11-03"
+  },
+  "/courses/college-apps": {
+    "published": "2026-04-27",
+    "modified": "2026-11-03"
+  },
+  "/courses/college-apps/lessons": {
+    "published": "2026-04-27",
+    "modified": "2026-11-03"
+  },
+  "/crm": {
+    "published": "2026-04-23",
+    "modified": "2026-10-26"
+  },
+  "/digital": {
+    "published": "2026-03-05",
+    "modified": "2026-11-03"
+  },
+  "/digital/ai-faq-builder": {
+    "published": "2026-05-25",
+    "modified": "2026-10-27"
+  },
+  "/digital/estimating": {
+    "published": "2026-05-25",
+    "modified": "2026-10-27"
+  },
+  "/digital/event-registration": {
+    "published": "2026-05-25",
+    "modified": "2026-10-27"
+  },
+  "/digital/expenses": {
+    "published": "2026-05-25",
+    "modified": "2026-10-27"
+  },
+  "/digital/finder": {
+    "published": "2026-03-05",
+    "modified": "2026-11-03"
+  },
+  "/digital/inventory": {
+    "published": "2026-05-25",
+    "modified": "2026-10-27"
+  },
+  "/digital/loyalty": {
+    "published": "2026-05-25",
+    "modified": "2026-10-27"
+  },
+  "/digital/playbook": {
+    "published": "2026-03-05",
+    "modified": "2026-11-03"
+  },
+  "/digital/tools": {
+    "published": "2026-05-25",
+    "modified": "2026-10-26"
+  },
+  "/faq": {
+    "published": "2026-05-21",
+    "modified": "2026-11-09"
+  },
+  "/free": {
+    "published": "2026-05-25",
+    "modified": "2026-10-26"
+  },
+  "/how-we-work": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/invoicing": {
+    "published": "2026-04-23",
+    "modified": "2026-11-03"
+  },
+  "/links": {
+    "published": "2026-05-21",
+    "modified": "2026-11-09"
+  },
+  "/logos": {
+    "published": "2026-03-05",
+    "modified": "2026-10-26"
+  },
+  "/newsletter": {
+    "published": "2026-04-23",
+    "modified": "2026-10-26"
+  },
+  "/now": {
+    "published": "2026-05-21",
+    "modified": "2026-11-03"
+  },
+  "/patterns": {
+    "published": "2026-04-24",
+    "modified": "2026-11-03"
+  },
+  "/portfolio": {
+    "published": "2026-05-25",
+    "modified": "2026-11-09"
+  },
+  "/pricing-comparison": {
+    "published": "2026-05-25",
+    "modified": "2026-11-09"
+  },
+  "/print": {
+    "published": "2026-03-12",
+    "modified": "2026-10-27"
+  },
+  "/progress": {
+    "published": "2026-10-28",
+    "modified": "2026-10-29"
+  },
+  "/qr": {
+    "published": "2026-04-23",
+    "modified": "2026-10-26"
+  },
+  "/rep-portal": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/affiliates": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/ask": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/calendar": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/call-recap": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/crm": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/deals": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/demo-tools": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/email-polish": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/handbook": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/help": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/leads": {
+    "published": "2026-05-25",
+    "modified": "2026-05-25"
+  },
+  "/rep-portal/login": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/objections": {
+    "published": "2026-05-25",
+    "modified": "2026-08-20"
+  },
+  "/rep-portal/onboard": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/operations": {
+    "published": "2026-05-25",
+    "modified": "2026-08-20"
+  },
+  "/rep-portal/operations/estimating": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/operations/events": {
+    "published": "2026-05-25",
+    "modified": "2026-05-25"
+  },
+  "/rep-portal/operations/expenses": {
+    "published": "2026-05-25",
+    "modified": "2026-05-25"
+  },
+  "/rep-portal/operations/inventory": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/operations/loyalty": {
+    "published": "2026-05-25",
+    "modified": "2026-05-25"
+  },
+  "/rep-portal/pitch-coach": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/playbook": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/pricing": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/products": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/scripts": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/settings": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/status": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/rep-portal/templates": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/resume": {
+    "published": "2026-03-16",
+    "modified": "2026-11-09"
+  },
+  "/resume/print": {
+    "published": "2026-04-20",
+    "modified": "2026-10-26"
+  },
+  "/sales-rep": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/services": {
+    "published": "2026-03-05",
+    "modified": "2026-10-26"
+  },
+  "/shop": {
+    "published": "2026-05-25",
+    "modified": "2026-10-26"
+  },
+  "/shop/bundle": {
+    "published": "2026-05-25",
+    "modified": "2026-10-26"
+  },
+  "/shop/bundle/thanks": {
+    "published": "2026-05-25",
+    "modified": "2026-10-26"
+  },
+  "/shop/cold-email-pack": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/shop/cold-email-pack/thanks": {
+    "published": "2026-05-25",
+    "modified": "2026-10-26"
+  },
+  "/shop/starter-kit": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/shop/starter-kit/thanks": {
+    "published": "2026-05-25",
+    "modified": "2026-10-26"
+  },
+  "/shop/subject-lines": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/shop/subject-lines/thanks": {
+    "published": "2026-05-25",
+    "modified": "2026-10-26"
+  },
+  "/shop/wallet-tracker-premium": {
+    "published": "2026-05-25",
+    "modified": "2026-10-26"
+  },
+  "/shop/wallet-tracker-premium/thanks": {
+    "published": "2026-05-25",
+    "modified": "2026-10-26"
+  },
+  "/sites": {
+    "published": "2026-06-09",
+    "modified": "2026-11-03"
+  },
+  "/software": {
+    "published": "2026-03-05",
+    "modified": "2026-11-03"
+  },
+  "/steady": {
+    "published": "2026-05-25",
+    "modified": "2026-11-03"
+  },
+  "/steady/start": {
+    "published": "2026-05-25",
+    "modified": "2026-11-01"
+  },
+  "/team": {
+    "published": "2026-08-20",
+    "modified": "2026-11-03"
+  },
+  "/tools": {
+    "published": "2026-08-20",
+    "modified": "2026-11-03"
+  },
+  "/tutorials": {
+    "published": "2026-05-25",
+    "modified": "2026-10-26"
+  },
+  "/uses": {
+    "published": "2026-05-21",
+    "modified": "2026-10-26"
+  },
+  "/verses": {
+    "published": "2026-05-21",
+    "modified": "2026-10-26"
+  },
+  "/what-is-purcell-ventures": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  },
+  "/who": {
+    "published": "2026-08-20",
+    "modified": "2026-11-09"
+  }
+}

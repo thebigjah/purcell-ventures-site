@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { pageDates, formatDate } from "@/lib/page-dates";
 
 // THE SAME AUTHOR, STATED THE SAME WAY, ON EVERY POST.
 //
@@ -33,13 +34,18 @@ export default function PostByline({ post }: { post: PostMeta }) {
   // A slug starting with "/" is a full path. Everything else is a blog post, which is
   // what every caller was until the AI guide, and a node whose url points at a page that
   // does not exist is worse than no node at all.
-  const href = post.slug.startsWith("/") ? `${SITE}${post.slug}` : `${SITE}/blog/${post.slug}`;
+  const path = post.slug.startsWith("/") ? post.slug : `/blog/${post.slug}`;
+  const href = `${SITE}${path}`;
+  // dateModified is the last git commit to this post's files (lib/page-dates.json), never
+  // earlier than the date the post prints as its publish date.
+  const dates = pageDates(path, post.published)!;
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
-    datePublished: post.published,
+    datePublished: dates.published,
+    dateModified: dates.modified,
     url: href,
     mainEntityOfPage: { "@type": "WebPage", "@id": href },
     author: {
@@ -87,6 +93,9 @@ export default function PostByline({ post }: { post: PostMeta }) {
         />
         <div>
           <p className="ui-byline__by">Written by Elijah Purcell</p>
+          <p className="ui-updated">
+            Updated <time dateTime={dates.modified}>{formatDate(dates.modified)}</time>
+          </p>
           <p>
             Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, which builds AI systems and software for local businesses. He studies psychology and data science in New College and the Honors College at the University of Alabama and built COSMIC, a station of 57 AI agents in 17 rooms that does the company&apos;s proposals, research and outreach.
           </p>

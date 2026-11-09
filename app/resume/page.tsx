@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PrintButton from "./print/PrintButton";
 import { ResumeDocument, RESUME_CSS } from "./ResumeDocument";
+import PageDates from "@/app/components/PageDates";
 
 // The résumé as a sheet of paper on the site, the same document /resume/print prints.
 // He asked for the PDF look on 26 Oct 2026, so the web version no longer has its own layout.
@@ -8,7 +9,7 @@ import { ResumeDocument, RESUME_CSS } from "./ResumeDocument";
 export const metadata: Metadata = {
   title: "Elijah Purcell, résumé",
   description:
-    "Résumé of Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data science student at the University of Alabama, in New College and the Honors College: shipped software, AI agent systems, client work, education and awards.",
+    "Résumé of Elijah Purcell, Founder/CEO of Purcell Ventures LLC: shipped software, AI agent systems, client work, awards and his University of Alabama studies.",
   alternates: { canonical: "/resume" },
 };
 
@@ -25,6 +26,7 @@ export default function ResumePage() {
       <div className="rw-sheet rp">
         <ResumeDocument />
       </div>
+      <PageDates path="/resume" />
     </main>
   );
 }

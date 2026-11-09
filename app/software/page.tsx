@@ -1,5 +1,7 @@
 import { PageHero, Section, Tiers, Rows, Button, ClosingCall } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
+import PageDates, { UpdatedLine } from "@/app/components/PageDates";
+import ServiceSchema from "@/app/components/ServiceSchema";
 
 // Rebuilt on the page kit 26 Oct 2026. The price ranges were already in this page's
 // metadata and schema. They now show on the page too, so the visible page and the
@@ -138,6 +140,9 @@ export default function SoftwarePage() {
         button="Email Elijah"
         href={MAIL}
       />
+      <UpdatedLine path="/software" />
+      <ServiceSchema />
+      <PageDates path="/software" />
     </main>
   );
 }

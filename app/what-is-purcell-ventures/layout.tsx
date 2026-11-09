@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CONTACT } from "@/lib/contact";
+import { pageDates } from "@/lib/page-dates";
 
 // THE COMPANY'S ANSWER PAGE, and the reason it is separate from /who.
 //
@@ -19,7 +20,7 @@ import { CONTACT } from "@/lib/contact";
 export const metadata: Metadata = {
   title: { absolute: "What is Purcell Ventures LLC? The company Elijah Purcell founded" },
   description:
-    "Purcell Ventures LLC is a Georgia software company founded by Elijah Purcell in April 2025, control number 25075361. It builds AI systems and custom software for small businesses and advises owners on using them. Divisions, prices and contact details.",
+    "Purcell Ventures LLC is a Georgia software company Elijah Purcell founded in April 2025. It builds AI systems and custom software for small businesses.",
   alternates: { canonical: "/what-is-purcell-ventures" },
   openGraph: {
     title: "What is Purcell Ventures LLC?",
@@ -68,7 +69,8 @@ export default function CompanyLayout({ children }: { children: React.ReactNode 
     "@type": "AboutPage",
     name: "What is Purcell Ventures LLC?",
     url: "https://purcellventures.co/what-is-purcell-ventures",
-    dateModified: "2026-08-20",
+    datePublished: pageDates("/what-is-purcell-ventures")?.published,
+    dateModified: pageDates("/what-is-purcell-ventures")?.modified,
     mainEntity: { "@id": "https://purcellventures.co/#organization" },
     about: { "@id": "https://purcellventures.co/#organization" },
   };

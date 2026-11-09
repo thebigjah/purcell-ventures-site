@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { PageHero, Section, Figures, Rows, Tiers, Faq, Button, Note, Prose } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import WaitlistForm from "../WaitlistForm";
+import PageDates from "@/app/components/PageDates";
 
 // THE COLLEGE APPLICATION PLAYBOOK, rebuilt on the page kit 26 Oct 2026.
 //
@@ -238,6 +239,7 @@ export default function CollegeAppsPage() {
           <a className="ui-link" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>. I reply within one business day.
         </p>
       </Section>
+      <PageDates path="/courses/college-apps" />
     </main>
   );
 }

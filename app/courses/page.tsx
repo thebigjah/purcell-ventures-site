@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero, Section, Rows, Prose, ClosingCall } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
+import PageDates from "@/app/components/PageDates";
 
 // THE COURSES INDEX, rebuilt on the page kit 26 Oct 2026.
 //
@@ -96,6 +97,7 @@ export default function CoursesPage() {
         button="See consulting"
         href="/consulting"
       />
+      <PageDates path="/courses" />
     </main>
   );
 }

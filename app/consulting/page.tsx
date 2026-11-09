@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { PageHero, Section, Prose, Button, Rows, Figures, Tiers, Faq, ClosingCall } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
+import PageDates, { UpdatedLine } from "@/app/components/PageDates";
+import ServiceSchema from "@/app/components/ServiceSchema";
 
 // Rebuilt on the page kit 26 Oct 2026. The session list used to be an accordion that
 // hid each session's detail behind a click. Every session now shows in full: a buyer
@@ -236,6 +238,9 @@ export default function ConsultingPage() {
           href={EMAIL}
         />
       </div>
+      <UpdatedLine path="/consulting" />
+      <ServiceSchema />
+      <PageDates path="/consulting" />
     </main>
   );
 }

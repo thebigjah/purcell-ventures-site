@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageHero, Section, Figures, Rows, Tiers, Faq, Button, Note, Prose, Facts, ClosingCall } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import WaitlistForm from "../WaitlistForm";
+import PageDates from "@/app/components/PageDates";
 
 // THE BUSINESS LAUNCH PLAYBOOK, rebuilt on the page kit 26 Oct 2026.
 //
@@ -277,6 +278,7 @@ export default function BusinessLaunchPage() {
         button="See consulting"
         href="/consulting"
       />
+      <PageDates path="/courses/business-launch" />
     </main>
   );
 }

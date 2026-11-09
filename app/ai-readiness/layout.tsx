@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import PageDates from "@/app/components/PageDates";
 
 export const metadata: Metadata = {
   title: "AI readiness test in 10 questions and 3 minutes",
   description:
-    "A test for small business owners and team leaders by Elijah Purcell. It scores your team's AI readiness out of 30 in 10 questions and gives you 3 next steps. No email required.",
+    "An AI readiness test for small business owners and team leaders. Ten questions score your team out of 30 and give you three next steps. No email required.",
   alternates: { canonical: "/ai-readiness" },
 };
 
@@ -31,6 +32,7 @@ export default function AIReadinessLayout({ children }: { children: React.ReactN
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
+      <PageDates path="/ai-readiness" />
       {children}
     </>
   );

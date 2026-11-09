@@ -1,5 +1,6 @@
 import { PageHero, Section, Rows, Facts } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
+import PageDates from "@/app/components/PageDates";
 
 // Rebuilt on the page kit 26 Oct 2026 as a server component.
 // - The college course line no longer prints the scholarship dollar total. His rule keeps
@@ -104,6 +105,7 @@ export default function LinksPage() {
           ]}
         />
       </Section>
+      <PageDates path="/links" />
     </main>
   );
 }

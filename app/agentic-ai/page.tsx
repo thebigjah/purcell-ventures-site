@@ -2,6 +2,8 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 import Link from "next/link";
 import MapPlanet from "@/app/components/MapPlanet";
 import { Section, Rows, ClosingCall } from "@/app/components/ui";
+import { UpdatedLine } from "@/app/components/PageDates";
+import ServiceSchema from "@/app/components/ServiceSchema";
 
 // Third person for the claims about him, first person for the engineering, because those
 // are two different jobs. An engine lifts "Elijah Purcell runs COSMIC, a station of 57 AI agents"
@@ -99,6 +101,8 @@ export default function AgenticAIPage() {
         button="See custom software"
         href="/software"
       />
+      <UpdatedLine path="/agentic-ai" />
+      <ServiceSchema />
     </main>
   );
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { PageHero, Section, Prose } from "@/app/components/ui";
+import PageDates from "@/app/components/PageDates";
 
 // Rebuilt on the page kit 26 Oct 2026. Removed in the rebuild, because public pages carry
 // what he would say introducing himself professionally: his birthday, his training
@@ -68,6 +69,7 @@ export default function NowPage() {
           </blockquote>
         </Prose>
       </Section>
+      <PageDates path="/now" />
     </main>
   );
 }

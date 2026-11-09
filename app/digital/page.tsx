@@ -9,6 +9,8 @@ import ROICalculator from "../components/ROICalculator";
 import TeamBuilder from "./TeamBuilder";
 import ContactForm from "./ContactForm";
 import s from "./digital.module.css";
+import PageDates, { UpdatedLine } from "@/app/components/PageDates";
+import ServiceSchema from "@/app/components/ServiceSchema";
 
 // /digital, rebuilt on the page kit 26 Oct 2026.
 //
@@ -288,6 +290,9 @@ export default function DigitalPage() {
           </p>
         </div>
       </Section>
+      <UpdatedLine path="/digital" />
+      <ServiceSchema />
+      <PageDates path="/digital" />
     </main>
   );
 }

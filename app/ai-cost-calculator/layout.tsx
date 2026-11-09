@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageDates from "@/app/components/PageDates";
 
 export const metadata: Metadata = {
   title: "AI cost calculator",
@@ -31,6 +32,7 @@ export default function AICostCalcLayout({ children }: { children: React.ReactNo
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
+      <PageDates path="/ai-cost-calculator" />
       {children}
     </>
   );

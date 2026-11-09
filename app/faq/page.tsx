@@ -1,5 +1,6 @@
 import { PageHero, Section, Faq, Rows, ClosingCall } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
+import PageDates from "@/app/components/PageDates";
 
 // Rebuilt on the page kit 26 Oct 2026 as a server component. The kit's Faq renders
 // <details>, so every answer is in the HTML for crawlers, which is what the FAQPage schema
@@ -122,6 +123,7 @@ export default function FAQPage() {
       />
       {/* After the hero: the hero must be the first child of <main> for the padding rule. */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }} />
+      <PageDates path="/faq" />
     </main>
   );
 }

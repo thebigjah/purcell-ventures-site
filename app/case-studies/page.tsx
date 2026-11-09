@@ -1,4 +1,5 @@
 import { PageHero, Section, Prose, Button, ClosingCall } from "@/app/components/ui";
+import PageDates from "@/app/components/PageDates";
 
 // CASE STUDIES, rebuilt on the page kit 26 Oct 2026.
 //
@@ -75,6 +76,7 @@ export default function CaseStudiesPage() {
         button="See consulting sessions"
         href="/consulting"
       />
+      <PageDates path="/case-studies" />
     </main>
   );
 }

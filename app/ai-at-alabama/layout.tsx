@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageDates } from "@/lib/page-dates";
 
 // THE HONEST WAY TO OWN "AI AT ALABAMA".
 //
@@ -20,7 +21,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: { absolute: "Studying AI at the University of Alabama, by Elijah Purcell" },
   description:
-    "A plain guide to artificial intelligence at the University of Alabama: the new AI BS and its exact course requirements, why AI majors cannot double major in CS, and the routes for students who are not in engineering. Written by Elijah Purcell, a UA student building AI agent systems in production.",
+    "Studying AI at the University of Alabama: the new AI BS and its course requirements, why AI majors cannot double major in CS, and routes outside engineering.",
   alternates: { canonical: "/ai-at-alabama" },
   openGraph: {
     title: "Studying AI at the University of Alabama",
@@ -60,7 +61,7 @@ export default function AiAtAlabamaLayout({ children }: { children: React.ReactN
     "@type": "Article",
     headline: "Studying AI at the University of Alabama",
     datePublished: "2026-08-20",
-    dateModified: "2026-08-20",
+    dateModified: pageDates("/ai-at-alabama", "2026-08-20")?.modified,
     url: "https://purcellventures.co/ai-at-alabama",
     author: { "@id": "https://purcellventures.co/#founder" },
     publisher: { "@id": "https://purcellventures.co/#organization" },

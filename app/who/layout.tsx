@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CONTACT } from "@/lib/contact";
+import { pageDates } from "@/lib/page-dates";
 
 // THE ANSWER PAGE.
 //
@@ -14,7 +15,7 @@ import { CONTACT } from "@/lib/contact";
 export const metadata: Metadata = {
   title: { absolute: "Who is Elijah Purcell, Founder/CEO of Purcell Ventures LLC" },
   description:
-    "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company formed in April 2025, and a psychology and data science student at the University of Alabama, in New College and the Honors College on a pre-med track toward psychiatry.",
+    "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama.",
   alternates: { canonical: "https://purcellventures.co/who" },
   openGraph: {
     title: "Who is Elijah Purcell?",
@@ -72,7 +73,8 @@ export default function WhoLayout({ children }: { children: React.ReactNode }) {
   const profile = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    dateModified: "2026-08-20",
+    datePublished: pageDates("/who")?.published,
+    dateModified: pageDates("/who")?.modified,
     mainEntity: { "@id": "https://purcellventures.co/#founder" },
     about: { "@id": "https://purcellventures.co/#founder" },
     url: "https://purcellventures.co/who",

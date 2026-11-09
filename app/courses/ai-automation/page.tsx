@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageHero, Section, Figures, Rows, Tiers, Faq, Button, Prose, Facts } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import WaitlistForm from "../WaitlistForm";
+import PageDates from "@/app/components/PageDates";
 
 // ZERO TO AUTOMATED, rebuilt on the page kit 26 Oct 2026.
 //
@@ -249,6 +250,7 @@ export default function ZeroToAutomatedPage() {
           I also teach <Link className="ui-link" href="/courses">two other courses</Link>. I reply to email within one business day.
         </p>
       </Section>
+      <PageDates path="/courses/ai-automation" />
     </main>
   );
 }

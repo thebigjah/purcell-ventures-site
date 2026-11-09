@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { PageHero, Section, Prose, Facts } from "@/app/components/ui";
+import PageDates from "@/app/components/PageDates";
 
 export const metadata = {
   alternates: { canonical: "/team" },
   title: "The team: Elijah Purcell and 57 AI agents",
   description:
-    "Purcell Ventures is one person, Elijah Purcell, working with COSMIC, a station of 57 AI agents in 17 rooms. Each agent's name, its job, and the actions it is not allowed to take.",
+    "Purcell Ventures is Elijah Purcell working with COSMIC, a station of 57 AI agents in 17 rooms. Each agent's name, its job and the actions it may not take.",
 };
 
 // WHY THIS PAGE SAYS "AI AGENT" IN THE FIRST SENTENCE
@@ -364,6 +365,7 @@ export default function TeamPage() {
             </p>
           </Prose>
         </Section>
+        <PageDates path="/team" />
       </main>
     </>
   );

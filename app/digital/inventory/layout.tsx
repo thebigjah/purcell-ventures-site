@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import PageDates from "@/app/components/PageDates";
 
 export const metadata: Metadata = {
   title: { absolute: "Free inventory tracker with low-stock alerts, Purcell Ventures" },
@@ -9,5 +10,10 @@ export const metadata: Metadata = {
 };
 
 export default function Layout({ children }: { children: ReactNode }) {
-  return children;
+  return (
+    <>
+      {children}
+      <PageDates path="/digital/inventory" />
+    </>
+  );
 }
