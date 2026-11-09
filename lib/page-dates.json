@@ -63,6 +63,10 @@
     "published": "2026-11-09",
     "modified": "2026-11-09"
   },
+  "/ai-for/accountants": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
   "/ai-for/auto-repair-shops": {
     "published": "2026-11-09",
     "modified": "2026-11-09"
@@ -75,6 +79,10 @@
     "published": "2026-11-09",
     "modified": "2026-11-09"
   },
+  "/ai-for/cleaning-companies": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
   "/ai-for/dental-offices": {
     "published": "2026-11-09",
     "modified": "2026-11-09"
@@ -83,11 +91,31 @@
     "published": "2026-11-09",
     "modified": "2026-11-09"
   },
+  "/ai-for/gyms": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
   "/ai-for/hvac-companies": {
     "published": "2026-11-09",
     "modified": "2026-11-09"
   },
+  "/ai-for/insurance-agents": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
+  "/ai-for/landscapers": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
   "/ai-for/law-firms": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
+  "/ai-for/med-spas": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
+  "/ai-for/photographers": {
     "published": "2026-11-09",
     "modified": "2026-11-09"
   },
@@ -108,6 +136,10 @@
     "modified": "2026-11-09"
   },
   "/ai-for/salons": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
+  "/ai-for/veterinary-clinics": {
     "published": "2026-11-09",
     "modified": "2026-11-09"
   },
@@ -594,6 +626,14 @@
   "/rep-portal/templates": {
     "published": "2026-05-25",
     "modified": "2026-11-03"
+  },
+  "/research": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
+  "/research/alabama-small-business-websites-2026": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
   },
   "/resume": {
     "published": "2026-03-16",
