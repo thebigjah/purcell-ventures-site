@@ -129,7 +129,7 @@ export default function ConsultingPage() {
         planet="consulting"
         kicker="AI consulting"
         title="Hands-on AI training for your team, from $125 a person."
-        lede={<>I come to your business and teach your team to use AI, with each session built around the tools you already use. Your team leaves with a takeaway guide the same day. I am based in Tuscaloosa, Alabama, and work nationwide. <Link className="ui-link" href="/ai-consultant-tuscaloosa">Local work in Tuscaloosa</Link>.</>}
+        lede={<>I come to your business and teach your team to use AI, with each session built around the tools you already use. Your team leaves with a takeaway guide the same day. I am based in Tuscaloosa, Alabama, and work nationwide. <Link className="ui-link" href="/ai-consultant-tuscaloosa">Local work in Tuscaloosa</Link> and <Link className="ui-link" href="/ai-consulting">AI consulting across Alabama</Link>.</>}
         meta="1-on-1 at $175 an hour. Small groups at $125 a person. Half-day workshop at $2,500 for up to 20 people."
         actions={<>
           <Button href="/consulting/book">Book a session</Button>
