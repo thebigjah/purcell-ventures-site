@@ -1,0 +1,43 @@
+// Which topic guide each blog post belongs to, from the cluster map built 9 Nov 2026.
+// PostByline links every listed post up to its guide, so older posts pass authority to
+// the pillar pages and readers find the full guide. New posts from the blog engine link
+// their pillar in the body instead.
+
+export const POST_PILLAR: Record<string, { href: string; title: string }> = {
+  "/blog/121-businesses-near-campus": { href: "/ai-for-small-business", title: "AI for small business" },
+  "/blog/agents-that-cannot-fix-what-they-find": { href: "/ai-automation", title: "AI automation for small businesses" },
+  "/blog/ai-augmented-sales-rep-day": { href: "/ai-consulting", title: "AI consulting in Alabama" },
+  "/blog/ai-social-media-posts-what-to-hand-off": { href: "/ai-for-small-business", title: "AI for small business" },
+  "/blog/ai-team-page-honesty": { href: "/ai-for-small-business", title: "AI for small business" },
+  "/blog/audit-every-business-in-your-town": { href: "/ai-for-small-business", title: "AI for small business" },
+  "/blog/audit-your-site-like-a-crawler": { href: "/ai-websites", title: "AI websites and getting found by AI search" },
+  "/blog/automation-augmentation-agency-explained": { href: "/ai-automation", title: "AI automation for small businesses" },
+  "/blog/business-domain-lapse-renewal": { href: "/ai-websites", title: "AI websites and getting found by AI search" },
+  "/blog/can-ai-find-your-business": { href: "/ai-websites", title: "AI websites and getting found by AI search" },
+  "/blog/canonical-tag-noindex": { href: "/ai-websites", title: "AI websites and getting found by AI search" },
+  "/blog/check-ai-answer-before-using": { href: "/ai-for-small-business", title: "AI for small business" },
+  "/blog/claim-your-google-listing": { href: "/ai-for-small-business", title: "AI for small business" },
+  "/blog/contact-page-that-reaches-you": { href: "/ai-websites", title: "AI websites and getting found by AI search" },
+  "/blog/five-workflows-no-code": { href: "/ai-automation", title: "AI automation for small businesses" },
+  "/blog/google-business-profile-before-website": { href: "/ai-websites", title: "AI websites and getting found by AI search" },
+  "/blog/is-your-business-invisible": { href: "/ai-websites", title: "AI websites and getting found by AI search" },
+  "/blog/keep-out-of-ai-chat-window": { href: "/ai-consulting", title: "AI consulting in Alabama" },
+  "/blog/not-secure-label-website-fix": { href: "/ai-websites", title: "AI websites and getting found by AI search" },
+  "/blog/prompt-usable-answer-first-time": { href: "/ai-for-small-business", title: "AI for small business" },
+  "/blog/quick-phone-test-business-website": { href: "/ai-websites", title: "AI websites and getting found by AI search" },
+  "/blog/shipped-is-not-activated": { href: "/ai-automation", title: "AI automation for small businesses" },
+  "/blog/six-sources-one-page": { href: "/ai-websites", title: "AI websites and getting found by AI search" },
+  "/blog/slow-site-on-phone-causes-free-tests": { href: "/ai-websites", title: "AI websites and getting found by AI search" },
+  "/blog/small-app-security-checklist": { href: "/ai-integration", title: "AI integration for small businesses" },
+  "/blog/start-using-ai-this-week-three-safe-first-tasks": { href: "/ai-for-small-business", title: "AI for small business" },
+  "/blog/tell-ai-about-your-business": { href: "/ai-for-small-business", title: "AI for small business" },
+  "/blog/tuscaloosa-small-business-online": { href: "/ai-for-small-business", title: "AI for small business" },
+  "/blog/what-a-website-actually-costs": { href: "/ai-websites", title: "AI websites and getting found by AI search" },
+  "/blog/what-one-operator-can-deliver": { href: "/ai-automation", title: "AI automation for small businesses" },
+  "/blog/what-the-agents-get-wrong": { href: "/ai-automation", title: "AI automation for small businesses" },
+  "/blog/what-you-should-own": { href: "/ai-websites", title: "AI websites and getting found by AI search" },
+  "/blog/who-controls-your-domain-hosting-and-login": { href: "/ai-websites", title: "AI websites and getting found by AI search" },
+  "/blog/why-i-built-crm-from-scratch": { href: "/ai-integration", title: "AI integration for small businesses" },
+  "/blog/why-most-ai-tools-waste-money": { href: "/ai-consulting", title: "AI consulting in Alabama" },
+  "/blog/write-a-page-an-ai-will-quote": { href: "/ai-websites", title: "AI websites and getting found by AI search" },
+};

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { pageDates, formatDate } from "@/lib/page-dates";
+import { POST_PILLAR } from "@/lib/post-pillars";
 
 // THE SAME AUTHOR, STATED THE SAME WAY, ON EVERY POST.
 //
@@ -39,6 +40,7 @@ export default function PostByline({ post }: { post: PostMeta }) {
   // dateModified is the last git commit to this post's files (lib/page-dates.json), never
   // earlier than the date the post prints as its publish date.
   const dates = pageDates(path, post.published)!;
+  const pillar = POST_PILLAR[path];
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -83,6 +85,11 @@ export default function PostByline({ post }: { post: PostMeta }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      {pillar && (
+        <p>
+          Part of the guide <Link href={pillar.href}>{pillar.title}</Link>.
+        </p>
+      )}
       <aside className="ui-byline">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
