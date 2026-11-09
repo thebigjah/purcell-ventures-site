@@ -35,7 +35,7 @@ const FAQ_SCHEMA = {
       name: "Where is Purcell Ventures based?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Elijah formed and registered the LLC in Acworth, Georgia, and he runs it from Tuscaloosa, Alabama. Websites, digital add-ons and AI consulting are available nationwide. Mantle Field Services serves metro Atlanta: Kennesaw, Marietta, Acworth, Canton and Woodstock.",
+        text: "Elijah formed and registered the LLC in Acworth, Georgia, and he runs it from Tuscaloosa, Alabama. AI consulting, software, digital add-ons and websites are available nationwide. Mantle Field Services serves metro Atlanta: Kennesaw, Marietta, Acworth, Canton and Woodstock.",
       },
     },
     {

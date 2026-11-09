@@ -4,7 +4,7 @@
 export const MAP = {
   core: { name: "Purcell Ventures", href: "/" },
   systems: [
-    { id: "services", name: "Services", href: "/sites", price: "from $79 a month", line: "Websites, digital add-ons, AI training, custom software and personal IT.",
+    { id: "services", name: "Services", href: "/sites", price: "from $79 a month", line: "AI training, custom software, digital add-ons, websites and personal IT.",
       planets: [
         { name: "Websites", href: "/sites", children: 0, tex: "websites", price: "$650 setup, $99 a month" },
         { name: "Digital add-ons", href: "/digital", children: 8, tex: "digital", price: "from $99 a month" },

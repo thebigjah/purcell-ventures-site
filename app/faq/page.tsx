@@ -20,7 +20,7 @@ const FAQS: { label: string; qas: QA[] }[] = [
       { q: "Who will I talk to?", a: "Me, Elijah Purcell. I handle your project myself from the first message to the final delivery." },
       { q: "How fast do you respond?", a: `I reply within one business day. If you need an answer sooner, call or text ${CONTACT.phone}.` },
       { q: "Where are you based?", a: "Tuscaloosa, Alabama. I formed and registered Purcell Ventures LLC in Acworth, Georgia, in April 2025, and I run it from Tuscaloosa, where I attend the University of Alabama. Local clients can meet me in person." },
-      { q: "Do you take clients outside Tuscaloosa?", a: "For websites, digital services, AI consulting and software, yes, anywhere in the United States. For field work (gutter cleaning, pressure washing, lawn care), see Mantle Field Services, which serves metro Atlanta only." },
+      { q: "Do you take clients outside Tuscaloosa?", a: "For AI consulting, software, digital services and websites, yes, anywhere in the United States. For field work (gutter cleaning, pressure washing, lawn care), see Mantle Field Services, which serves metro Atlanta only." },
       // PRICING QUESTIONS. An answer engine cannot quote a number that is not written down.
       { q: "How much does a website cost?", a: "Websites start at $650 setup and $99 a month, which covers the site plus the tooling around it. For University of Alabama students and student-run businesses, a site is $500, with an optional $25 a month to keep it maintained and updated. Custom builds start at $1,500." },
       { q: "How much does AI consulting cost?", a: "Group sessions start at $125 a person. One-on-one sessions are $175 an hour. A workshop for up to 20 people is $2,500 flat. The first conversation is free and often ends with me telling you the problem is smaller than you thought, or that AI is the wrong tool for it." },
@@ -71,7 +71,7 @@ const FAQS: { label: string; qas: QA[] }[] = [
     qas: [
       { q: "Are you nineteen?", a: "Yes. I have been building production software for a year. Every portfolio project links to a live site, and the full record is at /resume." },
       { q: "What is the logo based on?", a: "Bentham's panopticon, turned around. In Bentham's prison design, a hidden guard can see every prisoner at all times. In the logo, PV sits at the center in plain view, because the company is the one that answers for its work." },
-      { q: "Why is it called Ventures?", a: "The company runs several separate ventures: websites, digital services, consulting, software, Steady, and real estate as a planned division. I build and test each one on its own." },
+      { q: "Why is it called Ventures?", a: "The company runs several separate ventures: consulting, software, digital services, websites, Steady, and real estate as a planned division. I build and test each one on its own." },
       { q: "Who owns Mantle Field Services?", a: "I do. It is a sister brand to Purcell Ventures, with its own sales operation." },
     ],
   },

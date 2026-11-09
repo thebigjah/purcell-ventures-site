@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s, Purcell Ventures",
   },
   description:
-    "Websites, digital services from $99 a month, hands-on AI consulting and custom software for small businesses. Elijah Purcell, a University of Alabama student, runs Purcell Ventures from Tuscaloosa.",
+    "AI systems, custom software and business and AI consulting for small businesses, plus websites from $99 a month. Elijah Purcell, a University of Alabama student, runs Purcell Ventures from Tuscaloosa.",
   keywords: [
     "AI consulting", "digital services for small business", "custom software development",
     "business AI training", "website management", "Purcell Ventures", "Elijah Purcell",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Purcell Ventures",
     title: "Purcell Ventures: software and AI for small businesses, founded by Elijah Purcell",
     description:
-      "Websites, digital services, AI consulting and custom software for small businesses, from Elijah Purcell in Tuscaloosa, Alabama.",
+      "AI systems, custom software, AI consulting and websites for small businesses, from Elijah Purcell in Tuscaloosa, Alabama.",
   
     images: ["/opengraph-image"],
   },
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Purcell Ventures: software and AI for small businesses, founded by Elijah Purcell",
     description:
-      "Websites, digital services, AI consulting and custom software for small businesses, from Elijah Purcell in Tuscaloosa, Alabama.",
+      "AI systems, custom software, AI consulting and websites for small businesses, from Elijah Purcell in Tuscaloosa, Alabama.",
   },
   robots: {
     index: true,
@@ -62,7 +62,7 @@ const orgSchema = {
       "@id": "https://purcellventures.co/#website",
       "url": "https://purcellventures.co",
       "name": "Purcell Ventures",
-      "description": "Websites, digital services, AI consulting and custom software for small businesses, from Purcell Ventures LLC, founded by Elijah Purcell.",
+      "description": "AI systems, custom software, AI consulting and websites for small businesses, from Purcell Ventures LLC, founded by Elijah Purcell.",
       "publisher": { "@id": "https://purcellventures.co/#organization" },
       "potentialAction": {
         "@type": "SearchAction",
@@ -85,7 +85,7 @@ const orgSchema = {
         "width": 1200,
         "height": 630,
       },
-      "description": "Purcell Ventures LLC builds websites, digital services and custom software for small businesses and runs hands-on AI consulting. Elijah Purcell founded it in Georgia in April 2025 and runs it from Tuscaloosa, Alabama.",
+      "description": "Purcell Ventures LLC builds AI systems and custom software for small businesses, runs hands-on business and AI consulting, and builds websites. Elijah Purcell founded it in Georgia in April 2025 and runs it from Tuscaloosa, Alabama.",
       "foundingDate": "2025-04-08",
       // A logged-out ChatGPT answer on 20 Aug 2026 volunteered that an older New York
       // LLC shares this company name. Stating the distinguishing fact here means an

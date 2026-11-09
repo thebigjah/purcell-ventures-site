@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Pricing compared with agencies and freelancers",
   description:
-    "Purcell Ventures prices for websites, digital services, AI consulting and custom software, next to typical agency, freelancer and DIY prices.",
+    "Purcell Ventures prices for AI consulting, custom software, digital services and websites, next to typical agency, freelancer and DIY prices.",
   keywords: [
     "purcell ventures pricing", "agency pricing comparison", "AI consulting pricing",
     "small business digital services cost", "AI tools cost comparison",

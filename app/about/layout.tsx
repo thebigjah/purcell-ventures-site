@@ -57,7 +57,7 @@ const schema = {
           "name": "Who is Elijah Purcell?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia company formed in April 2025, control number 25075361, that builds websites, AI tools and custom software for small businesses. He runs it from Tuscaloosa, Alabama, where he studies psychology and data science at the University of Alabama, in New College and the Honors College, Class of 2030. He also founded Mantle Field Services, a sister brand for gutter cleaning, pressure washing and lawn care in metro Atlanta.",
+            "text": "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia company formed in April 2025, control number 25075361, that builds AI systems, custom software and websites for small businesses. He runs it from Tuscaloosa, Alabama, where he studies psychology and data science at the University of Alabama, in New College and the Honors College, Class of 2030. He also founded Mantle Field Services, a sister brand for gutter cleaning, pressure washing and lawn care in metro Atlanta.",
           },
         },
         {
@@ -65,7 +65,7 @@ const schema = {
           "name": "What is Purcell Ventures LLC?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Purcell Ventures LLC is a Georgia company that Elijah Purcell formed in April 2025. It has five active divisions: websites, digital add-ons for small businesses, AI consulting, custom software, and Steady, a personal IT service. Elijah plans to add a real estate division. A sister brand, Mantle Field Services, handles gutter cleaning, pressure washing and lawn care in metro Atlanta.",
+            "text": "Purcell Ventures LLC is a Georgia company that Elijah Purcell formed in April 2025. It has five active divisions: AI consulting, custom software, digital add-ons including AI chatbots, websites, and Steady, a personal IT service. Elijah plans to add a real estate division. A sister brand, Mantle Field Services, handles gutter cleaning, pressure washing and lawn care in metro Atlanta.",
           },
         },
         {
@@ -73,7 +73,7 @@ const schema = {
           "name": "Where is Purcell Ventures located?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Elijah Purcell formed and registered the LLC in Acworth, Georgia. He runs it from Tuscaloosa, Alabama, where he attends the University of Alabama. Websites, digital services, software and AI consulting are available nationwide. Sister brand Mantle Field Services serves metro Atlanta (Kennesaw, Marietta, Acworth, Canton and Woodstock) with gutter cleaning, pressure washing and lawn care.",
+            "text": "Elijah Purcell formed and registered the LLC in Acworth, Georgia. He runs it from Tuscaloosa, Alabama, where he attends the University of Alabama. AI consulting, software, digital services and websites are available nationwide. Sister brand Mantle Field Services serves metro Atlanta (Kennesaw, Marietta, Acworth, Canton and Woodstock) with gutter cleaning, pressure washing and lawn care.",
           },
         },
         {

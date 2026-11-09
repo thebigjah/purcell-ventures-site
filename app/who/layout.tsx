@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 
 const QA: [string, string][] = [
   ["Who is Elijah Purcell?",
-   "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company that builds websites and software for local businesses. He is a psychology and data science student at the University of Alabama, in New College and the Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at 17 and built COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, research and outreach for the company."],
+   "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company that builds AI systems and software for local businesses. He is a psychology and data science student at the University of Alabama, in New College and the Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at 17 and built COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, research and outreach for the company."],
   ["What does Elijah Purcell do?",
    "He designs and ships software end to end: websites for local businesses, mobile and web applications, and AI agent systems. He also works as an independent contractor with Mercor Intelligence on AI model training projects."],
   ["What is Purcell Ventures LLC?",

@@ -136,7 +136,7 @@ export default function AboutPage() {
           items={[
             { q: "Who will I talk to?", a: "Me. I handle every project myself, from the first message to delivery." },
             { q: "How fast do you respond?", a: "I reply within one business day. If you need an answer sooner, call or text." },
-            { q: "Do you work outside Tuscaloosa and Atlanta?", a: "For websites, digital add-ons, consulting and software, yes, remotely. Gutter cleaning, pressure washing and lawn care go through the sister brand Mantle Field Services, in metro Atlanta only." },
+            { q: "Do you work outside Tuscaloosa and Atlanta?", a: "For consulting, software, digital add-ons and websites, yes, remotely. Gutter cleaning, pressure washing and lawn care go through the sister brand Mantle Field Services, in metro Atlanta only." },
             { q: "What is the best way to start?", a: "Send me an email with one sentence about what you need. I will tell you whether I can help and what the work involves." },
           ]}
         />
