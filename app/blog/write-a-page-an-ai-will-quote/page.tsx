@@ -63,7 +63,7 @@ export default function Post() {
 
       <p>
         <strong>Survives:</strong> &quot;Purcell Ventures LLC is a Georgia software company
-        founded by Elijah Purcell in April 2025 that builds websites and software for small
+        founded by Elijah Purcell in April 2025 that builds AI systems and software for small
         businesses.&quot;
       </p>
 

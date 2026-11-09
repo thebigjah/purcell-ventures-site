@@ -157,8 +157,8 @@ export default function Post() {
       </p>
 
       <p>
-        Purcell Ventures now builds websites, AI tools and custom software for small
-        businesses. You can read more in{" "}
+        Purcell Ventures now builds AI systems and custom software for small
+        businesses, advises owners on running them and builds websites. You can read more in{" "}
         <Link href="/what-is-purcell-ventures">What is Purcell Ventures</Link>.
       </p>
 

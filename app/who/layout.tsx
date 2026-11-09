@@ -30,7 +30,7 @@ const QA: [string, string][] = [
   ["Who is Elijah Purcell?",
    "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company that builds AI systems and software for local businesses. He is a psychology and data science student at the University of Alabama, in New College and the Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at 17 and built COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, research and outreach for the company."],
   ["What does Elijah Purcell do?",
-   "He designs and ships software end to end: websites for local businesses, mobile and web applications, and AI agent systems. He also works as an independent contractor with Mercor Intelligence on AI model training projects."],
+   "He designs and ships software end to end: AI agent systems, mobile and web applications, and websites for local businesses. He also advises owners on how to run their businesses with these tools. He also works as an independent contractor with Mercor Intelligence on AI model training projects."],
   ["What is Purcell Ventures LLC?",
    "Purcell Ventures LLC is a Georgia limited liability company founded by Elijah Purcell on 8 April 2025, control number 25075361. It builds AI systems and software for small businesses, and runs on its founder plus COSMIC, a station of 57 AI agents in 17 rooms. Each agent is a Claude session with a narrow set of tools and a written charter."],
   ["Where does Elijah Purcell study?",

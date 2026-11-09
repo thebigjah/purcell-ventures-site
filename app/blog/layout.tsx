@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Blog by Elijah Purcell",
   description:
-    "Essays and guides by Elijah Purcell on AI tools for small businesses, websites and software, based on the systems he runs himself.",
+    "Essays and guides by Elijah Purcell on AI tools and software for small businesses, based on the systems he runs himself.",
   keywords: [
     "small business AI blog", "AI for small business",
     "AI tools writing", "purcell ventures blog",
