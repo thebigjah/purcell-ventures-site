@@ -773,11 +773,13 @@ AI for photographers: inquiry replies, session prep guides and culling help with
 ### Comparisons for small business buyers, Purcell Ventures
 URL: https://purcellventures.co/compare
 
-Small business comparisons before you buy AI or a website: custom AI agent vs Zapier, AI website builder vs custom site, and ChatGPT vs Claude, side by side.
+Small business comparisons before you buy AI or a website: who to hire, chatbot vs receptionist, Zapier vs a custom agent, and ChatGPT vs Claude, side by side.
 
 **Where the prices come from** I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC . Purcell Ventures prices come from my software , websites , digital and consulting pages. Other companies change their prices often, so for their products I describe how each one charges and leave the dollar figures to their own sites.
 
-### Custom AI agent vs Zapier for a small business, Purcell Ventures
+**Where to start** If you are not sure which question you have, take the AI readiness test first. Ten questions score your team out of 30 and point to three next steps. The AI cost calculator then shows how many hours a task costs your team now, which sets a ceiling on what any of these options is worth. For terms you meet along the way, the AI glossary defines each one in plain words.
+
+### Custom AI agent vs Zapier for a small business
 URL: https://purcellventures.co/compare/custom-ai-agent-vs-zapier
 
 Custom AI agent vs Zapier for a small business: when a Zapier workflow is enough and when an agent pays off, plus how each charges and who maintains it.
@@ -838,12 +840,75 @@ ChatGPT vs Claude for a small business: plan structure, team data controls, the 
 
 **How do I get in touch?** Email elijah@purcellventures.co or call (205) 462-7839 with the tasks you want AI to help with. I reply within one business day.
 
+### AI consultant vs agency vs freelancer, Purcell Ventures
+URL: https://purcellventures.co/compare/ai-consultant-vs-agency-vs-freelancer
+
+Who to hire for AI work: an independent AI consultant, an agency, a marketplace freelancer or doing it yourself. When each one fits and how each one charges.
+
+**When should you do it yourself?** Do it yourself when the job is learning a chat assistant. Drafting emails, summarizing documents, writing first drafts of posts and researching a question all fit in a paid ChatGPT or Claude plan and a few weeks of practice. Nobody needs to build anything.
+
+**When is a marketplace freelancer the right call?** A freelancer from a marketplace fits a single task you can describe on one page. A script that moves data from one spreadsheet into another, a chatbot set up on a platform you already chose, or a prompt library for one job. The marketplace shows past reviews and holds the payment until you approve the work.
+
+**When is an agency worth it?** An agency earns its fee on a large project that needs several skills at the same time. A rebuild that touches design, a mobile app, a data system and a marketing launch fits that shape. An agency can staff each part, keep the work moving when one person is out, and sign a contract with terms your legal team expects.
+
+**When does an independent consultant fit?** An independent consultant fits the middle: work too custom for a marketplace listing and too small for an agency minimum. The same person scopes the job, builds it and answers the phone when it breaks, so nothing gets lost between a salesperson and an engineer.
+
+**What does each one cost?** Agencies usually charge a project fee or a monthly retainer, and many set a minimum engagement. Marketplace freelancers charge hourly or a fixed price per job, and some marketplaces add a client fee on top. Rates vary widely in both groups, so get a written quote and check current pricing with each one.
+
+**What should you ask before you hire anyone?** The AI cost calculator shows how many hours a job costs your team now, which tells you how much any of these options can be worth.
+
+**Common questions** An independent consultant is one person who scopes, builds and supports the work. An agency is a team with separate people for sales, project management, design and engineering. The agency can run more work at once, and the consultant puts the person who scoped the job on the build.
+
+**How do I get in touch?** Email elijah@purcellventures.co or call (205) 462-7839 with the job you have in mind. If a freelancer, an agency or your own team fits it better, I will say so. I reply within one business day.
+
+### Hire an AI consultant or do it yourself, Purcell Ventures
+URL: https://purcellventures.co/compare/hire-ai-consultant-vs-do-it-yourself
+
+Should a small business learn AI tools itself or pay for help? When doing it yourself is enough, when a consultant pays back, and what each one costs you.
+
+**When is doing it yourself enough?** Doing it yourself is enough when one person wants help with writing and thinking. Drafting emails and quotes, turning notes into a clean summary, writing a first pass at a job post and researching a supplier all work in a paid chat assistant. Use it on real work every day for two or three weeks and you will know what it does well and where it makes things up.
+
+**When does paying for help save money?** Paying for help saves money when a mistake costs more than the help. Four kinds of jobs fit that test:
+
+**How do you tell which side you are on?** Take the free AI readiness test . Ten questions score your team out of 30 and give you three next steps, with no email required. A low score on data rules points toward help. A high score on daily use points toward doing it yourself.
+
+**What does each path cost?** Doing it yourself costs a chat assistant plan for each person who uses it, plus the hours spent learning. ChatGPT, Claude and Gemini each offer a free plan and paid plans per user, with business plans that add admin and data controls. Prices change, so check current pricing on each company's site.
+
+**What goes wrong with each path?** Doing it yourself goes wrong in two quiet ways. Someone pastes customer details into a free plan whose data terms nobody read, or someone sends an AI draft with a wrong fact because it sounded sure of itself. Both are easy to prevent with a one-page rule sheet and a habit of checking every number and name.
+
+**Can you do both?** Yes, and it is the path I recommend most often. Learn the chat assistant on your own for a few weeks, write down where you got stuck, then book a short session on those exact problems. You pay for two hours instead of ten, and the session answers questions you already have.
+
+**Common questions** Yes. Most owners can learn to draft, summarize and research with a paid chat assistant in a few weeks of regular use. The free tutorials and glossary on this site cover the basics. Paid help speeds up the learning and matters most when a whole team needs the same habits.
+
+**How do I get in touch?** Email elijah@purcellventures.co or call (205) 462-7839 with what you have tried so far. If you can finish it on your own, I will say so. I reply within one business day.
+
+### AI chatbot vs a human receptionist, Purcell Ventures
+URL: https://purcellventures.co/compare/ai-chatbot-vs-human-receptionist
+
+AI chatbot or phone answering vs a human receptionist: what software handles well, what a person must handle, and how each one charges a small business.
+
+**What does a website chatbot handle well?** A website chatbot answers the questions customers ask over and over. What time do you open on Saturday? Do you take walk-ins? How much is a standard cleaning? Where do I park? Trained on your own answers, a chatbot gives the same reply at 11 p.m. that you would give at noon, and it can send the customer to your booking page.
+
+**What can AI phone answering do?** AI voice tools can answer a call, give hours and prices, take a message and book into a connected calendar. They do well on short, predictable calls. They handle a caller with an unusual problem poorly, and an upset caller worse.
+
+**What must a person handle?** A person should handle any conversation where the right answer depends on judgment, feelings or money:
+
+**How does each one charge?** Website chatbots come as monthly plans from chatbot companies, as a feature inside a website or CRM plan, or as a custom build with a fee up front and model usage after. AI phone answering services usually charge a monthly plan with a set number of minutes or calls, or a rate per minute. A receptionist costs an hourly wage plus payroll costs, and a live answering service charges by minutes or calls. Prices change, so check current pricing with each provider.
+
+**Which one should you choose?** Start with the question your customers ask most and where they ask it. If most of them visit your website first and ask the same few things, a chatbot and an online booking page cover a lot of ground. If most of them call, and the calls are short and routine, an AI phone tool with a transfer to a person may help. If the calls are long, personal or emotional, keep a receptionist, and give them a booking page so they spend less time on scheduling.
+
+**Common questions** For routine questions on your website, such as hours, prices, services and how to book, a chatbot can answer at any hour. It cannot calm an upset customer, make an exception or notice that something feels wrong. Most small businesses that use one keep a person for everything outside the routine.
+
+**How do I get in touch?** Email elijah@purcellventures.co or call (205) 462-7839 with the questions your customers ask most. If a chatbot will not help, I will say so. I reply within one business day.
+
 ## Research
 
 ### Research on small business websites, Purcell Ventures
 URL: https://purcellventures.co/research
 
 Purcell Ventures research on small business websites: measured checks of working pages, structured data, AI crawler rules, llms.txt and speed, with the data.
+
+**How the studies work** Every study starts from public data. The Alabama study drew its business listings from OpenStreetMap through the public Overpass API, kept 2,102 unique business domains after dropping chains, government offices, schools and nonprofits, and drew its statewide sample at random with a fixed seed, so anyone can repeat the draw.
 
 ### Alabama small business websites in 2026, 700 sites checked
 URL: https://purcellventures.co/research/alabama-small-business-websites-2026
