@@ -26,6 +26,14 @@ export const TRADES: Trade[] = [
   { slug: "barbershops", name: "barbershops", line: "Booking and no-show reminders, shop questions, posts from cut photos and review replies." },
   { slug: "churches", name: "churches", line: "Sermon clips and summaries, volunteer scheduling and the weekly newsletter." },
   { slug: "auto-repair-shops", name: "auto repair shops", line: "Repair explanations from tech notes, status updates, service reminders and estimate drafts." },
+  { slug: "accountants", name: "accountants", line: "Document intake checklists, engagement letter drafts and tax-season questions, with strict limits on client data." },
+  { slug: "insurance-agents", name: "insurance agents", line: "Quote request intake, renewal reminders and policy questions. No coverage bound or advice given by a bot." },
+  { slug: "gyms", name: "gyms", line: "Trial member follow-up, class schedule questions and retention messages." },
+  { slug: "landscapers", name: "landscapers", line: "Quote intake from yard photos, crew scheduling and seasonal service reminders." },
+  { slug: "cleaning-companies", name: "cleaning companies", line: "Quote intake from photos and room counts, scheduling and recurring cleaning reminders." },
+  { slug: "med-spas", name: "med spas", line: "Booking, consult intake and aftercare from approved templates, with medical and HIPAA limits." },
+  { slug: "veterinary-clinics", name: "veterinary clinics", line: "Appointment reminders, vaccine recalls and new-client intake. Medical questions go to the veterinary team." },
+  { slug: "photographers", name: "photographers", line: "Inquiry replies, session prep guides and culling help, with the photographer making every pick." },
 ];
 
 export const tradeBySlug = (slug: string) => TRADES.find((t) => t.slug === slug)!;

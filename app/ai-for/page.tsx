@@ -13,10 +13,10 @@ const URL = "https://purcellventures.co/ai-for";
 export const metadata: Metadata = {
   title: { absolute: "AI for small business by trade, Purcell Ventures" },
   description:
-    "AI for small business by trade: guides for HVAC, plumbing, roofing, flooring, dental, law, real estate, restaurants, salons, barbershops, churches, auto repair.",
+    "AI for small business by trade: twenty guides, from HVAC and dental offices to gyms, med spas and photographers, on what AI handles and what stays with people.",
   openGraph: {
     title: "AI for small business by trade",
-    description: "AI for small business by trade: guides for HVAC, plumbing, roofing, flooring, dental, law, real estate, restaurants, salons, barbershops, churches, auto repair.",
+    description: "AI for small business by trade: twenty guides, from HVAC and dental offices to gyms, med spas and photographers, on what AI handles and what stays with people.",
     url: URL,
     type: "website",
     images: ["/opengraph-image"],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI for small business by trade",
-    description: "AI for small business by trade: guides for HVAC, plumbing, roofing, flooring, dental, law, real estate, restaurants, salons, barbershops, churches, auto repair.",
+    description: "AI for small business by trade: twenty guides, from HVAC and dental offices to gyms, med spas and photographers, on what AI handles and what stays with people.",
   },
   alternates: { canonical: URL },
 };
@@ -52,7 +52,7 @@ export default function AiForIndex() {
       ]} />}
       kicker="AI for small business"
       title="AI for small business by trade"
-      lede="Twelve trade guides: the jobs AI handles in each business, the work that stays with a person, the privacy cautions, and what Purcell Ventures sets up."
+      lede="Twenty trade guides: the jobs AI handles in each business, the work that stays with a person, the privacy cautions, and what Purcell Ventures sets up."
       meta="By Elijah Purcell, Purcell Ventures, Tuscaloosa."
     >
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LIST) }} />

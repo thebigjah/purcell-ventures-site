@@ -206,8 +206,8 @@ export default function AiForSmallBusiness() {
         Each trade hands AI different jobs. An HVAC company drafts estimates from tech
         notes, a dental office sends recall reminders, a church cuts sermon clips, and a law
         firm keeps legal advice away from any bot. The trade guides in{" "}
-        <Link href="/ai-for">AI for small business by trade</Link> cover twelve businesses,
-        from plumbers and roofers to restaurants, salons and auto repair shops.
+        <Link href="/ai-for">AI for small business by trade</Link> cover twenty businesses,
+        from plumbers and roofers to accountants, gyms and veterinary clinics.
       </p>
 
       <h2>Common questions</h2>
@@ -234,7 +234,7 @@ export default function AiForSmallBusiness() {
         <Link href="/ai-integration">AI integration for small business software</Link>,{" "}
         <Link href="/ai-websites">AI websites for small businesses</Link> and{" "}
         <Link href="/ai-design">AI in design for small businesses</Link>.{" "}
-        <Link href="/ai-for">By trade</Link>: guides for twelve kinds of small business.
+        <Link href="/ai-for">By trade</Link>: guides for twenty kinds of small business.
       </p>
     </PostLayout>
   );

@@ -7,7 +7,7 @@ import { CONTACT } from "@/lib/contact";
 import { pageDates } from "@/lib/page-dates";
 import { TRADES, tradeBySlug } from "./trades";
 
-// Shared parts of the twelve trade pages: metadata, the Article and FAQPage schema, the
+// Shared parts of the trade pages: metadata, the Article and FAQPage schema, the
 // breadcrumb trail, the hero meta line and the closing section. The prose of each page
 // lives in its own page.tsx because each trade needs its own answers.
 
