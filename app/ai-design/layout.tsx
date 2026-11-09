@@ -11,7 +11,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: { absolute: "AI in design for small businesses, Purcell Ventures" },
   description:
-    "What AI design tools do well and badly for logos, brand identity, websites and social graphics, when a small business should hire a designer, and how Purcell Ventures uses AI in design.",
+    "AI in design for small businesses: what AI tools do well and badly for logos, brand identity, websites and social graphics, and when to hire a designer instead.",
   keywords: [
     "AI logo for small business", "AI design tools small business", "AI brand identity",
     "AI social media graphics", "AI website design", "AI vs graphic designer",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI in design for small businesses",
     description:
-      "What AI design tools do well and badly for logos, brands, websites and social graphics, and when to hire a designer.",
+      "AI in design for small businesses: what AI tools do well and badly for logos, brand identity, websites and social graphics, and when to hire a designer instead.",
     url: "https://purcellventures.co/ai-design",
     type: "article",
     images: ["/opengraph-image"],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI in design for small businesses",
-    description: "What AI design tools do well and badly, and when to hire a designer.",
+    description: "AI in design for small businesses: what AI tools do well and badly for logos, brand identity, websites and social graphics, and when to hire a designer instead.",
   },
   alternates: { canonical: "https://purcellventures.co/ai-design" },
 };

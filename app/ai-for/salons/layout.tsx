@@ -9,7 +9,7 @@ const SLUG = "salons";
 
 export const metadata = tradeMetadata(
   SLUG,
-  "How a hair salon can use AI for multi-service booking, rebooking reminders, service and price questions and social captions, what stays with the stylist, and what Purcell Ventures sets up.",
+  "AI for salons: multi-service booking, rebooking reminders, service and price questions and social captions, what stays with the stylist, and what we set up.",
   ["AI for salons", "salon AI booking", "salon rebooking reminders", "AI for hair salons", "salon chatbot"],
 );
 

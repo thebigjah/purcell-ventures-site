@@ -8,7 +8,7 @@ const SLUG = "dental-offices";
 
 export const metadata = tradeMetadata(
   SLUG,
-  "How a dental office can use AI for recall reminders, insurance questions and new-patient forms, the HIPAA cautions that apply to patient data, what stays with clinical staff, and what Purcell Ventures sets up.",
+  "AI for dental offices: recall reminders, insurance questions and new-patient forms, the HIPAA cautions for patient data, and what stays with clinical staff.",
   ["AI for dental offices", "dental AI chatbot", "dental recall reminders", "HIPAA AI tools", "AI for dental practices"],
 );
 

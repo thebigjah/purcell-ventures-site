@@ -9,7 +9,7 @@ const SLUG = "auto-repair-shops";
 
 export const metadata = tradeMetadata(
   SLUG,
-  "How an auto repair shop can use AI for repair explanations from tech notes, status updates, service reminders and estimate drafts, what stays with the technician, and what Purcell Ventures sets up.",
+  "AI for auto repair shops: repair explanations from tech notes, status updates, service reminders and estimate drafts, what stays with the technician, and setup.",
   ["AI for auto repair shops", "auto repair AI estimates", "auto shop service reminders", "AI for mechanics", "auto repair customer updates"],
 );
 

@@ -13,7 +13,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: { absolute: "AI automation for small businesses, Purcell Ventures" },
   description:
-    "Which tasks a small business should automate first, what AI phone answering and booking can do, follow-ups, review requests, what to keep with a person, and what automation costs at Purcell Ventures.",
+    "AI automation for small businesses: which tasks to automate first, what AI phone answering and booking can do, what to keep with a person, and what it costs.",
   keywords: [
     "AI automation for small business", "small business automation", "AI receptionist small business",
     "automate lead follow up", "automate Google review requests", "Zapier vs custom automation",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI automation for small businesses",
     description:
-      "Which tasks to automate first, what to keep with a person, and what automation costs, from a founder who runs 57 AI agents in his own company.",
+      "AI automation for small businesses: which tasks to automate first, what AI phone answering and booking can do, what to keep with a person, and what it costs.",
     url: "https://purcellventures.co/ai-automation",
     type: "article",
     images: ["/opengraph-image"],
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI automation for small businesses",
-    description: "Which tasks to automate first, what to keep with a person, and what it costs.",
+    description: "AI automation for small businesses: which tasks to automate first, what AI phone answering and booking can do, what to keep with a person, and what it costs.",
   },
   alternates: { canonical: "https://purcellventures.co/ai-automation" },
 };

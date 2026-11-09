@@ -8,7 +8,7 @@ const SLUG = "flooring-companies";
 
 export const metadata = tradeMetadata(
   SLUG,
-  "How a flooring company can use AI for estimate write-ups from measurements, quote follow-ups, showroom questions and review replies, what to keep with an installer, and what Purcell Ventures sets up.",
+  "AI for flooring companies: estimate write-ups from measurements, quote follow-ups, showroom questions and review replies, what stays with the installer.",
   ["AI for flooring companies", "flooring estimate software AI", "flooring quote follow-up", "AI for flooring contractors", "flooring chatbot"],
 );
 

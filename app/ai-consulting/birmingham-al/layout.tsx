@@ -14,7 +14,7 @@ const URL = "https://purcellventures.co/ai-consulting/birmingham-al";
 export const metadata: Metadata = {
   title: { absolute: "AI consulting in Birmingham, Alabama, Purcell Ventures" },
   description:
-    "AI training, automation and custom software for Birmingham medical practices, law and accounting firms, banks and engineering offices, from Elijah Purcell in Tuscaloosa. Prices and how it works.",
+    "AI consulting in Birmingham, Alabama for medical practices, law and accounting firms, banks and engineering offices. Training, automation, software, prices.",
   keywords: [
     "AI consulting Birmingham", "AI consultant Birmingham Alabama", "AI training Birmingham",
     "AI automation Birmingham AL", "AI for medical practices Birmingham", "AI for law firms Birmingham",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI consulting in Birmingham, Alabama",
     description:
-      "AI training, automation and custom software for Birmingham businesses, with prices, from Elijah Purcell of Purcell Ventures.",
+      "AI consulting in Birmingham, Alabama for medical practices, law and accounting firms, banks and engineering offices. Training, automation, software, prices.",
     url: URL,
     type: "website",
     images: ["/opengraph-image"],
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI consulting in Birmingham, Alabama: Purcell Ventures",
-    description: "AI training, automation and custom software for Birmingham businesses.",
+    description: "AI consulting in Birmingham, Alabama for medical practices, law and accounting firms, banks and engineering offices. Training, automation, software, prices.",
   },
   alternates: { canonical: URL },
 };

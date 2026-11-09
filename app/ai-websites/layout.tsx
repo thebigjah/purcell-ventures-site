@@ -12,7 +12,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: { absolute: "AI websites for small businesses, Purcell Ventures" },
   description:
-    "How a small business gets found in ChatGPT and Google AI answers, what schema and llms.txt do, whether to block AI crawlers, and when an AI website builder is enough versus a custom site.",
+    "AI websites for small businesses: how to get found in ChatGPT and Google AI answers, what schema and llms.txt do, and when an AI site builder is enough.",
   keywords: [
     "show up in ChatGPT answers", "generative engine optimization small business", "AI website builder vs custom website",
     "llms.txt small business", "schema markup AI search", "AI search optimization Alabama",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI websites for small businesses",
     description:
-      "Getting found in ChatGPT and Google AI answers, and when an AI website builder is enough.",
+      "AI websites for small businesses: how to get found in ChatGPT and Google AI answers, what schema and llms.txt do, and when an AI site builder is enough.",
     url: "https://purcellventures.co/ai-websites",
     type: "article",
     images: ["/opengraph-image"],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI websites for small businesses",
-    description: "Getting found in ChatGPT and Google AI answers, and when an AI website builder is enough.",
+    description: "AI websites for small businesses: how to get found in ChatGPT and Google AI answers, what schema and llms.txt do, and when an AI site builder is enough.",
   },
   alternates: { canonical: "https://purcellventures.co/ai-websites" },
 };

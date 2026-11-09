@@ -14,7 +14,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: { absolute: "AI consulting in Alabama, Purcell Ventures" },
   description:
-    "AI consulting, AI automation and custom software for Alabama businesses from Elijah Purcell of Purcell Ventures in Tuscaloosa. Prices, what each service fits, and when AI is the wrong purchase.",
+    "AI consulting in Alabama from Elijah Purcell in Tuscaloosa: AI, automation and custom software for local businesses. Prices and when AI is the wrong buy.",
   keywords: [
     "AI consulting Alabama", "AI consultant Alabama", "AI consulting Birmingham",
     "AI consulting Huntsville", "AI consulting Montgomery", "AI consulting Mobile",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI consulting in Alabama",
     description:
-      "AI consulting, AI automation and custom software for Alabama businesses, with prices, from Elijah Purcell in Tuscaloosa.",
+      "AI consulting in Alabama from Elijah Purcell in Tuscaloosa: AI, automation and custom software for local businesses. Prices and when AI is the wrong buy.",
     url: "https://purcellventures.co/ai-consulting",
     type: "website",
     images: ["/opengraph-image"],
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI consulting in Alabama: Purcell Ventures",
-    description: "AI consulting, AI automation and custom software for Alabama businesses.",
+    description: "AI consulting in Alabama from Elijah Purcell in Tuscaloosa: AI, automation and custom software for local businesses. Prices and when AI is the wrong buy.",
   },
   alternates: { canonical: "https://purcellventures.co/ai-consulting" },
 };

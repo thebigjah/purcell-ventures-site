@@ -15,13 +15,13 @@ const PATH = "/compare/ai-website-builder-vs-custom-site";
 const URL = `https://purcellventures.co${PATH}`;
 
 export const metadata: Metadata = {
-  title: { absolute: "AI website builder vs a custom site for a small business, Purcell Ventures" },
+  title: { absolute: "AI website builder vs a custom site, Purcell Ventures" },
   description:
-    "When an AI website builder is enough for a small business and when a custom site is worth the build fee: cost shape, structured data, integrations, AI search and what you own if you leave.",
+    "AI website builder vs custom site for a small business: when a builder is enough and when a custom site is worth the build fee. Covers cost and what you own.",
   alternates: { canonical: URL },
   openGraph: {
     title: "AI website builder vs a custom site",
-    description: "When an AI website builder is enough, and when a custom site is worth the build fee.",
+    description: "AI website builder vs custom site for a small business: when a builder is enough and when a custom site is worth the build fee. Covers cost and what you own.",
     url: URL,
     type: "article",
     images: ["/opengraph-image"],

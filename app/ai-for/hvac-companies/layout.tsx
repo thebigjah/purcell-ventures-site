@@ -9,7 +9,7 @@ const SLUG = "hvac-companies";
 
 export const metadata = tradeMetadata(
   SLUG,
-  "How an HVAC company can use AI for after-hours call capture, maintenance-plan reminders and estimate write-ups from tech notes, what to keep with a technician, and what Purcell Ventures sets up.",
+  "AI for HVAC companies: after-hours call capture, maintenance-plan reminders and estimate write-ups from tech notes, and what stays with a technician.",
   ["AI for HVAC companies", "HVAC AI answering", "HVAC maintenance plan reminders", "AI for HVAC estimates", "HVAC chatbot"],
 );
 

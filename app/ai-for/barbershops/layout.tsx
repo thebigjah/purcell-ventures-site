@@ -9,7 +9,7 @@ const SLUG = "barbershops";
 
 export const metadata = tradeMetadata(
   SLUG,
-  "How a barbershop can use AI for booking by barber, no-show reminders, shop questions, posts from cut photos and review replies, what stays with the barber, and what Purcell Ventures sets up.",
+  "AI for barbershops: booking by barber, no-show reminders, shop questions, posts from cut photos and review replies, what stays with the barber, and our setup.",
   ["AI for barbershops", "barbershop booking app", "barber no-show reminders", "barbershop social media AI", "barbershop chatbot"],
 );
 

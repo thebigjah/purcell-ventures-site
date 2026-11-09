@@ -5,11 +5,11 @@ import { QA } from "./faq";
 export const metadata: Metadata = {
   title: "AI visibility check for your business website",
   description:
-    "A free check of whether ChatGPT, Claude, Perplexity and Google's AI can read your business website: AI crawler rules, llms.txt, title, description, structured data, phone, address, hours and page text. No account.",
+    "Free AI visibility check: see whether ChatGPT, Claude, Perplexity and Google's AI can read your business website. It tests crawler rules, llms.txt and schema.",
   alternates: { canonical: "/ai-visibility-check" },
   openGraph: {
     title: "AI visibility check",
-    description: "Check whether AI assistants can read your business website. Free, no account.",
+    description: "Free AI visibility check: see whether ChatGPT, Claude, Perplexity and Google's AI can read your business website. It tests crawler rules, llms.txt and schema.",
     url: "https://purcellventures.co/ai-visibility-check",
     type: "website",
     images: ["/opengraph-image"],

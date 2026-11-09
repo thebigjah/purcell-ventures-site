@@ -13,7 +13,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: { absolute: "AI for small business, Purcell Ventures" },
   description:
-    "How a small business can start with AI: safe first tasks, free tools, checking AI answers, a staff AI policy, telling customers, and where AI wastes money. From Elijah Purcell of Purcell Ventures.",
+    "AI for small business: how to start with safe first tasks and free tools, check AI answers, write a staff AI policy and avoid the places where AI wastes money.",
   keywords: [
     "AI for small business", "how to use AI in a small business", "free AI tools for small business",
     "small business AI policy", "ChatGPT for small business", "AI mistakes small business",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI for small business",
     description:
-      "Safe first tasks, checking AI answers, a staff AI policy and where AI wastes money, for small business owners.",
+      "AI for small business: how to start with safe first tasks and free tools, check AI answers, write a staff AI policy and avoid the places where AI wastes money.",
     url: "https://purcellventures.co/ai-for-small-business",
     type: "article",
     images: ["/opengraph-image"],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI for small business",
-    description: "Safe first tasks, checking AI answers, a staff AI policy and where AI wastes money.",
+    description: "AI for small business: how to start with safe first tasks and free tools, check AI answers, write a staff AI policy and avoid the places where AI wastes money.",
   },
   alternates: { canonical: "https://purcellventures.co/ai-for-small-business" },
 };

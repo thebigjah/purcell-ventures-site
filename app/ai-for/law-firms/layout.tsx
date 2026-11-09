@@ -9,7 +9,7 @@ const SLUG = "law-firms";
 
 export const metadata = tradeMetadata(
   SLUG,
-  "How a small law firm can use AI for intake screening under strict confidentiality limits and for first drafts an attorney reviews, why a bot never gives legal advice, and what Purcell Ventures sets up.",
+  "AI for law firms: intake screening under strict confidentiality limits and first drafts an attorney reviews, and why a bot never gives legal advice.",
   ["AI for law firms", "AI legal intake", "AI for small law firms", "law firm chatbot", "AI document drafting for lawyers"],
 );
 

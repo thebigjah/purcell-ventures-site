@@ -17,11 +17,11 @@ const URL = `https://purcellventures.co${PATH}`;
 export const metadata: Metadata = {
   title: { absolute: "Custom AI agent vs Zapier for a small business, Purcell Ventures" },
   description:
-    "When a Zapier workflow is enough and when a custom AI agent pays for itself: how each works, how each charges, who maintains it, and the questions to ask before you pay for either.",
+    "Custom AI agent vs Zapier for a small business: when a Zapier workflow is enough and when an agent pays off, plus how each charges and who maintains it.",
   alternates: { canonical: URL },
   openGraph: {
     title: "Custom AI agent vs Zapier",
-    description: "When a Zapier workflow is enough and when a custom AI agent pays for itself.",
+    description: "Custom AI agent vs Zapier for a small business: when a Zapier workflow is enough and when an agent pays off, plus how each charges and who maintains it.",
     url: URL,
     type: "article",
     images: ["/opengraph-image"],

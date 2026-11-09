@@ -15,7 +15,7 @@ const URL = "https://purcellventures.co/ai-consulting/auburn-al";
 export const metadata: Metadata = {
   title: { absolute: "AI consulting in Auburn, Alabama, Purcell Ventures" },
   description:
-    "AI training, automation and custom software for Auburn restaurants, shops, student housing and young founders, from Elijah Purcell in Tuscaloosa. Prices and how it works.",
+    "AI consulting in Auburn, Alabama for restaurants, shops, student housing and young founders. Training, automation, custom software and prices.",
   keywords: [
     "AI consulting Auburn",
     "AI consultant Auburn Alabama",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI consulting in Auburn, Alabama",
     description:
-      "AI training, automation and custom software for Auburn businesses, with prices, from Elijah Purcell of Purcell Ventures.",
+      "AI consulting in Auburn, Alabama for restaurants, shops, student housing and young founders. Training, automation, custom software and prices.",
     url: URL,
     type: "website",
     images: ["/opengraph-image"],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI consulting in Auburn, Alabama: Purcell Ventures",
-    description: "AI training, automation and custom software for Auburn businesses.",
+    description: "AI consulting in Auburn, Alabama for restaurants, shops, student housing and young founders. Training, automation, custom software and prices.",
   },
   alternates: { canonical: URL },
 };

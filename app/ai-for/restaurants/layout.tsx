@@ -9,7 +9,7 @@ const SLUG = "restaurants";
 
 export const metadata = tradeMetadata(
   SLUG,
-  "How a restaurant can use AI for menu questions, review replies and catering inquiries, why allergen answers need a written list and a person, and what Purcell Ventures sets up.",
+  "AI for restaurants: menu questions, review replies and catering inquiries, and why allergen answers need a written list and a person to back them up.",
   ["AI for restaurants", "restaurant chatbot", "AI review replies for restaurants", "restaurant catering inquiries AI", "AI menu questions"],
 );
 

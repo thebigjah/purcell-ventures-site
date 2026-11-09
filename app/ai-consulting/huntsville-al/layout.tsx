@@ -15,7 +15,7 @@ const URL = "https://purcellventures.co/ai-consulting/huntsville-al";
 export const metadata: Metadata = {
   title: { absolute: "AI consulting in Huntsville, Alabama, Purcell Ventures" },
   description:
-    "AI training, automation and custom software for Huntsville defense contractors, engineering firms, staffing companies and local businesses, from Elijah Purcell in Tuscaloosa. Prices and data rules.",
+    "AI consulting in Huntsville, Alabama for defense contractors, engineering firms and staffing companies. Training, automation, software, prices and data rules.",
   keywords: [
     "AI consulting Huntsville",
     "AI consultant Huntsville Alabama",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI consulting in Huntsville, Alabama",
     description:
-      "AI training, automation and custom software for Huntsville businesses, with prices, from Elijah Purcell of Purcell Ventures.",
+      "AI consulting in Huntsville, Alabama for defense contractors, engineering firms and staffing companies. Training, automation, software, prices and data rules.",
     url: URL,
     type: "website",
     images: ["/opengraph-image"],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI consulting in Huntsville, Alabama: Purcell Ventures",
-    description: "AI training, automation and custom software for Huntsville businesses.",
+    description: "AI consulting in Huntsville, Alabama for defense contractors, engineering firms and staffing companies. Training, automation, software, prices and data rules.",
   },
   alternates: { canonical: URL },
 };

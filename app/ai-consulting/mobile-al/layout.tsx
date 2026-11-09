@@ -15,7 +15,7 @@ const URL = "https://purcellventures.co/ai-consulting/mobile-al";
 export const metadata: Metadata = {
   title: { absolute: "AI consulting in Mobile, Alabama, Purcell Ventures" },
   description:
-    "AI training, automation and custom software for Mobile freight forwarders, logistics firms, marine contractors, hotels and rentals, from Elijah Purcell in Tuscaloosa. Prices and how it works.",
+    "AI consulting in Mobile, Alabama for freight forwarders, logistics firms, marine contractors, hotels and rentals. Training, automation, software and prices.",
   keywords: [
     "AI consulting Mobile",
     "AI consultant Mobile Alabama",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI consulting in Mobile, Alabama",
     description:
-      "AI training, automation and custom software for Mobile businesses, with prices, from Elijah Purcell of Purcell Ventures.",
+      "AI consulting in Mobile, Alabama for freight forwarders, logistics firms, marine contractors, hotels and rentals. Training, automation, software and prices.",
     url: URL,
     type: "website",
     images: ["/opengraph-image"],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI consulting in Mobile, Alabama: Purcell Ventures",
-    description: "AI training, automation and custom software for Mobile businesses.",
+    description: "AI consulting in Mobile, Alabama for freight forwarders, logistics firms, marine contractors, hotels and rentals. Training, automation, software and prices.",
   },
   alternates: { canonical: URL },
 };

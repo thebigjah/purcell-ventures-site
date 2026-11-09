@@ -8,7 +8,7 @@ const SLUG = "roofers";
 
 export const metadata = tradeMetadata(
   SLUG,
-  "How a roofing company can use AI for inspection reports from photos and notes, storm-season lead sorting and insurance paperwork drafts, what to keep with an inspector, and what Purcell Ventures sets up.",
+  "AI for roofers: inspection reports from photos and notes, storm-season lead sorting and insurance paperwork drafts, what stays with an inspector, and our setup.",
   ["AI for roofers", "AI roofing inspection report", "roofing lead management AI", "AI for roofing companies", "roofing insurance claim paperwork"],
 );
 

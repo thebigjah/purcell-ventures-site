@@ -17,11 +17,11 @@ const URL = `https://purcellventures.co${PATH}`;
 export const metadata: Metadata = {
   title: { absolute: "ChatGPT vs Claude for a small business, Purcell Ventures" },
   description:
-    "ChatGPT or Claude for a small business: plan structure, team data controls, features that differ, when one paid seat is enough, and how to test both on your own work before you buy.",
+    "ChatGPT vs Claude for a small business: plan structure, team data controls, the features that differ, and how to test both on your own work before you buy.",
   alternates: { canonical: URL },
   openGraph: {
     title: "ChatGPT vs Claude for a small business",
-    description: "Plan structure, team data controls, the features that differ, and how to test both on your own work.",
+    description: "ChatGPT vs Claude for a small business: plan structure, team data controls, the features that differ, and how to test both on your own work before you buy.",
     url: URL,
     type: "article",
     images: ["/opengraph-image"],

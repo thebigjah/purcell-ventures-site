@@ -8,7 +8,7 @@ const SLUG = "real-estate-agents";
 
 export const metadata = tradeMetadata(
   SLUG,
-  "How a real estate agent can use AI for listing descriptions, lead follow-up and showing feedback summaries, the fair housing and MLS cautions that apply, and what Purcell Ventures sets up.",
+  "AI for real estate agents: listing descriptions, lead follow-up and showing feedback summaries, plus the fair housing and MLS cautions that apply.",
   ["AI for real estate agents", "AI listing descriptions", "real estate lead follow-up AI", "fair housing AI", "AI for realtors"],
 );
 

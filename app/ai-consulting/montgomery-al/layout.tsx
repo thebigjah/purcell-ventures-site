@@ -15,7 +15,7 @@ const URL = "https://purcellventures.co/ai-consulting/montgomery-al";
 export const metadata: Metadata = {
   title: { absolute: "AI consulting in Montgomery, Alabama, Purcell Ventures" },
   description:
-    "AI training, automation and custom software for Montgomery firms that work with state government, automotive suppliers and businesses near Maxwell AFB, from Elijah Purcell in Tuscaloosa.",
+    "AI consulting in Montgomery, Alabama for firms working with state government, auto suppliers and businesses near Maxwell AFB. Training, automation, software.",
   keywords: [
     "AI consulting Montgomery",
     "AI consultant Montgomery Alabama",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI consulting in Montgomery, Alabama",
     description:
-      "AI training, automation and custom software for Montgomery businesses, with prices, from Elijah Purcell of Purcell Ventures.",
+      "AI consulting in Montgomery, Alabama for firms working with state government, auto suppliers and businesses near Maxwell AFB. Training, automation, software.",
     url: URL,
     type: "website",
     images: ["/opengraph-image"],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI consulting in Montgomery, Alabama: Purcell Ventures",
-    description: "AI training, automation and custom software for Montgomery businesses.",
+    description: "AI consulting in Montgomery, Alabama for firms working with state government, auto suppliers and businesses near Maxwell AFB. Training, automation, software.",
   },
   alternates: { canonical: URL },
 };

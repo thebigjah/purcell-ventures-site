@@ -8,7 +8,7 @@ const SLUG = "plumbers";
 
 export const metadata = tradeMetadata(
   SLUG,
-  "How a plumbing business can use AI for emergency call triage, job summaries from tech notes, quote follow-ups and review replies, what to keep with a licensed plumber, and what Purcell Ventures sets up.",
+  "AI for plumbers: emergency call triage, job summaries from tech notes, quote follow-ups and review replies, and what stays with a licensed plumber.",
   ["AI for plumbers", "plumbing AI answering", "AI for plumbing businesses", "plumbing quote follow-up", "plumber chatbot"],
 );
 

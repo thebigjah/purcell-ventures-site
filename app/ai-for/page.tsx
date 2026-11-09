@@ -13,10 +13,10 @@ const URL = "https://purcellventures.co/ai-for";
 export const metadata: Metadata = {
   title: { absolute: "AI for small business by trade, Purcell Ventures" },
   description:
-    "Trade guides to AI for HVAC, plumbing, roofing, flooring, dental offices, law firms, real estate agents, restaurants, salons, barbershops, churches and auto repair shops.",
+    "AI for small business by trade: guides for HVAC, plumbing, roofing, flooring, dental, law, real estate, restaurants, salons, barbershops, churches, auto repair.",
   openGraph: {
     title: "AI for small business by trade",
-    description: "Which jobs AI handles in twelve kinds of small business, what stays with a person, and what Purcell Ventures sets up.",
+    description: "AI for small business by trade: guides for HVAC, plumbing, roofing, flooring, dental, law, real estate, restaurants, salons, barbershops, churches, auto repair.",
     url: URL,
     type: "website",
     images: ["/opengraph-image"],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI for small business by trade",
-    description: "Which jobs AI handles in twelve kinds of small business and what stays with a person.",
+    description: "AI for small business by trade: guides for HVAC, plumbing, roofing, flooring, dental, law, real estate, restaurants, salons, barbershops, churches, auto repair.",
   },
   alternates: { canonical: URL },
 };

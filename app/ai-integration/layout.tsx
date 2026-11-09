@@ -11,7 +11,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: { absolute: "AI integration for small business software, Purcell Ventures" },
   description:
-    "How a small business connects AI to software it already uses: Google Workspace, QuickBooks, a CRM, a website, phone and text. Off-the-shelf versus custom, data safety, upkeep and prices.",
+    "AI integration for small business: connect AI to Google Workspace, QuickBooks, a CRM, your website, phone and text. Off-the-shelf vs custom, safety, prices.",
   keywords: [
     "AI integration small business", "add AI to CRM", "AI chatbot trained on my website",
     "AI QuickBooks integration", "connect ChatGPT to business software", "custom AI integration Alabama",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI integration for small business software",
     description:
-      "Connecting AI to Google Workspace, QuickBooks, a CRM, a website and phone or text, with what it costs and how to keep data safe.",
+      "AI integration for small business: connect AI to Google Workspace, QuickBooks, a CRM, your website, phone and text. Off-the-shelf vs custom, safety, prices.",
     url: "https://purcellventures.co/ai-integration",
     type: "article",
     images: ["/opengraph-image"],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI integration for small business software",
-    description: "Connecting AI to the software a small business already uses.",
+    description: "AI integration for small business: connect AI to Google Workspace, QuickBooks, a CRM, your website, phone and text. Off-the-shelf vs custom, safety, prices.",
   },
   alternates: { canonical: "https://purcellventures.co/ai-integration" },
 };

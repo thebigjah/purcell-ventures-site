@@ -10,7 +10,7 @@ import PageDates, { UpdatedLine } from "@/app/components/PageDates";
 export const metadata: Metadata = {
   title: "Comparisons for small business buyers",
   description:
-    "Side-by-side comparisons for small business owners about to pay for AI or a website: a custom AI agent vs Zapier, an AI website builder vs a custom site, and ChatGPT vs Claude.",
+    "Small business comparisons before you buy AI or a website: custom AI agent vs Zapier, AI website builder vs custom site, and ChatGPT vs Claude, side by side.",
   alternates: { canonical: "https://purcellventures.co/compare" },
 };
 
