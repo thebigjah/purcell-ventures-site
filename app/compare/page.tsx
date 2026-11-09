@@ -6,34 +6,50 @@ import PageDates, { UpdatedLine } from "@/app/components/PageDates";
 
 // Index for the /compare pages (9 Nov 2026). Each comparison sits under it in the
 // breadcrumb trail, so this page has to exist for that trail to lead somewhere.
+// Each row line names the question its page answers.
 
 export const metadata: Metadata = {
   title: "Comparisons for small business buyers",
   description:
-    "Small business comparisons before you buy AI or a website: custom AI agent vs Zapier, AI website builder vs custom site, and ChatGPT vs Claude, side by side.",
+    "Small business comparisons before you buy AI or a website: who to hire, chatbot vs receptionist, Zapier vs a custom agent, and ChatGPT vs Claude, side by side.",
   alternates: { canonical: "https://purcellventures.co/compare" },
 };
 
 const PAGES = [
   {
+    name: "AI consultant vs agency vs freelancer",
+    href: "/compare/ai-consultant-vs-agency-vs-freelancer",
+    line: "Answers who to hire for AI work: an independent consultant, an agency, a marketplace freelancer or your own team.",
+  },
+  {
+    name: "Hire an AI consultant or do it yourself",
+    href: "/compare/hire-ai-consultant-vs-do-it-yourself",
+    line: "Answers whether your business should learn AI tools on its own or pay for training, and how to tell which side you are on.",
+  },
+  {
+    name: "AI chatbot vs a human receptionist",
+    href: "/compare/ai-chatbot-vs-human-receptionist",
+    line: "Answers which customer questions a website chatbot or AI phone answering can take and which ones need a person.",
+  },
+  {
     name: "Custom AI agent vs Zapier",
     href: "/compare/custom-ai-agent-vs-zapier",
-    line: "When a Zapier workflow is enough, when a custom agent pays for itself, and what each costs to run.",
+    line: "Answers when a Zapier workflow is enough and when a custom agent pays for itself, with what each costs to run.",
   },
   {
     name: "AI website builder vs a custom site",
     href: "/compare/ai-website-builder-vs-custom-site",
-    line: "When a builder is enough, when a custom site is worth the build fee, and what you own if you leave.",
+    line: "Answers when a builder is enough, when a custom site is worth the build fee, and what you own if you leave.",
   },
   {
     name: "ChatGPT vs Claude for a small business",
     href: "/compare/chatgpt-vs-claude-for-small-business",
-    line: "Plans, team data controls, the features that differ, and a test to run on your own work.",
+    line: "Answers which chat assistant fits your team, with plans, data controls and a test to run on your own work.",
   },
   {
     name: "My prices next to agencies and freelancers",
     href: "/pricing-comparison",
-    line: "Purcell Ventures prices beside typical agency, freelancer and do-it-yourself prices.",
+    line: "Answers how Purcell Ventures prices sit beside typical agency, freelancer and do-it-yourself prices.",
   },
 ];
 
@@ -48,10 +64,19 @@ export default function ComparePage() {
         ]} />}
         kicker="Comparisons"
         title="Comparisons for small business buyers"
-        lede="A custom AI agent or Zapier, a website builder or a custom site, ChatGPT or Claude. When the cheaper option is the better buy, and what each one costs."
+        lede="Six side-by-side comparisons for a small business about to spend money on AI or a website. Each one names when the cheaper option or the other company is the better buy."
       />
 
       <Section stack>
+        <Prose>
+          <p>
+            Before you pay for AI work or a new website, two questions decide most of the
+            outcome: who should do the work, and which tool fits the job. Each comparison below
+            opens with a table you can read in a minute, then covers when each option fits, what
+            goes wrong, how each one charges and what to ask before you sign. Where the answer is
+            a free tool, a do-it-yourself plan or another company, the comparison says so.
+          </p>
+        </Prose>
         <Rows items={PAGES} />
       </Section>
 
@@ -64,6 +89,23 @@ export default function ComparePage() {
             <Link href="/consulting">consulting</Link> pages. Other companies change their prices
             often, so for their products I describe how each one charges and leave the dollar
             figures to their own sites.
+          </p>
+          <p>
+            If a fact about another company has changed, email me and I will correct it.
+          </p>
+        </Prose>
+      </Section>
+
+      <Section title="Where to start">
+        <Prose>
+          <p>
+            If you are not sure which question you have, take the{" "}
+            <Link href="/ai-readiness">AI readiness test</Link> first. Ten questions score your
+            team out of 30 and point to three next steps. The{" "}
+            <Link href="/ai-cost-calculator">AI cost calculator</Link> then shows how many hours
+            a task costs your team now, which sets a ceiling on what any of these options is
+            worth. For terms you meet along the way, the{" "}
+            <Link href="/ai-glossary">AI glossary</Link> defines each one in plain words.
           </p>
         </Prose>
       </Section>

@@ -116,6 +116,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/compare/custom-ai-agent-vs-zapier`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/compare/ai-website-builder-vs-custom-site`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/compare/chatgpt-vs-claude-for-small-business`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/compare/ai-consultant-vs-agency-vs-freelancer`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/compare/hire-ai-consultant-vs-do-it-yourself`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/compare/ai-chatbot-vs-human-receptionist`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
 
     { url: `${BASE}/blog/canonical-tag-noindex`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
