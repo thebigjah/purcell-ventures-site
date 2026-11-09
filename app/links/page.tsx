@@ -26,6 +26,7 @@ const SECTIONS: { label: string; items: Item[] }[] = [
     items: [
       { href: "/ai-readiness", name: "AI readiness test", line: "10 questions in 3 minutes. It scores how your team uses AI and suggests next steps. No email required." },
       { href: "/ai-cost-calculator", name: "AI cost calculator", line: "Enter your team size and workload to see how fast an AI session pays for itself. It shows the formula it uses." },
+      { href: "/ai-visibility-check", name: "AI visibility check", line: "Enter your website to see whether AI crawlers can read it, and what to fix. No account." },
     ],
   },
   {

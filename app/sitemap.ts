@@ -51,6 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Booking and case studies, conversion paths
     { url: `${BASE}/ai-readiness`,        lastModified: aug22, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/ai-cost-calculator`,  lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/ai-visibility-check`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/case-studies`,    lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // Every post, not the two that happened to be listed. A post absent from the
@@ -104,6 +105,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // "AI for [trade]" set under the AI for small business pillar, written 9 Nov 2026.
     { url: `${BASE}/ai-for`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 },
     ...TRADES.map((t) => ({ url: `${BASE}/ai-for/${t.slug}`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly" as const, priority: 0.7 })),
+    // Buyer comparisons, written 9 Nov 2026.
+    { url: `${BASE}/compare`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/compare/custom-ai-agent-vs-zapier`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/compare/ai-website-builder-vs-custom-site`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/compare/chatgpt-vs-claude-for-small-business`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
 
     { url: `${BASE}/blog/canonical-tag-noindex`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 

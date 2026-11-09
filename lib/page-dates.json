@@ -119,6 +119,10 @@
     "published": "2026-05-21",
     "modified": "2026-11-03"
   },
+  "/ai-visibility-check": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
   "/ai-websites": {
     "published": "2026-11-09",
     "modified": "2026-11-09"
@@ -311,6 +315,22 @@
     "published": "2026-05-16",
     "modified": "2026-11-09"
   },
+  "/compare": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
+  "/compare/ai-website-builder-vs-custom-site": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
+  "/compare/chatgpt-vs-claude-for-small-business": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
+  "/compare/custom-ai-agent-vs-zapier": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
   "/consulting": {
     "published": "2026-03-05",
     "modified": "2026-11-03"
@@ -393,7 +413,7 @@
   },
   "/digital/tools": {
     "published": "2026-05-25",
-    "modified": "2026-10-26"
+    "modified": "2026-11-09"
   },
   "/faq": {
     "published": "2026-05-21",
