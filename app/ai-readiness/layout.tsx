@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageDates from "@/app/components/PageDates";
+import ToolSchema from "@/app/components/ToolSchema";
 
 export const metadata: Metadata = {
   title: "AI readiness test in 10 questions and 3 minutes",
@@ -32,6 +33,7 @@ export default function AIReadinessLayout({ children }: { children: React.ReactN
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
+      <ToolSchema name="AI readiness test in 10 questions and 3 minutes" path="/ai-readiness" description="An AI readiness test for small business owners and team leaders. Ten questions score your team out of 30 and give you three next steps. No email required." />
       <PageDates path="/ai-readiness" />
       {children}
     </>
