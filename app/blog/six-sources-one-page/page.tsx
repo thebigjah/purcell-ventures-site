@@ -7,10 +7,10 @@ export const metadata = {
   alternates: { canonical: "/blog/six-sources-one-page" },
   title: { absolute: "Building a campus events site from six sources" },
   description:
-    "How UA Today combines six separate feeds of University of Alabama events into one page, why the hard part is detecting a source that stops sending events without raising an error, and what a floor check is.",
+    "How UA Today merges six feeds of University of Alabama events into one page, and why the hard part is catching a source that stops sending events with no error.",
   openGraph: {
     title: "Building a campus events site from six sources",
-    description: "How UA Today combines six separate feeds of University of Alabama events into one page, why the hard part is detecting a source that stops sending events without raising an error, and what a floor check is.",
+    description: "How UA Today merges six feeds of University of Alabama events into one page, and why the hard part is catching a source that stops sending events with no error.",
     url: "/blog/six-sources-one-page",
     type: "article",
     images: ["/opengraph-image"],

@@ -6,10 +6,10 @@ import { PostLayout, Note } from "@/app/components/ui";
 export const metadata = {
   alternates: { canonical: "/blog/why-i-built-crm-from-scratch" },
   title: { absolute: "Why I built a CRM from scratch instead of paying HubSpot" },
-  description: "HubSpot starts at $50 a month, and the features I needed put it at $200 to $400 a month. I built my own CRM in a week instead. The costs, what I gave up, and when you should not do this.",
+  description: "HubSpot would have cost me $200 to $400 a month for the features I needed, so I built my own CRM in a week. The costs, what I gave up, and when to skip it.",
   openGraph: {
     title: "Why I built a CRM from scratch instead of paying HubSpot",
-    description: "HubSpot starts at $50 a month, and the features I needed put it at $200 to $400 a month. I built my own CRM in a week instead. The costs, what I gave up, and when you should not do this.",
+    description: "HubSpot would have cost me $200 to $400 a month for the features I needed, so I built my own CRM in a week. The costs, what I gave up, and when to skip it.",
     url: "/blog/why-i-built-crm-from-scratch",
     type: "article",
     images: ["/opengraph-image"],
@@ -139,7 +139,7 @@ export default function Post() {
       <PostByline post={{
         slug: "why-i-built-crm-from-scratch",
         title: "Why I built a CRM from scratch instead of paying for HubSpot",
-        description: "HubSpot starts at $50 a month, and the features I needed put it at $200 to $400 a month. I built my own CRM in a week instead. The costs, what I gave up, and when you should not do this.",
+        description: "HubSpot would have cost me $200 to $400 a month for the features I needed, so I built my own CRM in a week. The costs, what I gave up, and when to skip it.",
         published: "2026-05-25",
       }} />
     </PostLayout>

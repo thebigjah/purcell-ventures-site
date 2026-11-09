@@ -7,10 +7,10 @@ export const metadata = {
   alternates: { canonical: "/blog/agents-that-cannot-fix-what-they-find" },
   title: { absolute: "I built agents that cannot fix what they find" },
   description:
-    "I split the agent that finds problems from the one that fixes them. That kept agents out of files they should not read, and it left every finding open until I built a way to close them.",
+    "I split the AI agent that finds problems from the one that fixes them. That kept agents out of files they should not read and left every finding open.",
   openGraph: {
     title: "I built agents that cannot fix what they find",
-    description: "I split the agent that finds problems from the one that fixes them. That kept agents out of files they should not read, and it left every finding open until I built a way to close them.",
+    description: "I split the AI agent that finds problems from the one that fixes them. That kept agents out of files they should not read and left every finding open.",
     url: "/blog/agents-that-cannot-fix-what-they-find",
     type: "article",
     images: ["/opengraph-image"],
@@ -77,7 +77,7 @@ export default function Post() {
 <PostByline post={{
             slug: "agents-that-cannot-fix-what-they-find",
             title: "I built agents that cannot fix what they find",
-            description: "I split the agent that finds problems from the one that fixes them. That kept agents out of files they should not read, and it left every finding open until I built a way to close them.",
+            description: "I split the AI agent that finds problems from the one that fixes them. That kept agents out of files they should not read and left every finding open.",
             published: "2026-08-17",
           }} />
 

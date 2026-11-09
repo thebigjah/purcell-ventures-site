@@ -81,7 +81,7 @@ const POST: Data = {
 
 export const metadata = {
   alternates: { canonical: "/blog/slow-site-on-phone-causes-free-tests" },
-  title: { absolute: POST.title },
+  title: { absolute: "Business site slow on a phone? Causes and free tests" },
   description: POST.description,
   openGraph: {
     title: POST.title,

@@ -14,10 +14,10 @@ export const metadata = {
   alternates: { canonical: "/blog/small-app-security-checklist" },
   title: { absolute: "Five security holes I keep finding in small production apps" },
   description:
-    "What turns up when you audit small production applications: row-level security with policies that let everyone in, paid API routes with no authentication, auth cookies anyone can forge, and two more. Written from seven read-only audits.",
+    "Security holes from seven read-only audits of small production apps: open row-level security, paid API routes with no auth, forgeable cookies and more.",
   openGraph: {
     title: "Five security holes I keep finding in small production apps",
-    description: "What turns up when you audit small production applications: row-level security with policies that let everyone in, paid API routes with no authentication, auth cookies anyone can forge, and two more. Written from seven read-only audits.",
+    description: "Security holes from seven read-only audits of small production apps: open row-level security, paid API routes with no auth, forgeable cookies and more.",
     url: "/blog/small-app-security-checklist",
     type: "article",
     images: ["/opengraph-image"],

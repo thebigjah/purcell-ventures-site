@@ -77,7 +77,7 @@ const POST: Data = {
 
 export const metadata = {
   alternates: { canonical: "/blog/ai-social-media-posts-what-to-hand-off" },
-  title: { absolute: POST.title },
+  title: { absolute: "AI social media posts: what to hand off, what to write" },
   description: POST.description,
   openGraph: {
     title: POST.title,

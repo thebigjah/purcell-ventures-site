@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Custom software, web apps and mobile apps",
   description:
-    "Custom mobile apps, web platforms, automation tools and AI integrations, scoped on a discovery call and built through launch. Small projects $1,500 to $3,500, full apps $5,000 to $15,000 and up.",
+    "Custom software for small businesses: mobile apps, web platforms, automation tools and AI integrations. Small projects $1,500 to $3,500, full apps from $5,000.",
   keywords: [
     "custom software development", "mobile app development", "web app development",
     "AI integration for business", "custom business software", "app development Georgia",

@@ -24,7 +24,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: { absolute: "AI consultant in Tuscaloosa, Alabama, Purcell Ventures" },
   description:
-    "Elijah Purcell is an AI consultant and software developer based in Tuscaloosa, Alabama. He builds AI systems, AI automation, custom software and websites for local businesses, with a reduced rate for University of Alabama students and student-run businesses.",
+    "AI consultant in Tuscaloosa, Alabama. Elijah Purcell builds AI systems, automation, custom software and websites for local businesses, with a UA student rate.",
   keywords: [
     "AI consultant Tuscaloosa", "AI consultant Tuscaloosa Alabama",
     "AI consultant near University of Alabama", "custom software Tuscaloosa",

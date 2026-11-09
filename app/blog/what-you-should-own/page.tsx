@@ -7,10 +7,10 @@ export const metadata = {
   alternates: { canonical: "/blog/what-you-should-own" },
   title: { absolute: "What you should own at the end of a website project" },
   description:
-    "The seven accounts and assets that should be in your name when a web project finishes, why the domain matters most, and the two questions to ask before you sign anything.",
+    "The seven accounts and assets that should be in your name when a website project ends, why the domain matters most, and two questions to ask before you sign.",
   openGraph: {
     title: "What you should own at the end of a website project",
-    description: "The seven accounts and assets that should be in your name when a web project finishes, why the domain matters most, and the two questions to ask before you sign anything.",
+    description: "The seven accounts and assets that should be in your name when a website project ends, why the domain matters most, and two questions to ask before you sign.",
     url: "/blog/what-you-should-own",
     type: "article",
     images: ["/opengraph-image"],

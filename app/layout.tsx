@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   // own in app/page.tsx. Every other page declares its own.
   metadataBase: new URL("https://purcellventures.co"),
   title: {
-    default: "Purcell Ventures: software and AI for small businesses, founded by Elijah Purcell",
+    default: "Purcell Ventures: AI and custom software for small business",
     template: "%s, Purcell Ventures",
   },
   description:
-    "AI systems, custom software and business and AI consulting for small businesses, plus websites from $99 a month. Elijah Purcell, a University of Alabama student, runs Purcell Ventures from Tuscaloosa.",
+    "Purcell Ventures builds AI systems and custom software for small businesses, with AI consulting and websites from $99 a month. Founded by Elijah Purcell.",
   keywords: [
     "AI consulting", "digital services for small business", "custom software development",
     "business AI training", "website management", "Purcell Ventures", "Elijah Purcell",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://purcellventures.co",
     siteName: "Purcell Ventures",
-    title: "Purcell Ventures: software and AI for small businesses, founded by Elijah Purcell",
+    title: "Purcell Ventures: AI and custom software for small business",
     description:
       "AI systems, custom software, AI consulting and websites for small businesses, from Elijah Purcell in Tuscaloosa, Alabama.",
   
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Purcell Ventures: software and AI for small businesses, founded by Elijah Purcell",
+    title: "Purcell Ventures: AI and custom software for small business",
     description:
       "AI systems, custom software, AI consulting and websites for small businesses, from Elijah Purcell in Tuscaloosa, Alabama.",
   },

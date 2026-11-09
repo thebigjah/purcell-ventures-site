@@ -8,10 +8,10 @@ export const metadata = {
   alternates: { canonical: "/blog/can-ai-find-your-business" },
   title: { absolute: "Can an AI find your business? A test you can run in five minutes" },
   description:
-    "Some people now ask an assistant instead of searching. A five-minute test shows what ChatGPT and Google's AI answer say about your business, why they get it wrong, and four fixes that change the answer.",
+    "Can an AI find your business? A five-minute test shows what ChatGPT and Google's AI answer say about you, why they get it wrong, and four fixes that help.",
   openGraph: {
     title: "Can an AI find your business? A test you can run in five minutes",
-    description: "Some people now ask an assistant instead of searching. A five-minute test shows what ChatGPT and Google's AI answer say about your business, why they get it wrong, and four fixes that change the answer.",
+    description: "Can an AI find your business? A five-minute test shows what ChatGPT and Google's AI answer say about you, why they get it wrong, and four fixes that help.",
     url: "/blog/can-ai-find-your-business",
     type: "article",
     images: ["/opengraph-image"],

@@ -13,10 +13,10 @@ export const metadata = {
   alternates: { canonical: "/blog/cold-outreach-that-worked" },
   title: { absolute: "The cold email that got me a client, and the ones that did not" },
   description:
-    "What worked when a teenager cold-emailed small businesses: leading with a specific observation instead of a pitch, why sending a built page works better than describing one, and three sentences to cut.",
+    "The cold email that got me a client: lead with a specific observation, send a built page instead of describing one, and three sentences to cut.",
   openGraph: {
     title: "The cold email that got me a client, and the ones that did not",
-    description: "What worked when a teenager cold-emailed small businesses: leading with a specific observation instead of a pitch, why sending a built page works better than describing one, and three sentences to cut.",
+    description: "The cold email that got me a client: lead with a specific observation, send a built page instead of describing one, and three sentences to cut.",
     url: "/blog/cold-outreach-that-worked",
     type: "article",
     images: ["/opengraph-image"],

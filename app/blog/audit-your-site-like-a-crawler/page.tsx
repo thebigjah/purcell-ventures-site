@@ -8,10 +8,10 @@ export const metadata = {
   alternates: { canonical: "/blog/audit-your-site-like-a-crawler" },
   title: { absolute: "Auditing your own site the way a crawler does, with curl" },
   description:
-    "Nine checks you can run against your live site from a terminal with curl and no account: canonical tags pointing at the wrong page, duplicate titles, sitemap and robots contradictions, missing structured data, and pages that silently tell Google to skip them.",
+    "Nine checks to run on your live site with curl and no account: wrong canonical tags, duplicate titles, sitemap and robots conflicts, missing structured data.",
   openGraph: {
     title: "Auditing your own site the way a crawler does, with curl",
-    description: "Nine checks you can run against your live site from a terminal with curl and no account: canonical tags pointing at the wrong page, duplicate titles, sitemap and robots contradictions, missing structured data, and pages that silently tell Google to skip them.",
+    description: "Nine checks to run on your live site with curl and no account: wrong canonical tags, duplicate titles, sitemap and robots conflicts, missing structured data.",
     url: "/blog/audit-your-site-like-a-crawler",
     type: "article",
     images: ["/opengraph-image"],

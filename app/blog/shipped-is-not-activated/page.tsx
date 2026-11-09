@@ -7,10 +7,10 @@ export const metadata = {
   alternates: { canonical: "/blog/shipped-is-not-activated" },
   title: { absolute: "A shipped site can still fail to take a payment" },
   description:
-    "A site can be live with every deploy check passing and still unable to accept a dollar. Usually one path is broken, and the owner never sees it because they already know where the checkout is.",
+    "A site can be live with every deploy check passing and still fail to take a payment. Usually one path is broken, and the owner never sees it.",
   openGraph: {
     title: "A shipped site can still fail to take a payment",
-    description: "A site can be live with every deploy check passing and still unable to accept a dollar. Usually one path is broken, and the owner never sees it because they already know where the checkout is.",
+    description: "A site can be live with every deploy check passing and still fail to take a payment. Usually one path is broken, and the owner never sees it.",
     url: "/blog/shipped-is-not-activated",
     type: "article",
     images: ["/opengraph-image"],
@@ -88,7 +88,7 @@ export default function Post() {
       <PostByline post={{
         slug: "shipped-is-not-activated",
         title: "A shipped site can still fail to take a payment",
-        description: "A site can be live with every deploy check passing and still unable to accept a dollar. Usually one path is broken, and the owner never sees it because they already know where the checkout is.",
+        description: "A site can be live with every deploy check passing and still fail to take a payment. Usually one path is broken, and the owner never sees it.",
         published: "2026-08-17",
       }} />
     </PostLayout>

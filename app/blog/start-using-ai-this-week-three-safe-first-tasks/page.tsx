@@ -10,7 +10,7 @@ const DESCRIPTION = "Three low-risk ways a small business owner can start using 
 
 export const metadata = {
   alternates: { canonical: "/blog/start-using-ai-this-week-three-safe-first-tasks" },
-  title: { absolute: TITLE },
+  title: { absolute: "Start using AI in your business: three safe first tasks" },
   description: DESCRIPTION,
   openGraph: {
     title: TITLE,

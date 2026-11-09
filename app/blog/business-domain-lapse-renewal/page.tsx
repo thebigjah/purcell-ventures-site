@@ -78,7 +78,7 @@ const POST: Data = {
 
 export const metadata = {
   alternates: { canonical: "/blog/business-domain-lapse-renewal" },
-  title: { absolute: POST.title },
+  title: { absolute: "What happens when your business domain lapses" },
   description: POST.description,
   openGraph: {
     title: POST.title,

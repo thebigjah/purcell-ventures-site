@@ -7,10 +7,10 @@ export const metadata = {
   alternates: { canonical: "/blog/psychology-and-software" },
   title: { absolute: "What psychology has to do with the software I build" },
   description:
-    "Within-subject design, base rates and construct validity are three ideas from a first-semester psychology methods course that changed a product I had already shipped.",
+    "Within-subject design, base rates and construct validity: three ideas from a first-semester psychology methods course that changed software I had shipped.",
   openGraph: {
     title: "What psychology has to do with the software I build",
-    description: "Within-subject design, base rates and construct validity are three ideas from a first-semester psychology methods course that changed a product I had already shipped.",
+    description: "Within-subject design, base rates and construct validity: three ideas from a first-semester psychology methods course that changed software I had shipped.",
     url: "/blog/psychology-and-software",
     type: "article",
     images: ["/opengraph-image"],
@@ -142,7 +142,7 @@ export default function Post() {
           <PostByline post={{
             slug: "psychology-and-software",
             title: "What psychology has to do with the software I build",
-            description: "Within-subject design, base rates and construct validity are three ideas from a first-semester psychology methods course that changed a product I had already shipped.",
+            description: "Within-subject design, base rates and construct validity: three ideas from a first-semester psychology methods course that changed software I had shipped.",
             published: "2026-08-20",
           }} />
 

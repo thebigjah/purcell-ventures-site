@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "AI consulting and hands-on team training",
   description:
-    "Hands-on AI training for business teams in Tuscaloosa, metro Atlanta and nationwide: 1-on-1 at $175 an hour, small groups at $125 a person, or a half-day workshop at $2,500 flat for up to 20 people. I come to you, and every session includes a same-day takeaway guide.",
+    "AI consulting and hands-on team training for businesses: 1-on-1 at $175 an hour, groups at $125 a person, or a $2,500 half-day workshop for up to 20 people.",
   keywords: [
     "AI consulting for business", "AI training workshop", "ChatGPT for business training",
     "AI consulting Atlanta Georgia", "hands-on AI training", "business AI workshop",

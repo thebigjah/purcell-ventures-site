@@ -7,10 +7,10 @@ export const metadata = {
   alternates: { canonical: "/blog/audit-every-business-in-your-town" },
   title: { absolute: "How to audit every business in your town in an afternoon" },
   description:
-    "The method behind auditing 121 independent businesses near the University of Alabama: one free Overpass query against OpenStreetMap, an HTTP request per site, and the two mistakes that will make your numbers wrong.",
+    "How to audit every business in your town in an afternoon: one free Overpass query on OpenStreetMap, one HTTP request per site, and two common mistakes.",
   openGraph: {
     title: "How to audit every business in your town in an afternoon",
-    description: "The method behind auditing 121 independent businesses near the University of Alabama: one free Overpass query against OpenStreetMap, an HTTP request per site, and the two mistakes that will make your numbers wrong.",
+    description: "How to audit every business in your town in an afternoon: one free Overpass query on OpenStreetMap, one HTTP request per site, and two common mistakes.",
     url: "/blog/audit-every-business-in-your-town",
     type: "article",
     images: ["/opengraph-image"],

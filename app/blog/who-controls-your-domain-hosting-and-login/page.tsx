@@ -79,7 +79,7 @@ const POST: Data = {
 
 export const metadata = {
   alternates: { canonical: "/blog/who-controls-your-domain-hosting-and-login" },
-  title: { absolute: POST.title },
+  title: { absolute: "Who controls your domain, hosting and website login" },
   description: POST.description,
   openGraph: {
     title: POST.title,
