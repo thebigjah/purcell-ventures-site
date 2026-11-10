@@ -80,7 +80,7 @@ export default function ComparePage() {
         <Rows items={PAGES} />
       </Section>
 
-      <Section title="How I handle prices">
+      <Section title="How do these comparisons handle prices?">
         <Prose>
           <p>
             I am Elijah Purcell, Founder/CEO of <Link href="/about">Purcell Ventures LLC</Link>.
@@ -97,7 +97,7 @@ export default function ComparePage() {
         </Prose>
       </Section>
 
-      <Section title="Where to start">
+      <Section title="Where should I start?">
         <Prose>
           <p>
             If you are not sure which question you have, take the{" "}

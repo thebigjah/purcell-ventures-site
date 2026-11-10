@@ -70,7 +70,7 @@ export default function Research() {
           </p>
         </Prose>
       </Section>
-      <Section title="Studies">
+      <Section title="Which studies can I read?">
         <Rows
           items={[
             {
@@ -94,7 +94,7 @@ export default function Research() {
           ]}
         />
       </Section>
-      <Section title="Results by city" intro="Each city page sets its local figures beside the Alabama statewide sample.">
+      <Section title="Which cities have their own results?" intro="Each city page sets its local figures beside the Alabama statewide sample.">
         <Rows
           items={CITIES.map((c) => ({
             name: c.name,
@@ -104,7 +104,7 @@ export default function Research() {
           }))}
         />
       </Section>
-      <Section title="How the studies work">
+      <Section title="How do the studies work?">
         <Prose>
           <p>
             Every study starts from public data. The Alabama study drew its business listings

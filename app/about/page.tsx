@@ -64,7 +64,7 @@ export default function AboutPage() {
       />
 
       <Section
-        title="Why I started the company"
+        title="Why did I start the company?"
         aside={
           // eslint-disable-next-line @next/next/no-img-element
           <img src="/brand/elijah.jpg" alt="Elijah Purcell, founder of Purcell Ventures LLC and University of Alabama student" width={240} height={240} />
@@ -109,7 +109,7 @@ export default function AboutPage() {
         </Prose>
       </Section>
 
-      <Section title="Where this is going">
+      <Section title="Where is the company going?">
         <Prose>
           <p>
             I am studying psychology and data science on a pre-med track toward psychiatry. I want to work where AI research meets clinical mental health care, and I think the people who build those tools should understand both the science and the patient.

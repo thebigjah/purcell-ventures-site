@@ -83,7 +83,7 @@ export default function HowWeWorkPage() {
         lede="How a project runs from your first email through the third year, what goes into every contract, and the work I turn down."
       />
 
-      <Section title="How a project runs">
+      <Section title="How does a project run?">
         <div className="ui-entries">
           {STAGES.map((s) => (
             <article className="ui-entry" key={s.title}>
@@ -100,11 +100,11 @@ export default function HowWeWorkPage() {
         </div>
       </Section>
 
-      <Section title="What every contract includes" intro="If I break one of these, you can end the contract and I refund you.">
+      <Section title="What does every contract include?" intro="If I break one of these, you can end the contract and I refund you.">
         <Rows items={COMMITMENTS} />
       </Section>
 
-      <Section title="Work I turn down">
+      <Section title="What work do I turn down?">
         <Prose>
           <p>I turn down work in these cases:</p>
           <ul>
@@ -118,7 +118,7 @@ export default function HowWeWorkPage() {
       </Section>
 
       <ClosingCall
-        title="The first conversation"
+        title="What happens in the first conversation?"
         line="Email me one sentence about what you are trying to do. I reply within one business day with whether we are a fit."
         button="Email me"
         href={START}
