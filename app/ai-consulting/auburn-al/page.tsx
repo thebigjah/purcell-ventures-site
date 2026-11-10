@@ -4,6 +4,8 @@ import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
+import aub from "@/lib/research/auburn-2026-11-summary.json";
+import al from "@/lib/research/alabama-2026-11-summary.json";
 
 // City page on the same single-column PostLayout as the pillar. Auburn's version follows
 // the university calendar, since move-in, semesters and home games set the busy weeks
@@ -11,6 +13,77 @@ import PageDates, { UpdatedLine } from "@/app/components/PageDates";
 // for University of Alabama students only.
 
 const PATH = "/ai-consulting/auburn-al";
+const STUDY = "/research/alabama-small-business-websites-2026";
+const MIN_BASE = 50;
+const MIN_PCT_BASE = 20;
+
+// Local proof point, built like the Chattanooga section. Every number comes from the Auburn
+// summary (checked with the Alabama study's method) and the Alabama statewide sample at build
+// time, so the page never carries a typed figure that can drift from the data. Under
+// MIN_PCT_BASE own-domain pages the section shows counts only. Under MIN_BASE it adds a note
+// on how far one site moves a share.
+function AuburnWebsites() {
+  const c = aub.frames.city;
+  const s = al.frames.statewide;
+  const checked = c.domains_checked;
+  const own = c.own_domain_pages;
+  const lo = Math.round(100 / checked);
+  const hi = Math.round(100 / own);
+  if (own < MIN_PCT_BASE) {
+    return (
+      <>
+        <h2>How do Auburn business websites hold up?</h2>
+
+        <p>
+          In November 2026 I checked the home pages of all {checked} business websites that
+          OpenStreetMap lists inside the Auburn city limits, and {c.not_reachable.n} had no
+          working home page. Of the {own} working pages on a business&rsquo;s own domain,{" "}
+          {c.jsonld_org_or_localbusiness.n} carried structured data that names the business and
+          its type, and {c.all_three_ai_signals.n} had all three signals I measured for AI
+          tools: business structured data, an llms.txt file and no AI crawler blocked in
+          robots.txt. The sample is too small for percentages, so I give counts only.
+        </p>
+
+        <p>
+          The checks, filters and scripts match my{" "}
+          <Link href={STUDY}>study of Alabama small business websites</Link>.
+        </p>
+      </>
+    );
+  }
+  return (
+    <>
+      <h2>How do Auburn business websites hold up?</h2>
+
+      <p>
+        In November 2026 I checked the home pages of all {checked} business websites that
+        OpenStreetMap lists inside the Auburn city limits, and{" "}
+        {c.not_reachable.pct_of_checked} percent had no working home page, against{" "}
+        {s.not_reachable.pct_of_checked} percent of my Alabama statewide sample. Of the {own}{" "}
+        working pages on a business&rsquo;s own domain,{" "}
+        {c.jsonld_org_or_localbusiness.pct_of_own_domain_pages} percent carried structured data
+        that names the business and its type, against{" "}
+        {s.jsonld_org_or_localbusiness.pct_of_own_domain_pages} percent statewide. On those
+        pages, {c.all_three_ai_signals.pct_of_own_domain_pages} percent had all three signals I
+        measured for AI tools, against {s.all_three_ai_signals.pct_of_own_domain_pages} percent
+        statewide: business structured data, an llms.txt file and no AI crawler blocked in
+        robots.txt.
+        {(own < MIN_BASE || checked < MIN_BASE) && (
+          <>
+            {" "}
+            With bases of {checked} sites and {own} pages, one Auburn site moves a share by{" "}
+            {lo === hi ? `about ${hi}` : `${lo} to ${hi}`} points.
+          </>
+        )}
+      </p>
+
+      <p>
+        The checks, filters and scripts match my{" "}
+        <Link href={STUDY}>study of Alabama small business websites</Link>.
+      </p>
+    </>
+  );
+}
 
 export default function AiConsultingAuburn() {
   return (
@@ -48,6 +121,8 @@ export default function AiConsultingAuburn() {
         waves, every August and every game week. A small team has to answer all of them
         while the rush is on, and that repeated work is where AI helps a small business most.
       </p>
+
+      <AuburnWebsites />
 
       <h2>What AI work fits Auburn businesses?</h2>
 
