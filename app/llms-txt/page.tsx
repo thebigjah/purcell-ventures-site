@@ -28,6 +28,7 @@ const AL = summary.frames.statewide;
 const AL_N = AL.llms_txt.n;
 const AL_BASE = AL.own_domain_pages;
 const AL_PCT = AL.llms_txt.pct_of_own_domain_pages;
+const ONE_IN = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"][Math.round(AL_BASE / AL_N) - 1] ?? String(Math.round(AL_BASE / AL_N));
 
 export default function LlmsTxtPage() {
   return (
@@ -178,7 +179,7 @@ export default function LlmsTxtPage() {
       <h2>How many Alabama small business websites have an llms.txt file?</h2>
 
       <p>
-        About one in {Math.round(AL_BASE / AL_N)}. In the{" "}
+        About one in {ONE_IN}. In the{" "}
         <Link href="/research/alabama-small-business-websites-2026">Purcell Ventures check of Alabama small business websites</Link>{" "}
         on 9 November 2026, {AL_N} of the {AL_BASE} home pages on a business&apos;s own
         domain in the statewide sample ({AL_PCT}%) served an llms.txt file that passed the

@@ -9,11 +9,11 @@
   },
   "/agentic-ai": {
     "published": "2026-08-21",
-    "modified": "2026-11-03"
+    "modified": "2026-11-09"
   },
   "/ai-at-alabama": {
     "published": "2026-08-20",
-    "modified": "2026-11-03"
+    "modified": "2026-11-09"
   },
   "/ai-automation": {
     "published": "2026-11-09",
@@ -373,7 +373,7 @@
   },
   "/business-cards": {
     "published": "2026-03-05",
-    "modified": "2026-10-26"
+    "modified": "2026-11-09"
   },
   "/case-studies": {
     "published": "2026-05-16",
@@ -421,7 +421,7 @@
   },
   "/courses": {
     "published": "2026-04-27",
-    "modified": "2026-11-03"
+    "modified": "2026-11-09"
   },
   "/courses/ai-automation": {
     "published": "2026-04-28",
@@ -433,7 +433,7 @@
   },
   "/courses/business-launch": {
     "published": "2026-04-28",
-    "modified": "2026-11-03"
+    "modified": "2026-11-09"
   },
   "/courses/business-launch/lessons": {
     "published": "2026-04-28",
@@ -441,7 +441,7 @@
   },
   "/courses/college-apps": {
     "published": "2026-04-27",
-    "modified": "2026-11-03"
+    "modified": "2026-11-09"
   },
   "/courses/college-apps/lessons": {
     "published": "2026-04-27",
@@ -509,6 +509,10 @@
   },
   "/links": {
     "published": "2026-05-21",
+    "modified": "2026-11-09"
+  },
+  "/llms-txt": {
+    "published": "2026-11-09",
     "modified": "2026-11-09"
   },
   "/logos": {
@@ -741,7 +745,7 @@
   },
   "/sites": {
     "published": "2026-06-09",
-    "modified": "2026-11-03"
+    "modified": "2026-11-09"
   },
   "/software": {
     "published": "2026-03-05",
@@ -765,7 +769,7 @@
   },
   "/tutorials": {
     "published": "2026-05-25",
-    "modified": "2026-10-26"
+    "modified": "2026-11-09"
   },
   "/uses": {
     "published": "2026-05-21",
