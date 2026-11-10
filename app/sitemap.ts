@@ -51,6 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Booking and case studies, conversion paths
     { url: `${BASE}/ai-readiness`,        lastModified: aug22, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/ai-cost-calculator`,  lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/ai-policy-template`,  lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/ai-visibility-check`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
     // Research, first study published 9 Nov 2026
     { url: `${BASE}/research`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },

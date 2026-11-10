@@ -940,6 +940,17 @@ Free AI visibility check: see whether ChatGPT, Claude, Perplexity and Google's A
 
 **Who built it** I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC in Tuscaloosa, Alabama. I built it to run the checks from my AI websites guide on any site in one pass. If you want the fixes done for you, the websites page lists the build tiers and the care plans.
 
+### AI use policy template for small business, Purcell Ventures
+URL: https://purcellventures.co/ai-policy-template
+
+Free AI use policy template for small businesses. Fill in a short form for a staff policy to copy, download or print. It runs in your browser and saves nothing.
+
+**What is an AI use policy?** An AI use policy is a short set of written rules for how staff use AI tools at work. It names the tools people may use, lists the information that never goes into them, and says who checks AI work before a customer sees it. Most small businesses fit it on one or two pages.
+
+**What should a small business AI policy cover?** Purpose, approved tools, what never goes into an AI tool (passwords, customer personal data, payment data, confidential client information, unreleased financials and industry rules), checking AI output (names, numbers, quotes and dates), disclosure to customers, approval of new tools, training and a review date.
+
+**Is this template legal advice?** No. The template is general information for small businesses. Health care, legal, financial and other regulated businesses have extra rules, so have an attorney review the policy before you adopt it.
+
 ## Services
 
 ### Booking, CRM and AI tools for small businesses, Purcell Ventures

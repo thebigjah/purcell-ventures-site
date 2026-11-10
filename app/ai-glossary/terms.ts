@@ -66,7 +66,7 @@ export const TERMS: Term[] = [
     name: "AI use policy",
     def: "An AI use policy is a short written rule set for staff: which AI tools they may use, what information must stay out of them, and who checks AI work before it reaches a customer.",
     biz: "A one-page policy at a dental office says no patient names or records go into any chatbot.",
-    link: SMALL_BIZ,
+    link: { href: "/ai-policy-template", label: "the free AI use policy template" },
   },
   {
     id: "answer-engine",

@@ -114,6 +114,7 @@ const FREE = [
   { name: "26 free AI tools", href: "/digital/tools", line: "An FAQ builder, content generator, palette tool, brand kit, logo concepts, review responder, estimate generator and more. No email signup." },
   { name: "AI readiness test", href: "/ai-readiness", line: "Ten questions that place your business in one of four tiers, each with next steps." },
   { name: "AI cost calculator", href: "/ai-cost-calculator", line: "Enter your team size, hourly rate and hours of manual work to see how long training takes to pay for itself." },
+  { name: "AI use policy template", href: "/ai-policy-template", line: "Answer a few questions about your business and get a one-page AI policy for your staff to copy, download or print." },
   { name: "AI visibility check", href: "/ai-visibility-check", line: "Enter your website to see whether AI crawlers can read it, and what to fix." },
   { name: "AI guides", href: "/ai-for-small-business", line: "Guides to AI consulting, automation, integration, AI websites and AI in design, plus twenty trade guides, a glossary and sourced statistics." },
   { name: "Research", href: "/research", line: "Measured checks of Alabama small business websites by city, with the method and the data." },

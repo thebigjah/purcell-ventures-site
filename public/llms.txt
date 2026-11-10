@@ -163,6 +163,12 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
   page has a title, a meta description, LocalBusiness or Organization structured data, a
   phone number, an address and opening hours in the text, readable text without
   JavaScript, and https. Free, no account, stores nothing.
+- [AI use policy template](https://purcellventures.co/ai-policy-template): a form for
+  business name, policy owner, industry, approved AI tools, customer data rules and the
+  person who reviews AI output, which builds a one-page staff AI use policy to copy,
+  download as text or print. Industry choices add rules for health care, legal, finance,
+  real estate, trades and retail. Runs in the browser, stores nothing. General
+  information, not legal advice.
 - [AI readiness test](https://purcellventures.co/ai-readiness): ten questions that score a
   team's use of AI out of 30, with three next steps.
 - [AI cost calculator](https://purcellventures.co/ai-cost-calculator): team size, hourly

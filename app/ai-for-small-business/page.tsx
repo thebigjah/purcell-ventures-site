@@ -106,6 +106,12 @@ export default function AiForSmallBusiness() {
         covers each category and a sample rule for your team.
       </p>
 
+      <p>
+        The free <Link href="/ai-policy-template">AI use policy template</Link> builds a
+        one-page policy from your business name, industry and approved tools, ready to copy,
+        download or print.
+      </p>
+
       <h2>Do I have to tell customers when I use AI?</h2>
 
       <p>
