@@ -29,7 +29,7 @@ export default function AiConsultingCost() {
         ]} />}
         kicker="AI consulting"
         title="How is AI consulting priced for a small business?"
-        lede="Consultants usually price AI consulting for a small business in one of six ways: hourly, per person trained, per workshop, as a fixed-fee project, as a monthly retainer or per software seat. Within any model, the price depends on the scope, the team size, the number of sessions, whether you need a custom build, travel and the support you want afterward."
+        lede="Consultants usually price AI consulting for a small business in one of six ways: hourly, per person trained, per workshop, as a fixed-fee project, as a monthly retainer or per software seat. The price within each model depends on scope, team size, sessions, custom builds, travel and follow-up support."
         meta="By Elijah Purcell, Purcell Ventures, Tuscaloosa."
       >
         <UpdatedLine path={PATH} bare />

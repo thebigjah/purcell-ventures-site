@@ -38,7 +38,7 @@ export default function CompanyPage() {
       <PageHero
         kicker="The company"
         title="What is Purcell Ventures?"
-        lede={<>Purcell Ventures LLC is a Tuscaloosa, Alabama AI and software company (a Georgia LLC) that builds AI systems and custom software for small businesses and advises owners on using them. <Link className="ui-link" href="/who">Elijah Purcell</Link> filed it with the Georgia Secretary of State as Zultar LLC on 8 April 2025 and renamed it Purcell Ventures LLC on 27 January 2026, under the same control number. It is a one-person company, and Elijah does the client calls and the building himself.</>}
+        lede={<>Purcell Ventures LLC is a Tuscaloosa, Alabama AI and software company that builds AI systems and custom software for small businesses and advises owners on using them. <Link className="ui-link" href="/who">Elijah Purcell</Link> filed it in Georgia as Zultar LLC on 8 April 2025 and renamed it on 27 January 2026. He takes the client calls and does the building himself.</>}
         meta={reviewed && <>Last reviewed <time dateTime={reviewed}>{formatDate(reviewed)}</time></>}
         crumbs={<Breadcrumbs trail={[
           { name: "Home", href: "/" },
