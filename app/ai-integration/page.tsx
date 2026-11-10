@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Cite from "@/app/ai-small-business-statistics/Cite";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
@@ -34,6 +35,11 @@ export default function AiIntegration() {
         nobody has to copy text into a chat window and paste the answer back. The model might
         sort incoming email, summarize a customer record, draft a quote from a form or answer
         questions on your website from your own documents.
+      </p>
+
+      <p>
+        Among small employer firms that use AI, 44% had partly worked it into their business
+        processes and 7% had fully integrated it <Cite k="sbcs" more />.
       </p>
 
       <p>There are three ways to get there, from least to most work.</p>
@@ -82,6 +88,12 @@ export default function AiIntegration() {
         Build custom when the job spans systems no product connects, when the paid tier you
         need costs more each year than a one-time build, or when the tool forces your team to
         keep a spreadsheet on the side.
+      </p>
+
+      <p>
+        Small employer firms planning to start with AI named finding tools that fit their
+        needs (54%) as their top challenge, and 43% of firms already using AI named adapting
+        tools to their business <Cite k="sbcs" />.
       </p>
 
       <table>

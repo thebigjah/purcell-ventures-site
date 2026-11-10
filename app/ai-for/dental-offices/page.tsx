@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PostLayout } from "@/app/components/ui";
-import { TradeCrumbs, TradeEnd, TradeFaq } from "../TradeParts";
+import { AlabamaKindFact, TradeCrumbs, TradeEnd, TradeFaq } from "../TradeParts";
 import { QA } from "./layout";
 
 const SLUG = "dental-offices";
@@ -34,6 +34,8 @@ export default function AiForDental() {
         never confirm that the reviewer is a patient or mention their treatment, so a person
         reads each draft before it posts.
       </p>
+
+      <AlabamaKindFact kind="health" />
 
       <h2>How does AI help with dental recall reminders?</h2>
 

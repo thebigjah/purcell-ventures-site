@@ -5,6 +5,9 @@ import PageDates, { UpdatedLine } from "@/app/components/PageDates";
 import { CONTACT } from "@/lib/contact";
 import { pageDates } from "@/lib/page-dates";
 import { TRADES, tradeBySlug } from "./trades";
+import alabamaByType from "@/lib/research/alabama-2026-11-by-type.json";
+import alabamaSummary from "@/lib/research/alabama-2026-11-summary.json";
+import { pct } from "@/lib/research/measures.mjs";
 
 // Shared parts of the trade pages: metadata, the Article and FAQPage schema, the
 // breadcrumb trail, the hero meta line and the closing section. The prose of each page
@@ -114,5 +117,37 @@ export function TradeEnd({ slug }: { slug: string }) {
       <UpdatedLine path={path} bare />
       <PageDates path={path} />
     </>
+  );
+}
+
+const KIND_LABEL = {
+  restaurants: "restaurant, cafe and bar home pages",
+  health: "dentist, doctor, clinic and vet home pages",
+  shops: "shop home pages, the group that includes hair salons and barbershops,",
+  offices: "office and professional service home pages",
+} as const;
+
+const CHECK_DATE = new Date(alabamaSummary.checks_started_utc).toLocaleDateString("en-GB", {
+  day: "numeric", month: "long", year: "numeric", timeZone: "UTC",
+});
+
+/** One sentence of first-hand data for a trade, read from the Alabama study by kind of business.
+ * Statewide random sample only, and only for kinds whose base reaches the study's minimum. */
+export function AlabamaKindFact({ kind }: { kind: keyof typeof KIND_LABEL }) {
+  const g = alabamaByType.frames.statewide[kind];
+  const base = g.own_domain_pages;
+  if (base < alabamaByType.min_base_for_percent) throw new Error(`base for ${kind} under minimum`);
+  const pc = (n: number) => `${pct(n, base).toFixed(1)}%`;
+  return (
+    <p>
+      In{" "}
+      <Link href="/research/alabama-small-business-websites-2026">
+        my {CHECK_DATE} check of Alabama small business websites
+      </Link>
+      , {g.jsonld_org_or_localbusiness} of {base} working {KIND_LABEL[kind]} in the statewide random
+      sample carried Organization or LocalBusiness structured data ({pc(g.jsonld_org_or_localbusiness)}),
+      and {g.all_three_ai_signals} of those {base} ({pc(g.all_three_ai_signals)}) also had an llms.txt
+      file and blocked no AI crawler.
+    </p>
   );
 }

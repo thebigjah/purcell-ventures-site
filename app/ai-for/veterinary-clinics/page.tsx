@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PostLayout } from "@/app/components/ui";
-import { TradeCrumbs, TradeEnd, TradeFaq } from "../TradeParts";
+import { AlabamaKindFact, TradeCrumbs, TradeEnd, TradeFaq } from "../TradeParts";
 import { QA } from "./layout";
 
 const SLUG = "veterinary-clinics";
@@ -35,6 +35,8 @@ export default function AiForVeterinaryClinics() {
         free <Link href="/digital/tools/review-response">review response generator</Link>{" "}
         shows what a draft looks like.
       </p>
+
+      <AlabamaKindFact kind="health" />
 
       <h2>How does AI help with veterinary appointment reminders?</h2>
 

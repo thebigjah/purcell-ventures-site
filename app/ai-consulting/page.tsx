@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Cite from "@/app/ai-small-business-statistics/Cite";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import PageDates from "@/app/components/PageDates";
 import { pageDates, formatDate } from "@/lib/page-dates";
@@ -116,6 +117,11 @@ export default function AiConsultingAlabama() {
       </p>
 
       <p>
+        A third of small employer firms had no plans to use AI, and over half of those said AI
+        does not apply to their business <Cite k="sbcs" more />.
+      </p>
+
+      <p>
         Work that suits AI includes first drafts of emails, quotes and posts, answers to the
         same customer questions, sorting incoming forms and requests, moving the same
         information between systems, and summaries of long documents.
@@ -142,6 +148,11 @@ export default function AiConsultingAlabama() {
         well. Automation fits when a task repeats on a schedule and follows the same steps each
         time. Custom software fits when the tool you need does not exist, or the version you
         can buy forces your team to work around it.
+      </p>
+
+      <p>
+        73% of surveyed owners in the Goldman Sachs 10,000 Small Businesses program said more
+        training and implementation help would benefit their business <Cite k="goldman" />.
       </p>
 
       <table>

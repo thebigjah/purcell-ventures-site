@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PostLayout } from "@/app/components/ui";
-import { TradeCrumbs, TradeEnd, TradeFaq } from "../TradeParts";
+import { AlabamaKindFact, TradeCrumbs, TradeEnd, TradeFaq } from "../TradeParts";
 import { QA } from "./layout";
 
 const SLUG = "accountants";
@@ -35,6 +35,8 @@ export default function AiForAccountants() {
         notes for staff. A preparer checks every summary against the source before anyone acts
         on it, and the notice itself carries no client identifiers when it goes into the tool.
       </p>
+
+      <AlabamaKindFact kind="offices" />
 
       <h2>How does AI help with client document intake?</h2>
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PostLayout } from "@/app/components/ui";
-import { TradeCrumbs, TradeEnd, TradeFaq } from "../TradeParts";
+import { AlabamaKindFact, TradeCrumbs, TradeEnd, TradeFaq } from "../TradeParts";
 import { QA } from "./layout";
 
 const SLUG = "law-firms";
@@ -35,6 +35,8 @@ export default function AiForLawFirms() {
         word, and a reply to a review must never reveal anything about the reviewer&apos;s
         matter.
       </p>
+
+      <AlabamaKindFact kind="offices" />
 
       <h2>How can AI screen legal intake inquiries?</h2>
 

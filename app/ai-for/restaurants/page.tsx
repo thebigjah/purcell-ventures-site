@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PostLayout } from "@/app/components/ui";
-import { TradeCrumbs, TradeEnd, TradeFaq } from "../TradeParts";
+import { AlabamaKindFact, TradeCrumbs, TradeEnd, TradeFaq } from "../TradeParts";
 import { QA } from "./layout";
 
 const SLUG = "restaurants";
@@ -36,6 +36,8 @@ export default function AiForRestaurants() {
         <Link href="/digital/tools/caption-generator">caption generator</Link> shows what a
         draft looks like.
       </p>
+
+      <AlabamaKindFact kind="restaurants" />
 
       <h2>How does an AI chatbot answer menu questions?</h2>
 

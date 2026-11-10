@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Cite from "@/app/ai-small-business-statistics/Cite";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { pageDates, formatDate } from "@/lib/page-dates";
 import { PostLayout } from "@/app/components/ui";
@@ -50,6 +51,11 @@ export default function AiForSmallBusiness() {
       </p>
 
       <p>
+        Of small employer firms that use AI, 83% use it for writing or marketing, 61% for
+        individual productivity and 51% for planning or analysis <Cite k="sbcs" more />.
+      </p>
+
+      <p>
         AI makes poor decisions. It can state a wrong answer in the same confident tone as a
         right one, so treat it as a fast assistant whose work you review, and keep pricing,
         hiring and legal calls with a person.
@@ -78,6 +84,11 @@ export default function AiForSmallBusiness() {
         Check four things against a source you trust before an AI answer reaches a customer:
         names, numbers, quotes and dates. A wrong one of these does the most damage when it
         goes out under your business name.
+      </p>
+
+      <p>
+        Small employer firms that already use AI named accuracy (46%) and adapting tools to
+        their business (43%) as their top challenges <Cite k="sbcs" />.
       </p>
 
       <ul>

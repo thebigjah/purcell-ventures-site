@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Cite from "@/app/ai-small-business-statistics/Cite";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { pageDates, formatDate } from "@/lib/page-dates";
 import { PostLayout } from "@/app/components/ui";
@@ -62,6 +63,12 @@ export default function AiAutomation() {
         and causes harm when someone forgets it. For most service businesses that is
         follow-up: replying to new leads, chasing quotes that went quiet, and reminding
         customers about invoices and appointments.
+      </p>
+
+      <p>
+        The top five uses of AI among U.S. businesses with up to 100 employees were marketing
+        (43%), customer service (36%), administrative tasks (33%), data processing (32%) and
+        bookkeeping (29%) <Cite k="intuit" more />.
       </p>
 
       <p>Three questions sort a task list quickly.</p>

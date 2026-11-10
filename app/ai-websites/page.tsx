@@ -1,4 +1,7 @@
 import Link from "next/link";
+import Cite from "@/app/ai-small-business-statistics/Cite";
+import alabama from "@/lib/research/alabama-2026-11-summary.json";
+import { pct } from "@/lib/research/measures.mjs";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { pageDates, formatDate } from "@/lib/page-dates";
 import { PostLayout } from "@/app/components/ui";
@@ -7,6 +10,15 @@ import { QA } from "./layout";
 
 // The visible Updated line and the Article dateModified in layout.tsx read the same value.
 const DATES = pageDates("/ai-websites")!;
+
+// Alabama study figures, read from the statewide random sample in lib/research at build time.
+// The base is the working home pages that stayed on the business's own domain.
+const AL = alabama.frames.statewide;
+const AL_BASE = AL.own_domain_pages;
+const alPct = (n: number) => `${pct(n, AL_BASE).toFixed(1)}%`;
+const AL_DATE = new Date(alabama.checks_started_utc).toLocaleDateString("en-GB", {
+  day: "numeric", month: "long", year: "numeric", timeZone: "UTC",
+});
 
 // Pillar for the AI websites cluster, on the same PostLayout as /ai-consulting. It leads
 // with AI findability, since websites are the last-listed PV service, and reaches builders
@@ -47,6 +59,11 @@ export default function AiWebsites() {
         Google Business Profile, directories and reviews. It shows up correctly when crawlers
         can reach those sources, the sources agree with each other, and state plainly what the business
         does, where it is and who it serves.
+      </p>
+
+      <p>
+        42% of U.S. adults use AI chatbots to search for information, and 60% say they read
+        the AI summaries at the top of search results <Cite k="pewAi2026" more />.
       </p>
 
       <ol>
@@ -132,6 +149,13 @@ export default function AiWebsites() {
       </p>
 
       <p>
+        In <Link href="/research/alabama-small-business-websites-2026">my {AL_DATE} check of
+        Alabama small business websites</Link>, {AL.jsonld_org_or_localbusiness.n} of {AL_BASE}{" "}
+        working home pages in the statewide random sample carried Organization or
+        LocalBusiness structured data ({alPct(AL.jsonld_org_or_localbusiness.n)}).
+      </p>
+
+      <p>
         FAQ markup changed in 2026. Google stopped showing FAQ rich results in its search
         pages on 7 May 2026, and Bing and the crawlers behind AI assistants still read the
         markup. An FAQ section still matters because customers ask questions and assistants
@@ -145,6 +169,11 @@ export default function AiWebsites() {
         pages and what each one is for, written for AI systems to read. Adoption is not
         universal, and nobody can promise results from one. For a site with more than a few
         pages, it takes about twenty minutes and costs nothing.
+      </p>
+
+      <p>
+        In the same Alabama check, {AL.llms_txt.n} of {AL_BASE} home pages had an llms.txt
+        file ({alPct(AL.llms_txt.n)}).
       </p>
 
       <p>
@@ -162,6 +191,11 @@ export default function AiWebsites() {
         describes your business from directories and reviews instead. Blocking makes sense for
         a business whose product is its writing or research, since that content is what the
         crawlers take.
+      </p>
+
+      <p>
+        In the same Alabama check, {AL.robots_blocks_any_ai_bot.n} of {AL_BASE} home pages
+        blocked at least one of five AI crawlers in robots.txt ({alPct(AL.robots_blocks_any_ai_bot.n)}).
       </p>
 
       <p>

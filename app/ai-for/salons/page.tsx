@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PostLayout } from "@/app/components/ui";
-import { TradeCrumbs, TradeEnd, TradeFaq } from "../TradeParts";
+import { AlabamaKindFact, TradeCrumbs, TradeEnd, TradeFaq } from "../TradeParts";
 import { QA } from "./layout";
 
 const SLUG = "salons";
@@ -34,6 +34,8 @@ export default function AiForSalons() {
         balayage prices can greet the client in the chair and check out the one at the
         register.
       </p>
+
+      <AlabamaKindFact kind="shops" />
 
       <h2>How does AI handle long, multi-service salon bookings?</h2>
 

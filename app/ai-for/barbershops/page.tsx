@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PostLayout } from "@/app/components/ui";
-import { TradeCrumbs, TradeEnd, TradeFaq } from "../TradeParts";
+import { AlabamaKindFact, TradeCrumbs, TradeEnd, TradeFaq } from "../TradeParts";
 import { QA } from "./layout";
 
 const SLUG = "barbershops";
@@ -34,6 +34,8 @@ export default function AiForBarbershops() {
         ringing phone on the counter. Every question a customer can answer without calling
         keeps the barber on the cut.
       </p>
+
+      <AlabamaKindFact kind="shops" />
 
       <h2>How should a barbershop handle walk-ins next to online booking?</h2>
 

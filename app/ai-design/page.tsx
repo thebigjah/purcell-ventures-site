@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Cite from "@/app/ai-small-business-statistics/Cite";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
@@ -118,6 +119,11 @@ export default function AiDesign() {
         short time and get a glance in a feed, so speed counts for more than originality. The
         way to keep them on brand is to start each post from a template in your own colors and
         logo and let AI fill in the image and caption.
+      </p>
+
+      <p>
+        Marketing was the top use of AI among U.S. businesses with up to 100 employees, at
+        43% <Cite k="intuit" more />.
       </p>
 
       <p>
