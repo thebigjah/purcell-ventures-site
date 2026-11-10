@@ -123,7 +123,7 @@ export default function Post() {
         instead of one week, and then file, because a wrong name only costs an amendment.
       </p>
 
-      <h2>What the LLC does and does not do for you</h2>
+      <h2>What does an LLC do for you, and what does it not do?</h2>
 
       <p>
         It gives you a legal entity that can hold a bank account, sign a contract, and

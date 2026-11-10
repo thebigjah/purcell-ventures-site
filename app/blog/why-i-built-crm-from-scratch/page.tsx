@@ -80,7 +80,7 @@ export default function Post() {
         <li><strong>AI features cost extra on third-party CRMs.</strong> HubSpot&apos;s AI features (Breeze) are tied to a $720 a month plan. Mine run on Claude Haiku at $0.001 per call.</li>
       </ol>
 
-      <h2>What I gave up</h2>
+      <h2>What did I give up?</h2>
 
       <ol>
         <li><strong>Polish.</strong> HubSpot looks more sophisticated. Mine looks like a small-team CRM, because that&apos;s what it is. It would matter if I needed to impress investors.</li>
@@ -88,7 +88,7 @@ export default function Post() {
         <li><strong>Ecosystem integrations.</strong> HubSpot integrates with hundreds of tools. Mine connects to the tools I choose to wire up. So far that has been enough.</li>
       </ol>
 
-      <h2>When you should not do this</h2>
+      <h2>When should you not do this?</h2>
 
       <ul>
         <li><strong>If you don&apos;t code:</strong> use HubSpot.</li>
@@ -98,7 +98,7 @@ export default function Post() {
         <li><strong>If you don&apos;t enjoy maintenance work:</strong> it will need maintenance now and then. If you hate that, pay someone else to do it.</li>
       </ul>
 
-      <h2>When you should do this</h2>
+      <h2>When should you do this?</h2>
       <ul>
         <li>You work alone or on a team of two or three</li>
         <li>You code (or have access to someone who does)</li>

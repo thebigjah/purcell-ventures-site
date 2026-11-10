@@ -36,7 +36,7 @@ export default function Post() {
         parts that differ.
       </p>
 
-      <h2>How the two jobs differ</h2>
+      <h2>How do the two jobs differ?</h2>
 
       <p>
         A search engine ranks pages, while an answer engine <em>extracts sentences</em>. A
@@ -139,7 +139,7 @@ export default function Post() {
         profiles to one person.
       </p>
 
-      <h2>Telling apart people with the same name</h2>
+      <h2>How do you tell apart people with the same name?</h2>
 
       <p>
         If somebody shares your name, say which one you are. schema.org has{" "}

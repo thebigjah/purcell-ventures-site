@@ -71,7 +71,7 @@ export default function Post() {
         website. There were 121 of them. Twenty-seven had a site that answered.
       </p>
 
-      <h2>What I measured</h2>
+      <h2>What did I measure?</h2>
 
       <p>
         The source is{" "}
@@ -131,7 +131,7 @@ export default function Post() {
         someone standing at the door can tell whether they are open right now.
       </p>
 
-      <h2>Where a website does not help</h2>
+      <h2>Where does a website not help?</h2>
 
       <p>
         I build websites, so you could read this as a pitch for my own service. Two

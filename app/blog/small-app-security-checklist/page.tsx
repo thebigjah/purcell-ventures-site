@@ -151,7 +151,7 @@ export default function Post() {
         where each one gets its input.
       </p>
 
-      <h2>How I run one of these audits</h2>
+      <h2>How do I run one of these audits?</h2>
 
       <p>
         I keep every audit read-only. The output is a list, and the fixes happen later in a
@@ -173,7 +173,7 @@ FIX        the specific change, not "add validation"`}</code></pre>
         to be wrong, the reader discounts the four that were right.
       </p>
 
-      <h2>Why the developer misses these</h2>
+      <h2>Why does the developer miss these?</h2>
 
       <p>
         Each of these problems sits in code that works. The developer tested that the

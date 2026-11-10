@@ -44,7 +44,7 @@ export default function Post() {
         It costs nothing, needs no API key or account, and does not scrape anybody&apos;s search results.
       </p>
 
-      <h2>The data source</h2>
+      <h2>Where does the business list come from?</h2>
 
       <p>
         OpenStreetMap, queried through{" "}
@@ -159,7 +159,7 @@ out center tags;`}</code></pre>
         <code>brand:wikidata</code> tag, which takes one line of code.
       </p>
 
-      <h2>Checking each website</h2>
+      <h2>How do I check each website?</h2>
 
       <p>
         For each business with a <code>website</code> tag, make a request and see what
@@ -221,7 +221,7 @@ return last`}</code></pre>
         headline, because somebody can disprove an overstated claim in one reply.
       </p>
 
-      <h2>What to do with the result</h2>
+      <h2>What should I do with the result?</h2>
 
       <p>
         Sort the businesses that list a website which no longer answers to the top,
