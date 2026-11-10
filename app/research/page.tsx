@@ -5,6 +5,8 @@ import { PageHero, Prose, Rows, Section } from "@/app/components/ui";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
 import summary from "@/lib/research/alabama-2026-11-summary.json";
 import cobb from "@/lib/research/cobb-2026-11-summary.json";
+import auburn from "@/lib/research/auburn-2026-11-summary.json";
+import chattanooga from "@/lib/research/chattanooga-2026-11-summary.json";
 
 // Index of Purcell Ventures research. Each study publishes aggregate figures only.
 // The method notes below restate what the study page itself says, so a change to the
@@ -15,6 +17,19 @@ const FRAME = summary.frame;
 const COBB = cobb.frames.county;
 const TUSC = summary.frames.tuscaloosa;
 const num = (n: number) => n.toLocaleString("en-US");
+
+// City pages that carry their own figures from these studies. Counts are listed sites checked.
+const CITIES = [
+  { name: "Birmingham, Alabama", href: "/ai-consulting/birmingham-al", n: summary.frames.birmingham.domains_checked, base: "Alabama study" },
+  { name: "Huntsville, Alabama", href: "/ai-consulting/huntsville-al", n: summary.frames.huntsville.domains_checked, base: "Alabama study" },
+  { name: "Mobile, Alabama", href: "/ai-consulting/mobile-al", n: summary.frames.mobile.domains_checked, base: "Alabama study" },
+  { name: "Montgomery, Alabama", href: "/ai-consulting/montgomery-al", n: summary.frames.montgomery.domains_checked, base: "Alabama study" },
+  { name: "Auburn, Alabama", href: "/ai-consulting/auburn-al", n: auburn.frames.city.domains_checked, base: "a city-limits run of the Alabama method" },
+  { name: "Chattanooga, Tennessee", href: "/ai-consulting/chattanooga-tn", n: chattanooga.frames.city.domains_checked, base: "a city-limits run of the Alabama method" },
+  { name: "Marietta, Georgia", href: "/ai-consulting/marietta-ga", n: cobb.frame.marietta, base: "Cobb County study" },
+  { name: "Kennesaw, Georgia", href: "/ai-consulting/kennesaw-ga", n: cobb.frame.kennesaw, base: "Cobb County study" },
+  { name: "Acworth, Georgia", href: "/ai-consulting/acworth-ga", n: cobb.frame.acworth, base: "Cobb County study" },
+];
 
 export const metadata: Metadata = {
   title: "Research on small business websites",
@@ -77,6 +92,16 @@ export default function Research() {
               fig: "Nov 2026",
             },
           ]}
+        />
+      </Section>
+      <Section title="Results by city" intro="Each city page sets its local figures beside the Alabama statewide sample.">
+        <Rows
+          items={CITIES.map((c) => ({
+            name: c.name,
+            href: c.href,
+            line: `Figures for the ${num(c.n)} business websites OpenStreetMap lists in ${c.name.split(",")[0]}, from the ${c.base}.`,
+            fig: "Nov 2026",
+          }))}
         />
       </Section>
       <Section title="How the studies work">
