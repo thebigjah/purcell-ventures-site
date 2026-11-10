@@ -11,7 +11,7 @@ import * as cobb from "../lib/research/cobb-2026.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const STUDIES = [
-  { mod: alabama, json: "alabama-2026-11-summary.json", csv: "alabama-small-business-websites-2026-aggregates.csv" },
+  { mod: alabama, json: "alabama-2026-11-summary.json", byType: "alabama-2026-11-by-type.json", csv: "alabama-small-business-websites-2026-aggregates.csv" },
   { mod: cobb, json: "cobb-2026-11-summary.json", csv: "cobb-county-small-business-websites-2026-aggregates.csv" },
 ];
 
@@ -32,7 +32,7 @@ const PCT_FIELD = {
 const out = join(ROOT, "public/research");
 mkdirSync(out, { recursive: true });
 
-for (const { mod, json, csv } of STUDIES) {
+for (const { mod, json, byType: byTypeJson, csv } of STUDIES) {
   const summary = JSON.parse(readFileSync(join(ROOT, "lib/research", json), "utf8"));
   let bad = 0;
   for (const r of mod.countRows(summary)) {
@@ -44,8 +44,31 @@ for (const { mod, json, csv } of STUDIES) {
       bad++;
     }
   }
+  // The by-kind file must add back up to the summary it splits.
+  const byType = byTypeJson ? JSON.parse(readFileSync(join(ROOT, "lib/research", byTypeJson), "utf8")) : null;
+  if (byType) {
+    for (const [frame, groups] of Object.entries(byType.frames)) {
+      const f = summary.frames[frame];
+      const want = {
+        domains_checked: f.domains_checked,
+        no_working_home_page: f.not_reachable.n,
+        own_domain_pages: f.own_domain_pages,
+        jsonld_org_or_localbusiness: f.jsonld_org_or_localbusiness.n,
+        all_three_ai_signals: f.all_three_ai_signals.n,
+        robots_blocks_any_ai_bot: f.robots_blocks_any_ai_bot.n,
+        no_meta_description: f.own_domain_pages - f.meta_description.n,
+      };
+      for (const [k, v] of Object.entries(want)) {
+        const sum = byType.kinds.reduce((t, kind) => t + groups[kind.key][k], 0);
+        if (sum !== v || groups.all[k] !== v) {
+          console.error(`${byTypeJson} ${frame} ${k}: kinds sum to ${sum}, all is ${groups.all[k]}, summary ${v}`);
+          bad++;
+        }
+      }
+    }
+  }
   if (bad) process.exit(1);
-  const text = mod.aggregatesCsv(summary);
+  const text = mod.aggregatesCsv(summary, byType);
   if (/\b[a-z0-9-]+\.(com|net|org|biz|us|co|info)\b/i.test(text)) {
     console.error(`refusing to write ${csv}: the CSV contains something shaped like a domain`);
     process.exit(1);

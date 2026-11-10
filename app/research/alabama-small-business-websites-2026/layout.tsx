@@ -64,6 +64,7 @@ const MEASURED = [
   "llms.txt file",
   "time to first byte",
   "HTML download time and size",
+  "kind of business from OpenStreetMap tags",
 ];
 
 const schema = {
@@ -74,7 +75,7 @@ const schema = {
       "@id": `${URL}#dataset`,
       name: "Alabama small business websites, November 2026",
       description:
-        `Aggregate checks of ${S.domains_checked} randomly drawn Alabama small business websites and every listed business website in Tuscaloosa, Birmingham, Huntsville, Montgomery and Mobile: working home page, https, viewport, title, meta description, business JSON-LD, AI crawler rules in robots.txt, llms.txt and response time. Sample frame from OpenStreetMap. Counts and percentages only, with no domains or business names.`,
+        `Aggregate checks of ${S.domains_checked} randomly drawn Alabama small business websites and every listed business website in Tuscaloosa, Birmingham, Huntsville, Montgomery and Mobile: working home page, https, viewport, title, meta description, business JSON-LD, AI crawler rules in robots.txt, llms.txt and response time, with the main checks also broken down by kind of business. Sample frame from OpenStreetMap. Counts and percentages only, with no domains or business names.`,
       url: URL,
       creator: { "@id": "https://purcellventures.co/#organization" },
       publisher: { "@id": "https://purcellventures.co/#organization" },

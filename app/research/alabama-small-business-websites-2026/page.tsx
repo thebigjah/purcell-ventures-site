@@ -2,7 +2,8 @@ import Link from "next/link";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PostLayout } from "@/app/components/ui";
 import summary from "@/lib/research/alabama-2026-11-summary.json";
-import { AREAS, CITIES, socialRows } from "@/lib/research/alabama-2026.mjs";
+import byType from "@/lib/research/alabama-2026-11-by-type.json";
+import { AREAS, CITIES, KIND_MEASURES, kindRows, socialRows } from "@/lib/research/alabama-2026.mjs";
 import { BarChart, CheckTable, SpeedTable, num, p, pctBars, ttfbBars, type AreaRow, type Frame } from "../_components/tables";
 import { QA } from "./layout";
 
@@ -21,6 +22,93 @@ const BAR_ROWS = [
   { key: "statewide", name: "Alabama sample", frame: S, ref: true },
   ...CITIES.map((c) => ({ key: c.key, name: c.name, frame: F[c.key as AreaKey] })),
 ];
+
+/* ---------- by kind of business ---------- */
+
+type KindRow = ReturnType<typeof kindRows>[number];
+const KIND_ROWS: KindRow[] = kindRows(byType);
+const MIN_BASE = byType.min_base_for_percent;
+const KINDS = [...byType.kinds, { key: "all", name: "All kinds" }];
+const kindCell = (frame: string, kind: string, measure: string) =>
+  KIND_ROWS.find((r) => r.frame === frame && r.kind === kind && r.measure === measure)!;
+const kindPct = (frame: string, kind: string, measure: string) => {
+  const r = kindCell(frame, kind, measure);
+  return `${r.percent!.toFixed(1)}%`;
+};
+
+function KindTable({ frame, caption }: { frame: "statewide" | "all_checked_domains"; caption: string }) {
+  const g = byType.frames[frame];
+  return (
+    <table>
+      <caption>{caption}</caption>
+      <thead>
+        <tr>
+          <th scope="col">Kind of business</th>
+          <th scope="col">Base n (domains checked)</th>
+          <th scope="col">Base n (own-domain pages)</th>
+          {KIND_MEASURES.map((m) => (
+            <th scope="col" key={m.key}>{m.label}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {KINDS.map((k) => {
+          const c = g[k.key as keyof typeof g];
+          return (
+            <tr key={k.key}>
+              <th scope="row">{k.name}</th>
+              <td>{num(c.domains_checked)}</td>
+              <td>{num(c.own_domain_pages)}</td>
+              {KIND_MEASURES.map((m) => {
+                const r = kindCell(frame, k.key, m.key);
+                return (
+                  <td key={m.key}>
+                    {r.percent === null
+                      ? `${num(r.n)} of ${num(r.base)}, base too small`
+                      : `${num(r.n)} (${r.percent.toFixed(1)}%)`}
+                  </td>
+                );
+              })}
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  );
+}
+
+function kindAiBars() {
+  const rows = KIND_ROWS.filter((r) => r.frame === "statewide" && r.measure === "all_three_ai_signals");
+  const shown = rows.filter((r) => r.percent !== null && r.kind !== "all");
+  const all = rows.find((r) => r.kind === "all")!;
+  return [
+    { name: "All kinds", n: all.n, base: all.base, value: all.percent!, text: `${all.percent!.toFixed(1)}%`, ref: true },
+    ...shown.map((r) => ({ name: r.kindName, n: r.n, base: r.base, value: r.percent!, text: `${r.percent!.toFixed(1)}%` })),
+  ];
+}
+
+function kindsBelowMin() {
+  return byType.kinds
+    .filter((k) => byType.frames.statewide[k.key as keyof typeof byType.frames.statewide].own_domain_pages < MIN_BASE)
+    .map((k) => k.name.toLowerCase());
+}
+
+const AI_RANGE = (() => {
+  const big = KIND_ROWS.filter((r) => r.frame === "statewide" && r.kind !== "all" && r.percent !== null);
+  const ai = big.filter((r) => r.measure === "all_three_ai_signals");
+  const js = big.filter((r) => r.measure === "jsonld_business" && r.kind !== "health").map((r) => r.percent!);
+  const v = ai.map((r) => r.percent!);
+  const b = ai.map((r) => r.base);
+  const f = (x: number) => `${x.toFixed(1)}%`;
+  return {
+    low: f(Math.min(...v)), high: f(Math.max(...v)), baseLow: num(Math.min(...b)), baseHigh: num(Math.max(...b)),
+    jsonldLow: f(Math.min(...js)), jsonldHigh: f(Math.max(...js)),
+  };
+})();
+
+function listJoin(xs: string[]) {
+  return xs.length < 2 ? xs.join("") : `${xs.slice(0, -1).join(", ")} and ${xs[xs.length - 1]}`;
+}
 
 function utcTime(iso: string) {
   return iso.slice(11, 16);
@@ -128,6 +216,49 @@ export default function AlabamaWebsites2026() {
         note="Milliseconds from one computer in Tuscaloosa, lower is faster"
         bars={ttfbBars(BAR_ROWS)}
       />
+
+      <h2>Which kinds of business are most ready for AI search?</h2>
+
+      <p>
+        Dentists, doctors, clinics and vets had the fewest broken home pages and the most business
+        structured data. Of them, {kindPct("statewide", "health", "no_working_home_page")} had no working home
+        page, against {kindPct("statewide", "shops", "no_working_home_page")} of shops, and{" "}
+        {kindPct("statewide", "health", "jsonld_business")} carried Organization or LocalBusiness
+        JSON-LD, against {AI_RANGE.jsonldLow} to {AI_RANGE.jsonldHigh} for the other kinds large
+        enough to report. On all three AI search signals together the kinds sat close, between{" "}
+        {AI_RANGE.low} and {AI_RANGE.high}, and with bases of {AI_RANGE.baseLow} to {AI_RANGE.baseHigh}{" "}
+        pages that gap is too small to rank them.
+      </p>
+
+      <BarChart
+        title="All three AI search signals, by kind of business"
+        note="Business JSON-LD, llms.txt and no AI crawler blocked, as a share of own-domain pages in the statewide sample"
+        bars={kindAiBars()}
+      />
+
+      <p>
+        The chart leaves out {listJoin(kindsBelowMin())}, whose bases fall under {MIN_BASE} pages.
+        In the tables, any figure with a base under {MIN_BASE} shows its count only.
+      </p>
+
+      <KindTable frame="statewide" caption="Statewide random sample, by kind of business" />
+
+      <p>
+        The second table pools every domain checked, the statewide draw plus the five city lists.
+        Cities carry more weight in it than in the state as a whole, so it gives each kind a
+        larger count but no statewide estimate. It also gives trades and crafts a base large
+        enough for percentages.
+      </p>
+
+      <KindTable frame="all_checked_domains" caption="All checked domains, by kind of business" />
+
+      <p>
+        Each domain takes the kind of business that its OpenStreetMap listings carry most often.
+        Restaurants, cafes and bars covers amenity=restaurant, cafe, bar and fast_food. Health and
+        vets covers amenity=dentist, doctors, clinic and veterinary. Shops covers every shop tag,
+        trades and crafts every craft tag, and offices and professional services every office tag.
+        Hotels covers tourism=hotel and gyms covers leisure=fitness_centre.
+      </p>
 
       <h2>Full results by check</h2>
 

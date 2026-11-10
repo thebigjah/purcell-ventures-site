@@ -1,0 +1,192 @@
+{
+ "data_file": "alabama-2026-11.csv",
+ "min_base_for_percent": 30,
+ "kind_source": "most common category across each domain's OpenStreetMap listings",
+ "kinds": [
+  {
+   "key": "restaurants",
+   "name": "Restaurants, cafes and bars",
+   "osm_tags": "amenity=restaurant, cafe, bar, fast_food"
+  },
+  {
+   "key": "health",
+   "name": "Health and vets",
+   "osm_tags": "amenity=dentist, doctors, clinic, veterinary"
+  },
+  {
+   "key": "shops",
+   "name": "Shops",
+   "osm_tags": "shop=*"
+  },
+  {
+   "key": "trades",
+   "name": "Trades and crafts",
+   "osm_tags": "craft=*"
+  },
+  {
+   "key": "offices",
+   "name": "Offices and professional services",
+   "osm_tags": "office=*"
+  },
+  {
+   "key": "hotels",
+   "name": "Hotels",
+   "osm_tags": "tourism=hotel"
+  },
+  {
+   "key": "gyms",
+   "name": "Gyms",
+   "osm_tags": "leisure=fitness_centre"
+  }
+ ],
+ "frames": {
+  "statewide": {
+   "restaurants": {
+    "domains_checked": 185,
+    "no_working_home_page": 26,
+    "own_domain_pages": 152,
+    "jsonld_org_or_localbusiness": 72,
+    "all_three_ai_signals": 22,
+    "robots_blocks_any_ai_bot": 3,
+    "no_meta_description": 44
+   },
+   "health": {
+    "domains_checked": 73,
+    "no_working_home_page": 6,
+    "own_domain_pages": 65,
+    "jsonld_org_or_localbusiness": 42,
+    "all_three_ai_signals": 11,
+    "robots_blocks_any_ai_bot": 2,
+    "no_meta_description": 13
+   },
+   "shops": {
+    "domains_checked": 294,
+    "no_working_home_page": 54,
+    "own_domain_pages": 218,
+    "jsonld_org_or_localbusiness": 103,
+    "all_three_ai_signals": 38,
+    "robots_blocks_any_ai_bot": 7,
+    "no_meta_description": 58
+   },
+   "trades": {
+    "domains_checked": 36,
+    "no_working_home_page": 5,
+    "own_domain_pages": 27,
+    "jsonld_org_or_localbusiness": 14,
+    "all_three_ai_signals": 5,
+    "robots_blocks_any_ai_bot": 1,
+    "no_meta_description": 5
+   },
+   "offices": {
+    "domains_checked": 93,
+    "no_working_home_page": 14,
+    "own_domain_pages": 74,
+    "jsonld_org_or_localbusiness": 32,
+    "all_three_ai_signals": 15,
+    "robots_blocks_any_ai_bot": 6,
+    "no_meta_description": 23
+   },
+   "hotels": {
+    "domains_checked": 4,
+    "no_working_home_page": 1,
+    "own_domain_pages": 3,
+    "jsonld_org_or_localbusiness": 1,
+    "all_three_ai_signals": 0,
+    "robots_blocks_any_ai_bot": 0,
+    "no_meta_description": 1
+   },
+   "gyms": {
+    "domains_checked": 15,
+    "no_working_home_page": 2,
+    "own_domain_pages": 13,
+    "jsonld_org_or_localbusiness": 4,
+    "all_three_ai_signals": 1,
+    "robots_blocks_any_ai_bot": 2,
+    "no_meta_description": 3
+   },
+   "all": {
+    "domains_checked": 700,
+    "no_working_home_page": 108,
+    "own_domain_pages": 552,
+    "jsonld_org_or_localbusiness": 268,
+    "all_three_ai_signals": 92,
+    "robots_blocks_any_ai_bot": 21,
+    "no_meta_description": 147
+   }
+  },
+  "all_checked_domains": {
+   "restaurants": {
+    "domains_checked": 351,
+    "no_working_home_page": 43,
+    "own_domain_pages": 294,
+    "jsonld_org_or_localbusiness": 136,
+    "all_three_ai_signals": 38,
+    "robots_blocks_any_ai_bot": 9,
+    "no_meta_description": 93
+   },
+   "health": {
+    "domains_checked": 106,
+    "no_working_home_page": 8,
+    "own_domain_pages": 94,
+    "jsonld_org_or_localbusiness": 60,
+    "all_three_ai_signals": 15,
+    "robots_blocks_any_ai_bot": 3,
+    "no_meta_description": 17
+   },
+   "shops": {
+    "domains_checked": 462,
+    "no_working_home_page": 78,
+    "own_domain_pages": 354,
+    "jsonld_org_or_localbusiness": 168,
+    "all_three_ai_signals": 63,
+    "robots_blocks_any_ai_bot": 19,
+    "no_meta_description": 89
+   },
+   "trades": {
+    "domains_checked": 56,
+    "no_working_home_page": 8,
+    "own_domain_pages": 42,
+    "jsonld_org_or_localbusiness": 23,
+    "all_three_ai_signals": 8,
+    "robots_blocks_any_ai_bot": 1,
+    "no_meta_description": 8
+   },
+   "offices": {
+    "domains_checked": 171,
+    "no_working_home_page": 22,
+    "own_domain_pages": 139,
+    "jsonld_org_or_localbusiness": 72,
+    "all_three_ai_signals": 22,
+    "robots_blocks_any_ai_bot": 8,
+    "no_meta_description": 38
+   },
+   "hotels": {
+    "domains_checked": 7,
+    "no_working_home_page": 2,
+    "own_domain_pages": 5,
+    "jsonld_org_or_localbusiness": 3,
+    "all_three_ai_signals": 1,
+    "robots_blocks_any_ai_bot": 0,
+    "no_meta_description": 1
+   },
+   "gyms": {
+    "domains_checked": 23,
+    "no_working_home_page": 2,
+    "own_domain_pages": 21,
+    "jsonld_org_or_localbusiness": 8,
+    "all_three_ai_signals": 4,
+    "robots_blocks_any_ai_bot": 3,
+    "no_meta_description": 4
+   },
+   "all": {
+    "domains_checked": 1176,
+    "no_working_home_page": 163,
+    "own_domain_pages": 949,
+    "jsonld_org_or_localbusiness": 470,
+    "all_three_ai_signals": 151,
+    "robots_blocks_any_ai_bot": 43,
+    "no_meta_description": 250
+   }
+  }
+ }
+}
