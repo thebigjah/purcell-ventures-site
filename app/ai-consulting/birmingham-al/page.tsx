@@ -4,6 +4,7 @@ import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
+import AlabamaCityWebsites from "@/app/components/AlabamaCityWebsites";
 
 // City page on the same single-column PostLayout as the pillar. The sections follow the
 // work Birmingham offices do, and each answer comes first under its question heading.
@@ -46,6 +47,8 @@ export default function AiConsultingBirmingham() {
         client questions. AI tools help most with document work, and document work also
         needs the most care, because it holds patient, client and account details.
       </p>
+
+      <AlabamaCityWebsites city="birmingham" name="Birmingham" />
 
       <h2>What AI work fits a Birmingham office?</h2>
 

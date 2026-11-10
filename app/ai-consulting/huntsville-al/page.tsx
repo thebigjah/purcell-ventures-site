@@ -4,6 +4,7 @@ import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
+import AlabamaCityWebsites from "@/app/components/AlabamaCityWebsites";
 
 // City page on the same single-column PostLayout as the pillar. Huntsville's version
 // spends its length on contract data rules, since that is what decides AI work there.
@@ -46,6 +47,8 @@ export default function AiConsultingHuntsville() {
         contracts limit where data can go, and those limits decide which work AI may touch
         before anyone opens a chat window.
       </p>
+
+      <AlabamaCityWebsites city="huntsville" name="Huntsville" />
 
       <h2>What AI work fits Huntsville companies?</h2>
 

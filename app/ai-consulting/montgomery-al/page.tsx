@@ -4,6 +4,7 @@ import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
+import AlabamaCityWebsites from "@/app/components/AlabamaCityWebsites";
 
 // City page on the same single-column PostLayout as the pillar. Montgomery's version is
 // split between the firms around state government and the suppliers around the plant.
@@ -46,6 +47,8 @@ export default function AiConsultingMontgomery() {
         Suppliers move data: purchase orders, shipping notices, quality records and shift
         reports. AI helps with both, in different ways.
       </p>
+
+      <AlabamaCityWebsites city="montgomery" name="Montgomery" />
 
       <h2>What AI work fits Montgomery businesses?</h2>
 

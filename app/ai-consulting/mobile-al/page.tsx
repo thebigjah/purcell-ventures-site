@@ -4,6 +4,7 @@ import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
+import AlabamaCityWebsites from "@/app/components/AlabamaCityWebsites";
 
 // City page on the same single-column PostLayout as the pillar. Mobile's version follows
 // the two halves of its economy: shipping paperwork at the port and guest questions on
@@ -48,6 +49,8 @@ export default function AiConsultingMobile() {
         businesses answer the same guest questions every day, often at night and on
         weekends.
       </p>
+
+      <AlabamaCityWebsites city="mobile" name="Mobile" />
 
       <h2>What AI work fits Mobile businesses?</h2>
 
