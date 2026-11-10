@@ -97,17 +97,17 @@ export default function AiForVeterinaryClinics() {
       <table>
         <thead>
           <tr>
-            <th>Veterinary clinic task</th>
-            <th>AI role</th>
-            <th>Veterinary team&apos;s role</th>
+            <th scope="col">Veterinary clinic task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Veterinary team&apos;s role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Appointment reminders</strong></td><td>Writes the templates</td><td>Approves prep instructions</td></tr>
-          <tr><td><strong>Vaccine recalls</strong></td><td>Writes the message series</td><td>Decides what each pet needs</td></tr>
-          <tr><td><strong>New-client forms</strong></td><td>Rewrites the questions</td><td>Reads the history before the visit</td></tr>
-          <tr><td><strong>Review replies</strong></td><td>Drafts each reply</td><td>Removes client details and posts it</td></tr>
-          <tr><td><strong>Medical questions</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Appointment reminders</th><td>Writes the templates</td><td>Approves prep instructions</td></tr>
+          <tr><th scope="row">Vaccine recalls</th><td>Writes the message series</td><td>Decides what each pet needs</td></tr>
+          <tr><th scope="row">New-client forms</th><td>Rewrites the questions</td><td>Reads the history before the visit</td></tr>
+          <tr><th scope="row">Review replies</th><td>Drafts each reply</td><td>Removes client details and posts it</td></tr>
+          <tr><th scope="row">Medical questions</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

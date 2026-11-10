@@ -96,17 +96,17 @@ export default function AiWebsites() {
       <table>
         <thead>
           <tr>
-            <th></th>
-            <th>SEO</th>
-            <th>Generative engine optimization</th>
+            <td></td>
+            <th scope="col">SEO</th>
+            <th scope="col">Generative engine optimization</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>The result</strong></td><td>A link in a ranked list</td><td>A sentence quoted or summarized in an answer</td></tr>
-          <tr><td><strong>What the page needs</strong></td><td>Thorough coverage of a topic</td><td>Sentences that make sense on their own</td></tr>
-          <tr><td><strong>Local listings</strong></td><td>Google Business Profile drives the map results</td><td>Listings feed the facts assistants repeat</td></tr>
-          <tr><td><strong>What hurts</strong></td><td>Thin or copied pages</td><td>Vague marketing copy and sources that disagree</td></tr>
-          <tr><td><strong>Shared base</strong></td><td colSpan={2}>A page that crawlers can reach and index</td></tr>
+          <tr><th scope="row">The result</th><td>A link in a ranked list</td><td>A sentence quoted or summarized in an answer</td></tr>
+          <tr><th scope="row">What the page needs</th><td>Thorough coverage of a topic</td><td>Sentences that make sense on their own</td></tr>
+          <tr><th scope="row">Local listings</th><td>Google Business Profile drives the map results</td><td>Listings feed the facts assistants repeat</td></tr>
+          <tr><th scope="row">What hurts</th><td>Thin or copied pages</td><td>Vague marketing copy and sources that disagree</td></tr>
+          <tr><th scope="row">Shared base</th><td colSpan={2}>A page that crawlers can reach and index</td></tr>
         </tbody>
       </table>
 
@@ -176,17 +176,17 @@ export default function AiWebsites() {
       <table>
         <thead>
           <tr>
-            <th></th>
-            <th>AI website builder</th>
-            <th>Custom site</th>
+            <td></td>
+            <th scope="col">AI website builder</th>
+            <th scope="col">Custom site</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Who builds it</strong></td><td>You, from a drafted template</td><td>A developer, to a written plan</td></tr>
-          <tr><td><strong>Cost shape</strong></td><td>A monthly subscription</td><td>A build fee, then hosting and upkeep</td></tr>
-          <tr><td><strong>Structured data</strong></td><td>Whatever the builder supports</td><td>Anything schema.org defines</td></tr>
-          <tr><td><strong>Integrations</strong></td><td>The builder&apos;s app store</td><td>Your CRM, booking and other tools</td></tr>
-          <tr><td><strong>Leaving</strong></td><td>Content export varies by builder</td><td>You keep the code, content and domain</td></tr>
+          <tr><th scope="row">Who builds it</th><td>You, from a drafted template</td><td>A developer, to a written plan</td></tr>
+          <tr><th scope="row">Cost shape</th><td>A monthly subscription</td><td>A build fee, then hosting and upkeep</td></tr>
+          <tr><th scope="row">Structured data</th><td>Whatever the builder supports</td><td>Anything schema.org defines</td></tr>
+          <tr><th scope="row">Integrations</th><td>The builder&apos;s app store</td><td>Your CRM, booking and other tools</td></tr>
+          <tr><th scope="row">Leaving</th><td>Content export varies by builder</td><td>You keep the code, content and domain</td></tr>
         </tbody>
       </table>
 

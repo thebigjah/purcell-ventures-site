@@ -43,16 +43,16 @@ export default function Post() {
 
       <table>
         <thead>
-          <tr><th>Asset</th><th>Why it matters</th></tr>
+          <tr><th scope="col">Asset</th><th scope="col">Why it matters</th></tr>
         </thead>
         <tbody>
-          <tr><td><strong>The domain</strong></td><td>Registered to you, in an account you can log into. Providers often register it in their own name.</td></tr>
-          <tr><td><strong>Hosting</strong></td><td>An account in your name, with your billing on it. A sub-account inside a provider&apos;s reseller plan leaves them in control of it.</td></tr>
-          <tr><td><strong>The code</strong></td><td>A repository you have access to, or at minimum a copy of the files delivered to you at launch.</td></tr>
-          <tr><td><strong>The content management login</strong></td><td>An administrator account. An editor account cannot export the site or add users.</td></tr>
-          <tr><td><strong>Google Business Profile</strong></td><td>Yours, in your own Google account.</td></tr>
-          <tr><td><strong>Analytics</strong></td><td>Your property, with the provider added as a user. The reverse arrangement means your traffic history leaves with them.</td></tr>
-          <tr><td><strong>Email at the domain</strong></td><td>Under your control, because losing it means losing password resets for everything else on this list.</td></tr>
+          <tr><th scope="row">The domain</th><td>Registered to you, in an account you can log into. Providers often register it in their own name.</td></tr>
+          <tr><th scope="row">Hosting</th><td>An account in your name, with your billing on it. A sub-account inside a provider&apos;s reseller plan leaves them in control of it.</td></tr>
+          <tr><th scope="row">The code</th><td>A repository you have access to, or at minimum a copy of the files delivered to you at launch.</td></tr>
+          <tr><th scope="row">The content management login</th><td>An administrator account. An editor account cannot export the site or add users.</td></tr>
+          <tr><th scope="row">Google Business Profile</th><td>Yours, in your own Google account.</td></tr>
+          <tr><th scope="row">Analytics</th><td>Your property, with the provider added as a user. The reverse arrangement means your traffic history leaves with them.</td></tr>
+          <tr><th scope="row">Email at the domain</th><td>Under your control, because losing it means losing password resets for everything else on this list.</td></tr>
         </tbody>
       </table>
 

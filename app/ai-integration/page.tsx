@@ -87,17 +87,17 @@ export default function AiIntegration() {
       <table>
         <thead>
           <tr>
-            <th></th>
-            <th>Built-in or off-the-shelf AI</th>
-            <th>Custom integration</th>
+            <td></td>
+            <th scope="col">Built-in or off-the-shelf AI</th>
+            <th scope="col">Custom integration</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Start time</strong></td><td>Same day</td><td>Days to weeks</td></tr>
-          <tr><td><strong>Cost shape</strong></td><td>A monthly fee per user or per plan</td><td>A one-time build, plus model usage and upkeep</td></tr>
-          <tr><td><strong>Fits</strong></td><td>One product doing one job</td><td>Work that crosses two or more systems</td></tr>
-          <tr><td><strong>Data terms</strong></td><td>Set by the vendor</td><td>Set by the model provider you choose</td></tr>
-          <tr><td><strong>Switching later</strong></td><td>Depends on the vendor&apos;s export</td><td>Change the model in one setting</td></tr>
+          <tr><th scope="row">Start time</th><td>Same day</td><td>Days to weeks</td></tr>
+          <tr><th scope="row">Cost shape</th><td>A monthly fee per user or per plan</td><td>A one-time build, plus model usage and upkeep</td></tr>
+          <tr><th scope="row">Fits</th><td>One product doing one job</td><td>Work that crosses two or more systems</td></tr>
+          <tr><th scope="row">Data terms</th><td>Set by the vendor</td><td>Set by the model provider you choose</td></tr>
+          <tr><th scope="row">Switching later</th><td>Depends on the vendor&apos;s export</td><td>Change the model in one setting</td></tr>
         </tbody>
       </table>
 

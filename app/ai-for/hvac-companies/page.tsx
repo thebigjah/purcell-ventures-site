@@ -110,17 +110,17 @@ export default function AiForHvac() {
       <table>
         <thead>
           <tr>
-            <th>HVAC task</th>
-            <th>AI role</th>
-            <th>Person&apos;s role</th>
+            <th scope="col">HVAC task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Person&apos;s role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>After-hours requests</strong></td><td>Collects details and alerts on-call staff</td><td>Decides dispatch and handles emergencies</td></tr>
-          <tr><td><strong>Tune-up reminders</strong></td><td>Writes the message</td><td>Keeps the plan list current</td></tr>
-          <tr><td><strong>Estimates</strong></td><td>Drafts from tech notes</td><td>Sets prices and checks each line</td></tr>
-          <tr><td><strong>Review replies</strong></td><td>Drafts each reply</td><td>Reads and posts it</td></tr>
-          <tr><td><strong>Sizing and diagnosis</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">After-hours requests</th><td>Collects details and alerts on-call staff</td><td>Decides dispatch and handles emergencies</td></tr>
+          <tr><th scope="row">Tune-up reminders</th><td>Writes the message</td><td>Keeps the plan list current</td></tr>
+          <tr><th scope="row">Estimates</th><td>Drafts from tech notes</td><td>Sets prices and checks each line</td></tr>
+          <tr><th scope="row">Review replies</th><td>Drafts each reply</td><td>Reads and posts it</td></tr>
+          <tr><th scope="row">Sizing and diagnosis</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

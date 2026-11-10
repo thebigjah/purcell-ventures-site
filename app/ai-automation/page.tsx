@@ -139,17 +139,17 @@ export default function AiAutomation() {
       <table>
         <thead>
           <tr>
-            <th></th>
-            <th>Zapier or Make</th>
-            <th>Custom automation</th>
+            <td></td>
+            <th scope="col">Zapier or Make</th>
+            <th scope="col">Custom automation</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Setup</strong></td><td>You click steps together in a browser</td><td>A developer writes and tests code</td></tr>
-          <tr><td><strong>Cost shape</strong></td><td>Monthly subscription that grows with task volume</td><td>One-time build, plus hosting and upkeep</td></tr>
-          <tr><td><strong>Fits</strong></td><td>Two or three apps with standard connections</td><td>Messy data, AI steps, apps with no ready connection</td></tr>
-          <tr><td><strong>When it breaks</strong></td><td>The platform emails you about failed runs</td><td>Depends on the checks the developer built</td></tr>
-          <tr><td><strong>Who can change it</strong></td><td>Anyone on your team with the login</td><td>The developer, or anyone who can read the code</td></tr>
+          <tr><th scope="row">Setup</th><td>You click steps together in a browser</td><td>A developer writes and tests code</td></tr>
+          <tr><th scope="row">Cost shape</th><td>Monthly subscription that grows with task volume</td><td>One-time build, plus hosting and upkeep</td></tr>
+          <tr><th scope="row">Fits</th><td>Two or three apps with standard connections</td><td>Messy data, AI steps, apps with no ready connection</td></tr>
+          <tr><th scope="row">When it breaks</th><td>The platform emails you about failed runs</td><td>Depends on the checks the developer built</td></tr>
+          <tr><th scope="row">Who can change it</th><td>Anyone on your team with the login</td><td>The developer, or anyone who can read the code</td></tr>
         </tbody>
       </table>
 
@@ -217,17 +217,17 @@ export default function AiAutomation() {
       <table>
         <thead>
           <tr>
-            <th>Option</th>
-            <th>Price</th>
-            <th>Fits</th>
+            <th scope="col">Option</th>
+            <th scope="col">Price</th>
+            <th scope="col">Fits</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Digital Growth plan</strong></td><td>$179 a month, setup $650 to $1,000</td><td>Review requests, an AI FAQ on your site, scheduling tools</td></tr>
-          <tr><td><strong>Digital Full Service plan</strong></td><td>$279 a month, setup $650 to $1,000</td><td>AI chatbot, online booking, email and text campaigns</td></tr>
-          <tr><td><strong>Custom automation</strong></td><td>Quoted per project</td><td>A repeated task across your own systems</td></tr>
-          <tr><td><strong>Small software project</strong></td><td>$1,500 to $3,500</td><td>One tool or one integration</td></tr>
-          <tr><td><strong>Zero to Automated course</strong></td><td>$397 at launch</td><td>Owners who want to build their own</td></tr>
+          <tr><th scope="row">Digital Growth plan</th><td>$179 a month, setup $650 to $1,000</td><td>Review requests, an AI FAQ on your site, scheduling tools</td></tr>
+          <tr><th scope="row">Digital Full Service plan</th><td>$279 a month, setup $650 to $1,000</td><td>AI chatbot, online booking, email and text campaigns</td></tr>
+          <tr><th scope="row">Custom automation</th><td>Quoted per project</td><td>A repeated task across your own systems</td></tr>
+          <tr><th scope="row">Small software project</th><td>$1,500 to $3,500</td><td>One tool or one integration</td></tr>
+          <tr><th scope="row">Zero to Automated course</th><td>$397 at launch</td><td>Owners who want to build their own</td></tr>
         </tbody>
       </table>
 

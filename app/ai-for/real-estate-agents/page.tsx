@@ -94,17 +94,17 @@ export default function AiForRealEstate() {
       <table>
         <thead>
           <tr>
-            <th>Agent task</th>
-            <th>AI role</th>
-            <th>Agent&apos;s role</th>
+            <th scope="col">Agent task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Agent&apos;s role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Listing descriptions</strong></td><td>Drafts from property facts</td><td>Checks claims and fair housing wording</td></tr>
-          <tr><td><strong>Lead follow-up</strong></td><td>Drafts replies and follow-ups</td><td>Approves and collects consent</td></tr>
-          <tr><td><strong>Showing feedback</strong></td><td>Summarizes notes for the seller</td><td>Checks it and adds advice</td></tr>
-          <tr><td><strong>Social posts</strong></td><td>Drafts from your notes</td><td>Reads and posts</td></tr>
-          <tr><td><strong>Pricing and contracts</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Listing descriptions</th><td>Drafts from property facts</td><td>Checks claims and fair housing wording</td></tr>
+          <tr><th scope="row">Lead follow-up</th><td>Drafts replies and follow-ups</td><td>Approves and collects consent</td></tr>
+          <tr><th scope="row">Showing feedback</th><td>Summarizes notes for the seller</td><td>Checks it and adds advice</td></tr>
+          <tr><th scope="row">Social posts</th><td>Drafts from your notes</td><td>Reads and posts</td></tr>
+          <tr><th scope="row">Pricing and contracts</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

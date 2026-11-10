@@ -295,7 +295,7 @@ export default function CRMPage() {
                 <table className="crm-table">
                   <thead>
                     <tr>
-                      {["Name", "Email", "Business type", "Date", ""].map((h, i) => <th key={i}>{h}</th>)}
+                      {["Name", "Email", "Business type", "Date", ""].map((h, i) => <th scope="col" key={i}>{h}</th>)}
                     </tr>
                   </thead>
                   <tbody>

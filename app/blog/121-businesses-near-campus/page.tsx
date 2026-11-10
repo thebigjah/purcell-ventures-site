@@ -97,9 +97,9 @@ export default function Post() {
       <table>
         <thead>
           <tr>
-            <th>Category</th>
-            <th>Found</th>
-            <th>Reachable site</th>
+            <th scope="col">Category</th>
+            <th scope="col">Found</th>
+            <th scope="col">Reachable site</th>
           </tr>
         </thead>
         <tbody>

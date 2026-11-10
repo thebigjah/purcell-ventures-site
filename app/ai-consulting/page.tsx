@@ -72,18 +72,18 @@ export default function AiConsultingAlabama() {
       <table>
         <thead>
           <tr>
-            <th>Service</th>
-            <th>Price</th>
-            <th>Fits</th>
+            <th scope="col">Service</th>
+            <th scope="col">Price</th>
+            <th scope="col">Fits</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>1-on-1 consulting</strong></td><td>$175 an hour, two-hour minimum recommended</td><td>One owner or manager working on their own tools and problems</td></tr>
-          <tr><td><strong>Small group training</strong></td><td>$125 a person, 2 to 8 people</td><td>A team that works closely together</td></tr>
-          <tr><td><strong>Half-day workshop</strong></td><td>$2,500 flat, up to 20 people</td><td>All-hands training or a company event</td></tr>
-          <tr><td><strong>Small software project</strong></td><td>$1,500 to $3,500</td><td>One tool, one integration or one internal app</td></tr>
-          <tr><td><strong>Full application</strong></td><td>$5,000 to $15,000 and up</td><td>A larger system with several users and features</td></tr>
-          <tr><td><strong>AI automation</strong></td><td>Quoted per project</td><td>A repeated manual task that follows the same steps</td></tr>
+          <tr><th scope="row">1-on-1 consulting</th><td>$175 an hour, two-hour minimum recommended</td><td>One owner or manager working on their own tools and problems</td></tr>
+          <tr><th scope="row">Small group training</th><td>$125 a person, 2 to 8 people</td><td>A team that works closely together</td></tr>
+          <tr><th scope="row">Half-day workshop</th><td>$2,500 flat, up to 20 people</td><td>All-hands training or a company event</td></tr>
+          <tr><th scope="row">Small software project</th><td>$1,500 to $3,500</td><td>One tool, one integration or one internal app</td></tr>
+          <tr><th scope="row">Full application</th><td>$5,000 to $15,000 and up</td><td>A larger system with several users and features</td></tr>
+          <tr><th scope="row">AI automation</th><td>Quoted per project</td><td>A repeated manual task that follows the same steps</td></tr>
         </tbody>
       </table>
 
@@ -136,17 +136,17 @@ export default function AiConsultingAlabama() {
       <table>
         <thead>
           <tr>
-            <th></th>
-            <th>Training</th>
-            <th>Automation</th>
-            <th>Custom software</th>
+            <td></td>
+            <th scope="col">Training</th>
+            <th scope="col">Automation</th>
+            <th scope="col">Custom software</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>What changes</strong></td><td>Your team uses AI tools on its own work</td><td>A task runs without a person doing it each time</td><td>A new tool built around how you work</td></tr>
-          <tr><td><strong>A sign you need it</strong></td><td>Staff use ChatGPT for one-off questions only</td><td>Someone copies the same information between apps every week</td><td>Your team keeps spreadsheets to cover gaps in its software</td></tr>
-          <tr><td><strong>Who runs it afterward</strong></td><td>Your team</td><td>The automation, with your team checking results</td><td>Your team, with support agreed in the quote</td></tr>
-          <tr><td><strong>What it costs here</strong></td><td>$125 a person to $2,500 a workshop</td><td>Quoted per project</td><td>From $1,500</td></tr>
+          <tr><th scope="row">What changes</th><td>Your team uses AI tools on its own work</td><td>A task runs without a person doing it each time</td><td>A new tool built around how you work</td></tr>
+          <tr><th scope="row">A sign you need it</th><td>Staff use ChatGPT for one-off questions only</td><td>Someone copies the same information between apps every week</td><td>Your team keeps spreadsheets to cover gaps in its software</td></tr>
+          <tr><th scope="row">Who runs it afterward</th><td>Your team</td><td>The automation, with your team checking results</td><td>Your team, with support agreed in the quote</td></tr>
+          <tr><th scope="row">What it costs here</th><td>$125 a person to $2,500 a workshop</td><td>Quoted per project</td><td>From $1,500</td></tr>
         </tbody>
       </table>
 

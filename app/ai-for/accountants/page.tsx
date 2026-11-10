@@ -93,17 +93,17 @@ export default function AiForAccountants() {
       <table>
         <thead>
           <tr>
-            <th>Accounting firm task</th>
-            <th>AI role</th>
-            <th>Preparer&apos;s role</th>
+            <th scope="col">Accounting firm task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Preparer&apos;s role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Document checklists</strong></td><td>Drafts one per client type</td><td>Loads them into the portal</td></tr>
-          <tr><td><strong>Engagement letters</strong></td><td>Drafts from your template</td><td>Checks scope and fees and signs</td></tr>
-          <tr><td><strong>Tax-season FAQ</strong></td><td>Answers firm questions from a written list</td><td>Handles questions about one client</td></tr>
-          <tr><td><strong>Notice summaries</strong></td><td>Summarizes in plain words</td><td>Checks against the source</td></tr>
-          <tr><td><strong>Tax advice</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Document checklists</th><td>Drafts one per client type</td><td>Loads them into the portal</td></tr>
+          <tr><th scope="row">Engagement letters</th><td>Drafts from your template</td><td>Checks scope and fees and signs</td></tr>
+          <tr><th scope="row">Tax-season FAQ</th><td>Answers firm questions from a written list</td><td>Handles questions about one client</td></tr>
+          <tr><th scope="row">Notice summaries</th><td>Summarizes in plain words</td><td>Checks against the source</td></tr>
+          <tr><th scope="row">Tax advice</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

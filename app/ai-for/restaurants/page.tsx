@@ -103,17 +103,17 @@ export default function AiForRestaurants() {
       <table>
         <thead>
           <tr>
-            <th>Restaurant task</th>
-            <th>AI role</th>
-            <th>Person&apos;s role</th>
+            <th scope="col">Restaurant task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Person&apos;s role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Menu and hours questions</strong></td><td>Answers from your written facts</td><td>Updates the facts when they change</td></tr>
-          <tr><td><strong>Allergen questions</strong></td><td>Repeats the written list or hands off</td><td>Keeps the list current and answers the rest</td></tr>
-          <tr><td><strong>Review replies</strong></td><td>Drafts each reply</td><td>Edits, posts and handles safety complaints</td></tr>
-          <tr><td><strong>Catering inquiries</strong></td><td>Collects details and drafts a reply</td><td>Confirms the date and sets the price</td></tr>
-          <tr><td><strong>Food safety calls</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Menu and hours questions</th><td>Answers from your written facts</td><td>Updates the facts when they change</td></tr>
+          <tr><th scope="row">Allergen questions</th><td>Repeats the written list or hands off</td><td>Keeps the list current and answers the rest</td></tr>
+          <tr><th scope="row">Review replies</th><td>Drafts each reply</td><td>Edits, posts and handles safety complaints</td></tr>
+          <tr><th scope="row">Catering inquiries</th><td>Collects details and drafts a reply</td><td>Confirms the date and sets the price</td></tr>
+          <tr><th scope="row">Food safety calls</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

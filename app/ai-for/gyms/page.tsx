@@ -100,17 +100,17 @@ export default function AiForGyms() {
       <table>
         <thead>
           <tr>
-            <th>Gym task</th>
-            <th>AI role</th>
-            <th>Staff role</th>
+            <th scope="col">Gym task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Staff role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Trial follow-up</strong></td><td>Writes the message series</td><td>Answers every reply</td></tr>
-          <tr><td><strong>Schedule questions</strong></td><td>Answers from your schedule</td><td>Keeps the schedule current</td></tr>
-          <tr><td><strong>Retention messages</strong></td><td>Drafts by member group</td><td>Approves and sends</td></tr>
-          <tr><td><strong>Captions</strong></td><td>Drafts each one</td><td>Edits and posts with member permission</td></tr>
-          <tr><td><strong>Health and training advice</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Trial follow-up</th><td>Writes the message series</td><td>Answers every reply</td></tr>
+          <tr><th scope="row">Schedule questions</th><td>Answers from your schedule</td><td>Keeps the schedule current</td></tr>
+          <tr><th scope="row">Retention messages</th><td>Drafts by member group</td><td>Approves and sends</td></tr>
+          <tr><th scope="row">Captions</th><td>Drafts each one</td><td>Edits and posts with member permission</td></tr>
+          <tr><th scope="row">Health and training advice</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

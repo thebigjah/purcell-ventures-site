@@ -117,15 +117,15 @@ export default function AiConsultingCost() {
 
         <table>
           <thead>
-            <tr><th>The job</th><th>The usual model</th></tr>
+            <tr><th scope="col">The job</th><th scope="col">The usual model</th></tr>
           </thead>
           <tbody>
-            <tr><td><strong>One owner learning AI tools</strong></td><td>Hourly</td></tr>
-            <tr><td><strong>A small team that works closely together</strong></td><td>Per-person training</td></tr>
-            <tr><td><strong>All-hands training or a company event</strong></td><td>Workshop</td></tr>
-            <tr><td><strong>An automation or a custom tool</strong></td><td>Fixed-fee project</td></tr>
-            <tr><td><strong>Updates and support after launch</strong></td><td>Retainer</td></tr>
-            <tr><td><strong>An off-the-shelf AI tool for your staff</strong></td><td>Per-seat software</td></tr>
+            <tr><th scope="row">One owner learning AI tools</th><td>Hourly</td></tr>
+            <tr><th scope="row">A small team that works closely together</th><td>Per-person training</td></tr>
+            <tr><th scope="row">All-hands training or a company event</th><td>Workshop</td></tr>
+            <tr><th scope="row">An automation or a custom tool</th><td>Fixed-fee project</td></tr>
+            <tr><th scope="row">Updates and support after launch</th><td>Retainer</td></tr>
+            <tr><th scope="row">An off-the-shelf AI tool for your staff</th><td>Per-seat software</td></tr>
           </tbody>
         </table>
 

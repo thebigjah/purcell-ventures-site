@@ -145,19 +145,19 @@ export default function AiDesign() {
       <table>
         <thead>
           <tr>
-            <th>Job</th>
-            <th>What AI does well</th>
-            <th>Where it falls short</th>
-            <th>Who should finish it</th>
+            <th scope="col">Job</th>
+            <th scope="col">What AI does well</th>
+            <th scope="col">Where it falls short</th>
+            <th scope="col">Who should finish it</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Logo</strong></td><td>Many directions in minutes</td><td>Pixel output, garbled letters, weak legal footing</td><td>A designer</td></tr>
-          <tr><td><strong>Color palette</strong></td><td>Palettes with hex codes and usage notes</td><td>Text contrast needs checking</td><td>You, with a contrast checker</td></tr>
-          <tr><td><strong>Brand guide</strong></td><td>Font pairings, voice notes, draft taglines</td><td>Consistency across real uses</td><td>You or a designer</td></tr>
-          <tr><td><strong>Website</strong></td><td>A working layout from a description</td><td>Look-alike layouts, real copy, speed, accessibility</td><td>A web developer</td></tr>
-          <tr><td><strong>Social graphics</strong></td><td>Volume, variations and captions</td><td>Drifts off brand without templates</td><td>You or your staff</td></tr>
-          <tr><td><strong>Photos of your business</strong></td><td>Backgrounds and illustrations</td><td>Fake photos of real work mislead customers</td><td>A camera</td></tr>
+          <tr><th scope="row">Logo</th><td>Many directions in minutes</td><td>Pixel output, garbled letters, weak legal footing</td><td>A designer</td></tr>
+          <tr><th scope="row">Color palette</th><td>Palettes with hex codes and usage notes</td><td>Text contrast needs checking</td><td>You, with a contrast checker</td></tr>
+          <tr><th scope="row">Brand guide</th><td>Font pairings, voice notes, draft taglines</td><td>Consistency across real uses</td><td>You or a designer</td></tr>
+          <tr><th scope="row">Website</th><td>A working layout from a description</td><td>Look-alike layouts, real copy, speed, accessibility</td><td>A web developer</td></tr>
+          <tr><th scope="row">Social graphics</th><td>Volume, variations and captions</td><td>Drifts off brand without templates</td><td>You or your staff</td></tr>
+          <tr><th scope="row">Photos of your business</th><td>Backgrounds and illustrations</td><td>Fake photos of real work mislead customers</td><td>A camera</td></tr>
         </tbody>
       </table>
 

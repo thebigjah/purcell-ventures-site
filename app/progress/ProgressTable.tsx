@@ -57,8 +57,8 @@ export default function ProgressTable({ rows }: { rows: Row[] }) {
         <table>
           <thead>
             <tr>
-              <th>Project</th><th>Category</th><th>First grade</th><th>Blind grade</th><th>Final</th>
-              <th>Portfolio</th><th>Résumé</th><th>Commits</th><th>Tests</th><th>Last activity</th>
+              <th scope="col">Project</th><th scope="col">Category</th><th scope="col">First grade</th><th scope="col">Blind grade</th><th scope="col">Final</th>
+              <th scope="col">Portfolio</th><th scope="col">Résumé</th><th scope="col">Commits</th><th scope="col">Tests</th><th scope="col">Last activity</th>
             </tr>
           </thead>
           <tbody>

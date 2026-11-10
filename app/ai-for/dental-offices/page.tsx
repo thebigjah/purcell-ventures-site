@@ -94,17 +94,17 @@ export default function AiForDental() {
       <table>
         <thead>
           <tr>
-            <th>Dental office task</th>
-            <th>AI role</th>
-            <th>Person&apos;s role</th>
+            <th scope="col">Dental office task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Person&apos;s role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Recall reminders</strong></td><td>Writes the templates</td><td>Loads them into the sending system</td></tr>
-          <tr><td><strong>Insurance FAQ</strong></td><td>Answers general questions from a written list</td><td>Handles questions about one patient</td></tr>
-          <tr><td><strong>New-patient forms</strong></td><td>Rewrites the questions</td><td>Chooses a compliant form tool</td></tr>
-          <tr><td><strong>Review replies</strong></td><td>Drafts each reply</td><td>Removes any patient detail and posts it</td></tr>
-          <tr><td><strong>Clinical questions</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Recall reminders</th><td>Writes the templates</td><td>Loads them into the sending system</td></tr>
+          <tr><th scope="row">Insurance FAQ</th><td>Answers general questions from a written list</td><td>Handles questions about one patient</td></tr>
+          <tr><th scope="row">New-patient forms</th><td>Rewrites the questions</td><td>Chooses a compliant form tool</td></tr>
+          <tr><th scope="row">Review replies</th><td>Drafts each reply</td><td>Removes any patient detail and posts it</td></tr>
+          <tr><th scope="row">Clinical questions</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

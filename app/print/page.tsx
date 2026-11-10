@@ -576,7 +576,7 @@ export default function PrintPage() {
           <div className="pr-scroll">
             <table className="pr-table">
               <thead>
-                <tr>{["Material", "Printer", "Estimated cost", "Finish", "Notes"].map(h => <th key={h}>{h}</th>)}</tr>
+                <tr>{["Material", "Printer", "Estimated cost", "Finish", "Notes"].map(h => <th scope="col" key={h}>{h}</th>)}</tr>
               </thead>
               <tbody>
                 {PRINTER_GUIDE.map(row => (

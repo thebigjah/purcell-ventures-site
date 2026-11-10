@@ -66,16 +66,16 @@ export default function Page() {
 
         <table>
           <thead>
-            <tr><th></th><th>AI website builder</th><th>Custom site</th></tr>
+            <tr><td></td><th scope="col">AI website builder</th><th scope="col">Custom site</th></tr>
           </thead>
           <tbody>
-            <tr><td><strong>Who builds it</strong></td><td>You, from pages the AI drafts</td><td>A developer, from a written plan</td></tr>
-            <tr><td><strong>Time to launch</strong></td><td>Hours to days</td><td>One to several weeks</td></tr>
-            <tr><td><strong>How it charges</strong></td><td>A monthly or yearly subscription. Check current pricing on their site</td><td>A build fee, then hosting and upkeep</td></tr>
-            <tr><td><strong>Structured data</strong></td><td>What the builder supports</td><td>Anything schema.org defines</td></tr>
-            <tr><td><strong>Integrations</strong></td><td>The builder&apos;s app store</td><td>Your CRM, booking, payments and other tools</td></tr>
-            <tr><td><strong>Who updates it</strong></td><td>You, in the editor</td><td>The developer, or you through an editor they set up</td></tr>
-            <tr><td><strong>Leaving</strong></td><td>Content export varies by builder</td><td>You keep the code, content and domain</td></tr>
+            <tr><th scope="row">Who builds it</th><td>You, from pages the AI drafts</td><td>A developer, from a written plan</td></tr>
+            <tr><th scope="row">Time to launch</th><td>Hours to days</td><td>One to several weeks</td></tr>
+            <tr><th scope="row">How it charges</th><td>A monthly or yearly subscription. Check current pricing on their site</td><td>A build fee, then hosting and upkeep</td></tr>
+            <tr><th scope="row">Structured data</th><td>What the builder supports</td><td>Anything schema.org defines</td></tr>
+            <tr><th scope="row">Integrations</th><td>The builder&apos;s app store</td><td>Your CRM, booking, payments and other tools</td></tr>
+            <tr><th scope="row">Who updates it</th><td>You, in the editor</td><td>The developer, or you through an editor they set up</td></tr>
+            <tr><th scope="row">Leaving</th><td>Content export varies by builder</td><td>You keep the code, content and domain</td></tr>
           </tbody>
         </table>
 

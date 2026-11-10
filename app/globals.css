@@ -175,6 +175,10 @@ a { color: inherit; }
 .ui-prose h2 { font-size: clamp(24px, 2.6vw, 32px); line-height: 1.2; color: var(--fg); margin-top: 1.8em; }
 .ui-prose h3 { font-size: 21px; line-height: 1.25; color: var(--fg); margin-top: 1.6em; }
 .ui-prose a { color: var(--gold-text); text-underline-offset: 3px; }
+/* Links inside running text need a cue besides colour (WCAG 1.4.1). Buttons,
+   rows and cards that sit in prose keep their own treatment. */
+:is(.ui-prose, .ui-entry__body, .ui-faq) :is(p, li, td, th, dd, blockquote, figcaption) a:not([class*="btn"]):not(.ui-row):not(.pv-card) { text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(227,189,106,.45); text-underline-offset: 3px; }
+:is(.ui-prose, .ui-entry__body, .ui-faq) :is(p, li, td, th, dd, blockquote, figcaption) a:not([class*="btn"]):not(.ui-row):not(.pv-card):hover { text-decoration-color: var(--gold-text); }
 .ui-prose ul, .ui-prose ol { padding-left: 1.3em; }
 .ui-prose ul { list-style: disc; }
 .ui-prose ol { list-style: decimal; }
