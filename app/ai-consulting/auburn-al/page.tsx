@@ -25,6 +25,8 @@ const MIN_PCT_BASE = 20;
 function AuburnWebsites() {
   const c = aub.frames.city;
   const s = al.frames.statewide;
+  // Equal rounded shares read as a contrast with "against", so say they match.
+  const vs = (a: number, b: number) => (a === b ? "the same as statewide" : `against ${b} percent statewide`);
   const checked = c.domains_checked;
   const own = c.own_domain_pages;
   const lo = Math.round(100 / checked);
@@ -62,11 +64,11 @@ function AuburnWebsites() {
         {s.not_reachable.pct_of_checked} percent of my Alabama statewide sample. Of the {own}{" "}
         working pages on a business&rsquo;s own domain,{" "}
         {c.jsonld_org_or_localbusiness.pct_of_own_domain_pages} percent carried structured data
-        that names the business and its type, against{" "}
-        {s.jsonld_org_or_localbusiness.pct_of_own_domain_pages} percent statewide. On those
+        that names the business and its type,{" "}
+        {vs(c.jsonld_org_or_localbusiness.pct_of_own_domain_pages, s.jsonld_org_or_localbusiness.pct_of_own_domain_pages)}. On those
         pages, {c.all_three_ai_signals.pct_of_own_domain_pages} percent had all three signals I
-        measured for AI tools, against {s.all_three_ai_signals.pct_of_own_domain_pages} percent
-        statewide: business structured data, an llms.txt file and no AI crawler blocked in
+        measured for AI tools,{" "}
+        {vs(c.all_three_ai_signals.pct_of_own_domain_pages, s.all_three_ai_signals.pct_of_own_domain_pages)}: business structured data, an llms.txt file and no AI crawler blocked in
         robots.txt.
         {(own < MIN_BASE || checked < MIN_BASE) && (
           <>
