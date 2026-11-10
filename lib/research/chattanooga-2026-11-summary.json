@@ -1,0 +1,174 @@
+{
+ "data_file": "chattanooga-2026-11.csv",
+ "area": "City of Chattanooga, Tennessee (Wikidata Q186702, OSM relation 197273, admin_level 8)",
+ "draw": "every domain in the frame",
+ "checks_started_utc": "2026-11-10T04:29:07Z",
+ "checks_finished_utc": "2026-11-10T04:31:50Z",
+ "timing_note": "one machine (Tuscaloosa, AL), one run; compare timings only within this run, not against the Alabama or Cobb runs",
+ "overpass_fetched_utc": {
+  "chattanooga": "2026-11-10T04:28:12+00:00"
+ },
+ "overpass_endpoint": {
+  "chattanooga": "https://overpass-api.de/api/interpreter"
+ },
+ "overpass_elements_city": 805,
+ "frame": {
+  "chattanooga": 354,
+  "total": 354
+ },
+ "excluded": {
+  "no_or_bad_url": 0,
+  "social_page_elements": 1,
+  "brand_tagged_elements": 420,
+  "nonbusiness_elements": 4,
+  "chain_domains_dropped": 197
+ },
+ "social_page_urls": {
+  "chattanooga": 1,
+  "total": 1
+ },
+ "frames": {
+  "city": {
+   "domains_checked": 354,
+   "reachable_200": {
+    "n": 322,
+    "pct_of_checked": 91.0
+   },
+   "not_reachable": {
+    "n": 32,
+    "pct_of_checked": 9.0,
+    "by_reason": {
+     "dns_failed": 10,
+     "http_403": 7,
+     "http_429": 4,
+     "tls_cert_verify_failed": 2,
+     "http_409": 2,
+     "http_404": 2,
+     "timeout": 2,
+     "http_400": 1,
+     "http_500": 1,
+     "tls_error": 1
+    }
+   },
+   "redirect_to_other_domain": {
+    "n": 11,
+    "pct_of_reachable": 3.4
+   },
+   "own_domain_pages": 311,
+   "https_final": {
+    "n": 289,
+    "pct_of_own_domain_pages": 92.9
+   },
+   "viewport": {
+    "n": 302,
+    "pct_of_own_domain_pages": 97.1
+   },
+   "title": {
+    "n": 303,
+    "pct_of_own_domain_pages": 97.4
+   },
+   "meta_description": {
+    "n": 233,
+    "pct_of_own_domain_pages": 74.9
+   },
+   "jsonld_any": {
+    "n": 230,
+    "pct_of_own_domain_pages": 74.0
+   },
+   "jsonld_org_or_localbusiness": {
+    "n": 194,
+    "pct_of_own_domain_pages": 62.4
+   },
+   "robots_txt_found": {
+    "n": 296,
+    "pct_of_own_domain_pages": 95.2
+   },
+   "llms_txt": {
+    "n": 101,
+    "pct_of_own_domain_pages": 32.5
+   },
+   "no_https": {
+    "n": 22,
+    "pct_of_own_domain_pages": 7.1
+   },
+   "no_viewport": {
+    "n": 9,
+    "pct_of_own_domain_pages": 2.9
+   },
+   "robots_blocks_GPTBot": {
+    "n": 12,
+    "pct_of_own_domain_pages": 3.9,
+    "named_in_robots_n": 74
+   },
+   "robots_blocks_ClaudeBot": {
+    "n": 13,
+    "pct_of_own_domain_pages": 4.2,
+    "named_in_robots_n": 75
+   },
+   "robots_blocks_PerplexityBot": {
+    "n": 3,
+    "pct_of_own_domain_pages": 1.0,
+    "named_in_robots_n": 12
+   },
+   "robots_blocks_Google-Extended": {
+    "n": 11,
+    "pct_of_own_domain_pages": 3.5,
+    "named_in_robots_n": 73
+   },
+   "robots_blocks_CCBot": {
+    "n": 11,
+    "pct_of_own_domain_pages": 3.5,
+    "named_in_robots_n": 68
+   },
+   "robots_blocks_any_ai_bot": {
+    "n": 13,
+    "pct_of_own_domain_pages": 4.2
+   },
+   "robots_blocks_an_ai_bot_by_name": {
+    "n": 11,
+    "pct_of_own_domain_pages": 3.5
+   },
+   "robots_blocks_all_five": {
+    "n": 3,
+    "pct_of_own_domain_pages": 1.0
+   },
+   "all_three_ai_signals": {
+    "n": 75,
+    "pct_of_own_domain_pages": 24.1,
+    "definition": "business JSON-LD present, llms.txt present, none of five AI bots blocked"
+   },
+   "passes_all_four_basics": {
+    "n": 222,
+    "pct_of_own_domain_pages": 71.4,
+    "definition": "https, viewport, title, meta description"
+   },
+   "ttfb_ms": {
+    "median": 656,
+    "p75": 876,
+    "p90": 1378,
+    "over_800ms_n": 98,
+    "over_800ms_pct": 31.5
+   },
+   "html_download_ms": {
+    "median": 837,
+    "p75": 1144,
+    "p90": 1591,
+    "over_2000ms_n": 18,
+    "over_2000ms_pct": 5.8
+   },
+   "html_bytes": {
+    "median": 195738,
+    "p75": 375994,
+    "p90": 682651
+   },
+   "osm_opening_hours": {
+    "n": 274,
+    "pct_of_checked": 77.4
+   },
+   "osm_phone": {
+    "n": 289,
+    "pct_of_checked": 81.6
+   }
+  }
+ }
+}

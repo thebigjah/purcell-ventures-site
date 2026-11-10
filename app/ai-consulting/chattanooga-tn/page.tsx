@@ -4,12 +4,48 @@ import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
+import chatt from "@/lib/research/chattanooga-2026-11-summary.json";
+import al from "@/lib/research/alabama-2026-11-summary.json";
 
 // City page on the same single-column PostLayout as the pillar. Chattanooga's version
 // splits its length between the startups downtown, the supplier and freight work around
 // the Volkswagen plant and the interstates, and the tourism and medical offices.
 
 const PATH = "/ai-consulting/chattanooga-tn";
+const STUDY = "/research/alabama-small-business-websites-2026";
+
+// Local proof point, built like AlabamaCityWebsites. Every number comes from the Chattanooga
+// summary (checked with the Alabama study's method) and the Alabama statewide sample at build
+// time, so the page never carries a typed figure that can drift from the data.
+function ChattanoogaWebsites() {
+  const c = chatt.frames.city;
+  const s = al.frames.statewide;
+  return (
+    <>
+      <h2>How do Chattanooga business websites hold up?</h2>
+
+      <p>
+        In November 2026 I checked the home pages of all {c.domains_checked} business websites
+        that OpenStreetMap lists inside the Chattanooga city limits, and{" "}
+        {c.not_reachable.pct_of_checked} percent had no working home page, against{" "}
+        {s.not_reachable.pct_of_checked} percent of my Alabama statewide sample. Of the{" "}
+        {c.own_domain_pages} working pages on a business&rsquo;s own domain,{" "}
+        {c.jsonld_org_or_localbusiness.pct_of_own_domain_pages} percent carried structured data
+        that names the business and its type, against{" "}
+        {s.jsonld_org_or_localbusiness.pct_of_own_domain_pages} percent in Alabama. On those
+        pages, {c.all_three_ai_signals.pct_of_own_domain_pages} percent had all three signals I
+        measured for AI tools, against {s.all_three_ai_signals.pct_of_own_domain_pages} percent
+        in Alabama: business structured data, an llms.txt file and no AI crawler blocked in
+        robots.txt.
+      </p>
+
+      <p>
+        The checks, filters and scripts match my{" "}
+        <Link href={STUDY}>study of Alabama small business websites</Link>.
+      </p>
+    </>
+  );
+}
 
 export default function AiConsultingChattanooga() {
   return (
@@ -49,6 +85,8 @@ export default function AiConsultingChattanooga() {
         medical practices and clinics to the streets around it. Each of those businesses
         repeats some work every week, and repeated work is where AI helps most.
       </p>
+
+      <ChattanoogaWebsites />
 
       <h2>What AI work fits Chattanooga businesses?</h2>
 
