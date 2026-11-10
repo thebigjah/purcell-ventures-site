@@ -64,7 +64,7 @@ AI consultant in Tuscaloosa, Alabama. Elijah Purcell builds AI systems, automati
 
 **When I am the wrong fit** Purcell Ventures is one person. If you need a large team, a signed enterprise MSA or support around the clock, I am the wrong fit, and I will tell you on the first call.
 
-**Do you work outside Tuscaloosa?** Yes. AI consulting across Alabama covers how the work runs in other cities, with guides for Birmingham , Huntsville , Montgomery , Mobile and Auburn . The trade guides cover what AI handles in twenty kinds of business, and the Alabama website study shows how 1,176 business sites across the state hold up with Google and AI search.
+**Do you work outside Tuscaloosa?** Yes. AI consulting across Alabama covers how the work runs in other cities, with guides for Birmingham , Huntsville , Montgomery , Mobile and Auburn . The trade guides cover what AI handles in twenty kinds of business, and the Alabama website study shows how 1,176 business sites across the state hold up with Google and AI search. The Tuscaloosa website study sets every listed Tuscaloosa business site beside the state on the same checks.
 
 **Common questions** Elijah Purcell, Founder/CEO of Purcell Ventures LLC, works as an AI consultant and software developer out of Tuscaloosa, Alabama. He builds AI systems, AI automation, custom software and websites for local businesses and is a student at the University of Alabama, in New College and the Honors College.
 
@@ -1024,7 +1024,7 @@ I checked 700 Alabama small business websites in November 2026. 15.4% had no wor
 
 **What did the check find?** The statewide figures come from a random draw of 700 of the 2,102 business domains that OpenStreetMap lists for Alabama. The city figures cover every listed domain inside each city limit. Percentages for page checks use the 552 pages that stayed on the business's own domain as the base.
 
-**How do the five cities compare?** Each bar shows one city's share, with the statewide sample in grey for reference. The n under each name is the base for that bar. Montgomery and Tuscaloosa have small bases, so a single site moves their figures by two to three points.
+**How do the five cities compare?** Each bar shows one city's share, with the statewide sample in grey for reference. The n under each name is the base for that bar. Montgomery and Tuscaloosa have small bases, so a single site moves their figures by two to three points. The Tuscaloosa study sets the Tuscaloosa figures beside the statewide sample on every measure.
 
 **Which kinds of business are most ready for AI search?** Dentists, doctors, clinics and vets had the fewest broken home pages and the most business structured data. Of them, 8.2% had no working home page, against 18.4% of shops, and 64.6% carried Organization or LocalBusiness JSON-LD, against 43.2% to 47.4% for the other kinds large enough to report. On all three AI search signals together the kinds sat close, between 14.5% and 20.3% , and with bases of 65 to 218 pages that gap is too small to rank them.
 
@@ -1035,6 +1035,25 @@ I checked 700 Alabama small business websites in November 2026. 15.4% had no wor
 **Common questions** It checked the home page of each business website for a working response, https, a viewport tag, a title, a meta description and Organization or LocalBusiness JSON-LD. It also read robots.txt for five AI crawlers, looked for an llms.txt file and timed the first byte and the HTML download from one computer in Tuscaloosa.
 
 **Data credit and license** Listing data © OpenStreetMap contributors , available under the Open Database License. The aggregate figures on this page and in the CSV carry a Creative Commons Attribution 4.0 license. Credit Purcell Ventures and OpenStreetMap contributors when you use them.
+
+### Tuscaloosa small business websites, November 2026
+URL: https://purcellventures.co/research/tuscaloosa-small-business-websites-2026
+
+I checked all 60 Tuscaloosa small business websites listed in OpenStreetMap. 14.9% of their own-domain pages block an AI crawler, against 3.8% across Alabama.
+
+**What did the check find?** The Tuscaloosa figures cover every listed business domain in the city, so they count the whole OpenStreetMap list. The Alabama figures come from a random draw of 700 of the 2,102 business domains in the state. Both come from the same run of the Alabama study , with the same query, filters and script.
+
+**How does Tuscaloosa compare with Alabama?** The table lists every measure in the study, with the count and the base for each side. The last column gives a Fisher exact test of each gap. A value under 0.05 means a gap that large would turn up by chance less than one time in twenty. Only rows in the AI crawler group fall under it. One Tuscaloosa site moves a page figure by 2.1 points.
+
+**Why does AI crawler blocking stand out?** At the statewide rate, about 2 of the 47 Tuscaloosa pages would block an AI crawler. 7 do. The Fisher exact test puts the chance of a gap that large at 0.004 , so chance alone is an unlikely cause. The count is still small, and 7 sites is a short list to explain a city with.
+
+**What did the campus audit find?** On 20 August 2026 I counted every independent business within 2,500 m of the Quad, with or without a website. There were 121 . Of those, 27 had a website a machine could reach, and 23 had opening hours recorded anywhere a machine can read them. The full count by kind of business is in 121 businesses near campus, and what a phone can find .
+
+**Method** This page reads the Tuscaloosa frame of the Alabama study , which prints the full Overpass query and the exact test behind each check. The Tuscaloosa query ran on 9 November 2026 at 22:19 UTC against the OpenStreetMap boundary with Wikidata id Q79580, the Tuscaloosa city limit, and the statewide query ran at 22:05 UTC. Both ask for every listing tagged shop, craft or office, every restaurant, cafe, bar, fast food outlet, dentist, doctor's office, clinic and veterinarian, every hotel and every fitness centre, where the listing has a website or contact:website tag. Chains, government offices, schools, nonprofits and social media pages came out before the checks.
+
+**Common questions** On most checks they sit close to the Alabama statewide sample. 15.0% of Tuscaloosa sites had no working home page, against 15.4% statewide, and 44.7% carried business structured data, against 48.6%. The clear gap is AI crawler blocking: 7 of 47 Tuscaloosa pages block at least one AI crawler, against 21 of 552 in the statewide sample.
+
+**Data and license** Download the Alabama study CSV . Its tuscaloosa rows hold the count, base and percentage behind every Tuscaloosa study figure on this page, beside the statewide rows, with no domains or business names.
 
 ### Cobb County small business websites, 1,672 checked
 URL: https://purcellventures.co/research/cobb-county-small-business-websites-2026
@@ -2144,6 +2163,14 @@ Essays and guides by Elijah Purcell on AI tools and software for small businesse
 URL: https://purcellventures.co/contact
 
 Phone, email and a contact card to save for Elijah Purcell, Founder/CEO of Purcell Ventures LLC in Tuscaloosa, Alabama.
+
+**How to reach me** Email elijah@purcellventures.co or call or text (205) 462-7839 . Either one reaches me directly, and I reply within one business day.
+
+**What to put in a first message** Three things get us moving. Tell me which business you run, what you want done, and when you need it finished. If you already have a website, send the link. A few plain sentences work better than a long brief, and I will ask follow-up questions if I need more.
+
+**Where the work happens** I am based in Tuscaloosa , Alabama. I meet businesses in person in Tuscaloosa and metro Atlanta. Everything else runs remotely, so a business anywhere in the US can hire me for AI, software or website work.
+
+**What happens next** We set up a free call. I ask how your business runs today and what is slowing it down. You do not need a plan or a budget figure to start. Describing the problem is enough. I quote every project after that free call, so you hear the price before you commit to anything.
 
 ### Privacy, Purcell Ventures
 URL: https://purcellventures.co/privacy
