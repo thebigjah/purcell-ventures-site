@@ -67,6 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/pricing-comparison`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/steady`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/contact`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/privacy`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "yearly", priority: 0.3 },
     { url: `${BASE}/tutorials`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/llms-txt`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.5 },
 

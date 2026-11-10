@@ -100,6 +100,7 @@ export default function SiteFooter() {
       <div className="ui-wrap foot__base">
         <span>&copy; 2026 Purcell Ventures LLC, Georgia control number {CONTACT.llcControlNumber}.</span>
         <span>Elijah Purcell, Founder/CEO</span>
+        <Link href="/privacy">Privacy</Link>
       </div>
     </footer>
   );
@@ -118,5 +119,7 @@ const FOOT_CSS = `
 .foot li a{display:inline-block;padding:4px 0;color:var(--muted);text-decoration:none}
 .foot li a:hover,.foot__reach a:hover{color:#f0d79a}
 .foot__base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--subtle)}
+.foot__base a{color:var(--muted);text-decoration:none;padding:4px 0}
+.foot__base a:hover{color:#f0d79a}
 @media (max-width:980px){.foot__top{grid-template-columns:repeat(2,minmax(0,1fr))}.foot__brand{grid-column:1/-1}}
 @media (max-width:520px){.foot{padding-block:44px 28px}.foot__top{gap:28px 20px}.foot__base{margin-top:28px}}`;
