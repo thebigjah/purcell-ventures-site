@@ -68,12 +68,6 @@ export default function LlmsTxtPage() {
         is version 2.
       </p>
 
-      <p>
-        Howard has also said what the file is for. In a Bluesky reply on 20 January 2026 he
-        wrote: &ldquo;llms.txt has nothing to do with SEO. It&apos;s basically a pre-written
-        CLAUDE.md/AGENTS.md file to help people using stuff like Cursor and Claude Code use
-        your site/product. It&apos;s not used for training LLMs.&rdquo;
-      </p>
 
       <h2>What goes in an llms.txt file?</h2>
 
