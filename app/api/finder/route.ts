@@ -1,3 +1,4 @@
+import { guard } from "@/lib/api-guard";
 import { NextRequest, NextResponse } from "next/server";
 
 const TYPE_MAP: Record<string, string> = {
@@ -87,6 +88,9 @@ async function searchGroup(
 }
 
 export async function GET(req: NextRequest) {
+  const blocked = guard(req);
+  if (blocked) return blocked;
+
   const { searchParams } = new URL(req.url);
   const lat = parseFloat(searchParams.get("lat") ?? "0");
   const lng = parseFloat(searchParams.get("lng") ?? "0");
