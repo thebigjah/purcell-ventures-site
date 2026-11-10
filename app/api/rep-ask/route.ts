@@ -1,5 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { NextRequest, NextResponse } from "next/server";
+import { repFromRequest } from "@/lib/rep-session";
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
@@ -99,8 +100,8 @@ When a rep asks "how do I handle X" — give them the SPECIFIC LANGUAGE they sho
 
 export async function POST(req: NextRequest) {
   // Auth check — same session cookie as /rep-portal pages
-  const session = req.cookies.get("pv_rep_session");
-  if (!session?.value) {
+  const rep = await repFromRequest(req);
+  if (!rep) {
     return NextResponse.json({ error: "Not authenticated. Sign in at /rep-portal/login." }, { status: 401 });
   }
 

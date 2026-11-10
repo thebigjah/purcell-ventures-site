@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { REP_SESSION_COOKIE, signSession, timingSafeEqualStr } from "@/lib/rep-session";
 
 /**
  * POST /api/rep-auth
@@ -37,6 +38,23 @@ function parseRepPasswords(raw: string | undefined): RepEntry[] {
     .filter((x): x is RepEntry => x !== null);
 }
 
+/**
+ * Constant-time password check. Both sides are hashed first so the comparison runs over
+ * equal-length digests and leaks neither content nor length.
+ */
+async function passwordMatches(given: string, expected: string): Promise<boolean> {
+  const enc = new TextEncoder();
+  const [a, b] = await Promise.all([
+    crypto.subtle.digest("SHA-256", enc.encode(given)),
+    crypto.subtle.digest("SHA-256", enc.encode(expected)),
+  ]);
+  const hex = (buf: ArrayBuffer) => Array.from(new Uint8Array(buf), (x) => x.toString(16).padStart(2, "0")).join("");
+  return timingSafeEqualStr(hex(a), hex(b));
+}
+
+/** Flat delay on every failed attempt, so guessing costs wall-clock time per try. */
+const failDelay = () => new Promise((r) => setTimeout(r, 750));
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -53,15 +71,21 @@ export async function POST(req: NextRequest) {
 
     // Per-rep mode (preferred)
     if (reps.length > 0) {
-      const match = reps.find((r) => r.password === password);
+      // Check every entry (no early exit) so timing does not reveal which rep matched.
+      let match: RepEntry | null = null;
+      for (const r of reps) {
+        if ((await passwordMatches(password, r.password)) && !match) match = r;
+      }
       if (!match) {
+        await failDelay();
         return NextResponse.json({ error: "Wrong password." }, { status: 401 });
       }
       matchedName = match.name;
     }
     // Shared-password fallback
     else if (sharedPassword) {
-      if (password !== sharedPassword) {
+      if (!(await passwordMatches(password, sharedPassword))) {
+        await failDelay();
         return NextResponse.json({ error: "Wrong password." }, { status: 401 });
       }
       if (!providedName || typeof providedName !== "string" || providedName.trim().length < 2) {
@@ -78,10 +102,10 @@ export async function POST(req: NextRequest) {
 
     const res = NextResponse.json({ ok: true, name: matchedName });
     const thirtyDays = 60 * 60 * 24 * 30;
-    res.cookies.set("pv_rep_session", "1", {
+    res.cookies.set(REP_SESSION_COOKIE, await signSession(matchedName), {
       httpOnly: true,
       sameSite: "lax",
-      secure: process.env.NODE_ENV === "production",
+      secure: true,
       path: "/",
       maxAge: thirtyDays,
     });
@@ -119,7 +143,7 @@ export async function GET() {
 /** DELETE /api/rep-auth — clears the session */
 export async function DELETE() {
   const res = NextResponse.json({ ok: true });
-  res.cookies.delete("pv_rep_session");
+  res.cookies.delete(REP_SESSION_COOKIE);
   res.cookies.delete("pv_rep_name");
   return res;
 }

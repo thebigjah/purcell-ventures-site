@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test scripts/test-url-safety.mjs"
+    "test": "node --test scripts/test-url-safety.mjs scripts/test-rep-session.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",

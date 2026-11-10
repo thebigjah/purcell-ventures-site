@@ -1,5 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { NextRequest, NextResponse } from "next/server";
+import { repFromRequest } from "@/lib/rep-session";
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
@@ -47,8 +48,8 @@ Quality bar:
 - Maximum 50 words for "action" and "exact_message" each. Be tight.`;
 
 export async function POST(req: NextRequest) {
-  const session = req.cookies.get("pv_rep_session");
-  if (!session?.value) {
+  const rep = await repFromRequest(req);
+  if (!rep) {
     return NextResponse.json({ error: "Not authenticated." }, { status: 401 });
   }
 

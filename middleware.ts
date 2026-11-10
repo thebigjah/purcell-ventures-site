@@ -1,17 +1,15 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { REP_SESSION_COOKIE, verifySession } from "@/lib/rep-session";
 
 /**
- * Rep portal auth gate (v1).
+ * Rep portal auth gate.
  *
- * Protects /rep-portal/* (except /rep-portal/login).
- * Checks for `pv_rep_session` cookie. If missing or invalid, redirects to login.
- *
- * v1 uses a shared password set via REP_PORTAL_PASSWORD env var on Vercel.
- * v2 will swap this for Google sign-in via Auth.js — same middleware shape,
- * different validation step.
+ * Protects /rep-portal/* (except /rep-portal/login). The `pv_rep_session` cookie must be a
+ * valid, unexpired HMAC-signed session issued by /api/rep-auth (see lib/rep-session.ts).
+ * Anything else redirects to login and the bad cookie is cleared.
  */
-export function middleware(req: NextRequest) {
+export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   // Only gate /rep-portal/*, allow /rep-portal/login through
@@ -22,12 +20,15 @@ export function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
-  const session = req.cookies.get("pv_rep_session");
-  if (!session?.value) {
+  const raw = req.cookies.get(REP_SESSION_COOKIE)?.value;
+  const rep = await verifySession(raw);
+  if (!rep) {
     const url = req.nextUrl.clone();
     url.pathname = "/rep-portal/login";
     url.searchParams.set("redirect", pathname);
-    return NextResponse.redirect(url);
+    const res = NextResponse.redirect(url);
+    if (raw !== undefined) res.cookies.delete(REP_SESSION_COOKIE);
+    return res;
   }
 
   return NextResponse.next();
