@@ -96,7 +96,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/agentic-ai`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     // Cluster pillars, written 9 Nov 2026. Each blog post in a cluster links up to one.
     { url: `${BASE}/ai-consulting`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.9 },
-    // Buyer cost page under the pillar, written 9 Nov 2026.
+    // Buyer pricing page under the pillar, written 9 Nov 2026.
     { url: `${BASE}/ai-consulting-cost`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.9 },
     // City pages under the statewide pillar, written 9 Nov 2026
     ...["birmingham-al", "huntsville-al", "montgomery-al", "mobile-al", "auburn-al"].map((city) => (

@@ -155,7 +155,7 @@ export default function ConsultingPage() {
           If you are not sure which session fits, <a className="ui-link" href="#contact">send me a message</a> and I will recommend one.
         </p>
         <p className="ui-muted" style={{ marginTop: 12 }}>
-          What moves the price and how to estimate payback: <Link className="ui-link" href="/ai-consulting-cost">how much AI consulting costs for a small business</Link>.
+          What goes into a quote and how to estimate payback: <Link className="ui-link" href="/ai-consulting-cost">how AI consulting is priced for a small business</Link>.
         </p>
       </Section>
 

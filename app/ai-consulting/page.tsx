@@ -91,8 +91,8 @@ export default function AiConsultingAlabama() {
         To check whether a session pays for itself, the{" "}
         <Link href="/ai-cost-calculator">AI cost calculator</Link> takes your team size,
         hourly cost and hours of manual work, and shows the payback in dollars and hours.
-        For what moves the price and what to ask before you pay anyone, read{" "}
-        <Link href="/ai-consulting-cost">how much AI consulting costs for a small business</Link>.
+        For what drives a quote and what to ask before you pay anyone, read{" "}
+        <Link href="/ai-consulting-cost">how AI consulting is priced for a small business</Link>.
       </p>
 
       <h2>Is my business ready for AI consulting?</h2>

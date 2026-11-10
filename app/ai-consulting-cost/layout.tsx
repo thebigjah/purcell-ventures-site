@@ -1,30 +1,28 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-// BUYER COST PAGE (9 Nov 2026).
+// BUYER PRICING PAGE (9 Nov 2026).
 //
-// Answers "how much does AI consulting cost for a small business", which the blog engine
-// cannot cover because it bans dollar figures. Every Purcell Ventures price on the page was
-// read off /consulting, /software, /digital, /steady, /pricing-comparison and /ai-consulting
-// on 9 Nov 2026. /sites prints no dollar figures (builds are quoted on the discovery call).
-//
-// No market price ranges. /pricing-comparison lists agency and freelancer figures with no
-// sources behind them, so this page leaves them out and describes how each pricing model
-// works instead.
+// Answers "how much does AI consulting cost for a small business" for the buyer who
+// searches it. Elijah's rule as of 9 Nov 2026: no service prices anywhere on the site.
+// Websites, consulting, software, digital plans and partnerships are quoted per business
+// after a free call, and only /courses and /shop show prices. So this page explains how
+// the quote is built and how pricing models work, with zero dollar figures in the copy,
+// the metadata or the schema. Keep it that way.
 
 const URL = "https://purcellventures.co/ai-consulting-cost";
 const DESCRIPTION =
-  "AI consulting at Purcell Ventures costs $175 an hour, $125 a person for groups or $2,500 for a workshop. What drives the price and how to estimate the payback.";
+  "How Purcell Ventures quotes AI consulting for small businesses after a free call, what drives a quote, how common pricing models work and how to judge payback.";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI consulting cost for a small business, Purcell Ventures" },
+  title: { absolute: "AI consulting pricing for a small business, Purcell Ventures" },
   description: DESCRIPTION,
   keywords: [
     "AI consulting cost", "how much does AI consulting cost", "AI consultant pricing",
-    "AI training cost for small business", "AI workshop price", "AI consulting rates",
+    "AI consulting pricing models", "AI training cost for small business", "AI consulting quote",
   ],
   openGraph: {
-    title: "How much does AI consulting cost for a small business?",
+    title: "How is AI consulting priced for a small business?",
     description: DESCRIPTION,
     url: URL,
     type: "article",
@@ -32,23 +30,23 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "How much does AI consulting cost for a small business?",
+    title: "How is AI consulting priced for a small business?",
     description: DESCRIPTION,
   },
   alternates: { canonical: URL },
 };
 
 export const QA: [string, string][] = [
-  ["How much does AI consulting cost for a small business?",
-   "At Purcell Ventures, 1-on-1 AI consulting costs $175 an hour with a two-hour minimum recommended. Small group training costs $125 a person for 2 to 8 people, and a half-day workshop costs $2,500 flat for up to 20 people. Small software projects run $1,500 to $3,500."],
-  ["How much does AI training cost for a team of 8?",
-   "A small group session for 8 people costs $1,000 at Purcell Ventures, which is 8 people at $125 each, with a two-hour minimum."],
-  ["Is the first consultation free?",
+  ["How much does AI consulting cost at Purcell Ventures?",
+   "Elijah Purcell quotes each business after a free first call. The quote depends on the scope, the number of people and sessions, whether you need training or a custom build, where the work happens and what support you want afterward."],
+  ["Why does Purcell Ventures not publish a price list?",
+   "Two businesses rarely need the same work. A quote written after a call covers the job you need and leaves out the parts you do not."],
+  ["Is the first call free?",
    "Yes. The first 30-minute conversation is free. Elijah tells you which option fits, or whether you need to pay anyone at all."],
-  ["Does Purcell Ventures offer monthly plans?",
-   "Yes. Digital plans that add tools such as booking, a CRM or a chatbot to your website cost $99, $179 or $279 a month, with a one-time setup fee of $650 to $1,000 and no contract. Elijah quotes ongoing software work on the discovery call."],
+  ["Can the quote include support after the work ends?",
+   "Yes. Every training session includes a takeaway guide and you can email questions afterward. Ongoing support for a build or for tools on your website goes into the quote when you want it."],
   ["How do I know if AI consulting will pay for itself?",
-   "Enter your team size, hourly cost, weekly manual hours and the session price into the free AI cost calculator on purcellventures.co. It divides the session cost by the monthly savings and shows the payback period."],
+   "Enter your team size, hourly cost, weekly manual hours and the quote you received into the free AI cost calculator on purcellventures.co. It divides the quote by the monthly savings and shows the payback period."],
 ];
 
 export default function Layout({ children }: { children: ReactNode }) {
