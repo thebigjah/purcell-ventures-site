@@ -169,6 +169,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/blog/tuscaloosa-small-business-online`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
 
     { url: `${BASE}/what-is-purcell-ventures`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/press`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
 
 
     // The name-query pages. /who exists specifically to be the answer to

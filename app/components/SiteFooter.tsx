@@ -40,6 +40,7 @@ const COLS: { title: string; links: { href: string; label: string; rel?: string 
       { href: "/how-we-work", label: "How I work" },
       { href: "/team", label: "The team" },
       { href: "/resume", label: "Founder résumé" },
+      { href: "/press", label: "Press kit" },
       { href: "/faq", label: "Questions" },
       { href: "/ai-at-alabama", label: "AI at Alabama" },
     ],

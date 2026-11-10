@@ -87,6 +87,10 @@ export default function Research() {
             <Link href="/ai-visibility-check">AI visibility check</Link>. It reads your
             robots.txt, llms.txt and home page and lists what to fix.
           </p>
+          <p>
+            Reporters quoting a study can find bios, a headshot and the press contact in the{" "}
+            <Link href="/press">press kit</Link>.
+          </p>
         </Prose>
       </Section>
       <UpdatedLine path="/research" />
