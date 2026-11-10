@@ -69,12 +69,22 @@ export default function Galaxy({ children }: { children: ReactNode }) {
     let alive = true;
     const phone = window.matchMedia("(max-width:760px)").matches;
     const rm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const lowPower = (navigator.hardwareConcurrency || 8) <= 4;
     const hold = new Promise((r) => setTimeout(r, 700));
-    import("./scene").then(({ createGalaxy }) => {
+    // The scene build starts after the first paint, once the main thread is idle,
+    // so it no longer competes with hydration and the first tap. The loader covers the stage until
+    // then, so the first view is the same as before (9 Nov 2026).
+    const idle = new Promise<void>((r) => {
+      const ric = (window as Window & { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number }).requestIdleCallback;
+      requestAnimationFrame(() => setTimeout(() => { if (ric) ric(() => r(), { timeout: 500 }); else r(); }, 0));
+    });
+    // The chunk downloads straight away; only the build waits for idle.
+    Promise.all([import("./scene"), idle]).then(async ([{ createGalaxy }]) => {
       if (!alive || !stageRef.current || !labelsRef.current) return;
-      const g = createGalaxy(stageRef.current, {
+      const g = await createGalaxy(stageRef.current, {
         map: MAP,
         phone,
+        lowPower,
         reducedMotion: rm,
         labelsRoot: labelsRef.current,
         starD,
@@ -90,6 +100,7 @@ export default function Galaxy({ children }: { children: ReactNode }) {
           setTimeout(() => router.push(p.href), 1100);
         },
       });
+      if (!alive) { g.destroy(); return; }
       sceneRef.current = g;
       Promise.all([g.ready, hold]).then(() => {
         if (!alive) return;

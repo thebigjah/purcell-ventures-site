@@ -59,18 +59,30 @@ precision mediump float; varying vec3 vTint; varying float vPhase;
 void main(){ vec2 c=gl_PointCoord-0.5; float d=length(c)*2.0; float a=pow(max(0.0,1.0-d),2.4);
   gl_FragColor=vec4(vTint*a,a); }`;
 
-export function createGalaxy(container, opts = {}) {
+/* Building the scene took one long task (about a third of a second on a fast laptop with the CPU slowed 4x,
+   and seconds on a slow phone), which blocked taps on the page behind the loader. The build now hands the
+   main thread back between its heavy steps. Nothing it draws changes (9 Nov 2026). */
+const yieldMain = () => new Promise((r) => { const s = globalThis.scheduler; if (s && typeof s.yield === "function") s.yield().then(r, r); else setTimeout(r, 0); });
+
+export async function createGalaxy(container, opts = {}) {
   const map = opts.map, phone = !!opts.phone, rm = !!opts.reducedMotion, labelsRoot = opts.labelsRoot || container;
   const A = opts.assets || {};
   const manager = new THREE.LoadingManager(); let resolveReady; const ready = new Promise((r) => { resolveReady = r; }); let loaded = false; manager.onLoad = () => { loaded = true; };
   const loader = new THREE.TextureLoader(manager);
-  const loadTex = (url, cb) => { if (!url) return null; const t = loader.load(url, cb); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; };
-  const DPR = Math.min(window.devicePixelRatio || 1, phone ? 2 : 2.5);
+  const loadTex = (url, cb) => { if (!url) return null; const t = loader.load(url, (tx) => { upload(tx); if (cb) cb(tx); }); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; };
+  /* each image goes to the GPU in its own task as it arrives, not all at once in the first frame */
+  const destroyedEarly = { v: false };
+  const upload = (tx) => setTimeout(() => { if (!destroyedEarly.v) try { renderer.initTexture(tx); } catch (e) {} }, 0);
+  /* lowPower (4 cores or fewer): cap the pixel ratio a little lower so each frame costs less; the scene is unchanged */
+  const DPR = Math.min(window.devicePixelRatio || 1, opts.lowPower ? 1.5 : phone ? 2 : 2.5);
   const renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: "high-performance" });
   renderer.setPixelRatio(DPR); renderer.setClearColor(BG, 1); renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 0.9;
   container.appendChild(renderer.domElement);
   renderer.domElement.style.cssText = "position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0"; labelsRoot.style.zIndex = "1";
+  /* size the canvas now, before any GPU work is queued: resizing it later waits for that work to finish */
+  if (container.clientWidth && container.clientHeight) renderer.setSize(container.clientWidth, container.clientHeight, false);
 
+  await yieldMain();
   const scene = new THREE.Scene(); scene.background = BG;
   const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 600);
   const pmrem = new THREE.PMREMGenerator(renderer); scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
@@ -87,6 +99,7 @@ export function createGalaxy(container, opts = {}) {
   let camAngle = 0.4 + Math.PI;
   const view = { r: ORBIT_R, el: ORBIT_EL, target: new THREE.Vector3() }, viewGoal = { r: ORBIT_R, el: ORBIT_EL, target: new THREE.Vector3() };
 
+  await yieldMain();
   scene.add(new THREE.HemisphereLight(0x6d6a7a, 0x120d08, 0.35));
   const coreLight = new THREE.PointLight(0xffc46a, 260, 0, 1.55); coreLight.position.set(0, 2, 0); scene.add(coreLight);
 
@@ -96,7 +109,9 @@ export function createGalaxy(container, opts = {}) {
 
   /* ---------- gas: layered sprites ---------- */
   const texSoft = cloudTexture(11, { size: 256, soft: 0.95, gain: 1.0 }), texSoft2 = cloudTexture(23, { size: 256, soft: 0.9, gain: 1.1 });
+  await yieldMain();
   const texRidge = cloudTexture(37, { size: 256, ridged: true, soft: 0.95, gain: 1.4 }), texDust = cloudTexture(53, { size: 256, soft: 0.85, gain: 1.2 });
+  await yieldMain();
   const PAL = { blue: "#2a52b8", teal: "#128a94", rust: "#b0451a", amber: "#d08a3a", cream: "#f2d9a8", purple: "#5a2a8a" };
   const rnd = mulberry(7);
   const gas = new THREE.Group(); scene.add(gas);
@@ -135,6 +150,7 @@ export function createGalaxy(container, opts = {}) {
   const spikeTex = spikeTexture(128), glowTex = glowTexture(256, 0.22), haloTex = glowTexture(256, 0.04);
   for (let i = 0; i < (phone ? 18 : 40); i++) { const r = 18 + rnd() * 120, a = rnd() * Math.PI * 2; const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: spikeTex, color: rnd() < 0.3 ? warm : cream, transparent: true, opacity: 0.35 + rnd() * 0.35, blending: THREE.AdditiveBlending, depthWrite: false })); s.position.set(Math.cos(a) * r, (rnd() - 0.5) * 60, Math.sin(a) * r); const k = 0.9 + rnd() * 1.6; s.scale.set(k, k, 1); scene.add(s); }
 
+  await yieldMain();
   /* ---------- the core: the mark, live star ---------- */
   const coreCanvas = document.createElement("canvas"); coreCanvas.width = coreCanvas.height = phone ? 768 : 1024;
   const cctx = coreCanvas.getContext("2d"); const coreTex = new THREE.CanvasTexture(coreCanvas); coreTex.colorSpace = THREE.SRGBColorSpace; coreTex.anisotropy = 8;
@@ -243,6 +259,7 @@ export function createGalaxy(container, opts = {}) {
   const blogLab = document.createElement("div"); blogLab.className = "gx-label"; blogLab.textContent = map.blog.name; labelsRoot.appendChild(blogLab); labels.push({ el: blogLab, obj: cometHead, off: 1.1, kind: "blog" });
   const coreLab = document.createElement("div"); coreLab.className = "gx-label gx-core"; coreLab.textContent = map.core.name; labelsRoot.appendChild(coreLab); labels.push({ el: coreLab, obj: coreMesh, off: 0, kind: "core", dy: phone ? 60 : 84 });
 
+  await yieldMain();
   /* ---------- post: bloom ---------- */
   const composer = new EffectComposer(renderer); composer.addPass(new RenderPass(scene, camera));
   /* Lensing: light passing the hole bends toward it. Each pixel past the hole's edge samples the scene from
@@ -370,7 +387,28 @@ export function createGalaxy(container, opts = {}) {
       if (dx < aw + bw + 6 && dy < 18) { const lo = A._y > B._y ? A : B, hi = lo === A ? B : A; lo._y = hi._y + 18; } }
     live.forEach((L) => { L.el.style.transform = `translate(-50%,-50%) translate(${L._x.toFixed(1)}px,${L._y.toFixed(1)}px)`; });
   }
+  /* Compile every shader before the first frame. Where the browser compiles in parallel
+     (KHR_parallel_shader_compile, most of Chrome) this waits without blocking; the first frame used to
+     stall for seconds on a cold shader cache. The scene and the passes compile into the composer's
+     buffer, the hole after bloom straight to the screen, matching how each is drawn. */
+  try {
+    const jobs = [];
+    const quadScene = new THREE.Scene(), quadGeo = new THREE.PlaneGeometry(2, 2), ortho = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+    [lens.material, bloom.materialHighPassFilter, ...bloom.separableBlurMaterials, bloom.compositeMaterial, bloom.blendMaterial, bloom.basic]
+      .filter(Boolean).forEach((m) => quadScene.add(new THREE.Mesh(quadGeo, m)));
+    renderer.setRenderTarget(composer.readBuffer);
+    jobs.push(renderer.compileAsync(scene, camera), renderer.compileAsync(quadScene, ortho));
+    renderer.setRenderTarget(null);
+    if (holeScene) jobs.push(renderer.compileAsync(holeScene, camera));
+    await Promise.race([Promise.all(jobs), new Promise((r) => setTimeout(r, 4000))]);
+    quadGeo.dispose();
+  } catch (e) { renderer.setRenderTarget(null); }
+  /* the drawn textures (clouds, glows, the core) go up one per task too */
+  { const maps = new Set(); scene.traverse((o) => { const m = o.material; if (m && m.map && m.map.isCanvasTexture) maps.add(m.map); });
+    for (const tx of maps) { try { renderer.initTexture(tx); } catch (e) {} await yieldMain(); } }
+  /* two animation frames: lets the GPU finish the environment map and uploads before the first draw asks for them */
+  await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
   frame();
-  function destroy() { destroyed = true; try { renderer.dispose(); composer.dispose && composer.dispose(); } catch (e) {} renderer.domElement.remove(); labels.forEach((L) => L.el.remove()); document.body.classList.remove("gx-focused", "gx-planet"); }
+  function destroy() { destroyed = true; destroyedEarly.v = true; try { renderer.dispose(); composer.dispose && composer.dispose(); } catch (e) {} renderer.domElement.remove(); labels.forEach((L) => L.el.remove()); document.body.classList.remove("gx-focused", "gx-planet"); }
   return { destroy, back, ready, selectPlanet: (href, notify) => { const m = pickables.find((o) => o.userData.kind === "planet" && o.userData.planet.href === href && o.userData.group === focused); if (m) { focusedPlanet = m.userData.mesh || m; if (notify && opts.onPlanet) opts.onPlanet(m.userData.planet, m.userData.system); } }, setActive: (v) => { active = !!v; }, focus: (id) => { const g = systems.find((s) => s.userData.system.id === id); if (g) focus(g, g.userData.system); }, renderer, get time() { return t; } };
 }
