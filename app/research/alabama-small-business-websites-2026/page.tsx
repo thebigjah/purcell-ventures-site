@@ -2,153 +2,28 @@ import Link from "next/link";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PostLayout } from "@/app/components/ui";
 import summary from "@/lib/research/alabama-2026-11-summary.json";
-import { AREAS, CITIES, GROUPS, pct, socialRows } from "@/lib/research/alabama-2026.mjs";
+import { AREAS, CITIES, socialRows } from "@/lib/research/alabama-2026.mjs";
+import { BarChart, CheckTable, SpeedTable, num, p, pctBars, ttfbBars, type AreaRow, type Frame } from "../_components/tables";
 import { QA } from "./layout";
 
 // Every number on this page is read from the summary JSON at build time, through the
 // measure code in lib/research/alabama-2026.mjs that also writes the downloadable CSV.
 // Aggregates only. No domain or business name may appear here.
 
-type Frame = (typeof summary.frames)["statewide"];
 type AreaKey = "statewide" | "tuscaloosa" | "birmingham" | "huntsville" | "montgomery" | "mobile";
 
 const F = summary.frames as unknown as Record<AreaKey, Frame>;
 const S = F.statewide;
 const CSV_PATH = "/research/alabama-small-business-websites-2026-aggregates.csv";
 
-const num = (n: number) => n.toLocaleString("en-US");
-const p = (n: number, base: number) => `${pct(n, base).toFixed(1)}%`;
-
-const MEASURE = Object.fromEntries(
-  GROUPS.flatMap((g) => g.measures.map((m) => [m.key, { ...m, baseLabel: g.baseLabel }])),
-) as Record<string, { key: string; label: string; get: (f: Frame) => { n: number; base: number }; baseNote?: string; baseLabel: string }>;
+const ROWS: AreaRow[] = AREAS.map((a) => ({ key: a.key, name: a.name, frame: F[a.key as AreaKey] }));
+const BAR_ROWS = [
+  { key: "statewide", name: "Alabama sample", frame: S, ref: true },
+  ...CITIES.map((c) => ({ key: c.key, name: c.name, frame: F[c.key as AreaKey] })),
+];
 
 function utcTime(iso: string) {
   return iso.slice(11, 16);
-}
-
-/* ---------- tables ---------- */
-
-function CheckTable({ caption, keys, baseLabel }: { caption: string; keys: string[]; baseLabel: string }) {
-  const ms = keys.map((k) => MEASURE[k]);
-  return (
-    <table>
-      <caption>{caption}</caption>
-      <thead>
-        <tr>
-          <th scope="col">Area</th>
-          <th scope="col">Base n ({baseLabel})</th>
-          {ms.map((m) => (
-            <th scope="col" key={m.key}>{m.label}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {AREAS.map((a) => {
-          const f = F[a.key as AreaKey];
-          const base = ms[0].get(f).base;
-          return (
-            <tr key={a.key}>
-              <th scope="row">{a.name}</th>
-              <td>{num(base)}</td>
-              {ms.map((m) => {
-                const v = m.get(f);
-                return (
-                  <td key={m.key}>
-                    {v.base === base ? `${num(v.n)} (${p(v.n, v.base)})` : `${num(v.n)} of ${num(v.base)} (${p(v.n, v.base)})`}
-                  </td>
-                );
-              })}
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
-  );
-}
-
-function SpeedTable() {
-  return (
-    <table>
-      <caption>Speed of the home page HTML, timed from one computer in Tuscaloosa</caption>
-      <thead>
-        <tr>
-          <th scope="col">Area</th>
-          <th scope="col">Base n (own-domain pages)</th>
-          <th scope="col">Median first byte</th>
-          <th scope="col">75th percentile first byte</th>
-          <th scope="col">First byte over 800 ms</th>
-          <th scope="col">Median HTML download</th>
-          <th scope="col">HTML download over 2 seconds</th>
-          <th scope="col">Median HTML size</th>
-        </tr>
-      </thead>
-      <tbody>
-        {AREAS.map((a) => {
-          const f = F[a.key as AreaKey];
-          const b = f.own_domain_pages;
-          return (
-            <tr key={a.key}>
-              <th scope="row">{a.name}</th>
-              <td>{num(b)}</td>
-              <td>{num(f.ttfb_ms.median)} ms</td>
-              <td>{num(f.ttfb_ms.p75)} ms</td>
-              <td>{num(f.ttfb_ms.over_800ms_n)} ({p(f.ttfb_ms.over_800ms_n, b)})</td>
-              <td>{num(f.html_download_ms.median)} ms</td>
-              <td>{num(f.html_download_ms.over_2000ms_n)} ({p(f.html_download_ms.over_2000ms_n, b)})</td>
-              <td>{num(Math.round(f.html_bytes.median / 1000))} KB</td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
-  );
-}
-
-/* ---------- charts ---------- */
-
-type Bar = { name: string; n: number; base: number; value: number; text: string; ref?: boolean };
-
-function BarChart({ title, bars, note }: { title: string; bars: Bar[]; note: string }) {
-  const max = Math.max(...bars.map((b) => b.value)) * 1.1;
-  return (
-    <figure className="rs-chart">
-      <figcaption>
-        <span className="rs-chart__title">{title}</span>
-        <span className="rs-chart__note">{note}</span>
-      </figcaption>
-      <ul className="rs-bars">
-        {bars.map((b) => (
-          <li className={`rs-bar${b.ref ? " rs-bar--ref" : ""}`} key={b.name}>
-            <span className="rs-bar__label">
-              {b.name}
-              <span className="rs-bar__n">n = {num(b.base)}</span>
-            </span>
-            <span className="rs-bar__track" aria-hidden="true">
-              <span className="rs-bar__fill" style={{ width: `${(b.value / max) * 100}%` }} />
-            </span>
-            <span className="rs-bar__val">{b.text}</span>
-          </li>
-        ))}
-      </ul>
-    </figure>
-  );
-}
-
-function pctBars(key: string): Bar[] {
-  const m = MEASURE[key];
-  const row = (name: string, f: Frame, ref?: boolean): Bar => {
-    const v = m.get(f);
-    return { name, n: v.n, base: v.base, value: pct(v.n, v.base), text: p(v.n, v.base), ref };
-  };
-  return [row("Alabama sample", S, true), ...CITIES.map((c) => row(c.name, F[c.key as AreaKey]))];
-}
-
-function ttfbBars(): Bar[] {
-  const row = (name: string, f: Frame, ref?: boolean): Bar => ({
-    name, n: f.ttfb_ms.median, base: f.own_domain_pages, value: f.ttfb_ms.median, text: `${num(f.ttfb_ms.median)} ms`, ref,
-  });
-  return [row("Alabama sample", S, true), ...CITIES.map((c) => row(c.name, F[c.key as AreaKey]))];
 }
 
 /* ---------- page ---------- */
@@ -236,22 +111,22 @@ export default function AlabamaWebsites2026() {
       <BarChart
         title="No working home page"
         note="Share of domains checked"
-        bars={pctBars("no_working_home_page")}
+        bars={pctBars("no_working_home_page", BAR_ROWS)}
       />
       <BarChart
         title="Organization or LocalBusiness structured data"
         note="Share of pages on the business's own domain"
-        bars={pctBars("jsonld_business")}
+        bars={pctBars("jsonld_business", BAR_ROWS)}
       />
       <BarChart
         title="All three AI search signals"
         note="Business JSON-LD, llms.txt and no AI crawler blocked, as a share of own-domain pages"
-        bars={pctBars("all_three_ai_signals")}
+        bars={pctBars("all_three_ai_signals", BAR_ROWS)}
       />
       <BarChart
         title="Median time to first byte"
         note="Milliseconds from one computer in Tuscaloosa, lower is faster"
-        bars={ttfbBars()}
+        bars={ttfbBars(BAR_ROWS)}
       />
 
       <h2>Full results by check</h2>
@@ -267,6 +142,7 @@ export default function AlabamaWebsites2026() {
         caption="Home page response, as a share of domains checked"
         keys={["home_page_works", "no_working_home_page", "address_does_not_resolve", "moves_to_other_domain"]}
         baseLabel="domains checked"
+        rows={ROWS}
       />
       <p>
         Statewide, the {num(S.not_reachable.n)} failures break down as {num(dns)} addresses that did
@@ -287,11 +163,13 @@ export default function AlabamaWebsites2026() {
         caption="https and the viewport tag"
         keys={["https", "no_https", "viewport"]}
         baseLabel="own-domain pages"
+        rows={ROWS}
       />
       <CheckTable
         caption="Title, meta description and all four basics"
         keys={["title", "meta_description", "no_meta_description", "all_four_basics"]}
         baseLabel="own-domain pages"
+        rows={ROWS}
       />
 
       <h3>Structured data</h3>
@@ -299,6 +177,7 @@ export default function AlabamaWebsites2026() {
         caption="JSON-LD structured data on the home page"
         keys={["jsonld_any", "jsonld_business"]}
         baseLabel="own-domain pages"
+        rows={ROWS}
       />
 
       <h3>AI crawlers and llms.txt</h3>
@@ -306,21 +185,24 @@ export default function AlabamaWebsites2026() {
         caption="robots.txt, llms.txt and the three AI signals together"
         keys={["robots_txt", "blocks_any_ai_crawler", "blocks_all_five", "llms_txt", "all_three_ai_signals"]}
         baseLabel="own-domain pages"
+        rows={ROWS}
       />
       <CheckTable
         caption="Home page disallowed in robots.txt, by crawler"
         keys={["blocks_gptbot", "blocks_claudebot", "blocks_perplexitybot", "blocks_google_extended", "blocks_ccbot"]}
         baseLabel="own-domain pages"
+        rows={ROWS}
       />
 
       <h3>Speed</h3>
-      <SpeedTable />
+      <SpeedTable rows={ROWS} />
 
       <h3>The OpenStreetMap listing</h3>
       <CheckTable
         caption="Opening hours and phone number on the map listing, as a share of domains checked"
         keys={["osm_opening_hours", "osm_phone"]}
         baseLabel="domains checked"
+        rows={ROWS}
       />
 
       <h3>Social pages in place of a website</h3>

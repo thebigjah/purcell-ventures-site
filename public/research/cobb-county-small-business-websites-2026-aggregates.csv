@@ -1,0 +1,33 @@
+measure,description,area,count,base,percent,unit
+home_page_works,Working home page (status 200),county,1484,1672,88.8,count
+no_working_home_page,No working home page,county,188,1672,11.2,count
+address_does_not_resolve,Web address no longer resolves,county,74,1672,4.4,count
+moves_to_other_domain,Working page ends on a different domain,county,74,1484,5.0,count
+https,Ends on https,county,1314,1410,93.2,count
+no_https,"Plain http only, never https",county,96,1410,6.8,count
+viewport,Viewport tag for phones,county,1342,1410,95.2,count
+title,Page title,county,1372,1410,97.3,count
+meta_description,Meta description,county,1078,1410,76.5,count
+no_meta_description,No meta description,county,332,1410,23.5,count
+all_four_basics,"All four: https, viewport, title, meta description",county,1027,1410,72.8,count
+jsonld_any,Any JSON-LD,county,948,1410,67.2,count
+jsonld_business,Organization or LocalBusiness JSON-LD,county,789,1410,56.0,count
+robots_txt,robots.txt present,county,1301,1410,92.3,count
+blocks_any_ai_crawler,Blocks at least one of the five AI crawlers,county,66,1410,4.7,count
+blocks_all_five,Blocks all five,county,14,1410,1.0,count
+blocks_gptbot,Blocks GPTBot,county,62,1410,4.4,count
+blocks_claudebot,Blocks ClaudeBot,county,55,1410,3.9,count
+blocks_perplexitybot,Blocks PerplexityBot,county,22,1410,1.6,count
+blocks_google_extended,Blocks Google-Extended,county,54,1410,3.8,count
+blocks_ccbot,Blocks CCBot,county,62,1410,4.4,count
+llms_txt,llms.txt file,county,435,1410,30.9,count
+all_three_ai_signals,"All three: business JSON-LD, llms.txt, no AI crawler blocked",county,331,1410,23.5,count
+ttfb_over_800ms,First byte took over 800 ms,county,892,1410,63.3,count
+html_over_2s,HTML download took over 2 seconds,county,321,1410,22.8,count
+osm_opening_hours,Listing has opening hours,county,1339,1672,80.1,count
+osm_phone,Listing has a phone number,county,1493,1672,89.3,count
+social_page_instead_of_website,"Listed web address is a Facebook, Instagram or Linktree page",county,8,1680,0.5,count
+ttfb_median_ms,Median time to first byte,county,966,1410,,ms
+ttfb_p75_ms,75th percentile time to first byte,county,1401,1410,,ms
+html_download_median_ms,Median HTML download,county,1330,1410,,ms
+html_size_median_kb,Median HTML size,county,169,1410,,KB

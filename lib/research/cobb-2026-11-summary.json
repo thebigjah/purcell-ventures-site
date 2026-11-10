@@ -1,0 +1,209 @@
+{
+ "data_file": "cobb-2026-11.csv",
+ "area": "Cobb County, Georgia (Wikidata Q484247, admin_level 6)",
+ "draw": "every domain in the frame",
+ "checks_started_utc": "2026-11-10T01:52:07Z",
+ "checks_finished_utc": "2026-11-10T02:11:17Z",
+ "overpass_fetched_utc": {
+  "cobb": "2026-11-09T23:54:19+00:00",
+  "cobb-marietta": "2026-11-09T23:56:06+00:00",
+  "cobb-kennesaw": "2026-11-09T23:57:13+00:00",
+  "cobb-smyrna": "2026-11-09T23:58:25+00:00",
+  "cobb-acworth": "2026-11-09T23:59:36+00:00",
+  "cobb-austell": "2026-11-10T01:49:16+00:00",
+  "cobb-powder-springs": "2026-11-10T01:50:13+00:00",
+  "cobb-mableton": "2026-11-10T01:51:21+00:00"
+ },
+ "overpass_endpoint": {
+  "cobb": "https://overpass-api.de/api/interpreter",
+  "cobb-marietta": "https://overpass-api.de/api/interpreter",
+  "cobb-kennesaw": "https://overpass-api.de/api/interpreter",
+  "cobb-smyrna": "https://overpass-api.de/api/interpreter",
+  "cobb-acworth": "https://overpass-api.de/api/interpreter",
+  "cobb-austell": "https://overpass-api.de/api/interpreter",
+  "cobb-powder-springs": "https://overpass-api.de/api/interpreter",
+  "cobb-mableton": "https://overpass-api.de/api/interpreter"
+ },
+ "overpass_elements_county": 3157,
+ "frame": {
+  "acworth": 16,
+  "austell": 1,
+  "kennesaw": 174,
+  "mableton": 9,
+  "marietta": 481,
+  "powder-springs": 1,
+  "rest_of_county": 912,
+  "smyrna": 78,
+  "total": 1672
+ },
+ "excluded": {
+  "no_or_bad_url": 2,
+  "social_page_elements": 8,
+  "brand_tagged_elements": 1225,
+  "nonbusiness_elements": 47,
+  "chain_domains_dropped": 416
+ },
+ "social_page_urls": {
+  "rest_of_county": 5,
+  "kennesaw": 1,
+  "marietta": 2,
+  "total": 8
+ },
+ "network_control": {
+  "run_utc": "2026-11-10T02:12:45+00:00",
+  "n": 60,
+  "alabama_recorded_median_ms": 657.5,
+  "same_sites_now_median_ms": 1055.5
+ },
+ "frames": {
+  "county": {
+   "domains_checked": 1672,
+   "reachable_200": {
+    "n": 1484,
+    "pct_of_checked": 88.8
+   },
+   "not_reachable": {
+    "n": 188,
+    "pct_of_checked": 11.2,
+    "by_reason": {
+     "dns_failed": 74,
+     "http_404": 33,
+     "http_403": 25,
+     "timeout": 15,
+     "http_429": 10,
+     "tls_cert_verify_failed": 9,
+     "http_409": 6,
+     "http_402": 3,
+     "http_202": 2,
+     "http_503": 2,
+     "http_500": 2,
+     "http_526": 2,
+     "http_521": 1,
+     "http_423": 1,
+     "http_307": 1,
+     "tls_error": 1,
+     "http_401": 1
+    }
+   },
+   "redirect_to_other_domain": {
+    "n": 74,
+    "pct_of_reachable": 5.0
+   },
+   "own_domain_pages": 1410,
+   "https_final": {
+    "n": 1314,
+    "pct_of_own_domain_pages": 93.2
+   },
+   "viewport": {
+    "n": 1342,
+    "pct_of_own_domain_pages": 95.2
+   },
+   "title": {
+    "n": 1372,
+    "pct_of_own_domain_pages": 97.3
+   },
+   "meta_description": {
+    "n": 1078,
+    "pct_of_own_domain_pages": 76.5
+   },
+   "jsonld_any": {
+    "n": 948,
+    "pct_of_own_domain_pages": 67.2
+   },
+   "jsonld_org_or_localbusiness": {
+    "n": 789,
+    "pct_of_own_domain_pages": 56.0
+   },
+   "robots_txt_found": {
+    "n": 1301,
+    "pct_of_own_domain_pages": 92.3
+   },
+   "llms_txt": {
+    "n": 435,
+    "pct_of_own_domain_pages": 30.9
+   },
+   "no_https": {
+    "n": 96,
+    "pct_of_own_domain_pages": 6.8
+   },
+   "no_viewport": {
+    "n": 68,
+    "pct_of_own_domain_pages": 4.8
+   },
+   "robots_blocks_GPTBot": {
+    "n": 62,
+    "pct_of_own_domain_pages": 4.4,
+    "named_in_robots_n": 167
+   },
+   "robots_blocks_ClaudeBot": {
+    "n": 55,
+    "pct_of_own_domain_pages": 3.9,
+    "named_in_robots_n": 159
+   },
+   "robots_blocks_PerplexityBot": {
+    "n": 22,
+    "pct_of_own_domain_pages": 1.6,
+    "named_in_robots_n": 47
+   },
+   "robots_blocks_Google-Extended": {
+    "n": 54,
+    "pct_of_own_domain_pages": 3.8,
+    "named_in_robots_n": 154
+   },
+   "robots_blocks_CCBot": {
+    "n": 62,
+    "pct_of_own_domain_pages": 4.4,
+    "named_in_robots_n": 151
+   },
+   "robots_blocks_any_ai_bot": {
+    "n": 66,
+    "pct_of_own_domain_pages": 4.7
+   },
+   "robots_blocks_an_ai_bot_by_name": {
+    "n": 52,
+    "pct_of_own_domain_pages": 3.7
+   },
+   "robots_blocks_all_five": {
+    "n": 14,
+    "pct_of_own_domain_pages": 1.0
+   },
+   "all_three_ai_signals": {
+    "n": 331,
+    "pct_of_own_domain_pages": 23.5,
+    "definition": "business JSON-LD present, llms.txt present, none of five AI bots blocked"
+   },
+   "passes_all_four_basics": {
+    "n": 1027,
+    "pct_of_own_domain_pages": 72.8,
+    "definition": "https, viewport, title, meta description"
+   },
+   "ttfb_ms": {
+    "median": 966,
+    "p75": 1401,
+    "p90": 2167,
+    "over_800ms_n": 892,
+    "over_800ms_pct": 63.3
+   },
+   "html_download_ms": {
+    "median": 1330,
+    "p75": 1906,
+    "p90": 3006,
+    "over_2000ms_n": 321,
+    "over_2000ms_pct": 22.8
+   },
+   "html_bytes": {
+    "median": 169207,
+    "p75": 336694,
+    "p90": 667866
+   },
+   "osm_opening_hours": {
+    "n": 1339,
+    "pct_of_checked": 80.1
+   },
+   "osm_phone": {
+    "n": 1493,
+    "pct_of_checked": 89.3
+   }
+  }
+ }
+}

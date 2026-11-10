@@ -1,15 +1,19 @@
-// Writes public/research/alabama-small-business-websites-2026-aggregates.csv from the
-// summary JSON, and checks the shared measure code against the percentages the summary
-// already carries. Aggregates only: the summary has no domains or business names.
+// Writes each study's aggregates CSV under public/research/ from its summary JSON, and
+// checks the shared measure code against the percentages the summary already carries.
+// Aggregates only: the summaries have no domains or business names.
 //
 //   node scripts/research-aggregates.mjs
 
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
-import { aggregatesCsv, countRows } from "../lib/research/alabama-2026.mjs";
+import * as alabama from "../lib/research/alabama-2026.mjs";
+import * as cobb from "../lib/research/cobb-2026.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
-const summary = JSON.parse(readFileSync(join(ROOT, "lib/research/alabama-2026-11-summary.json"), "utf8"));
+const STUDIES = [
+  { mod: alabama, json: "alabama-2026-11-summary.json", csv: "alabama-small-business-websites-2026-aggregates.csv" },
+  { mod: cobb, json: "cobb-2026-11-summary.json", csv: "cobb-county-small-business-websites-2026-aggregates.csv" },
+];
 
 // Cross-check: wherever the summary states a percentage, the computed one must match it.
 const PCT_FIELD = {
@@ -25,24 +29,27 @@ const PCT_FIELD = {
   all_three_ai_signals: ["all_three_ai_signals", "pct_of_own_domain_pages"],
   all_four_basics: ["passes_all_four_basics", "pct_of_own_domain_pages"],
 };
-let bad = 0;
-for (const r of countRows(summary)) {
-  const f = PCT_FIELD[r.measure];
-  if (!f) continue;
-  const want = summary.frames[r.area][f[0]][f[1]];
-  if (Math.abs(want - r.percent) > 0.05) {
-    console.error(`mismatch ${r.measure} ${r.area}: computed ${r.percent}, summary ${want}`);
-    bad++;
-  }
-}
-if (bad) process.exit(1);
-
 const out = join(ROOT, "public/research");
 mkdirSync(out, { recursive: true });
-const csv = aggregatesCsv(summary);
-if (/\b[a-z0-9-]+\.(com|net|org|biz|us|co|info)\b/i.test(csv)) {
-  console.error("refusing to write: the CSV contains something shaped like a domain");
-  process.exit(1);
+
+for (const { mod, json, csv } of STUDIES) {
+  const summary = JSON.parse(readFileSync(join(ROOT, "lib/research", json), "utf8"));
+  let bad = 0;
+  for (const r of mod.countRows(summary)) {
+    const f = PCT_FIELD[r.measure];
+    if (!f) continue;
+    const want = summary.frames[r.area][f[0]][f[1]];
+    if (Math.abs(want - r.percent) > 0.05) {
+      console.error(`${json} mismatch ${r.measure} ${r.area}: computed ${r.percent}, summary ${want}`);
+      bad++;
+    }
+  }
+  if (bad) process.exit(1);
+  const text = mod.aggregatesCsv(summary);
+  if (/\b[a-z0-9-]+\.(com|net|org|biz|us|co|info)\b/i.test(text)) {
+    console.error(`refusing to write ${csv}: the CSV contains something shaped like a domain`);
+    process.exit(1);
+  }
+  writeFileSync(join(out, csv), text);
+  console.log(`${csv}: wrote ${text.trim().split("\n").length - 1} rows`);
 }
-writeFileSync(join(out, "alabama-small-business-websites-2026-aggregates.csv"), csv);
-console.log(`wrote ${csv.trim().split("\n").length - 1} rows`);
