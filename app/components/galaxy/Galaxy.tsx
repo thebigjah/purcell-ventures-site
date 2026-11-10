@@ -148,7 +148,7 @@ export default function Galaxy({ children }: { children: ReactNode }) {
         <p className="gx-hint" aria-hidden="true">Click any light to open it.</p>
         <a className="gx-cue" href="#what" aria-hidden="true" tabIndex={-1}>Scroll <span /></a>
 
-        <aside className={`gx-strip${sys && !opening ? " is-open" : ""}`} aria-live="polite" aria-hidden={sys && !opening ? undefined : true}>
+        <aside className={`gx-strip${sys && !opening ? " is-open" : ""}`} aria-live="polite" aria-hidden={sys && !opening ? undefined : true} inert={sys && !opening ? undefined : true}>
           <button type="button" className="ui-btn ui-btn--ghost gx-back" onClick={() => sceneRef.current?.back()}>Back to the map</button>
           {sys && (
             <>
