@@ -5,12 +5,12 @@ import PostByline from "@/app/components/PostByline";
 
 export const metadata = {
   alternates: { canonical: "/blog/new-college-alabama" },
-  title: { absolute: "New College at Alabama, explained by someone in it" },
+  title: { absolute: "New College at the University of Alabama: a student's guide" },
   description:
-    "How New College at the University of Alabama works: the self-designed degree, the depth study, the seminars, the Levitetz program, and the case for and against.",
+    "What New College at the University of Alabama is and how it works: the self-designed degree, depth study, seminars, Levitetz program, the case for and against.",
   openGraph: {
-    title: "New College at Alabama, explained by someone in it",
-    description: "How New College at the University of Alabama works: the self-designed degree, the depth study, the seminars, the Levitetz program, and the case for and against.",
+    title: "New College at the University of Alabama: a student's guide",
+    description: "What New College at the University of Alabama is and how it works: the self-designed degree, depth study, seminars, Levitetz program, the case for and against.",
     url: "/blog/new-college-alabama",
     type: "article",
     images: ["/opengraph-image"],
@@ -24,12 +24,19 @@ export default function Post() {
       crumbs={<Breadcrumbs trail={[
         { name: "Home", href: "/" },
         { name: "Blog", href: "/blog" },
-        { name: "New College at Alabama, explained by someone in it", href: "/blog/new-college-alabama" },
+        { name: "New College at the University of Alabama: a student's guide", href: "/blog/new-college-alabama" },
       ]} />}
       kicker="Guide"
-      title="New College at Alabama, explained by someone in it"
+      title="New College at the University of Alabama: a student's guide"
       meta="20 August 2026, 6 minute read, written in week one"
     >
+      <p>
+        New College at the University of Alabama is an interdisciplinary program inside
+        the Barefield College of Arts and Sciences. It started in 1971. Instead of choosing
+        a major off a list, each student works with an advisor to design a degree around a
+        question they care about, using courses from any department.
+      </p>
+
       <p>
         Before I applied, every explanation of New College I found was either a brochure
         or a forum post from 2014. I wrote this in my first week as a New College student,
@@ -158,7 +165,7 @@ export default function Post() {
 
 <PostByline post={{
             slug: "new-college-alabama",
-            title: "New College at Alabama, explained by someone in it",
+            title: "New College at the University of Alabama: a student's guide",
             description: "How the self-designed degree works, what a depth study means, and the case for and against choosing it.",
             published: "2026-08-20",
           }} />

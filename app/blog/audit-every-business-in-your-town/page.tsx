@@ -2,6 +2,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PostLayout } from "@/app/components/ui";
 import PostByline from "@/app/components/PostByline";
+import PostFaq from "@/app/components/PostFaq";
 
 export const metadata = {
   alternates: { canonical: "/blog/audit-every-business-in-your-town" },
@@ -28,7 +29,7 @@ export default function Post() {
       ]} />}
       kicker="Method"
       title="How to audit every business in your town in an afternoon"
-      meta="20 August 2026, 7 minute read"
+      meta="20 August 2026, 9 minute read"
     >
       <p>
         I pulled every independent business within 2500 metres of the Quad in Tuscaloosa,
@@ -74,6 +75,71 @@ out center tags;`}</code></pre>
         about: <code>shop=barber</code>, <code>shop=clothes</code>,{" "}
         <code>shop=books</code>, <code>amenity=cafe</code>, and so on.
       </p>
+
+      <h2>What <code>out center tags;</code> does in Overpass QL</h2>
+
+      <p>
+        The last line of the query decides what Overpass sends back. The{" "}
+        <a href="https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL" rel="noopener">Overpass
+        QL documentation</a> describes the <code>out</code> statement as a verbosity level
+        plus an optional geometry modifier. Each word in <code>out center tags;</code> does
+        one job.
+      </p>
+
+      <ul>
+        <li>
+          <code>out</code> is the output statement. It prints the elements the query found.
+          With nothing after it, Overpass uses <code>out body</code>.
+        </li>
+        <li>
+          <code>center</code> adds one centre coordinate to each way and relation. A shop
+          mapped as a building outline comes back with a single lat and lon, the same as a
+          shop mapped as a point. Overpass takes the centre of the element&apos;s bounding
+          box, and the documentation warns that this point can fall outside the shape.
+        </li>
+        <li>
+          <code>tags</code> prints each element&apos;s id and tags only. Ways lose their node
+          list and relations lose their member list, so the response stays small.
+        </li>
+      </ul>
+
+      <p>
+        Nodes keep their own coordinates. When I ran the minimal query below against
+        Tuscaloosa, every way came back with a <code>center</code> object and its tags, and
+        no node list.
+      </p>
+
+      <pre><code>{`[out:json][timeout:25];
+way["amenity"="restaurant"](around:2500,33.2140,-87.5460);
+out center tags;`}</code></pre>
+
+      <p>One element of the response:</p>
+
+      <pre><code>{`{
+  "type": "way",
+  "id": 103489064,
+  "center": { "lat": 33.2249900, "lon": -87.5419030 },
+  "tags": { "amenity": "restaurant", "building": "yes", "name": "Cypress Inn" }
+}`}</code></pre>
+
+      <p>Pick the output by what you plan to do with the result.</p>
+
+      <ul>
+        <li>
+          <code>out center tags</code> for lists, spreadsheets and map pins. You get one point
+          and the tags for every business, which is all an audit needs.
+        </li>
+        <li>
+          <code>out geom</code> when you need the full shape, for example to draw building
+          outlines or measure an area. It adds coordinates to every node of every way, so
+          the response grows much larger.
+        </li>
+        <li>
+          <code>out body</code> when you want the raw structure. Ways come back with node ids
+          and relations with member lists, and you fetch the node coordinates yourself with a
+          recursion step such as <code>(._;&gt;;);</code> before the output line.
+        </li>
+      </ul>
 
       <p>
         POST that to <code>overpass-api.de/api/interpreter</code> with the query in a
@@ -180,6 +246,11 @@ return last`}</code></pre>
         <a href="mailto:elijah@purcellventures.co">I would like to hear
         it</a>.
       </p>
+
+      <PostFaq qa={[[
+        "What does out center tags do in Overpass QL?",
+        "out center tags tells Overpass to print each element's id and tags, and to add one centre coordinate to every way and relation. Nodes keep their own lat and lon. A business mapped as a building outline then comes back as a single point you can pin on a map, without its full shape. Use out geom when you need the shape, and out body when you need the node ids and member lists.",
+      ]]} />
 
 <PostByline post={{
             slug: "audit-every-business-in-your-town",
