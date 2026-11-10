@@ -57,6 +57,18 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
   for freight forwarders, customs brokers, marine contractors and Gulf Coast hospitality.
 - [AI consulting in Auburn](https://purcellventures.co/ai-consulting/auburn-al): AI work
   for restaurants, shops, student housing and young founders around Auburn University.
+- [AI consulting in Kennesaw](https://purcellventures.co/ai-consulting/kennesaw-ga): AI
+  work for shops on Barrett Parkway, small manufacturers and distributors along I-75, and
+  founders around Kennesaw State University. Elijah grew up in Kennesaw.
+- [AI consulting in Marietta](https://purcellventures.co/ai-consulting/marietta-ga): AI
+  work for aerospace suppliers, medical practices and Marietta Square businesses, and how
+  export rules and patient privacy limit it.
+- [AI consulting in Acworth](https://purcellventures.co/ai-consulting/acworth-ga): AI work
+  for contractors, home service companies, marinas and lake businesses. The LLC is
+  registered in Acworth and run from Tuscaloosa, with no office in Georgia.
+- [AI consulting in Chattanooga](https://purcellventures.co/ai-consulting/chattanooga-tn):
+  AI work for startups, automotive suppliers, freight companies, hotels and medical
+  offices, run from Tuscaloosa with no office in Tennessee.
 - [Consulting](https://purcellventures.co/consulting): hands-on AI consulting and team
   training. 1-on-1 at $175 an hour, small groups at $125 a person, and a half-day workshop
   at $2,500 for up to 20 people.
