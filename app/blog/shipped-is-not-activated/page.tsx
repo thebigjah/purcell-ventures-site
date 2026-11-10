@@ -56,7 +56,7 @@ export default function Post() {
         is and never has to look for it.
       </p>
 
-      <h2>Why nobody catches it</h2>
+      <h2>Why does nobody catch it?</h2>
 
       <p>
         The person who built the site tests that each page loads. Few owners test that a
@@ -65,7 +65,7 @@ export default function Post() {
         stay broken for months.
       </p>
 
-      <h2>How to check your own site</h2>
+      <h2>How do I check my own site?</h2>
 
       <p>
         Open your own site in a private window. Start from wherever a stranger would land,

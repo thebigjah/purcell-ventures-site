@@ -59,7 +59,7 @@ export default function Post() {
         notes should treat this rule as fixed.
       </p>
 
-      <h2>Choosing tasks you can check yourself</h2>
+      <h2>Which tasks can I check myself?</h2>
       <p>
         First decide whether AI should do the task at all. For a first week, I pick tasks
         where you can spot a wrong answer quickly, a mistake costs little to fix, and the
@@ -113,7 +113,7 @@ export default function Post() {
         your exact facts and ask for a short email and a Facebook post in plain language.
       </p>
 
-      <h2>How to check every result before you use it</h2>
+      <h2>How do I check every result before I use it?</h2>
       <p>
         Models can state wrong things with full confidence, so I
         check every fact, name, number and quote against a source before I use it.

@@ -83,7 +83,7 @@ export default function Post() {
         finish? If they cannot answer in one sentence, they are not keeping a schedule.
       </p>
 
-      <h2>What an agency does better</h2>
+      <h2>What does an agency do better?</h2>
 
       <p>
         Continuity is the first. If I became unavailable, your site would be a repository
@@ -109,7 +109,7 @@ export default function Post() {
         and that is a fair preference.
       </p>
 
-      <h2>What a solo operator does better</h2>
+      <h2>What does a solo operator do better?</h2>
 
       <p>
         The person you talked to is the person who builds it. Nothing is lost between the
@@ -150,7 +150,7 @@ export default function Post() {
         them is software</Link>, because the alternative is a roster of invented colleagues.
       </p>
 
-      <h2>How to decide</h2>
+      <h2>How should I decide?</h2>
 
       <p>Ask three questions and listen to whether the answers are specific.</p>
 

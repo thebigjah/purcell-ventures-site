@@ -41,7 +41,7 @@ export default function Post() {
         are paying for.
       </p>
 
-      <h2>What the price pays for</h2>
+      <h2>What does the price pay for?</h2>
 
       <p>
         The first is design, which means deciding what the site looks like. It ranges from
@@ -60,7 +60,7 @@ export default function Post() {
         is waiting on the client and the client thought it was included.
       </p>
 
-      <h2>What each price tier buys</h2>
+      <h2>What does each price tier buy?</h2>
 
       <table>
         <thead>
@@ -78,7 +78,7 @@ export default function Post() {
         </tbody>
       </table>
 
-      <h2>The costs quotes leave out</h2>
+      <h2>Which costs do quotes leave out?</h2>
 
       <p>
         These costs continue after you pay the invoice, whether or not the quote mentions
@@ -93,7 +93,7 @@ export default function Post() {
         <li>Your own time goes to photographs, copy, decisions and feedback, and it is more than most clients expect.</li>
       </ul>
 
-      <h2>How to judge whether a quote is fair</h2>
+      <h2>How do I judge whether a quote is fair?</h2>
 
       <p>
         A $10,000 site can be good value and a $500 site can be a waste. Judge a quote by

@@ -43,7 +43,7 @@ export default function Post() {
         and it includes the drawbacks I weighed before choosing it.
       </p>
 
-      <h2>What it is</h2>
+      <h2>What is New College?</h2>
 
       <p>
         <a href="https://newcollege.ua.edu/" rel="noopener">New College</a>{" "}
@@ -128,7 +128,7 @@ export default function Post() {
         licensure body or an accredited curriculum, check with them before you commit.
       </p>
 
-      <h2>Who should pick it</h2>
+      <h2>Who should pick New College?</h2>
 
       <p>
         Pick it if you can already say, in one sentence, the question your degree is for.

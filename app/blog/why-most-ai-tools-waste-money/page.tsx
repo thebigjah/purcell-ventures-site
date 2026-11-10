@@ -37,7 +37,7 @@ export default function Post() {
         to do with the output, AI will not fix it.
       </p>
 
-      <h2>What AI does well</h2>
+      <h2>What does AI do well?</h2>
       <p>
         AI mostly does two things well: <strong>generating drafts</strong> (writing,
         summaries, structured outputs) and <strong>pattern matching at scale</strong>
@@ -57,7 +57,7 @@ export default function Post() {
         <li><strong>Who reviews the outputs?</strong> AI drafts need a person to check facts, brand voice and edge cases. Without a named reviewer, you risk publishing an error.</li>
       </ol>
 
-      <h2>How I set up the AI tools I sell</h2>
+      <h2>How do I set up the AI tools I sell?</h2>
       <p>
         My <Link href="/digital">Digital Services subscription</Link> includes AI tools: a
         chatbot, a content generator and an FAQ builder. When I set them up, I connect each

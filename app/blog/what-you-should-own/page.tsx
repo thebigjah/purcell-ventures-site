@@ -39,7 +39,7 @@ export default function Post() {
         stay because the work is good than because leaving is hard.
       </p>
 
-      <h2>Seven accounts and assets to own</h2>
+      <h2>Which seven accounts and assets should I own?</h2>
 
       <table>
         <thead>
@@ -56,7 +56,7 @@ export default function Post() {
         </tbody>
       </table>
 
-      <h2>Why the domain comes first</h2>
+      <h2>Why does the domain come first?</h2>
 
       <p>
         You can replace everything else with some effort. Code can be rebuilt, hosting can
@@ -88,7 +88,7 @@ export default function Post() {
         that should worry you is reassurance that you would not want to.
       </p>
 
-      <h2>What a provider can reasonably keep</h2>
+      <h2>What can a provider reasonably keep?</h2>
 
       <p>
         Providers can reasonably keep their own internal tooling, their project management
