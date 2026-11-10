@@ -1,16 +1,36 @@
 import Link from "next/link";
 import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import PostFaq from "@/app/components/PostFaq";
 import { PostLayout } from "@/app/components/ui";
 
 // Written by the daily blog engine (~/blog-engine), held overnight for Elijah's veto.
 
-const TITLE = "What the \"Not secure\" label next to your website means, and how to fix it";
-const DESCRIPTION = "Why Chrome shows \"Not secure\" next to your business web address, and the steps to fix it on a typical small business host this week.";
+const TITLE = "\"Not secure\" website: what it means and how to fix it";
+const DESCRIPTION = "What \"Not secure\" means in Chrome, whether the site is dangerous, why every site can show it, and how to remove it from your own website for free.";
+
+const FAQ: [string, string][] = [
+  [
+    "What does \"Not secure\" mean on a website?",
+    "It means the page loads over plain http, without the encryption that https adds. Anything a visitor types on that page travels as readable text. Chrome also shows the label when a site's certificate has expired or fails to match the address.",
+  ],
+  [
+    "Is a \"Not secure\" website dangerous to visit?",
+    "Reading a \"Not secure\" page usually carries little risk. The label describes the connection and says nothing about scams or malware on the site. The risk comes from what you type, so skip passwords and card numbers on that page. Chrome warns about known phishing and malware sites with a separate red full-page warning.",
+  ],
+  [
+    "Why does every website say \"Not secure\"?",
+    "When the label shows up on sites you know use https, the cause usually sits on your side. Common causes include a wrong date or time on your device, antivirus software that scans HTTPS traffic, and hotel or coffee shop Wi-Fi that wants you to sign in first. Fix the clock, finish the Wi-Fi sign-in, or try another network.",
+  ],
+  [
+    "How do I remove \"Not secure\" from my own website?",
+    "Install a free SSL certificate through your host, turn on a redirect that sends every http visitor to https, and change any image or script address inside your pages from http to https. On most small business hosts the whole fix takes an afternoon.",
+  ],
+];
 
 export const metadata = {
   alternates: { canonical: "/blog/not-secure-label-website-fix" },
-  title: { absolute: '"Not secure" next to your website: what it means and the fix' },
+  title: { absolute: TITLE },
   description: DESCRIPTION,
   openGraph: {
     title: TITLE,
@@ -31,8 +51,15 @@ export default function Post() {
       ]} />}
       kicker="Guide"
       title={TITLE}
-      meta="24 October 2026, 5 minute read"
+      meta="24 October 2026, 8 minute read"
     >
+      <p>
+        The words &quot;Not secure&quot; in the address bar mean the page loads over plain http,
+        without the encryption that https adds. Anything a visitor types on that page
+        travels as readable text. Chrome also shows the label when a site&apos;s certificate
+        has expired or fails to match the address.
+      </p>
+
       <p>
         Open your business website in Google Chrome and look at the left edge of the address
         bar. If you see the words &quot;Not secure,&quot; every Chrome visitor sees them too. I build and
@@ -58,6 +85,69 @@ export default function Post() {
         whether your site is safe can read that message with one click.
       </p>
 
+      <h2>Why does Chrome say &quot;Not secure&quot;?</h2>
+      <p>
+        Chrome puts the label on every page that loads over plain http. Click it and the
+        panel reads &quot;Your connection to this site is not secure.&quot; Chrome makes no
+        exception for small sites, old sites or sites without a form.
+      </p>
+      <p>
+        Chrome also flags https pages that have a certificate problem. The certificate may
+        have expired, it may name a different address, or the browser may not trust the
+        company that issued it. In those cases Chrome often stops the visitor with a
+        full-page warning that reads &quot;Your connection is not private&quot; before the page
+        loads at all.
+      </p>
+
+      <h2>Is a &quot;Not secure&quot; website dangerous to visit?</h2>
+      <p>
+        Reading a &quot;Not secure&quot; page usually carries little risk. The label describes the
+        connection between you and the site. It says nothing about whether the site hosts
+        scams or malware.
+      </p>
+      <p>
+        The risk comes from what you type. On a page without https, someone on the same
+        network could read a password, card number or phone number as you send it. Skip
+        those fields on any page that carries the label.
+      </p>
+      <p>
+        Chrome uses a separate warning for sites it knows host phishing or malware. That
+        warning fills the whole screen in red before the page opens. If you see it, close
+        the tab.
+      </p>
+
+      <h2>Why does every website say &quot;Not secure&quot;?</h2>
+      <p>
+        If the label shows up on sites you know use https, such as Google or your bank, the
+        cause usually sits on your side. The common ones are below.
+      </p>
+      <ul>
+        <li>
+          Your device clock is wrong. Certificates carry start and end dates, so a computer
+          set to the wrong day can treat every valid certificate as expired. Set the date and
+          time to update on their own.
+        </li>
+        <li>
+          Your antivirus scans HTTPS traffic. Some security programs place their own
+          certificate between the browser and each site. When that setup breaks, browsers
+          flag sites that work fine elsewhere. Update the program, or turn off its HTTPS or
+          web scanning option and test again.
+        </li>
+        <li>
+          You joined Wi-Fi that wants a sign-in first. Hotels, airports and coffee shops often
+          catch every request until you accept their terms page. Finish that sign-in and the
+          warnings should stop.
+        </li>
+        <li>
+          A school or workplace network inspects traffic. Ask the people who run that network
+          before you change anything on a device they manage.
+        </li>
+      </ul>
+      <p>
+        A quick test separates the two cases. Switch your phone from Wi-Fi to mobile data and
+        load the same site. If the warning disappears, the network caused it.
+      </p>
+
       <h2>Why browsers show it on a site that sells nothing</h2>
       <p>
         Owners often tell me their site has no checkout, so the warning should not matter.
@@ -74,6 +164,29 @@ export default function Post() {
         Google also uses https as a small signal when it ranks pages. I can&apos;t promise any
         change in search position from fixing it. Leaving the warning up does give visitors
         one more reason to leave.
+      </p>
+
+      <h2>How do I remove &quot;Not secure&quot; from my own website?</h2>
+      <ol>
+        <li>
+          Get a free SSL certificate. Most hosts issue one from Let&apos;s Encrypt with a
+          button in the control panel.
+        </li>
+        <li>
+          Force https redirects, so anyone who types the http address lands on the https
+          version.
+        </li>
+        <li>
+          Fix mixed content. Change every image, script and link address inside your pages
+          from http to https.
+        </li>
+        <li>
+          Check the result. Load your homepage, contact page and any form page in Chrome, with
+          and without www, and look for the padlock.
+        </li>
+      </ol>
+      <p>
+        The sections below walk through each step on cPanel and WordPress.
       </p>
 
       <h2>What fixing it involves</h2>
@@ -160,6 +273,8 @@ export default function Post() {
         I check small business websites around Tuscaloosa for problems like these. If you
         want me to look at yours, <Link href="/contact">send me the address</Link>.
       </p>
+
+      <PostFaq qa={FAQ} />
 
       <PostByline post={{
         slug: "not-secure-label-website-fix",
