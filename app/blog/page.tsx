@@ -20,6 +20,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "ai-customer-emails-that-sound-like-you",
+    title: "Using AI to draft customer emails that sound like you",
+    excerpt: "AI can write the first draft of a customer email from a few facts. A sample of your own writing and a four point review keep the result accurate and in your voice.",
+    date: "November 10, 2026",
+    readingTime: "3 min read",
+    category: "Guide",
+  },
+  {
     slug: "business-domain-lapse-renewal",
     title: "What happens when your business domain lapses, and how to keep it renewed",
     excerpt: "Your web address is a registration you rent one year or more at a time. Here is what happens when it expires, who can buy it next and the settings that keep it renewed.",
