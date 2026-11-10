@@ -58,7 +58,7 @@ export default function AgenticAIPage() {
         </div>
       </header>
 
-      <Section title="What an agent system is">
+      <Section title="What is an agent system?">
         <div className="ui-prose">
           <p>
             An autonomous AI agent system is one where a model decides what to
@@ -77,7 +77,7 @@ export default function AgenticAIPage() {
         </div>
       </Section>
 
-      <Section title="Production failures" intro="Four things that broke in COSMIC, and how I fixed each one.">
+      <Section title="How do agent systems fail in production?" intro="Four things that broke in COSMIC, and how I fixed each one.">
         <Rows items={LESSONS.map(([claim, body]) => ({ name: claim, line: body }))} />
       </Section>
 

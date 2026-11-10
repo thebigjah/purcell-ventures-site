@@ -154,7 +154,7 @@ export default function ConsultingPage() {
         />
       </Section>
 
-      <Section id="pricing" title="Session formats" intro="I quote every business after a free call, based on group size, session length and prep. Every session includes a takeaway guide.">
+      <Section id="pricing" title="What session formats are there?" intro="I quote every business after a free call, based on group size, session length and prep. Every session includes a takeaway guide.">
         <Tiers tiers={PRICING} />
         <p className="ui-muted" style={{ marginTop: 24 }}>
           If you are not sure which session fits, <a className="ui-link" href="#contact">send me a message</a> and I will recommend one.
@@ -187,7 +187,7 @@ export default function ConsultingPage() {
         </div>
       </Section>
 
-      <Section title="Who books this" intro="Teams that know they should be using AI and have not started.">
+      <Section title="Who books AI training?" intro="Teams that know they should be using AI and have not started.">
         <Rows
           items={[
             { name: "Small business owners", line: "An hour a day saved on admin adds up to 250 working hours a year." },
@@ -198,7 +198,7 @@ export default function ConsultingPage() {
         />
       </Section>
 
-      <Section title="How a session runs">
+      <Section title="How does a training session run?">
         <Rows
           items={[
             { name: "A 15-minute call", line: "You tell me about your business, your team and the tasks that eat the most time. I tell you which session fits and what I will customize." },
@@ -209,7 +209,7 @@ export default function ConsultingPage() {
         />
       </Section>
 
-      <Section title="Background">
+      <Section title="Who teaches the sessions?">
         <Prose>
           <p>
             I started the company at seventeen. I spent my last year of high school building autonomous AI systems and production tools full-time, and I teach the same tools I use in my own business every day.

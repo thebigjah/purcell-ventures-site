@@ -113,7 +113,7 @@ export default function SoftwarePage() {
         <Tiers tiers={ENGAGE} />
       </Section>
 
-      <Section title="What I build">
+      <Section title="What software does Purcell Ventures build?">
         <Rows items={SERVICES} />
       </Section>
 
@@ -133,7 +133,7 @@ export default function SoftwarePage() {
         </div>
       </Section>
 
-      <Section title="How a project runs">
+      <Section title="How does a software project run?">
         <Rows
           items={[
             { name: "Discovery call", line: "30 minutes. You explain the problem. I ask questions and tell you what it takes to build." },
@@ -147,7 +147,7 @@ export default function SoftwarePage() {
       <FaqBlock qa={QA} />
 
       <ClosingCall
-        title="Starting a project"
+        title="How do I start a project?"
         line="Tell me what you want built, and I will tell you whether I can help and what it would take. I reply within one business day."
         button="Email Elijah"
         href={MAIL}

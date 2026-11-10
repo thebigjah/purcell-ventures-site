@@ -103,11 +103,11 @@ export default function SitesPage() {
         </>}
       />
 
-      <Section id="build" title="Build tiers" intro="Every tier ends with a published website. I quote the price on the discovery call, once I know what your business needs.">
+      <Section id="build" title="What kinds of website builds are there?" intro="Every tier ends with a published website. I quote the price on the discovery call, once I know what your business needs.">
         <Tiers tiers={BUILD} />
       </Section>
 
-      <Section title="After launch" intro="After launch I keep hosting and updating the site on one of three plans. You can switch plans as the business grows.">
+      <Section title="What happens after the site launches?" intro="After launch I keep hosting and updating the site on one of three plans. You can switch plans as the business grows.">
         <Tiers tiers={CARE} />
       </Section>
 
@@ -120,7 +120,7 @@ export default function SitesPage() {
         <div className="ui-hero__actions"><Button href="https://the-loom-gold.vercel.app" ghost>See The Loom</Button></div>
       </Section>
 
-      <Section title="What every client gets">
+      <Section title="What does every website client get?">
         <Rows
           items={[
             { name: "One person to call", line: "When something on your site breaks, you call me directly and I fix it." },
