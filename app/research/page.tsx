@@ -4,6 +4,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PageHero, Prose, Rows, Section } from "@/app/components/ui";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
 import summary from "@/lib/research/alabama-2026-11-summary.json";
+import cobb from "@/lib/research/cobb-2026-11-summary.json";
 
 // Index of Purcell Ventures research. Each study publishes aggregate figures only.
 // The method notes below restate what the study page itself says, so a change to the
@@ -11,6 +12,7 @@ import summary from "@/lib/research/alabama-2026-11-summary.json";
 
 const S = summary.frames.statewide;
 const FRAME = summary.frame;
+const COBB = cobb.frames.county;
 const num = (n: number) => n.toLocaleString("en-US");
 
 export const metadata: Metadata = {
@@ -46,6 +48,8 @@ export default function Research() {
             can act on, and each one publishes its full method, its limits and a data file anyone
             can reuse. The first study covers Alabama, where Purcell Ventures is based, and
             checks several of the signals the free AI visibility check reads for a single site.
+            The second runs the same checks on every listed small business site in Cobb County,
+            Georgia.
           </p>
         </Prose>
       </Section>
@@ -58,6 +62,12 @@ export default function Research() {
               line: `Answers how many Alabama small business websites work, carry business structured data, block AI crawlers or publish llms.txt, from ${num(S.domains_checked)} randomly drawn sites plus every listed site in Tuscaloosa, Birmingham, Huntsville, Montgomery and Mobile.`,
               fig: "Nov 2026",
             },
+            {
+              name: "Cobb County, Georgia small business websites, November 2026",
+              href: "/research/cobb-county-small-business-websites-2026",
+              line: `Runs the same checks on all ${num(COBB.domains_checked)} small business websites OpenStreetMap lists in Cobb County, Georgia, and sets the results beside the Alabama statewide sample.`,
+              fig: "Nov 2026",
+            },
           ]}
         />
       </Section>
@@ -68,7 +78,8 @@ export default function Research() {
             from OpenStreetMap through the public Overpass API, kept {num(FRAME.total)} unique
             business domains after dropping chains, government offices, schools and nonprofits,
             and drew its statewide sample at random with a fixed seed, so anyone can repeat the
-            draw.
+            draw. The Cobb County study used the same query and filters and checked all{" "}
+            {num(cobb.frame.total)} business domains in the county, so it needed no draw.
           </p>
           <p>
             The method goes up with the results. The study page prints the Overpass query, the

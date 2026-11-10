@@ -173,6 +173,12 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
   LocalBusiness JSON-LD, AI crawler rules in robots.txt, llms.txt and time to first byte.
   Tables by city, the Overpass query, limits, and a CSV of the aggregates under CC BY 4.0.
   No business is named.
+- [Cobb County, Georgia small business websites, November 2026](https://purcellventures.co/research/cobb-county-small-business-websites-2026):
+  every small business website OpenStreetMap lists in Cobb County, Georgia, checked with the
+  same query, filters and scripts as the Alabama study. Same checks, a table that sets Cobb
+  County beside the Alabama statewide sample with its margin of error, domain counts by city
+  limit, the Overpass query, limits, and a CSV of the aggregates under CC BY 4.0. The page
+  names no business.
 
 ## Free tools
 

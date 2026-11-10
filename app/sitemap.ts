@@ -53,9 +53,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ai-cost-calculator`,  lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/ai-policy-template`,  lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/ai-visibility-check`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
-    // Research, first study published 9 Nov 2026
-    { url: `${BASE}/research`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
+    // Research, first study published 9 Nov 2026, Cobb County study added the same night
+    { url: `${BASE}/research`, lastModified: new Date("2026-11-10T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/research/alabama-small-business-websites-2026`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "yearly", priority: 0.7 },
+    { url: `${BASE}/research/cobb-county-small-business-websites-2026`, lastModified: new Date("2026-11-10T00:00:00Z"), changeFrequency: "yearly", priority: 0.7 },
     { url: `${BASE}/case-studies`,    lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // Every post, not the two that happened to be listed. A post absent from the
