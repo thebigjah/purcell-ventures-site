@@ -1057,14 +1057,68 @@ I checked all 1,672 Cobb County, Georgia small business websites listed in OpenS
 
 ## Free tools
 
-### Free AI tools for small businesses
+### Free AI tools for small businesses, Purcell Ventures
 URL: https://purcellventures.co/digital/tools
 
-26 free AI tools for small businesses: FAQ pages, review replies, emails, captions, color palettes, job posts and more, plus working demos of the loyalty, expense, inventory, estimating and event add-ons.
+26 free AI tools for small businesses: FAQ pages, review replies, emails and captions, plus working demos of the loyalty, expense and inventory add-ons.
 
 **Add-on demos** Working versions of add-ons I install on client sites. They run in your browser and save only to your device.
 
 **A branded version on your site** I can brand any of these tools and connect it to your own site and your business data. Every plan is quoted for your business after a free call.
+
+### Free AI About page writer, Purcell Ventures
+URL: https://purcellventures.co/digital/tools/about-page
+
+Enter why you started, what you do and how you work, and get an About Us page draft for a small business website. Free, with an example and tips for editing it.
+
+**Examples** Sample inputs written for this page, with the kind of result the tool returns.
+
+**The PV AI Starter Kit: all 24 prompts for $19** The kit has 24 AI prompts, this one included, plus 5 sales scripts, the full rep handbook, 50+ cold-outreach templates, a contractor agreement and a CRM file in CSV. Every file is editable. It costs $19 once and downloads right away.
+
+### Free AI social media caption generator, Purcell Ventures
+URL: https://purcellventures.co/digital/tools/caption-generator
+
+Describe a post or photo and get five social media captions in five voices for Instagram, Facebook, LinkedIn or TikTok. Free, with an example and editing tips.
+
+**Examples** Sample inputs written for this page, with the kind of result the tool returns.
+
+**The PV AI Starter Kit: all 24 prompts for $19** The kit has 24 AI prompts, this one included, plus 5 sales scripts, the full rep handbook, 50+ cold-outreach templates, a contractor agreement and a CRM file in CSV. Every file is editable. It costs $19 once and downloads right away.
+
+### Free AI business email writer, Purcell Ventures
+URL: https://purcellventures.co/digital/tools/email-composer
+
+Describe the situation and get a draft business email: a follow-up, a reply to an inquiry, an apology or an announcement. Free, with examples and tips.
+
+**Examples** Sample inputs written for this page, with the kind of result the tool returns.
+
+**The PV AI Starter Kit: all 24 prompts for $19** The kit has 24 AI prompts, this one included, plus 5 sales scripts, the full rep handbook, 50+ cold-outreach templates, a contractor agreement and a CRM file in CSV. Every file is editable. It costs $19 once and downloads right away.
+
+### Free AI estimate generator, Purcell Ventures
+URL: https://purcellventures.co/digital/tools/estimate-generator
+
+Turn rough job notes into estimate text with scope, line items, exclusions and caveats. A free tool for contractors and service businesses, with examples.
+
+**Examples** Sample inputs written for this page, with the kind of result the tool returns.
+
+**The PV AI Starter Kit: all 24 prompts for $19** The kit has 24 AI prompts, this one included, plus 5 sales scripts, the full rep handbook, 50+ cold-outreach templates, a contractor agreement and a CRM file in CSV. Every file is editable. It costs $19 once and downloads right away.
+
+### Free AI FAQ generator for small business, Purcell Ventures
+URL: https://purcellventures.co/digital/tools/faq-builder
+
+Describe your business and get 6 to 10 FAQ questions and answers, phrased the way customers ask. Free, with steps, an example and tips for a website FAQ page.
+
+**Examples** Sample inputs written for this page, with the kind of result the tool returns.
+
+**The PV AI Starter Kit: all 24 prompts for $19** The kit has 24 AI prompts, this one included, plus 5 sales scripts, the full rep handbook, 50+ cold-outreach templates, a contractor agreement and a CRM file in CSV. Every file is editable. It costs $19 once and downloads right away.
+
+### Free AI review response generator, Purcell Ventures
+URL: https://purcellventures.co/digital/tools/review-response
+
+Paste a Google, Yelp or Facebook review and get a calm reply that answers what the customer said. Free and no signup, with steps, an example and editing tips.
+
+**Examples** Sample inputs written for this page, with the kind of result the tool returns.
+
+**The PV AI Starter Kit: all 24 prompts for $19** The kit has 24 AI prompts, this one included, plus 5 sales scripts, the full rep handbook, 50+ cold-outreach templates, a contractor agreement and a CRM file in CSV. Every file is editable. It costs $19 once and downloads right away.
 
 ### AI visibility check for your business website, Purcell Ventures
 URL: https://purcellventures.co/ai-visibility-check
@@ -1188,7 +1242,7 @@ A digital punch card for repeat customers: add a punch each visit and redeem the
 ### Custom websites for local businesses, Purcell Ventures
 URL: https://purcellventures.co/sites
 
-Custom websites for local businesses in Tuscaloosa, metro Atlanta and remote: three build tiers and three maintenance plans. When something needs fixing, you call me directly.
+Elijah Purcell builds and maintains websites for local businesses in Tuscaloosa, metro Atlanta and remote, with three build tiers and three maintenance plans.
 
 **Build tiers** Every tier ends with a published website. I quote the price on the discovery call, once I know what your business needs.
 
@@ -1201,7 +1255,7 @@ Custom websites for local businesses in Tuscaloosa, metro Atlanta and remote: th
 ### How Elijah Purcell works with clients, Purcell Ventures
 URL: https://purcellventures.co/how-we-work
 
-The five stages of a project with Elijah Purcell, from the first email to year three, and the six commitments written into every contract, including no surprise invoices and no vendor lock-in.
+A project with Elijah Purcell runs in five stages, from the first email to year three, and every contract carries six commitments, including no vendor lock-in.
 
 **How a project runs** You email me one sentence about the problem. I reply within one business day. We set up a 30-minute call by phone or Zoom, or in person if you are in metro Atlanta or Tuscaloosa. On the call I scope the work and tell you which of my services fits, which does not, and whether someone else would serve you better.
 
@@ -1244,7 +1298,7 @@ Personal tech help: AI coaching, phone setup, password managers, medication remi
 ### Elijah Purcell, portfolio, Purcell Ventures
 URL: https://purcellventures.co/portfolio
 
-Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a University of Alabama New College and Honors College student: Rufus on the App Store, honors, AI work, faith and service, and everything else he has built.
+Elijah Purcell, founder of Purcell Ventures and a University of Alabama student, lists what he has built, including Rufus on the App Store, AI work and honors.
 
 **Rufus Rideshare** John White, a student at Georgia College & State University, asked me in September 2026 for a way to help students get rides from other students they can see and choose. I designed and built Rufus, and Apple approved it for the App Store on 8 October 2026.
 
@@ -2090,6 +2144,23 @@ Essays and guides by Elijah Purcell on AI tools and software for small businesse
 URL: https://purcellventures.co/contact
 
 Phone, email and a contact card to save for Elijah Purcell, Founder/CEO of Purcell Ventures LLC in Tuscaloosa, Alabama.
+
+### Privacy, Purcell Ventures
+URL: https://purcellventures.co/privacy
+
+The Purcell Ventures site sends form details to Elijah and AI tool input to Anthropic, takes payments through Stripe and runs no analytics or ad tracking.
+
+**Forms** These four forms send what you type to Elijah Purcell, who runs Purcell Ventures.
+
+**AI tools and the chat window** The free tools on /digital/tools , the FAQ builder and the chat window send what you type to the Anthropic API, which writes the reply. Purcell Ventures does not save your input or the result. Anthropic handles each request under its own terms. Leave passwords, card numbers and health details out of these tools.
+
+**Payments** Purchases run through Stripe checkout pages on stripe.com. Stripe collects your card details, and Purcell Ventures never sees your card number. After a purchase, Stripe tells this site your email address, the product, the amount and any referral code from the link you used. The server logs record the product, the amount and the referral code, with no email address. For the one product delivered as a Telegram channel, the site asks Telegram for an invite link labelled with the part of your email address before the @, then emails you that link through Resend.
+
+**Cookies and browser storage** The site sets cookies only for sales reps who sign in to the rep portal. The pv_rep_session cookie keeps a rep signed in, and the pv_rep_name cookie holds the rep's name. Both last 30 days. Visitors who never sign in get no cookies from this site.
+
+**Analytics, tracking and hosting** The site loads no analytics, advertising or tracking scripts and no third-party pixels. Vercel hosts the site and handles every request, so Vercel's servers see your IP address and keep request logs. The business card, print and QR code pages load QR code images from api.qrserver.com, which also sees your IP address.
+
+**Your requests** Email elijah@purcellventures.co to ask what the site holds about you, to correct it or to have it deleted. Elijah answers these requests himself.
 
 ### Tutorials for the Purcell Ventures tools, Purcell Ventures
 URL: https://purcellventures.co/tutorials
