@@ -112,7 +112,9 @@ export default function AiConsultantTuscaloosa() {
         <Link href="/ai-consulting/auburn-al">Auburn</Link>. The{" "}
         <Link href="/ai-for">trade guides</Link> cover what AI handles in twenty kinds of business, and the{" "}
         <Link href="/research/alabama-small-business-websites-2026">Alabama website study</Link> shows how
-        1,176 business sites across the state hold up with Google and AI search.
+        1,176 business sites across the state hold up with Google and AI search. The{" "}
+        <Link href="/research/tuscaloosa-small-business-websites-2026">Tuscaloosa website study</Link>{" "}
+        sets every listed Tuscaloosa business site beside the state on the same checks.
       </p>
 
       <h2>Common questions</h2>

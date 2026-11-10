@@ -13,6 +13,7 @@ import cobb from "@/lib/research/cobb-2026-11-summary.json";
 const S = summary.frames.statewide;
 const FRAME = summary.frame;
 const COBB = cobb.frames.county;
+const TUSC = summary.frames.tuscaloosa;
 const num = (n: number) => n.toLocaleString("en-US");
 
 export const metadata: Metadata = {
@@ -48,8 +49,9 @@ export default function Research() {
             can act on, and each one publishes its full method, its limits and a data file anyone
             can reuse. The first study covers Alabama, where Purcell Ventures is based, and
             checks several of the signals the free AI visibility check reads for a single site.
-            The second runs the same checks on every listed small business site in Cobb County,
-            Georgia.
+            The second sets every listed Tuscaloosa business site beside the statewide sample,
+            and the third runs the same checks on every listed small business site in Cobb
+            County, Georgia.
           </p>
         </Prose>
       </Section>
@@ -60,6 +62,12 @@ export default function Research() {
               name: "Alabama small business websites, November 2026",
               href: "/research/alabama-small-business-websites-2026",
               line: `Answers how many Alabama small business websites work, carry business structured data, block AI crawlers or publish llms.txt, from ${num(S.domains_checked)} randomly drawn sites plus every listed site in Tuscaloosa, Birmingham, Huntsville, Montgomery and Mobile.`,
+              fig: "Nov 2026",
+            },
+            {
+              name: "Tuscaloosa small business websites, November 2026",
+              href: "/research/tuscaloosa-small-business-websites-2026",
+              line: `Sets all ${num(TUSC.domains_checked)} small business websites OpenStreetMap lists in Tuscaloosa beside the Alabama statewide sample, and finds Tuscaloosa sites block AI crawlers far more often than the state.`,
               fig: "Nov 2026",
             },
             {

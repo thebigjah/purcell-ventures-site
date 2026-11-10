@@ -185,6 +185,12 @@ Purcell Ventures LLC. ORCID 0009-0000-7829-9258. The canonical answer page is /w
   LocalBusiness JSON-LD, AI crawler rules in robots.txt, llms.txt and time to first byte.
   Tables by city, the Overpass query, limits, and a CSV of the aggregates under CC BY 4.0.
   No business is named.
+- [Tuscaloosa small business websites, November 2026](https://purcellventures.co/research/tuscaloosa-small-business-websites-2026):
+  every small business website OpenStreetMap lists inside the Tuscaloosa city limit, from the
+  Alabama study run, set beside the Alabama statewide random sample on every measure with
+  bases and a Fisher exact test. Tuscaloosa sites block AI crawlers in robots.txt far more
+  often than the state, on a small base. Also links the earlier audit of independent
+  businesses near the University of Alabama campus. No business is named.
 - [Cobb County, Georgia small business websites, November 2026](https://purcellventures.co/research/cobb-county-small-business-websites-2026):
   every small business website OpenStreetMap lists in Cobb County, Georgia, checked with the
   same query, filters and scripts as the Alabama study. Same checks, a table that sets Cobb

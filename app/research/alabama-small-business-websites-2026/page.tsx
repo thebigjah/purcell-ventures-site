@@ -193,7 +193,9 @@ export default function AlabamaWebsites2026() {
       <p>
         Each bar shows one city&apos;s share, with the statewide sample in grey for reference. The n
         under each name is the base for that bar. Montgomery and Tuscaloosa have small bases, so a
-        single site moves their figures by two to three points.
+        single site moves their figures by two to three points. The{" "}
+        <Link href="/research/tuscaloosa-small-business-websites-2026">Tuscaloosa study</Link> sets
+        the Tuscaloosa figures beside the statewide sample on every measure.
       </p>
 
       <BarChart
