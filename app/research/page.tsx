@@ -94,12 +94,14 @@ export default function Research() {
           ]}
         />
       </Section>
-      <Section title="Which cities have their own results?" intro="Each city page sets its local figures beside the Alabama statewide sample.">
+      <Section title="Which cities have their own results?" intro="The Alabama and Tennessee city pages set local figures beside the Alabama statewide sample. The Georgia pages give the city's site count and the Cobb County figures.">
         <Rows
           items={CITIES.map((c) => ({
             name: c.name,
             href: c.href,
-            line: `Figures for the ${num(c.n)} business websites OpenStreetMap lists in ${c.name.split(",")[0]}, from the ${c.base}.`,
+            line: c.base === "Cobb County study"
+              ? `Counts the ${num(c.n)} business websites OpenStreetMap lists in ${c.name.split(",")[0]} and gives the county figures, from the ${c.base}.`
+              : `Sets the ${num(c.n)} business websites OpenStreetMap lists in ${c.name.split(",")[0]} beside the Alabama statewide sample, from the ${c.base}.`,
             fig: "Nov 2026",
           }))}
         />

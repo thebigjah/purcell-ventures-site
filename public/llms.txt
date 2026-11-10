@@ -197,10 +197,11 @@ Purcell Ventures LLC. ORCID 0009-0000-7829-9258. The canonical answer page is /w
   County beside the Alabama statewide sample with its margin of error, domain counts by city
   limit, the Overpass query, limits, and a CSV of the aggregates under CC BY 4.0. The page
   names no business.
-- City results: the AI consulting pages for Birmingham, Huntsville, Mobile, Montgomery, Auburn,
-  Chattanooga, Marietta, Kennesaw and Acworth each set that city's figures beside the Alabama
-  statewide sample. Auburn (171 sites) and Chattanooga (354 sites) are separate city-limit runs
-  of the Alabama method. The research index links all nine.
+- City results: the AI consulting pages for Birmingham, Huntsville, Mobile, Montgomery, Auburn
+  and Chattanooga set that city's figures beside the Alabama statewide sample. Auburn (171 sites)
+  and Chattanooga (354 sites) are separate city-limit runs of the Alabama method. The Marietta,
+  Kennesaw and Acworth pages give the city's site count and the Cobb County figures. The
+  research index links all nine.
 
 ## Free tools
 
