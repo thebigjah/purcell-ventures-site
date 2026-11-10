@@ -732,7 +732,7 @@ Quality bar:
     fields: [
       { name: "businessName", label: "Business name", type: "text", required: true },
       { name: "businessType", label: "What you do (1 sentence)", type: "text", required: true },
-      { name: "purchase", label: "What did they buy?", type: "text", required: true, placeholder: "e.g., 1-year gym membership, salon-membership package, $99/mo subscription" },
+      { name: "purchase", label: "What did they buy?", type: "text", required: true, placeholder: "e.g., 1-year gym membership, salon-membership package, monthly subscription" },
       { name: "valueGoal", label: "The first win that matters most to them", type: "text", placeholder: "e.g., Finishing 3 workouts in the first 14 days" },
     ],
     systemPrompt: `You write customer onboarding email sequences. NOT corporate "welcome to the family" energy. Real, useful, sets expectations.

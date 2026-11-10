@@ -69,7 +69,7 @@
   },
   "/ai-cost-calculator": {
     "published": "2026-05-21",
-    "modified": "2026-10-26"
+    "modified": "2026-11-09"
   },
   "/ai-design": {
     "published": "2026-11-09",
@@ -413,11 +413,11 @@
   },
   "/consulting/book": {
     "published": "2026-04-23",
-    "modified": "2026-10-26"
+    "modified": "2026-11-09"
   },
   "/contact": {
     "published": "2026-08-22",
-    "modified": "2026-10-27"
+    "modified": "2026-11-09"
   },
   "/courses": {
     "published": "2026-04-27",
@@ -453,7 +453,7 @@
   },
   "/digital": {
     "published": "2026-03-05",
-    "modified": "2026-11-03"
+    "modified": "2026-11-09"
   },
   "/digital/ai-faq-builder": {
     "published": "2026-05-25",
@@ -485,7 +485,7 @@
   },
   "/digital/playbook": {
     "published": "2026-03-05",
-    "modified": "2026-11-03"
+    "modified": "2026-11-09"
   },
   "/digital/tools": {
     "published": "2026-05-25",
@@ -497,7 +497,7 @@
   },
   "/free": {
     "published": "2026-05-25",
-    "modified": "2026-10-26"
+    "modified": "2026-11-09"
   },
   "/how-we-work": {
     "published": "2026-05-25",
@@ -689,7 +689,7 @@
   },
   "/sales-rep": {
     "published": "2026-05-25",
-    "modified": "2026-11-03"
+    "modified": "2026-11-09"
   },
   "/services": {
     "published": "2026-03-05",
@@ -745,11 +745,11 @@
   },
   "/software": {
     "published": "2026-03-05",
-    "modified": "2026-11-03"
+    "modified": "2026-11-09"
   },
   "/steady": {
     "published": "2026-05-25",
-    "modified": "2026-11-03"
+    "modified": "2026-11-09"
   },
   "/steady/start": {
     "published": "2026-05-25",

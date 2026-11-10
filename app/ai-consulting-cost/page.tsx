@@ -147,7 +147,7 @@ export default function AiConsultingCost() {
           <li><strong>Average hourly cost per person:</strong> salary plus benefits and overhead.</li>
           <li><strong>Repeatable manual work per person, per week:</strong> drafting, data entry, scheduling and formatting.</li>
           <li><strong>Share of that work AI could automate:</strong> a slider from 20% to 80%.</li>
-          <li><strong>Cost of the consulting session:</strong> the quote you received.</li>
+          <li><strong>Your training cost:</strong> the quote you received.</li>
         </ol>
 
         <p>
