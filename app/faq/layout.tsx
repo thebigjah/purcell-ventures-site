@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Common questions",
   description:
-    "Answers to the questions clients ask Elijah Purcell most: prices, response times, AI consulting, digital services, custom software, the courses and the company.",
+    "Answers to the questions clients ask Elijah Purcell most: how quotes work, response times, AI consulting, digital services, custom software and the courses.",
   alternates: { canonical: "/faq" },
 };
 

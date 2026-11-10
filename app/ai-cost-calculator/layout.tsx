@@ -5,7 +5,7 @@ import ToolSchema from "@/app/components/ToolSchema";
 export const metadata: Metadata = {
   title: "AI cost calculator",
   description:
-    "A free calculator by Elijah Purcell. It takes team size, hourly cost and manual workload, and shows how fast an AI consulting session pays back in dollars and hours.",
+    "A free calculator by Elijah Purcell. Enter team size, hourly cost, manual workload and your quoted training cost to see how fast AI training pays back.",
   alternates: { canonical: "/ai-cost-calculator" },
 };
 
@@ -33,7 +33,7 @@ export default function AICostCalcLayout({ children }: { children: React.ReactNo
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
-      <ToolSchema name="AI cost calculator" path="/ai-cost-calculator" description="A free calculator by Elijah Purcell. It takes team size, hourly cost and manual workload, and shows how fast an AI consulting session pays back in dollars and hours." />
+      <ToolSchema name="AI cost calculator" path="/ai-cost-calculator" description="A free calculator by Elijah Purcell. Enter team size, hourly cost, manual workload and your quoted training cost to see how fast AI training pays back." />
       <PageDates path="/ai-cost-calculator" />
       {children}
     </>

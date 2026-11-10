@@ -24,7 +24,7 @@ export const CONTACT = {
 
   serviceArea: "Metro Atlanta and Tuscaloosa",
 
-  // Stripe Payment Link for the $325 website deposit (half of the $650 one-page site), the one
+  // Stripe Payment Link for a website deposit, the one
   // Elijah made on 22 Oct 2026 (also in ~/bh6/pricing.json). Only a buy.stripe.com link goes
   // here. /contact shows a "Pay the deposit" button only when this is set.
   depositLink: "https://buy.stripe.com/3cI4gBgFY4YW2pMgef3VC04",

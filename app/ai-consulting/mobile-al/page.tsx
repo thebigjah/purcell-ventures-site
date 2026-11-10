@@ -23,7 +23,7 @@ export default function AiConsultingMobile() {
       kicker="Mobile, Alabama"
       title="AI consulting in Mobile"
       lede="AI training, automation and custom software for Mobile logistics firms, marine contractors and Gulf Coast hospitality, from Elijah Purcell of Purcell Ventures in Tuscaloosa. The first conversation is free."
-      meta="1-on-1 sessions $175 an hour. Team workshops $2,500 for up to 20 people. Training happens at your location."
+      meta="Every project is quoted after a free call. Training happens at your location."
     >
       <p>
         I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data
@@ -116,16 +116,14 @@ export default function AiConsultingMobile() {
       <h2>What does AI consulting cost in Mobile?</h2>
 
       <p>
-        A 1-on-1 session costs $175 an hour, with a two-hour minimum recommended. Small group
-        training costs $125 a person for 2 to 8 people, which fits a front desk or a dispatch
-        office. A half-day workshop costs $2,500 flat for up to 20 people.
+        I quote every Mobile business after a free call. Sessions run 1-on-1, as small group
+        training for 2 to 8 people, or as a half-day workshop for up to 20. Small group training fits a front desk or a dispatch office. The half-day workshop fits a larger crew.
       </p>
 
       <p>
-        Small software projects run $1,500 to $3,500, and full applications run $5,000 to
-        $15,000 and up. I quote automation per project after the first conversation. The{" "}
-        <Link href="/ai-cost-calculator">AI cost calculator</Link> takes your team size,
-        hourly cost and hours of manual work and shows the payback.
+        Automation and custom software get a written quote once I know how many systems the
+        work touches. The <Link href="/ai-cost-calculator">AI cost calculator</Link> takes your
+        team size, hourly cost and hours of manual work and shows what that work costs you now.
       </p>
 
       <h2>When is Purcell Ventures the wrong fit?</h2>
@@ -169,7 +167,7 @@ export default function AiConsultingMobile() {
       </p>
 
       <p>
-        Statewide prices and services: <Link href="/ai-consulting">AI consulting in Alabama</Link>.
+        Statewide services: <Link href="/ai-consulting">AI consulting in Alabama</Link>.
         Other cities: <Link href="/ai-consultant-tuscaloosa">Tuscaloosa</Link>,{" "}
         <Link href="/ai-consulting/birmingham-al">Birmingham</Link>,{" "}
         <Link href="/ai-consulting/huntsville-al">Huntsville</Link>,{" "}

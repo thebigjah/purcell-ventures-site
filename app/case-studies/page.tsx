@@ -114,7 +114,7 @@ export default function CaseStudiesPage() {
               I am taking a small number of first clients, and I will ask each one for permission to publish the results. I plan to publish the first case studies within 60 days of starting client work.
             </p>
             <p>
-              Early clients pay a discounted rate and get more of my time. You can also use your case study in your own marketing.
+              Early clients get more of my time. You can also use your case study in your own marketing.
             </p>
           </Prose>
           <div className="ui-hero__actions">

@@ -47,9 +47,9 @@ const PAGES = [
     line: "Answers which chat assistant fits your team, with plans, data controls and a test to run on your own work.",
   },
   {
-    name: "My prices next to agencies and freelancers",
+    name: "How agencies, freelancers and I each charge",
     href: "/pricing-comparison",
-    line: "Answers how Purcell Ventures prices sit beside typical agency, freelancer and do-it-yourself prices.",
+    line: "Answers how Purcell Ventures, agencies, freelancers and do-it-yourself tools each set a price, and what each one includes.",
   },
 ];
 
@@ -80,15 +80,16 @@ export default function ComparePage() {
         <Rows items={PAGES} />
       </Section>
 
-      <Section title="Where the prices come from">
+      <Section title="How I handle prices">
         <Prose>
           <p>
             I am Elijah Purcell, Founder/CEO of <Link href="/about">Purcell Ventures LLC</Link>.
-            Purcell Ventures prices come from my <Link href="/software">software</Link>,{" "}
-            <Link href="/sites">websites</Link>, <Link href="/digital">digital</Link> and{" "}
-            <Link href="/consulting">consulting</Link> pages. Other companies change their prices
-            often, so for their products I describe how each one charges and leave the dollar
-            figures to their own sites.
+            I quote every <Link href="/software">software</Link>,{" "}
+            <Link href="/sites">website</Link>, <Link href="/digital">digital</Link> and{" "}
+            <Link href="/consulting">consulting</Link> project for the business after a free
+            call. Other companies change their
+            prices often, so for their products I describe how each one charges and leave the
+            dollar figures to their own sites.
           </p>
           <p>
             If a fact about another company has changed, email me and I will correct it.

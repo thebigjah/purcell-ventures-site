@@ -402,8 +402,8 @@ function RackCardFront() {
 
         {/* Price */}
         <div style={{ marginBottom: "14px" }}>
-          <div style={{ fontSize: "8.5px", color: C.subtle, letterSpacing: "0.12em", fontFamily: "'Satoshi', system-ui, sans-serif" }}>From</div>
-          <div style={{ fontFamily: "'Clash Display', serif", fontSize: "24px", fontWeight: 700, color: C.gold, marginTop: "2px" }}>$99 a month</div>
+          <div style={{ fontSize: "8.5px", color: C.subtle, letterSpacing: "0.12em", fontFamily: "'Satoshi', system-ui, sans-serif" }}>Quoted per business</div>
+          <div style={{ fontFamily: "'Clash Display', serif", fontSize: "24px", fontWeight: 700, color: C.gold, marginTop: "2px" }}>Free call</div>
         </div>
 
         {/* QR */}

@@ -130,25 +130,22 @@ export default function AiForRestaurants() {
 
       <p>
         I can train your managers, add guest-facing tools to your website, or build a small
-        tool for a gap your point-of-sale system leaves. Each route has a published price on
-        its own page, and the first conversation about which one fits is free.
+        tool for a gap your point-of-sale system leaves. The first conversation about which route fits is free, and every project is quoted for your business after that call.
       </p>
 
       <ul>
         <li>
           <strong>Training.</strong> <Link href="/consulting">AI training</Link> on review
-          replies, captions and a staff AI rule: $175 an hour 1-on-1, $125 a person for groups
-          of 2 to 8, or $2,500 for a half-day workshop for up to 20 people.
+          replies, captions and a staff AI rule, in 1-on-1 sessions, small groups of 2 to 8, or a half-day workshop for up to 20 people.
         </li>
         <li>
           <strong>Website tools.</strong> The <Link href="/digital">Digital plans</Link> add an
           AI FAQ builder, review request automation, event registration and a loyalty punch
-          card at $179 a month, or an AI chatbot trained on your restaurant and online booking
-          at $279 a month. Setup is $650 to $1,000, with no contract.
+          card, or an AI chatbot trained on your restaurant and online booking. Pricing is quoted per business, with no contract.
         </li>
         <li>
           <strong>Custom software.</strong> A <Link href="/software">small project</Link> such as
-          a catering inquiry tool that drafts quotes from your menu runs $1,500 to $3,500.
+          a catering inquiry tool that drafts quotes from your menu is quoted after a free call.
         </li>
       </ul>
 

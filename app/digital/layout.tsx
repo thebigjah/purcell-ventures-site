@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Booking, CRM and AI tools for small businesses",
   description:
-    "Booking, a CRM, an AI chatbot and 23 more add-ons for small businesses. Starter $99, Growth $179 and Full Service $279 a month, with setup from $650 to $1,000.",
+    "Booking, a CRM, an AI chatbot and 23 more add-ons for small businesses, built and maintained for you. Every plan is quoted for your business after a free call.",
   keywords: [
     "digital services small business", "AI chatbot for website", "business website management",
     "CRM for small business", "email marketing automation", "booking system",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Digital add-ons for small businesses, Purcell Ventures",
     description:
-      "Booking, a CRM, an AI chatbot and 23 more add-ons for small businesses. Plans from $99 a month.",
+      "Booking, a CRM, an AI chatbot and 23 more add-ons for small businesses. Every plan is quoted for your business after a free call.",
     url: "https://purcellventures.co/digital",
     type: "website",
   
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "Digital add-ons, Purcell Ventures",
-    description: "Booking, a CRM, an AI chatbot and 23 more add-ons for small businesses. Plans from $99 a month.",
+    description: "Booking, a CRM, an AI chatbot and 23 more add-ons for small businesses. Every plan is quoted for your business after a free call.",
   },
   // No canonical here. This layout wraps every /digital child route and Next
   // inherits it, so until 27 Oct 2026 all eight demos told Google they were
@@ -41,18 +41,6 @@ const schema = {
       "url": "https://purcellventures.co/digital",
       "serviceType": "Digital business services",
       "areaServed": "Worldwide",
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "USD",
-        "lowPrice": "99",
-        "highPrice": "279",
-        "offerCount": 3,
-        "offers": [
-          { "@type": "Offer", "name": "Starter plan", "price": "99", "priceCurrency": "USD" },
-          { "@type": "Offer", "name": "Growth plan", "price": "179", "priceCurrency": "USD" },
-          { "@type": "Offer", "name": "Full Service plan", "price": "279", "priceCurrency": "USD" },
-        ],
-      },
     },
     {
       "@type": "FAQPage",
@@ -70,7 +58,7 @@ const schema = {
           "name": "How much does a digital services subscription cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Starter is $99 a month, Growth $179 a month and Full Service $279 a month. There is a one-time setup fee of $650 to $1,000.",
+            "text": "Every plan is quoted for your business after a free call. The quote depends on the add-ons you pick and the setup they need, and you see it before any work starts.",
           },
         },
         {
@@ -91,10 +79,10 @@ const schema = {
         },
         {
           "@type": "Question",
-          "name": "Why does it cost less than a typical agency?",
+          "name": "How is the price set?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "I reuse the same modules across clients instead of building each site from scratch, and I use AI tools to write and test code. Both cut my hours, so I can charge less.",
+            "text": "I quote each business after a free call, based on the add-ons you pick and how much setup they need. You see the full quote before any work starts.",
           },
         },
       ],

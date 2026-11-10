@@ -7,8 +7,8 @@ import ServiceSchema from "@/app/components/ServiceSchema";
 import { CONTACT } from "@/lib/contact";
 
 // Comparison page, written 9 Nov 2026. PV facts come from /sites (build tiers, timelines,
-// ownership, care plans) and /digital (monthly plans and setup fee). /sites quotes build
-// prices on the discovery call, so this page gives timelines and no build price. Builders
+// ownership, care plans) and /digital (monthly plans). PV quotes every build and plan per
+// business after a free call, so this page gives timelines and no PV price. Builders
 // are described by how they work and charge, with no dollar figures, since plans change.
 
 const PATH = "/compare/ai-website-builder-vs-custom-site";
@@ -165,8 +165,8 @@ export default function Page() {
 
         <p>
           If you keep a builder site, the <Link href="/digital">Digital plans</Link> add booking, a
-          CRM, an AI FAQ or a chatbot to the site you already have, from $99 a month with a
-          one-time setup fee of $650 to $1,000.
+          CRM, an AI FAQ or a chatbot to the site you already have. Each plan is quoted for your
+          business after a free call.
         </p>
 
         <h2>What do you own if you leave?</h2>

@@ -4,14 +4,14 @@ import type { ReactNode } from "react";
 // PILLAR FOR THE AI INTEGRATION CLUSTER (9 Nov 2026).
 //
 // The hub the blog engine links each ai-integration post up to (~/blog-engine cluster_map.json).
-// Prices come from /software and /digital as of 9 Nov 2026. The CRM example is the one in
+// Purcell Ventures service work carries no prices (owner rule, 9 Nov 2026). The CRM example is the one in
 // /blog/why-i-built-crm-from-scratch. Vendor features are named in general terms only, with
 // no prices, because vendor prices change and the site cannot keep them current.
 
 export const metadata: Metadata = {
   title: { absolute: "AI integration for small business software, Purcell Ventures" },
   description:
-    "AI integration for small business: connect AI to Google Workspace, QuickBooks, a CRM, your website, phone and text. Off-the-shelf vs custom, safety, prices.",
+    "AI integration for small business: connect AI to Google Workspace, QuickBooks, a CRM, your website, phone and text. Off-the-shelf vs custom, and safety.",
   keywords: [
     "AI integration small business", "add AI to CRM", "AI chatbot trained on my website",
     "AI QuickBooks integration", "connect ChatGPT to business software", "custom AI integration Alabama",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI integration for small business software",
     description:
-      "AI integration for small business: connect AI to Google Workspace, QuickBooks, a CRM, your website, phone and text. Off-the-shelf vs custom, safety, prices.",
+      "AI integration for small business: connect AI to Google Workspace, QuickBooks, a CRM, your website, phone and text. Off-the-shelf vs custom, and safety.",
     url: "https://purcellventures.co/ai-integration",
     type: "article",
     images: ["/opengraph-image"],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI integration for small business software",
-    description: "AI integration for small business: connect AI to Google Workspace, QuickBooks, a CRM, your website, phone and text. Off-the-shelf vs custom, safety, prices.",
+    description: "AI integration for small business: connect AI to Google Workspace, QuickBooks, a CRM, your website, phone and text. Off-the-shelf vs custom, and safety.",
   },
   alternates: { canonical: "https://purcellventures.co/ai-integration" },
 };
@@ -38,7 +38,7 @@ export const QA: [string, string][] = [
   ["Can AI work with QuickBooks?",
    "Yes. Intuit has added AI features inside QuickBooks itself, and QuickBooks Online has an API that outside tools can connect to. Read-only uses, such as summaries and reports, are the safe place to start. Anything that posts entries or sends invoices should wait for a person to approve it."],
   ["How do I add an AI chatbot to my website that only answers from my own information?",
-   "Give the chatbot a fixed set of your own documents, such as services, prices, hours and policies, and instruct it to answer only from them and to hand off when the answer is missing. Test it with questions it should refuse. Purcell Ventures includes an AI chatbot trained on your business in the Digital Full Service plan at $279 a month."],
+   "Give the chatbot a fixed set of your own documents, such as services, prices, hours and policies, and instruct it to answer only from them and to hand off when the answer is missing. Test it with questions it should refuse. Purcell Ventures includes an AI chatbot trained on your business in the Digital Full Service plan."],
   ["How do I avoid getting locked into one AI vendor?",
    "Keep your own data in your own systems, and keep the instructions and documents you give the model in files you control. A custom integration can then switch models by changing one setting. With an all-in-one AI product, ask how to export your data before you sign."],
   ["Which AI model should a small business build on?",

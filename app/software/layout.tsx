@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Custom software, web apps and mobile apps",
   description:
-    "Custom software for small businesses: mobile apps, web platforms, automation tools and AI integrations. Small projects $1,500 to $3,500, full apps from $5,000.",
+    "Custom software for small businesses: mobile apps, web platforms, automation tools and AI integrations. Every project is quoted for your business after a free call.",
   keywords: [
     "custom software development", "mobile app development", "web app development",
     "AI integration for business", "custom business software", "app development Georgia",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Custom software development, Purcell Ventures",
     description:
-      "Mobile apps, web platforms and AI tools for your business. Small projects $1,500 to $3,500, full apps $5,000 to $15,000 and up.",
+      "Mobile apps, web platforms and AI tools for your business. Every project is quoted after a free call.",
     url: "https://purcellventures.co/software",
     type: "website",
   
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "Custom software development, Purcell Ventures",
-    description: "Mobile apps, web apps and AI tools built for your business, from $1,500.",
+    description: "Mobile apps, web apps and AI tools built for your business, quoted after a free call.",
   },
   alternates: { canonical: "https://purcellventures.co/software" },
 };
@@ -37,16 +37,6 @@ const schema = {
   "url": "https://purcellventures.co/software",
   "serviceType": "Custom software development",
   "areaServed": "Worldwide",
-  "offers": {
-    "@type": "AggregateOffer",
-    "priceCurrency": "USD",
-    "lowPrice": "1500",
-    "highPrice": "15000",
-    "offers": [
-      { "@type": "Offer", "name": "Small project", "price": "1500", "priceCurrency": "USD", "description": "Scripts, tools, automations, simple web apps" },
-      { "@type": "Offer", "name": "Full application", "price": "5000", "priceCurrency": "USD", "description": "Mobile apps, web platforms, full AI integrations" },
-    ],
-  },
 };
 
 
@@ -77,7 +67,7 @@ const FAQ_LD = {
       "name": "What kind of custom software does Purcell Ventures build?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mobile applications for iOS and Android built with React Native or Expo, full-stack web applications built with Next.js, and AI tools. Small projects cost $1,500 to $3,500 and full applications $5,000 to $15,000 and up."
+        "text": "Mobile applications for iOS and Android built with React Native or Expo, full-stack web applications built with Next.js, and AI tools. Elijah quotes each project for the business after a free discovery call."
       }
     },
     {

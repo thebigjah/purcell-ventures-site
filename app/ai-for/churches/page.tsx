@@ -128,27 +128,22 @@ export default function AiForChurches() {
 
       <p>
         I can train your staff and volunteers, add event and scheduling tools to your
-        website, or build software for a gap your church management system leaves. Each
-        route below has a published price on its own page, and the first conversation about
-        which one fits is free.
+        website, or build software for a gap your church management system leaves. The first conversation about which route fits is free, and every project is quoted for your business after that call.
       </p>
 
       <ul>
         <li>
           <strong>Training.</strong> <Link href="/consulting">AI training</Link> on sermon
-          summaries, newsletter drafts and safe use of member data: $175 an hour 1-on-1, $125
-          a person for groups of 2 to 8, or $2,500 for a half-day workshop for up to 20 people.
+          summaries, newsletter drafts and safe use of member data, in 1-on-1 sessions, small groups of 2 to 8, or a half-day workshop for up to 20 people.
         </li>
         <li>
           <strong>Website tools.</strong> The <Link href="/digital">Digital plans</Link> include
-          an event registration system, a staff scheduler and an AI content generator at $179
-          a month, and an email and SMS campaign system at $279 a month. Setup is $650 to
-          $1,000, with no contract.
+          an event registration system, a staff scheduler and an AI content generator, and an email and SMS campaign system. Pricing is quoted per business, with no contract.
         </li>
         <li>
           <strong>Custom software.</strong> A <Link href="/software">small project</Link>,
           such as a tool that turns each sermon transcript into a summary, small group
-          questions and a clip list, runs $1,500 to $3,500.
+          questions and a clip list, is quoted after a free call.
         </li>
       </ul>
 

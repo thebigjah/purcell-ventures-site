@@ -10,31 +10,31 @@ import ServiceSchema from "@/app/components/ServiceSchema";
 const TIERS = [
   {
     name: "One-off help",
-    price: "$99 flat",
+    price: "Quoted after a free call",
     for: "One 90-minute session, in person in Tuscaloosa or metro Atlanta, or over video. You bring one problem and we solve it in that session.",
     items: ["Suits a single need: a new iPhone, a ChatGPT lesson, a smart speaker setup or a move to a password manager"],
   },
   {
     name: "Monthly care",
-    price: "$79 a month",
+    price: "Quoted for your household",
     for: "Unlimited texts during business hours, a 30-minute video check-in every month, and one in-person visit a month in Tuscaloosa or metro Atlanta.",
     items: ["Suits ongoing help, when you have tech questions most weeks and want someone to text", "The plan I recommend for most people"],
   },
   {
     name: "Family care",
-    price: "$149 a month",
+    price: "Quoted for your household",
     for: "Everything in Monthly care, for up to 4 family members on one plan.",
     items: ["Suits adult children who support their parents' devices, so your mom calls me instead of you"],
   },
 ];
 
 const PACKAGES = [
-  { name: "New phone setup", fig: "$79", line: "An iPhone or Android out of the box: contacts, email, photos, apps, a password manager, two-factor sign-in, accessibility settings, and unused apps removed." },
-  { name: "ChatGPT crash course", fig: "$129", line: "A 90-minute hands-on lesson. By the end you can use ChatGPT or Claude for research, writing, planning and decisions. I build it around the things you want to use it for." },
-  { name: "Password manager migration", fig: "$99", line: "I set up 1Password or Bitwarden, move every saved password out of your browsers, and set up family sharing, so you no longer reuse passwords." },
-  { name: "Medication reminder setup", fig: "$99", line: "For an elderly parent or grandparent. Smart speaker reminders, phone reminders and a visual cue system. Includes a 30-minute training session with them." },
-  { name: "Smart home starter", fig: "$199", line: "One Echo or Google Home, 4 smart bulbs, 2 plugs, and three routines I set up (morning, evening and away). Includes a 60-minute walkthrough." },
-  { name: "Digital legacy plan", fig: "$149", line: "I document every account, password, subscription and digital asset so your family can reach them if something happens to you. I write the plan down, store it securely and test it." },
+  { name: "New phone setup", line: "An iPhone or Android out of the box: contacts, email, photos, apps, a password manager, two-factor sign-in, accessibility settings, and unused apps removed." },
+  { name: "ChatGPT crash course", line: "A 90-minute hands-on lesson. By the end you can use ChatGPT or Claude for research, writing, planning and decisions. I build it around the things you want to use it for." },
+  { name: "Password manager migration", line: "I set up 1Password or Bitwarden, move every saved password out of your browsers, and set up family sharing, so you no longer reuse passwords." },
+  { name: "Medication reminder setup", line: "For an elderly parent or grandparent. Smart speaker reminders, phone reminders and a visual cue system. Includes a 30-minute training session with them." },
+  { name: "Smart home starter", line: "One Echo or Google Home, 4 smart bulbs, 2 plugs, and three routines I set up (morning, evening and away). Includes a 60-minute walkthrough." },
+  { name: "Digital legacy plan", line: "I document every account, password, subscription and digital asset so your family can reach them if something happens to you. I write the plan down, store it securely and test it." },
 ];
 
 const PROBLEMS = [
@@ -50,7 +50,7 @@ const COMPARE: [string, string, string, string, string][] = [
   ["Patience with people who are not technical", "Built for people who are not technical", "Depends on the technician", "Often frustrated", "Nobody to ask"],
   ["Teaches you to do it yourself", "Every session", "Rarely", "Rarely, because they do it for you", "You teach yourself"],
   ["Available between visits", "Unlimited texts on Monthly and Family care", "Pay per visit", "Yes, when they have time", "Nobody to ask"],
-  ["Cost in a typical month", "$79 to $149 a month", "Per-visit fees", "$0, but it takes their time", "$0, but it takes your time"],
+  ["Cost in a typical month", "Quoted for your household after a free call", "Per-visit fees", "$0, but it takes their time", "$0, but it takes your time"],
   ["Knows AI tools well", "My main focus", "Generally no", "Depends on the kid", "YouTube tutorials"],
   ["Handles family members", "Family care covers up to 4 people", "Each person pays separately", "You answer everyone's questions", "Everyone on their own"],
 ];
@@ -88,9 +88,9 @@ export default function SteadyPage() {
       <PageHero
         planet="steady"
         kicker="Steady, personal IT"
-        title="Personal IT help for families, from $79 a month."
+        title="Personal IT help for families."
         lede="I set up phones, computers and smart home devices, teach you and your parents to use them, and answer when something breaks."
-        meta="Monthly care $79 a month. Family care $149 a month. A one-off session $99."
+        meta="One-off sessions, Monthly care and Family care, each quoted for your household after a free call."
         actions={<>
           <Button href="/steady/start">Fill out the intake</Button>
           <Button href="#tiers" ghost>See plans</Button>

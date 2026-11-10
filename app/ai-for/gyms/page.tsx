@@ -133,28 +133,25 @@ export default function AiForGyms() {
 
       <p>
         I can train your front desk and coaches, add scheduling and AI tools to your website,
-        or build software for a gap your member system leaves. Each route below has a
-        published price on its own page, and the first conversation about which one fits is
-        free.
+        or build software for a gap your member system leaves. The first conversation about which route fits is free, and every project is quoted for your business after that call.
       </p>
 
       <ul>
         <li>
           <strong>Training.</strong> <Link href="/consulting">AI training</Link> on follow-up
-          wording, captions and a staff AI rule: $175 an hour 1-on-1, $125 a person for groups
-          of 2 to 8, or $2,500 for a half-day workshop for up to 20 people.
+          wording, captions and a staff AI rule, in 1-on-1 sessions, small groups of 2 to 8, or a half-day workshop for up to 20 people.
         </li>
         <li>
           <strong>Website tools.</strong> The <Link href="/digital">Digital plans</Link> start
-          with a caption generator at $99 a month. Growth adds an AI FAQ builder, a staff
-          scheduler and a loyalty punch card with QR check-ins at $179 a month. Full Service
+          with a caption generator. Growth adds an AI FAQ builder, a staff
+          scheduler and a loyalty punch card with QR check-ins. Full Service
           adds an AI chatbot trained on your gym, branded online booking and an email and SMS
-          campaign system at $279 a month. Setup is $650 to $1,000, with no contract.
+          campaign system. Pricing is quoted per business, with no contract.
         </li>
         <li>
           <strong>Custom software.</strong> A <Link href="/software">small project</Link>,
           such as a tool that lists members with no recent check-in from your software&apos;s
-          export, runs $1,500 to $3,500.
+          export, is quoted after a free call.
         </li>
       </ul>
 

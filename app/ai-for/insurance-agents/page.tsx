@@ -136,26 +136,22 @@ export default function AiForInsuranceAgents() {
 
       <p>
         I can train your agents and service staff, add intake and FAQ tools to your website,
-        or build a small tool around your own question lists. Each route has a published
-        price on its own page, and the first conversation about which one fits is free.
+        or build a small tool around your own question lists. The first conversation about which route fits is free, and every project is quoted for your business after that call.
       </p>
 
       <ul>
         <li>
           <strong>Training.</strong> <Link href="/consulting">AI training</Link> on renewal
-          wording, review replies and a staff AI rule: $175 an hour 1-on-1, $125 a person for
-          groups of 2 to 8, or $2,500 for a half-day workshop for up to 20 people.
+          wording, review replies and a staff AI rule, in 1-on-1 sessions, small groups of 2 to 8, or a half-day workshop for up to 20 people.
         </li>
         <li>
           <strong>Website tools.</strong> The <Link href="/digital">Digital plans</Link> add an
-          AI FAQ builder and review request automation at $179 a month, or an AI chatbot that
-          collects quote details and an email and SMS campaign system at $279 a month. Setup
-          is $650 to $1,000, with no contract.
+          AI FAQ builder and review request automation, or an AI chatbot that
+          collects quote details and an email and SMS campaign system. Pricing is quoted per business, with no contract.
         </li>
         <li>
           <strong>Custom software.</strong> A <Link href="/software">small project</Link>,
-          such as an intake form that turns answers into a summary in your format, runs $1,500
-          to $3,500.
+          such as an intake form that turns answers into a summary in your format, is quoted after a free call.
         </li>
       </ul>
 

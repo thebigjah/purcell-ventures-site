@@ -202,8 +202,8 @@ export default function AiForSmallBusiness() {
 
       <p>
         For a team that wants hands-on help, <Link href="/consulting">AI training</Link>{" "}
-        costs $175 an hour for 1-on-1 sessions, $125 a person for groups of 2 to 8, and $2,500
-        for a half-day workshop for up to 20 people.
+        comes as 1-on-1 sessions, small groups of 2 to 8, or a half-day workshop for up to 20
+        people. Each format is quoted for your business after a free call.
       </p>
 
       <h2>How does AI fit my trade?</h2>

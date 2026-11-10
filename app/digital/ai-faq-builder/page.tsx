@@ -34,7 +34,7 @@ const ABOUT = [
   {
     h: "The version on your own website",
     p: [
-      <>The AI FAQ Builder, running on your site, is in the Growth plan, $179 a month, with a one-time setup fee of $650 to $1,000. The Full Service plan, $279 a month, adds an AI chatbot trained on your business that answers questions 24 hours a day. <Link href="/digital#pricing">Compare the plans</Link>.</>,
+      <>The AI FAQ Builder, running on your site, is in the Growth plan, which I quote for your business after a free call. The Full Service plan adds an AI chatbot trained on your business that answers questions 24 hours a day. <Link href="/digital#pricing">Compare the plans</Link>.</>,
     ],
   },
 ];

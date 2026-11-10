@@ -41,7 +41,7 @@ const ABOUT = [
   {
     h: "The version on your own website",
     p: [
-      <>The Loyalty Punch Card with QR check-ins is in the Growth plan, $179 a month, with a one-time setup fee of $650 to $1,000. Customers check in by scanning a QR code, and I set it up for your business and maintain it. <Link href="/digital#pricing">Compare the plans</Link>.</>,
+      <>The Loyalty Punch Card with QR check-ins is in the Growth plan, which I quote for your business after a free call. Customers check in by scanning a QR code, and I set it up for your business and maintain it. <Link href="/digital#pricing">Compare the plans</Link>.</>,
     ],
   },
 ];

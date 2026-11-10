@@ -5,6 +5,9 @@ import s from "./ROICalculator.module.css";
 
 // Rebuilt on the page kit 26 Oct 2026. The maths, the inputs, their ranges and the presets'
 // numbers are unchanged. Only /digital uses this, and the page supplies the section heading.
+// 9 Nov 2026: the plan picker and its monthly prices are gone. Elijah quotes every business
+// separately, so the calculator now shows the extra revenue and leaves the visitor to set
+// it against the quote they get.
 
 const INDUSTRY_PRESETS = [
   { label: "Hair salon", bookingValue: 55, extraBookings: 5 },
@@ -15,21 +18,13 @@ const INDUSTRY_PRESETS = [
   { label: "Lawn care", bookingValue: 120, extraBookings: 3 },
 ];
 
-const PLAN_NAMES = { starter: "Starter", growth: "Growth", full: "Full Service" } as const;
-
 export default function ROICalculator() {
   const [bookingValue, setBookingValue] = useState(55);
   const [extraPerWeek, setExtraPerWeek] = useState(5);
-  const [plan, setPlan] = useState<"starter" | "growth" | "full">("growth");
   const [selectedPreset, setSelectedPreset] = useState("Hair salon");
 
-  const planCosts = { starter: 99, growth: 179, full: 279 };
-  const planCost = planCosts[plan];
-
   const extraMonthly = extraPerWeek * 4.3 * bookingValue;
-  const netGain = extraMonthly - planCost;
-  const roi = Math.round((netGain / planCost) * 100);
-  const paybackDays = Math.round((planCost / extraMonthly) * 30);
+  const extraBookingsMonthly = Math.round(extraPerWeek * 4.3);
 
   function applyPreset(preset: typeof INDUSTRY_PRESETS[0]) {
     setBookingValue(preset.bookingValue);
@@ -93,58 +88,27 @@ export default function ROICalculator() {
           <div className={s.ends}><span>1</span><span>30</span></div>
         </div>
 
-        <div className={s.group}>
-          <p className={s.label} id="roi-plan">Plan</p>
-          <div className={s.plans} role="group" aria-labelledby="roi-plan">
-            {(["starter", "growth", "full"] as const).map((p) => (
-              <button
-                key={p}
-                type="button"
-                className={s.choice}
-                aria-pressed={plan === p}
-                onClick={() => setPlan(p)}
-              >
-                {PLAN_NAMES[p]}
-                <small>${planCosts[p]} a month</small>
-              </button>
-            ))}
-          </div>
-        </div>
       </div>
 
       <div aria-live="polite">
         <div className={s.result}>
-          <p>Estimated net gain each month, after the plan cost</p>
-          <span className={`${s.big}${netGain < 0 ? ` ${s.loss}` : ""}`}>
-            {netGain >= 0 ? "+" : "−"}${Math.abs(netGain).toLocaleString()}
+          <p>Estimated extra revenue each month</p>
+          <span className={s.big}>
+            +${extraMonthly.toLocaleString(undefined, { maximumFractionDigits: 0 })}
           </span>
         </div>
 
         <dl className="ui-facts">
-          <dt>Extra revenue a month</dt>
-          <dd>+${extraMonthly.toLocaleString(undefined, { maximumFractionDigits: 0 })}</dd>
-          <dt>Plan cost</dt>
-          <dd>{"−"}${planCost} a month</dd>
-          <dt>Net gain</dt>
-          <dd className={netGain >= 0 ? "ui-gold" : undefined}>
-            {netGain < 0 ? "−" : ""}${Math.abs(netGain).toLocaleString(undefined, { maximumFractionDigits: 0 })} a month
-          </dd>
+          <dt>Extra bookings a month</dt>
+          <dd>{extraBookingsMonthly}</dd>
+          <dt>Extra revenue a year</dt>
+          <dd className="ui-gold">+${(extraMonthly * 12).toLocaleString(undefined, { maximumFractionDigits: 0 })}</dd>
         </dl>
-
-        <div className={`ui-figures ${s.figs}`}>
-          <div className="ui-figure">
-            <b>{roi > 0 ? roi : 0}%</b>
-            <span>Monthly return on the plan</span>
-          </div>
-          <div className="ui-figure">
-            <b>{paybackDays <= 30 ? `${paybackDays} days` : "Over 30 days"}</b>
-            <span>Time to pay back the plan</span>
-          </div>
-        </div>
 
         <p className={s.fine}>
           This is arithmetic on the numbers above. It assumes online booking, the chatbot and review
-          requests bring in the extra bookings you entered.
+          requests bring in the extra bookings you entered. Set the monthly figure against the quote
+          you get for your business.
         </p>
 
         <a className="ui-btn" href="#contact">Talk to me about your numbers</a>

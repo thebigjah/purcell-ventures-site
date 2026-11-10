@@ -24,7 +24,7 @@ export default function AiConsultingAuburn() {
       kicker="Auburn, Alabama"
       title="AI consulting in Auburn"
       lede="AI training, automation and custom software for Auburn restaurants, shops, student housing and young founders, from Elijah Purcell of Purcell Ventures in Tuscaloosa. The first conversation is free."
-      meta="1-on-1 sessions $175 an hour. Small group training $125 a person. Training happens at your location."
+      meta="Every project is quoted after a free call. Training happens at your location."
     >
       <p>
         I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data
@@ -118,17 +118,14 @@ export default function AiConsultingAuburn() {
       <h2>What does AI consulting cost in Auburn?</h2>
 
       <p>
-        A 1-on-1 session costs $175 an hour, with a two-hour minimum recommended, and suits an
-        owner who runs most of the business alone. Small group training costs $125 a person
-        for 2 to 8 people, which fits a leasing office or a restaurant&rsquo;s managers. A
-        half-day workshop costs $2,500 flat for up to 20 people.
+        I quote every Auburn business after a free call. Sessions run 1-on-1, as small group
+        training for 2 to 8 people, or as a half-day workshop for up to 20. A 1-on-1 session suits an owner who runs most of the business alone. Small group training fits a leasing office or a restaurant&rsquo;s managers.
       </p>
 
       <p>
-        Small software projects run $1,500 to $3,500, and full applications run $5,000 to
-        $15,000 and up. I quote automation per project after the first conversation. The{" "}
-        <Link href="/ai-cost-calculator">AI cost calculator</Link> shows whether a session
-        pays for itself, using your team size, hourly cost and hours of manual work.
+        Automation and custom software get a written quote once I know how many systems the
+        work touches. The <Link href="/ai-cost-calculator">AI cost calculator</Link> takes your
+        team size, hourly cost and hours of manual work and shows what that work costs you now.
       </p>
 
       <h2>When is Purcell Ventures the wrong fit?</h2>
@@ -173,7 +170,7 @@ export default function AiConsultingAuburn() {
       </p>
 
       <p>
-        Statewide prices and services: <Link href="/ai-consulting">AI consulting in Alabama</Link>.
+        Statewide services: <Link href="/ai-consulting">AI consulting in Alabama</Link>.
         Other cities: <Link href="/ai-consultant-tuscaloosa">Tuscaloosa</Link>,{" "}
         <Link href="/ai-consulting/birmingham-al">Birmingham</Link>,{" "}
         <Link href="/ai-consulting/huntsville-al">Huntsville</Link>,{" "}

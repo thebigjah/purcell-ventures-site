@@ -192,7 +192,7 @@ export default function AiDesign() {
 
       <p>
         Businesses that want this done for them can add the logo designer, brand kit and social
-        templates to a <Link href="/digital">Digital plan</Link>. Plans start at $99 a month.
+        templates to a <Link href="/digital">Digital plan</Link>, quoted for your business after a free call.
         Print work such as <Link href="/business-cards">business cards</Link> is on its own page.
       </p>
 

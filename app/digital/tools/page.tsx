@@ -59,7 +59,7 @@ export default function ToolsIndexPage() {
 
       <ClosingCall
         title="A branded version on your site"
-        line="I can brand any of these tools and connect it to your own site and your business data. The digital plans start at $99 a month."
+        line="I can brand any of these tools and connect it to your own site and your business data. Every plan is quoted for your business after a free call."
         button="See the digital plans"
         href="/digital"
       />

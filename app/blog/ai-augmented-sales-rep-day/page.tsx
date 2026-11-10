@@ -44,7 +44,7 @@ export default function Post() {
       <p>Luke clicks into Sarah&apos;s contact and clicks <strong>&quot;Where are we?&quot;</strong> in the Conversation Summary panel. The AI reads the 8 entries in her activity timeline and writes a 5-line catch-up:</p>
 
       <ul>
-        <li><strong>Where we are:</strong> Sarah owns a salon and got a Growth tier quote 5 days ago: $179/mo plus $700 setup.</li>
+        <li><strong>Where we are:</strong> Sarah owns a salon and got a Growth tier quote 5 days ago.</li>
         <li><strong>Last meaningful action:</strong> Said &quot;let me think about it&quot; on the Tuesday call. Has not answered the day-3 follow-up.</li>
         <li><strong>What we owe them:</strong> Nothing. She owes us a reply.</li>
         <li><strong>What they owe us:</strong> A decision on Growth or the smaller Starter tier.</li>
@@ -114,7 +114,7 @@ export default function Post() {
       <p>Luke needs a contact named &quot;Pamela&quot; and has forgotten her last name. He presses <strong>Cmd+K</strong> and types &quot;pam.&quot; Fuzzy search across all contacts finds her, and he clicks through to her page.</p>
 
       <h2>2:00 PM: A prospect objects to the price</h2>
-      <p>Mike at the plumbing shop emails back: <em>&quot;$179/mo is too expensive for where we are right now.&quot;</em></p>
+      <p>Mike at the plumbing shop emails back: <em>&quot;The monthly price is too much for where we are right now.&quot;</em></p>
 
       <p>Luke opens the <strong>AI Objection Handler</strong> and pastes the objection with some context. The AI returns 3 ways to respond:</p>
 
@@ -150,7 +150,7 @@ export default function Post() {
       <h2>Getting these tools</h2>
       <p>If you run sales for your business, or you are the whole sales team, start with the <Link href="/shop/starter-kit">PV AI Starter Kit ($19)</Link>. It includes the AI tool prompts and sales scripts described above.</p>
 
-      <p>If you want me to set this up and manage it, see the <Link href="/digital">Digital Services tiers</Link> ($99 to $279 a month), or <Link href="/software">Custom Software</Link> if you want a rep portal built for your business.</p>
+      <p>If you want me to set this up and manage it, see the <Link href="/digital">Digital Services tiers</Link>, quoted for your business after a free call, or <Link href="/software">Custom Software</Link> if you want a rep portal built for your business.</p>
 
       <Note>I drafted this post with AI tools and edited it before publishing.</Note>
 

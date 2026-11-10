@@ -10,9 +10,9 @@ const SESSION_LABELS: Record<string, string> = {
 };
 
 const FORMAT_LABELS: Record<string, string> = {
-  "1on1":      "1-on-1 ($175/hr)",
-  "group":     "Small Group ($125/person)",
-  "workshop":  "Workshop ($2,500 flat, up to 20)",
+  "1on1":      "1-on-1",
+  "group":     "Small Group (2 to 8)",
+  "workshop":  "Workshop (up to 20)",
   "corporate": "Corporate / Custom (quote)",
 };
 

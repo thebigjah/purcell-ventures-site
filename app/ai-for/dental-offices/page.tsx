@@ -127,26 +127,21 @@ export default function AiForDental() {
 
       <p>
         I can train your front desk, add patient-facing tools to your website that hold no
-        health information, or build a small tool for a gap your software leaves. Each route
-        has a published price on its own page, and the first conversation about which one
-        fits is free.
+        health information, or build a small tool for a gap your software leaves. The first conversation about which route fits is free, and every project is quoted for your business after that call.
       </p>
 
       <ul>
         <li>
           <strong>Training.</strong> <Link href="/consulting">AI training</Link> on reminder
-          wording, review replies and a staff AI rule: $175 an hour 1-on-1, $125 a person for
-          groups of 2 to 8, or $2,500 for a half-day workshop for up to 20 people.
+          wording, review replies and a staff AI rule, in 1-on-1 sessions, small groups of 2 to 8, or a half-day workshop for up to 20 people.
         </li>
         <li>
           <strong>Website tools.</strong> The <Link href="/digital">Digital plans</Link> add an
-          AI FAQ builder for insurance and first-visit questions at $179 a month, or an AI
-          chatbot trained on your office and branded online booking at $279 a month. Setup is
-          $650 to $1,000, with no contract.
+          AI FAQ builder for insurance and first-visit questions, or an AI
+          chatbot trained on your office and branded online booking. Pricing is quoted per business, with no contract.
         </li>
         <li>
-          <strong>Custom software.</strong> A <Link href="/software">small project</Link> runs
-          $1,500 to $3,500, scoped around where patient data may and may not go.
+          <strong>Custom software.</strong> A <Link href="/software">small project</Link> is quoted after a free call and scoped around where patient data may and may not go.
         </li>
       </ul>
 

@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 // Written around what Montgomery businesses do (state government and the firms around it, Maxwell AFB, and the automotive suppliers
 // tied to the Hyundai plant),
 // so the page answers a Montgomery owner's question instead of swapping a city name into
-// the pillar. Prices and delivery format come from /consulting, /software and
+// the pillar. Delivery format comes from /consulting, /software and
 // /ai-consulting only. No clients, results or Montgomery address, because the company
 // has none there.
 
@@ -48,7 +48,7 @@ export const QA: [string, string][] = [
   ["Can an automotive supplier automate its paperwork?",
    "Often, yes. Order, shipping and quality data that someone retypes between a customer portal and your own system makes a good first automation. Anything that decides part quality or safety stays with your quality team."],
   ["How much does AI training cost for a Montgomery team?",
-   "1-on-1 consulting costs $175 an hour, small group training costs $125 a person for 2 to 8 people, and a half-day workshop costs $2,500 flat for up to 20 people. Small software projects run $1,500 to $3,500, and Elijah quotes automation per project after a free conversation."],
+   "Elijah quotes each Montgomery business after a free call. The price depends on the number of people in the session, the tools your team already uses and any automation or software built afterward."],
   ["Does Purcell Ventures have an office in Montgomery?",
    "No. Purcell Ventures works from Tuscaloosa. Elijah comes to your office for training sessions, and the rest of the work runs by phone and email."],
 ];
@@ -85,10 +85,10 @@ const schema = {
         "@type": "OfferCatalog",
         "name": "AI consulting services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "1-on-1 AI consulting" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "175", "priceCurrency": "USD", "unitCode": "HUR" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small group AI training, 2 to 8 people" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "125", "priceCurrency": "USD", "unitText": "per person" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half-day AI workshop for up to 20 people" }, "price": "2500", "priceCurrency": "USD" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small custom software project" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500", "maxPrice": "3500", "priceCurrency": "USD" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "1-on-1 AI consulting" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small group AI training, 2 to 8 people" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half-day AI workshop for up to 20 people" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom software project" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI automation, quoted per project" } },
         ],
       },

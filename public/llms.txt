@@ -45,7 +45,7 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
 ## What the company does
 
 - [AI consulting in Alabama](https://purcellventures.co/ai-consulting): the statewide
-  answer page. What an AI consultant does, prices for training, automation and software,
+  answer page. What an AI consultant does, how training, automation and software are quoted,
   which of the three a business needs, and when AI is the wrong purchase.
 - [How AI consulting is priced for a small business](https://purcellventures.co/ai-consulting-cost):
   Purcell Ventures quotes each business after a free call. What drives the quote, how
@@ -77,12 +77,12 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
   AI work for startups, automotive suppliers, freight companies, hotels and medical
   offices, run from Tuscaloosa with no office in Tennessee.
 - [Consulting](https://purcellventures.co/consulting): hands-on AI consulting and team
-  training. 1-on-1 at $175 an hour, small groups at $125 a person, and a half-day workshop
-  at $2,500 for up to 20 people.
+  training: 1-on-1, small groups, and a half-day workshop for up to 20 people. Every
+  session is quoted for the business after a free call.
 - [AI consultant in Tuscaloosa](https://purcellventures.co/ai-consultant-tuscaloosa): the
   same services for businesses in Tuscaloosa, with in-person meetings.
-- [Software](https://purcellventures.co/software): custom builds. Small projects $1,500 to
-  $3,500, full applications $5,000 to $15,000 and up.
+- [Software](https://purcellventures.co/software): custom builds, from small tools to
+  full applications. Every project is quoted after a free call.
 - [AI automation for small businesses](https://purcellventures.co/ai-automation): which
   task to automate first, AI phone answering and booking, lead and invoice follow-up,
   review requests, what to keep with a person, and how COSMIC's 57 agents handle the
@@ -95,7 +95,7 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
   AI wastes a small business's money.
 - [AI for small business by trade](https://purcellventures.co/ai-for): twenty trade
   guides, each with the jobs AI handles in that business, what stays with a person,
-  privacy cautions and Purcell Ventures prices:
+  privacy cautions and how Purcell Ventures quotes the work:
   [flooring companies](https://purcellventures.co/ai-for/flooring-companies),
   [HVAC companies](https://purcellventures.co/ai-for/hvac-companies),
   [plumbers](https://purcellventures.co/ai-for/plumbers),
@@ -117,7 +117,7 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
   [veterinary clinics](https://purcellventures.co/ai-for/veterinary-clinics) and
   [photographers](https://purcellventures.co/ai-for/photographers).
 - [Digital](https://purcellventures.co/digital): AI chatbots, booking, CRM and marketing
-  add-ons for an existing website, maintained monthly. Plans from $99 a month.
+  add-ons for an existing website, maintained monthly. Pricing is quoted per business.
 - [AI in design for small businesses](https://purcellventures.co/ai-design): what AI
   design tools do well and badly for logos, brand identity, websites and social graphics,
   and when a small business should hire a designer.
@@ -144,7 +144,7 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
 - [Comparisons](https://purcellventures.co/compare): the index of buyer comparisons.
 - [Custom AI agent vs Zapier](https://purcellventures.co/compare/custom-ai-agent-vs-zapier):
   when a Zapier workflow is enough, when a custom agent pays for itself, how each charges,
-  and Purcell Ventures software prices.
+  and how Purcell Ventures quotes software.
 - [AI website builder vs a custom site](https://purcellventures.co/compare/ai-website-builder-vs-custom-site):
   when a builder is enough, when a custom site is worth the build fee, AI crawler
   readability, and what you own if you leave.
@@ -153,11 +153,11 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
   own work. Purcell Ventures runs on Claude and the page says so.
 - [AI consultant vs agency vs freelancer](https://purcellventures.co/compare/ai-consultant-vs-agency-vs-freelancer):
   who to hire for AI work, an independent consultant, an agency, a marketplace freelancer
-  or your own team, when each fits, how each charges, and Purcell Ventures training and
-  software prices.
+  or your own team, when each fits, how each charges, and how Purcell Ventures quotes training
+  and software.
 - [Hire an AI consultant or do it yourself](https://purcellventures.co/compare/hire-ai-consultant-vs-do-it-yourself):
   when a small business should learn AI tools on its own and when paid training saves
-  money, with the readiness test, cost calculator and Purcell Ventures training prices.
+  money, with the readiness test, cost calculator and how Purcell Ventures quotes training.
 - [AI chatbot vs a human receptionist](https://purcellventures.co/compare/ai-chatbot-vs-human-receptionist):
   what a website chatbot or AI phone answering handles, what a person must handle, and how
   each charges. Purcell Ventures sells a website chatbot and no phone answering product.
@@ -197,7 +197,7 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
 - [AI readiness test](https://purcellventures.co/ai-readiness): ten questions that score a
   team's use of AI out of 30, with three next steps.
 - [AI cost calculator](https://purcellventures.co/ai-cost-calculator): team size, hourly
-  cost and manual workload in, payback time for an AI consulting session out.
+  cost, manual workload and your quoted training cost in, payback time out.
 - [Free AI tools for small businesses](https://purcellventures.co/digital/tools): writing,
   branding and operations tools, free.
 

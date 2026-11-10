@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 // Written around what Mobile businesses do (the port, freight forwarders and customs brokers, shipbuilding and aircraft assembly,
 // and Gulf tourism),
 // so the page answers a Mobile owner's question instead of swapping a city name into
-// the pillar. Prices and delivery format come from /consulting, /software and
+// the pillar. Delivery format comes from /consulting, /software and
 // /ai-consulting only. No clients, results or Mobile address, because the company
 // has none there.
 
@@ -15,7 +15,7 @@ const URL = "https://purcellventures.co/ai-consulting/mobile-al";
 export const metadata: Metadata = {
   title: { absolute: "AI consulting in Mobile, Alabama, Purcell Ventures" },
   description:
-    "AI consulting in Mobile, Alabama for freight forwarders, logistics firms, marine contractors, hotels and rentals. Training, automation, software and prices.",
+    "AI consulting in Mobile, Alabama for freight forwarders, logistics firms, marine contractors, hotels and rentals. Training, automation and custom software.",
   keywords: [
     "AI consulting Mobile",
     "AI consultant Mobile Alabama",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI consulting in Mobile, Alabama",
     description:
-      "AI consulting in Mobile, Alabama for freight forwarders, logistics firms, marine contractors, hotels and rentals. Training, automation, software and prices.",
+      "AI consulting in Mobile, Alabama for freight forwarders, logistics firms, marine contractors, hotels and rentals. Training, automation and custom software.",
     url: URL,
     type: "website",
     images: ["/opengraph-image"],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI consulting in Mobile, Alabama: Purcell Ventures",
-    description: "AI consulting in Mobile, Alabama for freight forwarders, logistics firms, marine contractors, hotels and rentals. Training, automation, software and prices.",
+    description: "AI consulting in Mobile, Alabama for freight forwarders, logistics firms, marine contractors, hotels and rentals. Training, automation and custom software.",
   },
   alternates: { canonical: URL },
 };
@@ -48,7 +48,7 @@ export const QA: [string, string][] = [
   ["Can a hotel or beach rental use AI to answer guests?",
    "Yes, for the questions guests ask every day about check-in, parking, pets and cancellations. A person handles complaints, refunds and any guest who is upset."],
   ["How much does AI training cost for a Mobile team?",
-   "1-on-1 consulting costs $175 an hour, small group training costs $125 a person for 2 to 8 people, and a half-day workshop costs $2,500 flat for up to 20 people. Small software projects run $1,500 to $3,500, and Elijah quotes automation per project after a free conversation."],
+   "Elijah quotes each Mobile business after a free call. The price depends on the number of people in the session, the tools your team already uses and any automation or software built afterward."],
   ["Will you come to Mobile for training?",
    "Yes. Training sessions run at your location, with examples from your own business. Standard sessions need one to two weeks of notice, and planning and builds run over phone and email."],
 ];
@@ -85,10 +85,10 @@ const schema = {
         "@type": "OfferCatalog",
         "name": "AI consulting services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "1-on-1 AI consulting" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "175", "priceCurrency": "USD", "unitCode": "HUR" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small group AI training, 2 to 8 people" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "125", "priceCurrency": "USD", "unitText": "per person" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half-day AI workshop for up to 20 people" }, "price": "2500", "priceCurrency": "USD" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small custom software project" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500", "maxPrice": "3500", "priceCurrency": "USD" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "1-on-1 AI consulting" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small group AI training, 2 to 8 people" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half-day AI workshop for up to 20 people" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom software project" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI automation, quoted per project" } },
         ],
       },

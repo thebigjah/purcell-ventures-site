@@ -2,8 +2,8 @@
 //
 // One list feeds the index at /ai-for, the sitemap and the related-trade links at the foot
 // of each trade page, so a new trade is added here once. Purcell Ventures has no published
-// client in any of these trades, so no page claims one. Prices on every page come from
-// /consulting, /software and /digital only.
+// client in any of these trades, so no page claims one. No page lists a Purcell Ventures
+// price: every service is quoted per business after a free call.
 
 export type Trade = {
   slug: string;

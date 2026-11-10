@@ -82,7 +82,7 @@ export default function AiAutomation() {
         Booking is the easier half. An online booking page tied to your real calendar takes
         appointments at any hour and sends reminders without any AI at all. I add branded
         online booking and an AI chatbot trained on your business to sites on the{" "}
-        <Link href="/digital">Digital Full Service plan</Link>, at $279 a month. Purcell
+        <Link href="/digital">Digital Full Service plan</Link>. Purcell
         Ventures does not sell a phone answering product.
       </p>
 
@@ -122,7 +122,7 @@ export default function AiAutomation() {
 
       <p>
         Review request automation is part of the{" "}
-        <Link href="/digital">Digital Growth plan</Link> at $179 a month, and the Marketing
+        <Link href="/digital">Digital Growth plan</Link>, and the Marketing
         Partner website plan sends a request after each job. Replying to reviews is a good
         place for AI drafts, as long as an owner reads each reply before it posts.
       </p>
@@ -208,33 +208,31 @@ export default function AiAutomation() {
       <h2>How much does AI automation cost?</h2>
 
       <p>
-        At Purcell Ventures, I quote automation per project after a free conversation,
-        because the price depends on how many systems it touches. Small software projects run
-        $1,500 to $3,500. Monthly plans that include ready-made automations start at $179, with
-        a one-time setup fee of $650 to $1,000.
+        At Purcell Ventures, I quote automation for each business after a free conversation,
+        because the price depends on how many systems it touches. The monthly plans with
+        ready-made automations and custom builds are quoted the same way.
       </p>
 
       <table>
         <thead>
           <tr>
             <th scope="col">Option</th>
-            <th scope="col">Price</th>
             <th scope="col">Fits</th>
           </tr>
         </thead>
         <tbody>
-          <tr><th scope="row">Digital Growth plan</th><td>$179 a month, setup $650 to $1,000</td><td>Review requests, an AI FAQ on your site, scheduling tools</td></tr>
-          <tr><th scope="row">Digital Full Service plan</th><td>$279 a month, setup $650 to $1,000</td><td>AI chatbot, online booking, email and text campaigns</td></tr>
-          <tr><th scope="row">Custom automation</th><td>Quoted per project</td><td>A repeated task across your own systems</td></tr>
-          <tr><th scope="row">Small software project</th><td>$1,500 to $3,500</td><td>One tool or one integration</td></tr>
-          <tr><th scope="row">Zero to Automated course</th><td>$397 at launch</td><td>Owners who want to build their own</td></tr>
+          <tr><th scope="row">Digital Growth plan</th><td>Review requests, an AI FAQ on your site, scheduling tools</td></tr>
+          <tr><th scope="row">Digital Full Service plan</th><td>AI chatbot, online booking, email and text campaigns</td></tr>
+          <tr><th scope="row">Custom automation</th><td>A repeated task across your own systems</td></tr>
+          <tr><th scope="row">Small software project</th><td>One tool or one integration</td></tr>
+          <tr><th scope="row">Zero to Automated course</th><td>Owners who want to build their own</td></tr>
         </tbody>
       </table>
 
       <p>
         I am still recording the{" "}
-        <Link href="/courses/ai-automation">Zero to Automated course</Link>, and the waitlist
-        is open.
+        <Link href="/courses/ai-automation">Zero to Automated course</Link>. It costs $397 at
+        launch, and the waitlist is open.
       </p>
 
       <h2>Common questions</h2>

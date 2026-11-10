@@ -6,8 +6,8 @@ import s from "./digital.module.css";
 // The "seven roles" comparison. Rebuilt 26 Oct 2026: the hover-only V-formation of
 // silhouettes is gone (hover does nothing on a phone), and every role now shows its tools
 // and salary up front. Adding and removing roles and the running total work as before.
-// The saving now subtracts the $99 Starter price the line beside it quotes. It used to
-// subtract 75, a number from an older price list.
+// 9 Nov 2026: the subscription price and the "difference" row are gone. Elijah quotes
+// each business after a free call, so the comparison shows the salaries only.
 
 const TEAM_MEMBERS = [
   {
@@ -61,8 +61,6 @@ const TEAM_MEMBERS = [
   },
 ];
 
-const SUBSCRIPTION_FROM = 99;
-
 export default function TeamBuilder() {
   const [hiredTeam, setHiredTeam] = useState<string[]>([]);
 
@@ -109,10 +107,8 @@ export default function TeamBuilder() {
             <dd>{hiredTeam.length} of {TEAM_MEMBERS.length}</dd>
             <dt>Hiring would cost</dt>
             <dd>${totalSalary.toLocaleString()} a month in average salary, before benefits</dd>
-            <dt>My subscription</dt>
-            <dd>From ${SUBSCRIPTION_FROM} a month</dd>
-            <dt>Difference</dt>
-            <dd className="ui-gold">${(totalSalary - SUBSCRIPTION_FROM).toLocaleString()} a month or more</dd>
+            <dt>The same tools from me</dt>
+            <dd>Quoted for your business after a free call</dd>
           </dl>
           <div className="ui-hero__actions">
             <a className="ui-btn" href="#contact">Ask about these tools</a>

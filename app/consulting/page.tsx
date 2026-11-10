@@ -85,23 +85,23 @@ const SESSIONS = [
 const PRICING = [
   {
     name: "1-on-1",
-    price: "$175 an hour",
+    price: "1 person",
     for: "One person, working on your own situation, tools and problems. You set the agenda. I recommend a two-hour minimum.",
   },
   {
     name: "Small group",
-    price: "$125 a person",
+    price: "2 to 8 people",
     for: "2 to 8 people, per session, with a two-hour minimum. It suits teams that work closely together.",
   },
   {
     name: "Workshop",
-    price: "$2,500 flat",
+    price: "Up to 20 people",
     for: "A half day for up to 20 people. A structured session with Q&A and hands-on exercises, suited to all-hands training or a company event.",
   },
   {
     name: "Corporate or custom",
-    price: "Quoted for the job",
-    for: "Larger teams, programs of several sessions, or a fully custom curriculum. The quote includes prep time, materials and follow-up resources. Contact me for pricing.",
+    price: "Any size",
+    for: "Larger teams, programs of several sessions, or a fully custom curriculum. The quote includes prep time, materials and follow-up resources.",
   },
 ];
 
@@ -128,9 +128,9 @@ export default function ConsultingPage() {
       <PageHero
         planet="consulting"
         kicker="AI consulting"
-        title="Hands-on AI training for your team, from $125 a person."
+        title="Hands-on AI training for your team."
         lede={<>I come to your business and teach your team to use AI, with each session built around the tools you already use. Your team leaves with a takeaway guide the same day. I am based in Tuscaloosa, Alabama, and work nationwide. <Link className="ui-link" href="/ai-consultant-tuscaloosa">Local work in Tuscaloosa</Link> and <Link className="ui-link" href="/ai-consulting">AI consulting across Alabama</Link>.</>}
-        meta="1-on-1 at $175 an hour. Small groups at $125 a person. Half-day workshop at $2,500 for up to 20 people."
+        meta="1-on-1, small groups or a half-day workshop for up to 20 people. Every session is quoted after a free call."
         actions={<>
           <Button href="/consulting/book">Book a session</Button>
           <Button href="/ai-readiness" ghost>Take the 3-minute readiness test</Button>
@@ -143,13 +143,13 @@ export default function ConsultingPage() {
           items={[
             ["5", "core sessions"],
             ["1 to 20", "people, from 1-on-1 to a workshop"],
-            ["$125", "a person, the lowest rate"],
+            ["Free", "first call, then a written quote"],
             ["Same day", "takeaway guide for every participant"],
           ]}
         />
       </Section>
 
-      <Section id="pricing" title="Pricing by group size" intro="The rate depends on group size and session length. The per-person cost drops as the group grows. Every session includes a takeaway guide.">
+      <Section id="pricing" title="Session formats" intro="I quote every business after a free call, based on group size, session length and prep. Every session includes a takeaway guide.">
         <Tiers tiers={PRICING} />
         <p className="ui-muted" style={{ marginTop: 24 }}>
           If you are not sure which session fits, <a className="ui-link" href="#contact">send me a message</a> and I will recommend one.

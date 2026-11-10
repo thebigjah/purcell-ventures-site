@@ -7,7 +7,7 @@ import PageDates from "@/app/components/PageDates";
 // below claims.
 //
 // Facts brought in line with the site in the rebuild: replies within one business day,
-// the consulting prices, and the courses, which are not finished and have a waitlist.
+// how quotes work, and the courses, which are not finished and have a waitlist.
 
 interface QA {
   q: string;
@@ -22,9 +22,10 @@ const FAQS: { label: string; qas: QA[] }[] = [
       { q: "How fast do you respond?", a: `I reply within one business day. If you need an answer sooner, call or text ${CONTACT.phone}.` },
       { q: "Where are you based?", a: "Tuscaloosa, Alabama. I formed and registered Purcell Ventures LLC in Acworth, Georgia, in April 2025, and I run it from Tuscaloosa, where I attend the University of Alabama. Local clients can meet me in person." },
       { q: "Do you take clients outside Tuscaloosa?", a: "For AI consulting, software, digital services and websites, yes, anywhere in the United States. For field work (gutter cleaning, pressure washing, lawn care), see Mantle Field Services, which serves metro Atlanta only." },
-      // PRICING QUESTIONS. An answer engine cannot quote a number that is not written down.
-      { q: "How much does a website cost?", a: "Websites start at $650 setup and $99 a month, which covers the site plus the tooling around it. For University of Alabama students and student-run businesses, a site is $500, with an optional $25 a month to keep it maintained and updated. Custom builds start at $1,500." },
-      { q: "How much does AI consulting cost?", a: "Group sessions start at $125 a person. One-on-one sessions are $175 an hour. A workshop for up to 20 people is $2,500 flat. The first conversation is free and often ends with me telling you the problem is smaller than you thought, or that AI is the wrong tool for it." },
+      // PRICING QUESTIONS. From 9 Nov 2026 Elijah quotes every business after a free call, so
+      // these answers explain how a quote works and give no number.
+      { q: "How much does a website cost?", a: "I quote every website for the business after a free call. The quote covers the build, the tooling around it and the monthly maintenance, and you see it in writing before any work starts." },
+      { q: "How much does AI consulting cost?", a: "Every session is quoted for your business after a free call, based on group size, length and prep. That first conversation is free and often ends with me telling you the problem is smaller than you thought, or that AI is the wrong tool for it." },
       { q: "What is the best way to start?", a: `Email ${CONTACT.email} with one sentence about what you are trying to do. Describe the goal rather than the thing you think needs building. I will tell you whether I can help and what the work would look like.` },
     ],
   },
@@ -42,7 +43,7 @@ const FAQS: { label: string; qas: QA[] }[] = [
   {
     label: "Digital services",
     qas: [
-      { q: "How does the subscription work?", a: "You pick a tier: Starter ($99 a month plus $650 setup), Growth ($179 a month plus $700 setup) or Full Service ($279 a month plus $1,000 setup). After setup you pay a flat monthly rate with no contract, and you can cancel at any time. You reach every tool from one dashboard." },
+      { q: "How does the subscription work?", a: "You pick a tier: Starter, Growth or Full Service. I quote setup and the monthly cost for your business after a free call. After setup you pay the same amount each month with no contract, and you can cancel at any time. You reach every tool from one dashboard." },
       { q: "Can I mix and match tools from different tiers?", a: "Yes. The tiers are common starting points, and every account is custom. Tell me what you need and I will build that combination." },
       { q: "Will you migrate me off my existing tools?", a: "Yes. Most clients come from a mix of tools like Squarespace, Mailchimp and Google Forms. I move everything into one place during setup." },
       { q: "What happens if I cancel?", a: "Your data is yours. I export everything to you in standard formats, and there is no exit fee." },
@@ -51,8 +52,8 @@ const FAQS: { label: string; qas: QA[] }[] = [
   {
     label: "Custom software",
     qas: [
-      { q: "What kinds of projects do you take on?", a: "Web apps, mobile apps, AI integrations, browser extensions and automation tools. The best fit is a clear problem, one decision-maker and a budget between $1,500 and $15,000. If your project is bigger, I will say so and refer you to someone else." },
-      { q: "What is the timeline for a small project?", a: "Most $1,500 to $3,500 projects ship 1 to 2 weeks after kickoff. Full apps take 3 to 8 weeks, depending on scope." },
+      { q: "What kinds of projects do you take on?", a: "Web apps, mobile apps, AI integrations, browser extensions and automation tools. The best fit is a clear problem and one decision-maker. If your project is bigger than I can take on, I will say so and refer you to someone else." },
+      { q: "What is the timeline for a small project?", a: "Most small projects ship 1 to 2 weeks after kickoff. Full apps take 3 to 8 weeks, depending on scope." },
       { q: "Do you write the code yourself?", a: "Yes. I work with Claude, Anthropic's AI, as a pair-programming partner, and I review and edit every line before it ships." },
       { q: "Can you maintain it after launch?", a: "Yes, either as a fixed-rate bug-fix retainer or as ongoing feature development. We decide what works for both of us at the end of the build." },
     ],

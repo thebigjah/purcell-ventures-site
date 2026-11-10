@@ -9,7 +9,8 @@ import { CONTACT } from "@/lib/contact";
 // Comparison page, written 9 Nov 2026. PV runs on Claude (COSMIC's agents are Claude
 // sessions, the CRM's AI features run on Claude), and the page says so up front. Both
 // products are described by plan structure and broad features with no dollar figures and
-// no quality ranking, because both change with every release. PV prices from /consulting.
+// no quality ranking, because both change with every release. No PV prices: training is
+// quoted per business (rule set 9 Nov 2026).
 
 const PATH = "/compare/chatgpt-vs-claude-for-small-business";
 const URL = `https://purcellventures.co${PATH}`;
@@ -164,9 +165,9 @@ export default function Page() {
         <h2>What does training your team cost?</h2>
 
         <p>
-          At Purcell Ventures, 1-on-1 sessions cost $175 an hour, small groups of 2 to 8 cost
-          $125 a person, and a half-day workshop for up to 20 people costs $2,500. Bring examples
-          of your own work to the session. The <Link href="/consulting">consulting
+          Purcell Ventures runs 1-on-1 sessions, small groups of 2 to 8 and half-day workshops
+          for up to 20 people. Every session is quoted for your business after a free call.
+          Bring examples of your own work to the session. The <Link href="/consulting">consulting
           page</Link> lists the sessions, and the <Link href="/ai-readiness">AI readiness
           test</Link> shows where your team stands in three minutes.
         </p>

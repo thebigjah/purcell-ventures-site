@@ -42,7 +42,7 @@ const ABOUT = [
   {
     h: "The version on your own website",
     p: [
-      <>Expense Tracker is one of the 26 add-ons in the catalog, with monthly summaries and tax-ready reports. Plans run from $99 to $279 a month with a one-time setup fee of $650 to $1,000, and I set up and maintain the tools. Ask me which plan covers it. <Link href="/digital#pricing">Compare the plans</Link>.</>,
+      <>Expense Tracker is one of the 26 add-ons in the catalog, with monthly summaries and tax-ready reports. Every plan is quoted for your business after a free call, and I set up and maintain the tools. Ask me which plan covers it. <Link href="/digital#pricing">Compare the plans</Link>.</>,
     ],
   },
 ];

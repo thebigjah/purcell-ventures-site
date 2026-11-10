@@ -22,7 +22,7 @@ export default function AiConsultingMontgomery() {
       kicker="Montgomery, Alabama"
       title="AI consulting in Montgomery"
       lede="AI training, automation and custom software for Montgomery firms, suppliers and local businesses, from Elijah Purcell of Purcell Ventures in Tuscaloosa. The first conversation is free."
-      meta="1-on-1 sessions $175 an hour. Team workshops $2,500 for up to 20 people. Training happens at your office."
+      meta="Every project is quoted after a free call. Training happens at your office."
     >
       <p>
         I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data
@@ -118,17 +118,14 @@ export default function AiConsultingMontgomery() {
       <h2>What does AI consulting cost in Montgomery?</h2>
 
       <p>
-        A 1-on-1 session costs $175 an hour, with a two-hour minimum recommended. Small group
-        training costs $125 a person for 2 to 8 people. A half-day workshop costs $2,500 flat
-        for up to 20 people, which suits an association staff meeting or a supplier&rsquo;s
-        office team.
+        I quote every Montgomery business after a free call. Sessions run 1-on-1, as small group
+        training for 2 to 8 people, or as a half-day workshop for up to 20. A half-day workshop suits an association staff meeting or a supplier&rsquo;s office team.
       </p>
 
       <p>
-        Small software projects run $1,500 to $3,500, and full applications run $5,000 to
-        $15,000 and up. I quote automation per project, because the price depends on how many
-        systems it touches. The <Link href="/ai-cost-calculator">AI cost calculator</Link>{" "}
-        shows the payback for your own team size and hourly cost.
+        Automation and custom software get a written quote once I know how many systems the
+        work touches. The <Link href="/ai-cost-calculator">AI cost calculator</Link> takes your
+        team size, hourly cost and hours of manual work and shows what that work costs you now.
       </p>
 
       <h2>When is Purcell Ventures the wrong fit?</h2>
@@ -173,7 +170,7 @@ export default function AiConsultingMontgomery() {
       </p>
 
       <p>
-        Statewide prices and services: <Link href="/ai-consulting">AI consulting in Alabama</Link>.
+        Statewide services: <Link href="/ai-consulting">AI consulting in Alabama</Link>.
         Other cities: <Link href="/ai-consultant-tuscaloosa">Tuscaloosa</Link>,{" "}
         <Link href="/ai-consulting/birmingham-al">Birmingham</Link>,{" "}
         <Link href="/ai-consulting/huntsville-al">Huntsville</Link>,{" "}

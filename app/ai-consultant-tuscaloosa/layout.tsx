@@ -24,7 +24,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: { absolute: "AI consultant in Tuscaloosa, Alabama, Purcell Ventures" },
   description:
-    "AI consultant in Tuscaloosa, Alabama. Elijah Purcell builds AI systems, automation, custom software and websites for local businesses, with a UA student rate.",
+    "AI consultant in Tuscaloosa, Alabama. Elijah Purcell builds AI systems, automation, custom software and websites for local businesses, quoted after a free call.",
   keywords: [
     "AI consultant Tuscaloosa", "AI consultant Tuscaloosa Alabama",
     "AI consultant near University of Alabama", "custom software Tuscaloosa",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI consultant in Tuscaloosa, Alabama",
     description:
-      "AI consulting, custom software and web development for Tuscaloosa businesses, from a developer who lives in Tuscaloosa. Reduced rate for University of Alabama students.",
+      "AI consulting, custom software and web development for Tuscaloosa businesses, from a developer who lives in Tuscaloosa. Every project is quoted after a free call.",
     url: "https://purcellventures.co/ai-consultant-tuscaloosa",
     type: "website",
     images: ["/opengraph-image"],
@@ -53,7 +53,7 @@ export const QA: [string, string][] = [
   ["What does an AI consultant in Tuscaloosa do for a small business?",
    "Three things come up most: replacing a repeated manual task with an automation that runs on a schedule, adding an AI feature such as intake, drafting or triage to software you already have, and telling you when AI is the wrong tool."],
   ["How much does it cost?",
-   "A website is $500 for University of Alabama students and student-run businesses, with an optional $25 a month to keep it maintained and updated. I quote custom software and AI automation per project after a free conversation about what you need."],
+   "Pricing is quoted per business. I quote websites, custom software and AI automation after a free conversation about what you need."],
   ["Are you an agency?",
    "No. Purcell Ventures LLC is one person, me. COSMIC, a station of 57 AI agents in 17 rooms that I built, handles proposals, site audits, security checks, research and outreach. I do the building and I answer the phone myself."],
   ["Do you only work with businesses in Tuscaloosa?",
@@ -93,9 +93,9 @@ const schema = {
         "@type": "OfferCatalog",
         "name": "Services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website for University of Alabama students and student-run businesses" }, "price": "500", "priceCurrency": "USD" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ongoing site maintenance and updates" }, "price": "25", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "25", "priceCurrency": "USD", "unitCode": "MON" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI automation and custom software, quoted per project" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Websites for local businesses and student-run businesses" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ongoing site maintenance and updates" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI automation and custom software" } },
         ],
       },
     },

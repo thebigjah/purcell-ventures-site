@@ -19,11 +19,11 @@ const FACTS: [string, string][] = [
 ];
 
 const DIVISIONS = [
-  { name: "Consulting", line: "Hands-on AI work: workshops and implementation.", fig: "From $125 a person", href: "/consulting" },
+  { name: "Consulting", line: "Hands-on AI work: workshops and implementation.", href: "/consulting" },
   { name: "Software", line: "Custom builds: mobile apps, web platforms and internal tools.", href: "/software" },
-  { name: "Digital", line: "Add-ons and ongoing service for local businesses: chatbots, booking, CRM and more.", fig: "From $99 a month", href: "/digital" },
-  { name: "Steady", line: "Personal IT for people who do not have an IT person.", fig: "From $79 a month", href: "/steady" },
-  { name: "Websites", line: "Custom websites for local businesses, with hosting and updates after launch.", fig: "From $650 setup and $99 a month", href: "/sites" },
+  { name: "Digital", line: "Add-ons and ongoing service for local businesses: chatbots, booking, CRM and more.", href: "/digital" },
+  { name: "Steady", line: "Personal IT for people who do not have an IT person.", href: "/steady" },
+  { name: "Websites", line: "Custom websites for local businesses, with hosting and updates after launch.", href: "/sites" },
   { name: "Real estate", line: "Planned. Not taking clients yet." },
 ];
 

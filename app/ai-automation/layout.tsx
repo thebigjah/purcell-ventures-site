@@ -6,14 +6,14 @@ import type { ReactNode } from "react";
 // The hub the blog engine links each ai-automation post up to (~/blog-engine cluster_map.json).
 // Alabama city pages under /ai-automation/<city>-al hang off it later.
 //
-// Prices come from /consulting, /software, /digital and /courses/ai-automation as of 9 Nov
-// 2026. The COSMIC claims match /agentic-ai and /team: 57 agents in 17 rooms. Purcell
+// Service work carries no prices (owner rule, 9 Nov 2026). The course price comes from
+// /courses/ai-automation. The COSMIC claims match /agentic-ai and /team: 57 agents in 17 rooms. Purcell
 // Ventures sells no AI phone answering product, and the page says so. No client results.
 
 export const metadata: Metadata = {
   title: { absolute: "AI automation for small businesses, Purcell Ventures" },
   description:
-    "AI automation for small businesses: which tasks to automate first, what AI phone answering and booking can do, what to keep with a person, and what it costs.",
+    "AI automation for small businesses: which tasks to automate first, what AI phone answering and booking can do, and which work to keep with a person.",
   keywords: [
     "AI automation for small business", "small business automation", "AI receptionist small business",
     "automate lead follow up", "automate Google review requests", "Zapier vs custom automation",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI automation for small businesses",
     description:
-      "AI automation for small businesses: which tasks to automate first, what AI phone answering and booking can do, what to keep with a person, and what it costs.",
+      "AI automation for small businesses: which tasks to automate first, what AI phone answering and booking can do, and which work to keep with a person.",
     url: "https://purcellventures.co/ai-automation",
     type: "article",
     images: ["/opengraph-image"],
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI automation for small businesses",
-    description: "AI automation for small businesses: which tasks to automate first, what AI phone answering and booking can do, what to keep with a person, and what it costs.",
+    description: "AI automation for small businesses: which tasks to automate first, what AI phone answering and booking can do, and which work to keep with a person.",
   },
   alternates: { canonical: "https://purcellventures.co/ai-automation" },
 };
@@ -41,7 +41,7 @@ export const QA: [string, string][] = [
   ["Can an AI answer my business phone calls?",
    "Yes. AI voice tools can answer calls, take messages, answer common questions and book into a calendar. They work best on routine calls with a clear script, and they need a fast handoff to a person for complaints, emergencies and anything involving money. Purcell Ventures does not sell a phone answering product."],
   ["How much does it cost to automate a business process?",
-   "At Purcell Ventures, Elijah quotes automation per project after a free conversation, because the price depends on how many systems it touches. Small software projects run $1,500 to $3,500. Digital plans that include review request automation start at $179 a month, with a one-time setup fee of $650 to $1,000."],
+   "At Purcell Ventures, Elijah quotes automation for each business after a free conversation, because the price depends on how many systems it touches. Digital plans that include review request automation are quoted the same way."],
   ["Should I use Zapier or Make, or pay for a custom automation?",
    "Start with Zapier or Make when both apps are on their lists and the task has a few steps. Pay for a custom build when the data needs cleaning, the task needs judgment from an AI model, or the monthly task count would cost more than a one-time build."],
   ["What happens when an automation breaks?",

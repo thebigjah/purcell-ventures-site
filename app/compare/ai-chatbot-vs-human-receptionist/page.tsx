@@ -7,7 +7,7 @@ import ServiceSchema from "@/app/components/ServiceSchema";
 import { CONTACT } from "@/lib/contact";
 
 // Comparison page, written 9 Nov 2026. PV facts come from /digital (the chatbot sits in
-// the Full Service plan at $279 a month, setup $650 to $1,000) and /ai-automation, which
+// the Full Service plan, quoted per business with no PV price) and /ai-automation, which
 // states that Purcell Ventures does not sell a phone answering product. AI phone services,
 // answering services and wages are described by how they charge, with no dollar figures.
 
@@ -34,7 +34,7 @@ const QA: [string, string][] = [
   ["Can AI answer the phone for a small business?",
    "Yes, for routine calls. AI voice tools can answer, give hours and prices, take a message and book into a connected calendar. They handle a caller with an unusual problem poorly, and an upset caller worse. Set one up with a script and a transfer to a person."],
   ["Does Purcell Ventures sell AI phone answering?",
-   "No. Purcell Ventures does not sell a phone answering product. The Digital Full Service plan, at $279 a month with a one-time setup fee of $650 to $1,000, includes an AI chatbot trained on your business and branded online booking for your website."],
+   "No. Purcell Ventures does not sell a phone answering product. The Digital Full Service plan includes an AI chatbot trained on your business and branded online booking for your website. Pricing is quoted per business after a free call."],
   ["How do AI phone answering services charge?",
    "Most charge a monthly plan with a set number of minutes or calls, or a rate per minute. Some add setup fees or charge more for calendar and CRM connections. Prices change, so check current pricing on each provider's site."],
   ["What should a chatbot never handle on its own?",
@@ -152,9 +152,9 @@ export default function Page() {
 
         <p>
           At Purcell Ventures, an AI chatbot trained on your business comes with the{" "}
-          <Link href="/digital">Digital Full Service plan</Link> at $279 a month, along with
-          branded online booking and email and text campaigns. Setup is a one-time fee of $650
-          to $1,000, with no contract. The{" "}
+          <Link href="/digital">Digital Full Service plan</Link>, along with branded online
+          booking and email and text campaigns. The plan is quoted for your business after a
+          free call, with no contract. The{" "}
           <Link href="/ai-automation">AI automation guide</Link> covers which tasks to hand to
           software first.
         </p>

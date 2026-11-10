@@ -43,7 +43,7 @@ const ABOUT = [
   {
     h: "The version on your own website",
     p: [
-      <>Inventory Tracker is in the Growth plan, $179 a month, with a one-time setup fee of $650 to $1,000. On that plan you get a product list with stock levels and low-stock alerts, and I set it up for your business and maintain it. <Link href="/digital#pricing">Compare the plans</Link>.</>,
+      <>Inventory Tracker is in the Growth plan, which I quote for your business after a free call. On that plan you get a product list with stock levels and low-stock alerts, and I set it up for your business and maintain it. <Link href="/digital#pricing">Compare the plans</Link>.</>,
     ],
   },
 ];

@@ -7,7 +7,7 @@ import ServiceSchema from "@/app/components/ServiceSchema";
 import { CONTACT } from "@/lib/contact";
 
 // Comparison page, written 9 Nov 2026 for the owner deciding whether to learn AI tools
-// alone or pay for help. PV prices come from /consulting and /software. Chat assistant
+// alone or pay for help. No PV prices: PV work is quoted per business. Chat assistant
 // plans are described by how they charge, with no dollar figures, since plans change.
 
 const PATH = "/compare/hire-ai-consultant-vs-do-it-yourself";
@@ -33,7 +33,7 @@ const QA: [string, string][] = [
   ["How long does it take to learn ChatGPT or Claude for business?",
    "Basic drafting takes an afternoon. Knowing when to trust the output and when to check it takes longer, and it comes from using the tool on your own work every day for a few weeks."],
   ["How much does AI training cost at Purcell Ventures?",
-   "One person runs $175 an hour with a two-hour minimum. Groups of 2 to 8 run $125 a person per session, with a two-hour minimum. A half-day workshop for up to 20 people costs $2,500 flat."],
+   "Pricing is quoted per business after a free call. Training comes as 1-on-1 sessions, small groups of 2 to 8 or a half-day workshop for up to 20 people, and the quote depends on the format and how many people take part."],
   ["When should a small business pay for AI help?",
    "Pay for help when the job needs two systems connected, a custom tool, written rules for staff about customer data, or the same training for several people at once. Those jobs cost more to get wrong alone than the help costs."],
   ["What does doing it yourself cost?",
@@ -68,7 +68,7 @@ export default function Page() {
             <tr><td></td><th scope="col">Do it yourself</th><th scope="col">Hire a consultant</th></tr>
           </thead>
           <tbody>
-            <tr><th scope="row">What you pay</th><td>A chat assistant plan per user. Check current pricing on their site</td><td>An hourly or flat training fee, or a project fee for a build</td></tr>
+            <tr><th scope="row">What you pay</th><td>A chat assistant plan per user. Check current pricing on their site</td><td>A quote for your business, for training or a build</td></tr>
             <tr><th scope="row">What it costs in time</th><td>Weeks of practice, mostly trial and error</td><td>A few hours of sessions, then practice</td></tr>
             <tr><th scope="row">Best for</th><td>One owner learning to draft, summarize and research</td><td>A team, a connection between systems, or a custom tool</td></tr>
             <tr><th scope="row">Data rules</th><td>You work them out yourself</td><td>Written with you for your business</td></tr>
@@ -149,11 +149,11 @@ export default function Page() {
         </p>
 
         <p>
-          Purcell Ventures <Link href="/consulting">AI training</Link> runs $175 an hour for one
-          person with a two-hour minimum, $125 a person for groups of 2 to 8 with a two-hour
-          minimum, and $2,500 flat for a half-day workshop of up to 20 people. Sessions use your
-          own tasks and tools. If the job needs a build, small{" "}
-          <Link href="/software">software</Link> projects run $1,500 to $3,500.
+          Purcell Ventures <Link href="/consulting">AI training</Link> comes as 1-on-1 sessions,
+          groups of 2 to 8 or a half-day workshop for up to 20 people. Sessions use your own
+          tasks and tools. If the job needs a build, I scope a{" "}
+          <Link href="/software">software</Link> project with you. Every project is quoted after
+          a free call.
         </p>
 
         <h2>What goes wrong with each path?</h2>

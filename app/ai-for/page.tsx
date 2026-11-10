@@ -77,9 +77,9 @@ export default function AiForIndex() {
       </p>
 
       <p>
-        Purcell Ventures charges published prices for <Link href="/consulting">training</Link>,{" "}
+        Purcell Ventures quotes <Link href="/consulting">training</Link>,{" "}
         <Link href="/digital">website tools</Link> and <Link href="/software">custom
-        software</Link>. For any business, <Link href="/ai-for-small-business">AI for small
+        software</Link> for each business after a free call. For any business, <Link href="/ai-for-small-business">AI for small
         business</Link> covers safe first tasks and a staff AI policy, and{" "}
         <Link href="/ai-automation">AI automation for small businesses</Link> covers booking,
         follow-ups and review requests.

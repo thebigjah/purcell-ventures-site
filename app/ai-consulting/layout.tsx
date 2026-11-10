@@ -8,13 +8,14 @@ import type { ReactNode } from "react";
 // City pages for Birmingham, Huntsville, Montgomery, Mobile and Auburn sit under it at
 // /ai-consulting/<city>-al.
 //
-// Every price below was read off /consulting and /software on 9 Nov 2026. No client
-// results, counts or percentages, because the site has none it can show.
+// No prices anywhere on this page (owner rule, 9 Nov 2026): every service is quoted per
+// business after a free call. No client results, counts or percentages, because the site
+// has none it can show.
 
 export const metadata: Metadata = {
   title: { absolute: "AI consulting in Alabama, Purcell Ventures" },
   description:
-    "AI consulting in Alabama from Elijah Purcell in Tuscaloosa: AI, automation and custom software for local businesses. Prices and when AI is the wrong buy.",
+    "AI consulting in Alabama from Elijah Purcell in Tuscaloosa: training, automation and custom software for local businesses, each quoted after a free call.",
   keywords: [
     "AI consulting Alabama", "AI consultant Alabama", "AI consulting Birmingham",
     "AI consulting Huntsville", "AI consulting Montgomery", "AI consulting Mobile",
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI consulting in Alabama",
     description:
-      "AI consulting in Alabama from Elijah Purcell in Tuscaloosa: AI, automation and custom software for local businesses. Prices and when AI is the wrong buy.",
+      "AI consulting in Alabama from Elijah Purcell in Tuscaloosa: training, automation and custom software for local businesses, each quoted after a free call.",
     url: "https://purcellventures.co/ai-consulting",
     type: "website",
     images: ["/opengraph-image"],
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI consulting in Alabama: Purcell Ventures",
-    description: "AI consulting in Alabama from Elijah Purcell in Tuscaloosa: AI, automation and custom software for local businesses. Prices and when AI is the wrong buy.",
+    description: "AI consulting in Alabama from Elijah Purcell in Tuscaloosa: training, automation and custom software for local businesses, each quoted after a free call.",
   },
   alternates: { canonical: "https://purcellventures.co/ai-consulting" },
 };
@@ -40,7 +41,7 @@ export const QA: [string, string][] = [
   ["Who offers AI consulting in Alabama?",
    "Purcell Ventures LLC, run by Elijah Purcell in Tuscaloosa, offers AI consulting, AI automation and custom software to businesses across Alabama. Elijah is a student at the University of Alabama, in New College and the Honors College, and builds the systems himself."],
   ["How much does AI consulting cost in Alabama?",
-   "At Purcell Ventures, 1-on-1 AI consulting costs $175 an hour, small group training costs $125 a person for 2 to 8 people, and a half-day workshop costs $2,500 flat for up to 20 people. Small software projects run $1,500 to $3,500, and Elijah quotes automation per project after a free conversation."],
+   "Purcell Ventures quotes every project for the business in front of it. Elijah prices training, automation and software after a free call, once he knows the team size, the tools involved and the work to be done."],
   ["Does my team need technical experience?",
    "No. Elijah designs most sessions for people who have never used AI tools, and they go at your team's pace."],
   ["Can the training happen at our office?",
@@ -85,11 +86,11 @@ export const schema = {
         "@type": "OfferCatalog",
         "name": "AI consulting services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "1-on-1 AI consulting" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "175", "priceCurrency": "USD", "unitCode": "HUR" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small group AI training, 2 to 8 people" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "125", "priceCurrency": "USD", "unitText": "per person" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half-day AI workshop for up to 20 people" }, "price": "2500", "priceCurrency": "USD" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small custom software project" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500", "maxPrice": "3500", "priceCurrency": "USD" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI automation, quoted per project" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "1-on-1 AI consulting" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small group AI training, 2 to 8 people" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half-day AI workshop for up to 20 people" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom software project" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI automation" } },
         ],
       },
     },

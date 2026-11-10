@@ -7,7 +7,7 @@ import ServiceSchema from "@/app/components/ServiceSchema";
 import { CONTACT } from "@/lib/contact";
 
 // Comparison page, written 9 Nov 2026 for the search a buyer makes right before paying for
-// automation. PV prices come from /software, /digital and /ai-integration. Zapier is
+// automation. No PV prices: PV work is quoted per business (rule set 9 Nov 2026). Zapier is
 // described by how it works and how it charges, with no dollar figures, because its plans
 // change and a stale number on this page would be a false statement about another company.
 
@@ -34,7 +34,7 @@ const QA: [string, string][] = [
   ["Can a Zapier workflow and a custom agent work together?",
    "Yes. Zapier can send data to a web address with a webhook step, so a custom agent can sit in the middle of a Zap. Zapier moves the data between apps and the agent handles the step that needs judgment."],
   ["How much does a custom AI agent cost at Purcell Ventures?",
-   "One tool or one integration falls in the small software project range of $1,500 to $3,500. A full application runs $5,000 to $15,000 and up. Hosting and model usage come on top, and the quote states both."],
+   "Every project is quoted after a free call. The quote depends on the scope, from one tool or one integration to a full application. Hosting and model usage come on top, and the quote states both."],
   ["How much does Zapier cost?",
    "Zapier has a free plan and paid plans that charge by the number of tasks your workflows run each month, with more features on higher plans. Prices change, so check current pricing on Zapier's site."],
   ["Who fixes a custom agent when it breaks?",
@@ -153,18 +153,17 @@ export default function Page() {
         </p>
 
         <p>
-          At Purcell Ventures, a small software project such as one tool or one integration runs
-          $1,500 to $3,500. A full application runs $5,000 to $15,000 and up. Hosting and model
+          At Purcell Ventures, I quote each software project for your business after a free
+          call, from one tool or one integration up to a full application. Hosting and model
           usage come on top. Model usage can stay small: when I wrote about my own CRM in May
           2026, its AI features had cost $15 in API usage. The{" "}
-          <Link href="/software">software page</Link> lists what each range covers.
+          <Link href="/software">software page</Link> lists what each kind of project covers.
         </p>
 
         <p>
           If you want ready-made automations without a build, the{" "}
-          <Link href="/digital">Digital plans</Link> cost $179 or $279 a month, plus a one-time
-          setup fee of $650 to $1,000. They cover review requests, an AI FAQ, a chatbot and
-          booking.
+          <Link href="/digital">Digital plans</Link> cover review requests, an AI FAQ, a chatbot
+          and booking. Pricing is quoted per business.
         </p>
 
         <h2>Can you use both?</h2>

@@ -127,28 +127,23 @@ export default function AiForSalons() {
 
       <p>
         I can train your front desk and stylists, add booking and AI tools to your website,
-        or build software for a gap your booking system leaves. Each route below has a
-        published price on its own page, and the first conversation about which one fits is
-        free.
+        or build software for a gap your booking system leaves. The first conversation about which route fits is free, and every project is quoted for your business after that call.
       </p>
 
       <ul>
         <li>
           <strong>Training.</strong> <Link href="/consulting">AI training</Link> on captions,
-          reminder wording and review replies: $175 an hour 1-on-1, $125 a person for groups
-          of 2 to 8, or $2,500 for a half-day workshop for up to 20 people.
+          reminder wording and review replies, in 1-on-1 sessions, small groups of 2 to 8, or a half-day workshop for up to 20 people.
         </li>
         <li>
           <strong>Website tools.</strong> The <Link href="/digital">Digital plans</Link> start
-          with a caption generator and review response generator at $99 a month. Growth adds
-          a staff scheduler, an AI FAQ builder and review request automation at $179 a month.
-          Full Service adds branded online booking and an AI chatbot trained on your salon at
-          $279 a month. Setup is $650 to $1,000, with no contract.
+          with a caption generator and review response generator. Growth adds
+          a staff scheduler, an AI FAQ builder and review request automation.
+          Full Service adds branded online booking and an AI chatbot trained on your salon. Pricing is quoted per business, with no contract.
         </li>
         <li>
           <strong>Custom software.</strong> A <Link href="/software">small project</Link>,
-          such as a tool that pulls return dates from your booking export, runs $1,500 to
-          $3,500.
+          such as a tool that pulls return dates from your booking export, is quoted after a free call.
         </li>
       </ul>
 

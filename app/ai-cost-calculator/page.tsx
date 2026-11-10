@@ -3,6 +3,10 @@
 // Rebuilt on the page kit 26 Oct 2026. The presets, the inputs, their limits and the
 // maths in `computed` are unchanged. The payback lines lost their traffic-light colours
 // and read in the site gold when the payback is fast.
+//
+// 9 Nov 2026: the cost input is the visitor's own training cost, from whatever quote they
+// have. It starts empty and the presets no longer set it. No Purcell Ventures price appears
+// on the page, because Elijah quotes every business after a free call.
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
@@ -13,23 +17,22 @@ interface Preset {
   rate: number;
   manual: number;
   auto: number;
-  cost: number;
   desc: string;
 }
 
 const PRESETS: Record<string, Preset> = {
-  realestate: { team: 6, rate: 55, manual: 12, auto: 65, cost: 1500,
+  realestate: { team: 6, rate: 55, manual: 12, auto: 65,
     desc: "Real estate office, agents and admin. Listing descriptions, market reports, follow-ups, contract drafts." },
-  dental:     { team: 8, rate: 45, manual: 10, auto: 55, cost: 1500,
+  dental:     { team: 8, rate: 45, manual: 10, auto: 55,
     desc: "Dental practice, front desk and clinical admin. Insurance pre-authorization, scheduling reminders, treatment-plan summaries, patient messages." },
-  law:        { team: 5, rate: 95, manual: 14, auto: 60, cost: 2500,
+  law:        { team: 5, rate: 95, manual: 14, auto: 60,
     desc: "Law firm, partners and paralegals. Document review, brief drafting, intake forms, case summaries." },
-  marketing:  { team: 4, rate: 75, manual: 18, auto: 70, cost: 1500,
+  marketing:  { team: 4, rate: 75, manual: 18, auto: 70,
     desc: "Marketing agency, content and ops. Caption writing, ad copy, scheduling, reporting, client deliverables." },
-  ecommerce:  { team: 3, rate: 60, manual: 15, auto: 70, cost: 1500,
+  ecommerce:  { team: 3, rate: 60, manual: 15, auto: 70,
     desc: "Ecommerce brand, operator and customer service. Product descriptions, support emails, social posts, returns workflows." },
-  solo:       { team: 1, rate: 100, manual: 20, auto: 65, cost: 500,
-    desc: "Solo founder doing every job. Outbound sales, content, admin, follow-ups. The lower session cost uses 1-on-1 pricing." },
+  solo:       { team: 1, rate: 100, manual: 20, auto: 65,
+    desc: "Solo founder doing every job. Outbound sales, content, admin, follow-ups." },
 };
 
 const PRESET_LABELS: Record<string, string> = {
@@ -49,7 +52,7 @@ export default function AICostCalculatorPage() {
   const [rate, setRate] = useState(65);
   const [manual, setManual] = useState(8);
   const [auto, setAuto] = useState(60);
-  const [cost, setCost] = useState(700);
+  const [cost, setCost] = useState(0);
   const [presetNote, setPresetNote] = useState<string | null>(null);
 
   const computed = useMemo(() => {
@@ -62,17 +65,19 @@ export default function AICostCalculatorPage() {
     let payback: { text: string; tier: "compounding" | "fast" | "slow" | "too-slow" | "none" } = { text: "", tier: "none" };
     if (dollarsMonthly <= 0) {
       payback = { text: "Enter values to see the payback period.", tier: "none" };
+    } else if (cost <= 0) {
+      payback = { text: "Enter the training cost from your quote to see the payback period.", tier: "none" };
     } else {
       const months = Math.max(0, cost) / dollarsMonthly;
       if (months < 1) {
         const days = Math.round(months * 30);
-        payback = { text: `At those inputs, the session pays back in ${days} days. After that, the savings continue each month.`, tier: "compounding" };
+        payback = { text: `At those inputs, the training pays back in ${days} days. After that, the savings continue each month.`, tier: "compounding" };
       } else if (months < 6) {
-        payback = { text: `At those inputs, the session pays back in ${months.toFixed(1)} months. After that, the savings continue each month.`, tier: "fast" };
+        payback = { text: `At those inputs, the training pays back in ${months.toFixed(1)} months. After that, the savings continue each month.`, tier: "fast" };
       } else if (months < 24) {
-        payback = { text: `At those inputs, the session pays back in ${months.toFixed(1)} months. That is slow, because the team is small or the manual hours are low. It can still be worth doing if the work wears your team down.`, tier: "slow" };
+        payback = { text: `At those inputs, the training pays back in ${months.toFixed(1)} months. That is slow, because the team is small or the manual hours are low. It can still be worth doing if the work wears your team down.`, tier: "slow" };
       } else {
-        payback = { text: `At those inputs, the payback takes ${months.toFixed(1)} months, too slow to justify on time savings alone. A smaller 1-on-1 session at $175 an hour may fit better.`, tier: "too-slow" };
+        payback = { text: `At those inputs, the payback takes ${months.toFixed(1)} months, too slow to justify on time savings alone. A shorter or smaller session may fit better.`, tier: "too-slow" };
       }
     }
 
@@ -86,7 +91,6 @@ export default function AICostCalculatorPage() {
     setRate(p.rate);
     setManual(p.manual);
     setAuto(p.auto);
-    setCost(p.cost);
     setPresetNote(p.desc);
   }
 
@@ -95,8 +99,7 @@ export default function AICostCalculatorPage() {
       <PageHero
         kicker="No login and no tracking"
         title="AI cost calculator"
-        lede="Enter your team size, hourly cost and manual workload to see how fast an AI consulting session pays for itself, in dollars and hours. The formula is under the results."
-        meta="Sessions from $125 a person. 1-on-1 at $175 an hour. Half-day workshop at $2,500."
+        lede="Enter your team size, hourly cost, manual workload and the training cost you were quoted to see how fast AI training pays for itself, in dollars and hours. The formula is under the results."
       />
 
       <Section title="Start from a preset" intro="Each preset fills in the inputs for a typical business of that kind.">
@@ -148,9 +151,9 @@ export default function AICostCalculatorPage() {
 
           <NumberField
             id="calc-cost"
-            label="Cost of the consulting session"
-            context="My sessions: $175 an hour for 1-on-1, $125 a person for a small group, or a flat $2,500 for a half-day team training. The default is $700 for a 4-hour 1-on-1 session at $175 an hour."
-            value={cost} onChange={setCost} min={100} max={20000} prefix="$"
+            label="Your training cost"
+            context="The total from the quote you have for AI training, from any provider. Leave it at 0 to see the savings alone."
+            value={cost} onChange={setCost} min={0} max={100000} prefix="$"
           />
         </div>
       </Section>
@@ -169,7 +172,7 @@ export default function AICostCalculatorPage() {
           {computed.payback.text}
         </p>
         <p className="ui-muted ui-small" style={{ marginTop: 20, maxWidth: "var(--measure)" }}>
-          <strong>How the calculator works:</strong> manual hrs/wk × team size × automation % × 4.33 wks/mo = hours saved monthly. Multiply by hourly rate for dollar value. Payback = session cost ÷ monthly $ saved. The estimate leaves out quality improvements, fewer errors and staff retention.
+          <strong>How the calculator works:</strong> manual hrs/wk × team size × automation % × 4.33 wks/mo = hours saved monthly. Multiply by hourly rate for dollar value. Payback = your training cost ÷ monthly $ saved. The estimate leaves out quality improvements, fewer errors and staff retention.
         </p>
       </Section>
 
@@ -183,7 +186,7 @@ export default function AICostCalculatorPage() {
             You enter team size, a loaded hourly rate, and how many hours a week go into
             repetitive written work: drafting, replying, summarising and formatting. The
             calculator multiplies those hours by the automation share you pick, compares the
-            savings with the cost of a session, and gives you the payback period.
+            savings with the training cost you enter, and gives you the payback period.
           </p>
           <p>
             Lower the automation share to allow for interruptions, revisions, and tasks where a

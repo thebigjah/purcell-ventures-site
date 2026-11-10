@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s, Purcell Ventures",
   },
   description:
-    "Purcell Ventures builds AI systems and custom software for small businesses, with AI consulting and websites from $99 a month. Founded by Elijah Purcell.",
+    "Purcell Ventures builds AI systems, custom software and websites for small businesses, with AI consulting quoted per business. Founded by Elijah Purcell.",
   keywords: [
     "AI consulting", "digital services for small business", "custom software development",
     "business AI training", "website management", "Purcell Ventures", "Elijah Purcell",

@@ -5,8 +5,8 @@ import type { ReactNode } from "react";
 //
 // The hub the blog engine links each ai-websites post up to (~/blog-engine cluster_map.json).
 // Websites are the last-listed PV service, so this page leads with AI findability and comes
-// to builders and site prices after it. /sites quotes build prices on the discovery call, so
-// this page gives the build timelines and the /digital monthly prices and no build price.
+// to builders after it. Every PV service is quoted per business (owner rule, 9 Nov 2026), so
+// this page gives build timelines and no prices.
 // The FAQ rich result date comes from /blog/write-a-page-an-ai-will-quote. No client results.
 
 export const metadata: Metadata = {
@@ -45,7 +45,7 @@ export const QA: [string, string][] = [
   ["Are AI website builders good enough for a small business?",
    "For a simple brochure site that the owner will update, often yes. Check that the builder lets you edit page titles and descriptions, add structured data, connect your own domain and export your content before you commit."],
   ["How much does an AI-ready website cost?",
-   "Purcell Ventures quotes each website build on a free discovery call. A single-page Starter site goes live in 7 to 10 business days and a multi-page Pro site in 14 to 21. Digital plans that add AI tools to an existing site cost $99, $179 or $279 a month, with a one-time setup fee of $650 to $1,000."],
+   "Purcell Ventures quotes each website build on a free discovery call. A single-page Starter site goes live in 7 to 10 business days and a multi-page Pro site in 14 to 21. Digital plans that add AI tools to an existing site are quoted for your business after a free call."],
 ];
 
 const schema = {

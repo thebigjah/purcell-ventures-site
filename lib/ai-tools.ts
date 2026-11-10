@@ -378,7 +378,7 @@ Output: just the response text, ready to paste.`,
     category: "Communication & Marketing",
     fields: [
       { name: "emailType", label: "Email type", type: "select", required: true, options: ["Cold outreach", "Warm follow-up", "Response to inquiry", "Customer announcement", "Apology / make-good", "Quote / proposal", "Thank you"], default: "Warm follow-up" },
-      { name: "context", label: "Context: who, what and why", type: "textarea", required: true, placeholder: "e.g., Following up with Jane Smith. I toured her salon last week and quoted Digital Growth at $179 a month. No reply in 5 days." },
+      { name: "context", label: "Context: who, what and why", type: "textarea", required: true, placeholder: "e.g., Following up with Jane Smith. I toured her salon last week and sent her a quote for a booking add-on. No reply in 5 days." },
       { name: "yourName", label: "Your name", type: "text", required: true },
       { name: "tone", label: "Tone (optional)", type: "text", placeholder: "e.g., warm but direct, low pressure" },
     ],
@@ -1089,7 +1089,7 @@ Output in markdown:
 - [Specific change 3]
 
 ## Want a custom version that runs on YOUR site?
-Purcell Ventures builds AI-powered email tools for businesses — automated outreach scoring, template libraries, follow-up sequences. Starting at $179/mo bundled with our Digital Growth tier. Email elijah@purcellventures.co.
+Purcell Ventures builds AI-powered email tools for businesses, such as outreach scoring, template libraries and follow-up sequences, quoted for each business after a free call. Email elijah@purcellventures.co.
 
 Quality bar:
 - Be honest with the grade. A "C" is fine. Don't grade-inflate.

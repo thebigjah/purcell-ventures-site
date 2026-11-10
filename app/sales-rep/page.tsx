@@ -17,30 +17,30 @@ const COMMISSION = [
 const SERVICES: { division: string; blurb: string; tiers: [string, string][] }[] = [
   {
     division: "Digital Services",
-    blurb: "Managed websites and AI tools for small businesses, billed monthly in three tiers.",
+    blurb: "Managed websites and AI tools for small businesses, billed monthly in three tiers. Elijah quotes each business after a free call.",
     tiers: [
-      ["Starter", "$99 a month plus $650 setup. Site, AI chatbot and lead form."],
-      ["Growth", "$179 a month plus $700 setup. Starter plus booking, email, social and reviews."],
-      ["Full Service", "$279 a month plus $1,000 setup. Growth plus CRM, invoicing and AI content."],
+      ["Starter", "Site, AI chatbot and lead form."],
+      ["Growth", "Starter plus booking, email, social and reviews."],
+      ["Full Service", "Growth plus CRM, invoicing and AI content."],
     ],
   },
   {
     division: "AI Consulting",
-    blurb: "AI training for business teams, held at their office.",
+    blurb: "AI training for business teams, held at their office. Elijah quotes each business after a free call.",
     tiers: [
-      ["1-on-1", "$175 an hour. Elijah recommends a 2-hour minimum."],
-      ["Small group", "$125 a person. 2 to 8 people, 2-hour minimum."],
-      ["Workshop", "$2,500 flat. Up to 20 people, half a day."],
-      ["Corporate", "Custom quote. Larger teams, several sessions."],
+      ["1-on-1", "One person. Elijah recommends a 2-hour minimum."],
+      ["Small group", "2 to 8 people, 2-hour minimum."],
+      ["Workshop", "Up to 20 people, half a day."],
+      ["Corporate", "Larger teams, several sessions."],
     ],
   },
   {
     division: "Custom Software",
-    blurb: "Apps, web platforms and automation, priced per deal. Senior reps only. Elijah scopes the project and the rep closes.",
+    blurb: "Apps, web platforms and automation, quoted per business. Senior reps only. Elijah scopes the project and the rep closes.",
     tiers: [
-      ["Small project", "$1,500 to $3,500. Scripts and simple tools."],
-      ["Full app", "$5,000 to $15,000. Mobile and web applications."],
-      ["Retainer", "Custom. Ongoing engagement."],
+      ["Small project", "Scripts and simple tools."],
+      ["Full app", "Mobile and web applications."],
+      ["Retainer", "Ongoing engagement."],
     ],
   },
   {
@@ -116,7 +116,7 @@ export default function SalesRepPage() {
         </div>
         <Prose>
           <p style={{ marginTop: 32 }}>
-            <strong>Also, at low priority for reps:</strong> Mantle Field Services, the sister brand. Gutter cleaning from $100, pressure washing from $75 and lawn care from $50. Elijah owns it and a crew runs the jobs day to day. Reps rarely close Mantle jobs.
+            <strong>Also, at low priority for reps:</strong> Mantle Field Services, the sister brand, for gutter cleaning, pressure washing and lawn care. Elijah owns it and a crew runs the jobs day to day. Reps rarely close Mantle jobs.
           </p>
         </Prose>
       </Section>

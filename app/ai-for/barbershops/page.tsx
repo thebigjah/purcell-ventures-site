@@ -128,28 +128,24 @@ export default function AiForBarbershops() {
 
       <p>
         I can train your barbers on drafting posts and replies, add booking and loyalty tools
-        to your website, or build software for a gap your booking app leaves. Each route below
-        has a published price on its own page, and the first conversation about which one
-        fits is free.
+        to your website, or build software for a gap your booking app leaves. The first conversation about which route fits is free, and every project is quoted for your business after that call.
       </p>
 
       <ul>
         <li>
           <strong>Training.</strong> <Link href="/consulting">AI training</Link> on captions,
-          reminder wording and review replies: $175 an hour 1-on-1, $125 a person for groups
-          of 2 to 8, or $2,500 for a half-day workshop for up to 20 people.
+          reminder wording and review replies, in 1-on-1 sessions, small groups of 2 to 8, or a half-day workshop for up to 20 people.
         </li>
         <li>
           <strong>Website tools.</strong> The <Link href="/digital">Digital plans</Link> start
-          with a caption generator and review response generator at $99 a month. Growth adds
+          with a caption generator and review response generator. Growth adds
           a loyalty punch card with QR check-ins, a staff scheduler and review request
-          automation at $179 a month. Full Service adds branded online booking and an AI
-          chatbot trained on your shop at $279 a month. Setup is $650 to $1,000, with no
-          contract.
+          automation. Full Service adds branded online booking and an AI
+          chatbot trained on your shop. Pricing is quoted per business, with no contract.
         </li>
         <li>
           <strong>Custom software.</strong> A <Link href="/software">small project</Link>,
-          such as a walk-in wait list that texts the next customer, runs $1,500 to $3,500.
+          such as a walk-in wait list that texts the next customer, is quoted after a free call.
         </li>
       </ul>
 

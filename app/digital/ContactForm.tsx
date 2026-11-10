@@ -10,9 +10,9 @@ import { CONTACT } from "@/lib/contact";
 
 const PLANS: Record<string, string> = {
   "": "Not sure, help me pick",
-  starter: "Starter, $99 a month",
-  growth: "Growth, $179 a month",
-  full: "Full Service, $279 a month",
+  starter: "Starter",
+  growth: "Growth",
+  full: "Full Service",
   custom: "Custom",
 };
 

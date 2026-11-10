@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Steady, personal IT for everyday life",
   description:
-    "Personal tech help for people who want someone to set up and explain their devices: AI coaching, phone setup, password managers, medication reminders and smart home setup. One-off help $99, monthly care from $79.",
+    "Personal tech help: AI coaching, phone setup, password managers, medication reminders and smart home setup, quoted for your household after a free call.",
   keywords: [
     "personal IT help", "tech help for parents", "AI coaching personal",
     "tech help seniors", "household tech support", "personal tech coach",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Steady, personal IT for everyday life",
     description:
-      "Personal tech help: AI coaching, phone setup, smart home, password managers and family care plans. From $79 a month.",
+      "Personal tech help: AI coaching, phone setup, smart home, password managers and family care plans, quoted for your household after a free call.",
     url: "https://purcellventures.co/steady",
     type: "website",
   
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "Steady, personal IT for everyday life",
-    description: "Personal tech help from $79 a month.",
+    description: "Personal tech help, quoted for your household after a free call.",
   },
   alternates: { canonical: "/steady" },
 };
@@ -40,17 +40,6 @@ const schema = {
     { "@type": "Place", "name": "Metro Atlanta, Georgia (in-person)" },
     { "@type": "Place", "name": "United States (remote)" },
   ],
-  "offers": {
-    "@type": "AggregateOffer",
-    "priceCurrency": "USD",
-    "lowPrice": "79",
-    "highPrice": "149",
-    "offers": [
-      { "@type": "Offer", "name": "One-off help", "price": "99", "priceCurrency": "USD", "unitText": "per 90-min session" },
-      { "@type": "Offer", "name": "Monthly care", "price": "79", "priceCurrency": "USD", "unitText": "per month" },
-      { "@type": "Offer", "name": "Family care", "price": "149", "priceCurrency": "USD", "unitText": "per month" },
-    ],
-  },
 };
 
 
@@ -81,7 +70,7 @@ const FAQ_LD = {
       "name": "What is Steady?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Personal IT help for individuals and families. Elijah Purcell sets up devices, teaches people to use them and answers texts when something breaks. Monthly care is $79 a month and a one-off session is $99."
+        "text": "Personal IT help for individuals and families. Elijah Purcell sets up devices, teaches people to use them and answers texts when something breaks. Each plan is quoted for the household after a free call."
       }
     },
     {

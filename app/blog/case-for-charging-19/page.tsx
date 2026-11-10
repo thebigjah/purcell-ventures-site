@@ -42,10 +42,10 @@ export default function Post() {
       <h2>Some $19 buyers may buy a digital services plan</h2>
       <p>Someone who has paid $19 has already bought from Purcell Ventures once, which makes a second purchase an easier decision.</p>
 
-      <p>When they need the done-for-you version of one of my products (Digital Services from $99 a month, Consulting $175 an hour, Custom Software from $1,500), they already know how I work and what I deliver.</p>
+      <p>When they need the done-for-you version of one of my products (Digital Services, Consulting or Custom Software, each quoted for their business after a free call), they already know how I work and what I deliver.</p>
 
       <h2>Unit economics</h2>
-      <p>The content in the $19 kit took 40 hours of work. If I sell 100 copies, that is $1,900, or $47.50 for each hour of build time. If I sell 1,000 copies, that is $19,000, or $475 an hour, which is above my $175 hourly consulting rate.</p>
+      <p>The content in the $19 kit took 40 hours of work. If I sell 100 copies, that is $1,900, or $47.50 for each hour of build time. If I sell 1,000 copies, that is $19,000, or $475 an hour.</p>
 
       <p>Each extra copy is a digital download and costs me nothing to deliver, so total sales matter more than margin per copy.</p>
 
@@ -65,7 +65,7 @@ export default function Post() {
       <h2>What 200 sales would mean</h2>
       <p>If I sell 200 kits a year at $19, that is $3,800 toward the build time and 200 people who have bought from me once.</p>
 
-      <p>If 10 of them became Digital Services customers at $179 a month for 12 months, that would add $21,480.</p>
+      <p>If 10 of them went on to hire me for Digital Services, those ongoing accounts would be worth more than every kit sale combined.</p>
 
       <p>The $19 kit will not cover my costs on its own. I expect most of its value to come from the customers it brings to the paid services.</p>
 

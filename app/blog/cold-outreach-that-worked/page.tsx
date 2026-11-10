@@ -53,7 +53,7 @@ export default function Post() {
 
       <blockquote>
         Hi, I&apos;m Elijah, I run a web design company. I noticed your business could
-        benefit from a modern website. We offer affordable packages starting at $99/mo.
+        benefit from a modern website. We offer affordable monthly packages.
         Would you be interested in a quick call this week?
       </blockquote>
 

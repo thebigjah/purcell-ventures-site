@@ -15,7 +15,7 @@ const TEMPLATES: Template[] = [
   {
     industry: "Salons and spas",
     subject: "Quick question about {{salonName}}",
-    body: `Hi {{firstName}},\n\nI checked out {{salonName}}'s booking flow online and noticed {{specificObservation}}. Most salons we work with say this was the #1 thing they wanted to fix.\n\nWe help salons fix this for $179/mo. Worth 15 min to see what we'd do for you?\n\nIf not, no worries, just delete this.\n\n{{yourName}}`,
+    body: `Hi {{firstName}},\n\nI checked out {{salonName}}'s booking flow online and noticed {{specificObservation}}. Most salons we work with say this was the #1 thing they wanted to fix.\n\nWe help salons fix this for {{yourPrice}}. Worth 15 min to see what we'd do for you?\n\nIf not, no worries, just delete this.\n\n{{yourName}}`,
     why: "A specific observation, a familiar problem, a small ask and permission to ignore it.",
   },
   {
@@ -39,7 +39,7 @@ const TEMPLATES: Template[] = [
   {
     industry: "Law firm",
     subject: "Intake automation for {{firmName}}",
-    body: `Hi {{firstName}},\n\nMost law firms we work with were spending {{specificHours}} on intake: qualifying leads, scheduling consults and gathering documents. We automated that for under $200/mo.\n\nIf intake is a bottleneck, I can show you the workflow in a 15-minute walkthrough.\n\n{{yourName}}`,
+    body: `Hi {{firstName}},\n\nMost law firms we work with were spending {{specificHours}} on intake: qualifying leads, scheduling consults and gathering documents. We automated that for {{yourPrice}}.\n\nIf intake is a bottleneck, I can show you the workflow in a 15-minute walkthrough.\n\n{{yourName}}`,
     why: "Offering a walkthrough of the workflow is a small ask. It names the problem first and states the price plainly.",
   },
   {
@@ -51,13 +51,13 @@ const TEMPLATES: Template[] = [
   {
     industry: "E-commerce brand",
     subject: "{{specificProductFeature}} on {{brandName}}'s site",
-    body: `Hi {{firstName}},\n\nQuick observation about {{brandName}}'s product page for {{specificProduct}}: {{specificImprovement}}.\n\nWe help brands implement {{specificThing}} for ~$179/mo.\n\nWorth a look?\n\n{{yourName}}`,
+    body: `Hi {{firstName}},\n\nQuick observation about {{brandName}}'s product page for {{specificProduct}}: {{specificImprovement}}.\n\nWe help brands implement {{specificThing}} for {{yourPrice}}.\n\nWorth a look?\n\n{{yourName}}`,
     why: "A specific observation shows you looked at their store. It is short and asks for a yes or no.",
   },
   {
     industry: "Wellness and fitness studios",
     subject: "Booking gap I noticed at {{studioName}}",
-    body: `Hi {{firstName}},\n\nLooked at {{studioName}}'s booking flow and noticed {{specificGap}}. Studios that fix this see ~{{specificMetric}}.\n\nWe handle all of it for $179/mo (Mindbody integration included).\n\nWorth 15 minutes?\n\n{{yourName}}`,
+    body: `Hi {{firstName}},\n\nLooked at {{studioName}}'s booking flow and noticed {{specificGap}}. Studios that fix this see ~{{specificMetric}}.\n\nWe handle all of it for {{yourPrice}} (Mindbody integration included).\n\nWorth 15 minutes?\n\n{{yourName}}`,
     why: "Naming Mindbody shows you know the tools studios use.",
   },
   {

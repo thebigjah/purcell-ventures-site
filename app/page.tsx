@@ -55,32 +55,32 @@ const SERVICES = [
   {
     name: "AI consulting",
     href: "/consulting",
-    fig: "from $125 a person",
+    fig: "quoted per business",
     line: "I come to your business, on site or by video, and train your team on AI tools picked for the work they do every day. Two-hour minimum. Each session ends with a written guide your team keeps.",
   },
   {
     name: "Custom software",
     href: "/software",
-    fig: "scoped on a discovery call",
+    fig: "quoted after a discovery call",
     line: "Apps, web platforms and automation built for one business's problem, from the first scoping call to launch. Web, mobile and AI.",
   },
   {
     name: "Digital add-ons",
     href: "/digital",
-    fig: "from $99 a month",
+    fig: "quoted per business",
     line: "26 add-ons that plug into your site, including an AI chatbot, online booking, review requests and content writing. Your maintenance plan sets which ones you can add. Available nationwide.",
   },
   {
     name: "Websites",
     href: "/sites",
-    fig: "$650 setup, $99 a month",
+    fig: "quoted after a free call",
     line: "Custom websites for local businesses, with maintenance after launch. Three build tiers (Starter, Pro and Custom) and three maintenance plans. I scope each one on a discovery call.",
   },
   {
     name: "Steady, personal IT",
     href: "/steady",
-    fig: "from $79 a month",
-    line: "Tech help for individuals and households: phone setup, smart home devices, AI coaching and medication reminders. One-off sessions cost $99. Tuscaloosa, Metro Atlanta and remote.",
+    fig: "quoted per household",
+    line: "Tech help for individuals and households: phone setup, smart home devices, AI coaching and medication reminders. Tuscaloosa, Metro Atlanta and remote.",
   },
   {
     name: "Real estate",
@@ -118,7 +118,7 @@ const FREE = [
   { name: "AI visibility check", href: "/ai-visibility-check", line: "Enter your website to see whether AI crawlers can read it, and what to fix." },
   { name: "AI guides", href: "/ai-for-small-business", line: "Guides to AI consulting, automation, integration, AI websites and AI in design, plus twenty trade guides, a glossary and sourced statistics." },
   { name: "Research", href: "/research", line: "Measured checks of Alabama small business websites by city, with the method and the data." },
-  { name: "Pricing, compared", href: "/pricing-comparison", line: "My prices next to typical agency, freelancer and do-it-yourself prices." },
+  { name: "Pricing, compared", href: "/pricing-comparison", line: "How an agency, a freelancer, a website builder and I each price the work, and what each one includes." },
   { name: "Comparisons", href: "/compare", line: "A custom AI agent or Zapier, a website builder or a custom site, ChatGPT or Claude." },
   { name: "How I work", href: "/how-we-work", line: "The five stages of a project, six commitments and the work I turn down." },
   { name: "Portfolio", href: "/portfolio", line: "Rufus on the App Store, honors, and everything else I have built." },
@@ -147,7 +147,7 @@ export default function Home() {
         </div>
       </Galaxy>
 
-      <Section id="what" title="What I build" intro="Five services, with the prices I charge.">
+      <Section id="what" title="What I build" intro="Five services, each quoted after a free call.">
         <Rows items={SERVICES} />
       </Section>
 
@@ -162,7 +162,7 @@ export default function Home() {
         </div>
         <div className="ui-hero__actions">
           <Button href="/how-we-work" ghost>How the work goes</Button>
-          <Link className="ui-link" href="/pricing-comparison">Prices next to agencies and freelancers</Link>
+          <Link className="ui-link" href="/pricing-comparison">How agencies, freelancers and I each price work</Link>
         </div>
       </Section>
 

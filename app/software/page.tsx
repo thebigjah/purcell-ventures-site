@@ -69,17 +69,17 @@ const SERVICES = [
 const ENGAGE = [
   {
     name: "Small projects",
-    price: "$1,500 to $3,500",
+    price: "Quoted after a free call",
     for: "Landing pages, Chrome extensions, small tools and automation scripts.",
   },
   {
     name: "Full apps",
-    price: "$5,000 to $15,000 and up",
+    price: "Quoted after a free call",
     for: "Mobile apps, web platforms, AI tools and full-stack applications.",
   },
   {
     name: "Ongoing work",
-    price: "Quoted on the discovery call",
+    price: "Quoted after a free call",
     for: "Retainer work, long-term projects and feature development over time.",
   },
 ];
@@ -92,14 +92,14 @@ export default function SoftwarePage() {
         kicker="Custom software"
         title="I build mobile apps, web platforms and AI tools for businesses."
         lede="I scope each project on a free 30-minute discovery call, then write the proposal, build it and stay involved after launch."
-        meta="Small projects $1,500 to $3,500. Full apps $5,000 to $15,000 and up."
+        meta="Every project is quoted after a free 30-minute call."
         actions={<>
           <Button href={MAIL}>Start a project</Button>
           <Button href="#work" ghost>See my work</Button>
         </>}
       />
 
-      <Section title="Prices" intro="Every project starts with a free 30-minute discovery call, and I set the exact scope and price on that call.">
+      <Section title="Kinds of projects" intro="Every project starts with a free 30-minute discovery call, and I set the scope and the quote for your business on that call.">
         <Tiers tiers={ENGAGE} />
       </Section>
 

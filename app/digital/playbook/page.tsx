@@ -38,13 +38,6 @@ const SERVICES = [
   "Logo / Branding", "Social Media Templates",
 ];
 
-const SERVICE_PRICES: Record<string, number> = {
-  "Website": 50, "AI Chatbot": 25, "Online Booking": 25,
-  "Social Media Scheduler": 20, "Email Marketing": 20,
-  "Review Manager": 15, "Simple CRM": 25, "Online Invoicing": 15,
-  "Logo / Branding": 20, "Social Media Templates": 10,
-};
-
 // Interest levels use the palette's status colours: green hot, gold warm, grey cold, red pass.
 const INTEREST_CONFIG: Record<Interest, { label: string; cls: string }> = {
   hot:  { label: "Hot",  cls: "hotText" },
@@ -116,9 +109,9 @@ const DISCOVERY = [
 
 const CLOSES = [
   { type: "Soft close (try this one first)", script: "Here's what I'd suggest. Let me put together a quick overview of what I'd build for you, with pricing, and we can look at it together. No commitment. Would that be useful?", note: "This gives them an easy 'yes' and gives you a reason to follow up." },
-  { type: "Demo close", script: "Can I show you something quickly? [Pull up purcellventures.co/digital on your phone] This is what a full setup looks like for a business like yours. Starting at $99 a month.", note: "Always have the site up and ready on your phone." },
+  { type: "Demo close", script: "Can I show you something quickly? [Pull up purcellventures.co/digital on your phone] This is what a full setup looks like for a business like yours. I quote it for your business after a short call.", note: "Always have the site up and ready on your phone." },
   { type: "Urgency close (warm prospects only)", script: "I only take on a few new clients at a time so I can give each one attention. I've got a slot opening up this month. Want to get on a call this week?", note: "Use this only with a prospect who has shown clear interest." },
-  { type: "Leave-Behind", script: "Here's my card. My site is purcellventures.co, where you can see pricing and the tools. I'll follow up in a day or two if that's okay.", note: "Ask permission to follow up, then follow up." },
+  { type: "Leave-Behind", script: "Here's my card. My site is purcellventures.co, where you can see the tools. I'll follow up in a day or two if that's okay.", note: "Ask permission to follow up, then follow up." },
 ];
 
 const OBJECTIONS = [
@@ -133,17 +126,17 @@ const OBJECTIONS = [
 const WORD_OF_MOUTH = [
   { context: "Casual conversation (friends, church, family)", lines: [
     "I run a company called Purcell Ventures. I build websites and AI tools for small businesses: booking, chatbots and social media, all managed for them.",
-    "If you know any small business owners, like salons, contractors or restaurants, who are unhappy with their online presence or don't have one, send them my way. It's $99 a month and I run it for them.",
+    "If you know any small business owners, like salons, contractors or restaurants, who are unhappy with their online presence or don't have one, send them my way. I quote each business and I run it for them.",
     "I do what a digital agency does at a lower price, and I answer my own phone.",
   ]},
   { context: "Someone asks what you do", lines: [
     "I build and manage the digital side of small businesses: websites, booking systems, AI chatbots and social media tools, all under one subscription.",
-    "It covers what a web designer, a marketing person and an AI specialist would do, for $99 a month.",
+    "It covers what a web designer, a marketing person and an AI specialist would do, under one monthly quote.",
   ]},
   { context: "They mention a business that's struggling with marketing", lines: [
     "What's their online presence like? That's usually the first thing to fix.",
     "That sounds like a website and Google reviews problem. I fix that. Want me to take a look?",
-    "Tell them to go to purcellventures.co/digital. The services and prices are all there.",
+    "Tell them to go to purcellventures.co/digital. The services and the free tools are all there.",
   ]},
 ];
 
@@ -151,24 +144,14 @@ const FOLLOW_UPS = [
   { label: "Day 1: text or email after a walk-in", script: `Hey [Name], it's Elijah. I stopped by [Business] earlier today. Here's what I mentioned: purcellventures.co/digital\n\nBased on what you told me, I think [specific tool] would make the biggest difference for you. I'm happy to put together a short overview with pricing if you want to take a look. No pressure either way.\n\nElijah Purcell, Purcell Ventures`, note: "Keep it short. Mention something specific from the conversation. Link straight to the digital page." },
   { label: "Day 3: if they have not replied", script: `Hey [Name], circling back. I know you're busy. I wanted to leave the door open if you had any questions about what I mentioned.\n\nIf the timing's wrong, I understand. If you want me to put together a custom quote for [Business], I'm happy to do that. It takes me 10 minutes.\n\nElijah`, note: "One more touch. If they don't reply after this, let them go. Don't spam." },
   { label: "Day 7: final follow-up", script: `Hey [Name], last message, I promise. If you ever want to revisit the online presence work for [Business], I'm at ${CONTACT.email}.\n\nI do good work and I'm local. Whenever the time is right.\n\nElijah`, note: "End on a friendly note. Saying 'last message' tells them the truth, and it gets replies." },
-  { label: "Warm lead: custom proposal email", script: `Hey [Name],\n\nGood talking to you. Based on what you shared, here's what I'd recommend for [Business]:\n\n- [Tool 1]: [one line on why it fits them]\n- [Tool 2]: [one line on why it fits them]\n- [Tool 3]: [one line on why it fits them]\n\nTotal: $[X] setup and $[Y] a month after that.\n\nThat includes me building it, maintaining it, and being reachable when you need something. Full pricing is at purcellventures.co/digital.\n\nWant to hop on a 15-minute call to go over it?\n\nElijah Purcell, Purcell Ventures LLC\n${CONTACT.email}`, note: "Send a written proposal to every warm lead. It looks professional and gives them something to share with a spouse or partner." },
+  { label: "Warm lead: custom proposal email", script: `Hey [Name],\n\nGood talking to you. Based on what you shared, here's what I'd recommend for [Business]:\n\n- [Tool 1]: [one line on why it fits them]\n- [Tool 2]: [one line on why it fits them]\n- [Tool 3]: [one line on why it fits them]\n\nYour quote: [setup] and [monthly], as we discussed.\n\nThat includes me building it, maintaining it, and being reachable when you need something.\n\nWant to hop on a 15-minute call to go over it?\n\nElijah Purcell, Purcell Ventures LLC\n${CONTACT.email}`, note: "Send a written proposal to every warm lead. It looks professional and gives them something to share with a spouse or partner." },
 ];
 
 // Helpers
 
-// The add-on prices below are rep estimates per service. The published prices win: a digital
-// plan starts at $99 a month and setup runs $650 to $1,000, so the estimate is held inside those.
-function monthlyFor(services: string[]): number {
-  const sum = services.reduce((total, svc) => total + (SERVICE_PRICES[svc] ?? 20), 0);
-  return Math.max(99, sum);
-}
-function setupFor(monthly: number): number {
-  return Math.min(1000, Math.max(650, Math.round(monthly * 4)));
-}
-
+// 9 Nov 2026: the per-add-on price estimator is gone. Elijah quotes each business after a
+// call, so the proposal lists the services and leaves the quote for that call.
 function generateProposal(v: Visit): string {
-  const monthly = monthlyFor(v.servicesNeeded);
-  const setup = setupFor(monthly);
   const serviceLines = v.servicesNeeded.map(svc => `- ${svc}`).join("\n");
 
   return `Hey ${v.ownerName || "[Name]"},
@@ -177,12 +160,11 @@ Good talking to you. Based on what you shared, here's what I'd put together for 
 
 ${serviceLines || "- [Services to be decided]"}
 
-Setup fee: $${setup}
-Monthly: $${monthly} a month
+I will send you a quote for these after a short call, with the setup and the monthly cost written out.
 
 That includes me building everything, maintaining it, and being reachable when you need something. You need no tech knowledge on your end.
 
-See the full breakdown at purcellventures.co/digital
+You can see each of these tools at purcellventures.co/digital
 
 Want to hop on a 15-minute call to go over it?
 
@@ -427,7 +409,7 @@ export default function PlaybookPage() {
             ))}
             <h2 className={s.groupName} style={{ marginTop: "36px" }}>The one line to remember</h2>
             <aside className="ui-note">
-              &ldquo;I build and manage the online presence for small businesses: website, booking, AI chatbot and social media. Starting at $99 a month.&rdquo;
+              &ldquo;I build and manage the online presence for small businesses: website, booking, AI chatbot and social media. I quote each business after a short call.&rdquo;
             </aside>
           </div>
         )}
@@ -504,11 +486,6 @@ export default function PlaybookPage() {
                   );
                 })}
               </div>
-              {form.servicesNeeded.length > 0 && (
-                <p className="ui-muted" style={{ marginBottom: 0 }}>
-                  Estimated monthly: <b className="ui-gold">${monthlyFor(form.servicesNeeded)} a month</b>
-                </p>
-              )}
             </section>
 
             <section className={s.form}>

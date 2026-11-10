@@ -5,8 +5,7 @@ import type { ReactNode } from "react";
 //
 // Written around what Birmingham businesses do (healthcare around UAB, banking, law,
 // accounting and engineering firms), so the page answers a Birmingham owner's question
-// instead of swapping a city name into the pillar. Prices and delivery format come from
-// /consulting, /software and /ai-consulting only. No clients, results or Birmingham
+// instead of swapping a city name into the pillar. Delivery format comes from /consulting, /software and /ai-consulting only. No clients, results or Birmingham
 // address, because the company has none there.
 
 const URL = "https://purcellventures.co/ai-consulting/birmingham-al";
@@ -14,7 +13,7 @@ const URL = "https://purcellventures.co/ai-consulting/birmingham-al";
 export const metadata: Metadata = {
   title: { absolute: "AI consulting in Birmingham, Alabama, Purcell Ventures" },
   description:
-    "AI consulting in Birmingham, Alabama for medical practices, law and accounting firms, banks and engineering offices. Training, automation, software, prices.",
+    "AI consulting in Birmingham, Alabama for medical practices, law and accounting firms, banks and engineering offices. Training, automation and software.",
   keywords: [
     "AI consulting Birmingham", "AI consultant Birmingham Alabama", "AI training Birmingham",
     "AI automation Birmingham AL", "AI for medical practices Birmingham", "AI for law firms Birmingham",
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI consulting in Birmingham, Alabama",
     description:
-      "AI consulting in Birmingham, Alabama for medical practices, law and accounting firms, banks and engineering offices. Training, automation, software, prices.",
+      "AI consulting in Birmingham, Alabama for medical practices, law and accounting firms, banks and engineering offices. Training, automation and software.",
     url: URL,
     type: "website",
     images: ["/opengraph-image"],
@@ -30,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI consulting in Birmingham, Alabama: Purcell Ventures",
-    description: "AI consulting in Birmingham, Alabama for medical practices, law and accounting firms, banks and engineering offices. Training, automation, software, prices.",
+    description: "AI consulting in Birmingham, Alabama for medical practices, law and accounting firms, banks and engineering offices. Training, automation and software.",
   },
   alternates: { canonical: URL },
 };
@@ -43,7 +42,7 @@ export const QA: [string, string][] = [
   ["Can a law or accounting firm use ChatGPT on client work?",
    "With care. Check the data and training settings of the plan your firm uses before any client information goes in, and have a licensed person review every draft before it leaves the office. Work that holds no client data, such as internal memos and marketing copy, makes the safest first step."],
   ["How much does AI training cost for a Birmingham team?",
-   "1-on-1 consulting costs $175 an hour, small group training costs $125 a person for 2 to 8 people, and a half-day workshop costs $2,500 flat for up to 20 people. Small software projects run $1,500 to $3,500, and Elijah quotes automation per project after a free conversation."],
+   "Elijah quotes each Birmingham business after a free call. The price depends on the number of people in the session, the tools your team already uses and any automation or software built afterward."],
   ["Does Purcell Ventures have an office in Birmingham?",
    "No. Purcell Ventures works from Tuscaloosa. Elijah comes to your office for training sessions, and the rest of the work runs by phone and email."],
 ];
@@ -80,10 +79,10 @@ const schema = {
         "@type": "OfferCatalog",
         "name": "AI consulting services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "1-on-1 AI consulting" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "175", "priceCurrency": "USD", "unitCode": "HUR" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small group AI training, 2 to 8 people" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "125", "priceCurrency": "USD", "unitText": "per person" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half-day AI workshop for up to 20 people" }, "price": "2500", "priceCurrency": "USD" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small custom software project" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500", "maxPrice": "3500", "priceCurrency": "USD" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "1-on-1 AI consulting" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small group AI training, 2 to 8 people" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half-day AI workshop for up to 20 people" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom software project" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI automation, quoted per project" } },
         ],
       },

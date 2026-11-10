@@ -9,9 +9,9 @@
 ### AI consulting and hands-on team training, Purcell Ventures
 URL: https://purcellventures.co/consulting
 
-AI consulting and hands-on team training for businesses: 1-on-1 at $175 an hour, groups at $125 a person, or a $2,500 half-day workshop for up to 20 people.
+AI consulting and hands-on team training for businesses: 1-on-1 sessions, small group training and half-day workshops for up to 20 people. Every engagement is quoted after a free call.
 
-**Pricing by group size** The rate depends on group size and session length. The per-person cost drops as the group grows. Every session includes a takeaway guide.
+**How sessions are quoted** I quote each session for your business after a free call, based on group size and session length. Every session includes a takeaway guide.
 
 **Sessions** There are five core sessions. I adapt each one to your industry and the software your team uses.
 
@@ -37,15 +37,15 @@ An AI readiness test for small business owners and team leaders. Ten questions s
 ### AI cost calculator, Purcell Ventures
 URL: https://purcellventures.co/ai-cost-calculator
 
-A free calculator by Elijah Purcell. It takes team size, hourly cost and manual workload, and shows how fast an AI consulting session pays back in dollars and hours.
+A free calculator by Elijah Purcell. It takes team size, hourly cost and manual workload, and shows how many hours and dollars repetitive work costs your team, and how fast a training cost you enter pays back.
 
 **Start from a preset** Each preset fills in the inputs for a typical business of that kind.
 
 **Your inputs** The number of people whose work you want to speed up.
 
-**Your estimated savings** At those inputs, the session pays back in 3 days. After that, the savings continue each month.
+**Your estimated savings** At those inputs, the calculator shows the hours and dollars saved each month, and the payback period for the training cost you enter.
 
-**How the math works** You enter team size, a loaded hourly rate, and how many hours a week go into repetitive written work: drafting, replying, summarising and formatting. The calculator multiplies those hours by the automation share you pick, compares the savings with the cost of a session, and gives you the payback period.
+**How the math works** You enter team size, a loaded hourly rate, and how many hours a week go into repetitive written work: drafting, replying, summarising and formatting. The calculator multiplies those hours by the automation share you pick, compares the savings with the training cost you enter, and gives you the payback period.
 
 **When to skip the session** If your team is small and the repetitive writing takes a couple of hours a week, the payback period will be long and you should skip the session. The calculator shows that result too.
 
@@ -54,9 +54,9 @@ A free calculator by Elijah Purcell. It takes team size, hourly cost and manual 
 ### AI consultant in Tuscaloosa, Alabama, Purcell Ventures
 URL: https://purcellventures.co/ai-consultant-tuscaloosa
 
-AI consultant in Tuscaloosa, Alabama. Elijah Purcell builds AI systems, automation, custom software and websites for local businesses, with a UA student rate.
+AI consultant in Tuscaloosa, Alabama. Elijah Purcell builds AI systems, automation, custom software and websites for local businesses in Tuscaloosa.
 
-**What I do and what it costs** Websites. Built, hosted and maintained. For University of Alabama students and student-run businesses the price is $500, with an optional $25 a month to keep it updated.
+**What I do** Websites. Built, hosted and maintained. Every project, including work for University of Alabama students and student-run businesses, is quoted after a free call.
 
 **Working with someone local** If you hire someone in Tuscaloosa, you can meet them in person. Purcell Ventures is a one-person company, so the person you meet with is the person who writes the code.
 
@@ -71,11 +71,11 @@ AI consultant in Tuscaloosa, Alabama. Elijah Purcell builds AI systems, automati
 ### AI consulting in Alabama, Purcell Ventures
 URL: https://purcellventures.co/ai-consulting
 
-AI consulting in Alabama from Elijah Purcell in Tuscaloosa: AI, automation and custom software for local businesses. Prices and when AI is the wrong buy.
+AI consulting in Alabama from Elijah Purcell in Tuscaloosa: AI, automation and custom software for local businesses. How quotes work and when AI is the wrong buy.
 
 **What does an AI consultant do for an Alabama business?** An AI consultant looks at the work your business repeats every week and sorts it into three piles: work an AI tool or automation can take over, work that needs custom software, and work that should stay with a person. Then the consultant trains your team or builds the system.
 
-**How much does AI consulting cost?** At Purcell Ventures, a 1-on-1 session costs $175 an hour, small group training costs $125 a person, and a half-day workshop costs $2,500 flat for up to 20 people. Small software projects run $1,500 to $3,500. I quote automation work per project after a free conversation, because the price depends on how many systems it touches.
+**How much does AI consulting cost?** Purcell Ventures quotes every project per business after a free conversation. Training depends on group size and session length, and automation depends on how many systems it touches.
 
 **Is my business ready for AI consulting?** Most businesses are ready if they have work that repeats, information already kept in some digital tool, and one person who will own the change. You do not need technical staff. The AI readiness test scores your team out of 30 in 10 questions, takes about three minutes and asks for no email.
 
@@ -92,7 +92,7 @@ AI consulting in Alabama from Elijah Purcell in Tuscaloosa: AI, automation and c
 ### AI consulting in Birmingham, Alabama, Purcell Ventures
 URL: https://purcellventures.co/ai-consulting/birmingham-al
 
-AI consulting in Birmingham, Alabama for medical practices, law and accounting firms, banks and engineering offices. Training, automation, software, prices.
+AI consulting in Birmingham, Alabama for medical practices, law and accounting firms, banks and engineering offices. Training, automation, software and how quotes work.
 
 **Which Birmingham businesses get the most from AI?** Birmingham runs on healthcare, banking and professional services. The University of Alabama at Birmingham operates a large medical center, and clinics, specialty practices, billing companies and medical suppliers fill the city around it. Several banks have their headquarters downtown, and law, accounting, insurance and engineering firms serve all of them.
 
@@ -102,7 +102,7 @@ AI consulting in Birmingham, Alabama for medical practices, law and accounting f
 
 **How does an engagement work from Tuscaloosa?** It starts with a free conversation by phone or email. You tell me what your team repeats every week, and I tell you whether training, automation or custom software fits, or none of them. I reply within one business day.
 
-**What does AI consulting cost in Birmingham?** A 1-on-1 session costs $175 an hour, with a two-hour minimum recommended. Small group training costs $125 a person for 2 to 8 people, and a half-day workshop costs $2,500 flat for up to 20 people. For a front desk or a small practice team, the small group rate costs less. For a whole floor of a firm, the workshop does.
+**What does AI consulting cost in Birmingham?** Pricing is quoted per business after a free call. I offer 1-on-1 sessions, small group training for 2 to 8 people and half-day workshops for up to 20. A front desk or a small practice team fits small group training. A whole floor of a firm fits the workshop.
 
 **When is Purcell Ventures the wrong fit?** Purcell Ventures is one person. A hospital system or a bank that needs a large team, a signed enterprise MSA or support around the clock should hire a bigger firm, and I will say so on the first call. The same goes for any project that asks AI to make clinical or lending decisions on its own.
 
@@ -113,7 +113,7 @@ AI consulting in Birmingham, Alabama for medical practices, law and accounting f
 ### AI consulting in Huntsville, Alabama, Purcell Ventures
 URL: https://purcellventures.co/ai-consulting/huntsville-al
 
-AI consulting in Huntsville, Alabama for defense contractors, engineering firms and staffing companies. Training, automation, software, prices and data rules.
+AI consulting in Huntsville, Alabama for defense contractors, engineering firms and staffing companies. Training, automation, software, quotes and data rules.
 
 **What does Huntsville’s economy mean for AI work?** Huntsville runs on aerospace and defense. Redstone Arsenal holds Army commands and NASA’s Marshall Space Flight Center, and Cummings Research Park holds engineering firms, defense contractors and technology companies. Around them work the subcontractors, staffing firms and service businesses that support that work, plus the restaurants, contractors and shops that serve the people who live there.
 
@@ -123,7 +123,7 @@ AI consulting in Huntsville, Alabama for defense contractors, engineering firms 
 
 **How does an engagement work from Tuscaloosa?** It starts with a free conversation by phone or email about the work your team repeats. If AI or software fits, I propose a session or quote a build. If it does not fit, I tell you on that first call. I reply within one business day.
 
-**What does AI consulting cost in Huntsville?** A 1-on-1 session costs $175 an hour, with a two-hour minimum recommended. Small group training costs $125 a person for 2 to 8 people, and a half-day workshop costs $2,500 flat for up to 20 people. A proposal team of five fits the small group rate. A whole program office fits the workshop.
+**What does AI consulting cost in Huntsville?** Every project is quoted after a free call. I offer 1-on-1 sessions, small group training for 2 to 8 people and half-day workshops for up to 20. A proposal team of five fits small group training. A whole program office fits the workshop.
 
 **When is Purcell Ventures the wrong fit?** Purcell Ventures is one person and does not run a cleared team. Work that needs one, or a large team, a signed enterprise MSA or support around the clock, belongs with a firm built for it. I will say so on the first call.
 
@@ -144,7 +144,7 @@ AI consulting in Montgomery, Alabama for firms working with state government, au
 
 **How does an engagement work from Tuscaloosa?** It starts with a free conversation by phone or email. You describe the work your team repeats, and I tell you whether training, automation or custom software fits, or that none of them does. I reply within one business day.
 
-**What does AI consulting cost in Montgomery?** A 1-on-1 session costs $175 an hour, with a two-hour minimum recommended. Small group training costs $125 a person for 2 to 8 people. A half-day workshop costs $2,500 flat for up to 20 people, which suits an association staff meeting or a supplier’s office team.
+**What does AI consulting cost in Montgomery?** Pricing is quoted for your business after a free call. I offer 1-on-1 sessions, small group training for 2 to 8 people and half-day workshops for up to 20, which suit an association staff meeting or a supplier’s office team.
 
 **When is Purcell Ventures the wrong fit?** Purcell Ventures is one person. A state agency or a plant that needs a large team, a signed enterprise MSA or support around the clock should hire a bigger firm, and I will say so on the first call.
 
@@ -155,7 +155,7 @@ AI consulting in Montgomery, Alabama for firms working with state government, au
 ### AI consulting in Mobile, Alabama, Purcell Ventures
 URL: https://purcellventures.co/ai-consulting/mobile-al
 
-AI consulting in Mobile, Alabama for freight forwarders, logistics firms, marine contractors, hotels and rentals. Training, automation, software and prices.
+AI consulting in Mobile, Alabama for freight forwarders, logistics firms, marine contractors, hotels and rentals. Training, automation, software and how quotes work.
 
 **What does Mobile’s economy mean for AI work?** Mobile is Alabama’s port city. The Port of Mobile is the state’s only deepwater port, and freight forwarders, customs brokers, trucking companies and warehouses work around it. Shipyards on the river build vessels for the Navy, and Airbus assembles airliners at Brookley. Along the Gulf, from Dauphin Island to the Baldwin County beaches across the bay, hotels, rentals, charters and restaurants run on tourism, with Mardi Gras and summer bringing the busiest weeks.
 
@@ -165,7 +165,7 @@ AI consulting in Mobile, Alabama for freight forwarders, logistics firms, marine
 
 **How does an engagement work from Tuscaloosa?** It starts with a free conversation by phone or email about the work your staff repeats. If AI or software fits, I propose a session or quote a build. If it does not fit, I tell you on that first call. I reply within one business day.
 
-**What does AI consulting cost in Mobile?** A 1-on-1 session costs $175 an hour, with a two-hour minimum recommended. Small group training costs $125 a person for 2 to 8 people, which fits a front desk or a dispatch office. A half-day workshop costs $2,500 flat for up to 20 people.
+**What does AI consulting cost in Mobile?** Every project is quoted after a free call. I offer 1-on-1 sessions, small group training for 2 to 8 people, which fits a front desk or a dispatch office, and half-day workshops for up to 20.
 
 **When is Purcell Ventures the wrong fit?** Purcell Ventures is one person. A port operator, shipyard or hotel chain that needs a large team, a signed enterprise MSA or support around the clock should hire a bigger firm, and I will say so on the first call.
 
@@ -176,7 +176,7 @@ AI consulting in Mobile, Alabama for freight forwarders, logistics firms, marine
 ### AI consulting in Auburn, Alabama, Purcell Ventures
 URL: https://purcellventures.co/ai-consulting/auburn-al
 
-AI consulting in Auburn, Alabama for restaurants, shops, student housing and young founders. Training, automation, custom software and prices.
+AI consulting in Auburn, Alabama for restaurants, shops, student housing and young founders. Training, automation, custom software and how quotes work.
 
 **What does Auburn’s economy mean for AI work?** Auburn is a college town, and Auburn University sets its calendar. Move-in, graduation and home football weekends bring the busiest days of the year to restaurants, bars, shops, hotels and apartment complexes. Downtown around Toomer’s Corner, the student housing at the edge of campus and the businesses in neighboring Opelika all serve that population.
 
@@ -186,7 +186,7 @@ AI consulting in Auburn, Alabama for restaurants, shops, student housing and you
 
 **How does an engagement work from Tuscaloosa?** It starts with a free conversation by phone or email. You tell me what takes up your week, and I tell you whether training, automation or custom software fits, or that none of them does. I reply within one business day.
 
-**What does AI consulting cost in Auburn?** A 1-on-1 session costs $175 an hour, with a two-hour minimum recommended, and suits an owner who runs most of the business alone. Small group training costs $125 a person for 2 to 8 people, which fits a leasing office or a restaurant’s managers. A half-day workshop costs $2,500 flat for up to 20 people.
+**What does AI consulting cost in Auburn?** Pricing is quoted per business after a free call. A 1-on-1 session suits an owner who runs most of the business alone. Small group training for 2 to 8 people fits a leasing office or a restaurant’s managers. A half-day workshop covers up to 20 people.
 
 **When is Purcell Ventures the wrong fit?** Purcell Ventures is one person. A business that needs a large team, a signed enterprise MSA or support around the clock should hire a bigger firm, and I will say so on the first call.
 
@@ -254,7 +254,7 @@ AI automation for small businesses: which tasks to automate first, what AI phone
 ### AI integration for small business software, Purcell Ventures
 URL: https://purcellventures.co/ai-integration
 
-AI integration for small business: connect AI to Google Workspace, QuickBooks, a CRM, your website, phone and text. Off-the-shelf vs custom, safety, prices.
+AI integration for small business: connect AI to Google Workspace, QuickBooks, a CRM, your website, phone and text. Off-the-shelf vs custom, safety and quotes.
 
 **What does it mean to integrate AI into software I already use?** Integrating AI means a model reads from or writes to a system you already run, so nobody has to copy text into a chat window and paste the answer back. The model might sort incoming email, summarize a customer record, draft a quote from a form or answer questions on your website from your own documents.
 
@@ -268,7 +268,7 @@ AI integration for small business: connect AI to Google Workspace, QuickBooks, a
 
 **Is it safe to connect AI to my business data?** It can be, if you control three things: which data the model can see, what it may change, and what the provider does with what you send. Give every integration the smallest access that does the job, keep write access behind an approval step, and read the provider's data and training terms.
 
-**How much does an AI integration cost?** At Purcell Ventures, a small software project such as one integration runs $1,500 to $3,500. Full applications run $5,000 to $15,000 and up. Monthly Digital plans with ready-made AI tools run $179 to $279 a month, plus a one-time setup fee of $650 to $1,000.
+**How much does an AI integration cost?** Purcell Ventures quotes each integration for your business after a free call. The price depends on how many systems it connects and how much of the work needs custom code.
 
 **Common questions** An API is a published way for one program to read from and write to another. If your software has one, a developer can connect an AI model to it directly. If it has none, the options shrink to exports, email and copy and paste.
 
@@ -365,7 +365,7 @@ AI for flooring companies: estimate write-ups from measurements, quote follow-up
 
 **What privacy rules apply to flooring customer data in AI tools?** Treat customer names, addresses, phone numbers and job notes as private, and keep card numbers, lockbox codes and alarm details out of AI chats entirely. Use a business plan of your AI tool with training on your chats turned off. This is general information, and your own counsel can answer questions about your state.
 
-**What can Purcell Ventures set up for a flooring company?** I can train your office and estimators, add tools to your website, or build software for a gap your current system leaves. Each route below has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for a flooring company?** I can train your office and estimators, add tools to your website, or build software for a gap your current system leaves. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** No AI tool should replace a tape or laser measure on site. AI can take the measurements your estimator records and write them up as a clean quote, with waste and transitions listed the way you price them. The estimator checks every number.
 
@@ -386,7 +386,7 @@ AI for HVAC companies: after-hours call capture, maintenance-plan reminders and 
 
 **What privacy rules apply to HVAC customer data in AI tools?** Treat customer names, addresses, phone numbers and job notes as private, and keep card numbers, door codes, gate codes and alarm codes out of AI chats entirely. Use a business plan of your AI tool with training on your chats turned off. This is general information, and your own counsel can answer questions about your state.
 
-**What can Purcell Ventures set up for an HVAC company?** I can train your office and techs, add tools to your website, or build software for a gap your current system leaves. Each route below has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for an HVAC company?** I can train your office and techs, add tools to your website, or build software for a gap your current system leaves. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** Yes, for routine requests. An online booking page or website chat can take the address, the problem and a time window and place the job on your calendar. A dispatcher still confirms the slot, and any call that mentions gas, smoke or carbon monoxide goes to a person.
 
@@ -407,7 +407,7 @@ AI for plumbers: emergency call triage, job summaries from tech notes, quote fol
 
 **What privacy rules apply to plumbing customer data in AI tools?** Treat customer names, addresses, phone numbers and job notes as private, and keep card numbers, door codes, gate codes and alarm codes out of AI chats entirely. Use a business plan of your AI tool with training on your chats turned off. This is general information, and your own counsel can answer questions about your state.
 
-**What can Purcell Ventures set up for a plumbing business?** I can train your office and plumbers, add tools to your website, or build software for a gap your current system leaves. Each route below has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for a plumbing business?** I can train your office and plumbers, add tools to your website, or build software for a gap your current system leaves. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** AI can sort calls and messages by the words customers use, such as burst pipe, flooding or sewage backup, and alert the on-call plumber at once. A person still decides what is an emergency and who goes out.
 
@@ -428,7 +428,7 @@ AI for roofers: inspection reports from photos and notes, storm-season lead sort
 
 **What privacy rules apply to roofing customer data in AI tools?** Treat customer names, addresses, phone numbers, photos of the home and inspection notes as private. Keep card numbers, policy numbers, claim numbers and gate or alarm codes out of consumer AI chats. Use a business plan with training on your chats turned off. This is general information, and your own counsel can answer questions about your state.
 
-**What can Purcell Ventures set up for a roofing company?** I can train your office and inspectors, add tools to your website, or build software for a gap your current system leaves. Each route below has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for a roofing company?** I can train your office and inspectors, add tools to your website, or build software for a gap your current system leaves. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** Do not rely on it. AI can label and arrange the photos your inspector takes and describe what the inspector noted, but a person on the roof judges hail, wind and wear damage. A wrong call from a photo can mislead a homeowner and an adjuster.
 
@@ -449,7 +449,7 @@ AI for dental offices: recall reminders, insurance questions and new-patient for
 
 **What HIPAA cautions apply to AI in a dental office?** Under HIPAA, a dental office can share patient health information with a vendor only when that vendor signs a business associate agreement. Most consumer AI chat accounts come with no such agreement, so patient names, charts, X-rays and insurance details stay out of them. This is general information, and your counsel can confirm your setup.
 
-**What can Purcell Ventures set up for a dental office?** I can train your front desk, add patient-facing tools to your website that hold no health information, or build a small tool for a gap your software leaves. Each route has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for a dental office?** I can train your front desk, add patient-facing tools to your website that hold no health information, or build a small tool for a gap your software leaves. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** A consumer chat account is the wrong place for patient health information. Use an AI tool for patient data only when the vendor signs a business associate agreement with your practice and your settings match it. Ask your own counsel or compliance advisor to confirm your setup.
 
@@ -470,7 +470,7 @@ AI for law firms: intake screening under strict confidentiality limits and first
 
 **What confidentiality limits apply to AI in a law firm?** A lawyer's duty of confidentiality covers client information typed into an AI tool, and the duty of competence covers knowing how that tool stores and uses it. The American Bar Association addressed generative AI in Formal Opinion 512 in July 2024, and several state bars have issued their own guidance. This is general information, and your own bar's rules and ethics counsel govern your firm.
 
-**What can Purcell Ventures set up for a law firm?** I can train your attorneys and staff, add intake and FAQ tools to your website, or build a small tool around your own templates. Each route has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for a law firm?** I can train your attorneys and staff, add intake and FAQ tools to your website, or build a small tool around your own templates. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** Only within the firm's ethics duties on confidentiality and competence. The ABA addressed generative AI in Formal Opinion 512, and several state bars have issued their own guidance. Use a business plan with training on your data turned off, keep client confidences out of any tool the firm has not approved, and have an attorney review every output.
 
@@ -491,7 +491,7 @@ AI for real estate agents: listing descriptions, lead follow-up and showing feed
 
 **What fair housing and MLS rules apply to AI copy?** The federal Fair Housing Act bars ads that state a preference for or against buyers by race, color, religion, sex, disability, familial status or national origin. AI copy can slip in steering words such as "perfect for young families," so a person reads every line. This is general information, and your broker or a lawyer can answer questions about a specific listing.
 
-**What can Purcell Ventures set up for a real estate agent?** I can train you or your team, add lead and booking tools to your website, or build a small tool for a gap your CRM leaves. Each route has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for a real estate agent?** I can train you or your team, add lead and booking tools to your website, or build a small tool for a gap your CRM leaves. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** Yes, from the facts you give it: rooms, square footage, upgrades, lot and location. Check every claim against the listing data, remove language that describes who should live there, and follow your MLS rules before you publish.
 
@@ -514,7 +514,7 @@ AI for restaurants: menu questions, review replies and catering inquiries, and w
 
 **What privacy and compliance cautions apply to restaurants using AI?** Keep card numbers, guest phone lists and staff records out of consumer AI chats, and use a business plan with training on your chats turned off. Allergen and menu labeling rules come from your health department and federal law, and AI copy has to follow them. This is general information, and your own counsel can confirm details.
 
-**What can Purcell Ventures set up for a restaurant?** I can train your managers, add guest-facing tools to your website, or build a small tool for a gap your point-of-sale system leaves. Each route has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for a restaurant?** I can train your managers, add guest-facing tools to your website, or build a small tool for a gap your point-of-sale system leaves. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 ### AI for salons, Purcell Ventures
 URL: https://purcellventures.co/ai-for/salons
@@ -533,7 +533,7 @@ AI for salons: multi-service booking, rebooking reminders, service and price que
 
 **What privacy rules apply to salon client data in AI tools?** Treat client names, phone numbers and service history as private, and keep allergy notes, patch-test results, scalp conditions and medications out of AI chats entirely. Use a business plan of your AI tool with training on your chats turned off. This is general information, and your own counsel can answer questions about your state.
 
-**What can Purcell Ventures set up for a salon?** I can train your front desk and stylists, add booking and AI tools to your website, or build software for a gap your booking system leaves. Each route below has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for a salon?** I can train your front desk and stylists, add booking and AI tools to your website, or build software for a gap your booking system leaves. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** Yes. An online booking page or a website chatbot can book single services and longer color appointments into each stylist's real calendar at any hour. Set the length and gap rules for every service first, and send anything unusual, such as a color correction, to the stylist.
 
@@ -554,7 +554,7 @@ AI for barbershops: booking by barber, no-show reminders, shop questions, posts 
 
 **What privacy rules apply to barbershop customer data in AI tools?** Treat customer names, phone numbers and cut notes as private, and keep card numbers and any notes about skin or scalp conditions out of AI chats entirely. Use a business plan of your AI tool with training on your chats turned off. This is general information, and your own counsel can answer questions about your state.
 
-**What can Purcell Ventures set up for a barbershop?** I can train your barbers on drafting posts and replies, add booking and loyalty tools to your website, or build software for a gap your booking app leaves. Each route below has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for a barbershop?** I can train your barbers on drafting posts and replies, add booking and loyalty tools to your website, or build software for a gap your booking app leaves. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** Yes. Give each barber bookable hours and open walk-in hours, or keep one chair for walk-ins. The booking page shows only the bookable slots, and a chatbot can tell a customer which hours take walk-ins.
 
@@ -575,7 +575,7 @@ AI for churches: sermon clips and summaries, volunteer scheduling and the weekly
 
 **What privacy rules apply to church data in AI tools?** Treat member names, phone numbers and attendance as private, and keep prayer requests, care notes, giving records and children's details out of AI chats entirely. Use a business plan of your AI tool with training on your chats turned off. This is general information, and your church's own counsel can answer legal questions.
 
-**What can Purcell Ventures set up for a church?** I can train your staff and volunteers, add event and scheduling tools to your website, or build software for a gap your church management system leaves. Each route below has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for a church?** I can train your staff and volunteers, add event and scheduling tools to your website, or build software for a gap your church management system leaves. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** Each church decides its own limits, and AI fits administrative work such as summaries, schedules and newsletters. A good line keeps AI on logistics and drafts while the pastor and staff keep teaching, counseling and prayer.
 
@@ -596,7 +596,7 @@ AI for auto repair shops: repair explanations from tech notes, status updates, s
 
 **What privacy rules apply to auto shop customer data in AI tools?** Treat customer names, phone numbers, vehicle details and repair history as private, and keep card numbers, license details and key or lockbox codes out of AI chats entirely. Use a business plan of your AI tool with training on your chats turned off. This is general information, and your own counsel can answer questions about your state.
 
-**What can Purcell Ventures set up for an auto repair shop?** I can train your advisors and technicians, add estimate and review tools to your website, or build software for a gap your shop management system leaves. Each route below has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for an auto repair shop?** I can train your advisors and technicians, add estimate and review tools to your website, or build software for a gap your shop management system leaves. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** AI can collect symptoms from a customer and suggest what a technician might check first. A technician still finds the fault with the car on the lift, the scan tool and a road test, and no bot tells a customer what is wrong.
 
@@ -617,7 +617,7 @@ AI for accountants and tax preparers: document intake checklists, engagement let
 
 **What confidentiality rules apply to AI in an accounting firm?** Tax preparers work under federal rules on taxpayer data. Section 7216 of the Internal Revenue Code limits how a preparer may use or disclose return information, and the IRS expects professional preparers to keep a written information security plan, as its Publication 4557 explains. CPAs also answer to their own professional and state board rules. This is general information, and your counsel or professional body can confirm what applies to your firm.
 
-**What can Purcell Ventures set up for an accounting firm?** I can train your preparers and admin staff, add a firm FAQ and booking to your website, or build a small tool around your own checklists and templates. Each route has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for an accounting firm?** I can train your preparers and admin staff, add a firm FAQ and booking to your website, or build a small tool around your own checklists and templates. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** Keep client returns, Social Security numbers and bank details out of consumer AI chat accounts. Federal rules limit how a tax preparer may use or disclose return information, so use AI on client data only through a tool your firm has approved in writing, and ask your own counsel or professional body to confirm your setup.
 
@@ -638,7 +638,7 @@ AI for insurance agents: quote request intake, renewal reminders and policy FAQs
 
 **What licensing and privacy rules apply to AI in an insurance agency?** States require a license to sell, solicit or negotiate insurance, so a bot that recommends a policy steps into licensed work. Client financial and personal details also fall under privacy rules from the Gramm-Leach-Bliley Act and state insurance law, and carriers often add their own terms in the agency contract. This is general information, and your state insurance department and counsel govern your agency.
 
-**What can Purcell Ventures set up for an insurance agency?** I can train your agents and service staff, add intake and FAQ tools to your website, or build a small tool around your own question lists. Each route has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for an insurance agency?** I can train your agents and service staff, add intake and FAQ tools to your website, or build a small tool around your own question lists. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** A chatbot can collect the details a quote needs, such as the vehicles, drivers, property and current coverage, and pass them to a licensed agent. The agent runs the quote through the carrier and presents it. The bot never states a final premium.
 
@@ -659,7 +659,7 @@ AI for gyms and fitness studios: trial member follow-up, class schedule question
 
 **What privacy rules apply to gym member data in AI tools?** Treat member names, phone numbers, payment details and visit history as private, and keep health questionnaires, injury notes and body measurements out of AI chats entirely. Many states also have laws on health club contracts, renewals and cancellations, so have counsel approve any message about them. This is general information, and your own counsel can answer questions about your state.
 
-**What can Purcell Ventures set up for a gym?** I can train your front desk and coaches, add scheduling and AI tools to your website, or build software for a gap your member system leaves. Each route below has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for a gym?** I can train your front desk and coaches, add scheduling and AI tools to your website, or build software for a gap your member system leaves. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** Yes. Your member software or a texting tool sends a short series of messages during and after the trial, and AI helps write them in your gym's voice. A staff member takes over the moment a person replies with a question or wants to talk about a membership.
 
@@ -680,7 +680,7 @@ AI for landscapers and lawn care companies: quote intake from yard photos, crew 
 
 **What rules apply to landscaping customer data and AI?** Treat customer names, addresses, gate codes and payment details as private, and keep gate codes and alarm details out of AI chats entirely. Pesticide and herbicide work follows the product label and your state's applicator licensing rules, and no AI answer changes that. This is general information, and your state agriculture department or counsel can answer questions about your business.
 
-**What can Purcell Ventures set up for a landscaping company?** I can train your office and crew leads, add quote and booking tools to your website, or build software for a gap your scheduling app leaves. Each route has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for a landscaping company?** I can train your office and crew leads, add quote and booking tools to your website, or build software for a gap your scheduling app leaves. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** AI can turn yard photos and a short form into a clean quote request, and it can draft an estimate from your own price sheet. An owner or crew lead sets the final price, often after a site visit, since a photo hides slopes, drainage, roots and gate widths.
 
@@ -701,7 +701,7 @@ AI for cleaning companies: quote intake from photos and room counts, scheduling 
 
 **What privacy rules apply to cleaning client data in AI tools?** A cleaning company holds keys to people's homes. Treat door codes, alarm codes, key locations and notes about when a client travels as the most sensitive data you keep, and never paste them into an AI chat. Limit them in your software to the cleaners who need them for that visit. Federal workplace rules also require employers to give workers access to Safety Data Sheets for the chemicals they use. This is general information, and your own counsel can answer questions about your state.
 
-**What can Purcell Ventures set up for a cleaning company?** I can train your office staff, add quote, scheduling and booking tools to your website, or build software for a gap your booking app leaves. Each route has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for a cleaning company?** I can train your office staff, add quote, scheduling and booking tools to your website, or build software for a gap your booking app leaves. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** AI can turn photos, room counts and a short form into a clean quote request, and it can draft a price from your own rate sheet for a standard clean. The owner sets the final price for a first deep clean, a move-out or a home that needs more than the photos show.
 
@@ -722,7 +722,7 @@ AI for med spas: booking, consult intake and aftercare from approved templates, 
 
 **What HIPAA and medical cautions apply to AI in a med spa?** HIPAA applies to covered entities, which include health care providers that send certain transactions electronically, such as insurance claims. Whether that includes your med spa depends on how it operates and bills, and state privacy and medical practice laws can apply either way. States also set their own rules on who may perform and supervise injectables and lasers. This is general information, and your counsel can confirm your setup.
 
-**What can Purcell Ventures set up for a med spa?** I can train your front desk, add booking and general FAQ tools to your website that hold no health information, or build a small tool for a gap your software leaves. Each route has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for a med spa?** I can train your front desk, add booking and general FAQ tools to your website that hold no health information, or build a small tool for a gap your software leaves. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** HIPAA applies to covered entities, which include health care providers that send certain transactions electronically, such as insurance claims. Whether that includes your med spa depends on how it operates and bills, and state privacy laws can apply either way. Ask your own counsel or compliance advisor, and treat client health details as protected in the meantime.
 
@@ -743,7 +743,7 @@ AI for veterinary clinics: appointment reminders, vaccine recalls and new-client
 
 **What privacy and record rules apply to AI in a vet clinic?** HIPAA protects human health information, so it does not cover pet medical records. Many states have their own rules on the confidentiality of veterinary records, and state rules on the veterinarian-client-patient relationship govern who may diagnose and prescribe. This is general information, and your state veterinary board or counsel can confirm what applies to your clinic.
 
-**What can Purcell Ventures set up for a veterinary clinic?** I can train your front desk, add booking and FAQ tools to your website that hold no medical records, or build a small tool for a gap your software leaves. Each route has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for a veterinary clinic?** I can train your front desk, add booking and FAQ tools to your website that hold no medical records, or build a small tool for a gap your software leaves. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** HIPAA protects human health information, so it does not cover pet medical records. Many states have their own veterinary record confidentiality rules, and client names, addresses and payment details deserve care either way. Your state veterinary board or counsel can confirm what applies.
 
@@ -764,7 +764,7 @@ AI for photographers: inquiry replies, session prep guides and culling help with
 
 **What privacy and rights cautions apply to client photos in AI tools?** Under United States copyright law, the photographer usually owns the copyright in the images unless a contract says otherwise, and posting a recognizable person for advertising generally calls for their written release. Before you upload client photos to any AI tool, read its terms on storage and training, and choose tools that keep your uploads out of model training. This is general information, and your own counsel can answer questions about your contracts and state.
 
-**What can Purcell Ventures set up for a photographer?** I can train you and any assistants, add booking and inquiry tools to your website, or build software for a gap your studio app leaves. Each route has a published price on its own page, and the first conversation about which one fits is free.
+**What can Purcell Ventures set up for a photographer?** I can train you and any assistants, add booking and inquiry tools to your website, or build software for a gap your studio app leaves. Each route is quoted for your business, and the first conversation about which one fits is free.
 
 **Common questions** AI can draft a reply from your own packages, prices and availability, and an email tool can send it fast. Read each draft before it goes out, and make sure every price, date and package matches what you actually offer. A wrong quote in a first reply is hard to take back.
 
@@ -775,7 +775,7 @@ URL: https://purcellventures.co/compare
 
 Small business comparisons before you buy AI or a website: who to hire, chatbot vs receptionist, Zapier vs a custom agent, and ChatGPT vs Claude, side by side.
 
-**Where the prices come from** I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC . Purcell Ventures prices come from my software , websites , digital and consulting pages. Other companies change their prices often, so for their products I describe how each one charges and leave the dollar figures to their own sites.
+**How prices are handled** I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC . Purcell Ventures quotes each project per business after a free call, so these pages list no Purcell Ventures prices. Other companies change their prices often, so for their products I describe how each one charges and leave the dollar figures to their own sites.
 
 **Where to start** If you are not sure which question you have, take the AI readiness test first. Ten questions score your team out of 30 and point to three next steps. The AI cost calculator then shows how many hours a task costs your team now, which sets a ceiling on what any of these options is worth. For terms you meet along the way, the AI glossary defines each one in plain words.
 
@@ -834,7 +834,7 @@ ChatGPT vs Claude for a small business: plan structure, team data controls, the 
 
 **What about building your own tools on them?** Both companies sell API access that developers use to build AI into your own software, billed by usage. The chat subscription and the API are separate purchases. The free AI tools on this site run on the Claude API. When I wrote about my CRM in May 2026, its AI features had cost $15 in API usage. The custom AI agent vs Zapier comparison covers when a build is worth it.
 
-**What does training your team cost?** At Purcell Ventures, 1-on-1 sessions cost $175 an hour, small groups of 2 to 8 cost $125 a person, and a half-day workshop for up to 20 people costs $2,500. Bring examples of your own work to the session. The consulting page lists the sessions, and the AI readiness test shows where your team stands in three minutes.
+**What does training your team cost?** At Purcell Ventures, training is quoted for your business after a free call. Sessions run 1-on-1, in small groups of 2 to 8, or as a half-day workshop for up to 20 people. Bring examples of your own work to the session. The consulting page lists the sessions, and the AI readiness test shows where your team stands in three minutes.
 
 **Common questions** Neither wins for every business, and the answer shifts with each model release. Run the same three tasks from your own week through both free plans and pick the one whose drafts need the least editing.
 
@@ -956,17 +956,17 @@ Free AI use policy template for small businesses. Fill in a short form for a sta
 ### Booking, CRM and AI tools for small businesses, Purcell Ventures
 URL: https://purcellventures.co/digital
 
-Booking, a CRM, an AI chatbot and 23 more add-ons for small businesses. Starter $99, Growth $179 and Full Service $279 a month, with setup from $650 to $1,000.
+Booking, a CRM, an AI chatbot and 23 more add-ons for small businesses, in Starter, Growth and Full Service plans quoted for your business after a free call.
 
 **The add-on catalog** 26 tools in seven groups, and you can pick any combination. 16 of them have a free version you can try now.
 
-**Tools compared with hiring** Pick the jobs you would otherwise hire someone for, and compare their salaries with the cost of my subscription.
+**Tools compared with hiring** Pick the jobs you would otherwise hire someone for, and see which tools cover that work.
 
-**Plans and prices** Each plan includes the tools in the one before it. Setup is a one-time fee of $650 to $1,000, depending on the add-ons. There is no contract and you can cancel at any time.
+**Plans** Each plan includes the tools in the one before it. Pricing is quoted per business after a free call. There is no contract and you can cancel at any time.
 
 **Estimated return** Enter your own numbers. I made up the business-type presets as starting values.
 
-**Custom bundles** Tell me which tools you need, whether that is two or twelve. I build them as one bundle for a flat monthly price, and you own everything I build for you.
+**Custom bundles** Tell me which tools you need, whether that is two or twelve. I build them as one bundle quoted for your business, and you own everything I build for you.
 
 **About me** I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC. I am 19 and I study at The University of Alabama.
 
@@ -975,9 +975,9 @@ Booking, a CRM, an AI chatbot and 23 more add-ons for small businesses. Starter 
 ### Custom software, web apps and mobile apps, Purcell Ventures
 URL: https://purcellventures.co/software
 
-Custom software for small businesses: mobile apps, web platforms, automation tools and AI integrations. Small projects $1,500 to $3,500, full apps from $5,000.
+Custom software for small businesses: mobile apps, web platforms, automation tools and AI integrations. Every project is quoted after a free 30-minute call.
 
-**Prices** Every project starts with a free 30-minute discovery call, and I set the exact scope and price on that call.
+**Quotes** Every project starts with a free 30-minute discovery call, and I set the exact scope and quote on that call.
 
 **Starting a project** Tell me what you want built, and I will tell you whether I can help and what it would take. I reply within one business day.
 
@@ -992,7 +992,7 @@ Describe your business and get 6 to 10 questions and answers written the way cus
 
 **How setup works** There is no account. Fill in the form and choose Write the FAQs. Your description is sent to an AI model to write the answers, so leave out anything private. Copy the result as Markdown, HTML or JSON and paste it into your website builder.
 
-**The version on your own website** The AI FAQ Builder, running on your site, is in the Growth plan, $179 a month, with a one-time setup fee of $650 to $1,000. The Full Service plan, $279 a month, adds an AI chatbot trained on your business that answers questions 24 hours a day. Compare the plans .
+**The version on your own website** The AI FAQ Builder, running on your site, is in the Growth plan, quoted for your business after a free call. The Full Service plan adds an AI chatbot trained on your business that answers questions 24 hours a day. Compare the plans .
 
 ### Free online estimate builder, Purcell Ventures
 URL: https://purcellventures.co/digital/estimating
@@ -1005,7 +1005,7 @@ Build job quotes from labor and material line items, then print them or save a P
 
 **How setup works** There is nothing to set up and no account. Start an estimate, fill it in and choose Print or save as PDF. The printed header in the free version shows Purcell Ventures LLC.
 
-**The version on your own website** Online Estimating is one of the add-ons in the Growth plan, $179 a month, with a one-time setup fee of $650 to $1,000. On that plan I set it up for your business and maintain it, and estimates go out as shareable links. The Full Service plan, $279 a month, adds an AI estimate generator that turns a photo into a quote. Compare the plans .
+**The version on your own website** Online Estimating is one of the add-ons in the Growth plan, which is quoted per business. On that plan I set it up for your business and maintain it, and estimates go out as shareable links. The Full Service plan adds an AI estimate generator that turns a photo into a quote. Compare the plans .
 
 ### Free event registration and check-in tool, Purcell Ventures
 URL: https://purcellventures.co/digital/event-registration
@@ -1018,7 +1018,7 @@ Create an event, collect RSVPs and check guests in at the door. Free, no signup,
 
 **How setup works** There is nothing to install and no account. Create the event and start adding RSVPs. Everything is stored in this browser on this device, so RSVPs are entered on the same device that holds the event. That suits a sign-up table, or logging RSVPs that come in by phone or email.
 
-**The version on your own website** Event Registration is in the Growth plan, $179 a month, with a one-time setup fee of $650 to $1,000. On that plan it runs on your own site with RSVPs, an attendee list and automatic reminder emails, and I set it up and maintain it. Compare the plans .
+**The version on your own website** Event Registration is in the Growth plan, quoted for your business after a free call. On that plan it runs on your own site with RSVPs, an attendee list and automatic reminder emails, and I set it up and maintain it. Compare the plans .
 
 ### Free expense tracker for small businesses, Purcell Ventures
 URL: https://purcellventures.co/digital/expenses
@@ -1031,7 +1031,7 @@ Log expenses as they happen, filter by month and export a CSV at tax time. Free,
 
 **How setup works** There is nothing to install and no account. Expenses are stored in this browser on this device only. They do not sync to another computer or phone, and clearing the browser's site data deletes them, so export each month's CSV as a backup.
 
-**The version on your own website** Expense Tracker is one of the 26 add-ons in the catalog, with monthly summaries and tax-ready reports. Plans run from $99 to $279 a month with a one-time setup fee of $650 to $1,000, and I set up and maintain the tools. Ask me which plan covers it. Compare the plans .
+**The version on your own website** Expense Tracker is one of the 26 add-ons in the catalog, with monthly summaries and tax-ready reports. Every plan is quoted after a free call, and I set up and maintain the tools. Ask me which plan covers it. Compare the plans .
 
 ### Free inventory tracker with low-stock alerts, Purcell Ventures
 URL: https://purcellventures.co/digital/inventory
@@ -1044,7 +1044,7 @@ A product list with stock levels and low-stock alerts for a small shop. Free, no
 
 **How setup works** There is nothing to install and no account. Add items one at a time. The reorder point starts at 5 and can be changed for each item.
 
-**The version on your own website** Inventory Tracker is in the Growth plan, $179 a month, with a one-time setup fee of $650 to $1,000. On that plan you get a product list with stock levels and low-stock alerts, and I set it up for your business and maintain it. Compare the plans .
+**The version on your own website** Inventory Tracker is in the Growth plan, which is quoted per business. On that plan you get a product list with stock levels and low-stock alerts, and I set it up for your business and maintain it. Compare the plans .
 
 ### Free digital loyalty punch card, Purcell Ventures
 URL: https://purcellventures.co/digital/loyalty
@@ -1057,7 +1057,7 @@ A digital punch card for repeat customers: add a punch each visit and redeem the
 
 **How setup works** There is nothing to install and no account. The cards are stored in this browser on this device, so keep it on the device at your register. They do not sync to another device, and clearing the browser's site data deletes them.
 
-**The version on your own website** The Loyalty Punch Card with QR check-ins is in the Growth plan, $179 a month, with a one-time setup fee of $650 to $1,000. Customers check in by scanning a QR code, and I set it up for your business and maintain it. Compare the plans .
+**The version on your own website** The Loyalty Punch Card with QR check-ins is in the Growth plan, quoted for your business after a free call. Customers check in by scanning a QR code, and I set it up for your business and maintain it. Compare the plans .
 
 ## Company and founder
 
@@ -1473,7 +1473,7 @@ Why I priced the PV AI Starter Kit at $19, what it does to how people buy, and w
 
 **Some $19 buyers may buy a digital services plan** Someone who has paid $19 has already bought from Purcell Ventures once, which makes a second purchase an easier decision.
 
-**Unit economics** The content in the $19 kit took 40 hours of work. If I sell 100 copies, that is $1,900, or $47.50 for each hour of build time. If I sell 1,000 copies, that is $19,000, or $475 an hour, which is above my $175 hourly consulting rate.
+**Unit economics** The content in the $19 kit took 40 hours of work. If I sell 100 copies, that is $1,900, or $47.50 for each hour of build time. If I sell 1,000 copies, that is $19,000, or $475 an hour.
 
 **A $19 purchase carries little risk** A buyer who picks the wrong kit loses $19, which changes how people buy. At $19, the buyer is testing: let's see if this is any good. At $497, the buyer is justifying: I have to prove to myself this was worth it.
 
@@ -1874,7 +1874,7 @@ A reporting series by Elijah Purcell on independent businesses near the Universi
 ### Purcell Ventures: AI and custom software for small business
 URL: https://purcellventures.co
 
-Purcell Ventures builds AI systems and custom software for small businesses, with AI consulting and websites from $99 a month. Founded by Elijah Purcell.
+Purcell Ventures builds AI systems and custom software for small businesses, with AI consulting and websites quoted per business. Founded by Elijah Purcell.
 
 **Work with me** How a project with me starts, and what happens after launch.
 
@@ -1909,7 +1909,7 @@ AI for small business by trade: twenty guides, from HVAC and dental offices to g
 ### Common questions, Purcell Ventures
 URL: https://purcellventures.co/faq
 
-Answers to the questions clients ask Elijah Purcell most: prices, response times, AI consulting, digital services, custom software, the courses and the company.
+Answers to the questions clients ask Elijah Purcell most: quotes, response times, AI consulting, digital services, custom software, the courses and the company.
 
 **A question that is not here** Email me and I will answer it. I reply within one business day.
 
@@ -1926,7 +1926,7 @@ Three self-paced courses from Elijah Purcell: the college application playbook, 
 
 **Who teaches them** I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC . I build AI agent systems and study psychology and data science in New College and the Honors College at the University of Alabama in Tuscaloosa. More background: Who is Elijah Purcell . If you need direct help more than a course, I also do consulting .
 
-**One-on-one help** If you would rather have me look at your situation directly, consulting starts at $125 a person. I reply within one business day.
+**One-on-one help** If you would rather have me look at your situation directly, consulting is quoted for your situation after a free call. I reply within one business day.
 
 ### The College Application Playbook, by Elijah Purcell
 URL: https://purcellventures.co/courses/college-apps

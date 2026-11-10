@@ -3,11 +3,11 @@ import PostByline from "@/app/components/PostByline";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PostLayout } from "@/app/components/ui";
 
-// PRICES CHECKED AGAINST THE LIVE SERVICE PAGES BEFORE WRITING.
+// NO PURCELL VENTURES PRICES ON THIS PAGE.
 //
-// A pricing post that contradicts the pricing pages is worse than no pricing post, because
-// the reader finds the discrepancy and concludes something about the whole site. Every
-// figure below was read off /digital, /software and /consulting.
+// Elijah quotes every website, software and consulting job per business (rule set
+// 9 Nov 2026). The ranges below describe the general market. Do not add PV figures back.
+// Quote wording for PV work: "quoted per business after a free call".
 
 export const metadata = {
   alternates: { canonical: "/blog/what-a-website-actually-costs" },
@@ -38,7 +38,7 @@ export default function Post() {
       <p>
         Ask three providers what a website costs and you will get $400, $4,000 and $15,000,
         for sites that can look alike to a customer. The spread comes from three things you
-        are paying for, and I include my own prices so you can compare.
+        are paying for.
       </p>
 
       <h2>What the price pays for</h2>
@@ -72,8 +72,8 @@ export default function Post() {
         <tbody>
           <tr><th scope="row">Free to $50/mo</th><td>You build it on a site builder. A workable option for many businesses, and your time is the cost.</td></tr>
           <tr><th scope="row">$400 to $1,500 once</th><td>A template configured for you. Somebody else does the work, the design is not original, and this tier fits most small business sites.</td></tr>
-          <tr><th scope="row">$1,500 to $5,000 once</th><td>Custom build. Original layout, your content structure, functionality beyond pages. My custom software work starts at $1,500 and a substantial build runs to $5,000.</td></tr>
-          <tr><th scope="row">$99 to $279/mo</th><td>A subscription covers the site and somebody maintaining it. My digital tiers run $99, $179 and $279 a month. There is no large upfront cost, and you rent the site instead of owning it.</td></tr>
+          <tr><th scope="row">$1,500 to $5,000 once</th><td>Custom build. Original layout, your content structure, functionality beyond pages.</td></tr>
+          <tr><th scope="row">A monthly fee</th><td>A subscription covers the site and somebody maintaining it. There is no large upfront cost, and you rent the site instead of owning it.</td></tr>
           <tr><th scope="row">$10,000 and up</th><td>Original design, multiple specialists, strategy, photography. Useful work, rarely needed by a barber shop.</td></tr>
         </tbody>
       </table>
@@ -132,7 +132,8 @@ export default function Post() {
         I audited 121 independent businesses near the University of Alabama, and for most of
         them I recommend the free option first. My{" "}
         <Link href="/blog/is-your-business-invisible">ten-minute self-check</Link> shows
-        where your business stands.
+        where your business stands. If you want me to build or run your site, I quote it for
+        your business after a free <Link href="/contact">call</Link>.
       </p>
 
       <PostByline post={{

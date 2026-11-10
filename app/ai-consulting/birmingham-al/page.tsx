@@ -22,7 +22,7 @@ export default function AiConsultingBirmingham() {
       kicker="Birmingham, Alabama"
       title="AI consulting in Birmingham"
       lede="AI training, automation and custom software for Birmingham practices, firms and offices, from Elijah Purcell of Purcell Ventures in Tuscaloosa. The first conversation is free."
-      meta="1-on-1 sessions $175 an hour. Team workshops $2,500 for up to 20 people. Training happens at your office."
+      meta="Every project is quoted after a free call. Training happens at your office."
     >
       <p>
         I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data
@@ -112,19 +112,14 @@ export default function AiConsultingBirmingham() {
       <h2>What does AI consulting cost in Birmingham?</h2>
 
       <p>
-        A 1-on-1 session costs $175 an hour, with a
-        two-hour minimum recommended. Small group training costs $125 a person for 2 to 8
-        people, and a half-day workshop costs $2,500 flat for up to 20 people. For a front
-        desk or a small practice team, the small group rate costs less. For a whole floor of a
-        firm, the workshop does.
+        I quote every Birmingham business after a free call. Sessions run 1-on-1, as small group
+        training for 2 to 8 people, or as a half-day workshop for up to 20. A front desk or a small practice team fits small group training. A whole floor of a firm fits the half-day workshop.
       </p>
 
       <p>
-        Small software projects run $1,500 to $3,500, and full applications start at $5,000.
-        I quote automation per project, because the price depends on how many systems it
-        touches. The <Link href="/ai-cost-calculator">AI cost calculator</Link> takes your
-        team size, hourly cost and hours of manual work and shows the payback in dollars and
-        hours.
+        Automation and custom software get a written quote once I know how many systems the
+        work touches. The <Link href="/ai-cost-calculator">AI cost calculator</Link> takes your
+        team size, hourly cost and hours of manual work and shows what that work costs you now.
       </p>
 
       <h2>When is Purcell Ventures the wrong fit?</h2>
@@ -169,7 +164,7 @@ export default function AiConsultingBirmingham() {
       </p>
 
       <p>
-        Statewide prices and services: <Link href="/ai-consulting">AI consulting in Alabama</Link>.
+        Statewide services: <Link href="/ai-consulting">AI consulting in Alabama</Link>.
         Other cities: <Link href="/ai-consultant-tuscaloosa">Tuscaloosa</Link>,{" "}
         <Link href="/ai-consulting/huntsville-al">Huntsville</Link>,{" "}
         <Link href="/ai-consulting/montgomery-al">Montgomery</Link>,{" "}

@@ -19,10 +19,10 @@ const SESSION_TYPES = [
 ];
 
 const FORMAT = [
-  { id: "1on1",      label: "1-on-1",      rate: "$175 an hour" },
-  { id: "group",     label: "Small group", rate: "$125 a person" },
-  { id: "workshop",  label: "Workshop",    rate: "$2,500 flat, up to 20 people" },
-  { id: "corporate", label: "Corporate",   rate: "Quoted for the job" },
+  { id: "1on1",      label: "1-on-1",      rate: "One person" },
+  { id: "group",     label: "Small group", rate: "2 to 8 people" },
+  { id: "workshop",  label: "Workshop",    rate: "Up to 20 people" },
+  { id: "corporate", label: "Corporate",   rate: "Any size" },
 ];
 
 interface Booking {

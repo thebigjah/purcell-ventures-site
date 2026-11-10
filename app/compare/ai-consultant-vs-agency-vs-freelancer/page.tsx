@@ -7,10 +7,9 @@ import ServiceSchema from "@/app/components/ServiceSchema";
 import { CONTACT } from "@/lib/contact";
 
 // Comparison page, written 9 Nov 2026 for the buyer choosing who to hire for AI work.
-// PV prices come from /consulting and /software. Agencies, marketplace freelancers and
-// marketplaces themselves are described by how they work and charge, with no dollar
-// figures, because their rates vary and change. /pricing-comparison holds the typical
-// ranges for anyone who wants them side by side.
+// No PV prices: PV work is quoted per business (rule set 9 Nov 2026). Agencies,
+// marketplace freelancers and marketplaces themselves are described by how they work and
+// charge, with no dollar figures, because their rates vary and change.
 
 const PATH = "/compare/ai-consultant-vs-agency-vs-freelancer";
 const URL = `https://purcellventures.co${PATH}`;
@@ -35,7 +34,7 @@ const QA: [string, string][] = [
   ["Is it safe to hire an AI freelancer from a marketplace?",
    "It can be. Marketplaces show reviews and hold payment until you approve the work. Write the scope down, ask for the code and every login in your own name, and test the result on your real data before you release the final payment."],
   ["How much does an AI consultant cost at Purcell Ventures?",
-   "Training runs $175 an hour for one person with a two-hour minimum, $125 a person for groups of 2 to 8, and $2,500 flat for a half-day workshop of up to 20 people. Software builds run $1,500 to $3,500 for one tool and $5,000 to $15,000 and up for a full application."],
+   "Every project is quoted after a free call. The quote depends on the format of the training and how many people take part, or on the scope of the software build, from one tool or integration to a full application."],
   ["How do agencies and freelancers charge for AI work?",
    "Agencies usually charge a project fee or a monthly retainer, often with a minimum engagement. Freelancers on marketplaces charge hourly or a fixed price per job. Rates vary widely, so ask for a written quote and check current pricing with each one."],
   ["Should a small business do AI work itself first?",
@@ -71,7 +70,7 @@ export default function Page() {
           </thead>
           <tbody>
             <tr><th scope="row">Who does the work</th><td>One person, start to finish</td><td>A team with a project manager</td><td>One person you found through a listing</td><td>You or a staff member</td></tr>
-            <tr><th scope="row">How it charges</th><td>Hourly training, fixed project fees</td><td>Project fees or retainers, often with a minimum. Check current pricing</td><td>Hourly or fixed price per job. Check current pricing</td><td>A tool subscription and your hours</td></tr>
+            <tr><th scope="row">How it charges</th><td>A quote per business after a free call</td><td>Project fees or retainers, often with a minimum. Check current pricing</td><td>Hourly or fixed price per job. Check current pricing</td><td>A tool subscription and your hours</td></tr>
             <tr><th scope="row">Best at</th><td>Scoping, small builds, team training</td><td>Large projects that need many skills at once</td><td>One clear task with a written spec</td><td>Drafting, summaries and research</td></tr>
             <tr><th scope="row">Weak at</th><td>Several large projects at the same time</td><td>Small jobs below their minimum</td><td>Vague goals and long support</td><td>Connecting systems and custom code</td></tr>
             <tr><th scope="row">Who you talk to</th><td>The person doing the work</td><td>Usually an account manager</td><td>The person doing the work</td><td>Nobody</td></tr>
@@ -164,13 +163,11 @@ export default function Page() {
         </p>
 
         <p>
-          Purcell Ventures <Link href="/consulting">AI training</Link> runs $175 an hour for one
-          person with a two-hour minimum, $125 a person for groups of 2 to 8, and $2,500 flat
-          for a half-day workshop of up to 20 people. <Link href="/software">Software</Link>{" "}
-          builds run $1,500 to $3,500 for one tool or integration and $5,000 to $15,000 and up
-          for a full application. Each project starts with a free 30-minute discovery call. The{" "}
-          <Link href="/pricing-comparison">pricing comparison</Link> sets these prices beside
-          typical agency, freelancer and do-it-yourself ranges.
+          Purcell Ventures quotes <Link href="/consulting">AI training</Link> and{" "}
+          <Link href="/software">software</Link> builds per business. Each project starts with a
+          free 30-minute discovery call, and the written quote follows it. The{" "}
+          <Link href="/pricing-comparison">pricing comparison</Link> sets out how agencies,
+          freelancers and do-it-yourself tools each charge.
         </p>
 
         <h2>What should you ask before you hire anyone?</h2>

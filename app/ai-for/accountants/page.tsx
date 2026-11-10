@@ -128,27 +128,23 @@ export default function AiForAccountants() {
 
       <p>
         I can train your preparers and admin staff, add a firm FAQ and booking to your
-        website, or build a small tool around your own checklists and templates. Each route
-        has a published price on its own page, and the first conversation about which one
-        fits is free.
+        website, or build a small tool around your own checklists and templates. The first conversation about which route fits is free, and every project is quoted for your business after that call.
       </p>
 
       <ul>
         <li>
           <strong>Training.</strong> <Link href="/consulting">AI training</Link> on checklist
-          and letter drafting and a staff AI rule: $175 an hour 1-on-1, $125 a person for
-          groups of 2 to 8, or $2,500 for a half-day workshop for up to 20 people.
+          and letter drafting and a staff AI rule, in 1-on-1 sessions, small groups of 2 to 8, or a half-day workshop for up to 20 people.
         </li>
         <li>
           <strong>Website tools.</strong> The <Link href="/digital">Digital plans</Link> add an
-          AI FAQ builder for deadline, fee and portal questions at $179 a month, or an AI
-          chatbot trained on your firm and branded online booking for client meetings at $279
-          a month. Setup is $650 to $1,000, with no contract.
+          AI FAQ builder for deadline, fee and portal questions, or an AI
+          chatbot trained on your firm and branded online booking for client meetings. Pricing is quoted per business, with no contract.
         </li>
         <li>
           <strong>Custom software.</strong> A <Link href="/software">small project</Link>,
           such as a tool that builds each client&apos;s checklist from last year&apos;s list of
-          forms, runs $1,500 to $3,500.
+          forms, is quoted after a free call.
         </li>
       </ul>
 

@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Pricing compared with agencies and freelancers",
+  title: "How agencies, freelancers and I price work",
   description:
-    "Purcell Ventures prices for AI consulting, custom software, digital services and websites, next to typical agency, freelancer and DIY prices.",
+    "How Purcell Ventures, agencies, freelancers and do-it-yourself tools each price AI consulting, custom software and websites, and what each option includes.",
   keywords: [
     "purcell ventures pricing", "agency pricing comparison", "AI consulting pricing",
     "small business digital services cost", "AI tools cost comparison",
   ],
   openGraph: {
-    title: "Pricing compared with agencies and freelancers, Purcell Ventures",
-    description: "Purcell Ventures prices beside typical agency, freelancer and DIY costs.",
+    title: "How agencies, freelancers and I price work, Purcell Ventures",
+    description: "How Purcell Ventures, agencies, freelancers and DIY tools each set a price, and what each includes.",
     url: "https://purcellventures.co/pricing-comparison",
     type: "website",
   

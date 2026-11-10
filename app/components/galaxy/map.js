@@ -4,16 +4,16 @@
 export const MAP = {
   core: { name: "Purcell Ventures", href: "/" },
   systems: [
-    { id: "services", name: "Services", href: "/sites", price: "from $79 a month", line: "AI training, custom software, digital add-ons, websites and personal IT.",
+    { id: "services", name: "Services", href: "/sites", price: "quoted per business", line: "AI training, custom software, digital add-ons, websites and personal IT.",
       planets: [
-        { name: "Websites", href: "/sites", children: 0, tex: "websites", price: "$650 setup, $99 a month" },
-        { name: "Digital add-ons", href: "/digital", children: 8, tex: "digital", price: "from $99 a month" },
-        { name: "AI consulting", href: "/consulting", children: 1, tex: "consulting", price: "from $125 a person" },
-        { name: "Custom software", href: "/software", children: 0, tex: "software", price: "scoped on a discovery call" },
-        { name: "Steady, personal IT", href: "/steady", children: 1, tex: "steady", price: "from $79 a month" },
+        { name: "Websites", href: "/sites", children: 0, tex: "websites", price: "quoted after a free call" },
+        { name: "Digital add-ons", href: "/digital", children: 8, tex: "digital", price: "quoted per business" },
+        { name: "AI consulting", href: "/consulting", children: 1, tex: "consulting", price: "quoted per business" },
+        { name: "Custom software", href: "/software", children: 0, tex: "software", price: "quoted after a discovery call" },
+        { name: "Steady, personal IT", href: "/steady", children: 1, tex: "steady", price: "quoted per household" },
       ],
       belt: { name: "Free tools", count: 26, href: "/digital/tools" } },
-    { id: "proof", name: "Proof", href: "/portfolio", price: "", line: "Shipped projects, case studies and my prices next to the alternatives.",
+    { id: "proof", name: "Proof", href: "/portfolio", price: "", line: "Shipped projects, case studies and how my pricing compares with the alternatives.",
       planets: [
         { name: "Portfolio", href: "/portfolio", children: 17, tex: "portfolio" },
         { name: "Case studies", href: "/case-studies", children: 0, tex: "casestudies" },

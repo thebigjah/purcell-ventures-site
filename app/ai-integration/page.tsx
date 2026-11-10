@@ -121,9 +121,9 @@ export default function AiIntegration() {
       <p>
         The website version is the safer start, because every answer stays written down and
         you can read the log. I run an AI FAQ on client sites in the{" "}
-        <Link href="/digital">Digital Growth plan</Link> at $179 a month, and an AI chatbot
-        trained on the business in the Full Service plan at $279 a month. Phone and text work
-        goes through custom integrations, which I price per scope.
+        <Link href="/digital">Digital Growth plan</Link>, and an AI chatbot trained on the
+        business in the Full Service plan. Phone and text work goes through custom
+        integrations, which I quote per scope.
       </p>
 
       <h2>How do I get an AI to answer from my own business documents?</h2>
@@ -169,10 +169,9 @@ export default function AiIntegration() {
       <h2>How much does an AI integration cost?</h2>
 
       <p>
-        At Purcell Ventures, a small software project such as one integration runs $1,500 to
-        $3,500. Full applications run $5,000 to $15,000 and up. Monthly Digital plans with
-        ready-made AI tools run $179 to $279 a month, plus a one-time setup fee of $650 to
-        $1,000.
+        At Purcell Ventures, every integration is quoted after a free call. The price depends
+        on how many systems the work touches and how much the AI has to do. The monthly
+        Digital plans with ready-made AI tools are quoted for your business the same way.
       </p>
 
       <p>

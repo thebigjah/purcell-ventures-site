@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 // Written around what Auburn businesses do (Auburn University, the semester and football calendar, student housing, and the
 // restaurants and shops downtown),
 // so the page answers a Auburn owner's question instead of swapping a city name into
-// the pillar. Prices and delivery format come from /consulting, /software and
+// the pillar. Delivery format comes from /consulting, /software and
 // /ai-consulting only. No clients, results or Auburn address, because the company
 // has none there.
 
@@ -15,7 +15,7 @@ const URL = "https://purcellventures.co/ai-consulting/auburn-al";
 export const metadata: Metadata = {
   title: { absolute: "AI consulting in Auburn, Alabama, Purcell Ventures" },
   description:
-    "AI consulting in Auburn, Alabama for restaurants, shops, student housing and young founders. Training, automation, custom software and prices.",
+    "AI consulting in Auburn, Alabama for restaurants, shops, student housing and young founders. Training, automation and custom software, quoted per business.",
   keywords: [
     "AI consulting Auburn",
     "AI consultant Auburn Alabama",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI consulting in Auburn, Alabama",
     description:
-      "AI consulting in Auburn, Alabama for restaurants, shops, student housing and young founders. Training, automation, custom software and prices.",
+      "AI consulting in Auburn, Alabama for restaurants, shops, student housing and young founders. Training, automation and custom software, quoted per business.",
     url: URL,
     type: "website",
     images: ["/opengraph-image"],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI consulting in Auburn, Alabama: Purcell Ventures",
-    description: "AI consulting in Auburn, Alabama for restaurants, shops, student housing and young founders. Training, automation, custom software and prices.",
+    description: "AI consulting in Auburn, Alabama for restaurants, shops, student housing and young founders. Training, automation and custom software, quoted per business.",
   },
   alternates: { canonical: URL },
 };
@@ -48,7 +48,7 @@ export const QA: [string, string][] = [
   ["Can a restaurant use AI to get ready for a home football weekend?",
    "AI can draft the posts with game-day hours and specials, a staff schedule for the rush and replies to the reviews that come after. A manager checks the schedule and the hours before anything goes out."],
   ["How much does AI training cost for an Auburn business?",
-   "1-on-1 consulting costs $175 an hour, small group training costs $125 a person for 2 to 8 people, and a half-day workshop costs $2,500 flat for up to 20 people. Small software projects run $1,500 to $3,500, and Elijah quotes automation per project after a free conversation."],
+   "Elijah quotes each Auburn business after a free call. The price depends on the number of people in the session, the tools your team already uses and any automation or software built afterward."],
   ["Does Purcell Ventures have an office in Auburn?",
    "No. Purcell Ventures works from Tuscaloosa. Elijah comes to your business for training sessions, and the rest of the work runs by phone and email."],
 ];
@@ -85,10 +85,10 @@ const schema = {
         "@type": "OfferCatalog",
         "name": "AI consulting services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "1-on-1 AI consulting" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "175", "priceCurrency": "USD", "unitCode": "HUR" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small group AI training, 2 to 8 people" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "125", "priceCurrency": "USD", "unitText": "per person" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half-day AI workshop for up to 20 people" }, "price": "2500", "priceCurrency": "USD" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small custom software project" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500", "maxPrice": "3500", "priceCurrency": "USD" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "1-on-1 AI consulting" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small group AI training, 2 to 8 people" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half-day AI workshop for up to 20 people" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom software project" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI automation, quoted per project" } },
         ],
       },

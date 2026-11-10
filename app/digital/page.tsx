@@ -21,9 +21,9 @@ import ServiceSchema from "@/app/components/ServiceSchema";
 //   invented numbers (subscriber counts, open rates, RSVP names, reviews). In their place,
 //   every add-on with a working demo on this site links to it.
 // - The floating dashboard graphic in the hero went for the same reason.
-// - The three plans carry the decided prices: Starter $99, Growth $179, Full Service $279.
-//   They used to read "Tier I, II, III" under the websites page's plan names with "pricing
-//   on the discovery call". The old names are kept in each plan's description.
+// - The three plans keep their names and contents but carry no price. From 9 Nov 2026
+//   Elijah quotes every business separately after a free call, so no plan shows a number.
+//   The old website-plan names are kept in each plan's description.
 // - Metadata, canonical and JSON-LD live in layout.tsx.
 
 type Addon = { name: string; desc: string; demo?: string };
@@ -114,7 +114,7 @@ const CONTACT_HREF = "#contact";
 const PLANS = [
   {
     name: "Starter",
-    price: "$99 a month",
+    price: "Quoted for your business",
     for: "Light tools, open to every client. I set them up in one to two days. On the website plans, I call this level Site Care.",
     items: [
       "Color Palette Tool",
@@ -129,7 +129,7 @@ const PLANS = [
   },
   {
     name: "Growth",
-    price: "$179 a month",
+    price: "Quoted for your business",
     for: "Tools that connect to your site or send messages for you. On the website plans, I call this level Site Care plus Lead Ops.",
     items: [
       "Everything in Starter",
@@ -145,7 +145,7 @@ const PLANS = [
   },
   {
     name: "Full Service",
-    price: "$279 a month",
+    price: "Quoted for your business",
     for: "Marketing add-ons that I adjust every month. On the website plans, I call this level Marketing Partner.",
     items: [
       "Everything in Growth",
@@ -153,7 +153,7 @@ const PLANS = [
       "Online Booking, branded and connected to your site",
       "AI Estimate Generator, from a photo to a quote",
       "Email and SMS campaign system",
-      "Custom integrations, priced per scope",
+      "Custom integrations, scoped with you",
     ],
   },
 ].map((p) => ({
@@ -167,10 +167,10 @@ const PLANS = [
 
 const FAQ = [
   { q: "How is this different from Wix or Squarespace?", a: "You manage Wix and Squarespace yourself. I build and maintain the site and add AI tools such as a chatbot trained on your business, AI-drafted social posts and automated review responses." },
-  { q: "Why does it cost less than a typical agency?", a: "I reuse the same modules across clients instead of building each site from scratch, and I use AI tools to write and test code. Both cut my hours, so I can charge less." },
+  { q: "How is the price set?", a: "I quote each business after a free call, based on the add-ons you pick and how much setup they need. You see the full quote before any work starts." },
   { q: "Do I own the website?", a: "Yes. The site, content and domain are yours. If you leave, I hand over the full source code and all assets." },
   { q: "What if I need something that is not on the list?", a: "Ask me. If it is in scope, I add it. If it is a bigger custom build, I quote it separately before any work starts." },
-  { q: "What does the setup fee cover?", a: "The first build: your branding, colors, content and settings. After that, the monthly plan covers maintenance, updates and support." },
+  { q: "What does the setup cover?", a: "The first build: your branding, colors, content and settings. After that, the monthly plan covers maintenance, updates and support." },
   { q: "Can I start small and add more later?", a: "Yes. Start with a website and chatbot and add booking or other tools when you want them." },
 ];
 
@@ -181,19 +181,18 @@ export default function DigitalPage() {
         planet="digital"
         kicker="Digital add-ons"
         title="Websites and business tools for small businesses"
-        lede="I add booking, a CRM, a chatbot and other business tools to your website, and I maintain them for you. Plans start at $99 a month."
-        meta="Setup $650 to $1,000. No contract. I reply within one business day."
+        lede="I add booking, a CRM, a chatbot and other business tools to your website, and I maintain them for you. I quote each business after a free call."
+        meta="No contract. I reply within one business day."
         actions={<>
           <Button href={CONTACT_HREF}>Book a free demo</Button>
           <Button href="/digital/tools" ghost>Try the tools free</Button>
-          <Button href="#pricing" ghost>See pricing</Button>
+          <Button href="#pricing" ghost>See the plans</Button>
         </>}
       />
 
       <Section stack>
         <Figures
           items={[
-            ["$99", "a month for the Starter plan"],
             [String(ADDON_COUNT), "add-ons in the catalog"],
             ["You", "own the code, the domain and the content"],
             ["1 day", "for a reply, on business days"],
@@ -218,15 +217,15 @@ export default function DigitalPage() {
       <Section
         id="build-team"
         title="Tools compared with hiring"
-        intro="Pick the jobs you would otherwise hire someone for, and compare their salaries with the cost of my subscription."
+        intro="Pick the jobs you would otherwise hire someone for, and see what those roles would cost in salary."
       >
         <TeamBuilder />
       </Section>
 
       <Section
         id="pricing"
-        title="Plans and prices"
-        intro="Each plan includes the tools in the one before it. Setup is a one-time fee of $650 to $1,000, depending on the add-ons. There is no contract and you can cancel at any time."
+        title="Plans"
+        intro="Each plan includes the tools in the one before it. Every plan is quoted for your business after a free call. There is no contract and you can cancel at any time."
       >
         <Tiers tiers={PLANS} />
       </Section>
@@ -241,7 +240,7 @@ export default function DigitalPage() {
 
       <Section title="Custom bundles">
         <Prose>
-          <p>Tell me which tools you need, whether that is two or twelve. I build them as one bundle for a flat monthly price, and you own everything I build for you.</p>
+          <p>Tell me which tools you need, whether that is two or twelve. I build them as one bundle with one monthly quote, and you own everything I build for you.</p>
         </Prose>
         <div className="ui-hero__actions">
           <Button href={CONTACT_HREF}>Ask for a bundle quote</Button>
@@ -253,7 +252,7 @@ export default function DigitalPage() {
           items={[
             { name: "Direct contact", line: "You text or call me, the person who built your tools." },
             { name: "AI tools included", line: "A chatbot trained on your business, plus AI drafts of your captions and posts." },
-            { name: "Priced below agency rates", line: "Agencies charge $2,000 or more a month. My plans start at $99." },
+            { name: "Quoted per business", line: "You get one quote for the tools you pick, after a free call." },
             { name: "You own everything", line: "You own the code, the domain and the content. I hand it over when you ask." },
           ]}
         />
@@ -268,7 +267,7 @@ export default function DigitalPage() {
             My first business was Mantle Field Services, doing gutters, pressure washing and lawn care, so I have done the scheduling, quoting and invoicing these tools handle.
           </p>
           <p>
-            I build with AI coding tools such as Claude Code, which cuts my build time and keeps my prices low.
+            I build with AI coding tools such as Claude Code, which cuts my build time.
           </p>
         </Prose>
       </Section>

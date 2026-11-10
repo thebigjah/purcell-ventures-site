@@ -53,7 +53,7 @@ const ABOUT = [
   {
     h: "The version on your own website",
     p: [
-      <>Event Registration is in the Growth plan, $179 a month, with a one-time setup fee of $650 to $1,000. On that plan it runs on your own site with RSVPs, an attendee list and automatic reminder emails, and I set it up and maintain it. <Link href="/digital#pricing">Compare the plans</Link>.</>,
+      <>Event Registration is in the Growth plan, which I quote for your business after a free call. On that plan it runs on your own site with RSVPs, an attendee list and automatic reminder emails, and I set it up and maintain it. <Link href="/digital#pricing">Compare the plans</Link>.</>,
     ],
   },
 ];

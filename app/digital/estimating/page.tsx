@@ -78,7 +78,7 @@ const ABOUT = [
   {
     h: "The version on your own website",
     p: [
-      <>Online Estimating is one of the add-ons in the Growth plan, $179 a month, with a one-time setup fee of $650 to $1,000. On that plan I set it up for your business and maintain it, and estimates go out as shareable links. The Full Service plan, $279 a month, adds an AI estimate generator that turns a photo into a quote. <Link href="/digital#pricing">Compare the plans</Link>.</>,
+      <>Online Estimating is one of the add-ons in the Growth plan, which I quote for your business after a free call. On that plan I set it up for your business and maintain it, and estimates go out as shareable links. The Full Service plan adds an AI estimate generator that turns a photo into a quote. <Link href="/digital#pricing">Compare the plans</Link>.</>,
     ],
   },
 ];

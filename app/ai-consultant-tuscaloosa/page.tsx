@@ -21,7 +21,7 @@ export default function AiConsultantTuscaloosa() {
       kicker="Tuscaloosa, Alabama"
       title="AI consultant in Tuscaloosa"
       lede="AI systems, custom software and automation for Tuscaloosa businesses, built by one person who lives here. The first conversation is free."
-      meta="Student websites $500, with optional upkeep at $25 a month. Software and automation quoted per project."
+      meta="Websites, software and automation, each quoted after a free call."
     >
       <p>
         I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data
@@ -36,12 +36,12 @@ export default function AiConsultantTuscaloosa() {
         want to know if that is true.
       </p>
 
-      <h2>What I do and what it costs</h2>
+      <h2>What I do and how I price it</h2>
 
       <p>
-        <strong>Websites.</strong> Built, hosted and maintained. For University of Alabama
-        students and student-run businesses the price is $500, with an
-        optional $25 a month to keep it updated.
+        <strong>Websites.</strong> Built, hosted and maintained, for local businesses and for
+        student-run businesses at the University of Alabama. Each site is quoted for the
+        business after a free call.
       </p>
 
       <p>

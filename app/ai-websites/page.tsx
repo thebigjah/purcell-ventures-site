@@ -6,7 +6,7 @@ import { QA } from "./layout";
 
 // Pillar for the AI websites cluster, on the same PostLayout as /ai-consulting. It leads
 // with AI findability, since websites are the last-listed PV service, and reaches builders
-// and prices near the end. Question H2s, each answered in the paragraph under it.
+// and how pricing works near the end. Question H2s, each answered in the paragraph under it.
 
 export default function AiWebsites() {
   return (
@@ -207,9 +207,9 @@ export default function AiWebsites() {
       </p>
 
       <p>
-        I add an AI FAQ to an existing site on the <Link href="/digital">Digital Growth plan</Link>{" "}
-        at $179 a month, and an AI chatbot with online booking on the Full Service plan at $279
-        a month.
+        I add an AI FAQ to an existing site on the <Link href="/digital">Digital Growth plan</Link>,
+        and an AI chatbot with online booking on the Full Service plan. Each plan is quoted for
+        your business after a free call.
       </p>
 
       <h2>Should I redesign my website for AI search or fix the one I have?</h2>
