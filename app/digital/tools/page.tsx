@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero, Section, Rows, Button, ClosingCall } from "@/app/components/ui";
 import { AI_TOOLS, type AIToolConfig } from "@/lib/ai-tools";
+import FaqBlock, { type QA } from "@/app/components/FaqBlock";
 
 export const metadata: Metadata = {
   title: "Free AI tools for small businesses",
@@ -18,6 +19,13 @@ const CATEGORY_LABEL: Record<AIToolConfig["category"], string> = {
 };
 
 const CATEGORY_ORDER: AIToolConfig["category"][] = ["AI-Powered", "Communication & Marketing", "Branding & Identity", "Operations & Finance"];
+
+const QA: QA[] = [
+  ["Are these AI tools free?",
+   "Yes. Every tool here is free and needs no email signup. Enter your business details and the tool writes the result."],
+  ["Can I get one of these tools on my own website?",
+   "Yes. Elijah can brand any of these tools and connect it to your site and your business data. He quotes every plan for your business after a free call."],
+];
 
 const DEMOS = [
   { slug: "loyalty", name: "Loyalty punch card", tagline: "A digital punch card for repeat customers.", category: "Customer management" },
@@ -56,6 +64,8 @@ export default function ToolsIndexPage() {
       <Section title="Add-on demos" intro="Working versions of add-ons I install on client sites. They run in your browser and save only to your device.">
         <Rows items={DEMOS.map((d) => ({ name: d.name, line: `${d.tagline} ${d.category}.`, href: `/digital/${d.slug}` }))} />
       </Section>
+
+      <FaqBlock qa={QA} />
 
       <ClosingCall
         title="A branded version on your site"

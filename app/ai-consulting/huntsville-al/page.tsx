@@ -4,7 +4,6 @@ import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
 
 // City page on the same single-column PostLayout as the pillar. Huntsville's version
 // spends its length on contract data rules, since that is what decides AI work there.
@@ -180,7 +179,6 @@ export default function AiConsultingHuntsville() {
         <Link href="/ai-consulting/auburn-al">Auburn</Link>.
       </p>
       <UpdatedLine path={PATH} bare />
-      <ServiceSchema />
       <PageDates path={PATH} />
     </PostLayout>
   );

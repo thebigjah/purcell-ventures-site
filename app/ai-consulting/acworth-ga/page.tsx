@@ -4,7 +4,7 @@ import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
+import cobb from "@/lib/research/cobb-2026-11-summary.json";
 
 // City page on the same single-column PostLayout as the pillar. Acworth's version follows
 // the lake season and the steady stream of new homeowners, since those set the repeated
@@ -49,6 +49,15 @@ export default function AiConsultingAcworth() {
         Contractors get calls from new homeowners who want a quote this week. A small office
         answers all of it, often with the owner doing the answering, and that repeated work is
         where AI helps a small business most.
+      </p>
+
+      <p>
+        I checked {cobb.frame.acworth} business websites in Acworth for my{" "}
+        <Link href="/research/cobb-county-small-business-websites-2026">
+          study of {cobb.frame.total.toLocaleString("en-US")} small business websites across Cobb County
+        </Link>{" "}
+        in November 2026. Across the county, {cobb.frames.county.all_three_ai_signals.pct_of_own_domain_pages} percent
+        of the working sites on a business&rsquo;s own domain had all three signals I measured for AI tools: business structured data, an llms.txt file and no AI crawler blocked in robots.txt.
       </p>
 
       <h2>What AI work fits Acworth businesses?</h2>
@@ -178,7 +187,6 @@ export default function AiConsultingAcworth() {
         <Link href="/ai-consulting/marietta-ga">Marietta</Link>.
       </p>
       <UpdatedLine path={PATH} bare />
-      <ServiceSchema />
       <PageDates path={PATH} />
     </PostLayout>
   );

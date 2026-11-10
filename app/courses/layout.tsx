@@ -13,25 +13,10 @@ export const metadata: Metadata = {
 // NO breadcrumb here. This layout wraps all three course pages and Next inherits layout
 // output, so a trail declared here appears on every child alongside the child's own and
 // the two disagree about which page you are on. Each page declares its own instead.
-const FAQ_LD = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What courses does Elijah Purcell offer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Three self-paced courses: the college application playbook, the business launch playbook, and Zero to Automated, which covers building AI tools for small business work."
-      }
-    }
-  ]
-};
 
 export default function CoursesLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_LD) }} />
       {children}
     </>
   );

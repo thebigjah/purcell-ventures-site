@@ -4,6 +4,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PageHero, Section, Prose, Facts, Rows } from "@/app/components/ui";
 import { GUIDES } from "@/lib/guides";
 import { CONTACT } from "@/lib/contact";
+import { pageDates, formatDate } from "@/lib/page-dates";
 
 // Written in the THIRD PERSON on purpose. A search engine can lift "Elijah Purcell is the
 // Founder/CEO of Purcell Ventures LLC" out of a page and present it as a fact about a named
@@ -20,7 +21,7 @@ const FACTS: [string, string][] = [
   ["Full name", "Elijah Brent Purcell"],
   ["Born", "August 2007"],
   ["Role", "Founder/CEO, Purcell Ventures LLC"],
-  ["Company", `Purcell Ventures LLC, Georgia, control number ${CONTACT.llcControlNumber}, formed 8 April 2025`],
+  ["Company", `Purcell Ventures LLC, a Tuscaloosa, Alabama AI and software company (a Georgia LLC), control number ${CONTACT.llcControlNumber}, formed 8 April 2025`],
   ["University", "University of Alabama, New College and Honors College, Tuscaloosa, Class of 2030"],
   ["Studying", "Psychology and data science, pre-med track toward psychiatry"],
   ["Also", "Independent contractor with Mercor Intelligence"],
@@ -62,13 +63,15 @@ const WRITING: [string, string, string][] = [
 ];
 
 export default function WhoPage() {
+  // The same value the ProfilePage dateModified uses in layout.tsx.
+  const reviewed = pageDates("/who")?.modified;
   return (
     <main>
       <PageHero
         kicker="Elijah Purcell"
         title="Who is Elijah Purcell?"
-        lede="Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia company that builds AI systems and software for local businesses. He founded it at seventeen and runs it from Tuscaloosa, Alabama. He studies psychology and data science at the University of Alabama (New College, Honors College, Class of 2030), pre-med toward psychiatry."
-        meta="Last reviewed 20 August 2026"
+        lede="Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Tuscaloosa, Alabama AI and software company (a Georgia LLC) that builds AI systems and software for local businesses. He founded it at seventeen. He studies psychology and data science at the University of Alabama (New College, Honors College, Class of 2030), pre-med toward psychiatry."
+        meta={reviewed && <>Last reviewed <time dateTime={reviewed}>{formatDate(reviewed)}</time></>}
         crumbs={<Breadcrumbs trail={[
           { name: "Home", href: "/" },
           { name: "Who is Elijah Purcell", href: "/who" },

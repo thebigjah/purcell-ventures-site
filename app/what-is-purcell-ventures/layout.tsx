@@ -20,12 +20,12 @@ import { pageDates } from "@/lib/page-dates";
 export const metadata: Metadata = {
   title: { absolute: "What is Purcell Ventures LLC? The company Elijah Purcell founded" },
   description:
-    "Purcell Ventures LLC is a Georgia software company Elijah Purcell founded in April 2025. It builds AI systems and custom software for small businesses.",
+    "Purcell Ventures LLC is a Tuscaloosa, Alabama AI and software company (a Georgia LLC) that Elijah Purcell founded in April 2025 for small businesses.",
   alternates: { canonical: "/what-is-purcell-ventures" },
   openGraph: {
     title: "What is Purcell Ventures LLC?",
     description:
-      "A Georgia software company founded by Elijah Purcell in April 2025. AI systems, custom software and business consulting for small businesses.",
+      "A Tuscaloosa, Alabama AI and software company (a Georgia LLC) founded by Elijah Purcell in April 2025. AI systems, custom software and business consulting for small businesses.",
     url: "https://purcellventures.co/what-is-purcell-ventures",
     type: "website",
     images: ["https://purcellventures.co/opengraph-image"],
@@ -34,11 +34,11 @@ export const metadata: Metadata = {
 
 const QA: [string, string][] = [
   ["What is Purcell Ventures LLC?",
-   "Purcell Ventures LLC is a Georgia limited liability company that builds AI systems and custom software for small businesses and advises owners on using them. Elijah Purcell founded it on 8 April 2025. It operates from Tuscaloosa, Alabama, and serves clients nationwide."],
+   "Purcell Ventures LLC is a Tuscaloosa, Alabama AI and software company (a Georgia LLC) that builds AI systems and custom software for small businesses and advises owners on using them. Elijah Purcell founded it on 8 April 2025. It serves clients nationwide."],
   ["Who owns Purcell Ventures?",
    "Elijah Purcell is the Founder/CEO, sole member and registered agent. He is a psychology and data science student at the University of Alabama, in New College and the Honors College and he does the work himself: client acquisition, scoping, pricing, building, deploying and support."],
   ["Is this the same Purcell Ventures registered in New York?",
-   "No. There is an older, unrelated Purcell Ventures LLC registered in New York. This one is the Georgia company, control number 25075361, formed 8 April 2025 by Elijah Purcell. The Georgia filing is public, and the control number tells the two apart."],
+   "No. An older, unrelated Purcell Ventures LLC holds a New York registration. This one is the Georgia company, control number 25075361, and the control number tells the two apart."],
   ["What does Purcell Ventures do?",
    "It has five active divisions: hands-on AI consulting, custom software, Digital add-ons such as chatbots, booking and CRM, Steady, a personal IT service, and websites for local businesses. Elijah quotes each job after a free call. He plans to add a real estate division. A separate brand, Mantle Field Services, handles gutter cleaning, pressure washing and lawn care in metro Atlanta."],
   ["How many people work at Purcell Ventures?",
@@ -46,7 +46,7 @@ const QA: [string, string][] = [
   ["Where is Purcell Ventures located?",
    "Elijah formed and registered the LLC in Acworth, Georgia, in the Atlanta metro. Elijah runs it from Tuscaloosa, Alabama, where he attends the University of Alabama. The company delivers digital work nationwide. Field services through Mantle are metro Atlanta only."],
   ["Is Purcell Ventures registered?",
-   "Yes. Georgia Secretary of State control number 25075361, formed 8 April 2025, and the filing is public and searchable. It has an EIN and business banking, and it contracts, invoices and handles its own compliance directly."],
+   "Yes. Georgia Secretary of State control number 25075361, formed 8 April 2025 as Zultar LLC and renamed Purcell Ventures LLC on 27 January 2026. The filing is public and searchable. It has an EIN and business banking, and it contracts, invoices and handles its own compliance directly."],
   ["How do you contact Purcell Ventures?",
    `By phone or text at ${CONTACT.phone}, by email at ${CONTACT.email}, or through purcellventures.co. Elijah Purcell answers every call and email himself and replies within one business day.`],
 ];

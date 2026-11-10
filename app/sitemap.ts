@@ -22,10 +22,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Caught by running this site's own published checklist against it.
 
     // Deliberately absent: /consulting/book, /uses, /verses and /writing.
-    // All four are Disallowed in robots.txt, and listing a page in the sitemap while
-    // forbidding the crawler to read it is a contradiction Google resolves badly: the
-    // URL can surface as a bare link with no description at all. Removed here rather
-    // than unblocked there, because unblocking would publish pages he chose to hide.
+    // /consulting/book and /writing are Disallowed in robots.txt. /uses and /verses were
+    // unblocked on 9 Nov 2026 but stay out of this list until he chooses to list them.
+    // Listing a page in the sitemap while forbidding the crawler to read it is a
+    // contradiction Google resolves badly: the URL can surface as a bare link with no
+    // description at all.
     //
     // /links WAS in that list until 22 Aug 2026. He asked for it to be unblocked, so it
     // is now allowed in robots.txt and belongs here. The pair has to move together: a
@@ -48,15 +49,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/digital/inventory`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/digital/loyalty`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
 
+    // Hub and service pages added 9 Nov 2026. Each exists, carries its own canonical and
+    // has no noindex, so leaving it out was a discovery gap.
+    { url: `${BASE}/blog`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${BASE}/sites`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/portfolio`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/digital/tools`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/how-we-work`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/pricing-comparison`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/steady`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/contact`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/tutorials`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.5 },
+    { url: `${BASE}/llms-txt`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.5 },
+
     // Booking and case studies, conversion paths
     { url: `${BASE}/ai-readiness`,        lastModified: aug22, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/ai-cost-calculator`,  lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/ai-policy-template`,  lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/ai-visibility-check`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
     // Research, first study published 9 Nov 2026, Cobb County study added the same night
-    { url: `${BASE}/research`, lastModified: new Date("2026-11-10T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/research`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/research/alabama-small-business-websites-2026`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "yearly", priority: 0.7 },
-    { url: `${BASE}/research/cobb-county-small-business-websites-2026`, lastModified: new Date("2026-11-10T00:00:00Z"), changeFrequency: "yearly", priority: 0.7 },
+    { url: `${BASE}/research/cobb-county-small-business-websites-2026`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "yearly", priority: 0.7 },
     { url: `${BASE}/case-studies`,    lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // Every post, not the two that happened to be listed. A post absent from the

@@ -4,7 +4,7 @@ import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
+import cobb from "@/lib/research/cobb-2026-11-summary.json";
 
 // City page on the same single-column PostLayout as the pillar. Marietta's version spends
 // its length on two sets of data rules, export rules for the aerospace suppliers and patient
@@ -48,6 +48,15 @@ export default function AiConsultingMarietta() {
         and specs that export rules and contracts restrict. Medical practices handle patient
         information that federal privacy law protects. Both decide which work AI may touch
         before anyone opens a chat window.
+      </p>
+
+      <p>
+        I checked {cobb.frame.marietta} business websites in Marietta for my{" "}
+        <Link href="/research/cobb-county-small-business-websites-2026">
+          study of {cobb.frame.total.toLocaleString("en-US")} small business websites across Cobb County
+        </Link>{" "}
+        in November 2026. Across the county, {cobb.frames.county.jsonld_org_or_localbusiness.pct_of_own_domain_pages} percent
+        of the working sites on a business&rsquo;s own domain carried structured data that names the business and its type for search engines and AI tools.
       </p>
 
       <h2>What AI work fits Marietta businesses?</h2>
@@ -180,7 +189,6 @@ export default function AiConsultingMarietta() {
         <Link href="/ai-consulting/acworth-ga">Acworth</Link>.
       </p>
       <UpdatedLine path={PATH} bare />
-      <ServiceSchema />
       <PageDates path={PATH} />
     </PostLayout>
   );

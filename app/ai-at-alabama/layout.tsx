@@ -63,7 +63,7 @@ export default function AiAtAlabamaLayout({ children }: { children: React.ReactN
     datePublished: "2026-08-20",
     dateModified: pageDates("/ai-at-alabama", "2026-08-20")?.modified,
     url: "https://purcellventures.co/ai-at-alabama",
-    author: { "@id": "https://purcellventures.co/#founder" },
+    author: { "@id": "https://elijahpurcell.com/#person" },
     publisher: { "@id": "https://purcellventures.co/#organization" },
     about: [
       { "@type": "CollegeOrUniversity", name: "University of Alabama", url: "https://www.ua.edu" },

@@ -33,7 +33,7 @@ const LD = {
       "url": "https://purcellventures.co/agentic-ai",
       "datePublished": "2026-08-21",
       "dateModified": pageDates("/agentic-ai", "2026-08-21")?.modified,
-      "author": { "@id": "https://purcellventures.co/#founder" },
+      "author": { "@id": "https://elijahpurcell.com/#person" },
       "publisher": { "@id": "https://purcellventures.co/#organization" },
       "about": [
         { "@type": "Thing", "name": "Autonomous AI agents" },

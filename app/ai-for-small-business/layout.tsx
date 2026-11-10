@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageDates } from "@/lib/page-dates";
 import type { ReactNode } from "react";
 
 // PILLAR FOR THE AI FOR SMALL BUSINESS CLUSTER (9 Nov 2026).
@@ -55,9 +56,9 @@ const schema = {
       "@id": "https://purcellventures.co/ai-for-small-business#article",
       "headline": "AI for small business",
       "url": "https://purcellventures.co/ai-for-small-business",
-      "datePublished": "2026-11-09",
-      "dateModified": "2026-11-09",
-      "author": { "@id": "https://purcellventures.co/#founder" },
+      "datePublished": pageDates("/ai-for-small-business")!.published,
+      "dateModified": pageDates("/ai-for-small-business")!.modified,
+      "author": { "@id": "https://elijahpurcell.com/#person" },
       "publisher": { "@id": "https://purcellventures.co/#organization" },
       "about": ["AI for small business", "AI use policy", "Checking AI output", "AI tools"],
     },
@@ -69,14 +70,6 @@ const schema = {
         "name": q,
         "acceptedAnswer": { "@type": "Answer", "text": a },
       })),
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://purcellventures.co" },
-        { "@type": "ListItem", "position": 2, "name": "Consulting", "item": "https://purcellventures.co/consulting" },
-        { "@type": "ListItem", "position": 3, "name": "AI for small business", "item": "https://purcellventures.co/ai-for-small-business" },
-      ],
     },
   ],
 };

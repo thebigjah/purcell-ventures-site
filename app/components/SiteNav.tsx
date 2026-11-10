@@ -14,7 +14,8 @@ const MENUS: { label: string; items: Item[] }[] = [
   { label: "Services", items: [
     { href: "/sites", label: "Websites" },
     { href: "/digital", label: "Digital add-ons" },
-    { href: "/consulting", label: "AI consulting" },
+    { href: "/ai-consulting", label: "AI consulting" },
+    { href: "/consulting", label: "AI training" },
     { href: "/software", label: "Custom software" },
     { href: "/steady", label: "Steady, personal IT" },
     { href: "/pricing-comparison", label: "Prices compared" },

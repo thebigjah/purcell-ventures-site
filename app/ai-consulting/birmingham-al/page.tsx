@@ -4,7 +4,6 @@ import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
 
 // City page on the same single-column PostLayout as the pillar. The sections follow the
 // work Birmingham offices do, and each answer comes first under its question heading.
@@ -172,7 +171,6 @@ export default function AiConsultingBirmingham() {
         <Link href="/ai-consulting/auburn-al">Auburn</Link>.
       </p>
       <UpdatedLine path={PATH} bare />
-      <ServiceSchema />
       <PageDates path={PATH} />
     </PostLayout>
   );

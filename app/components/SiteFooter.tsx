@@ -12,7 +12,8 @@ const COLS: { title: string; links: { href: string; label: string; rel?: string 
   {
     title: "Services",
     links: [
-      { href: "/consulting", label: "AI consulting" },
+      { href: "/ai-consulting", label: "AI consulting" },
+      { href: "/consulting", label: "AI training" },
       { href: "/software", label: "Custom software" },
       { href: "/digital", label: "Digital add-ons" },
       { href: "/sites", label: "Websites" },

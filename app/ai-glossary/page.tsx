@@ -3,7 +3,6 @@ import Link from "next/link";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PostLayout } from "@/app/components/ui";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
 import { CONTACT } from "@/lib/contact";
 import { TERMS } from "./terms";
 
@@ -45,7 +44,7 @@ const LD = {
   url: URL,
   inLanguage: "en-US",
   publisher: { "@id": "https://purcellventures.co/#organization" },
-  author: { "@id": "https://purcellventures.co/#founder" },
+  author: { "@id": "https://elijahpurcell.com/#person" },
   hasDefinedTerm: TERMS.map((t) => ({
     "@type": "DefinedTerm",
     "@id": `${URL}#${t.id}`,
@@ -119,7 +118,6 @@ export default function Page() {
         </p>
       </PostLayout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LD) }} />
-      <ServiceSchema />
       <PageDates path={PATH} name="AI glossary for small business owners" />
     </>
   );

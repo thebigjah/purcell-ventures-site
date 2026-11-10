@@ -71,8 +71,8 @@ const schema = {
       "description":
         "AI consulting, custom software development, and web development for businesses in Tuscaloosa, Alabama, delivered by Elijah Purcell of Purcell Ventures LLC.",
       "provider": { "@id": "https://purcellventures.co/#organization" },
-      "founder": { "@id": "https://purcellventures.co/#founder" },
-      "employee": { "@id": "https://purcellventures.co/#founder" },
+      "founder": { "@id": "https://elijahpurcell.com/#person" },
+      "employee": { "@id": "https://elijahpurcell.com/#person" },
       "areaServed": [
         { "@type": "City", "name": "Tuscaloosa", "containedInPlace": { "@type": "AdministrativeArea", "name": "Alabama" } },
         { "@type": "AdministrativeArea", "name": "Alabama" },
@@ -107,14 +107,6 @@ const schema = {
         "name": q,
         "acceptedAnswer": { "@type": "Answer", "text": a },
       })),
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://purcellventures.co" },
-        { "@type": "ListItem", "position": 2, "name": "Consulting", "item": "https://purcellventures.co/consulting" },
-        { "@type": "ListItem", "position": 3, "name": "AI consultant in Tuscaloosa", "item": "https://purcellventures.co/ai-consultant-tuscaloosa" },
-      ],
     },
   ],
 };

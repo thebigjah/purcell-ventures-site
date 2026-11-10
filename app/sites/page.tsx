@@ -3,7 +3,6 @@ import Link from "next/link";
 import { PageHero, Section, Tiers, Rows, Button, ClosingCall, Prose } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
 
 export const metadata: Metadata = {
   title: "Custom websites for local businesses",
@@ -139,7 +138,6 @@ export default function SitesPage() {
         href={CALL}
       />
       <UpdatedLine path="/sites" />
-      <ServiceSchema />
       <PageDates path="/sites" />
     </main>
   );

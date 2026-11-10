@@ -1,8 +1,12 @@
 import Link from "next/link";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import { pageDates, formatDate } from "@/lib/page-dates";
 import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
+
+// The visible Updated line and the Article dateModified in layout.tsx read the same value.
+const DATES = pageDates("/ai-websites")!;
 
 // Pillar for the AI websites cluster, on the same PostLayout as /ai-consulting. It leads
 // with AI findability, since websites are the last-listed PV service, and reaches builders
@@ -19,8 +23,16 @@ export default function AiWebsites() {
       kicker="AI search and websites"
       title="AI websites for small businesses"
       lede="How a small business gets ChatGPT and Google's AI answers to describe it correctly, what schema and llms.txt do, and when an AI website builder is enough."
-      meta={<>Updated <time dateTime="2026-11-09">9 November 2026</time>. By Elijah Purcell, Purcell Ventures, Tuscaloosa.</>}
+      meta={<>Updated <time dateTime={DATES.modified}>{formatDate(DATES.modified)}</time>. By Elijah Purcell, Purcell Ventures, Tuscaloosa.</>}
     >
+      <p>
+        A business shows up correctly in ChatGPT and Google AI answers when crawlers can
+        reach its website, Google Business Profile and directories, and those sources
+        agree on what it does, where it is and who it serves. Let crawlers index your
+        site, put one plain sentence on it that names the business, its work and its
+        town, and match your name, phone number, address and hours everywhere.
+      </p>
+
       <p>
         Some customers now ask an AI assistant for a recommendation instead of scrolling
         search results. I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC in
@@ -138,6 +150,9 @@ export default function AiWebsites() {
       <p>
         Writing one also forces you to describe each page in a sentence, which often shows
         which pages have no clear job. This site publishes one at purcellventures.co/llms.txt.
+        The guide <Link href="/llms-txt">What is llms.txt?</Link> covers who proposed the
+        format, llms.txt versus llms-full.txt, what Google has said about it and how to write
+        one.
       </p>
 
       <h2>Should I block AI crawlers from my website?</h2>

@@ -138,7 +138,7 @@ const FAQS: { q: ReactNode; a: ReactNode }[] = [
     a: "No. The course assumes you start with nothing but an idea, and it walks through legal setup, banking, pricing and outreach from the beginning. I wrote it for people who have never done this and have no mentor who has.",
   },
   {
-    q: "You are nineteen. Why take business advice from you?",
+    q: "You started the company as a teenager. Why take business advice from you?",
     a: "I founded Purcell Ventures at 17 and wrote down the tools, decisions and mistakes as I went. The course teaches that process while I still remember it clearly, and I still use every tool it recommends.",
   },
   {

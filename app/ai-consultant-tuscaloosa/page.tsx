@@ -4,7 +4,6 @@ import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
 
 // Rebuilt on the page kit 26 Oct 2026 as a single readable column (PostLayout), since
 // the page is one long answer to one question. The what-it-costs paragraphs now come
@@ -23,6 +22,12 @@ export default function AiConsultantTuscaloosa() {
       lede="AI systems, custom software and automation for Tuscaloosa businesses, built by one person who lives here. The first conversation is free."
       meta="Websites, software and automation, each quoted after a free call."
     >
+      <p>
+        Purcell Ventures is a one-person AI and software company in Tuscaloosa that
+        builds AI automation, custom software and websites for local businesses. Elijah quotes each job after a free call, and the person you meet is the person who
+        writes the code.
+      </p>
+
       <p>
         I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data
         science student in New College and the Honors College at the University of Alabama. From Tuscaloosa, I build
@@ -87,7 +92,7 @@ export default function AiConsultantTuscaloosa() {
       <h2>When I am the wrong fit</h2>
 
       <p>
-        Purcell Ventures is one person, and I am 19. If you need a large team, a signed
+        Purcell Ventures is one person. If you need a large team, a signed
         enterprise MSA or support around the clock, I am the wrong fit, and I will tell you on
         the first call.
       </p>
@@ -133,7 +138,6 @@ export default function AiConsultantTuscaloosa() {
         <Link href="/who">Who is Elijah Purcell</Link>.
       </p>
       <UpdatedLine path="/ai-consultant-tuscaloosa" bare />
-      <ServiceSchema />
       <PageDates path="/ai-consultant-tuscaloosa" />
     </PostLayout>
   );

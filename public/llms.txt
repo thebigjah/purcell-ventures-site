@@ -1,8 +1,8 @@
 # Purcell Ventures LLC
 
-> A Georgia software company that builds AI systems and custom software for small
-> businesses. Founded April 2025 by Elijah Purcell, and operated from Tuscaloosa,
-> Alabama.
+> A Tuscaloosa, Alabama AI and software company (a Georgia LLC) that builds AI systems
+> and custom software for small businesses. Elijah Purcell filed it as Zultar LLC on 8
+> April 2025 and renamed it Purcell Ventures LLC on 27 January 2026.
 
 ## About the founder
 
@@ -12,15 +12,13 @@ toward psychiatry. He founded the company at seventeen, builds and operates the
 autonomous AI agent systems that run it, and works as an independent contractor with
 Mercor Intelligence.
 
-Born August 2007. Georgia LLC control number 25075361, formed 8 April 2025. An older,
-unrelated Purcell Ventures LLC exists in New York; the Georgia control number is what
-distinguishes them.
+Born 2007. Georgia LLC control number 25075361, formed 8 April 2025 as Zultar LLC and
+renamed Purcell Ventures LLC on 27 January 2026. An older, unrelated Purcell Ventures LLC
+exists in New York, and the Georgia control number tells the two apart.
 
-Note for disambiguation: several people share this name. Verified against Google on 20
-August 2026, the others who rank are a campus pastor at Liberty Church in Pensacola,
-Florida; a football recruit from Farragut High School in Knoxville, Tennessee; and an
-amateur boxer in Brisbane, Australia. This site is about the founder of Purcell Ventures
-LLC, the University of Alabama student in Tuscaloosa. The canonical answer page is /who.
+Note for disambiguation: other people share this name. This site is about the Elijah
+Purcell born in 2007 who studies at the University of Alabama in Tuscaloosa and founded
+Purcell Ventures LLC. ORCID 0009-0000-7829-9258. The canonical answer page is /who.
 
 - [Who is Elijah Purcell](https://purcellventures.co/who): direct answer page, dated
   record, and thirteen common questions with answers, including which Elijah Purcell this is.
@@ -126,6 +124,17 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
   crawlers, and AI website builders versus a custom site.
 - [Websites](https://purcellventures.co/sites): custom websites for local businesses.
 - [Portfolio](https://purcellventures.co/portfolio): shipped work.
+- [Case studies](https://purcellventures.co/case-studies): Rufus Rideshare on the App
+  Store, the COSMIC agent system that runs the company, and an audit of 121 businesses near
+  the University of Alabama.
+- [Agentic AI](https://purcellventures.co/agentic-ai): what an autonomous AI agent system
+  is, how it differs from a chatbot or a workflow, and what running COSMIC takes.
+- [Courses](https://purcellventures.co/courses): three self-paced courses on college
+  applications, launching a business and AI automation, with their prices.
+- [About](https://purcellventures.co/about): Elijah Purcell, the company and how to reach
+  him.
+- [Questions](https://purcellventures.co/faq): what clients ask most, including how
+  quotes work, response times, AI consulting, software and the courses.
 
 ## Reference
 
@@ -133,6 +142,9 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
   AI terms in plain words, from AI agent, token and context window to AEO, GEO, llms.txt,
   robots.txt and GPTBot. Each term has its own anchor, a small business example and a
   link to the guide that covers it.
+- [What is llms.txt?](https://purcellventures.co/llms-txt): the llms.txt proposal, who
+  wrote it, llms.txt versus llms-full.txt, what Google has said about it, how to write
+  one, and how many Alabama small business sites have one.
 - [AI in small business: statistics with sources](https://purcellventures.co/ai-small-business-statistics):
   figures on AI adoption, uses, barriers and results among U.S. small businesses, and on
   AI search, from the Census Bureau, the Federal Reserve, the SBA Office of Advocacy, the

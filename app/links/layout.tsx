@@ -22,8 +22,8 @@ const schema = {
       "name": "Elijah Purcell's links",
       "description":
         "Links to the services, free tools, courses, profiles and contact details of Elijah Purcell and Purcell Ventures LLC.",
-      "mainEntity": { "@id": "https://purcellventures.co/#founder" },
-      "about": { "@id": "https://purcellventures.co/#founder" },
+      "mainEntity": { "@id": "https://elijahpurcell.com/#person" },
+      "about": { "@id": "https://elijahpurcell.com/#person" },
       "publisher": { "@id": "https://purcellventures.co/#organization" },
     },
     {

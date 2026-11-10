@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { PageHero, Figures, Note } from "@/app/components/ui";
 import s from "../_demo/demo.module.css";
 import { Field, ToolsKicker, AboutTool } from "../_demo/parts";
+import FaqBlock, { type QA } from "@/app/components/FaqBlock";
 
 interface Item {
   id: string;
@@ -18,6 +19,16 @@ interface Item {
 }
 
 const KEY = "pv_inventory_v1";
+
+// Questions about this tool, shown on the page and sent as FAQPage schema.
+const QA: QA[] = [
+  ["What does the free inventory tracker do?",
+   "It keeps a list of items, each with a SKU, a name, a category, a quantity, a reorder point and a unit cost. Any item at or below its reorder point shows in a Reorder soon list."],
+  ["How does the tracker value my stock?",
+   "It multiplies quantity by unit cost for each item and totals the result. You can search the list by name, SKU or category."],
+  ["Does the inventory sync between devices?",
+   "No. The tracker stores inventory in this browser on this device only, and clearing the browser's site data deletes it."],
+];
 
 const ABOUT = [
   {
@@ -207,6 +218,7 @@ export default function InventoryPage() {
         )}
       </div>
       <AboutTool sections={ABOUT} />
+      <div className="no-print"><FaqBlock qa={QA} /></div>
     </main>
   );
 }

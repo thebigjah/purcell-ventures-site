@@ -10,7 +10,45 @@ import TeamBuilder from "./TeamBuilder";
 import ContactForm from "./ContactForm";
 import s from "./digital.module.css";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
+import { FaqSchema } from "@/app/components/FaqBlock";
+
+// Schema for /digital alone. It used to sit in app/digital/layout.tsx and reach every demo.
+const SERVICE_LD = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://purcellventures.co/digital#service",
+      "name": "Digital services for small businesses",
+      "description":
+        "26 add-ons for small businesses, including a website, an AI chatbot, booking, a CRM, email marketing and social scheduling. I build and maintain them for one monthly subscription.",
+      "provider": { "@id": "https://purcellventures.co/#organization" },
+      "url": "https://purcellventures.co/digital",
+      "serviceType": "Digital business services",
+      "areaServed": "Worldwide",
+    },
+  ],
+};
+
+
+const BREADCRUMB_LD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://purcellventures.co"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Digital",
+      "item": "https://purcellventures.co/digital"
+    }
+  ]
+};
 
 // /digital, rebuilt on the page kit 26 Oct 2026.
 //
@@ -177,6 +215,9 @@ const FAQ = [
 export default function DigitalPage() {
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_LD) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
+      <FaqSchema qa={FAQ.map(({ q, a }) => [q, a])} />
       <PageHero
         planet="digital"
         kicker="Digital add-ons"
@@ -261,7 +302,7 @@ export default function DigitalPage() {
       <Section title="About me">
         <Prose>
           <p>
-            I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC. I am 19 and I study at The University of Alabama.
+            I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC. I started the company at seventeen, and I study at The University of Alabama.
           </p>
           <p>
             My first business was Mantle Field Services, doing gutters, pressure washing and lawn care, so I have done the scheduling, quoting and invoicing these tools handle.
@@ -290,7 +331,6 @@ export default function DigitalPage() {
         </div>
       </Section>
       <UpdatedLine path="/digital" />
-      <ServiceSchema />
       <PageDates path="/digital" />
     </main>
   );

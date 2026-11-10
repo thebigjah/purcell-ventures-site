@@ -44,51 +44,6 @@ const schema = {
         { "@type": "Place", "name": "United States" },
       ],
     },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Does my team need tech experience for AI consulting?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. I design most sessions for people who have never used AI tools, and I go at your team's pace.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "How is AI consulting different from using ChatGPT on my own?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most people use AI tools for one-off questions. I show you prompting techniques, integrations and workflows that save time in your type of business.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "Can you come to our office for AI training?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. I come to your office and train your team there. Examples from your own setting make the session more useful.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "How much does AI consulting cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "I quote every business after a free call, based on group size, session length and prep. Formats run from 1-on-1 sessions and small groups of 2 to 8 people to a half-day workshop for up to 20 people. There are five session types: AI basics, ChatGPT workflow, AI for marketing, automation, and custom training.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "How far ahead do I need to book an AI training session?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Standard sessions need 1 to 2 weeks. Custom trainings need more prep time, so contact me as early as you can.",
-          },
-        },
-      ],
-    },
   ],
 };
 

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { CONTACT } from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "About Elijah Purcell, founder",
@@ -37,8 +36,8 @@ const schema = {
       "url": "https://purcellventures.co/about",
       "name": "About Elijah Purcell",
       "description": "Profile page for Elijah Purcell, Founder/CEO of Purcell Ventures LLC.",
-      "mainEntity": { "@id": "https://purcellventures.co/#founder" },
-      "about": { "@id": "https://purcellventures.co/#founder" },
+      "mainEntity": { "@id": "https://elijahpurcell.com/#person" },
+      "about": { "@id": "https://elijahpurcell.com/#person" },
       "publisher": { "@id": "https://purcellventures.co/#organization" },
     },
     // NO Person NODE HERE. The root layout declares the full Person under this same
@@ -49,43 +48,6 @@ const schema = {
     // Pressure Washing and Lawn Care to him personally; those belong to Mantle Field
     // Services, not to his own expertise. The ProfilePage above already points at the
     // canonical Person via mainEntity/about, which is what a shared @id is for.
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Who is Elijah Purcell?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia company formed in April 2025, control number 25075361, that builds AI systems, custom software and websites for small businesses. He runs it from Tuscaloosa, Alabama, where he studies psychology and data science at the University of Alabama, in New College and the Honors College, Class of 2030. He also founded Mantle Field Services, a sister brand for gutter cleaning, pressure washing and lawn care in metro Atlanta.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "What is Purcell Ventures LLC?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Purcell Ventures LLC is a Georgia company that Elijah Purcell formed in April 2025. It has five active divisions: AI consulting, custom software, digital add-ons including AI chatbots, websites, and Steady, a personal IT service. Elijah plans to add a real estate division. A sister brand, Mantle Field Services, handles gutter cleaning, pressure washing and lawn care in metro Atlanta.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "Where is Purcell Ventures located?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Elijah Purcell formed and registered the LLC in Acworth, Georgia. He runs it from Tuscaloosa, Alabama, where he attends the University of Alabama. AI consulting, software, digital services and websites are available nationwide. Sister brand Mantle Field Services serves metro Atlanta (Kennesaw, Marietta, Acworth, Canton and Woodstock) with gutter cleaning, pressure washing and lawn care.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "How can I contact Elijah Purcell?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": `You can reach Elijah Purcell by email at ${CONTACT.email} or by phone at ${CONTACT.phone}. He replies within one business day.`,
-          },
-        },
-      ],
-    },
   ],
 };
 

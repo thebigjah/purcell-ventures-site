@@ -2,54 +2,27 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Galaxy from "./components/galaxy/Galaxy";
 import { Section, Rows, Figures, Facts, ClosingCall, Button } from "./components/ui";
+import FaqBlock, { type QA } from "./components/FaqBlock";
 import { CONTACT } from "@/lib/contact";
 import PageDates from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
 
 export const metadata: Metadata = {
+  title: { absolute: "AI and software in Tuscaloosa, Alabama, Purcell Ventures" },
   alternates: { canonical: "/" },
 };
 
-// FAQ schema: the questions a search engine or an AI assistant is most likely to be asked
-// about the company, answered in the same words the page uses.
-const FAQ_SCHEMA = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What does Purcell Ventures do?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Purcell Ventures LLC builds custom websites and maintains them, sells digital add-ons such as AI chatbots and online booking, trains business teams to use AI tools, builds custom software, and offers personal tech help for households through Steady. Field services such as gutter cleaning and pressure washing run separately under the Mantle Field Services brand.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Who founded Purcell Ventures?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Elijah Purcell founded Purcell Ventures LLC in April 2025 and is its Founder/CEO. He studies psychology and data science in New College and the Honors College at the University of Alabama and lives in Tuscaloosa, Alabama. He registered the company in Georgia.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Where is Purcell Ventures based?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Elijah formed and registered the LLC in Acworth, Georgia, and he runs it from Tuscaloosa, Alabama. AI consulting, software, digital add-ons and websites are available nationwide. Mantle Field Services serves metro Atlanta: Kennesaw, Marietta, Acworth, Canton and Woodstock.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I contact Purcell Ventures?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: `Email Elijah Purcell at ${CONTACT.email} or call ${CONTACT.phone}.`,
-      },
-    },
-  ],
-};
+// The homepage questions, rendered visibly and as FAQPage schema by FaqBlock from the
+// same strings. Mantle Field Services is answered on /faq, not here.
+const QA: QA[] = [
+  ["What does Purcell Ventures do?",
+   "Purcell Ventures LLC is a Tuscaloosa, Alabama AI and software company (a Georgia LLC) that builds AI systems and custom software for small businesses and advises owners on using them. It also trains teams to use AI tools, builds websites and digital add-ons such as chatbots and online booking, and runs Steady, a personal IT service. Elijah quotes each job after a free call."],
+  ["Who founded Purcell Ventures?",
+   "Elijah Purcell founded Purcell Ventures LLC on 8 April 2025 and is its Founder/CEO. He studies psychology and data science in New College and the Honors College at the University of Alabama."],
+  ["Where is Purcell Ventures based?",
+   "Purcell Ventures works from Tuscaloosa, Alabama, and Elijah registered the LLC in Acworth, Georgia. Elijah meets businesses in person in Tuscaloosa and metro Atlanta, and does AI, software and website work for businesses anywhere in the US."],
+  ["How do I contact Purcell Ventures?",
+   `Email Elijah Purcell at ${CONTACT.email} or call ${CONTACT.phone}. He replies within one business day.`],
+];
 
 const SERVICES = [
   {
@@ -136,8 +109,6 @@ const DEEPER = [
 export default function Home() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-
       <Galaxy>
         <h1>AI systems, software and consulting for small businesses.</h1>
         <p>I build them for local businesses in Tuscaloosa and metro Atlanta, and I keep supporting them after launch.</p>
@@ -211,6 +182,8 @@ export default function Home() {
         <Rows items={DEEPER} />
       </Section>
 
+      <FaqBlock qa={QA} />
+
       <Section title="Contact and service area">
         <Facts
           items={[
@@ -223,7 +196,6 @@ export default function Home() {
       </Section>
 
       <ClosingCall />
-      <ServiceSchema />
       <PageDates path="/" />
     </main>
   );

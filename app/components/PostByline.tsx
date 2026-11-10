@@ -27,8 +27,6 @@ export interface PostMeta {
   published: string;
 }
 
-const AUTHOR_URL = "https://purcellventures.co/who";
-const AUTHOR_IMG = "https://purcellventures.co/brand/elijah.jpg";
 const SITE = "https://purcellventures.co";
 
 export default function PostByline({ post }: { post: PostMeta }) {
@@ -50,33 +48,11 @@ export default function PostByline({ post }: { post: PostMeta }) {
     dateModified: dates.modified,
     url: href,
     mainEntityOfPage: { "@type": "WebPage", "@id": href },
-    author: {
-      "@type": "Person",
-      // THE SAME @id AS THE SITEWIDE NODE, AND THIS IS NOT COSMETIC.
-      //
-      // Without it this byline declares a second, anonymous "Elijah Purcell" on a page
-      // that already carries the canonical one from the root layout. A crawler reading
-      // that page sees two Person entities with the same name and no statement that they
-      // are the same person, which is the exact ambiguity the whole /who effort exists to
-      // remove, manufactured on our own site. Measured 20 Aug 2026: three pages were
-      // doing this.
-      "@id": "https://purcellventures.co/#founder",
-      name: "Elijah Purcell",
-      url: AUTHOR_URL,
-      image: AUTHOR_IMG,
-      jobTitle: "Founder/CEO, Purcell Ventures LLC",
-      affiliation: { "@type": "CollegeOrUniversity", name: "University of Alabama" },
-      sameAs: [
-        "https://github.com/thebigjah",
-        "https://www.linkedin.com/in/theelijahpurcell",
-        "https://www.instagram.com/theelijahpurcell/",
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Purcell Ventures LLC",
-      url: SITE,
-    },
+    // References only. The full Person and Organization nodes live once, in the sitewide
+    // graph in app/layout.tsx, so every post points at the same two entities instead of
+    // restating them with different fields.
+    author: { "@id": "https://elijahpurcell.com/#person" },
+    publisher: { "@id": "https://purcellventures.co/#organization" },
   };
 
   return (

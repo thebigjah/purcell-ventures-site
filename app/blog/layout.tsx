@@ -36,7 +36,7 @@ const BLOG_LD = {
   "description": "Essays and reporting by Elijah Purcell on building software as a solo operator, autonomous AI agent systems, small businesses around the University of Alabama, and search and answer engines.",
   "inLanguage": "en-US",
   "author": {
-    "@id": "https://purcellventures.co/#founder"
+    "@id": "https://elijahpurcell.com/#person"
   },
   "publisher": {
     "@id": "https://purcellventures.co/#organization"
@@ -48,7 +48,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/starting-a-business-at-alabama",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -57,7 +57,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/what-you-should-own",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -66,7 +66,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/six-sources-one-page",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -75,7 +75,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/write-a-page-an-ai-will-quote",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -84,7 +84,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/can-ai-find-your-business",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -93,7 +93,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/ai-team-page-honesty",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -102,7 +102,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/psychology-and-software",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -111,7 +111,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/what-a-website-actually-costs",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -120,7 +120,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/what-one-operator-can-deliver",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -129,7 +129,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/audit-your-site-like-a-crawler",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -138,7 +138,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/claim-your-google-listing",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -147,7 +147,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/cold-outreach-that-worked",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -156,7 +156,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/llc-at-seventeen",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -165,7 +165,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/audit-every-business-in-your-town",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -174,7 +174,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/new-college-alabama",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -183,7 +183,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/what-the-agents-get-wrong",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -192,7 +192,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/free-at-alabama",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -201,7 +201,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/is-your-business-invisible",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -210,7 +210,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/small-app-security-checklist",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -219,7 +219,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/canonical-tag-noindex",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -228,7 +228,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/ai-at-alabama",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -237,7 +237,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/121-businesses-near-campus",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -246,7 +246,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/tuscaloosa-small-business-online",
       "datePublished": "2026-08-20",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -255,7 +255,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/agents-that-cannot-fix-what-they-find",
       "datePublished": "2026-08-17",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -264,7 +264,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/shipped-is-not-activated",
       "datePublished": "2026-08-17",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -273,7 +273,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/ai-augmented-sales-rep-day",
       "datePublished": "2026-05-25",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -282,7 +282,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/why-i-built-crm-from-scratch",
       "datePublished": "2026-05-25",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -291,7 +291,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/case-for-charging-19",
       "datePublished": "2026-05-25",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -300,7 +300,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/five-workflows-no-code",
       "datePublished": "2026-05-24",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     },
     {
@@ -309,7 +309,7 @@ const BLOG_LD = {
       "url": "https://purcellventures.co/blog/why-most-ai-tools-waste-money",
       "datePublished": "2026-05-24",
       "author": {
-        "@id": "https://purcellventures.co/#founder"
+        "@id": "https://elijahpurcell.com/#person"
       }
     }
   ]

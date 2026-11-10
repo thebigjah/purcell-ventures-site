@@ -5,6 +5,7 @@ import { useState, useEffect, useMemo } from "react";
 import { PageHero, Figures } from "@/app/components/ui";
 import s from "../_demo/demo.module.css";
 import { Field, ToolsKicker, AboutTool } from "../_demo/parts";
+import FaqBlock, { type QA } from "@/app/components/FaqBlock";
 
 interface Expense {
   id: string;
@@ -17,6 +18,16 @@ interface Expense {
 
 const CATEGORIES = ["Materials", "Tools", "Vehicle and fuel", "Subscriptions", "Marketing", "Office", "Meals", "Travel", "Insurance", "Other"];
 const KEY = "pv_expenses_v1";
+
+// Questions about this tool, shown on the page and sent as FAQPage schema.
+const QA: QA[] = [
+  ["What does the free expense tracker record?",
+   "Each expense gets a date, an amount, a category, a description and a box for whether it is tax deductible. Pick a month to see the total, the deductible share and a breakdown by category."],
+  ["Can I send my expenses to my accountant?",
+   "Yes. Export CSV writes the month on screen to a file that opens in Excel or Google Sheets. Whether an expense is deductible is a question for whoever does your taxes."],
+  ["Where are my expenses saved?",
+   "In this browser on this device only. They do not sync to another computer or phone, and clearing the browser's site data deletes them, so export each month's CSV as a backup."],
+];
 
 const ABOUT = [
   {
@@ -219,6 +230,7 @@ export default function ExpensesPage() {
         )}
       </div>
       <AboutTool sections={ABOUT} />
+      <div className="no-print"><FaqBlock qa={QA} /></div>
     </main>
   );
 }

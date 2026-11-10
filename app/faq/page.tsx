@@ -72,7 +72,7 @@ const FAQS: { label: string; qas: QA[] }[] = [
   {
     label: "The company",
     qas: [
-      { q: "Are you nineteen?", a: "Yes. I have been building production software for a year. Every portfolio project links to a live site, and the full record is at /resume." },
+      { q: "How old are you?", a: "I was born in 2007 and started the company at seventeen. Every portfolio project links to a live site, and the full record is at /resume." },
       { q: "What is the logo based on?", a: "Bentham's panopticon, turned around. In Bentham's prison design, a hidden guard can see every prisoner at all times. In the logo, PV sits at the center in plain view, because the company is the one that answers for its work." },
       { q: "Why is it called Ventures?", a: "The company runs several separate ventures: consulting, software, digital services, websites, Steady, and real estate as a planned division. I build and test each one on its own." },
       { q: "Who owns Mantle Field Services?", a: "I do. It is a sister brand to Purcell Ventures, with its own sales operation." },

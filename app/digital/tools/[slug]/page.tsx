@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, use } from "react";
+import { notFound } from "next/navigation";
 import { PageHero, Button, Note } from "@/app/components/ui";
 import { getTool, type AIToolField } from "@/lib/ai-tools";
 import s from "../../_demo/demo.module.css";
@@ -39,18 +40,7 @@ export default function ToolPage({ params }: { params: Promise<{ slug: string }>
   const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
 
-  if (!tool) {
-    return (
-      <main>
-        <PageHero
-          kicker={<ToolsKicker />}
-          title="Tool not found"
-          lede="There is no tool at this address."
-          actions={<Button href="/digital/tools">See all the tools</Button>}
-        />
-      </main>
-    );
-  }
+  if (!tool) notFound();
 
   async function generate() {
     setError(null);

@@ -222,7 +222,7 @@ export const TERMS: Term[] = [
     name: "llms.txt",
     def: "llms.txt is a proposed plain-text file at the root of a website that lists its most useful pages for language models, written in Markdown. Support differs between AI companies, so it costs little to add and promises nothing.",
     biz: "A consulting firm publishes an llms.txt that lists its services, prices and answer pages in a few short lines.",
-    link: WEBSITES,
+    link: { href: "/llms-txt", label: "What is llms.txt?" },
   },
   {
     id: "machine-learning",

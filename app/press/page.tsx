@@ -24,11 +24,12 @@ const SHORT_BIO =
   "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a software company he registered in Georgia in April 2025, at seventeen. The company builds AI systems, custom software and websites for small businesses, and Elijah handles the client calls, the scoping and the building himself. He built and runs COSMIC, a system of 57 AI agents in 17 rooms that handles proposals, site audits, security checks, research and outreach. In October 2026 Apple approved Rufus Rideshare, an iPhone app he built for a client, for the App Store. He studies psychology and data science at the University of Alabama, in New College and the Honors College, on a pre-med track toward psychiatry.";
 
 const BOILERPLATE =
-  "Purcell Ventures LLC builds AI systems and custom software for small businesses and runs hands-on AI and business consulting. Elijah Purcell founded the company in Georgia on 8 April 2025 and runs it from Tuscaloosa, Alabama. COSMIC, a system of 57 AI agents in 17 rooms, handles its proposals, site audits, research and outreach. More at purcellventures.co.";
+  "Purcell Ventures LLC is a Tuscaloosa, Alabama AI and software company (a Georgia LLC). It builds AI systems and custom software for small businesses and runs hands-on AI and business consulting. Elijah Purcell founded the company on 8 April 2025. COSMIC, a system of 57 AI agents in 17 rooms, handles its proposals, site audits, research and outreach. More at purcellventures.co.";
 
 const FACTS: [React.ReactNode, React.ReactNode][] = [
   ["Company", "Purcell Ventures LLC"],
-  ["Founded", "8 April 2025"],
+  ["Founded", "8 April 2025, as Zultar LLC"],
+  ["Renamed", "Purcell Ventures LLC on 27 January 2026, same control number"],
   ["Registration", `Georgia Secretary of State, control number ${CONTACT.llcControlNumber}, filed in Acworth, Georgia`],
   ["Based in", "Tuscaloosa, Alabama"],
   ["Founder", "Elijah Purcell, Founder/CEO and sole member"],
@@ -67,7 +68,7 @@ export default function PressPage() {
       <PageHero
         kicker="Press"
         title="Press kit"
-        lede="Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company he formed in April 2025 at seventeen. The company builds AI systems and custom software for small businesses and advises owners on using them. He runs it from Tuscaloosa while studying at the University of Alabama."
+        lede="Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Tuscaloosa, Alabama AI and software company (a Georgia LLC) he formed in April 2025 at seventeen. The company builds AI systems and custom software for small businesses and advises owners on using them. He runs it while studying at the University of Alabama."
         crumbs={<Breadcrumbs trail={[
           { name: "Home", href: "/" },
           { name: "Press kit", href: "/press" },

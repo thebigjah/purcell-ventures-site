@@ -4,7 +4,6 @@ import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
 
 // City page on the same single-column PostLayout as the pillar. Auburn's version follows
 // the university calendar, since move-in, semesters and home games set the busy weeks
@@ -178,7 +177,6 @@ export default function AiConsultingAuburn() {
         <Link href="/ai-consulting/mobile-al">Mobile</Link>.
       </p>
       <UpdatedLine path={PATH} bare />
-      <ServiceSchema />
       <PageDates path={PATH} />
     </PostLayout>
   );

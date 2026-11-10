@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PageHero, Section, Prose, Facts, Rows, Faq, Button } from "@/app/components/ui";
+import { FaqSchema, type QA } from "@/app/components/FaqBlock";
 import { GUIDES } from "@/lib/guides";
 import { CONTACT } from "@/lib/contact";
 import PageDates from "@/app/components/PageDates";
@@ -38,6 +39,14 @@ const WRITING = [
   { name: "Studying AI at the University of Alabama", href: "/ai-at-alabama" },
   { name: "AI consultant in Tuscaloosa, Alabama", href: "/ai-consultant-tuscaloosa" },
   { name: "Everything else I have written", href: "/blog" },
+];
+
+// The "What to expect" questions, shown on the page and sent as FAQPage schema.
+const EXPECT: QA[] = [
+  ["Who will I talk to?", "Me. I handle every project myself, from the first message to delivery."],
+  ["How fast do you respond?", "I reply within one business day. If you need an answer sooner, call or text."],
+  ["Do you work outside Tuscaloosa and Atlanta?", "For consulting, software, digital add-ons and websites, yes, remotely. Gutter cleaning, pressure washing and lawn care go through the sister brand Mantle Field Services, in metro Atlanta only."],
+  ["What is the best way to start?", "Send me an email with one sentence about what you need. I will tell you whether I can help and what the work involves."],
 ];
 
 export default function AboutPage() {
@@ -138,14 +147,8 @@ export default function AboutPage() {
           <Button href={`tel:${CONTACT.phoneE164}`} ghost>Call {CONTACT.phone}</Button>
         </div>
         <h3 style={{ marginTop: 48, marginBottom: 8 }}>What to expect</h3>
-        <Faq
-          items={[
-            { q: "Who will I talk to?", a: "Me. I handle every project myself, from the first message to delivery." },
-            { q: "How fast do you respond?", a: "I reply within one business day. If you need an answer sooner, call or text." },
-            { q: "Do you work outside Tuscaloosa and Atlanta?", a: "For consulting, software, digital add-ons and websites, yes, remotely. Gutter cleaning, pressure washing and lawn care go through the sister brand Mantle Field Services, in metro Atlanta only." },
-            { q: "What is the best way to start?", a: "Send me an email with one sentence about what you need. I will tell you whether I can help and what the work involves." },
-          ]}
-        />
+        <FaqSchema qa={EXPECT} />
+        <Faq items={EXPECT.map(([q, a]) => ({ q, a }))} />
       </Section>
 
       {/* /about is one of the few pages Google has indexed, so it links recent posts to get

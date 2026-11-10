@@ -101,7 +101,7 @@ const schema = {
       url: URL,
       datePublished: "2026-11-09",
       dateModified: "2026-11-09",
-      author: { "@id": "https://purcellventures.co/#founder" },
+      author: { "@id": "https://elijahpurcell.com/#person" },
       publisher: { "@id": "https://purcellventures.co/#organization" },
       about: { "@id": `${URL}#dataset` },
     },

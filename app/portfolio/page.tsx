@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import FaqBlock, { type QA } from "@/app/components/FaqBlock";
 
 // THE PORTFOLIO, rebuilt 28 Oct 2026 from a graded inventory, not from memory.
 //
@@ -92,6 +93,12 @@ const INDEX: { group: string; items: IndexItem[] }[] = [
 ];
 
 const INDEX_COUNT = INDEX.reduce((n, g) => n + g.items.length, 0);
+
+// Shown on the page and sent as FAQPage schema by FaqBlock.
+const QA: QA[] = [
+  ["What has Elijah Purcell built?",
+   "My lead project is Rufus Rideshare, an iPhone app a Georgia College & State University student commissioned, which Apple approved for the App Store in October 2026. I also built UA Today, an unofficial University of Alabama events page, Returns Void, a prayer ledger, and more than forty free tools and games, and I am founding Yellowhammer Society: Innovators in AI at The University of Alabama."],
+];
 
 export default function PortfolioPage() {
   return (
@@ -220,7 +227,7 @@ export default function PortfolioPage() {
               </p>
               <a href="https://yellowhammer-society.vercel.app" className="pf-link" target="_blank" rel="noopener noreferrer">yellowhammer-society.vercel.app</a>
             </div>
-            <a className="pf-shot" href="https://yellowhammer-society.vercel.app" target="_blank" rel="noopener noreferrer">
+            <a className="pf-shot" href="https://yellowhammer-society.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit the Yellowhammer Society site (opens in a new tab)">
               <Image src="/portfolio/yh.jpg" alt="The Yellowhammer Society home page" width={1440} height={900} sizes="(max-width: 800px) 92vw, 560px" />
             </a>
           </article>
@@ -235,7 +242,7 @@ export default function PortfolioPage() {
               </p>
               <a href="https://ua-today.vercel.app" className="pf-link" target="_blank" rel="noopener noreferrer">ua-today.vercel.app</a>
             </div>
-            <a className="pf-shot" href="https://ua-today.vercel.app" target="_blank" rel="noopener noreferrer">
+            <a className="pf-shot" href="https://ua-today.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit UA Today (opens in a new tab)">
               <Image src="/portfolio/uatoday.jpg" alt="The UA Today events page" width={1440} height={900} sizes="(max-width: 800px) 92vw, 560px" />
             </a>
           </article>
@@ -250,7 +257,7 @@ export default function PortfolioPage() {
               </p>
               <a href="https://returns-void-v2.vercel.app" className="pf-link" target="_blank" rel="noopener noreferrer">returns-void-v2.vercel.app</a>
             </div>
-            <a className="pf-shot" href="https://returns-void-v2.vercel.app" target="_blank" rel="noopener noreferrer">
+            <a className="pf-shot" href="https://returns-void-v2.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit Returns Void (opens in a new tab)">
               <Image src="/portfolio/rvoid.jpg" alt="The Returns Void home page" width={1440} height={900} sizes="(max-width: 800px) 92vw, 560px" />
             </a>
           </article>
@@ -337,6 +344,8 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
+      <FaqBlock qa={QA} />
+
     </main>
   );
 }

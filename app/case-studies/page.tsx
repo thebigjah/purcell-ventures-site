@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PageHero, Section, Prose, Button, ClosingCall } from "@/app/components/ui";
 import { UpdatedLine } from "@/app/components/PageDates";
 import PageDates from "@/app/components/PageDates";
+import FaqBlock, { type QA } from "@/app/components/FaqBlock";
 
 // CASE STUDIES, rebuilt on the page kit 26 Oct 2026.
 //
@@ -25,6 +26,12 @@ interface CaseStudy {
 
 const CASE_STUDIES: CaseStudy[] = [
   // When clients say yes to a testimonial, fill in the data and push.
+];
+
+// Shown on the page and sent as FAQPage schema by FaqBlock.
+const QA: QA[] = [
+  ["What work can I check from Purcell Ventures?",
+   "Rufus Rideshare, an iPhone app built for a Georgia College student and approved for the App Store on 8 October 2026. COSMIC, the system of 57 AI agents that runs the company. And an audit of 121 businesses near the University of Alabama. Client case studies with results go up only with the client's permission."],
 ];
 
 export default function CaseStudiesPage() {
@@ -139,6 +146,8 @@ export default function CaseStudiesPage() {
           </Section>
         ))
       )}
+
+      <FaqBlock qa={QA} />
 
       <ClosingCall
         title="Consulting sessions"

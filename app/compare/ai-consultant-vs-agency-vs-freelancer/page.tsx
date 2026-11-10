@@ -3,7 +3,6 @@ import Link from "next/link";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PostLayout } from "@/app/components/ui";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
 import { CONTACT } from "@/lib/contact";
 
 // Comparison page, written 9 Nov 2026 for the buyer choosing who to hire for AI work.
@@ -204,7 +203,6 @@ export default function Page() {
         </p>
       </PostLayout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LD) }} />
-      <ServiceSchema />
       <PageDates path={PATH} name="AI consultant vs agency vs freelancer" />
     </>
   );

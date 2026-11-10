@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import { PageHero, Section, Rows } from "@/app/components/ui";
+
+// The canonical lives on the index page, not app/blog/layout.tsx, because the layout
+// wraps every post and a canonical there would mark each post as a copy of /blog.
+// Next merges this with the layout's title, description and openGraph.
+export const metadata: Metadata = {
+  alternates: { canonical: "/blog" },
+};
 
 interface Post {
   slug: string;

@@ -6,7 +6,7 @@ import alabama from "@/lib/research/alabama-2026-11-summary.json";
 import { socialRows } from "@/lib/research/cobb-2026.mjs";
 import { socialRows as alabamaSocialRows } from "@/lib/research/alabama-2026.mjs";
 import { BarChart, CheckTable, MEASURE, SpeedTable, num, p, pctBars, type AreaRow, type Frame } from "../_components/tables";
-import { QA } from "./layout";
+import { QA, RUN_DAY } from "./layout";
 
 // Every number on this page is read from the Cobb County and Alabama summary JSON at build
 // time, through the measure code in lib/research/measures.mjs that also writes the
@@ -144,7 +144,7 @@ export default function CobbWebsites2026() {
       ]} />}
       title="Cobb County, Georgia small business websites, November 2026"
       lede={`I checked the home page of every small business website OpenStreetMap lists in Cobb County, Georgia, ${num(checked)} sites in all, with the same scripts as the Alabama study.`}
-      meta={<>Published <time dateTime={summary.checks_finished_utc.slice(0, 10)}>{day(summary.checks_finished_utc)}</time>. By Elijah Purcell, Purcell Ventures, Tuscaloosa.</>}
+      meta={<>Published <time dateTime={RUN_DAY}>{day(RUN_DAY)}</time>. By Elijah Purcell, Purcell Ventures, Tuscaloosa.</>}
     >
       <h2>What did the check find?</h2>
 

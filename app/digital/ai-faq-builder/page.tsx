@@ -5,11 +5,22 @@ import { useState } from "react";
 import { PageHero, Note } from "@/app/components/ui";
 import s from "../_demo/demo.module.css";
 import { ToolsKicker, AboutTool } from "../_demo/parts";
+import FaqBlock, { type QA } from "@/app/components/FaqBlock";
 
 interface FAQ {
   question: string;
   answer: string;
 }
+
+// Questions about this tool, shown on the page and sent as FAQPage schema.
+const QA: QA[] = [
+  ["What does the AI FAQ builder write?",
+   "It writes 6 to 10 questions phrased the way customers ask them, each with an answer of one to three sentences. It works from your business name, two to four sentences on what you do and optional topic hints."],
+  ["Should I put private details in the description?",
+   "No. The description goes to an AI model to write the answers, so leave out anything private. The tool needs no account."],
+  ["How do I add the FAQ to my website?",
+   "Copy the result as Markdown, HTML or JSON and paste it into your website builder. Read each answer first and fix anything it gets wrong, especially prices and promises."],
+];
 
 const ABOUT = [
   {
@@ -178,6 +189,7 @@ export default function AIFaqBuilderPage() {
         </p>
       </div>
       <AboutTool sections={ABOUT} />
+      <div className="no-print"><FaqBlock qa={QA} /></div>
     </main>
   );
 }

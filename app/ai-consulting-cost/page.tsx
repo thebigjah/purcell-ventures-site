@@ -2,7 +2,6 @@ import Link from "next/link";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PostLayout } from "@/app/components/ui";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
 
@@ -30,13 +29,14 @@ export default function AiConsultingCost() {
         ]} />}
         kicker="AI consulting"
         title="How is AI consulting priced for a small business?"
-        lede="Purcell Ventures quotes each business after a free first call. The quote depends on the work: how much of it there is, how many people need training, how many sessions they need, whether you need a custom build, where the work happens and what support you want afterward."
+        lede="Consultants usually price AI consulting for a small business in one of six ways: hourly, per person trained, per workshop, as a fixed-fee project, as a monthly retainer or per software seat. Within any model, the price depends on the scope, the team size, the number of sessions, whether you need a custom build, travel and the support you want afterward."
         meta="By Elijah Purcell, Purcell Ventures, Tuscaloosa."
       >
         <UpdatedLine path={PATH} bare />
 
         <p>
-          I am Elijah Purcell, and I run Purcell Ventures LLC from Tuscaloosa, Alabama. I write
+          Purcell Ventures quotes each business after a free first call, using the same six
+          factors. I am Elijah Purcell, and I run Purcell Ventures LLC from Tuscaloosa, Alabama. I write
           every quote myself and I do the work myself, so the person on the first call is the
           person who prices the job.
         </p>
@@ -219,7 +219,6 @@ export default function AiConsultingCost() {
         </p>
       </PostLayout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_LD) }} />
-      <ServiceSchema />
       <PageDates path={PATH} name="How is AI consulting priced for a small business?" />
     </>
   );

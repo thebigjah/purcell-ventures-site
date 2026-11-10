@@ -3,7 +3,6 @@ import Link from "next/link";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PostLayout } from "@/app/components/ui";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
 import { pageDates } from "@/lib/page-dates";
 import { SOURCES, type SourceKey } from "./sources";
 
@@ -57,7 +56,7 @@ export default function Page() {
         datePublished: d.published,
         dateModified: d.modified,
         inLanguage: "en-US",
-        author: { "@id": "https://purcellventures.co/#founder" },
+        author: { "@id": "https://elijahpurcell.com/#person" },
         publisher: { "@id": "https://purcellventures.co/#organization" },
         image: "https://purcellventures.co/opengraph-image",
         citation: KEYS.map((k) => ({
@@ -342,7 +341,6 @@ export default function Page() {
         </p>
       </PostLayout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LD) }} />
-      <ServiceSchema />
       <PageDates path={PATH} name={TITLE} />
     </>
   );

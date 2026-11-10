@@ -6,6 +6,7 @@ import { PageHero } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import s from "../_demo/demo.module.css";
 import { Field, ToolsKicker, AboutTool } from "../_demo/parts";
+import FaqBlock, { type QA } from "@/app/components/FaqBlock";
 
 interface LineItem {
   id: string;
@@ -53,6 +54,16 @@ function emptyEstimate(): Estimate {
     createdAt: new Date().toISOString(),
   };
 }
+
+// Questions about this tool, shown on the page and sent as FAQPage schema.
+const QA: QA[] = [
+  ["How do I build a job estimate with this tool?",
+   "List labor and materials as line items with a quantity and a rate, add a tax rate, and the builder totals the estimate as you type. Choose Print or save as PDF to send it."],
+  ["What goes on each estimate?",
+   "An estimate number, a client, a job name and location, a date and a valid-until date that starts 30 days out. A notes field holds scope, exclusions, payment terms and warranty details."],
+  ["Can I track which estimates a client accepted?",
+   "Yes. Every saved estimate sits in one list with its status: Draft, Sent, Accepted or Declined."],
+];
 
 const ABOUT = [
   {
@@ -326,6 +337,7 @@ export default function EstimatingPage() {
         }
       ` }} />
       <AboutTool sections={ABOUT} />
+      <div className="no-print"><FaqBlock qa={QA} /></div>
     </main>
   );
 }

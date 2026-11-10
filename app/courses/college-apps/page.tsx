@@ -118,8 +118,8 @@ const FAQS: { q: ReactNode; a: ReactNode }[] = [
     a: "No. The essay, financial aid and scholarship modules apply at any point in the timeline. The modules on building a list still help if you have not finalized your schools.",
   },
   {
-    q: "You are nineteen. Why take college advice from you?",
-    a: "I went through it in the last two years. I researched 98 schools and got 34 acceptances and $530,384 a year in scholarship offers, and I wrote down what worked and what failed as I went. A counselor has more years of experience than I do, but my process is recent and I documented every step.",
+    q: "You applied to college recently. Why take college advice from you?",
+    a: "I applied during my senior year of high school, in 2025 and 2026. I researched 98 schools and got 34 acceptances and $530,384 a year in scholarship offers, and I wrote down what worked and what failed as I went. A counselor has more years of experience than I do, but my process is recent and I documented every step.",
   },
   {
     q: "Does it cover scholarships, or only admissions?",
@@ -146,7 +146,7 @@ export default function CollegeAppsPage() {
         planet="courses"
         kicker="Course: The College Application Playbook"
         title="34 acceptances from 98 schools, and $530,384 a year in scholarship offers."
-        lede="I am Elijah Purcell. I am 19, and I went through college applications in the last two years. The course teaches what I learned, in the order I wish someone had shown me."
+        lede="I am Elijah Purcell. I applied to college during my senior year of high school, in 2025 and 2026. The course teaches what I learned, in the order I wish someone had shown me."
         meta="Waitlist open. I am still recording the course."
         actions={<>
           <Button href="#waitlist">Join the waitlist</Button>

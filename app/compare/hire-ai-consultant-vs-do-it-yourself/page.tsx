@@ -3,7 +3,6 @@ import Link from "next/link";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PostLayout } from "@/app/components/ui";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
 import { CONTACT } from "@/lib/contact";
 
 // Comparison page, written 9 Nov 2026 for the owner deciding whether to learn AI tools
@@ -205,7 +204,6 @@ export default function Page() {
         </p>
       </PostLayout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LD) }} />
-      <ServiceSchema />
       <PageDates path={PATH} name="Hire an AI consultant or do it yourself" />
     </>
   );

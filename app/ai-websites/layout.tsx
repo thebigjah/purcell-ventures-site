@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageDates } from "@/lib/page-dates";
 import type { ReactNode } from "react";
 
 // PILLAR FOR THE AI WEBSITES CLUSTER (9 Nov 2026).
@@ -56,9 +57,9 @@ const schema = {
       "@id": "https://purcellventures.co/ai-websites#article",
       "headline": "AI websites for small businesses",
       "url": "https://purcellventures.co/ai-websites",
-      "datePublished": "2026-11-09",
-      "dateModified": "2026-11-09",
-      "author": { "@id": "https://purcellventures.co/#founder" },
+      "datePublished": pageDates("/ai-websites")!.published,
+      "dateModified": pageDates("/ai-websites")!.modified,
+      "author": { "@id": "https://elijahpurcell.com/#person" },
       "publisher": { "@id": "https://purcellventures.co/#organization" },
       "about": ["Generative engine optimization", "AI search", "Schema markup", "llms.txt", "AI website builders"],
     },
@@ -70,14 +71,6 @@ const schema = {
         "name": q,
         "acceptedAnswer": { "@type": "Answer", "text": a },
       })),
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://purcellventures.co" },
-        { "@type": "ListItem", "position": 2, "name": "Websites", "item": "https://purcellventures.co/sites" },
-        { "@type": "ListItem", "position": 3, "name": "AI websites for small businesses", "item": "https://purcellventures.co/ai-websites" },
-      ],
     },
   ],
 };

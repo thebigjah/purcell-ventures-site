@@ -1,8 +1,13 @@
 import Link from "next/link";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import PageDates from "@/app/components/PageDates";
+import { pageDates, formatDate } from "@/lib/page-dates";
 import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA, schema } from "./layout";
+
+// The visible Updated line and the PageDates dateModified read the same value.
+const DATES = pageDates("/ai-consulting")!;
 
 // Statewide pillar for the AI consulting cluster, built on the same single-column
 // PostLayout as /ai-consultant-tuscaloosa. Each H2 is a question a business owner asks,
@@ -20,12 +25,20 @@ export default function AiConsultingAlabama() {
       kicker="Alabama"
       title="AI consulting in Alabama"
       lede="AI consulting, automation and custom software for Alabama businesses, from Elijah Purcell of Purcell Ventures in Tuscaloosa. The first conversation is free."
-      meta={<>Updated <time dateTime="2026-11-09">9 November 2026</time>. Every project is quoted after a free call.</>}
+      meta={<>Updated <time dateTime={DATES.modified}>{formatDate(DATES.modified)}</time>. Every project is quoted after a free call.</>}
     >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <p>
+        An AI consultant sorts the work an Alabama business repeats every week into
+        three piles: work an AI tool or automation can take over, work that needs custom
+        software, and work that should stay with a person. Then the consultant trains
+        your team or builds the system, and Purcell Ventures quotes each job after a
+        free call.
+      </p>
+
       <p>
         I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data
         science student at the University of Alabama. I work from Tuscaloosa with owners and
@@ -275,6 +288,7 @@ export default function AiConsultingAlabama() {
         <Link href="/ai-design">AI in design for small businesses</Link>. The <Link href="/ai-glossary">AI glossary</Link> defines the terms, and{" "}
         <Link href="/ai-small-business-statistics">AI small business statistics</Link> lists the numbers with sources.
       </p>
+      <PageDates path="/ai-consulting" />
     </PostLayout>
   );
 }

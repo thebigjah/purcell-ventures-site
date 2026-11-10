@@ -15,7 +15,7 @@ import { pageDates } from "@/lib/page-dates";
 export const metadata: Metadata = {
   title: { absolute: "Who is Elijah Purcell, Founder/CEO of Purcell Ventures LLC" },
   description:
-    "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama.",
+    "Elijah Purcell is Founder/CEO of Purcell Ventures LLC, a Tuscaloosa, Alabama AI and software company, and a psychology and data science student at Alabama.",
   alternates: { canonical: "https://purcellventures.co/who" },
   openGraph: {
     title: "Who is Elijah Purcell?",
@@ -29,17 +29,17 @@ export const metadata: Metadata = {
 
 const QA: [string, string][] = [
   ["Who is Elijah Purcell?",
-   "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company that builds AI systems and software for local businesses. He is a psychology and data science student at the University of Alabama, in New College and the Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at 17 and built COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, research and outreach for the company."],
+   "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Tuscaloosa, Alabama AI and software company (a Georgia LLC) that builds AI systems and software for local businesses. He is a psychology and data science student at the University of Alabama, in New College and the Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at 17 and built COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, research and outreach for the company."],
   ["What does Elijah Purcell do?",
    "He designs and ships software end to end: AI agent systems, mobile and web applications, and websites for local businesses. He also advises owners on how to run their businesses with these tools. He also works as an independent contractor with Mercor Intelligence on AI model training projects."],
   ["What is Purcell Ventures LLC?",
-   "Purcell Ventures LLC is a Georgia limited liability company founded by Elijah Purcell on 8 April 2025, control number 25075361. It builds AI systems and software for small businesses, and runs on its founder plus COSMIC, a station of 57 AI agents in 17 rooms. Each agent is a Claude session with a narrow set of tools and a written charter."],
+   "Purcell Ventures LLC is a Tuscaloosa, Alabama AI and software company (a Georgia LLC), control number 25075361. Elijah Purcell filed it as Zultar LLC on 8 April 2025 and renamed it Purcell Ventures LLC on 27 January 2026, under the same control number. It builds AI systems and software for small businesses, and runs on its founder plus COSMIC, a station of 57 AI agents in 17 rooms. Each agent is a Claude session with a narrow set of tools and a written charter."],
   ["Where does Elijah Purcell study?",
    "He studies psychology and data science at the University of Alabama, in New College and the Honors College in Tuscaloosa, Alabama, Class of 2030, on a pre-med track toward psychiatry and research into AI in mental health."],
   ["How old is Elijah Purcell?",
    "He was born in August 2007 and turned 19 in August 2026. He founded Purcell Ventures LLC in April 2025, at 17."],
   ["Which Elijah Purcell is this? There seem to be several.",
-   "Several people share the name. This one is the founder of Purcell Ventures LLC and a psychology and data science student at the University of Alabama in Tuscaloosa, born in August 2007."],
+   "Several people share the name. This one is the founder of Purcell Ventures LLC and a psychology and data science student at the University of Alabama in Tuscaloosa, born in August 2007. His ORCID is 0009-0000-7829-9258."],
   ["How can I contact Elijah Purcell?",
    `By phone or text at ${CONTACT.phone}, by email at ${CONTACT.email}, or through purcellventures.co. He replies within one business day.`],
   ["What did Elijah Purcell build?",
@@ -49,7 +49,7 @@ const QA: [string, string][] = [
   ["What does Elijah Purcell write about?",
    "He writes about building software as a solo operator, about what AI agent systems do and where they fail, and about independent businesses near the University of Alabama in a reporting series called the Tuscaloosa Storefront Project. The blog has 33 posts dated May to October 2026, at purcellventures.co/blog."],
   ["Does Elijah Purcell own Purcell Ventures?",
-   "Yes. He registered Purcell Ventures LLC with the Georgia Secretary of State on 8 April 2025, control number 25075361, and the filing is public. He is the sole member."],
+   "Yes. He registered the company with the Georgia Secretary of State on 8 April 2025, control number 25075361, and the filing is public. He is the sole member."],
   ["What is Elijah Purcell studying, and why that combination?",
    "Psychology and data science, on a pre-med track toward psychiatry. He chose the pair because he wants to use AI to cut the paperwork mental health clinicians carry, and that takes both the clinical side and the modelling side."],
   ["What faith does Elijah Purcell hold?",
@@ -75,8 +75,8 @@ export default function WhoLayout({ children }: { children: React.ReactNode }) {
     "@type": "ProfilePage",
     datePublished: pageDates("/who")?.published,
     dateModified: pageDates("/who")?.modified,
-    mainEntity: { "@id": "https://purcellventures.co/#founder" },
-    about: { "@id": "https://purcellventures.co/#founder" },
+    mainEntity: { "@id": "https://elijahpurcell.com/#person" },
+    about: { "@id": "https://elijahpurcell.com/#person" },
     url: "https://purcellventures.co/who",
     name: "Who is Elijah Purcell?",
   };

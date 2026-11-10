@@ -12,7 +12,7 @@ import type { ReactNode } from "react";
 
 const URL = "https://purcellventures.co/ai-consulting-cost";
 const DESCRIPTION =
-  "How Purcell Ventures quotes AI consulting for small businesses after a free call, what drives a quote, how common pricing models work and how to judge payback.";
+  "The six ways consultants price AI consulting for a small business, what drives a quote and how to judge payback. Purcell Ventures quotes after a free call.";
 
 export const metadata: Metadata = {
   title: { absolute: "AI consulting pricing for a small business, Purcell Ventures" },
@@ -37,6 +37,8 @@ export const metadata: Metadata = {
 };
 
 export const QA: [string, string][] = [
+  ["How is AI consulting priced for a small business?",
+   "Consultants usually price AI consulting in one of six ways: hourly, per person trained, per workshop, as a fixed-fee project, as a monthly retainer or per software seat. Within any model, the price depends on the scope, the team size, the number of sessions, whether you need a custom build, travel and the support you want afterward."],
   ["How much does AI consulting cost at Purcell Ventures?",
    "Elijah Purcell quotes each business after a free first call. The quote depends on the scope, the number of people and sessions, whether you need training or a custom build, where the work happens and what support you want afterward."],
   ["Why does Purcell Ventures not publish a price list?",

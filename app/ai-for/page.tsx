@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
 import { PostLayout } from "@/app/components/ui";
 import { TRADES } from "./trades";
 
@@ -95,7 +94,6 @@ export default function AiForIndex() {
       </p>
 
       <UpdatedLine path="/ai-for" bare />
-      <ServiceSchema />
       <PageDates path="/ai-for" />
     </PostLayout>
   );

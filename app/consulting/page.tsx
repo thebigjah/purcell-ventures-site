@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { PageHero, Section, Prose, Button, Rows, Figures, Tiers, Faq, ClosingCall } from "@/app/components/ui";
+import { FaqSchema, type QA } from "@/app/components/FaqBlock";
 import { CONTACT } from "@/lib/contact";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
 
 // Rebuilt on the page kit 26 Oct 2026. The session list used to be an accordion that
 // hid each session's detail behind a click. Every session now shows in full: a buyer
@@ -117,8 +117,13 @@ const FAQ = [
   { q: "Can you come to our location?", a: "Yes. I come to your office and train your team there. Examples from your own setting make the session more useful." },
   { q: "How is this different from using ChatGPT on my own?", a: "Most people use AI tools for one-off questions. I show you prompting techniques, integrations and workflows that save time in your type of business." },
   { q: "Will the session turn into a sales pitch for your other services?", a: "No. If I see something in your business that I could build for you, I mention it once, after the session." },
+  { q: "How much does AI training cost?", a: "I quote every business after a free call, based on group size, session length and prep. Formats run from 1-on-1 sessions and small groups of 2 to 8 people to a half-day workshop for up to 20 people." },
   { q: "How far ahead do I need to book?", a: "Standard sessions need 1 to 2 weeks. Custom trainings need more prep time, so contact me as early as you can." },
 ];
+
+// FAQPage schema from the same list. The first answer holds a link, so it stays out of the
+// schema, which takes plain text.
+const FAQ_QA: QA[] = FAQ.flatMap(({ q, a }) => (typeof a === "string" ? [[q, a] as QA] : []));
 
 const EMAIL = `mailto:${CONTACT.email}?subject=Consulting%20session%20inquiry`;
 
@@ -207,7 +212,7 @@ export default function ConsultingPage() {
       <Section title="Background">
         <Prose>
           <p>
-            I am 19. I spent my last year of high school building autonomous AI systems and production tools full-time, and I teach the same tools I use in my own business every day.
+            I started the company at seventeen. I spent my last year of high school building autonomous AI systems and production tools full-time, and I teach the same tools I use in my own business every day.
           </p>
         </Prose>
         <div style={{ marginTop: 32 }}>
@@ -230,6 +235,7 @@ export default function ConsultingPage() {
       </Section>
 
       <Section title="Common questions">
+        <FaqSchema qa={FAQ_QA} />
         <Faq items={FAQ} />
       </Section>
 
@@ -242,7 +248,6 @@ export default function ConsultingPage() {
         />
       </div>
       <UpdatedLine path="/consulting" />
-      <ServiceSchema />
       <PageDates path="/consulting" />
     </main>
   );

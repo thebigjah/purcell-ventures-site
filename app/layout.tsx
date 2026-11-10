@@ -3,6 +3,7 @@ import "./globals.css";
 import ChatWidget from "./components/ChatWidget";
 import SiteNav from "./components/SiteNav";
 import SiteFooter from "./components/SiteFooter";
+import { SERVICE_AREA } from "@/lib/service-area";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -64,34 +65,33 @@ const orgSchema = {
       "name": "Purcell Ventures",
       "description": "AI systems, custom software, AI consulting and websites for small businesses, from Purcell Ventures LLC, founded by Elijah Purcell.",
       "publisher": { "@id": "https://purcellventures.co/#organization" },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://purcellventures.co/?q={search_term_string}",
-        },
-        "query-input": "required name=search_term_string",
-      },
+      // No SearchAction: the site has no search, so a search box in results would lead nowhere.
     },
     {
-      "@type": "Organization",
+      // One node for the company on every page. ProfessionalService rides here instead of on
+      // a second node per service page, so every page states the same types for one @id.
+      "@type": ["Organization", "ProfessionalService"],
       "@id": "https://purcellventures.co/#organization",
       "name": "Purcell Ventures LLC",
       "legalName": "Purcell Ventures LLC",
+      // Filed as Zultar LLC on 8 April 2025 and renamed on 27 January 2026, same Georgia
+      // control number. The old name stays findable so records under it resolve here.
+      "alternateName": ["Purcell Ventures", "Zultar LLC"],
       "url": "https://purcellventures.co",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://purcellventures.co/opengraph-image",
-        "width": 1200,
-        "height": 630,
+        // Square, from public/mark-foil.svg. Logo slots crop a wide image badly.
+        "url": "https://purcellventures.co/brand/logo-512.png",
+        "width": 512,
+        "height": 512,
       },
-      "description": "Purcell Ventures LLC builds AI systems and custom software for small businesses, runs hands-on business and AI consulting, and builds websites. Elijah Purcell founded it in Georgia in April 2025 and runs it from Tuscaloosa, Alabama.",
+      "description": "Purcell Ventures LLC is a Tuscaloosa, Alabama AI and software company (a Georgia LLC). It builds AI systems and custom software for small businesses, runs hands-on AI consulting and builds websites. Elijah Purcell filed it as Zultar LLC on 8 April 2025 and renamed it Purcell Ventures LLC on 27 January 2026.",
       "foundingDate": "2025-04-08",
       // A logged-out ChatGPT answer on 20 Aug 2026 volunteered that an older New York
       // LLC shares this company name. Stating the distinguishing fact here means an
       // assistant does not have to hedge about which company it found.
       "disambiguatingDescription":
-        "The Purcell Ventures LLC registered in Georgia, control number 25075361, formed 8 April 2025 by Elijah Purcell. Not the older, unrelated Purcell Ventures LLC registered in New York.",
+        "The Purcell Ventures LLC registered in Georgia, control number 25075361, formed 8 April 2025 by Elijah Purcell as Zultar LLC. An older, unrelated company with the same name holds a New York registration.",
       "identifier": {
         "@type": "PropertyValue",
         "propertyID": "Georgia Secretary of State control number",
@@ -103,10 +103,12 @@ const orgSchema = {
       },
       "email": "elijah@purcellventures.co",
       "telephone": "+12054627839",
+      // Where the company operates. Acworth, Georgia stays as foundingLocation and in the
+      // legal identifier above, because that is where the LLC is filed.
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Acworth",
-        "addressRegion": "GA",
+        "addressLocality": "Tuscaloosa",
+        "addressRegion": "AL",
         "addressCountry": "US",
       },
       // THE COMPANY'S OWN PROFILES, NOT HIS. This array previously listed his personal
@@ -117,22 +119,16 @@ const orgSchema = {
       // Same rule as the Person node below: independent records only. ua-today.vercel.app
       // and purcellventures.co/who are both his, so neither corroborated anything.
       "sameAs": [
-        "https://www.linkedin.com/company/138853899/",
-        "https://www.crunchbase.com/organization/purcell-ventures",
-        "https://github.com/thebigjah"],
-      "founder": { "@id": "https://purcellventures.co/#founder" },
-      "employee": { "@id": "https://purcellventures.co/#founder" },
+        "https://www.linkedin.com/company/purcell-ventures-llc/",
+        "https://www.crunchbase.com/organization/purcell-ventures"],
+      "founder": { "@id": "https://elijahpurcell.com/#person" },
+      "employee": { "@id": "https://elijahpurcell.com/#person" },
       "knowsAbout": [
         "Web development for small business", "Custom software development",
         "AI consulting", "Autonomous AI agent systems", "Business process automation",
         "Search engine optimization",
       ],
-      "areaServed": [
-        { "@type": "City", "name": "Tuscaloosa" },
-        { "@type": "City", "name": "Acworth" },
-        { "@type": "AdministrativeArea", "name": "Metro Atlanta" },
-        { "@type": "Country", "name": "United States" },
-      ],
+      "areaServed": SERVICE_AREA,
       "slogan": "AI systems, custom software and business consulting for small businesses.",
       // One human. The 57 COSMIC agents are software and the team page says so in its first
       // sentence, so the count here stays honest rather than flattering.
@@ -140,7 +136,9 @@ const orgSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://purcellventures.co/#founder",
+      // ONE PERSON ID ACROSS BOTH SITES. elijahpurcell.com uses this @id for him, so this
+      // domain uses it too, and every page here points at it rather than restating him.
+      "@id": "https://elijahpurcell.com/#person",
       "name": "Elijah Purcell",
       "image": "https://purcellventures.co/brand/elijah.jpg",
       "givenName": "Elijah",
@@ -150,7 +148,7 @@ const orgSchema = {
       // title he wants surfaced for search sits beside it rather than replacing it.
       // hasOccupation below carries the full description of each.
       "jobTitle": ["Founder/CEO", "Autonomous AI Agent Systems Engineer"],
-      "description": "Founder of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama, in New College and the Honors College, Class of 2030, on a pre-med track toward psychiatry. Based in Tuscaloosa, Alabama. Builds and operates COSMIC, a station of 57 AI agents in 17 rooms.",
+      "description": "Founder of Purcell Ventures LLC, a Tuscaloosa, Alabama AI and software company (a Georgia LLC), and a psychology and data science student at the University of Alabama, in New College and the Honors College, Class of 2030, on a pre-med track toward psychiatry. Based in Tuscaloosa, Alabama. Builds and operates COSMIC, a station of 57 AI agents in 17 rooms.",
       "worksFor": { "@id": "https://purcellventures.co/#organization" },
       // His own site is the home page of the person, this domain the home of the company (9 Nov 2026).
       "url": "https://elijahpurcell.com/",
@@ -163,20 +161,11 @@ const orgSchema = {
         "addressRegion": "AL",
         "addressCountry": "US",
       },
-      // DISAMBIGUATION, WHICH IS THE WHOLE FIGHT.
-      //
-      // schema.org has a property built for exactly this situation, where two entities
-      // share a name and a reader needs one sentence to tell them apart.
-      //
-      // The names here come from Google in a real browser on 20 Aug 2026, not from a
-      // search API, and the two disagreed. The API returned a Duke Energy HR business
-      // partner in the top three; Google returns him nowhere in the top twenty. Who
-      // actually ranks: a campus pastor at Liberty Church in Pensacola at position two, a
-      // Farragut High linebacker recruit in Knoxville, and an amateur boxer in Brisbane.
-      // Naming a competitor who does not rank is useless, and naming the wrong one makes
-      // the page look like it is guessing.
+      // DISAMBIGUATION BY POSITIVE IDENTIFIERS. Other people share the name. This states
+      // what identifies him (school, city, birth year, company, its control number and
+      // former name, ORCID) and names no one else, because the others are private people.
       "disambiguatingDescription":
-        "The Elijah Purcell who founded Purcell Ventures LLC and studies psychology and data science at the University of Alabama in Tuscaloosa. Not the campus pastor at Liberty Church in Pensacola, Florida, not the Farragut High School football recruit in Knoxville, Tennessee, and not the amateur boxer in Brisbane, Australia.",
+        "The Elijah Purcell born in 2007 who studies psychology and data science at the University of Alabama in Tuscaloosa and founded Purcell Ventures LLC (Georgia control number 25075361, formerly Zultar LLC). ORCID 0009-0000-7829-9258. Other people share the name.",
       "birthDate": "2007-08",
       "nationality": { "@type": "Country", "name": "United States" },
       "alumniOf": {

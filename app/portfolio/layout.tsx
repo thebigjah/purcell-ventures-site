@@ -39,26 +39,11 @@ const BREADCRUMB_LD = {
     }
   ]
 };
-const FAQ_LD = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What has Elijah Purcell built?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "My lead project is Rufus Rideshare, an iPhone app a Georgia College & State University student commissioned, which Apple approved for the App Store in October 2026. I also built UA Today, an unofficial University of Alabama events page, Returns Void, a prayer ledger, and more than forty free tools and games, and I am founding Yellowhammer Society: Innovators in AI at The University of Alabama."
-      }
-    }
-  ]
-};
 
 export default function PortfolioLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_LD) }} />
       {children}
     </>
   );

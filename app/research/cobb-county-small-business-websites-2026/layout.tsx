@@ -13,7 +13,10 @@ import { pct } from "@/lib/research/cobb-2026.mjs";
 const URL = "https://purcellventures.co/research/cobb-county-small-business-websites-2026";
 const CSV = "https://purcellventures.co/research/cobb-county-small-business-websites-2026-aggregates.csv";
 const C = summary.frames.county;
-const RUN_DAY = summary.checks_finished_utc.slice(0, 10);
+// The checks finished at 02:11 UTC on 10 November, which was 9 November in Tuscaloosa.
+// The publication date is the calendar day where he published it, America/Chicago.
+// en-CA formats as YYYY-MM-DD.
+export const RUN_DAY = new Date(summary.checks_finished_utc).toLocaleDateString("en-CA", { timeZone: "America/Chicago" });
 
 export const TITLE = `Cobb County small business websites, ${C.domains_checked.toLocaleString("en-US")} checked`;
 export const DESCRIPTION =
@@ -106,7 +109,7 @@ const schema = {
       url: URL,
       datePublished: RUN_DAY,
       dateModified: RUN_DAY,
-      author: { "@id": "https://purcellventures.co/#founder" },
+      author: { "@id": "https://elijahpurcell.com/#person" },
       publisher: { "@id": "https://purcellventures.co/#organization" },
       about: { "@id": `${URL}#dataset` },
     },

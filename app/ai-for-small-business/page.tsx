@@ -1,8 +1,12 @@
 import Link from "next/link";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import { pageDates, formatDate } from "@/lib/page-dates";
 import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
+
+// The visible Updated line and the Article dateModified in layout.tsx read the same value.
+const DATES = pageDates("/ai-for-small-business")!;
 
 // Pillar for the AI for small business cluster, on the same PostLayout as /ai-consulting.
 // Question H2s, each answered in the paragraph directly under it. Where a live post already
@@ -19,8 +23,15 @@ export default function AiForSmallBusiness() {
       kicker="AI for small business"
       title="AI for small business"
       lede="Where a small business owner can start with AI safely, how to check what it produces, what to tell staff and customers, and where AI spending goes to waste."
-      meta={<>Updated <time dateTime="2026-11-09">9 November 2026</time>. By Elijah Purcell, Purcell Ventures, Tuscaloosa.</>}
+      meta={<>Updated <time dateTime={DATES.modified}>{formatDate(DATES.modified)}</time>. By Elijah Purcell, Purcell Ventures, Tuscaloosa.</>}
     >
+      <p>
+        A small business owner can use AI each day for two jobs it does well: writing
+        first drafts and sorting or summarizing large amounts of text. Start with
+        writing jobs where you already know what a good answer looks like, such as
+        replies to Google reviews, and check every result before it reaches a customer.
+      </p>
+
       <p>
         I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a psychology and data
         science student at the University of Alabama. I train small business teams to use AI

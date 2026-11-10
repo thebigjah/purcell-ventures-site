@@ -143,10 +143,12 @@ export default function Galaxy({ children }: { children: ReactNode }) {
         <div className="gx-stage" ref={stageRef}><div className="gx-labels" ref={labelsRef} /></div>
         <div className="gx-vig" aria-hidden="true" />
         <div className="gx-hero">{children}</div>
-        <p className="gx-hint">Click any light to open it.</p>
-        <a className="gx-cue" href="#what">Scroll <span /></a>
+        {/* Map controls, hidden from the accessibility tree and text extractors so the
+            page text runs from the H1 straight into the content. The visuals are unchanged. */}
+        <p className="gx-hint" aria-hidden="true">Click any light to open it.</p>
+        <a className="gx-cue" href="#what" aria-hidden="true" tabIndex={-1}>Scroll <span /></a>
 
-        <aside className={`gx-strip${sys && !opening ? " is-open" : ""}`} aria-live="polite">
+        <aside className={`gx-strip${sys && !opening ? " is-open" : ""}`} aria-live="polite" aria-hidden={sys && !opening ? undefined : true}>
           <button type="button" className="ui-btn ui-btn--ghost gx-back" onClick={() => sceneRef.current?.back()}>Back to the map</button>
           {sys && (
             <>

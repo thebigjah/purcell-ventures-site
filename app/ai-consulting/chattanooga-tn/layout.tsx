@@ -65,8 +65,8 @@ const schema = {
       "description":
         "AI training, AI automation and custom software for businesses in Chattanooga, Tennessee, delivered by Elijah Purcell of Purcell Ventures LLC from Tuscaloosa.",
       "provider": { "@id": "https://purcellventures.co/#organization" },
-      "founder": { "@id": "https://purcellventures.co/#founder" },
-      "employee": { "@id": "https://purcellventures.co/#founder" },
+      "founder": { "@id": "https://elijahpurcell.com/#person" },
+      "employee": { "@id": "https://elijahpurcell.com/#person" },
       "areaServed": [
         { "@type": "City", "name": "Chattanooga", "containedInPlace": { "@type": "AdministrativeArea", "name": "Tennessee" } },
         { "@type": "AdministrativeArea", "name": "Tennessee" },
@@ -102,14 +102,6 @@ const schema = {
         "name": q,
         "acceptedAnswer": { "@type": "Answer", "text": a },
       })),
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://purcellventures.co" },
-        { "@type": "ListItem", "position": 2, "name": "AI consulting", "item": "https://purcellventures.co/ai-consulting" },
-        { "@type": "ListItem", "position": 3, "name": "Chattanooga", "item": URL },
-      ],
     },
   ],
 };

@@ -30,7 +30,7 @@ const TUTORIALS: Tutorial[] = [
     category: "AI",
     title: "How to edit AI blog drafts",
     blurb: "How to use the AI Content Generator to get usable first drafts, and three rules for editing them.",
-    toolLink: "/digital/tools/ai-content-generator",
+    toolLink: "/digital/tools/content-generator",
     readTime: "5 min read",
   },
   {
@@ -46,7 +46,7 @@ const TUTORIALS: Tutorial[] = [
     category: "AI",
     title: "How to build a brand kit with the Brand Kit Builder",
     blurb: "How to use the Brand Kit Builder to get a color palette, typography pairs and logo concepts for a new business.",
-    toolLink: "/digital/tools/brand-kit-builder",
+    toolLink: "/digital/tools/brand-kit",
     readTime: "5 min read",
   },
   {
@@ -54,7 +54,7 @@ const TUTORIALS: Tutorial[] = [
     category: "AI",
     title: "How to build a customer persona with the Customer Persona Builder",
     blurb: "How to use the Customer Persona Builder to write a persona document for your sales and marketing team.",
-    toolLink: "/digital/tools/customer-persona-builder",
+    toolLink: "/digital/tools/customer-persona",
     readTime: "4 min read",
   },
   {
@@ -62,7 +62,7 @@ const TUTORIALS: Tutorial[] = [
     category: "Sales",
     title: "How to audit your pricing page with the Pricing Audit tool",
     blurb: "Paste your URL and the tool reviews your pricing structure, social proof and calls to action. Includes common findings and how to fix them.",
-    toolLink: "/digital/tools/pricing-page-audit",
+    toolLink: "/digital/tools/pricing-audit",
     readTime: "3 min read",
   },
   {

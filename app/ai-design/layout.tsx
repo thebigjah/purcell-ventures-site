@@ -55,7 +55,7 @@ const schema = {
       "url": "https://purcellventures.co/ai-design",
       "datePublished": "2026-11-09",
       "dateModified": "2026-11-09",
-      "author": { "@id": "https://purcellventures.co/#founder" },
+      "author": { "@id": "https://elijahpurcell.com/#person" },
       "publisher": { "@id": "https://purcellventures.co/#organization" },
       "about": ["AI design tools", "Logo design", "Brand identity", "Website design", "Social media graphics"],
     },
@@ -67,14 +67,6 @@ const schema = {
         "name": q,
         "acceptedAnswer": { "@type": "Answer", "text": a },
       })),
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://purcellventures.co" },
-        { "@type": "ListItem", "position": 2, "name": "Digital", "item": "https://purcellventures.co/digital" },
-        { "@type": "ListItem", "position": 3, "name": "AI in design for small businesses", "item": "https://purcellventures.co/ai-design" },
-      ],
     },
   ],
 };

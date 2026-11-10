@@ -1,7 +1,7 @@
 import { PageHero, Section, Prose, Button, Rows, Facts, Tiers, Faq, ClosingCall } from "@/app/components/ui";
+import { FaqSchema } from "@/app/components/FaqBlock";
 import { CONTACT } from "@/lib/contact";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
 
 // Rebuilt on the page kit 26 Oct 2026. It was a client component for no reason (no
 // state, no handlers), so it is a server component now. Every plan, package, table row,
@@ -156,6 +156,7 @@ export default function SteadyPage() {
       </Section>
 
       <Section title="Common questions">
+        <FaqSchema qa={FAQ.map(({ q, a }) => [q, a])} />
         <Faq items={FAQ} />
       </Section>
 
@@ -166,7 +167,6 @@ export default function SteadyPage() {
         href="/steady/start"
       />
       <UpdatedLine path="/steady" />
-      <ServiceSchema />
       <PageDates path="/steady" />
     </main>
   );

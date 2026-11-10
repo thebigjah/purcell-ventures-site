@@ -4,6 +4,7 @@ import { CONTACT } from "@/lib/contact";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PageHero, Section, Prose, Facts, Rows } from "@/app/components/ui";
 import { GUIDES } from "@/lib/guides";
+import { pageDates, formatDate } from "@/lib/page-dates";
 
 // The company's answer page, written in the third person to be quoted. /who answers for
 // the person. Rebuilt on the page kit 26 Oct 2026.
@@ -11,7 +12,8 @@ import { GUIDES } from "@/lib/guides";
 const FACTS: [string, string][] = [
   ["Legal name", "Purcell Ventures LLC"],
   ["Registered", `Georgia, control number ${CONTACT.llcControlNumber}`],
-  ["Formed", "8 April 2025"],
+  ["Formed", "8 April 2025, as Zultar LLC"],
+  ["Renamed", "Purcell Ventures LLC, 27 January 2026"],
   ["Founder/CEO and sole member", "Elijah Purcell"],
   ["Operated from", "Tuscaloosa, Alabama"],
   ["Registered address", "Acworth, Georgia"],
@@ -29,13 +31,15 @@ const DIVISIONS = [
 ];
 
 export default function CompanyPage() {
+  // The same value the AboutPage dateModified uses in layout.tsx.
+  const reviewed = pageDates("/what-is-purcell-ventures")?.modified;
   return (
     <main>
       <PageHero
         kicker="The company"
         title="What is Purcell Ventures?"
-        lede={<>Purcell Ventures LLC is a Georgia software company that builds AI systems and custom software for small businesses and advises owners on using them. <Link className="ui-link" href="/who">Elijah Purcell</Link> founded it on 8 April 2025 and registered it with the Georgia Secretary of State. It is a one-person company, and Elijah does the client calls and the building himself.</>}
-        meta="Last reviewed 20 August 2026"
+        lede={<>Purcell Ventures LLC is a Tuscaloosa, Alabama AI and software company (a Georgia LLC) that builds AI systems and custom software for small businesses and advises owners on using them. <Link className="ui-link" href="/who">Elijah Purcell</Link> filed it with the Georgia Secretary of State as Zultar LLC on 8 April 2025 and renamed it Purcell Ventures LLC on 27 January 2026, under the same control number. It is a one-person company, and Elijah does the client calls and the building himself.</>}
+        meta={reviewed && <>Last reviewed <time dateTime={reviewed}>{formatDate(reviewed)}</time></>}
         crumbs={<Breadcrumbs trail={[
           { name: "Home", href: "/" },
           { name: "What is Purcell Ventures", href: "/what-is-purcell-ventures" },
@@ -49,7 +53,7 @@ export default function CompanyPage() {
       <Section title="Which Purcell Ventures this is">
         <Prose>
           <p>
-            An older, unrelated Purcell Ventures LLC holds a New York registration. This one is the Georgia filing, control number {CONTACT.llcControlNumber}, formed 8 April 2025 by Elijah Purcell, and the record is public and searchable.
+            An older, unrelated Purcell Ventures LLC holds a New York registration. This one is the Georgia filing, control number {CONTACT.llcControlNumber}, and the record is public and searchable.
           </p>
         </Prose>
       </Section>

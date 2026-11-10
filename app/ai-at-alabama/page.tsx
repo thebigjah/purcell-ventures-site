@@ -3,7 +3,6 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
-import ServiceSchema from "@/app/components/ServiceSchema";
 
 // Rebuilt on the page kit 26 Oct 2026 as a guide in PostLayout. Every course code and
 // credit figure was read off catalog.ua.edu on 20 Aug 2026 and is unchanged.
@@ -127,7 +126,6 @@ export default function AiAtAlabama() {
         description: "The new AI BS, its exact requirements, why AI majors cannot double major in CS, and the routes for students who are not in engineering.",
         published: "2026-08-20",
       }} />
-      <ServiceSchema />
     </PostLayout>
   );
 }

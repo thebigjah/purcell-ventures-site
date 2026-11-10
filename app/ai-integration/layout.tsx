@@ -57,7 +57,7 @@ const schema = {
       "url": "https://purcellventures.co/ai-integration",
       "datePublished": "2026-11-09",
       "dateModified": "2026-11-09",
-      "author": { "@id": "https://purcellventures.co/#founder" },
+      "author": { "@id": "https://elijahpurcell.com/#person" },
       "publisher": { "@id": "https://purcellventures.co/#organization" },
       "about": ["AI integration", "API", "CRM", "Website chatbot", "Data security"],
     },
@@ -69,14 +69,6 @@ const schema = {
         "name": q,
         "acceptedAnswer": { "@type": "Answer", "text": a },
       })),
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://purcellventures.co" },
-        { "@type": "ListItem", "position": 2, "name": "Software", "item": "https://purcellventures.co/software" },
-        { "@type": "ListItem", "position": 3, "name": "AI integration for small business software", "item": "https://purcellventures.co/ai-integration" },
-      ],
     },
   ],
 };

@@ -26,26 +26,11 @@ const BREADCRUMB_LD = {
     }
   ]
 };
-const FAQ_LD = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What work can I check from Purcell Ventures?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Rufus Rideshare, an iPhone app built for a Georgia College student and approved for the App Store on 8 October 2026. COSMIC, the system of 57 AI agents that runs the company. And an audit of 121 businesses near the University of Alabama. Client case studies with results go up only with the client's permission."
-      }
-    }
-  ]
-};
 
 export default function CaseStudiesLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_LD) }} />
       {children}
     </>
   );

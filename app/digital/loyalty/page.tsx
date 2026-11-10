@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { PageHero, Figures } from "@/app/components/ui";
 import s from "../_demo/demo.module.css";
 import { Field, ToolsKicker, AboutTool } from "../_demo/parts";
+import FaqBlock, { type QA } from "@/app/components/FaqBlock";
 
 interface Customer {
   id: string;
@@ -17,6 +18,16 @@ interface Customer {
 }
 
 const KEY = "pv_loyalty_v1";
+
+// Questions about this tool, shown on the page and sent as FAQPage schema.
+const QA: QA[] = [
+  ["How does the free loyalty punch card work?",
+   "Add a customer by name and phone number, tap to add a punch at each visit, and redeem the reward when the card fills. Each card holds 10 punches by default, and redeeming resets that card to zero."],
+  ["Where are the punch cards stored?",
+   "In the browser on the device you use. The cards do not sync to another device, and clearing the browser's site data deletes them, so keep the tracker on the device at your register."],
+  ["Can customers check in with a QR code?",
+   "Yes, in the version on your own website. The Loyalty Punch Card with QR check-ins is in the Growth plan, which Elijah quotes for your business after a free call."],
+];
 
 const ABOUT = [
   {
@@ -172,6 +183,7 @@ export default function LoyaltyPage() {
         )}
       </div>
       <AboutTool sections={ABOUT} />
+      <div className="no-print"><FaqBlock qa={QA} /></div>
     </main>
   );
 }

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
 import { CONTACT } from "@/lib/contact";
 import { pageDates } from "@/lib/page-dates";
 import { TRADES, tradeBySlug } from "./trades";
@@ -41,7 +40,7 @@ export function TradeSchema({ slug, qa, about }: { slug: string; qa: [string, st
         headline: `AI for ${t.name}`,
         url,
         ...(d ? { datePublished: d.published, dateModified: d.modified } : {}),
-        author: { "@id": `${SITE}/#founder` },
+        author: { "@id": "https://elijahpurcell.com/#person" },
         publisher: { "@id": `${SITE}/#organization` },
         about,
       },
@@ -113,7 +112,6 @@ export function TradeEnd({ slug }: { slug: string }) {
         <Link href="/ai-for">All trades</Link>.
       </p>
       <UpdatedLine path={path} bare />
-      <ServiceSchema />
       <PageDates path={path} />
     </>
   );

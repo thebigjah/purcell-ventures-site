@@ -17,9 +17,7 @@ export default function robots(): MetadataRoute.Robots {
           "/logos",
           "/consulting/book",
           "/writing",
-          "/verses",
           "/sales-rep",
-          "/rep-portal",
           // /links was here until 22 Aug 2026. Removed on his explicit instruction.
           //
           // It is the hub page his bio links to, it names his external profiles, and a
@@ -29,10 +27,10 @@ export default function robots(): MetadataRoute.Robots {
           // those links are the only thing on the site pointing a crawler at the
           // independent records of him that exist.
           //
-          // /uses, /verses and /writing stay blocked. Those were separate decisions and he
-          // did not ask for them.
-          "/uses",
-          "/shop",
+          // /uses, /verses, /shop and /rep-portal were removed on 9 Nov 2026. /shop and
+          // /rep-portal carry a robots noindex in their layouts, and a crawler blocked here
+          // never reads that tag, so a blocked URL could still be indexed from links alone.
+          // /writing stays blocked.
           "/free",
         ],
       },

@@ -4,7 +4,7 @@ import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
+import cobb from "@/lib/research/cobb-2026-11-summary.json";
 
 // City page on the same single-column PostLayout as the pillar. Kennesaw's version splits
 // its length between storefront work, the order and shipping work of the I-75 manufacturers,
@@ -48,6 +48,15 @@ export default function AiConsultingKennesaw() {
         order and shipping details between systems every week. Student founders try to do the
         work of a full team with one or two people. Repeated work like that is where AI helps
         a small business most.
+      </p>
+
+      <p>
+        I checked {cobb.frame.kennesaw} business websites in Kennesaw for my{" "}
+        <Link href="/research/cobb-county-small-business-websites-2026">
+          study of {cobb.frame.total.toLocaleString("en-US")} small business websites across Cobb County
+        </Link>{" "}
+        in November 2026. Across the county, {cobb.frames.county.llms_txt.pct_of_own_domain_pages} percent
+        of the working sites on a business&rsquo;s own domain published an llms.txt file, a plain text summary of the site written for AI tools.
       </p>
 
       <h2>What AI work fits Kennesaw businesses?</h2>
@@ -180,7 +189,6 @@ export default function AiConsultingKennesaw() {
         <Link href="/ai-consulting/acworth-ga">Acworth</Link>.
       </p>
       <UpdatedLine path={PATH} bare />
-      <ServiceSchema />
       <PageDates path={PATH} />
     </PostLayout>
   );

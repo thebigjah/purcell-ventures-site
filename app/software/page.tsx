@@ -1,7 +1,7 @@
 import { PageHero, Section, Tiers, Rows, Button, ClosingCall } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import PageDates, { UpdatedLine } from "@/app/components/PageDates";
-import ServiceSchema from "@/app/components/ServiceSchema";
+import FaqBlock, { type QA } from "@/app/components/FaqBlock";
 
 // Rebuilt on the page kit 26 Oct 2026. The price ranges were already in this page's
 // metadata and schema. They now show on the page too, so the visible page and the
@@ -84,6 +84,16 @@ const ENGAGE = [
   },
 ];
 
+// Shown on the page and sent as FAQPage schema by FaqBlock.
+const QA: QA[] = [
+  ["What kind of custom software does Purcell Ventures build?",
+   "Mobile applications for iOS and Android built with React Native or Expo, full-stack web applications built with Next.js, and AI tools. Elijah quotes each project for the business after a free discovery call."],
+  ["How does a custom software project start?",
+   "With a free 30-minute discovery call. Elijah scopes the work on that call before he quotes anything."],
+  ["What happens after a software project launches?",
+   "Elijah builds every project himself and stays involved after launch for fixes and follow-on work."],
+];
+
 export default function SoftwarePage() {
   return (
     <main>
@@ -134,6 +144,8 @@ export default function SoftwarePage() {
         />
       </Section>
 
+      <FaqBlock qa={QA} />
+
       <ClosingCall
         title="Starting a project"
         line="Tell me what you want built, and I will tell you whether I can help and what it would take. I reply within one business day."
@@ -141,7 +153,6 @@ export default function SoftwarePage() {
         href={MAIL}
       />
       <UpdatedLine path="/software" />
-      <ServiceSchema />
       <PageDates path="/software" />
     </main>
   );

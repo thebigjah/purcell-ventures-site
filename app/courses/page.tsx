@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageHero, Section, Rows, Prose, ClosingCall } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import PageDates from "@/app/components/PageDates";
+import FaqBlock, { type QA } from "@/app/components/FaqBlock";
 
 // THE COURSES INDEX, rebuilt on the page kit 26 Oct 2026.
 //
@@ -44,6 +45,12 @@ const BREADCRUMB_LD = {
     { "@type": "ListItem", position: 2, name: "Courses", item: "https://purcellventures.co/courses" },
   ],
 };
+
+// Shown on the page and sent as FAQPage schema by FaqBlock.
+const QA: QA[] = [
+  ["What courses does Elijah Purcell offer?",
+   "Three self-paced courses: the college application playbook, the business launch playbook, and Zero to Automated, which covers building AI tools for small business work."],
+];
 
 export default function CoursesPage() {
   return (
@@ -91,9 +98,11 @@ export default function CoursesPage() {
         </Prose>
       </Section>
 
+      <FaqBlock qa={QA} />
+
       <ClosingCall
         title="One-on-one help"
-        line="If you would rather have me look at your situation directly, consulting starts at $125 a person. I reply within one business day."
+        line="If you would rather have me look at your situation directly, I quote consulting for you after a free call. I reply within one business day."
         button="See consulting"
         href="/consulting"
       />

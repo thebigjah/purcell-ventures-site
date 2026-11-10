@@ -1,8 +1,12 @@
 import Link from "next/link";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import { pageDates, formatDate } from "@/lib/page-dates";
 import { PostLayout } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
 import { QA } from "./layout";
+
+// The visible Updated line and the Article dateModified in layout.tsx read the same value.
+const DATES = pageDates("/ai-automation")!;
 
 // Pillar for the AI automation cluster, on the same PostLayout as /ai-consulting and
 // /ai-design. Question H2s, each answered in the paragraph directly under it. The
@@ -19,8 +23,15 @@ export default function AiAutomation() {
       kicker="AI automation"
       title="AI automation for small businesses"
       lede="Which tasks a small business should hand to software first, what AI phone answering and booking can do, and which work should stay with a person."
-      meta={<>Updated <time dateTime="2026-11-09">9 November 2026</time>. By Elijah Purcell, Purcell Ventures, Tuscaloosa.</>}
+      meta={<>Updated <time dateTime={DATES.modified}>{formatDate(DATES.modified)}</time>. By Elijah Purcell, Purcell Ventures, Tuscaloosa.</>}
     >
+      <p>
+        Automate first the task that happens most often, follows the same steps each
+        time, and causes harm when someone forgets it. For most service businesses that
+        is follow-up: replying to new leads, chasing quotes that went quiet, and
+        reminding customers about invoices and appointments.
+      </p>
+
       <p>
         I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a student at the
         University of Alabama. I build automations for small businesses, and my own company

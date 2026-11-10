@@ -45,7 +45,7 @@ export default function PressLayout({ children }: { children: ReactNode }) {
     publisher: { "@id": "https://purcellventures.co/#organization" },
     about: [
       { "@id": "https://purcellventures.co/#organization" },
-      { "@id": "https://purcellventures.co/#founder" },
+      { "@id": "https://elijahpurcell.com/#person" },
     ],
     mainEntity: { "@id": "https://purcellventures.co/#organization" },
     primaryImageOfPage: {

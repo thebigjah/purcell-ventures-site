@@ -61,42 +61,11 @@ const BREADCRUMB_LD = {
     }
   ]
 };
-const FAQ_LD = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is Steady?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Personal IT help for individuals and families. Elijah Purcell sets up devices, teaches people to use them and answers texts when something breaks. Each plan is quoted for the household after a free call."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who is personal IT support for?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Parents and grandparents who are not comfortable with technology, and the family member who usually answers their tech questions."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this remote or in person?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Both. Elijah Purcell visits in person in Tuscaloosa or metro Atlanta and helps remotely by video anywhere in the US, through monthly plans and one-off packages. The fastest route is to email him at elijah@purcellventures.co."
-      }
-    }
-  ]
-};
 
 export default function SteadyLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_LD) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

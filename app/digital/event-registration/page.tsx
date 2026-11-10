@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { PageHero } from "@/app/components/ui";
 import s from "../_demo/demo.module.css";
 import { Field, ToolsKicker, AboutTool } from "../_demo/parts";
+import FaqBlock, { type QA } from "@/app/components/FaqBlock";
 
 interface Attendee {
   id: string;
@@ -28,6 +29,16 @@ interface Event {
 }
 
 const KEY = "pv_events_v1";
+
+// Questions about this tool, shown on the page and sent as FAQPage schema.
+const QA: QA[] = [
+  ["What does the free event registration tool do?",
+   "You create an event with a name, date, time, location, capacity and description, then collect RSVPs against it. Each RSVP records a name and an email address, with an optional phone number and notes."],
+  ["What happens when the event fills up?",
+   "Capacity starts at 25 and you can change it. Registration closes when the list reaches the number you set."],
+  ["How does check-in work at the door?",
+   "Tap Check in next to each name. The event shows how many people registered and how many arrived."],
+];
 
 const ABOUT = [
   {
@@ -226,6 +237,7 @@ export default function EventRegistrationPage() {
         )}
       </div>
       <AboutTool sections={ABOUT} />
+      <div className="no-print"><FaqBlock qa={QA} /></div>
     </main>
   );
 }
