@@ -4,7 +4,7 @@ import { AI_TOOLS, type AIToolConfig } from "@/lib/ai-tools";
 import FaqBlock, { type QA } from "@/app/components/FaqBlock";
 
 export const metadata: Metadata = {
-  title: "Free AI tools for small businesses",
+  title: { absolute: "Free AI tools for small businesses, Purcell Ventures" },
   description: `${AI_TOOLS.length} free AI tools for small businesses: FAQ pages, review replies, emails, captions, color palettes, job posts and more, plus working demos of the loyalty, expense, inventory, estimating and event add-ons.`,
   alternates: { canonical: "/digital/tools" },
 };
@@ -44,7 +44,7 @@ export default function ToolsIndexPage() {
         planet="tools"
         kicker="Digital add-ons"
         title={`${AI_TOOLS.length} free AI tools for small businesses`}
-        lede="Enter your business details and the tool writes the result for you, free. If one of them saves you time, I can add a branded version to your own site."
+        lede={`These ${AI_TOOLS.length} free AI tools write the everyday text a small business needs: review replies, job estimates, social media captions, FAQ pages, About pages and business emails. Enter your business details, run the tool and edit the draft. None of them asks for an account or an email address.`}
         actions={<>
           <Button href="#tools">See the tools</Button>
           <Button href="/digital" ghost>See the digital plans</Button>
