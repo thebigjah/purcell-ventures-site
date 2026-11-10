@@ -501,7 +501,7 @@
   },
   "/how-we-work": {
     "published": "2026-05-25",
-    "modified": "2026-11-03"
+    "modified": "2026-11-09"
   },
   "/invoicing": {
     "published": "2026-04-23",
@@ -545,6 +545,10 @@
   },
   "/print": {
     "published": "2026-03-12",
+    "modified": "2026-11-09"
+  },
+  "/privacy": {
+    "published": "2026-11-09",
     "modified": "2026-11-09"
   },
   "/progress": {
@@ -769,11 +773,11 @@
   },
   "/uses": {
     "published": "2026-05-21",
-    "modified": "2026-10-26"
+    "modified": "2026-11-09"
   },
   "/verses": {
     "published": "2026-05-21",
-    "modified": "2026-10-26"
+    "modified": "2026-11-09"
   },
   "/what-is-purcell-ventures": {
     "published": "2026-08-20",

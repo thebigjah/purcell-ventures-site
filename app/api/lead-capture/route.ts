@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Log to console (Vercel function logs)
-    console.log("[LEAD CAPTURE]", { email, firstName, source, intent, timestamp: new Date().toISOString() });
+    console.log("[LEAD CAPTURE]", { source, intent, timestamp: new Date().toISOString() });
     await sendLead("lead-magnet", { email, name: firstName, source, intent });
 
     // The welcome email delivers the free cold-email templates, so only the /free page's leads get it.

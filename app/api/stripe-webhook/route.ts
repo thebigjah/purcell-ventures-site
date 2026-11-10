@@ -60,12 +60,12 @@ export async function POST(req: NextRequest) {
   const product = session.metadata?.product || "unknown";
   const amount = session.amount_total ? session.amount_total / 100 : 0;
 
+  // No buyer email in the logs: Stripe already keeps the full record, and logs are not the place
+  // for customer contact details (9 Nov 2026).
   console.log("[STRIPE WEBHOOK] Sale", {
     product,
     amount,
-    email,
     sessionId: session.id,
-    customerId: session.customer,
     referrer: session.client_reference_id, // affiliate ref if any
   });
 

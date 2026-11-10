@@ -82,7 +82,8 @@ export default function PrivacyPage() {
             Purchases run through Stripe checkout pages on stripe.com. Stripe collects your card
             details, and Purcell Ventures never sees your card number. After a purchase, Stripe
             tells this site your email address, the product, the amount and any referral code
-            from the link you used. The site writes those details to its server logs. For the one
+            from the link you used. The server logs record the product, the amount and the
+            referral code, with no email address. For the one
             product delivered as a Telegram channel, the site asks Telegram for an invite link
             labelled with the part of your email address before the @, then emails you that link
             through Resend.
