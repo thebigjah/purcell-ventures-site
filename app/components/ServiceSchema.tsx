@@ -6,10 +6,14 @@
 // node reaches it through `provider`.
 //
 // Georgia is listed because the LLC is registered there (Acworth). The Alabama cities are
-// the service area chosen for these pages on 9 Nov 2026.
+// the service area chosen for these pages on 9 Nov 2026. Kennesaw, Marietta and Acworth
+// joined the same day with their own city pages under /ai-consulting, and so did
+// Chattanooga, Tennessee.
 
 const ORG = "https://purcellventures.co/#organization";
 const AL = { "@type": "State", name: "Alabama" };
+const GA = { "@type": "State", name: "Georgia" };
+const TN = { "@type": "State", name: "Tennessee" };
 
 const AREA = [
   ...["Tuscaloosa", "Birmingham", "Huntsville", "Montgomery", "Mobile", "Auburn"].map((name) => ({
@@ -18,7 +22,13 @@ const AREA = [
     containedInPlace: AL,
   })),
   AL,
-  { "@type": "State", name: "Georgia" },
+  ...["Kennesaw", "Marietta", "Acworth"].map((name) => ({
+    "@type": "City",
+    name,
+    containedInPlace: GA,
+  })),
+  GA,
+  { "@type": "City", name: "Chattanooga", containedInPlace: TN },
 ];
 
 const LD = {

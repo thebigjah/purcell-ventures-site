@@ -97,8 +97,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/agentic-ai`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     // Cluster pillars, written 9 Nov 2026. Each blog post in a cluster links up to one.
     { url: `${BASE}/ai-consulting`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.9 },
-    // City pages under the statewide pillar, written 9 Nov 2026
-    ...["birmingham-al", "huntsville-al", "montgomery-al", "mobile-al", "auburn-al"].map((city) => (
+    // City pages under the pillar, Alabama, Georgia and Tennessee, written 9 Nov 2026
+    ...["birmingham-al", "huntsville-al", "montgomery-al", "mobile-al", "auburn-al", "kennesaw-ga", "marietta-ga", "acworth-ga", "chattanooga-tn"].map((city) => (
       { url: `${BASE}/ai-consulting/${city}`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly" as const, priority: 0.8 }
     )),
     { url: `${BASE}/ai-design`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },

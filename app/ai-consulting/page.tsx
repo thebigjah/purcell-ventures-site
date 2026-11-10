@@ -185,6 +185,8 @@ export default function AiConsultingAlabama() {
 
       <h2>AI consulting by city</h2>
 
+      <h3>Alabama</h3>
+
       <ul>
         <li><Link href="/ai-consultant-tuscaloosa">Tuscaloosa</Link>: local businesses near the University of Alabama, with in-person meetings.</li>
         <li><Link href="/ai-consulting/birmingham-al">Birmingham</Link>: medical practices, law and accounting firms, banks and engineering offices.</li>
@@ -192,6 +194,25 @@ export default function AiConsultingAlabama() {
         <li><Link href="/ai-consulting/montgomery-al">Montgomery</Link>: firms that work with state government, automotive suppliers and businesses near Maxwell.</li>
         <li><Link href="/ai-consulting/mobile-al">Mobile</Link>: freight forwarders, logistics and marine firms, and Gulf Coast hospitality.</li>
         <li><Link href="/ai-consulting/auburn-al">Auburn</Link>: restaurants, shops, student housing and young founders.</li>
+      </ul>
+
+      <h3>Georgia</h3>
+
+      <p>
+        I registered Purcell Ventures LLC in Acworth, Georgia, and I grew up in Kennesaw.
+        Training for metro Atlanta teams runs at your location, the same way it does in Alabama.
+      </p>
+
+      <ul>
+        <li><Link href="/ai-consulting/kennesaw-ga">Kennesaw</Link>: shops on Barrett Parkway, small manufacturers and distributors along I-75, and Kennesaw State founders.</li>
+        <li><Link href="/ai-consulting/marietta-ga">Marietta</Link>: aerospace suppliers, medical practices and businesses on Marietta Square.</li>
+        <li><Link href="/ai-consulting/acworth-ga">Acworth</Link>: contractors, home service companies, marinas and lake businesses.</li>
+      </ul>
+
+      <h3>Tennessee</h3>
+
+      <ul>
+        <li><Link href="/ai-consulting/chattanooga-tn">Chattanooga</Link>: startups, automotive suppliers, freight companies, hotels and medical offices.</li>
       </ul>
 
       <h2>When is AI consulting the wrong purchase?</h2>
