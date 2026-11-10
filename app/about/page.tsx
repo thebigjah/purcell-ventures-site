@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PageHero, Section, Prose, Facts, Rows, Faq, Button } from "@/app/components/ui";
+import { GUIDES } from "@/lib/guides";
 import { CONTACT } from "@/lib/contact";
 import PageDates from "@/app/components/PageDates";
 
@@ -115,6 +116,10 @@ export default function AboutPage() {
 
       <Section title="Divisions" intro="Five active divisions, one planned, and a sister brand. I run all of them.">
         <Rows items={DIVISIONS} />
+      </Section>
+
+      <Section title="Research and guides">
+        <Rows items={GUIDES} />
       </Section>
 
       <Section id="contact" title="Contact" intro="Email works best, and I reply within one business day. Call or text if it is urgent.">

@@ -3,6 +3,7 @@ import { QA } from "./layout";
 import { CONTACT } from "@/lib/contact";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PageHero, Section, Prose, Facts, Rows } from "@/app/components/ui";
+import { GUIDES } from "@/lib/guides";
 
 // The company's answer page, written in the third person to be quoted. /who answers for
 // the person. Rebuilt on the page kit 26 Oct 2026.
@@ -60,6 +61,10 @@ export default function CompanyPage() {
             COSMIC, a station of 57 AI agents in 17 rooms, does proposals, site audits, security checks, research and outreach for the company. Each agent is a Claude session with a narrow set of tools and a written charter. The <Link href="/team">team roster</Link> names every agent and states that each one is software.
           </p>
         </Prose>
+      </Section>
+
+      <Section title="Research and guides">
+        <Rows items={GUIDES} />
       </Section>
 
       <Section title="Common questions">

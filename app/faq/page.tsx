@@ -1,4 +1,5 @@
 import { PageHero, Section, Faq, Rows, ClosingCall } from "@/app/components/ui";
+import { GUIDES } from "@/lib/guides";
 import { CONTACT } from "@/lib/contact";
 import PageDates from "@/app/components/PageDates";
 
@@ -106,6 +107,10 @@ export default function FAQPage() {
           <Faq items={section.qas} />
         </Section>
       ))}
+
+      <Section title="Guides and research">
+        <Rows items={GUIDES} />
+      </Section>
 
       <Section title="An FAQ for your business" intro="A free tool.">
         <Rows items={[{

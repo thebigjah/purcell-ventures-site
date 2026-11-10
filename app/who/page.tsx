@@ -2,6 +2,7 @@ import Link from "next/link";
 import { QA } from "./layout";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PageHero, Section, Prose, Facts, Rows } from "@/app/components/ui";
+import { GUIDES } from "@/lib/guides";
 import { CONTACT } from "@/lib/contact";
 
 // Written in the THIRD PERSON on purpose. A search engine can lift "Elijah Purcell is the
@@ -105,6 +106,10 @@ export default function WhoPage() {
           line: date,
           href: slug.startsWith("/") ? slug : `/blog/${slug}`,
         }))} />
+      </Section>
+
+      <Section title="Research and guides he has published">
+        <Rows items={GUIDES} />
       </Section>
 
       <Section title="Contact and profiles">
