@@ -120,7 +120,7 @@ Output ONLY the content. No preamble like "Here's your post:".`,
     fields: [
       { name: "postContext", label: "Describe the post or photo", type: "textarea", required: true, placeholder: "e.g., Behind-the-scenes shot of me organizing the new tool inventory in the truck before a job tomorrow" },
       { name: "businessName", label: "Business name", type: "text", required: true, placeholder: "e.g., Bob's Plumbing" },
-      { name: "platform", label: "Platform", type: "select", options: ["Instagram", "Facebook", "LinkedIn", "X / Twitter", "TikTok"], default: "Instagram" },
+      { name: "platform", label: "Platform", type: "select", options: ["Instagram", "Facebook", "LinkedIn", "TikTok"], default: "Instagram" },
       { name: "goal", label: "Goal of the post", type: "select", options: ["Build trust / show personality", "Educate / share tips", "Drive bookings / inquiries", "Make people laugh", "Celebrate a customer / win"], default: "Build trust / show personality" },
     ],
     systemPrompt: `You write social media captions for small businesses. Tone: ${TONE_DEFAULT}.
@@ -1115,7 +1115,7 @@ Quality bar:
   {
     slug: "bio-writer",
     name: "AI bio writer",
-    tagline: "Three bios in your voice, from a 140-character X bio to a full About page.",
+    tagline: "Three bios in your voice, from a 140-character social bio to a full About page.",
     description: "Enter a few facts about yourself or your business. The tool writes three bios: short (140 characters, for X), medium (80 words, for LinkedIn) and long (250 words, for an About page).",
     category: "Communication & Marketing",
     fields: [
@@ -1129,7 +1129,7 @@ Quality bar:
 
 Output in markdown:
 
-## Short (X/Twitter — 140 chars max)
+## Short (social profile bio, 140 chars max)
 [Single sentence. Most important fact + voice signature. Counts include spaces.]
 
 ## Medium (LinkedIn / About — 60-90 words)
