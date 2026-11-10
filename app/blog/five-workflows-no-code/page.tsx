@@ -56,7 +56,7 @@ export default function Post() {
         Schedule a month&apos;s posts in one sitting using Buffer, Later, or Meta&apos;s built-in scheduler. AI can draft the captions in minutes (my <Link href="/digital/tools/caption-generator">Caption Generator</Link> writes five captions per post). You write the prompts and the tool publishes them.
       </p>
 
-      <h2>What the five have in common</h2>
+      <h2>What do the five have in common?</h2>
       <p>
         Each workflow takes a task you already do by hand and puts it on a schedule so you don&apos;t have to remember it.
       </p>

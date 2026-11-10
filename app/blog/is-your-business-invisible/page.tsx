@@ -58,7 +58,7 @@ export default function Post() {
         new customer will not see. Every check below depends on starting clean.
       </p>
 
-      <h2>The seven checks</h2>
+      <h2>What are the seven checks?</h2>
 
       <h3>1. Your business name plus your town</h3>
       <p>
@@ -133,7 +133,7 @@ export default function Post() {
         your trade so a search engine can tell you apart.
       </p>
 
-      <h2>What to fix first</h2>
+      <h2>What should I fix first?</h2>
 
       <p>In this order:</p>
 
@@ -155,7 +155,7 @@ export default function Post() {
         </li>
       </ol>
 
-      <h2>When you do not need a website</h2>
+      <h2>When do you not need a website?</h2>
 
       <p>
         I build websites, so read this with that in mind.

@@ -67,7 +67,7 @@ export default function Post() {
 
       <pre><code>{`<link rel="canonical" href="https://purcellventures.co/blog"/>`}</code></pre>
 
-      <h2>What that tells a search engine</h2>
+      <h2>What does that tell a search engine?</h2>
 
       <p>
         A canonical tag tells a search engine that this page and the target page are the
@@ -88,7 +88,7 @@ export default function Post() {
         with them, even though all of it was correct.
       </p>
 
-      <h2>Why the bug goes unnoticed</h2>
+      <h2>Why does the bug go unnoticed?</h2>
 
       <p>I found three reasons.</p>
 
@@ -109,7 +109,7 @@ export default function Post() {
         in search, and on a new site that is easy to blame on the site being new.
       </p>
 
-      <h2>Checking your own site in two minutes</h2>
+      <h2>How do I check my own site in two minutes?</h2>
 
       <p>One command:</p>
 

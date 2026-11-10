@@ -42,7 +42,7 @@ export default function Post() {
         The test takes five minutes.
       </p>
 
-      <h2>The five-minute test</h2>
+      <h2>How do I test whether AI can find my business?</h2>
 
       <p>
         Run it signed out, in a private window, on a device that has not been to your
@@ -77,7 +77,7 @@ export default function Post() {
         change it.
       </Note>
 
-      <h2>Why they get it wrong</h2>
+      <h2>Why do AI assistants get businesses wrong?</h2>
 
       <p>
         <strong>They read cached copies.</strong> A correction to your website can take
@@ -131,7 +131,7 @@ export default function Post() {
         that sentence on my own site because four other people share my name.
       </p>
 
-      <h2>What does not work</h2>
+      <h2>What does not work?</h2>
 
       <p>
         Keyword stuffing does not work, and neither does paying for an "AI optimisation"

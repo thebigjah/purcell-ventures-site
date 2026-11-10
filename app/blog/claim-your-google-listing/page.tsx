@@ -46,7 +46,7 @@ export default function Post() {
             hours would do more than a website.
           </p>
 
-          <h2>What a Google Business Profile is</h2>
+          <h2>What is a Google Business Profile?</h2>
 
           <p>
             A Google Business Profile is the panel that appears beside search results with
@@ -59,7 +59,7 @@ export default function Post() {
             for it and claim it before you create a new one.
           </p>
 
-          <h2>Step by step</h2>
+          <h2>How do I claim my listing, step by step?</h2>
 
           <h3>1. Checking for an existing listing</h3>
           <p>
@@ -160,7 +160,7 @@ export default function Post() {
             permanently closed.
           </p>
 
-          <h2>When to get help</h2>
+          <h2>When should I get help?</h2>
 
           <p>
             Most owners can do all of this without help. Help is worth paying for when you
