@@ -62,7 +62,7 @@ const SECTIONS: { label: string; items: Item[] }[] = [
     items: [
       { href: "https://github.com/thebigjah", name: "GitHub", line: "Code for my public projects.", me: true },
       { href: "https://www.linkedin.com/in/theelijahpurcell", name: "LinkedIn", line: "My professional record.", me: true },
-      { href: "https://www.linkedin.com/company/138853899/", name: "Purcell Ventures on LinkedIn", line: "The company page." },
+      { href: "https://www.linkedin.com/company/purcell-ventures-llc/", name: "Purcell Ventures on LinkedIn", line: "The company page." },
       { href: "https://www.instagram.com/theelijahpurcell/", name: "Instagram", me: true },
     ],
   },

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://purcellventures.co/resume" },
 };
 
-// This was a bare Person re-stating the #founder node the root layout already renders
+// This was a bare Person re-stating the Person node the root layout already renders
 // on every page. Two effects, both bad. Google merges nodes sharing an @id, so the
 // duplicate added no entity and only a second, thinner set of claims to reconcile. And
 // because the page declared a Person rather than a ProfilePage, Search Console reported

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 // A hub page that lists a person's profiles is a ProfilePage, and saying so is the
 // difference between a list of links and a machine-readable statement that these accounts
-// are the same person. It points at the canonical #founder node in the root layout rather
+// are the same person. It points at the canonical Person node (https://elijahpurcell.com/#person) in the root layout rather
 // than describing him again; three pages used to re-declare that Person with contradictory
 // values and it took a day to unpick.
 const schema = {
