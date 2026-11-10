@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PillarReading from "@/app/components/PillarReading";
 import Cite from "@/app/ai-small-business-statistics/Cite";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PostLayout } from "@/app/components/ui";
@@ -201,6 +202,8 @@ export default function AiDesign() {
         templates to a <Link href="/digital">Digital plan</Link>, quoted for your business after a free call.
         Print work such as <Link href="/business-cards">business cards</Link> is on its own page.
       </p>
+
+      <PillarReading href="/ai-design" />
 
       <h2>Common questions</h2>
 
