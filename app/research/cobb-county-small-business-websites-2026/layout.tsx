@@ -13,6 +13,7 @@ import { pct } from "@/lib/research/cobb-2026.mjs";
 const URL = "https://purcellventures.co/research/cobb-county-small-business-websites-2026";
 const CSV = "https://purcellventures.co/research/cobb-county-small-business-websites-2026-aggregates.csv";
 const C = summary.frames.county;
+const RUN_DAY = summary.checks_finished_utc.slice(0, 10);
 
 export const TITLE = `Cobb County small business websites, ${C.domains_checked.toLocaleString("en-US")} checked`;
 export const DESCRIPTION =
@@ -82,8 +83,8 @@ const schema = {
       url: URL,
       creator: { "@id": "https://purcellventures.co/#organization" },
       publisher: { "@id": "https://purcellventures.co/#organization" },
-      datePublished: "2026-11-09",
-      temporalCoverage: "2026-11-09",
+      datePublished: RUN_DAY,
+      temporalCoverage: `${summary.overpass_fetched_utc.cobb.slice(0, 10)}/${RUN_DAY}`,
       spatialCoverage: { "@type": "Place", name: "Cobb County, Georgia, United States" },
       license: "https://creativecommons.org/licenses/by/4.0/",
       isBasedOn: "https://www.openstreetmap.org/copyright",
@@ -103,8 +104,8 @@ const schema = {
       headline: TITLE,
       description: DESCRIPTION,
       url: URL,
-      datePublished: "2026-11-09",
-      dateModified: "2026-11-09",
+      datePublished: RUN_DAY,
+      dateModified: RUN_DAY,
       author: { "@id": "https://purcellventures.co/#founder" },
       publisher: { "@id": "https://purcellventures.co/#organization" },
       about: { "@id": `${URL}#dataset` },
