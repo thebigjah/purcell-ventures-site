@@ -27,7 +27,7 @@
     "published": "2026-11-09",
     "modified": "2026-11-09"
   },
-  "/ai-consulting/acworth-ga": {
+  "/ai-consulting-cost": {
     "published": "2026-11-09",
     "modified": "2026-11-09"
   },
@@ -39,19 +39,7 @@
     "published": "2026-11-09",
     "modified": "2026-11-09"
   },
-  "/ai-consulting/chattanooga-tn": {
-    "published": "2026-11-09",
-    "modified": "2026-11-09"
-  },
   "/ai-consulting/huntsville-al": {
-    "published": "2026-11-09",
-    "modified": "2026-11-09"
-  },
-  "/ai-consulting/kennesaw-ga": {
-    "published": "2026-11-09",
-    "modified": "2026-11-09"
-  },
-  "/ai-consulting/marietta-ga": {
     "published": "2026-11-09",
     "modified": "2026-11-09"
   },
@@ -164,10 +152,6 @@
     "modified": "2026-11-09"
   },
   "/ai-integration": {
-    "published": "2026-11-09",
-    "modified": "2026-11-09"
-  },
-  "/ai-policy-template": {
     "published": "2026-11-09",
     "modified": "2026-11-09"
   },

@@ -154,6 +154,9 @@ export default function ConsultingPage() {
         <p className="ui-muted" style={{ marginTop: 24 }}>
           If you are not sure which session fits, <a className="ui-link" href="#contact">send me a message</a> and I will recommend one.
         </p>
+        <p className="ui-muted" style={{ marginTop: 12 }}>
+          What goes into a quote and how to estimate payback: <Link className="ui-link" href="/ai-consulting-cost">how AI consulting is priced for a small business</Link>.
+        </p>
       </Section>
 
       <Section id="sessions" title="Sessions" intro="There are five core sessions. I adapt each one to your industry and the software your team uses.">

@@ -44,6 +44,10 @@ LLC, the University of Alabama student in Tuscaloosa. The canonical answer page 
 - [AI consulting in Alabama](https://purcellventures.co/ai-consulting): the statewide
   answer page. What an AI consultant does, prices for training, automation and software,
   which of the three a business needs, and when AI is the wrong purchase.
+- [How AI consulting is priced for a small business](https://purcellventures.co/ai-consulting-cost):
+  Purcell Ventures quotes each business after a free call. What drives the quote, how
+  hourly, per-person, workshop, fixed-fee, retainer and per-seat pricing work, how to
+  estimate payback, and what to ask before paying anyone.
 - [AI consulting in Birmingham](https://purcellventures.co/ai-consulting/birmingham-al):
   AI work for medical practices, law and accounting firms, banks and engineering offices,
   and where patient and client data has to stay out of AI tools.
