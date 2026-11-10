@@ -33,10 +33,10 @@ export default function Post() {
         Since this post, the agents have grown into COSMIC: 57 agents in 17 rooms. The current roster is on <Link href="/team">the team page</Link>.
       </Note>
       <p>
-        Purcell Ventures is one person, me, working with 15 AI agents. They are software,
-        and <Link href="/team">the team page</Link> lists every one of them and says so.
-        They draft proposals, audit the live properties, chase invoices, check for exposed
-        secrets, and write case studies.
+        When I wrote this, Purcell Ventures was one person, me, working with 15 AI agents.
+        They were software, and <Link href="/team">the team page</Link> says so about every
+        agent. They drafted proposals, audited the live properties, chased invoices, checked
+        for exposed secrets, and wrote case studies.
       </p>
 
       <p>

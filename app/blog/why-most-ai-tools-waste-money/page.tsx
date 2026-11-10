@@ -82,7 +82,7 @@ export default function Post() {
 
       <h2>Related reading</h2>
       <ul>
-        <li><Link href="/blog/what-the-agents-get-wrong">What fifteen agents in production get wrong</Link></li>
+        <li><Link href="/blog/what-the-agents-get-wrong">What AI agents in production get wrong</Link></li>
         <li><Link href="/blog/can-ai-find-your-business">Whether an AI assistant can find your business</Link></li>
       </ul>
 

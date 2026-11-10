@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import { PageHero, Button } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
+
+// The root layout sets robots index,follow, and Next adds its own noindex to a 404, so the
+// page carried both tags. Clearing robots here leaves only the noindex Next adds.
+export const metadata: Metadata = {
+  robots: null,
+};
 
 // The 404 page, rebuilt on the page kit 26 Oct 2026.
 export default function NotFound() {

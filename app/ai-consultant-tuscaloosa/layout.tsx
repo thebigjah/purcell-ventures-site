@@ -64,30 +64,18 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ProfessionalService",
+      "@type": "Service",
       "@id": "https://purcellventures.co/ai-consultant-tuscaloosa#service",
       "name": "AI consulting and software development in Tuscaloosa, Alabama",
       "url": "https://purcellventures.co/ai-consultant-tuscaloosa",
       "description":
         "AI consulting, custom software development, and web development for businesses in Tuscaloosa, Alabama, delivered by Elijah Purcell of Purcell Ventures LLC.",
       "provider": { "@id": "https://purcellventures.co/#organization" },
-      "founder": { "@id": "https://elijahpurcell.com/#person" },
-      "employee": { "@id": "https://elijahpurcell.com/#person" },
+      "serviceType": "AI consulting",
       "areaServed": [
         { "@type": "City", "name": "Tuscaloosa", "containedInPlace": { "@type": "AdministrativeArea", "name": "Alabama" } },
         { "@type": "AdministrativeArea", "name": "Alabama" },
         { "@type": "Country", "name": "United States" },
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Tuscaloosa",
-        "addressRegion": "AL",
-        "addressCountry": "US",
-      },
-      "email": "elijah@purcellventures.co",
-      "knowsAbout": [
-        "AI consulting", "Autonomous AI agent systems", "Business process automation",
-        "Custom software development", "Web development for small business",
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",

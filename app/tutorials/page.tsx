@@ -5,6 +5,7 @@ import { PageHero, Section, Rows, ClosingCall } from "@/app/components/ui";
 export const metadata: Metadata = {
   title: "Tutorials for the Purcell Ventures tools",
   description: "Short how-to guides for each Purcell Ventures AI tool, with example output. Reading them needs no login.",
+  alternates: { canonical: "/tutorials" },
 };
 
 interface Tutorial {

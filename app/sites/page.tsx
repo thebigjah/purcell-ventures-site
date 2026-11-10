@@ -7,7 +7,7 @@ import PageDates, { UpdatedLine } from "@/app/components/PageDates";
 export const metadata: Metadata = {
   title: "Custom websites for local businesses",
   description:
-    "Custom websites for local businesses in Tuscaloosa, metro Atlanta and remote: three build tiers and three maintenance plans. When something needs fixing, you call me directly.",
+    "Elijah Purcell builds and maintains websites for local businesses in Tuscaloosa, metro Atlanta and remote, with three build tiers and three maintenance plans.",
   alternates: { canonical: "/sites" },
 };
 

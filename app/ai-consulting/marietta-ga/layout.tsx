@@ -57,29 +57,17 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ProfessionalService",
+      "@type": "Service",
       "@id": `${URL}#service`,
       "name": "AI consulting in Marietta, Georgia",
       "url": URL,
       "description":
         "AI training, AI automation and custom software for businesses in Marietta, Georgia, delivered by Elijah Purcell of Purcell Ventures LLC from Tuscaloosa.",
       "provider": { "@id": "https://purcellventures.co/#organization" },
-      "founder": { "@id": "https://elijahpurcell.com/#person" },
-      "employee": { "@id": "https://elijahpurcell.com/#person" },
+      "serviceType": "AI consulting",
       "areaServed": [
         { "@type": "City", "name": "Marietta", "containedInPlace": { "@type": "AdministrativeArea", "name": "Georgia" } },
         { "@type": "AdministrativeArea", "name": "Georgia" },
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Tuscaloosa",
-        "addressRegion": "AL",
-        "addressCountry": "US",
-      },
-      "email": "elijah@purcellventures.co",
-      "knowsAbout": [
-        "AI consulting", "AI training for teams", "Business process automation",
-        "Custom software development", "AI use with export-controlled and patient data",
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",

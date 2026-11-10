@@ -312,7 +312,7 @@ Quality bar:
     slug: "social-templates",
     name: "Social media templates",
     tagline: "Reusable post formats matched to your brand.",
-    description: "Five reusable post templates for your business (quote, before and after, weekly tip, customer spotlight and behind the scenes), each with voice notes and blanks to fill in.",
+    description: "Five reusable post templates for your business: quote, before and after, weekly tip, customer spotlight and behind the scenes, each with blanks to fill in.",
     category: "Branding & Identity",
     fields: [
       { name: "businessDescription", label: "About your business", type: "textarea", required: true },
@@ -549,7 +549,7 @@ Quality bar:
     slug: "tagline",
     name: "Tagline generator",
     tagline: "10 taglines from different angles.",
-    description: "Describe your business and what sets it apart. The tool writes 10 taglines across five angles (benefit, contrarian, founder voice, audience mirror, time-based), each labelled with its angle.",
+    description: "Describe your business and what sets it apart. The tool writes 10 taglines across five angles, such as benefit and founder voice, each labelled with its angle.",
     category: "Branding & Identity",
     fields: [
       { name: "businessName", label: "Business name", type: "text", required: true },
@@ -1047,7 +1047,7 @@ Quality bar:
     slug: "cold-email-audit",
     name: "Cold email audit",
     tagline: "Paste your cold email. You get a grade and a rewrite.",
-    description: "Paste the cold email you have been sending. The tool grades the subject line, hook, ask and ethics, then rewrites it 30% shorter. I use the same model for my own outreach.",
+    description: "Paste the cold email you have been sending. The tool grades the subject line, hook, ask and ethics, then rewrites the email 30% shorter.",
     category: "Communication & Marketing",
     fields: [
       { name: "subject", label: "Subject line", type: "text", required: true, placeholder: "e.g., Quick question about Cherry Blossom Salon" },
@@ -1116,7 +1116,7 @@ Quality bar:
     slug: "bio-writer",
     name: "AI bio writer",
     tagline: "Three bios in your voice, from a 140-character social bio to a full About page.",
-    description: "Enter a few facts about yourself or your business. The tool writes three bios: short (140 characters, for X), medium (80 words, for LinkedIn) and long (250 words, for an About page).",
+    description: "Enter a few facts about yourself or your business. The tool writes three bios: short (140 characters), medium (80 words, for LinkedIn) and long (250 words).",
     category: "Communication & Marketing",
     fields: [
       { name: "name", label: "Name (person or business)", type: "text", required: true, placeholder: "e.g., Elijah Purcell" },
@@ -1223,7 +1223,7 @@ Quality bar:
     slug: "review-request",
     name: "AI customer review request",
     tagline: "Drafts a polite, specific review request by email or text.",
-    description: "Drafts a request for a Google, Yelp or Facebook review to send after a positive customer interaction. It personalizes the message with what they bought and a specific moment from their visit.",
+    description: "Drafts a Google, Yelp or Facebook review request to send after a good customer visit, personalized with what they bought and a moment from their visit.",
     category: "Communication & Marketing",
     fields: [
       { name: "customerName", label: "Customer's first name", type: "text", required: true, placeholder: "e.g., Sarah" },

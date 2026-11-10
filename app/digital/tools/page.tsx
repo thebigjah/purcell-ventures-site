@@ -5,7 +5,7 @@ import FaqBlock, { type QA } from "@/app/components/FaqBlock";
 
 export const metadata: Metadata = {
   title: { absolute: "Free AI tools for small businesses, Purcell Ventures" },
-  description: `${AI_TOOLS.length} free AI tools for small businesses: FAQ pages, review replies, emails, captions, color palettes, job posts and more, plus working demos of the loyalty, expense, inventory, estimating and event add-ons.`,
+  description: `${AI_TOOLS.length} free AI tools for small businesses: FAQ pages, review replies, emails and captions, plus working demos of the loyalty, expense and inventory add-ons.`,
   alternates: { canonical: "/digital/tools" },
 };
 

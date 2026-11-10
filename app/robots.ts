@@ -13,7 +13,6 @@ export default function robots(): MetadataRoute.Robots {
           "/invoicing",
           "/newsletter",
           "/qr",
-          "/business-cards",
           "/logos",
           "/consulting/book",
           "/writing",

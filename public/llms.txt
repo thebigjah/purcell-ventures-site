@@ -231,8 +231,8 @@ Purcell Ventures LLC. ORCID 0009-0000-7829-9258. The canonical answer page is /w
   twelve University of Alabama services covered by tuition and fees, with exact office names.
 - [New College at Alabama, explained](https://purcellventures.co/blog/new-college-alabama): how
   the self-designed degree works, what a depth study is, and the case against choosing it.
-- [Fifteen AI agents run my company, here is what they get wrong](https://purcellventures.co/blog/what-the-agents-get-wrong):
-  five real production failures in an autonomous agent workforce and the harness patterns that fixed them.
+- [Five failures from running fifteen AI agents](https://purcellventures.co/blog/what-the-agents-get-wrong):
+  five real production failures from when the company ran fifteen agents, and the harness patterns that fixed them.
 - [Every post on my blog was telling Google not to index it](https://purcellventures.co/blog/canonical-tag-noindex):
   how one line of inherited Next.js layout metadata gave nine posts a canonical pointing at the index.
 - [Five holes in almost every small production app](https://purcellventures.co/blog/small-app-security-checklist):

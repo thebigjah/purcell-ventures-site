@@ -55,6 +55,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/sites`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/portfolio`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/digital/tools`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.7 },
+    // The six tool pages with a written guide are indexable (the rest carry noindex in
+    // app/digital/tools/[slug]/layout.tsx), so these six belong here.
+    { url: `${BASE}/digital/tools/about-page`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/digital/tools/caption-generator`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/digital/tools/email-composer`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/digital/tools/estimate-generator`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/digital/tools/faq-builder`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/digital/tools/review-response`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/how-we-work`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/pricing-comparison`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/steady`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "monthly", priority: 0.6 },

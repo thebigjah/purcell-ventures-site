@@ -57,29 +57,17 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ProfessionalService",
+      "@type": "Service",
       "@id": `${URL}#service`,
       "name": "AI consulting in Mobile, Alabama",
       "url": URL,
       "description":
         "AI training, AI automation and custom software for businesses in Mobile, Alabama, delivered by Elijah Purcell of Purcell Ventures LLC from Tuscaloosa.",
       "provider": { "@id": "https://purcellventures.co/#organization" },
-      "founder": { "@id": "https://elijahpurcell.com/#person" },
-      "employee": { "@id": "https://elijahpurcell.com/#person" },
+      "serviceType": "AI consulting",
       "areaServed": [
         { "@type": "City", "name": "Mobile", "containedInPlace": { "@type": "AdministrativeArea", "name": "Alabama" } },
         { "@type": "AdministrativeArea", "name": "Alabama" },
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Tuscaloosa",
-        "addressRegion": "AL",
-        "addressCountry": "US",
-      },
-      "email": "elijah@purcellventures.co",
-      "knowsAbout": [
-        "AI consulting", "AI training for teams", "Business process automation",
-        "Custom software development", "Shipping document automation",
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",

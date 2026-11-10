@@ -3,7 +3,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // /writing came down 26 Oct 2026 at Elijah's request. Old links land on the blog.
   async redirects() {
-    return [{ source: "/writing", destination: "/blog", permanent: true }];
+    // /services was a noindexed stub whose canonical pointed at the Mantle site. Field
+    // services live there now, so the old URL goes straight to it (permanent, 308).
+    return [
+      { source: "/writing", destination: "/blog", permanent: true },
+      { source: "/services", destination: "https://mantle-field-site.vercel.app", permanent: true },
+    ];
   },
   async rewrites() {
     // THE NFC CARD LIVES HERE NOW, AND THE REASON IS PHYSICAL.
