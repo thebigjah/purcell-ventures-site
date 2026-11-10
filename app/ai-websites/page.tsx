@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PillarReading from "@/app/components/PillarReading";
 import Cite from "@/app/ai-small-business-statistics/Cite";
 import alabama from "@/lib/research/alabama-2026-11-summary.json";
 import { pct } from "@/lib/research/measures.mjs";
@@ -285,6 +286,8 @@ export default function AiWebsites() {
         leave out, read{" "}
         <Link href="/blog/what-a-website-actually-costs">what a small business website costs</Link>.
       </p>
+
+      <PillarReading href="/ai-websites" />
 
       <h2>Common questions</h2>
 

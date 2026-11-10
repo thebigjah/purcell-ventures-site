@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PillarReading from "@/app/components/PillarReading";
 import Cite from "@/app/ai-small-business-statistics/Cite";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { pageDates, formatDate } from "@/lib/page-dates";
@@ -252,6 +253,8 @@ export default function AiAutomation() {
         <Link href="/courses/ai-automation">Zero to Automated course</Link>. It costs $397 at
         launch, and the waitlist is open.
       </p>
+
+      <PillarReading href="/ai-automation" />
 
       <h2>Common questions</h2>
 

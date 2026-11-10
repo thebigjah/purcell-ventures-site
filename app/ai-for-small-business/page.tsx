@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PillarReading from "@/app/components/PillarReading";
 import Cite from "@/app/ai-small-business-statistics/Cite";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { pageDates, formatDate } from "@/lib/page-dates";
@@ -248,6 +249,8 @@ export default function AiForSmallBusiness() {
         with its source and date. In fall 2025, for example, the Federal Reserve&apos;s Small
         Business Credit Survey found 46% of small employer firms using AI.
       </p>
+
+      <PillarReading href="/ai-for-small-business" />
 
       <h2>Common questions</h2>
 

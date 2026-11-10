@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PillarReading from "@/app/components/PillarReading";
 import Cite from "@/app/ai-small-business-statistics/Cite";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { PostLayout } from "@/app/components/ui";
@@ -193,6 +194,8 @@ export default function AiIntegration() {
         <Link href="/software">software page</Link> explains how I scope a build on a free
         30-minute call.
       </p>
+
+      <PillarReading href="/ai-integration" />
 
       <h2>Common questions</h2>
 

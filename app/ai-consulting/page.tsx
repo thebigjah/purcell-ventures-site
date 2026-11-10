@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PillarReading from "@/app/components/PillarReading";
 import Cite from "@/app/ai-small-business-statistics/Cite";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import PageDates from "@/app/components/PageDates";
@@ -268,6 +269,8 @@ export default function AiConsultingAlabama() {
         <Link href="/team">team page</Link> lists what each agent does and what it is not
         allowed to do.
       </p>
+
+      <PillarReading href="/ai-consulting" />
 
       <h2>Common questions</h2>
 
