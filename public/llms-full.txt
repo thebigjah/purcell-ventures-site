@@ -17,7 +17,7 @@ AI consulting and hands-on team training for businesses: 1-on-1, small groups or
 
 **Who books this** Teams that know they should be using AI and have not started.
 
-**Background** I am 19. I spent my last year of high school building autonomous AI systems and production tools full-time, and I teach the same tools I use in my own business every day.
+**Background** I started the company at seventeen. I spent my last year of high school building autonomous AI systems and production tools full-time, and I teach the same tools I use in my own business every day.
 
 **Early client terms** The consulting business is new, so I have no corporate testimonials yet.
 
@@ -62,7 +62,7 @@ AI consultant in Tuscaloosa, Alabama. Elijah Purcell builds AI systems, automati
 
 **Work you can see** UA Today is a campus events site I built for students here. It pulls events from six sources: official University events, student organizations, ministries and athletics. It is free, needs no account and is not affiliated with the University.
 
-**When I am the wrong fit** Purcell Ventures is one person, and I am 19. If you need a large team, a signed enterprise MSA or support around the clock, I am the wrong fit, and I will tell you on the first call.
+**When I am the wrong fit** Purcell Ventures is one person. If you need a large team, a signed enterprise MSA or support around the clock, I am the wrong fit, and I will tell you on the first call.
 
 **Do you work outside Tuscaloosa?** Yes. AI consulting across Alabama covers how the work runs in other cities, with guides for Birmingham , Huntsville , Montgomery , Mobile and Auburn . The trade guides cover what AI handles in twenty kinds of business, and the Alabama website study shows how 1,176 business sites across the state hold up with Google and AI search.
 
@@ -94,7 +94,7 @@ AI consulting in Alabama from Elijah Purcell in Tuscaloosa: training, automation
 ### AI consulting pricing for a small business, Purcell Ventures
 URL: https://purcellventures.co/ai-consulting-cost
 
-How Purcell Ventures quotes AI consulting for small businesses after a free call, what drives a quote, how common pricing models work and how to judge payback.
+The six ways consultants price AI consulting for a small business, what drives a quote and how to judge payback. Purcell Ventures quotes after a free call.
 
 **What drives the quote?** Six things move the price of AI consulting for any business, with any consultant.
 
@@ -108,7 +108,7 @@ How Purcell Ventures quotes AI consulting for small businesses after a free call
 
 **What should I ask before paying anyone?** My answers: I do the work myself, you own the code, and every training session ends with a takeaway guide for your team. The consultant, agency and freelancer comparison covers who to hire, and hiring a consultant or doing it yourself covers whether to hire at all.
 
-**Common questions** Elijah Purcell quotes each business after a free first call. The quote depends on the scope, the number of people and sessions, whether you need training or a custom build, where the work happens and what support you want afterward.
+**Common questions** Consultants usually price AI consulting in one of six ways: hourly, per person trained, per workshop, as a fixed-fee project, as a monthly retainer or per software seat. Within any model, the price depends on the scope, the team size, the number of sessions, whether you need a custom build, travel and the support you want afterward.
 
 **How do I get a quote?** Email elijah@purcellventures.co or call (205) 462-7839 with your team size and the work you want to speed up. The first conversation is free, and I reply within one business day. More on AI consulting in Alabama .
 
@@ -1026,6 +1026,8 @@ I checked 700 Alabama small business websites in November 2026. 15.4% had no wor
 
 **How do the five cities compare?** Each bar shows one city's share, with the statewide sample in grey for reference. The n under each name is the base for that bar. Montgomery and Tuscaloosa have small bases, so a single site moves their figures by two to three points.
 
+**Which kinds of business are most ready for AI search?** Dentists, doctors, clinics and vets had the fewest broken home pages and the most business structured data. Of them, 8.2% had no working home page, against 18.4% of shops, and 64.6% carried Organization or LocalBusiness JSON-LD, against 43.2% to 47.4% for the other kinds large enough to report. On all three AI search signals together the kinds sat close, between 14.5% and 20.3% , and with bases of 65 to 218 pages that gap is too small to rank them.
+
 **Full results by check** Each table lists the count, the share and the base n for the statewide sample and the five cities. Download every figure as a CSV file . It holds counts, bases and percentages only.
 
 **Method** Business listings came from OpenStreetMap through the public Overpass API at overpass-api.de on 9 November 2026. The statewide query ran at 22:05 UTC and the five city queries between 22:19 and 22:31 UTC. The query asks for every Alabama listing tagged shop, craft or office, every restaurant, cafe, bar, fast food outlet, dentist, doctor's office, clinic and veterinarian, every hotel and every fitness centre, where the listing has a website or contact:website tag.
@@ -1055,6 +1057,15 @@ I checked all 1,672 Cobb County, Georgia small business websites listed in OpenS
 
 ## Free tools
 
+### Free AI tools for small businesses
+URL: https://purcellventures.co/digital/tools
+
+26 free AI tools for small businesses: FAQ pages, review replies, emails, captions, color palettes, job posts and more, plus working demos of the loyalty, expense, inventory, estimating and event add-ons.
+
+**Add-on demos** Working versions of add-ons I install on client sites. They run in your browser and save only to your device.
+
+**A branded version on your site** I can brand any of these tools and connect it to your own site and your business data. Every plan is quoted for your business after a free call.
+
 ### AI visibility check for your business website, Purcell Ventures
 URL: https://purcellventures.co/ai-visibility-check
 
@@ -1083,7 +1094,7 @@ Booking, a CRM, an AI chatbot and 23 more add-ons for small businesses, built an
 
 **Custom bundles** Tell me which tools you need, whether that is two or twelve. I build them as one bundle with one monthly quote, and you own everything I build for you.
 
-**About me** I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC. I am 19 and I study at The University of Alabama.
+**About me** I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC. I started the company at seventeen, and I study at The University of Alabama.
 
 **How to reach me** Tell me about your business. I reply within one business day with a recommendation and a quote.
 
@@ -1174,7 +1185,72 @@ A digital punch card for repeat customers: add a punch each visit and redeem the
 
 **The version on your own website** The Loyalty Punch Card with QR check-ins is in the Growth plan, which I quote for your business after a free call. Customers check in by scanning a QR code, and I set it up for your business and maintain it. Compare the plans .
 
+### Custom websites for local businesses, Purcell Ventures
+URL: https://purcellventures.co/sites
+
+Custom websites for local businesses in Tuscaloosa, metro Atlanta and remote: three build tiers and three maintenance plans. When something needs fixing, you call me directly.
+
+**Build tiers** Every tier ends with a published website. I quote the price on the discovery call, once I know what your business needs.
+
+**After launch** After launch I keep hosting and updating the site on one of three plans. You can switch plans as the business grows.
+
+**The Loom** Some businesses first hear from me through The Loom.
+
+**A fifteen-minute call** You tell me what your business does and what you wish your website did. I tell you which tier fits, what it costs and how long it takes.
+
+### How Elijah Purcell works with clients, Purcell Ventures
+URL: https://purcellventures.co/how-we-work
+
+The five stages of a project with Elijah Purcell, from the first email to year three, and the six commitments written into every contract, including no surprise invoices and no vendor lock-in.
+
+**How a project runs** You email me one sentence about the problem. I reply within one business day. We set up a 30-minute call by phone or Zoom, or in person if you are in metro Atlanta or Tuscaloosa. On the call I scope the work and tell you which of my services fits, which does not, and whether someone else would serve you better.
+
+**What every contract includes** If I break one of these, you can end the contract and I refund you.
+
+**The first conversation** Email me one sentence about what you are trying to do. I reply within one business day with whether we are a fit.
+
+### How agencies, freelancers and I price work, Purcell Ventures
+URL: https://purcellventures.co/pricing-comparison
+
+How Purcell Ventures, agencies, freelancers and do-it-yourself tools each price AI consulting, custom software and websites, and what each option includes.
+
+**Custom software** Custom software has the widest price spread of the three. Agencies carry overhead and project managers, and the quote reflects that. Ask any option for the scope in writing before you compare quotes.
+
+**When to hire someone else** In these cases I will send you to someone else.
+
+**The AI cost calculator** A free tool that estimates the return on AI spending.
+
+**A free first conversation** The first 30-minute conversation is free. I tell you which option fits, quote it for your business, or tell you whether you need me at all. I reply within one business day. See how I work .
+
+### Steady, personal IT for everyday life, Purcell Ventures
+URL: https://purcellventures.co/steady
+
+Personal tech help: AI coaching, phone setup, password managers, medication reminders and smart home setup, quoted for your household after a free call.
+
+**Who it is for** Steady is for anyone who wants help with their devices, and for the family member who usually gets the calls about them. On a plan, your parents text or call me instead of you.
+
+**Care plans** Monthly care suits most people. One-off help covers a single problem.
+
+**One-off packages** Each package has a flat fee and includes the setup plus a short training session for you or the person you bought it for.
+
+**How Steady compares** Steady next to the other ways people get tech help.
+
+**A sample month of Monthly care** What four weeks on the plan can look like for one family.
+
+**The intake form** The form takes 5 minutes. I reply within one business day with a recommended plan, or I tell you that you do not need me. Steady is a service of Purcell Ventures LLC, and I run it myself.
+
 ## Company and founder
+
+### Elijah Purcell, portfolio, Purcell Ventures
+URL: https://purcellventures.co/portfolio
+
+Elijah Purcell, Founder/CEO of Purcell Ventures LLC and a University of Alabama New College and Honors College student: Rufus on the App Store, honors, AI work, faith and service, and everything else he has built.
+
+**Rufus Rideshare** John White, a student at Georgia College & State University, asked me in September 2026 for a way to help students get rides from other students they can see and choose. I designed and built Rufus, and Apple approved it for the App Store on 8 October 2026.
+
+**Honors and recognition** Admitted to the Honors College, studying psychology and data science through New College on a Presidential Scholarship.
+
+**Everything else I have built** 44 more projects, from free tools for small businesses to games. Each link opens the working version.
 
 ### Case studies: client app, AI system, town audit, Purcell Ventures
 URL: https://purcellventures.co/case-studies
@@ -1192,20 +1268,20 @@ Rufus Rideshare on the App Store, the 57-agent COSMIC system that runs Purcell V
 ### What is Purcell Ventures LLC? The company Elijah Purcell founded
 URL: https://purcellventures.co/what-is-purcell-ventures
 
-Purcell Ventures LLC is a Georgia software company Elijah Purcell founded in April 2025. It builds AI systems and custom software for small businesses.
+Purcell Ventures LLC is a Tuscaloosa, Alabama AI and software company (a Georgia LLC) that Elijah Purcell founded in April 2025 for small businesses.
 
-**Which Purcell Ventures this is** An older, unrelated Purcell Ventures LLC holds a New York registration. This one is the Georgia filing, control number 25075361 , formed 8 April 2025 by Elijah Purcell, and the record is public and searchable.
+**Which Purcell Ventures this is** An older, unrelated Purcell Ventures LLC holds a New York registration. This one is the Georgia filing, control number 25075361 , and the record is public and searchable.
 
-**Common questions** Purcell Ventures LLC is a Georgia limited liability company that builds AI systems and custom software for small businesses and advises owners on using them. Elijah Purcell founded it on 8 April 2025. It operates from Tuscaloosa, Alabama, and serves clients nationwide.
+**Common questions** Purcell Ventures LLC is a Tuscaloosa, Alabama AI and software company (a Georgia LLC) that builds AI systems and custom software for small businesses and advises owners on using them. Elijah Purcell founded it on 8 April 2025. It serves clients nationwide.
 
 **Contact** Phone or text (205) 462-7839 , or email elijah@purcellventures.co . Elijah replies within one business day. More about the founder: Who is Elijah Purcell .
 
 ### Who is Elijah Purcell, Founder/CEO of Purcell Ventures LLC
 URL: https://purcellventures.co/who
 
-Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company, and a psychology and data science student at the University of Alabama.
+Elijah Purcell is Founder/CEO of Purcell Ventures LLC, a Tuscaloosa, Alabama AI and software company, and a psychology and data science student at Alabama.
 
-**Common questions** Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Georgia software company that builds AI systems and software for local businesses. He is a psychology and data science student at the University of Alabama, in New College and the Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at 17 and built COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, research and outreach for the company.
+**Common questions** Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Tuscaloosa, Alabama AI and software company (a Georgia LLC) that builds AI systems and software for local businesses. He is a psychology and data science student at the University of Alabama, in New College and the Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at 17 and built COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, research and outreach for the company.
 
 **What he has written** A selection of his posts from May to October 2026. The full list is on the blog.
 
@@ -1992,7 +2068,7 @@ A reporting series by Elijah Purcell on independent businesses near the Universi
 
 ## Other
 
-### Purcell Ventures: AI and custom software for small business
+### AI and software in Tuscaloosa, Alabama, Purcell Ventures
 URL: https://purcellventures.co
 
 Purcell Ventures builds AI systems, custom software and websites for small businesses, with AI consulting quoted per business. Founded by Elijah Purcell.
@@ -2004,6 +2080,44 @@ Purcell Ventures builds AI systems, custom software and websites for small busin
 **Courses** Three self-paced courses with the waitlist open. Ask me and I will send the material I have so far.
 
 **Start a project** Every project starts with a discovery call. If I am the wrong fit for the job, I tell you. I reply within one business day.
+
+### Blog by Elijah Purcell, Purcell Ventures
+URL: https://purcellventures.co/blog
+
+Essays and guides by Elijah Purcell on AI tools and software for small businesses, based on the systems he runs himself.
+
+### Contact Elijah Purcell, Purcell Ventures
+URL: https://purcellventures.co/contact
+
+Phone, email and a contact card to save for Elijah Purcell, Founder/CEO of Purcell Ventures LLC in Tuscaloosa, Alabama.
+
+### Tutorials for the Purcell Ventures tools, Purcell Ventures
+URL: https://purcellventures.co/tutorials
+
+Short how-to guides for each Purcell Ventures AI tool, with example output. Reading them needs no login.
+
+**AI workflows I run for you** On the digital services tiers I set up and run AI workflows for your business. I also sell templates and scripts in the shop . I reply within one business day.
+
+### What is llms.txt? The file, the spec and what Google says
+URL: https://purcellventures.co/llms-txt
+
+llms.txt is a Markdown file that points AI tools to a site's key pages. Who proposed it, llms.txt vs llms-full.txt, what Google says and how to write one.
+
+**Who proposed llms.txt?** Jeremy Howard, co-founder of Answer.AI, proposed llms.txt in a post dated 3 September 2024 . The specification lives at llmstxt.org , which states the idea in one sentence: “We propose adding a /llms.txt markdown file to websites to provide LLM-friendly content.” The current text of the spec is version 2.
+
+**What goes in an llms.txt file?** The spec sets out the parts in this order.
+
+**What is the difference between llms.txt and llms-full.txt?** llms.txt is an index: a summary and links. llms-full.txt puts the full text of the pages in one file, so a tool can read the whole site without following a single link.
+
+**What has Google said about llms.txt?** Google Search ignores it. Google's Search Central guide, Optimizing your website for generative AI features on Google Search , says: “You don't need to create new machine readable files, AI text files, markup, or Markdown to appear in Google Search.” On llms.txt files made for other services, it adds: “Doing so will neither harm nor help your site's visibility or rankings in Google Search, as Google Search ignores them.”
+
+**What does a real llms.txt look like?** This is the top of the file this site serves at purcellventures.co/llms.txt , up to the end of its first link section. The H1 names the company, the blockquote states what it is and where, and the first H2 section gives facts about the founder, then links to the pages that answer who and what.
+
+**How many Alabama small business websites have an llms.txt file?** About one in four . In the Purcell Ventures check of Alabama small business websites on 9 November 2026, 139 of the 552 home pages on a business's own domain in the statewide sample ( 25.2 %) served an llms.txt file that passed the test: status 200, plain text, and a Markdown heading or quote line. Many of those sites get the file from their website platform or an SEO plugin.
+
+**Common questions** Google Search does not. Google's Search Central guide on generative AI features says Google Search ignores llms.txt files, and that making one will neither harm nor help a site's visibility or rankings in Google Search.
+
+**How do I get help with mine?** Email elijah@purcellventures.co or call (205) 462-7839 with your site's address. I reply within one business day, and I quote any work after a free call.
 
 ### AI use policy template for small business, Purcell Ventures
 URL: https://purcellventures.co/ai-policy-template
@@ -2051,7 +2165,7 @@ Elijah Purcell founded Purcell Ventures LLC in Georgia in April 2025. Bios, comp
 
 **Bios** Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, which builds AI systems and custom software for small businesses, and a University of Alabama student in the Class of 2030.
 
-**Company boilerplate** Purcell Ventures LLC builds AI systems and custom software for small businesses and runs hands-on AI and business consulting. Elijah Purcell founded the company in Georgia on 8 April 2025 and runs it from Tuscaloosa, Alabama. COSMIC, a system of 57 AI agents in 17 rooms, handles its proposals, site audits, research and outreach. More at purcellventures.co.
+**Company boilerplate** Purcell Ventures LLC is a Tuscaloosa, Alabama AI and software company (a Georgia LLC). It builds AI systems and custom software for small businesses and runs hands-on AI and business consulting. Elijah Purcell founded the company on 8 April 2025. COSMIC, a system of 57 AI agents in 17 rooms, handles its proposals, site audits, research and outreach. More at purcellventures.co.
 
 **Coverage** The Crimson White quoted Elijah on bringing AI tools to local businesses:
 
@@ -2077,7 +2191,7 @@ Three self-paced courses from Elijah Purcell: the college application playbook, 
 
 **Who teaches them** I am Elijah Purcell, Founder/CEO of Purcell Ventures LLC . I build AI agent systems and study psychology and data science in New College and the Honors College at the University of Alabama in Tuscaloosa. More background: Who is Elijah Purcell . If you need direct help more than a course, I also do consulting .
 
-**One-on-one help** If you would rather have me look at your situation directly, consulting starts at $125 a person. I reply within one business day.
+**One-on-one help** If you would rather have me look at your situation directly, I quote consulting for you after a free call. I reply within one business day.
 
 ### The College Application Playbook, by Elijah Purcell
 URL: https://purcellventures.co/courses/college-apps
