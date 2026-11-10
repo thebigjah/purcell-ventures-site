@@ -119,6 +119,8 @@ AI consulting in Birmingham, Alabama for medical practices, law and accounting f
 
 **Which Birmingham businesses get the most from AI?** Birmingham runs on healthcare, banking and professional services. The University of Alabama at Birmingham operates a large medical center, and clinics, specialty practices, billing companies and medical suppliers fill the city around it. Several banks have their headquarters downtown, and law, accounting, insurance and engineering firms serve all of them.
 
+**How do Birmingham business websites hold up?** I checked the home pages of all 218 Birmingham business websites listed in OpenStreetMap for my study of Alabama small business websites on 9 November 2026, and 8.7 percent had no working home page, against 15.4 percent of the statewide sample. Of the 187 working pages on a business’s own domain, 50.8 percent carried structured data that names the business and its type, against 48.6 percent statewide. On those pages, 17.6 percent had all three signals I measured for AI tools, against 16.7 percent statewide: business structured data, an llms.txt file and no AI crawler blocked in robots.txt.
+
 **What AI work fits a Birmingham office?** Most of these start as training. A team learns to use ChatGPT, Claude or Gemini on its own email and documents, and the tasks that repeat every week become candidates for an AI automation later.
 
 **What should stay with a person in healthcare and finance?** Decisions that carry legal or medical responsibility stay with a person. So does any message where a wrong answer reaches a patient or client before someone can catch it.
@@ -131,14 +133,14 @@ AI consulting in Birmingham, Alabama for medical practices, law and accounting f
 
 **Who runs Purcell Ventures?** I do. I write the code, run the training sessions and answer the email. I also built COSMIC, a station of 57 AI agents in 17 rooms that handles proposals, site audits, security checks, research and outreach for the company. The team page lists what each agent does and what it may not do.
 
-**Common questions** Purcell Ventures LLC, run by Elijah Purcell in Tuscaloosa, works with Birmingham businesses on AI training, AI automation and custom software. Training sessions happen at your office, and planning and builds run over phone and email. The first conversation is free.
-
 ### AI consulting in Huntsville, Alabama, Purcell Ventures
 URL: https://purcellventures.co/ai-consulting/huntsville-al
 
 AI consulting in Huntsville, Alabama for defense contractors, engineering firms and staffing companies. Training, automation, software and data rules.
 
 **What does Huntsville’s economy mean for AI work?** Huntsville runs on aerospace and defense. Redstone Arsenal holds Army commands and NASA’s Marshall Space Flight Center, and Cummings Research Park holds engineering firms, defense contractors and technology companies. Around them work the subcontractors, staffing firms and service businesses that support that work, plus the restaurants, contractors and shops that serve the people who live there.
+
+**How do Huntsville business websites hold up?** I checked the home pages of all 279 Huntsville business websites listed in OpenStreetMap for my study of Alabama small business websites on 9 November 2026, and 10 percent had no working home page, against 15.4 percent of the statewide sample. Of the 240 working pages on a business’s own domain, 45.8 percent carried structured data that names the business and its type, against 48.6 percent statewide. On those pages, 14.6 percent had all three signals I measured for AI tools, against 16.7 percent statewide: business structured data, an llms.txt file and no AI crawler blocked in robots.txt.
 
 **What AI work fits Huntsville companies?** Office tasks that repeat on a schedule and follow the same steps make good AI automation candidates. Training usually comes first, so your team knows what the tools can and cannot do before anything runs on its own.
 
@@ -152,14 +154,14 @@ AI consulting in Huntsville, Alabama for defense contractors, engineering firms 
 
 **Who runs Purcell Ventures?** I do. I write the code, run the sessions and answer the email. I also built COSMIC, a station of 57 AI agents in 17 rooms that handles proposals, site audits, security checks, research and outreach for the company. The page on autonomous AI agent systems covers how the agents work and what goes wrong with them in daily use.
 
-**Common questions** Purcell Ventures LLC, run by Elijah Purcell in Tuscaloosa, works with Huntsville businesses on AI training, AI automation and custom software. Training sessions happen at your office, and planning and builds run over phone and email. The first conversation is free.
-
 ### AI consulting in Montgomery, Alabama, Purcell Ventures
 URL: https://purcellventures.co/ai-consulting/montgomery-al
 
 AI consulting in Montgomery, Alabama for firms working with state government, auto suppliers and businesses near Maxwell AFB. Training, automation, software.
 
 **What does Montgomery’s economy mean for AI work?** Montgomery is the state capital, so state agencies sit there along with the associations, law firms, lobbying shops and vendors that work with them. Maxwell Air Force Base, home of Air University, brings Air Force families and the contractors who support the base. The Hyundai assembly plant ties a network of automotive suppliers, trucking companies and staffing firms to the region.
+
+**How do Montgomery business websites hold up?** I checked the home pages of all 44 Montgomery business websites listed in OpenStreetMap for my study of Alabama small business websites on 9 November 2026, and 25 percent had no working home page, against 15.4 percent of the statewide sample. Of the 31 working pages on a business’s own domain, 41.9 percent carried structured data that names the business and its type, against 48.6 percent statewide. On those pages, 9.7 percent had all three signals I measured for AI tools, against 16.7 percent statewide: business structured data, an llms.txt file and no AI crawler blocked in robots.txt. With bases of 44 sites and 31 pages, one Montgomery site moves a share by 2 to 3 points.
 
 **What AI work fits Montgomery businesses?** The supplier work usually ends in an AI automation , because the same data moves on the same schedule every week. The government affairs work usually ends in training, because each document needs a person’s judgment at the end.
 
@@ -173,14 +175,14 @@ AI consulting in Montgomery, Alabama for firms working with state government, au
 
 **Who runs Purcell Ventures?** I do. I write the code, run the sessions and answer the email. I also built COSMIC, a station of 57 AI agents in 17 rooms that handles proposals, site audits, security checks, research and outreach for the company. The team page lists what each agent does and what it may not do.
 
-**Common questions** Purcell Ventures LLC, run by Elijah Purcell in Tuscaloosa, works with Montgomery businesses on AI training, AI automation and custom software. Training sessions happen at your office, and planning and builds run over phone and email. The first conversation is free.
-
 ### AI consulting in Mobile, Alabama, Purcell Ventures
 URL: https://purcellventures.co/ai-consulting/mobile-al
 
 AI consulting in Mobile, Alabama for freight forwarders, logistics firms, marine contractors, hotels and rentals. Training, automation and custom software.
 
 **What does Mobile’s economy mean for AI work?** Mobile is Alabama’s port city. The Port of Mobile is the state’s only deepwater port, and freight forwarders, customs brokers, trucking companies and warehouses work around it. Shipyards on the river build vessels for the Navy, and Airbus assembles airliners at Brookley. Along the Gulf, from Dauphin Island to the Baldwin County beaches across the bay, hotels, rentals, charters and restaurants run on tourism, with Mardi Gras and summer bringing the busiest weeks.
+
+**How do Mobile business websites hold up?** I checked the home pages of all 86 Mobile business websites listed in OpenStreetMap for my study of Alabama small business websites on 9 November 2026, and 15.1 percent had no working home page, against 15.4 percent of the statewide sample. Of the 65 working pages on a business’s own domain, 61.5 percent carried structured data that names the business and its type, against 48.6 percent statewide. On those pages, 18.5 percent had all three signals I measured for AI tools, against 16.7 percent statewide: business structured data, an llms.txt file and no AI crawler blocked in robots.txt.
 
 **What AI work fits Mobile businesses?** The shipping paperwork usually becomes an AI automation , since the same fields move from the same documents every day. The guest questions usually start with training, so staff learn to draft answers fast and check them before they send.
 
@@ -194,14 +196,14 @@ AI consulting in Mobile, Alabama for freight forwarders, logistics firms, marine
 
 **Who runs Purcell Ventures?** I do. I write the code, run the sessions and answer the email. I also built COSMIC, a station of 57 AI agents in 17 rooms that handles proposals, site audits, security checks, research and outreach for the company. The team page lists what each agent does and what it may not do.
 
-**Common questions** Purcell Ventures LLC, run by Elijah Purcell in Tuscaloosa, works with Mobile businesses on AI training, AI automation and custom software. Training sessions happen at your office, and planning and builds run over phone and email. The first conversation is free.
-
 ### AI consulting in Auburn, Alabama, Purcell Ventures
 URL: https://purcellventures.co/ai-consulting/auburn-al
 
 AI consulting in Auburn, Alabama for restaurants, shops, student housing and young founders. Training, automation and custom software, quoted per business.
 
 **What does Auburn’s economy mean for AI work?** Auburn is a college town, and Auburn University sets its calendar. Move-in, graduation and home football weekends bring the busiest days of the year to restaurants, bars, shops, hotels and apartment complexes. Downtown around Toomer’s Corner, the student housing at the edge of campus and the businesses in neighboring Opelika all serve that population.
+
+**How do Auburn business websites hold up?** In November 2026 I checked the home pages of all 171 business websites that OpenStreetMap lists inside the Auburn city limits, and 4.1 percent had no working home page, against 15.4 percent of my Alabama statewide sample. Of the 156 working pages on a business’s own domain, 48.7 percent carried structured data that names the business and its type, against 48.6 percent statewide. On those pages, 16.7 percent had all three signals I measured for AI tools, against 16.7 percent statewide: business structured data, an llms.txt file and no AI crawler blocked in robots.txt.
 
 **What AI work fits Auburn businesses?** Staff turnover makes written guides matter more in Auburn than in most towns. Each training session ends with a takeaway guide, so next year’s staff can pick up what this year’s staff learned. Tasks that repeat on a schedule, such as posting hours or sending booking confirmations, can become an AI automation later.
 
@@ -214,8 +216,6 @@ AI consulting in Auburn, Alabama for restaurants, shops, student housing and you
 **When is Purcell Ventures the wrong fit?** Purcell Ventures is one person. A business that needs a large team, a signed enterprise MSA or support around the clock should hire a bigger firm, and I will say so on the first call.
 
 **Who runs Purcell Ventures?** I do. I write the code, run the sessions and answer the email. I also built COSMIC, a station of 57 AI agents in 17 rooms that handles proposals, site audits, security checks, research and outreach for the company. The team page lists what each agent does and what it may not do.
-
-**Common questions** Purcell Ventures LLC, run by Elijah Purcell in Tuscaloosa, works with Auburn businesses on AI training, AI automation and custom software. Training sessions happen at your location, and planning and builds run over phone and email. The first conversation is free.
 
 ### AI consulting in Kennesaw, Georgia, Purcell Ventures
 URL: https://purcellventures.co/ai-consulting/kennesaw-ga
@@ -287,6 +287,8 @@ AI consulting in Chattanooga, Tennessee for startups, manufacturers, suppliers, 
 
 **What does Chattanooga’s economy mean for AI work?** Chattanooga built its own fiber network. EPB, the city’s public electric utility, runs fiber to homes and businesses across its service area and was among the first in the country to offer gigabit internet. Startups gather downtown around the Edney Innovation Center and the Company Lab. Volkswagen builds cars at its Chattanooga plant, and suppliers, trucking companies and warehouses work along I-75 and I-24, which meet in the city.
 
+**How do Chattanooga business websites hold up?** In November 2026 I checked the home pages of all 354 business websites that OpenStreetMap lists inside the Chattanooga city limits, and 9 percent had no working home page, against 15.4 percent of my Alabama statewide sample. Of the 311 working pages on a business’s own domain, 62.4 percent carried structured data that names the business and its type, against 48.6 percent in Alabama. On those pages, 24.1 percent had all three signals I measured for AI tools, against 16.7 percent in Alabama: business structured data, an llms.txt file and no AI crawler blocked in robots.txt.
+
 **What AI work fits Chattanooga businesses?** The supplier and freight work usually becomes an AI automation , because the same data moves on the same schedule every day. The guest and patient questions usually start with training, so staff learn to draft answers fast and check them before they send.
 
 **What should stay with a person?** Quality and safety sign-offs, anything a customer contract restricts, refunds and complaints stay with a person. Patient health information stays out of any AI tool your practice has not cleared under HIPAA, and diagnosis and treatment stay with a clinician. So does any message where a wrong answer reaches a customer or patient before someone can catch it.
@@ -298,8 +300,6 @@ AI consulting in Chattanooga, Tennessee for startups, manufacturers, suppliers, 
 **When is Purcell Ventures the wrong fit?** Purcell Ventures is one person. A plant, a hospital or a hotel group that needs a large team, a signed enterprise MSA or support around the clock should hire a bigger firm, and I will say so on the first call.
 
 **Who runs Purcell Ventures?** I do. I write the code, run the sessions and answer the email. I also built COSMIC, a station of 57 AI agents in 17 rooms that handles proposals, site audits, security checks, research and outreach for the company. The page on autonomous AI agent systems covers how the agents work and what goes wrong with them in daily use.
-
-**Common questions** Purcell Ventures LLC, run by Elijah Purcell in Tuscaloosa, Alabama, works with Chattanooga businesses on AI training, AI automation and custom software. Training sessions happen at your location, and planning and builds run over phone and email. The first conversation is free.
 
 ## Topic guides
 
