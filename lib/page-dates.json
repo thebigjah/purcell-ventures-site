@@ -449,7 +449,7 @@
   },
   "/crm": {
     "published": "2026-04-23",
-    "modified": "2026-10-26"
+    "modified": "2026-11-09"
   },
   "/digital": {
     "published": "2026-03-05",
@@ -505,7 +505,7 @@
   },
   "/invoicing": {
     "published": "2026-04-23",
-    "modified": "2026-11-03"
+    "modified": "2026-11-09"
   },
   "/links": {
     "published": "2026-05-21",
@@ -541,11 +541,11 @@
   },
   "/print": {
     "published": "2026-03-12",
-    "modified": "2026-10-27"
+    "modified": "2026-11-09"
   },
   "/progress": {
     "published": "2026-10-28",
-    "modified": "2026-10-29"
+    "modified": "2026-11-09"
   },
   "/qr": {
     "published": "2026-04-23",
