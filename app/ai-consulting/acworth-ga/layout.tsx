@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 //
 // Written around what Acworth businesses do (Lake Acworth and Lake Allatoona, the marinas and
 // rentals on them, downtown shops and restaurants, and the contractors and home service
-// companies that follow a growing suburb). Purcell Ventures LLC is registered in Acworth, a
+// companies that follow a growing suburb). Elijah registered Purcell Ventures LLC in Acworth, a
 // filing address, so the page says that and claims no office there. Delivery format
 // comes from /consulting, /software and /ai-consulting only. No clients or results.
 
@@ -43,7 +43,7 @@ export const QA: [string, string][] = [
   ["Who offers AI consulting in Acworth, Georgia?",
    "Purcell Ventures LLC, run by Elijah Purcell, works with Acworth businesses on AI training, AI automation and custom software. Training sessions happen at your location, and planning and builds run over phone and email. The first conversation is free."],
   ["Is Purcell Ventures based in Acworth?",
-   "Purcell Ventures LLC is registered in Acworth, Georgia, and Elijah runs it from Tuscaloosa, Alabama, where he attends the University of Alabama. The company has no office to visit in Acworth. Elijah comes to your location for training sessions, and the rest of the work runs by phone and email."],
+   "Elijah registered Purcell Ventures LLC in Acworth, Georgia, and he runs it from Tuscaloosa, Alabama, where he attends the University of Alabama. The company has no office to visit in Acworth. Elijah comes to your location for training sessions, and the rest of the work runs by phone and email."],
   ["Can AI help a contractor follow up with leads?",
    "Yes. AI can draft replies to new leads, send follow-up messages and turn your notes from a site visit into a written quote for you to check. The price, the schedule and any promise about the work stay with the owner."],
   ["Can AI help a marina or rental business in the busy season?",

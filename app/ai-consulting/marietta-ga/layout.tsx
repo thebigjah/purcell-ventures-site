@@ -50,7 +50,7 @@ export const QA: [string, string][] = [
   ["How much does AI training cost for a Marietta team?",
    "Elijah quotes every job per business after a free call, because the price depends on the size of the team and how much of the work is training or building. Training comes as 1-on-1 sessions, small group training for 2 to 8 people or a half-day workshop for up to 20 people."],
   ["Does Purcell Ventures have an office in Marietta?",
-   "No. Purcell Ventures works from Tuscaloosa, Alabama, and the LLC is registered in Acworth, Georgia. Elijah comes to your office for training sessions, and the rest of the work runs by phone and email."],
+   "No. Purcell Ventures works from Tuscaloosa, Alabama, and Elijah registered the LLC in Acworth, Georgia. Elijah comes to your office for training sessions, and the rest of the work runs by phone and email."],
 ];
 
 const schema = {

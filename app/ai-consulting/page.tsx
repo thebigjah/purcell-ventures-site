@@ -199,7 +199,7 @@ export default function AiConsultingAlabama() {
       <h3>Georgia</h3>
 
       <p>
-        Purcell Ventures LLC is registered in Acworth, Georgia, and I grew up in Kennesaw.
+        I registered Purcell Ventures LLC in Acworth, Georgia, and I grew up in Kennesaw.
         Training for metro Atlanta teams runs at your location, the same way it does in Alabama.
       </p>
 

@@ -8,7 +8,7 @@ import ServiceSchema from "@/app/components/ServiceSchema";
 
 // City page on the same single-column PostLayout as the pillar. Acworth's version follows
 // the lake season and the steady stream of new homeowners, since those set the repeated
-// work for most businesses there. The LLC is registered in Acworth, and the page says so
+// work for most businesses there. Elijah registered the LLC in Acworth, and the page says so
 // without claiming an office.
 
 const PATH = "/ai-consulting/acworth-ga";
@@ -40,7 +40,7 @@ export default function AiConsultingAcworth() {
         Allatoona next to it. In warm months the lakes bring boaters, swimmers, campers and day
         visitors to the marinas, boat rentals and campgrounds, and to the restaurants and shops
         downtown. New neighborhoods keep going up around the city, and roofers, plumbers,
-        landscapers, cleaners and other home service companies follow the new houses.
+        lawn care crews, cleaners and other home service companies follow the new houses.
       </p>
 
       <p>
