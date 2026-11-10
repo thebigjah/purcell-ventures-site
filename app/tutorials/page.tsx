@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero, Section, Rows, ClosingCall } from "@/app/components/ui";
+import PageDates from "@/app/components/PageDates";
 
 export const metadata: Metadata = {
   title: "Tutorials for the Purcell Ventures tools",
@@ -125,6 +126,7 @@ export default function TutorialsPage() {
 
   return (
     <main>
+      <PageDates path="/tutorials" />
       <PageHero
         kicker="How-to guides"
         title="Tutorials for the free tools."

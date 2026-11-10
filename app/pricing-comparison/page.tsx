@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { PageHero, Section, Rows, Button, ClosingCall } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
+import PageDates from "@/app/components/PageDates";
 
 // Rebuilt on the page kit 26 Oct 2026. Server component now: nothing on the page needed
 // state.
@@ -87,6 +88,7 @@ function Footnote({ children }: { children: ReactNode }) {
 export default function PricingComparisonPage() {
   return (
     <main>
+      <PageDates path="/pricing-comparison" />
       <PageHero
         planet="pricing"
         kicker="Pricing"

@@ -14,7 +14,8 @@ const DATES = data as Record<string, Dates>;
  * after the last regeneration, falls back to its stated publish date.
  */
 export function pageDates(path: string, published?: string): Dates | null {
-  const d = DATES[path];
+  // Dynamic tool pages share the dates of their one template folder.
+  const d = DATES[path] ?? (path.startsWith("/digital/tools/") ? DATES["/digital/tools/[slug]"] : undefined);
   const pub = published ?? d?.published;
   if (!pub) return null;
   const mod = d?.modified && d.modified > pub ? d.modified : pub;

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero, Section, Rows } from "@/app/components/ui";
+import PageDates from "@/app/components/PageDates";
 
 // The canonical lives on the index page, not app/blog/layout.tsx, because the layout
 // wraps every post and a canonical there would mark each post as a copy of /blog.
@@ -375,6 +376,7 @@ const POSTS: Post[] = [
 export default function BlogPage() {
   return (
     <main>
+      <PageDates path="/blog" />
       <PageHero
         title="Blog"
         lede="Posts about AI, small business and software. I draft some of them with AI tools, and I edit every post before it goes up."

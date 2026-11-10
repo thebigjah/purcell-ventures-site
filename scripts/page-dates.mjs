@@ -45,7 +45,8 @@ function walk(dir) {
   for (const e of entries) {
     const p = join(dir, e);
     if (!statSync(p).isDirectory()) continue;
-    if (e === "api" || e.startsWith("_") || e.startsWith("[")) continue;
+    if (e === "api" || e.startsWith("_")) continue;
+    if (e.startsWith("[") && !(dir.endsWith("digital/tools") && e === "[slug]")) continue;
     walk(p);
   }
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero, Section, Prose, Facts } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
+import PageDates from "@/app/components/PageDates";
 
 // Written from the code as it ran on 9 November 2026. Each section names the files it
 // describes, so a change to any of them is a reason to reread this page:
@@ -25,6 +26,7 @@ const UPDATED = "9 November 2026";
 export default function PrivacyPage() {
   return (
     <main>
+      <PageDates path="/privacy" />
       <PageHero
         kicker="Purcell Ventures LLC"
         title="Privacy"

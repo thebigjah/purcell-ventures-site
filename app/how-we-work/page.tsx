@@ -1,5 +1,6 @@
 import { PageHero, Section, Prose, Rows, ClosingCall } from "@/app/components/ui";
 import { CONTACT } from "@/lib/contact";
+import PageDates from "@/app/components/PageDates";
 
 // Rebuilt on the page kit 26 Oct 2026. The company is one person, so the page says "I".
 // The stages are a real sequence, so they stay in order, without numerals.
@@ -74,6 +75,7 @@ const COMMITMENTS = [
 export default function HowWeWorkPage() {
   return (
     <main>
+      <PageDates path="/how-we-work" />
       <PageHero
         planet="book"
         kicker="How I work"

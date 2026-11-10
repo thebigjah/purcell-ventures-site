@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import FaqBlock, { type QA } from "@/app/components/FaqBlock";
+import PageDates from "@/app/components/PageDates";
 
 // THE PORTFOLIO, rebuilt 28 Oct 2026 from a graded inventory, not from memory.
 //
@@ -103,6 +104,7 @@ const QA: QA[] = [
 export default function PortfolioPage() {
   return (
     <main className="pf">
+      <PageDates path="/portfolio" />
       <style dangerouslySetInnerHTML={{ __html: PF_CSS }} />
 
       <header className="pf-hero">

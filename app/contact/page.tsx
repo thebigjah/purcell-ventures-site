@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CONTACT } from "@/lib/contact";
+import PageDates from "@/app/components/PageDates";
 
 // The contact card. It looks like the preview a phone shows after scanning a vCard: the
 // photo, the name, four actions, then the details. "Save to contacts" downloads
@@ -27,9 +28,33 @@ const DETAILS = [
   { label: "Based in", value: `${CONTACT.personCity}, Alabama` },
 ];
 
+const SITE = "https://purcellventures.co";
+const SCHEMA = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": `${SITE}/contact#contactpage`,
+      url: `${SITE}/contact`,
+      name: "Contact Elijah Purcell",
+      isPartOf: { "@id": `${SITE}/#website` },
+      about: { "@id": `${SITE}/#organization` },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+        { "@type": "ListItem", position: 2, name: "Contact", item: `${SITE}/contact` },
+      ],
+    },
+  ],
+};
+
 export default function ContactCard() {
   return (
     <main className="cc">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA) }} />
+      <PageDates path="/contact" />
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <div className="cc__card">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -61,7 +86,23 @@ export default function ContactCard() {
             </div>
           ))}
         </dl>
-        <p className="cc__note">I reply within one business day.</p>
+
+        <section className="cc__body" aria-labelledby="cc-how">
+          <h2 id="cc-how">How to reach me</h2>
+          <p>Email {CONTACT.email} or call or text {CONTACT.phone}. Either one reaches me directly, and I reply within one business day.</p>
+
+          <h2>What to put in a first message</h2>
+          <p>Three things get us moving. Tell me which business you run, what you want done, and when you need it finished. If you already have a website, send the link. A few plain sentences work better than a long brief, and I will ask follow-up questions if I need more.</p>
+
+          <h2>Where the work happens</h2>
+          <p>I am based in {CONTACT.personCity}, Alabama. I meet businesses in person in {CONTACT.personCity} and metro Atlanta. Everything else runs remotely, so a business anywhere in the US can hire me for AI, software or website work.</p>
+
+          <h2>What happens next</h2>
+          <p>We set up a free call. I ask how your business runs today and what is slowing it down. You do not need a plan or a budget figure to start. Describing the problem is enough. I quote every project after that free call, so you hear the price before you commit to anything.</p>
+          {CONTACT.depositLink.startsWith("https://buy.stripe.com/") && (
+            <p>If we already agreed on a website project, the deposit button above takes you straight to payment.</p>
+          )}
+        </section>
       </div>
     </main>
   );
@@ -84,4 +125,6 @@ const CSS = `
 .cc__details dd{margin:0;overflow-wrap:anywhere}
 .cc__details a{color:var(--fg);text-decoration:none}
 .cc__details a:hover{color:var(--gold-text)}
-.cc__note{color:var(--muted);font-size:14px;margin:20px 0 0}`;
+.cc__body{margin:36px 0 0;width:100%;text-align:left;border-top:1px solid var(--line);padding-top:8px}
+.cc__body h2{font:600 20px/1.2 var(--font-display);margin:28px 0 8px}
+.cc__body p{color:var(--muted);font-size:16px;line-height:1.6;margin:0 0 12px}`;

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero, Section, Rows, Button, ClosingCall } from "@/app/components/ui";
 import { AI_TOOLS, type AIToolConfig } from "@/lib/ai-tools";
 import FaqBlock, { type QA } from "@/app/components/FaqBlock";
+import PageDates from "@/app/components/PageDates";
 
 export const metadata: Metadata = {
   title: { absolute: "Free AI tools for small businesses, Purcell Ventures" },
@@ -40,6 +41,7 @@ export default function ToolsIndexPage() {
 
   return (
     <main>
+      <PageDates path="/digital/tools" />
       <PageHero
         planet="tools"
         kicker="Digital add-ons"

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getTool } from "@/lib/ai-tools";
 import { getToolGuide } from "@/lib/tool-guides";
 import ToolSchema from "@/app/components/ToolSchema";
+import PageDates from "@/app/components/PageDates";
 
 // The title, description, canonical and robots for every tool page come from here.
 // Without this file all 26 tool pages carried the /digital layout's title.
@@ -37,6 +38,7 @@ export default async function ToolLayout({ children, params }: { children: React
   return (
     <>
       <ToolSchema name={tool.name} path={`/digital/tools/${slug}`} description={getToolGuide(slug)?.description ?? tool.description} />
+      <PageDates path={`/digital/tools/${slug}`} />
       {children}
     </>
   );
