@@ -208,7 +208,8 @@ export function Faq({ items }: { items: { q: ReactNode; a: ReactNode }[] }) {
     <div className="ui-faq">
       {items.map((it, i) => (
         <details key={i}>
-          <summary>{it.q}</summary>
+          {/* The h3 gives crawlers and answer engines a question heading. The CSS strips its own styling. */}
+          <summary><h3 className="ui-faq__q">{it.q}</h3></summary>
           <div>{it.a}</div>
         </details>
       ))}
