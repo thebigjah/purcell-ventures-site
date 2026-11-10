@@ -105,17 +105,17 @@ export default function AiForPlumbers() {
       <table>
         <thead>
           <tr>
-            <th>Plumbing task</th>
-            <th>AI role</th>
-            <th>Person&apos;s role</th>
+            <th scope="col">Plumbing task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Person&apos;s role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Incoming calls and messages</strong></td><td>Collects details and flags emergencies</td><td>Decides dispatch</td></tr>
-          <tr><td><strong>Job summaries</strong></td><td>Drafts from tech notes</td><td>Checks parts, prices and advice</td></tr>
-          <tr><td><strong>Quote follow-ups</strong></td><td>Writes each message</td><td>Keeps the list current and calls replies</td></tr>
-          <tr><td><strong>Review replies</strong></td><td>Drafts each reply</td><td>Reads and posts it</td></tr>
-          <tr><td><strong>Diagnosis and code</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Incoming calls and messages</th><td>Collects details and flags emergencies</td><td>Decides dispatch</td></tr>
+          <tr><th scope="row">Job summaries</th><td>Drafts from tech notes</td><td>Checks parts, prices and advice</td></tr>
+          <tr><th scope="row">Quote follow-ups</th><td>Writes each message</td><td>Keeps the list current and calls replies</td></tr>
+          <tr><th scope="row">Review replies</th><td>Drafts each reply</td><td>Reads and posts it</td></tr>
+          <tr><th scope="row">Diagnosis and code</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

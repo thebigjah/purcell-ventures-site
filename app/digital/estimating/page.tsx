@@ -239,11 +239,11 @@ export default function EstimatingPage() {
             <table className={s.table}>
               <thead>
                 <tr>
-                  <th>Description</th>
-                  <th className={s.num} style={{ width: 90 }}>Qty</th>
-                  <th className={s.num} style={{ width: 120 }}>Rate</th>
-                  <th className={s.num} style={{ width: 120 }}>Amount</th>
-                  <th className="no-print" style={{ width: 100 }}><span className="sr-only">Remove</span></th>
+                  <th scope="col">Description</th>
+                  <th scope="col" className={s.num} style={{ width: 90 }}>Qty</th>
+                  <th scope="col" className={s.num} style={{ width: 120 }}>Rate</th>
+                  <th scope="col" className={s.num} style={{ width: 120 }}>Amount</th>
+                  <th scope="col" className="no-print" style={{ width: 100 }}><span className="sr-only">Remove</span></th>
                 </tr>
               </thead>
               <tbody>

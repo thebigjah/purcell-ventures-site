@@ -191,11 +191,11 @@ export default function ExpensesPage() {
             <table className={s.table}>
               <thead>
                 <tr>
-                  <th>Date</th>
-                  <th>Category</th>
-                  <th>Description</th>
-                  <th className={s.num}>Amount</th>
-                  <th><span className="sr-only">Remove</span></th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Description</th>
+                  <th scope="col" className={s.num}>Amount</th>
+                  <th scope="col"><span className="sr-only">Remove</span></th>
                 </tr>
               </thead>
               <tbody>

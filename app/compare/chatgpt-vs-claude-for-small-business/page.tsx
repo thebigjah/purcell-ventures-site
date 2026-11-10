@@ -66,15 +66,15 @@ export default function Page() {
 
         <table>
           <thead>
-            <tr><th></th><th>ChatGPT</th><th>Claude</th></tr>
+            <tr><td></td><th scope="col">ChatGPT</th><th scope="col">Claude</th></tr>
           </thead>
           <tbody>
-            <tr><td><strong>Made by</strong></td><td>OpenAI</td><td>Anthropic</td></tr>
-            <tr><td><strong>Plans</strong></td><td>Free, individual, team and enterprise</td><td>Free, individual, team and enterprise</td></tr>
-            <tr><td><strong>How it charges</strong></td><td>Per person per month. Check current pricing on their site</td><td>Per person per month. Check current pricing on their site</td></tr>
-            <tr><td><strong>Team data</strong></td><td>Business plans exclude your data from training by default</td><td>Business plans exclude your data from training by default</td></tr>
-            <tr><td><strong>Built-in extras</strong></td><td>Image generation, voice conversations, custom GPTs</td><td>Artifacts for documents and small apps, Claude Code for software</td></tr>
-            <tr><td><strong>Shared in both</strong></td><td colSpan={2}>Web search, file uploads, projects with saved instructions, connectors to apps such as Google Drive, and an API for developers</td></tr>
+            <tr><th scope="row">Made by</th><td>OpenAI</td><td>Anthropic</td></tr>
+            <tr><th scope="row">Plans</th><td>Free, individual, team and enterprise</td><td>Free, individual, team and enterprise</td></tr>
+            <tr><th scope="row">How it charges</th><td>Per person per month. Check current pricing on their site</td><td>Per person per month. Check current pricing on their site</td></tr>
+            <tr><th scope="row">Team data</th><td>Business plans exclude your data from training by default</td><td>Business plans exclude your data from training by default</td></tr>
+            <tr><th scope="row">Built-in extras</th><td>Image generation, voice conversations, custom GPTs</td><td>Artifacts for documents and small apps, Claude Code for software</td></tr>
+            <tr><th scope="row">Shared in both</th><td colSpan={2}>Web search, file uploads, projects with saved instructions, connectors to apps such as Google Drive, and an API for developers</td></tr>
           </tbody>
         </table>
 

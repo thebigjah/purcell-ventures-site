@@ -65,16 +65,16 @@ export default function Post() {
       <table>
         <thead>
           <tr>
-            <th>Price</th>
-            <th>What that is</th>
+            <th scope="col">Price</th>
+            <th scope="col">What that is</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Free to $50/mo</strong></td><td>You build it on a site builder. A workable option for many businesses, and your time is the cost.</td></tr>
-          <tr><td><strong>$400 to $1,500 once</strong></td><td>A template configured for you. Somebody else does the work, the design is not original, and this tier fits most small business sites.</td></tr>
-          <tr><td><strong>$1,500 to $5,000 once</strong></td><td>Custom build. Original layout, your content structure, functionality beyond pages. My custom software work starts at $1,500 and a substantial build runs to $5,000.</td></tr>
-          <tr><td><strong>$99 to $279/mo</strong></td><td>A subscription covers the site and somebody maintaining it. My digital tiers run $99, $179 and $279 a month. There is no large upfront cost, and you rent the site instead of owning it.</td></tr>
-          <tr><td><strong>$10,000 and up</strong></td><td>Original design, multiple specialists, strategy, photography. Useful work, rarely needed by a barber shop.</td></tr>
+          <tr><th scope="row">Free to $50/mo</th><td>You build it on a site builder. A workable option for many businesses, and your time is the cost.</td></tr>
+          <tr><th scope="row">$400 to $1,500 once</th><td>A template configured for you. Somebody else does the work, the design is not original, and this tier fits most small business sites.</td></tr>
+          <tr><th scope="row">$1,500 to $5,000 once</th><td>Custom build. Original layout, your content structure, functionality beyond pages. My custom software work starts at $1,500 and a substantial build runs to $5,000.</td></tr>
+          <tr><th scope="row">$99 to $279/mo</th><td>A subscription covers the site and somebody maintaining it. My digital tiers run $99, $179 and $279 a month. There is no large upfront cost, and you rent the site instead of owning it.</td></tr>
+          <tr><th scope="row">$10,000 and up</th><td>Original design, multiple specialists, strategy, photography. Useful work, rarely needed by a barber shop.</td></tr>
         </tbody>
       </table>
 

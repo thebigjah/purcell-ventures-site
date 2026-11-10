@@ -95,17 +95,17 @@ export default function AiForSalons() {
       <table>
         <thead>
           <tr>
-            <th>Salon task</th>
-            <th>AI role</th>
-            <th>Stylist&apos;s role</th>
+            <th scope="col">Salon task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Stylist&apos;s role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Multi-service booking</strong></td><td>Books by your length rules</td><td>Sets the rules and reviews odd requests</td></tr>
-          <tr><td><strong>Rebooking reminders</strong></td><td>Writes the message</td><td>Keeps return dates per service current</td></tr>
-          <tr><td><strong>Service and price questions</strong></td><td>Answers from your list</td><td>Gives final quotes</td></tr>
-          <tr><td><strong>Captions</strong></td><td>Drafts each one</td><td>Edits and posts with client permission</td></tr>
-          <tr><td><strong>Color and allergy calls</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Multi-service booking</th><td>Books by your length rules</td><td>Sets the rules and reviews odd requests</td></tr>
+          <tr><th scope="row">Rebooking reminders</th><td>Writes the message</td><td>Keeps return dates per service current</td></tr>
+          <tr><th scope="row">Service and price questions</th><td>Answers from your list</td><td>Gives final quotes</td></tr>
+          <tr><th scope="row">Captions</th><td>Drafts each one</td><td>Edits and posts with client permission</td></tr>
+          <tr><th scope="row">Color and allergy calls</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

@@ -67,12 +67,12 @@ export default function Post() {
 
       <table>
         <thead>
-          <tr><th>Service</th><th>What it is</th></tr>
+          <tr><th scope="col">Service</th><th scope="col">What it is</th></tr>
         </thead>
         <tbody>
           {ROWS.map(([a, b]) => (
             <tr key={a}>
-              <td><strong>{a}</strong></td>
+              <th scope="row">{a}</th>
               <td>{b}</td>
             </tr>
           ))}

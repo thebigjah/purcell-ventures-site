@@ -100,17 +100,17 @@ export default function AiForAutoRepairShops() {
       <table>
         <thead>
           <tr>
-            <th>Shop task</th>
-            <th>AI role</th>
-            <th>Person&apos;s role</th>
+            <th scope="col">Shop task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Person&apos;s role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Repair explanations</strong></td><td>Drafts from tech notes</td><td>Advisor checks and sends</td></tr>
-          <tr><td><strong>Status updates</strong></td><td>Writes the message</td><td>Calls when news is bad</td></tr>
-          <tr><td><strong>Service reminders</strong></td><td>Writes the wording</td><td>Keeps mileage and dates current</td></tr>
-          <tr><td><strong>Estimates</strong></td><td>Drafts from findings</td><td>Sets prices and gets approval</td></tr>
-          <tr><td><strong>Diagnosis and safety</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Repair explanations</th><td>Drafts from tech notes</td><td>Advisor checks and sends</td></tr>
+          <tr><th scope="row">Status updates</th><td>Writes the message</td><td>Calls when news is bad</td></tr>
+          <tr><th scope="row">Service reminders</th><td>Writes the wording</td><td>Keeps mileage and dates current</td></tr>
+          <tr><th scope="row">Estimates</th><td>Drafts from findings</td><td>Sets prices and gets approval</td></tr>
+          <tr><th scope="row">Diagnosis and safety</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

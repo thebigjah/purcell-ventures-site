@@ -207,7 +207,7 @@ export default function InvoicingPage() {
               <div className="inv-scroll">
                 <table className="inv-table">
                   <thead>
-                    <tr>{["Invoice number", "Client", "Division", "Amount", "Due", "Status"].map(h => <th key={h}>{h}</th>)}</tr>
+                    <tr>{["Invoice number", "Client", "Division", "Amount", "Due", "Status"].map(h => <th scope="col" key={h}>{h}</th>)}</tr>
                   </thead>
                   <tbody>
                     {invoices.map(inv => (

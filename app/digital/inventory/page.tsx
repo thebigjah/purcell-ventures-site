@@ -168,12 +168,12 @@ export default function InventoryPage() {
             <table className={s.table} style={{ minWidth: 680 }}>
               <thead>
                 <tr>
-                  <th>SKU</th>
-                  <th>Name</th>
-                  <th>Category</th>
-                  <th className={s.num}>Quantity</th>
-                  <th className={s.num}>Value</th>
-                  <th><span className="sr-only">Actions</span></th>
+                  <th scope="col">SKU</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Category</th>
+                  <th scope="col" className={s.num}>Quantity</th>
+                  <th scope="col" className={s.num}>Value</th>
+                  <th scope="col"><span className="sr-only">Actions</span></th>
                 </tr>
               </thead>
               <tbody>

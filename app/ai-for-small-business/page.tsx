@@ -153,18 +153,18 @@ export default function AiForSmallBusiness() {
       <table>
         <thead>
           <tr>
-            <th>Task</th>
-            <th>Good use of AI?</th>
-            <th>What a person still does</th>
+            <th scope="col">Task</th>
+            <th scope="col">Good use of AI?</th>
+            <th scope="col">What a person still does</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Review replies</strong></td><td>Yes</td><td>Reads each reply before it posts</td></tr>
-          <tr><td><strong>Website and social copy</strong></td><td>Yes, from your own facts</td><td>Checks names, prices and claims</td></tr>
-          <tr><td><strong>Summaries of long documents</strong></td><td>Yes</td><td>Opens the source before acting on a summary</td></tr>
-          <tr><td><strong>Customer chat on your site</strong></td><td>Yes, with written answers and a handoff</td><td>Reads the log and handles handoffs</td></tr>
-          <tr><td><strong>Pricing and quotes</strong></td><td>Drafts only</td><td>Sets the price and signs off</td></tr>
-          <tr><td><strong>Hiring, firing and legal replies</strong></td><td>No</td><td>All of it</td></tr>
+          <tr><th scope="row">Review replies</th><td>Yes</td><td>Reads each reply before it posts</td></tr>
+          <tr><th scope="row">Website and social copy</th><td>Yes, from your own facts</td><td>Checks names, prices and claims</td></tr>
+          <tr><th scope="row">Summaries of long documents</th><td>Yes</td><td>Opens the source before acting on a summary</td></tr>
+          <tr><th scope="row">Customer chat on your site</th><td>Yes, with written answers and a handoff</td><td>Reads the log and handles handoffs</td></tr>
+          <tr><th scope="row">Pricing and quotes</th><td>Drafts only</td><td>Sets the price and signs off</td></tr>
+          <tr><th scope="row">Hiring, firing and legal replies</th><td>No</td><td>All of it</td></tr>
         </tbody>
       </table>
 

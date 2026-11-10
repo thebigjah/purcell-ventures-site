@@ -98,17 +98,17 @@ export default function AiForRoofers() {
       <table>
         <thead>
           <tr>
-            <th>Roofing task</th>
-            <th>AI role</th>
-            <th>Person&apos;s role</th>
+            <th scope="col">Roofing task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Person&apos;s role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Inspection reports</strong></td><td>Writes up the inspector&apos;s notes and photos</td><td>Inspects the roof and checks the report</td></tr>
-          <tr><td><strong>Storm-season leads</strong></td><td>Sorts by urgency and area, drafts replies</td><td>Sets the inspection schedule</td></tr>
-          <tr><td><strong>Claim paperwork</strong></td><td>Drafts summaries, photo logs and letters</td><td>Checks every line and follows the carrier</td></tr>
-          <tr><td><strong>Review replies</strong></td><td>Drafts each reply</td><td>Reads and posts it</td></tr>
-          <tr><td><strong>Damage calls</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Inspection reports</th><td>Writes up the inspector&apos;s notes and photos</td><td>Inspects the roof and checks the report</td></tr>
+          <tr><th scope="row">Storm-season leads</th><td>Sorts by urgency and area, drafts replies</td><td>Sets the inspection schedule</td></tr>
+          <tr><th scope="row">Claim paperwork</th><td>Drafts summaries, photo logs and letters</td><td>Checks every line and follows the carrier</td></tr>
+          <tr><th scope="row">Review replies</th><td>Drafts each reply</td><td>Reads and posts it</td></tr>
+          <tr><th scope="row">Damage calls</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

@@ -100,17 +100,17 @@ export default function AiForMedSpas() {
       <table>
         <thead>
           <tr>
-            <th>Med spa task</th>
-            <th>AI role</th>
-            <th>Provider&apos;s role</th>
+            <th scope="col">Med spa task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Provider&apos;s role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Booking</strong></td><td>Books by your service rules</td><td>Sets the rules and the consult step</td></tr>
-          <tr><td><strong>Consult intake</strong></td><td>Collects contact and scheduling details</td><td>Reviews health history</td></tr>
-          <tr><td><strong>Aftercare</strong></td><td>Formats and sends approved text</td><td>Writes and approves it</td></tr>
-          <tr><td><strong>Review replies</strong></td><td>Drafts each reply</td><td>Removes client details and posts it</td></tr>
-          <tr><td><strong>Clinical questions</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Booking</th><td>Books by your service rules</td><td>Sets the rules and the consult step</td></tr>
+          <tr><th scope="row">Consult intake</th><td>Collects contact and scheduling details</td><td>Reviews health history</td></tr>
+          <tr><th scope="row">Aftercare</th><td>Formats and sends approved text</td><td>Writes and approves it</td></tr>
+          <tr><th scope="row">Review replies</th><td>Drafts each reply</td><td>Removes client details and posts it</td></tr>
+          <tr><th scope="row">Clinical questions</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

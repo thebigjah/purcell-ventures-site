@@ -102,17 +102,17 @@ export default function AiForLandscapers() {
       <table>
         <thead>
           <tr>
-            <th>Landscaping task</th>
-            <th>AI role</th>
-            <th>Crew lead&apos;s role</th>
+            <th scope="col">Landscaping task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Crew lead&apos;s role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Quote requests</strong></td><td>Sorts photos and drafts a range</td><td>Sets the final price</td></tr>
-          <tr><td><strong>Weather delays</strong></td><td>Writes the customer message</td><td>Decides whether the day moves</td></tr>
-          <tr><td><strong>Seasonal reminders</strong></td><td>Writes the templates</td><td>Sets the dates per service</td></tr>
-          <tr><td><strong>Captions and reviews</strong></td><td>Drafts each one</td><td>Edits and posts</td></tr>
-          <tr><td><strong>Chemical treatments</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Quote requests</th><td>Sorts photos and drafts a range</td><td>Sets the final price</td></tr>
+          <tr><th scope="row">Weather delays</th><td>Writes the customer message</td><td>Decides whether the day moves</td></tr>
+          <tr><th scope="row">Seasonal reminders</th><td>Writes the templates</td><td>Sets the dates per service</td></tr>
+          <tr><th scope="row">Captions and reviews</th><td>Drafts each one</td><td>Edits and posts</td></tr>
+          <tr><th scope="row">Chemical treatments</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

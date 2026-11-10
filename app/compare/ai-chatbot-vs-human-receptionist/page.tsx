@@ -66,15 +66,15 @@ export default function Page() {
 
         <table>
           <thead>
-            <tr><th></th><th>Website chatbot</th><th>AI phone answering</th><th>Human receptionist</th></tr>
+            <tr><td></td><th scope="col">Website chatbot</th><th scope="col">AI phone answering</th><th scope="col">Human receptionist</th></tr>
           </thead>
           <tbody>
-            <tr><td><strong>Where it works</strong></td><td>Your website</td><td>Your phone line</td><td>Phone, front desk and email</td></tr>
-            <tr><td><strong>Hours</strong></td><td>Any hour</td><td>Any hour</td><td>Set shifts, or an answering service after hours</td></tr>
-            <tr><td><strong>How it charges</strong></td><td>A monthly plan, or a build fee plus usage. Check current pricing</td><td>A monthly plan by minutes or calls, or a rate per minute. Check current pricing</td><td>An hourly wage, or an answering service plan by minutes or calls</td></tr>
-            <tr><td><strong>Best at</strong></td><td>Hours, prices, services and booking links</td><td>Routine calls, messages and simple bookings</td><td>Upset customers, exceptions and judgment calls</td></tr>
-            <tr><td><strong>Weak at</strong></td><td>Questions outside what you trained it on</td><td>Unusual problems and upset callers</td><td>Covering every hour of every day</td></tr>
-            <tr><td><strong>Needs from you</strong></td><td>Accurate answers to train it on</td><td>A script, an allowed list and a transfer number</td><td>Hiring, training and a schedule</td></tr>
+            <tr><th scope="row">Where it works</th><td>Your website</td><td>Your phone line</td><td>Phone, front desk and email</td></tr>
+            <tr><th scope="row">Hours</th><td>Any hour</td><td>Any hour</td><td>Set shifts, or an answering service after hours</td></tr>
+            <tr><th scope="row">How it charges</th><td>A monthly plan, or a build fee plus usage. Check current pricing</td><td>A monthly plan by minutes or calls, or a rate per minute. Check current pricing</td><td>An hourly wage, or an answering service plan by minutes or calls</td></tr>
+            <tr><th scope="row">Best at</th><td>Hours, prices, services and booking links</td><td>Routine calls, messages and simple bookings</td><td>Upset customers, exceptions and judgment calls</td></tr>
+            <tr><th scope="row">Weak at</th><td>Questions outside what you trained it on</td><td>Unusual problems and upset callers</td><td>Covering every hour of every day</td></tr>
+            <tr><th scope="row">Needs from you</th><td>Accurate answers to train it on</td><td>A script, an allowed list and a transfer number</td><td>Hiring, training and a schedule</td></tr>
           </tbody>
         </table>
 

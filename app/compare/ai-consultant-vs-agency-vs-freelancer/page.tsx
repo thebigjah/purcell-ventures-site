@@ -67,15 +67,15 @@ export default function Page() {
 
         <table>
           <thead>
-            <tr><th></th><th>Independent consultant</th><th>Agency</th><th>Marketplace freelancer</th><th>Do it yourself</th></tr>
+            <tr><td></td><th scope="col">Independent consultant</th><th scope="col">Agency</th><th scope="col">Marketplace freelancer</th><th scope="col">Do it yourself</th></tr>
           </thead>
           <tbody>
-            <tr><td><strong>Who does the work</strong></td><td>One person, start to finish</td><td>A team with a project manager</td><td>One person you found through a listing</td><td>You or a staff member</td></tr>
-            <tr><td><strong>How it charges</strong></td><td>Hourly training, fixed project fees</td><td>Project fees or retainers, often with a minimum. Check current pricing</td><td>Hourly or fixed price per job. Check current pricing</td><td>A tool subscription and your hours</td></tr>
-            <tr><td><strong>Best at</strong></td><td>Scoping, small builds, team training</td><td>Large projects that need many skills at once</td><td>One clear task with a written spec</td><td>Drafting, summaries and research</td></tr>
-            <tr><td><strong>Weak at</strong></td><td>Several large projects at the same time</td><td>Small jobs below their minimum</td><td>Vague goals and long support</td><td>Connecting systems and custom code</td></tr>
-            <tr><td><strong>Who you talk to</strong></td><td>The person doing the work</td><td>Usually an account manager</td><td>The person doing the work</td><td>Nobody</td></tr>
-            <tr><td><strong>Support after launch</strong></td><td>The same person, under an agreement</td><td>A support contract</td><td>Varies by freelancer</td><td>You</td></tr>
+            <tr><th scope="row">Who does the work</th><td>One person, start to finish</td><td>A team with a project manager</td><td>One person you found through a listing</td><td>You or a staff member</td></tr>
+            <tr><th scope="row">How it charges</th><td>Hourly training, fixed project fees</td><td>Project fees or retainers, often with a minimum. Check current pricing</td><td>Hourly or fixed price per job. Check current pricing</td><td>A tool subscription and your hours</td></tr>
+            <tr><th scope="row">Best at</th><td>Scoping, small builds, team training</td><td>Large projects that need many skills at once</td><td>One clear task with a written spec</td><td>Drafting, summaries and research</td></tr>
+            <tr><th scope="row">Weak at</th><td>Several large projects at the same time</td><td>Small jobs below their minimum</td><td>Vague goals and long support</td><td>Connecting systems and custom code</td></tr>
+            <tr><th scope="row">Who you talk to</th><td>The person doing the work</td><td>Usually an account manager</td><td>The person doing the work</td><td>Nobody</td></tr>
+            <tr><th scope="row">Support after launch</th><td>The same person, under an agreement</td><td>A support contract</td><td>Varies by freelancer</td><td>You</td></tr>
           </tbody>
         </table>
 

@@ -95,17 +95,17 @@ export default function AiForChurches() {
       <table>
         <thead>
           <tr>
-            <th>Church task</th>
-            <th>AI role</th>
-            <th>Staff role</th>
+            <th scope="col">Church task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Staff role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Sermon summaries and clips</strong></td><td>Drafts and cuts</td><td>Pastor approves each one</td></tr>
-          <tr><td><strong>Volunteer scheduling</strong></td><td>Drafts rotations and reminders</td><td>Coordinator adjusts and clears kids&apos; roles</td></tr>
-          <tr><td><strong>Newsletter</strong></td><td>Drafts from staff notes</td><td>Checks dates and names</td></tr>
-          <tr><td><strong>Event sign-ups</strong></td><td>Answers event questions</td><td>Runs the event</td></tr>
-          <tr><td><strong>Prayer and pastoral care</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Sermon summaries and clips</th><td>Drafts and cuts</td><td>Pastor approves each one</td></tr>
+          <tr><th scope="row">Volunteer scheduling</th><td>Drafts rotations and reminders</td><td>Coordinator adjusts and clears kids&apos; roles</td></tr>
+          <tr><th scope="row">Newsletter</th><td>Drafts from staff notes</td><td>Checks dates and names</td></tr>
+          <tr><th scope="row">Event sign-ups</th><td>Answers event questions</td><td>Runs the event</td></tr>
+          <tr><th scope="row">Prayer and pastoral care</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

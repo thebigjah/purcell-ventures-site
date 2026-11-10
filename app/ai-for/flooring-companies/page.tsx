@@ -100,17 +100,17 @@ export default function AiForFlooring() {
       <table>
         <thead>
           <tr>
-            <th>Flooring task</th>
-            <th>AI role</th>
-            <th>Person&apos;s role</th>
+            <th scope="col">Flooring task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Person&apos;s role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Estimates</strong></td><td>Drafts from measurements and your price sheet</td><td>Measures, prices and checks each line</td></tr>
-          <tr><td><strong>Quote follow-ups</strong></td><td>Writes each message</td><td>Keeps the quote list current and calls replies</td></tr>
-          <tr><td><strong>Showroom questions</strong></td><td>Answers from your written answers</td><td>Handles questions about a specific floor</td></tr>
-          <tr><td><strong>Review replies</strong></td><td>Drafts each reply</td><td>Reads and posts it</td></tr>
-          <tr><td><strong>Moisture and subfloor</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Estimates</th><td>Drafts from measurements and your price sheet</td><td>Measures, prices and checks each line</td></tr>
+          <tr><th scope="row">Quote follow-ups</th><td>Writes each message</td><td>Keeps the quote list current and calls replies</td></tr>
+          <tr><th scope="row">Showroom questions</th><td>Answers from your written answers</td><td>Handles questions about a specific floor</td></tr>
+          <tr><th scope="row">Review replies</th><td>Drafts each reply</td><td>Reads and posts it</td></tr>
+          <tr><th scope="row">Moisture and subfloor</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

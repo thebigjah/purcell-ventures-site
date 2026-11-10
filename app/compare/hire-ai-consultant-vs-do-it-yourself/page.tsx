@@ -65,15 +65,15 @@ export default function Page() {
 
         <table>
           <thead>
-            <tr><th></th><th>Do it yourself</th><th>Hire a consultant</th></tr>
+            <tr><td></td><th scope="col">Do it yourself</th><th scope="col">Hire a consultant</th></tr>
           </thead>
           <tbody>
-            <tr><td><strong>What you pay</strong></td><td>A chat assistant plan per user. Check current pricing on their site</td><td>An hourly or flat training fee, or a project fee for a build</td></tr>
-            <tr><td><strong>What it costs in time</strong></td><td>Weeks of practice, mostly trial and error</td><td>A few hours of sessions, then practice</td></tr>
-            <tr><td><strong>Best for</strong></td><td>One owner learning to draft, summarize and research</td><td>A team, a connection between systems, or a custom tool</td></tr>
-            <tr><td><strong>Data rules</strong></td><td>You work them out yourself</td><td>Written with you for your business</td></tr>
-            <tr><td><strong>Risk</strong></td><td>Wrong answers you do not catch, customer data in the wrong tool</td><td>Paying for help you did not need</td></tr>
-            <tr><td><strong>What you keep</strong></td><td>Your own habits</td><td>Habits, written prompts and rules your staff can follow</td></tr>
+            <tr><th scope="row">What you pay</th><td>A chat assistant plan per user. Check current pricing on their site</td><td>An hourly or flat training fee, or a project fee for a build</td></tr>
+            <tr><th scope="row">What it costs in time</th><td>Weeks of practice, mostly trial and error</td><td>A few hours of sessions, then practice</td></tr>
+            <tr><th scope="row">Best for</th><td>One owner learning to draft, summarize and research</td><td>A team, a connection between systems, or a custom tool</td></tr>
+            <tr><th scope="row">Data rules</th><td>You work them out yourself</td><td>Written with you for your business</td></tr>
+            <tr><th scope="row">Risk</th><td>Wrong answers you do not catch, customer data in the wrong tool</td><td>Paying for help you did not need</td></tr>
+            <tr><th scope="row">What you keep</th><td>Your own habits</td><td>Habits, written prompts and rules your staff can follow</td></tr>
           </tbody>
         </table>
 

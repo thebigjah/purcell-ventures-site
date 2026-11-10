@@ -101,17 +101,17 @@ export default function AiForBarbershops() {
       <table>
         <thead>
           <tr>
-            <th>Barbershop task</th>
-            <th>AI or automation role</th>
-            <th>Barber&apos;s role</th>
+            <th scope="col">Barbershop task</th>
+            <th scope="col">AI or automation role</th>
+            <th scope="col">Barber&apos;s role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Booking by chair</strong></td><td>Books each barber&apos;s open hours</td><td>Sets hours and walk-in time</td></tr>
-          <tr><td><strong>No-show reminders</strong></td><td>Sends them on a schedule</td><td>Sets the no-show policy</td></tr>
-          <tr><td><strong>Shop questions</strong></td><td>Answers from your list</td><td>Handles anything off the list</td></tr>
-          <tr><td><strong>Posts and review replies</strong></td><td>Drafts each one</td><td>Edits, asks permission and posts</td></tr>
-          <tr><td><strong>The cut and skin concerns</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Booking by chair</th><td>Books each barber&apos;s open hours</td><td>Sets hours and walk-in time</td></tr>
+          <tr><th scope="row">No-show reminders</th><td>Sends them on a schedule</td><td>Sets the no-show policy</td></tr>
+          <tr><th scope="row">Shop questions</th><td>Answers from your list</td><td>Handles anything off the list</td></tr>
+          <tr><th scope="row">Posts and review replies</th><td>Drafts each one</td><td>Edits, asks permission and posts</td></tr>
+          <tr><th scope="row">The cut and skin concerns</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

@@ -102,17 +102,17 @@ export default function AiForInsuranceAgents() {
       <table>
         <thead>
           <tr>
-            <th>Agency task</th>
-            <th>AI role</th>
-            <th>Agent&apos;s role</th>
+            <th scope="col">Agency task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Agent&apos;s role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Quote requests</strong></td><td>Collects details for each line</td><td>Runs and presents the quote</td></tr>
-          <tr><td><strong>Renewal reminders</strong></td><td>Writes the templates</td><td>Reviews the policy with the client</td></tr>
-          <tr><td><strong>Policy FAQ</strong></td><td>Answers general questions from a written list</td><td>Answers questions about one policy</td></tr>
-          <tr><td><strong>Review replies</strong></td><td>Drafts each reply</td><td>Removes client details and posts it</td></tr>
-          <tr><td><strong>Binding and advice</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Quote requests</th><td>Collects details for each line</td><td>Runs and presents the quote</td></tr>
+          <tr><th scope="row">Renewal reminders</th><td>Writes the templates</td><td>Reviews the policy with the client</td></tr>
+          <tr><th scope="row">Policy FAQ</th><td>Answers general questions from a written list</td><td>Answers questions about one policy</td></tr>
+          <tr><th scope="row">Review replies</th><td>Drafts each reply</td><td>Removes client details and posts it</td></tr>
+          <tr><th scope="row">Binding and advice</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

@@ -97,17 +97,17 @@ export default function AiForLawFirms() {
       <table>
         <thead>
           <tr>
-            <th>Law firm task</th>
-            <th>AI role</th>
-            <th>Attorney or staff role</th>
+            <th scope="col">Law firm task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Attorney or staff role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Intake screening</strong></td><td>Collects contact details, parties and dates</td><td>Runs conflicts and decides on the matter</td></tr>
-          <tr><td><strong>Routine letters</strong></td><td>Drafts from a template and facts</td><td>Rewrites, checks and signs</td></tr>
-          <tr><td><strong>Record summaries</strong></td><td>Summarizes long documents</td><td>Checks the summary against the source</td></tr>
-          <tr><td><strong>Research and citations</strong></td><td>Suggests where to look</td><td>Reads every authority before citing it</td></tr>
-          <tr><td><strong>Legal advice</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Intake screening</th><td>Collects contact details, parties and dates</td><td>Runs conflicts and decides on the matter</td></tr>
+          <tr><th scope="row">Routine letters</th><td>Drafts from a template and facts</td><td>Rewrites, checks and signs</td></tr>
+          <tr><th scope="row">Record summaries</th><td>Summarizes long documents</td><td>Checks the summary against the source</td></tr>
+          <tr><th scope="row">Research and citations</th><td>Suggests where to look</td><td>Reads every authority before citing it</td></tr>
+          <tr><th scope="row">Legal advice</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

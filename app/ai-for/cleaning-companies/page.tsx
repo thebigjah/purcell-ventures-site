@@ -103,17 +103,17 @@ export default function AiForCleaningCompanies() {
       <table>
         <thead>
           <tr>
-            <th>Cleaning company task</th>
-            <th>AI role</th>
-            <th>Owner&apos;s role</th>
+            <th scope="col">Cleaning company task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Owner&apos;s role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Quote requests</strong></td><td>Sorts details and drafts a range</td><td>Sets the final price</td></tr>
-          <tr><td><strong>Schedule changes</strong></td><td>Writes the client notice</td><td>Decides who moves</td></tr>
-          <tr><td><strong>Visit reminders</strong></td><td>Writes the templates</td><td>Keeps the schedule current</td></tr>
-          <tr><td><strong>Review replies</strong></td><td>Drafts each reply</td><td>Edits and posts</td></tr>
-          <tr><td><strong>Chemical safety</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Quote requests</th><td>Sorts details and drafts a range</td><td>Sets the final price</td></tr>
+          <tr><th scope="row">Schedule changes</th><td>Writes the client notice</td><td>Decides who moves</td></tr>
+          <tr><th scope="row">Visit reminders</th><td>Writes the templates</td><td>Keeps the schedule current</td></tr>
+          <tr><th scope="row">Review replies</th><td>Drafts each reply</td><td>Edits and posts</td></tr>
+          <tr><th scope="row">Chemical safety</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

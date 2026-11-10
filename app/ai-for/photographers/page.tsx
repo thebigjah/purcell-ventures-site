@@ -99,17 +99,17 @@ export default function AiForPhotographers() {
       <table>
         <thead>
           <tr>
-            <th>Photography task</th>
-            <th>AI role</th>
-            <th>Photographer&apos;s role</th>
+            <th scope="col">Photography task</th>
+            <th scope="col">AI role</th>
+            <th scope="col">Photographer&apos;s role</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Inquiry replies</strong></td><td>Drafts from your price sheet</td><td>Checks and sends</td></tr>
-          <tr><td><strong>Session prep guides</strong></td><td>Drafts one per session type</td><td>Edits in your voice</td></tr>
-          <tr><td><strong>Culling</strong></td><td>Flags blinks, focus misses and duplicates</td><td>Makes every final pick</td></tr>
-          <tr><td><strong>Captions and blog posts</strong></td><td>Drafts each one</td><td>Edits and posts with client permission</td></tr>
-          <tr><td><strong>Contracts and final quotes</strong></td><td>None</td><td>All of it</td></tr>
+          <tr><th scope="row">Inquiry replies</th><td>Drafts from your price sheet</td><td>Checks and sends</td></tr>
+          <tr><th scope="row">Session prep guides</th><td>Drafts one per session type</td><td>Edits in your voice</td></tr>
+          <tr><th scope="row">Culling</th><td>Flags blinks, focus misses and duplicates</td><td>Makes every final pick</td></tr>
+          <tr><th scope="row">Captions and blog posts</th><td>Drafts each one</td><td>Edits and posts with client permission</td></tr>
+          <tr><th scope="row">Contracts and final quotes</th><td>None</td><td>All of it</td></tr>
         </tbody>
       </table>
 

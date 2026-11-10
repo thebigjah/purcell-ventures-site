@@ -66,16 +66,16 @@ export default function Page() {
 
         <table>
           <thead>
-            <tr><th></th><th>Zapier</th><th>Custom AI agent</th></tr>
+            <tr><td></td><th scope="col">Zapier</th><th scope="col">Custom AI agent</th></tr>
           </thead>
           <tbody>
-            <tr><td><strong>What it does</strong></td><td>Runs fixed steps between apps when something happens</td><td>Reads the input, decides the next step and acts within limits you set</td></tr>
-            <tr><td><strong>Who sets it up</strong></td><td>You or a staff member, in a visual editor</td><td>A developer, from a written plan</td></tr>
-            <tr><td><strong>Time to first version</strong></td><td>Often an afternoon</td><td>Days to weeks</td></tr>
-            <tr><td><strong>How it charges</strong></td><td>A free plan, then monthly plans by tasks run. Check current pricing on their site</td><td>A build fee, then hosting and model usage each month</td></tr>
-            <tr><td><strong>Best at</strong></td><td>Rules that fit in one sentence</td><td>Messy inputs, judgment calls and long chains of steps</td></tr>
-            <tr><td><strong>Weak at</strong></td><td>Inputs that vary from one case to the next</td><td>Small, stable jobs where the build fee never pays back</td></tr>
-            <tr><td><strong>Who fixes it</strong></td><td>You, in the editor</td><td>The developer, or your staff with a written handover</td></tr>
+            <tr><th scope="row">What it does</th><td>Runs fixed steps between apps when something happens</td><td>Reads the input, decides the next step and acts within limits you set</td></tr>
+            <tr><th scope="row">Who sets it up</th><td>You or a staff member, in a visual editor</td><td>A developer, from a written plan</td></tr>
+            <tr><th scope="row">Time to first version</th><td>Often an afternoon</td><td>Days to weeks</td></tr>
+            <tr><th scope="row">How it charges</th><td>A free plan, then monthly plans by tasks run. Check current pricing on their site</td><td>A build fee, then hosting and model usage each month</td></tr>
+            <tr><th scope="row">Best at</th><td>Rules that fit in one sentence</td><td>Messy inputs, judgment calls and long chains of steps</td></tr>
+            <tr><th scope="row">Weak at</th><td>Inputs that vary from one case to the next</td><td>Small, stable jobs where the build fee never pays back</td></tr>
+            <tr><th scope="row">Who fixes it</th><td>You, in the editor</td><td>The developer, or your staff with a written handover</td></tr>
           </tbody>
         </table>
 
