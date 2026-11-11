@@ -81,6 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/research/alabama-small-business-websites-2026`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "yearly", priority: 0.7 },
     { url: `${BASE}/research/tuscaloosa-small-business-websites-2026`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "yearly", priority: 0.7 },
     { url: `${BASE}/research/cobb-county-small-business-websites-2026`, lastModified: new Date("2026-11-09T00:00:00Z"), changeFrequency: "yearly", priority: 0.7 },
+    { url: `${BASE}/partners`,        lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/case-studies`,    lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     // Every post, not the two that happened to be listed. A post absent from the

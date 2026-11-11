@@ -26,6 +26,7 @@ const COLS: { title: string; links: { href: string; label: string; rel?: string 
     links: [
       { href: "/portfolio", label: "Portfolio" },
       { href: "/case-studies", label: "Case studies" },
+      { href: "/partners", label: "Partners" },
       { href: "/agentic-ai", label: "Autonomous AI agents" },
       { href: "/courses", label: "Courses" },
       { href: "/shop", label: "Shop" },
