@@ -20,6 +20,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "facebook-page-vs-website-small-business",
+    title: "Facebook page vs website: what a small business needs",
+    excerpt: "A Facebook page handles a lot of a small business's daily work, and it still leaves gaps with Google and with people who skip Facebook. Here is how to test your own page this week and spot the signs that a one-page site makes sense.",
+    date: "November 12, 2026",
+    readingTime: "5 min read",
+    category: "Guide",
+  },
+  {
     slug: "ai-customer-emails-that-sound-like-you",
     title: "Using AI to draft customer emails that sound like you",
     excerpt: "AI can write the first draft of a customer email from a few facts. A sample of your own writing and a four point review keep the result accurate and in your voice.",
