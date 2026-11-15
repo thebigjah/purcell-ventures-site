@@ -20,6 +20,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "what-is-an-ai-agent-small-business",
+    title: "What is an AI agent? Small business jobs that suit one",
+    excerpt: "An AI agent takes a goal and carries out the steps itself through apps you connect, such as Gmail or Google Sheets. Here is how to tell which jobs in your business suit one and how to test one safely this week.",
+    date: "November 15, 2026",
+    readingTime: "5 min read",
+    category: "Guide",
+  },
+  {
     slug: "one-page-website-local-business-what-to-include",
     title: "One-page website for a local business: what to include",
     excerpt: "A one-page website can do everything most local service businesses need, if each section has a clear job. Here is what to put on it from top to bottom, and what to cut.",
