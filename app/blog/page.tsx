@@ -20,6 +20,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "test-new-ai-tool-before-customers",
+    title: "How to test a new AI tool before customers see it",
+    excerpt: "Before an AI tool answers your customers, run it on 20 past questions and grade every reply against your own records. This guide covers the test batch, the fact sheet, the grading checklist and the pass mark.",
+    date: "November 16, 2026",
+    readingTime: "5 min read",
+    category: "Guide",
+  },
+  {
     slug: "what-is-an-ai-agent-small-business",
     title: "What is an AI agent? Small business jobs that suit one",
     excerpt: "An AI agent takes a goal and carries out the steps itself through apps you connect, such as Gmail or Google Sheets. Here is how to tell which jobs in your business suit one and how to test one safely this week.",
