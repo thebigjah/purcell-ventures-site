@@ -16,7 +16,13 @@ const SECTIONS: { h: string; p: string[] }[] = [
   {
     h: "What Swipr stores on your device",
     p: [
-      "Swipr has no accounts and no sign-in. Your progress (levels cleared, streaks, best scores) and your game preferences are saved only on your device. We do not send them to our own servers, and uninstalling the app deletes them.",
+      "Swipr has no accounts and no sign-in. Your progress (levels cleared, streaks, best scores) and your game preferences are saved on your device, and uninstalling the app deletes them.",
+    ],
+  },
+  {
+    h: "Anonymous gameplay data",
+    p: [
+      "To tune how hard each game is, Swipr sends us anonymous gameplay events: which game and level you played, whether you won, failed or skipped, how long it took, which ads were shown or offered, and how long the app was open. Each install gets a random ID that is not linked to your name, email, advertising ID or any other identifier. We use this data only to improve the games, we do not share or sell it, and it is sent over an encrypted connection to our server on Cloudflare.",
     ],
   },
   {
@@ -46,7 +52,7 @@ const SECTIONS: { h: string; p: string[] }[] = [
   },
   {
     h: "Changes",
-    p: ["If this policy changes, we will update this page and the date below. Effective 12 November 2026."],
+    p: ["If this policy changes, we will update this page and the date below. Effective 18 November 2026."],
   },
 ];
 
