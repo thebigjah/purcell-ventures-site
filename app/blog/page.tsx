@@ -20,6 +20,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "how-to-reply-to-google-reviews",
+    title: "How to reply to Google reviews as a small business",
+    excerpt: "Your replies to Google reviews show the next customer how you treat people. Here is where to find the reply button, what to write for good and bad reviews, and what to leave out.",
+    date: "November 19, 2026",
+    readingTime: "5 min read",
+    category: "Guide",
+  },
+  {
     slug: "business-hours-google-facebook-yelp-website",
     title: "Business hours on Google, Facebook, Yelp and your website",
     excerpt: "Customers trust whichever listing they find first, so every listing needs the same hours. Here is where to change hours on each platform and a short monthly check to catch mistakes.",
