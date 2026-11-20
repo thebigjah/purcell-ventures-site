@@ -257,7 +257,7 @@ export default function AiConsultingAlabama() {
 
       <p>
         Purcell Ventures LLC is a one-person company run by me, Elijah Purcell, a student in
-        New College and the Honors College at the University of Alabama. The person you meet
+        the Honors College at the University of Alabama. The person you meet
         with is the person who writes the code and answers your email.
       </p>
 

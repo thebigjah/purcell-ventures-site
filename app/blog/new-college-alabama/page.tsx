@@ -39,8 +39,8 @@ export default function Post() {
 
       <p>
         Before I applied, every explanation of New College I found was either a brochure
-        or a forum post from 2014. I wrote this in my first week as a New College student,
-        and it includes the drawbacks I weighed before choosing it.
+        or a forum post from 2014. I wrote this in my first semester at Alabama while applying to
+        New College, and it includes the drawbacks I weighed before choosing to apply.
       </p>
 
       <h2>What is New College?</h2>
@@ -145,7 +145,7 @@ export default function Post() {
 
       <p>
         New College is reachable at (205) 348-4600 or ncfrndsk@ua.edu. It combines with
-        the Honors College, which is what I am doing. Ask about the depth study proposal
+        the Honors College, which is what I am applying to do. Ask about the depth study proposal
         process early, because it shapes which courses are worth taking in your first
         year instead of your third.
       </p>

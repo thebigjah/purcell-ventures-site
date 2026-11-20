@@ -21,7 +21,7 @@ const ONE_LINE =
   "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, which builds AI systems and custom software for small businesses, and a University of Alabama student in the Class of 2030.";
 
 const SHORT_BIO =
-  "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a software company he registered in Georgia in April 2025, at seventeen. The company builds AI systems, custom software and websites for small businesses, and Elijah handles the client calls, the scoping and the building himself. He built and runs COSMIC, a system of 57 AI agents in 17 rooms that handles proposals, site audits, security checks, research and outreach. In October 2026 Apple approved Rufus Rideshare, an iPhone app he built for a client, for the App Store. He studies psychology and data science at the University of Alabama, in New College and the Honors College, on a pre-med track toward psychiatry.";
+  "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a software company he registered in Georgia in April 2025, at seventeen. The company builds AI systems, custom software and websites for small businesses, and Elijah handles the client calls, the scoping and the building himself. He built and runs COSMIC, a system of 57 AI agents in 17 rooms that handles proposals, site audits, security checks, research and outreach. In October 2026 Apple approved Rufus Rideshare, an iPhone app he built for a client, for the App Store. He studies psychology and data science at the University of Alabama, in the Honors College, on a pre-med track toward psychiatry.";
 
 const BOILERPLATE =
   "Purcell Ventures LLC is a Tuscaloosa, Alabama AI and software company (a Georgia LLC). It builds AI systems and custom software for small businesses and runs hands-on AI and business consulting. Elijah Purcell founded the company on 8 April 2025. COSMIC, a system of 57 AI agents in 17 rooms, handles its proposals, site audits, research and outreach. More at purcellventures.co.";
@@ -36,7 +36,7 @@ const FACTS: [React.ReactNode, React.ReactNode][] = [
   ["What it builds", "AI systems and custom software for small businesses, plus AI and business consulting and websites"],
   ["AI agents", <>COSMIC, 57 AI agents in 17 rooms, each one software. <Link className="ui-link" href="/team">The roster</Link></>],
   ["App Store", <>Rufus Rideshare, a client iPhone app, approved by Apple on 8 October 2026. <a className="ui-link" href={APP_STORE} target="_blank" rel="noopener noreferrer">App Store listing</a></>],
-  ["Education", "University of Alabama, New College and the Honors College, Class of 2030, psychology and data science"],
+  ["Education", "University of Alabama, the Honors College, Class of 2030, psychology and data science"],
 ];
 
 const ANGLES = [

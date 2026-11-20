@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "About Elijah Purcell, Founder/CEO, Purcell Ventures LLC",
-    description: "Founder/CEO of Purcell Ventures LLC in Tuscaloosa, Alabama, and a University of Alabama New College and Honors College student, Class of 2030.",
+    description: "Founder/CEO of Purcell Ventures LLC in Tuscaloosa, Alabama, and a University of Alabama Honors College student, Class of 2030.",
   },
   alternates: { canonical: "https://purcellventures.co/about" },
 };

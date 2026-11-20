@@ -22,7 +22,7 @@ const FACTS: [string, string][] = [
   ["Born", "August 2007"],
   ["Role", "Founder/CEO, Purcell Ventures LLC"],
   ["Company", `Purcell Ventures LLC, a Tuscaloosa, Alabama AI and software company (a Georgia LLC), control number ${CONTACT.llcControlNumber}, formed 8 April 2025`],
-  ["University", "University of Alabama, New College and Honors College, Tuscaloosa, Class of 2030"],
+  ["University", "University of Alabama, Honors College, Tuscaloosa, Class of 2030. Applying to New College"],
   ["Studying", "Psychology and data science, pre-med track toward psychiatry"],
   ["Also", "Independent contractor with Mercor Intelligence"],
   ["Based", "Tuscaloosa, Alabama"],
@@ -33,7 +33,7 @@ const FACTS: [string, string][] = [
 const DATED: [string, string][] = [
   ["2026", "Built and runs COSMIC, a station of 57 AI agents in 17 rooms that handle proposals, site audits, security checks, research and outreach for Purcell Ventures."],
   ["2026", "Built UA Today, a campus events page for the University of Alabama that pulls from six sources."],
-  ["2026", "Enrolled at the University of Alabama, in New College and the Honors College to study psychology and data science."],
+  ["2026", "Enrolled at the University of Alabama, in the Honors College to study psychology and data science."],
   ["2025", "Founded Purcell Ventures LLC in Georgia at seventeen."],
   ["High school", "Christian Character Award and the Steadfast Award (10th grade), Grove Christian School."],
 ];
@@ -44,7 +44,7 @@ const WRITING: [string, string, string][] = [
   ["cold-outreach-that-worked", "The cold email that got me a client, and the ones that did not", "20 August 2026"],
   ["llc-at-seventeen", "What registering an LLC at seventeen involved", "20 August 2026"],
   ["audit-every-business-in-your-town", "How to audit every business in your town in an afternoon", "20 August 2026"],
-  ["new-college-alabama", "New College at Alabama, explained by someone in it", "20 August 2026"],
+  ["new-college-alabama", "New College at Alabama, explained by someone applying", "20 August 2026"],
   ["what-the-agents-get-wrong", "Five failures from running fifteen AI agents", "20 August 2026"],
   ["free-at-alabama", "What you have already paid for at Alabama", "20 August 2026"],
   ["is-your-business-invisible", "Is your business invisible online?", "20 August 2026"],
@@ -70,7 +70,7 @@ export default function WhoPage() {
       <PageHero
         kicker="Elijah Purcell"
         title="Who is Elijah Purcell?"
-        lede="Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Tuscaloosa, Alabama AI and software company (a Georgia LLC) that builds AI systems and software for local businesses. He founded it at seventeen. He studies psychology and data science at the University of Alabama (New College, Honors College, Class of 2030), pre-med toward psychiatry."
+        lede="Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Tuscaloosa, Alabama AI and software company (a Georgia LLC) that builds AI systems and software for local businesses. He founded it at seventeen. He studies psychology and data science at the University of Alabama (Honors College, Class of 2030, applying to New College), pre-med toward psychiatry."
         meta={reviewed && <>Last reviewed <time dateTime={reviewed}>{formatDate(reviewed)}</time></>}
         crumbs={<Breadcrumbs trail={[
           { name: "Home", href: "/" },

@@ -29,13 +29,13 @@ export const metadata: Metadata = {
 
 const QA: [string, string][] = [
   ["Who is Elijah Purcell?",
-   "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Tuscaloosa, Alabama AI and software company (a Georgia LLC) that builds AI systems and software for local businesses. He is a psychology and data science student at the University of Alabama, in New College and the Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at 17 and built COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, research and outreach for the company."],
+   "Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, a Tuscaloosa, Alabama AI and software company (a Georgia LLC) that builds AI systems and software for local businesses. He is a psychology and data science student at the University of Alabama, in the Honors College, Class of 2030, on a pre-med track toward psychiatry. He founded the company at 17 and built COSMIC, a station of 57 AI agents in 17 rooms that does proposals, site audits, research and outreach for the company."],
   ["What does Elijah Purcell do?",
    "He designs and ships software end to end: AI agent systems, mobile and web applications, and websites for local businesses. He also advises owners on how to run their businesses with these tools. He also works as an independent contractor with Mercor Intelligence on AI model training projects."],
   ["What is Purcell Ventures LLC?",
    "Purcell Ventures LLC is a Tuscaloosa, Alabama AI and software company (a Georgia LLC), control number 25075361. Elijah Purcell filed it as Zultar LLC on 8 April 2025 and renamed it Purcell Ventures LLC on 27 January 2026, under the same control number. It builds AI systems and software for small businesses, and runs on its founder plus COSMIC, a station of 57 AI agents in 17 rooms. Each agent is a Claude session with a narrow set of tools and a written charter."],
   ["Where does Elijah Purcell study?",
-   "He studies psychology and data science at the University of Alabama, in New College and the Honors College in Tuscaloosa, Alabama, Class of 2030, on a pre-med track toward psychiatry and research into AI in mental health."],
+   "He studies psychology and data science at the University of Alabama, in the Honors College in Tuscaloosa, Alabama, Class of 2030, on a pre-med track toward psychiatry and research into AI in mental health."],
   ["How old is Elijah Purcell?",
    "He was born in August 2007 and turned 19 in August 2026. He founded Purcell Ventures LLC in April 2025, at 17."],
   ["Which Elijah Purcell is this? There seem to be several.",

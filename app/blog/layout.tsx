@@ -170,7 +170,7 @@ const BLOG_LD = {
     },
     {
       "@type": "BlogPosting",
-      "headline": "New College at Alabama, explained by someone in it",
+      "headline": "New College at Alabama, explained by someone applying",
       "url": "https://purcellventures.co/blog/new-college-alabama",
       "datePublished": "2026-08-20",
       "author": {

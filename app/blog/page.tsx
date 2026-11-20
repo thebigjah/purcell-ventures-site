@@ -301,7 +301,7 @@ const POSTS: Post[] = [
   },
   {
     slug: "new-college-alabama",
-    title: "New College at Alabama, explained by someone in it",
+    title: "New College at Alabama, explained by someone applying",
     excerpt: "How the self-designed degree works, what a depth study is, the Levitetz seed grants, and the case against it: few people know what it is, and you supply the structure.",
     date: "August 20, 2026",
     readingTime: "6 min read",

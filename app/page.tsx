@@ -17,7 +17,7 @@ const QA: QA[] = [
   ["What does Purcell Ventures do?",
    "Purcell Ventures LLC is a Tuscaloosa, Alabama AI and software company (a Georgia LLC) that builds AI systems and custom software for small businesses and advises owners on using them. It also trains teams to use AI tools, builds websites and digital add-ons such as chatbots and online booking, and runs Steady, a personal IT service. Elijah quotes each job after a free call."],
   ["Who founded Purcell Ventures?",
-   "Elijah Purcell founded Purcell Ventures LLC on 8 April 2025 and is its Founder/CEO. He studies psychology and data science in New College and the Honors College at the University of Alabama."],
+   "Elijah Purcell founded Purcell Ventures LLC on 8 April 2025 and is its Founder/CEO. He studies psychology and data science in the Honors College at the University of Alabama."],
   ["Where is Purcell Ventures based?",
    "Purcell Ventures works from Tuscaloosa, Alabama, and Elijah registered the LLC in Acworth, Georgia. Elijah meets businesses in person in Tuscaloosa and metro Atlanta, and does AI, software and website work for businesses anywhere in the US."],
   ["How do I contact Purcell Ventures?",
@@ -161,7 +161,7 @@ export default function Home() {
       <Section title="Elijah Brent Purcell" intro="Founder/CEO">
         <div className="ui-prose">
           <p>
-            I founded Purcell Ventures LLC in Acworth, Georgia, in April 2025, when I was 17. I now study psychology and data science in New College and the Honors College at the University of Alabama in Tuscaloosa, on a pre-med track toward psychiatry.
+            I founded Purcell Ventures LLC in Acworth, Georgia, in April 2025, when I was 17. I now study psychology and data science in the Honors College at the University of Alabama in Tuscaloosa, on a pre-med track toward psychiatry.
           </p>
           <p>
             I started the company because the small businesses I knew were paying for AI tools that nobody had set up for the way they work. I build the software and answer the phone myself, and I can meet you at your business.

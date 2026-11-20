@@ -80,7 +80,7 @@ export default function PostByline({ post }: { post: PostMeta }) {
             Updated <time dateTime={dates.modified}>{formatDate(dates.modified)}</time>
           </p>
           <p>
-            Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, which builds AI systems and software for local businesses. He studies psychology and data science in New College and the Honors College at the University of Alabama and built COSMIC, a station of 57 AI agents in 17 rooms that does the company&apos;s proposals, research and outreach.
+            Elijah Purcell is the Founder/CEO of Purcell Ventures LLC, which builds AI systems and software for local businesses. He studies psychology and data science in the Honors College at the University of Alabama and built COSMIC, a station of 57 AI agents in 17 rooms that does the company&apos;s proposals, research and outreach.
           </p>
           <p>
             {/* The anchor text is the point. "More about him" tells a crawler nothing about

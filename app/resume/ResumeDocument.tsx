@@ -44,7 +44,7 @@ function Block({ title, intro, children }: { title: string; intro?: string; chil
 // YouTube channel (old gaming and singing), 200+ hours, Mantle (until he confirms paid jobs).
 
 const EDUCATION: Entry[] = [
-  { title: "The University of Alabama, Honors College", org: "B.S. Psychology and Data Science, New College", when: "2026 to 2030", body: <ul><li>Presidential Scholarship. Pre-med, working toward psychiatry and research on AI in mental health care.</li><li>Admitted to 34 colleges, including the Georgia State University Honors College.</li></ul> },
+  { title: "The University of Alabama, Honors College", org: "Psychology and Data Science, applying to New College", when: "2026 to 2030", body: <ul><li>Presidential Scholarship. Pre-med, working toward psychiatry and research on AI in mental health care.</li><li>Admitted to 34 colleges, including the Georgia State University Honors College.</li></ul> },
   { title: "Lee University, Summer Honors Program", org: "Cleveland, Tennessee", when: "Summers 2025 and 2026", body: <p>12 college credit hours across four courses: Cryptography, Marketing, Mechatronics, and Igniting the World for Change.</p> },
   { title: "Cornerstone Preparatory Academy", org: "Acworth, Georgia", when: "Graduated May 2026", body: <p>GPA 3.92 weighted, SAT 1440, Beta Club, three years of Spanish. Grove Christian School, Midlothian, Virginia, December 2021 to December 2023.</p> },
 ];
@@ -183,7 +183,7 @@ export function ResumeDocument() {
     <div className="rp-page">
         <header className="rp-head">
           <h1>Elijah Purcell</h1>
-          <p className="rp-sub">Founder/CEO, Purcell Ventures LLC. New College and Honors College, The University of Alabama.</p>
+          <p className="rp-sub">Founder/CEO, Purcell Ventures LLC. Honors College, The University of Alabama.</p>
           <ul className="rp-contact">
             <li>Tuscaloosa, Alabama</li>
             <li>{CONTACT.email}</li>

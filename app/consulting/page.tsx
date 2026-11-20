@@ -220,7 +220,7 @@ export default function ConsultingPage() {
             items={[
               { name: "34 college acceptances", line: "Acceptances from colleges and honors programs across the country." },
               { name: "7 security audits", line: "Read-only audits of live production applications, each finding delivered with a severity, a reproduction path and a fix." },
-              { name: "UA Honors College, fall 2026", line: "A self-designed psychology and data science major in New College at the University of Alabama, on a pre-med path." },
+              { name: "UA Honors College, fall 2026", line: "Psychology and data science at the University of Alabama, applying to New College for a self-designed degree, on a pre-med path." },
               { name: "Tools I run myself", line: "Every tool I teach runs in my own business, starting with purcellventures.co." },
             ]}
           />
