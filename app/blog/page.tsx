@@ -20,6 +20,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "business-email-own-domain-setup",
+    title: "Business email at your own domain: why and how to set it up",
+    excerpt: "The part after the @ tells a customer who sent the email. Here is what an address at your own domain changes, and the exact steps to set one up in Google Workspace or Microsoft 365.",
+    date: "November 21, 2026",
+    readingTime: "5 min read",
+    category: "Guide",
+  },
+  {
     slug: "how-to-reply-to-google-reviews",
     title: "How to reply to Google reviews as a small business",
     excerpt: "Your replies to Google reviews show the next customer how you treat people. Here is where to find the reply button, what to write for good and bad reviews, and what to leave out.",
