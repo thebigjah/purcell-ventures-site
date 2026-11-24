@@ -20,6 +20,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "how-to-find-broken-links-small-business-website",
+    title: "How to find broken links on a small business website",
+    excerpt: "A dead Book now button turns away customers who already decided to book, and a redesign does nothing to fix it. Here is how to find broken links and dead pages with free tools and your phone.",
+    date: "November 24, 2026",
+    readingTime: "5 min read",
+    category: "Guide",
+  },
+  {
     slug: "business-email-own-domain-setup",
     title: "Business email at your own domain: why and how to set it up",
     excerpt: "The part after the @ tells a customer who sent the email. Here is what an address at your own domain changes, and the exact steps to set one up in Google Workspace or Microsoft 365.",
