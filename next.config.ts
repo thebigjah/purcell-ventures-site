@@ -10,6 +10,16 @@ const nextConfig: NextConfig = {
       { source: "/services", destination: "https://mantle-field-site.vercel.app", permanent: true },
     ];
   },
+  async headers() {
+    // Apple fetches this file to tie purcellventures.co to the PV Card app and App Clip
+    // (~/pv-card). It has no extension, so it must be told it is JSON.
+    return [
+      {
+        source: "/.well-known/apple-app-site-association",
+        headers: [{ key: "Content-Type", value: "application/json" }],
+      },
+    ];
+  },
   async rewrites() {
     // THE NFC CARD LIVES HERE NOW, AND THE REASON IS PHYSICAL.
     //

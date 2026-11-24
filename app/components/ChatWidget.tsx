@@ -1,10 +1,14 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 interface Msg { role: "user" | "assistant"; content: string; }
 
 export default function ChatWidget() {
+  // A contact card at /c/<slug> can belong to another business (IQ Installs), so it
+  // carries no Purcell Ventures chat.
+  const onCard = (usePathname() || "").startsWith("/c/");
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState("");
@@ -42,6 +46,7 @@ export default function ChatWidget() {
     setLoading(false);
   };
 
+  if (onCard) return null;
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: CHAT_CSS }} />

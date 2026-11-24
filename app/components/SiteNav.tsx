@@ -5,7 +5,7 @@ import Link from "next/link";
 
 // Pages that are internal tools, print targets or standalone storefronts. They carry
 // their own chrome, so the site nav stays off them. Mirrors SiteFooter.
-export const HIDE_CHROME_ON = ["/logos", "/patterns", "/brand", "/print", "/qr", "/business-cards", "/crm", "/invoicing", "/newsletter", "/digital/playbook", "/digital/finder", "/sales-rep", "/rep-portal", "/courses/college-apps/lessons", "/courses/business-launch/lessons", "/courses/ai-automation/lessons", "/resume/print"];
+export const HIDE_CHROME_ON = ["/c/", "/logos", "/patterns", "/brand", "/print", "/qr", "/business-cards", "/crm", "/invoicing", "/newsletter", "/digital/playbook", "/digital/finder", "/sales-rep", "/rep-portal", "/courses/college-apps/lessons", "/courses/business-launch/lessons", "/courses/ai-automation/lessons", "/resume/print"];
 
 // Grouped the way the homepage map is: what I do, the proof, what you can learn, who I
 // am. Each group opens a menu on hover. Blog is one destination, so it stays a link.

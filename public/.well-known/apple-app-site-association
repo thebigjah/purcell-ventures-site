@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["6DNN7P664K.co.purcellventures.card"],
+        "components": [
+          { "/": "/card", "comment": "Elijah's original NFC tags" },
+          { "/": "/c/*", "comment": "Everyone else's cards" }
+        ]
+      }
+    ]
+  },
+  "appclips": {
+    "apps": ["6DNN7P664K.co.purcellventures.card.Clip"]
+  }
+}
