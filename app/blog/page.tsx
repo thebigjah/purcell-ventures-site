@@ -20,6 +20,14 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: "using-ai-to-find-what-your-website-is-missing",
+    title: "Using AI to find what your website is missing",
+    excerpt: "Your customers keep asking questions your website never answers. Here is how to use an AI chat tool to find those gaps and check its work before you change a page.",
+    date: "November 27, 2026",
+    readingTime: "4 min read",
+    category: "Guide",
+  },
+  {
     slug: "how-to-find-broken-links-small-business-website",
     title: "How to find broken links on a small business website",
     excerpt: "A dead Book now button turns away customers who already decided to book, and a redesign does nothing to fix it. Here is how to find broken links and dead pages with free tools and your phone.",
